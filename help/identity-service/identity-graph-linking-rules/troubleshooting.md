@@ -44,12 +44,12 @@ ht-degree: 0%
 
 これが発生する理由には、次のように様々な理由があります（ただし、これらに限定されません）。
 
-* [ データセットはプロファイルに対して有効になっていません ](../../catalog/datasets/enable-for-profile.md)。
+* [&#x200B; データセットはプロファイルに対して有効になっていません &#x200B;](../../catalog/datasets/enable-for-profile.md)。
 * イベントには ID が 1 つしかないので、レコードはスキップされます。
-* [ID サービスで検証エラーが発生しました ](../guardrails.md#identity-value-validation)。
+* [ID サービスで検証エラーが発生しました &#x200B;](../guardrails.md#identity-value-validation)。
    * 例えば、ECID が最大長の 38 文字を超えている場合があります。
-* デフォルトでは、[AAID の取り込みはブロックされます ](../guardrails.md#identity-namespace-ingestion)。
-* [ システムガードレール ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) が原因で、ID が削除されます。
+* デフォルトでは、[AAID の取り込みはブロックされます &#x200B;](../guardrails.md#identity-namespace-ingestion)。
+* [&#x200B; システムガードレール &#x200B;](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) が原因で、ID が削除されます。
 
 受信イベントには同じ一意の名前空間を持つが、ID 値が異なる 2 つ以上の ID があるので、[!DNL Identity Graph Linking Rules] のコンテキスト内では、レコードが ID サービスから拒否される場合があります。 このシナリオは通常、実装エラーが原因で発生します。
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 * ID グラフに取り込まれると想定される ID 値（`identity_value`）。
 * イベントが送信されたデータセット（`dataset_name`）。
 
-次に、[Adobe Experience Platform クエリサービスを使用して ](../../query-service/home.md) 次のクエリを実行します。
+次に、[Adobe Experience Platform クエリサービスを使用して &#x200B;](../../query-service/home.md) 次のクエリを実行します。
 
 >[!TIP]
 >
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 クエリを実行した後、グラフを生成するために必要なイベントレコードを見つけ、同じ行で ID 値が異なることを検証します。 例として、次の画像を表示します。
 
-![ 名前空間の重複を引き起こした名称未設定のクエリ。](../images/troubleshooting/duplicated_unique_namespace.png)
+![&#x200B; 名前空間の重複を引き起こした名称未設定のクエリ。](../images/troubleshooting/duplicated_unique_namespace.png)
 
 >[!NOTE]
 >
@@ -123,26 +123,26 @@ ht-degree: 0%
 
 名前空間の優先度は、イベントフラグメントがプライマリ ID を決定する方法において重要な役割を果たします。
 
-* 特定のサンドボックスに対して [ID 設定 ](./identity-settings-ui.md) を設定および保存すると、プロファイルは [ 名前空間優先度 ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) を使用してプライマリ ID を決定します。 identityMap の場合、プロファイルは `primary=true` フラグを使用しなくなります。
+* 特定のサンドボックスに対して [ID 設定 &#x200B;](./identity-settings-ui.md) を設定および保存すると、プロファイルは [&#x200B; 名前空間優先度 &#x200B;](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) を使用してプライマリ ID を決定します。 identityMap の場合、プロファイルは `primary=true` フラグを使用しなくなります。
 * プロファイルはこのフラグを参照しなくなりますが、Experience Platform上の他のサービスは引き続き `primary=true` フラグを使用する場合があります。
 
-[ 認証済みユーザーイベント ](implementation-guide.md#ingest-your-data) をユーザー名前空間に結び付けるには、すべての認証済みイベントにユーザー名前空間（CRMID）が含まれている必要があります。 つまり、ユーザーがログインした後も、認証済みのすべてのイベントにユーザーの名前空間が引き続き存在する必要があります。
+[&#x200B; 認証済みユーザーイベント &#x200B;](implementation-guide.md#ingest-your-data) をユーザー名前空間に結び付けるには、すべての認証済みイベントにユーザー名前空間（CRMID）が含まれている必要があります。 つまり、ユーザーがログインした後も、認証済みのすべてのイベントにユーザーの名前空間が引き続き存在する必要があります。
 
 プロファイルビューアでプロファイル `primary=true` 検索する際に、「イベント」フラグが引き続き表示される場合があります。 ただし、これは無視され、プロファイルでは使用されません。
 
-AAID はデフォルトでブロックされます。 したがって、[Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用している場合は、未認証のイベントが ECID のプライマリ ID を持つように、ECID の優先順位が ECID よりも高くなるように設定する必要があります。
+AAID はデフォルトでブロックされます。 したがって、[Adobe Analytics ソースコネクタ &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用している場合は、未認証のイベントが ECID のプライマリ ID を持つように、ECID の優先順位が ECID よりも高くなるように設定する必要があります。
 
 **トラブルシューティング手順**
 
-1. 認証済みイベントにユーザーと cookie の名前空間の両方が含まれていることを検証するには、[ID サービスに取り込まれないデータに関するエラーのトラブルシューティング ](#my-identities-are-not-getting-ingested-into-identity-service) に関する節で説明されている手順を読んでください。
+1. 認証済みイベントにユーザーと cookie の名前空間の両方が含まれていることを検証するには、[ID サービスに取り込まれないデータに関するエラーのトラブルシューティング &#x200B;](#my-identities-are-not-getting-ingested-into-identity-service) に関する節で説明されている手順を読んでください。
 2. 認証済みのイベントにユーザー名前空間のプライマリ ID （CRMID など）があることを検証するには、ステッチなし結合ポリシー（プライベートグラフを使用しない結合ポリシー）を使用して、プロファイルビューアでユーザー名前空間を検索します。 この検索では、ユーザー名前空間に関連付けられたイベントのみが返されます。
 
 ### エクスペリエンスイベントフラグメントがプロファイルに取り込まれない {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 エクスペリエンスイベントフラグメントがプロファイルに取り込まれない理由には、次のように様々な理由があります（ただし、これに限定されません）。
 
-* [ データセットはプロファイルに対して有効になっていません ](../../catalog/datasets/enable-for-profile.md)。
-* [ プロファイルで検証エラーが発生した可能性があります ](../../xdm/classes/experienceevent.md)。
+* [&#x200B; データセットはプロファイルに対して有効になっていません &#x200B;](../../catalog/datasets/enable-for-profile.md)。
+* [&#x200B; プロファイルで検証エラーが発生した可能性があります &#x200B;](../../xdm/classes/experienceevent.md)。
    * 例えば、エクスペリエンスイベントには、`_id` と `timestamp` の両方を含める必要があります。
    * さらに、`_id` はイベント（レコード）ごとに一意である必要があります。
 
@@ -202,7 +202,7 @@ AAID はデフォルトでブロックされます。 したがって、[Adobe A
 
 ### 認証されていない ExperienceEvents が、間違った認証済みプロファイルに添付されます
 
-ID 最適化アルゴリズムは、[ 最近確立されたリンク ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) を優先し、最も古いリンクを削除します。 したがって、この機能を有効にすると、あるユーザーから別のユーザーに ECID を再割り当て（再リンク）できるようになります。 ID が時間の経過と共にどのようにリンクされるかの履歴を理解するには、次の手順に従います。
+ID 最適化アルゴリズムは、[&#x200B; 最近確立されたリンク &#x200B;](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) を優先し、最も古いリンクを削除します。 したがって、この機能を有効にすると、あるユーザーから別のユーザーに ECID を再割り当て（再リンク）できるようになります。 ID が時間の経過と共にどのようにリンクされるかの履歴を理解するには、次の手順に従います。
 
 **トラブルシューティング手順**
 
@@ -278,16 +278,16 @@ ORDER BY timestamp desc
 
 **トラブルシューティング手順**
 
-詳しくは、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) のドキュメントと、サポートされるグラフ構造のタイプを参照してください。
+詳しくは、[ID 最適化アルゴリズム &#x200B;](./identity-optimization-algorithm.md) のドキュメントと、サポートされるグラフ構造のタイプを参照してください。
 
-* サポートされるグラフ構造の例については、[ グラフ設定ガイド ](./example-configurations.md) を参照してください。
-* また、サポートされていないグラフ構造の例については、[ 実装ガイド ](./implementation-guide.md#appendix) を参照してください。 発生する可能性があるシナリオは次の 2 つです。
+* サポートされるグラフ構造の例については、[&#x200B; グラフ設定ガイド &#x200B;](./example-configurations.md) を参照してください。
+* また、サポートされていないグラフ構造の例については、[&#x200B; 実装ガイド &#x200B;](./implementation-guide.md#appendix) を参照してください。 発生する可能性があるシナリオは次の 2 つです。
    * すべてのプロファイルに単一の名前空間はありません。
-   * [ 「ダングリング ID」 ](./implementation-guide.md#dangling-loginid-scenario) シナリオが発生します。 このシナリオでは、ID サービスは、ダングリング ID がグラフ内の人物エンティティのいずれかに関連付けられているかどうかを判断できません。
+   * [&#x200B; 「ダングリング ID」 &#x200B;](./implementation-guide.md#dangling-loginid-scenario) シナリオが発生します。 このシナリオでは、ID サービスは、ダングリング ID がグラフ内の人物エンティティのいずれかに関連付けられているかどうかを判断できません。
 
-また、UI の [ グラフシミュレーションツール ](./graph-simulation.md) を使用して、イベントをシミュレートし、独自の名前空間や名前空間の優先度設定を設定することもできます。 これにより、ID 最適化アルゴリズムの動作のベースラインを理解するのに役立ちます。
+また、UI の [&#x200B; グラフシミュレーションツール &#x200B;](./graph-simulation.md) を使用して、イベントをシミュレートし、独自の名前空間や名前空間の優先度設定を設定することもできます。 これにより、ID 最適化アルゴリズムの動作のベースラインを理解するのに役立ちます。
 
-シミュレーション結果がグラフの動作の期待と一致する場合は、[ID 設定 ](./identity-settings-ui.md) がシミュレーションで設定した設定と一致するかどうかを確認できます。
+シミュレーション結果がグラフの動作の期待と一致する場合は、[ID 設定 &#x200B;](./identity-settings-ui.md) がシミュレーションで設定した設定と一致するかどうかを確認できます。
 
 ### ID 設定を指定した後も、サンドボックスに折りたたまれたグラフが表示されます
 
@@ -295,9 +295,9 @@ ID グラフは、設定された一意の名前空間と名前空間の優先�
 
 **トラブルシューティング手順**
 
-[ID グラフビューア ](../features/identity-graph-viewer.md) を使用すると、グラフが設定の前または後に取り込まれたかどうかを確認できます。 [!UICONTROL  リンクプロパティ ] の下で最終更新されたタイムスタンプを調べて、ID サービスがグラフを取り込んだタイミングを確認します。 タイムスタンプが設定前の場合は、機能を有効にする前に「折りたたまれた」グラフが作成されたことを示します。
+[ID グラフビューア &#x200B;](../features/identity-graph-viewer.md) を使用すると、グラフが設定の前または後に取り込まれたかどうかを確認できます。 [!UICONTROL &#x200B; リンクプロパティ &#x200B;] の下で最終更新されたタイムスタンプを調べて、ID サービスがグラフを取り込んだタイミングを確認します。 タイムスタンプが設定前の場合は、機能を有効にする前に「折りたたまれた」グラフが作成されたことを示します。
 
-![ グラフの例を示す ID グラフビューア ](../images/troubleshooting/graph_viewer.png)
+![&#x200B; グラフの例を示す ID グラフビューア &#x200B;](../images/troubleshooting/graph_viewer.png)
 
 ### サンドボックス内に「折りたたまれた」グラフが何本存在するかを知りたい
 
@@ -305,7 +305,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ![ID 数、グラフ数、名前空間別の数、サイズ別のグラフ数、2 つ以上の名前空間を持つグラフのグラフ数に関する指標を持つ ID ダッシュボード。](../images/troubleshooting/identity_dashboard.png)
 
-以下のクエリを実行すると、データレイクの [ プロファイルスナップショット書き出しデータセット ](../../dashboards/query.md) で詳細な分類を確認できます。
+以下のクエリを実行すると、データレイクの [&#x200B; プロファイルスナップショット書き出しデータセット &#x200B;](../../dashboards/query.md) で詳細な分類を確認できます。
 
 >[!NOTE]
 >
@@ -342,11 +342,11 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ## ID 最適化アルゴリズム {#identity-optimization-algorithm}
 
-[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) に関するよくある質問への回答については、この節を参照してください。
+[ID 最適化アルゴリズム &#x200B;](./identity-optimization-algorithm.md) に関するよくある質問への回答については、この節を参照してください。
 
 ### ビジネスユニット（B2C CRMID、B2B CRMID）ごとに CRMID がありますが、すべてのプロファイルに一意の名前空間があるわけではありません。 B2C CRMID と B2B CRMID を一意としてマークし、ID 設定を有効にすると、どうなりますか？
 
-このシナリオはサポートされていません。 そのため、ユーザーが B2C CRMID を使用してログインし、別のユーザーが B2B CRMID を使用してログインすると、グラフが折りたたまれる場合があります。 詳しくは、実装ページの [1 人の名前空間要件 ](./implementation-guide.md#single-person-namespace-requirement) に関する節を参照してください。
+このシナリオはサポートされていません。 そのため、ユーザーが B2C CRMID を使用してログインし、別のユーザーが B2B CRMID を使用してログインすると、グラフが折りたたまれる場合があります。 詳しくは、実装ページの [1 人の名前空間要件 &#x200B;](./implementation-guide.md#single-person-namespace-requirement) に関する節を参照してください。
 
 ### ID 最適化アルゴリズムは、折りたたまれた既存のグラフを「修正」しますか？
 
@@ -357,7 +357,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 * 匿名イベント（リアルタイム顧客プロファイルのプライマリ ID が ECID のイベント）は、最後に認証されたユーザーに転送されます。 これは、ECID が（ID サービスで）最後に認証されたユーザーの CRMID にリンクされるからです。
 * すべての認証済みイベント（CRMID をプライマリ ID として定義したイベント）は、その人物に残ります。
 
-詳しくは、[ エクスペリエンスイベントのプライマリ ID の決定 ](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) に関するガイドを参照してください。
+詳しくは、[&#x200B; エクスペリエンスイベントのプライマリ ID の決定 &#x200B;](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) に関するガイドを参照してください。
 
 ### ECID を人から人に転送すると、Adobe Journey Optimizerのジャーニーはどのような影響を受けますか？
 
@@ -385,7 +385,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ## 名前空間の優先度
 
-このセクションでは、[ 名前空間の優先度 ](./namespace-priority.md) に関するよくある質問に対する回答を示しています。
+このセクションでは、[&#x200B; 名前空間の優先度 &#x200B;](./namespace-priority.md) に関するよくある質問に対する回答を示しています。
 
 ### ID 設定を有効にしました。 設定を有効にした後にカスタム名前空間を追加するとどうなりますか？
 
@@ -393,7 +393,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ### リアルタイム顧客プロファイルが identityMap で「プライマリ」フラグを使用しなくなった場合、この値を送信する必要がありますか？
 
-はい、identityMap の「プライマリ」フラグは他のサービスで使用されます。 詳しくは、のガイド [ 他のExperience Platform サービスにおける名前空間の優先度の影響 ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services) を参照してください。
+はい、identityMap の「プライマリ」フラグは他のサービスで使用されます。 詳しくは、のガイド [&#x200B; 他のExperience Platform サービスにおける名前空間の優先度の影響 &#x200B;](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services) を参照してください。
 
 ### 名前空間の優先度は、リアルタイム顧客プロファイルのプロファイルレコードデータセットに適用されますか。
 
@@ -401,7 +401,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ### この機能は、グラフあたり 50 個の ID からなる ID グラフガードレールと並行してどのように機能しますか？ 名前空間の優先度は、このシステム定義のガードレールに影響を与えますか？
 
-最初に ID 最適化アルゴリズムが適用されて、人物エンティティ表現が確実に行われます。 その後、グラフが [ID グラフガードレール ](../guardrails.md) （グラフあたり 50 個の ID）を超えようとした場合、このロジックが適用されます。 名前空間の優先度は、50 ID/グラフガードレールの削除ロジックには影響しません。
+最初に ID 最適化アルゴリズムが適用されて、人物エンティティ表現が確実に行われます。 その後、グラフが [ID グラフガードレール &#x200B;](../guardrails.md) （グラフあたり 50 個の ID）を超えようとした場合、このロジックが適用されます。 名前空間の優先度は、50 ID/グラフガードレールの削除ロジックには影響しません。
 
 ## テスト
 
@@ -421,6 +421,6 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ### この機能が期待どおりに動作していることを検証するにはどうすればよいですか？
 
-[ グラフシミュレーションツール ](./graph-simulation.md) を使用して、フィーチャーが個々のグラフレベルで動作していることを検証します。
+[&#x200B; グラフシミュレーションツール &#x200B;](./graph-simulation.md) を使用して、フィーチャーが個々のグラフレベルで動作していることを検証します。
 
-サンドボックスレベルで機能を検証するには、ID ダッシュボードの [!UICONTROL  複数の名前空間を使用したグラフ数 ] の節を参照してください。
+サンドボックスレベルで機能を検証するには、ID ダッシュボードの [!UICONTROL &#x200B; 複数の名前空間を使用したグラフ数 &#x200B;] の節を参照してください。
