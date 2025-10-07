@@ -2,9 +2,9 @@
 title: 外部オーディエンス API エンドポイント
 description: 外部オーディエンス API を使用して、Adobe Experience Platformから外部オーディエンスを作成、更新、アクティブ化および削除する方法について説明します。
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
+source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2253'
 ht-degree: 9%
 
 ---
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | 文字列 | 外部オーディエンスのオプションの説明。 |
 | `customAudienceId` | 文字列 | 外部オーディエンスのオプションの識別子。 |
 | `fields` | オブジェクトの配列 | フィールドとそのデータタイプのリスト。 フィールドのリストを作成する際には、次の項目を追加できます。 <ul><li>`name`: **必須** 外部オーディエンスの仕様に含まれるフィールドの名前。</li><li>`type`: **必須** フィールドに入力されるデータのタイプ。 サポートされる値は、`string`、`number`、`long`、`integer`、`date` （`2025-05-13`）、`datetime` （`2025-05-23T20:19:00+00:00`）、`boolean` です。</li><li>`identityNs`: **ID フィールドには必須** ID フィールドで使用される名前空間。 サポートされる値には、`ECID` や `email` など、有効なすべての名前空間が含まれます。</li><li>`labels`: *オプション* フィールドのアクセス制御ラベルの配列。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベルの用語集 ](/help/data-governance/labels/reference.md) を参照してください。 </li></ul> |
-| `sourceSpec` | オブジェクト | 外部オーディエンスが配置されている情報を含むオブジェクト。 このオブジェクトを使用する場合、次の情報を含める **必要があります**。 <ul><li>`path`: **必須**：ソース内の外部オーディエンスを含む外部オーディエンスまたはフォルダーの場所。</li><li>`type`: **必須** ソースから取得するオブジェクトのタイプ。 この値は、`file` または `folder` のいずれかです。</li><li>`sourceType`: *オプション* 取得元のソースのタイプ。 現在、サポートされている値は `Cloud Storage` のみです。</li><li>`cloudType`: *オプション* ソースタイプに基づく、クラウドストレージのタイプ。 サポートされる値は、`S3`、`DLZ`、`GCS`、`SFTP` です。</li><li>`baseConnectionId`: ベース接続の ID。ソースプロバイダーから提供されます。 **値の**、`cloudType` または `S3` を使用する場合、この値は `GCS` 必須 `SFTP` です。 詳しくは、[ ソースコネクタの概要 ](../../sources/home.md) を参照してください。</li></ul> |
+| `sourceSpec` | オブジェクト | 外部オーディエンスが配置されている情報を含むオブジェクト。 このオブジェクトを使用する場合、次の情報を含める **必要があります**。 <ul><li>`path`: **必須**：ソース内の外部オーディエンスを含む外部オーディエンスまたはフォルダーの場所。 ファイルパス **にスペースを含めることはできません**。 例えば、パスが `activation/sample-source/Example CSV File.csv` の場合、パスを `activation/sample-source/ExampleCSVFile.csv` に設定します。 データフローセクションの **Source data** 列内でソースへのパスを見つけることができます。</li><li>`type`: **必須** ソースから取得するオブジェクトのタイプ。 この値は、`file` または `folder` のいずれかです。</li><li>`sourceType`: *オプション* 取得元のソースのタイプ。 現在、サポートされている値は `Cloud Storage` のみです。</li><li>`cloudType`: **必須** ソースタイプに基づく、クラウドストレージのタイプ。 サポートされる値は、`S3`、`DLZ`、`GCS`、`Azure`、`SFTP` です。</li><li>`baseConnectionId`: ベース接続の ID。ソースプロバイダーから提供されます。 **値の**、`cloudType` または `S3` を使用する場合、この値は `GCS` 必須 `SFTP` です。 それ以外の場合は、このパラメーターを含める必要は **ありません**。 詳しくは、[ ソースコネクタの概要 ](../../sources/home.md) を参照してください。</li></ul> |
 | `ttlInDays` | 整数 | 外部オーディエンスのデータ有効期限（日数）。 この値は 1～90 に設定できます。 デフォルトでは、データの有効期限は 30 日に設定されています。 |
 | `audienceType` | 文字列 | 外部オーディエンスのオーディエンスタイプ。 現在は、`people` のみがサポートされています。 |
 | `originName` | 文字列 | **必須** オーディエンスの接触チャネル。 これは、オーディエンスがどこから来たかを示します。外部オーディエンスの場合は、`CUSTOM_UPLOAD` を使用する必要があります。 |
@@ -408,8 +408,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | プロパティ | タイプ | 説明 |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | エポックタイムスタンプ | **必須** 処理するファイルを選択するためにフローを実行する開始時間を指定する範囲。 |
-| `dataFilterEndTime` | エポックタイムスタンプ | 処理するファイルを選択するためにフローを実行する終了時刻を指定する範囲。 |
+| `dataFilterStartTime` | エポックタイムスタンプ | **必須** 処理するファイルを決定する開始時間を指定する範囲。 つまり、選択されたファイルは、指定された時間が経過した **後** ファイルになります。 |
+| `dataFilterEndTime` | エポックタイムスタンプ | 処理するファイルを選択するためにフローを実行する終了時刻を指定する範囲。 つまり、選択されたファイルは、指定された時間より前の **ファイル** なります。 |
 
 +++
 

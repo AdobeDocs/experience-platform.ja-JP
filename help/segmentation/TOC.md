@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 76%
+source-wordcount: '207'
+ht-degree: 75%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 76%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja#segmentation-guardrails)
+- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
@@ -62,7 +62,7 @@ ht-degree: 76%
    - [マルチエンティティのセグメント化](tutorials/multi-entity-segmentation.md)
    - [同意の遵守](tutorials/consents.md)
    - [セグメント定義の評価](tutorials/evaluate-a-segment.md)
-   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
+   - [外部オーディエンスの作成](tutorials/create-external-audience.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [オーディエンスに対してデータ使用のコンプライアンスを適用](tutorials/governance.md)
 - Profile Query Language {#pql}

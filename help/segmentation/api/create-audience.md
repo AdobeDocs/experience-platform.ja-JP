@@ -3,17 +3,17 @@ title: オーディエンス API エンドポイントの作成
 description: API を使用して外部オーディエンスのメタデータを作成する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 36%
+source-wordcount: '246'
+ht-degree: 35%
 
 ---
 
-
 # オーディエンスエンドポイントを作成
 
-POST `/audiences` エンドポイントは、外部オーディエンスのメタデータの作成に使用できます。 オーディエンスの取り込みが、バッチ取り込みなどの別のサービスで管理される場合は、このエンドポイントを使用する必要があります。
+POST `/audiences` エンドポイントは、外部オーディエンスのメタデータを作成するために使用できます。これにより、オーディエンスを Audience Portal に表示できます。 オーディエンスの取り込みが、バッチ取り込みなどの別のサービスで管理される場合は、このエンドポイントを使用する必要があります。
 
 ## はじめに
 
