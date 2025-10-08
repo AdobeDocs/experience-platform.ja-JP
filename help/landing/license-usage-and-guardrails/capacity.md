@@ -2,10 +2,10 @@
 title: ライセンスの使用状況と処理能力
 description: Adobe Experience Platform内でのライセンス使用状況と容量制限について説明します。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 7%
+source-wordcount: '1621'
+ht-degree: 6%
 
 ---
 
@@ -20,14 +20,15 @@ ht-degree: 7%
 >   - この権限を使用すると、処理能力ホームを **表示** できます。
 >- **サンドボックスの管理**
 >   - この権限を使用すると、処理能力の割り当てを **編集** できます。
+>   - さらに、容量割り当てを編集するすべてのサンドボックスへのアクセス権が割り当てられている **必要があります**。
 >
->Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](/help/access-control/home.md#permissions) を参照してください
+>Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](/help/access-control/home.md#permissions) を参照してください
 >
 >さらに、高スループットのストリーミングセグメント化を購入した場合、容量を使用して容量を割り当てることはで **ません**。 処理能力を更新するには、Adobe カスタマーケアにお問い合わせください。
 
 Adobe Experience Platformでは、の処理能力によって、組織がガードレールの上限を超えたかどうかを知ることができ、これらの問題を修正する方法に関する情報が提供されます。
 
-Experience Platformのガードレールについて詳しくは、[Real-Time CDP ガードレールの概要 &#x200B;](../../rtcdp/guardrails/overview.md) を参照してください。
+Experience Platformのガードレールについて詳しくは、[Real-Time CDP ガードレールの概要 ](../../rtcdp/guardrails/overview.md) を参照してください。
 
 ## 処理能力動作 {#behavior}
 
@@ -57,7 +58,7 @@ Experience Platformのガードレールについて詳しくは、[Real-Time CD
    - 500 個のストリーミングオーディエンスのうち、エッジオーディエンスの最大数は 150 個です
 - ストリーミング取得の初期結合スループットは、1 秒あたり 1500 レコード（rps）です
    - このストリーミングのスループットの組み合わせにより、実稼働および開発用サンドボックスをまたいでリアルタイム顧客プロファイルにストリーミングで取り込むための 1 秒あたりのピーク受信イベントの組み合わせが測定されます。
-   - 1 秒あたり最大 13,500 レコードのストリーミングセグメント化サポートを追加購入できます。 追加資格の購入について詳しくは、[Real-Time CDPの製品説明 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) を参照してください。
+   - 1 秒あたり最大 13,500 レコードのストリーミングセグメント化サポートを追加購入できます。 追加資格の購入について詳しくは、[Real-Time CDPの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) を参照してください。
 
 オーディエンス処理能力は **サンドボックス** レベルにあります。 つまり、組織内のサンドボックスごとに 500 個のストリーミングオーディエンスを持つことができ、そのうち 150 個はエッジオーディエンスにすることができます。
 
@@ -73,17 +74,17 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 処理能力の概要にアクセスするには、**[!UICONTROL ライセンスの使用状況]** を選択してから **[!UICONTROL 処理能力]** を選択します。
 
-![&#x200B; 処理能力セクションにアクセスする方法がハイライト表示されています。](/help/landing/images/capacity/access-capacity.png)
+![ 処理能力セクションにアクセスする方法がハイライト表示されています。](/help/landing/images/capacity/access-capacity.png)
 
 処理能力の概要ページが表示され、アラートの履歴や組織の処理能力の詳細などの情報が表示されます。
 
-![&#x200B; 容量の概要ページが完全に表示され、アラート履歴と容量の詳細セクションが表示されます。](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![ 容量の概要ページが完全に表示され、アラート履歴と容量の詳細セクションが表示されます。](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### アラート履歴 {#alert-history}
 
 「**[!UICONTROL アラート履歴]**」セクションには、組織内で最新の容量超過のリストが表示されます。
 
-![&#x200B; アラート履歴セクションが表示されます。](/help/landing/images/capacity/alert-history.png)
+![ アラート履歴セクションが表示されます。](/help/landing/images/capacity/alert-history.png)
 
 | 列の名前 | 説明 |
 | ----------- | ----------- |
@@ -91,15 +92,15 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 | アラート | サンドボックスで超過した容量。 |
 | タイムスタンプ | 違反が発生したデータと時刻。 |
 
-組織のアラートの完全な履歴を表示するには、![3 つのドットのアイコン &#x200B;](/help/images/icons/more.png)、「**[!UICONTROL すべて表示]** の順に選択します。
+組織のアラートの完全な履歴を表示するには、![3 つのドットのアイコン ](/help/images/icons/more.png)、「**[!UICONTROL すべて表示]** の順に選択します。
 
-![&#x200B; 組織の完全なアラート履歴が表示されます。](/help/landing/images/capacity/full-alert-history.png)
+![ 組織の完全なアラート履歴が表示されます。](/help/landing/images/capacity/full-alert-history.png)
 
 ### 処理能力の詳細 {#capacity-details}
 
 処理能力の詳細セクションでは、組織の処理能力に関する情報の概要を説明します。 このセクションでは、サンドボックスごとにフィルタリングし、ルックバック期間を変更できます。
 
-![&#x200B; ルックバック期間のサンドボックスセレクターと日付選択がハイライト表示されます。](/help/landing/images/capacity/filter-sandbox-and-date.png)
+![ ルックバック期間のサンドボックスセレクターと日付選択がハイライト表示されます。](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
 現在は、ストリーミングのスループット、ストリーミングオーディエンスおよびエッジオーディエンスに関する容量情報が表示されます。
 
@@ -107,7 +108,7 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 「ストリーミングスループット」セクションには、組織のサンドボックス内のストリーミングスループットに関する情報が表示されます。 ストリーミングスループット値は、プロファイルサービスへのストリーミング取り込みについて、1 秒あたりの結合されたピーク受信イベントを測定します。
 
-![&#x200B; 容量の詳細ページ内のストリーミングスループット セクションが表示されます。](/help/landing/images/capacity/streaming-throughput-section.png)
+![ 容量の詳細ページ内のストリーミングスループット セクションが表示されます。](/help/landing/images/capacity/streaming-throughput-section.png)
 
 | 列の名前 | 説明 |
 | ----------- | ----------- |
@@ -120,19 +121,19 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 個々のサンドボックスを選択すると、サンドボックスのストリーミングスループットの詳細を表示できます。
 
-![&#x200B; ストリーミングスループット セクション内でサンドボックスがハイライト表示されている様子 &#x200B;](/help/landing/images/capacity/select-sandbox.png)
+![ ストリーミングスループット セクション内でサンドボックスがハイライト表示されている様子 ](/help/landing/images/capacity/select-sandbox.png)
 
 ストリーミングスループットの詳細ページが表示されます。 容量制限と比較したリクエストスループットを表示するグラフ、サンドボックスとそのスループットのリスト、および組織の容量を割り当てるボタンを表示できます。
 
-![&#x200B; ストリーミングスループット ページが表示され、選択したサンドボックスのストリーミングスループットに関する詳細情報が表示されます。](/help/landing/images/capacity/streaming-capacity-allocation.png)
+![ ストリーミングスループット ページが表示され、選択したサンドボックスのストリーミングスループットに関する詳細情報が表示されます。](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
 組織のストリーミングスループット容量を更新するには、「**[!UICONTROL 容量を割り当て]**」を選択します。
 
-![&#x200B; ストリーミングスループットの詳細ページ内で「容量を割り当て」ボタンがハイライト表示されています。](/help/landing/images/capacity/select-allocate.png)
+![ ストリーミングスループットの詳細ページ内で「容量を割り当て」ボタンがハイライト表示されています。](/help/landing/images/capacity/select-allocate.png)
 
 割り当てページが表示されます。 このページでは、様々なサンドボックスの容量を設定できます。 すべての容量の合計 **必須** が組織の容量の合計と等しくなります。
 
-![&#x200B; 生産能力配賦ページが表示されます。](/help/landing/images/capacity/allocate-capacity.png)
+![ 生産能力配賦ページが表示されます。](/help/landing/images/capacity/allocate-capacity.png)
 
 >[!NOTE]
 >
@@ -146,7 +147,7 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 「**[!UICONTROL ストリーミングオーディエンス数]** および **[!UICONTROL Edgeオーディエンス数]** の節には、サンドボックス内のストリーミングオーディエンス数とエッジオーディエンス数、およびサンドボックス内で許可されているストリーミングオーディエンス数とエッジオーディエンス数の上限が表示されます。
 
-![&#x200B; オーディエンス数セクションが表示されます。](/help/landing/images/capacity/audience-count.png)
+![ オーディエンス数セクションが表示されます。](/help/landing/images/capacity/audience-count.png)
 
 | 列の名前 | 説明 |
 | ----------- | ----------- |
@@ -160,21 +161,21 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 次のいずれかの推奨事項を採用することで、ストリーミングスループット違反を解決できます。
 
 1. サンドボックスに割り当てられた容量を増やします。
-2. [&#x200B; 監視ダッシュボード &#x200B;](/help/dataflows/ui/monitor-streaming-profile.md) で高スループットのデータフローを特定し、必要に応じてこれらのデータフローに対してスロットルまたはフィルタリングを適用します。
+2. [ 監視ダッシュボード ](/help/dataflows/ui/monitor-streaming-profile.md) で高スループットのデータフローを特定し、必要に応じてこれらのデータフローに対してスロットルまたはフィルタリングを適用します。
 3. 待機時間の短いユースケースに対してバッチ取り込みを使用して、取り込みを最適化します。
 
 さらに、データフローを調べて、データ戦略を最適化できるかどうかを確認できます。
 
 | 寄与因子 | 概要 | ユースケースへの影響 | ベストプラクティス |
 | --- | --- | --- | --- |
-| バッチからストリーミングへの変換 | ストリーミングに変換されるバッチワークロードは、スループットを大幅に向上させる可能性があり、パフォーマンスとリソース割り当てに影響を与えます。 例えば、レート制限のないイベントの後に一括プロファイル更新を実行する場合などです。 | 低遅延処理が必要ない場合のバッチのユースケースには、ストリーミング戦略は不要です。 | ユースケースの要件を評価します。 バッチ送信マーケティングの場合は、ストリーミングではなく [&#x200B; バッチ取り込み &#x200B;](/help/ingestion/batch-ingestion/overview.md) を使用して、データ取り込みをより効率的に管理することを検討します。 |
-| 不要なデータ取り込み | パーソナライゼーションに不要なデータの取り込みは、価値を追加することなくスループットを向上させ、リソースを無駄にします。 例えば、関連度に関係なく、すべての分析トラフィックをプロファイルに取り込みます。 | 過剰な無関係なデータはノイズを生み出し、影響を受けるデータポイントを特定するのが難しくなります。 また、オーディエンスとプロファイルを定義および管理する際に摩擦が生じる可能性があります。 | ユースケースに必要なデータのみを取り込みます。 不要なデータは必ず除外してください。<ul><li>**Adobe Analytics**: [&#x200B; 行レベルのフィルタリング &#x200B;](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) を使用して、データ取り込みを最適化します。</li><li>**ソース**:[[!DNL Flow Service] API を使用して、](/help/sources/tutorials/api/filter.md) や [!DNL Snowflake] などのサポートされているソースの行レベルのデータ [!DNL Google BigQuery] をフィルタリングします。</li></li>**Edge データストリーム**: [&#x200B; 動的データストリーム &#x200B;](/help/datastreams/configure-dynamic-datastream.md) を設定して、WebSDK から受信するトラフィックの行レベルのフィルタリングを実行します。</li></ul> |
+| バッチからストリーミングへの変換 | ストリーミングに変換されるバッチワークロードは、スループットを大幅に向上させる可能性があり、パフォーマンスとリソース割り当てに影響を与えます。 例えば、レート制限のないイベントの後に一括プロファイル更新を実行する場合などです。 | 低遅延処理が必要ない場合のバッチのユースケースには、ストリーミング戦略は不要です。 | ユースケースの要件を評価します。 バッチ送信マーケティングの場合は、ストリーミングではなく [ バッチ取り込み ](/help/ingestion/batch-ingestion/overview.md) を使用して、データ取り込みをより効率的に管理することを検討します。 |
+| 不要なデータ取り込み | パーソナライゼーションに不要なデータの取り込みは、価値を追加することなくスループットを向上させ、リソースを無駄にします。 例えば、関連度に関係なく、すべての分析トラフィックをプロファイルに取り込みます。 | 過剰な無関係なデータはノイズを生み出し、影響を受けるデータポイントを特定するのが難しくなります。 また、オーディエンスとプロファイルを定義および管理する際に摩擦が生じる可能性があります。 | ユースケースに必要なデータのみを取り込みます。 不要なデータは必ず除外してください。<ul><li>**Adobe Analytics**: [ 行レベルのフィルタリング ](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) を使用して、データ取り込みを最適化します。</li><li>**ソース**:[[!DNL Flow Service] API を使用して、](/help/sources/tutorials/api/filter.md) や [!DNL Snowflake] などのサポートされているソースの行レベルのデータ [!DNL Google BigQuery] をフィルタリングします。</li></li>**Edge データストリーム**: [ 動的データストリーム ](/help/datastreams/configure-dynamic-datastream.md) を設定して、WebSDK から受信するトラフィックの行レベルのフィルタリングを実行します。</li></ul> |
 
 ## ビデオの概要 {#video}
 
 次のビデオでは、処理能力の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475274/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## よくある質問 {#faq}
 
