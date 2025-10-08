@@ -13,7 +13,7 @@ ht-degree: 59%
 
 # クエリサービスとデータDistillerに関するよくある質問
 
-このドキュメントでは、クエリサービスとデータDistillerに関するよくある質問に回答します。 また、データの検証や変換されたデータのデータレイクへの書き戻しに「クエリ」製品を使用する際に表示される一般的なエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、クエリサービスとデータDistillerに関するよくある質問に回答します。 また、データの検証や変換されたデータのデータレイクへの書き戻しに「クエリ」製品を使用する際に表示される一般的なエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
 
 クエリサービスとデータDistillerがAdobe Experience Platform内でどのように連携するかを明確にするために、2 つの基本的な質問を以下に示します。
 
@@ -29,7 +29,7 @@ ht-degree: 59%
 
 **データDistiller**：データを処理、クリーンアップ、エンリッチメントするバッチクエリを有効にし、結果をデータレイクに保存し直します。 これらのクエリは、より長い実行（最大 24 時間）、スケジュール、監視、高速レポートなどの追加機能をサポートします。 Data Distillerは、詳細なデータ操作やスケジュールされたデータ処理タスクに最適です。
 
-詳しくは、[ クエリサービスのパッケージ化ドキュメント ](./packaging.md) を参照してください。
+詳しくは、[&#x200B; クエリサービスのパッケージ化ドキュメント &#x200B;](./packaging.md) を参照してください。
 
 ## 質問カテゴリ {#categories}
 
@@ -40,8 +40,8 @@ ht-degree: 59%
 - [クエリ UI](#queries-ui)
 - [データセットのサンプル](#dataset-samples)
 - [データの書き出し](#exporting-data)
-- [SQL 構文 ](#sql-syntax) 
-- [ITAS クエリ ](#itas-queries)
+- [SQL 構文 &#x200B;](#sql-syntax) 
+- [ITAS クエリ &#x200B;](#itas-queries)
 - [サードパーティツール](#third-party-tools)
 - [PostgreSQL API エラー](#postgresql-api-errors)
 - [REST API エラー](#rest-api-errors)
@@ -65,7 +65,7 @@ ht-degree: 59%
 ### Query Service API に [!DNL Postman] を使用できますか？
 
 +++回答
-はい、[!DNL Postman] （無料のサードパーティアプリケーション）を使用して、すべてのAdobe API サービスを視覚化し、操作できます。 Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
+はい、[!DNL Postman] （無料のサードパーティアプリケーション）を使用して、すべてのAdobe API サービスを視覚化し、操作できます。 Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[&#x200B; [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
 +++
 
 ### UI を使用してクエリから返される行の最大数に制限はありますか？
@@ -118,7 +118,7 @@ ht-degree: 59%
 - Experience Platform にログインした後、UI の左側のナビゲーションで「**[!UICONTROL データセット]**」を選択して、[!UICONTROL データセット]ダッシュボードに移動します。
 - データセットの「[!UICONTROL 参照]」タブが開きます。検索バーを使用して、使用可能なオプションを絞り込むことができます。表示されたリストからデータセットを選択します。
 
-![ 検索バーとハイライトされたデータセットを含むExperience Platform UI のデータセットダッシュボード。](./images/troubleshooting/dataset-selection.png)
+![&#x200B; 検索バーとハイライトされたデータセットを含むExperience Platform UI のデータセットダッシュボード。](./images/troubleshooting/dataset-selection.png)
 
 - [!UICONTROL データセットアクティビティ]画面が表示されます。「**[!UICONTROL データセットをプレビュー]**」を選択して、XDM スキーマのダイアログと、選択したデータセットからフラット化されたデータの表形式表示を開きます。詳しくは、[データセットのプレビューに関するドキュメント](../catalog/datasets/user-guide.md#preview-a-dataset)を参照してください
 
@@ -134,7 +134,7 @@ ht-degree: 59%
 ### 配列を含むデータセットに対するクエリを高速化するにはどうすればよいですか？
 
 +++回答
-配列を含むデータセットに対するクエリのパフォーマンスを向上させるには、実行時に [CTAS クエリ ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) として [ 配列を展開 ](./sql/syntax.md#create-table-as-select) し、処理時間を改善する機会をさらに探索する必要があります。
+配列を含むデータセットに対するクエリのパフォーマンスを向上させるには、実行時に [CTAS クエリ &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) として [&#x200B; 配列を展開 &#x200B;](./sql/syntax.md#create-table-as-select) し、処理時間を改善する機会をさらに探索する必要があります。
 +++
 
 ### CTAS クエリが、少数の行に対して何時間も処理されたままになっているのはなぜですか？
@@ -148,7 +148,7 @@ ht-degree: 59%
 ### アドビのカスタマーサポートに問い合わせるにはどうすればよいですか？ {#customer-support}
 
 +++回答
-[Adobe カスタマーサポートの電話番号の完全なリスト ](https://helpx.adobe.com/jp/contact/phone.html) は、Adobeのヘルプページで入手できます。 または、次の手順を実行してオンラインでヘルプを見つけることもできます。
+[Adobe カスタマーサポートの電話番号の完全なリスト &#x200B;](https://helpx.adobe.com/jp/contact/phone.html) は、Adobeのヘルプページで入手できます。 または、次の手順を実行してオンラインでヘルプを見つけることもできます。
 
 - Web ブラウザーで [https://www.adobe.com/](https://www.adobe.com/) に移動します。
 - 上部のナビゲーションバーの右側にある「**[!UICONTROL ログイン]**」を選択します。
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### データをサンプリングできますか？
 
 +++回答
-この機能は現在開発中です。 詳しくは、[ リリースノート ](../release-notes/latest/latest.md) を参照してください。機能のリリース準備が整った時点で、Experience Platform UI ダイアログを通じて使用可能になります。
+この機能は現在開発中です。 詳しくは、[&#x200B; リリースノート &#x200B;](../release-notes/latest/latest.md) を参照してください。機能のリリース準備が整った時点で、Experience Platform UI ダイアログを通じて使用可能になります。
 +++
 
 ### クエリサービスでサポートされているヘルパー関数は何ですか？
@@ -600,7 +600,7 @@ Data Distillerのコンピューター時間のライセンス使用状況ダッ
 ### DbVisualizer で匿名ブロックを使用できますか？
 
 +++回答
-はい。ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、[ 匿名ブロックのドキュメント ](./key-concepts/anonymous-block.md) または [ 公式の DbVisualizer ドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) を参照してください。
+はい。ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、[&#x200B; 匿名ブロックのドキュメント &#x200B;](./key-concepts/anonymous-block.md) または [&#x200B; 公式の DbVisualizer ドキュメント &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) を参照してください。
 +++
 
 ## TLS、ポートアクセス、暗号化 {#tls-port-questions}
@@ -646,7 +646,7 @@ Data Distillerのコンピューター時間のライセンス使用状況ダッ
 ### Data Distillerのライセンス使用状況はどのように追跡されますか。また、どこで確認できますか。
 
 +++回答  
-バッチクエリの使用状況の追跡に使用される主な指標は、時間の計算です。 [ ライセンス使用状況ダッシュボード ](../dashboards/guides/license-usage.md) から、この情報および現在の使用状況にアクセスできます。
+バッチクエリの使用状況の追跡に使用される主な指標は、時間の計算です。 [&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../dashboards/guides/license-usage.md) から、この情報および現在の使用状況にアクセスできます。
 +++
 
 ### 計算時間とは何ですか？
@@ -678,7 +678,7 @@ Data Distillerのコンピューター時間のライセンス使用状況ダッ
 +++回答
 開発用サンドボックスと実稼動用サンドボックスの両方でクエリを実行すると、同様のパフォーマンスが期待できます。 どちらの環境も、同じレベルの処理能力を提供するように設計されています。 ただし、処理するデータの量やクエリ実行時の全体的なシステムアクティビティによって、計算時間の違いが生じる場合があります。
 
-Experience Platform UI の [ ライセンス使用状況ダッシュボード ](../dashboards/guides/license-usage.md) でコンピューティング時間の使用状況を追跡します。
+Experience Platform UI の [&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../dashboards/guides/license-usage.md) でコンピューティング時間の使用状況を追跡します。
 +++
 
 ## クエリ UI
