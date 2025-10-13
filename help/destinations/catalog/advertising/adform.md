@@ -27,16 +27,16 @@ Adform 宛先を使用する方法とタイミングをより深く理解する�
 
 この宛先を使用して、Adobe Real-Time CDP オーディエンスを Adform に送信し、Experience Cloud ID （ECID）と Adform の ID Fusion に基づいてアクティブ化します。 Adform の ID Fusion は、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化できる Adform の ID 解決サービスです。
 
-一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
+一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
 
 ## 前提条件 {#prerequisites}
 
 * この宛先を使用するには、既存の Adform 顧客である必要があります。
 * Adobe Audience Base のデータ接続資格情報が必要です。
    * Adform Audience Base データ接続資格情報がない場合は、Adform 担当者にお問い合わせください。
-* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
+* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
    * エンティティから Adform サイトトラッキングへのイベントストリーミングまたはクライアントサイド接続がない場合は、Adform 担当者にお問い合わせください。
-   * Adform は、[&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
+   * Adform は、[&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
 
 
 ## サポートされている ID {#supported-identities}
