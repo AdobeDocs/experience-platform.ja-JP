@@ -27,16 +27,16 @@ Adform 宛先を使用する方法とタイミングをより深く理解する�
 
 この宛先を使用して、Adobe Real-Time CDP オーディエンスを Adform に送信し、Experience Cloud ID （ECID）と Adform の ID Fusion に基づいてアクティブ化します。 Adform の ID Fusion は、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化できる Adform の ID 解決サービスです。
 
-一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
+一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
 
 ## 前提条件 {#prerequisites}
 
 * この宛先を使用するには、既存の Adform 顧客である必要があります。
 * Adobe Audience Base のデータ接続資格情報が必要です。
    * Adform Audience Base データ接続資格情報がない場合は、Adform 担当者にお問い合わせください。
-* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
+* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
    * エンティティから Adform サイトトラッキングへのイベントストリーミングまたはクライアントサイド接続がない場合は、Adform 担当者にお問い合わせください。
-   * Adform は、[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
+   * Adform は、[&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
 
 
 ## サポートされている ID {#supported-identities}
@@ -55,7 +55,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 | オーディエンスオリジン | サポートあり | 説明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -75,7 +75,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -83,7 +83,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![ 宛先に対する認証 ](../../assets/catalog/advertising/adform/authenticate-destination.png)
+![&#x200B; 宛先に対する認証 &#x200B;](../../assets/catalog/advertising/adform/authenticate-destination.png)
 
 * **[!UICONTROL アカウント名]**：今後この宛先接続を識別するためのアカウント名を入力します。
 * **[!UICONTROL S3 アクセスキー ID]**: Adform から提供された S3 アクセスキーを入力します。
@@ -93,7 +93,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細の入力 ](../../assets/catalog/advertising/adform/configure-destination-details.png)
+![&#x200B; 宛先の詳細の入力 &#x200B;](../../assets/catalog/advertising/adform/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -109,8 +109,8 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -130,4 +130,4 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 ## その他のリソース {#additional-resources}
 
-Adform Audience Base について詳しくは、[Adform Audience Base ドキュメント ](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform) を参照してください。
+Adform Audience Base について詳しくは、[Adform Audience Base ドキュメント &#x200B;](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform) を参照してください。
