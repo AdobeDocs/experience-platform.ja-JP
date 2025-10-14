@@ -25,9 +25,9 @@ ht-degree: 54%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、[ エンドポイントを使用して ](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定を作成 `/destinations-server` します。
+まず、[&#x200B; エンドポイントを使用して &#x200B;](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定を作成 `/destinations-server` します。
 
-次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定するフィールドについて詳しくは、対応する [ サーバーの設定 ](../functionality/destination-server/server-specs.md) を参照してください。
+次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定するフィールドについて詳しくは、対応する [&#x200B; サーバーの設定 &#x200B;](../functionality/destination-server/server-specs.md) を参照してください。
 
 **API 形式**
 
@@ -413,7 +413,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [SSH キーを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [パスワードを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* 「`"authenticationRule": "PLATFORM_AUTHENTICATION"`」を選択した場合は、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
+* 「`"authenticationRule": "PLATFORM_AUTHENTICATION"`」を選択した場合は、[&#x200B; 資格情報設定 &#x200B;](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [&#x200B; 設定の &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
 
 ## 手順 5：宛先のテスト {#test-destination}
 
@@ -422,7 +422,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
 * [オーディエンスの作成 – ドキュメントページ](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ オーディエンスの作成 – ビデオのチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [&#x200B; オーディエンスの作成 – ビデオのチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 
@@ -446,4 +446,4 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 >
 >自分で使用するためにプライベートな宛先を作成していて、他の顧客が使用できるように宛先カタログに公開する予定がない場合は、この手順は必要ありません。
 
-最後に、宛先をExperience Platform カタログに公開して、すべてのExperience Platform ユーザーに表示する前に、Adobeのレビュー用に宛先を正式に送信する必要があります。 [Destination SDKで作成した製品化された宛先をレビュー用に送信 ](../guides/submit-destination.md) する方法に関する詳細を確認します。
+最後に、宛先をExperience Platform カタログに公開して、すべてのExperience Platform ユーザーに表示する前に、Adobeのレビュー用に宛先を正式に送信する必要があります。 [Destination SDKで作成した製品化された宛先をレビュー用に送信 &#x200B;](../guides/submit-destination.md) する方法に関する詳細を確認します。

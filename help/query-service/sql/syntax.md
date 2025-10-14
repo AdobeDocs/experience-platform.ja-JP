@@ -198,7 +198,7 @@ SELECT statement 2
 
 `CREATE TABLE AS SELECT` （CTAS）コマンドを使用して、`SELECT` クエリの結果を新しいテーブルに生成します。 これは、変換後のデータセットを作成したり、集計を実行したり、機能がエンジニアリングされたデータをモデルで使用する前にプレビューしたりする場合に便利です。
 
-変換後の機能を使用してモデルのトレーニングを行う準備が整ったら、[Models のドキュメント ](../advanced-statistics/models.md) を参照して、`TRANSFORM` 句で `CREATE MODEL` を使用する方法を確認してください。
+変換後の機能を使用してモデルのトレーニングを行う準備が整ったら、[Models のドキュメント &#x200B;](../advanced-statistics/models.md) を参照して、`TRANSFORM` 句で `CREATE MODEL` を使用する方法を確認してください。
 
 オプションで、`TRANSFORM` 句を含めて、CTAS 文内に 1 つ以上の機能エンジニアリング関数を直接適用することもできます。 `TRANSFORM` を使用して、モデルのトレーニング前に変換ロジックの結果を調べます。
 
@@ -224,7 +224,7 @@ AS (select_query)
 | `rowvalidation` | （任意）データセットに取り込まれた各バッチに対して、行レベルの検証を有効にします。 デフォルトは true です。 |
 | `label` | （オプション）値 `PROFILE` を使用して、プロファイル取り込みが有効としてデータセットにラベルを付けます。 |
 | `transform` | （任意）データセットを実現する前に、機能エンジニアリング変換（文字列インデックス、ワンホットエンコーディング、TF-IDF など）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは [&#128279;](#transform)`TRANSFORM` 句のドキュメントを参照してください。 |
-| `select_query` | データセットを定義する標準の `SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節 ](#select-queries) 参照してください。 |
+| `select_query` | データセットを定義する標準の `SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節 &#x200B;](#select-queries) 参照してください。 |
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ AS SELECT * FROM movie_review;
 
 >[!NOTE]
 >
->使用可能な変換関数とその出力タイプについて詳しくは、[ フィーチャー変換出力データタイプ ](../advanced-statistics/feature-transformation.md#available-transformations) を参照してください。
+>使用可能な変換関数とその出力タイプについて詳しくは、[&#x200B; フィーチャー変換出力データタイプ &#x200B;](../advanced-statistics/feature-transformation.md#available-transformations) を参照してください。
 
 
 ### TRANSFORM 句 {#transform}
@@ -302,9 +302,9 @@ AS SELECT * FROM movie_review;
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-変換の定義、モデルオプションの設定、トレーニングデータの設定の方法など、CREATE MODEL の使用方法について詳しくは、[ モデルのドキュメント ](../advanced-statistics/models.md) を参照してください。
+変換の定義、モデルオプションの設定、トレーニングデータの設定の方法など、CREATE MODEL の使用方法について詳しくは、[&#x200B; モデルのドキュメント &#x200B;](../advanced-statistics/models.md) を参照してください。
 
-`CREATE TABLE` の使用方法については、[CREATE TABLE AS SELECT セクション ](#create-table-as-select) を参照してください。
+`CREATE TABLE` の使用方法については、[CREATE TABLE AS SELECT セクション &#x200B;](#create-table-as-select) を参照してください。
 
 #### モデルを作成の例
 
@@ -347,7 +347,7 @@ INSERT INTO table_name select_query
 | パラメーター | 説明 |
 | ----- | ----- |
 | `table_name` | クエリを挿入するテーブルの名前。 |
-| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries) にあります。 |
 
 **例**
 
@@ -442,7 +442,7 @@ CREATE VIEW view_name AS select_query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries) にあります。 |
 
 **例**
 
@@ -466,7 +466,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | データベースの名前。 |
 | `schema_name` | スキーマの名前。 |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries) にあります。 |
 
 **例**
 
@@ -746,7 +746,7 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-クエリサービスのベストプラクティスについて詳しくは、[ データアセットの論理的構成 ](../best-practices/organize-data-assets.md) ガイドを参照してください。
+クエリサービスのベストプラクティスについて詳しくは、[&#x200B; データアセットの論理的構成 &#x200B;](../best-practices/organize-data-assets.md) ガイドを参照してください。
 
 ## テーブルが存在します
 
@@ -845,7 +845,7 @@ SET property_key = property_value
 
 ### 分析テーブル {#analyze-table}
 
-`ANALYZE TABLE` コマンドは、指定されたテーブルに対して分布分析および統計計算を実行します。 `ANALYZE TABLE` の使用方法は、データセットが [ 高速化ストア ](#compute-statistics-data-lake) と [ データレイク ](#compute-statistics-accelerated-store) のどちらに保存されているかによって異なります。 使用方法について詳しくは、それぞれの節を参照してください。
+`ANALYZE TABLE` コマンドは、指定されたテーブルに対して分布分析および統計計算を実行します。 `ANALYZE TABLE` の使用方法は、データセットが [&#x200B; 高速化ストア &#x200B;](#compute-statistics-data-lake) と [&#x200B; データレイク &#x200B;](#compute-statistics-accelerated-store) のどちらに保存されているかによって異なります。 使用方法について詳しくは、それぞれの節を参照してください。
 
 #### 高速化ストアの統計を計算 {#compute-statistics-accelerated-store}
 
@@ -898,7 +898,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 (1 row)
 ```
 
-その後、`Statistics ID` を参照して、計算された統計に対して直接クエリを実行できます。 以下のステートメントの例に示すように、`Statistics ID` またはエイリアス名を使用して、出力を完全に表示します。 この機能について詳しくは、[ エイリアス名のドキュメント ](../key-concepts/dataset-statistics.md#alias-name) を参照してください。
+その後、`Statistics ID` を参照して、計算された統計に対して直接クエリを実行できます。 以下のステートメントの例に示すように、`Statistics ID` またはエイリアス名を使用して、出力を完全に表示します。 この機能について詳しくは、[&#x200B; エイリアス名のドキュメント &#x200B;](../key-concepts/dataset-statistics.md#alias-name) を参照してください。
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -921,7 +921,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-詳しくは、[ データセット統計のドキュメント ](../key-concepts/dataset-statistics.md) を参照してください。
+詳しくは、[&#x200B; データセット統計のドキュメント &#x200B;](../key-concepts/dataset-statistics.md) を参照してください。
 
 #### 大さじ {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-詳しくは、[ データセットサンプルのドキュメント ](../key-concepts/dataset-samples.md) を参照してください。
+詳しくは、[&#x200B; データセットサンプルのドキュメント &#x200B;](../key-concepts/dataset-samples.md) を参照してください。
 
 ### BEGIN
 
@@ -965,7 +965,7 @@ CLOSE ALL
 
 ### DEALLOCATE
 
-以前に準備した SQL 文の割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 プリペアドステートメントの割り当てを明示的に解除しなかった場合、セッションが終了すると割り当てが解除されます。 準備文の詳細については、[PREPARE コマンド ](#prepare) の節を参照してください。
+以前に準備した SQL 文の割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 プリペアドステートメントの割り当てを明示的に解除しなかった場合、セッションが終了すると割り当てが解除されます。 準備文の詳細については、[PREPARE コマンド &#x200B;](#prepare) の節を参照してください。
 
 ```sql
 DEALLOCATE name
@@ -989,7 +989,7 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-`EXECUTE` コマンドは、事前に準備された文を実行するために使用します。 準備済み文はセッション中にのみ存在するので、準備済み文は現在のセッションの前に実行された `PREPARE` 文によって作成されている必要があります。 準備文の使用について詳しくは、[`PREPARE` のコマンドの節を参照し ](#prepare) ください。
+`EXECUTE` コマンドは、事前に準備された文を実行するために使用します。 準備済み文はセッション中にのみ存在するので、準備済み文は現在のセッションの前に実行された `PREPARE` 文によって作成されている必要があります。 準備文の使用について詳しくは、[`PREPARE` のコマンドの節を参照し &#x200B;](#prepare) ください。
 
 ステートメントを作成した `PREPARE` ステートメントで一部のパラメーターが指定された場合は、互換性のあるパラメーターセットを `EXECUTE` ステートメントに渡す必要があります。 これらのパラメーターが渡されない場合、エラーが発生します。
 
@@ -1101,12 +1101,12 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-標準の SELECT クエリパラメーターについて詳しくは、[SELECT クエリの節 ](#select-queries) を参照してください。 このセクションには、`SELECT INTO` コマンド専用のパラメータのみがリストされます。
+標準の SELECT クエリパラメーターについて詳しくは、[SELECT クエリの節 &#x200B;](#select-queries) を参照してください。 このセクションには、`SELECT INTO` コマンド専用のパラメータのみがリストされます。
 
 | パラメーター | 説明 |
 | ------ | ------ |
 | `TEMPORARY` または `TEMP` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログのないテーブルになります。 ログに記録されていないテーブルについて詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/sql-createtable.html) を参照してください。 |
+| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログのないテーブルになります。 ログに記録されていないテーブルについて詳しくは、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/sql-createtable.html) を参照してください。 |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-詳しくは、[ アドホックデータセットでの ID の設定 ](../data-governance/ad-hoc-schema-identities.md) のドキュメントを参照してください。
+詳しくは、[&#x200B; アドホックデータセットでの ID の設定 &#x200B;](../data-governance/ad-hoc-schema-identities.md) のドキュメントを参照してください。
 
 #### 列を追加
 

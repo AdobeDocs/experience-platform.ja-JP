@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL &#x200B; アプリケーション &#x200B;] は、アプリケーションによって生成されるインタラクションに関連する詳細を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 アプリケーションとは、エンドユーザーがインストール、実行、閉じる、またはアンインストールできるモバイルアプリケーションやデスクトップアプリケーションなどのソフトウェアエクスペリエンスを指します。 このデータタイプのプロパティは、チャットボット、ブラウザーベースのプラグイン、アプリケーションに適用されないその他のエクスペリエンスなどのエージェントを記述するためのものではありません。
 
-![ アプリケーション画像 ](../images/data-types/application.PNG){width=500}
+![&#x200B; アプリケーション画像 &#x200B;](../images/data-types/application.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -35,5 +35,5 @@ ht-degree: 3%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)

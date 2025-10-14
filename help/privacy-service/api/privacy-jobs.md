@@ -20,11 +20,11 @@ ht-degree: 44%
 >
 >リクエストの失敗を避けるために、この期限の前に統合を更新してください。
 
-このドキュメントでは、API 呼び出しを使用したプライバシージョブの操作方法について説明します。 特に、[!DNL Privacy Service] API の `/job` エンドポイントの使用について説明します。 このガイドを読む前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正しく実行するために必要な重要な情報を確認してください。
+このドキュメントでは、API 呼び出しを使用したプライバシージョブの操作方法について説明します。 特に、[!DNL Privacy Service] API の `/job` エンドポイントの使用について説明します。 このガイドを読む前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正しく実行するために必要な重要な情報を確認してください。
 
 >[!NOTE]
 >
->顧客からの同意またはオプトアウトリクエストを管理しようとする場合は、[ 同意エンドポイントガイド ](./consent.md) を参照してください。
+>顧客からの同意またはオプトアウトリクエストを管理しようとする場合は、[&#x200B; 同意エンドポイントガイド &#x200B;](./consent.md) を参照してください。
 
 ## すべてのジョッブをリスト {#list}
 
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
+| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[&#x200B; サポートされる規制 &#x200B;](../regulations/overview.md) の概要を参照してください。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `100` で、最大は `1000` です。最大値を超えると、API は 400 コードエラーを返します。 |
 | `{status}` | デフォルトの動作では、すべてのステータスが含まれます。 ステータスタイプを指定すると、リクエストはそのステータスタイプに一致するプライバシージョブのみを返します。 指定できる値は次のとおりです。 <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -90,7 +90,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な識別子について詳しくは [&#128279;](../experience-cloud-apps.md)Privacy ServiceおよびExperience Cloud アプリケーション &rbrace; のガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[ プライバシーリクエストの ID データ ](../identity-data.md) のドキュメントを参照してください。
+>互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な識別子について詳しくは [&#128279;](../experience-cloud-apps.md)Privacy ServiceおよびExperience Cloud アプリケーション &rbrace; のガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[&#x200B; プライバシーリクエストの ID データ &#x200B;](../identity-data.md) のドキュメントを参照してください。
 
 [!DNL Privacy Service] API は、個人データに対して、次の 2 種類のジョブリクエストをサポートしています。
 
@@ -179,8 +179,8 @@ curl -X POST \
 | `include` **(必須)** | 処理に含めるアドビ製品の配列。この値がない場合や空の場合、リクエストは拒否されます。組織が統合している製品のみを含めます。詳しくは、付録の「[受け入れられる製品値](appendix.md)」の節を参照してください。 |
 | `expandIDs` | オプションのプロパティで、`true` に設定すると、アプリケーションの ID を処理するための最適化を表します（現在は [!DNL Analytics] でのみサポートされています）。 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
-| `mergePolicyId` | リアルタイム顧客プロファイル（`profileService`）のプライバシーリクエストを行う際に、ID のステッチに使用する特定の [ 結合ポリシー ](../../profile/merge-policies/overview.md) の ID をオプションで指定できます。 結合ポリシーを指定すると、顧客に関するデータを返す際に、プライバシーリクエストにオーディエンス情報を含めることができます。 リクエストごとに指定できる結合ポリシーは 1 つだけです。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
-| `regulation` **(必須)** | プライバシージョブの規制。 以下の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
+| `mergePolicyId` | リアルタイム顧客プロファイル（`profileService`）のプライバシーリクエストを行う際に、ID のステッチに使用する特定の [&#x200B; 結合ポリシー &#x200B;](../../profile/merge-policies/overview.md) の ID をオプションで指定できます。 結合ポリシーを指定すると、顧客に関するデータを返す際に、プライバシーリクエストにオーディエンス情報を含めることができます。 リクエストごとに指定できる結合ポリシーは 1 つだけです。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
+| `regulation` **(必須)** | プライバシージョブの規制。 以下の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[&#x200B; サポートされる規制 &#x200B;](../regulations/overview.md) の概要を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -254,7 +254,7 @@ GET /jobs/{JOB_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{JOB_ID}` | 検索するジョブの ID。 この ID は、成功した API 応答で [ ジョブの作成 ](#create-job) および [ すべてのジョブのリスト ](#list) の `jobId` に返されます。 |
+| `{JOB_ID}` | 検索するジョブの ID。 この ID は、成功した API 応答で [&#x200B; ジョブの作成 &#x200B;](#create-job) および [&#x200B; すべてのジョブのリスト &#x200B;](#list) の `jobId` に返されます。 |
 
 {style="table-layout:auto"}
 
@@ -347,7 +347,7 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `productStatusResponse` | `productResponses` 配列内の各オブジェクトには、特定の [!DNL Experience Cloud] アプリケーションに関するジョブの現在のステータスに関する情報が含まれます。 |
-| `productStatusResponse.status` | ジョブの現在の状態カテゴリ。 [ 利用可能なステータスカテゴリ ](#status-categories) のリストと対応する意味については、次の表を参照してください。 |
+| `productStatusResponse.status` | ジョブの現在の状態カテゴリ。 [&#x200B; 利用可能なステータスカテゴリ &#x200B;](#status-categories) のリストと対応する意味については、次の表を参照してください。 |
 | `productStatusResponse.message` | ステータスカテゴリに対応するジョブの特定のステータス。 |
 | `productStatusResponse.responseMsgCode` | [!DNL Privacy Service] が受信する製品応答メッセージの標準コード。 メッセージの詳細は、`responseMsgDetail` に記載されています。 |
 | `productStatusResponse.responseMsgDetail` | ジョブのステータスのより詳細な説明。 同様のステータスのメッセージは、製品間で異なる場合があります。 |

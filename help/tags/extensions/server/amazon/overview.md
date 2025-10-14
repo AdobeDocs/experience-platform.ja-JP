@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ### 秘密鍵およびデータ要素の作成 {#secret}
 
-新しい [!DNL Amazon][ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成し、認証メンバーを示す一意の名前を指定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
+新しい [!DNL Amazon][&#x200B; イベント転送の秘密鍵 &#x200B;](../../../ui/event-forwarding/secrets.md) を作成し、認証メンバーを示す一意の名前を指定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
 
 次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して (../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成  し、作成した `Amazon` シークレットを参照します。
 
@@ -32,7 +32,7 @@ Experience Platformを [!DNL Amazon] に接続するには、次の詳細を入�
 | --- | --- |
 | アカウント ID | [!DNL Amazon] アカウントの一意のアカウント ID。 |
 | エンティティ ID | 広告主アカウントに関連付けられたプロファイルの識別子。 これは Campaign Manager ポータル URL にあり、先頭に `entity` が付きます。 |
-| アクセストークン | OAuth 経由で [!DNL Amazon] API への認証に使用される、アプリの有効期限が切れていないアクセストークン。 詳しくは、[ 認証に関するAmazon API ドキュメント ](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) を参照してください。 |
+| アクセストークン | OAuth 経由で [!DNL Amazon] API への認証に使用される、アプリの有効期限が切れていないアクセストークン。 詳しくは、[&#x200B; 認証に関するAmazon API ドキュメント &#x200B;](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) を参照してください。 |
 
 ## [!DNL Amazon] 拡張機能のインストールと設定 {#install-configure}
 
@@ -51,7 +51,7 @@ Experience Platformを [!DNL Amazon] に接続するには、次の詳細を入�
 
    - **エンティティ ID**：エンティティ ID （「エンティティ」というプレフィックスを持つ Campaign Manager ポータル URL 内に見つかりました）。
 
-     ![ 「エンティティ ID」フィールドがハイライト表示された Campaign Manager ポータルインターフェイス ](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
+     ![&#x200B; 「エンティティ ID」フィールドがハイライト表示された Campaign Manager ポータルインターフェイス &#x200B;](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
 
 5. 「**保存**」を選択して、設定を完了します。
 
@@ -63,7 +63,7 @@ Experience Platformを [!DNL Amazon] に接続するには、次の詳細を入�
 2. 「**アクション**」で、「**Amazon Conversions API 拡張機能**」を選択します。
 3. **アクションタイプ** を **コンバージョンイベントをインポート** に設定します。
 
-   ![ 「アクションタイプ」が「コンバージョンイベントをインポート」に設定されているイベント転送ルール設定インターフェイス ](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
+   ![&#x200B; 「アクションタイプ」が「コンバージョンイベントをインポート」に設定されているイベント転送ルール設定インターフェイス &#x200B;](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
 
 ### コンバージョンイベントデータの設定 {#conversion-event-data}
 
@@ -89,9 +89,9 @@ Experience Platformを [!DNL Amazon] に接続するには、次の詳細を入�
 
 - 「**[!UICONTROL 変更を保持]**」を選択して、ルールを保存します。
 
-![ 「変更を保持」ボタンがハイライト表示されたイベントパラメーター設定インターフェイス ](../../../images/extensions/server/amazon/event-parameters.png)
+![&#x200B; 「変更を保持」ボタンがハイライト表示されたイベントパラメーター設定インターフェイス &#x200B;](../../../images/extensions/server/amazon/event-parameters.png)
 
-![ 「変更を保持」ボタンがハイライト表示された追加のイベントパラメーター設定インターフェイス ](../../../images/extensions/server/amazon/additional-event-parameters.png)
+![&#x200B; 「変更を保持」ボタンがハイライト表示された追加のイベントパラメーター設定インターフェイス &#x200B;](../../../images/extensions/server/amazon/additional-event-parameters.png)
 
 ## イベントの重複排除 {#deduplication}
 
@@ -108,10 +108,10 @@ Experience Platformを [!DNL Amazon] に接続するには、次の詳細を入�
 
 重複排除を適切に設定することで、最適化データが正確なままとなり、レポートに悪影響が及ばなくなります。
 
-詳しくは、[Amazon イベントの重複排除ガイド ](https://advertising.amazon.com/) を参照してください。
+詳しくは、[Amazon イベントの重複排除ガイド &#x200B;](https://advertising.amazon.com/) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、[!DNL Amazon] Conversions API 拡張機能を使用してコンバージョンイベントを設定および [!DNL Amazon] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
+このガイドでは、[!DNL Amazon] Conversions API 拡張機能を使用してコンバージョンイベントを設定および [!DNL Amazon] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。
 
-Experience Platform Debugger とイベント転送の監視ツールを使用して実装をデバッグする方法について詳しくは、イベント転送の [Adobe Experience Platform Debuggerの概要 ](/help/debugger/home.md) および [ アクティビティの監視 ](../../../ui/event-forwarding/monitoring.md) を参照してください。
+Experience Platform Debugger とイベント転送の監視ツールを使用して実装をデバッグする方法について詳しくは、イベント転送の [Adobe Experience Platform Debuggerの概要 &#x200B;](/help/debugger/home.md) および [&#x200B; アクティビティの監視 &#x200B;](../../../ui/event-forwarding/monitoring.md) を参照してください。

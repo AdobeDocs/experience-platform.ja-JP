@@ -19,10 +19,10 @@ ht-degree: 15%
 
 # Experience Platform UI での結合ポリシーの作成
 
-このビデオでは、Experience Platform内の結合ポリシーの基本的な理解と、Adobe Experience Platform ユーザーインターフェイスを使用して結合ポリシーを定義する方法の概要を説明します。 結合ポリシーについて詳しくは、まず [ 結合ポリシーの概要 ](../merge-policies/overview.md) をお読みください。
+このビデオでは、Experience Platform内の結合ポリシーの基本的な理解と、Adobe Experience Platform ユーザーインターフェイスを使用して結合ポリシーを定義する方法の概要を説明します。 結合ポリシーについて詳しくは、まず [&#x200B; 結合ポリシーの概要 &#x200B;](../merge-policies/overview.md) をお読みください。
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ 結合ポリシー UI ガイド ](../merge-policies/ui-guide.md) を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[&#x200B; 結合ポリシー UI ガイド &#x200B;](../merge-policies/ui-guide.md) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345078?quality=12&learn=on&captions=jpn)

@@ -17,17 +17,17 @@ ht-degree: 20%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; チャネルの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、ID、チャネルタイプ、メディアタイプ、場所タイプなどのチャネル情報を記述するために使用されます。
+[!UICONTROL &#x200B; チャネルの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、ID、チャネルタイプ、メディアタイプ、場所タイプなどのチャネル情報を記述するために使用されます。
 
 ![](../../images/field-groups/channel-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `channel` | [Experience チャネル ](../../data-types/experience-channel.md) | 商品の返品、保証登録、買い物かご/注文プロセスを説明するオブジェクトです。 |
+| `channel` | [Experience チャネル &#x200B;](../../data-types/experience-channel.md) | 商品の返品、保証登録、買い物かご/注文プロセスを説明するオブジェクトです。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)

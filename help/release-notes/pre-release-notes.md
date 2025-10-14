@@ -49,7 +49,7 @@ Adobe Experience Platform AI アシスタントは、Adobe Experience Cloud ア�
 | Agent Orchestrator | Adobe Experience Platform Agent Orchestratorは、AI アシスタントを機能させるインテリジェントなレイヤーです。 ユーザーが質問したりヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門の担当者を呼び出し、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 |
 | Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 |
 
-詳しくは、[AI アシスタントの概要 ](../ai-assistant/home.md) を参照してください。
+詳しくは、[AI アシスタントの概要 &#x200B;](../ai-assistant/home.md) を参照してください。
 
 ## アラート {#alerts}
 
@@ -59,11 +59,11 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 | 機能 | 説明 |
 | --- | --- |
-| ストリーミングプロファイル取り込みアラート | データフローレベルでのストリーミング取り込みに関する 2 つの新しいアラートを登録できるようになりました。 <ul><li>ストリーミング取得の失敗率を超えています</li><li>ストリーミング取り込みスキップ率が超過しました</li></ul> プラットフォーム内またはメールのアラートは、デフォルトのしきい値または定義したカスタムのしきい値を超えたときに通知します。 詳しくは、[ プロファイルアラート ](../observability/alerts/rules.md#profile) ガイドを参照してください。 |
+| ストリーミングプロファイル取り込みアラート | データフローレベルでのストリーミング取り込みに関する 2 つの新しいアラートを登録できるようになりました。 <ul><li>ストリーミング取得の失敗率を超えています</li><li>ストリーミング取り込みスキップ率が超過しました</li></ul> プラットフォーム内またはメールのアラートは、デフォルトのしきい値または定義したカスタムのしきい値を超えたときに通知します。 詳しくは、[&#x200B; プロファイルアラート &#x200B;](../observability/alerts/rules.md#profile) ガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
-アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../observability/home.md) を参照してください。
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 &#x200B;](../observability/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -84,7 +84,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL &#x200B; タブと &#x200B;]](../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL &#x200B; タブの新しい並べ替え機能により、宛先管理ワークフローが向上し &#x200B;]](../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。 |
 
-詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -96,7 +96,7 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 | ------- | ----------- |
 | モデルベースのスキーマ | モデルベースのスキーマを使用して、データモデリングを簡略化できます。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 この機能には、時系列データと変更データのキャプチャ機能のサポートが含まれています。 |
 
-詳しくは、[XDM の概要 ](../xdm/home.md) を参照してください。
+詳しくは、[XDM の概要 &#x200B;](../xdm/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -108,7 +108,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | ------- | ----------- |
 | プロファイルビューアの機能強化 | 2025 年 9 月リリースには、プロファイルビューアに対する次の機能強化が含まれています。 <ul><li>**組み合わせビュー**：属性、イベント、インサイトが単一のビューに組み合わされました。</li><li>**AI で生成されたインサイト**：プロファイルの詳細ページに、AI で生成されたインサイトが表示され、プロファイルから生成された詳細を知ることができるようになりました。 これらのインサイトには、傾向スコアやトレンド分析などの情報を含めることができます。</li><li>**スタイルの更新**：プロファイルの詳細ページが視覚的に更新されました。</li><li>**参照**：検索とカスタマイズ機能を備えたインタラクティブカードベースのカルーセルを使用して、プロファイルを参照できるようになりました。</li></ul> |
 
-詳しくは、[ リアルタイム顧客プロファイルの概要 ](../profile/home.md) を参照してください。
+詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../profile/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -136,7 +136,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| 一般公開の新しいソース | 次のソースが一般提供されるようになりました。複数のソースコネクタがBetaから GA に更新されました。 <ul><li>[Acxiom のデータ取り込み ](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 見込み客データの取り込み ](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury エンタープライズ ](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。これらのソースが完全にサポートされ、実稼動で使用できる状態になりました。 |
+| 一般公開の新しいソース | 次のソースが一般提供されるようになりました。複数のソースコネクタがBetaから GA に更新されました。 <ul><li>[Acxiom のデータ取り込み &#x200B;](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 見込み客データの取り込み &#x200B;](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury エンタープライズ &#x200B;](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。これらのソースが完全にサポートされ、実稼動で使用できる状態になりました。 |
 | [!DNL Snowflake] キーペア認証のサポート | キーペア認証をサポートし、Snowflake接続のセキュリティを強化しました。 基本認証（ユーザー名/パスワード）は 2025 年 11 月までに廃止される予定です。セキュリティを向上させるには、キーペア認証に移行することをお勧めします。 |
 
 詳しくは、[ソースの概要](../sources/home.md)を参照してください。

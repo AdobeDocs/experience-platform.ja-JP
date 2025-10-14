@@ -18,21 +18,21 @@ ht-degree: 16%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで ](../../classes/individual-profile.md) 個人の連絡先情報を記述します。
+[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで &#x200B;](../../classes/individual-profile.md) 個人の連絡先情報を記述します。
 
 ![](../../images/field-groups/personal-contact-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `faxPhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の FAX 番号を表します。 |
-| `homeAddress` | [ 郵送先住所 ](../../data-types/postal-address.md) | 人物の居住地を表します。 |
-| `homePhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の自宅電話番号を表します。 |
-| `mobilePhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の携帯電話番号を表します。 |
-| `personalEmail` | [ メールアドレス ](../../data-types/email-address.md) | 人物のメールアドレスを表します。 |
+| `faxPhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の FAX 番号を表します。 |
+| `homeAddress` | [&#x200B; 郵送先住所 &#x200B;](../../data-types/postal-address.md) | 人物の居住地を表します。 |
+| `homePhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の自宅電話番号を表します。 |
+| `mobilePhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の携帯電話番号を表します。 |
+| `personalEmail` | [&#x200B; メールアドレス &#x200B;](../../data-types/email-address.md) | 人物のメールアドレスを表します。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

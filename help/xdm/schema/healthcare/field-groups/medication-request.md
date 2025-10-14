@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # [!UICONTROL &#x200B; 投薬リクエスト &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 投薬リクエスト &#x200B;] は、[[!DNL Medication]  クラス ](../../../classes/medication.md)、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md)、[[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 薬の供給の注文または要求と、患者への薬の投与の指示の両方をキャプチャする単一のオブジェクトタイプのフィールド `healthcareMedicationDispense` を提供します。
+[!UICONTROL &#x200B; 投薬リクエスト &#x200B;] は、[[!DNL Medication]  クラス &#x200B;](../../../classes/medication.md)、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md)、[[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 薬の供給の注文または要求と、患者への薬の投与の指示の両方をキャプチャする単一のオブジェクトタイプのフィールド `healthcareMedicationDispense` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/medication-request/medication-request.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/medication-request/medication-request.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -24,7 +24,7 @@ ht-degree: 3%
 | [!UICONTROL カテゴリ] | `category` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 投薬リクエストの分類またはグループ化。 |
 | [!UICONTROL &#x200B; 治療の種類 &#x200B;] | `courseOfTherapyType` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 患者への薬の投与のための全体的なパターンの説明。 |
 | [!UICONTROL &#x200B; デバイス &#x200B;] | `device` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) の配列 | 投薬の投与に使用されるデバイスのタイプ。 |
-| [!UICONTROL &#x200B; 交付の請求 &#x200B;] | `dispenseRequest` | オブジェクト | 調剤リクエストの具体的な詳細を示します。通常、投薬指示と呼ばれます。 詳しくは、[ 以下の節 ](#dispense-request) を参照してください。 |
+| [!UICONTROL &#x200B; 交付の請求 &#x200B;] | `dispenseRequest` | オブジェクト | 調剤リクエストの具体的な詳細を示します。通常、投薬指示と呼ばれます。 詳しくは、[&#x200B; 以下の節 &#x200B;](#dispense-request) を参照してください。 |
 | [!UICONTROL &#x200B; 服薬指示 &#x200B;] | `dosageInstructions` | 配列 [[!UICONTROL Dose]](../data-types/dosage.md) | 薬が患者によってどのように使用されるかについての具体的な指示。 |
 | [!UICONTROL &#x200B; 有効線量期間 &#x200B;] | `effectiveDosePeriod` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) | 薬を服用する期間。 複数の `dosageInstruction` 線がある場合（例えば、用量を漸減する場合）、これは投薬指示の最も早い日付と最も遅い日付です。 |
 | [!UICONTROL &#x200B; 出会い &#x200B;] | `encounter` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | リクエストが作成された際の発生。 |
@@ -56,14 +56,14 @@ ht-degree: 3%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.schema.json)
 
 ## `dispenseRequest` {#dispense-request}
 
 `dispenseRequest` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ リクエスト構造のディスペンス ](../../../images/healthcare/field-groups/medication-request/dispense-request.png)
+![&#x200B; リクエスト構造のディスペンス &#x200B;](../../../images/healthcare/field-groups/medication-request/dispense-request.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

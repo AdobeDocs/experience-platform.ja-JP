@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](./appendix.md#query) の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[&#x200B; クエリパラメーター &#x200B;](./appendix.md#query) の節を参照してください。 |
 
 **リクエスト**
 
@@ -404,7 +404,7 @@ curl -X PUT \
 }
 ```
 
-デフォルトの実稼動用サンドボックスとユーザー作成の実稼動用サンドボックスは、その中にホストされている ID グラフがAdobe Analyticsでも [ クロスデバイス分析（CDA） ](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja) 機能に使用されている場合や、その中にホストされている ID グラフがAdobe Audience Managerでも [People Based Destinations （PBD） ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja) 機能に使用されている場合は、リセットできません。
+デフォルトの実稼動用サンドボックスとユーザー作成の実稼動用サンドボックスは、その中にホストされている ID グラフがAdobe Analyticsでも [&#x200B; クロスデバイス分析（CDA） &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja) 機能に使用されている場合や、その中にホストされている ID グラフがAdobe Audience Managerでも [People Based Destinations （PBD） &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja) 機能に使用されている場合は、リセットできません。
 
 サンドボックスがリセットされない可能性のある例外のリストを以下に示します。
 

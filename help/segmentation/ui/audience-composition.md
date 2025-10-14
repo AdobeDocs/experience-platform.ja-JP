@@ -20,7 +20,7 @@ ht-degree: 78%
 >- プロファイルの管理
 >- 結合ポリシーの管理
 >
->Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](../../access-control/home.md#permissions) を参照してください。
+>Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../access-control/home.md#permissions) を参照してください。
 
 >[!NOTE]
 >
@@ -154,7 +154,7 @@ ht-degree: 78%
 >title="属性別に除外"
 >abstract="属性別に除外すると、選択した属性に基づいて、特定のプロファイルが構成に表示されないように除外できます。"
 
-属性別に除外する場合は、「除外ルール」セクションにある ![ フィルター ](/help/images/icons/project-edit.png) アイコンを選択することで、除外する属性を選択でき **[!UICONTROL す]**。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
+属性別に除外する場合は、「除外ルール」セクションにある ![&#x200B; フィルター &#x200B;](/help/images/icons/project-edit.png) アイコンを選択することで、除外する属性を選択でき **[!UICONTROL す]**。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
 
 ![属性セクションがハイライト表示され、除外する属性を選ぶために選択すべき場所が示されている様子。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -292,7 +292,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 さらに、「プロファイル制限を追加 **[!UICONTROL 切替スイッチを有効にすることで、返されるプロファイルの数を制限でき]** す。 この切替スイッチが有効になっている場合は、「**[!UICONTROL 含まれるプロファイル]**」フィールド内で、返されるプロファイルの最大数を設定できます。
 
-![ 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
+![&#x200B; 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL 分割] {#split-block}
 
@@ -337,11 +337,11 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 割合で分割する場合、オーディエンスは、指定されたパスの数と割合に基づいてランダムに分割されます。
 
-![ 分割された割合がハイライト表示されている様子 ](../images/ui/audience-composition/split-by-percentage.png)
+![&#x200B; 分割された割合がハイライト表示されている様子 &#x200B;](../images/ui/audience-composition/split-by-percentage.png)
 
 または、ID を指定することもできます。これにより、パーセンテージベースの分割が永続的になります。 使用可能な ID タイプには、組織で使用可能なすべての ID 名前空間が含まれます。
 
-![ 「ID で分割」チェックボックスがハイライト表示されている様子。 さらに、分割する ID を選択できるドロップダウンがハイライト表示されます。](../images/ui/audience-composition/split-by-identity.png)
+![&#x200B; 「ID で分割」チェックボックスがハイライト表示されている様子。 さらに、分割する ID を選択できるドロップダウンがハイライト表示されます。](../images/ui/audience-composition/split-by-identity.png)
 
 ### 属性で分割 {#split-attribute}
 
@@ -374,11 +374,11 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 コンポジションを作成したら、「**[!UICONTROL 公開]**」を選択して保存および公開できます。
 
-![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
+![&#x200B; 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
 
 オーディエンスの作成でエラーが発生した場合は、アラートが表示され、問題の解決方法を知らせます。
 
-![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
+![&#x200B; 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
 
 ## 次の手順
 

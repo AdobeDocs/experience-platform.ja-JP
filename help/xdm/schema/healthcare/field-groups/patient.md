@@ -16,16 +16,16 @@ ht-degree: 8%
 
 [!UICONTROL Patient] は、[[!DNL XDM Individual Profile] class](../../../classes/individual-profile.md) の標準スキーマフィールドグループです。 ケアやその他の健康関連サービスを受ける個人または動物の人口統計やその他の管理上の詳細をキャプチャする単一のオブジェクトタイプフィールド `healthcarePatient` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/patient/patient.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/patient/patient.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL アドレス] | `address` | [[!UICONTROL Address]](../data-types/address.md) の配列 | 患者の住所情報。 |
-| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 患者の健康状態について患者とコミュニケーションをとるために使用される言語。 詳しくは、[ 以下の節 ](#communication) を参照してください。 |
-| [!UICONTROL &#x200B; 患者との接触 &#x200B;] | `contact` | オブジェクトの配列 | 患者の連絡パーティ（後見人、パートナー、友人など）。 詳しくは、[ 以下の節 ](#contact) を参照してください。 |
+| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 患者の健康状態について患者とコミュニケーションをとるために使用される言語。 詳しくは、[&#x200B; 以下の節 &#x200B;](#communication) を参照してください。 |
+| [!UICONTROL &#x200B; 患者との接触 &#x200B;] | `contact` | オブジェクトの配列 | 患者の連絡パーティ（後見人、パートナー、友人など）。 詳しくは、[&#x200B; 以下の節 &#x200B;](#contact) を参照してください。 |
 | [!UICONTROL &#x200B; 一般開業医 &#x200B;] | `generalPractioner` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | 患者の主治医。 |
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | 患者の識別子。 |
-| [!UICONTROL &#x200B; 患者リンクの詳細 &#x200B;] | `link` | オブジェクトの配列 | 同じ人物に関する患者または関係者のリソースへのリンク。 詳しくは、[ 以下の節 ](#link) を参照してください。 |
+| [!UICONTROL &#x200B; 患者リンクの詳細 &#x200B;] | `link` | オブジェクトの配列 | 同じ人物に関する患者または関係者のリソースへのリンク。 詳しくは、[&#x200B; 以下の節 &#x200B;](#link) を参照してください。 |
 | [!UICONTROL &#x200B; 組織の管理 &#x200B;] | `managingOrganization` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 患者の記録の管理組織。 |
 | [!UICONTROL &#x200B; 配偶者の有無 &#x200B;] | `maritalStatus` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 患者の婚姻ステータス。 |
 | [!UICONTROL 名前] | `name` | [[!UICONTROL &#x200B; 人名 &#x200B;]](../data-types/human-name.md) の配列 | 患者に関連付けられた名前。 |
@@ -40,14 +40,14 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.schema.json)
 
 ## `communication` {#communication}
 
 `communication` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 通信構造 ](../../../images/healthcare/field-groups/patient/communication.png)
+![&#x200B; 通信構造 &#x200B;](../../../images/healthcare/field-groups/patient/communication.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ ht-degree: 8%
 
 `contact` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 接触構造 ](../../../images/healthcare/field-groups/patient/contact.png)
+![&#x200B; 接触構造 &#x200B;](../../../images/healthcare/field-groups/patient/contact.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -67,14 +67,14 @@ ht-degree: 8%
 | [!UICONTROL &#x200B; 連絡先の組織 &#x200B;] | `organization` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 担当者に関連付けられている組織。 |
 | [!UICONTROL &#x200B; 連絡期間 &#x200B;] | `period` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) | 連絡先が使用中またはだった期間。 |
 | [!UICONTROL &#x200B; 関係&#39;] | `relationship` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 患者と連絡担当者の関係。 |
-| [!UICONTROL &#x200B; 連絡先詳細 &#x200B;] | `telecom` | オブジェクトの配列 | 担当者の連絡先詳細。 詳しくは、[ 以下の節 ](#telecom) を参照してください。 |
+| [!UICONTROL &#x200B; 連絡先詳細 &#x200B;] | `telecom` | オブジェクトの配列 | 担当者の連絡先詳細。 詳しくは、[&#x200B; 以下の節 &#x200B;](#telecom) を参照してください。 |
 | [!UICONTROL &#x200B; 性別 &#x200B;] | `gender` | 文字列 | 人物の性自認。 このプロパティの値は、次の既知の列挙値のいずれかに等しい必要があります。 <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 ### `telecom` {#telecom}
 
 `telecom` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 通信構造 ](../../../images/healthcare/field-groups/patient/telecom.png)
+![&#x200B; 通信構造 &#x200B;](../../../images/healthcare/field-groups/patient/telecom.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ ht-degree: 8%
 
 `link` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ リンク構造 ](../../../images/healthcare/field-groups/patient/link.png)
+![&#x200B; リンク構造 &#x200B;](../../../images/healthcare/field-groups/patient/link.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

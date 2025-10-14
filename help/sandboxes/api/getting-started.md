@@ -20,7 +20,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## 前提条件
 
-組織のサンドボックスを管理するには、サンドボックス管理権限が必要です。 アクセス権限を持たないユーザーは、[ 使用可能なサンドボックスエンドポイント ](./available.md) のみを使用して、現在のユーザーのアクティブなサンドボックスをリストできます。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+組織のサンドボックスを管理するには、サンドボックス管理権限が必要です。 アクセス権限を持たないユーザーは、[&#x200B; 使用可能なサンドボックスエンドポイント &#x200B;](./available.md) のみを使用して、現在のユーザーのアクティブなサンドボックスをリストできます。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -28,7 +28,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Experience Platform API を正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Experience Platform API を正しく呼び出すために、[&#x200B; 認証に関するチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`

@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # [!DNL Azure] CMK のアラートと IP許可リストの設定
 
-透明性を高めるために、Adobeでは [ モニタリングサービス ](../../../../observability/alerts/ui.md){target="_blank"} を提供しています。このサービスは、Key Vault のアクセスステータスを確認し、問題が発生した場合にトリガーアラートを送信します。 これらのアラートは、迅速な対応とサービスの中断の回避に役立ちます。 このサービスを有効にするには、Adobeの静的 IP アドレスを許可リストに加えるします。
+透明性を高めるために、Adobeでは [&#x200B; モニタリングサービス &#x200B;](../../../../observability/alerts/ui.md){target="_blank"} を提供しています。このサービスは、Key Vault のアクセスステータスを確認し、問題が発生した場合にトリガーアラートを送信します。 これらのアラートは、迅速な対応とサービスの中断の回避に役立ちます。 このサービスを有効にするには、Adobeの静的 IP アドレスを許可リストに加えるします。
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ネットワーク制限を維持しながら、これらのアラートを有効にするには、**[!DNL Azure Key Vault]** / **[!DNL Networking settings]** に移動します。 「**[!DNL Firewalls and virtual networks]**」タブで、「**[!DNL Allow public access from specific virtual networks and IP addresses]**」を選択します。
 
-Adobe![[!DNL Azure] 静的 IP アドレスを追加する場所と、「次からアクセスを許可」オプションがハイライト表示された状態を示す、Key Vault ネットワーク設定画面 ](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings.png)
+Adobe![[!DNL Azure] 静的 IP アドレスを追加する場所と、「次からアクセスを許可」オプションがハイライト表示された状態を示す、Key Vault ネットワーク設定画面 &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings.png)
 
 ### Adobeの静的 IP アドレス
 
@@ -42,12 +42,12 @@ Platform アラートは、**[!UICONTROL キーアクセスの失敗]** や **[!
 
 <!-- For a complete list of alert types and recommended resolutions, see the [CMK alert resolution reference](../alert-resolution-reference.md). -->
 
-Adobe I/O イベント通知を購読すると、モニタリングツールでリアルタイムアラートを受け取ることができます。 設定手順については、[Adobe I/O イベント通知の購読 ](../../../../observability/alerts/subscribe.md) を参照してください。 また、Experience Platform内でアラートを表示および管理する方法については、[ アラート UI ガイド ](../../../../observability/alerts/ui.md) を参照してください。
+Adobe I/O イベント通知を購読すると、モニタリングツールでリアルタイムアラートを受け取ることができます。 設定手順については、[Adobe I/O イベント通知の購読 &#x200B;](../../../../observability/alerts/subscribe.md) を参照してください。 また、Experience Platform内でアラートを表示および管理する方法については、[&#x200B; アラート UI ガイド &#x200B;](../../../../observability/alerts/ui.md) を参照してください。
 
 ## 次の手順
 
 これで、[!DNL Azure] Key Vault の IP許可リストに加えるとアラートモニタリングが設定されました。 [!DNL Azure] での顧客管理キーの設定を完了するには、次の設定ガイドに従います。
 
-- [Key Vault [!DNL Azure]  設定 ](./azure-key-vault-config.md)
-- [API を使用した CMK の設定 ](./api-set-up.md)
+- [Key Vault [!DNL Azure]  設定 &#x200B;](./azure-key-vault-config.md)
+- [API を使用した CMK の設定 &#x200B;](./api-set-up.md)
 - [UI を使用した CMK の設定](./ui-set-up.md)

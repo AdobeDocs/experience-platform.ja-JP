@@ -23,7 +23,7 @@ ht-degree: 5%
 
 このプロセスの一部として機械学習モデルのトレーニングが必要なため、このドキュメントでは 1 つ以上の機械学習環境に関する実務知識を前提としています。
 
-この例では、[!DNL Jupyter Notebook] を開発環境として使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 [ 公式サイトからダウンロード ](https://jupyter.org/) できます。
+この例では、[!DNL Jupyter Notebook] を開発環境として使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 [&#x200B; 公式サイトからダウンロード &#x200B;](https://jupyter.org/) できます。
 
 ## [!DNL Query Service] を使用して、ボットアクティビティのしきい値を定義します
 
@@ -116,7 +116,7 @@ FROM   ( ( (SELECT mcid,
 
 ## 機械学習を使用した新しいスパイクしきい値の特定
 
-次に、結果のクエリデータセットを CSV 形式で書き出し、[!DNL Jupyter Notebook] に読み込みます。 その環境から、現在の機械学習ライブラリを使用して機械学習モデルをトレーニングできます。 [CSV 形式でデータを書き出す方法  [!DNL Query Service]  について詳しくは、トラブルシューティングガイドを参照してください ](../troubleshooting-guide.md#export-csv)
+次に、結果のクエリデータセットを CSV 形式で書き出し、[!DNL Jupyter Notebook] に読み込みます。 その環境から、現在の機械学習ライブラリを使用して機械学習モデルをトレーニングできます。 [CSV 形式でデータを書き出す方法  [!DNL Query Service]  について詳しくは、トラブルシューティングガイドを参照してください &#x200B;](../troubleshooting-guide.md#export-csv)
 
 最初に設定したアドホックスパイクしきい値はデータ駆動型ではないので、精度に欠けます。 機械学習モデルは、パラメーターをしきい値としてトレーニングするために使用できます。 その結果、不要な機能を削除して `GROUP BY` キーワードの数を減らし、クエリの効率を高めることができます。
 
@@ -159,7 +159,7 @@ plt.show()
 Model Accuracy: 0.99935
 ```
 
-![ 機械学習モデルから [!DNL Jupyter Notebook] 統計出力。](../images/use-cases/jupiter-notebook-output.png)
+![&#x200B; 機械学習モデルから [!DNL Jupyter Notebook] 統計出力。](../images/use-cases/jupiter-notebook-output.png)
 
 上記の例に示すモデルの結果は、99% 以上が正確です。
 
@@ -171,4 +171,4 @@ Model Accuracy: 0.99935
 
 このドキュメントを参照することで、[!DNL Query Service] と機械学習を使用してボットアクティビティを決定およびフィルタリングする方法をより深く理解できます。
 
-組織の戦略的ビジネスインサイトに対する [!DNL Query Service] の利点を示すその他のドキュメントには、[ 放棄された参照のユースケース ](./abandoned-browse.md) 例があります。
+組織の戦略的ビジネスインサイトに対する [!DNL Query Service] の利点を示すその他のドキュメントには、[&#x200B; 放棄された参照のユースケース &#x200B;](./abandoned-browse.md) 例があります。

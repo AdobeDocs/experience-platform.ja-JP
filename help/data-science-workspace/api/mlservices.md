@@ -221,7 +221,7 @@ curl -X GET \
 
 >[!TIP]
 >
->このPUTリクエストが正常に実行されるようにするには、まずGETリクエストを実行して [ID で MLService を取得 ](#retrieve-a-specific-mlservice) することをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
+>このPUTリクエストが正常に実行されるようにするには、まずGETリクエストを実行して [ID で MLService を取得 &#x200B;](#retrieve-a-specific-mlservice) することをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
 
 **API 形式**
 

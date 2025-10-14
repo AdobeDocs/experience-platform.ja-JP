@@ -21,25 +21,25 @@ ht-degree: 6%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Azure Synapse Analytics] ています。
 
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Salesforce Marketing Cloud] す。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Salesforce Marketing Cloud]  認証の概要 ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md) を参照してください。
+認証について詳しくは、[[!DNL Salesforce Marketing Cloud]  認証の概要 &#x200B;](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) に関するガイドを参照してください。
+Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) に関するガイドを参照してください。
 
 ## [!DNL Salesforce Marketing Cloud] を [!DNL Azure] のExperience Platformに接続
 
@@ -191,4 +191,4 @@ curl -X POST \
 
 ## データのデータフロー [!DNL Salesforce Marketing Cloud] 作成
 
-[!DNL Salesforce Marketing Cloud] アカウントに正常に接続したので、次は [ データフローを作成し、マーケティング自動化プロバイダーからExperience Platformにデータを取り込む ](../../collect/marketing-automation.md) ことができます。
+[!DNL Salesforce Marketing Cloud] アカウントに正常に接続したので、次は [&#x200B; データフローを作成し、マーケティング自動化プロバイダーからExperience Platformにデータを取り込む &#x200B;](../../collect/marketing-automation.md) ことができます。

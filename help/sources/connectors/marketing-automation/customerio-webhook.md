@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL Customer.io] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Customer.io] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -34,18 +34,18 @@ Experience Platformは、ストリーミングアプリケーションからの�
 * Slack イベント
 * Webhook イベント
 
-Webhook を通じて使用できるイベントのリストについては、[[!DNL Customer.io] Webhook イベントのレポート ](https://customer.io/docs/webhooks/#events) ドキュメントを参照してください。
+Webhook を通じて使用できるイベントのリストについては、[[!DNL Customer.io] Webhook イベントのレポート &#x200B;](https://customer.io/docs/webhooks/#events) ドキュメントを参照してください。
 
 ## 前提条件 {#prerequisites}
 
 [!DNL Customer.io] ソース接続を作成する前に、次の点を確認する必要があります。
 
-* [!DNL Customer.io] アカウント。 アカウントをお持ちでない場合は [[!DNL Customer.io]  登録ページ ](https://fly.customer.io/signup) を読み、アカウントを登録、作成してください。
-* アカウントを作成したら、アカウントを検証する必要もあります。 [[!DNL Customer.io]  アカウントの検証 ](https://customer.io/docs/account-verification/) ページに記載されている手順に従って、プロセスを完了します。
+* [!DNL Customer.io] アカウント。 アカウントをお持ちでない場合は [[!DNL Customer.io]  登録ページ &#x200B;](https://fly.customer.io/signup) を読み、アカウントを登録、作成してください。
+* アカウントを作成したら、アカウントを検証する必要もあります。 [[!DNL Customer.io]  アカウントの検証 &#x200B;](https://customer.io/docs/account-verification/) ページに記載されている手順に従って、プロセスを完了します。
 
 ### Webhook[!DNL Customer.io] 設定 {#set-up-webhook}
 
-データフローが正常に作成されたら、イベントについてExperience Platformに通知するレポート Webhook を設定する必要 [!DNL Customer.io] あります。 Webhook は、顧客属性が変更されたとき、またはユーザーがメッセージを開いたときにすぐに通知を受け取り、この情報を [!DNL Customer.io] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook) に関するチュ  [!DNL Customer.io]  トリアルを参照してください。
+データフローが正常に作成されたら、イベントについてExperience Platformに通知するレポート Webhook を設定する必要 [!DNL Customer.io] あります。 Webhook は、顧客属性が変更されたとき、またはユーザーがメッセージを開いたときにすぐに通知を受け取り、この情報を [!DNL Customer.io] ソースに送信できます。 詳しくは、[&#x200B; ストリーミングエンドポイント URL の取得 &#x200B;](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) および [Webhook の設定 &#x200B;](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook) に関するチュ  [!DNL Customer.io]  トリアルを参照してください。
 
 ## Experience Platformへの [!DNL Customer.io] の接続 {#connect-to-platform}
 
@@ -53,7 +53,7 @@ Webhook を通じて使用できるイベントのリストについては、[[!
 
 ### API を使用した [!DNL Customer.io] のExperience Platformへの接続 {#connect-to-platform-using-api}
 
-* [ソース接続とデータフローを作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Customer.io] ](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [ソース接続とデータフローを作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Customer.io] &#x200B;](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
 ### UI を使用した [!DNL Customer.io] のExperience Platformへの接続 {#connect-to-platform-using-ui}
 

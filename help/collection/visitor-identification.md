@@ -13,7 +13,7 @@ ht-degree: 86%
 
 # 訪問者の識別
 
-Edge Network API は、[ ファーストパーティ ID を使用した訪問者の識別（[!DNL FPID]） ](visitor-identification-fpid.md) をサポートしています。
+Edge Network API は、[&#x200B; ファーストパーティ ID を使用した訪問者の識別（[!DNL FPID]） &#x200B;](visitor-identification-fpid.md) をサポートしています。
 
 すべてのユーザーの ID を、`identityMap` フィールドグループで提供する必要があります。このフィールドグループは AEP Web SDK `ExperienceEvent` mixin に含まれています。
 

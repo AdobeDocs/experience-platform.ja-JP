@@ -16,7 +16,7 @@ ht-degree: 12%
 
 [!UICONTROL &#x200B; 単純数量 &#x200B;] は、測定または測定可能な量を提供する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ 単純量データ型の構造 ](../../../images/healthcare/data-types/simple-quantity.png)
+![&#x200B; 単純量データ型の構造 &#x200B;](../../../images/healthcare/data-types/simple-quantity.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -27,5 +27,5 @@ ht-degree: 12%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)

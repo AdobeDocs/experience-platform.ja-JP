@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # よくある質問 {#faq}
 
-このドキュメントでは、Adobe Experience Platform カタログサービスとデータセットに関するよくある質問に対する回答を示します。 すべてのExperience Platform API で発生する問題を含め、他のExperience Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform カタログサービスとデータセットに関するよくある質問に対する回答を示します。 すべてのExperience Platform API で発生する問題を含め、他のExperience Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
 
 ## 保存ポリシーとルール {#retention-policies-and-rules}
 
@@ -66,7 +66,7 @@ ExperienceEvent XDM クラスを使用して作成されたデータセットに
 
 +++回答
 
-[!UICONTROL &#x200B; データセット &#x200B;] インベントリページで、データレイクとプロファイルの最新のデータセットレベルのストレージサイズを別々の指標として表示できます。 また、列を並べ替えることで、最大のデータセットを識別し、保存ポリシーを確実に適用することもできます。 サンドボックスレベルの使用状況は、ライセンス使用状況ダッシュボードで確認できます。 詳しくは、[ ライセンス使用状況ドキュメント ](../dashboards/guides/license-usage.md) を参照してください。
+[!UICONTROL &#x200B; データセット &#x200B;] インベントリページで、データレイクとプロファイルの最新のデータセットレベルのストレージサイズを別々の指標として表示できます。 また、列を並べ替えることで、最大のデータセットを識別し、保存ポリシーを確実に適用することもできます。 サンドボックスレベルの使用状況は、ライセンス使用状況ダッシュボードで確認できます。 詳しくは、[&#x200B; ライセンス使用状況ドキュメント &#x200B;](../dashboards/guides/license-usage.md) を参照してください。
 
 +++
 
@@ -74,7 +74,7 @@ ExperienceEvent XDM クラスを使用して作成されたデータセットに
 
 +++回答
 
-[ データセット保持設定 UI](./datasets/user-guide.md#data-retention-policy) および [!UICONTROL &#x200B; データセット &#x200B;] インベントリページで、最後のデータ保持ジョブのタイムスタンプを確認できます。 過去のデータセット使用状況に関するレポートは、現在は使用できませんが、今後のリリースで提供される予定です。
+[&#x200B; データセット保持設定 UI](./datasets/user-guide.md#data-retention-policy) および [!UICONTROL &#x200B; データセット &#x200B;] インベントリページで、最後のデータ保持ジョブのタイムスタンプを確認できます。 過去のデータセット使用状況に関するレポートは、現在は使用できませんが、今後のリリースで提供される予定です。
 
 +++
 

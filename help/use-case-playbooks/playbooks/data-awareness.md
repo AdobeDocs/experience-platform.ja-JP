@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルを読む前に、[ 使用可能なユースケースプレイブックテンプレート ](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) および [ インスタンスの作成 ](/help/use-case-playbooks/playbooks/create-share-reuse.md) を参照してください。
+このチュートリアルを読む前に、[&#x200B; 使用可能なユースケースプレイブックテンプレート &#x200B;](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) および [&#x200B; インスタンスの作成 &#x200B;](/help/use-case-playbooks/playbooks/create-share-reuse.md) を参照してください。
 
 インスタンスを作成すると、インスピレーションの得られるサンドボックス内に、ジャーニー、セグメント、スキーマ、メッセージなどの一連のアセットが生成されます。 これらのアセットを他のサンドボックスにコピーする方法については、こちらを参照してください。
 
@@ -31,21 +31,21 @@ ht-degree: 0%
 
 1. 感動的なサンドボックスから別のサンドボックスにオブジェクトを読み込むには、ユースケースプレイブックの目的のインスタンスを参照し、**[!UICONTROL 別のサンドボックスにPublish]** を選択して、アーティファクトをパッケージとして書き出します。
 
-   ![ 様々なユースケースインスタンスを示すGIF](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
+   ![&#x200B; 様々なユースケースインスタンスを示すGIF](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
 2. 「**[!UICONTROL 別のサンドボックスにPublish]**」ボタンを選択すると、モーダルが表示されます。 名前とオプションの説明を入力し、「**[!UICONTROL 作成]**」を選択します。 この手順では、生成されたアセットを別のサンドボックスに読み込むことができるパッケージにバンドルします。
 
-   ![ パッケージを作成するためのモーダル ](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
+   ![&#x200B; パッケージを作成するためのモーダル &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. 左側のナビゲーションの **サンドボックス** ページに移動し、「**パッケージ**」タブを選択し、パッケージを見つけて公開します。 ドラフト状態のパッケージを公開するには、[ サンドボックスツール ](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) ドキュメントの手順に従います。
+3. 左側のナビゲーションの **サンドボックス** ページに移動し、「**パッケージ**」タブを選択し、パッケージを見つけて公開します。 ドラフト状態のパッケージを公開するには、[&#x200B; サンドボックスツール &#x200B;](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) ドキュメントの手順に従います。
 
-   ![ パッケージがドラフトまたは未公開の状態です ](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
+   ![&#x200B; パッケージがドラフトまたは未公開の状態です &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![ パッケージの公開 ](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![&#x200B; パッケージの公開 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
 4. 公開が正常に完了すると、パッケージの参照ページで、名前の横に「**+**」ボタンが有効になっているはずです。
 
-   ![ サンドボックスページの「パッケージ」タブ ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; サンドボックスページの「パッケージ」タブ &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
    >[!NOTE]
    >
@@ -53,33 +53,33 @@ ht-degree: 0%
 
 5. **+** コントロールを選択してワークフローを開始し、ユースケースプレイブックによって生成されたアセットを **[!UICONTROL ターゲットサンドボックス]** に読み込みます。 ターゲットサンドボックスを選択し、ドロップダウンを使用して読み込むパッケージ名を確認します。 次の手順に進む前に、ジョブ名やジョブの説明などのジョブの詳細を追加します。
 
-   ![ インポートワークフローの開始、ターゲットの選択、パッケージの確認、ジョブの詳細の追加 ](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
+   ![&#x200B; インポートワークフローの開始、ターゲットの選択、パッケージの確認、ジョブの詳細の追加 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
 6. **[!UICONTROL 依存関係の表示]** 手順では、スキーマをマッピングし、他のアセットを感動的なサンドボックスからターゲットサンドボックスにコピーできます。 各スキーマをマッピングするまで、「**[!UICONTROL 完了]**」ボタンは無効になります。
 
-   ![ 「依存関係を表示」手順でスキーマをマッピングし、「終了」ボタンを有効にします。](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
+   ![&#x200B; 「依存関係を表示」手順でスキーマをマッピングし、「終了」ボタンを有効にします。](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
 ### スキーマのマッピング {#map-schemas}
 
-1. 最初のスキーマのマッピング スキーママッピングダイアログに、ターゲットスキーマを選択するためのドロップダウンが表示されます。 ソーススキーマがプロファイルスキーマの場合、[ 個々の結合プロファイルスキーマ ](/help/xdm/classes/individual-profile.md) 以外にターゲットスキーマオプションはありません。 このページが最初に表示されると、Source データとターゲットフィールドの間に、自動生成されたマッピングレコメンデーションを確認できます。 ターゲットフィールドを選択してから新しいフィールドを選択すると、マッピングを編集できます。 提示されたマッピングを変更する場合は、「**検証**」ボタンを使用して新しいマッピングを検証し、新しいマッピングにリンクされている可能性のあるエラーを表示します。 マッピングが完了したら、「**保存**」を選択します。
+1. 最初のスキーマのマッピング スキーママッピングダイアログに、ターゲットスキーマを選択するためのドロップダウンが表示されます。 ソーススキーマがプロファイルスキーマの場合、[&#x200B; 個々の結合プロファイルスキーマ &#x200B;](/help/xdm/classes/individual-profile.md) 以外にターゲットスキーマオプションはありません。 このページが最初に表示されると、Source データとターゲットフィールドの間に、自動生成されたマッピングレコメンデーションを確認できます。 ターゲットフィールドを選択してから新しいフィールドを選択すると、マッピングを編集できます。 提示されたマッピングを変更する場合は、「**検証**」ボタンを使用して新しいマッピングを検証し、新しいマッピングにリンクされている可能性のあるエラーを表示します。 マッピングが完了したら、「**保存**」を選択します。
 
-   ![ ターゲットスキーマを選択するためのドロップダウンを含むスキーマママッピングダイアログ。](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
+   ![&#x200B; ターゲットスキーマを選択するためのドロップダウンを含むスキーマママッピングダイアログ。](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
-2. スキーマ内のすべてのフィールドのマッピングを続行します。 スキーマが [ イベントスキーマ ](/help/xdm/classes/experienceevent.md) の場合、ダイアログにドロップダウンが表示され、ターゲットサンドボックス内のすべてのイベントスキーマを表示できます。
+2. スキーマ内のすべてのフィールドのマッピングを続行します。 スキーマが [&#x200B; イベントスキーマ &#x200B;](/help/xdm/classes/experienceevent.md) の場合、ダイアログにドロップダウンが表示され、ターゲットサンドボックス内のすべてのイベントスキーマを表示できます。
 
-   ![ ドロップダウンからのターゲットスキーマの選択 ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
+   ![&#x200B; ドロップダウンからのターゲットスキーマの選択 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
 
 3. **ターゲットサンドボックス** で使用可能なスキーマからスキーマを選択します。
 
-   ![ スキーマを選択 ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
+   ![&#x200B; スキーマを選択 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
 
 4. マッピングを完了し、「**保存**」を選択します。
 
-   ![ マッピングを保存 ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
+   ![&#x200B; マッピングを保存 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
 5. スキーマ内のすべてのフィールドのマッピングが完了したら、「**完了**」を選択してインポートワークフローを完了します。
 
-   ![ フローの完了 ](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+   ![&#x200B; フローの完了 &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
    >[!NOTE]
    >
@@ -89,12 +89,12 @@ ht-degree: 0%
 
 1. 読み込みの進行状況を確認できる [**読み込み**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) ページに自動的にリダイレクトされます。
 
-   ![ 読み込みの進行状況を示すページ ](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
+   ![&#x200B; 読み込みの進行状況を示すページ &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
 2. パッケージの読み込み中、パッケージのアセットは、ターゲットサンドボックスに作成されます。 入力が完了すると、読み込みプロセス中にマッピングされたフィールドが参照されます。 これでプロセスが完了し、感動的なサンドボックスのアセットがターゲットサンドボックスにも表示され、テストできるようになりました。
 
-   ![ ターゲットサンドボックスで生成されたアセット ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; ターゲットサンドボックスで生成されたアセット &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## 次の手順
 
-このガイドを読むことで、ユースケースプレイブックを [ サンドボックスツール ](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) と共に活用して、スキーマを参照する実行可能なジャーニーを作成する方法について、理解が深まりました。 一般的な [Real-Time CDPのユースケースについて説明 ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) ます。
+このガイドを読むことで、ユースケースプレイブックを [&#x200B; サンドボックスツール &#x200B;](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) と共に活用して、スキーマを参照する実行可能なジャーニーを作成する方法について、理解が深まりました。 一般的な [Real-Time CDPのユースケースについて説明 &#x200B;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) ます。

@@ -12,5 +12,5 @@ ht-degree: 0%
 
 Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージソリューションです。 このパッケージは、リアルタイム顧客プロファイルの取得後データ準備や、クエリサービスで実行されるバッチクエリによる分析データのユースケースを目的としています。
 
-[SQL インサイトを視覚化する方法 ](../../dashboards/sql-insights-query-pro-mode/overview.md)、または query pro モードを使用して [ カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換する方法 ](../../dashboards/sql-insights-query-pro-mode/overview.md) に関するガイドを参照してください。 Query pro モードを使用して、カスタムダッシュボードにカスタムのインサイトやビジュアライゼーションを作成できます。
+[SQL インサイトを視覚化する方法 &#x200B;](../../dashboards/sql-insights-query-pro-mode/overview.md)、または query pro モードを使用して [&#x200B; カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換する方法 &#x200B;](../../dashboards/sql-insights-query-pro-mode/overview.md) に関するガイドを参照してください。 Query pro モードを使用して、カスタムダッシュボードにカスタムのインサイトやビジュアライゼーションを作成できます。
 

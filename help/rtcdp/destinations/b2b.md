@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Real-time Customer Data Platform B2B Edition を使用していない場合は、代わりに [ 宛先の概要 ](../../destinations/home.md) を参照してください。
+>Adobe Real-time Customer Data Platform B2B Edition を使用していない場合は、代わりに [&#x200B; 宛先の概要 &#x200B;](../../destinations/home.md) を参照してください。
 
 Real-Time CDP B2B Edition で完全にサポートされるExperience Platformの宛先には、Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などがあります。
 
-宛先がお客様の B2B ワークフローにどのように適合するかを理解するには、[ エンドツーエンドのチュートリアル ](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination) を参照してください。
+宛先がお客様の B2B ワークフローにどのように適合するかを理解するには、[&#x200B; エンドツーエンドのチュートリアル &#x200B;](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination) を参照してください。
 
 Adobe Real-time Customer Data Platform B2B Edition を使用すると、Marketo Engage先コネクタを通じて B2B データを書き出すことができます。 Marketo Engageの宛先を使用すると、Adobe Experience Platformで作成したオーディエンスをMarketoにプッシュでき、静的リストとして表示されます。
 
 次のドキュメントでは、Marketo Engageの宛先を使用したデータの書き出しに関する詳細を説明します。
 
-- Real-time Customer Data Platform B2B Edition で使用できる宛先について詳しくは、[ 宛先カタログ ](../../destinations/catalog/overview.md) を参照してください。
-- 宛先に書き出し可能な ID について詳しくは、[Marketo EngageMarketo Engageのドキュメント ](../../destinations/catalog/adobe/marketo-engage.md) を参照してください。
-- Experience PlatformUI でMarketo Engageの宛先に接続し、データを書き出す方法について詳しくは、[Adobe Experience Platform セグメントをMarketo静的リストにプッシュ」を参照してくだ ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja) い。
+- Real-time Customer Data Platform B2B Edition で使用できる宛先について詳しくは、[&#x200B; 宛先カタログ &#x200B;](../../destinations/catalog/overview.md) を参照してください。
+- 宛先に書き出し可能な ID について詳しくは、[Marketo EngageMarketo Engageのドキュメント &#x200B;](../../destinations/catalog/adobe/marketo-engage.md) を参照してください。
+- Experience PlatformUI でMarketo Engageの宛先に接続し、データを書き出す方法について詳しくは、[Adobe Experience Platform セグメントをMarketo静的リストにプッシュ」を参照してくだ &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja) い。

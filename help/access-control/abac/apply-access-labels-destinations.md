@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理
 
-Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;]](overview.md) 機能の一部として、[ 宛先データフロー ](../../dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。
+Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;]](overview.md) 機能の一部として、[&#x200B; 宛先データフロー &#x200B;](../../dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。
 
 アクセスラベルを特定の宛先に追加すると、そのラベルが割り当てられている役割へのアクセス権を持つユーザーのみが、その宛先データフローを表示および編集できます。 宛先データフローがラベルでマークされていない場合、組織に属するすべてのユーザーに表示されます。
 
@@ -27,7 +27,7 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 ### 権限 UI へのアクセス {#access-permissions-ui}
 
-[!UICONTROL &#x200B; 権限 &#x200B;] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。 開始するには、[ 権限の節 ](/help/access-control/abac/end-to-end-guide.md#permissions) を参照してください。
+[!UICONTROL &#x200B; 権限 &#x200B;] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。 開始するには、[&#x200B; 権限の節 &#x200B;](/help/access-control/abac/end-to-end-guide.md#permissions) を参照してください。
 
 ### 役割、ラベルの作成、ユーザーの割り当て {#create-roles-labels-assign-users}
 
@@ -41,7 +41,7 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 データフローにアクセスラベルを適用するには、まず目的の宛先に接続し、データを書き出すデータフローを作成する必要があります。
 
-[ 宛先への接続 ](/help/destinations/ui/connect-destination.md) および [ 宛先へのデータのアクティベート ](/help/destinations/ui/activation-overview.md) に関するガイドを参照してください。 次に、[ 使用可能なコネクタのカタログ ](/help/destinations/catalog/overview.md) から目的の宛先を選択します。
+[&#x200B; 宛先への接続 &#x200B;](/help/destinations/ui/connect-destination.md) および [&#x200B; 宛先へのデータのアクティベート &#x200B;](/help/destinations/ui/activation-overview.md) に関するガイドを参照してください。 次に、[&#x200B; 使用可能なコネクタのカタログ &#x200B;](/help/destinations/catalog/overview.md) から目的の宛先を選択します。
 
 ## 既に使用可能です：他のExperience Platform リソースにアクセスラベルを適用してください {#apply-labels-other-resources}
 
@@ -56,12 +56,12 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 特定のデータフローにアクセスラベルを適用するには：
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、ユーザーアクセスを制限したい宛先データフローを見つけます。
-1. [!UICONTROL &#x200B; 名前 &#x200B;] 列の省略記号（`...`）を選択し、![ 詳細を編集コントロール ](/help/images/icons/key.png)**[!UICONTROL アクセスラベルを適用]** コントロールを使用して新しいラベルを追加し、データフローの既存のラベルを管理します。
-   ![ 宛先ワークスペースの参照表示で「アクセスラベルを適用」を選択します。](/help/access-control/images/olac/apply-access-labels.png)
+1. [!UICONTROL &#x200B; 名前 &#x200B;] 列の省略記号（`...`）を選択し、![&#x200B; 詳細を編集コントロール &#x200B;](/help/images/icons/key.png)**[!UICONTROL アクセスラベルを適用]** コントロールを使用して新しいラベルを追加し、データフローの既存のラベルを管理します。
+   ![&#x200B; 宛先ワークスペースの参照表示で「アクセスラベルを適用」を選択します。](/help/access-control/images/olac/apply-access-labels.png)
 1. 宛先データフローに追加するラベルを選択して、「**[!UICONTROL 保存]**」を選択します。
-   ![ 宛先データフローに適用するのアクセスラベルを選択します。](/help/access-control/images/olac/view-access-labels.png)
+   ![&#x200B; 宛先データフローに適用するのアクセスラベルを選択します。](/help/access-control/images/olac/view-access-labels.png)
 1. データフローに、UI にアクセスラベルが表示されていることに注意してください。
-   ![ 選択したデータフローを含む複数の宛先データフローの表示アクセスラベルの表示方法。](/help/access-control/images/olac/dataflow-with-access-label.png)
+   ![&#x200B; 選択したデータフローを含む複数の宛先データフローの表示アクセスラベルの表示方法。](/help/access-control/images/olac/dataflow-with-access-label.png)
 
 宛先データフローがラベルでマークされていない場合は、すべてのユーザーに対して表示されます。 データフローが 1 つ以上のアクセスラベルでマークされている場合、そのデータフローは、同じラベルまたはラベルの組み合わせを持つ役割に属するユーザーに対してのみ表示されます。
 
@@ -83,10 +83,10 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 >
 > Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルが表示を制限する宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。
 
-![ 特定のユーザーのみが複数のラベルが適用された宛先にアクセスできることを示すベン図。](/help/access-control/images/olac/multiple-labels-venn.png)
+![&#x200B; 特定のユーザーのみが複数のラベルが適用された宛先にアクセスできることを示すベン図。](/help/access-control/images/olac/multiple-labels-venn.png)
 
 ## 次の手順 {#next-steps}
 
 このドキュメントの手順に従うことで、組織のユーザーのサブセットのみが特定の宛先データフローにアクセスできるように、宛先データフローにアクセスラベルを適用する方法を理解できました。
 
-次に、宛先にデータをアクティブ化する際に、[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;] でサポートされる他の機能について詳しく説明します。 例えば、ユーザーのアクセスを [ 特定のフィールドのみを表示およびアクティブ化 ](/help/access-control/abac/overview.md#destinations) に制限できます。
+次に、宛先にデータをアクティブ化する際に、[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;] でサポートされる他の機能について詳しく説明します。 例えば、ユーザーのアクセスを [&#x200B; 特定のフィールドのみを表示およびアクティブ化 &#x200B;](/help/access-control/abac/overview.md#destinations) に制限できます。

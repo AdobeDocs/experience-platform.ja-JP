@@ -17,7 +17,7 @@ Adobe Experience Platform Web SDK は、シングルページアプリケーシ�
 
 シングルページアプリケーション（SPA）などの最新型 web アプリケーションは、代わりに、ページの再読み込みがほどんど独立した、ブラウザーの UI レンダリングの迅速な使用を推進するモデルを採用しています。これらのエクスペリエンスは、スクロール、クリック、カーソル移動などの顧客のインタラクションによってトリガーされます。最新の web の仕組みが進化するにつれて、パーソナライゼーションと実験をデプロイするためのページ読み込みなどの従来の一般的なイベントは機能しなくなりました。
 
-![ ページライフサイクル図 ](assets/web-spa-vs-traditional-lifecycle.png)
+![&#x200B; ページライフサイクル図 &#x200B;](assets/web-spa-vs-traditional-lifecycle.png)
 
 ## SPAに Web SDK を使用するメリット {#web-spa-benefits}
 
@@ -37,21 +37,21 @@ Journey Optimizerの web エディターでは、「_ビュー_ と呼ばれる�
 
 * ホームサイトに移動した後、ヒーロー画像は、季節のコレクションとサイトで入手可能な様々な製品カタログを紹介します。この場合、ビューはホーム画面全体として定義できます。このビューは、単に「ホーム」と呼ぶことができます。
 
-  ![ ホームページを示すサンプルの web サイト画像 ](assets/web-spa-home.png)
+  ![&#x200B; ホームページを示すサンプルの web サイト画像 &#x200B;](assets/web-spa-home.png)
 
 * 顧客は、その会社が販売している製品に興味を持つようになると、**メンズ**&#x200B;のリンクをクリックすることを決定します。ホームページと同様に、**メンズ**&#x200B;ページ全体をビューとして定義できます。このビューには「メンズ」という名前を付けることができます。
 
-  ![ 特定のビューを示すサンプル web サイト画像 ](assets/web-spa-men.png)
+  ![&#x200B; 特定のビューを示すサンプル web サイト画像 &#x200B;](assets/web-spa-men.png)
 
 * ビューはサイト全体またはサイト上のビジュアル要素のグループとして定義できるので、製品サイトに表示される 4 つの製品をグループ化し、ビューと見なすことができます。このビューには、「製品」という名前を付けることができます。
 
-  ![ 特定のビューを示すサンプル web サイト画像 ](assets/web-spa-men-products.png)
+  ![&#x200B; 特定のビューを示すサンプル web サイト画像 &#x200B;](assets/web-spa-men-products.png)
 
 * 顧客が&#x200B;**すべてのメンズ製品**&#x200B;ボタンを使用してサイト上の他の製品を参照する場合、この場合、web サイトの URL は変わりませんが、表示される製品の 2 行目のみを表示するビューをここで作成できます。ビュー名は「製品ページ-2」になります。
 
 * 顧客がサイトでいくつかの製品を購入することを決定し、チェックアウト画面に進みます。買い物かご画面自体を、「買い物かご」という名前のビューに関連付けることができます。または、チェックアウト画面内で別のビューを使用して、下に推奨商品を表示することもできます。
 
-  ![ 特定のビューを示すサンプル web サイト画像 ](assets/web-spa-cart.png)
+  ![&#x200B; 特定のビューを示すサンプル web サイト画像 &#x200B;](assets/web-spa-cart.png)
 
 ビューの概念は、これよりもはるかに広範に拡張できます。これらは、サイトで定義できるビューの例に過ぎません。
 
@@ -61,7 +61,7 @@ XDM ビューはAdobe Journey Optimizerで活用すると、マーケターがJo
 
 これには、1 回限りの開発者向けの設定を完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) をインストールし、[web チャネルの前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=ja) ページを確認します。
+1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) をインストールし、[web チャネルの前提条件 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=ja) ページを確認します。
 
 2. パーソナライズするシングルページアプリケーション内のすべての XDM ビューを決定します。
 
@@ -92,7 +92,7 @@ XDM ビューはAdobe Journey Optimizerで活用すると、マーケターがJo
 
 マーケティングチームは、ホームページ全体で A/B テストを実行したいと考えています。
 
-![ 単一ページアプリケーションのサンプルページ ](assets/web-spa-home.png)
+![&#x200B; 単一ページアプリケーションのサンプルページ &#x200B;](assets/web-spa-home.png)
 
 ホームサイト全体で A/B テストを実行するには、`sendEvent()` は、`home` に設定した XDM `viewName` と共に呼び出す必要があります。
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 マーケティングチームは、ユーザーがすべてのメンズ向け製品をクリックした後に、価格ラベルの色を赤に変更して、2 行目の製品をパーソナライズしたいと考えています。
 
-![ パーソナライズされた製品を含む単一ページアプリケーションのサンプルページ ](assets/web-spa-men-products.png)
+![&#x200B; パーソナライズされた製品を含む単一ページアプリケーションのサンプルページ &#x200B;](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

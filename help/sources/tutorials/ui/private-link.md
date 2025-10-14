@@ -41,26 +41,26 @@ Experience Platform UI のソースワークスペースを使用してプライ
 
 プライベートリンクの使用を開始するには、Experience Platform UI の *[!UICONTROL ソース]* カタログに移動し、ソースワークスペースのタブのメニューから **[!UICONTROL プライベートエンドポイント]** を選択します。
 
-![ 「プライベートエンドポイント」を含むソースカタログ ](../../images/tutorials/private-links/catalog.png)
+![&#x200B; 「プライベートエンドポイント」を含むソースカタログ &#x200B;](../../images/tutorials/private-links/catalog.png)
 
 インターフェイスを使用して、ID、関連するソース、現在のステータスなど、既存のプライベートエンドポイントに関する情報を表示します。 新しいプライベートエンドポイントを作成するには、「**[!UICONTROL プライベートエンドポイントを作成]**」を選択します。
 
-![ 「プライベートエンドポイントを作成」が選択されているプライベートエンドポイントインターフェイス ](../../images/tutorials/private-links/private-endpoints.png)
+![&#x200B; 「プライベートエンドポイントを作成」が選択されているプライベートエンドポイントインターフェイス &#x200B;](../../images/tutorials/private-links/private-endpoints.png)
 
 次に、目的のソースを選択し、次のプロパティの値を入力します。
 
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | プライベートエンドポイントの名前。 |
-| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
-| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
-| `resourceGroup` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
+| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [&#x200B; からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
+| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [&#x200B; に関する &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
+| `resourceGroup` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [&#x200B; に関する  [!DNL Azure]  ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
 
 {style="table-layout:auto"}
 
 終了したら、「**[!UICONTROL 送信]**」を選択します。
 
-![ ソース UI ワークスペースで新しいプライベートエンドポイントを作成するための認証ウィンドウ。](../../images/tutorials/private-links/create-private-endpoint.png)
+![&#x200B; ソース UI ワークスペースで新しいプライベートエンドポイントを作成するための認証ウィンドウ。](../../images/tutorials/private-links/create-private-endpoint.png)
 
 ### プライベートエンドポイントの承認
 
@@ -68,7 +68,7 @@ Experience Platform UI のソースワークスペースを使用してプライ
 
 [!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] ソースに対するプライベートエンドポイントリクエストを承認するには、[!DNL Azure Portal] にログインします。 左側のナビゲーションで「**[!DNL Data storage]**」を選択し、「**[!DNL Security + networking]**」タブに移動して「**[!DNL Networking]**」を選択します。 次に、「**[!DNL Private endpoints]**」を選択して、お使いのアカウントに関連付けられているプライベートエンドポイントとその現在の接続状態のリストを表示します。 保留中のリクエストを承認するには、目的のエンドポイントを選択し、「**[!DNL Approve]**」をクリックします。
 
-![ 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
+![&#x200B; 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
 
 ## プライベートエンドポイントを持つアカウントの作成
 
@@ -78,17 +78,17 @@ Experience Platform UI のソースワークスペースを使用してプライ
 >
 >「[!UICONTROL &#x200B; プライベートエンドポイント &#x200B;]」オプションが有効な場合、Experience Platformは選択したソースに承認済みのプライベートエンドポイントが存在するかどうかを確認します。 承認済みエンドポイントが見つからない場合は、接続を確立できません。
 
-![ プライベートエンドポイントを有効にした新しいアカウント認証手順。](../../images/tutorials/private-links/new-account.png)
+![&#x200B; プライベートエンドポイントを有効にした新しいアカウント認証手順。](../../images/tutorials/private-links/new-account.png)
 
-次に、ソースの [!UICONTROL &#x200B; 既存のアカウント &#x200B;] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![ フィルターアイコン ](../../../images/icons/filter.png) を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
+次に、ソースの [!UICONTROL &#x200B; 既存のアカウント &#x200B;] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![&#x200B; フィルターアイコン &#x200B;](../../../images/icons/filter.png) を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
 
-![ ソースワークフローの既存のアカウントインターフェイスには、プライベートエンドポイント接続が有効になっているフィルター済みアカウントのみが表示されます。](../../images/tutorials/private-links/existing-private-endpoints.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイスには、プライベートエンドポイント接続が有効になっているフィルター済みアカウントのみが表示されます。](../../images/tutorials/private-links/existing-private-endpoints.png)
 
 使用するアカウントを選択し、「**[!UICONTROL インタラクティブオーサリング]** を有効にします。 この切替スイッチは、接続のテスト、フォルダーリストの参照、データのプレビューを可能にする [!UICONTROL &#x200B; 機能である &#x200B;] インタラクティブオーサリング [!DNL Azure] をアクティブにします。 プライベートエンドポイント接続には、[!UICONTROL &#x200B; インタラクティブオーサリング &#x200B;] を有効にする必要があります。 この切り替えは 60 分後に自動的に無効になるので、手動ではオフにできないことに注意してください。
 
 [!UICONTROL &#x200B; インタラクティブオーサリング &#x200B;] を有効にするには数分かかります。 設定を有効にしたら、「**[!UICONTROL 次へ]**」を選択して次の手順に進み、取り込むデータを選択します。
 
-![ 既存のアカウントが選択され、インタラクティブオーサリングが有効になっている。](../../images/tutorials/private-links/interactive-authoring.png)
+![&#x200B; 既存のアカウントが選択され、インタラクティブオーサリングが有効になっている。](../../images/tutorials/private-links/interactive-authoring.png)
 
 ## 次の手順
 

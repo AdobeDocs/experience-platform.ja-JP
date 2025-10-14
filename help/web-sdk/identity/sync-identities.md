@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDKでは、[sendEvent](./overview.md#syncing-identities) コマンドを使用して顧客 ID とその認証状態を宣言する機能をサポートしています。
 
-[ID サービス名前空間 ](../../identity/../identity-service/features/namespaces.md) から名前空間を選択し、ID 記号列の値を使用して、ID の関連先コンテキストを示します。
+[ID サービス名前空間 &#x200B;](../../identity/../identity-service/features/namespaces.md) から名前空間を選択し、ID 記号列の値を使用して、ID の関連先コンテキストを示します。
 
-![ 名前空間 UI の表示 ](../assets/identity/edge_namespaceUI_identity-symbol.png)
+![&#x200B; 名前空間 UI の表示 &#x200B;](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
 Audience Managerをご利用のお客様は、ID タイプを使用する既存のすべてのデータソースに対して、対応する ID 名前空間が自動的に設定されます。 Audience Manager Data Sourceに対応する ID 名前空間を見つけるには、Adobe Experience Platformにログインし、「ID」セクションに移動します。
 

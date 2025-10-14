@@ -17,7 +17,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->このドキュメントで使用される様々な用語の定義については、[ プライバシー規制の用語 ](terminology.md) ガイドを参照してください。
+>このドキュメントで使用される様々な用語の定義については、[&#x200B; プライバシー規制の用語 &#x200B;](terminology.md) ガイドを参照してください。
 
 ## 一般的な質問
 
@@ -25,7 +25,7 @@ ht-degree: 32%
 
 ### サポートされるプライバシー規制は誰に影響を与えますか？
 
-[Experience Cloudがサポートするプライバシー規制 ](./overview.md) は、組織の地理的な場所に関係なく、規制の各管轄区域内の市民の個人データを保存および処理するすべての組織に適用されます。
+[Experience Cloudがサポートするプライバシー規制 &#x200B;](./overview.md) は、組織の地理的な場所に関係なく、規制の各管轄区域内の市民の個人データを保存および処理するすべての組織に適用されます。
 
 ### 個人データとは何ですか？
 
@@ -107,7 +107,7 @@ GDPR などの多くの規制では、機密性の高い個人データを処理
 
 ### プライバシー規制の対象となるデータを維持する場合、消費者のプライバシーリクエストをどのようにサポートできますか？
 
-適切な法的管轄区域に該当するコンシューマーを認証するために必要な手順を実行したら、Adobe Experience Platform Privacy Serviceを使用して、互換性のあるExperience Cloudアプリケーションにコンシューマープライバシーリクエストを送信できます。 詳しくは、[[!DNL Privacy Service]  概要 ](../home.md) を参照してください。 お使いの Experience Cloud アプリケーションがプライバシーリクエストをどのように受け入れるかについて詳しくは、[Privacy Service および Experience Cloud アプリケーション](../experience-cloud-apps.md)のガイドを参照してください。
+適切な法的管轄区域に該当するコンシューマーを認証するために必要な手順を実行したら、Adobe Experience Platform Privacy Serviceを使用して、互換性のあるExperience Cloudアプリケーションにコンシューマープライバシーリクエストを送信できます。 詳しくは、[[!DNL Privacy Service]  概要 &#x200B;](../home.md) を参照してください。 お使いの Experience Cloud アプリケーションがプライバシーリクエストをどのように受け入れるかについて詳しくは、[Privacy Service および Experience Cloud アプリケーション](../experience-cloud-apps.md)のガイドを参照してください。
 
 >[!NOTE]
 >

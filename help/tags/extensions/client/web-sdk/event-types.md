@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # イベントタイプ
 
-ここでは、Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platform イベントタイプについて説明します。 これらは [ ルールの作成 ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ja) に使用されるので、[`xdm` オブジェクトの `eventType` フィールドと混同しないでください ](/help/web-sdk/commands/sendevent/xdm.md)。
+ここでは、Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platform イベントタイプについて説明します。 これらは [&#x200B; ルールの作成 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ja) に使用されるので、[`xdm` オブジェクトの `eventType` フィールドと混同しないでください &#x200B;](/help/web-sdk/commands/sendevent/xdm.md)。
 
 ## モニタリングフックのトリガー {#monitoring-hook-triggered}
 
 Adobe Experience Platform Web SDK には、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、Web SDK ログを取得したりするのに役立ちます。
 
-各モニタリングフックイベントに含まれるパラメーターについて詳しくは、[Web SDK モニタリングフックのドキュメント ](../../../../web-sdk/monitoring-hooks.md) を参照してください。
+各モニタリングフックイベントに含まれるパラメーターについて詳しくは、[Web SDK モニタリングフックのドキュメント &#x200B;](../../../../web-sdk/monitoring-hooks.md) を参照してください。
 
-![ 監視フックイベントタイプを示すタグユーザーインターフェイス画像 ](assets/monitoring-hook-triggered.png)
+![&#x200B; 監視フックイベントタイプを示すタグユーザーインターフェイス画像 &#x200B;](assets/monitoring-hook-triggered.png)
 
 Web SDK タグ拡張機能は、次の監視フックをサポートしています。
 
@@ -44,7 +44,7 @@ Web SDK タグ拡張機能は、次の監視フックをサポートしていま
 
 ## [!UICONTROL &#x200B; 送信イベントの完了 &#x200B;]
 
-通常、Adobe Experience Platform Edge Networkにイベントを送信するには、プロパティに [[!UICONTROL &#x200B; イベントを送信 &#x200B;] アクション ](action-types.md#send-event) を使用する 1 つ以上のルールがあります。 イベントがEdge Networkに送信されるたびに、役立つデータが記載されたレスポンスがブラウザーに返されます。 [!UICONTROL &#x200B; イベント完了を送信 &#x200B;] イベントタイプがないと、返されたデータにアクセスできません。
+通常、Adobe Experience Platform Edge Networkにイベントを送信するには、プロパティに [[!UICONTROL &#x200B; イベントを送信 &#x200B;] アクション &#x200B;](action-types.md#send-event) を使用する 1 つ以上のルールがあります。 イベントがEdge Networkに送信されるたびに、役立つデータが記載されたレスポンスがブラウザーに返されます。 [!UICONTROL &#x200B; イベント完了を送信 &#x200B;] イベントタイプがないと、返されたデータにアクセスできません。
 
 返されたデータにアクセスするには、別のルールを作成してから、[!UICONTROL &#x200B; イベント完了を送信 &#x200B;] イベントをルールに追加します。 このルールは、[!UICONTROL &#x200B; イベントを送信 &#x200B;] アクションの結果として、サーバーから正常な応答を受信するたびにトリガーされます。
 
@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Adobe Target応答トークンへのアクセス
 
-Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
 応答データを処理するルールにあるカスタムコードアクションでは、サーバーから返されたパーソナライゼーションの提案にアクセスできます。 それには、次のカスタムコードを入力します。
 
@@ -253,7 +253,7 @@ Adobe Targetから返されるPersonalization コンテンツには、アクテ�
 var propositions = event.propositions;
 ```
 
-`event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 コンテン `result.propositions` のコンテンツについて詳しくは、[ パーソナライズされたコンテンツの手動レンダリング ](#manually-render-personalized-content) を参照してください。
+`event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 コンテン `result.propositions` のコンテンツについて詳しくは、[&#x200B; パーソナライズされたコンテンツの手動レンダリング &#x200B;](#manually-render-personalized-content) を参照してください。
 
 Web SDK によって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、1 つの配列にプッシュするとします。 その後、単一のアレイをサードパーティに送信できます。 この場合、[!UICONTROL &#x200B; カスタムコード &#x200B;] アクション内にカスタムコードを記述して、次の操作を行います。
 
@@ -293,7 +293,7 @@ if (propositions) {
 
 **[!UICONTROL ルールセット項目を登録]** イベントタイプを使用すると、サーフェスのAdobe Journey Optimizer コンテンツカードを登録できます。 ルールセットが評価されるたびに、このコマンドに提供されるコールバックは、コンテンツカードデータを保持する提案を含む結果オブジェクトを受け取ります。
 
-![ 「購読ルールセット項目」イベントタイプを示すExperience Platformタグのユーザーインターフェイスの画像。](assets/subscribe-ruleset-items.png)
+![&#x200B; 「購読ルールセット項目」イベントタイプを示すExperience Platformタグのユーザーインターフェイスの画像。](assets/subscribe-ruleset-items.png)
 
 このイベントタイプは、次の設定可能なプロパティをサポートしています。
 

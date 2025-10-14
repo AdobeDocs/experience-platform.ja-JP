@@ -47,7 +47,7 @@ ht-degree: 1%
 | 名前 | データ属性 | 説明 |
 | --- | --- | --- |
 | [!DNL Label] | `data-aep-click-label` | クリックされた要素に label データ属性が存在する場合、[!DNL Edge Network] ーザーに送信されたインタラクションの詳細と共に含まれます。 [!DNL Web SDK] は、要素をクリックして DOM ツリーを上に移動し、ラベルデータ属性を探します。 [!DNL Web SDK] は、最初に見つかったラベルを使用します。 |
-| [!DNL Token] | `data-aep-click-token` | このトークンは、[Adobe Journey Optimizer コードベースのキャンペーン ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) で決定ポリシーを活用する際に使用します。 トークンを使用すると、クリックされた決定ポリシー項目を区別できます。 クリックされた要素に token data 属性が存在する場合、Edge Networkに送信されたインタラクションの詳細と共に含まれます。 [!DNL Web SDK] は、要素をクリックして DOM ツリーを上に移動して、トークン データ属性を探します。 [!DNL Web SDK] は、最初に見つけたトークンを使用します。 |
+| [!DNL Token] | `data-aep-click-token` | このトークンは、[Adobe Journey Optimizer コードベースのキャンペーン &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) で決定ポリシーを活用する際に使用します。 トークンを使用すると、クリックされた決定ポリシー項目を区別できます。 クリックされた要素に token data 属性が存在する場合、Edge Networkに送信されたインタラクションの詳細と共に含まれます。 [!DNL Web SDK] は、要素をクリックして DOM ツリーを上に移動して、トークン データ属性を探します。 [!DNL Web SDK] は、最初に見つけたトークンを使用します。 |
 | [!DNL Interact ID] | `data-aep-interact-id` | [!DNL Web SDK] は、提案のレンダリング時に、この一意の ID をコンテナ要素に自動的に追加します。 Web SDKは、この ID を使用して、[!DNL DOM] の要素を提案に関連付けます。 これは [!DNL Web SDK] に必要な ID なので、一切変更しないでください。 無視しても問題ありません。 |
 
 **例**

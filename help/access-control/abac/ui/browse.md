@@ -45,4 +45,4 @@ Adobe Admin Consoleのロールではなく [!DNL Adobe Experience Platform] の
 
 ## 次の手順
 
-権限ワークスペースに移動したら、次の手順 [ 新しい役割の作成 ](roles.md) に進みます。
+権限ワークスペースに移動したら、次の手順 [&#x200B; 新しい役割の作成 &#x200B;](roles.md) に進みます。

@@ -16,4 +16,4 @@ ht-degree: 23%
 
 認証済みデータ収集を使用すると、[!DNL Real-Time Customer Profile] や [!DNL Identity] などのAdobe Experience Platform サービスで、信頼できるソースと信頼できないソースのレコードを区別できます。 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
 
-認証済みストリーミング接続を作成する方法については、[HTTP API ソース API ガイド ](../../sources/tutorials/api/create/streaming/http.md) を参照してください。
+認証済みストリーミング接続を作成する方法については、[HTTP API ソース API ガイド &#x200B;](../../sources/tutorials/api/create/streaming/http.md) を参照してください。

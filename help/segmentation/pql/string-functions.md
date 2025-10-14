@@ -12,7 +12,7 @@ ht-degree: 66%
 
 # 文字列関数
 
-[!DNL Profile Query Language] （PQL）が提供する関数によって、文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+[!DNL Profile Query Language] （PQL）が提供する関数によって、文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## 次に類似
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## matches
 
-`matches` 関数は、文字列が特定の正規表現と一致するかどうかを判定するために使用されます。正規表現のマッチングパターンをブール値として使用する方法について詳しくは、[ このドキュメント ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) を参照してください。
+`matches` 関数は、文字列が特定の正規表現と一致するかどうかを判定するために使用されます。正規表現のマッチングパターンをブール値として使用する方法について詳しくは、[&#x200B; このドキュメント &#x200B;](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) を参照してください。
 
 **形式**
 

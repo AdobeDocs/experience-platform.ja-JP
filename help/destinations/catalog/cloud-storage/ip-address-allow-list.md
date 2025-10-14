@@ -43,7 +43,7 @@ Adobeでは、クラウドストレージの宛先接続を使用する前に、
 
 ## AWSを使用している米国のお客様 {#aws}
 
-以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 &#x200B;](../../../landing/multi-cloud.md) を参照してください。
 
 >[!NOTE]
 >

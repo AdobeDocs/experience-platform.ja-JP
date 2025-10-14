@@ -435,19 +435,19 @@ AI アシスタントの使用例については、次のビデオをご覧く�
 
 AI アシスタントのユースケースの例については、以下を参照してください。
 
-* [ チームの新しいメンバーのオンボーディング時間を短縮 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ja)
-* [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ja)
-* [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ja)
-* [ 新機能の検出とデプロイを迅速化 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ja)
-* [AI アシスタントでカスタマーサポートに革命を起こす ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ja)
+* [&#x200B; チームの新しいメンバーのオンボーディング時間を短縮 &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ja)
+* [&#x200B; オーディエンスを整理し、マーケティング業務を最適化する &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ja)
+* [&#x200B; 依存関係を確認し、データ更新中のリスクを最小限に抑える &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ja)
+* [&#x200B; 新機能の検出とデプロイを迅速化 &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ja)
+* [AI アシスタントでカスタマーサポートに革命を起こす &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ja)
 
 >[!TAB  追加のビデオコンテンツ ]
 
 その他の AI アシスタントの使用例については、次のビデオをご覧ください。
 
-* [AI アシスタントのパワーを解き放つ ](https://www.youtube.com/watch?v=J48CNmcV7wc)
-* [AI Assistant for Audiences の概要 ](https://www.youtube.com/live/DYsyii7ldck)
-* [AI アシスタントで運用に関するインサイトを活用 ](https://www.youtube.com/watch?v=fGgFwAOZle8)
+* [AI アシスタントのパワーを解き放つ &#x200B;](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [AI Assistant for Audiences の概要 &#x200B;](https://www.youtube.com/live/DYsyii7ldck)
+* [AI アシスタントで運用に関するインサイトを活用 &#x200B;](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 

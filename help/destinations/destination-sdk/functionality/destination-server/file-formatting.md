@@ -24,7 +24,7 @@ Destination SDK でファイルベースの宛先を作成する場合、書き�
 
 ファイル形式設定は、ファイルベースの宛先に対する宛先サーバー設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介してファイル形式オプションを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -200,7 +200,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | オプション | 書き出されるファイルごとの最大行数を 1,000,000～10,000,000 行の範囲で示します。 | 5,000,000 |
-| `includeFileManifest` | オプション | ファイルの書き出しと共にファイル マニフェストの書き出しのサポートを有効にします。 マニフェスト JSON ファイルには、エクスポートの場所、エクスポートサイズなどに関する情報が含まれています。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 | [ サンプル マニフェスト ファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。 <ul><li>`flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。</li><li>`scheduledTime`: ファイルが書き出された時間（UTC 単位）。 </li><li>`exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。 </li><li>`exportResults.name`：書き出すファイルの名前。</li><li>`size`：書き出されたファイルのサイズ（バイト単位）。</li></ul> |
+| `includeFileManifest` | オプション | ファイルの書き出しと共にファイル マニフェストの書き出しのサポートを有効にします。 マニフェスト JSON ファイルには、エクスポートの場所、エクスポートサイズなどに関する情報が含まれています。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 | [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。 <ul><li>`flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。</li><li>`scheduledTime`: ファイルが書き出された時間（UTC 単位）。 </li><li>`exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。 </li><li>`exportResults.name`：書き出すファイルの名前。</li><li>`size`：書き出されたファイルのサイズ（バイト単位）。</li></ul> |
 
 {style="table-layout:auto"}
 

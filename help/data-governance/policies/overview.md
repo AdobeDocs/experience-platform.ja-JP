@@ -27,7 +27,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->データ使用ポリシーを [ アクセス制御ポリシー ](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL &#x200B; 権限 &#x200B;]」タブを使用して設定します。
+>データ使用ポリシーを [&#x200B; アクセス制御ポリシー &#x200B;](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL &#x200B; 権限 &#x200B;]」タブを使用して設定します。
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL &#x200B; ヘルスケア提供組織 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL Healthcare Provider] は、[[!UICONTROL Provider] クラス ](../../classes/provider.md) の標準スキーマフィールドグループです。 診断および治療のヘルスケアサービスを提供するための免許を持つ医療従事者個人または医療施設組織に関連するプロパティを収集する単一のオブジェクトタイプのフィールド `healthcareProvider` ードを提供します。
+[!UICONTROL Healthcare Provider] は、[[!UICONTROL Provider] クラス &#x200B;](../../classes/provider.md) の標準スキーマフィールドグループです。 診断および治療のヘルスケアサービスを提供するための免許を持つ医療従事者個人または医療施設組織に関連するプロパティを収集する単一のオブジェクトタイプのフィールド `healthcareProvider` ードを提供します。
 
 ![](../../images/field-groups/healthcare-provider.png)
 
@@ -32,4 +32,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) を参照してください。

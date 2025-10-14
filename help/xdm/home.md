@@ -27,7 +27,7 @@ Experience Platform では、スキーマを使用して、一貫性のある再
 
 データをExperience Platformに取り込む前に、データの構造を記述し、各フィールドに含めることができるデータのタイプに制約を適用するためのスキーマを作成する必要があります。 スキーマは、基本クラスと 0 個以上のスキーマフィールドグループで構成されます。
 
-デザインの原則やベストプラクティスなど、スキーマ構成モデルについて詳しくは、[ スキーマ構成の基本 ](schema/composition.md) を参照してください。
+デザインの原則やベストプラクティスなど、スキーマ構成モデルについて詳しくは、[&#x200B; スキーマ構成の基本 &#x200B;](schema/composition.md) を参照してください。
 
 ### 標準 XDM コンポーネント {#Standard-xdm-components}
 
@@ -35,7 +35,7 @@ XDM は、標準的なフィールドグループとデータタイプの堅牢�
 
 Experience Platform UI でスキーマを構築する場合、リストされたフィールドグループが人気度指標と共に表示されます。この指標は、他のExperience Platform ユーザーがスキーマでそのフィールドグループを使用する頻度によって決定されます。 数値が大きくなるほど、フィールドグループの人気度が高くなります。デフォルトでは、最も人気のあるものから順に結果が表示されるので、業界のデータモデリングのトレンドを常に把握できます。
 
-![ フィールドグループを追加 [!UICONTROL &#x200B; ダイアログの「人気度」列 &#x200B;] す。](./images/overview/popularity.png)
+![&#x200B; フィールドグループを追加 [!UICONTROL &#x200B; ダイアログの「人気度」列 &#x200B;] す。](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
@@ -67,7 +67,7 @@ Experience Platform 用のデータは、次の 3 つの動作タイプに分類
 
 >[!NOTE]
 >
->アドホック動作に基づく標準クラスはありません。アドホックスキーマは、それを使用するExperience Platform プロセスによって自動的に生成されますが、[Schema Registry API を使用して手動で作成する ](./tutorials/ad-hoc.md) こともできます。
+>アドホック動作に基づく標準クラスはありません。アドホックスキーマは、それを使用するExperience Platform プロセスによって自動的に生成されますが、[Schema Registry API を使用して手動で作成する &#x200B;](./tutorials/ad-hoc.md) こともできます。
 
 ### [!UICONTROL XDM 個人プロファイル] {#xdm-individual-profile}
 
@@ -87,7 +87,7 @@ XDM ExperienceEvent は、イベント（または一連のイベント）が発
 
 すべてのイベントがすべてのデータソースをまたいで簡単に分類できるとは限りませんが、類似したイベントを、できる限り似たタイプのイベントと調和させるとは非常に便利です。
 
-![ エクスペリエンスイベントを使用して経時的に可視化したカスタマージャーニーのインフォグラフィック。](images/overview/experience-event-journey.png)
+![&#x200B; エクスペリエンスイベントを使用して経時的に可視化したカスタマージャーニーのインフォグラフィック。](images/overview/experience-event-journey.png)
 
 クラスが提供するフィールドの構造およびユースケースについて詳しくは、[[!UICONTROL XDM エクスペリエンスイベント]リファレンスガイド](./classes/experienceevent.md)を参照してください。
 
@@ -103,7 +103,7 @@ Experience Platformは、スキーマに依存しません。つまり、XDM 標
 
 Experience Platform へのデータ取り込みを開始するには、カタログサービスを使用してデータセットを作成します。データセットは、取り込むデータの構造を記述した XDM スキーマを参照します。スキーマを使用せずにデータセットを作成した場合、Experience Platform は、取り込んだデータフィールドのタイプと内容を調べることで、「観察されたスキーマ」を派生します。その後、データセットはカタログサービスで追跡され、ベースとなるスキーマおよび観測されたスキーマと共にデータレイクに保存されます。
 
-詳しくは、[ カタログサービスの概要 ](../catalog/home.md) を参照してください。 Adobe Experience Platformのデータ取り込みについて詳しくは、[ データ取り込みの概要 ](../ingestion/home.md) を参照してください。
+詳しくは、[&#x200B; カタログサービスの概要 &#x200B;](../catalog/home.md) を参照してください。 Adobe Experience Platformのデータ取り込みについて詳しくは、[&#x200B; データ取り込みの概要 &#x200B;](../ingestion/home.md) を参照してください。
 
 ### Data Mirrorとモデルベースのスキーマ {#model-based-schemas}
 
@@ -111,11 +111,11 @@ Experience Platform へのデータ取り込みを開始するには、カタロ
 >
 >Data Mirrorおよびモデルベースのスキーマは、Adobe Journey Optimizer **オーケストレートキャンペーン** のライセンスホルダーが使用できます。 ライセンスとイネーブルメント機能に応じて、Customer Journey Analytics ユーザー向けの **限定リリース** としても使用できます。 アクセスについては、Adobe担当者にお問い合わせください。
 
-Data Mirrorは、モデルベースのスキーマを使用して高度なデータベース同期を有効にするAdobe Experience Platform機能です。 Data Mirrorの機能とユースケースについて詳しくは、[Data Mirrorの概要 ](./data-mirror/overview.md) を参照してください。
+Data Mirrorは、モデルベースのスキーマを使用して高度なデータベース同期を有効にするAdobe Experience Platform機能です。 Data Mirrorの機能とユースケースについて詳しくは、[Data Mirrorの概要 &#x200B;](./data-mirror/overview.md) を参照してください。
 
 Data Mirrorは、構造化されたリレーショナルスタイルのデータパターン用に設計されたモデルベースのスキーマを通じて動作します。 プライマリキーを適用し、バージョン識別子をサポートし、プライマリキーと外部キーを使用してスキーマとスキーマの関係を定義します。 標準の XDM スキーマとは異なり、クラスやフィールドグループは必要なく、変更データキャプチャ取り込みワークフロー用に最適化されています。
 
-スキーマとスキーマの関係を定義する方法について詳しくは、[ 記述子エンドポイントのドキュメント ](./api/descriptors.md) を参照してください。
+スキーマとスキーマの関係を定義する方法について詳しくは、[&#x200B; 記述子エンドポイントのドキュメント &#x200B;](./api/descriptors.md) を参照してください。
 
 次の場合にData Mirrorを使用します。
 
@@ -132,8 +132,8 @@ Data Mirrorは、構造化されたリレーショナルスタイルのデータ
 
 詳細な手順とユースケースのガイダンスについては、以下を参照してください。
 
-* [Data Mirrorの概要 ](./data-mirror/overview.md) – 機能、ユースケースおよび実装計画
-* [ モデルベースのスキーマに関する技術リファレンス ](./schema/model-based.md) – 技術仕様と制約
+* [Data Mirrorの概要 &#x200B;](./data-mirror/overview.md) – 機能、ユースケースおよび実装計画
+* [&#x200B; モデルベースのスキーマに関する技術リファレンス &#x200B;](./schema/model-based.md) – 技術仕様と制約
 * [UI チュートリアル](./ui/resources/schemas.md#create-model-based-schema)
 * [API チュートリアル](./api/schemas.md#create-model-based-schema)
 * [記述子（識別子）のドキュメント](./api/descriptors.md#relationship-descriptor)

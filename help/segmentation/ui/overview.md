@@ -51,7 +51,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 さらに、オーディエンスポータルを使用すると、セグメントビルダーまたはオーディエンスコンポジションを使用して新しいオーディエンスを作成したり、外部で生成されたオーディエンスをExperience Platformに読み込んだりできます。
 
-Audience Portal について詳しくは、[Audience Portal の概要 ](./audience-portal.md) を参照してください。
+Audience Portal について詳しくは、[Audience Portal の概要 &#x200B;](./audience-portal.md) を参照してください。
 
 ## 構成 {#compositions}
 
@@ -67,7 +67,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 | ------ | ----------- |
 | 複製 | 選択したオーディエンスをコピーします。 |
 | アクセスの管理 | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
-| 削除 | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[ セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
+| 削除 | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[&#x200B; セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
 
 「![テーブルをカスタマイズ](/help/images/icons/column-settings.png)」アイコンを選択して、表示するフィールドを変更できます。
 
@@ -94,7 +94,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
-![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
+![&#x200B; 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
 ## ストリーミングセグメント化 {#streaming-segmentation}
 

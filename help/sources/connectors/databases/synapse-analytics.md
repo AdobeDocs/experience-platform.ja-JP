@@ -36,7 +36,7 @@ ht-degree: 8%
 * **ソースの表示**
 * **ソースの管理**
 
-これらの権限がない場合は、製品管理者に連絡してアクセス権をリクエストしてください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+これらの権限がない場合は、製品管理者に連絡してアクセス権をリクエストしてください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/ui/overview.md) を参照してください。
 
 ### Experience Platformに対する認証
 
@@ -62,7 +62,7 @@ ht-degree: 8%
 * 秘密鍵
 * テナント ID
 
-次に、[[!DNL Azure Synapse Analytics]  インスタンス ](https://azure.microsoft.com/en-ca/products/synapse-analytics) に移動し、外部プロバイダーからユーザーを作成するオプションを選択します。 ここから、スキーマのサービスプリンシパルに適した権限を指定します。 **メモ：**：スキーマのプレビューには、「コピー」と同様に、「SELECT」を含める必要があります。 例えば、次のようなコマンドがあります。
+次に、[[!DNL Azure Synapse Analytics]  インスタンス &#x200B;](https://azure.microsoft.com/en-ca/products/synapse-analytics) に移動し、外部プロバイダーからユーザーを作成するオプションを選択します。 ここから、スキーマのサービスプリンシパルに適した権限を指定します。 **メモ：**：スキーマのプレビューには、「コピー」と同様に、「SELECT」を含める必要があります。 例えば、次のようなコマンドがあります。
 
 ```SQL
 GRANT SELECT ON SCHEMA::dbo TO {APP_ID};

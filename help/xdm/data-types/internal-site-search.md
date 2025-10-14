@@ -39,4 +39,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json) を参照してください。
+データタイプについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json) を参照してください。

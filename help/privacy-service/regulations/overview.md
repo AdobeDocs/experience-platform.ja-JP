@@ -40,7 +40,7 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | MCDPA （モンタナ） | `mcdpa_mt_usa` | [[!DNL Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095) は、事業者が収集、共有、販売する個人データの内容と、その利用目的を知る権利を住民に与えます。 また、収集したデータを修正、削除、またはコピーを取得する機能も付与されます。 この法律は、50,000 を超える Montana の消費者のデータを処理する企業に適用されます。 同法は、生体情報や遺伝情報を含む機密性の高い個人データの保護を重視している。 |
 | MHMDA （ワシントン州） | `mhmda_wa_usa` | [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) は、消費者の健康データに関するプライバシー権を強化します。 健康データの開示、消費者の同意、削除権を義務付け、許可なく健康データを販売することを禁止しています。 さらに同法は、医療施設の周辺でジオフェンスを使用することを違法にしている。 |
 | NDPA （ネブラスカ州） | `ndpa_ne_usa` | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf) は、ネブラスカ人に対し、自身の個人データに対する権利を提供しています。これには、アクセス、訂正、削除、販売のオプトアウトなどが含まれます。 この法律は、データ処理と個人情報の販売からの収益に関する特定の閾値を満たす企業に適用されます。 また、企業に対しては、適切なデータセキュリティ対策を実施すること、およびコンプライアンスに関する問題を解決するために罰則が科される 30 日間のキュア期間を義務付けています。 |
-| ニュージーランド [!DNL Privacy Act] | `nzpa_nzl` | [ ニュージーランド  [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、ニュージーランドの市民や団体の個人情報の収集、使用、開示、保管、アクセスの方法を管理しています。 2020 年に同法の最新版は、これらのプライバシー法に大幅な更新を加えました。 この更新には、新たな犯罪、罰金の増加、データ侵害に対する通知の義務化、個人情報保護委員会の権限強化などが含まれている。 |
+| ニュージーランド [!DNL Privacy Act] | `nzpa_nzl` | [&#x200B; ニュージーランド  [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、ニュージーランドの市民や団体の個人情報の収集、使用、開示、保管、アクセスの方法を管理しています。 2020 年に同法の最新版は、これらのプライバシー法に大幅な更新を加えました。 この更新には、新たな犯罪、罰金の増加、データ侵害に対する通知の義務化、個人情報保護委員会の権限強化などが含まれている。 |
 | NHDPA （ニューハンプシャー州） | `nhpa_nh_usa` | [[!DNL New Hampshire Privacy Act]](https://www.doj.nh.gov/sites/g/files/ehbemt721/files/inline-documents/sonh/data-privacy-faqs-revised_0.pdf) は、データのアクセス、削除、ポータビリティに関する消費者権を確立することにより、ニューハンプシャー州の住民の個人情報を保護します。 組織はデータ収集と共有の慣行を開示する必要があり、消費者はデータ販売をオプトアウトできます。 この法律は、特定のデータ処理しきい値を満たすビジネスに適用されます。 |
 | NJDPA （ニュージャージー州） | `njdpa_nj_usa` | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF) は、ニュージャージー州の居住者に情報へのアクセス、訂正、および削除の権利を提供することにより、自身の個人データを管理することを許可します。 データ販売とターゲット広告のオプトアウトメカニズムが含まれます。 この法律は、大量の消費者データを処理し、データ使用の透明性を義務付ける企業を対象としています。 |
 | OCPA （オレゴン） | `ocpa_or_usa` | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) （OCPA）は、オレゴンの居住者に個人データの基本的権利を提供し、そのようなデータを処理する企業に義務を課します。 消費者は、自分のデータのコピーを知り、修正し、削除し、取得する権利を持ち、ターゲット広告や販売のためのデータ処理をオプトアウトします。 同法は、機密データの保護強化、特定の目的を超えたデータ処理に対する同意、データ管理者による包括的なプライバシー通知の提供を義務付けています。 |
@@ -53,7 +53,7 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 
 {style="table-layout:auto"}
 
-Privacy Service API を使用してアクセスリクエストと削除リクエストを送信、トラッキング、管理する方法については、[ プライバシージョブエンドポイントガイド ](../api/privacy-jobs.md) を参照してください。 このガイドには、使い始めるのに役立つ例とフォーマットの詳細が含まれています。
+Privacy Service API を使用してアクセスリクエストと削除リクエストを送信、トラッキング、管理する方法については、[&#x200B; プライバシージョブエンドポイントガイド &#x200B;](../api/privacy-jobs.md) を参照してください。 このガイドには、使い始めるのに役立つ例とフォーマットの詳細が含まれています。
 
 ## 次の手順
 
@@ -62,4 +62,4 @@ Privacy Service API を使用してアクセスリクエストと削除リクエ
 * [プライバシー規制 FAQ](./faq.md)
 * [プライバシー規制の用語](./terminology.md)
 
-Experience Cloud アプリケーションに保存されたデータに対するカスタマーアクセスリクエストおよび削除リクエストのサポート方法については、[Privacy ServiceおよびExperience Cloud アプリケーション ](../experience-cloud-apps.md) のガイドを参照してください。
+Experience Cloud アプリケーションに保存されたデータに対するカスタマーアクセスリクエストおよび削除リクエストのサポート方法については、[Privacy ServiceおよびExperience Cloud アプリケーション &#x200B;](../experience-cloud-apps.md) のガイドを参照してください。

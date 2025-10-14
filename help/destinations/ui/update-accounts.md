@@ -15,7 +15,7 @@ ht-degree: 10%
 
 ## 概要 {#overview}
 
-「**[!UICONTROL アカウント]**」タブには、様々な宛先との接続を確立した場合の詳細が表示されます。 各宛先アカウントについて取得できるすべての情報については、[ アカウントの概要 ](../ui/destinations-workspace.md#accounts) を参照してください。
+「**[!UICONTROL アカウント]**」タブには、様々な宛先との接続を確立した場合の詳細が表示されます。 各宛先アカウントについて取得できるすべての情報については、[&#x200B; アカウントの概要 &#x200B;](../ui/destinations-workspace.md#accounts) を参照してください。
 
 このチュートリアルでは、Experience PlatformUI を使用して、宛先アカウントの詳細を更新する手順を説明します。
 
@@ -35,29 +35,29 @@ ht-degree: 10%
 
 2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたフィルターされたアカウントの選択を表示できます。
 
-   ![ 宛先アカウントのフィルタリング ](../assets/ui/update-accounts/filter-accounts.png)
+   ![&#x200B; 宛先アカウントのフィルタリング &#x200B;](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 更新するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 「![ 詳細を編集ボタン ](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集]** ボタンを選択して、アカウント情報を編集します。
+3. 更新するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 「![&#x200B; 詳細を編集ボタン &#x200B;](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集]** ボタンを選択して、アカウント情報を編集します。
 
-   ![ アカウントを編集 ](../assets/ui/update-accounts/accounts-edit.png)
+   ![&#x200B; アカウントを編集 &#x200B;](../assets/ui/update-accounts/accounts-edit.png)
 
 4. 更新したアカウント資格情報を入力します。
 
    * `OAuth1` または `OAuth2` の接続タイプを使用するアカウントの場合は、「**[!UICONTROL OAuth に再接続]**」を選択してアカウント資格情報を更新します。 また、アカウントの名前と説明を更新することもできます。
 
-   ![ 詳細 OAuth を編集 ](../assets/ui/update-accounts/edit-details-oauth.png)
+   ![&#x200B; 詳細 OAuth を編集 &#x200B;](../assets/ui/update-accounts/edit-details-oauth.png)
 
    * `Access Key` または `ConnectionString` の接続タイプを使用するアカウントの場合、アクセス ID、秘密鍵、接続文字列などの情報を含むアカウント認証情報を編集できます。 また、アカウントの名前と説明を更新することもできます。
 
-   ![ 詳細アクセスキーを編集 ](../assets/ui/update-accounts/edit-details-key.png)
+   ![&#x200B; 詳細アクセスキーを編集 &#x200B;](../assets/ui/update-accounts/edit-details-key.png)
 
    * `Bearer token` 接続タイプを使用するアカウントの場合、必要に応じて、新しいベアラートークンを入力できます。 また、アカウントの名前と説明を更新することもできます。
 
-   ![ 詳細ベアラートークンを編集 ](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![&#x200B; 詳細ベアラートークンを編集 &#x200B;](../assets/ui/update-accounts/edit-details-bearer.png)
 
    * `Server to server` 接続タイプを使用するアカウントの場合、アカウントの名前と説明を更新できます。
 
-   ![ 詳細をサーバー間で編集 ](../assets/ui/update-accounts/edit-details-s2s.png)
+   ![&#x200B; 詳細をサーバー間で編集 &#x200B;](../assets/ui/update-accounts/edit-details-s2s.png)
 
 5. 「**[!UICONTROL 保存]**」を選択して、アカウントの詳細の更新を終了します。
 
@@ -65,4 +65,4 @@ ht-degree: 10%
 
 このチュートリアルでは、**[!UICONTROL destinations]** ワークスペースを使用して既存のアカウントを正常に更新しました。
 
-宛先について詳しくは、[ 宛先の概要 ](../catalog/overview.md) を参照してください。
+宛先について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../catalog/overview.md) を参照してください。

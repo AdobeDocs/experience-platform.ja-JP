@@ -32,13 +32,13 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 ### [!DNL Event Hubs] とExperience Platformの並列処理を強化
 
-並列処理とは、複数の処理ユニットで同じタスクを同時に実行することで、処理の高速化と高性能化を図ることを指します。 パーティションを増やすか、[!DNL Event Hubs] アカウントの処理単位を増やすことで、[!DNL Event Hubs] 側の並列処理を増やすことができます。 詳しくは、この [[!DNL Event Hubs]  拡大縮小に関するドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
+並列処理とは、複数の処理ユニットで同じタスクを同時に実行することで、処理の高速化と高性能化を図ることを指します。 パーティションを増やすか、[!DNL Event Hubs] アカウントの処理単位を増やすことで、[!DNL Event Hubs] 側の並列処理を増やすことができます。 詳しくは、この [[!DNL Event Hubs]  拡大縮小に関するドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
 
 Experience Platform側の取り込み速度を上げるには、Experience Platformが [!DNL Event Hubs] パーティションから読み取るソースコネクタのタスク数を増やす必要があります。 [!DNL Event Hubs] 側の並列性を高めたら、Adobeの担当者に連絡して、新しいパーティションに基づいてExperience Platform タスクを拡張してください。 現在、このプロセスは自動化されていません。
 
 ## 仮想ネットワークを使用して [!DNL Event Hubs] をExperience Platformに接続する
 
-ファイアウォール対策を有効にしながらExperience Platformに接続する [!DNL Event Hubs] うに、仮想ネットワークを設定できます。 仮想ネットワークを設定するには、この [[!DNL Event Hubs]  ネットワークのルールセットのドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照し、次の手順に従います。
+ファイアウォール対策を有効にしながらExperience Platformに接続する [!DNL Event Hubs] うに、仮想ネットワークを設定できます。 仮想ネットワークを設定するには、この [[!DNL Event Hubs]  ネットワークのルールセットのドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照し、次の手順に従います。
 
 * REST API パネルから **試す** を選択します。
 * 同じブラウザーの資格情報を使用して [!DNL Azure] アカウントを認証します。
@@ -119,7 +119,7 @@ Experience Platform サブネットの様々なリージョンについては、
 }
 ```
 
-ネットワーク ルール セットの詳細については、次の [[!DNL Event Hubs]  ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
+ネットワーク ルール セットの詳細については、次の [[!DNL Event Hubs]  ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
 
 ## [!DNL Event Hubs] をExperience Platformに接続
 

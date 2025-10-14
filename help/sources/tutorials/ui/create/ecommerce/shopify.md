@@ -20,12 +20,12 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ エクスペリエンスデータモデル（XDM）システム ](../../../../../xdm/home.md):[!DNL Experience Platform] が顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [&#x200B; エクスペリエンスデータモデル（XDM）システム &#x200B;](../../../../../xdm/home.md):[!DNL Experience Platform] が顧客体験データを整理する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL Shopify] 接続がある場合は、このドキュメントの残りの部分をスキップし、[e コマースコネクタのデータフローの設定 ](../../dataflow/ecommerce.md) に関するチュートリアルに進んで構いません。
+既に [!DNL Shopify] 接続がある場合は、このドキュメントの残りの部分をスキップし、[e コマースコネクタのデータフローの設定 &#x200B;](../../dataflow/ecommerce.md) に関するチュートリアルに進んで構いません。
 
 ### 必要な資格情報の収集
 
@@ -36,7 +36,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `host` | [!DNL Shopify] サーバーのエンドポイント。 |
 | `accessToken` | [!DNL Shopify] ユーザーアカウントのアクセストークン。 |
 
-基本について詳しくは、この [[!DNL Shopify]  ドキュメント ](https://shopify.dev/concepts/about-apis/authentication) を参照してください。
+基本について詳しくは、この [[!DNL Shopify]  ドキュメント &#x200B;](https://shopify.dev/concepts/about-apis/authentication) を参照してください。
 
 ## [!DNL Shopify] アカウントの接続
 
@@ -56,7 +56,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL Shopify] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/shopify/new.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/shopify/new.png)
 
 ### 既存のアカウント
 

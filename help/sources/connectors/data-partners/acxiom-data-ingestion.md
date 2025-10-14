@@ -30,11 +30,11 @@ ht-degree: 32%
 
 ## IP アドレスの許可リスト
 
-ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス ](../../ip-address-allow-list.md) を参照してください。
+ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス &#x200B;](../../ip-address-allow-list.md) を参照してください。
 
 ### Experience Platformに対する権限の設定
 
-**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom Data Ingestion] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom Data Ingestion] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/ui/overview.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -49,4 +49,4 @@ ht-degree: 32%
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Acxiom] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Acxiom Data Ingestion]  に関するガイドに進むことができ ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md) す。
+このドキュメントでは、[!DNL Acxiom] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Acxiom Data Ingestion]  に関するガイドに進むことができ &#x200B;](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md) す。

@@ -16,7 +16,7 @@ ht-degree: 5%
 
 [!UICONTROL Appointment] は、[[!DNL XDM Individual Profile] class](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 患者、医療従事者、関係者、および/または特定の日時のデバイス間でのヘルスケアイベントの予約に関する情報を含む、単一のオブジェクトタイプのフィールド `healthcareAppointment` ータを提供します。
 
-![ 予定フィールドグループ構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/appointment.png)
+![&#x200B; 予定フィールドグループ構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/appointment.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -28,12 +28,12 @@ ht-degree: 5%
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | 予定にリンクされている一意の ID のリスト。 これらの識別子は、ビジネス ルールに基づいて割り当てられているか、予定への直接 URL リンクが適切でない場合に割り当てられます。 |
 | [!UICONTROL &#x200B; 注 &#x200B;] | `note` | [[!UICONTROL Annotation]](../data-types/annotation.md) の配列 | 予定に関する追加のメモまたはコメント。 |
 | [!UICONTROL &#x200B; 元の予定 &#x200B;] | `originatingAppointment` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 関連する予定の定期的なセットの元の予定。 |
-| [!UICONTROL &#x200B; 参加者 &#x200B;] | `participant` | オブジェクトの配列 | 予定に関与した参加者のリスト。 詳しくは、[ 以下の節 ](#participant) を参照してください。 |
+| [!UICONTROL &#x200B; 参加者 &#x200B;] | `participant` | オブジェクトの配列 | 予定に関与した参加者のリスト。 詳しくは、[&#x200B; 以下の節 &#x200B;](#participant) を参照してください。 |
 | [!UICONTROL &#x200B; 患者指導 &#x200B;] | `patientInstruction` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/reference.md) の配列 | 予約に関連する診断。 |
 | [!UICONTROL &#x200B; 前の予定 &#x200B;] | `previousAppointment` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 関連する一連の予定の前の予定。 |
 | [!UICONTROL 優先度] | `priority` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 予定の優先順位。予定の優先順位を変更する必要がある場合に、十分な情報に基づいた決定を行うために使用できます。 iCal 規格では、`0` は未定義、`1` は最高、`9` は最低の優先度として指定されます。 |
 | [!UICONTROL 理由] | `reason` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 予定がスケジュールされている理由（通常、条件または手順）。 |
-| [!UICONTROL &#x200B; 繰り返しテンプレート &#x200B;] | `recurrenceTemplate` | オブジェクトの配列 | 定期的な予定の作成に使用する定期的なパターンまたはテンプレートの詳細を含みます。  詳しくは、[ 以下の節 ](#recurrence) を参照してください。 |
+| [!UICONTROL &#x200B; 繰り返しテンプレート &#x200B;] | `recurrenceTemplate` | オブジェクトの配列 | 定期的な予定の作成に使用する定期的なパターンまたはテンプレートの詳細を含みます。  詳しくは、[&#x200B; 以下の節 &#x200B;](#recurrence) を参照してください。 |
 | [!UICONTROL &#x200B; 置換 &#x200B;] | `replaces` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | この予定に置き換えられる予定です。 キャンセルがある場合、キャンセルの詳細は、参照先のリソースの `cancellationReason` プロパティで確認できます。 |
 | [!UICONTROL &#x200B; 申請期間 &#x200B;] | `requestedPeriod` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) の配列 | 予定をスケジュールすることが望ましい一連の日付範囲（場合によっては時間を含む）。 |
 | [!UICONTROL &#x200B; サービス区分 &#x200B;] | `serviceCategory` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 任用中に実行されるサービスの幅広いカテゴリ。 |
@@ -56,14 +56,14 @@ ht-degree: 5%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.schema.json)
 
 ## `participant` {#participant}
 
 `participant` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 参加者オブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/participant.png)
+![&#x200B; 参加者オブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/participant.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -77,14 +77,14 @@ ht-degree: 5%
 
 `recurrenceTemplate` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 参照テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/recurrence-template.png)
+![&#x200B; 参照テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/recurrence-template.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL &#x200B; 月間テンプレート &#x200B;] | `monthlyTemplate` | オブジェクトの配列 | 毎月の定期的な予定に関する情報です。 詳しくは、[ 以下の節 ](#monthly-template) を参照してください。 |
+| [!UICONTROL &#x200B; 月間テンプレート &#x200B;] | `monthlyTemplate` | オブジェクトの配列 | 毎月の定期的な予定に関する情報です。 詳しくは、[&#x200B; 以下の節 &#x200B;](#monthly-template) を参照してください。 |
 | [!UICONTROL &#x200B; 繰り返しタイプ &#x200B;] | `recurrenceType` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 定期的な予定を繰り返す頻度（毎週、毎月、毎年など）。 |
 | [!UICONTROL タイムゾーン] | `timezone` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 定期的な予定のタイムゾーンを指定します。 |
-| [!UICONTROL &#x200B; 週別テンプレート &#x200B;] | `weeklyTemplate` | オブジェクトの配列 | 毎週の定期的な予定に関する情報です。 詳しくは、以下の [ 節 ](#weekly-template) を参照してください。 |
+| [!UICONTROL &#x200B; 週別テンプレート &#x200B;] | `weeklyTemplate` | オブジェクトの配列 | 毎週の定期的な予定に関する情報です。 詳しくは、以下の [&#x200B; 節 &#x200B;](#weekly-template) を参照してください。 |
 | [!UICONTROL &#x200B; 年次テンプレート &#x200B;] | `yearlyTemplate` | オブジェクト | 1 年の定期的な予定に関する情報です。 予定が繰り返される n 年目ごとに示す整数値を含む、`yearInterval` という 1 つのプロパティが含まれます。 |
 | [!UICONTROL &#x200B; 日付を除く。] | `excludingDate` | 日付の配列 | 休日など、繰り返しから除外する必要のある日付。 |
 | [!UICONTROL &#x200B; 繰り返し Id の除外 &#x200B;] | `excludingRecurrenceId` | 整数の配列 | 繰り返しから除外する必要がある繰り返し ID。 これは、除外する予定の `reccurenceID` を指定する `excludingDate` の代わりに使用できます。 |
@@ -96,7 +96,7 @@ ht-degree: 5%
 
 `weeklyTemplate` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 週別テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/weekly-template.png)
+![&#x200B; 週別テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/weekly-template.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ ht-degree: 5%
 
 `monthlyTemplate` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 月次テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/monthly-template.png)
+![&#x200B; 月次テンプレートオブジェクト構造のスキーマ図。](../../../images/healthcare/field-groups/appointment/monthly-template.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

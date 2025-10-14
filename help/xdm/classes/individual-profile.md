@@ -15,7 +15,7 @@ ht-degree: 29%
 
 [!DNL XDM Individual Profile] は、個人の単一の表現（または「プロファイル」）を形成する標準のエクスペリエンスデータモデル（XDM）クラスです。 特に、クラス（およびその互換性のあるフィールドグループ）は、ブランドとやり取りする、識別された個人と部分的に識別された個人の両方の属性と興味を取得します。
 
-プロファイルは、匿名の行動信号（ブラウザー cookie など）から、名前、生年月日、場所、メールアドレスなどの詳細情報を含む識別されたプロファイルまで様々です。 プロファイルが大きくなると、個々の個人情報、ID、連絡先の詳細、コミュニケーション環境設定の堅牢なリポジトリになります。 Experience Platform エコシステムでのこのクラスの使用に関するハイレベルな情報については、[XDM の概要 ](../home.md#data-behaviors) を参照してください。
+プロファイルは、匿名の行動信号（ブラウザー cookie など）から、名前、生年月日、場所、メールアドレスなどの詳細情報を含む識別されたプロファイルまで様々です。 プロファイルが大きくなると、個々の個人情報、ID、連絡先の詳細、コミュニケーション環境設定の堅牢なリポジトリになります。 Experience Platform エコシステムでのこのクラスの使用に関するハイレベルな情報については、[XDM の概要 &#x200B;](../home.md#data-behaviors) を参照してください。
 
 ![XDM 個人プロファイルクラスのスキーマ図。](../images/classes/individual-profile.png)
 
@@ -25,7 +25,7 @@ ht-degree: 29%
 | `_id` | レコードの一意の文字列識別子。 このフィールドは、個々のレコードの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのレコードを検索するために使用されます。 場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://tools.ietf.org/html/rfc4122) または [グローバル固有識別子（GUID）](https://docs.microsoft.com/ja-jp/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br> ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、プライマリ ID、タイムスタンプ、レコードタイプなど、レコードを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
 | `createdByBatchID` | レコードを作成する原因となった取り込まれたバッチの ID。 |
 | `modifiedByBatchID` | レコードを更新する原因となった、最後に取り込まれたバッチの ID。 |
-| `personID` | このレコードに関連する個人の一意の ID。 このフィールドは、[ID フィールド ](../schema/composition.md#identity) としても指定されていない限り、必ずしも人物に関連する ID を表すわけではありません。 |
+| `personID` | このレコードに関連する個人の一意の ID。 このフィールドは、[ID フィールド &#x200B;](../schema/composition.md#identity) としても指定されていない限り、必ずしも人物に関連する ID を表すわけではありません。 |
 | `repositoryCreatedBy` | レコードを作成したユーザーの ID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーの ID。 |
 
@@ -52,4 +52,4 @@ ht-degree: 29%
 
 *\*このフィールドグループは、Adobe Real-Time Customer Data PlatformのB2B editionにアクセスできる組織のみが使用できます。*
 
-[!DNL XDM Individual Profile] と互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub リポジトリ ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile) を参照してください。
+[!DNL XDM Individual Profile] と互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub リポジトリ &#x200B;](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile) を参照してください。

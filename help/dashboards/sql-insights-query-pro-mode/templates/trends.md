@@ -14,20 +14,20 @@ ht-degree: 1%
 
 ## オーディエンスのフィルタリング {#filter-audiences}
 
-分析を開始するには、グローバルフィルターを使用して、分析する特定のオーディエンスと日付範囲を選択します。 フィルターアイコン（![ フィルターアイコンを選択します。](../../../images/icons/filter-icon-white.png)）を選択して **[!UICONTROL フィルター]** ダイアログを開きます。このダイアログで、次の操作を行うことができます。
+分析を開始するには、グローバルフィルターを使用して、分析する特定のオーディエンスと日付範囲を選択します。 フィルターアイコン（![&#x200B; フィルターアイコンを選択します。](../../../images/icons/filter-icon-white.png)）を選択して **[!UICONTROL フィルター]** ダイアログを開きます。このダイアログで、次の操作を行うことができます。
 
 1. **オーディエンスを選択**：分析するオーディエンスを選択します（例のスクリーンショットでは、**アモキシシリン** オーディエンスが選択されています）。
 1. **日付範囲の設定**：ドロップダウンメニューから事前定義済みの範囲を選択するか、カレンダーフィールドを使用して開始日と終了日を手動で選択します。
 
-![ オーディエンスのトレンド ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-trends-filters.png)
+![&#x200B; オーディエンスのトレンド ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-trends-filters.png)
 
 フィルターを設定したら、「**[!UICONTROL 適用]**」を選択してダッシュボードを更新します。 選択したフィルターが適用され、特定の期間に選択したオーディエンスに関するフォーカスされたインサイトが表示されます。 カスタムフィルターを使用すると、分析目標に関連したデータが得られます。
 
-![ アモキシリンセグメントフィルターが適用され、ハイライト表示されたオーディエンスのトレンド ダッシュボード ](../../images/sql-insights-query-pro-mode/templates/audience-trends-applied-filters.png)
+![&#x200B; アモキシリンセグメントフィルターが適用され、ハイライト表示されたオーディエンスのトレンド ダッシュボード &#x200B;](../../images/sql-insights-query-pro-mode/templates/audience-trends-applied-filters.png)
 
 ## 使用可能なオーディエンスのトレンドグラフ {#available-charts}
 
-オーディエンス指標の推移を理解するのに役立つ主なグラフが 3 つあります。 各グラフでは、右上の楕円（`...`）に続いて [!UICONTROL &#x200B; さらに表示 &#x200B;] を選択して、結果を表形式で表示するか、データを CSV ファイルとしてダウンロードしてスプレッドシートで表示できます。 詳しくは、[ 詳細を表示ガイド ](../view-more.md) を参照してください。
+オーディエンス指標の推移を理解するのに役立つ主なグラフが 3 つあります。 各グラフでは、右上の楕円（`...`）に続いて [!UICONTROL &#x200B; さらに表示 &#x200B;] を選択して、結果を表形式で表示するか、データを CSV ファイルとしてダウンロードしてスプレッドシートで表示できます。 詳しくは、[&#x200B; 詳細を表示ガイド &#x200B;](../view-more.md) を参照してください。
 
 >[!TIP]
 >
@@ -37,26 +37,26 @@ ht-degree: 1%
 
 **[!UICONTROL オーディエンスサイズのトレンド]** グラフには、選択したオーディエンス内のプロファイル数の推移が表示されます。 オーディエンスの増加または減少を追跡するのに役立ちます。 このグラフを使用して、エンゲージメントの有効性を監視し、オーディエンスサイズの変化を把握できます。
 
-![ オーディエンスサイズのトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png)
+![&#x200B; オーディエンスサイズのトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png)
 
 ### オーディエンス Id のトレンド {#audience-identities-trends}
 
 **[!UICONTROL オーディエンス ID のトレンド]** グラフは、オーディエンスセグメント内の ID の合計数に関するインサイトを提供します。 このグラフを使用すると、一意の ID がオーディエンスの全体的なサイズにどのように貢献しているかを把握できます。 オーディエンスの安定性とエンゲージメントの高さを示します。
 
-![ オーディエンス ID のトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-identities-trends.png)
+![&#x200B; オーディエンス ID のトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-identities-trends.png)
 
 ### 単一 Id のオーディエンスサイズのトレンド {#single-identity-audience-size-trends}
 
 **[!UICONTROL 単一 ID オーディエンスサイズのトレンド]** グラフは、単一 ID のみを持つオーディエンスメンバーの数を示します。 この指標は、特に ID の一意性の点で、オーディエンスの構成を理解するのに役立ち、ID ステッチの取り組みの有効性を測定するのに役立ちます。
 
-![ 単一 ID のオーディエンスサイズのトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/single-identity-audience-size-trends.png)
+![&#x200B; 単一 ID のオーディエンスサイズのトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/single-identity-audience-size-trends.png)
 
 ## インサイトの書き出し {#export-insights}
 
 指標を分析し、関連するフィルターを適用した後、オフラインでの分析やレポートに役立てるためにデータをエクスポートできます。 これを行うには、テーブルの右上にある「**[!UICONTROL エクスポート]**」を選択します。 印刷PDFダイアログが表示されます。 このダイアログから、ビジュアライゼーションされたデータをPDFとして保存したり、印刷したりできます。
 
-![ 書き出しがハイライト表示されたオーディエンスのトレンドダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-trends-export.png)
+![&#x200B; 書き出しがハイライト表示されたオーディエンスのトレンドダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-trends-export.png)
 
 ## 次の手順
 
-このドキュメントでは、**オーディエンスのトレンド** ダッシュボードから、オーディエンスの行動に関する貴重なインサイトを経時的に得る方法を確認しました。 十分な情報に基づいた意思決定、セグメント化の最適化、エンゲージメント戦略の向上に役立つ、他の Data Distiller テンプレートについて詳しくは、[ オーディエンス比較 ](./comparison.md)、[ オーディエンス ID の重複 ](./identity-overlaps.md)、および [ 詳細なオーディエンスの重複 ](./overlaps.md) UI ガイドを参照してください。
+このドキュメントでは、**オーディエンスのトレンド** ダッシュボードから、オーディエンスの行動に関する貴重なインサイトを経時的に得る方法を確認しました。 十分な情報に基づいた意思決定、セグメント化の最適化、エンゲージメント戦略の向上に役立つ、他の Data Distiller テンプレートについて詳しくは、[&#x200B; オーディエンス比較 &#x200B;](./comparison.md)、[&#x200B; オーディエンス ID の重複 &#x200B;](./identity-overlaps.md)、および [&#x200B; 詳細なオーディエンスの重複 &#x200B;](./overlaps.md) UI ガイドを参照してください。

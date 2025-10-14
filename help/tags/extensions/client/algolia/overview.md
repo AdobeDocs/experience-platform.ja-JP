@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能を使用するには、有効な [!DNL Algolia] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Algolia]  新規登録ページ ](https://dashboard.algolia.com/users/sign_up) に移動してアカウントを作成してください。
+この拡張機能を使用するには、有効な [!DNL Algolia] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Algolia]  新規登録ページ &#x200B;](https://dashboard.algolia.com/users/sign_up) に移動してアカウントを作成してください。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
@@ -27,8 +27,8 @@ ht-degree: 2%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| アプリケーション ID | お使いのアプリケーション ID は、アプリ [ ーションダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 0ABCDEFG12 |
-| 検索 API キー | 検索 API キーは、[ ールダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
+| アプリケーション ID | お使いのアプリケーション ID は、アプリ [&#x200B; ーションダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 0ABCDEFG12 |
+| 検索 API キー | 検索 API キーは、[&#x200B; ールダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
 
 ## [!DNL Algolia] Insights 拡張機能のインストールと設定 {#install-configure}
 
@@ -42,8 +42,8 @@ ht-degree: 2%
 
 | プロパティ | 説明 |
 | --- | --- |
-| [!UICONTROL アプリケーション ID] | 「[!UICONTROL &#x200B; 設定の詳細 &#x200B;]」セクションで以前に収集した [ アプリケーション ID](#configuration-details) を入力します。 |
-| [!UICONTROL &#x200B; 検索 API キー &#x200B;] | 「[!UICONTROL &#x200B; 設定の詳細 &#x200B;] セクションで以前に収集した [ 検索 API キー ](#configuration-details) を入力します。 |
+| [!UICONTROL アプリケーション ID] | 「[!UICONTROL &#x200B; 設定の詳細 &#x200B;]」セクションで以前に収集した [&#x200B; アプリケーション ID](#configuration-details) を入力します。 |
+| [!UICONTROL &#x200B; 検索 API キー &#x200B;] | 「[!UICONTROL &#x200B; 設定の詳細 &#x200B;] セクションで以前に収集した [&#x200B; 検索 API キー &#x200B;](#configuration-details) を入力します。 |
 | [!UICONTROL &#x200B; インデックス名 &#x200B;] | [!UICONTROL &#x200B; インデックス名 &#x200B;] には、製品またはコンテンツが含まれます。  このインデックスは、デフォルトとして使用されます。 |
 | [!UICONTROL &#x200B; ユーザートークンデータ要素 &#x200B;] | ユーザートークンを返すデータ要素。 |
 | [!UICONTROL &#x200B; 認証済みユーザートークンデータ要素 &#x200B;] | 認証済みユーザートークンを返すデータ要素を設定します。 |
@@ -91,8 +91,8 @@ ht-degree: 2%
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
-イベントカテゴリについて詳しくは、[ 検索後にクリックされたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/) を参照してください。
-と [ クリックオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) ガイド。
+イベントカテゴリについて詳しくは、[&#x200B; 検索後にクリックされたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/) を参照してください。
+と [&#x200B; クリックオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) ガイド。
 
 ### 変換済 {#converted}
 
@@ -113,7 +113,7 @@ ht-degree: 2%
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
-イベント カテゴリの詳細については、「[ 検索後の変換済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/)」および [ 変換済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) ガイドを参照してください。
+イベント カテゴリの詳細については、「[&#x200B; 検索後の変換済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/)」および [&#x200B; 変換済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) ガイドを参照してください。
 
 ### 買い物かごに追加 {#added-to-cart}
 
@@ -135,7 +135,7 @@ ht-degree: 2%
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
-イベントカテゴリについて詳しくは、[ 検索後に買い物かごオブジェクト ID に追加 ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) および [ 買い物かごオブジェクト ID に追加 ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/) ガイドを参照してください。
+イベントカテゴリについて詳しくは、[&#x200B; 検索後に買い物かごオブジェクト ID に追加 &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) および [&#x200B; 買い物かごオブジェクト ID に追加 &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/) ガイドを参照してください。
 
 ### Purchased {#purchased}
 
@@ -157,8 +157,8 @@ ht-degree: 2%
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
-イベントカテゴリについて詳しくは、[ 検索後の購入したオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/) を参照してください
-と [ 購入済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) ガイド。
+イベントカテゴリについて詳しくは、[&#x200B; 検索後の購入したオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/) を参照してください
+と [&#x200B; 購入済みオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) ガイド。
 
 ### 表示済み {#viewed}
 
@@ -175,7 +175,7 @@ ht-degree: 2%
 
 ![](../../../images/extensions/client/algolia/viewed.png)
 
-表示イベントについて詳しくは、「[ 表示されたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/)」ガイドを参照してください。
+表示イベントについて詳しくは、「[&#x200B; 表示されたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/)」ガイドを参照してください。
 
 ## [!DNL Algolia] Insights 拡張機能のデータ要素 {#data-elements}
 
@@ -278,17 +278,17 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 *検索後にクリック済み* または *検索後に変換済み* イベントには `queryId` が必要です。また、`position` 検索後にクリック済み *にも* が必要です。 これらのプロパティは、InstantSearch やオートコンプリートのクエリパラメーターで `insights` フラグが有効な場合に使用できます。 サイトに関するインサイトの設定方法については、次のリソースを参照してください。
 
-* [ オートコンプリートでのインサイトの設定 ](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
-* [InstantSearch.js での Insights の設定 ](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
-* [ クリックおよびコンバージョンイベントの概要 ](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [Sending [!DNL Algolia] Insights イベント ](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
-* [[!DNL Algolia] Launch 拡張機能 GitHub リポジトリ ](https://github.com/algolia/algolia-launch-extension)
-* [InstantSearch.js のドキュメント ](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia] Insights API ドキュメント ](https://www.algolia.com/doc/rest-api/insights/)
-* [Algolia Launch 拡張機能コードリポジトリ ](https://github.com/algolia/algolia-launch-extension)
+* [&#x200B; オートコンプリートでのインサイトの設定 &#x200B;](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
+* [InstantSearch.js での Insights の設定 &#x200B;](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
+* [&#x200B; クリックおよびコンバージョンイベントの概要 &#x200B;](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
+* [Sending [!DNL Algolia] Insights イベント &#x200B;](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [[!DNL Algolia] Launch 拡張機能 GitHub リポジトリ &#x200B;](https://github.com/algolia/algolia-launch-extension)
+* [InstantSearch.js のドキュメント &#x200B;](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
+* [[!DNL Algolia] Insights API ドキュメント &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+* [Algolia Launch 拡張機能コードリポジトリ &#x200B;](https://github.com/algolia/algolia-launch-extension)
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、[!DNL Algolia] タグ拡張機能を使用して [!DNL Algolia Insights] にデータを送信する方法について説明しました。 サーバーサイドのイベントも [!DNL Algolia] に送信することを計画している場合は、[[!DNL Conversions API]  イベント転送拡張機能 ](../../server/algolia/overview.md) のインストールと設定に進むことができます。
+このガイドでは、[!DNL Algolia] タグ拡張機能を使用して [!DNL Algolia Insights] にデータを送信する方法について説明しました。 サーバーサイドのイベントも [!DNL Algolia] に送信することを計画している場合は、[[!DNL Conversions API]  イベント転送拡張機能 &#x200B;](../../server/algolia/overview.md) のインストールと設定に進むことができます。
 
-Experience Platformのタグについて詳しくは、[ タグの概要 ](../../../home.md) を参照してください。
+Experience Platformのタグについて詳しくは、[&#x200B; タグの概要 &#x200B;](../../../home.md) を参照してください。

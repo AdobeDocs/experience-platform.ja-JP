@@ -71,7 +71,7 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 | `kinesis:DescribeStream` | シャード ID を生成するために必要な、シャードマップを含むストリームに関する情報を返すアクション。 |
 | `kinesis:ListStreams` | UI から選択できる、使用可能なストリームをリストするために必要なアクション。 |
 
-[!DNL Kinesis] データストリームのアクセス制御について詳しくは、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
+[!DNL Kinesis] データストリームのアクセス制御について詳しくは、次の [[!DNL Kinesis]  ドキュメント &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
 
 ### イテレータータイプの設定
 
@@ -87,7 +87,7 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 [!DNL Kinesis] UI ソースは現在 `TRIM_HORIZON` のみをサポートしていますが、API は `TRIM_HORIZON` と `LATEST` の両方をデータを取得するモードとしてサポートしています。 Experience Platformが [!DNL Kinesis] ソースに使用するデフォルトのイテレータ値は `TRIM_HORIZON` です。
 
-イテレータタイプについて詳しくは、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) を参照してください。
+イテレータタイプについて詳しくは、次の [[!DNL Kinesis]  ドキュメント &#x200B;](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) を参照してください。
 
 ## [!DNL Amazon Kinesis] の [!DNL Experience Platform] への接続
 

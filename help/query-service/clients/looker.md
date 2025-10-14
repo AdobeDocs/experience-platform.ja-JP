@@ -23,7 +23,7 @@ ht-degree: 7%
 
 [!DNL Looker] にログインしたら、「**[!DNL Admin]**」を選択し、続いて「**[!DNL Connections]**」を選択します。 [!DNL Connections] ページが開きます。 [!DNL Connections] ページで「**[!DNL Add Connection]**」を選択します。
 
-ここから、以下に示す接続設定の詳細を入力します。 [ 新しいデータベース接続を作成する手順と使用可能なプロパティの説明 ](https://cloud.google.com/looker/docs/connecting-to-your-db#creating_a_new_database_connection) については、公式の Looker ドキュメントを参照してください。
+ここから、以下に示す接続設定の詳細を入力します。 [&#x200B; 新しいデータベース接続を作成する手順と使用可能なプロパティの説明 &#x200B;](https://cloud.google.com/looker/docs/connecting-to-your-db#creating_a_new_database_connection) については、公式の Looker ドキュメントを参照してください。
 
 - **[!DNL Name]:** 接続名。
 - **[!DNL Dialect]:** SQL データベースに使用するダイアレクト。 [!DNL Query Service] は **[!DNL PostgreSQL]** を使用します。
@@ -32,17 +32,17 @@ ht-degree: 7%
 - **[!DNL Username and Password]:** 使用するログイン資格情報。 ユーザー名は、`ORG_ID@AdobeOrg` の形式で入力します。
 - **SSL**: SSL を有効にして、ネットワーク全体で安全な接続を確保します。
 
-Looker をクエリサービスと連携させるために必要な資格情報を見つけるには、Experience Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 **host**、**port**、**database**、**username** および **password** 資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
+Looker をクエリサービスと連携させるために必要な資格情報を見つけるには、Experience Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 **host**、**port**、**database**、**username** および **password** 資格情報の検索について詳しくは、[&#x200B; 資格情報ガイド &#x200B;](../ui/credentials.md) を参照してください。
 
-![ 資格情報と期限切れになる資格情報がハイライト表示されているExperience Platform クエリワークスペースの「資格情報」ページ ](../images/clients/looker/query-service-credentials-page.png)
+![&#x200B; 資格情報と期限切れになる資格情報がハイライト表示されているExperience Platform クエリワークスペースの「資格情報」ページ &#x200B;](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >
->[!DNL Query Service] では、有効期限のない資格情報も提供され、サードパーティのクライアントとの 1 回限りのセットアップが可能になります。 詳しくは、ドキュメント [ 有効期限のない資格情報の生成と使用の方法に関する完全な手順 ](../ui/credentials.md#non-expiring-credentials) を参照してください。 Looker を 1 回限りの設定として接続する場合は、このプロセスを完了する必要があります。 取得した `credential` 値と `technicalAccountId` 値は、Looker `password` パラメーターの値で構成されます。
+>[!DNL Query Service] では、有効期限のない資格情報も提供され、サードパーティのクライアントとの 1 回限りのセットアップが可能になります。 詳しくは、ドキュメント [&#x200B; 有効期限のない資格情報の生成と使用の方法に関する完全な手順 &#x200B;](../ui/credentials.md#non-expiring-credentials) を参照してください。 Looker を 1 回限りの設定として接続する場合は、このプロセスを完了する必要があります。 取得した `credential` 値と `technicalAccountId` 値は、Looker `password` パラメーターの値で構成されます。
 
-Adobe Experience Platformでのサードパーティ接続用 SSL サポートについては、[[!DNL Query Service] SSL ドキュメント ](./ssl-modes.md) を参照してください。 このドキュメントでは、SSL モードを使用して接続する方法 `verify-full` 説明します。
+Adobe Experience Platformでのサードパーティ接続用 SSL サポートについては、[[!DNL Query Service] SSL ドキュメント &#x200B;](./ssl-modes.md) を参照してください。 このドキュメントでは、SSL モードを使用して接続する方法 `verify-full` 説明します。
 
-接続の詳細を入力したら、「**[!DNL Test These Settings]**」を選択して、資格情報が正しく機能することを確認します。 [ 接続設定のテスト ](https://cloud.google.com/looker/docs/connecting-to-your-db#testing_your_connection_settings) について詳しくは、公式の Looker ドキュメントを参照してください。 接続に成功すると、接続できることを示すメッセージが画面に表示されます。 接続に成功したら、「**[!DNL Add Connection]**」を選択して接続を作成します。
+接続の詳細を入力したら、「**[!DNL Test These Settings]**」を選択して、資格情報が正しく機能することを確認します。 [&#x200B; 接続設定のテスト &#x200B;](https://cloud.google.com/looker/docs/connecting-to-your-db#testing_your_connection_settings) について詳しくは、公式の Looker ドキュメントを参照してください。 接続に成功すると、接続できることを示すメッセージが画面に表示されます。 接続に成功したら、「**[!DNL Add Connection]**」を選択して接続を作成します。
 
 ## 次の手順
 

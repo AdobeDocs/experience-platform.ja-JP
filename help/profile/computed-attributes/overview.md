@@ -91,4 +91,4 @@ Adobe Experience Platformでは、[!DNL Real-Time Customer Profiles] ータを�
 
 ## 次の手順
 
-計算済み属性の作成と管理について詳しくは、[ 計算属性 API ガイド ](./api.md) または [ 計算属性 UI ガイド ](./ui.md) を参照してください。
+計算済み属性の作成と管理について詳しくは、[&#x200B; 計算属性 API ガイド &#x200B;](./api.md) または [&#x200B; 計算属性 UI ガイド &#x200B;](./ui.md) を参照してください。

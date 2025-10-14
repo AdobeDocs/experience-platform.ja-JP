@@ -19,12 +19,12 @@ Destination SDKを使用すると、書き出したファイルの書式設定�
 
 ## 前提条件 {#prerequisites}
 
-以下に説明する手順に進む前に、[Destination SDKの概要 ](../../getting-started.md) ページを参照して、Adobe I/ODestination SDK資格情報および認証 API を使用するために必要なその他の前提条件について確認してください。
+以下に説明する手順に進む前に、[Destination SDKの概要 &#x200B;](../../getting-started.md) ページを参照して、Adobe I/ODestination SDK資格情報および認証 API を使用するために必要なその他の前提条件について確認してください。
 
 Adobeでは、先に進む前に次のドキュメントを読み、内容を理解しておくこともお勧めします。
 
-* 使用可能なすべてのファイル形式オプションについては、[ ファイル形式設定 ](../../functionality/destination-server/file-formatting.md) セクションで詳しく説明しています。
-* Destination SDKを使用して [ ファイルベースの宛先を設定 ](../../guides/configure-file-based-destination-instructions.md) する手順を実行します。
+* 使用可能なすべてのファイル形式オプションについては、[&#x200B; ファイル形式設定 &#x200B;](../../functionality/destination-server/file-formatting.md) セクションで詳しく説明しています。
+* Destination SDKを使用して [&#x200B; ファイルベースの宛先を設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md) する手順を実行します。
 
 ## サーバーとファイル設定の作成 {#create-server-file-configuration}
 
@@ -108,11 +108,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!IMPORTANT]
 >
->この手順はオプションで、Experience PlatformUI でユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[ サーバーおよびファイル設定 ](#create-server-file-configuration) で設定されたデフォルト値で続行されます。
+>この手順はオプションで、Experience PlatformUI でユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[&#x200B; サーバーおよびファイル設定 &#x200B;](#create-server-file-configuration) で設定されたデフォルト値で続行されます。
 
 この手順では、表示されるオプションを任意の順序でグループ化し、選択したファイルタイプに基づいて、カスタムグループ化、ドロップダウンフィールド、条件付きグループを作成できます。 これらの設定はすべて、録画と後述の節で説明します。
 
-![ バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
+![&#x200B; バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### ファイル形式オプションの並べ替え {#ordering}
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 次の手順 {#next-steps}
 
-この記事では、Destination SDKを使用して、書き出したファイルにカスタムのファイル形式オプションを設定する方法を確認しました。 次に、チームは [ ファイルベース宛先のアクティベーションワークフロー ](../../../ui/activate-batch-profile-destinations.md) を使用して、宛先にデータを書き出すことができます。
+この記事では、Destination SDKを使用して、書き出したファイルにカスタムのファイル形式オプションを設定する方法を確認しました。 次に、チームは [&#x200B; ファイルベース宛先のアクティベーションワークフロー &#x200B;](../../../ui/activate-batch-profile-destinations.md) を使用して、宛先にデータを書き出すことができます。

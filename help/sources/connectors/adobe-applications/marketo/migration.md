@@ -15,8 +15,8 @@ ECID マッピングを [!DNL Marketo Engage Person] データセットから [!
 
 | 問題点 | ソリューション |
 | --- | --- |
-| [!DNL Marketo Person] データセットに複数の ECID へのリンクがある場合、[ エクスペリエンスデータモデル（XDM）レコードの ID の合計数が 20](../../../../identity-service/guardrails.md) を超えると、データ取り込みは失敗します。 | ECID フィールドマッピングを [!DNL Activity] に移行することで、[!DNL Marketo Person] データフローの ID の数が制限内に収まり、データ取り込みを成功させることができます。 |
-| [!DNL Marketo Person] データセットが ECID で取り込まれるたびに、[!DNL Marketo Person] データセットからのすべての ECID のタイムスタンプが、人物レコードの最後に更新されたタイムスタンプで更新されます。 その結果、[ID グラフからの新しい ID の削除が正しく行われない ](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) 可能性があります。 | ECID フィールドマッピングを [!DNL Activity] に移行することで、ID サービスは ECID のタイムスタンプを正しく反映でき、ID サービスの「先入れ先出し」メカニズムにより、より安定した動作が提供されます。 |
+| [!DNL Marketo Person] データセットに複数の ECID へのリンクがある場合、[&#x200B; エクスペリエンスデータモデル（XDM）レコードの ID の合計数が 20](../../../../identity-service/guardrails.md) を超えると、データ取り込みは失敗します。 | ECID フィールドマッピングを [!DNL Activity] に移行することで、[!DNL Marketo Person] データフローの ID の数が制限内に収まり、データ取り込みを成功させることができます。 |
+| [!DNL Marketo Person] データセットが ECID で取り込まれるたびに、[!DNL Marketo Person] データセットからのすべての ECID のタイムスタンプが、人物レコードの最後に更新されたタイムスタンプで更新されます。 その結果、[ID グラフからの新しい ID の削除が正しく行われない &#x200B;](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) 可能性があります。 | ECID フィールドマッピングを [!DNL Activity] に移行することで、ID サービスは ECID のタイムスタンプを正しく反映でき、ID サービスの「先入れ先出し」メカニズムにより、より安定した動作が提供されます。 |
 | ECID がデータフローを通じて取り込まれ [!DNL Marketo Person] 場合、新しく追加された ECID は、[!DNL Marketo] で [!DNL Person] レコードを更新しない限り、Experience Platformに取り込まれません。 | 新しい ECID が [!DNL Marketo] の [!DNL Person] レコードにリンクされている場合、[!DNL Marketo Activity] データフローを通じてその ECID データを取り込み、Experience Platform時に直ちに ID グラフの更新を求めることができます。 |
 
 基本的に、次の操作を行う必要があります。
@@ -58,5 +58,5 @@ ECID マッピングを [!DNL Marketo Engage Person] データセットから [!
 
 このドキュメントでは、[!DNL Marketo Person] データセットからデータセットへの ECID マッピングの移行方法を確認 [!DNL Marketo Activity] ました。 詳しくは、次の [!DNL Marketo] ドキュメントを参照してください。
 
-* [Experience Platformにデータを取り込むデ  [!DNL Marketo]  タフローを作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md)。
-* [ フィールドマッピングガイド ](../mapping/marketo.md)。
+* [Experience Platformにデータを取り込むデ  [!DNL Marketo]  タフローを作成 &#x200B;](../../../tutorials/ui/create/adobe-applications/marketo.md)。
+* [&#x200B; フィールドマッピングガイド &#x200B;](../mapping/marketo.md)。

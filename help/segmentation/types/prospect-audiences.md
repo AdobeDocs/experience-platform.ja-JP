@@ -28,7 +28,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 この表示にフィールドを追加するには、![フィルター属性アイコン](/help/images/icons/column-settings.png) アイコンを選択します。これらの追加フィールドには、更新頻度と最終更新者が含まれます。
 
-リストに表示されたフィールドに関する詳細情報を含む、Audience Portal に関する詳細については、[Audience Portal の概要 ](../ui/audience-portal.md#list) を参照してください。
+リストに表示されたフィールドに関する詳細情報を含む、Audience Portal に関する詳細については、[Audience Portal の概要 &#x200B;](../ui/audience-portal.md#list) を参照してください。
 
 ## オーディエンスの詳細 {#details}
 
@@ -40,7 +40,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 ![見込み客オーディエンスの詳細ページが表示されています。](../images/types/prospect/audience-details.png)
 
-オーディエンスの詳細ページについて詳しくは、[ オーディエンスポータルの概要のオーディエンスの詳細 ](../ui/audience-portal.md#audience-details) を参照してください。
+オーディエンスの詳細ページについて詳しくは、[&#x200B; オーディエンスポータルの概要のオーディエンスの詳細 &#x200B;](../ui/audience-portal.md#audience-details) を参照してください。
 
 ## オーディエンスを作成 {#create}
 

@@ -32,5 +32,5 @@ ht-degree: 6%
 
 人物名データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

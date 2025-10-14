@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # [!UICONTROL &#x200B; 製品カタログ &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 製品カタログ &#x200B;] は、[[!UICONTROL &#x200B; 製品 &#x200B;] クラスの標準スキーマフィールドグループで ](../../classes/product.md) 製品カタログに関連するプロパティをキャプチャします。
+[!UICONTROL &#x200B; 製品カタログ &#x200B;] は、[[!UICONTROL &#x200B; 製品 &#x200B;] クラスの標準スキーマフィールドグループで &#x200B;](../../classes/product.md) 製品カタログに関連するプロパティをキャプチャします。
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +22,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json) を参照してください。

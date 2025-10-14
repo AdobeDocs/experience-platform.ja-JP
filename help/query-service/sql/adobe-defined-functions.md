@@ -47,7 +47,7 @@ Web サイト、モバイルアプリケーション、インタラクティブ�
 
 このグループ化、つまりデータのセッション化は、イベントを関連付けて、顧客体験に関するより多くのコンテキストを明らかにするのに役立ちます。
 
-Adobe Analyticsのセッション化について詳しくは、[ コンテキスト対応セッション ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja) に関するドキュメントを参照してください。
+Adobe Analyticsのセッション化について詳しくは、[&#x200B; コンテキスト対応セッション &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja) に関するドキュメントを参照してください。
 
 **クエリ構文**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
 | `{EXPIRATION_IN_SECONDS}` | 現在のセッションの終了と新しいセッションの開始の条件を満たすためにイベント間に必要な秒数。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
 | `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0`。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
 | `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0`。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -262,7 +262,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （任意）現在のイベントから離れたイベントの数。 デフォルト値は 1 です。 |
 | `{IGNORE_NULLS}` | （任意） null`{KEY}` 値を無視する必要があるかどうかを示すブール値。 デフォルト値は `false` です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -313,7 +313,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （任意）現在のイベントから離れたイベントの数。 デフォルト値は 1 です。 |
 | `{IGNORE_NULLS}` | （任意） null`{KEY}` 値を無視する必要があるかどうかを示すブール値。 デフォルト値は `false` です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | 前のイベントを選定するための式。 |
 | `{TIME_UNIT}` | 出力の単位。 日数、時間数、分数、秒数などの値を指定できます。 デフォルト値は秒です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | 次のイベントを選定するための式。 |
 | `{TIME_UNIT}` | （任意）出力の単位。 日数、時間数、分数、秒数などの値を指定できます。 デフォルト値は秒です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](#window-functions) を参照してください。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
 
 **クエリの例**
 
@@ -481,7 +481,7 @@ LIMIT 10
 
 ## 次の手順
 
-ここで説明した関数を使用すると、[!DNL Query Service] を使用して独自の [!DNL Experience Event] データセットにアクセスするクエリを記述できます。 [!DNL Query Service] でのクエリの作成について詳しくは、[ クエリの作成 ](../best-practices/writing-queries.md) に関するドキュメントを参照してください。
+ここで説明した関数を使用すると、[!DNL Query Service] を使用して独自の [!DNL Experience Event] データセットにアクセスするクエリを記述できます。 [!DNL Query Service] でのクエリの作成について詳しくは、[&#x200B; クエリの作成 &#x200B;](../best-practices/writing-queries.md) に関するドキュメントを参照してください。
 
 ## その他のリソース
 

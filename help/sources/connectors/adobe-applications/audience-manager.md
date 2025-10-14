@@ -27,7 +27,7 @@ Adobe Audience Manager ソースは、Adobe Experience Platformでのアクテ�
 
 Audience Manager ソースは、これらのデータタイプをエクスペリエンスデータモデル（XDM）スキーマにマッピングしてから、Experience Platformに送信します。 リアルタイムデータは XDM ExperienceEvent データとして送信され、プロファイルデータは XDM 個人プロファイルデータとして送信されます。
 
-詳しくは、[UI でのAudience Manager ソース接続の作成 ](../../tutorials/ui/create/adobe-applications/audience-manager.md) に関するガイドを参照してください。
+詳しくは、[UI でのAudience Manager ソース接続の作成 &#x200B;](../../tutorials/ui/create/adobe-applications/audience-manager.md) に関するガイドを参照してください。
 
 ## エクスペリエンスデータモデル（XDM）とは
 
@@ -35,7 +35,7 @@ XDM は、Experience Platformがカスタマーエクスペリエンスデータ
 
 XDM 標準に準拠することで、カスタマーエクスペリエンスデータを一律に取り込むことができ、データの配信と情報の収集が容易になります。
 
-Experience Platformでの XDM の使用方法について詳しくは、[XDM システムの概要 ](../../../xdm/home.md) を参照してください。 プロファイルとイベントの間で XDM スキーマがどのように構造化されるかについて詳しくは、[ スキーマ構成の基本 ](../../../xdm/schema/composition.md) を参照してください。
+Experience Platformでの XDM の使用方法について詳しくは、[XDM システムの概要 &#x200B;](../../../xdm/home.md) を参照してください。 プロファイルとイベントの間で XDM スキーマがどのように構造化されるかについて詳しくは、[&#x200B; スキーマ構成の基本 &#x200B;](../../../xdm/schema/composition.md) を参照してください。
 
 ## XDM スキーマの例
 
@@ -49,7 +49,7 @@ Experience Platformで XDM ExperienceEvent および XDM 個人プロファイ�
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-フィールドがAudience Managerから XDM にマッピングされる方法について詳しくは、[Audience Manager マッピングフィールド ](./mapping/audience-manager.md) に関するドキュメントを参照してください。
+フィールドがAudience Managerから XDM にマッピングされる方法について詳しくは、[Audience Manager マッピングフィールド &#x200B;](./mapping/audience-manager.md) に関するドキュメントを参照してください。
 
 ## Experience Platformのデータ管理
 
@@ -76,13 +76,13 @@ Audience Manager データセットはデフォルトでプロファイルに対
 
 ### 接続
 
-Adobe Audience Managerは、カタログに、Audience Manager連携の 1 つの連携を作成します。 カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、顧客固有のコネクタのインスタンスである Catalog オブジェクトです。 カタログ、接続、コネクタについて詳しくは、[ カタログサービスの概要 ](../../../catalog/home.md) を参照してください。
+Adobe Audience Managerは、カタログに、Audience Manager連携の 1 つの連携を作成します。 カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、顧客固有のコネクタのインスタンスである Catalog オブジェクトです。 カタログ、接続、コネクタについて詳しくは、[&#x200B; カタログサービスの概要 &#x200B;](../../../catalog/home.md) を参照してください。
 
 ### セグメント母集団からプロファイルへの影響
 
 セグメント母集団のサイズは、最初にAudience Manager セグメントをExperience Platformに送信する際に、プロファイル番号に直接影響します。 つまり、すべてのセグメントを選択すると、プロファイルの超過がライセンス使用権限を超える可能性があります。 また、Experience Platformは、プロファイル取り込み履歴データから新しいデータを区別します。 ファーストパーティベースの ID が 100 あるセグメントは、100 個のプロファイルを作成します。 ただし、その同じセグメントの母集団が 150 に増やしてExperience Platformに取り込まれた場合、新しいプロファイルは 50 個しかないので、プロファイルの数は 50 増加するだけです。
 
-また、[ ライセンス使用状況ダッシュボード ](../../../dashboards/guides/license-usage.md) から、アカウントのプロファイル使用状況を確認することもできます。
+また、[&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../../../dashboards/guides/license-usage.md) から、アカウントのプロファイル使用状況を確認することもできます。
 
 ## Experience Platform上のAudience Manager データでは、どの程度の待ち時間が予想されますか？
 

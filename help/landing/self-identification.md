@@ -28,7 +28,7 @@ Adobe Experience Platform について詳しくは、[Experience Platform の概
 
 サーベイを開始するには、「**[!UICONTROL 開始]**」を選択します。
 
-![ 自己識別サーベイを開始するように促すトーストメッセージが表示されたExperience Platform UI ホームページ ](./images/survey/survey-prompt.png)
+![&#x200B; 自己識別サーベイを開始するように促すトーストメッセージが表示されたExperience Platform UI ホームページ &#x200B;](./images/survey/survey-prompt.png)
 
 サーベイの最初の質問では、自分の業務内容を最もよく表す職種を選択します。
 
@@ -81,16 +81,16 @@ Adobe Experience Platform について詳しくは、[Experience Platform の概
 
 Experience Cloud の環境設定メニューを使用して、職種と目的を更新します。環境設定メニューにアクセスするには、上部のナビゲーションでプロファイルアイコンを選択したあと、「**[!UICONTROL 環境設定]**」を選択します。
 
-![ プロファイルアイコンと環境設定ボタンが選択されたExperience Platform UI ホームページ ](./images/survey/preferences.png)
+![&#x200B; プロファイルアイコンと環境設定ボタンが選択されたExperience Platform UI ホームページ &#x200B;](./images/survey/preferences.png)
 
 次に、プロファイル環境設定メニューの「[!UICONTROL 一般]」セクションで、「**[!UICONTROL 職種と目的を更新]**」を選択します。
 
-![Experience Platform UI プロファイル環境設定ページの「一般」セクション ](./images/survey/update.png)
+![Experience Platform UI プロファイル環境設定ページの「一般」セクション &#x200B;](./images/survey/update.png)
 
 自己識別サーベイが表示され、回答の再設定とプロファイルの更新が可能です。
 
-![ ユーザーが自分の個人プロファイルを更新できるようにするために自己識別サーベイが表示されているExperience Platform UI プロファイル環境設定ページ ](./images/survey/new-survey.png)
+![&#x200B; ユーザーが自分の個人プロファイルを更新できるようにするために自己識別サーベイが表示されているExperience Platform UI プロファイル環境設定ページ &#x200B;](./images/survey/new-survey.png)
 
 ## 次の手順
 
-このドキュメントを通じて、Experience Platform UI の使用時により関連性の高いコンテンツを受け取ることができるように、職種と目的に関する情報を送信および更新することができました。 Experience Platform UI について詳しくは、[Experience Platformの概要 ](home.md) を参照してください。
+このドキュメントを通じて、Experience Platform UI の使用時により関連性の高いコンテンツを受け取ることができるように、職種と目的に関する情報を送信および更新することができました。 Experience Platform UI について詳しくは、[Experience Platformの概要 &#x200B;](home.md) を参照してください。

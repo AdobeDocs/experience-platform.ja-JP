@@ -31,7 +31,7 @@ ht-degree: 21%
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Azure Synapse Analytics]  概要 ](../../../../connectors/databases/synapse-analytics.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL Azure Synapse Analytics]  概要 &#x200B;](../../../../connectors/databases/synapse-analytics.md#prerequisites) を参照してください。
 
 ## ソースカタログのナビゲート
 
@@ -43,19 +43,19 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![ 「Azure Synapse Analytics」が選択されているソースカタログ ](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+![&#x200B; 「Azure Synapse Analytics」が選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Azure Synapse Analytics] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## 新しいアカウントを作成 {#new}
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Experience Platformへの接続
 
@@ -65,18 +65,18 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  アカウントキー認証 ]
 
-アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[ 接続文字列 ](../../../../connectors/databases/synapse-analytics.md#prerequisites)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[&#x200B; 接続文字列 &#x200B;](../../../../connectors/databases/synapse-analytics.md#prerequisites)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
 
-![ ソースワークフローの「新しいアカウントを作成」手順で「アカウントキー認証 ](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png) が選択されている。
+![&#x200B; ソースワークフローの「新しいアカウントを作成」手順で「アカウントキー認証 &#x200B;](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png) が選択されている。
 
 >[!TAB  サービスプリンシパルとキーの認証 ]
 
-または、「**[!UICONTROL サービスプリンシパルとキー認証]**」を選択し、[ 認証資格情報 ](../../../../connectors/databases/synapse-analytics.md#prerequisites) の値を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+または、「**[!UICONTROL サービスプリンシパルとキー認証]**」を選択し、[&#x200B; 認証資格情報 &#x200B;](../../../../connectors/databases/synapse-analytics.md#prerequisites) の値を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
 
-![ ソースワークフローの「新しいアカウントを作成」手順で「サービスプリンシパルとキー認証」が選択されている様子。](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+![&#x200B; ソースワークフローの「新しいアカウントを作成」手順で「サービスプリンシパルとキー認証」が選択されている様子。](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
 
 >[!ENDTABS]
 
 ## データのデータフロー [!DNL Azure Synapse Analytics] 作成
 
-[!DNL Azure Synapse Analytics] データベースに正常に接続できたので、[ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
+[!DNL Azure Synapse Analytics] データベースに正常に接続できたので、[&#x200B; データフローを作成し、データベースからExperience Platformにデータを取り込む &#x200B;](../../dataflow/databases.md) ことができます。

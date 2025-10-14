@@ -22,8 +22,8 @@ ht-degree: 50%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してExperience Platformに正しく接続するために必要 [!DNL Kinesis] 追加情報を示します。
 
@@ -35,14 +35,14 @@ ht-degree: 50%
 | ---------- | ----------- |
 | `accessKeyId` | アクセスキー ID は、[!DNL Kinesis] アカウントをExperience Platformに認証するために使用されるアクセスキーのペアの一方です。 |
 | `secretKey` | 秘密アクセスキーは、[!DNL Kinesis] アカウントをExperience Platformに認証するために使用されるアクセスキーのペアの残りの半分です。 |
-| `region` | [!DNL Kinesis] アカウントの地域。 地域について詳しくは、[許可リストへの IP アドレスの追加 ](../../../../ip-address-allow-list.md) に関するガイドを参照してください。 |
+| `region` | [!DNL Kinesis] アカウントの地域。 地域について詳しくは、[許可リストへの IP アドレスの追加 &#x200B;](../../../../ip-address-allow-list.md) に関するガイドを参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Kinesis] 接続仕様 ID は `86043421-563b-46ec-8e6c-e23184711bf6` です。 |
 
-アクセスキーとその生成方法について詳 [!DNL Kinesis] くは、この [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド ](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
+アクセスキーとその生成方法について詳 [!DNL Kinesis] くは、この [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド &#x200B;](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -172,4 +172,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Kinesis] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Kinesis] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[&#x200B; [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。

@@ -24,7 +24,7 @@ ht-degree: 19%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `_dc` | オブジェクト | データ表示に関するユーザーの言語的、地理的、文化的な好みを表す環境の言語を示す、単一のフィールド `language` を含むオブジェクト。 言語は、[IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) で定義されている言語コードで指定されます。 |
-| `browserDetails` | [ ブラウザーの詳細 ](./browser-details.md) | ブラウザー名、バージョン、JavaScriptのバージョン、ユーザーエージェント文字列、受け入れる言語など、ブラウザー固有の環境の詳細を表します。 |
+| `browserDetails` | [&#x200B; ブラウザーの詳細 &#x200B;](./browser-details.md) | ブラウザー名、バージョン、JavaScriptのバージョン、ユーザーエージェント文字列、受け入れる言語など、ブラウザー固有の環境の詳細を表します。 |
 | `ISP` | 文字列 | ユーザーのインターネットサービスプロバイダーの名前。 |
 | `carrier` | 文字列 | ユーザーに通信サービスを販売および提供するモバイルネットワーク通信事業者または MNO （ワイヤレスサービスプロバイダー、ワイヤレス通信事業者、携帯電話会社またはモバイルネットワーク通信事業者とも呼ばれます）の名前。 |
 | `colorDepth` | 整数 | 単一のピクセルの各色成分に使用されるビット数。 |
@@ -35,7 +35,7 @@ ht-degree: 19%
 | `operatingSystem` | 文字列 | 観察されたときに使用されたオペレーティングシステムの名前。属性には、`10.5.3` などのバージョン情報を含めず、`Ultimate` や `Professional` などの「エディション」指定を含める必要があります。 |
 | `operatingSystemVendor` | 文字列 | 観察されたときに使用されたオペレーティングシステムベンダーの名前。 |
 | `operatingSystemVersion` | 文字列 | 観察されたときに使用されたオペレーティングシステムの完全なバージョン識別子。バージョンは通常、数値で構成されますが、ベンダーが定義した形式の場合もあります。 |
-| `type` | 文字列 | アプリケーション環境のタイプ。 使用可能な値については、[ 付録 ](#type) を参照してください。 |
+| `type` | 文字列 | アプリケーション環境のタイプ。 使用可能な値については、[&#x200B; 付録 &#x200B;](#type) を参照してください。 |
 | `viewportHeight` | 整数 | エクスペリエンスが表示されたウィンドウ内の垂直方向のサイズ（ピクセル単位）。 Web ビューイベントの場合、これはブラウザービューポートの高さです。 |
 | `viewPortWidth` | 整数 | エクスペリエンスが表示されたウィンドウ内の水平方向のサイズ（ピクセル単位）。 Web ビューイベントの場合、これはブラウザービューポートの幅です。 |
 
@@ -43,8 +43,8 @@ ht-degree: 19%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## 付録
 

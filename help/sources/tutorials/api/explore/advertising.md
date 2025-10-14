@@ -21,7 +21,7 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->このチュートリアルでは、広告ソースの一意のベース接続 ID が必要です。 この ID を持っていない場合は、[ 広告ソースのExperience Platformへの接続 ](../../api/create/advertising/ads.md) チュートリアルを参照してください。
+>このチュートリアルでは、広告ソースの一意のベース接続 ID が必要です。 この ID を持っていない場合は、[&#x200B; 広告ソースのExperience Platformへの接続 &#x200B;](../../api/create/advertising/ads.md) チュートリアルを参照してください。
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
@@ -32,7 +32,7 @@ ht-degree: 15%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ## データテーブルの探索
 
@@ -170,4 +170,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、広告システムを探索し、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [ 広告システムからデータを収集し、Experience Platformに取り込む ](../collect/advertising.md) ことができます。
+このチュートリアルに従って、広告システムを探索し、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [&#x200B; 広告システムからデータを収集し、Experience Platformに取り込む &#x200B;](../collect/advertising.md) ことができます。

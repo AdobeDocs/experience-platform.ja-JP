@@ -41,7 +41,7 @@ ht-degree: 50%
 
 - `{DOCKER_URL}`：インテリジェントサービスの Docker イメージへの URL アドレス。
 
-このチュートリアルでは、[!DNL Experience Platform] API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+このチュートリアルでは、[!DNL Experience Platform] API を正しく呼び出すために、[Adobe Experience Platformへの認証 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
 - `{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。

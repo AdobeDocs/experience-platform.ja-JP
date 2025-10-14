@@ -19,9 +19,9 @@ ht-degree: 0%
 
 このプロセスの一部として機械学習モデルのトレーニングが必要なため、このドキュメントでは 1 つ以上の機械学習環境に関する実務知識を前提としています。
 
-この例では、[!DNL Jupyter Notebook] を開発環境として使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 [ 公式サイトからダウンロード ](https://jupyter.org/) できます。
+この例では、[!DNL Jupyter Notebook] を開発環境として使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 [&#x200B; 公式サイトからダウンロード &#x200B;](https://jupyter.org/) できます。
 
-まだ行っていない場合は、このガイドに進む前に、Adobe Experience Platform クエリサービスに [ 接続  [!DNL Jupyter Notebook]  する ](../clients/jupyter-notebook.md) の手順に従ってください。
+まだ行っていない場合は、このガイドに進む前に、Adobe Experience Platform クエリサービスに [&#x200B; 接続  [!DNL Jupyter Notebook]  する &#x200B;](../clients/jupyter-notebook.md) の手順に従ってください。
 
 この例で使用されるライブラリは次のとおりです。
 
@@ -37,9 +37,9 @@ tqdm
 
 ## Experience Platformから [!DNL Jupyter Notebook] への分析テーブルの読み込み {#import-analytics-tables}
 
-傾向スコアモデルを生成するには、Experience Platformに保存された Analytics データのプロジェクションを [!DNL Jupyter Notebook] に読み込む必要があります。 クエリサービスに接続された [!DNL Python] 3 [!DNL Jupyter Notebook] から、次のコマンドは架空の衣料品ストアである Luma から顧客行動データセットを読み込みます。 Experience Platform データはエクスペリエンスデータモデル（XDM）形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 [ サンプル JSON オブジェクトの生成 ](../../xdm/ui/sample.md) 方法については、ドキュメントを参照してください。
+傾向スコアモデルを生成するには、Experience Platformに保存された Analytics データのプロジェクションを [!DNL Jupyter Notebook] に読み込む必要があります。 クエリサービスに接続された [!DNL Python] 3 [!DNL Jupyter Notebook] から、次のコマンドは架空の衣料品ストアである Luma から顧客行動データセットを読み込みます。 Experience Platform データはエクスペリエンスデータモデル（XDM）形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 [&#x200B; サンプル JSON オブジェクトの生成 &#x200B;](../../xdm/ui/sample.md) 方法については、ドキュメントを参照してください。
 
-![ 複数のコマンドがハイライト表示された [!DNL Jupyter Notebook] ダッシュボード ](../images/use-cases/jupyter-commands.png)
+![&#x200B; 複数のコマンドがハイライト表示された [!DNL Jupyter Notebook] ダッシュボード &#x200B;](../images/use-cases/jupyter-commands.png)
 
 出力には、[!DNL Jupyter Notebook] ダッシュボード内の Luma の行動データセットのすべての列を表形式で表示します。
 
@@ -100,7 +100,7 @@ y = df['target']
 
 `X` と定義されたデータは表形式で表示され、次のように表示されます。
 
-![[!DNL Jupyter Notebook] 内の X の表形式の出力 ](../images/use-cases/x-output-table.png)
+![[!DNL Jupyter Notebook] 内の X の表形式の出力 &#x200B;](../images/use-cases/x-output-table.png)
 
 
 機械学習に必要なデータが利用可能になったので、[!DNL Python] の `sklearn` ライブラリに事前設定された機械学習モデルに適合させることができます。 傾向モデルのトレーニングに [!DNL Logistics Regression] を使用すると、テストデータの精度を確認できます。 この場合、約 85% です。
@@ -155,7 +155,7 @@ plt.show()
 
 結果の縦棒グラフのビジュアライゼーションを次に示します。
 
-![ 購入の傾向と購入しない傾向を定義する上位 10 の機能のビジュアライゼーション。](../images/use-cases/visualized-results.png)
+![&#x200B; 購入の傾向と購入しない傾向を定義する上位 10 の機能のビジュアライゼーション。](../images/use-cases/visualized-results.png)
 
 棒グラフからは、いくつかのパターンを識別できます。 償還としてのチャネルの販売時点（POS）と通話のトピックは、購買行動を決定する最も重要な要因です。 Call のトピックは苦情と請求書ですが、購買行動を定義するための重要な役割です。 これらは、マーケターがマーケティングキャンペーンを実施して、これらの顧客の購入傾向に対処するために活用できる、定量化可能で実用的なインサイトです。
 
@@ -326,6 +326,6 @@ bootstrap_accuracy = np.sort(bootstrap_accuracy)
 
 ブートストラップされたモデルの精度がソートされます。 その後、モデルの精度の 10 番目と 90 番目の分量は、指定されたサンプルサイズでのモデルの精度の 95% の信頼区間になります。
 
-![ 傾向スコアの信頼区間を表示する印刷コマンド。](../images/use-cases/confidence-interval.png)
+![&#x200B; 傾向スコアの信頼区間を表示する印刷コマンド。](../images/use-cases/confidence-interval.png)
 
 上の図では、モデルのトレーニングに 1000 行しか使用しない場合、精度は約 84～88% に低下すると予想されます。 モデルのパフォーマンスを確保するために、必要に応じて、クエリサービスクエリの `LIMIT` 句を調整できます。

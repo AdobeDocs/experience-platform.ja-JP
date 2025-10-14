@@ -19,8 +19,8 @@ ht-degree: 14%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 >[!IMPORTANT]
 >
@@ -30,11 +30,11 @@ ht-degree: 14%
 
 ### 必要な資格情報の収集
 
-認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
+認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド &#x200B;](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -186,4 +186,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL SFTP] 接続を作成し、接続の一意の ID 値を取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 ](../../explore/cloud-storage.md) を行うことができます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL SFTP] 接続を作成し、接続の一意の ID 値を取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 &#x200B;](../../explore/cloud-storage.md) を行うことができます。

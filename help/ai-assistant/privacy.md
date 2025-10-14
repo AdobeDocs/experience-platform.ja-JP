@@ -17,10 +17,10 @@ Adobe Experience Platformの AI アシスタントは、プライバシー、セ
 
 * 現在、AI アシスタントは、トレーニング目的であっても、個人データを使用していません。
 * AI アシスタントは、消費者データを認識していません。
-* 既存のすべての [ アクセス制御 ](../access-control/home.md) ポリシーは、AI アシスタントによって順守されます。
+* 既存のすべての [&#x200B; アクセス制御 &#x200B;](../access-control/home.md) ポリシーは、AI アシスタントによって順守されます。
    * 新しい属性ベースのアクセス制御ポリシーは、最大 24 時間後に AI Assistant に反映されます*
 * AI アシスタントとやり取りするための明示的な権限を付与される必要があります。
-   * [ 権限 UI](../access-control/abac/ui/permissions.md) を使用して、Experience PlatformとJourney Optimizerに対して異なる権限を設定できます。また、[Admin Console](../access-control/ui/browse.md) を使用して、Customer Journey Analyticsの権限を割り当てることができます。
+   * [&#x200B; 権限 UI](../access-control/abac/ui/permissions.md) を使用して、Experience PlatformとJourney Optimizerに対して異なる権限を設定できます。また、[Admin Console](../access-control/ui/browse.md) を使用して、Customer Journey Analyticsの権限を割り当てることができます。
    * 権限は粒度が細かく、サンドボックス管理者は、どのユーザーに異なる質問カテゴリ（AI アシスタントを使用した製品ナレッジベースの質問または運用インサイトに関する質問）を依頼できるかを設定できます。
 * AI アシスタントは、Adobe Experience Platform Healthcare Shield と組み合わせて使用する場合の、HIPAA 対応の機能です。
 * 以前に AI アシスタントとやり取りしたログを 30 日間の保持ポリシーで表示できます。

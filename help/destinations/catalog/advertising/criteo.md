@@ -16,13 +16,13 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、Criteo によって作成および管理されます。 お問い合わせや更新のリクエストについては、Criteo に直接お問い合わせください [ こちら ](mailto:criteoTechnicalPartnerships@criteo.com)。
+>この宛先コネクタとドキュメントページは、Criteo によって作成および管理されます。 お問い合わせや更新のリクエストについては、Criteo に直接お問い合わせください [&#x200B; こちら &#x200B;](mailto:criteoTechnicalPartnerships@criteo.com)。
 
 Criteo は、信頼性の高い効果的な広告を強化し、オープンインターネットを通じてすべての消費者により豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI により、Criteo はショッピングジャーニー全体の各タッチポイントが適切な広告で適切なタイミングで顧客に届くようにパーソナライズされるようにします。
 
 ## 前提条件 {#prerequisites}
 
-* [Criteo 管理センター ](https://marketing.criteo.com) の管理者ユーザーアカウントが必要です。
+* [Criteo 管理センター &#x200B;](https://marketing.criteo.com) の管理者ユーザーアカウントが必要です。
 * Criteo 広告主 ID が必要です（この ID をお持ちでない場合は、Criteo 担当者にお問い合わせください）。
 * 識別子として使用する場合は、[!DNL GUM caller ID] を指定する必要 [!DNL GUM ID] あります。
 
@@ -67,7 +67,7 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -77,15 +77,15 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 1. Adobe Experience Platformにログインし、Criteo の宛先に接続します。
 
-   ![ ログイン ](../../assets/catalog/advertising/criteo/connect-destination.png)
+   ![&#x200B; ログイン &#x200B;](../../assets/catalog/advertising/criteo/connect-destination.png)
 
 1. 接続を認証するために、Criteo にリダイレクトされます。 最初に Criteo 資格情報を使用してログインする必要がある場合があります。
 
-   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### 接続パラメーター {#connection-parameters}
@@ -111,14 +111,14 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-書き出されたオーディエンスは、[Criteo 管理センター ](https://marketing.criteo.com/audience-manager/dashboard) で確認できます。
+書き出されたオーディエンスは、[Criteo 管理センター &#x200B;](https://marketing.criteo.com/audience-manager/dashboard) で確認できます。
 
 [!DNL Criteo] 接続で受け取ったユーザープロファイルを追加するリクエスト本文は、次のようになります。
 
@@ -178,9 +178,9 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 ## データの使用とガバナンス {#data-usage}
 
-Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[ データガバナンスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。
+Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。
 
 ## その他のリソース
 
-* [Criteo ヘルプセンター ](https://help.criteo.com/kb/en)
-* [Criteo デベロッパーポータル ](https://developers.criteo.com)
+* [Criteo ヘルプセンター &#x200B;](https://help.criteo.com/kb/en)
+* [Criteo デベロッパーポータル &#x200B;](https://developers.criteo.com)

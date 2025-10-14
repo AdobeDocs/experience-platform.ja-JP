@@ -50,7 +50,7 @@ Edge Networkで使用可能なサービスは次のとおりです。
 
 次の節では、hub とEdge Networkの両方の場所を示します。
 
-![ ハブサーバーとEdge Network サーバーの両方で異なる場所を示す図。](./images/servers/platform-server-locations.png)
+![&#x200B; ハブサーバーとEdge Network サーバーの両方で異なる場所を示す図。](./images/servers/platform-server-locations.png)
 
 **ハブ**
 
@@ -71,7 +71,7 @@ Edge Networkで使用可能なサービスは次のとおりです。
 - AUS3 （オーストラリア）
 - JPN3 （日本）
 
-使用可能なサーバーの場所について詳しくは、[ マルチクラウドの概要 ](./multi-cloud.md#available-cloud-regions) を参照してください。
+使用可能なサーバーの場所について詳しくは、[&#x200B; マルチクラウドの概要 &#x200B;](./multi-cloud.md#available-cloud-regions) を参照してください。
 
 ## 次の手順
 

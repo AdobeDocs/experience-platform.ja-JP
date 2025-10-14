@@ -39,7 +39,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 {style="table-layout:auto"}
 
-Experience Platformの監査ログについて詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
+Experience Platformの監査ログについて詳しくは、[&#x200B; 監査ログの概要 &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## Real-Time CDP B2B Edition の関連するアカウント {#related-accounts}
 
@@ -69,7 +69,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 {style="table-layout:auto"}
 
-Experience Platformのアラートについて詳しくは、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。
+Experience Platformのアラートについて詳しくは、[&#x200B; アラートの概要 &#x200B;](../../observability/alerts/overview.md) を参照してください。
 
 ## ダッシュボード {#dashboards}
 
@@ -104,7 +104,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 {style="table-layout:auto"}
 
-Experience Platformの宛先ダッシュボードについて詳しくは、[ 宛先ダッシュボードの概要 ](../../dashboards/guides/destinations.md) を参照してください。
+Experience Platformの宛先ダッシュボードについて詳しくは、[&#x200B; 宛先ダッシュボードの概要 &#x200B;](../../dashboards/guides/destinations.md) を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -117,7 +117,7 @@ Experience Platform は、クライアントサイドのカスタマーエクス
 | グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../datastreams/overview.md#create)の節を参照してください。 |
 | [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Edge Network API を使用すると、お客様は、新しい認証済みエンドポイントを使用してExperience Platform Edge Networkを操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
 
-Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
+Experience Platformのデータ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -144,8 +144,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | B2B で使用できる新しいソースを提供開始 | B2B ユースケースで、Experience Platformで使用可能なすべてのソースを使用できるようになりました。 使用できるソースの完全なリストについては、[ソースカタログ](../../sources/home.md)を参照してください。 |
-| 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）からExperience Platformにシームレスにデータを取り込むことができるようになりました。 詳しくは、[ [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
-| [!DNL Data Landing Zone] の API の強化 | [!DNL Data Landing Zone] ソースは、[!DNL Flow Service] API 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
+| 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）からExperience Platformにシームレスにデータを取り込むことができるようになりました。 詳しくは、[&#x200B; [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
+| [!DNL Data Landing Zone] の API の強化 | [!DNL Data Landing Zone] ソースは、[!DNL Flow Service] API 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[&#x200B; [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 

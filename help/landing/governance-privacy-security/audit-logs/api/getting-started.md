@@ -19,7 +19,7 @@ Audit Query API を使用すると、様々なサービスおよび機能に関�
 
 ## 前提条件
 
-監査イベントを管理するには、**[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限を付与する必要があります（[!UICONTROL &#x200B; データガバナンス &#x200B;] カテゴリの下にあります）。 Experience Platform機能の個々の権限を管理する方法については、[ アクセス制御ドキュメント ](../../../../access-control/home.md) を参照してください。
+監査イベントを管理するには、**[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限を付与する必要があります（[!UICONTROL &#x200B; データガバナンス &#x200B;] カテゴリの下にあります）。 Experience Platform機能の個々の権限を管理する方法については、[&#x200B; アクセス制御ドキュメント &#x200B;](../../../../access-control/home.md) を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -27,7 +27,7 @@ Audit Query API を使用すると、様々なサービスおよび機能に関�
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Experience Platform API を正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Experience Platform API を正しく呼び出すために、[&#x200B; 認証に関するチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -43,4 +43,4 @@ Audit Query API を使用すると、様々なサービスおよび機能に関�
 
 ## 次の手順
 
-[!DNL Audit Query] API を使用した呼び出しを開始するには、[ イベントエンドポイントガイド ](./events.md) および [ 書き出しエンドポイントガイド ](./export.md) を参照してください。
+[!DNL Audit Query] API を使用した呼び出しを開始するには、[&#x200B; イベントエンドポイントガイド &#x200B;](./events.md) および [&#x200B; 書き出しエンドポイントガイド &#x200B;](./export.md) を参照してください。

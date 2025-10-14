@@ -18,7 +18,7 @@ ht-degree: 75%
 
 [!DNL QuestionPro Intercept Surveys] は、Adobe Experience Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![QuestionPro Intercept Surveys 拡張機能](../../assets/catalog/survey/web-intercept-surveys/catalog.png)
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL QuestionPro Intercept Surveys] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

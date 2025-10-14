@@ -17,7 +17,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL Pinterest Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Pinterest Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -31,15 +31,15 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 [!DNL Pinterest Ads] ソースは、[!DNL Pinterest] API を活用して、すべてのパフォーマンスと指標と共に [!DNL Pinterest Ads] データを取得します。 サポートされている API エンドポイントは次のとおりです。
 
-* [Campaign 分析 ](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
-* [ 広告グループ分析 ](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
-* [ 広告分析 ](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
+* [Campaign 分析 &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
+* [&#x200B; 広告グループ分析 &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
+* [&#x200B; 広告分析 &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
 [!DNL Pinterest Ads] ソースを使用して、[!DNL Pinterest] からExperience Platformにデータを取り込み、データ分析を実行できます。 データは、過去 90 日間の取得日から返されます。 [!DNL Pinterest Ads] は、[!DNL Pinterest] API と通信するための認証メカニズムとして bearer トークンを使用します。
 
 ## 前提条件 {#prerequisites}
 
-[!DNL Pinterest Ads] ソース接続を作成する最初の手順は、Pinterest開発者アカウントを持っていることを確認することです。 アカウントをまだお持ちでない場合は、[ 新規登録 ](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) ページにアクセスし、アカウントを登録および作成してください。
+[!DNL Pinterest Ads] ソース接続を作成する最初の手順は、Pinterest開発者アカウントを持っていることを確認することです。 アカウントをまだお持ちでない場合は、[&#x200B; 新規登録 &#x200B;](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) ページにアクセスし、アカウントを登録および作成してください。
 
 ### アプリ [!DNL Pinterest] 設定し、アクセストークンを生成する {#create-app-and-generate-token}
 
@@ -47,7 +47,7 @@ Adobe Experience Platform には、サードパーティの広告システムか
 >
 >UI でアクセストークンを生成するとアクセスが制限されるので、[!DNL Pinterest] API を使用してアクセストークンを生成することをお勧めします。 UI を使用してアクセスできるのは、`pins:read`、`boards:read` および `user_accounts:read` のスコープのみです。 この制限は、[!DNL Pinterest] API の分析エンドポイントでの使用には適切ではありません。
 
-アクセストークンを生成するには、[!DNL Pinterest] のガイド [ アプリの設定 ](https://developers.pinterest.com/docs/getting-started/set-up-app/) および [OAuth 2.0 を使用した認証 ](https://developers.pinterest.com/docs/getting-started/authentication/) を参照してください。
+アクセストークンを生成するには、[!DNL Pinterest] のガイド [&#x200B; アプリの設定 &#x200B;](https://developers.pinterest.com/docs/getting-started/set-up-app/) および [OAuth 2.0 を使用した認証 &#x200B;](https://developers.pinterest.com/docs/getting-started/authentication/) を参照してください。
 
 ### 必要な資格情報の収集 {#gather-required-credentials}
 
@@ -55,8 +55,8 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 | 資格情報 | 説明 |
 | --- | --- |
-| アクセストークン | ユーザーアカウントの [!DNL Pinterest Ads] アクセストークン。 トークンのユーザーアカウントは、指定された [!DNL Pinterest Ad] アカウントの所有者であるか、ビジネスアクセスで必要な役割（管理者、アナリスト、キャンペーンマネージャー）の 1 つが付与されている必要があります。 アクセストークンについて詳しくは、[[!DNL Pinterest]  アクセストークンの生成に関するガイド ](https://developers.pinterest.com/docs/getting-started/set-up-app/) を参照してください。 |
-| 広告アカウント ID | ビジネスユニットの関連する [!DNL Pinterest Ads] 広告アカウント ID。 広告アカウント ID の取得については、こちらを参照してください。 [[!DNL Pinterest]  広告マネージャーでの ID の検索に関するガイド ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) を参照してください。 |
+| アクセストークン | ユーザーアカウントの [!DNL Pinterest Ads] アクセストークン。 トークンのユーザーアカウントは、指定された [!DNL Pinterest Ad] アカウントの所有者であるか、ビジネスアクセスで必要な役割（管理者、アナリスト、キャンペーンマネージャー）の 1 つが付与されている必要があります。 アクセストークンについて詳しくは、[[!DNL Pinterest]  アクセストークンの生成に関するガイド &#x200B;](https://developers.pinterest.com/docs/getting-started/set-up-app/) を参照してください。 |
+| 広告アカウント ID | ビジネスユニットの関連する [!DNL Pinterest Ads] 広告アカウント ID。 広告アカウント ID の取得については、こちらを参照してください。 [[!DNL Pinterest]  広告マネージャーでの ID の検索に関するガイド &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) を参照してください。 |
 | キャンペーン、広告グループまたは広告 ID | 広告アカウント ID に対応する `campaign`、`ad group` または `ad` の ID。 必要な ID を取得するには、**Pinterest Business Hub**/**広告アカウントの概要**/**キャンペーン**/**広告グループ**/**広告** の [!DNL Pinterest] ページに移動し、それぞれの名前の下に記載されている必須 ID をコピーします。 |
 
 >[!NOTE]
@@ -99,7 +99,7 @@ Experience Platformの場合、[!DNL Pinterest Ads] ソースは内部で `Day` 
 
 >[!IMPORTANT]
 >
->Pinterestでは、広告、広告グループまたは広告キャンペーンから情報を読み取るために、API に対して毎日 1,000 回の API 呼び出しのレート制限が課されています。 基になる API 呼び出しに適用されるレート制限について詳しくは、[[!DNL Pinterest]  レート制限に関するドキュメント ](https://developers.pinterest.com/docs/reference/ratelimits/) を参照してください。
+>Pinterestでは、広告、広告グループまたは広告キャンペーンから情報を読み取るために、API に対して毎日 1,000 回の API 呼び出しのレート制限が課されています。 基になる API 呼び出しに適用されるレート制限について詳しくは、[[!DNL Pinterest]  レート制限に関するドキュメント &#x200B;](https://developers.pinterest.com/docs/reference/ratelimits/) を参照してください。
 
 ## [!DNL Pinterest Ads] をExperience Platformに接続 {#connect-to-platform}
 

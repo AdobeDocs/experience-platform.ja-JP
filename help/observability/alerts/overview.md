@@ -81,9 +81,9 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 >[!NOTE]
 >
->Experience Platformで権限を管理する方法について詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/ui/overview.md) を参照してください。
+>Experience Platformで権限を管理する方法について詳しくは、[&#x200B; アクセス制御に関するドキュメント &#x200B;](../../access-control/ui/overview.md) を参照してください。
 
-「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
+「アラートの表示」権限を使用すると、右上隅のベルアイコン（![&#x200B; ベルアイコン &#x200B;](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
 ![](../images/alerts/overview/ui.png)
 

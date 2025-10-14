@@ -15,7 +15,7 @@ ht-degree: 18%
 
 [!UICONTROL &#x200B; 検索 &#x200B;] は、web 検索アクティビティに関する情報を含んだ標準の Experience Data Model （XDM）データタイプです。
 
-![ 検索画像 ](../images/data-types/search.PNG){width=500}
+![&#x200B; 検索画像 &#x200B;](../images/data-types/search.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -31,5 +31,5 @@ ht-degree: 18%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

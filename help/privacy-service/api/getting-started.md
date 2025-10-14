@@ -18,7 +18,7 @@ ht-degree: 21%
 
 このガイドでは、[Privacy Service](../home.md) と、Adobe Experience Cloud アプリケーション全体のデータ主体（お客様）からのアクセスリクエストや削除リクエストを管理する方法に関する十分な知識が必要です。
 
-API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Serviceの製品プロファイルを事前に設定している必要があります。 API 統合に割り当てる製品プロファイルによって、Privacy Service機能にアクセスする際に統合に付与される権限が決まります。 詳しくは、[Privacy Service権限の管理 ](../permissions.md) に関するガイドを参照してください。
+API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Serviceの製品プロファイルを事前に設定している必要があります。 API 統合に割り当てる製品プロファイルによって、Privacy Service機能にアクセスする際に統合に付与される権限が決まります。 詳しくは、[Privacy Service権限の管理 &#x200B;](../permissions.md) に関するガイドを参照してください。
 
 ## 必須ヘッダーの値の収集 {#gather-values-required-headers}
 
@@ -38,23 +38,23 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 新しいプロジェクトを作成したら、「**[!UICONTROL プロジェクトに追加]**」を選択し、ドロップダウンメニューから「**[!UICONTROL API]**」を選択します。
 
-![Developer Consoleのプロジェクトの詳細ページの [!UICONTROL &#x200B; プロジェクトに追加 &#x200B;] ドロップダウンから選択されている「API」オプション ](../images/api/getting-started/add-api-button.png)
+![Developer Consoleのプロジェクトの詳細ページの [!UICONTROL &#x200B; プロジェクトに追加 &#x200B;] ドロップダウンから選択されている「API」オプション &#x200B;](../images/api/getting-started/add-api-button.png)
 
 #### Privacy Service API を選択します。 {#select-privacy-service-api}
 
 **[!UICONTROL API の追加]**&#x200B;画面が表示されます。 「**[!UICONTROL Experience Cloud]**」を選択して使用可能な API のリストを絞り込み、「**[!UICONTROL Privacy Service API]**」のカードを選択して **[!UICONTROL 「次へ]**」を選択します。
 
-![ 使用可能な API のリストから選択されているPrivacy Service API カード ](../images/api/getting-started/add-privacy-service-api.png)
+![&#x200B; 使用可能な API のリストから選択されているPrivacy Service API カード &#x200B;](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Privacy Service API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) を参照します。
+>**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Privacy Service API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) を参照します。
 
 次に、認証タイプを選択してアクセストークンを生成し、Privacy Service API にアクセスします。
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE &#x200B; 非推奨 &#x200B;]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) ます。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE &#x200B; 非推奨 &#x200B;]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 &#x200B;](/help/landing/api-authentication.md#jwt) ます。
 
 ![Oauth サーバー間認証方法を選択します。](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -64,18 +64,18 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 >[!NOTE]
 >
->製品プロファイルとそれらが提供する詳細な権限は、Adobe Admin Consoleを通じて管理者が作成および管理します。 詳しくは、[Privacy Serviceの権限 ](../permissions.md) に関するガイドを参照してください。
+>製品プロファイルとそれらが提供する詳細な権限は、Adobe Admin Consoleを通じて管理者が作成および管理します。 詳しくは、[Privacy Serviceの権限 &#x200B;](../permissions.md) に関するガイドを参照してください。
 
 終了したら、「**[!UICONTROL 設定済み API を保存]**」を選択します。
 
-![ 設定を保存する前に、リストから 1 つの製品プロファイルが選択されている ](../images/api/getting-started/select-product-profiles.png)
+![&#x200B; 設定を保存する前に、リストから 1 つの製品プロファイルが選択されている &#x200B;](../images/api/getting-started/select-product-profiles.png)
 
 API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Privacy Service API]** ページに、Privacy Service API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
 * `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
 
-![Developer Consoleに API を追加した後の統合情報 ](/help/privacy-service/images/api/getting-started/api-integration-information.png)
+![Developer Consoleに API を追加した後の統合情報 &#x200B;](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
 ### 各セッションの認証 {#authentication-each-session}
 
@@ -83,8 +83,8 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 一般に、アクセストークンは次の 2 とおりの方法で生成されます。
 
-* テストおよび開発用に [ 手動でトークンを生成 ](#manual-token) します。
-* API 統合用の [ トークン生成の自動化 ](#auto-token)。
+* テストおよび開発用に [&#x200B; 手動でトークンを生成 &#x200B;](#manual-token) します。
+* API 統合用の [&#x200B; トークン生成の自動化 &#x200B;](#auto-token)。
 
 #### トークンの手動生成 {#manual-token}
 
@@ -96,7 +96,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 #### トークン生成の自動化 {#auto-token}
 
-また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
+また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト &#x200B;](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
 
 ## API 呼び出し例の読み取り {#read-sample-api-calls}
 

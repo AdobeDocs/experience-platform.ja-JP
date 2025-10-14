@@ -14,9 +14,9 @@ ht-degree: 8%
 
 # [!UICONTROL &#x200B; 予防接種 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 予防接種 &#x200B;] は、[[!DNL XDM Experience Event]  クラス ](../../../classes/experienceevent.md) の標準スキーマフィールドグループです。 免疫イベント情報を取得する単一のオブジェクトタイプフィールド `healthcareImmunization` を提供します。
+[!UICONTROL &#x200B; 予防接種 &#x200B;] は、[[!DNL XDM Experience Event]  クラス &#x200B;](../../../classes/experienceevent.md) の標準スキーマフィールドグループです。 免疫イベント情報を取得する単一のオブジェクトタイプフィールド `healthcareImmunization` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/immunization/immunization.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/immunization/immunization.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -31,10 +31,10 @@ ht-degree: 8%
 | [!UICONTROL &#x200B; 製造元 &#x200B;] | `manufacturer` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) | ワクチンの製造元。 |
 | [!UICONTROL &#x200B; 注 &#x200B;] | `note` | [[!UICONTROL Annotation]](../data-types/annotation.md) の配列 | 追加の予防接種記録。 |
 | [!UICONTROL &#x200B; 患者 &#x200B;] | `patient` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 予防接種を受けた人。 |
-| [!UICONTROL バッチ] | `performer` | オブジェクトの配列 | 予防接種イベントを行った人。 詳しくは、[ 以下の節 ](#performer) を参照してください。 |
-| [!UICONTROL &#x200B; プログラムの実施要件 &#x200B;] | `programEligibility` | オブジェクトの配列 | 特定のワクチン接種プログラムに対する患者の実施要件。 詳しくは、[ 以下の節 ](#program-eligibility) を参照してください。 |
-| [!UICONTROL &#x200B; 適用されるプロトコル &#x200B;] | `protocolApplied` | オブジェクトの配列 | プロバイダーから提供されるプロトコル。 詳しくは、[ 以下の節 ](#protocol-applied) を参照してください。 |
-| [!UICONTROL &#x200B; 反応 &#x200B;] | `reaction` | オブジェクトの配列 | 予防接種後の反応の詳細。 詳しくは、[ 以下の節 ](#reaction) を参照してください。 |
+| [!UICONTROL バッチ] | `performer` | オブジェクトの配列 | 予防接種イベントを行った人。 詳しくは、[&#x200B; 以下の節 &#x200B;](#performer) を参照してください。 |
+| [!UICONTROL &#x200B; プログラムの実施要件 &#x200B;] | `programEligibility` | オブジェクトの配列 | 特定のワクチン接種プログラムに対する患者の実施要件。 詳しくは、[&#x200B; 以下の節 &#x200B;](#program-eligibility) を参照してください。 |
+| [!UICONTROL &#x200B; 適用されるプロトコル &#x200B;] | `protocolApplied` | オブジェクトの配列 | プロバイダーから提供されるプロトコル。 詳しくは、[&#x200B; 以下の節 &#x200B;](#protocol-applied) を参照してください。 |
+| [!UICONTROL &#x200B; 反応 &#x200B;] | `reaction` | オブジェクトの配列 | 予防接種後の反応の詳細。 詳しくは、[&#x200B; 以下の節 &#x200B;](#reaction) を参照してください。 |
 | [!UICONTROL 理由] | `reason` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) の配列 | 予防接種の理由。 |
 | [!UICONTROL &#x200B; ルート &#x200B;] | `route` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | ワクチンが体に入った方法。 |
 | [!UICONTROL &#x200B; サイト &#x200B;] | `site` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | ワクチンを接種した身体部位 |
@@ -52,14 +52,14 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.schema.json)
 
 ## `performer` {#performer}
 
 `performer` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ パフォーマンス構造 ](../../../images/healthcare/field-groups/immunization/performer.png)
+![&#x200B; パフォーマンス構造 &#x200B;](../../../images/healthcare/field-groups/immunization/performer.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ ht-degree: 8%
 
 `protocolApplied` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![protocolApplied 構造体 ](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
+![protocolApplied 構造体 &#x200B;](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ ht-degree: 8%
 
 `reaction` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 反応構造 ](../../../images/healthcare/field-groups/immunization/reaction.png)
+![&#x200B; 反応構造 &#x200B;](../../../images/healthcare/field-groups/immunization/reaction.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

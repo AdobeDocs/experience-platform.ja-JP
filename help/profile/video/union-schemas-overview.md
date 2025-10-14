@@ -19,10 +19,10 @@ ht-degree: 17%
 
 # 結合スキーマの概要
 
-このビデオでは、Experience Platform内の結合スキーマの基本的な理解を提供し、Adobe Experience Platform ユーザーインターフェイスを使用して結合スキーマを参照する方法の概要を説明します。 結合スキーマについて詳しくは、[ 結合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
+このビデオでは、Experience Platform内の結合スキーマの基本的な理解を提供し、Adobe Experience Platform ユーザーインターフェイスを使用して結合スキーマを参照する方法の概要を説明します。 結合スキーマについて詳しくは、[&#x200B; 結合スキーマ UI ガイド &#x200B;](../ui/union-schema.md) を参照してください。
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ 結合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[&#x200B; 結合スキーマ UI ガイド &#x200B;](../ui/union-schema.md) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342824?quality=12&learn=on&captions=jpn)

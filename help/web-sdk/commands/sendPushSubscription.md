@@ -124,5 +124,5 @@ if (lastSent !== today) {
 ## 関連ドキュメント
 
 - [プッシュ通知の設定](configure/pushnotifications.md)
-- [Web プッシュ API の仕様 ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
-- [ サービスワーカー API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+- [Web プッシュ API の仕様 &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+- [&#x200B; サービスワーカー API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

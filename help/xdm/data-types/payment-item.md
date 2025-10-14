@@ -15,7 +15,7 @@ ht-degree: 19%
 
 [!UICONTROL &#x200B; 支払い項目 &#x200B;] は、注文に関連付けられた支払いを記述する標準の Experience Data Model （XDM）データタイプで、支払いのタイプ、金額、関連する通貨を定義します。
 
-![ 支払い項目の画像 ](../images/data-types/payment-item.PNG){width=400}
+![&#x200B; 支払い項目の画像 &#x200B;](../images/data-types/payment-item.PNG){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -28,5 +28,5 @@ ht-degree: 19%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)

@@ -59,7 +59,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [ 宛先のアクティベーションワークフロー ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントの新しく選定されたすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [&#x200B; 宛先のアクティベーションワークフロー &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントの新しく選定されたすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -80,7 +80,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 * **[!UICONTROL クライアント ID]**:Medallia 配信チームから取得します。
 * **[!UICONTROL クライアントの秘密鍵]**:Medallia 配信チームから入手します。
 
-![ この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![&#x200B; この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -91,7 +91,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 * **[!UICONTROL API ゲートウェイ URL]**:Medallia 配信チームから入手します。 通常、https://instance-tenant.apis.medallia.comの形式で指定します。
 * **[!UICONTROL インポート API 名]**:Medallia 配信チームから取得します。 この接続で使用される Medallia Import API （Web フィードとも呼ばれます）の名前です。 異なるオーディエンスを異なる読み込み API に対してアクティブ化して、異なる調査プログラムをトリガーにすることができます。
 
-![ この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![&#x200B; この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -103,8 +103,8 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -121,7 +121,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
    * 顧客の姓を **ターゲットフィールド**/**カスタム属性を選択**/**属性名**/**lastname** にマッピングします
 * 必要に応じて、他のターゲットカスタム属性のマッピングを追加します
 
-![ID と属性のサンプルマッピングを示す画像 ](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![ID と属性のサンプルマッピングを示す画像 &#x200B;](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 

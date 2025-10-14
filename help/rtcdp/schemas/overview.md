@@ -16,4 +16,4 @@ ht-degree: 81%
 
 スキーマを作成したら、データの構造を XDM にマッピングして、システムに取り込むことができます。
 
-XDM と UI でのスキーマの管理方法について詳しくは、[XDM のドキュメント](../../xdm/home.md)を参照してください。Real-time Customer Experience Platform B2B editionを使用している場合、XDM の B2B 固有のアプリケーションについて詳しくは、[Real-Time CDP B2B editionのスキーマ ](./b2b.md) に関するドキュメントを参照してください。
+XDM と UI でのスキーマの管理方法について詳しくは、[XDM のドキュメント](../../xdm/home.md)を参照してください。Real-time Customer Experience Platform B2B editionを使用している場合、XDM の B2B 固有のアプリケーションについて詳しくは、[Real-Time CDP B2B editionのスキーマ &#x200B;](./b2b.md) に関するドキュメントを参照してください。

@@ -14,7 +14,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->[!DNL Braze Currents] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Braze Currents] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -26,8 +26,8 @@ Experience Platformは、ストリーミングアプリケーションからの�
 
 このガイドの手順を完了するには、以下が必要です。
 
-* [Adobe Experience Platformにログインし ](https://platform.adobe.com) 新しいストリーミングソース接続を作成する権限。
-* [[!DNL Braze]  ダッシュボード ](https://dashboard.braze.com/sign_in) へのログイン、未使用の [Current Connector ライセンス ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)、コネクタを作成するための権限。 詳しくは、[ 設定の要件  [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements) を参照してください。
+* [Adobe Experience Platformにログインし &#x200B;](https://platform.adobe.com) 新しいストリーミングソース接続を作成する権限。
+* [[!DNL Braze]  ダッシュボード &#x200B;](https://dashboard.braze.com/sign_in) へのログイン、未使用の [Current Connector ライセンス &#x200B;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)、コネクタを作成するための権限。 詳しくは、[&#x200B; 設定の要件  [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements) を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -42,8 +42,8 @@ Experience Platformは、ストリーミングアプリケーションからの�
 | データフロー ID | Experience Platform ソースに関連付けられたデータフロー ID。 |
 | ストリーミングエンドポイント | Experience Platform ソースに関連付けられたストリーミングエンドポイント。 **メモ**:[!DNL Braze] はこれをバッチストリーミングエンドポイントに自動的に変換します。 |
 
-これらの値の取得方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-authentication.md) を参照してください。 [!DNL Braze] ダッシュボードの使用方法については、[!DNL Braze] ガイドで [ 電流に移動 ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents) する方法を参照してください。
+これらの値の取得方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-authentication.md) を参照してください。 [!DNL Braze] ダッシュボードの使用方法については、[!DNL Braze] ガイドで [&#x200B; 電流に移動 &#x200B;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents) する方法を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Braze Currents] アカウントからExperience Platformにデータをストリーミングするために必要な前提条件を説明しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Braze Currents]  に関するガイドに進むことができ ](../../tutorials/ui/create/marketing-automation/braze.md) す。
+このドキュメントでは、[!DNL Braze Currents] アカウントからExperience Platformにデータをストリーミングするために必要な前提条件を説明しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Braze Currents]  に関するガイドに進むことができ &#x200B;](../../tutorials/ui/create/marketing-automation/braze.md) す。

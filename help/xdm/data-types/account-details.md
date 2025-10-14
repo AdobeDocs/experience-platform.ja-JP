@@ -13,7 +13,7 @@ ht-degree: 22%
 
 [!UICONTROL &#x200B; アカウントの詳細 &#x200B;] は、ビジネス組織に関連する詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
-![ データタイプ構造 ](../images/data-types/account-details.png)
+![&#x200B; データタイプ構造 &#x200B;](../images/data-types/account-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -42,5 +42,5 @@ ht-degree: 22%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)

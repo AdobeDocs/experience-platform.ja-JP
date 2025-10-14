@@ -12,16 +12,16 @@ ht-degree: 8%
 
 # [!UICONTROL &#x200B; 予約詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 予約詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、長さ、変更、払い戻し可能ステータス、部屋数など、予約に関する情報を取得するために使用されます。
+[!UICONTROL &#x200B; 予約詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、長さ、変更、払い戻し可能ステータス、部屋数など、予約に関する情報を取得するために使用されます。
 
 フィールドグループは、単一のオブジェクトタイプのフィールド `reservations` を提供します。 このオブジェクトに含まれるプロパティについては、以下で説明します。
 
-![ 予約詳細の構造 ](../../images/field-groups/reservation-details.png)
+![&#x200B; 予約詳細の構造 &#x200B;](../../images/field-groups/reservation-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `nonRefundableAmount` | [通貨](../../data-types/currency.md) | 払い戻し不可とマークされている予約金額。 |
-| `transaction` | [ トランザクション ](../../data-types/transaction.md) | 予約の通貨トランザクションを表します。 |
+| `transaction` | [&#x200B; トランザクション &#x200B;](../../data-types/transaction.md) | 予約の通貨トランザクションを表します。 |
 | `id` | 文字列 | 予約の一意の ID。 |
 | `cancellation` | 整数 | この値は、予約がキャンセルされた際にキャプチャされます。 |
 | `confirmationNumber` | 文字列 | 予約の確認番号または識別子。 |
@@ -41,8 +41,8 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
 
 ## 業界固有の予約フィールドグループ
 

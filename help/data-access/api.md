@@ -15,7 +15,7 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->Data Access API が **非推奨** になりました。 Adobe Experience Platformからのデータの書き出しに Destinations を使用することをお勧めします。 詳しくは、[ データセット書き出し宛先のドキュメント ](../destinations/destination-types.md#dataset-export-destinations) を参照してください。
+>Data Access API が **非推奨** になりました。 Adobe Experience Platformからのデータの書き出しに Destinations を使用することをお勧めします。 詳しくは、[&#x200B; データセット書き出し宛先のドキュメント &#x200B;](../destinations/destination-types.md#dataset-export-destinations) を参照してください。
 
 Data Access API は、[!DNL Experience Platform] 内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
@@ -23,7 +23,7 @@ Data Access API は、[!DNL Experience Platform] 内に取り込んだデータ�
 
 ## API 仕様リファレンス
 
-統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[ データアクセス OpenAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-access/) を参照してください。
+統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[&#x200B; データアクセス OpenAPI リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-access/) を参照してください。
 
 ## 用語 {#terminology}
 
@@ -239,8 +239,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## その他のコードサンプル
 
-その他の例については、[ データアクセスのチュートリアル ](tutorials/dataset-data.md) を参照してください。
+その他の例については、[&#x200B; データアクセスのチュートリアル &#x200B;](tutorials/dataset-data.md) を参照してください。
 
 ## データ取得イベントへのサブスクライブ {#subscribe-to-data-ingestion-events}
 
-[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobe イベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。
+[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobe イベント通知の登録 &#x200B;](../observability/alerts/subscribe.md) のチュートリアルを参照してください。

@@ -31,13 +31,13 @@ ht-degree: 63%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
    * [クラウドストレージソース](../api/collect/cloud-storage.md)：クラウドストレージソースから Experience Platform にバッチデータを取り込むためのデータフローを作成します。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
 
 ### 暗号化されたファイルでサポートされるファイル拡張子 {#supported-file-extensions-for-encrypted-files}
 
@@ -624,4 +624,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、クラウドストレージデータの暗号化キーペアと、暗号化されたデータを [!DNL Flow Service API] を使用して取り込むデータフローを作成しました。データフローの完全性、エラーおよび指標に関するステータスの更新については、[API を使用したデータフローの監視 ](./monitor.md) に関するガイドを参照し  [!DNL Flow Service]  ください。
+このチュートリアルでは、クラウドストレージデータの暗号化キーペアと、暗号化されたデータを [!DNL Flow Service API] を使用して取り込むデータフローを作成しました。データフローの完全性、エラーおよび指標に関するステータスの更新については、[API を使用したデータフローの監視 &#x200B;](./monitor.md) に関するガイドを参照し  [!DNL Flow Service]  ください。

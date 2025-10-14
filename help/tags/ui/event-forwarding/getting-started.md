@@ -104,7 +104,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 **[!UICONTROL Tags]** ワークスペースでプロパティを作成し、**[!UICONTROL Extensions]** に移動して、カタログからExperience Platform Web SDK拡張機能を選択して、設定とインストールを行います。
 
-設定オプションについて詳しくは、[Web SDK拡張機能のドキュメント ](../../extensions/client/web-sdk/overview.md) を参照してください。
+設定オプションについて詳しくは、[Web SDK拡張機能のドキュメント &#x200B;](../../extensions/client/web-sdk/overview.md) を参照してください。
 
 ## Experience Platform Web SDKにデータを送信するタグルールを作成する
 

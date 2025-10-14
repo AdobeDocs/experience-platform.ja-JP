@@ -25,7 +25,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL ServiceNow] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
+既に有効な [!DNL ServiceNow] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -37,7 +37,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `username` | 認証のために [!DNL ServiceNow] サーバーに接続するために使用するユーザー名。 |
 | `password` | 認証のために [!DNL ServiceNow] サーバーに接続するためのパスワード。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL ServiceNow]  を参照してください ](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL ServiceNow]  を参照してください &#x200B;](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET)。
 
 ## [!DNL ServiceNow] アカウントの接続
 
@@ -67,4 +67,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL ServiceNow] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/customer-success.md) を行いましょう。
+このチュートリアルでは、[!DNL ServiceNow] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/customer-success.md) を行いましょう。

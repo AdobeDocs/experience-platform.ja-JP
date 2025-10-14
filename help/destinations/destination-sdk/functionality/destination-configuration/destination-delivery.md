@@ -48,7 +48,7 @@ ht-degree: 82%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [ に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 ](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[credentials API](../../credentials-api/create-credential-configuration.md) 設定を使用して資格情報オブジェクトを作成し、`authenticationId` パラメーターを資格情報オブジェクト ID 値に設定する必要があります。</li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
+| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [&#x200B; に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 &#x200B;](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[credentials API](../../credentials-api/create-credential-configuration.md) 設定を使用して資格情報オブジェクトを作成し、`authenticationId` パラメーターを資格情報オブジェクト ID 値に設定する必要があります。</li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
 | `authenticationId` | 文字列 | 認証に使用する資格情報オブジェクトの構成 ID の `instanceId` です。 このパラメーターは、特定の資格情報設定を指定する必要がある場合にのみ必要です。 |
 | `destinationServerId` | 文字列 | データの書き出し先にする[宛先サーバー](../../authoring-api/destination-server/create-destination-server.md)の `instanceId`。 |
 | `deliveryMatchers.type` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `SOURCE` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
@@ -107,7 +107,7 @@ ht-degree: 82%
 `PLATFORM_AUTHENTICATION` を使用する場合、宛先設定を資格情報設定にリンクするには、`authenticationId` パラメーターを指定する必要があります。
 
 1. 宛先設定で `destinationDelivery.authenticationRule` を `"PLATFORM_AUTHENTICATION"` に設定します
-2. [ 認証情報オブジェクトを作成します ](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
+2. [&#x200B; 認証情報オブジェクトを作成します &#x200B;](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
 3. `authenticationId` パラメーターを認証情報オブジェクトの `instanceId` 値に設定します。
 
 **PLATFORM_AUTHENTICATION を使用した設定例：**

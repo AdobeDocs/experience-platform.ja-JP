@@ -17,24 +17,24 @@ ht-degree: 17%
 >
 >* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Databricks] ソースを利用できます。
 >
->* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
-このガイドでは、[!DNL Databricks]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法について説明します。
+このガイドでは、[!DNL Databricks]API[[!DNL Flow Service]  を使用して &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API の呼び出しを正常に実行する方法について詳しくは、[Experience Platform API の基本を学ぶ方法 ](../../../../../landing/api-guide.md) に関するガイドを参照してください。
+Experience Platform API の呼び出しを正常に実行する方法について詳しくは、[Experience Platform API の基本を学ぶ方法 &#x200B;](../../../../../landing/api-guide.md) に関するガイドを参照してください。
 
 ### 前提条件の設定
 
-アカウントをExperience Platformに接続する前に完了する必要がある前提条件の設定については、[[!DNL Databricks]  概要 ](../../../../connectors/databases/databricks.md) を参照してください。
+アカウントをExperience Platformに接続する前に完了する必要がある前提条件の設定については、[[!DNL Databricks]  概要 &#x200B;](../../../../connectors/databases/databricks.md) を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -124,5 +124,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Databricks] アカウントとExperience Platformの間の接続を正常に作成しました。 次のチュートリアルでは、新しく生成されたベース接続 ID を使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

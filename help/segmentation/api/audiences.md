@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## オーディエンスのリストの取得 {#list}
 
@@ -188,12 +188,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 | `audienceId` | 両方 | オーディエンスが Platform で生成されたオーディエンスの場合、これは `id` と同じ値です。 オーディエンスが外部で生成される場合、この値はクライアントから提供されます。 |
 | `schema` | 両方 | オーディエンスのエクスペリエンスデータモデル（XDM）スキーマ。 |
 | `imsOrgId` | 両方 | オーディエンスが属する組織の ID。 |
-| `sandbox` | 両方 | オーディエンスが属するサンドボックスに関する情報。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。 |
+| `sandbox` | 両方 | オーディエンスが属するサンドボックスに関する情報。 サンドボックスについて詳しくは、[&#x200B; サンドボックスの概要 &#x200B;](../../sandboxes/home.md) を参照してください。 |
 | `name` | 両方 | オーディエンスの名前。 |
 | `description` | 両方 | オーディエンスの説明。 |
-| `expression` | Platform で生成 | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド ](../pql/overview.md) を参照してください。 |
+| `expression` | Platform で生成 | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド &#x200B;](../pql/overview.md) を参照してください。 |
 | `mergePolicyId` | Platform で生成 | オーディエンスが関連付けられている結合ポリシーの ID。 結合ポリシーについて詳しくは、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。 |
-| `evaluationInfo` | Platform で生成 | オーディエンスの評価方法を表示します。 考えられる評価方法には、バッチ、同期（ストリーミング）または連続（エッジ）があります。 評価方法について詳しくは、[ セグメント化の概要 ](../home.md) を参照してください。 |
+| `evaluationInfo` | Platform で生成 | オーディエンスの評価方法を表示します。 考えられる評価方法には、バッチ、同期（ストリーミング）または連続（エッジ）があります。 評価方法について詳しくは、[&#x200B; セグメント化の概要 &#x200B;](../home.md) を参照してください。 |
 | `dependents` | 両方 | 現在のオーディエンスに依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
 | `dependencies` | 両方 | オーディエンスが依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
 | `type` | 両方 | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
@@ -250,7 +250,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | オーディエンスの名前。 |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
-| `expression` | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド ](../pql/overview.md) を参照してください。 |
+| `expression` | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド &#x200B;](../pql/overview.md) を参照してください。 |
 | `schema` | オーディエンスのエクスペリエンスデータモデル（XDM）スキーマ。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
 
@@ -767,4 +767,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
 
 ## 次の手順
 
-このガイドを読むことで、Adobe Experience Platform API を使用してオーディエンスを作成、管理および削除する方法について、理解が深まりました。 UI を使用した Audience Management について詳しくは、[ セグメント化 UI ガイド ](../ui/overview.md) を参照してください。
+このガイドを読むことで、Adobe Experience Platform API を使用してオーディエンスを作成、管理および削除する方法について、理解が深まりました。 UI を使用した Audience Management について詳しくは、[&#x200B; セグメント化 UI ガイド &#x200B;](../ui/overview.md) を参照してください。

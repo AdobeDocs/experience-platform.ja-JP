@@ -13,7 +13,7 @@ ht-degree: 7%
 
 [!UICONTROL &#x200B; 返品アイテム &#x200B;] は、購入した品目の返品プロセスに関連する重要な詳細を取得する、標準の Experience Data Model （XDM）データタイプです。
 
-![ 返品品目データ型の図。](../images/data-types/return-item.png)
+![&#x200B; 返品品目データ型の図。](../images/data-types/return-item.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|
@@ -30,5 +30,5 @@ ht-degree: 7%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)

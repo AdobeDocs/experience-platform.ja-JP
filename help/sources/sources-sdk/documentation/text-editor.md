@@ -17,33 +17,33 @@ ht-degree: 5%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[&#x200B; ドキュメントを参照するために Git リポジトリをローカルに設定する &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[&#x200B; 大幅な変更点に対する GitHub 投稿ワークフロー &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
 
 ## 前提条件
 
-次のチュートリアルでは、ローカルマシンに GitHub Desktop をインストールする必要があります。 GitHub デスクトップがない場合は、アプリケーションを [ こちら ](https://desktop.github.com/) からダウンロードできます。
+次のチュートリアルでは、ローカルマシンに GitHub Desktop をインストールする必要があります。 GitHub デスクトップがない場合は、アプリケーションを [&#x200B; こちら &#x200B;](https://desktop.github.com/) からダウンロードできます。
 
 ## GitHub に接続し、ローカルオーサリング環境を設定します
 
-ローカルオーサリング環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ ](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
+ローカルオーサリング環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
 
 ![platform-repo](../assets/platform-repo.png)
 
 Experience Platform GitHub リポジトリのメインページで、「**分岐**」を選択します。
 
-![ 分岐 ](../assets/fork.png)
+![&#x200B; 分岐 &#x200B;](../assets/fork.png)
 
 リポジトリをローカルマシンにクローンするには、「**コード**」を選択します。 表示されるドロップダウンメニューから「**HTTPS**」を選択し、「**GitHub デスクトップで開く**」を選択します。
 
 >[!TIP]
 >
->詳しくは、[ ドキュメント用の Git リポジトリのローカルでのセットアップ ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#create-a-local-clone-of-the-repository) に関するチュートリアルを参照してください。
+>詳しくは、[&#x200B; ドキュメント用の Git リポジトリのローカルでのセットアップ &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#create-a-local-clone-of-the-repository) に関するチュートリアルを参照してください。
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
 次に、GitHub デスクトップで `experience-platform.en` リポジトリのクローンが作成されるまでしばらく待ちます。
 
-![ 複製 ](../assets/cloning.png)
+![&#x200B; 複製 &#x200B;](../assets/cloning.png)
 
 クローン作成が完了したら、GitHub デスクトップに移動して新しいブランチを作成します。 上部ナビゲーションから「**マスター**」を選択し、「**新しいブランチ**」を選択します
 
@@ -59,7 +59,7 @@ Experience Platform GitHub リポジトリのメインページで、「**分岐
 
 ## ソースのドキュメントページを作成する
 
-ローカルマシンにリポジトリのクローンを作成し、新しいブランチを作成したら、選択した [ テキストエディター ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja#understand-markdown-editors) を使用して、新しいソースのドキュメントページのオーサリングを開始できます。
+ローカルマシンにリポジトリのクローンを作成し、新しいブランチを作成したら、選択した [&#x200B; テキストエディター &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja#understand-markdown-editors) を使用して、新しいソースのドキュメントページのオーサリングを開始できます。
 
 Adobeでは、[Visual Studio Code](https://code.visualstudio.com/) を使用し、Adobe Markdown オーサリング拡張機能をインストールすることをお勧めします。 拡張機能をインストールするには、Visual Studio Code を起動し、左側のナビゲーションから「**拡張機能**」タブを選択します。
 
@@ -67,9 +67,9 @@ Adobeでは、[Visual Studio Code](https://code.visualstudio.com/) を使用し�
 
 次に、検索バーに `Adobe Markdown Authoring` と入力し、表示されるページから **インストール** を選択します。
 
-![ インストール ](../assets/install.png)
+![&#x200B; インストール &#x200B;](../assets/install.png)
 
-ローカルマシンの準備が整ったら、[sources ドキュメントテンプレート ](../assets/api-template.zip) をダウンロードし、選択したカテゴリを表す [`...`] を使用してファイルを抽出し `experience-platform.en/help/sources/tutorials/api/create/...` す。 例えば、データベースソースを作成する場合、データベースフォルダーを選択します。
+ローカルマシンの準備が整ったら、[sources ドキュメントテンプレート &#x200B;](../assets/api-template.zip) をダウンロードし、選択したカテゴリを表す [`...`] を使用してファイルを抽出し `experience-platform.en/help/sources/tutorials/api/create/...` す。 例えば、データベースソースを作成する場合、データベースフォルダーを選択します。
 
 最後に、テンプレートに記載されている手順に従って、ソースに関連する関連情報を使用してテンプレートを編集します。
 
@@ -83,7 +83,7 @@ Adobeでは、[Visual Studio Code](https://code.visualstudio.com/) を使用し�
 
 次に、「**接触チャネルをプッシュ**」を選択して、作業をリモートブランチにアップロードします。
 
-![ プッシュオリジン ](../assets/push-origin.png)
+![&#x200B; プッシュオリジン &#x200B;](../assets/push-origin.png)
 
 プルリクエストを作成するには、「**プルリクエストを作成**」を選択します。
 

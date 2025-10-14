@@ -17,7 +17,7 @@ ht-degree: 8%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL Telecom Subscription] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで ](../../classes/individual-profile.md) 価格、パッケージ、個々の製品のサブスクリプションなど、顧客の通信サブスクリプションプランを記述します。
+[!UICONTROL Telecom Subscription] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで &#x200B;](../../classes/individual-profile.md) 価格、パッケージ、個々の製品のサブスクリプションなど、顧客の通信サブスクリプションプランを記述します。
 
 フィールドグループには、以下にプロパティを説明する単一のオブジェクトタイプフィールド `telecomSubscription` が用意されています。
 
@@ -25,10 +25,10 @@ ht-degree: 8%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `internetSubscription` | オブジェクトの配列 | インターネットサブスクリプションプランの詳細（データの上限、接続タイプ、速度の詳細など）を記述します。 詳しくは、[ 以下の節 ](#internetSubscription) を参照してください。 |
-| `landlineSubscription` | オブジェクトの配列 | 固定電話の契約の詳細（選択した機能、分、ダイヤルプランを含む）を記述します。 詳しくは、[ 以下の節 ](#landlineSubscription) を参照してください。 |
-| `mediaSubscription` | オブジェクトの配列 | メディアサブスクリプションプランの詳細（チャネル数やストリーミングサービスを含む）を記述します。 詳しくは、[ 以下の節 ](#mediaSubscription) を参照してください。 |
-| `mobileSubscription` | オブジェクトの配列 | モバイル購読プランの詳細（回線数、データ料金、コストなど）を記述します。 詳しくは、[ 以下の節 ](#mobileSubscription) を参照してください。 |
+| `internetSubscription` | オブジェクトの配列 | インターネットサブスクリプションプランの詳細（データの上限、接続タイプ、速度の詳細など）を記述します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#internetSubscription) を参照してください。 |
+| `landlineSubscription` | オブジェクトの配列 | 固定電話の契約の詳細（選択した機能、分、ダイヤルプランを含む）を記述します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#landlineSubscription) を参照してください。 |
+| `mediaSubscription` | オブジェクトの配列 | メディアサブスクリプションプランの詳細（チャネル数やストリーミングサービスを含む）を記述します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#mediaSubscription) を参照してください。 |
+| `mobileSubscription` | オブジェクトの配列 | モバイル購読プランの詳細（回線数、データ料金、コストなど）を記述します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#mobileSubscription) を参照してください。 |
 | `primarySubscriber` | [[!UICONTROL &#x200B; 人物 &#x200B;]](../../data-types/person.md) | サブスクリプションの所有者を表します。 |
 | `bundleName` | 文字列 | お客様が登録されている任意のタイプのサブスクリプションバンドルの名前をキャプチャします（`Internet + Media` など）。 |
 | `primaryPartyID` | 文字列 | サブスクリプションに対して責任がある主要人物の識別子。通常は、デバイスの電話番号になります。 |
@@ -37,8 +37,8 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
 
 ## `internetSubscription` {#internetSubscription}
 

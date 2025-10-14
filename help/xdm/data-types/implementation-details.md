@@ -13,7 +13,7 @@ ht-degree: 7%
 
 [!UICONTROL &#x200B; 実装の詳細 &#x200B;] は、API や SDK などのテクノロジー実装を記述する標準の Experience Data Model （XDM）データタイプです。
 
-![ データタイプ構造 ](../images/data-types/implementation-details.png)
+![&#x200B; データタイプ構造 &#x200B;](../images/data-types/implementation-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 7%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

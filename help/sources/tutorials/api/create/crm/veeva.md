@@ -39,11 +39,11 @@ ht-degree: 68%
 | `securityToken` | [!DNL Veeva CRM] インスタンスのセキュリティトークン。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
-これらの値について詳しくは、この [[!DNL Veeva CRM]  ドキュメント ](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
+これらの値について詳しくは、この [[!DNL Veeva CRM]  ドキュメント &#x200B;](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -116,5 +116,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Veeva CRM] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)

@@ -18,10 +18,10 @@ ht-degree: 25%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ データフロー ](../../../dataflows/home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+* [&#x200B; データフロー &#x200B;](../../../dataflows/home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    * [データフロー実行](../../notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## ストリーミングソースのデータフローの監視
 
@@ -35,7 +35,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 表示するデータフローの名前を選択します。
 
-![ データフロー ](../../images/tutorials/monitor-streaming/dataflows.png)
+![&#x200B; データフロー &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
 
 データフロー実行ステータスについて詳しくは、次の表を参照してください。
 
@@ -55,11 +55,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 カレンダーポップアップウィンドウが表示され、代替取り込み時間枠のオプションが表示されます。 データフロー実行時間枠を設定して、過去 7 日間または過去 30 日間のフロー実行を表示できます。 または、選択したカスタム時間枠を設定するようにインタラクティブカレンダーを設定します。 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
-![ カレンダー ](../../images/tutorials/monitor-streaming/calendar.png)
+![&#x200B; カレンダー &#x200B;](../../images/tutorials/monitor-streaming/calendar.png)
 
 ページの下半分には、フロー実行ごとに受信、取り込み、失敗したレコードの数に関する情報が表示されます。 各フロー実行は、1 時間ごとの期間内に記録されます。
 
-![ データフロー実行 ](../../images/tutorials/monitor-streaming/dataflow-run.png)
+![&#x200B; データフロー実行 &#x200B;](../../images/tutorials/monitor-streaming/dataflow-run.png)
 
 ### データフロー実行指標 {#dataflow-run-metrics}
 
@@ -116,11 +116,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 エラー診断を表示するには、「**[!UICONTROL エラー診断をプレビュー]**」を選択します。
 
-![ 警告を含むレコード ](../../images/tutorials/monitor-streaming/records-with-warnings.png)
+![&#x200B; 警告を含むレコード &#x200B;](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
 [!UICONTROL &#x200B; エラー診断のプレビュー &#x200B;] ウィンドウでは、データフローの実行に関する最大 100 個のエラーや警告をプレビューできます。 ここから、[!DNL Data Access] API を使用して、取り込み失敗マニフェストをダウンロードして詳細を確認することもできます。
 
-![ 診断 ](../../images/tutorials/monitor-streaming/diagnostics.png)
+![&#x200B; 診断 &#x200B;](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## 次の手順
 

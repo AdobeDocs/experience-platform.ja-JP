@@ -19,12 +19,12 @@ ht-degree: 2%
 
 ## 移行コンテキスト {#migration-context}
 
-[2022 年 10 月 ](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) 以降は、新しいファイル書き出し機能を使用して、Experience Platformからファイルを書き出す際に拡張カスタマイズ機能にアクセスできます。
+[2022 年 10 月 &#x200B;](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) 以降は、新しいファイル書き出し機能を使用して、Experience Platformからファイルを書き出す際に拡張カスタマイズ機能にアクセスできます。
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
-* [ 新しいマッピングステップ ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) を使用して、書き出すファイルにカスタムファイルヘッダーを設定する機能。
-* 書き出されたファイルの [ ファイルタイプ ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) を選択する機能。
-* [ 書き出された CSV データファイルの形式をカスタマイズ ](/help/destinations/ui/batch-destinations-file-formatting-options.md) する機能。
+* [&#x200B; 新しいマッピングステップ &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) を使用して、書き出すファイルにカスタムファイルヘッダーを設定する機能。
+* 書き出されたファイルの [&#x200B; ファイルタイプ &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) を選択する機能。
+* [&#x200B; 書き出された CSV データファイルの形式をカスタマイズ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) する機能。
 
 この機能は、以下に示すベータ版のクラウドストレージカードでサポートされています。
 
@@ -68,13 +68,13 @@ TBD if we keep this link but will likely remove it
 
 -->
 * [オーディエンスをクラウドストレージの宛先に書き出す API チュートリアル](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [Destinations Flow Service API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [Destinations Flow Service API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## 後方互換性のない変更の概要 {#summary-backwards-incompatible-changes}
 
-新しい宛先への移行に伴い、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP の各宛先への既存のデータフローはすべて、新しいターゲット接続とベース接続に割り当てられます。 プロファイルマッピングの手順も変更されます。 後方互換性のない変更については、各宛先に関して以下の節で要約します。 以下の図の用語について詳しくは、[ 宛先の用語集 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) も参照してください。
+新しい宛先への移行に伴い、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP の各宛先への既存のデータフローはすべて、新しいターゲット接続とベース接続に割り当てられます。 プロファイルマッピングの手順も変更されます。 後方互換性のない変更については、各宛先に関して以下の節で要約します。 以下の図の用語について詳しくは、[&#x200B; 宛先の用語集 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) も参照してください。
 
-![ 移行ガイドの概要画像 ](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
+![&#x200B; 移行ガイドの概要画像 &#x200B;](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
 ### [!DNL Amazon S3] の宛先に対する後方互換性のない変更 {#changes-amazon-s3-destination}
 
@@ -670,11 +670,11 @@ TBD if we keep this link but will likely remove it
 
 3 つのすべての宛先のプロファイルセレクターの手順は、必要に応じて、書き出したファイルの列ヘッダーの名前を変更できるマッピング手順に置き換えられます。 古い属性セレクターの手順を左側に、新しいマッピングの手順を右側に、それぞれ以下の画像を並べて参照してください。
 
-![ 移行ガイドの概要画像 ](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+![&#x200B; 移行ガイドの概要画像 &#x200B;](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
 従来の例の `profileSelectors` オブジェクトが新しい `profileMapping` オブジェクトに置き換えられることに注意してください。
 
-`profileMapping` オブジェクトの設定に関する詳細については、[API チュートリアルを参照して、クラウドストレージの宛先にデータを書き出してください ](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
+`profileMapping` オブジェクトの設定に関する詳細については、[API チュートリアルを参照して、クラウドストレージの宛先にデータを書き出してください &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
 
 >[!BEGINTABS]
 
@@ -802,4 +802,4 @@ TBD if we keep this link but will likely remove it
 
 ## 次の手順 {#next-steps}
 
-このページを参照すると、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかがわかります。 また、Experience Platform設定でファイルを好みのクラウドストレージの宛先に書き出す API ベースのワークフローを設定する際に、参照するドキュメントページもわかります。 次に、API チュートリアルを参照して、[ クラウドストレージの宛先へのデータの書き出し ](/help/destinations/api/activate-segments-file-based-destinations.md) を確認できます。
+このページを参照すると、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかがわかります。 また、Experience Platform設定でファイルを好みのクラウドストレージの宛先に書き出す API ベースのワークフローを設定する際に、参照するドキュメントページもわかります。 次に、API チュートリアルを参照して、[&#x200B; クラウドストレージの宛先へのデータの書き出し &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md) を確認できます。

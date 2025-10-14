@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL &#x200B; 測定 &#x200B;] は、特定の指標の具体的な定量化可能なデータポイントを含んだ、標準の Experience Data Model （XDM）データタイプです。 測定は、一意の ID と値で構成されます。
 
-![ 画像を測定 ](../images/data-types/measure.PNG){ 幅=500}
+![&#x200B; 画像を測定 &#x200B;](../images/data-types/measure.PNG){ 幅=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -26,5 +26,5 @@ ht-degree: 5%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)

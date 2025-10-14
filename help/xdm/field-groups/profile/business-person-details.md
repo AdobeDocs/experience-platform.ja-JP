@@ -11,7 +11,7 @@ ht-degree: 11%
 
 # [!UICONTROL XDM ビジネスユーザー詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL XDM ビジネスユーザー詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、B2B （Business to Business）エンタープライズのコンテキストでの個人に関する情報をキャプチャします。
+[!UICONTROL XDM ビジネスユーザー詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループで、B2B （Business to Business）エンタープライズのコンテキストでの個人に関する情報をキャプチャします。
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -34,31 +34,31 @@ ht-degree: 11%
 | `b2b.personSource` | 文字列 | 人物の情報を受信したソース。 |
 | `b2b.personStatus` | 文字列 | 人物の現在のマーケティングまたは販売ステータス。 |
 | `b2b.personType` | 文字列 | B2B 人物のタイプ。 |
-| `extSourceSystemAudit` | [ 外部Source システム監査属性 ](../../data-types/external-source-system-audit-attributes.md) | ビジネスパーソンの関係が外部ソースシステムから取得されたものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [&#x200B; 外部Source システム監査属性 &#x200B;](../../data-types/external-source-system-audit-attributes.md) | ビジネスパーソンの関係が外部ソースシステムから取得されたものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `extendedWorkDetails` | オブジェクト | 人物に関する追加の作業関連の詳細をキャプチャします。 |
-| `extendedWorkDetails.assistantDetails` | オブジェクト | 人物のアシスタントに関する次の属性をキャプチャします。 <ul><li>`name`: （[ 氏名 ](../../data-types/person-name.md)）アシスタントの氏名。</li><li>`phone`: （[ 電話番号 ](../../data-types/phone-number.md)） アシスタントの電話番号。</li></ul> |
+| `extendedWorkDetails.assistantDetails` | オブジェクト | 人物のアシスタントに関する次の属性をキャプチャします。 <ul><li>`name`: （[&#x200B; 氏名 &#x200B;](../../data-types/person-name.md)）アシスタントの氏名。</li><li>`phone`: （[&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md)） アシスタントの電話番号。</li></ul> |
 | `extendedWorkDetails.departments` | 文字列の配列 | その人物が働いている部門名のリスト。 |
 | `extendedWorkDetails.jobTitle` | 文字列 | 人物の役職。 |
 | `extendedWorkDetails.photoUrl` | 文字列 | 人物の写真への URL。 |
 | `extendedWorkDetails.reportsToID` | 文字列 | 人物のレポートマネージャーの識別子。 |
-| `faxPhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の FAX 電話番号。 |
-| `homeAddress` | [ 郵送先住所 ](../../data-types/postal-address.md) | 人物の自宅の住所。 |
-| `homePhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の自宅電話番号。 |
-| `mobilePhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
-| `otherAddress` | [ 郵送先住所 ](../../data-types/postal-address.md) | 人物の代替住所。 |
-| `otherPhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の代替の電話番号。 |
-| `person` | [ 人物 ](../../data-types/person.md) | 個々のアクター、連絡先、または所有者。 |
-| `personalEmail` | [ メールアドレス ](../../data-types/email-address.md) | 人物の個人メールアドレス。 |
-| `workAddress` | [ 郵送先住所 ](../../data-types/postal-address.md) | 人物の仕事用アドレス。 |
-| `workEmail` | [ メールアドレス ](../../data-types/email-address.md) | 人物の仕事用電子メールアドレス。 |
-| `workPhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の仕事用電話番号。 |
-| `identityMap` | マップ | 人物の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するため [ リアルタイム顧客プロファイル ](../../../profile/home.md)、データ操作ではフィールドの内容を手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
-| `isDeleted` | ブール値 | この人物がMarketo Engageで削除されたかどうかを示します。<br><br>[Marketo ソースコネクタを使用 ](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
+| `faxPhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の FAX 電話番号。 |
+| `homeAddress` | [&#x200B; 郵送先住所 &#x200B;](../../data-types/postal-address.md) | 人物の自宅の住所。 |
+| `homePhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の自宅電話番号。 |
+| `mobilePhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
+| `otherAddress` | [&#x200B; 郵送先住所 &#x200B;](../../data-types/postal-address.md) | 人物の代替住所。 |
+| `otherPhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の代替の電話番号。 |
+| `person` | [&#x200B; 人物 &#x200B;](../../data-types/person.md) | 個々のアクター、連絡先、または所有者。 |
+| `personalEmail` | [&#x200B; メールアドレス &#x200B;](../../data-types/email-address.md) | 人物の個人メールアドレス。 |
+| `workAddress` | [&#x200B; 郵送先住所 &#x200B;](../../data-types/postal-address.md) | 人物の仕事用アドレス。 |
+| `workEmail` | [&#x200B; メールアドレス &#x200B;](../../data-types/email-address.md) | 人物の仕事用電子メールアドレス。 |
+| `workPhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の仕事用電話番号。 |
+| `identityMap` | マップ | 人物の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するため [&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../profile/home.md)、データ操作ではフィールドの内容を手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
+| `isDeleted` | ブール値 | この人物がMarketo Engageで削除されたかどうかを示します。<br><br>[Marketo ソースコネクタを使用 &#x200B;](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
 | `organizations` | 文字列の配列 | 人物が働いている組織名のリスト。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.schema.json)

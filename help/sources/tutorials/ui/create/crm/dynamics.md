@@ -25,7 +25,7 @@ ht-degree: 25%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-有効な [!DNL Dynamics] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[CRM ソースのデータフローの設定 ](../../dataflow/crm.md) に関するチュートリアルに進んでください。
+有効な [!DNL Dynamics] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[CRM ソースのデータフローの設定 &#x200B;](../../dataflow/crm.md) に関するチュートリアルに進んでください。
 
 ### 必要な資格情報の収集
 
@@ -50,7 +50,7 @@ ht-degree: 25%
 
 >[!ENDTABS]
 
-基本について詳しくは、[ このドキュメント  [!DNL Dynamics]  を参照してください ](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL Dynamics]  を参照してください &#x200B;](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
 
 ## [!DNL Dynamics] アカウントを接続
 
@@ -60,7 +60,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!UICONTROL CRM] カテゴリ内で、「**[!UICONTROL Microsoft Dynamics]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Microsoft Dynamicsが選択されているソースカタログ ](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![Microsoft Dynamicsが選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
 **[!UICONTROL Microsoft Dynamics アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -78,7 +78,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Dynamics] アカウントの名前と説明（オプション）を入力します。
 
-![ 新しいアカウント作成インターフェイス ](../../../../images/tutorials/create/ms-dynamics/new.png)
+![&#x200B; 新しいアカウント作成インターフェイス &#x200B;](../../../../images/tutorials/create/ms-dynamics/new.png)
 
 [!DNL Dynamics] アカウントを作成する際は、基本認証またはサービスプリンシパルおよびキー認証のいずれかを使用できます。
 
@@ -90,7 +90,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
-![ 基本認証インターフェイス ](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+![&#x200B; 基本認証インターフェイス &#x200B;](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
 
 >[!TAB  サービスプリンシパルとキーの認証 ]
 
@@ -98,10 +98,10 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
-![ サービスプリンシパルキー認証インターフェイス ](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+![&#x200B; サービスプリンシパルキー認証インターフェイス &#x200B;](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Dynamics] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。
+このチュートリアルでは、[!DNL Dynamics] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/crm.md) を行いましょう。

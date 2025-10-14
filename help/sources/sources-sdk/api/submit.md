@@ -18,14 +18,14 @@ ht-degree: 10%
 
 ## はじめに
 
-* Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
-* Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+* Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
+* Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
 * Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。
-* テストとデバッグプロセスに役立つように、[ セルフサービスソースの検証コレクションと環境をこちらからダウンロードし ](../assets/sdk-verification.zip) 以下の手順に従ってください。
+* テストとデバッグプロセスに役立つように、[&#x200B; セルフサービスソースの検証コレクションと環境をこちらからダウンロードし &#x200B;](../assets/sdk-verification.zip) 以下の手順に従ってください。
 
 ## ソースのテスト
 
-ソースをテストするには、ソースに関連する適切な環境変数を指定しながら、[!DNL Postman] で [ セルフサービスソース検証コレクションおよび環境 ](../assets/sdk-verification.zip) を実行する必要があります。
+ソースをテストするには、ソースに関連する適切な環境変数を指定しながら、[!DNL Postman] で [&#x200B; セルフサービスソース検証コレクションおよび環境 &#x200B;](../assets/sdk-verification.zip) を実行する必要があります。
 
 テストを開始するには、まず [!DNL Postman] でコレクションと環境を設定する必要があります。 次に、テストする接続仕様 ID を指定します。
 
@@ -59,16 +59,16 @@ ht-degree: 10%
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `x-api-key` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `x-api-key` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `x-api-key` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `x-gw-ims-org-id` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Experience Platform API を呼び出すために必要な認証トークン。 サー `authorizationToken` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer authorizationToken` |
+| `authorizationToken` | Experience Platform API を呼び出すために必要な認証トークン。 サー `authorizationToken` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer authorizationToken` |
 | `schemaId` | ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | スキーマに対応する一意のバージョン。 | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | 新しいスキーマを作成する際に `schemaId` と共に返される `meta:altId`。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。 | `5f3c3cedb2805c194ff0b69a` |
-| `mappings` | マッピングセットを使用すると、ソーススキーマ内のデータと宛先スキーマのデータとのマッピング方法を定義できます。マッピングの作成方法に関する詳細な手順については、[API を使用したマッピングセットの作成 ](../../../data-prep/api/mapping-set.md) に関するチュートリアルを参照してください。 | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
+| `mappings` | マッピングセットを使用すると、ソーススキーマ内のデータと宛先スキーマのデータとのマッピング方法を定義できます。マッピングの作成方法に関する詳細な手順については、[API を使用したマッピングセットの作成 &#x200B;](../../../data-prep/api/mapping-set.md) に関するチュートリアルを参照してください。 | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
 | `mappingId` | マッピングセットに対応する一意の ID。 | `bf5286a9c1ad4266baca76ba3adc9366` |
-| `connectionSpecId` | ソースに対応する接続仕様 ID。 これは、[ 新しい接続仕様の作成 ](./create.md) 後に生成した ID です。 | `2e8580db-6489-4726-96de-e33f5f60295f` |
+| `connectionSpecId` | ソースに対応する接続仕様 ID。 これは、[&#x200B; 新しい接続仕様の作成 &#x200B;](./create.md) 後に生成した ID です。 | `2e8580db-6489-4726-96de-e33f5f60295f` |
 | `flowSpecificationId` | `RestStorageToAEP` のフロー仕様 ID。 **固定値です**。 | `6499120c-0b15-42dc-936e-847ea3c24d72` |
 | `targetConnectionSpecId` | 取り込まれたデータが取り込まれたデータレイクのターゲット接続 ID。 **固定値です**。 | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
 | `verifyWatTimeInSecond` | フロー実行の完了を確認するときに従う、指定された時間間隔です。 | `40` |
@@ -76,7 +76,7 @@ ht-degree: 10%
 
 環境変数をすべて指定したら、[!DNL Postman] インターフェイスを使用してコレクションの実行を開始できます。 [!DNL Postman] インターフェイスで、[!DNL Sources SSSs Verification Collection] の横にある省略記号（**...**）を選択し、「**コレクションを実行**」を選択します。
 
-![ ランナー ](../assets/runner.png)
+![&#x200B; ランナー &#x200B;](../assets/runner.png)
 
 [!DNL Runner] インターフェイスが表示され、データフローの実行順序を設定できます。 「**SSS 検証コレクションを実行**」を選択して、コレクションを実行します。
 

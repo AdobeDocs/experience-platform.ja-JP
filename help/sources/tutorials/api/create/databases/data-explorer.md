@@ -41,11 +41,11 @@ ht-degree: 52%
 | `servicePrincipalKey` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のサービスプリンシパルキー。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure Data Explorer] の接続仕様 ID は `0479cc14-7651-4354-b233-7480606c2ac3` です。 |
 
-はじめに詳しくは、この [[!DNL Azure Data Explorer]  ドキュメント ](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad) を参照してください。
+はじめに詳しくは、この [[!DNL Azure Data Explorer]  ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -115,5 +115,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure Data Explorer] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

@@ -16,7 +16,7 @@ ht-degree: 77%
 
 [!DNL Nielsen IMA Handler] は、Adobe Experience Platformの analytics 拡張機能です。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![Nielsen IMA Handler 拡張機能](../../assets/catalog/analytics/nielsen-ima/catalog.png)
 
@@ -30,7 +30,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL Nielsen IMA Handler] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

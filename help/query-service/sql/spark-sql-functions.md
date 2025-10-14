@@ -15,7 +15,7 @@ ht-degree: 93%
 
 複数の組み込みの Spark SQL 関数を使用して、Adobe Experience Platform クエリサービスで SQL 機能を拡張できます。 このドキュメントでは、クエリサービスでサポートされる Spark SQL 関数を示します。
 
-関数の構文、使用方法、例など、関数について詳しくは、[Spark SQL 関数のドキュメント ](https://spark.apache.org/docs/latest/api/sql/index.html) を参照してください。
+関数の構文、使用方法、例など、関数について詳しくは、[Spark SQL 関数のドキュメント &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html) を参照してください。
 
 >[!NOTE]
 >

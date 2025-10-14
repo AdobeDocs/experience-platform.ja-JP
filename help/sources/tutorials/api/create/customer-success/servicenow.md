@@ -38,11 +38,11 @@ ht-degree: 85%
 | `password` | 認証のために [!DNL ServiceNow] サーバーに接続するためのパスワード。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL ServiceNow] の接続仕様 ID は `eb13cb25-47ab-407f-ba89-c0125281c563` です。 |
 
-基本について詳しくは、[この ServiceNow ドキュメント](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)を参照してください。
+基本について詳しくは、[この ServiceNow ドキュメント](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET)を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -108,5 +108,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL ServiceNow] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、カスタマーサクセスデータをExperience Platformに取り込むデータフローの作成](../../collect/customer-success.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、カスタマーサクセスデータをExperience Platformに取り込むデータフローの作成](../../collect/customer-success.md)

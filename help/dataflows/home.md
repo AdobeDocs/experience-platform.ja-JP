@@ -29,4 +29,4 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 ## データフローの監視
 
-データフローの監視は、Experience Platform API またはExperience Platform UI を使用して実行できます。 API を使用してデータフローを監視する方法について詳しくは、[データフロー API の監視チュートリアル](./api/monitor.md)をお読みください。Experience Platform UI 内のデータフローを監視する方法を学ぶには、[ ソースのデータフロー監視 ](./ui/monitor-sources.md) および [ 宛先のデータフロー監視 ](./ui/monitor-destinations.md) のチュートリアルをお読みください。
+データフローの監視は、Experience Platform API またはExperience Platform UI を使用して実行できます。 API を使用してデータフローを監視する方法について詳しくは、[データフロー API の監視チュートリアル](./api/monitor.md)をお読みください。Experience Platform UI 内のデータフローを監視する方法を学ぶには、[&#x200B; ソースのデータフロー監視 &#x200B;](./ui/monitor-sources.md) および [&#x200B; 宛先のデータフロー監視 &#x200B;](./ui/monitor-destinations.md) のチュートリアルをお読みください。

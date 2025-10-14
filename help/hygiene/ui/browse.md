@@ -25,7 +25,7 @@ ht-degree: 79%
 
 UI で最初に **[!UICONTROL データライフサイクル]** ワークスペースにアクセスすると、既存の作業指示のリストが、基本的な情報と共に表示されます。
 
-![Experience Platform UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
+![Experience Platform UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースを示す画像 &#x200B;](../images/ui/browse/work-order-list.png)
 
 リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。**[!UICONTROL 消費者]** を選択してレコード削除タスクのリストを表示し、**[!UICONTROL データセット]** を選択して、スケジュールされたデータセット有効期限のリストを表示します。
 
@@ -87,7 +87,7 @@ UI で最初に **[!UICONTROL データライフサイクル]** ワークスペ�
 
 レコード削除リクエストの詳細には、現在のステータスとリクエストが行われてからの経過時間が含まれます。 各リクエストには、「**[!UICONTROL サービス別ステータス]**」セクションも含まれ、削除に関連する各ダウンストリームサービスの個々のステータスの詳細が表示されます。右側のパネルでは、コントロールを使用して、作業指示の名前と説明を更新できます。
 
-![ レコード削除作業指示の詳細ページを示す画像 ](../images/ui/browse/record-delete-details.png)
+![&#x200B; レコード削除作業指示の詳細ページを示す画像 &#x200B;](../images/ui/browse/record-delete-details.png)
 
 ### データセット有効期限の詳細 {#dataset-expiration}
 

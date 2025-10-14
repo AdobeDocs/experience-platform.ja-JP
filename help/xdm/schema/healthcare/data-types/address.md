@@ -16,7 +16,7 @@ ht-degree: 10%
 
 [!UICONTROL &#x200B; アドレス &#x200B;] は、標準の Experience Data Model （XDM）データタイプで、（GPS やその他の位置定義形式とは異なり）郵便規則を使用して表現されたアドレスを記述します。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ アドレスタイプ構造 ](../../../images/healthcare/data-types/address.png)
+![&#x200B; アドレスタイプ構造 &#x200B;](../../../images/healthcare/data-types/address.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -33,5 +33,5 @@ ht-degree: 10%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.schema.json)

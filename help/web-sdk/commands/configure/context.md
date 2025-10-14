@@ -97,7 +97,7 @@ ht-degree: 13%
 
 `"highEntropyUserAgentHints"` キーワードは、ユーザーのデバイスに関する詳細情報を収集します。 このデータは、Adobeに送信されるリクエストの HTTP ヘッダーに含まれます。 Edge ネットワーク内にデータが到着すると、XDM オブジェクトは、それぞれの XDM パスを入力します。 `sendEvent` 呼び出しでそれぞれの XDM パスを設定すると、HTTP ヘッダー値よりも優先されます。
 
-[ データストリームの設定 ](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
+[&#x200B; データストリームの設定 &#x200B;](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
 
 | プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ ht-degree: 13%
 
 ## Web SDK タグ拡張機能を使用してコンテキスト情報を収集
 
-コンテキスト情報の設定は、（タグ拡張機能の設定 [ 時のラジオボタンとチェックボックスの組み合わせです ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。 各チェックボックスは、コンテキストキーワードにマッピングされます。
+コンテキスト情報の設定は、（タグ拡張機能の設定 [&#x200B; 時のラジオボタンとチェックボックスの組み合わせです &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。 各チェックボックスは、コンテキストキーワードにマッピングされます。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

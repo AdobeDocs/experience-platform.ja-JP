@@ -12,7 +12,7 @@ ht-degree: 69%
 
 # その他の関数
 
-次の関数は、[!DNL Profile Query Language] （PQL）のその他の関数です。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+次の関数は、[!DNL Profile Query Language] （PQL）のその他の関数です。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## Let
 

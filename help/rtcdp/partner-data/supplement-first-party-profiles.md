@@ -41,7 +41,7 @@ Adobeでは、万能のアプローチはないことを理解し、データお
 
 >[!WARNING]
 >
->Real-Time CDPに取り込まれる追加のパートナー提供の属性は、*合計データボリューム* に影響を与えます。 合計データ量について詳しくは、[Real-time Customer Data Platformの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) を参照してください。
+>Real-Time CDPに取り込まれる追加のパートナー提供の属性は、*合計データボリューム* に影響を与えます。 合計データ量について詳しくは、[Real-time Customer Data Platformの製品説明 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) を参照してください。
 
 ## ビデオチュートリアル {#video-walkthrough}
 
@@ -137,5 +137,5 @@ Commenting out links for now
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [ パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ ](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
-* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [&#x200B; パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
+* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

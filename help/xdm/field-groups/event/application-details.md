@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL &#x200B; アプリケーションの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; アプリケーションの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `application` オブジェクトを提供します。このオブジェクトは、クラッシュ回数、機能の使用状況、起動回数、アップグレード回数など、アプリケーション関連の詳細を取得します。
+[!UICONTROL &#x200B; アプリケーションの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `application` オブジェクトを提供します。このオブジェクトは、クラッシュ回数、機能の使用状況、起動回数、アップグレード回数など、アプリケーション関連の詳細を取得します。
 
 ![](../../images/field-groups/application-details.png)
 
@@ -21,4 +21,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json) を参照してください。

@@ -21,21 +21,21 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 開始するには、左側のナビゲーションで「**[!UICONTROL アラート]**」を選択します。
 
-![ 左側のナビゲーションのアラートページがハイライト表示された [!UICONTROL &#x200B; アラート &#x200B;]。](../images/alerts/ui/workspace.png)
+![&#x200B; 左側のナビゲーションのアラートページがハイライト表示された [!UICONTROL &#x200B; アラート &#x200B;]。](../images/alerts/ui/workspace.png)
 
 ## アラートルールの管理 {#manage-rules}
 
 「**[!UICONTROL 参照]**」タブには、アラートをトリガーする可能性のある使用可能なルールが一覧表示されます。
 
-![ 使用可能なアラートのリストが「[!UICONTROL &#x200B; 参照 &#x200B;] タブに表示されます。](../images/alerts/ui/rules.png)
+![&#x200B; 使用可能なアラートのリストが「[!UICONTROL &#x200B; 参照 &#x200B;] タブに表示されます。](../images/alerts/ui/rules.png)
 
 リストからルールを選択し、その説明と設定パラメーター（しきい値や重大度を含む）を右側のパネルに表示します。
 
-![ 右側のパネルに詳細を表示するアラートルールがハイライト表示されている様子 ](../images/alerts/ui/rule-details.png)
+![&#x200B; 右側のパネルに詳細を表示するアラートルールがハイライト表示されている様子 &#x200B;](../images/alerts/ui/rule-details.png)
 
 ルール名の横にある省略記号（**...**）を選択すると、ドロップダウンにアラートの有効／無効（現在のステータスに応じて異なる）と、アラートのメール通知の登録／登録解除を切り替えるためのコントロールが表示されます。
 
-![ 選択した省略記号によってドロップダウンメニューが表示されます。](../images/alerts/ui/disable-subscribe.png)
+![&#x200B; 選択した省略記号によってドロップダウンメニューが表示されます。](../images/alerts/ui/disable-subscribe.png)
 
 ## アラートサブスクライバーを管理 {#manage-subscribers}
 
@@ -45,11 +45,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 「**[!UICONTROL 参照]**」タブには、アラートをトリガーする可能性のある使用可能なルールが一覧表示されます。
 
-![ 「参照 [!UICONTROL &#x200B; タブに表示される使用可能なアラートルール &#x200B;] リスト ](../images/alerts/ui/rules.png)
+![&#x200B; 「参照 [!UICONTROL &#x200B; タブに表示される使用可能なアラートルール &#x200B;] リスト &#x200B;](../images/alerts/ui/rules.png)
 
 ルール名の横にある省略記号（**...**）を選択すると、ドロップダウンにコントロールが表示されます。 「**[!UICONTROL アラート購読者を管理]**」を選択します。
 
-![ 省略記号を選択してドロップダウンメニューを表示します。 「[!UICONTROL &#x200B; アラート購読者を管理 &#x200B;]」オプションがハイライト表示されている様子 ](../images/alerts/ui/manage-alert-subscribers.png)
+![&#x200B; 省略記号を選択してドロップダウンメニューを表示します。 「[!UICONTROL &#x200B; アラート購読者を管理 &#x200B;]」オプションがハイライト表示されている様子 &#x200B;](../images/alerts/ui/manage-alert-subscribers.png)
 
 [!UICONTROL &#x200B; アラート購読者の管理 &#x200B;] ページが表示されます。 特定のユーザーに通知を割り当てるには、ユーザーのAdobe ユーザー ID、外部メールアドレス、メールグループリストのいずれかを入力し、Enter キーを押します。
 
@@ -57,31 +57,31 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 >
 >この通知を複数のユーザーに一度に送信するには、ユーザー ID またはメールアドレスのリストをコンマで区切って指定します。
 
-![ 入力されたメールアドレスを示すアラート購読者の管理ページ ](../images/alerts/ui/manage-alert-add-email.png)
+![&#x200B; 入力されたメールアドレスを示すアラート購読者の管理ページ &#x200B;](../images/alerts/ui/manage-alert-add-email.png)
 
 これらのメールアドレスは、現在リストされている購読者のリストに表示されます。 「**[!UICONTROL 更新]**」を選択します。
 
-![ アラート購読者を管理ページで購読者を強調表示して [!UICONTROL &#x200B; 更新 &#x200B;] します。](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![&#x200B; アラート購読者を管理ページで購読者を強調表示して [!UICONTROL &#x200B; 更新 &#x200B;] します。](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
 アラート通知リストにユーザーが正常に追加されました。 送信されたユーザーは、このアラートに関するメール通知を受け取れるようになります（以下の画像を参照）。
 
-![ 受信したアラート通知のメールの例。](../images/alerts/ui/manage-alert-subscribers-email.png)
+![&#x200B; 受信したアラート通知のメールの例。](../images/alerts/ui/manage-alert-subscribers-email.png)
 
 ## メールアラートを有効にする {#enable-email}
 
 アラート通知は、メールに直接配信できます。
 
-通知とお知らせを表示するには、右側の上部のリボンにあるベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択します。 表示されるドロップダウンで、歯車アイコン（![ 歯車アイコン ](/help/images/icons/settings.png)）を選択して、Experience Cloudの環境設定ページにアクセスします。
+通知とお知らせを表示するには、右側の上部のリボンにあるベルアイコン（![&#x200B; ベルアイコン &#x200B;](/help/images/icons/bell.png)）を選択します。 表示されるドロップダウンで、歯車アイコン（![&#x200B; 歯車アイコン &#x200B;](/help/images/icons/settings.png)）を選択して、Experience Cloudの環境設定ページにアクセスします。
 
-![ ベルアイコンと歯車アイコンを強調表示したアラートのリスト。](../images/alerts/ui/edit-preferences.png)
+![&#x200B; ベルアイコンと歯車アイコンを強調表示したアラートのリスト。](../images/alerts/ui/edit-preferences.png)
 
 **プロファイル** ページが表示されます。 左側のナビゲーションで **[!UICONTROL 通知]** を選択して、メールアラートの環境設定にアクセスします。
 
-![ 左側のナビゲーションでハイライト表示されたプロファイルページ [!UICONTROL &#x200B; 通知 &#x200B;]。](../images/alerts/ui/profile.png)
+![&#x200B; 左側のナビゲーションでハイライト表示されたプロファイルページ [!UICONTROL &#x200B; 通知 &#x200B;]。](../images/alerts/ui/profile.png)
 
 ページ下部の「**メール**」セクションまでスクロールし、「**[!UICONTROL インスタント通知]**」を選択します。
 
-![ プロファイルページでハイライト表示された「メール」セクション。](../images/alerts/ui/notifications.png)
+![&#x200B; プロファイルページでハイライト表示された「メール」セクション。](../images/alerts/ui/notifications.png)
 
 購読しているアラートは、Adobe ID アカウントに接続されているメールアドレスに配信されます。
 
@@ -105,25 +105,25 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ルール名の横にある省略記号（**...**）を選択すると、ドロップダウンにコントロールが表示されます。 「**[!UICONTROL 編集]**」を選択します。
 
-![ 選択したルールの「[!UICONTROL &#x200B; 編集 &#x200B;]」オプションがハイライト表示されている様子 ](../images/alerts/ui/threshold-edit.png)
+![&#x200B; 選択したルールの「[!UICONTROL &#x200B; 編集 &#x200B;]」オプションがハイライト表示されている様子 &#x200B;](../images/alerts/ui/threshold-edit.png)
 
 **[!UICONTROL アラートのカスタマイズ]** ページが表示されます。 しきい値を目的の分に更新し、「**[!UICONTROL 確認]**」を選択します。
 
-![ アラートページをカスタマイズの [!UICONTROL &#x200B; しきい値 &#x200B;] および [!UICONTROL &#x200B; 確認 &#x200B;] オプションがハイライト表示されます。](../images/alerts/ui/threshold-update.png)
+![&#x200B; アラートページをカスタマイズの [!UICONTROL &#x200B; しきい値 &#x200B;] および [!UICONTROL &#x200B; 確認 &#x200B;] オプションがハイライト表示されます。](../images/alerts/ui/threshold-update.png)
 
 「**[!UICONTROL アラート]**」ページに戻ります。 アラートのしきい値設定を表示するには、リストからルールを選択します。 右側のパネルに、ステータスや重大度などの詳細を含む、アラートのしきい値設定が表示されます。
 
-![ 右側のパネルで詳細を示すハイライト表示されたアラートとハイライト表示 [!UICONTROL &#x200B; しきい値 &#x200B;]。](../images/alerts/ui/threshold-view.png)
+![&#x200B; 右側のパネルで詳細を示すハイライト表示されたアラートとハイライト表示 [!UICONTROL &#x200B; しきい値 &#x200B;]。](../images/alerts/ui/threshold-view.png)
 
 ## アラート履歴の表示 {#alert-history}
 
 「**[!UICONTROL 履歴]**」タブには、アラートをトリガーしたルール、トリガー日、解決日（該当する場合）など、組織で受信したアラートの履歴が表示されます。
 
-![ 受信したアラートのリストは「[!UICONTROL &#x200B; 履歴 &#x200B;] タブに表示されます。](../images/alerts/ui/history.png)
+![&#x200B; 受信したアラートのリストは「[!UICONTROL &#x200B; 履歴 &#x200B;] タブに表示されます。](../images/alerts/ui/history.png)
 
 リストに表示されたアラートを選択すると、右側のパネルに詳細（そのアラートをトリガーしたイベントの概要を含む）が表示されます。
 
-![ 右側のパネルに詳細を示すハイライト表示されたアラート ](../images/alerts/ui/history-details.png)
+![&#x200B; 右側のパネルに詳細を示すハイライト表示されたアラート &#x200B;](../images/alerts/ui/history-details.png)
 
 ## 次の手順
 

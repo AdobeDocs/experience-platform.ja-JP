@@ -33,4 +33,4 @@ ht-degree: 51%
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、公開 XDM リポジトリの [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/address.schema.json) を参照してください。
+データタイプについて詳しくは、公開 XDM リポジトリの [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/address.schema.json) を参照してください。

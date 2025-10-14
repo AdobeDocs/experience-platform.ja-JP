@@ -25,7 +25,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL HubSpot] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
+既に [!DNL HubSpot] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -38,7 +38,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `accessToken` | OAuth 統合を最初に認証する際に取得したアクセストークン。 |
 | `refreshToken` | OAuth 統合を最初に認証する際に取得した更新トークン。 |
 
-基本について詳しくは、この [[!DNL HubSpot]  ドキュメント ](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview) を参照してください。
+基本について詳しくは、この [[!DNL HubSpot]  ドキュメント &#x200B;](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview) を参照してください。
 
 ## [!DNL HubSpot] アカウントの接続
 
@@ -58,7 +58,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL HubSpot] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/hubspot/connect.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/hubspot/connect.png)
 
 ### 既存のアカウント
 
@@ -68,4 +68,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL HubSpot] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/marketing-automation.md) を行いましょう。
+このチュートリアルでは、[!DNL HubSpot] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/marketing-automation.md) を行いましょう。

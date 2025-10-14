@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->グローバルフィルターをすべてのグラフに必ずマッピングしてください。 これは自動プロセスではありません。 グローバルフィルターを使用するには、グラフの SQL に [ クエリパラメーター ](../../../query-service/ui/parameterized-queries.md) を、ウィジェットコンポーザーに [ グローバルフィルターを有効にする ](#enable-global-filter) を、そしてグローバルフィルターダイアログのパラメーターに [ ランタイム値を選択する ](#select-global-filter) を含める必要があります。 クエリパラメーターを組み込む必要がある場合は、query pro ガイドを参照して、SQL の編集方法を確認してください。
+>グローバルフィルターをすべてのグラフに必ずマッピングしてください。 これは自動プロセスではありません。 グローバルフィルターを使用するには、グラフの SQL に [&#x200B; クエリパラメーター &#x200B;](../../../query-service/ui/parameterized-queries.md) を、ウィジェットコンポーザーに [&#x200B; グローバルフィルターを有効にする &#x200B;](#enable-global-filter) を、そしてグローバルフィルターダイアログのパラメーターに [&#x200B; ランタイム値を選択する &#x200B;](#select-global-filter) を含める必要があります。 クエリパラメーターを組み込む必要がある場合は、query pro ガイドを参照して、SQL の編集方法を確認してください。
 
-![ 「フィルターを追加」とドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/add-filter.png)
+![&#x200B; 「フィルターを追加」とドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/add-filter.png)
 
 カスタマイズされたグローバルフィルターを使用すると、SQL から提供されるインサイトをすばやく変更できます。
 
-[!UICONTROL &#x200B; グローバルフィルターを作成 &#x200B;] ダイアログが開きます。 グローバルフィルターの作成は、SQL を使用したinsightの作成と同じプロセスに従います。 まず、クエリするデータベース（インサイトデータモデル）を選択し、クエリエディターにカスタム SQL を入力して、最後に「実行」アイコン（![ 実行アイコン。](/help/images/icons/play.png)）を選択します。
+[!UICONTROL &#x200B; グローバルフィルターを作成 &#x200B;] ダイアログが開きます。 グローバルフィルターの作成は、SQL を使用したinsightの作成と同じプロセスに従います。 まず、クエリするデータベース（インサイトデータモデル）を選択し、クエリエディターにカスタム SQL を入力して、最後に「実行」アイコン（![&#x200B; 実行アイコン。](/help/images/icons/play.png)）を選択します。
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 1%
 >
 >デフォルトでは、クエリ結果は 100 行に制限されています。 さらに行を返すには、SQL クエリに LIMIT 句を追加し、必要な行数を指定します。 すべての行を取得し、デフォルトの制限を削除するには、クエリで LIMIT 0 を使用します。
 
-![ データセットのドロップダウンメニューが表示され、実行アイコンと「次へ」がハイライト表示された [!UICONTROL &#x200B; グローバルフィルターを作成ダイアログ &#x200B;]。](../../images/sql-insights-query-pro-mode/global-filter.png)
+![&#x200B; データセットのドロップダウンメニューが表示され、実行アイコンと「次へ」がハイライト表示された [!UICONTROL &#x200B; グローバルフィルターを作成ダイアログ &#x200B;]。](../../images/sql-insights-query-pro-mode/global-filter.png)
 
 グローバルフィルター作成ワークフローの最後の手順では、フィルターのラベルを追加する必要があります。 「**[!UICONTROL フィルターラベル]**」テキストフィールドにラベルを追加し、ドロップダウンボックスからフィルタータイプを選択します。
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 最後に「**[!UICONTROL 選択]**」を選択して、ダッシュボードビューに戻ります。
 
-![ 選択とフィルターラベルのテキスト入力がハイライト表示された [!UICONTROL &#x200B; グローバルフィルターを作成ダイアログ &#x200B;]。](../../images/sql-insights-query-pro-mode/global-filter-label.png)
+![&#x200B; 選択とフィルターラベルのテキスト入力がハイライト表示された [!UICONTROL &#x200B; グローバルフィルターを作成ダイアログ &#x200B;]。](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
 ## 各insightに対してグローバルフィルターを有効にします {#enable-global-filter}
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ダッシュボードのグローバルフィルターを作成すると、そのグローバルフィルターの切替スイッチがウィジェットコンポーザーの一部として使用できるようになります。
 
-![ グローバルフィルター切り替えがハイライト表示されているウィジェットコンポーザー。](../../images/sql-insights-query-pro-mode/global-filter-consent.png)
+![&#x200B; グローバルフィルター切り替えがハイライト表示されているウィジェットコンポーザー。](../../images/sql-insights-query-pro-mode/global-filter-consent.png)
 
 >[!IMPORTANT]
 >
@@ -63,10 +63,10 @@ ht-degree: 1%
 
 すべてのカスタムフィルターを一覧表示する [!UICONTROL &#x200B; フィルター &#x200B;] ダイアログを開くには、フィルターアイコン（![A フィルターアイコン](/help/images/icons/filter.png)）を選択します。 次に、ダッシュボードインサイトに影響を適用するには、グローバルフィルターのドロップダウンメニューからオプションを選択し、「**[!UICONTROL 適用]**」を選択します。
 
-![ フィルターダイアログがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-filters.png)
+![&#x200B; フィルターダイアログがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-filters.png)
 
 ## グローバルフィルターをクリア {#clear-global-filter}
 
 すべてのカスタムグローバルフィルターをクリアするには、**[!UICONTROL フィルター]** ダイアログから [!UICONTROL &#x200B; すべてクリア &#x200B;] を選択します。
 
-![ 「すべてクリア」がハイライト表示されたフィルターダイアログ ](../../images/sql-insights-query-pro-mode/clear-all.png)
+![&#x200B; 「すべてクリア」がハイライト表示されたフィルターダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/clear-all.png)

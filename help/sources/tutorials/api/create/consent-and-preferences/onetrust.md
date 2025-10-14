@@ -23,11 +23,11 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 >
->[!DNL OneTrust Integration] ソースコネクタとドキュメントは、[!DNL OneTrust Integration] チームによって作成されました。 お問い合わせや更新のリクエストについては、[[!DNL OneTrust]  チーム ](https://my.onetrust.com/s/contactsupport?language=en_US) に直接お問い合わせください。
+>[!DNL OneTrust Integration] ソースコネクタとドキュメントは、[!DNL OneTrust Integration] チームによって作成されました。 お問い合わせや更新のリクエストについては、[[!DNL OneTrust]  チーム &#x200B;](https://my.onetrust.com/s/contactsupport?language=en_US) に直接お問い合わせください。
 
-[!DNL OneTrust Integration] をExperience Platformに接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド ](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
+[!DNL OneTrust Integration] をExperience Platformに接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド &#x200B;](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
 
-システム間の更新トークンは [!DNL OneTrust] でサポートされていないため、有効期限が切れた後は、アクセストークンは自動的に更新されません。 そのため、有効期限が切れる前に、接続でアクセストークンが更新されていることを確認する必要があります。 アクセストークンの設定可能な最長有効期間は 1 年です。 アクセストークンの更新について詳しくは、[[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理のドキュメント ](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials) を参照してください。
+システム間の更新トークンは [!DNL OneTrust] でサポートされていないため、有効期限が切れた後は、アクセストークンは自動的に更新されません。 そのため、有効期限が切れる前に、接続でアクセストークンが更新されていることを確認する必要があります。 アクセストークンの設定可能な最長有効期間は 1 年です。 アクセストークンの更新について詳しくは、[[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理のドキュメント &#x200B;](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials) を参照してください。
 
 ## [!DNL Flow Service] API を使用した [!DNL OneTrust Integration] のExperience Platformへの接続
 
@@ -874,20 +874,20 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。

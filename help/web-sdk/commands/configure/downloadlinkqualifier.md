@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Web SDK タグ拡張機能を使用したリンク修飾子のダウンロード
 
-「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを有効にし、「タグ拡張機能の設定 [ 時に **[!UICONTROL リンク修飾子をダウンロード]** の下に目的のテキストを入力し ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) す。
+「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを有効にし、「タグ拡張機能の設定 [&#x200B; 時に **[!UICONTROL リンク修飾子をダウンロード]** の下に目的のテキストを入力し &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) す。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

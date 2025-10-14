@@ -16,7 +16,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->クラウドストレージを探索するには、クラウドストレージソースの有効なベース接続 ID が必要です。 この ID がない場合は、ベース接続を作成できるクラウドストレージソースのリストについて、[ ソースの概要 ](../../../home.md#cloud-storage) を参照してください。
+>クラウドストレージを探索するには、クラウドストレージソースの有効なベース接続 ID が必要です。 この ID がない場合は、ベース接続を作成できるクラウドストレージソースのリストについて、[&#x200B; ソースの概要 &#x200B;](../../../home.md#cloud-storage) を参照してください。
 
 ## はじめに
 
@@ -27,7 +27,7 @@ ht-degree: 15%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ## クラウドストレージフォルダーの参照
 
@@ -114,7 +114,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | `{BASE_CONNECTION_ID}` | クラウドストレージソースコネクタの接続 ID。 |
 | `{FILE_PATH}` | 検査するファイルへのパス。 |
 | `{FILE_TYPE}` | ファイルのタイプ。 次のファイルタイプがサポートされています。<ul><li><code> 区切り</code>：区切り文字区切りの値。 DSV ファイルはコンマで区切る必要があります。</li><li><code>JSON</code>:JavaScript オブジェクトの表記。 JSON ファイルは XDM に準拠している必要があります</li><li><code> 寄木細工</code>: Apache Parquet。 Parquet ファイルは XDM に準拠している必要があります。</li></ul> |
-| `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](#query) の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、[&#x200B; クエリパラメーター &#x200B;](#query) の節を参照してください。 |
 
 **リクエスト**
 
@@ -168,4 +168,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、クラウドストレージシステムを調べ、[!DNL Experience Platform] に取り込むファイルのパスを見つけ、その構造を確認しました。 次のチュートリアルではこの情報を使用して [ クラウドストレージからデータを収集し、Experience Platformに取り込む ](../collect/cloud-storage.md) ことができます。
+このチュートリアルでは、クラウドストレージシステムを調べ、[!DNL Experience Platform] に取り込むファイルのパスを見つけ、その構造を確認しました。 次のチュートリアルではこの情報を使用して [&#x200B; クラウドストレージからデータを収集し、Experience Platformに取り込む &#x200B;](../collect/cloud-storage.md) ことができます。

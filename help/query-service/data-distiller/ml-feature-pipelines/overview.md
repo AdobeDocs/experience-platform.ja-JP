@@ -21,7 +21,7 @@ Data Distillerを使用すると、データサイエンティストやエンジ
 >
 >このワークフローを使用するには、Data DistillerとAdobe Experience Platform Intelligence ライセンスが必要です。 これらの商品をお持ちでない場合は、Adobe サービス担当者にお問い合わせください。
 
-![AI-ML 機能パイプラインの詳細を説明するインフォグラフィック ](../../images/data-distiller/ai-ml-feature-pipeline.png)。
+![AI-ML 機能パイプラインの詳細を説明するインフォグラフィック &#x200B;](../../images/data-distiller/ai-ml-feature-pipeline.png)。
 
 - Data Distillerの強力なクエリ機能を使用すると、Experience Platformで利用可能な豊富な行動データから意味のある機能を抽出できます。 その後、大量のイベントデータをExperience Platformの外部にコピーしなくても、蒸留済みの機能データを機械学習環境に取り込むことができます。
 - 準備した機能データセットを好みの機械学習ツールに読み込み、エンタープライズデータから得られた他の機能と組み合わせて、ビジネスに合わせたカスタムモデルのトレーニング、実験、調整、デプロイを行います。
@@ -31,8 +31,8 @@ Data Distillerを使用すると、データサイエンティストやエンジ
 
 このワークフローを実行するには、Adobe Experience Platformの様々な側面に関する十分な知識が必要です。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-- Experience Platform API の [ 認証およびアクセス ](../../../landing/api-authentication.md) 方法
-- サンドボックス：[ 属性ベースのアクセス制御権限 ](../../../access-control/abac/overview.md) 役割の作成および管理方法、およびこれらの役割に必要なリソース権限の割り当て。
+- Experience Platform API の [&#x200B; 認証およびアクセス &#x200B;](../../../landing/api-authentication.md) 方法
+- サンドボックス：[&#x200B; 属性ベースのアクセス制御権限 &#x200B;](../../../access-control/abac/overview.md) 役割の作成および管理方法、およびこれらの役割に必要なリソース権限の割り当て。
 - データガバナンス：関連するデータガバナンスポリシーとアクセス制御ポリシーに従って各データを分類し [&#128279;](../../../data-governance/labels/overview.md) データ使用ラベルをデータセットとフィールドに適用する  方法。
 
 ## 次の手順
@@ -41,13 +41,13 @@ Data Distillerを使用すると、データサイエンティストやエンジ
 
 この一連のガイドに含まれるドキュメントでは、Experience Platformから機能パイプラインを作成して機械学習環境でカスタムモデルをフィードするための基本的な手順を説明します。 これで、Data Distillerと [!DNL Jupyter Notebook] の間の接続を確立する準備が整いました。
 
-- **設定**:[ ノートブックから Data Distillerに接続  [!DNL Python]  る ](./establish-connection.md)
+- **設定**:[&#x200B; ノートブックから Data Distillerに接続  [!DNL Python]  る &#x200B;](./establish-connection.md)
 
 以下にリンクされているドキュメントは、上記のインフォグラフィックに示されている手順に対応しています。
 
-- **手順 1**:[ データセットを調査および分析 ](./exploratory-analysis.md)
-- **手順 2**:[ 機械学習のエンジニア機能 ](./feature-engineering.md)
-- **手順 3**:[ 機能データセットの書き出し ](./export-data.md)
+- **手順 1**:[&#x200B; データセットを調査および分析 &#x200B;](./exploratory-analysis.md)
+- **手順 2**:[&#x200B; 機械学習のエンジニア機能 &#x200B;](./feature-engineering.md)
+- **手順 3**:[&#x200B; 機能データセットの書き出し &#x200B;](./export-data.md)
 
 ## その他のリソース
 

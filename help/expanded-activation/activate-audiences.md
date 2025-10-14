@@ -15,19 +15,19 @@ ht-degree: 0%
 
 ## 始める前に {#before-you-begin}
 
-このガイドで説明されている手順は、[ 拡張されたアクティベーションの概要ページ ](overview.md) を読み、オーディエンスのアクティベーションの前提条件を満たしていることを確認したことを前提としています。
+このガイドで説明されている手順は、[&#x200B; 拡張されたアクティベーションの概要ページ &#x200B;](overview.md) を読み、オーディエンスのアクティベーションの前提条件を満たしていることを確認したことを前提としています。
 
 >[!IMPORTANT]
 >
->[!DNL Expanded Activation] を通じてオーディエンスをアクティブ化するには、Audience Manager オーディエンスが **ハッシュ化されたメールアドレス** に基づいていることを確認します。 詳しくは、[ 前提条件 ](overview.md#prerequisites) を参照してください。
+>[!DNL Expanded Activation] を通じてオーディエンスをアクティブ化するには、Audience Manager オーディエンスが **ハッシュ化されたメールアドレス** に基づいていることを確認します。 詳しくは、[&#x200B; 前提条件 &#x200B;](overview.md#prerequisites) を参照してください。
 
 ## 手順 1:Audience Manager ソース接続の設定 {#configure-source}
 
-[Audience Manager ソースコネクタ ](../sources/connectors/adobe-applications/audience-manager.md) は、Adobe Audience Managerで収集されたオーディエンスデータを送信して、拡張されたアクティベーションでサポートされる出力先プラットフォームでアクティベーションを行います。
+[Audience Manager ソースコネクタ &#x200B;](../sources/connectors/adobe-applications/audience-manager.md) は、Adobe Audience Managerで収集されたオーディエンスデータを送信して、拡張されたアクティベーションでサポートされる出力先プラットフォームでアクティベーションを行います。
 
-ソースコネクタを設定するには、[Audience Manager ソース接続を作成する ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 方法に関するガイドに従います。
+ソースコネクタを設定するには、[Audience Manager ソース接続を作成する &#x200B;](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 方法に関するガイドに従います。
 
-![Audience Manager ソース接続を含む「ソース」タブを示すExperience Platform UI 画像 ](assets/sources-tab.png)
+![Audience Manager ソース接続を含む「ソース」タブを示すExperience Platform UI 画像 &#x200B;](assets/sources-tab.png)
 
 >[!TIP]
 >
@@ -41,14 +41,14 @@ Audience Managerから拡張アクティベーションに取り込んだオー�
 
 オーディエンスを表示するには、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]**/**[!UICONTROL 参照]** に移動します。
 
-![ オーディエンスページを示すExperience Platform UI 画像。](assets/audiences-browse.png)
+![&#x200B; オーディエンスページを示すExperience Platform UI 画像。](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
 >* 拡張されたアクティベーションにオーディエンスが完全に入力されるまでに、最大 48 時間かかる場合があります。 これは、既存のAudience Manager オーディエンスの更新にも当てはまります。
 >* 新しく作成されたAudience Manager オーディエンスは、拡張されたアクティベーションでは自動的には表示されません。 拡張されたアクティベーションで新しいセグメントを取り込むには、Audience Manager ソースコネクタを使用してセグメントを追加する必要があります。
 
-Audience Manager ソースコネクタを設定したら、[ 手順 2](#create-destination-connection) に進みます。
+Audience Manager ソースコネクタを設定したら、[&#x200B; 手順 2](#create-destination-connection) に進みます。
 
 ## 手順 2：新しい宛先接続の作成 {#create-destination-connection}
 
@@ -56,20 +56,20 @@ Audience Manager オーディエンスを任意の宛先プラットフォーム
 
 左サイドバーで、**[!UICONTROL 接続]**/**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]** に移動します。
 
-[!DNL Expanded Activation] で使用可能な宛先カテゴリは [ 広告 ](../destinations/catalog/advertising/overview.md) および [ ソーシャル ](../destinations/catalog/social/overview.md) です。
+[!DNL Expanded Activation] で使用可能な宛先カテゴリは [&#x200B; 広告 &#x200B;](../destinations/catalog/advertising/overview.md) および [&#x200B; ソーシャル &#x200B;](../destinations/catalog/social/overview.md) です。
 
-![ 拡張されたアクティベーションの宛先カタログを示すExperience Platform UI 画像。](assets/destination-catalog.png)
+![&#x200B; 拡張されたアクティベーションの宛先カタログを示すExperience Platform UI 画像。](assets/destination-catalog.png)
 
-宛先プラットフォームへの新しい接続を作成するには、[ 新しい宛先接続の作成方法 ](../destinations/ui/connect-destination.md) に関するガイドに従ってください。 次に、[ 手順 3](#activate-audiences) に進みます。
+宛先プラットフォームへの新しい接続を作成するには、[&#x200B; 新しい宛先接続の作成方法 &#x200B;](../destinations/ui/connect-destination.md) に関するガイドに従ってください。 次に、[&#x200B; 手順 3](#activate-audiences) に進みます。
 
 ## 手順 3：宛先に対するオーディエンスのアクティブ化 {#activate-audiences}
 
-Audience Manager オーディエンスを正常に [ 取り込み ](#configure-source)、[ 新しい宛先接続を作成 ](#create-destination-connection) したら、選択した宛先プラットフォームに対してオーディエンスをアクティブ化できます。
+Audience Manager オーディエンスを正常に [&#x200B; 取り込み &#x200B;](#configure-source)、[&#x200B; 新しい宛先接続を作成 &#x200B;](#create-destination-connection) したら、選択した宛先プラットフォームに対してオーディエンスをアクティブ化できます。
 
-![ 拡張されたアクティベーションの宛先カタログを示すExperience Platform UI 画像。](assets/activate-audiences.png)
+![&#x200B; 拡張されたアクティベーションの宛先カタログを示すExperience Platform UI 画像。](assets/activate-audiences.png)
 
-宛先に対してオーディエンスをアクティブ化するには、[ ストリーミング宛先に対してオーディエンスをアクティブ化する方法 ](../destinations/ui/activate-segment-streaming-destinations.md) のガイドに従ってください。
+宛先に対してオーディエンスをアクティブ化するには、[&#x200B; ストリーミング宛先に対してオーディエンスをアクティブ化する方法 &#x200B;](../destinations/ui/activate-segment-streaming-destinations.md) のガイドに従ってください。
 
 ## Audience Activation の検証 {#verify}
 
-宛先へのデータのフローを監視する方法について詳しくは、[ 宛先の監視に関するドキュメント ](../dataflows/ui/monitor-destinations.md) を参照してください。
+宛先へのデータのフローを監視する方法について詳しくは、[&#x200B; 宛先の監視に関するドキュメント &#x200B;](../dataflows/ui/monitor-destinations.md) を参照してください。

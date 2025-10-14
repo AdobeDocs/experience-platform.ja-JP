@@ -20,9 +20,9 @@ ht-degree: 8%
 
 顧客グラフシナリオは、3 つの異なるカテゴリにグループ化できます。
 
-* **基本**: [ 基本実装 ](#basic-implementations) には、ほとんどの場合が単純な実装を含むグラフが含まれています。 これらの実装は、単一のクロスデバイス名前空間（CRMID など）を中心に展開される傾向があります。 基本的な実装はかなり簡単ですが、多くの場合、（共有デバイス **シナリオが原因で、グラフが折りたたまれ** ことがあります。
-* **中間**:[ 中間実装 ](#intermediate-implementations) には、**複数のクロスデバイス名前空間**、**一意でない ID**、**複数の一意の名前空間** など、複数の変数が含まれます。
-* **詳細**: [ 高度な実装 ](#advanced-implementations) には、複雑な多層グラフシナリオが含まれます。 高度な実装では、適切なリンクを確実に削除してグラフの折りたたみを防ぐために、正しい名前空間の優先順位を確立することが不可欠です。
+* **基本**: [&#x200B; 基本実装 &#x200B;](#basic-implementations) には、ほとんどの場合が単純な実装を含むグラフが含まれています。 これらの実装は、単一のクロスデバイス名前空間（CRMID など）を中心に展開される傾向があります。 基本的な実装はかなり簡単ですが、多くの場合、（共有デバイス **シナリオが原因で、グラフが折りたたまれ** ことがあります。
+* **中間**:[&#x200B; 中間実装 &#x200B;](#intermediate-implementations) には、**複数のクロスデバイス名前空間**、**一意でない ID**、**複数の一意の名前空間** など、複数の変数が含まれます。
+* **詳細**: [&#x200B; 高度な実装 &#x200B;](#advanced-implementations) には、複雑な多層グラフシナリオが含まれます。 高度な実装では、適切なリンクを確実に削除してグラフの折りたたみを防ぐために、正しい名前空間の優先順位を確立することが不可欠です。
 
 ## 基本を学ぶ
 
@@ -99,7 +99,7 @@ CRMID: Jane, ECID: 111
 
 両方のユーザーが e コマースプラットフォームへのアクセスに使用するデスクトップコンピューター上のブラウザーは、`{ECID: 111}` で表されます。 このグラフシナリオでは、Jane は最後に認証されたエンドユーザーなので、`{ECID: 111}` と `{CRMID: John}` の間のリンクは削除されます。
 
-![ 共有デバイス（PC）のシミュレーショングラフ。](../images/configs/basic/shared-device-pc.png)
+![&#x200B; 共有デバイス（PC）のシミュレーショングラフ。](../images/configs/basic/shared-device-pc.png)
 
 >[!TAB  共有デバイス （モバイル） ]
 
@@ -116,7 +116,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 このグラフでは、John と Jane の両方がそれぞれの CRMID で表されています。 ユーザーが使用するブラウザーは `{ECID: 111}` で表され、ユーザーが共有する [!DNL iPad] は `{IDFA: a-b-c}` で表されます。 このグラフシナリオでは、Jane は最後に認証されたエンドユーザーなので、`{ECID: 111}` と `{IDFA: a-b-c}` から `{CRMID: John}` へのリンクは削除されます。
 
-![ 共有デバイス（モバイル）のシミュレーショングラフ。](../images/configs/basic/shared-device-mobile.png)
+![&#x200B; 共有デバイス（モバイル）のシミュレーショングラフ。](../images/configs/basic/shared-device-mobile.png)
 
 >[!ENDTABS]
 
@@ -161,7 +161,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **シミュレーショングラフ**
 
-![ シミュレーショングラフの画像 ](../images/configs/basic/simple-implementation-non-unique.png)
+![&#x200B; シミュレーショングラフの画像 &#x200B;](../images/configs/basic/simple-implementation-non-unique.png)
 
 これらのクレジットカード番号や、その他の一意でない名前空間が、常に 1 人のエンドユーザーに関連付けられるとは保証されません。 2 人のエンドユーザーが同じクレジットカードに登録すると、一意でないプレースホルダー値が誤って取り込まれる場合があります。 簡単に言えば、一意でない名前空間がグラフの折りたたみを引き起こさない保証はありません。
 
@@ -186,7 +186,7 @@ CRMID: Jane, ECID:123
 
 **シミュレーショングラフ**
 
-![CChash を使用した中間共有デバイスグラフ ](../images/configs/intermediate/intermediate-shared-device.png)
+![CChash を使用した中間共有デバイスグラフ &#x200B;](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB  同じクレジットカードを持つ 2 人のエンドユーザー ]
 
@@ -220,7 +220,7 @@ CRMID: Jill, CChash: undefined
 
 **シミュレーショングラフ**
 
-![ ハッシュの問題により無効なクレジットカードが発生するグラフ。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+![&#x200B; ハッシュの問題により無効なクレジットカードが発生するグラフ。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
 
 >[!ENDTABS]
 
@@ -265,7 +265,7 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![ ハッシュ化された CRMID を含む共有デバイスグラフ ](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![&#x200B; ハッシュ化された CRMID を含む共有デバイスグラフ &#x200B;](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
 >[!TAB  不正なデータ ]
 
@@ -278,7 +278,7 @@ CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
 
-![ ハッシュプロセスでエラーが発生し、一意でないハッシュ化された CRMID が発生した共有デバイスグラフ。](../images/configs/intermediate/hashing-error.png)
+![&#x200B; ハッシュプロセスでエラーが発生し、一意でないハッシュ化された CRMID が発生した共有デバイスグラフ。](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
 <!-- 
@@ -377,7 +377,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![ 同じデバイスを使用して web サイトにログインした 2 人のエンドユーザーを表示するグラフ。](../images/configs/intermediate/two-end-users-log-ing.png)
+![&#x200B; 同じデバイスを使用して web サイトにログインした 2 人のエンドユーザーを表示するグラフ。](../images/configs/intermediate/two-end-users-log-ing.png)
 
 >[!TAB  エンドユーザーがメールを変更した場合 ]
 
@@ -388,7 +388,7 @@ CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
 CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 ```
 
-![ メールを変更したエンドユーザーを表示するグラフ。](../images/configs/intermediate/end-user-changes-email.png)
+![&#x200B; メールを変更したエンドユーザーを表示するグラフ。](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
@@ -396,7 +396,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 高度な実装には、複雑で複数のレイヤーを持つグラフシナリオが含まれます。 これらのタイプの実装には、グラフの折りたたみを防ぐために削除する必要がある正しいリンクを識別するための **名前空間優先度** の使用が含まれます。
 
-**名前空間の優先度** は、名前空間を重要度別にランク付けするメタデータです。 グラフに 2 つの ID が含まれ、それぞれが異なる一意の名前空間を持つ場合、ID サービスは名前空間の優先度を使用して、削除するリンクを決定します。 詳しくは、[ 名前空間の優先度に関するドキュメント ](../identity-graph-linking-rules/namespace-priority.md) を参照してください。
+**名前空間の優先度** は、名前空間を重要度別にランク付けするメタデータです。 グラフに 2 つの ID が含まれ、それぞれが異なる一意の名前空間を持つ場合、ID サービスは名前空間の優先度を使用して、削除するリンクを決定します。 詳しくは、[&#x200B; 名前空間の優先度に関するドキュメント &#x200B;](../identity-graph-linking-rules/namespace-priority.md) を参照してください。
 
 名前空間の優先度は、複雑なグラフシナリオで重要な役割を果たします。 グラフには複数のレイヤーを含めることができます。1 人のエンドユーザーを複数のログイン ID に関連付けて、これらのログイン ID をハッシュ化することもできます。 さらに、別の ECID を別のログイン ID にリンクすることもできます。 適切なレイヤーの適切なリンクが削除されるようにするには、名前空間の優先度の設定を正しく設定する必要があります。
 
@@ -434,7 +434,7 @@ loginID: JohnBusiness, ECID: 222
 
 **シミュレーショングラフ**
 
-![ ビジネスと個人のメールを持つエンドユーザーの ID グラフ ](../images/configs/advanced/advanced.png)
+![&#x200B; ビジネスと個人のメールを持つエンドユーザーの ID グラフ &#x200B;](../images/configs/advanced/advanced.png)
 
 **演習**
 
@@ -455,7 +455,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 111
 ```
 
-![ 高度な共有デバイスのグラフ。](../images/configs/advanced/advanced-shared-device.png)
+![&#x200B; 高度な共有デバイスのグラフ。](../images/configs/advanced/advanced-shared-device.png)
 
 >[!TAB  無効なデータがReal-Time CDPに送信される ]
 
@@ -470,7 +470,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 222
 ```
 
-![ 無効なデータがReal-Time CDPに送信されるシナリオを表示するグラフ。](../images/configs/advanced/advanced-bad-data.png)
+![&#x200B; 無効なデータがReal-Time CDPに送信されるシナリオを表示するグラフ。](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
@@ -533,7 +533,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![ 共有デバイスの複雑なグラフの例 ](../images/configs/advanced/complex-shared-device.png)
+![&#x200B; 共有デバイスの複雑なグラフの例 &#x200B;](../images/configs/advanced/complex-shared-device.png)
 
 >[!TAB  エンドユーザーがメールアドレスを変更する ]
 
@@ -544,7 +544,7 @@ CRMID: John, loyaltyID: John, Email: john@g
 CRMID: John, loyaltyID: John, Email: john@y
 ```
 
-![ メールの変更が与えられた ID の動作を表示するグラフ。](../images/configs/advanced/complex-email-change.png)
+![&#x200B; メールの変更が与えられた ID の動作を表示するグラフ。](../images/configs/advanced/complex-email-change.png)
 
 >[!TAB thirdPartyID の関連付けが変更されました ]
 
@@ -557,7 +557,7 @@ CRMID: John, thirdPartyID: xyz
 CRMID: Jane, thirdPartyID: xyz
 ```
 
-![ サードパーティ ID の関連付けに変更があった場合の ID 動作を表示するグラフ。](../images/configs/advanced/complex-third-party-change.png)
+![&#x200B; サードパーティ ID の関連付けに変更があった場合の ID 動作を表示するグラフ。](../images/configs/advanced/complex-third-party-change.png)
 
 >[!TAB  一意でない orderID]
 
@@ -570,7 +570,7 @@ Email: john@g, orderID: aaa
 Email: jane@g, orderID: aaa
 ```
 
-![ 一意でない注文 ID が指定された ID の動作を表示するグラフ。](../images/configs/advanced/complex-non-unique.png)
+![&#x200B; 一意でない注文 ID が指定された ID の動作を表示するグラフ。](../images/configs/advanced/complex-non-unique.png)
 
 >[!TAB  エラーのある loyaltyID]
 
@@ -581,7 +581,7 @@ CRMID: John, loyaltyID: aaa, Email: john@g
 CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
-![ 誤ったロイヤルティ ID が指定された ID 行動を表示するグラフ。](../images/configs/advanced/complex-error.png)
+![&#x200B; 誤ったロイヤルティ ID が指定された ID 行動を表示するグラフ。](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 

@@ -25,7 +25,7 @@ Data Distiller Authorization API を使用して、IP ベースの制限を適�
 次の機能を使用すると、IP ベースのアクセス制限を定義し、アクセス試行を監視し、クエリサービスのネットワークセキュリティ設定をカスタマイズできます。
 
 - **ネットワークベースのデータアクセス制御を定義**：クエリサービスアクセスの許可される IP 範囲を指定します。 この制限は、SQL データベース接続（Business Intelligence（BI）ツール、データベースクライアント、JDBC などのプログラミングインターフェイスを使用して確立された接続など）に特に当てはまります。
-- **包括的な監視とアラートの有効化**：拒否された接続を含むすべてのアクセス試行は、ログに記録され、[Adobe Experience Platform監査ログ ](../../landing/governance-privacy-security/audit-logs/overview.md) に送信されて、リアルタイムトラッキングが行われます。 この機能を使用して、アクセスパターンを監視し、潜在的なセキュリティ侵害を検出します。
+- **包括的な監視とアラートの有効化**：拒否された接続を含むすべてのアクセス試行は、ログに記録され、[Adobe Experience Platform監査ログ &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) に送信されて、リアルタイムトラッキングが行われます。 この機能を使用して、アクセスパターンを監視し、潜在的なセキュリティ侵害を検出します。
 - **柔軟な IP 制限を設定**：許可する IP を、個々の IP ブロック形式と CIDR ブロック形式の両方で指定します。 これらの設定はサンドボックスごとに適用され、特定のセキュリティニーズに合わせてネットワーク制限を調整できます。
 
 ## 監査と監視の機能
@@ -35,12 +35,12 @@ Data Distiller Authorization API を使用して、IP ベースの制限を適�
 - **リアルタイム監視**: IP ベースのアクセスパターンを追跡して、コンプライアンスを確保します。
 - **権限のないアクセスに関するアラート**：権限のない IP からのアクセス試行を識別して応答します。
 
-詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
+詳しくは、[&#x200B; 監査ログの概要 &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## 次の手順
 
-Data Distiller Authorization API の基本を学ぶには、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーや API 呼び出し規則などの基本的な設定手順を確認してください。 次に、安全なデータアクセスの設定と管理に関する [IP アクセス ](./ip-access.md) および [IP 検証 ](./validate.md) のエンドポイント固有のガイドを参照します。
+Data Distiller Authorization API の基本を学ぶには、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーや API 呼び出し規則などの基本的な設定手順を確認してください。 次に、安全なデータアクセスの設定と管理に関する [IP アクセス &#x200B;](./ip-access.md) および [IP 検証 &#x200B;](./validate.md) のエンドポイント固有のガイドを参照します。
 
-統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。
+統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。
 
-返される各データセットの様々な応答パラメーターについて詳しくは、[ データセット API 開発者向けドキュメント ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。
+返される各データセットの様々な応答パラメーターについて詳しくは、[&#x200B; データセット API 開発者向けドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。

@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL &#x200B; チャプターの詳細 &#x200B;] コレクションは、メディアコンテンツ内のチャプターまたはセグメントに関連する様々な属性を記述する、標準の Experience Data Model （XDM）データタイプです。 [!UICONTROL &#x200B; チャプターの詳細 &#x200B;] コレクション データ型を使用すると、チャプター名、オフセット、期間、チャプターインデックスなどの詳細をキャプチャできます。 メディアコレクションフィールドは、データをキャプチャし、さらに処理するために他のAdobe サービスに送信します。
 
-![ チャプター詳細コレクションのデータタイプを示す図。](../images/data-types/chapter-details-collection.png)
+![&#x200B; チャプター詳細コレクションのデータタイプを示す図。](../images/data-types/chapter-details-collection.png)
 
 >[!NOTE]
 >

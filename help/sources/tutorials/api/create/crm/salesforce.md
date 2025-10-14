@@ -11,7 +11,7 @@ ht-degree: 17%
 
 # [!DNL Salesforce] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
-[!DNL Salesforce]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+[!DNL Salesforce]API[[!DNL Flow Service]  を使用して &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -22,7 +22,7 @@ ht-degree: 17%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## [!DNL Salesforce] を [!DNL Azure] のExperience Platformに接続 {#azure}
 
@@ -51,7 +51,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 | `apiVersion` | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
-基本について詳しくは、[ このSalesforceのドキュメント ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm) を参照してください。
+基本について詳しくは、[&#x200B; このSalesforceのドキュメント &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm) を参照してください。
 
 >[!TAB OAuth 2 クライアント資格情報 ]
 
@@ -66,7 +66,7 @@ OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカ�
 | `includeDeletedObjects` | ソフト削除されたレコードを含めるかどうかを決定するために使用されるブール値。 true に設定した場合は、ソフト削除されたレコードを [!DNL Salesforce] クエリに含めて、アカウントからExperience Platformに取り込むことができます。 設定を指定しない場合、この値はデフォルトで `false` になります。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
-[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
+[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 
@@ -211,7 +211,7 @@ curl -X POST \
 
 ### 前提条件
 
-AWS上のExperience Platformに接続できるように [!DNL Salesforce] アカウントを設定する方法については、[[!DNL Salesforce]  概要 ](../../../../connectors/crm/salesforce.md#aws) を参照してください。
+AWS上のExperience Platformに接続できるように [!DNL Salesforce] アカウントを設定する方法については、[[!DNL Salesforce]  概要 &#x200B;](../../../../connectors/crm/salesforce.md#aws) を参照してください。
 
 ### AWS上のExperience Platformに [!DNL Salesforce] のベース接続を作成する
 
@@ -255,7 +255,7 @@ curl -X POST \
   }'
 ```
 
-[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWS上のExperience Platformに接続するソースの設定方法  [!DNL Salesforce]  に関するガイドを参 ](../../../../connectors/crm/salesforce.md#aws) してください。
+[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWS上のExperience Platformに接続するソースの設定方法  [!DNL Salesforce]  に関するガイドを参 &#x200B;](../../../../connectors/crm/salesforce.md#aws) してください。
 
 +++
 
@@ -400,5 +400,5 @@ curl -X GET \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)

@@ -27,7 +27,7 @@ ht-degree: 37%
 
    この宛先を使用すると、アクティベーションワークフロー中に、マッピング ID を手動で追加することを選択できます。 データを PubMatic プラットフォームの既存のオーディエンスに送信する必要がある場合や、カスタムの「Source オーディエンス ID」が必要な場合に、この宛先を使用します。
 
-![ 宛先カタログ内の 2 つの PubMatic コネクタを並べて表示します。](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
+![&#x200B; 宛先カタログ内の 2 つの PubMatic コネクタを並べて表示します。](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
@@ -63,7 +63,7 @@ ht-degree: 37%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 | --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -91,7 +91,7 @@ ht-degree: 37%
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![ 認証方法 ](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
+![&#x200B; 認証方法 &#x200B;](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
 - **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
 
@@ -99,7 +99,7 @@ ht-degree: 37%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細 ](../../assets/catalog/advertising/pubmatic/destination-details.png)
+![&#x200B; 宛先の詳細 &#x200B;](../../assets/catalog/advertising/pubmatic/destination-details.png)
 
 - **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 - **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -121,9 +121,9 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 >
-> - データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+> - データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >
-> - _ID_ を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](../../assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+> - _ID_ を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](../../assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -138,13 +138,13 @@ ht-degree: 37%
 - この手順で正しいUIDの種類については、[!DNL PubMatic] 担当営業または販売店にお問い合わせください。
 - 最初の手順で選択した識別子に一致する [!DNL PubMatic UID] タイプ番号を選択します。
 
-![ 属性と ID のマッピング ](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![&#x200B; 属性と ID のマッピング &#x200B;](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ### オーディエンスのスケジュール
 
 PubMatic Connect （カスタムオーディエンス ID マッピング）宛先を使用する場合、PubMatic プラットフォームの「Source オーディエンス ID」に対応する各オーディエンスのマッピング ID を指定する必要があります。
 
-![ オーディエンスのスケジュール設定 ](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
+![&#x200B; オーディエンスのスケジュール設定 &#x200B;](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

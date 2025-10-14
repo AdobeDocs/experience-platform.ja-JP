@@ -27,9 +27,9 @@ Experience Platform インターフェイスで拡張機能を見つけるには
 
 ## タグ拡張機能の仕組み {#how-extensions-work}
 
-[ タグ拡張機能 ](../../../tags/home.md#extensions) は、web サイトまたはモバイルアプリの機能を強化するコードのパッケージです。 これには、[Google Analyticsなどの宛先に生のイベントデータを送信することが含まれますが ](/help/destinations/catalog/analytics/google-universal-analytics.md) 他の機能も提供できます。
+[&#x200B; タグ拡張機能 &#x200B;](../../../tags/home.md#extensions) は、web サイトまたはモバイルアプリの機能を強化するコードのパッケージです。 これには、[Google Analyticsなどの宛先に生のイベントデータを送信することが含まれますが &#x200B;](/help/destinations/catalog/analytics/google-universal-analytics.md) 他の機能も提供できます。
 
-タグとイベント転送拡張機能を区別することが重要です。 Experience Platformの宛先のユーザーインターフェイスに表示される拡張機能は、*タグ拡張機能* です。 [ タグとイベント転送の違い ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) について詳しくは、イベント転送の概要を参照してください。
+タグとイベント転送拡張機能を区別することが重要です。 Experience Platformの宛先のユーザーインターフェイスに表示される拡張機能は、*タグ拡張機能* です。 [&#x200B; タグとイベント転送の違い &#x200B;](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) について詳しくは、イベント転送の概要を参照してください。
 
 
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 Experience Platformのタグ機能は、Experience Cloudの既存のお客様に無料で提供されます。 このシステムは、インストール、設定、更新、削除が可能な使いやすい拡張機能を使用して、web サイトでのタグのデプロイメントを簡素化します。 タグを使用すると、web サイト上に小さな足跡が残り、ページの読み込みを迅速に維持できます。
 
-オーディエンスをアクティブ化して拡張機能をタグ付けすることはできませんが、特定の状況でイベントデータのみを転送するようにルールを設定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、[ タグドキュメント ](../../../tags/ui/managing-resources/rules.md) のルールについてを参照してください。
+オーディエンスをアクティブ化して拡張機能をタグ付けすることはできませんが、特定の状況でイベントデータのみを転送するようにルールを設定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、[&#x200B; タグドキュメント &#x200B;](../../../tags/ui/managing-resources/rules.md) のルールについてを参照してください。
 
 ## 拡張機能の使用例 {#extensions-use-cases}
 

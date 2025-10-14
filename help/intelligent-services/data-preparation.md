@@ -15,7 +15,7 @@ ht-degree: 2%
 
 マーケティングイベントデータからインサイトを発見する [!DNL Intelligent Services] めには、データを意味的にエンリッチメントし、標準構造に維持する必要があります。 これを実現 [!DNL Intelligent Services] るには、[!DNL Experience Data Model] （XDM）スキーマを活用します。 特に、[!DNL Intelligent Services] で使用するすべてのデータセットは、コンシューマーエクスペリエンスイベント（CEE） XDM スキーマに準拠するか、Adobe Analytics コネクタを使用する必要があります。 さらに、顧客 AI はAdobe Audience Manager コネクタをサポートします。
 
-このドキュメントでは、複数のチャネルから CEE スキーマにマーケティングイベントデータをマッピングする際の一般的なガイダンスを提供し、スキーマ内の重要なフィールドに関する情報を概説し、データをその構造に効果的にマッピングする方法を決定するのに役立ちます。 Adobe Analyticsのデータを使用する予定がある場合は、[Adobe Analyticsのデータ準備 ](#analytics-data) の節を参照してください。 Adobe Audience Manager データ（顧客 AI のみ）を使用する予定がある場合は、[Adobe Audience Manger のデータ準備 ](#AAM-data) の節を参照してください。
+このドキュメントでは、複数のチャネルから CEE スキーマにマーケティングイベントデータをマッピングする際の一般的なガイダンスを提供し、スキーマ内の重要なフィールドに関する情報を概説し、データをその構造に効果的にマッピングする方法を決定するのに役立ちます。 Adobe Analyticsのデータを使用する予定がある場合は、[Adobe Analyticsのデータ準備 &#x200B;](#analytics-data) の節を参照してください。 Adobe Audience Manager データ（顧客 AI のみ）を使用する予定がある場合は、[Adobe Audience Manger のデータ準備 &#x200B;](#AAM-data) の節を参照してください。
 
 ## データ要件
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 例えば、顧客 AI を使用して製品の購入傾向を予測する場合、顧客 AI のモデルには、購入が成功したパスの例と失敗したパスの例の両方が必要です。 これは、モデルのトレーニング中、顧客 AI がイベントやジャーニーが購入につながるかを理解しようとするためです。 これには、買い物かごへの商品の追加でジャーニーを停止した個人など、購入しなかった顧客が実行したアクションも含まれます。 これらの顧客は同様の行動を示す場合がありますが、顧客 AI はインサイトを提供し、傾向スコアの上昇につながる主な違いや要因を掘り下げることができます。 同様に、アトリビューション AI では、タッチポイントの有効性、トップコンバージョンパス、タッチポイントポジション別の分類などの指標を表示するために、両方のタイプのイベントとジャーニーが必要です。
 
-履歴データ要件に関するその他の例と情報については、入力/出力ドキュメントの [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [ アトリビューション AI](./attribution-ai/input-output.md#data-requirements) 履歴データ要件の節を参照してください。
+履歴データ要件に関するその他の例と情報については、入力/出力ドキュメントの [&#x200B; 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [&#x200B; アトリビューション AI](./attribution-ai/input-output.md#data-requirements) 履歴データ要件の節を参照してください。
 
 ### データのステッチのガイドライン
 
@@ -37,19 +37,19 @@ ht-degree: 2%
 
 ### 外部データの準備
 
-データがExperience Platform外に保存されている場合は、データを [Consumer ExperienceEvent スキーマ ](#cee-schema) の必須フィールドと関連フィールドにマッピングする必要があります。 このスキーマをカスタムフィールドグループで拡張して、顧客データをより適切に取り込むことができます。 マッピングが完了したら、Consumer ExperienceEvent スキーマを使用してデータセットを作成し、[ データをExperience Platformに取り込む ](../ingestion/home.md) ことができます。 [!DNL Intelligent Service] の設定時に、CEE データセットを選択できます。
+データがExperience Platform外に保存されている場合は、データを [Consumer ExperienceEvent スキーマ &#x200B;](#cee-schema) の必須フィールドと関連フィールドにマッピングする必要があります。 このスキーマをカスタムフィールドグループで拡張して、顧客データをより適切に取り込むことができます。 マッピングが完了したら、Consumer ExperienceEvent スキーマを使用してデータセットを作成し、[&#x200B; データをExperience Platformに取り込む &#x200B;](../ingestion/home.md) ことができます。 [!DNL Intelligent Service] の設定時に、CEE データセットを選択できます。
 
-使用する [!DNL Intelligent Service] に応じて、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することがベストプラクティスです。 必須フィールドについて詳しくは、[ アトリビューション AI](./attribution-ai/input-output.md) または [ 顧客 AI](./customer-ai/data-requirements.md) データ要件ガイドを参照してください。
+使用する [!DNL Intelligent Service] に応じて、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することがベストプラクティスです。 必須フィールドについて詳しくは、[&#x200B; アトリビューション AI](./attribution-ai/input-output.md) または [&#x200B; 顧客 AI](./customer-ai/data-requirements.md) データ要件ガイドを参照してください。
 
 ### Adobe Analytics データの準備 {#analytics-data}
 
-顧客 AI とアトリビューション AI は、Adobe Analytics データをネイティブにサポートします。 Adobe Analytics データを使用するには、[Analytics ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/analytics.md) を設定するためのドキュメントで説明されている手順に従ってください。
+顧客 AI とアトリビューション AI は、Adobe Analytics データをネイティブにサポートします。 Adobe Analytics データを使用するには、[Analytics ソースコネクタ &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md) を設定するためのドキュメントで説明されている手順に従ってください。
 
 ソースコネクタでデータがExperience Platformにストリーミングされると、インスタンス設定の際に、Adobe Analyticsをデータソースとして選択し、続いてデータセットを選択できるようになります。 すべての必須スキーマフィールドグループと個々のフィールドは、接続の設定時に自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
 
 Adobe Analytics ソースコネクタを通じてAdobe Experience Platformに送信されたデータをAdobe Analytics データと比較すると、いくつかの不一致に気付く場合があります。 Analytics Source コネクタでは、エクスペリエンスデータモデル（XDM）スキーマへの変換中に行が削除される可能性があります。 行全体が変換に適さない理由としては、タイムスタンプの欠落、ユーザー ID の欠落、無効または大きなユーザー ID、無効な分析値など、複数の理由が考えられます。
 
-詳細と例については、[Adobe AnalyticsとCustomer Journey Analytics データの比較 ](https://www.adobe.com/go/compare-aa-data-to-cja-data) のドキュメントを参照してください。 この記事は、データの整合性に関する懸念に妨げられることなく、お客様とチームがAdobe Experience Platform データをインテリジェントサービスに使用できるように、これらの違いを診断し、解決することを目的としています。
+詳細と例については、[Adobe AnalyticsとCustomer Journey Analytics データの比較 &#x200B;](https://www.adobe.com/go/compare-aa-data-to-cja-data) のドキュメントを参照してください。 この記事は、データの整合性に関する懸念に妨げられることなく、お客様とチームがAdobe Experience Platform データをインテリジェントサービスに使用できるように、これらの違いを診断し、解決することを目的としています。
 
 Adobe Experience Platform Query Services で、channel.typeAtSource クエリを使用して開始と終了のタイムスタンプの間の合計レコード数を次のように実行し、マーケティングチャネル別にカウントを見つけます。
 
@@ -65,24 +65,24 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Adobe Analytics コネクタによるデータのバックフィルには最大 4 週間かかります。 最近接続を設定した場合は、データセットに、顧客 AI またはアトリビューション AI に必要な最小データ長があることを確認する必要があります。 [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [ アトリビューション AI](./attribution-ai/input-output.md#data-requirements) の履歴データの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
+>Adobe Analytics コネクタによるデータのバックフィルには最大 4 週間かかります。 最近接続を設定した場合は、データセットに、顧客 AI またはアトリビューション AI に必要な最小データ長があることを確認する必要があります。 [&#x200B; 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [&#x200B; アトリビューション AI](./attribution-ai/input-output.md#data-requirements) の履歴データの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
 
 ### Adobe Audience Manager データ準備（顧客 AI のみ） {#AAM-data}
 
-顧客 AI は、Adobe Audience Manager データをネイティブにサポートします。 Audience Manager データを使用するには、[Audience Manager ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) を設定するためのドキュメントで概説されている手順に従ってください。
+顧客 AI は、Adobe Audience Manager データをネイティブにサポートします。 Audience Manager データを使用するには、[Audience Manager ソースコネクタ &#x200B;](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) を設定するためのドキュメントで概説されている手順に従ってください。
 
 ソースコネクタでデータがExperience Platformにストリーミングされると、顧客 AI 設定の際に、Adobe Audience Managerをデータソースとして選択し、続いてデータセットを選択できるようになります。 接続の設定時に、すべてのスキーマフィールドグループと個々のフィールドが自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
 
 >[!IMPORTANT]
 >
->最近コネクタを設定した場合は、データセットに必要なデータの最小の長さがあることを確認する必要があります。 顧客 AI については、[ 入力/出力ドキュメント ](./customer-ai/data-requirements.md) の履歴データの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
+>最近コネクタを設定した場合は、データセットに必要なデータの最小の長さがあることを確認する必要があります。 顧客 AI については、[&#x200B; 入力/出力ドキュメント &#x200B;](./customer-ai/data-requirements.md) の履歴データの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
 
 ### [!DNL Experience Platform] データの準備
 
 データが既に [!DNL Experience Platform] に保存されていて、Adobe AnalyticsまたはAdobe Audience Manager（顧客 AI のみ）ソースコネクタを介してストリーミングされていない場合は、次の手順に従います。 CEE スキーマを理解することをお勧めします。
 
-1. [Consumer ExperienceEvent スキーマ ](#cee-schema) の構造を確認し、データをフィールドにマッピングできるかどうかを判断します。
-2. Adobe Consulting サービスに連絡して、データをスキーマにマッピングして [!DNL Intelligent Services] に取り込むか、データを自分でマッピングする場合は [ このガイドの手順に従ってください ](#mapping)。
+1. [Consumer ExperienceEvent スキーマ &#x200B;](#cee-schema) の構造を確認し、データをフィールドにマッピングできるかどうかを判断します。
+2. Adobe Consulting サービスに連絡して、データをスキーマにマッピングして [!DNL Intelligent Services] に取り込むか、データを自分でマッピングする場合は [&#x200B; このガイドの手順に従ってください &#x200B;](#mapping)。
 
 ## CEE スキーマについて {#cee-schema}
 
@@ -92,11 +92,11 @@ CEE スキーマは、すべての XDM ExperienceEvent スキーマと同様に�
 
 [!DNL Intelligent Services] のスキーマ内のいくつかの主要なフィールドを利用して、マーケティングイベントデータからインサイトを生成します。これらはすべてルートレベルで見つかり、必要なサブフィールドを表示するように展開できます。
 
-![ ナビゲーションとサブフィールドの詳細を示す、Adobe Experience Platform UI でのスキーマ拡張のデモ ](./images/data-preparation/schema-expansion.gif)
+![&#x200B; ナビゲーションとサブフィールドの詳細を示す、Adobe Experience Platform UI でのスキーマ拡張のデモ &#x200B;](./images/data-preparation/schema-expansion.gif)
 
 すべての XDM スキーマと同様に、CEE スキーマフィールドグループは拡張可能です。 つまり、CEE フィールドグループにフィールドを追加したり、必要に応じて様々なバリエーションを複数のスキーマに含めたりできます。
 
-フィールドグループの完全な例は、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md) にあります。 さらに、CEE スキーマに準拠したデータの構造を示す例として、次の [JSON ファイル ](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を表示してコピーできます。 独自のデータをスキーマにマッピングする方法を決定するには、これらの両方の例を参照し、以下のセクションで概要を説明するキーフィールドについて確認します。
+フィールドグループの完全な例は、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md) にあります。 さらに、CEE スキーマに準拠したデータの構造を示す例として、次の [JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を表示してコピーできます。 独自のデータをスキーマにマッピングする方法を決定するには、これらの両方の例を参照し、以下のセクションで概要を説明するキーフィールドについて確認します。
 
 ## キーフィールド
 
@@ -173,7 +173,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 }
 ```
 
-`xdm:channel` の必須サブフィールドのそれぞれについて詳しくは、[ エクスペリエンスチャネルスキーマ ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 仕様を参照してください。 マッピングの例については、以下の [ 表 ](#example-channels) を参照してください。
+`xdm:channel` の必須サブフィールドのそれぞれについて詳しくは、[&#x200B; エクスペリエンスチャネルスキーマ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 仕様を参照してください。 マッピングの例については、以下の [&#x200B; 表 &#x200B;](#example-channels) を参照してください。
 
 #### チャネルマッピングの例 {#example-channels}
 
@@ -198,7 +198,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドは、顧客が選択した製品を表す項目の配列で、製品 SKU、名前、価格、数量が含まれます。
 
-![xdm:productListItems フィールド（SKU、名前、currencyCode、数量、priceTotal などのサブフィールドを含む） ](./images/data-preparation/productListItems.png)
+![xdm:productListItems フィールド（SKU、名前、currencyCode、数量、priceTotal などのサブフィールドを含む） &#x200B;](./images/data-preparation/productListItems.png)
 
 **スキーマの例**
 
@@ -221,13 +221,13 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 ]
 ```
 
-`xdm:productListItems` の必須サブフィールドのそれぞれについて詳しくは、[ コマースの詳細スキーマ ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 仕様を参照してください。
+`xdm:productListItems` の必須サブフィールドのそれぞれについて詳しくは、[&#x200B; コマースの詳細スキーマ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 仕様を参照してください。
 
 #### xdm:commerce
 
 このフィールドには、発注番号や支払い情報など、ExperienceEvent に関するコマース固有の情報が含まれています。
 
-![ 注文、購入、支払いなどのサブフィールドを含む、xdm:commerce フィールドの構造。](./images/data-preparation/commerce.png)
+![&#x200B; 注文、購入、支払いなどのサブフィールドを含む、xdm:commerce フィールドの構造。](./images/data-preparation/commerce.png)
 
 **スキーマの例**
 
@@ -259,13 +259,13 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
   }
 ```
 
-`xdm:commerce` の必須サブフィールドのそれぞれについて詳しくは、[ コマースの詳細スキーマ ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 仕様を参照してください。
+`xdm:commerce` の必須サブフィールドのそれぞれについて詳しくは、[&#x200B; コマースの詳細スキーマ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 仕様を参照してください。
 
 #### xdm:web
 
 このフィールドは、インタラクション、ページの詳細、リファラーなど、ExperienceEvent に関する web の詳細を表します。
 
-![xdm:web フィールド（webPageDetails や webReferrer などのサブフィールドを含む ](./images/data-preparation/web.png)
+![xdm:web フィールド（webPageDetails や webReferrer などのサブフィールドを含む &#x200B;](./images/data-preparation/web.png)
 
 **スキーマの例**
 
@@ -321,7 +321,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 >[!NOTE]
 >
->以下の手順では、Experience Platformを購読する必要があります。 Experience Platformへのアクセス権がない場合は、[ 次の手順 ](#next-steps) の節に進みます。
+>以下の手順では、Experience Platformを購読する必要があります。 Experience Platformへのアクセス権がない場合は、[&#x200B; 次の手順 &#x200B;](#next-steps) の節に進みます。
 
 この節では、[!DNL Intelligent Services] で使用するデータをExperience Platformにマッピングおよび取り込むためのワークフローの概要を説明し、詳細な手順を示すチュートリアルへのリンクを示します。
 
@@ -340,7 +340,7 @@ CEE フィールドグループをスキーマに追加した後、データ内�
 
 スキーマを作成して保存したら、そのスキーマに基づいて新しいデータセットを作成できます。 次のチュートリアルでは、UI または API で新しいデータセットを作成するプロセスについて順を追って説明します。
 
-* [UI でのデータセットの作成 ](../catalog/datasets/user-guide.md#create) （既存のスキーマを使用する場合のワークフローに従う）
+* [UI でのデータセットの作成 &#x200B;](../catalog/datasets/user-guide.md#create) （既存のスキーマを使用する場合のワークフローに従う）
 * [API でのデータセットの作成](../catalog/datasets/create.md)
 
 データセットを作成したら、Experience Platform UI の **[!UICONTROL データセット]** ワークスペース内で見つけることができます。
@@ -349,17 +349,17 @@ CEE フィールドグループをスキーマに追加した後、データ内�
 
 #### データセットに ID フィールドを追加する
 
-[!DNL Adobe Audience Manager]、[!DNL Adobe Analytics]、または別の外部ソースからデータを取り込む場合は、スキーマフィールドを ID フィールドとして設定するオプションがあります。 スキーマフィールドを ID フィールドとして設定するには、スキーマを作成するための [UI チュートリアル ](../xdm/tutorials/create-schema-ui.md#identity-field) または [API チュートリアル ](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) の ID フィールドの設定に関する節を参照してください。
+[!DNL Adobe Audience Manager]、[!DNL Adobe Analytics]、または別の外部ソースからデータを取り込む場合は、スキーマフィールドを ID フィールドとして設定するオプションがあります。 スキーマフィールドを ID フィールドとして設定するには、スキーマを作成するための [UI チュートリアル &#x200B;](../xdm/tutorials/create-schema-ui.md#identity-field) または [API チュートリアル &#x200B;](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) の ID フィールドの設定に関する節を参照してください。
 
-ローカルの CSV ファイルからデータを取り込む場合は、次の節 [ データのマッピングと取り込み ](#ingest) に進みます。
+ローカルの CSV ファイルからデータを取り込む場合は、次の節 [&#x200B; データのマッピングと取り込み &#x200B;](#ingest) に進みます。
 
 #### データのマッピングと取り込み {#ingest}
 
-CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータをExperience Platformに取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする ](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [ サンプル JSON ファイル ](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
+CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータをExperience Platformに取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする &#x200B;](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [&#x200B; サンプル JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
 
 データセットにデータを入力したら、同じデータセットを使用して追加のデータファイルを取り込むことができます。
 
-サポートされているサードパーティアプリケーションにデータが保存されている場合は、[ ソースコネクタ ](../sources/home.md) を作成して、マーケティングイベントデータをリアルタイムで [!DNL Experience Platform] に取り込むこともできます。
+サポートされているサードパーティアプリケーションにデータが保存されている場合は、[&#x200B; ソースコネクタ &#x200B;](../sources/home.md) を作成して、マーケティングイベントデータをリアルタイムで [!DNL Experience Platform] に取り込むこともできます。
 
 ## 次の手順 {#next-steps}
 

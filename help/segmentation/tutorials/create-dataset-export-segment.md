@@ -17,15 +17,15 @@ ht-degree: 15%
 
 このチュートリアルでは、[!DNL Experience Platform] UI を使用してオーディエンスを書き出すために使用できるデータセットの作成に必要な手順について説明します。
 
-このチュートリアルは、[ セグメント化結果の評価とアクセス ](./evaluate-a-segment.md) に関するチュートリアルで概要を説明する手順に直接関連しています。 セグメント定義の評価チュートリアルでは、[!DNL Catalog Service] API を使用してデータセットを作成する手順を説明しますが、このチュートリアルでは、[!DNL Experience Platform] UI を使用してデータセットを作成する手順の概要を説明します。
+このチュートリアルは、[&#x200B; セグメント化結果の評価とアクセス &#x200B;](./evaluate-a-segment.md) に関するチュートリアルで概要を説明する手順に直接関連しています。 セグメント定義の評価チュートリアルでは、[!DNL Catalog Service] API を使用してデータセットを作成する手順を説明しますが、このチュートリアルでは、[!DNL Experience Platform] UI を使用してデータセットを作成する手順の概要を説明します。
 
 ## はじめに
 
-オーディエンスを書き出すには、データセットが [!DNL XDM Individual Profile Union Schema] に基づいている必要があります。 結合スキーマは、同じクラスを共有するすべてのスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 和集合スキーマについて詳しくは、[ スキーマ構成の基本 ](../../xdm/schema/composition.md#union) に関するガイドを参照してください。
+オーディエンスを書き出すには、データセットが [!DNL XDM Individual Profile Union Schema] に基づいている必要があります。 結合スキーマは、同じクラスを共有するすべてのスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 和集合スキーマについて詳しくは、[&#x200B; スキーマ構成の基本 &#x200B;](../../xdm/schema/composition.md#union) に関するガイドを参照してください。
 
 UI で和集合スキーマを表示するには、左側のナビゲーションで **[!UICONTROL プロファイル]** を選択してから、「**[!UICONTROL 和集合スキーマ]** を選択します（下図を参照）。
 
-![ 「和集合スキーマ」タブがハイライト表示されている様子 ](../images/tutorials/segment-export-dataset/union.png)
+![&#x200B; 「和集合スキーマ」タブがハイライト表示されている様子 &#x200B;](../images/tutorials/segment-export-dataset/union.png)
 
 ## データセットワークスペース
 
@@ -37,17 +37,17 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 >
 >検索バーの横にあるフィルターアイコンを選択すると、フィルタリング機能を使用して、[!DNL Real-Time Customer Profile] ークフローが有効になっているデータセットのみを表示できます。
 
-![ データセットワークスペースが表示されます。](../images/tutorials/segment-export-dataset/browse.png)
+![&#x200B; データセットワークスペースが表示されます。](../images/tutorials/segment-export-dataset/browse.png)
 
 ## データセットの作成
 
 データセットを作成するには、「**[!UICONTROL データセットを作成]**」を選択します。
 
-![ 「データセットを作成」ボタンがハイライト表示されます。](../images/tutorials/segment-export-dataset/create-dataset.png)
+![&#x200B; 「データセットを作成」ボタンがハイライト表示されます。](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 次の画面で、「**[!UICONTROL スキーマからデータセットを作成]**」を選択します。
 
-![ 「スキーマからデータセットを作成」オプションがハイライト表示されます。](../images/tutorials/segment-export-dataset/create-from-schema.png)
+![&#x200B; 「スキーマからデータセットを作成」オプションがハイライト表示されます。](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## XDM 個別プロファイル和集合スキーマの選択
 
@@ -73,7 +73,7 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 
 データセットに名前と説明を入力したら、「**[!UICONTROL 終了]**」を選択します。
 
-![ データセットを設定ページが表示されます。 設定オプションがハイライト表示されている様子 ](../images/tutorials/segment-export-dataset/configure-dataset.png)
+![&#x200B; データセットを設定ページが表示されます。 設定オプションがハイライト表示されている様子 &#x200B;](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## データセットアクティビティ
 
@@ -81,10 +81,10 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 
 右側のパネルには、データセット ID、名前、説明、スキーマなど、新しいデータセットに関連する情報が含まれています。 **[!UICONTROL データセット ID]** をメモしておいてください。この値は、オーディエンスの書き出しワークフローを完了するために必要です。
 
-![ データセットアクティビティページが表示されます。 データセット ID は、今後の手順でこの値をメモする必要があるので、ハイライト表示されます。](../images/tutorials/segment-export-dataset/activity.png)
+![&#x200B; データセットアクティビティページが表示されます。 データセット ID は、今後の手順でこの値をメモする必要があるので、ハイライト表示されます。](../images/tutorials/segment-export-dataset/activity.png)
 
 ## 次の手順
 
-[!DNL XDM Individual Profile Union Schema] に基づくデータセットを作成したので、データセット ID を使用して [ セグメント定義結果の評価とアクセス ](./evaluate-a-segment.md) チュートリアルを続行できます。
+[!DNL XDM Individual Profile Union Schema] に基づくデータセットを作成したので、データセット ID を使用して [&#x200B; セグメント定義結果の評価とアクセス &#x200B;](./evaluate-a-segment.md) チュートリアルを続行できます。
 
-現時点では、セグメント定義結果の評価チュートリアルに戻り、オーディエンスワークフローの書き出しの [ オーディエンスメンバーのプロファイルの生成 ](./evaluate-a-segment.md#generate-profiles) 手順から選択してください。
+現時点では、セグメント定義結果の評価チュートリアルに戻り、オーディエンスワークフローの書き出しの [&#x200B; オーディエンスメンバーのプロファイルの生成 &#x200B;](./evaluate-a-segment.md#generate-profiles) 手順から選択してください。

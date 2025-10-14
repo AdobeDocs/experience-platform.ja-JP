@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[!DNL Pendo] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Pendo] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -26,19 +26,19 @@ Experience Platformでは、サードパーティの分析アプリケーショ�
 
 サポートされている Webhook は次の通りです。
 
-* [ ガイド ](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) が表示されました
-* [ 投票 ](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) 表示/送信
-* [ ネットプロモータースコア ](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) 表示/送信済み
+* [&#x200B; ガイド &#x200B;](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) が表示されました
+* [&#x200B; 投票 &#x200B;](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) 表示/送信
+* [&#x200B; ネットプロモータースコア &#x200B;](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) 表示/送信済み
 
 ## 前提条件 {#prerequisites}
 
 [!DNL Pendo] ソース接続を作成する前に、次の点を確認する必要があります。
 
-[!DNL Pendo] アカウント。 アカウントをまだお持ちでない場合は、アカウントを登録および作成するための [[!DNL Pendo]  登録 ](https://app.pendo.io/register) ページが表示されます。
+[!DNL Pendo] アカウント。 アカウントをまだお持ちでない場合は、アカウントを登録および作成するための [[!DNL Pendo]  登録 &#x200B;](https://app.pendo.io/register) ページが表示されます。
 
 ### Webhook[!DNL Pendo] 設定 {#set-up-webhook}
 
-データフローが正常に作成されたら、イベントについてExperience Platformに通知する Webhook を設定する必要 [!DNL Pendo] あります。 [!DNL Pendo] Webhook は、特定のイベントが発生したときにリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) に関するチュ  [!DNL Pendo]  トリアルを参照してください。
+データフローが正常に作成されたら、イベントについてExperience Platformに通知する Webhook を設定する必要 [!DNL Pendo] あります。 [!DNL Pendo] Webhook は、特定のイベントが発生したときにリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソースに送信できます。 詳しくは、[&#x200B; ストリーミングエンドポイント URL の取得 &#x200B;](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [Webhook の設定 &#x200B;](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) に関するチュ  [!DNL Pendo]  トリアルを参照してください。
 
 ## Experience Platformへの [!DNL Pendo] の接続 {#connect-to-platform}
 
@@ -46,7 +46,7 @@ Experience Platformでは、サードパーティの分析アプリケーショ�
 
 ### API を使用した [!DNL Pendo] のExperience Platformへの接続 {#connect-to-platform-using-api}
 
-* [ソース接続を作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Pendo] ](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [ソース接続を作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Pendo] &#x200B;](../../tutorials/api/create/analytics/pendo-webhook.md)
 
 ### UI を使用した [!DNL Pendo] のExperience Platformへの接続 {#connect-to-platform-using-ui}
 

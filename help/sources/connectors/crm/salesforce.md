@@ -29,7 +29,7 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 
 ### Azure に接続するための IP アドレスの許可リスト
 
-ソースを Azure 上のExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス ](../../ip-address-allow-list.md) ページを参照してください。
+ソースを Azure 上のExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス &#x200B;](../../ip-address-allow-list.md) ページを参照してください。
 
 >[!BEGINTABS]
 
@@ -226,9 +226,9 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 
 [!DNL Salesforce] ソースを [!DNL B2B-CDP] の一部として使用するには、まず [!DNL Postman] ユーティリティを設定して、[!DNL Salesforce] 名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を示します。
 
-- この [GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
-- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Experience Platform API の使用について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
-- Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+- この [GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
+- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Experience Platform API の使用について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
+- Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
 - Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。
 
 Experience Platform Developer Console と [!DNL Postman] の設定により、[!DNL Postman] 環境に適切な環境値を適用できるようになりました。
@@ -239,21 +239,21 @@ Experience Platform Developer Console と [!DNL Postman] の設定により、[!
 
 | 変数 | 説明 | 例 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
-| `API_KEY` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience Platform API を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
+| `API_KEY` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo] に関しては、この値は固定で、常に `ent_dataservices_sdk` に設定されます。 | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global` コンテナには、標準のAdobeおよびExperience Platform パートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが含まれます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
-| `PRIVATE_KEY` | Experience Platform API に対する [!DNL Postman] インスタンスの認証に使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [ 開発者コンソールの設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Experience Platform API に対する [!DNL Postman] インスタンスの認証に使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [&#x200B; 開発者コンソールの設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System （IMS）は、Adobe サービスに対して認証を行うためのフレームワークを提供します。 [!DNL Marketo] に関しては、この値は固定で、常に `ims-na1.adobelogin.com` に設定されます。 | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `{ORG_ID}` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 使用している仮想サンドボックスパーティションの名前。 | `prod` |
 | `TENANT_ID` | 作成するリソースの名前空間が適切に設定され、組織内に含まれていることを確認するために使用される ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 呼び出しを行う URL エンドポイント。 この値は固定で、常に `http://platform.adobe.io/` に設定されます。 | `http://platform.adobe.io/` |
-| `munchkinId` | [!DNL Marketo] アカウントの一意の ID。 インスタンスの取得方法について詳しくは、[ インスタンスの認証 ](../adobe-applications/marketo/marketo-auth.md) に関するチュー `munchkinId` リアルを参照してください  [!DNL Marketo]  | `123-ABC-456` |
-| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織 ID。 [!DNL Salesforce] 組織 ID の取得について詳しくは、次の [[!DNL Salesforce]  ガイド ](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) を参照してください。 | `00D4W000000FgYJUA0` |
+| `munchkinId` | [!DNL Marketo] アカウントの一意の ID。 インスタンスの取得方法について詳しくは、[&#x200B; インスタンスの認証 &#x200B;](../adobe-applications/marketo/marketo-auth.md) に関するチュー `munchkinId` リアルを参照してください  [!DNL Marketo]  | `123-ABC-456` |
+| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織 ID。 [!DNL Salesforce] 組織 ID の取得について詳しくは、次の [[!DNL Salesforce]  ガイド &#x200B;](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) を参照してください。 | `00D4W000000FgYJUA0` |
 | `has_abm` | [!DNL Marketo Account-Based Marketing] を購読しているかどうかを示すブール値。 | `false` |
 | `has_msi` | [!DNL Marketo Sales Insight] を購読しているかどうかを示すブール値。 | `false` |
 
@@ -303,7 +303,7 @@ Amazon Web Services（AWS）上のExperience Platform用に [!DNL Salesforce] �
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. [!DNL Salesforce] ダッシュボードで、「設定」（![ 設定アイコン）を選択します。](/help/images/icons/settings.png)）を選択してから、「**[!DNL Setup]**」を選択します。
+1. [!DNL Salesforce] ダッシュボードで、「設定」（![&#x200B; 設定アイコン）を選択します。](/help/images/icons/settings.png)）を選択してから、「**[!DNL Setup]**」を選択します。
 2. [!DNL App Manager] に移動し、「**[!DNL New Connection App]**」を選択します。
 3. アプリの名前を指定し、残りのフィールドに自動入力できるようにします。
 4. [!DNL Enable OAuth Settings] のボックスを有効にします。

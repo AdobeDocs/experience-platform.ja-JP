@@ -49,7 +49,7 @@ ht-degree: 11%
 
 [!UICONTROL &#x200B; 請求 &#x200B;] は、請求の詳細に関する情報を含む、標準の Experience Data Model （XDM）データタイプです。 特に、請求先住所に焦点を当てています。
 
-![ 請求データタイプの図。](../images/data-types/billing.png)
+![&#x200B; 請求データタイプの図。](../images/data-types/billing.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-------------------------------|-----------------|-----------------|--------------------------|
@@ -59,5 +59,5 @@ ht-degree: 11%
 
 [!UICONTROL Commerce] のデータタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)

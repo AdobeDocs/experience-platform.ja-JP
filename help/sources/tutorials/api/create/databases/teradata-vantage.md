@@ -25,7 +25,7 @@ ht-degree: 46%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Teradata Vantage] す。
 
@@ -38,7 +38,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 | `connectionString` | 接続文字列は、データ ソースとその接続方法に関する情報を提供する文字列です。 [!DNL Teradata Vantage] の接続文字列のパターンは `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}` です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Teradata Vantage] の接続仕様 ID は `2fa8af9c-2d1a-43ea-a253-f00a00c74412` です。 |
 
-基本について詳しくは、この [[!DNL Teradata Vantage]  ドキュメント ](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options) を参照してください。
+基本について詳しくは、この [[!DNL Teradata Vantage]  ドキュメント &#x200B;](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options) を参照してください。
 
 ## ベース接続の作成
 
@@ -98,5 +98,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Teradata Vantage] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

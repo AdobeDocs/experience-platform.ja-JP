@@ -176,4 +176,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、CS システムを探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [CS システムからデータを収集し、Experience Platformに取り込む ](../collect/customer-success.md) ことができます。
+このチュートリアルに従って、CS システムを探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [CS システムからデータを収集し、Experience Platformに取り込む &#x200B;](../collect/customer-success.md) ことができます。

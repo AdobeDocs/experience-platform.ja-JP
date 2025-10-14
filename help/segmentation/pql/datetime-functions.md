@@ -12,7 +12,7 @@ ht-degree: 85%
 
 # 日付および時間関数
 
-日時関数を使用すると、[!DNL Profile Query Language] （PQL）内の値に対して日時操作を実行できます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+日時関数を使用すると、[!DNL Profile Query Language] （PQL）内の値に対して日時操作を実行できます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## Current month
 

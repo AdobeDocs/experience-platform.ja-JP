@@ -18,7 +18,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->データフローを作成するには、クラウドストレージソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、ベース接続を作成できるクラウドストレージソースのリストについて、[ ソースの概要 ](../../../home.md#cloud-storage) を参照してください。
+>データフローを作成するには、クラウドストレージソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、ベース接続を作成できるクラウドストレージソースのリストについて、[&#x200B; ソースの概要 &#x200B;](../../../home.md#cloud-storage) を参照してください。
 
 ## はじめに
 
@@ -29,11 +29,11 @@ ht-degree: 56%
    - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 - [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-- [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | （オプション）取り込む圧縮ファイルのタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは、`bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`、`tar` です。 **メモ**:`compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
 | `params.path` | アクセスするソースファイルのパス。 このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**：ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例：`/acme/summerCampaign/*.csv` は `/acme/summerCampaign/` フォルダー全体を取り込みます。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプ `file` を使用して個々のファイルを取り込み、タイプ `folder` を使用してフォルダー全体を取り込みます。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 モデルベースのスキーマで使用される場合、変更データキャプチャは `_change_request_type` ータコントロール列（`u` — upsert、`d` — delete）に依存します。この列は、取り込み時に評価されますが、ターゲットスキーマには保存されません。 このプロパティは、次のクラウドストレージソースでサポートされています。 <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>この機能の概要については、[Data Mirrorの概要 ](../../../../xdm/data-mirror/overview.md) を参照してください。 実装について詳しくは、使用に関するガイド [ ソースでのデータキャプチャの変更 ](../change-data-capture.md) および [ モデルベースのスキーマに関するテクニカルリファレンス ](../../../../xdm/schema/model-based.md) を参照してください。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 モデルベースのスキーマで使用される場合、変更データキャプチャは `_change_request_type` ータコントロール列（`u` — upsert、`d` — delete）に依存します。この列は、取り込み時に評価されますが、ターゲットスキーマには保存されません。 このプロパティは、次のクラウドストレージソースでサポートされています。 <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>この機能の概要については、[Data Mirrorの概要 &#x200B;](../../../../xdm/data-mirror/overview.md) を参照してください。 実装について詳しくは、使用に関するガイド [&#x200B; ソースでのデータキャプチャの変更 &#x200B;](../change-data-capture.md) および [&#x200B; モデルベースのスキーマに関するテクニカルリファレンス &#x200B;](../../../../xdm/schema/model-based.md) を参照してください。 |
 | `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられた接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
 **応答**

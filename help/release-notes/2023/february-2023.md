@@ -86,13 +86,13 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- | --- |
 | フィールドグループ | [!UICONTROL フリークエンシーキャップの制約] | [!UICONTROL フリークエンシーキャップの制約]フィールドグループが [繰り返しイベントとカスタムイベントをサポートするように更新](https://github.com/adobe/xdm/pull/1641/files)されました。 |
 | データタイプ | [!UICONTROL Web リファラー] | Web リファラープロパティが [`xdm:linkName` と `xdm:linkRegion` を含むように更新されました](https://github.com/adobe/xdm/pull/1666/files)。これらはそれぞれ、前のページで選択した HTML 要素の名前と領域です。 |
-| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [[!UICONTROL トラッカー URL] フィールドが ](https://github.com/adobe/xdm/pull/1665/files) [!UICONTROL Adobe CJM ExperienceEvent] に追加されました。このトラッカーは、ユーザーが選択した URL を提供します。 |
+| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [[!UICONTROL トラッカー URL] フィールドが &#x200B;](https://github.com/adobe/xdm/pull/1665/files) [!UICONTROL Adobe CJM ExperienceEvent] に追加されました。このトラッカーは、ユーザーが選択した URL を提供します。 |
 | フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [空の `meta:enum` プロパティが](https://github.com/adobe/xdm/pull/1668/files) URL [!UICONTROL トラッキングタイプ]フィールドから削除されました。 |
 | データタイプ | [!UICONTROL メディア情報] | [[!UICONTROL メディア情報]データタイプの `videoSegment` プロパティの正規表現パターンが削除されました](https://github.com/adobe/xdm/pull/1667/files)。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、[XDM システムの概要 ](../../xdm/home.md) を参照してください&#x200B;
+Experience Platformの XDM について詳しくは、[XDM システムの概要 &#x200B;](../../xdm/home.md) を参照してください&#x200B;
 
 ## クエリサービス {#query-service}
 
@@ -102,7 +102,7 @@ Experience Platformの XDM について詳しくは、[XDM システムの概要
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL によるプロファイルでのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセットを「プロファイル対応」にする](../../query-service/sql/syntax.md#create-table-as-select)か、ALTER を使用して、プロファイルで有効になるように既存のデータセットを更新します。この拡張 SQL コンストラクトを使用すると、リアルタイム顧客プロファイルのビジネスユースケースに対して派生データセットをシームレスにサポートできます。 詳しくは、[ 派生データセットのシームレスな SQL フローに関するドキュメント ](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) を参照してください。 |
+| SQL によるプロファイルでのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセットを「プロファイル対応」にする](../../query-service/sql/syntax.md#create-table-as-select)か、ALTER を使用して、プロファイルで有効になるように既存のデータセットを更新します。この拡張 SQL コンストラクトを使用すると、リアルタイム顧客プロファイルのビジネスユースケースに対して派生データセットをシームレスにサポートできます。 詳しくは、[&#x200B; 派生データセットのシームレスな SQL フローに関するドキュメント &#x200B;](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) を参照してください。 |
 | スケジュール済みクエリの監視 | [「スケジュール済みクエリ」タブ](../../query-service/ui/monitor-queries.md)を使用すると、クエリの実行に関する重要な情報を見つけたり、アラートを購読したりできます。 スケジュール詳細のクエリ、ステータス、クエリが失敗した場合のエラーメッセージ／コードを監視できます。 |
 | オートコンプリート機能の切り替え | [クエリエディターのオートコンプリート機能を切り替えると](../../query-service/ui/user-guide.md#auto-complete)、特定のメタデータコマンドが削除され、処理時間が短縮されます。この機能では、クエリの記述時に、クエリの SQL キーワード候補とテーブル詳細が自動的に提示されます。 |
 | データセットのサンプル | クエリでサンプリングレートを指定し、[データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/key-concepts/dataset-samples.md)か、特定の条件に基づいて条件付きサンプルを作成します。 |
@@ -136,8 +136,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Google PubSub] を使用したサブスクリプションレベルアクセスの指定  | 認証時にサブスクリプション ID を指定して、[!DNL Google PubSub] ソースを使用する際に特定のトピックサブスクリプションへのアクセスを定義できるようになりました。詳しくは、[!DNL Google PubSub] 認証のチュートリアル [Flow Service API を使用 ](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md) を参照してください。 |
-| [!DNL Marketo] からのカスタムアクティビティデータの取り込み | カスタムアクティビティデータを [!DNL Marketo] インスタンスから Experience Platform に取り込めるようになりました。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマにカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには [!DNL Marketo] インスタンスからの標準アクティビティとカスタムアクティビティの両方が含まれています。 その結果、[ クエリサービス ](../../query-service/home.md) を使用して、Experience Platformのカスタムアクティビティレコードにアクセスできます。 詳しくは、[カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)に関するガイドを参照してください。 |
+| [!DNL Google PubSub] を使用したサブスクリプションレベルアクセスの指定  | 認証時にサブスクリプション ID を指定して、[!DNL Google PubSub] ソースを使用する際に特定のトピックサブスクリプションへのアクセスを定義できるようになりました。詳しくは、[!DNL Google PubSub] 認証のチュートリアル [Flow Service API を使用 &#x200B;](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md) を参照してください。 |
+| [!DNL Marketo] からのカスタムアクティビティデータの取り込み | カスタムアクティビティデータを [!DNL Marketo] インスタンスから Experience Platform に取り込めるようになりました。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマにカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには [!DNL Marketo] インスタンスからの標準アクティビティとカスタムアクティビティの両方が含まれています。 その結果、[&#x200B; クエリサービス &#x200B;](../../query-service/home.md) を使用して、Experience Platformのカスタムアクティビティレコードにアクセスできます。 詳しくは、[カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)に関するガイドを参照してください。 |
 | [!DNL Marketo] からの未要求アカウントの除外  | 企業データのデータフローを作成する際に、未要求アカウントを取り込みから除外するか取り込みに含めるかを設定できるようになりました。詳しくは、[ソース接続とデータフローの作成： [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}

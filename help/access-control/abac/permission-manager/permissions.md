@@ -27,7 +27,7 @@ ht-degree: 9%
 
 ドロップダウンを使用して、属性 **[!UICONTROL ユーザー]** を選択します。
 
-![ ユーザーがハイライト表示された属性ドロップダウン。](../../images/permission-manager/users-select.png)
+![&#x200B; ユーザーがハイライト表示された属性ドロップダウン。](../../images/permission-manager/users-select.png)
 
 次に、ドロップダウンを使用して検索する **[!UICONTROL ユーザーグループ]** を選択します。
 
@@ -35,7 +35,7 @@ ht-degree: 9%
 >
 >[!UICONTROL &#x200B; ユーザーグループ &#x200B;] は必須フィールドではありません。 各レポートで選択できるユーザーグループは 1 つだけです。
 
-![ 「ユーザーグループ」ドロップダウンがハイライト表示されている様子 ](../../images/permission-manager/user-group-select.png)
+![&#x200B; 「ユーザーグループ」ドロップダウンがハイライト表示されている様子 &#x200B;](../../images/permission-manager/user-group-select.png)
 
 レポートをよりきめ細かく制御するには、特定のサンドボックス内のアクションを使用してリソースを指定します。 ドロップダウンを使用して **[!UICONTROL リソース]**、**[!UICONTROL アクション]**、**[!UICONTROL サンドボックス]** を選択し、**[!UICONTROL 結果を表示]** を選択します。
 
@@ -43,11 +43,11 @@ ht-degree: 9%
 >
 >[!UICONTROL &#x200B; リソース &#x200B;]、[!UICONTROL &#x200B; アクション &#x200B;] および [!UICONTROL &#x200B; サンドボックス &#x200B;] は、必須フィールドではありません。 アクションまたはサンドボックスは、追加したら、削除したい選択の横にある「**&#39;x&#39;** を選択することで削除できます。
 
-![ ハイライト表示されたリソース、アクション、サンドボックスのドロップダウンおよび結果を表示 ](../../images/permission-manager/users-additional-attributes-select.png)
+![&#x200B; ハイライト表示されたリソース、アクション、サンドボックスのドロップダウンおよび結果を表示 &#x200B;](../../images/permission-manager/users-additional-attributes-select.png)
 
 選択した条件に基づいて、ユーザーのリストとそのメールアドレスがレポートされます。 左側のフィルターメニューを使用して、属性と結果を更新します。 特定のユーザーの詳細については、リストからユーザー名を選択します。
 
-![ 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 ](../../images/permission-manager/users-report.png)
+![&#x200B; 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 &#x200B;](../../images/permission-manager/users-report.png)
 
 ## 特定のラベルを持つ役割の検索 {#search-roles}
 
@@ -57,11 +57,11 @@ ht-degree: 9%
 >
 >[!UICONTROL &#x200B; ラベル &#x200B;] は必須フィールドではありません。 複数のラベルを選択できます。選択すると、このドロップダウンの下にラベルが表示されます。 ラベルを追加したら、アクションの横にある「**」を選択** て削除できます。
 
-![ 属性ドロップダウンで役割がハイライト表示されます。](../../images/permission-manager/roles-select.png)
+![&#x200B; 属性ドロップダウンで役割がハイライト表示されます。](../../images/permission-manager/roles-select.png)
 
 次に、ドロップダウンを使用して、検索する **[!UICONTROL ラベル]** を選択します。
 
-![ ラベル ドロップダウンがハイライト表示されている様子 ](../../images/permission-manager/roles-labels-select.png)
+![&#x200B; ラベル ドロップダウンがハイライト表示されている様子 &#x200B;](../../images/permission-manager/roles-labels-select.png)
 
 レポートをよりきめ細かく制御するには、特定のサンドボックス内のアクションを使用してリソースを指定します。 ドロップダウンを使用して **[!UICONTROL リソース]**、**[!UICONTROL アクション]**、**[!UICONTROL サンドボックス]** を選択し、**[!UICONTROL 結果を表示]** を選択します。
 
@@ -69,7 +69,7 @@ ht-degree: 9%
 >
 >[!UICONTROL &#x200B; リソース &#x200B;]、[!UICONTROL &#x200B; アクション &#x200B;] および [!UICONTROL &#x200B; サンドボックス &#x200B;] は、必須フィールドではありません。 各レポートに対して選択できる [!UICONTROL &#x200B; リソース &#x200B;] は 1 つだけです。 アクションまたはサンドボックスは、追加したら、削除したい選択の横にある「**&#39;x&#39;** を選択することで削除できます。
 
-![ ハイライト表示されたリソース、アクション、サンドボックスのドロップダウンおよび結果を表示 ](../../images/permission-manager/roles-additional-attributes-select.png)
+![&#x200B; ハイライト表示されたリソース、アクション、サンドボックスのドロップダウンおよび結果を表示 &#x200B;](../../images/permission-manager/roles-additional-attributes-select.png)
 
 選択した条件に基づいて、役割のリストがレポートされます。 左側のフィルターメニューを使用して、属性と結果を更新します。 特定の役割の詳細については、リストから役割を選択してください。
 
@@ -84,8 +84,8 @@ ht-degree: 9%
 | 作成日時 | 役割が作成された日時とタイムスタンプ。 |
 | 作成者 | 役割の作成者の詳細。 |
 
-![ 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 ](../../images/permission-manager/roles-report.png)
+![&#x200B; 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 &#x200B;](../../images/permission-manager/roles-report.png)
 
 ## 次の手順
 
-これで、ユーザーと役割に関するレポートの生成方法を学習しました。 属性ベースのアクセス制御の詳細については、[ 属性ベースのアクセス制御の概要 ](../overview.md) を参照してください。
+これで、ユーザーと役割に関するレポートの生成方法を学習しました。 属性ベースのアクセス制御の詳細については、[&#x200B; 属性ベースのアクセス制御の概要 &#x200B;](../overview.md) を参照してください。

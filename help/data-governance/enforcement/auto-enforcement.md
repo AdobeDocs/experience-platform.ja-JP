@@ -27,10 +27,10 @@ Experience Platformでは、潜在的なリスクと負債から組織を保護�
 
 このガイドでは、自動適用に関連するExperience Platform サービスについて実際に理解している必要があります。 このガイドに進む前に、次のドキュメントで詳細を確認してください。
 
-* [Adobe Experience Platform データガバナンス ](../home.md): Experience Platformがラベルとポリシーを通じてデータ使用のコンプライアンスを適用するフレームワークです。
+* [Adobe Experience Platform データガバナンス &#x200B;](../home.md): Experience Platformがラベルとポリシーを通じてデータ使用のコンプライアンスを適用するフレームワークです。
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Experience Platform] 内のセグメント化エンジンで、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するのに使用されます。
-* [ 宛先 ](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Experience Platformのデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などを実現できます。
+* [&#x200B; 宛先 &#x200B;](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Experience Platformのデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などを実現できます。
 
 ## 適用フロー {#flow}
 
@@ -94,23 +94,23 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 ポリシー名を選択して、その違反の詳細を表示します。
 
-![ ポリシー名がハイライト表示された状態で、ポリシー違反が発生したことを示すダイアログ ](../images/enforcement/violation-policy-select.png)
+![&#x200B; ポリシー名がハイライト表示された状態で、ポリシー違反が発生したことを示すダイアログ &#x200B;](../images/enforcement/violation-policy-select.png)
 
 違反メッセージには、違反をチェックするためにポリシーが設定されている条件、違反をトリガーした特定のアクション、問題の解決策のリストなど、ポリシー違反に関する概要が表示されます。
 
-![ 違反の概要がハイライト表示されたポリシー違反ダイアログ ](../images/enforcement/violation-summary.png)
+![&#x200B; 違反の概要がハイライト表示されたポリシー違反ダイアログ &#x200B;](../images/enforcement/violation-summary.png)
 
 違反の概要の下にデータ系列グラフが表示され、ポリシー違反に関与したデータセット、結合ポリシー、オーディエンス、および宛先を視覚化できます。グラフ内では現在変更中のエンティティがハイライト表示され、違反が発生する原因となっているフロー内のポイントを示します。グラフ内でエンティティ名を選択して、対象のエンティティの詳細ページを開くことができます。
 
-![ データ系列グラフがハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/data-lineage.png)
+![&#x200B; データ系列グラフがハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/data-lineage.png)
 
 「**[!UICONTROL フィルター]**」アイコン（![A フィルターアイコンも使用できます。](/help/images/icons/filter.png)）を選択して、表示されたエンティティをカテゴリでフィルタリングします。 データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
 
-![ データ系列フィルターとドロップダウンメニューがハイライト表示されたポリシー違反ダイアログ ](../images/enforcement/lineage-filter.png)
+![&#x200B; データ系列フィルターとドロップダウンメニューがハイライト表示されたポリシー違反ダイアログ &#x200B;](../images/enforcement/lineage-filter.png)
 
 「**[!UICONTROL リスト表示]**」を選択し、データ系列をリストとして表示します。ビジュアルグラフに戻すには、「**[!UICONTROL パス表示]**」を選択します。
 
-![ データ系列のパス表示がハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/list-view.png)
+![&#x200B; データ系列のパス表示がハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/list-view.png)
 
 #### ラベルが正常に適用されました {#labels-successfully-applied}
 
@@ -118,11 +118,11 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 データ系列図を使用して、スキーマフィールドにラベルを追加する前に行う必要がある、他の設定変更を理解します。
 
-![ 「[!UICONTROL &#x200B; ラベルが正常に適用されました &#x200B;] タブがハイライト表示されたポリシー違反ダイアログ ](../images/enforcement/labels-successfully-applied.png)
+![&#x200B; 「[!UICONTROL &#x200B; ラベルが正常に適用されました &#x200B;] タブがハイライト表示されたポリシー違反ダイアログ &#x200B;](../images/enforcement/labels-successfully-applied.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-宛先に対してオーディエンスをアクティブ化すると、[ 宛先のアクティブ化 ](../policies/user-guide.md) ワークフローの [ レビュー段階 [[!UICONTROL &#x200B; で、]](#pre-activation-evaluation) 同意ポリシー ] がオーディエンスのリーチにどのように影響するかを確認できます。
+宛先に対してオーディエンスをアクティブ化すると、[&#x200B; 宛先のアクティブ化 &#x200B;](../policies/user-guide.md) ワークフローの [ レビュー段階 [[!UICONTROL &#x200B; で、]](#pre-activation-evaluation) 同意ポリシー ] がオーディエンスのリーチにどのように影響するかを確認できます。
 
 >[!NOTE]
 >
@@ -140,13 +140,13 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 #### アクティベーション前の評価 {#pre-activation-evaluation}
 
-[ 宛先のアクティブ化 ](../../destinations/ui/activation-overview.md) 時に **[!UICONTROL レビュー]** ステップに到達したら、**[!UICONTROL 適用されたポリシーを表示]** を選択します。
+[&#x200B; 宛先のアクティブ化 &#x200B;](../../destinations/ui/activation-overview.md) 時に **[!UICONTROL レビュー]** ステップに到達したら、**[!UICONTROL 適用されたポリシーを表示]** を選択します。
 
 ![宛先のアクティブ化ワークフローで適用されたポリシーの表示ボタン](../images/enforcement/view-applied-policies.png)
 
 ポリシーチェックダイアログが表示され、同意ポリシーがアクティブ化されるオーディエンスの同意されたオーディエンスにどのように影響するかのプレビューが表示されます。
 
-![Experience Platform UI での同意ポリシーチェックダイアログ ](../images/enforcement/consent-policy-check.png)
+![Experience Platform UI での同意ポリシーチェックダイアログ &#x200B;](../images/enforcement/consent-policy-check.png)
 
 ダイアログには、同意されたオーディエンスが一度に 1 つのオーディエンスごとに表示されます。別のオーディエンスのポリシー評価を表示するには、ダイアグラムの上にあるドロップダウンメニューを使用して、リストから 1 つ選択します。
 

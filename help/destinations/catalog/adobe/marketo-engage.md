@@ -25,12 +25,12 @@ ht-degree: 27%
 
 -->
 
-![2 つのMarketoの宛先カードを並べて表示した画像 ](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
+![2 つのMarketoの宛先カードを並べて表示した画像 &#x200B;](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2 の宛先の改善点は次のとおりです。
 
 * Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL セグメントをスケジュール]**&#x200B;手順で、**マッピング ID** を手動で追加して、Marketo にデータを正常に書き出す必要がありました。この手動の手順は、Marketo V2 では不要になりました。
-* Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL マッピング]**&#x200B;手順で、XDM フィールドを Marketo の 3 つのターゲットフィールド（`firstName`、`lastName`、および `companyName`）にのみマッピングできました。  Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、後述の [ サポートされる属性 ](#supported-attributes) の節を参照してください。
+* Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL マッピング]**&#x200B;手順で、XDM フィールドを Marketo の 3 つのターゲットフィールド（`firstName`、`lastName`、および `companyName`）にのみマッピングできました。  Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、後述の [&#x200B; サポートされる属性 &#x200B;](#supported-attributes) の節を参照してください。
 
 ## 概要 {#overview}
 
@@ -42,7 +42,7 @@ Marketo V2 の宛先の改善点は次のとおりです。
 
 >[!NOTE]
 >
->宛先のアクティブ化ワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) では、ID をマッピングする *必須* と属性をマッピングする *オプション* です。 「ID 名前空間」タブでのメールや ECID のマッピングは、Marketoでユーザーが一致していることを確認するために行う最も重要な操作です。 マッピングメールは、最も高い一致率を保証します。
+>宛先のアクティブ化ワークフローの [&#x200B; マッピング手順 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) では、ID をマッピングする *必須* と属性をマッピングする *オプション* です。 「ID 名前空間」タブでのメールや ECID のマッピングは、Marketoでユーザーが一致していることを確認するために行う最も重要な操作です。 マッピングメールは、最も高い一致率を保証します。
 
 ### サポートされている ID {#supported-identities}
 
@@ -63,7 +63,7 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-宛先を設定しオーディエンスをアクティブ化する方法について詳しくは、Marketo ドキュメントの [Marketo オーディエンスをAdobe Experience Platform静的リストにプッシュする ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) を参照してください。
+宛先を設定しオーディエンスをアクティブ化する方法について詳しくは、Marketo ドキュメントの [Marketo オーディエンスをAdobe Experience Platform静的リストにプッシュする &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) を参照してください。
 
 次のビデオでは、Marketoの宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
@@ -103,10 +103,10 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 ## 宛先の監視 {#monitor-destination}
 
-宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [ モニタリング機能 ](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
+宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [&#x200B; モニタリング機能 &#x200B;](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
 
-[!DNL Marketo Engage] 接続の監視情報には、各データフローおよびデータフロー実行のアクティブ化、除外、失敗した ID に関するオーディエンスレベルの情報が含まれます。 機能について [ 詳細を参照 ](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。
+[!DNL Marketo Engage] 接続の監視情報には、各データフローおよびデータフロー実行のアクティブ化、除外、失敗した ID に関するオーディエンスレベルの情報が含まれます。 機能について [&#x200B; 詳細を参照 &#x200B;](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[ データガバナンスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。

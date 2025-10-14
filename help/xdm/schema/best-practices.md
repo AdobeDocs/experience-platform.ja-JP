@@ -19,9 +19,9 @@ XDM は非常に汎用性が高く、デザインによってカスタマイズ�
 
 ## はじめに
 
-このガイドを読む前に、[XDM システムの概要 ](../home.md) を参照して、XDM の概要とExperience Platform内での役割を確認してください。
+このガイドを読む前に、[XDM システムの概要 &#x200B;](../home.md) を参照して、XDM の概要とExperience Platform内での役割を確認してください。
 
-このガイドは、スキーマのデザインに関する主な考慮事項にのみ焦点を当てているので、このガイド全体で説明している個々のスキーマ要素の詳細については、[ スキーマ構成の基本 ](./composition.md) を読むことを強くお勧めします。
+このガイドは、スキーマのデザインに関する主な考慮事項にのみ焦点を当てているので、このガイド全体で説明している個々のスキーマ要素の詳細については、[&#x200B; スキーマ構成の基本 &#x200B;](./composition.md) を読むことを強くお勧めします。
 
 ## ベストプラクティスのまとめ {#summary}
 
@@ -41,7 +41,7 @@ Experience Platformに取り込むデータソースを決定したら、高レ�
 
 次の例は、データをExperience Platformに取り込む会社の単純化された ERD を表しています。 この図は、顧客アカウント、ホテル、いくつかの一般的な e コマースイベントなど、XDM クラスに分類する必要がある重要なエンティティをハイライト表示しています。
 
-![ データ取り込みのために XDM クラスに並べ替える必要がある重要なエンティティをハイライトしたエンティティ関係図。](../images/best-practices/erd.png)
+![&#x200B; データ取り込みのために XDM クラスに並べ替える必要がある重要なエンティティをハイライトしたエンティティ関係図。](../images/best-practices/erd.png)
 
 ## プロファイル、ルックアップ、イベントのカテゴリへのエンティティの並べ替え {#sort-entities}
 
@@ -148,7 +148,7 @@ ERD で確立された基数は、エンティティの分類方法に関する�
 
 1 番目のアプローチは、顧客のプロファイルエンティティ内に `subscriptionID` の配列を含めることです。
 
-![ クラスと構造がハイライト表示されたスキーマエディターの顧客スキーマ ](../images/best-practices/profile-schema.png)
+![&#x200B; クラスと構造がハイライト表示されたスキーマエディターの顧客スキーマ &#x200B;](../images/best-practices/profile-schema.png)
 
 **長所**
 
@@ -180,7 +180,7 @@ ERD で確立された基数は、エンティティの分類方法に関する�
 
 エンティティをプロファイル、ルックアップ、イベントのカテゴリに並べ替えたら、データモデルを XDM スキーマへの変換を開始できます。次の図では、デモンストレーションの目的で、前に示したデータモデルの例を適切なカテゴリに並べ替えています。
 
-![ プロファイル、ルックアップ、イベントエンティティに含まれるスキーマの図 ](../images/best-practices/erd-sorted.png)
+![&#x200B; プロファイル、ルックアップ、イベントエンティティに含まれるスキーマの図 &#x200B;](../images/best-practices/erd-sorted.png)
 
 エンティティが並べ替えられたカテゴリによって、そのスキーマのベースとなる XDM クラスが決定されます。繰り返し実行する手順は、次のとおりです。
 
@@ -217,7 +217,7 @@ Experience Platform には、次のアドビアプリケーションに関連す
 * Adobe Campaign
 * Adobe Target
 
-例えば、[[!UICONTROL Adobe Analytics ExperienceEvent Template] フィールドグループを使用して ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) [!DNL Analytics] 固有のフィールドを XDM スキーマにマッピングできます。 使用しているアドビアプリケーションに応じて、これらのアドビが提供するフィールドグループをスキーマで使用する必要があります。
+例えば、[[!UICONTROL Adobe Analytics ExperienceEvent Template] フィールドグループを使用して &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) [!DNL Analytics] 固有のフィールドを XDM スキーマにマッピングできます。 使用しているアドビアプリケーションに応じて、これらのアドビが提供するフィールドグループをスキーマで使用する必要があります。
 
 ![[!UICONTROL Adobe Analytics ExperienceEvent テンプレートのスキーマ図 &#x200B;].](../images/best-practices/analytics-field-group.png)
 
@@ -237,9 +237,9 @@ Adobe Analytics の場合、ECID はデフォルトのプライマリ ID です�
 >
 >検証は、ネストされた列には適用されません。 フィールド形式が配列列内にある場合、データは検証されません。
 
-特定のフィールドに制約を設定するには、スキーマエディターからフィールドを選択して **[!UICONTROL フィールドプロパティ]** サイドバーを開きます。 使用可能なフィールドの正確な説明については、[ タイプ固有のフィールドプロパティ ](../ui/fields/overview.md#type-specific-properties) に関するドキュメントを参照してください。
+特定のフィールドに制約を設定するには、スキーマエディターからフィールドを選択して **[!UICONTROL フィールドプロパティ]** サイドバーを開きます。 使用可能なフィールドの正確な説明については、[&#x200B; タイプ固有のフィールドプロパティ &#x200B;](../ui/fields/overview.md#type-specific-properties) に関するドキュメントを参照してください。
 
-![[!UICONTROL &#x200B; フィールドプロパティ &#x200B;] サイドバーで制約フィールドがハイライト表示されているスキーマエディター ](../images/best-practices/data-validation-fields.png)
+![[!UICONTROL &#x200B; フィールドプロパティ &#x200B;] サイドバーで制約フィールドがハイライト表示されているスキーマエディター &#x200B;](../images/best-practices/data-validation-fields.png)
 
 ### データの整合性を維持するためのヒント {#data-integrity-tips}
 

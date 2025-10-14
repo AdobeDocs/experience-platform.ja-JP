@@ -23,7 +23,7 @@ ht-degree: 30%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一のExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一のExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して ADLS Gen2 ソース接続を正しく作成するために必要な追加情報を示します。
 
@@ -39,11 +39,11 @@ ht-degree: 30%
 | `tenant` | アプリケーションを含むテナント情報。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。ADLS Gen2 の接続仕様 ID は `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` です。 |
 
-これらの値の詳細については、[ この ADLS Gen2 ドキュメント ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
+これらの値の詳細については、[&#x200B; この ADLS Gen2 ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -109,4 +109,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、API を使用して ADLS Gen2 接続を作成し、一意の ID を応答本文の一部として取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 ](../../explore/cloud-storage.md) を行うことができます。
+このチュートリアルでは、API を使用して ADLS Gen2 接続を作成し、一意の ID を応答本文の一部として取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 &#x200B;](../../explore/cloud-storage.md) を行うことができます。

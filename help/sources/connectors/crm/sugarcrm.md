@@ -21,7 +21,7 @@ Experience Platformは、サードパーティの CRM アプリケーション�
 [!DNL SugarCRM] ソースを使用すると、次の API エンドポイントからアカウント、連絡先、イベントデータを取り込むことができます。
 
 * [アカウント](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3)
-* [ 連絡先 ](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
+* [&#x200B; 連絡先 &#x200B;](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
 * [イベント](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5)
 
 [!DNL SugarCRM] は、認証メカニズムとしてベアラートークンを使用して、[!DNL SugarCRM] アカウントおよび連絡先 API や [!DNL SugarCRM] Events API と通信します。
@@ -40,13 +40,13 @@ Experience Platformは、サードパーティの CRM アプリケーション�
 
 ## [!DNL SugarCRM Accounts & Contacts] をExperience Platformに接続
 
-* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Accounts & Contacts]  めのソース接続を作成します ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md)。
-* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Accounts & Contacts]  ス接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Accounts & Contacts]  めのソース接続を作成します &#x200B;](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md)。
+* [&#x200B; ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Accounts & Contacts]  ス接続を作成します &#x200B;](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)。
 * [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
 
 ## [!DNL SugarCRM Events] をExperience Platformに接続
 
-* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Events]  めのソース接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-events.md)。
-* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Events]  ス接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-events.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Events]  めのソース接続を作成します &#x200B;](../../tutorials/ui/create/crm/sugarcrm-events.md)。
+* [&#x200B; ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Events]  ス接続を作成します &#x200B;](../../tutorials/ui/create/crm/sugarcrm-events.md)。
 * [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

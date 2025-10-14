@@ -21,8 +21,8 @@ ht-degree: 32%
 
 このガイドには、Adobe Experience Platformの次のコンポーネントに関する十分な知識も必要です。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## API 呼び出し例の読み取り
 
@@ -42,7 +42,7 @@ Experience Platform API を呼び出すには、まず[認証に関するチュ�
 
 >[!NOTE]
 >
->Experience Platformのサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../../sandboxes/home.md) を参照してください。
+>Experience Platformのサンドボックスについて詳しくは、[&#x200B; サンドボックスのドキュメント &#x200B;](../../../sandboxes/home.md) を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -50,4 +50,4 @@ Experience Platform API を呼び出すには、まず[認証に関するチュ�
 
 ## 次の手順
 
-セルフサービスソース（バッチ SDK）を使用した新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。
+セルフサービスソース（バッチ SDK）を使用した新しいソースの作成を開始するには、[&#x200B; 新しいソースの作成 &#x200B;](./create.md) に関するチュートリアルを参照してください。

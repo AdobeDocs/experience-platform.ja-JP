@@ -13,7 +13,7 @@ ht-degree: 26%
 
 ## 概要 {#overview}
 
-[Snapchat 広告 ](https://forbusiness.snapchat.com/) は、規模や業界に関係なく、あらゆるビジネス向けに作られています。 ビジネスにとって最も重要な人々の行動を刺激するフルスクリーンのデジタル広告で、Snapchatters の日常会話の一部になります。
+[Snapchat 広告 &#x200B;](https://forbusiness.snapchat.com/) は、規模や業界に関係なく、あらゆるビジネス向けに作られています。 ビジネスにとって最も重要な人々の行動を刺激するフルスクリーンのデジタル広告で、Snapchatters の日常会話の一部になります。
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 26%
 
 この宛先を使用するには、Snapchat 広告アカウントが必要です。 作成方法については、このドキュメントを参照してください。
 
-[Snapchat Advertisingの概要 ](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[Snapchat Advertisingの概要 &#x200B;](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## 制限事項 {#limitations}
 
@@ -65,7 +65,7 @@ ht-degree: 26%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 | [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
@@ -86,7 +86,7 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -94,23 +94,23 @@ ht-degree: 26%
 
 1. Adobe Experience Platformの宛先カタログから *Snap Inc* の宛先を見つけて、「**設定**」を選択します。
 2. **[!UICONTROL 宛先に接続]** を選択します。 次の画面にリダイレクトされます：
-   ![ 認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+   ![&#x200B; 認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat の認証情報を入力し、「**ログイン**」を選択します。
 4. Adobe Experience Platformがアクセスできる Snapchat データが表示されます。 「**続行**」を選択して、接続プロセスを続行します。
 
-![ 認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+![&#x200B; 認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
 「続行」を選択した後、Adobe Experience Platformにリダイレクトされるまで待ちます。
 
 ### 宛先の詳細の入力 {#destination-details}
 
-![ 宛先の詳細 ](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![&#x200B; 宛先の詳細 &#x200B;](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
 宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL 次へ]**」を選択します。
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**：オーディエンスの読み込み先となる広告アカウントに関連付けられている広告アカウント ID。 見つける方法の詳細については、[Snapchat ビジネスヘルプセンターのこのドキュメント ](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US) を参照してください。
+* **[!UICONTROL アカウント ID]**：オーディエンスの読み込み先となる広告アカウントに関連付けられている広告アカウント ID。 見つける方法の詳細については、[Snapchat ビジネスヘルプセンターのこのドキュメント &#x200B;](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US) を参照してください。
 
 >[!IMPORTANT]
 > 
@@ -126,21 +126,21 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
-*Snap Inc* 宛先に対してオーディエンスをアクティブ化すると、Snap Ads Manager の [**オーディエンス** セクション ](https://businesshelp.snapchat.com/s/article/audience-sharing) でオーディエンスを表示できるようになります。 このセクションに移動するには、次の手順に従います。
+*Snap Inc* 宛先に対してオーディエンスをアクティブ化すると、Snap Ads Manager の [**オーディエンス** セクション &#x200B;](https://businesshelp.snapchat.com/s/article/audience-sharing) でオーディエンスを表示できるようになります。 このセクションに移動するには、次の手順に従います。
 
 1. [Snap Ads Manager](https://ads.snapchat.com/) にログインします
 2. 画面の左上隅にあるプルダウンメニューから「**オーディエンス**」を選択します。 Adobe Experience Platformでアクティブ化したオーディエンスがオーディエンスライブラリに表示されます。
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments) を参照してください。
+Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[&#x200B; セグメント化サービスの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

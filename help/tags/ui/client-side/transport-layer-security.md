@@ -13,9 +13,9 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、[ 用語の更新 ](../../term-updates.md) ドキュメントを参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、[&#x200B; 用語の更新 &#x200B;](../../term-updates.md) ドキュメントを参照してください。
 
-Transport Layer Security （TLS）は、インターネット経由でアプリケーション間で送信されるデータのエンドツーエンドのセキュリティを提供する暗号化プロトコルです。 TLS について詳しくは、[TLS の基本 ](https://www.internetsociety.org/deploy360/tls/basics/) ドキュメントを参照してください。
+Transport Layer Security （TLS）は、インターネット経由でアプリケーション間で送信されるデータのエンドツーエンドのセキュリティを提供する暗号化プロトコルです。 TLS について詳しくは、[TLS の基本 &#x200B;](https://www.internetsociety.org/deploy360/tls/basics/) ドキュメントを参照してください。
 
 Adobe Experience Platform のタグは、Web サイトにスクリプトを動的に読み込むように設計されたタグ管理システムです。TLS は、これらのスクリプトが読み込まれる際にAdobe ホスト `assets.adobedtm.com` と web サイト間の通信を保護します。
 
@@ -51,4 +51,4 @@ PORT    STATE SERVICE
 
 ### 自己ホスト
 
-ライブラリを [ セルフホスティング ](../publishing/hosts/self-hosting-libraries.md) している場合、サポートされる TLS バージョンは、独自のホスティングサービスによって決定されます。
+ライブラリを [&#x200B; セルフホスティング &#x200B;](../publishing/hosts/self-hosting-libraries.md) している場合、サポートされる TLS バージョンは、独自のホスティングサービスによって決定されます。

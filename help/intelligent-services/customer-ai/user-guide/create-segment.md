@@ -22,7 +22,7 @@ ht-degree: 66%
 
 Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメントを作成]**」をクリックします。
 
-![ 新しいセグメントを作成するオプションを示す、Experience Platform UI のセグメントページのスクリーンショット。](../images/user-guide/segments_new.png)
+![&#x200B; 新しいセグメントを作成するオプションを示す、Experience Platform UI のセグメントページのスクリーンショット。](../images/user-guide/segments_new.png)
 
 「**セグメントビルダー**」が表示されます。左側の「**[!UICONTROL フィールド]**」列の「**[!UICONTROL 属性]**」タブで、「**[!UICONTROL XDM Individual Profile]**」という名前のフォルダーをクリックし、組織の名前空間を持つフォルダーをクリックします。「**[!UICONTROL Customer AI]**」という名前のフォルダーには、予測実行の結果が格納され、スコアが属するインスタンスに基づいて名前が付けられます。インスタンスフォルダーをクリックして、目的のインスタンスの結果にアクセスします。
 

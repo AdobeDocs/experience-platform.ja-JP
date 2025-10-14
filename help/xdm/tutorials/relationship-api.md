@@ -19,7 +19,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Schema Registry API は、参照スキーマを「宛先スキーマ」と呼びます。 これらは、[ データ準備マッピングセット ](../../data-prep/mapping-set.md) の宛先スキーマや [ 宛先接続 ](../../destinations/home.md) のスキーマと混同しないでください。
+>Schema Registry API は、参照スキーマを「宛先スキーマ」と呼びます。 これらは、[&#x200B; データ準備マッピングセット &#x200B;](../../data-prep/mapping-set.md) の宛先スキーマや [&#x200B; 宛先接続 &#x200B;](../../destinations/home.md) のスキーマと混同しないでください。
 
 このドキュメントでは、[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) を使用して組織で定義された 2 つのスキーマ間に 1 対 1 の関係を定義するチュートリアルを提供します。
 
@@ -27,12 +27,12 @@ ht-degree: 27%
 
 このチュートリアルでは、[!DNL Experience Data Model] （XDM）および [!DNL XDM System] について実際に理解している必要があります。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience Platformの XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
+* [Experience Platformの XDM システム &#x200B;](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
    * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ [!DNL Accept] ヘッダーとその取り得る値には特に注意を払います）。
+このチュートリアルを開始する前に、[&#x200B; 開発者ガイド &#x200B;](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ [!DNL Accept] ヘッダーとその取り得る値には特に注意を払います）。
 
 ## ソースおよび参照スキーマの定義 {#define-schemas}
 
@@ -42,7 +42,7 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->関係を確立するには、両方のスキーマにプライマリ ID が定義され、[!DNL Real-Time Customer Profile] が有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成チュートリアルの [ プロファイルで使用するスキーマの有効化 ](./create-schema-api.md#profile) に関する節を参照してください。
+>関係を確立するには、両方のスキーマにプライマリ ID が定義され、[!DNL Real-Time Customer Profile] が有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成チュートリアルの [&#x200B; プロファイルで使用するスキーマの有効化 &#x200B;](./create-schema-api.md#profile) に関する節を参照してください。
 
 2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。スキーマの表示名（`title`）がわかっている場合は、[!DNL Schema Registry] API の `/tenant/schemas` エンドポイントに対してGET リクエストを実行することで、`$id` の値を見つけることができます。
 
@@ -122,7 +122,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->ソーススキーマに、参照フィールドとして使用する予定の専用フィールドが既に存在する場合は、[ 参照記述子の作成 ](#reference-identity) に関する手順に進みます。
+>ソーススキーマに、参照フィールドとして使用する予定の専用フィールドが既に存在する場合は、[&#x200B; 参照記述子の作成 &#x200B;](#reference-identity) に関する手順に進みます。
 
 ### 新しいフィールドグループの作成
 
@@ -468,4 +468,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、2 つのスキーマ間に 1 対 1 の関係を作成しました。[!DNL Schema Registry] API を使用した記述子の操作について詳しくは、『 [ スキーマレジストリ開発者ガイド ](../api/descriptors.md) 』を参照してください。 UI でスキーマの関係を定義する手順については、[スキーマエディタを使用したスキーマの関係の定義](relationship-ui.md)に関するチュートリアルを参照してください。
+このチュートリアルでは、2 つのスキーマ間に 1 対 1 の関係を作成しました。[!DNL Schema Registry] API を使用した記述子の操作について詳しくは、『 [&#x200B; スキーマレジストリ開発者ガイド &#x200B;](../api/descriptors.md) 』を参照してください。 UI でスキーマの関係を定義する手順については、[スキーマエディタを使用したスキーマの関係の定義](relationship-ui.md)に関するチュートリアルを参照してください。

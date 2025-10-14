@@ -19,7 +19,7 @@ Adobe Experience Platform Debuggerとして、「**[!UICONTROL Auditor]**」タ�
 1. 左側のナビゲーションで **[!UICONTROL Auditor]** を選択します。
 1. 「**[!UICONTROL Auditor テストを実行]**」を選択します。 テストが完了すると、結果が以下に表示されます。
 
-![ 「Auditor」タブに表示されるテスト結果のスクリーンショット ](../images/auditor-results.png)
+![&#x200B; 「Auditor」タブに表示されるテスト結果のスクリーンショット &#x200B;](../images/auditor-results.png)
 
 結果リストには、テストとその結果が表示され、問題を解決するための提案が示されます。
 

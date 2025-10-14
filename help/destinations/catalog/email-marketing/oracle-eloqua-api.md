@@ -15,9 +15,9 @@ ht-degree: 28%
 
 マーケター [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) キャンペーンを計画および実行しながら、パーソナライズされたカスタマーエクスペリエンスを見込み客に提供できます。 統合されたリード管理と簡単なキャンペーン作成により、マーケターがバイヤージャーニーで適切なオーディエンスを適切なタイミングで惹きつけ、メール、ディスプレイ検索、ビデオ、モバイルなどのあらゆるチャネルでオーディエンスにリーチするようにエレガントに拡張できます。 セールスチームは、より迅速により多くの取引を成立させ、リアルタイムinsightを通じてマーケティングの ROI を向上させることができます。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[!DNL Oracle Eloqua] REST API の [ 連絡先を更新 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作を活用し、オーディエンス内の **ID を更新** して [!DNL Oracle Eloqua] を更新できます。
+この [!DNL Adobe Experience Platform][&#x200B; 宛先 &#x200B;](/help/destinations/home.md) は、[!DNL Oracle Eloqua] REST API の [&#x200B; 連絡先を更新 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作を活用し、オーディエンス内の **ID を更新** して [!DNL Oracle Eloqua] を更新できます。
 
-[!DNL Oracle Eloqua] は [ 基本認証 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) を使用して [!DNL Oracle Eloqua] REST API と通信します。 [!DNL Oracle Eloqua] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
+[!DNL Oracle Eloqua] は [&#x200B; 基本認証 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) を使用して [!DNL Oracle Eloqua] REST API と通信します。 [!DNL Oracle Eloqua] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
 ## ユースケース {#use-cases}
 
@@ -29,13 +29,13 @@ ht-degree: 28%
 
 [!DNL Oracle Eloqua] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platform ドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platform ドキュメントを参照してください。
 
 ### [!DNL Oracle Eloqua] 前提条件 {#prerequisites-destination}
 
 Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエクスポートするには、[!DNL Oracle Eloqua] アカウントが必要です。
 
-さらに、[!DNL Oracle Eloqua] インスタンスには少なくとも *「詳細設定ユーザー – マーケティング権限」* が必要です。 詳しくは、*セキュリティで保護されたユーザーアクセス [ ページの「セキュリティグループ ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) の節を参照して* ださい。 アクセスは、[!DNL Oracle Eloqua] API を呼び出す際に宛先がプログラムで [ ベース URL を決定 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) するために必要です。
+さらに、[!DNL Oracle Eloqua] インスタンスには少なくとも *「詳細設定ユーザー – マーケティング権限」* が必要です。 詳しくは、*セキュリティで保護されたユーザーアクセス [&#x200B; ページの「セキュリティグループ &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) の節を参照して* ださい。 アクセスは、[!DNL Oracle Eloqua] API を呼び出す際に宛先がプログラムで [&#x200B; ベース URL を決定 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) するために必要です。
 
 #### [!DNL Oracle Eloqua] 資格情報の収集 {#gather-credentials}
 
@@ -43,12 +43,12 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `Company Name` | [!DNL Oracle Eloqua] アカウントに関連付けられた会社名。 <br> 後で `Company Name` と [!DNL Oracle Eloqua] `Username` を、[ 宛先への認証 ](#authenticate) 時に **[!UICONTROL Username]** として使用される連結文字列として使用します。 |
+| `Company Name` | [!DNL Oracle Eloqua] アカウントに関連付けられた会社名。 <br> 後で `Company Name` と [!DNL Oracle Eloqua] `Username` を、[&#x200B; 宛先への認証 &#x200B;](#authenticate) 時に **[!UICONTROL Username]** として使用される連結文字列として使用します。 |
 | `Username` | [!DNL Oracle Eloqua] アカウントのユーザー名。 |
 | `Password` | [!DNL Oracle Eloqua] アカウントのパスワード。 |
-| `Pod` | [!DNL Oracle Eloqua] では、それぞれ一意のドメイン名を持つ複数のデータセンターをサポートしています。 現在、こ [!DNL Oracle Eloqua] らを「ポッド」と呼び、p01、p02、p03、p04、p06、p07、p08 の合計 7 つがあります。 使用しているポッドを取得するには、[!DNL Oracle Eloqua] にログインし、正常にログインしたらブラウザーに URL をメモします。 例えば、ブラウザーの URL が `secure.p01.eloqua.com` の場合、`pod` は `p01` です。 詳しくは、[POD の決定 ](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) ページを参照してください。 |
+| `Pod` | [!DNL Oracle Eloqua] では、それぞれ一意のドメイン名を持つ複数のデータセンターをサポートしています。 現在、こ [!DNL Oracle Eloqua] らを「ポッド」と呼び、p01、p02、p03、p04、p06、p07、p08 の合計 7 つがあります。 使用しているポッドを取得するには、[!DNL Oracle Eloqua] にログインし、正常にログインしたらブラウザーに URL をメモします。 例えば、ブラウザーの URL が `secure.p01.eloqua.com` の場合、`pod` は `p01` です。 詳しくは、[POD の決定 &#x200B;](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) ページを参照してください。 |
 
-詳しくは、[ へのログイン  [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) を参照してください。
+詳しくは、[&#x200B; へのログイン  [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) を参照してください。
 
 ## ガードレール {#guardrails}
 
@@ -61,7 +61,7 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 * この制限を超えると、Experience Platformでエラーが発生します。 これは、[!DNL Oracle Eloqua] API がリクエストを検証できず、- *400：検証エラーが発生しました* – 問題を説明するエラーメッセージと応答するからです。
 * 上記の上限に達した場合、さらにセグメントを書き出す前に、既存のマッピングを宛先から削除し、[!DNL Oracle Eloqua] アカウントの対応するカスタム連絡先フィールドを削除する必要があります。
 
-* 追加の制限について詳しくは、[[!DNL Oracle Eloqua]  連絡先フィールドの作成 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) ページを参照してください。
+* 追加の制限について詳しくは、[[!DNL Oracle Eloqua]  連絡先フィールドの作成 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) ページを参照してください。
 
 ## サポートされる ID {#supported-identities}
 
@@ -86,7 +86,7 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -104,7 +104,7 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 * **[!UICONTROL Username]**:[!DNL Oracle Eloqua] の会社名と [!DNL Oracle Eloqua] のユーザー名を連結した文字列です。<br> 連結された値は、`{COMPANY_NAME}\{USERNAME}` の形式になります。<br> 注意：中括弧やスペースを使用せず、`\` を保持します。 <br> 例えば、[!DNL Oracle Eloqua] の会社名が `MyCompany` で [!DNL Oracle Eloqua] ユーザー名が `Username` の場合、「**[!UICONTROL ユーザー名]**」フィールドで使用する連結された値は `MyCompany\Username` です。
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+![&#x200B; 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
 
@@ -118,7 +118,7 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+![&#x200B; 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -134,8 +134,8 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -166,7 +166,7 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
    * 上記のマッピングの例を以下に示します。
 
-     ![ 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![&#x200B; 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -194,7 +194,7 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
 >[!NOTE]
 >
->宛先は、連絡先フィールド情報を [!DNL Oracle Eloqua] に送信する際に、各実行で選択されたオーディエンス名に自動的に一意の ID を付加します。 これにより、オーディエンス名に対応する連絡先フィールド名が重複するのを防ぐことができます。 オーディエンス名を使用して作成されたカスタム連絡先フィールドを含む [!DNL Oracle Eloqua] スタム連絡先詳細ページのスクリーンショットの例については、[ データ書き出しの検証 ](#exported-data) の節を参照してください。
+>宛先は、連絡先フィールド情報を [!DNL Oracle Eloqua] に送信する際に、各実行で選択されたオーディエンス名に自動的に一意の ID を付加します。 これにより、オーディエンス名に対応する連絡先フィールド名が重複するのを防ぐことができます。 オーディエンス名を使用して作成されたカスタム連絡先フィールドを含む [!DNL Oracle Eloqua] スタム連絡先詳細ページのスクリーンショットの例については、[&#x200B; データ書き出しの検証 &#x200B;](#exported-data) の節を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
@@ -202,14 +202,14 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** を選択し、宛先のリストに移動します。
 1. 次に、宛先を選択し、**[!UICONTROL アクティベーションデータ]** タブに切り替えて、オーディエンス名を選択します。
-   ![ 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+   ![&#x200B; 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内の数と一致していることを確認します。
-   ![ セグメントを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   ![&#x200B; セグメントを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
 1. [!DNL Oracle Eloqua] Web サイトにログインして、**[!UICONTROL 連絡先の概要]** ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 オーディエンスのステータスを表示するには、**[!UICONTROL 連絡先の詳細]** ページにドリルダウンし、選択したオーディエンス名をプレフィックスとして持つ連絡先フィールドが作成されたかどうかを確認します。
 
-![ オーディエンス名で作成されたカスタム連絡先フィールドを含む連絡先詳細ページを示すOracle Eloqua UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![&#x200B; オーディエンス名で作成されたカスタム連絡先フィールドを含む連絡先詳細ページを示すOracle Eloqua UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -217,16 +217,16 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-宛先を作成すると、次のいずれかのエラーメッセージが表示される場合があります：`400: There was a validation error` または `400 BAD_REQUEST`。 これは、[ ガードレール ](#guardrails) の節で説明しているように、カスタムの連絡先フィールドの上限である 250 を超えた場合に発生します。 このエラーを修正するには、[!DNL Oracle Eloqua] のカスタム連絡先フィールド制限を超えていないことを確認してください。
-![ エラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+宛先を作成すると、次のいずれかのエラーメッセージが表示される場合があります：`400: There was a validation error` または `400 BAD_REQUEST`。 これは、[&#x200B; ガードレール &#x200B;](#guardrails) の節で説明しているように、カスタムの連絡先フィールドの上限である 250 を超えた場合に発生します。 このエラーを修正するには、[!DNL Oracle Eloqua] のカスタム連絡先フィールド制限を超えていないことを確認してください。
+![&#x200B; エラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
-ステータスコードとエラーコードの包括的なリストと説明については、[[!DNL Oracle Eloqua] HTTP ステータスコード ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) ページおよび [[!DNL Oracle Eloqua]  検証エラー ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) ページを参照してください。
+ステータスコードとエラーコードの包括的なリストと説明については、[[!DNL Oracle Eloqua] HTTP ステータスコード &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) ページおよび [[!DNL Oracle Eloqua]  検証エラー &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) ページを参照してください。
 
 ## その他のリソース {#additional-resources}
 
 詳しくは、[!DNL Oracle Eloqua] のドキュメントを参照してください。
 
-* [Oracle Eloqua マーケティング自動処理 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [Oracle Eloqua マーケティング自動処理 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [Oracle Eloqua Marketing Cloud サービスの REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### 変更ログ
@@ -237,7 +237,7 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年4月 | ドキュメントの更新 | <ul><li>[ ユースケース ](#use-cases) の節を更新し、この宛先を使用することで、お客様にメリットが得られるタイミングをより明確に例を示しました。</li> <li>[ マッピング ](#mapping-considerations-example) の節を更新し、必須マッピングとオプションマッピングの両方の明確な例を追加しました。</li> <li>「[ 宛先への接続 ](#connect)」の節を更新し、[!DNL Oracle Eloqua] ーザーの会社名と [!DNL Oracle Eloqua] ユーザー名を使用して **[!UICONTROL ユーザー名]** フィールドの連結された値を作成する方法の例を追加しました。 （PLATIR-28343）</li><li>「**[[!UICONTROL ポッド &#x200B;]](#gather-credentials) の選択に関するガイダンスを使用して、「[ 収集  [!DNL Oracle Eloqua]  資格情報 ](#destination-details) と [ 宛先の詳細の入力]** の節 [!DNL Oracle Eloqua] 更新しました。 *「Pod」* 値は、API 呼び出しのベース URL を作成するために宛先で使用されます。 また、[[!DNL Oracle Eloqua]  前提条件 ](#prerequisites-destination) の節が更新され、[!DNL Oracle Eloqua] インスタンスの必須の *「セキュリティグループ」として* 「詳細設定ユーザー – マーケティング権限」 *を割り当てる際のガイダンスが追加されました*</li></ul> |
+| 2023年4月 | ドキュメントの更新 | <ul><li>[&#x200B; ユースケース &#x200B;](#use-cases) の節を更新し、この宛先を使用することで、お客様にメリットが得られるタイミングをより明確に例を示しました。</li> <li>[&#x200B; マッピング &#x200B;](#mapping-considerations-example) の節を更新し、必須マッピングとオプションマッピングの両方の明確な例を追加しました。</li> <li>「[&#x200B; 宛先への接続 &#x200B;](#connect)」の節を更新し、[!DNL Oracle Eloqua] ーザーの会社名と [!DNL Oracle Eloqua] ユーザー名を使用して **[!UICONTROL ユーザー名]** フィールドの連結された値を作成する方法の例を追加しました。 （PLATIR-28343）</li><li>「**[[!UICONTROL ポッド &#x200B;]](#gather-credentials) の選択に関するガイダンスを使用して、「[&#x200B; 収集  [!DNL Oracle Eloqua]  資格情報 &#x200B;](#destination-details) と [ 宛先の詳細の入力]** の節 [!DNL Oracle Eloqua] 更新しました。 *「Pod」* 値は、API 呼び出しのベース URL を作成するために宛先で使用されます。 また、[[!DNL Oracle Eloqua]  前提条件 &#x200B;](#prerequisites-destination) の節が更新され、[!DNL Oracle Eloqua] インスタンスの必須の *「セキュリティグループ」として* 「詳細設定ユーザー – マーケティング権限」 *を割り当てる際のガイダンスが追加されました*</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
 
 {style="table-layout:auto"}

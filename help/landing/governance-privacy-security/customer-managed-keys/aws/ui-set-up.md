@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->このガイドを進める前に、[ の CMK 用AWS KMS の設定」のドキュメントで詳しく説明されている設定が完了しているこ ](./configure-kms.md) を確認してください。
+>このガイドを進める前に、[&#x200B; の CMK 用AWS KMS の設定」のドキュメントで詳しく説明されている設定が完了しているこ &#x200B;](./configure-kms.md) を確認してください。
 
 ## AWS キーポリシーを更新して、キーをExperience Platformと統合します
 
@@ -45,7 +45,7 @@ AWS キーをExperience Platformと統合するには、KMS Workspace の **[!DN
 
 Experience Platform UI で、左側のナビゲーションレールの「**[!UICONTROL 管理]**」セクションに移動し、「**[!UICONTROL 暗号化]**」を選択します。 [!UICONTROL &#x200B; 暗号化設定 &#x200B;] ワークスペースで、**[!UICONTROL 顧客管理キー]** カードの [!UICONTROL &#x200B; 設定 &#x200B;] を選択します。
 
-![ 顧客管理キーカードで「設定」がハイライト表示されたExperience Platform暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![&#x200B; 顧客管理キーカードで「設定」がハイライト表示されたExperience Platform暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] が表示されます。 [!UICONTROL &#x200B; 顧客管理キー &#x200B;][!UICONTROL &#x200B; 暗号化設定 &#x200B;] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
 
@@ -53,13 +53,13 @@ Experience Platform UI で、左側のナビゲーションレールの「**[!UI
 
 <!-- I cannot add the 'and the copy icon highlighted.' to the alt text below as i do not have access to this UI. -->
 
-![CMK KMS ポリシーが表示された顧客管理キー設定 ](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![CMK KMS ポリシーが表示された顧客管理キー設定 &#x200B;](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
 次に、AWS KMS ワークスペースに戻り、以下に示すキーポリシーを更新します。
 
-![ 更新されたポリシーと「完了」がハイライト表示されたワークフローのレビューステージ。](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![&#x200B; 更新されたポリシーと「完了」がハイライト表示されたワークフローのレビューステージ。](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
 [!UICONTROL Platform 暗号化設定 &#x200B;] ワークスペースから 4 つのステートメント（`Enable IAM User Permissions`、`CJA Flow IAM User Permissions`、`CJA Integrity IAM User Permissions`、`CJA Oberon IAM User Permissions`）をデフォルトポリシーに追加します。
 
@@ -164,7 +164,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 次に、暗号化を有効にするには、キーのAmazon リソース名（ARN）をExperience Platform[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] に追加します。 AWSの「[!DNL Customer Managed Keys]」セクションで、[!DNL Key Management Service] のリストから新しいキーのエイリアスを選択します。
 
-![ 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース ](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![&#x200B; 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース &#x200B;](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 キーの詳細が表示されます。 AWSのすべての要素には、次のようなAmazon リソース名（ARN）があります。
 は、AWS サービス全体でリソースを指定するために使用される一意の id です。 標準化された形式 `arn:partition:service:region:account-id:resource` に従います。
@@ -175,11 +175,11 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 次に、Experience Platform [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] UI に戻ります。 「**[!UICONTROL AWS暗号化キーの詳細を追加]**」セクションで、AWS UI からコピーした **[!UICONTROL 設定名]** と **[!UICONTROL KMS キー ARN]** を追加します。
 
-![ 「Experience Platform暗号化キーの詳細を追加」セクションでハイライト表示された設定名と KMS キー ARN を含むAWS暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![&#x200B; 「Experience Platform暗号化キーの詳細を追加」セクションでハイライト表示された設定名と KMS キー ARN を含むAWS暗号化設定ワークスペース &#x200B;](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 次に、「**[!UICONTROL 保存]**」を選択して設定名と KMS キー ARN を送信し、キーの検証を開始します。
 
-![ 「保存」がハイライト表示されたExperience Platform暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/save.png)
+![&#x200B; 「保存」がハイライト表示されたExperience Platform暗号化設定ワークスペース &#x200B;](../../../images/governance-privacy-security/key-management-service/save.png)
 
 「[!UICONTROL &#x200B; 暗号化設定 &#x200B;] ワークスペースに戻ります。 暗号化設定のステータスが **[!UICONTROL 顧客管理キー]** カードの下部に表示されます。
 
@@ -204,7 +204,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 キーを失効させるには、AWS KMS Workspace に移動します。 「**[!DNL Customer managed keys]**」セクションには、AWS アカウントで使用可能なすべてのキーが表示されます。 リストからキーのエイリアスを選択します。
 
-![ 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース ](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![&#x200B; 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース &#x200B;](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 キーの詳細が表示されます。 キーを無効にするには、「**[!DNL Key actions]**」を選択し、ドロップダウンメニューから「**[!DNL Disable]**」を選択します。
 
@@ -216,15 +216,15 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 >
 >キーを無効にしたら、必要に応じて、上記と同じ方法でキーを再度有効にできます。 このオプションは、**[!DNL Key actions]** ドロップダウンから使用できます。
 
-![ 「キーを無効にする」がハイライト表示された「キーを無効にする」ダイアログ ](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
+![&#x200B; 「キーを無効にする」がハイライト表示された「キーを無効にする」ダイアログ &#x200B;](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
 または、キーが他のサービスで使用されている場合は、キーポリシーから直接Experience Platformへのアクセスを削除できます。 **[!DNL Key Policy]** のセクションで「**[!UICONTROL 編集]**」を選択します。
 
-![ キーポリシーセクションで「編集」がハイライト表示されたAWS キーの詳細セクション。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
+![&#x200B; キーポリシーセクションで「編集」がハイライト表示されたAWS キーの詳細セクション。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
 **[!DNL Edit key policy]** ページが表示されます。 Experience Platform UI からコピーされたポリシーステートメントをハイライト表示して削除し、顧客管理キーアプリの権限を削除します。 次に、「**[!DNL Save changes]**」を選択してプロセスを完了します。
 
-![ ステートメント JSON オブジェクトと「変更を保存」がハイライト表示されたAWSのキーポリシーを編集ワークスペース。](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
+![&#x200B; ステートメント JSON オブジェクトと「変更を保存」がハイライト表示されたAWSのキーポリシーを編集ワークスペース。](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 
 ## キーの回転 {#key-rotation}
 
@@ -234,7 +234,7 @@ AWSは、自動およびオンデマンドでキーローテーションを提�
 
 キーの自動ローテーションはデフォルトで無効になっています。 KMS ワークスペースから自動キーローテーションのスケジュールを設定するには、[**[!DNL Key rotation]**] タブを選択してから、**[!DNL Automatic key rotation section]** で **[!DNL Edit]** を選択します。
 
-![ キーの回転と編集がハイライト表示されたAWS キーの詳細セクション。](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
+![&#x200B; キーの回転と編集がハイライト表示されたAWS キーの詳細セクション。](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
 
 **[!DNL Edit automatic key rotation]** ワークスペースが表示されます。 ここから、自動キー回転を有効または無効にするラジオ ボタンを選択します。 次に、テキスト入力フィールドまたはドロップダウンメニューを使用して、キーローテーションの期間を選択します。 「**[!DNL Save]**」を選択して設定を確認し、キーの詳細ワークスペースに戻ります。
 
@@ -242,13 +242,13 @@ AWSは、自動およびオンデマンドでキーローテーションを提�
 >
 >キーのローテーション期間の下限は 90 日、上限は 2560 日です。
 
-![ 回転期間と「保存」がハイライト表示された自動キー回転を編集ワークスペース ](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
+![&#x200B; 回転期間と「保存」がハイライト表示された自動キー回転を編集ワークスペース &#x200B;](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
 
 ### オンデマンドでの鍵のローテーション {#on-demand-key-rotation}
 
 現在のキーが侵害された場合に、**[!DNL Rotate Now]** を選択して即座にキーのローテーションを実行します。 AWSでは、この機能を 10 回転に制限しています。 通常のメンテナンスの場合は、代わりに自動キー回転をスケジュールします。
 
-![ 「今すぐ回転」がハイライト表示されたAWS キーの「詳細」セクション ](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
+![&#x200B; 「今すぐ回転」がハイライト表示されたAWS キーの「詳細」セクション &#x200B;](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
 
 ## 次の手順
 

@@ -21,10 +21,10 @@ ht-degree: 25%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-認証済みの [!DNL Oracle Eloqua] アカウントが既にExperience Platformにある場合は、このドキュメントの残りの部分をスキップし、[ データフローを作成してExperience Platformにマーケティング自動化データを取り込む ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
+認証済みの [!DNL Oracle Eloqua] アカウントが既にExperience Platformにある場合は、このドキュメントの残りの部分をスキップし、[&#x200B; データフローを作成してExperience Platformにマーケティング自動化データを取り込む &#x200B;](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -32,7 +32,7 @@ ht-degree: 25%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| エンドポイント | [!DNL Oracle Eloqua] サーバーのエンドポイント。 [!DNL Oracle Eloqua] は複数のデータセンターをサポートしています。 エンドポイントを見つけるには、資格情報を使用して [[!DNL Oracle Eloqua]  インターフェイス ](https://login.eloqua.com) にログインし、リダイレクト URL からベース URL の部分をコピーします。 URL パターンの形式は `xxx.xx.eloqua.com` で、`http` または `https` を付けずに入力する必要があります。 |
+| エンドポイント | [!DNL Oracle Eloqua] サーバーのエンドポイント。 [!DNL Oracle Eloqua] は複数のデータセンターをサポートしています。 エンドポイントを見つけるには、資格情報を使用して [[!DNL Oracle Eloqua]  インターフェイス &#x200B;](https://login.eloqua.com) にログインし、リダイレクト URL からベース URL の部分をコピーします。 URL パターンの形式は `xxx.xx.eloqua.com` で、`http` または `https` を付けずに入力する必要があります。 |
 | ユーザー名 | [!DNL Oracle Eloqua] サーバーのユーザー名。 ユーザー名は `siteName + \\ + username` の形式にする必要があります。`siteName` は、[!DNL Oracle Eloqua] へのログインに使用した会社名で、`username` はユーザー名です。 例えば、ログインのユーザー名は `Eloqua\Andy` のようになります。 **注意**: Experience Platform UI では、ユーザー名を入力するとバックスラッシュ（`\`）が自動的に追加されるので、UI を使用する場合はバックスラッシュ（`\`）を 1 つ使用する必要があります。 |
 | パスワード | [!DNL Oracle Eloqua] ユーザー名に対応するパスワード。 |
 
@@ -66,4 +66,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Oracle Eloqua] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローを作成する ](../../dataflow/marketing-automation.md) ことができるようになりました。
+このチュートリアルでは、認証を行い、お使いの [!DNL Oracle Eloqua] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[&#x200B; マーケティング自動化データをExperience Platformに取り込むためのデータフローを作成する &#x200B;](../../dataflow/marketing-automation.md) ことができるようになりました。

@@ -34,25 +34,25 @@ AI アシスタントでプレイブックを作成するには、次の手順�
 
 左側のナビゲーションパネルで、「**[!UICONTROL プレイブック]**」を選択します。
 
-![ 左側のナビゲーションパネルで「プレイブック」オプションがハイライト表示された Platform UI。](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![&#x200B; 左側のナビゲーションパネルで「プレイブック」オプションがハイライト表示された Platform UI。](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
 **[!UICONTROL 新しいプレイブック]** を選択し、次に **AI アシスタントでプレイブックを生成** を選択します。
 
-![ 「AI アシスタントを使用してプレイブックを生成」オプションが選択されていることを示すプレイブック作成インターフェイス ](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![&#x200B; 「AI アシスタントを使用してプレイブックを生成」オプションが選択されていることを示すプレイブック作成インターフェイス &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 プロンプトフィールドを使用して、ユースケースを説明します。 例：
 
 「ランニングシューズを閲覧したが購入を完了しなかった ACME のお客様を引き込みます。」
 
-![ ユーザーがプロンプトを入力できる Web フォーム領域をハイライト表示したプレイブック作成インターフェイス。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![&#x200B; ユーザーがプロンプトを入力できる Web フォーム領域をハイライト表示したプレイブック作成インターフェイス。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
 「**[!UICONTROL 生成]**」を選択して、プレイブックのメタデータを作成します。
 
-![ プロンプト領域で「生成」ボタンがハイライト表示されているプレイブック作成インターフェイス ](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
+![&#x200B; プロンプト領域で「生成」ボタンがハイライト表示されているプレイブック作成インターフェイス &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
 生成したら、「**[!UICONTROL 編集]**」を選択して、生成されたタイトル、説明およびメタデータを必要に応じて変更できます。
 
-![ 「編集」ボタンがハイライト表示され、ユーザーがメタデータを変更できる、生成されたプレイブック。](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
+![&#x200B; 「編集」ボタンがハイライト表示され、ユーザーがメタデータを変更できる、生成されたプレイブック。](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
 データエンジニアがユースケースの設定に必要な詳細をすべて備えているようにするには、「**[!UICONTROL プレイブックの詳細]** セクションに入力します。 これらのフィールドはオプションですが、重要な情報を取得するのに役立ち、適切な技術コンポーネントを簡単に接続できます。 「**[!UICONTROL 編集]**」を選択して、次のフィールドに値を追加します。
 
@@ -60,17 +60,17 @@ AI アシスタントでプレイブックを作成するには、次の手順�
 * **ターゲットオーディエンス**
 * **マーケティングチャネル**
 
-![ 「編集」ボタンがハイライト表示されたプレイブックの詳細セクション。業界、ターゲットオーディエンス、マーケティングチャネルなどの詳細を追加または変更できます。](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![&#x200B; 「編集」ボタンがハイライト表示されたプレイブックの詳細セクション。業界、ターゲットオーディエンス、マーケティングチャネルなどの詳細を追加または変更できます。](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
 メタデータを生成したら、「**[!UICONTROL ジャーニーマップを編集]** を選択して、必要に応じてジャーニーマップの手順を調整します。
 
-![ ジャーニーマップのステップを変更するための「ジャーニーマップを編集」ボタン ](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![&#x200B; ジャーニーマップのステップを変更するための「ジャーニーマップを編集」ボタン &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
-![ プレイブックのメタデータを取得した後に手順を調整できるように、ジャーニーマップエディターインターフェイス ](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
+![&#x200B; プレイブックのメタデータを取得した後に手順を調整できるように、ジャーニーマップエディターインターフェイス &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
 次に、プレイブックをテクニカルアセットに関連付けます。 プレイブックを手動で作成するには、「**[!UICONTROL プレイブックを手動で作成]**」を選択します。
 
-![ 空白のテンプレートからプレイブックを開始するには、「プレイブックを手動で作成」オプション ](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png) を選択します。
+![&#x200B; 空白のテンプレートからプレイブックを開始するには、「プレイブックを手動で作成」オプション &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png) を選択します。
 
 空のプレイブックテンプレートが表示されます。 **タイトル**、**説明** などの詳細を入力します。 必要に応じて、ジャーニーマップを編集して、イベントやタッチポイントを追加することもできます。
 
@@ -82,25 +82,25 @@ AI アシスタントでプレイブックを作成するには、次の手順�
 >
 > Real-Time CDPのサポートは、今後のリリースで追加される予定です。
 
-![ テクニカルアセットをプレイブックに関連付けるために使用できる、「必要な製品を追加」ボタンがハイライト表示された「テクニカルAssets」タブ ](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![&#x200B; テクニカルアセットをプレイブックに関連付けるために使用できる、「必要な製品を追加」ボタンがハイライト表示された「テクニカルAssets」タブ &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 「**[!UICONTROL アセットを選択]**」を選択して、次の画像に示すように、このプレイブックをジャーニーに関連付けます。 次に **プレイブックを公開** を選択して、プレイブックを完成させます。
 
-![ ジャーニーをプレイブックに関連付けるために使用できる、「アセットを選択」ボタンがハイライト表示された「テクニカルAssets」タブ ](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![&#x200B; ジャーニーをプレイブックに関連付けるために使用できる、「アセットを選択」ボタンがハイライト表示された「テクニカルAssets」タブ &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![ ジャーニーを選択してプレイブックに関連付けます。](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![&#x200B; ジャーニーを選択してプレイブックに関連付けます。](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 公開されると、プレイブックは自動的にジャーニーのスキーマとオーディエンスの詳細を抽出し、関連付けます。
 
-![ メタデータと関連する技術アセットを示す公開済みのプレイブック。](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
+![&#x200B; メタデータと関連する技術アセットを示す公開済みのプレイブック。](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
 作成したすべてのプレイブックは、「**プレイブック** タブで利用できます。
 
-![ 作成したプレイブックのリストが表示されている「プレイブック」タブ ](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![&#x200B; 作成したプレイブックのリストが表示されている「プレイブック」タブ &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
-カタログから任意のプレイブックを選択して、インスタンスを作成して再利用できます。 詳しくは、ドキュメント [ インスタンスの作成方法を学ぶ ](/help/use-case-playbooks/playbooks/create-share-reuse.md) を参照してください。
+カタログから任意のプレイブックを選択して、インスタンスを作成して再利用できます。 詳しくは、ドキュメント [&#x200B; インスタンスの作成方法を学ぶ &#x200B;](/help/use-case-playbooks/playbooks/create-share-reuse.md) を参照してください。
 
-![ 「インスタンスを作成」オプションがハイライト表示された「プレイブックの概要」タブ ](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
+![&#x200B; 「インスタンスを作成」オプションがハイライト表示された「プレイブックの概要」タブ &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ AI アシスタントは、不要な情報を除外しながら、様々なプ�
 
 「売り上げと CLV を増やすには、「Complete the Look」というタイトルのキャンペーンを作成します。 このキャンペーンは、台所用品や家具を購入したお客様に、パーソナライズされたレコメンデーションや購入に関連するオファーを通じて、補完的な購入を完了することをお勧めします。 最初に、製品レコメンデーションに関する顧客へのメッセージを示します。 7 日以内に購入を行わない場合は、製品の推奨事項とオファーを含む 2 番目のメッセージが届きます。 プッシュ通知とメールを使用して顧客に連絡します。 過去 7 日間に台所用品または家具カテゴリで購入し、過去 30 日間にターゲット設定されていない顧客をターゲットにします。 キャンペーンの一環として、クリック数（メール、アプリ、SMS、プッシュ）、CTR、E-Wallet CTR、AOV Conversion.CLV 売上高、合計購入イベント （店舗、デジタル、コールセンター）などの KPI を測定したいと考えています。」
 
-![ プレイブックを生成するためにテキスト入力ボックスに入力された長いプロンプトの例 ](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![&#x200B; プレイブックを生成するためにテキスト入力ボックスに入力された長いプロンプトの例 &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **例 2：**
 
@@ -126,20 +126,20 @@ AI アシスタントは、不要な情報を除外しながら、様々なプ�
 対象読者：ACME ファッションニュースレターのコミュニケーションを購読している顧客。
 ターゲット KPI/エンゲージメント指標/ROI: 1. 製品からの売上高の増加。 2.顧客の忠誠度を高める」
 
-![ プレイブックを生成するためにテキスト入力ボックスに入力された整理されたリストスタイルのプロンプトの例 ](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
+![&#x200B; プレイブックを生成するためにテキスト入力ボックスに入力された整理されたリストスタイルのプロンプトの例 &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **例 3：**
 
 「進行中の製品プロモーションキャンペーン中に、買い物客を微調整して製品を購入します。
 メール、SMS またはプッシュ通知を通じて適切なコミュニケーションを送信し、製品を購入することで、進行中のプロモーション中に買い物客と関わります。 24 時間経過してもプロモーションに関与していない場合は、リマインダーメールを送信します。」
 
-![ プレイブックを生成するためにテキスト入力ボックスに入力された簡潔なプロンプトの例 ](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
+![&#x200B; プレイブックを生成するためにテキスト入力ボックスに入力された簡潔なプロンプトの例 &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **例 4：**
 
 「高校生の選手に靴を売る。
 
-![ プレイブックを生成するためにテキスト入力ボックスに入力された 1 行のプロンプトの例 ](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
+![&#x200B; プレイブックを生成するためにテキスト入力ボックスに入力された 1 行のプロンプトの例 &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 AI アシスタントは、「プロジェクト名」や「背景」などの不要な詳細をすべて削除します。 「ターゲットオーディエンス」、「キャンペーン目標」、「マーケティングチャネル」などの主要要素を抽出し、任意の入力スタイルで機能します。
 
@@ -167,7 +167,7 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 
 結合スキーマに見つからないフィールドがある場合は、読み込み時にダイアログボックスがハイライト表示されます。
 
-![ プレイブックの読み込みプロセス中に和集合スキーマに見つからないフィールドを一覧表示するダイアログボックス。](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+![&#x200B; プレイブックの読み込みプロセス中に和集合スキーマに見つからないフィールドを一覧表示するダイアログボックス。](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## 組織間でのプレイブックの共有 {#sharing-playbooks-organizations}
 
@@ -178,7 +178,7 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 
    >[!NOTE]
    >
-   >プレイブックの共有を有効にするには、ソース組織とターゲット組織の間にパートナーシップを確立する必要があります。 [ 組織パートナーシップリクエストを作成 ](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request) する方法を説明します。
+   >プレイブックの共有を有効にするには、ソース組織とターゲット組織の間にパートナーシップを確立する必要があります。 [&#x200B; 組織パートナーシップリクエストを作成 &#x200B;](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request) する方法を説明します。
 
 3. **共有の開始**：プレイブックが公開され、パートナーシップが確立されたら、「**[!UICONTROL プレイブックを共有]**」を選択します。
 4. **ターゲット組織を選択**：プロンプトが表示されたら、プレイブックを共有する組織を選択します。
@@ -218,7 +218,7 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 
 これらの権限は、権限リストの **[!UICONTROL サンドボックス]** セクションにあります。
 
-![ プレイブックの管理と共有に関連する権限がハイライト表示された権限リスト ](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![&#x200B; プレイブックの管理と共有に関連する権限がハイライト表示された権限リスト &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### ジャーニーと関連オブジェクト – 権限
 
@@ -236,8 +236,8 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 * **プロファイル読み取り**
 * **データセット読み取り**
 
-ジャーニーは非常に柔軟性が高く、多数の相互に接続されたオブジェクトを伴う可能性があるので、その [ 完全な権限 ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) は個別にドキュメント化され、特定のユースケースに応じて異なる場合があります。
+ジャーニーは非常に柔軟性が高く、多数の相互に接続されたオブジェクトを伴う可能性があるので、その [&#x200B; 完全な権限 &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) は個別にドキュメント化され、特定のユースケースに応じて異なる場合があります。
 
 ## 次の手順
 
-これで、AI アシスタントを使用してプレイブックを作成、公開、共有する方法を理解できたので、使用可能なプレイブックの使用を開始し、ユースケースに適したプレイブックを [ プレイブックリスト ](/help/use-case-playbooks/playbooks/choose.md) から選択する方法を説明します。
+これで、AI アシスタントを使用してプレイブックを作成、公開、共有する方法を理解できたので、使用可能なプレイブックの使用を開始し、ユースケースに適したプレイブックを [&#x200B; プレイブックリスト &#x200B;](/help/use-case-playbooks/playbooks/choose.md) から選択する方法を説明します。

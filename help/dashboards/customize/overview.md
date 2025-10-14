@@ -26,11 +26,11 @@ Adobe Experience Platform 内で使用できるプロファイル、セグメン
 
 Experience Platform 内のウィジェットライブラリでは、組織で使用可能な [標準](#standard-widgets) および [カスタム](#custom-widgets) ウィジェットをすべて表示できます。 ダッシュボード（プロファイルダッシュボードなど）から「**[!UICONTROL ダッシュボードを変更]**」を選択して、「**[!UICONTROL ウィジェットライブラリ]**」ボタンを表示できます。
 
-![ 「変更」ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
+![&#x200B; 「変更」ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
 
 **[!UICONTROL ウィジェットライブラリ]** を選択してウィジェットライブラリを開き、使用可能なすべての標準指標を表示するか、カスタムウィジェットの作成を開始します。
 
-![ ウィジェットライブラリがハイライト表示されたプロファイルダッシュボード。](../images/customization/widget-library-button.png)
+![&#x200B; ウィジェットライブラリがハイライト表示されたプロファイルダッシュボード。](../images/customization/widget-library-button.png)
 
 ### 標準ウィジェット {#standard-widgets}
 
@@ -44,11 +44,11 @@ Experience Platform 内のウィジェットライブラリでは、組織で使
 
 独自のウィジェットを作成する詳細な手順については、 [ダッシュボードガイドのカスタムウィジェットに関するガイド](custom-widgets.md) を参照してください。
 
-![ 「標準」と「カスタム」がハイライト表示されたウィジェットライブラリワークスペース ](../images/customization/widget-library.png)
+![&#x200B; 「標準」と「カスタム」がハイライト表示されたウィジェットライブラリワークスペース &#x200B;](../images/customization/widget-library.png)
 
 #### スキーマの編集 {#edit-schema}
 
-ダッシュボード用の [ カスタムウィジェット ](#custom-widgets) を作成するには、まずウィジェットの基となるリアルタイム顧客プロファイル属性を特定する必要があります。
+ダッシュボード用の [&#x200B; カスタムウィジェット &#x200B;](#custom-widgets) を作成するには、まずウィジェットの基となるリアルタイム顧客プロファイル属性を特定する必要があります。
 
 組織のスキーマを編集してカスタムダッシュボードウィジェットを作成する手順については、 [ダッシュボードスキーマの編集](edit-schema.md) に関するガイドを参照してください。
 

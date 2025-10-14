@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDKは、Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 （IAB TCF 2.0）をサポートしています。 このガイドでは、Adobe Experience Platform Web SDK Tag Extension を使用して IAB TCF 2.0 同意情報をAdobeに送信するためのタグプロパティを設定する方法について説明します。
 
-タグを使用しない場合は、[ タグを使用しない IAB TCF 2.0 の使用 ](./without-tags.md) に関するガイドを参照してください。
+タグを使用しない場合は、[&#x200B; タグを使用しない IAB TCF 2.0 の使用 &#x200B;](./without-tags.md) に関するガイドを参照してください。
 
 ## はじめに
 
 タグおよびExperience Platform Web SDK拡張機能で IAB TCF 2.0 を使用するには、XDM スキーマとデータセットを使用できる必要があります。
 
-また、このガイドでは、Adobe Experience Platform web SDKについて実際に理解している必要があります。 簡単に復習するには、[Adobe Experience Platform Web SDKの概要 ](../../home.md) および [ よくある質問 ](../../faq.md) ドキュメントを参照してください。
+また、このガイドでは、Adobe Experience Platform web SDKについて実際に理解している必要があります。 簡単に復習するには、[Adobe Experience Platform Web SDKの概要 &#x200B;](../../home.md) および [&#x200B; よくある質問 &#x200B;](../../faq.md) ドキュメントを参照してください。
 
 ## デフォルトの同意の設定
 
@@ -62,7 +62,7 @@ addEventListener();
 * 値：「%IAB TCF Consent String%」
 * GDPR が適用されます：「%IAB TCF 同意 GDPR%」
 
-![IAB 同意アクションの設定 ](../../assets/consent/iab-tcf/with-launch/iab-action.png)
+![IAB 同意アクションの設定 &#x200B;](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-このコードは、`useractioncomplete` イベントと `tcloaded` イベントの両方が処理される点を除いて、前のカスタムコードと同一です。 [ 以前のカスタムコード ](#consent-code-1) は、顧客が初めて環境設定を選択する場合にのみトリガーが表示されます。 このコードは、お客様が既に環境設定を選択している場合にもトリガーを表示します。 例えば、2 番目のページの読み込み時です。
+このコードは、`useractioncomplete` イベントと `tcloaded` イベントの両方が処理される点を除いて、前のカスタムコードと同一です。 [&#x200B; 以前のカスタムコード &#x200B;](#consent-code-1) は、顧客が初めて環境設定を選択する場合にのみトリガーが表示されます。 このコードは、お客様が既に環境設定を選択している場合にもトリガーを表示します。 例えば、2 番目のページの読み込み時です。
 
 Experience Platform Web SDK拡張機能から「イベントを送信」アクションを追加します。 XDM フィールド内で、前の節で作成した XDM データ要素を選択します。
 
@@ -121,4 +121,4 @@ Experience Platform Web SDK拡張機能から「イベントを送信」アク�
 
 ## 次の手順
 
-これで、IAB TCF 2.0 をExperience Platform Web SDK拡張機能と共に使用する方法を説明したので、次は、Adobe AnalyticsやAdobe Real-Time Customer Data Platformなどの他のAdobe ソリューションと統合することもできます。 詳しくは、[IAB Transparency &amp; Consent Framework 2.0 の概要 ](./overview.md) を参照してください。
+これで、IAB TCF 2.0 をExperience Platform Web SDK拡張機能と共に使用する方法を説明したので、次は、Adobe AnalyticsやAdobe Real-Time Customer Data Platformなどの他のAdobe ソリューションと統合することもできます。 詳しくは、[IAB Transparency &amp; Consent Framework 2.0 の概要 &#x200B;](./overview.md) を参照してください。

@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Experience Platform Web SDKでの Target 用Adobe Analytics（A4T）ログ
 
-Adobe Targetをパーソナライゼーションに使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja) を使用すると、Target レポートとAdobe Analytics レポートのどちらかを選択できます。
+Adobe Targetをパーソナライゼーションに使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja) を使用すると、Target レポートとAdobe Analytics レポートのどちらかを選択できます。
 
 Analytics レポートを使用している場合、Adobe Targetは次の情報を Analytics に通知する必要があります。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Web SDKでは、Analytics for Target （A4T）のユ�
 
 ログの方式は、設定済みの [datastream](../../../../datastreams/overview.md) でAdobe Analyticsが有効になっているかどうかによって決まります。
 
-![ メソッドの決定フローの記録 ](../assets/analytics-logging.png)
+![&#x200B; メソッドの決定フローの記録 &#x200B;](../assets/analytics-logging.png)
 
 ## 次の手順
 

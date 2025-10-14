@@ -15,7 +15,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL RainFocus] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL RainFocus] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL RainFocus] は、イベントを宣伝し、オーディエンスを構築するために使用できるプラットフォームです。 [!DNL RainFocus] を使用すると、美しいプロモーションページを作成したり、キャンペーンのパフォーマンスを追跡したり、登録コンバージョンを最適化したりできます。
 
@@ -23,13 +23,13 @@ Adobe Experience PlatformとReal-time Customer Data Platformの [!DNL RainFocus]
 
 >[!IMPORTANT]
 >
->このソースコネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、clientcare<span>@rainfocus.comまで直接ご連絡いただくか、[[!DNL RainFocus]  ヘルプセンター ](https://help.rainfocus.com/hc/en-us) をご覧ください。
+>このソースコネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、clientcare<span>@rainfocus.comまで直接ご連絡いただくか、[[!DNL RainFocus]  ヘルプセンター &#x200B;](https://help.rainfocus.com/hc/en-us) をご覧ください。
 
 ## 前提条件
 
 Experience Platformで [!DNL RainFocus] 統合をアクティベートするには、次の前提条件を満たす必要があります。
 
-[Adobe Developer ポータルでのAdobe サービスアカウント（JWT）の作成 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
+[Adobe Developer ポータルでのAdobe サービスアカウント（JWT）の作成 &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Experience Platformで [!DNL RainFocus] 統合をアクティベートするに�
 >[!IMPORTANT]
 >
 >* スキーマは、**XDM ExperienceEvent クラス** を拡張する必要があります。
->* スキーマに **プライマリ ID** が含まれ、**プロファイルに対して有効** になっていることを確認する必要があります。 詳しくは、[UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja) に関するガイドを参照してください
+>* スキーマに **プライマリ ID** が含まれ、**プロファイルに対して有効** になっていることを確認する必要があります。 詳しくは、[UI での ID フィールドの定義 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja) に関するガイドを参照してください
 >* ID （メール）の例は、SHA256 メールや ECID など、別の適切な識別子に置き換えることができます。
 
 ### RainFocus での統合プロファイルの作成 {#create-an-integration-profile-in-rainfocus}
@@ -107,11 +107,11 @@ Experience Platformで [!DNL RainFocus] 統合をアクティベートするに�
 
 [[!DNL RainFocus] platform](https://app.rainfocus.com) にログインします。 プライマリナビゲーションで「**[!DNL Libraries]**」を選択し、「**[!DNL Integration Profiles]**」を選択します。
 
-![ ライブラリと統合プロファイルが選択された RainFocus UI。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
+![&#x200B; ライブラリと統合プロファイルが選択された RainFocus UI。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
 
 新しいプロファイルを作成するには、**（`+`）** アイコンを選択します。 次に、「**Adobe Real-time Customer Data Platform**」を選択し、「**OK**」を選択します。
 
-![RainFocus UI の統合プロファイルを作成ウィンドウ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
+![RainFocus UI の統合プロファイルを作成ウィンドウ &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
 
 次に、Adobe Developer ポータルプロジェクトで取得した資格情報を指定します。
 
@@ -124,13 +124,13 @@ Experience Platformで [!DNL RainFocus] 統合をアクティベートするに�
 
 資格情報を指定したら、「**[!DNL Save]**」を選択します。新しい [!DNL Integration Profile] が [!DNL RainFocus] ダッシュボードに表示されます。
 
-作成した [!DNL Integration Profile] を選択すると、既に設定済みの事前定義済み **プッシュタイプ** のリストが表示されます。 これらは、発生時にExperience Platformに送信される [ エクスペリエンスイベント ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=ja) です。
+作成した [!DNL Integration Profile] を選択すると、既に設定済みの事前定義済み **プッシュタイプ** のリストが表示されます。 これらは、発生時にExperience Platformに送信される [&#x200B; エクスペリエンスイベント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=ja) です。
 
 ![RainFocus ダッシュボードの事前定義済みのプッシュタイプのリスト。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-サンプル JSON ペイロードのコピーを取得するには、「**[!DNL Sample JSON Payload]**」を選択します。 次に、サンプルの JSON ペイロードをハイライト表示してコピーし、**拡張子.json を持つ新しいファイルに保存** ます。 これは、Experience Platformの後半で [ マッピング設定 ](../../tutorials/ui/create/analytics/rainfocus.md#mapping) に使用されます。
+サンプル JSON ペイロードのコピーを取得するには、「**[!DNL Sample JSON Payload]**」を選択します。 次に、サンプルの JSON ペイロードをハイライト表示してコピーし、**拡張子.json を持つ新しいファイルに保存** ます。 これは、Experience Platformの後半で [&#x200B; マッピング設定 &#x200B;](../../tutorials/ui/create/analytics/rainfocus.md#mapping) に使用されます。
 
-![RainFocus ダッシュボードのサンプル JSON ペイロード ](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
+![RainFocus ダッシュボードのサンプル JSON ペイロード &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 
 >[!TIP]
 >
@@ -138,4 +138,4 @@ Experience Platformで [!DNL RainFocus] 統合をアクティベートするに�
 
 ## 次の手順
 
-このドキュメントでは、[!DNL RainFocus] アカウントからExperience Platformにデータをストリーミングするために必要な前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL RainFocus]  に関するガイドに進むことができ ](../../tutorials/ui/create/analytics/rainfocus.md) す。
+このドキュメントでは、[!DNL RainFocus] アカウントからExperience Platformにデータをストリーミングするために必要な前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL RainFocus]  に関するガイドに進むことができ &#x200B;](../../tutorials/ui/create/analytics/rainfocus.md) す。

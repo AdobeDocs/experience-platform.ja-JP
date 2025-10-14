@@ -11,7 +11,7 @@ ht-degree: 14%
 
 # [!UICONTROL &#x200B; プロファイルパートナーエンリッチメント（サンプル） &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; プロファイルパートナーエンリッチメント（サンプル） &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 このフィールドグループを使用して、顧客プロファイルに対してパートナー主導のエンリッチメントに関連する追加データを提供します。
+[!UICONTROL &#x200B; プロファイルパートナーエンリッチメント（サンプル） &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 このフィールドグループを使用して、顧客プロファイルに対してパートナー主導のエンリッチメントに関連する追加データを提供します。
 
 ![[!UICONTROL &#x200B; プロファイルパートナーエンリッチメント（サンプル） &#x200B;] フィールドグループの図。](../../images/field-groups/profile-partner-enrichment-sample.png)
 
@@ -48,4 +48,4 @@ ht-degree: 14%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、公開 XDM リポジトリの [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) を参照してください。
+フィールドグループについて詳しくは、公開 XDM リポジトリの [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) を参照してください。

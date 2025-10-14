@@ -17,17 +17,17 @@ ht-degree: 57%
 
 データストリーム設定の上書きは、次の 2 つの手順で行います。
 
-1. 最初に、[ データストリーム設定ページ ](configure.md) でデータストリーム設定の上書きを定義する必要があります。
+1. 最初に、[&#x200B; データストリーム設定ページ &#x200B;](configure.md) でデータストリーム設定の上書きを定義する必要があります。
 2. 次に、以下のいずれかの方法で、上書きをEdge Networkに送信する必要があります。
    * `sendEvent` または `configure` の [Web SDK](#send-overrides) コマンドを使用します。
-   * Web SDK[ タグ拡張機能 ](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) を使用する。
+   * Web SDK[&#x200B; タグ拡張機能 &#x200B;](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) を使用する。
    * Mobile SDK [sendEvent](#send-overrides) API を使用するか、[Rules](#send-overrides) を使用する。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
 >[!IMPORTANT]
 >
->データストリームの上書きは、[Web SDK](../web-sdk/home.md) および [ モバイル SDK](https://developer.adobe.com/client-sdks/home/) 統合でのみサポートされます。 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) 統合では、現在、データストリームの上書きをサポートしていません。
+>データストリームの上書きは、[Web SDK](../web-sdk/home.md) および [&#x200B; モバイル SDK](https://developer.adobe.com/client-sdks/home/) 統合でのみサポートされます。 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) 統合では、現在、データストリームの上書きをサポートしていません。
 ><br>
 >異なるデータストリームに異なるデータを送信する必要がある場合は、データストリームの上書きを使用する必要があります。パーソナライゼーションのユースケースや同意データに対してデータストリームの上書きを使用しない。
 
@@ -68,7 +68,7 @@ Adobe Target データストリームのデータストリーム上書きを設�
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Target のデータストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 ](#send-overrides) できます。
+これで、Adobe Target のデータストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 &#x200B;](#send-overrides) できます。
 
 ### Adobe Analytics のデータストリームの上書き {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Adobe Analytics のデータストリームの上書きを設定するには、�
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Analytics データストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 ](#send-overrides) できます。
+これで、Adobe Analytics データストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 &#x200B;](#send-overrides) できます。
 
 ### Experience Platform イベントデータセットのデータストリームの上書き {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Experience Platform イベントデータセットのデータストリームの
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Experience Platform データストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 ](#send-overrides) できます。
+これで、Adobe Experience Platform データストリームの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 &#x200B;](#send-overrides) できます。
 
 ### サードパーティ ID 同期コンテナのデータストリームの上書き {#container-overrides}
 
@@ -112,13 +112,13 @@ Experience Platform イベントデータセットのデータストリームの
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、ID 同期コンテナの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 ](#send-overrides) できます。
+これで、ID 同期コンテナの上書きが設定されました。これで [Web SDKまたはモバイル SDKを介してEdge Networkに上書きを送信 &#x200B;](#send-overrides) できます。
 
 ## 上書きをEdge Networkに送信 {#send-overrides}
 
 データ収集 UI でデータストリームの上書きを設定した後、Web SDKまたは Mobile SDKを使用して、上書きをEdge Networkに送信できます。
 
-* **Web SDK**：タグ拡張手順およびJavaScript ライブラリコードの例については、[ データストリーム設定の上書き ](../web-sdk/commands/datastream-overrides.md#library) を参照してください。
+* **Web SDK**：タグ拡張手順およびJavaScript ライブラリコードの例については、[&#x200B; データストリーム設定の上書き &#x200B;](../web-sdk/commands/datastream-overrides.md#library) を参照してください。
 * **モバイルSDK**：データストリーム ID の上書きは、[sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) または [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/) を使用して送信できます。
 
 ## ペイロードの例 {#payload-example}

@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[!DNL JupyterLab] ノートブックを使用したレシピの作成に関するチュートリアルの [ データの準備と機能エンジニアリング ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) の節を参照してください。
+`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[!DNL JupyterLab] ノートブックを使用したレシピの作成に関するチュートリアルの [&#x200B; データの準備と機能エンジニアリング &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) の節を参照してください。

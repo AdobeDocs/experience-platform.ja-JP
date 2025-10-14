@@ -18,7 +18,7 @@ ht-degree: 2%
 
 顧客の実装はすべて、特定の組織の目標を満たすようにカスタマイズされて一意です。そのため、特定の名前空間の重要性は、顧客によって異なります。 実際の例を次に示します。
 
-* 会社では、各メールアドレスを 1 人のエンティティを表すものと見なして、メール名前空間を一意として設定するために [ID 設定 ](./identity-settings-ui.md) を使用する場合があります。 ただし、別の会社が、1 人のエンティティを複数のメールアドレスを持つものとして表し、メール名前空間を一意ではないように設定する場合があります。 これらの会社では、CRMID 名前空間などの一意な別の ID 名前空間を使用して、複数のメールアドレスにリンクされた単一のユーザー ID を使用できるようにする必要があります。
+* 会社では、各メールアドレスを 1 人のエンティティを表すものと見なして、メール名前空間を一意として設定するために [ID 設定 &#x200B;](./identity-settings-ui.md) を使用する場合があります。 ただし、別の会社が、1 人のエンティティを複数のメールアドレスを持つものとして表し、メール名前空間を一意ではないように設定する場合があります。 これらの会社では、CRMID 名前空間などの一意な別の ID 名前空間を使用して、複数のメールアドレスにリンクされた単一のユーザー ID を使用できるようにする必要があります。
 * 「ログイン ID」名前空間を使用して、オンライン動作を収集できます。 このログイン ID は CRMID と 1 対 1 の関係を持つ可能性があり、CRM システムから属性を保存し、最も重要な名前空間と見なされることがあります。 この場合、CRMID 名前空間は人物をより正確に表すものであり、ログイン ID 名前空間は 2 番目に重要なものであると判断します。
 
 名前空間の重要性を反映した設定を ID サービスで行う必要があります。これは、プロファイルとそれに関連する ID グラフの形成および分割方法に影響を与えます。
@@ -37,7 +37,7 @@ ht-degree: 2%
 >
 >* レイヤー化されたグラフとは、複数レベルのリンクを持つ ID グラフを指します。 3 つのレイヤーを持つグラフの例については、以下の画像を参照してください。
 
-![ グラフレイヤーの図 ](../images/namespace-priority/graph-layers.png " グラフレイヤーの図 "){zoomable="yes"}
+![&#x200B; グラフレイヤーの図 &#x200B;](../images/namespace-priority/graph-layers.png " グラフレイヤーの図 "){zoomable="yes"}
 
 ### 名前空間の意味論的意味
 
@@ -53,7 +53,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度設定の検証
 
-名前空間にどのように優先順位を付けるかを把握したら、UI のグラフシミュレーションツールを使用して、様々なグラフ折りたたみシナリオをテストし、優先設定が期待どおりのグラフ結果を返していることを確認します。 詳しくは、[ グラフシミュレーションツール ](./graph-simulation.md) の使用に関するガイドを参照してください。
+名前空間にどのように優先順位を付けるかを把握したら、UI のグラフシミュレーションツールを使用して、様々なグラフ折りたたみシナリオをテストし、優先設定が期待どおりのグラフ結果を返していることを確認します。 詳しくは、[&#x200B; グラフシミュレーションツール &#x200B;](./graph-simulation.md) の使用に関するガイドを参照してください。
 
 ## 名前空間の優先度の設定
 
@@ -65,13 +65,13 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
+現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 &#x200B;](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
 
-![ 名前空間の優先度のアプリケーションスコープを示す図。](../images/namespace-priority/application-scope.png " 名前空間優先アプリケーション スコープの図。"){zoomable="yes"}
+![&#x200B; 名前空間の優先度のアプリケーションスコープを示す図。](../images/namespace-priority/application-scope.png " 名前空間優先アプリケーション スコープの図。"){zoomable="yes"}
 
 ## ID サービス：ID 最適化アルゴリズム
 
-比較的複雑なグラフ構造の場合、グラフの折りたたみシナリオが発生したときに正しいリンクが削除されるようにするために、名前空間の優先度は重要な役割を果たします。 詳しくは、[ID 最適化アルゴリズムの概要 ](../identity-graph-linking-rules/identity-optimization-algorithm.md) を参照してください。
+比較的複雑なグラフ構造の場合、グラフの折りたたみシナリオが発生したときに正しいリンクが削除されるようにするために、名前空間の優先度は重要な役割を果たします。 詳しくは、[ID 最適化アルゴリズムの概要 &#x200B;](../identity-graph-linking-rules/identity-optimization-algorithm.md) を参照してください。
 
 ## リアルタイム顧客プロファイル：エクスペリエンスイベントのプライマリ ID 決定
 
@@ -82,7 +82,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
    * XDM エクスペリエンスイベントクラススキーマでプライマリ ID としてマークされたすべてのフィールド。
    * Adobe Analytics ソースコネクタのデフォルトのプライマリ ID 設定（ECID または AAID）。
 * 一方、**名前空間の優先度は、プロファイルレコードのプライマリ ID を決定しません**。
-   * プロファイルレコードの場合、プライマリ ID を含め、スキーマの ID フィールドを引き続き定義する必要があります。 詳しくは、[UI での ID フィールドの定義 ](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
+   * プロファイルレコードの場合、プライマリ ID を含め、スキーマの ID フィールドを引き続き定義する必要があります。 詳しくは、[UI での ID フィールドの定義 &#x200B;](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
 
 >[!TIP]
 >
@@ -120,7 +120,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## セグメント化サービス：セグメントメンバーシップのメタデータストレージ
 
-![ セグメントメンバーシップストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメントメンバーシップストレージの図。"){zoomable="yes"}
+![&#x200B; セグメントメンバーシップストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメントメンバーシップストレージの図。"){zoomable="yes"}
 
 特定の結合プロファイルについて、セグメントメンバーシップは、名前空間の優先度が最も高い ID に対して保存されます。
 
@@ -148,11 +148,11 @@ John と Jane がデバイスを共有する場合、ECID （web ブラウザー
 * リアルタイム顧客プロファイル：指定された ID をプライマリ ID とするプロファイルフラグメントを削除します。 **プロファイルのプライマリ ID は、名前空間の優先度に基づいて決定されるようになりました。**
 * データレイク：指定された ID をプライマリ ID とするレコードを削除します。 リアルタイム顧客プロファイルとは異なり、データレイクのプライマリ ID は、WebSDK （`primary=true`）で指定されたプライマリ ID、またはプライマリ ID としてマークされたフィールドに基づきます
 
-詳しくは、[ 高度なライフサイクル管理の概要 ](../../hygiene/home.md) を参照してください。
+詳しくは、[&#x200B; 高度なライフサイクル管理の概要 &#x200B;](../../hygiene/home.md) を参照してください。
 
 ### 計算属性
 
-ID 設定が有効な場合、計算済み属性は、名前空間の優先度を使用して計算済み属性値を保存します。 特定のイベントについて、名前空間の優先順位が最も高い ID には、計算属性の値が書き込まれます。 詳しくは、[ 計算属性 UI ガイド ](../../profile/computed-attributes/ui.md) を参照してください。
+ID 設定が有効な場合、計算済み属性は、名前空間の優先度を使用して計算済み属性値を保存します。 特定のイベントについて、名前空間の優先順位が最も高い ID には、計算属性の値が書き込まれます。 詳しくは、[&#x200B; 計算属性 UI ガイド &#x200B;](../../profile/computed-attributes/ui.md) を参照してください。
 
 ### データレイク
 
@@ -162,9 +162,9 @@ ID 設定が有効な場合、計算済み属性は、名前空間の優先度�
 
 ### エクスペリエンスデータモデル（XDM）スキーマ
 
-XDM 個人プロファイルなど、XDM エクスペリエンスイベントではないスキーマは、引き続き、[ID としてマークするフィールド ](../../xdm/ui/fields/identity.md) に従います。
+XDM 個人プロファイルなど、XDM エクスペリエンスイベントではないスキーマは、引き続き、[ID としてマークするフィールド &#x200B;](../../xdm/ui/fields/identity.md) に従います。
 
-XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/home.md) を参照してください。
+XDM スキーマについて詳しくは、[&#x200B; スキーマの概要 &#x200B;](../../xdm/home.md) を参照してください。
 
 ### インテリジェントサービス
 
@@ -175,7 +175,7 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 この設定の結果、スコアは認証済みイベントを使用してのみ計算されます。
 
-詳しくは、[ アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) および [ 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
+詳しくは、[&#x200B; アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) および [&#x200B; 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
 
 ### パートナーが作成した宛先
 
@@ -184,16 +184,16 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 * オーディエンスの選定は、匿名アクティビティにのみ基づきます。
 * 複数のプロファイルをまたいだログインは短期間で発生します。
 
-パートナーが作成した宛先について詳しくは、[ 宛先の概要 ](../../destinations/home.md#adobe-built-and-partner-built-destinations) を参照してください。
+パートナーが作成した宛先について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../../destinations/home.md#adobe-built-and-partner-built-destinations) を参照してください。
 
 ### Privacy Service
 
-[Privacy Service削除リクエスト ](../privacy.md) は、特定の id に対して次のように機能します。
+[Privacy Service削除リクエスト &#x200B;](../privacy.md) は、特定の id に対して次のように機能します。
 
 * リアルタイム顧客プロファイル：指定された ID 値をプライマリ ID として持つ、プロファイルフラグメントを削除します。 **プロファイルのプライマリ ID は、名前空間の優先度に基づいて決定されるようになりました。**
 * データレイク：指定した ID をプライマリまたはセカンダリ ID として持つレコードを削除します。
 
-詳しくは、[Privacy Service の概要 ](../../privacy-service/home.md) を参照してください。
+詳しくは、[Privacy Service の概要 &#x200B;](../../privacy-service/home.md) を参照してください。
 
 ### Edgeのセグメント化とEdge Network アプリケーション
 
@@ -207,14 +207,14 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 特定のイベントで、人物エンティティを表すすべての名前空間が `identityMap` に含まれていることを確認してください。これは、[XDM フィールドとして送信された ID](../../xdm/ui/fields/identity.md) は無視され、セグメントメンバーシップのメタデータストレージには使用されないからです。
 
 * **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [&#128279;](../../landing/edge-and-hub-comparison.md)0&rbrace;Experience Platform ハブ &rbrace; から取り込まれたイベントは、この制限の対象になりません。
-* **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
-* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
+* **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[&#x200B; エッジセグメント化ガイド &#x200B;](../../segmentation/methods/edge-segmentation.md) を参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 &#x200B;](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 &#x200B;](../../landing/edge-and-hub-comparison.md) のページを参照してください。
 
 #### Edge Network アプリケーション
 
 Edge Network上のアプリケーションが遅滞なくEdge プロファイルにアクセスできるようにするには、イベントに CRMID 上の `primary=true` が含まれていることを確認してください。 これにより、hub からの ID グラフの更新を待たずに、即座に可用性を確保できます。
 
 * Edge Network上のアプリケーション（Adobe Target、Offer Decisioning、カスタム Personalization宛先など）は、Edge プロファイルからプロファイルにアクセスする際に、イベント内のプライマリ ID に引き続き依存します。
-* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
-* Web SDKでプライマリ ID を設定する方法について詳しくは、[Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) および [Web SDKの ID データ ](../../web-sdk/identity/overview.md) に関するドキュメントを参照してください。
+* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 &#x200B;](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
+* Web SDKでプライマリ ID を設定する方法について詳しくは、[Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) および [Web SDKの ID データ &#x200B;](../../web-sdk/identity/overview.md) に関するドキュメントを参照してください。
 * ECID がエクスペリエンスイベントに含まれていることを確認します。 ECID がない場合は、`primary=true` でイベントペイロードに追加されるので、予期しない結果が生じる可能性があります。

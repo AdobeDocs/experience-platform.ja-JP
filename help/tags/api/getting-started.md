@@ -23,7 +23,7 @@ ht-degree: 54%
 
 ## Adobe Experience Platform への開発者のアクセス {#gain-developer-access}
 
-Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](/help/landing/api-authentication.md)の最初の手順に従ってください。[ ユーザーアクセスを取得 ](/help/landing/api-authentication.md#gain-user-access) 手順を完了したら、このチュートリアルに戻って Reactor API に固有の資格情報を生成します。
+Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](/help/landing/api-authentication.md)の最初の手順に従ってください。[&#x200B; ユーザーアクセスを取得 &#x200B;](/help/landing/api-authentication.md#gain-user-access) 手順を完了したら、このチュートリアルに戻って Reactor API に固有の資格情報を生成します。
 
 ## アクセス資格情報の生成 {#generate-access-credentials}
 
@@ -53,7 +53,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、Experience Platform API 認証チュートリアルの [!BADGE &#x200B; 非推奨 &#x200B;]{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) の節を参照してください。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、Experience Platform API 認証チュートリアルの [!BADGE &#x200B; 非推奨 &#x200B;]{type=negative}[JSON web トークン（JWT）を生成 &#x200B;](/help/landing/api-authentication.md#jwt) の節を参照してください。
 
 「**次へ**」をクリックして続行します。
 
@@ -76,7 +76,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 * `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
 * `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
 
-![Developer Consoleに API を追加した後の統合情報 ](/help/tags/images/api/getting-started/api-integration-information.png)
+![Developer Consoleに API を追加した後の統合情報 &#x200B;](/help/tags/images/api/getting-started/api-integration-information.png)
 
 ### アクセストークンの生成 {#generate-access-token}
 
@@ -101,7 +101,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 #### トークン生成の自動化 {#auto-token}
 
-また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
+また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト &#x200B;](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
 
 ## API 資格情報のテスト {#test-api-credentials}
 
@@ -123,5 +123,5 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 使用するヘッダーを理解できたので、Reactor API への呼び出しを開始できます。 開始するには、エンドポイントガイドの 1 つを選択します。
 
-* [Reactor API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [Reactor API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/reactor/)
 * [Reactor API ガイドの概要](/help/tags/api/overview.md)

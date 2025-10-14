@@ -15,30 +15,30 @@ ht-degree: 11%
 >
 >[!UICONTROL Adobe Advertising Cloud ExperienceEvent フル拡張機能 &#x200B;] フィールドグループは、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、Adobe Advertising（以前の「[!DNL Advertising Cloud]」）が収集する共通のメトリクスをキャプチャするものです。
+[!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、Adobe Advertising（以前の「[!DNL Advertising Cloud]」）が収集する共通のメトリクスをキャプチャするものです。
 
 このドキュメントでは、[!DNL Advertising Cloud] 拡張フィールドグループの構造と使用例について説明します。
 
 >[!NOTE]
 >
->また、このフィールドグループを [Experience Platform UI で ](../../ui/explore.md) 検索したり、[ パブリック XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) で完全なスキーマを表示したりすることもできます。
+>また、このフィールドグループを [Experience Platform UI で &#x200B;](../../ui/explore.md) 検索したり、[&#x200B; パブリック XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) で完全なスキーマを表示したりすることもできます。
 
 ## フィールドグループ構造
 
 フィールドグループは、スキーマに単一の `_experience` オブジェクトを提供し、スキーマ自身には単一の `adcloud` オブジェクトが含まれます。
 
-![[!DNL Advertising Cloud] フィールドグループの最上位フィールド ](../../images/field-groups/advertising-full-extension/full-schema.png " フィールドグループの最上位フィ  [!DNL Advertising Cloud]  ルド ")
+![[!DNL Advertising Cloud] フィールドグループの最上位フィールド &#x200B;](../../images/field-groups/advertising-full-extension/full-schema.png " フィールドグループの最上位フィ  [!DNL Advertising Cloud]  ルド ")
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `adDeliveryDetails` | オブジェクト | 広告配信の詳細。 このオブジェクトの内容について詳しくは、[ オブジェクトに関する次の `adDeliveryDetails` サブセクション ](#adDeliveryDetails) を参照してください。 |
-| `advertisement` | オブジェクト | デジタル広告の詳細。 このオブジェクトの内容について詳しくは、広告オブジェクトの次の [ サブセクション ](#advertisement) を参照してください。 |
-| `campaign` | オブジェクト | キャンペーン階層の詳細。 このオブジェクトの内容について詳しくは、キャンペーンオブジェクトに関する以下の [ サブセクション ](#campaign-campaign) を参照してください。 |
+| `adDeliveryDetails` | オブジェクト | 広告配信の詳細。 このオブジェクトの内容について詳しくは、[&#x200B; オブジェクトに関する次の `adDeliveryDetails` サブセクション &#x200B;](#adDeliveryDetails) を参照してください。 |
+| `advertisement` | オブジェクト | デジタル広告の詳細。 このオブジェクトの内容について詳しくは、広告オブジェクトの次の [&#x200B; サブセクション &#x200B;](#advertisement) を参照してください。 |
+| `campaign` | オブジェクト | キャンペーン階層の詳細。 このオブジェクトの内容について詳しくは、キャンペーンオブジェクトに関する以下の [&#x200B; サブセクション &#x200B;](#campaign-campaign) を参照してください。 |
 | `conversionDetails` | オブジェクト | 広告のコンバージョンの詳細。 このオブジェクトの内容については詳しくは、[次のサブセクション](#conversionDetails)を参照してください。 |
 | `eventType` | 文字列 | Adobe Advertising イベントタイプ。 |
-| `fees` | オブジェクト | Advertising料金の詳細。 このオブジェクトの内容について詳しくは [ 以下の fee オブジェクトのサブセクション ](#fees) を参照してください。 |
+| `fees` | オブジェクト | Advertising料金の詳細。 このオブジェクトの内容について詳しくは [&#x200B; 以下の fee オブジェクトのサブセクション &#x200B;](#fees) を参照してください。 |
 | `inventory` | オブジェクト | 在庫の詳細。 このオブジェクトの内容については詳しくは、[次のサブセクション](#inventory)を参照してください。 |
-| `productDetails` | オブジェクト | 製品広告の詳細。 このオブジェクトの内容について詳しくは [productDetails オブジェクトの次の ](#productDetails) サブセクションを参照してください。 |
+| `productDetails` | オブジェクト | 製品広告の詳細。 このオブジェクトの内容について詳しくは [productDetails オブジェクトの次の &#x200B;](#productDetails) サブセクションを参照してください。 |
 | `stitchId` | 文字列 | サードパーティ cookie をブロックするブラウザーでのクリックスルーコンバージョンをトラッキングするAdobe Advertising広告サーバーからの ID。 |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}
@@ -103,8 +103,8 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `trackingCode` | 文字列 | イベントに対するコンバージョントラッキングコード。 使用できる形式のリストについては、[AMO ID 形式 ](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) を参照してください。 |
-| `trackingIdentities` | 文字列 | イベントの EF ID またはトラッキング ID の詳細。 使用可能な形式の一覧は、[EF ID 形式 ](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats) を参照してください。 |
+| `trackingCode` | 文字列 | イベントに対するコンバージョントラッキングコード。 使用できる形式のリストについては、[AMO ID 形式 &#x200B;](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) を参照してください。 |
+| `trackingIdentities` | 文字列 | イベントの EF ID またはトラッキング ID の詳細。 使用可能な形式の一覧は、[EF ID 形式 &#x200B;](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats) を参照してください。 |
 | `conversionProperties` | オブジェクト | 変換プロパティのマップで、（`subscriptions=253` などの）キーと値のペアの文字列の配列として表されます。 |
 
 ## `fees` {#fees}
@@ -169,4 +169,4 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 このドキュメントでは、[!DNL Advertising Cloud] 拡張機能フィールドグループの構造と使用例について説明しました。 フィールドグループ自体の詳細については、[公開 XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json)を参照してください。
 
-Adobe Experience Platform Web SDKを使用した [!DNL Advertising] データの収集にこのフィールドグループを使用している場合は、[ データストリームの設定 ](../../../datastreams/overview.md) に関するガイドを参照し、サーバー側でデータを XDM にマッピングする方法を確認してください。
+Adobe Experience Platform Web SDKを使用した [!DNL Advertising] データの収集にこのフィールドグループを使用している場合は、[&#x200B; データストリームの設定 &#x200B;](../../../datastreams/overview.md) に関するガイドを参照し、サーバー側でデータを XDM にマッピングする方法を確認してください。

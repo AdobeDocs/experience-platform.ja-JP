@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Data Distillerおよびその他のAdobe Experience Platform サービスに接続するには、Experience Platform API 資格情報が必要です。 API 資格情報は、Experience Platformへの開発者アクセス権を持つユーザーが [&#128279;](https://developer.adobe.com/console/home)0&rbrace;Adobe Developer Console&rbrace; で作成できます。 データサイエンスワークフロー専用の Oauth2 API 認証情報を作成し、組織のAdobe システム管理者に、適切な権限を持つロールに認証情報を割り当てることをお勧めします。
 
-API 認証情報の作成および必要な権限の取得に関する詳細な手順については、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) を参照してください。
+API 認証情報の作成および必要な権限の取得に関する詳細な手順については、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) を参照してください。
 
 データサイエンスに推奨される権限は次のとおりです。
 
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## 次の手順
 
-このドキュメントでは、機械学習の [!DNL Python] ノートブックから Data Distillerに接続する方法について説明しました。 Experience Platformから機能パイプラインを作成して機械学習環境でカスタムモデルにフィードする次の手順は、[ データセットを調査および分析 ](./exploratory-analysis.md) することです。
+このドキュメントでは、機械学習の [!DNL Python] ノートブックから Data Distillerに接続する方法について説明しました。 Experience Platformから機能パイプラインを作成して機械学習環境でカスタムモデルにフィードする次の手順は、[&#x200B; データセットを調査および分析 &#x200B;](./exploratory-analysis.md) することです。

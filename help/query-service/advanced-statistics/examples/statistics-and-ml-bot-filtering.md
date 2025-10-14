@@ -166,7 +166,7 @@ root
 
 ### トレーニングデータセットの作成 {#build-a-training-dataset}
 
-まず、機械学習モデルが使用できる、フラットなネストされた構造を持つデータセットを準備します（上記を参照）。 これを行う方法について詳しくは、[ ネストされたデータ構造の操作ドキュメント ](../../key-concepts/nested-data-structures.md) を参照してください。 タイムスタンプ、ユーザー ID および web ページ名でデータをグループ化し、ボットアクティビティのパターンを識別します。
+まず、機械学習モデルが使用できる、フラットなネストされた構造を持つデータセットを準備します（上記を参照）。 これを行う方法について詳しくは、[&#x200B; ネストされたデータ構造の操作ドキュメント &#x200B;](../../key-concepts/nested-data-structures.md) を参照してください。 タイムスタンプ、ユーザー ID および web ページ名でデータをグループ化し、ボットアクティビティのパターンを識別します。
 
 ### モデルの作成に TRANSFORM 句とOPTIONS句を使用する {#transform-and-preprocess}
 
@@ -174,7 +174,7 @@ root
 
 >[!TIP]
 >
->変換の使用とデータの前処理について詳しくは、[ 機能変換テクニックのドキュメント ](../feature-transformation.md) を参照してください。
+>変換の使用とデータの前処理について詳しくは、[&#x200B; 機能変換テクニックのドキュメント &#x200B;](../feature-transformation.md) を参照してください。
 
 1. 数値、文字列、ブールの列に null 値を入力するには、それぞれ `numeric_imputer`、`string_imputer`、`boolean_imputer` 関数を使用します。 この手順により、機械学習アルゴリズムでエラーなくデータを処理できるようになります。
 2. フィーチャ変換を適用して、モデリング用のデータを準備します。 `binarized`、`quantile_discretizer`、`string_indexer` を適用して、列を分類または標準化します。 次に、インプター（`numeric_imputer` と `string_imputer`）の出力を `string_indexer` や `quantile_discretizer` などの後続のトランスフォーマーにフィードして、意味のある機能を作成します。

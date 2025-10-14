@@ -20,8 +20,8 @@ ht-degree: 32%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
@@ -35,7 +35,7 @@ ht-degree: 32%
 | `bucketName` | ユーザーがアクセスを制限している場合に必要な、許可されたバケット名。 バケット名は 3 ～ 63 文字で、先頭と末尾は文字または数字である必要があります。また、小文字、数字、ハイフン （`-`）のみを含めることができます。 バケット名を IP アドレスのようにフォーマットすることはできません。 |
 | `folderPath` | ユーザーがアクセスを制限している場合は、許可されたフォルダーパスが必要です。 |
 
-これらの値の取得方法について詳しくは、[Oracle オブジェクトストレージ認証ガイド ](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) を参照してください。
+これらの値の取得方法について詳しくは、[Oracle オブジェクトストレージ認証ガイド &#x200B;](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) を参照してください。
 
 必要な資格情報を収集したら、次の手順に従って、Experience Platformに接続するための新しいOracle オブジェクトストレージアカウントを作成できます。
 
@@ -63,4 +63,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Oracle Object Storage] アカウントとの接続を確立しました。次は、[ クラウドストレージからExperience Platformにデータを取り込むためのデータフローの設定 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
+このチュートリアルでは、[!DNL Oracle Object Storage] アカウントとの接続を確立しました。次は、[&#x200B; クラウドストレージからExperience Platformにデータを取り込むためのデータフローの設定 &#x200B;](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。

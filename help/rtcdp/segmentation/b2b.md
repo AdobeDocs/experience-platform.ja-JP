@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->B2B エンティティを参照するエクスペリエンスイベントを含むオーディエンス（キャンペーン、マーケティングリストなど）はサポートされなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレードの概要 ](../../rtcdp/b2b-architecture-upgrade.md) を参照してください。
+>B2B エンティティを参照するエクスペリエンスイベントを含むオーディエンス（キャンペーン、マーケティングリストなど）はサポートされなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレードの概要 &#x200B;](../../rtcdp/b2b-architecture-upgrade.md) を参照してください。
 
-このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionのセグメント定義の例と、一般的な B2B ユースケースで様々なタイプの属性を組み合わせる方法について説明します。 宛先がお客様の B2B ワークフローにどのように適合するかを理解するには、[ エンドツーエンドのチュートリアル ](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data) を参照してください。
+このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionのセグメント定義の例と、一般的な B2B ユースケースで様々なタイプの属性を組み合わせる方法について説明します。 宛先がお客様の B2B ワークフローにどのように適合するかを理解するには、[&#x200B; エンドツーエンドのチュートリアル &#x200B;](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data) を参照してください。
 
 >[!NOTE]
 >
->これらのセグメント化のユースケースに必要な属性は、Real-Time Customer Data Platform B2B editionのお客様のみが使用できます。 Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに [ セグメント化の概要 ](./segmentation-overview.md) を参照してください。
+>これらのセグメント化のユースケースに必要な属性は、Real-Time Customer Data Platform B2B editionのお客様のみが使用できます。 Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに [&#x200B; セグメント化の概要 &#x200B;](./segmentation-overview.md) を参照してください。
 
 >[!BEGINSHADEBOX]
 
@@ -39,10 +39,10 @@ Real-Time CDP B2B edition アーキテクチャへのアップグレードの一
 
 B2B クラスにセグメント属性を使用する前に、次の手順を完了する必要があります。
 
-1. B2B クラスを使用するスキーマを作成します。 B2B editionのクラスには、Account、Campaign、Opportunity、Marketing List などがあります。 [B2B クラスで使用するスキーマの設定方法 ](../schemas/b2b.md) について詳しくは、スキーマドキュメントを参照してください。
-2. エクスペリエンスデータモデル（XDM） B2B スキーマ間の関係を作成します。 B2B edition属性に基づくオーディエンスでは、拡張された B2B セグメント化機能を完全に使用するために、クラス間の関係が必要です。 詳しくは、[2 つの B2B スキーマ間の関係を定義する方法 ](../../xdm/tutorials/relationship-b2b.md) に関するドキュメントを参照してください。
-3. B2B スキーマに基づくデータセットを使用して、データを取り込みます。 [ データの取り込み方法について ](../../sources/connectors/adobe-applications/marketo/marketo.md) については、ソースドキュメントを参照してください。
-4. オーディエンスの作成方法に関する詳細なガイダンスについては、[ セグメントビルダーユーザーガイド ](../../segmentation/ui/segment-builder.md) を参照してください。
+1. B2B クラスを使用するスキーマを作成します。 B2B editionのクラスには、Account、Campaign、Opportunity、Marketing List などがあります。 [B2B クラスで使用するスキーマの設定方法 &#x200B;](../schemas/b2b.md) について詳しくは、スキーマドキュメントを参照してください。
+2. エクスペリエンスデータモデル（XDM） B2B スキーマ間の関係を作成します。 B2B edition属性に基づくオーディエンスでは、拡張された B2B セグメント化機能を完全に使用するために、クラス間の関係が必要です。 詳しくは、[2 つの B2B スキーマ間の関係を定義する方法 &#x200B;](../../xdm/tutorials/relationship-b2b.md) に関するドキュメントを参照してください。
+3. B2B スキーマに基づくデータセットを使用して、データを取り込みます。 [&#x200B; データの取り込み方法について &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md) については、ソースドキュメントを参照してください。
+4. オーディエンスの作成方法に関する詳細なガイダンスについては、[&#x200B; セグメントビルダーユーザーガイド &#x200B;](../../segmentation/ui/segment-builder.md) を参照してください。
 
 これらの要件が満たされたら、これらの属性を組み合わせて、一般的な B2B ユースケースを実現することができます。
 
@@ -62,13 +62,13 @@ B2B ユースケースのオーディエンスを効果的に作成するには�
 
 使用可能なリストから適切なスキーマを選択し、[!UICONTROL &#x200B; 構成 &#x200B;] サイドパネルから適切な関係を選択します。 次の例では、「人物」関係を選択すると、現在のスキーマのどの属性が関連する「人物」スキーマを参照するか（関係のソーススキーマの場合）、「人物」スキーマによって参照されるか（関係の参照スキーマの場合）が表示されます。
 
-![ スキーマワークスペースで人物の関係を使用したソースキーの例 ](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
+![&#x200B; スキーマワークスペースで人物の関係を使用したソースキーの例 &#x200B;](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
 この関係は、次の画像に示すように、`Key` フォルダーを使用してセグメントビルダー内に反映されます。
 
-![ セグメント化ワークスペースでセグメントビルダーを使用したソースキーの例 ](../assets/segmentation/b2b/source-key-segmentation-example.png)
+![&#x200B; セグメント化ワークスペースでセグメントビルダーを使用したソースキーの例 &#x200B;](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
-使用可能な B2B クラスについて詳しくは、[Real-Time Customer Data Platform B2B editionのスキーマ ドキュメント ](../schemas/b2b.md) を参照してください。
+使用可能な B2B クラスについて詳しくは、[Real-Time Customer Data Platform B2B editionのスキーマ ドキュメント &#x200B;](../schemas/b2b.md) を参照してください。
 
 以下のユースケースでは、これらの結果を得るために、異なるスキーマ間の関係を確立するために使用するクラスに関する情報を提供します。 これらの例は、独自のオーディエンスの作成に役立ちます。
 
@@ -80,19 +80,19 @@ B2B editionを使用したセグメント化には、次のユースケースが
 
 あらゆるオポチュニティの「意思決定者」であるすべての人物を検索します。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラスと [!UICONTROL XDM Business Opportunity Person Relation] クラスの間をリンクさせる必要があります。
 
-![ サンプル 1 の設定を表示する UI](../assets/segmentation/b2b/example-1.png)
+![&#x200B; サンプル 1 の設定を表示する UI](../assets/segmentation/b2b/example-1.png)
 
 ### 例 2：特定のドル金額を超える商談に割り当てられた B2B プロファイルの検索 {#find-opportunities-amount}
 
 商談額が指定額（100 万ドル）を超える商談に直接割り当てられている人物をすべて検索します。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラス、[!UICONTROL XDM Business Opportunity Person Relation] クラス、および [!UICONTROL XDM Business Opportunity] クラスの間をリンクしている必要があります。
 
-![ サンプル 2 の設定を表示する UI](../assets/segmentation/b2b/example-2.png)
+![&#x200B; サンプル 2 の設定を表示する UI](../assets/segmentation/b2b/example-2.png)
 
 ### 例 3：場所ごとに商談に割り当てられた B2B プロファイルの検索 {#find-opportunities-location}
 
 アカウントが特定の場所（カナダ）にある機会に直接割り当てられている人物をすべて検索します。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラス、[!UICONTROL XDM Business Opportunity Person Relation] クラス、[!UICONTROL XDM Business Opportunity] クラス、および [!UICONTROL XDM Business Account] クラスの間をリンクしている必要があります。
 
-![ サンプル 3 の設定を示す UI](../assets/segmentation/b2b/example-3.png)
+![&#x200B; サンプル 3 の設定を示す UI](../assets/segmentation/b2b/example-3.png)
 
 ### 例 4：業界別およびブラウジング行動別の機会の「意思決定者」を検索する {#find-industry-browsing-behavior}
 
@@ -100,23 +100,23 @@ B2B editionを使用したセグメント化には、次のユースケースが
 
 このオーディエンスを作成するには、過去 3 日間に価格ページにアクセスしたすべてのユーザーのベースオーディエンスを作成して、「セグメントのセグメント」を使用する必要があります。
 
-![ ベースオーディエンスを表示するセグメントビルダー ](../assets/segmentation/b2b/example-4-base.png)
+![&#x200B; ベースオーディエンスを表示するセグメントビルダー &#x200B;](../assets/segmentation/b2b/example-4-base.png)
 
 最初のオーディエンスを作成した後、それを、アカウントが「財務」業界にある機会の「意思決定者」である人々の別のオーディエンスと組み合わせることができます。
 
-![ サンプル 4 の設定を示す UI](../assets/segmentation/b2b/example-4.png)
+![&#x200B; サンプル 4 の設定を示す UI](../assets/segmentation/b2b/example-4.png)
 
 ### 例 5：部門名と商談額による商談の B2B プロファイルの検索 {#find-department-opportunity-amount}
 
 人事部門で働き、指定された金額（100 万ドル）以上に相当するオープン商談が 1 つ以上あるアカウントを持つすべての人物を検索します。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラス、[!UICONTROL XDM Business Account] クラス、および [!UICONTROL XDM Business Opportunity] クラスをリンクしている必要があります。
 
-![ サンプル 5 の設定を示す UI](../assets/segmentation/b2b/example-5.png)
+![&#x200B; サンプル 5 の設定を示す UI](../assets/segmentation/b2b/example-5.png)
 
 ### 例 6：役職および年収で B2B プロファイルを検索する {#find-by-job-title-and-revenue}
 
 副社長という役職を持ち、年間売上高が指定された額（1 億ドル）以上のアカウントを持つすべての人を検索します。また、先月に少なくとも 3 回は価格ページにアクセスしました。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラス、[!UICONTROL XDM Business Account] クラス、および [!UICONTROL XDM ExperienceEvent] クラスをリンクしている必要があります。
 
-![ サンプル 6 設定を表示する UI](../assets/segmentation/b2b/example-6.png)
+![&#x200B; サンプル 6 設定を表示する UI](../assets/segmentation/b2b/example-6.png)
 
 ### 例 7：商談のステータスとブラウジング行動で「意思決定者」を検索 {#find-by-opportunity-status-and-browsing-behavior}
 
@@ -124,47 +124,47 @@ B2B editionを使用したセグメント化には、次のユースケースが
 
 このオーディエンスを作成するには、過去 3 日間に価格ページにアクセスしたすべてのユーザーのベースオーディエンスを作成して、「セグメントのセグメント」を使用する必要があります。
 
-![ ベースオーディエンスを表示するセグメントビルダー ](../assets/segmentation/b2b/example-7-base.png)
+![&#x200B; ベースオーディエンスを表示するセグメントビルダー &#x200B;](../assets/segmentation/b2b/example-7-base.png)
 
 最初のオーディエンスを作成した後、これを、「クローズドフラグ」が true に、「ロストフラグ」が false に設定された任意の機会の「意思決定者」である他のオーディエンスと組み合わせることができます。
 
-![ サンプル 7 設定を表示する UI](../assets/segmentation/b2b/example-7.png)
+![&#x200B; サンプル 7 設定を表示する UI](../assets/segmentation/b2b/example-7.png)
 
 ### 例 8：関連するアカウントを使用してセグメント化のリーチを拡大 {#related-accounts}
 
 人事部門で勤務し、指定された金額（100 万ドル）以上のオープン商談が 1 つ以上ある任意のアカウント *またはアカウントに関連する任意のアカウント* またはアカウントの関連するアカウント）に関連するすべての従業員を検索します。 このオーディエンスは、[!UICONTROL XDM Individual Profile] クラス、[!UICONTROL XDM Business Account] クラス、および [!UICONTROL XDM Business Opportunity] クラスをリンクしている必要があります。
 
-![ 関連するアカウントのセグメント化を表示する UI](../assets/segmentation/b2b/example-8.png)
+![&#x200B; 関連するアカウントのセグメント化を表示する UI](../assets/segmentation/b2b/example-8.png)
 
 ### 例 9：リードスコアやアカウントスコアを使用してプロファイルを選定 {#account-scoring}
 
 リードスコアが 80 以上のすべてのプロファイルを検索します。
 
-![ リードおよびアカウントの予測スコアリングに関するセグメント化を表示する UI](../assets/segmentation/b2b/example-9.png)
+![&#x200B; リードおよびアカウントの予測スコアリングに関するセグメント化を表示する UI](../assets/segmentation/b2b/example-9.png)
 
 ### 例 10：親組織が特定のドル金額を超える売上高を持つアカウントに関連付けられた B2B プロファイルの検索 {#find-parent-org-amount}
 
 親組織に、指定された金額（$100,000,000）を超える収益があるアカウントに関連付けられているすべての人物を検索します。
 
-![ セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-10.png)
+![&#x200B; セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-10.png)
 
 ### 例 11：アクティブな関係を持つ役職とアカウント名で B2B プロファイルを検索する {#find-by-job-title-and-account-name}
 
 アカウントの関係が「アクティブ」であるアカウント「Acme」の「マネージャー」であるすべての人々を見つけます。
 
-![ セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-11.png)
+![&#x200B; セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-11.png)
 
 ### 例 12:actualCost が budgetedCost を超えるキャンペーンをターゲットとした B2B プロファイルの検索 {#find-actualcost-exceed-budgetcost}
 
 actualCost が budgetedCost を超えたキャンペーンのターゲットであるすべての人物を検索します。
 
-![ セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-12.png)
+![&#x200B; セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-12.png)
 
 ### 例 13:Marketo静的リストに属し、isDeleted=false である B2B プロファイルを検索する {#find-marketo-static-list}
 
 isDeleted=false で、Marketo静的リスト「Anniversary users」に属するすべてのユーザーを検索します。
 
-![ セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-13.png)
+![&#x200B; セグメント化の親組織を表示する UI](../assets/segmentation/b2b/example-13.png)
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 

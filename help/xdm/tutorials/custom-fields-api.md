@@ -11,15 +11,15 @@ ht-degree: 2%
 
 # Schema Registry API での XDM フィールドの定義
 
-すべてのエクスペリエンスデータモデル（XDM）フィールドは、フィールドタイプに適用される標準 [JSON スキーマ ](https://json-schema.org/) 制約を使用して定義され、Adobe Experience Platformによって適用されるフィールド名の制約も追加されます。 Schema Registry API では、形式とオプションの制約を使用して、スキーマにカスタムフィールドを定義できます。 XDM フィールドタイプは、フィールドレベルの属性 `meta:xdmType` で公開されます。
+すべてのエクスペリエンスデータモデル（XDM）フィールドは、フィールドタイプに適用される標準 [JSON スキーマ &#x200B;](https://json-schema.org/) 制約を使用して定義され、Adobe Experience Platformによって適用されるフィールド名の制約も追加されます。 Schema Registry API では、形式とオプションの制約を使用して、スキーマにカスタムフィールドを定義できます。 XDM フィールドタイプは、フィールドレベルの属性 `meta:xdmType` で公開されます。
 
 >[!NOTE]
 >
->`meta:xdmType` はシステムで生成される値なので、API を使用する場合（[ カスタムマップタイプの作成 ](#custom-maps) を除く）、このプロパティをフィールドの JSON に追加する必要はありません。 ベストプラクティスは、次の表で定義されている適切な min/max 制約を使用して JSON スキーマタイプ（`string` や `integer` など）を使用することです。
+>`meta:xdmType` はシステムで生成される値なので、API を使用する場合（[&#x200B; カスタムマップタイプの作成 &#x200B;](#custom-maps) を除く）、このプロパティをフィールドの JSON に追加する必要はありません。 ベストプラクティスは、次の表で定義されている適切な min/max 制約を使用して JSON スキーマタイプ（`string` や `integer` など）を使用することです。
 
 このガイドでは、オプションのプロパティを含む、様々なフィールドタイプを定義するための適切な形式について説明します。 オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-まず、目的のフィールドタイプを見つけ、提供されたサンプルコードを使用して [ フィールドグループの作成 ](../api/field-groups.md#create) または [ データタイプの作成 ](../api/data-types.md#create) のための API リクエストを作成します。
+まず、目的のフィールドタイプを見つけ、提供されたサンプルコードを使用して [&#x200B; フィールドグループの作成 &#x200B;](../api/field-groups.md#create) または [&#x200B; データタイプの作成 &#x200B;](../api/data-types.md#create) のための API リクエストを作成します。
 
 ## [!UICONTROL 文字列] {#string}
 
@@ -101,7 +101,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->`meta:enum` 値は、列挙を宣言したり **データ検証を単独で実行したりしない** です。 ほとんどの場合、`meta:enum` で指定する文字列は、データの制約を確保するために `enum` でも指定します。 ただし、対応する `enum` 配列なしで `meta:enum` が提供されるユースケースもあります。 詳しくは、[ 推奨値の定義 ](../tutorials/suggested-values.md) に関するチュートリアルを参照してください。
+>`meta:enum` 値は、列挙を宣言したり **データ検証を単独で実行したりしない** です。 ほとんどの場合、`meta:enum` で指定する文字列は、データの制約を確保するために `enum` でも指定します。 ただし、対応する `enum` 配列なしで `meta:enum` が提供されるユースケースもあります。 詳しくは、[&#x200B; 推奨値の定義 &#x200B;](../tutorials/suggested-values.md) に関するチュートリアルを参照してください。
 
 オプションで `default` プロパティを指定して、値が指定されていない場合にフィールドで使用されるデフォルトの `enum` 値を指定できます。
 
@@ -142,7 +142,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->`number` 型は整数または浮動小数点数のいずれかの数値型に使用され、[`integer` 型は特に ](#integer) 整数に使用されます。 各タイプのユースケースについて詳しくは、[ 数値タイプに関する JSON スキーマのドキュメント ](https://json-schema.org/understanding-json-schema/reference/numeric.html) を参照してください。
+>`number` 型は整数または浮動小数点数のいずれかの数値型に使用され、[`integer` 型は特に &#x200B;](#integer) 整数に使用されます。 各タイプのユースケースについて詳しくは、[&#x200B; 数値タイプに関する JSON スキーマのドキュメント &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) を参照してください。
 
 ## [!UICONTROL &#x200B; 整数 &#x200B;] {#integer}
 
@@ -158,7 +158,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->`integer` 型は特に整数を指しますが、[`number` 型は ](#number) 整数または浮動小数点数の任意の数値型に使用されます。 各タイプのユースケースについて詳しくは、[ 数値タイプに関する JSON スキーマのドキュメント ](https://json-schema.org/understanding-json-schema/reference/numeric.html) を参照してください。
+>`integer` 型は特に整数を指しますが、[`number` 型は &#x200B;](#number) 整数または浮動小数点数の任意の数値型に使用されます。 各タイプのユースケースについて詳しくは、[&#x200B; 数値タイプに関する JSON スキーマのドキュメント &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) を参照してください。
 
 必要に応じて、定義に `minimum` と `maximum` のプロパティを追加して、整数の範囲を制限できます。 スキーマビルダー UI でサポートされているその他のいくつかの数値タイプは、[[!UICONTROL Long]](#long)、[[!UICONTROL Short]](#short)、[[!UICONTROL Byte]](#byte) など、特定の `minimum` と `maximum` の制約を持つ `integer` タイプです。
 
@@ -333,7 +333,7 @@ ht-degree: 2%
 
 ## [!UICONTROL マップ] {#map}
 
-マップフィールドは基本的に [`object` 型のフィールドで ](#object) 制約のないキーセットを持ちます。 オブジェクトと同様に、マップの `type` 値は `object` ですが、マップの `meta:xdmType` は明示的に `map` に設定されます。
+マップフィールドは基本的に [`object` 型のフィールドで &#x200B;](#object) 制約のないキーセットを持ちます。 オブジェクトと同様に、マップの `type` 値は `object` ですが、マップの `meta:xdmType` は明示的に `map` に設定されます。
 
 マップは、プロパティを定義 **してはいけません** します。 **必ず** 単一の `additionalProperties` スキーマを定義して、マップ内に含まれる値のタイプを記述します（各マップには、単一のデータタイプのみを含めることができます）。 `type` 値は `string` または `integer` にする必要があります。
 
@@ -365,11 +365,11 @@ XDM は、このストレージヒントの使用に次の制限を設けます�
 
 絶対に必要な場合にのみ、マップタイプのフィールドを使用するようにしてください。これには、次のパフォーマンス上の欠点があります。
 
-* [Adobe Experience Platform クエリサービスからの応答時間が ](../../query-service/home.md)1 億件のレコードに対して 3 秒から 10 秒に短縮されます。
+* [Adobe Experience Platform クエリサービスからの応答時間が &#x200B;](../../query-service/home.md)1 億件のレコードに対して 3 秒から 10 秒に短縮されます。
 * マップのキー数は 16 未満にする必要があります。そうしないと、さらに低下する可能性があります。
 
 Experience Platform ユーザーインターフェイスには、マップタイプのフィールドのキーを抽出する方法に制限もあります。 オブジェクトタイプのフィールドは展開できますが、マップは代わりに単一のフィールドとして表示されます。
 
 ## 次の手順
 
-このガイドでは、API で様々なフィールドタイプを定義する方法について説明しました。 XDM フィールドタイプの書式設定方法について詳しくは、[XDM フィールドタイプの制約 ](../schema/field-constraints.md) に関するガイドを参照してください。
+このガイドでは、API で様々なフィールドタイプを定義する方法について説明しました。 XDM フィールドタイプの書式設定方法について詳しくは、[XDM フィールドタイプの制約 &#x200B;](../schema/field-constraints.md) に関するガイドを参照してください。

@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Query Service Interactive Postgres API の実稼動環境の TLS/SSL 証明書は、2024 年 1 月 24 日水曜日（PT）に更新されました。<br> これは年間要件ですが、この機会に、Adobeの TLS/SSL 証明書プロバイダーが証明書階層を更新したので、チェーンのルート証明書も変更されました。 これは、特定の Postgres クライアントで、その認証機関のリストにルート証明書がない場合に影響を与える可能性があります。 例えば、PSQL CLI クライアントでは、ルート証明書を明示的なファイル `~/postgresql/root.crt` に追加する必要がある場合があります。そうしないと、エラーが発生する可能性があります。 たとえば、`psql: error: SSL error: certificate verify failed` のように設定します。この問題について詳しくは、[ 公式の PostgreSQL ドキュメント ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) を参照してください。<br> 追加するルート証明書は、[https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pemからダウンロードできます ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem)。
+>Query Service Interactive Postgres API の実稼動環境の TLS/SSL 証明書は、2024 年 1 月 24 日水曜日（PT）に更新されました。<br> これは年間要件ですが、この機会に、Adobeの TLS/SSL 証明書プロバイダーが証明書階層を更新したので、チェーンのルート証明書も変更されました。 これは、特定の Postgres クライアントで、その認証機関のリストにルート証明書がない場合に影響を与える可能性があります。 例えば、PSQL CLI クライアントでは、ルート証明書を明示的なファイル `~/postgresql/root.crt` に追加する必要がある場合があります。そうしないと、エラーが発生する可能性があります。 たとえば、`psql: error: SSL error: certificate verify failed` のように設定します。この問題について詳しくは、[&#x200B; 公式の PostgreSQL ドキュメント &#x200B;](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) を参照してください。<br> 追加するルート証明書は、[https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pemからダウンロードできます &#x200B;](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem)。
 
 手順は、次のクライアントに対して提供されます。
 
@@ -32,4 +32,4 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Power BIユーザーと Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
+>Power BIユーザーと Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 &#x200B;](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。

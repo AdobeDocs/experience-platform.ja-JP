@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # [!UICONTROL &#x200B; スケジュール &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; スケジュール &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、予定を予約するのに利用できる時間枠のコンテナである、単一のオブジェクトタイプのフィールド `healthcareSchedule` を提供します。
+[!UICONTROL &#x200B; スケジュール &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、予定を予約するのに利用できる時間枠のコンテナである、単一のオブジェクトタイプのフィールド `healthcareSchedule` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/schedule.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/schedule.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -32,5 +32,5 @@ ht-degree: 5%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/schedule.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/schedule.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/schedule.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/schedule.schema.json)

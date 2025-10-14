@@ -15,20 +15,20 @@ Real-Time Customer Data Platformを使用して、顧客のライフタイム値
 
 次のインフォグラフィックは、マーケティングキャンペーンを改善するための高パフォーマンスのデータを生成する、データ収集、操作、分析、操作のサイクルを示しています。
 
-![ 観測から解析、行動までのデータを示した往復のインフォグラフィック ](../images/use-cases/infographic-use-case-cycle.png)
+![&#x200B; 観測から解析、行動までのデータを示した往復のインフォグラフィック &#x200B;](../images/use-cases/infographic-use-case-cycle.png)
 
 このエンドツーエンドのユースケースは、顧客のライフタイム値から得られた属性を計算するために、データ信号を取得および変更する方法を示しています。 これらの派生データセットはその後、Real-Time CDP プロファイルデータに適用でき、ユーザー定義のダッシュボードで使用してinsight analysis のダッシュボードを作成できます。 Data Distillerを通じて、Real-Time CDP insights データモデルを拡張し、CLV 派生データセットとダッシュボードインサイトを使用して、新しいオーディエンスを作成し、目的の宛先に対してアクティブ化できます。 これらの高パフォーマンスのオーディエンスは、次のマーケティングキャンペーンの強化に使用できます。
 
 このガイドは、CLV を推進する主要なタッチポイントをまたいでデータ信号を測定し、環境に類似のユースケースを実装することで、カスタマーエクスペリエンスをより深く理解できるように設計されています。 プロセス全体の概要を以下の画像に示します。
 
-![ 顧客のライフタイムバリューを利用するために必要な幅広い手順のインフォグラフィック ](../images/use-cases/implementation-steps.png)
+![&#x200B; 顧客のライフタイムバリューを利用するために必要な幅広い手順のインフォグラフィック &#x200B;](../images/use-cases/implementation-steps.png)
 
 ## はじめに {#getting-started}
 
 このガイドでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ クエリサービス ](../home.md):SQL クエリを使用してデータを分析および強化できるユーザーインターフェイスと RESTful API を提供します。
-* [ セグメント化サービス ](../../segmentation/home.md)：リアルタイム顧客プロファイルデータからオーディエンスを生成できます。
+* [&#x200B; クエリサービス &#x200B;](../home.md):SQL クエリを使用してデータを分析および強化できるユーザーインターフェイスと RESTful API を提供します。
+* [&#x200B; セグメント化サービス &#x200B;](../../segmentation/home.md)：リアルタイム顧客プロファイルデータからオーディエンスを生成できます。
 
 ## 前提条件
 
@@ -36,7 +36,7 @@ Real-Time Customer Data Platformを使用して、顧客のライフタイム値
 
 ## 派生データセットの作成 {#create-derived-dataset}
 
-CLV を確立する最初の手順は、ユーザーの操作から取得したデータ信号から派生データセットを作成することです。 この特定のユースケースは、航空会社のロイヤルティスキームに関する別のドキュメントで取り上げています。 [ クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生データセットを作成する ](./deciles-use-case.md) 方法については、ガイドを参照してください。 完全な例と説明は、次の手順を説明するドキュメントに記載されています。
+CLV を確立する最初の手順は、ユーザーの操作から取得したデータ信号から派生データセットを作成することです。 この特定のユースケースは、航空会社のロイヤルティスキームに関する別のドキュメントで取り上げています。 [&#x200B; クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生データセットを作成する &#x200B;](./deciles-use-case.md) 方法については、ガイドを参照してください。 完全な例と説明は、次の手順を説明するドキュメントに記載されています。
 
 * デシルバケット化を許可するスキーマを作成します。
 * クエリサービスを使用してデシルを作成します。
@@ -47,7 +47,7 @@ CLV を確立する最初の手順は、ユーザーの操作から取得した�
 
 ## インサイトデータモデルの拡張と更新のスケジュール設定 {#extend-data-model-and-set-refresh-schedule}
 
-次に、カスタムデータモデルを作成するか、既存のAdobe Real-Time CDP データモデルを拡張して、CLV レポートインサイトに関与する必要があります。 [ クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) 方法については、ドキュメントを参照してください。 このチュートリアルでは、次の手順について説明します。
+次に、カスタムデータモデルを作成するか、既存のAdobe Real-Time CDP データモデルを拡張して、CLV レポートインサイトに関与する必要があります。 [&#x200B; クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する &#x200B;](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) 方法については、ドキュメントを参照してください。 このチュートリアルでは、次の手順について説明します。
 
 * Data Distillerを使用して、レポートインサイト用のモデルを作成します。
 * テーブル、関係の作成およびデータの入力
@@ -58,22 +58,22 @@ CLV を確立する最初の手順は、ユーザーの操作から取得した�
 
 [SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../dashboards/data-models/cdp-insights-data-model-b2c.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
 
-カスタムデータモデルを更新するスケジュールを定期的に設定してください。 これにより、必要に応じて取り込みパイプラインの一部としてデータが戻り、ユーザー定義のダッシュボードに入力されます。 スケジュールの設定方法については、[ スケジュールクエリガイド ](../ui/query-schedules.md#create-schedule) を参照してください。
+カスタムデータモデルを更新するスケジュールを定期的に設定してください。 これにより、必要に応じて取り込みパイプラインの一部としてデータが戻り、ユーザー定義のダッシュボードに入力されます。 スケジュールの設定方法については、[&#x200B; スケジュールクエリガイド &#x200B;](../ui/query-schedules.md#create-schedule) を参照してください。
 
 ## インサイトを得るためのダッシュボードの作成 {#build-a-custom-dashboard}
 
-これで、カスタムデータモデルが作成されたので、カスタムクエリおよびユーザー定義ダッシュボードを使用してデータを視覚化する準備が整いました。 [ カスタムダッシュボードの作成 ](../../dashboards/standard-dashboards.md) 方法に関する完全なガイダンスについては、ユーザー定義ダッシュボードの概要を参照してください。 UI ガイドには、次の項目の詳細が含まれます。
+これで、カスタムデータモデルが作成されたので、カスタムクエリおよびユーザー定義ダッシュボードを使用してデータを視覚化する準備が整いました。 [&#x200B; カスタムダッシュボードの作成 &#x200B;](../../dashboards/standard-dashboards.md) 方法に関する完全なガイダンスについては、ユーザー定義ダッシュボードの概要を参照してください。 UI ガイドには、次の項目の詳細が含まれます。
 
 * ウィジェットの作成方法。
 * ウィジェットコンポーザーの使用方法。
 
 デシルバケットを使用するカスタム CLV ウィジェットの例を以下に示します。
 
-![ カスタムデシルベースの CLTV ウィジェットのコレクション。](../images/use-cases/deciles-user-defined-dashboard.png)
+![&#x200B; カスタムデシルベースの CLTV ウィジェットのコレクション。](../images/use-cases/deciles-user-defined-dashboard.png)
 
 ## 高パフォーマンスのオーディエンスを作成してアクティブ化する {#create-and-activate-audiences}
 
-次の手順では、セグメント定義を作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成します。 [Experience Platformでオーディエンスを作成およびアクティブ化 ](../../segmentation/ui/segment-builder.md) する方法については、セグメントビルダー UI ガイドを参照してください。 このガイドには、次の方法に関する節が用意されています。
+次の手順では、セグメント定義を作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成します。 [Experience Platformでオーディエンスを作成およびアクティブ化 &#x200B;](../../segmentation/ui/segment-builder.md) する方法については、セグメントビルダー UI ガイドを参照してください。 このガイドには、次の方法に関する節が用意されています。
 
 * 属性、イベントおよび既存のオーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成する。
 * ルールビルダーキャンバスとコンテナを使用して、セグメント化ルールの実行順序を制御します。
@@ -81,29 +81,29 @@ CLV を確立する最初の手順は、ユーザーの操作から取得した�
 * スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 * ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-または、詳細については、[ セグメントビルダービデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=ja) も参照できます。
+または、詳細については、[&#x200B; セグメントビルダービデオチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=ja) も参照できます。
 
 ## メールキャンペーンのオーディエンスのアクティブ化 {#activate-audience-for-campaign}
 
 オーディエンスを作成したら、宛先に対してアクティブ化する準備が整います。 Experience Platformは、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できる様々なメールサービスプロバイダー（ESP）をサポートしています。
 
-[ メールマーケティングの宛先の概要 ](../../destinations/catalog/email-marketing/overview.md#connect-destination) で、データの書き出し先としてサポートされている宛先のリスト（[Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) ページなど）を確認します。
+[&#x200B; メールマーケティングの宛先の概要 &#x200B;](../../destinations/catalog/email-marketing/overview.md#connect-destination) で、データの書き出し先としてサポートされている宛先のリスト（[Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) ページなど）を確認します。
 
 ## キャンペーンから返された分析データを確認します {#post-campaign-data-analysis}
 
-高速化データストア内のデータモデルに対してスケジュールされた更新の一環として、ソースのデータを [ 増分的に処理 ](../key-concepts/incremental-load.md) できるようになりました。 顧客からの任意の応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回または複数回に更新できます。 詳しくは、[ バッチ取得 API の概要 ](../../ingestion/batch-ingestion/api-overview.md) または [ ストリーミング取得の概要 ](../../ingestion/streaming-ingestion/overview.md) を参照してください。
+高速化データストア内のデータモデルに対してスケジュールされた更新の一環として、ソースのデータを [&#x200B; 増分的に処理 &#x200B;](../key-concepts/incremental-load.md) できるようになりました。 顧客からの任意の応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回または複数回に更新できます。 詳しくは、[&#x200B; バッチ取得 API の概要 &#x200B;](../../ingestion/batch-ingestion/api-overview.md) または [&#x200B; ストリーミング取得の概要 &#x200B;](../../ingestion/streaming-ingestion/overview.md) を参照してください。
 
 データモデルが更新されると、カスタムダッシュボードウィジェットは、顧客のライフタイム値を測定および視覚化できる意味のあるシグナルを提供します。
 
-![ オーディエンスとメールキャンペーンに応じて開封されたメールの数を表示するカスタムウィジェット。](../images/use-cases/post-activation-and-email-response-kpis.png)
+![&#x200B; オーディエンスとメールキャンペーンに応じて開封されたメールの数を表示するカスタムウィジェット。](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 カスタム分析用に様々なビジュアライゼーションオプションが用意されています。
 
-![ キャンペーンバケット別に開かれたメール ](../images/use-cases/email-opened-by-campaign-buckets.png)
+![&#x200B; キャンペーンバケット別に開かれたメール &#x200B;](../images/use-cases/email-opened-by-campaign-buckets.png)
 
 これらのインサイトは、後続のキャンペーンのビジネス戦略を策定するのに役立ちます。
 
-![ メールキャンペーンの結果の詳細を示す、4 つのカスタマイズされたウィジェットのコレクション。](../images/use-cases/example-widgets.png)
+![&#x200B; メールキャンペーンの結果の詳細を示す、4 つのカスタマイズされたウィジェットのコレクション。](../images/use-cases/example-widgets.png)
 
 ## 次の手順
 

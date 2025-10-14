@@ -21,15 +21,15 @@ Adobe Targetの mbox3rdPartyId は、会社のロイヤルティプログラム�
 
 ### 手順 1:`Target Third Party ID Namespace` を設定する
 
-mbox サードパーティ ID として使用する ID 名前空間を使用して、[ データストリーム ](../../../datastreams/overview.md) の `Target Third Party ID Namespace` を設定します。
-[ID 名前空間の詳細情報 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja)
+mbox サードパーティ ID として使用する ID 名前空間を使用して、[&#x200B; データストリーム &#x200B;](../../../datastreams/overview.md) の `Target Third Party ID Namespace` を設定します。
+[ID 名前空間の詳細情報 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja)
 
 ![Target サードパーティ ID 名前空間フィールドを示すExperience Platform UI。](assets/mbox3rdpartyid.png)
 
 ### 手順 2:`mbox3rdpartyId` を Target に送信する
 
 手順 1 で設定した ID 名前空間を使用して、`sendEvent` コマンドで Target に `mbox3rdpartyId` を送信します。
-[ID の送信の詳細情報 ](../../identity/overview.md#syncing-identities)
+[ID の送信の詳細情報 &#x200B;](../../identity/overview.md#syncing-identities)
 
 ```javascript
 alloy("sendEvent", {

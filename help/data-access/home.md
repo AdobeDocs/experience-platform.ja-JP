@@ -29,4 +29,4 @@ Data Science Workspace でのレシピおよびモデル開発の際、[!DNL Pyt
 
 ## データ取得イベントへのサブスクライブ
 
-[!DNL Experience Platform] は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を介して特定の価値の高いイベントをサブスクリプションで利用できるようにします。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobe イベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。
+[!DNL Experience Platform] は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を介して特定の価値の高いイベントをサブスクリプションで利用できるようにします。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobe イベント通知の登録 &#x200B;](../observability/alerts/subscribe.md) のチュートリアルを参照してください。

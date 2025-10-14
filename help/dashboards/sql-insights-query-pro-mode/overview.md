@@ -23,13 +23,13 @@ SQL からインサイトを生成するには、まずダッシュボードを�
 
 カスタムダッシュボードを作成するには、左側のナビゲーションパネルから **[!UICONTROL ダッシュボード]** を選択して、ダッシュボード ワークスペースを開きます。 次に、「**[!UICONTROL ダッシュボードを作成]**」を選択します。
 
-![ 作成ダッシュボードがハイライト表示されたダッシュボードインベントリ。](../images/sql-insights-query-pro-mode/create-dashboard.png)
+![&#x200B; 作成ダッシュボードがハイライト表示されたダッシュボードインベントリ。](../images/sql-insights-query-pro-mode/create-dashboard.png)
 
 **[!UICONTROL ダッシュボードを作成]** ダイアログが表示されます。 ダッシュボードの作成方法を選択する方法は 2 つあります。 インサイトを作成するには、[[!UICONTROL &#x200B; ガイド付き設計モード &#x200B;]](../standard-dashboards.md) で既存のデータモデルを使用するか、[!UICONTROL Query pro モード &#x200B;] で独自の SQL を使用します。
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
-既存のデータモデルを使用すると、特定のビジネスニーズに合わせて構造化された、効率的かつスケーラブルなフレームワークを提供できるというメリットがあります。 [ 既存のデータモデルからインサイトを作成する ](../standard-dashboards.md#create-widget) 方法については、カスタムダッシュボードガイドを参照してください。
+既存のデータモデルを使用すると、特定のビジネスニーズに合わせて構造化された、効率的かつスケーラブルなフレームワークを提供できるというメリットがあります。 [&#x200B; 既存のデータモデルからインサイトを作成する &#x200B;](../standard-dashboards.md#create-widget) 方法については、カスタムダッシュボードガイドを参照してください。
 
 SQL クエリから生成されたインサイトは、はるかに高い柔軟性とカスタマイズを提供します。 技術者は、query pro モードを使用して SQL で複雑な分析を実行し、このダッシュボード機能を通じて技術者以外のユーザーとこの分析を共有できます。 **[!UICONTROL クエリプロモード]** を選択してから **[!UICONTROL 保存]** を選択します。
 
@@ -37,7 +37,7 @@ SQL クエリから生成されたインサイトは、はるかに高い柔軟�
 >
 >選択を行った後は、そのダッシュボード内でこの選択を変更することはできません。 代わりに、別のダッシュボード作成方法で新しいダッシュボードを作成する必要があります。
 
-![Query pro モードと「保存」がハイライト表示された [!UICONTROL &#x200B; ダッシュボードを作成 &#x200B;] ダイアログ ](../images/sql-insights-query-pro-mode/query-pro-mode.png)
+![Query pro モードと「保存」がハイライト表示された [!UICONTROL &#x200B; ダッシュボードを作成 &#x200B;] ダイアログ &#x200B;](../images/sql-insights-query-pro-mode/query-pro-mode.png)
 
 ## クエリプロモードの概要 {#query-pro-mode}
 
@@ -51,19 +51,19 @@ Query pro モードでダッシュボードを作成することを選択する�
 >
 >Query pro モードは、Data Distiller SKU を購入したユーザーのみが使用できます。 [[!UICONTROL &#x200B; ガイド付きデザインモード &#x200B;]](../standard-dashboards.md) は、すべてのユーザーが既存のデータモデルからインサイトを作成できます。
 
-UI 要素について詳しくは、[ クエリエディターユーザーガイド ](../../query-service/ui/user-guide.md#query-authoring) を参照してください。
+UI 要素について詳しくは、[&#x200B; クエリエディターユーザーガイド &#x200B;](../../query-service/ui/user-guide.md#query-authoring) を参照してください。
 
-![ データセットのドロップダウンメニューと「実行」アイコンがハイライト表示された [!UICONTROL SQL を入力 &#x200B;] ダイアログには、SQL クエリが入力され、「クエリパラメーター」タブが表示されます。](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
+![&#x200B; データセットのドロップダウンメニューと「実行」アイコンがハイライト表示された [!UICONTROL SQL を入力 &#x200B;] ダイアログには、SQL クエリが入力され、「クエリパラメーター」タブが表示されます。](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
 
 ### クエリパラメーター {#query-parameters}
 
-[ グローバル ](./filters/global-filter.md) または [ 日付フィルターを含めるには ](./filters/date-filter.md) クエリ **必須** でクエリパラメーターを使用します。 query pro モードで文を作成する場合、クエリでクエリパラメーターを使用する場合は、サンプル値を指定する必要があります。 サンプル値を使用すると、SQL ステートメントを実行してグラフを作成できます。 ステートメントを作成するときに指定するサンプル値は、実行時に日付またはグローバルフィルターに選択する実際の値に置き換えられます。
+[&#x200B; グローバル &#x200B;](./filters/global-filter.md) または [&#x200B; 日付フィルターを含めるには &#x200B;](./filters/date-filter.md) クエリ **必須** でクエリパラメーターを使用します。 query pro モードで文を作成する場合、クエリでクエリパラメーターを使用する場合は、サンプル値を指定する必要があります。 サンプル値を使用すると、SQL ステートメントを実行してグラフを作成できます。 ステートメントを作成するときに指定するサンプル値は、実行時に日付またはグローバルフィルターに選択する実際の値に置き換えられます。
 
 >[!IMPORTANT]
 >
->グローバルフィルターを使用する場合は、SQL にクエリパラメーターを配置し、そのクエリパラメーターをウィジェットコンポーザーのグローバルフィルターにリンクする必要があります。 以下のスクリーンショットでは、SQL でグローバルフィルターのクエリパラメーターとして `CONSENT_VALUE_FILTER` が使用されています。 これを行う方法について詳しくは、[ グローバルフィルタードキュメント ](./filters/global-filter.md#enable-global-filter) を参照してください。
+>グローバルフィルターを使用する場合は、SQL にクエリパラメーターを配置し、そのクエリパラメーターをウィジェットコンポーザーのグローバルフィルターにリンクする必要があります。 以下のスクリーンショットでは、SQL でグローバルフィルターのクエリパラメーターとして `CONSENT_VALUE_FILTER` が使用されています。 これを行う方法について詳しくは、[&#x200B; グローバルフィルタードキュメント &#x200B;](./filters/global-filter.md#enable-global-filter) を参照してください。
 
-クエリを実行するには、実行アイコン（![ 実行アイコン](/help/images/icons/play.png)）に設定します。 クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、「**[!UICONTROL 選択]**」を選択します。
+クエリを実行するには、実行アイコン（![&#x200B; 実行アイコン](/help/images/icons/play.png)）に設定します。 クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、「**[!UICONTROL 選択]**」を選択します。
 
 >[!TIP]
 >
@@ -73,7 +73,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ## ウィジェットを入力 {#populate-widget}
 
-ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは左上に示されます。この場合は [!UICONTROL &#x200B; 手動 SQL 入力 &#x200B;] です。 鉛筆アイコン（![ 鉛筆アイコンを選択します。](/help/images/icons/edit.png)）を選択して、任意の時点で SQL を編集できます。
+ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは左上に示されます。この場合は [!UICONTROL &#x200B; 手動 SQL 入力 &#x200B;] です。 鉛筆アイコン（![&#x200B; 鉛筆アイコンを選択します。](/help/images/icons/edit.png)）を選択して、任意の時点で SQL を編集できます。
 
 >[!TIP]
 >
@@ -81,7 +81,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ウィジェットを作成するには、[!UICONTROL &#x200B; 属性 &#x200B;] 列に一覧表示された属性を使用します。 検索バーを使用して、属性を検索したり、リストをスクロールしたりできます。
 
-![ 作成メソッドと属性列がハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/creation-method-and-attribute-column.png)
+![&#x200B; 作成メソッドと属性列がハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/creation-method-and-attribute-column.png)
 
 ### 属性を追加 {#add-attributes}
 
@@ -91,66 +91,66 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 >[!TIP]
 >
->上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印と下向き矢印アイコン](/help/images/icons/switch.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
+>上向き矢印アイコンと下向き矢印アイコン（![&#x200B; 上向き矢印と下向き矢印アイコン](/help/images/icons/switch.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
 
-![ 追加アイコンのドロップダウンと切り替え矢印がハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
+![&#x200B; 追加アイコンのドロップダウンと切り替え矢印がハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
 
 ウィジェットのグラフまたはグラフのタイプを変更するには、[!UICONTROL &#x200B; マーク &#x200B;] ドロップダウンの使用可能なオプションから選択します。 オプションには、[!UICONTROL &#x200B; 行 &#x200B;]、[!UICONTROL &#x200B; ドーナツ &#x200B;]、[!UICONTROL &#x200B; 大きい数値 &#x200B;]、[!UICONTROL &#x200B; 棒 &#x200B;] があります。 選択すると、ウィジェットの現在の設定のプレビュービジュアライゼーションが生成されます。
 
-![ ウィジェットのプレビューがハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/widget-preview.png)
+![&#x200B; ウィジェットのプレビューがハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/widget-preview.png)
 
 ## 高度なテーブル属性 {#advanced-attributes}
 
 テーブルの一部またはすべての列に自動ソート機能を適用するには、「**[!UICONTROL 編集]**」を選択してダッシュボード全体を編集します。
 
-![ 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/advanced-edit-dashboard.png)
+![&#x200B; 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/advanced-edit-dashboard.png)
 
 列の並べ替えを追加するテーブルグラフで省略記号（`...`）を選択し、「**[!UICONTROL 編集]**」を選択します。
 
-![ 「編集」がハイライト表示された省略記号メニューを示す表。](../images/sql-insights-query-pro-mode/advanced-table-edit.png)
+![&#x200B; 「編集」がハイライト表示された省略記号メニューを示す表。](../images/sql-insights-query-pro-mode/advanced-table-edit.png)
 
 任意の列で並べ替えを有効にするには、「並べ替え可能 **[!UICONTROL ボックスをオンに]** ます。
 
-![ 並べ替え可能なチェックボックスがハイライト表示されたテーブル編集ページ。](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
+![&#x200B; 並べ替え可能なチェックボックスがハイライト表示されたテーブル編集ページ。](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
-「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、[!UICONTROL &#x200B; プロパティ &#x200B;] パネルを開きます。 **[!UICONTROL プロパティ]** パネルで、ドロップダウンを使用して **[!UICONTROL デフォルトの並べ替え]** 列を選択し、ドロップダウンを使用して **[!UICONTROL 並べ替え方向]** を選択します。 最後に、「**[!UICONTROL 保存して閉じる]** を選択します。
+「プロパティ」アイコン（![&#x200B; 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、[!UICONTROL &#x200B; プロパティ &#x200B;] パネルを開きます。 **[!UICONTROL プロパティ]** パネルで、ドロップダウンを使用して **[!UICONTROL デフォルトの並べ替え]** 列を選択し、ドロップダウンを使用して **[!UICONTROL 並べ替え方向]** を選択します。 最後に、「**[!UICONTROL 保存して閉じる]** を選択します。
 
-![ プロパティアイコン、デフォルトの並べ替え、並べ替え方向、保存して閉じるがハイライト表示されたウィジェットコンポーザー ](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
+![&#x200B; プロパティアイコン、デフォルトの並べ替え、並べ替え方向、保存して閉じるがハイライト表示されたウィジェットコンポーザー &#x200B;](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
 
-並べ替え、列のサイズ変更、ページネーションの機能の使用について詳しくは、[ 詳細を表示 ](./view-more.md) を参照してください。
+並べ替え、列のサイズ変更、ページネーションの機能の使用について詳しくは、[&#x200B; 詳細を表示 &#x200B;](./view-more.md) を参照してください。
 
 ## ウィジェットのプロパティ {#properties}
 
-「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL &#x200B; プロパティ &#x200B;] パネルの **[!UICONTROL ウィジェットタイトル]** テキストフィールドにウィジェットの名前を入力します。 グラフのさまざまな要素の名前を変更することもできます。
+「プロパティ」アイコン（![&#x200B; 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL &#x200B; プロパティ &#x200B;] パネルの **[!UICONTROL ウィジェットタイトル]** テキストフィールドにウィジェットの名前を入力します。 グラフのさまざまな要素の名前を変更することもできます。
 
 >[!NOTE]
 >
 >プロパティ サイドバーで使用できる特定のフィールドは、編集しているグラフのタイプによって異なります。
 
-![ プロパティアイコンと「ウィジェットタイトル」フィールドがハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/widget-properties-title-text.png)
+![&#x200B; プロパティアイコンと「ウィジェットタイトル」フィールドがハイライト表示されたウィジェットコンポーザー。](../images/sql-insights-query-pro-mode/widget-properties-title-text.png)
 
 ## ウィジェットを保存 {#save-widget}
 
 ウィジェットコンポーザーで保存すると、ウィジェットがダッシュボードにローカルに保存されます。 作業内容を保存し、後で再開する場合は、「**[!UICONTROL 保存]**」を選択します。 ウィジェット名の下のチェックマークアイコンは、ウィジェットが保存されたことを示します。 または、ウィジェットの設定が完了したら、「**[!UICONTROL 保存して閉じる]** を選択して、ダッシュボードにアクセスできる他のすべてのユーザーにウィジェットを公開します。 「キャンセル」を選択して作業を中断し、カスタムダッシュボードに戻ります。
 
-![ 「保存」、「ウィジェットを保存」、「保存して閉じる」がハイライト表示されたウィジェットコンポーザー ](../images/sql-insights-query-pro-mode/insight-saved.png)
+![&#x200B; 「保存」、「ウィジェットを保存」、「保存して閉じる」がハイライト表示されたウィジェットコンポーザー &#x200B;](../images/sql-insights-query-pro-mode/insight-saved.png)
 
 ## ダッシュボードとグラフの編集 {#edit}
 
 「**[!UICONTROL 編集]**」を選択して、ダッシュボード全体または任意のインサイトを編集します。 編集モードでは、ウィジェットのサイズ変更、SQL の編集、グローバルおよび時間フィルターの作成と適用を行うことができます。 これらのフィルターは、ダッシュボードウィジェットに表示されるデータを制限します。 これは、様々なユースケースに合わせてインサイトをすばやく更新し、微調整する便利な方法です。
 
-![ 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/edit-dashboard.png)
+![&#x200B; 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/edit-dashboard.png)
 
-**[!UICONTROL フィルターを追加]** を選択して、[[!UICONTROL &#x200B; 日付フィルター &#x200B;]](#create-date-filter) または [[!UICONTROL &#x200B; グローバルフィルター &#x200B;]](#create-global-filter) を作成します。 作成したら、すべてのグローバルフィルターおよび日付フィルターを [ フィルターアイコン ](#select-global-filter) （![A フィルターアイコンから使用できます。](/help/images/icons/filter.png)）を選択します。
+**[!UICONTROL フィルターを追加]** を選択して、[[!UICONTROL &#x200B; 日付フィルター &#x200B;]](#create-date-filter) または [[!UICONTROL &#x200B; グローバルフィルター &#x200B;]](#create-global-filter) を作成します。 作成したら、すべてのグローバルフィルターおよび日付フィルターを [&#x200B; フィルターアイコン &#x200B;](#select-global-filter) （![A フィルターアイコンから使用できます。](/help/images/icons/filter.png)）を選択します。
 
-![ 「フィルターを追加」ドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/add-filter.png)
+![&#x200B; 「フィルターを追加」ドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/add-filter.png)
 
 ## インサイトの編集、複製または削除
 
-[ 既存のウィジェットを編集、複製、削除する ](../standard-dashboards.md#duplicate) 方法については、カスタムダッシュボードガイドを参照してください。
+[&#x200B; 既存のウィジェットを編集、複製、削除する &#x200B;](../standard-dashboards.md#duplicate) 方法については、カスタムダッシュボードガイドを参照してください。
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platform UI で SQL クエリを記述して、カスタムダッシュボードのグラフを生成する方法を確認しました。 次に、[ 日付フィルターの作成 ](./filters/date-filter.md) または [ グローバルフィルターの作成 ](./filters/global-filter.md) を使用して、データをさらに充実させる方法を説明します。
+このドキュメントでは、Adobe Experience Platform UI で SQL クエリを記述して、カスタムダッシュボードのグラフを生成する方法を確認しました。 次に、[&#x200B; 日付フィルターの作成 &#x200B;](./filters/date-filter.md) または [&#x200B; グローバルフィルターの作成 &#x200B;](./filters/global-filter.md) を使用して、データをさらに充実させる方法を説明します。
 
-また、[SQL で分析したデータに対する様々な表示オプション ](./view-more.md) または [ カスタムインサイトの背後にある SQL を表示 ](./view-sql.md) など、他のカスタムインサイト機能についても説明します。
+また、[SQL で分析したデータに対する様々な表示オプション &#x200B;](./view-more.md) または [&#x200B; カスタムインサイトの背後にある SQL を表示 &#x200B;](./view-sql.md) など、他のカスタムインサイト機能についても説明します。

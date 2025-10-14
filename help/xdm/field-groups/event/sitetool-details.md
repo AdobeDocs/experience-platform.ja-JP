@@ -11,9 +11,9 @@ ht-degree: 6%
 
 # [!UICONTROL &#x200B; サイトツールの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; サイトツールの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `sitetool` オブジェクトを提供し、スキーマは、サイトツールによって収集された情報を取得します。
+[!UICONTROL &#x200B; サイトツールの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `sitetool` オブジェクトを提供し、スキーマは、サイトツールによって収集された情報を取得します。
 
-![ フィールドグループ構造 ](../../images/field-groups/sitetool-details.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../images/field-groups/sitetool-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -26,4 +26,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) を参照してください。

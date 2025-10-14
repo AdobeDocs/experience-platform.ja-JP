@@ -124,7 +124,7 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 #### スキーマのすべてのフィールドに対するサードパーティデータガバナンスラベルの追加
 
-スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。[ サードパーティのデータガバナンスラベル ](../../data-governance/labels/reference.md#partner-ecosystem-labels) についての詳細情報
+スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。[&#x200B; サードパーティのデータガバナンスラベル &#x200B;](../../data-governance/labels/reference.md#partner-ecosystem-labels) についての詳細情報
 
 これを行うには、以下の手順に従います。
 
@@ -197,7 +197,7 @@ Real-Time CDP に読み込んだ見込み客のプロファイルが見込み客
 
 ![見込み客プロファイルの検査方法のビュー。](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-詳しくは、[ 見込み客プロファイル ](/help/profile/ui/prospect-profile.md) を参照してください。
+詳しくは、[&#x200B; 見込み客プロファイル &#x200B;](/help/profile/ui/prospect-profile.md) を参照してください。
 
 ### 見込み客オーディエンスを作成 {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ Real-Time CDP のセグメント化機能を使用して、見込み客プロフ
 * バッチプロファイル評価のみ。
 * 時系列イベントに基づくオーディエンスの作成をサポートしていません。
 
-詳しくは、[ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) を参照してください。
+詳しくは、[&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) を参照してください。
 
 ### 宛先への見込み客のプロファイルをアクティブ化 {#activate-to-destinations}
 
 見込み客のオーディエンスを宛先に書き出して利用します。現在、特定のクラウドストレージの宛先のみが、見込み客プロファイルのアクティブ化をサポートしています。
 
-![ 見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![&#x200B; 見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-クラウドストレージの宛先に対する見込み客のアクティブ化については、[ 詳細情報 ](/help/destinations/ui/activate-prospect-audiences.md) を参照してください。
+クラウドストレージの宛先に対する見込み客のアクティブ化については、[&#x200B; 詳細情報 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) を参照してください。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [ パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ ](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
-* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [&#x200B; パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
+* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

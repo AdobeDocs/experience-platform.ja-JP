@@ -19,7 +19,7 @@ Adobe Experience Platformでは、スキーマを使用して、一貫性のあ�
 
 ## Web SDK 拡張機能を使用して XDM オブジェクトを設定
 
-タグルールのアクション内で **[!UICONTROL XDM]** オブジェクトを設定します。 [XDM オブジェクト ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) は、他のデータ要素をそれぞれの XDM フィールドにマッピングするための直感的なインターフェイスを提供します。
+タグルールのアクション内で **[!UICONTROL XDM]** オブジェクトを設定します。 [XDM オブジェクト &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) は、他のデータ要素をそれぞれの XDM フィールドにマッピングするための直感的なインターフェイスを提供します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-次の例では、[Commerceの詳細スキーマフィールドグループ ](/help/xdm/field-groups/event/commerce-details.md) を使用しています。
+次の例では、[Commerceの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/event/commerce-details.md) を使用しています。
 
 ```javascript
 alloy("sendEvent",{

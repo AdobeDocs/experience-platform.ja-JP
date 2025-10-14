@@ -36,7 +36,7 @@ ht-degree: 30%
 
 ### Experience Platform スキーマの作成
 
-[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 &#x200B;](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
 [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用しているオブジェクトタイプに応じて、個別のスキーマを作成する必要があります。 アカウントおよび連絡先スキーマの両方については、以下の例を参照してください。
 
@@ -44,11 +44,11 @@ ht-degree: 30%
 
 >[!TAB アカウント]
 
-![ アカウントのスキーマの例を示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
+![&#x200B; アカウントのスキーマの例を示すExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
 >[!TAB  連絡先 ]
 
-![ 連絡先のスキーマの例を示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![&#x200B; 連絡先のスキーマの例を示すExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
@@ -60,7 +60,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 *CRM* カテゴリ内で、「**[!UICONTROL SugarCRM アカウントと連絡先]**」、「**[!UICONTROL データを追加]**」の順に選択します。
 
-![SugarCRM アカウントおよび連絡先カードを含んだカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![SugarCRM アカウントおよび連絡先カードを含んだカタログのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -68,13 +68,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL SugarCRM Accounts & Contacts] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### 新規アカウント
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### データの選択
 
@@ -89,17 +89,17 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 >[!TAB アカウント]
 
-![ アカウントオプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![&#x200B; アカウントオプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB  連絡先 ]
 
-![ 連絡先オプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![&#x200B; 連絡先オプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SugarCRM Accounts & Contacts] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。
+このチュートリアルでは、[!DNL SugarCRM Accounts & Contacts] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/crm.md) を行いましょう。
 
 ## その他のリソース
 
@@ -121,11 +121,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 >[!TAB アカウント]
 
-![ アカウントのリストを表示する SugarMarket アカウントページからのスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
+![&#x200B; アカウントのリストを表示する SugarMarket アカウントページからのスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
 
 >[!TAB  連絡先 ]
 
-![ 連絡先のリストを表示する SugarMarket 連絡先ページからのスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
+![&#x200B; 連絡先のリストを表示する SugarMarket 連絡先ページからのスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
 
 >[!ENDTABS]
 

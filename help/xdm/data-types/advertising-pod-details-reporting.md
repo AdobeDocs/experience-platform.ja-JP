@@ -24,4 +24,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) を参照してください。

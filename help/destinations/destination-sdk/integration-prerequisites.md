@@ -25,9 +25,9 @@ Destination SDKを使用するには、以下の節に記載されている技�
 ## バッチ宛先の技術的な前提条件 {#batch-prerequisites}
 
 1. [!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage]、[!DNL SFTP]、[!DNL Google Cloud] またはプライベートフ [!DNL Data Landing Zone] ームでホストされた出力先があり、Experience Platformから書き出されたファイルを受け取ることができます。
-2. 宛先プラットフォームは、バッチ宛先にDestination SDKして [ ファイル形式オプション ](functionality/destination-server/file-formatting.md) で設定された形式でファイルを取り込むことができます。
+2. 宛先プラットフォームは、バッチ宛先にDestination SDKして [&#x200B; ファイル形式オプション &#x200B;](functionality/destination-server/file-formatting.md) で設定された形式でファイルを取り込むことができます。
 3. （任意）プログラムによるメタデータ管理用のオーディエンス作成/取得/更新/削除（[!DNL CRUD]） API または API エンドポイントがあります。
 
 ## パートナーシップの前提条件 {#partnership-prerequisites}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）のDestination SDKの使用を検討している場合は、[ アクセスの取得 ](overview.md#get-access) の ISV と SI のパートナーシップ要件をお読みください。
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）のDestination SDKの使用を検討している場合は、[&#x200B; アクセスの取得 &#x200B;](overview.md#get-access) の ISV と SI のパートナーシップ要件をお読みください。

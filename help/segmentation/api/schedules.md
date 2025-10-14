@@ -17,7 +17,7 @@ ht-degree: 15%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## スケジュールのリストの取得 {#retrieve-list}
 
@@ -110,7 +110,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.type` | 文字列としてのジョブのタイプ。 サポートされているタイプは「batch_segmentation」と「export」の 2 つです。 |
 | `children.properties` | スケジュールに関連する追加のプロパティを含むオブジェクト。 |
 | `children.properties.segments` | `["*"]` を使用すると、すべてのセグメントが確実に含まれます。 |
-| `children.schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
+| `children.schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 &#x200B;](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
 | `children.state` | スケジュールの状態を含む文字列。 サポートされている 2 つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「非アクティブ」に設定されています。 |
 
 +++
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **必須。** 文字列としてのジョブのタイプ。サポートされているタイプは「batch_segmentation」と「export」の 2 つです。 |
 | `properties` | **必須。** スケジュールに関連する追加のプロパティを含むオブジェクトです。 |
 | `properties.segments` | **`type` が「batch_segmentation」に等しい場合は必須です。**`["*"]` を使用すると、すべてのセグメントが確実に含まれます。 |
-| `schedule` | *オプション。* ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 <br><br> この文字列が指定されていない場合、システムで生成されたスケジュールが自動的に生成されます。 |
+| `schedule` | *オプション。* ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 &#x200B;](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 <br><br> この文字列が指定されていない場合、システムで生成されたスケジュールが自動的に生成されます。 |
 | `state` | *オプション。* スケジュールの状態を含む文字列。サポートされている 2 つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「非アクティブ」に設定されています。 |
 
 +++
@@ -257,7 +257,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | `type` | 文字列としてのジョブのタイプ。 サポートされているタイプは `batch_segmentation` と `export` の 2 つです。 |
 | `properties` | スケジュールに関連する追加のプロパティを含むオブジェクト。 |
 | `properties.segments` | `["*"]` を使用すると、すべてのセグメントが確実に含まれます。 |
-| `schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
+| `schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。cron スケジュールについて詳しくは、[cron 式形式 &#x200B;](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
 | `state` | スケジュールの状態を含む文字列。 サポートされている 2 つの状態は、`active` と `inactive` です。デフォルトでは、状態は `inactive` に設定されています。 |
 
 +++
@@ -266,7 +266,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 
 `/config/schedules` エンドポイントにPATCHリクエストを実行し、リクエストパスで更新しようとしているスケジュールの ID を指定することで、特定のスケジュールを更新できます。
 
-PATCHリクエストでは、個々のスケジュールの [state](#update-state) または [cron スケジュール ](#update-schedule) を更新できます。
+PATCHリクエストでは、個々のスケジュールの [state](#update-state) または [cron スケジュール &#x200B;](#update-schedule) を更新できます。
 
 **API 形式**
 
@@ -282,7 +282,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 >[!TAB  スケジュール状態の更新 ]
 
-JSON Patch 操作を使用すると、スケジュールの状態を更新できます。 状態を更新するには、`path` プロパティを `/state` として宣言し、`value` を `active` または `inactive` に設定します。 JSON パッチについて詳しくは、[JSON パッチ ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。
+JSON Patch 操作を使用すると、スケジュールの状態を更新できます。 状態を更新するには、`path` プロパティを `/state` として宣言し、`value` を `active` または `inactive` に設定します。 JSON パッチについて詳しくは、[JSON パッチ &#x200B;](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。
 
 **リクエスト**
 
@@ -317,7 +317,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 >[!TAB Cron スケジュールの更新 ]
 
-JSON Patch 操作を使用すると、cron スケジュールを更新できます。 スケジュールを更新するには、`path` プロパティを `/schedule` として宣言し、`value` を有効な cron スケジュールに設定します。 JSON パッチについて詳しくは、[JSON パッチ ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。
+JSON Patch 操作を使用すると、cron スケジュールを更新できます。 スケジュールを更新するには、`path` プロパティを `/schedule` として宣言し、`value` を有効な cron スケジュールに設定します。 JSON パッチについて詳しくは、[JSON パッチ &#x200B;](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。 cron スケジュールについて詳しくは、[cron 式形式 &#x200B;](#appendix) に関する付録を参照してください。
 
 >[!ENDTABS]
 

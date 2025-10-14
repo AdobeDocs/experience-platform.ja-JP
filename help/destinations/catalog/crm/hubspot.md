@@ -14,7 +14,7 @@ ht-degree: 35%
 
 [[!DNL HubSpot]](https://www.hubspot.com) は、マーケティング、セールス、コンテンツ管理、カスタマーサービスを結び付けるために必要なすべてのソフトウェア、統合、リソースを備えた CRM プラットフォームです。 データ、チーム、顧客を 1 つの CRM プラットフォームに接続できます。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[[!DNL HubSpot] Contacts API](https://developers.hubspot.com/docs/api/crm/contacts) を活用して、アクティブ化後に既存のExperience Platform オーディエンスから [!DNL HubSpot] 内の連絡先を更新します。
+この [!DNL Adobe Experience Platform][&#x200B; 宛先 &#x200B;](/help/destinations/home.md) は、[[!DNL HubSpot] Contacts API](https://developers.hubspot.com/docs/api/crm/contacts) を活用して、アクティブ化後に既存のExperience Platform オーディエンスから [!DNL HubSpot] 内の連絡先を更新します。
 
 [!DNL HubSpot] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
@@ -30,9 +30,9 @@ Experience Platformと [!DNL HubSpot] で設定する必要がある前提条件
 
 ### Experience Platform の前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL HubSpot] の宛先へのデータをアクティブ化する前に、[ スキーマ ](/help/xdm/schema/composition.md)、[ データセット ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) および [ オーディエンス ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=ja) を [!DNL Experience Platform] で作成する必要があります。
+[!DNL HubSpot] の宛先へのデータをアクティブ化する前に、[&#x200B; スキーマ &#x200B;](/help/xdm/schema/composition.md)、[&#x200B; データセット &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) および [&#x200B; オーディエンス &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=ja) を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platform ドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platform ドキュメントを参照してください。
 
 ### [!DNL HubSpot] の宛先の前提条件 {#prerequisites-destination}
 
@@ -40,13 +40,13 @@ Experience Platformから [!DNL HubSpot] アカウントにデータを書き出
 
 #### [!DNL HubSpot] アカウントが必要です {#prerequisites-account}
 
-Experience Platformから [!DNL Hubspot] アカウントにデータをエクスポートするには、[!DNL HubSpot] アカウントが必要です。 アカウントをお持ちでない場合は、[HubSpot アカウントの設定 ](https://knowledge.hubspot.com/get-started/set-up-your-account) ページにアクセスし、ガイダンスに従ってアカウントを登録して作成してください。
+Experience Platformから [!DNL Hubspot] アカウントにデータをエクスポートするには、[!DNL HubSpot] アカウントが必要です。 アカウントをお持ちでない場合は、[HubSpot アカウントの設定 &#x200B;](https://knowledge.hubspot.com/get-started/set-up-your-account) ページにアクセスし、ガイダンスに従ってアカウントを登録して作成してください。
 
 #### [!DNL HubSpot] プライベートアプリアクセストークンの収集 {#gather-credentials}
 
-[!DNL HubSpot] の宛先が [!DNL HubSpot] アカウント内の [!DNL HubSpot] プライベートアプリを介して API 呼び出しを行えるようにするには、[!DNL HubSpot] `Access token` が必要です。 `Access token` は、（宛先を認証 [ する際の `Bearer token` として機能 ](#authenticate) ます。
+[!DNL HubSpot] の宛先が [!DNL HubSpot] アカウント内の [!DNL HubSpot] プライベートアプリを介して API 呼び出しを行えるようにするには、[!DNL HubSpot] `Access token` が必要です。 `Access token` は、（宛先を認証 [&#x200B; する際の `Bearer token` として機能 &#x200B;](#authenticate) ます。
 
-プライベートアプリがない場合は、のドキュメントに従って [ プライベートアプリの作成  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps) してください。
+プライベートアプリがない場合は、のドキュメントに従って [&#x200B; プライベートアプリの作成  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps) してください。
 
 >[!IMPORTANT]
 >
@@ -56,11 +56,11 @@ Experience Platformから [!DNL Hubspot] アカウントにデータをエクス
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `Bearer token` | [!DNL HubSpot] プライベートアプリの `Access token`。 <br>[!DNL HubSpot] を取得する `Access token` は、[!DNL HubSpot] のドキュメントに従って [ アプリのアクセストークンを使用して API 呼び出しを行う ](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token) ください。 | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
+| `Bearer token` | [!DNL HubSpot] プライベートアプリの `Access token`。 <br>[!DNL HubSpot] を取得する `Access token` は、[!DNL HubSpot] のドキュメントに従って [&#x200B; アプリのアクセストークンを使用して API 呼び出しを行う &#x200B;](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token) ください。 | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
 
 ## ガードレール {#guardrails}
 
-[!DNL HubSpot] のプライベートアプリには、「レート制限 [ の対象とな ](https://developers.hubspot.com/docs/api/usage-details) ます。 プライベートアプリで実行できる呼び出しの数は、[!DNL HubSpot] アカウントのサブスクリプションと、API アドオンを購入したかどうかに基づきます。 また、[ その他の制限 ](https://developers.hubspot.com/docs/api/usage-details#other-limits) も参照してください。
+[!DNL HubSpot] のプライベートアプリには、「レート制限 [&#x200B; の対象とな &#x200B;](https://developers.hubspot.com/docs/api/usage-details) ます。 プライベートアプリで実行できる呼び出しの数は、[!DNL HubSpot] アカウントのサブスクリプションと、API アドオンを購入したかどうかに基づきます。 また、[&#x200B; その他の制限 &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits) も参照してください。
 
 ## サポートされる ID {#supported-identities}
 
@@ -99,7 +99,7 @@ Experience Platformから [!DNL Hubspot] アカウントにデータをエクス
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -107,18 +107,18 @@ Experience Platformから [!DNL Hubspot] アカウントにデータをエクス
 
 ### 宛先に対する認証 {#authenticate}
 
-以下の必須のフィールドに入力します。詳しくは、[ プライベートアプリアクセストークンの収集  [!DNL HubSpot]  の節を参照し ](#gather-credentials) ください。
+以下の必須のフィールドに入力します。詳しくは、[&#x200B; プライベートアプリアクセストークンの収集  [!DNL HubSpot]  の節を参照し &#x200B;](#gather-credentials) ください。
 * **[!UICONTROL ベアラートークン]**:[!DNL HubSpot] プライベートアプリのアクセストークン。
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+![&#x200B; 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/destination-details.png)
+![&#x200B; 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -133,7 +133,7 @@ Experience Platformから [!DNL Hubspot] アカウントにデータをエクス
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -147,7 +147,7 @@ XDM フィールドを [!DNL HubSpot] の宛先フィールドに正しくマッ
 
 `Email` ID は、この宛先に対する必須のマッピングです。 マッピングするには、次の手順に従います。
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。これで、新しいマッピング行が画面に表示されます。
-   ![ 「新しいマッピングを追加」ボタンがハイライト表示されたExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![&#x200B; 「新しいマッピングを追加」ボタンがハイライト表示されたExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、「**[!UICONTROL ID 名前空間を選択]** を選択し、ID を選択します。
    ![ID としてマッピングするソース属性としてメールを選択するExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで **[!UICONTROL 属性を選択]** を選択し `email` す。
@@ -158,17 +158,17 @@ XDM フィールドを [!DNL HubSpot] の宛先フィールドに正しくマッ
 | `IdentityMap: Email` | `Identity: email` | ○ |
 
 ID マッピングの例を以下に示します。
-![ メール ID マッピングを使用したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![&#x200B; メール ID マッピングを使用したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### マッピング **オプション** 属性
 
 XDM プロファイルスキーマと [!DNL HubSpot] アカウントの間で更新する他の属性を追加するには、次の手順を繰り返します。
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。これで、新しいマッピング行が画面に表示されます。
-   ![ 「新しいマッピングを追加」ボタンがハイライト表示されたExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![&#x200B; 「新しいマッピングを追加」ボタンがハイライト表示されたExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、**[!UICONTROL 属性を選択]** カテゴリを選択して、XDM 属性を選択します。
-   ![ ソース属性として名を選択するExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
-1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで **[!UICONTROL 属性を選択]** カテゴリを選択し、[!DNL HubSpot] アカウントから自動的に入力される属性のリストから選択します。 宛先では [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API を使用してこの情報を取得します。 [ デフォルトのプロパティ ](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) とカスタムプロパティの両方が [!DNL HubSpot] 取得され、ターゲットフィールドとして選択されます。
-   ![ ターゲット属性として名を選択するExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   ![&#x200B; ソース属性として名を選択するExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで **[!UICONTROL 属性を選択]** カテゴリを選択し、[!DNL HubSpot] アカウントから自動的に入力される属性のリストから選択します。 宛先では [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API を使用してこの情報を取得します。 [&#x200B; デフォルトのプロパティ &#x200B;](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) とカスタムプロパティの両方が [!DNL HubSpot] 取得され、ターゲットフィールドとして選択されます。
+   ![&#x200B; ターゲット属性として名を選択するExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 XDM プロファイルスキーマと [!DNL Hubspot] の間で使用できるマッピングを以下に示します。
 
@@ -181,7 +181,7 @@ XDM プロファイルスキーマと [!DNL Hubspot] の間で使用できるマ
 | `xdm: workAddress.country` | `Attribute: country` |
 
 これらの属性マッピングの使用例を次に示します。
-![ 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![&#x200B; 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 宛先接続のマッピングの指定を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
@@ -190,10 +190,10 @@ XDM プロファイルスキーマと [!DNL Hubspot] の間で使用できるマ
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. [!DNL HubSpot] web サイトにログインし、**[!UICONTROL 連絡先]** ページに移動して、オーディエンスのステータスを確認します。 このリストは、オーディエンス名で作成されたカスタムプロパティの列を表示し、その値がオーディエンスステータスになるように設定できます。
-   ![ オーディエンス名とセルのオーディエンスのステータスを示す列ヘッダーを含む連絡先ページを示す HubSpot UI のスクリーンショット ](../../assets/catalog/crm/hubspot/contacts.png)
+   ![&#x200B; オーディエンス名とセルのオーディエンスのステータスを示す列ヘッダーを含む連絡先ページを示す HubSpot UI のスクリーンショット &#x200B;](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. または、個々の **[!UICONTROL ユーザー]** ページにドリルダウンして、オーディエンス名とオーディエンスのステータスを表示するプロパティに移動することもできます。
-   ![ オーディエンス名とオーディエンスのステータスを表示するカスタムプロパティを含む連絡先ページを示す HubSpot UI のスクリーンショット。](../../assets/catalog/crm/hubspot/contact.png)
+   ![&#x200B; オーディエンス名とオーディエンスのステータスを表示するカスタムプロパティを含む連絡先ページを示す HubSpot UI のスクリーンショット。](../../assets/catalog/crm/hubspot/contact.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -202,8 +202,8 @@ XDM プロファイルスキーマと [!DNL Hubspot] の間で使用できるマ
 ## その他のリソース {#additional-resources}
 
 [!DNL HubSpot] ドキュメントからのその他の役に立つ情報は次のとおりです。
-* [HubSpot の認証方法 ](https://developers.hubspot.com/docs/api/intro-to-auth)
-* [ 連絡先 ](https://developers.hubspot.com/docs/api/crm/contacts) API と [ プロパティ ](https://developers.hubspot.com/docs/api/crm/properties) API の [!DNL HubSpot] API リファレンス。
+* [HubSpot の認証方法 &#x200B;](https://developers.hubspot.com/docs/api/intro-to-auth)
+* [&#x200B; 連絡先 &#x200B;](https://developers.hubspot.com/docs/api/crm/contacts) API と [&#x200B; プロパティ &#x200B;](https://developers.hubspot.com/docs/api/crm/properties) API の [!DNL HubSpot] API リファレンス。
 
 ### 変更ログ
 

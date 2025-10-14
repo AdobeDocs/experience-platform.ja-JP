@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->[HTTP API ソース ](../../sources/connectors/streaming/http.md) などのストリーミングソースは、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
+>[HTTP API ソース &#x200B;](../../sources/connectors/streaming/http.md) などのストリーミングソースは、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
 
 Adobe Experience Platform ユーザーインターフェイスのモニタリングダッシュボードを使用して、データレイクのデータ取得プロセスとデータ保持プロセスに関する指標を取得できます。 インターフェイスのグラフを使用して、時間の経過に伴う取り込みとリテンションのトレンドを監視し、すべてのソースデータフローにわたるパフォーマンスをまとめます。
 
@@ -23,12 +23,12 @@ Adobe Experience Platform ユーザーインターフェイスのモニタリン
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+* [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    * [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
-* [ ソース ](../../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; ソース &#x200B;](../../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## データレイク取り込み用の監視ダッシュボードの使用
 
@@ -46,17 +46,17 @@ Adobe Experience Platform ユーザーインターフェイスのモニタリン
 
 監視ダッシュボードのメインヘッダーから **[!UICONTROL データレイク]** を選択して、データレイクの取り込み率を表示します。
 
-![ ソースカードが選択された監視ダッシュボード。](../assets/ui/monitor-sources/data-lake.png)
+![&#x200B; ソースカードが選択された監視ダッシュボード。](../assets/ui/monitor-sources/data-lake.png)
 
-[!UICONTROL &#x200B; 取り込み率 &#x200B;] グラフには、設定した時間枠に基づいてデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込みレートが表示されます。 時間枠の設定手順については、[ 時間枠の監視の設定 ](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
+[!UICONTROL &#x200B; 取り込み率 &#x200B;] グラフには、設定した時間枠に基づいてデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込みレートが表示されます。 時間枠の設定手順については、[&#x200B; 時間枠の監視の設定 &#x200B;](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
 
 このグラフは、デフォルトで表示できるようになっています。 グラフを非表示にするには、「**[!UICONTROL 指標とグラフ]**」を選択して、切り替えを無効にし、グラフを非表示にします。
 
-![ 取り込み率メトリクスグラフ。](../assets/ui/monitor-sources/metrics-graph.png)
+![&#x200B; 取り込み率メトリクスグラフ。](../assets/ui/monitor-sources/metrics-graph.png)
 
 ダッシュボードの下部には、既存のすべてのソースデータフローの現在の指標レポートの概要を示すテーブルが表示されます。
 
-![ 監視ダッシュボード指標テーブル ](../assets/ui/monitor-sources/metrics-table.png)
+![&#x200B; 監視ダッシュボード指標テーブル &#x200B;](../assets/ui/monitor-sources/metrics-table.png)
 
 | 指標 | 説明 |
 | --- | --- |
@@ -82,39 +82,39 @@ Adobe Experience Platform ユーザーインターフェイスのモニタリン
 
 {style="table-layout:auto"}
 
-列表示をカスタマイズするには、列設定アイコン ![ 列アイコン ](/help/images/icons/column-settings.png) を選択します。
+列表示をカスタマイズするには、列設定アイコン ![&#x200B; 列アイコン &#x200B;](/help/images/icons/column-settings.png) を選択します。
 
-![ 列設定アイコンが選択された監視ダッシュボード。](../assets/ui/monitor-sources/edit-columns.png)
+![&#x200B; 列設定アイコンが選択された監視ダッシュボード。](../assets/ui/monitor-sources/edit-columns.png)
 
 次に、「*[!UICONTROL テーブルをカスタマイズ]*」ウィンドウを使用して、ダッシュボードに表示する列を選択します。 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
-![ 監視ダッシュボードの列をカスタマイズのポップアップウィンドウ。](../assets/ui/monitor-sources/customize-table.png)
+![&#x200B; 監視ダッシュボードの列をカスタマイズのポップアップウィンドウ。](../assets/ui/monitor-sources/customize-table.png)
 
-特定のデータフローに取り込まれるデータを監視するには、ソースの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+特定のデータフローに取り込まれるデータを監視するには、ソースの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
 >[!TIP]
 >
->監視ダッシュボードを使用すると、データ保持ポリシーを使用して削除されたレコードのデータ削除指標を監視できます。 データ保持について詳しくは、[ データ保持ポリシーの設定 ](../../catalog/datasets/user-guide.md#data-retention-policy) に関するガイドを参照してください。
+>監視ダッシュボードを使用すると、データ保持ポリシーを使用して削除されたレコードのデータ削除指標を監視できます。 データ保持について詳しくは、[&#x200B; データ保持ポリシーの設定 &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) に関するガイドを参照してください。
 
-![ 特定のソースの横にあるフィルターアイコンを選択して、特定のデータフローを監視します。](../assets/ui/monitor-sources/monitor-dataflow.png)
+![&#x200B; 特定のソースの横にあるフィルターアイコンを選択して、特定のデータフローを監視します。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 指標テーブルは、選択したソースに対応するアクティブなデータフローのテーブルに更新されます。 この手順では、対応するデータセットやデータタイプなどのデータフローに関する追加情報と、最後にアクティブだった日時を示すタイムスタンプを表示できます。
 
-データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
-![ 監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
+![&#x200B; 監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
 
 次に、選択したデータフローのすべてのデータフロー実行イテレーションをリストするインターフェイスに移動します。
 
 データフロー実行は、データフロー実行のインスタンスを表します。 例えば、データフローが 1 時間ごとに午前 9:00、午前 10:00、午前 11:00 に実行されるようにスケジュールされている場合、フロー実行のインスタンスが 3 つ存在します。 フロー実行は、特定の組織に固有です。
 
-特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
-![ データフロー実行指標ページ ](../assets/ui/monitor-sources/dataflow-page.png)
+![&#x200B; データフロー実行指標ページ &#x200B;](../assets/ui/monitor-sources/dataflow-page.png)
 
 データフロー実行の詳細ページを使用して、選択した実行イテレーションの指標と情報を表示します。
 
-![ データフロー実行の詳細ページ ](../assets/ui/monitor-sources/dataflow-run-details.png)
+![&#x200B; データフロー実行の詳細ページ &#x200B;](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | データフロー実行の詳細 | 説明 |
 | --- | --- |
@@ -147,5 +147,5 @@ Adobe Experience Platform ユーザーインターフェイスのモニタリン
 
 このチュートリアルでは、**[!UICONTROL 監視]** ダッシュボードを使用してデータレイクの取り込み率を監視する方法を学びました。 また、取り込み中にデータフローエラーを引き起こすエラーを特定する方法についても説明しました。 詳しくは、次のドキュメントを参照してください。
 
-* [ID データの監視 ](./monitor-identities.md)。
-* [ プロファイルデータの監視 ](./monitor-profiles.md)。
+* [ID データの監視 &#x200B;](./monitor-identities.md)。
+* [&#x200B; プロファイルデータの監視 &#x200B;](./monitor-profiles.md)。

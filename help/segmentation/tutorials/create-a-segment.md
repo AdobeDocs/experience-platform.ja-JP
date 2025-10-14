@@ -15,7 +15,7 @@ ht-degree: 44%
 
 このドキュメントでは、[[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md) を使用したセグメント定義の開発、テスト、プレビューおよび保存に関するチュートリアルを提供します。
 
-ユーザーインターフェイスを使用してセグメント定義を作成する方法については、『 [ セグメントビルダーガイド ](../ui/segment-builder.md) を参照してください。
+ユーザーインターフェイスを使用してセグメント定義を作成する方法については、『 [&#x200B; セグメントビルダーガイド &#x200B;](../ui/segment-builder.md) を参照してください。
 
 ## はじめに
 
@@ -57,7 +57,7 @@ ht-degree: 44%
 
 `/segment/definitions` API の [!DNL Segmentation] エンドポイントに POST リクエストをおこなうことで、新しいセグメント定義を作成できます。 次の例では、セグメント定義を正常に定義するために必要な情報など、定義リクエストのフォーマット方法の概要を説明します。
 
-セグメント定義の定義方法について詳しくは、『 [ セグメント定義開発者ガイド ](../api/segment-definitions.md#create) 』を参照してください。
+セグメント定義の定義方法について詳しくは、『 [&#x200B; セグメント定義開発者ガイド &#x200B;](../api/segment-definitions.md#create) 』を参照してください。
 
 ## オーディエンスの推定とプレビュー {#estimate-and-preview-an-audience}
 
@@ -93,13 +93,13 @@ ht-degree: 44%
 
 新しいプレビュージョブを作成するには、`/preview` エンドポイントに POST リクエストを送信します。
 
-プレビュージョブの作成に関する詳細な手順については、[ プレビューと予測エンドポイントガイド ](../api/previews-and-estimates.md#create-preview) を参照してください。
+プレビュージョブの作成に関する詳細な手順については、[&#x200B; プレビューと予測エンドポイントガイド &#x200B;](../api/previews-and-estimates.md#create-preview) を参照してください。
 
 ### 推定またはプレビューの表示
 
 クエリが異なると完了するまでの時間が異なる可能性があるので、推定プロセスとプレビュープロセスは非同期で実行されます。クエリが開始されたら、API 呼び出しを使用して、推定またはプレビューの現在の状態を進行に応じて取得できます（GET リクエストを使用）。
 
-[!DNL Segmentation Service] API を使用すると、プレビュージョブの現在の状態を ID で検索できます。 状態が「RESULT_READY」の場合は、結果を表示できます。プレビュージョブの現在の状態を検索するには、プレビューと予測エンドポイントガイドの [ プレビュージョブの取得 ](../api/previews-and-estimates.md#get-preview) セクションを参照してください。 推定ジョブの現在の状態を調べるには、プレビューと推定エンドポイントガイドの [ 推定ジョブの取得 ](../api/previews-and-estimates.md#get-estimate) の節を参照してください。
+[!DNL Segmentation Service] API を使用すると、プレビュージョブの現在の状態を ID で検索できます。 状態が「RESULT_READY」の場合は、結果を表示できます。プレビュージョブの現在の状態を検索するには、プレビューと予測エンドポイントガイドの [&#x200B; プレビュージョブの取得 &#x200B;](../api/previews-and-estimates.md#get-preview) セクションを参照してください。 推定ジョブの現在の状態を調べるには、プレビューと推定エンドポイントガイドの [&#x200B; 推定ジョブの取得 &#x200B;](../api/previews-and-estimates.md#get-estimate) の節を参照してください。
 
 
 ## 次の手順

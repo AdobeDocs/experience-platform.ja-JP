@@ -13,7 +13,7 @@ ht-degree: 21%
 
 [!UICONTROL &#x200B; プレーヤー状態データレポート &#x200B;] は、メディアプレーヤー内の様々な状態とその発生について説明する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 [!UICONTROL &#x200B; プレーヤー状態データレポート &#x200B;] データタイプを使用すると、フルスクリーン、ミュート、クローズドキャプション、ピクチャーインピクチャー、インフォーカス状態など、様々なプレーヤー状態をキャプチャできます。 各状態について、状態が設定されているかどうか、発生回数、メディアの再生中にアクティブのままである合計時間が記録されます。
 
-![ プレーヤーの状態データレポートのデータタイプを示す図。](../images/data-types/player-state-data-information.png)
+![&#x200B; プレーヤーの状態データレポートのデータタイプを示す図。](../images/data-types/player-state-data-information.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-------------------|----------------|-----------|----------------------------------------------|
@@ -24,4 +24,4 @@ ht-degree: 21%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) を参照してください。

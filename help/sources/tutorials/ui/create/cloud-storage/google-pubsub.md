@@ -22,14 +22,14 @@ ht-degree: 24%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 既に有効な [!DNL PubSub] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-[!DNL PubSub] アカウントをExperience Platformに接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
+[!DNL PubSub] アカウントをExperience Platformに接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 &#x200B;](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
 
 
 >[!BEGINTABS]
@@ -67,7 +67,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!UICONTROL クラウドストレージ]カテゴリで、**[!UICONTROL Google PubSub]** を選択し、次に&#x200B;**[!UICONTROL データを追加]**&#x200B;を選択します。
 
-![Experience Platform UI のソースカタログ ](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience Platform UI のソースカタログ &#x200B;](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 **[!UICONTROL Google PubSub に接続]**&#x200B;ページが表示されます。このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -75,7 +75,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL PubSub] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ ソースワークフローでの既存のアカウントの選択。](../../../../images/tutorials/create/google-pubsub/existing.png)
+![&#x200B; ソースワークフローでの既存のアカウントの選択。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### 新規アカウント
 
@@ -86,7 +86,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL PubSub] アカウントの名前と説明（オプション）を入力します。
 
-![ ソースワークフローのGoogle PubSub ソースの新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-pubsub/new.png)
+![&#x200B; ソースワークフローのGoogle PubSub ソースの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/google-pubsub/new.png)
 
 [!DNL PubSub] ソースでは、認証時に許可するアクセスの種類を指定できます。 アカウントを設定して、プロジェクトベースの認証か、トピックおよび購読ベースの認証を持つことができます。 プロジェクトベースの認証では、アカウントのルートレベルのプロジェクトへのアクセス権を付与でき、トピックおよび購読ベースの認証では、特定の [!DNL PubSub] トピックおよび購読へのアクセスを制限できます。
 
@@ -96,19 +96,19 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ルート [!DNL PubSub] プロジェクトフォルダーへのアクセス権を持つアカウントを作成するには： 認証の種類として **[!UICONTROL Google PubSub 認証資格情報]** を選択し、プロジェクト ID と資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ ルートアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-pubsub/root.png)
+![&#x200B; ルートアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/google-pubsub/root.png)
 
 >[!TAB  トピックおよび購読ベースの認証 ]
 
 特定の [!DNL PubSub] トピックおよびサブスクリプションに対してのみアクセスが制限されたアカウントを作成するには、**[!UICONTROL Google PubSub スコープ認証資格情報を選択してから]** 資格情報、トピック名、サブスクリプション名を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ スコープアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/scoped.png)
+![&#x200B; スコープアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント ](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
+>[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント &#x200B;](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
 
 ## データの選択
 
@@ -120,7 +120,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 プロジェクトベースのアクセスで認証した場合、[!UICONTROL &#x200B; データを選択 &#x200B;] インターフェイスには、トピックが添付されたプロジェクト内のすべての購読が表示されます。
 
-![ プロジェクトベースの認証を使用したソースワークフローのデータ選択ステップ ](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+![&#x200B; プロジェクトベースの認証を使用したソースワークフローのデータ選択ステップ &#x200B;](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
 >[!TAB  トピックおよび購読ベースの認証 ]
 
@@ -130,10 +130,10 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * 購読名のみを指定した場合、インターフェイスには、指定された購読名に対応するすべてのトピックと購読のペアが表示されます。
 * トピック名と購読名の両方が指定されている場合、インターフェイスには、指定された値の両方に対応するトピックと購読のペアが表示されます。
 
-![ トピックおよびサブスクリプションベースの認証を含むソースワークフローのデータ選択ステップ ](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+![&#x200B; トピックおよびサブスクリプションベースの認証を含むソースワークフローのデータ選択ステップ &#x200B;](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL PubSub] アカウントとExperience Platformの間に接続を作成しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにストリーミングデータを取り込む ](../../dataflow/streaming/cloud-storage-streaming.md) ことができます。
+このチュートリアルでは、[!DNL PubSub] アカウントとExperience Platformの間に接続を作成しました。 次のチュートリアルに進み、[&#x200B; データフローを設定して、クラウドストレージからExperience Platformにストリーミングデータを取り込む &#x200B;](../../dataflow/streaming/cloud-storage-streaming.md) ことができます。

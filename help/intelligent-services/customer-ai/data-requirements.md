@@ -213,7 +213,7 @@ Experience Platform UI にフィールドグループを表示するには、左
 
 出力データセットは、Experience Platform **データセット** ワークスペースで確認できます。 すべての顧客 AI 出力データセットは、「**顧客 AI スコア - NAME_OF_APP（アプリ名）**」という名前で始まります。同様に、すべての顧客 AI 出力スキーマは、「**顧客 AI スキーマ - Name_of_app（アプリ名）**」という名前で始まります。
 
-![ 顧客 AI の出力データセットの命名規則。](./images/user-guide/cai-schema-name-of-app.png)
+![&#x200B; 顧客 AI の出力データセットの命名規則。](./images/user-guide/cai-schema-name-of-app.png)
 
 次の表に、顧客 AI の出力に含まれる様々な属性を示します。
 

@@ -42,7 +42,7 @@ Adobe Experience Platform の新機能：
 
 * 現在、既知の問題はありません。
 
-[!DNL Intelligent Services] とその機能について詳しくは、[ インテリジェントサービスの概要 ](../../intelligent-services/home.md) を参照してください。
+[!DNL Intelligent Services] とその機能について詳しくは、[&#x200B; インテリジェントサービスの概要 &#x200B;](../../intelligent-services/home.md) を参照してください。
 
 ## [!DNL Experience Data Model]（XDM）システム {#xdm}
 
@@ -118,7 +118,7 @@ Real-Time CDPでは、50 を超える拡張機能へのデータのアクティ�
 
 * なし
 
-[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 ](../../privacy-service/home.md) を読んで開始してください。
+[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 &#x200B;](../../privacy-service/home.md) を読んで開始してください。
 
 ## ソース {#sources}
 

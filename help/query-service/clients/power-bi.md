@@ -35,7 +35,7 @@ ht-degree: 89%
 
 >[!IMPORTANT]
 >
->Power BIまたは Tableau のユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
+>Power BIまたは Tableau のユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 &#x200B;](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
 
 ![「資格情報」タブと期限切れになる資格情報がハイライト表示されている Experience Platform クエリワークスペース](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -89,7 +89,7 @@ ht-degree: 89%
 
 **[!DNL DirectQuery]** [!DNL Data Connectivity mode] では、データを [!DNL Power BI] Desktop に読み込んだりコピーしたりせずにデータソースに対して直接クエリを実行します。 この接続モードを使用すると、UI を通じてすべてのビジュアライゼーションを現在のデータで更新できます。 ただし、ビジュアライゼーションの生成または更新に要する時間は、基になるデータソースのパフォーマンスによって異なります。
 
-[ [!DNL DirectQuery] の使用](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-use-directquery)とその[接続オプション、ユースケースおよび制限事項](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about)に関する包括的な議論について詳しくは、[!DNL PowerBI] の公式ドキュメントを参照してください。
+[&#x200B; [!DNL DirectQuery] の使用](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-use-directquery)とその[接続オプション、ユースケースおよび制限事項](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about)に関する包括的な議論について詳しくは、[!DNL PowerBI] の公式ドキュメントを参照してください。
 
 この [!DNL Data Connectivity mode] を使用するには、「**[!DNL DirectQuery]**」切り替えスイッチに続いて「**[!DNL Advanced options]**」を選択して、「**[!DNL SQL statement]**」セクションにカスタム SQL クエリを入力します。 「**[!DNL Include relationship columns]**」が選択されていることを確認します。 クエリが完成したら、「**[!DNL OK]**」を選択して続行します。
 

@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # アクションタイプ
 
-[Adobe Experience Platform Web SDK タグ拡張機能 ](web-sdk-extension-configuration.md) を設定したら、アクションタイプを設定する必要があります。
+[Adobe Experience Platform Web SDK タグ拡張機能 &#x200B;](web-sdk-extension-configuration.md) を設定したら、アクションタイプを設定する必要があります。
 
-ここでは、[Adobe Experience Platform Web SDK タグ拡張機能 ](web-sdk-extension-configuration.md) でサポートされているアクションタイプについて説明します。
+ここでは、[Adobe Experience Platform Web SDK タグ拡張機能 &#x200B;](web-sdk-extension-configuration.md) でサポートされているアクションタイプについて説明します。
 
 ## 提案の適用 {#apply-propositions}
 
@@ -26,13 +26,13 @@ ht-degree: 1%
 このアクションタイプは、次のような様々なユースケースに使用できます。
 
 1. **mbox HTML オファーをレンダリング**。 **[!UICONTROL イベントを送信]** アクションから範囲またはサーフェスを介して明示的にリクエストされた提案は、自動的にはレンダリングされません。 「**[!UICONTROL 提案を適用]**」アクションタイプを使用すると、提案メタデータを指定してレンダリングする場所を Web SDKに指示できます。
-2. **単一ページアプリケーションでビューのオファーをレンダリング** ビューの変更イベントをレンダリングする際、分析データの準備がまだ整っていない場合は、**[!UICONTROL 提案を適用]** アクションを使用して、ページの上部にビューの提案をレンダリングできます。 詳しくは [ ページイベントの上部と下部（2 番目のページビュー – オプション 2） ](../../../../web-sdk/use-cases/top-bottom-page-events.md) を参照してください。 これを使用するには、フォームに **[!UICONTROL ビュー名]** を入力します。
+2. **単一ページアプリケーションでビューのオファーをレンダリング** ビューの変更イベントをレンダリングする際、分析データの準備がまだ整っていない場合は、**[!UICONTROL 提案を適用]** アクションを使用して、ページの上部にビューの提案をレンダリングできます。 詳しくは [&#x200B; ページイベントの上部と下部（2 番目のページビュー – オプション 2） &#x200B;](../../../../web-sdk/use-cases/top-bottom-page-events.md) を参照してください。 これを使用するには、フォームに **[!UICONTROL ビュー名]** を入力します。
 3. **提案を再レンダリング**。 サイトで React などのフレームワークを使用してコンテンツを再レンダリングする場合、パーソナライゼーションの再適用が必要になる場合があります。 そのような場合は、「**[!UICONTROL 提案を適用]**」アクションタイプを使用してこれを行うことができます。
 
 このアクションタイプでは、レンダリングされた提案の表示イベントは送信されません。 レンダリングされた提案を追跡し、後続の **[!UICONTROL イベントを送信]** 呼び出しに含められるようにします。
 
 
-![ 「提案を適用」アクションタイプを示すExperience Platform タグ UI。](assets/apply-propositions.png)
+![&#x200B; 「提案を適用」アクションタイプを示すExperience Platform タグ UI。](assets/apply-propositions.png)
 
 このアクションタイプでは、次のフィールドがサポートされます。
 
@@ -49,7 +49,7 @@ Edge Networkからの応答に基づいて様々なアクションを実行す�
 
 このアクションタイプを使用すると、ハイブリッドパーソナライゼーションのユースケースでクライアントの読み込み時間が短縮される可能性があります。
 
-![ 「応答を適用」アクションタイプを示すExperience Platform ユーザーインターフェイスの画像 ](assets/apply-response.png)
+![&#x200B; 「応答を適用」アクションタイプを示すExperience Platform ユーザーインターフェイスの画像 &#x200B;](assets/apply-response.png)
 
 このアクションタイプは、次の設定オプションをサポートしています。
 
@@ -62,7 +62,7 @@ Edge Networkからの応答に基づいて様々なアクションを実行す�
 
 このアクションタイプは、ルールセットの評価を手動でトリガーします。 ルールセットはAdobe Journey Optimizerから返され、ブラウザー内メッセージなどの機能をサポートします。
 
-![ 「ルールセットを評価」応答アクションタイプを示すExperience Platform ユーザーインターフェイスの画像。](assets/evaluate-rulesets.png)
+![&#x200B; 「ルールセットを評価」応答アクションタイプを示すExperience Platform ユーザーインターフェイスの画像。](assets/evaluate-rulesets.png)
 
 このアクションタイプは、次のオプションをサポートしています。
 
@@ -77,7 +77,7 @@ Edge Networkからの応答に基づいて様々なアクションを実行す�
 
 ## ID でリダイレクト {#redirect-with-identity}
 
-このアクションタイプを使用して、現在のページの ID を他のドメインに共有します。 このアクションは、**[!UICONTROL クリック]** イベントタイプおよび値比較条件で使用するように設計されています。 このアクションタイプの使用方法について詳しくは、[Web SDK拡張機能を使用した URL への ID の追加 ](../../../../web-sdk/commands/appendidentitytourl.md#extension) を参照してください。
+このアクションタイプを使用して、現在のページの ID を他のドメインに共有します。 このアクションは、**[!UICONTROL クリック]** イベントタイプおよび値比較条件で使用するように設計されています。 このアクションタイプの使用方法について詳しくは、[Web SDK拡張機能を使用した URL への ID の追加 &#x200B;](../../../../web-sdk/commands/appendidentitytourl.md#extension) を参照してください。
 
 ## イベントを送信 {#send-event}
 
@@ -89,7 +89,7 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 
 **[!UICONTROL インスタンス]** セレクターを使用して、設定する web SDK インスタンスを選択します。 インスタンスが 1 つしかない場合は、事前に選択されています。
 
-![ 「イベントを送信」アクションタイプのインスタンス設定を示すExperience Platform タグ UI 画像。](assets/instance-settings.png)
+![&#x200B; 「イベントを送信」アクションタイプのインスタンス設定を示すExperience Platform タグ UI 画像。](assets/instance-settings.png)
 
 * **[!UICONTROL インスタンス]**：設定する Web SDK インスタンスを選択します。 インスタンスが 1 つしかない場合は、事前に選択されます。
 * **[!UICONTROL ガイド付きイベントを使用]**：特定のユースケースを有効にするために、特定のフィールドを自動的に入力または非表示にするには、このオプションを有効にします。 このオプションを有効にすると、次のトリガーの表示が設定されます。
@@ -103,12 +103,12 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 
   >[!NOTE]
   >
-  >ガイド付きイベントは、[ ページイベントの上部と下部 ](../../../../web-sdk/use-cases/top-bottom-page-events.md) に関連しています。
+  >ガイド付きイベントは、[&#x200B; ページイベントの上部と下部 &#x200B;](../../../../web-sdk/use-cases/top-bottom-page-events.md) に関連しています。
 
 
 ### データ {#data}
 
-![ 「イベントを送信」アクションタイプのデータ要素設定を示すExperience Platform タグ UI 画像。](assets/data.png)
+![&#x200B; 「イベントを送信」アクションタイプのデータ要素設定を示すExperience Platform タグ UI 画像。](assets/data.png)
 
 * **[!UICONTROL タイプ]**：このフィールドでは、XDM スキーマに記録されるイベントタイプを指定できます。 詳細は、[`type`](/help/web-sdk/commands/sendevent/type.md) コマンドの `sendEvent` を参照してください。
 * **[!UICONTROL XDM]**:
@@ -119,11 +119,11 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 
 ### パーソナライズ機能 {#personalization}
 
-![ 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](assets/personalization-settings.png)
+![&#x200B; 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](assets/personalization-settings.png)
 
 * **[!UICONTROL 範囲]**：パーソナライズ機能から明示的にリクエストする範囲（Adobe Target [!DNL mboxes]）を選択します。 範囲は、手動で入力することも、データ要素を指定して入力することもできます。
-* **[!UICONTROL サーフェス]**：ページ上でパーソナライゼーションに使用できる web サーフェスを設定します。 詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) を参照してください。
-* **ビジュアルパーソナライゼーション決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「**[!UICONTROL ビジュアルパーソナライゼーション決定のレンダリング]** チェックボックスをオンにします。 必要に応じて、決定範囲やサーフェスを指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[ パーソナライゼーションドキュメント ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
+* **[!UICONTROL サーフェス]**：ページ上でパーソナライゼーションに使用できる web サーフェスを設定します。 詳しくは、[Adobe Journey Optimizer ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) を参照してください。
+* **ビジュアルパーソナライゼーション決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「**[!UICONTROL ビジュアルパーソナライゼーション決定のレンダリング]** チェックボックスをオンにします。 必要に応じて、決定範囲やサーフェスを指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[&#x200B; パーソナライゼーションドキュメント &#x200B;](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
 * **[!UICONTROL デフォルトのパーソナライゼーションをリクエスト]**：このセクションを使用して、ページ全体の範囲（グローバル mbox）とデフォルトのサーフェス（現在の URL に基づく web サーフェス）がリクエストされるかどうかを制御します。 デフォルトでは、これはページ読み込みの最初の `sendEvent` 呼び出し時に自動的に要求されます。 次のオプションから選択できます。
    * **[!UICONTROL 自動]**：これはデフォルトの動作です。 まだリクエストされていない場合にのみ、デフォルトのパーソナライゼーションをリクエストします。 これは、Web SDK コマンドで設定され `requestDefaultPersonalization` いない場合に該当します。
    * **[!UICONTROL 有効]**：ページ範囲とデフォルトサーフェスを明示的にリクエストします。 これにより、SPA ビューのキャッシュが更新されます。 これは、`requestDefaultPersonalization` `true` 設定に対応します。
@@ -134,7 +134,7 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 
 Web SDK カスタムビルドコンポーネントの **[!UICONTROL Advertising]** コンポーネントを選択する場合、`sendEvent` のアクションのルール設定には、アトリビューション測定への広告データの使用方法を定義する [!UICONTROL 3&rbrace;Advertising&rbrace; セクションが含まれます。 &#x200B;]この設定は、ルールに複数のアクションのシーケンスが含まれる場合に役立ちます。
 
-![ 「イベントを送信」アクションタイプのAdvertising設定を示すExperience Platform タグ UI 画像。](assets/send-event-advertising.png)
+![&#x200B; 「イベントを送信」アクションタイプのAdvertising設定を示すExperience Platform タグ UI 画像。](assets/send-event-advertising.png)
 
 **[!UICONTROL デフォルトのAdvertising データをリクエスト]** セクションには、次のオプションが用意されています。
 
@@ -149,13 +149,13 @@ Web SDK カスタムビルドコンポーネントの **[!UICONTROL Advertising]
 
 データストリームの上書きを使用すると、Web SDK を介して Edge Network に渡されるデータストリームの追加設定を定義できます。
 
-これにより、新しいデータストリームを作成したり、既存のトリガーを変更したりすることなく、デフォルトとは異なるデータストリームの動作を設定できます。 詳しくは、[ データストリームの上書きの設定 ](web-sdk-extension-configuration.md#datastream-overrides) に関するドキュメントを参照してください。
+これにより、新しいデータストリームを作成したり、既存のトリガーを変更したりすることなく、デフォルトとは異なるデータストリームの動作を設定できます。 詳しくは、[&#x200B; データストリームの上書きの設定 &#x200B;](web-sdk-extension-configuration.md#datastream-overrides) に関するドキュメントを参照してください。
 
 ## メディアイベントを送信 {#send-media-event}
 
 メディアイベントをAdobe Experience PlatformまたはAdobe Analytics（あるいはその両方）に送信します。 このアクションは、web サイト上のメディアイベントを追跡する場合に役立ちます。 インスタンスを選択します（複数のインスタンスがある場合）。 このアクションには、トラッキングされるメディアセッションの一意の ID を表す `playerId` が必要です。 また、メディアセッションを開始する際には、**[!UICONTROL エクスペリエンスの品質]** と `playhead` データ要素も必要です。
 
-![ メディアイベント送信画面を示すExperience Platform UI 画像。](assets/send-media-event.png)
+![&#x200B; メディアイベント送信画面を示すExperience Platform UI 画像。](assets/send-media-event.png)
 
 **[!UICONTROL メディアイベントを送信]** アクションタイプでは、次のプロパティをサポートしています。
 
@@ -174,7 +174,7 @@ Web SDK カスタムビルドコンポーネントの **[!UICONTROL Advertising]
 
 ## 同意を設定 {#set-consent}
 
-ユーザーから同意を得た後、「同意を設定」アクションタイプを使用して、この同意をAdobe Experience Platform Web SDKに伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。[ 顧客の同意環境設定のサポート ](../../../../web-sdk/commands/setconsent.md) を参照してください。 Adobe バージョン 2.0 を使用する場合、データ要素の値のみがサポートされます。 同意オブジェクトに解決されるデータ要素を作成します。
+ユーザーから同意を得た後、「同意を設定」アクションタイプを使用して、この同意をAdobe Experience Platform Web SDKに伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。[&#x200B; 顧客の同意環境設定のサポート &#x200B;](../../../../web-sdk/commands/setconsent.md) を参照してください。 Adobe バージョン 2.0 を使用する場合、データ要素の値のみがサポートされます。 同意オブジェクトに解決されるデータ要素を作成します。
 
 このアクションでは、ID マップを含めて同意を得た後で ID を同期できるようにするオプションのフィールドも提供されます。 同期は、同意が「保留中」または「アウト」と設定されている場合に役立ちます。これは、同意呼び出しが最初に実行される可能性が高いからです。
 
@@ -182,7 +182,7 @@ Web SDK カスタムビルドコンポーネントの **[!UICONTROL Advertising]
 
 イベントの結果として XDM オブジェクトを変更するには、このアクションを使用します。 このアクションは、イベント XDM オブジェクトを記録するために、後で **[!UICONTROL イベントを送信]** アクションから参照できるオブジェクトを作成することを目的としています。
 
-このアクションタイプを使用するには、[variable](data-element-types.md#variable) データ要素を定義する必要があります。 変更する変数データ要素を選択すると、[XDM オブジェクト ](data-element-types.md#xdm-object) データ要素のエディターと同様のエディターが表示されます。
+このアクションタイプを使用するには、[variable](data-element-types.md#variable) データ要素を定義する必要があります。 変更する変数データ要素を選択すると、[XDM オブジェクト &#x200B;](data-element-types.md#xdm-object) データ要素のエディターと同様のエディターが表示されます。
 
 ![](assets/update-variable.png)
 
@@ -194,4 +194,4 @@ Web SDK カスタムビルドコンポーネントの **[!UICONTROL Advertising]
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、アクションの設定方法に関する理解を深めることができました。 次に、[ データ要素タイプの設定 ](data-element-types.md) 方法について説明します。
+この記事を読むことで、アクションの設定方法に関する理解を深めることができました。 次に、[&#x200B; データ要素タイプの設定 &#x200B;](data-element-types.md) 方法について説明します。

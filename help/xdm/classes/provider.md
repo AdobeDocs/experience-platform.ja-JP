@@ -13,7 +13,7 @@ ht-degree: 4%
 
 エクスペリエンスデータモデル（XDM）では、[!UICONTROL &#x200B; プロバイダー &#x200B;] クラスは、プロバイダービジネスエンティティ（ヘルスケアプロバイダー、保険会社など）を定義するプロパティの最小セットを取得します。
 
-![ クラス構造 ](../images/classes/provider.png)
+![&#x200B; クラス構造 &#x200B;](../images/classes/provider.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-このクラスを [[!UICONTROL Healthcare Provider] フィールドグループ ](../field-groups/provider/healthcare-provider.md) で拡張すると、ヘルスケア提供組織に関する詳細を記述できます。
+このクラスを [[!UICONTROL Healthcare Provider] フィールドグループ &#x200B;](../field-groups/provider/healthcare-provider.md) で拡張すると、ヘルスケア提供組織に関する詳細を記述できます。

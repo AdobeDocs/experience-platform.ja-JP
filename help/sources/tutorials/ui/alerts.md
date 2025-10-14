@@ -23,8 +23,8 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ 可観測性 ](../../../observability/home.md):[!DNL Observability Insights] を使用すると、統計指標とイベント通知を使用して、Experience Platform アクティビティを監視できます。
-   * [ アラート ](../../../observability/alerts/overview.md):Experience Platform操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Experience Platformはその条件を登録している組織内のユーザーにアラートメッセージを配信できます。
+* [&#x200B; 可観測性 &#x200B;](../../../observability/home.md):[!DNL Observability Insights] を使用すると、統計指標とイベント通知を使用して、Experience Platform アクティビティを監視できます。
+   * [&#x200B; アラート &#x200B;](../../../observability/alerts/overview.md):Experience Platform操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Experience Platformはその条件を登録している組織内のユーザーにアラートメッセージを配信できます。
 
 ## UI でのアラートの登録 {#subscribe-sources-alerts}
 
@@ -78,7 +78,7 @@ UI でのソースデータフローの作成に関する詳細な手順につ�
 
 アラートは、Experience Platform UI の上部ヘッダーにある通知アイコンによって UI に表示されます。 通知アイコンを選択して、データフローに関する特定のアラートメッセージを表示します。
 
-![ 通知 ](../../images/tutorials/alerts/notification.png)
+![&#x200B; 通知 &#x200B;](../../images/tutorials/alerts/notification.png)
 
 通知パネルが表示され、作成したデータフローのステータス更新のリストが表示されます。
 
@@ -100,13 +100,13 @@ UI でのソースデータフローの作成に関する詳細な手順につ�
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
-データフローエラーの処理について詳しくは、[UI でのソースデータフローの監視 ](../../../dataflows/ui/monitor-sources.md) を参照してください。
+データフローエラーの処理について詳しくは、[UI でのソースデータフローの監視 &#x200B;](../../../dataflows/ui/monitor-sources.md) を参照してください。
 
 ### 電子メール
 
 データフローに関するアラートもメールで配信されます。 メール本文でデータフロー名を選択すると、データフローの詳細が表示されます。
 
-![ 電子メール ](../../images/tutorials/alerts/email.png)
+![&#x200B; 電子メール &#x200B;](../../images/tutorials/alerts/email.png)
 
 UI アラートと同様に、[!UICONTROL &#x200B; データフロー実行の概要 &#x200B;] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
 
@@ -120,8 +120,8 @@ UI アラートと同様に、[!UICONTROL &#x200B; データフロー実行の�
 
 ポップアップウィンドウが開き、ソースアラートのリストが表示されます。 登録するアラートを選択するか、登録解除するアラートの選択を解除します。 完了したら「**[!UICONTROL 保存]**」を選択します。
 
-![ 保存 ](../../images/tutorials/alerts/save.png)
+![&#x200B; 保存 &#x200B;](../../images/tutorials/alerts/save.png)
 
 ## 次の手順
 
-このドキュメントでは、ソースデータフローのコンテキスト内アラートを購読する方法を順を追って説明しました。 詳しくは、[ アラート UI ガイド ](../../../observability/alerts/ui.md) を参照してください。
+このドキュメントでは、ソースデータフローのコンテキスト内アラートを購読する方法を順を追って説明しました。 詳しくは、[&#x200B; アラート UI ガイド &#x200B;](../../../observability/alerts/ui.md) を参照してください。

@@ -38,11 +38,11 @@ Adobe Experience Platform ダッシュボードのカスタムウィジェット
 
 組織でプロファイル属性を選択していない場合は、まず画面の中央にある **[!UICONTROL 設定]** を選択します。
 
-![ 「設定」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/configure-schema.png)
+![&#x200B; 「設定」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/configure-schema.png)
 
 1 つ以上のカスタム属性を作成したら、「**[!UICONTROL スキーマを編集]**」を選択して、選択した属性を表示し、さらに追加します。
 
-![ 「スキーマを編集」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/edit-schema.png)
+![&#x200B; 「スキーマを編集」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/edit-schema.png)
 
 ## 属性の選択
 
@@ -57,7 +57,7 @@ Adobe Experience Platform ダッシュボードのカスタムウィジェット
 >[!WARNING]
 >新しく選択した属性は、次回の日別スナップショット（データが更新されるタイミング）後に使用可能になります。
 
-![ 属性と「保存」がハイライト表示されたスキーマ属性を選択するダイアログ ](../images/customization/select-attribute.png)
+![&#x200B; 属性と「保存」がハイライト表示されたスキーマ属性を選択するダイアログ &#x200B;](../images/customization/select-attribute.png)
 
 ## 次の手順
 

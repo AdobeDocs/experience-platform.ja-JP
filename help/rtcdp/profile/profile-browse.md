@@ -18,7 +18,7 @@ ht-degree: 11%
 
 Adobe Experience Platformのユーザーインターフェイス内では、これらの読み取り専用プロファイルを表示し、環境設定、過去のイベント、インタラクション、個人が属するオーディエンスなど、個々の顧客に関する重要な情報を確認できます。
 
-Adobe Real-Time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience Platform UI のプロファイル表示機能を利用できます。 Experience Platform ユーザーインターフェイス内で顧客プロファイルを表示する詳細なガイドについては、[ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) を参照してください。
+Adobe Real-Time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience Platform UI のプロファイル表示機能を利用できます。 Experience Platform ユーザーインターフェイス内で顧客プロファイルを表示する詳細なガイドについては、[&#x200B; リアルタイム顧客プロファイルユーザーガイド &#x200B;](../../profile/ui/user-guide.md) を参照してください。
 
 ## Real-Time CDP B2B Edition のプロファイルの機能強化
 
@@ -26,7 +26,7 @@ Adobe Experience Platform、Real-Time CDPでサポートされているプロフ
 
 Real-Time CDP、B2B editionを使用すると、個々の顧客に関連付けられた、全社のソースから [!UICONTROL Accounts]、[!UICONTROL Opportunity]、[!UICONTROL Source レコード &#x200B;] を参照することもできます。
 
-これらの機能強化を確認するには、まず [ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) で説明されている手順に従って、結合ポリシーまたは ID 名前空間でプロファイルを参照します。
+これらの機能強化を確認するには、まず [&#x200B; リアルタイム顧客プロファイルユーザーガイド &#x200B;](../../profile/ui/user-guide.md) で説明されている手順に従って、結合ポリシーまたは ID 名前空間でプロファイルを参照します。
 
 ![](images/b2b-browse-profile.png)
 
@@ -34,13 +34,13 @@ Real-Time CDP、B2B editionを使用すると、個々の顧客に関連付け�
 
 ![](images/b2b-profile-detail.png)
 
-Experience Platform UI に表示されるプロファイルの詳細について詳しくは、[ プロファイルダッシュボードのドキュメントの詳細 ](../../dashboards/guides/profiles.md#browse-profiles) を参照してください。
+Experience Platform UI に表示されるプロファイルの詳細について詳しくは、[&#x200B; プロファイルダッシュボードのドキュメントの詳細 &#x200B;](../../dashboards/guides/profiles.md#browse-profiles) を参照してください。
 
 ### 「アカウント」タブ
 
 **[!UICONTROL アカウント]** を選択して、プロファイルに関連するアカウントのリストを表示します。 このリストには、アカウントの名前、Web サイト、業界など、アカウントプロファイルの基本情報や、アカウントプロファイルへのリンクが含まれます。
 
-アカウントプロファイルの表示と調査について詳しくは、まず [ アカウントプロファイルの概要 ](../accounts/account-profile-overview.md) をお読みください。
+アカウントプロファイルの表示と調査について詳しくは、まず [&#x200B; アカウントプロファイルの概要 &#x200B;](../accounts/account-profile-overview.md) をお読みください。
 
 ![](images/b2b-profile-accounts.png)
 

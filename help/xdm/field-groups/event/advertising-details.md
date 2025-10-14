@@ -11,15 +11,15 @@ ht-degree: 29%
 
 # [!UICONTROL Advertisingの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL Advertisingの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `advertising` オブジェクトを提供します。これは、広告インプレッション数、クリックスルー数およびアトリビューションに関連する情報をキャプチャします。
+[!UICONTROL Advertisingの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `advertising` オブジェクトを提供します。これは、広告インプレッション数、クリックスルー数およびアトリビューションに関連する情報をキャプチャします。
 
-![ フィールドグループ構造 ](../../images/field-groups/advertising-details/structure.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../images/field-groups/advertising-details/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `adAssetReference` | オブジェクト | 広告に関するアセット情報をキャプチャします。 このオブジェクトの構造について詳しくは、次の [ サブセクション ](#adAssetReference) を参照してください。 |
-| `adAssetViewDetails` | オブジェクト | 広告再生のビューの詳細をキャプチャします。 このオブジェクトの構造について詳しくは、次の [ サブセクション ](#adAssetViewDetails) を参照してください。 |
-| `adViewability` | オブジェクト | エンドユーザーに表示されるインプレッション数（プレーヤーボリューム、ライブラリのバージョン、ウィンドウのステータス、広告ビューポートのサイズなど）をキャプチャします。 このオブジェクトの構造について詳しくは、次の [ サブセクション ](#adViewability) を参照してください。 |
+| `adAssetReference` | オブジェクト | 広告に関するアセット情報をキャプチャします。 このオブジェクトの構造について詳しくは、次の [&#x200B; サブセクション &#x200B;](#adAssetReference) を参照してください。 |
+| `adAssetViewDetails` | オブジェクト | 広告再生のビューの詳細をキャプチャします。 このオブジェクトの構造について詳しくは、次の [&#x200B; サブセクション &#x200B;](#adAssetViewDetails) を参照してください。 |
+| `adViewability` | オブジェクト | エンドユーザーに表示されるインプレッション数（プレーヤーボリューム、ライブラリのバージョン、ウィンドウのステータス、広告ビューポートのサイズなど）をキャプチャします。 このオブジェクトの構造について詳しくは、次の [&#x200B; サブセクション &#x200B;](#adViewability) を参照してください。 |
 | `clicks` | [[!UICONTROL 測定]](../../data-types/measure.md) | 広告でのクリックアクションの数。 |
 | `completes` | [[!UICONTROL 測定]](../../data-types/measure.md) | タイムドメディアアセットが最後まで視聴された回数。 このことは、エンドユーザーが先にスキップした可能性があるので、必ずしもビデオ全体を視聴したことを意味するものではありません。 |
 | `conversions` | [[!UICONTROL 測定]](../../data-types/measure.md) | パフォーマンス評価のために事前定義済みのアクション（またはアクション）でイベントがトリガーされた回数。 |
@@ -38,13 +38,13 @@ ht-degree: 29%
 
 `adAssetReference` オブジェクトは、広告に関するアセット情報をキャプチャします。
 
-![adAssetReference 構造 ](../../images/field-groups/advertising-details/adAssetReference.png)
+![adAssetReference 構造 &#x200B;](../../images/field-groups/advertising-details/adAssetReference.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `_dc.title` | 文字列 | 人間が読み取れる、わかりやすい広告アセットの名前。 |
 | `_xmpDM.duration` | 整数 | アセットの長さまたはデュレーション （秒）。 |
-| `_id` | 文字列 | [ 広告 ID 標準 ](https://datatracker.ietf.org/doc/html/rfc8107) に従った広告アセットの一意の ID。 |
+| `_id` | 文字列 | [&#x200B; 広告 ID 標準 &#x200B;](https://datatracker.ietf.org/doc/html/rfc8107) に従った広告アセットの一意の ID。 |
 | `advertiser` | 文字列 | 広告で商品が取り上げられる会社またはブランド。 |
 | `campaign` | 文字列 | 広告キャンペーンの ID。 |
 | `creativeID` | 文字列 | 広告クリエイティブの ID。 |
@@ -58,7 +58,7 @@ ht-degree: 29%
 
 `adAssetViewDetails` オブジェクトは、広告再生のためのビューの詳細をキャプチャします。
 
-![adAssetViewDetails 構造 ](../../images/field-groups/advertising-details/adAssetViewDetails.png)
+![adAssetViewDetails 構造 &#x200B;](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ ht-degree: 29%
 
 `adViewability` オブジェクトは、エンドユーザーに表示されるインプレッション数（プレーヤーボリューム、ライブラリのバージョン、ウィンドウのステータス、広告ビューポートのサイズなど）をキャプチャします。
 
-![adViewability 構造 ](../../images/field-groups/advertising-details/adViewability.png)
+![adViewability 構造 &#x200B;](../../images/field-groups/advertising-details/adViewability.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -100,4 +100,4 @@ ht-degree: 29%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json) を参照してください。

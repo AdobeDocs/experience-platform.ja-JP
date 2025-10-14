@@ -28,7 +28,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!NOTE]
 >
->Audience Manager ソースからExperience Platformに地域データを取り込むことはできません。 地域データを必要とする Analytics のユースケースがある場合は、[Analytics ソースコネクタ ](../adobe-applications/analytics.md) を使用してください。
+>Audience Manager ソースからExperience Platformに地域データを取り込むことはできません。 地域データを必要とする Analytics のユースケースがある場合は、[Analytics ソースコネクタ &#x200B;](../adobe-applications/analytics.md) を使用してください。
 
 [!UICONTROL &#x200B; 特性とセグメントを選択 &#x200B;] 手順が表示され、特性、セグメントおよびデータを調査して選択するためのインタラクティブインターフェイスが利用できます。
 
@@ -49,7 +49,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!WARNING]
 >
->サイズの大きいAudience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めてAudience Manager セグメントをExperience Platformに送信する際に、合計プロファイル数に直接影響します。 つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。続行する前に、[ ライセンス使用許可 ](../../../../../dashboards/guides/license-usage.md) を確認してください。
+>サイズの大きいAudience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めてAudience Manager セグメントをExperience Platformに送信する際に、合計プロファイル数に直接影響します。 つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。続行する前に、[&#x200B; ライセンス使用許可 &#x200B;](../../../../../dashboards/guides/license-usage.md) を確認してください。
 
 完了したら、「**[!UICONTROL 次へ]**」を選択します
 

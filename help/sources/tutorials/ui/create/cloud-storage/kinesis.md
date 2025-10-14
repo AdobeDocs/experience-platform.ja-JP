@@ -39,7 +39,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `Secret access key` | [!DNL Kinesis] アカウントの秘密アクセスキー。 |
 | `region` | AWS サーバーの地域。 |
 
-これらの値について詳しくは、[ この  [!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html) を参照してください。
+これらの値について詳しくは、[&#x200B; この  [!DNL Kinesis]  ドキュメント &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html) を参照してください。
 
 ## [!DNL Kinesis] アカウントの接続
 
@@ -69,4 +69,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Kinesis] アカウントに接続し [!DNL Experience Platform] す。 次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md) を行いましょう。
+このチュートリアルでは、[!DNL Kinesis] アカウントに接続し [!DNL Experience Platform] す。 次のチュートリアルに進み、[&#x200B; クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md) を行いましょう。

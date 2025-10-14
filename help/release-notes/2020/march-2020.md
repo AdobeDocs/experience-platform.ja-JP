@@ -63,7 +63,7 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 * なし
 
-データをExperience Platformに取り込む方法については、[ データ取得に関するドキュメント ](../../ingestion/home.md) を参照してください。
+データをExperience Platformに取り込む方法については、[&#x200B; データ取得に関するドキュメント &#x200B;](../../ingestion/home.md) を参照してください。
 
 
 ## 宛先 {#destinations}
@@ -97,7 +97,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 * なし
 
-[!DNL Identity Service] について詳しくは、「[ID サービスの概要 ](../../identity-service/home.md)」を参照してください。
+[!DNL Identity Service] について詳しくは、「[ID サービスの概要 &#x200B;](../../identity-service/home.md)」を参照してください。
 
 ## ソース {#sources}
 

@@ -18,4 +18,4 @@ Adobe Experience Platform へのデータストリーミングを開始するに
 
 ストリーミング接続を登録すると、データプロデューサーは一意の URL を使用してExperience Platformにデータをストリーミングできます。
 
-認証済みストリーミング接続を作成する方法については、[HTTP API ソース API ガイド ](../../sources/tutorials/api/create/streaming/http.md) を参照してください。
+認証済みストリーミング接続を作成する方法については、[HTTP API ソース API ガイド &#x200B;](../../sources/tutorials/api/create/streaming/http.md) を参照してください。

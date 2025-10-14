@@ -19,15 +19,15 @@ ht-degree: 4%
 
 * 新しいソースのドキュメントページを作成する際に従うことができるチュートリアル。
 * 新しいソースに入力するためのドキュメントテンプレート。
-* [ 技術ドキュメントの執筆に Markdown を使用する方法に関する手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
-* [Adobe Markdown フレーバーを理解するための手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions)。
+* [&#x200B; 技術ドキュメントの執筆に Markdown を使用する方法に関する手順 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
+* [Adobe Markdown フレーバーを理解するための手順 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions)。
 
 ## 前提条件
 
 新しいソースのドキュメント化を開始する前に、次の項目が必要です。
 
-* **有効な GitHub ユーザーアカウント**：既存の GitHub アカウントがない場合は、[GitHub サインアップ ページ ](https://github.com/) から作成する必要があります。
-* **GitHub デスクトップへのアクセス**：ローカル環境でソースドキュメントを作成するには、[GitHub デスクトップアプリ ](https://desktop.github.com/) を使用する必要があります。
+* **有効な GitHub ユーザーアカウント**：既存の GitHub アカウントがない場合は、[GitHub サインアップ ページ &#x200B;](https://github.com/) から作成する必要があります。
+* **GitHub デスクトップへのアクセス**：ローカル環境でソースドキュメントを作成するには、[GitHub デスクトップアプリ &#x200B;](https://desktop.github.com/) を使用する必要があります。
 * Adobeとの統合は、Experience Platformのステージング環境にソースをデプロイして、テスト段階にある必要があります。
 
 ## Experience Platformでソースのドキュメントを作成するための高度な手順
@@ -36,7 +36,7 @@ ht-degree: 4%
 
 ## ドキュメントテンプレート
 
-事前入力された [ ドキュメントテンプレート ](./template.md) を使用して、ソースのドキュメントの作成に役立てることができます。 さらに下では、テンプレートを編集してプルリクエストを開く方法を説明します。 新しいソース用に送信されたドキュメントは、Adobe ドキュメントチームによってレビューおよび公開されます。
+事前入力された [&#x200B; ドキュメントテンプレート &#x200B;](./template.md) を使用して、ソースのドキュメントの作成に役立てることができます。 さらに下では、テンプレートを編集してプルリクエストを開く方法を説明します。 新しいソース用に送信されたドキュメントは、Adobe ドキュメントチームによってレビューおよび公開されます。
 
 以下のドキュメントテンプレートもダウンロードできます。
 

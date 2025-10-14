@@ -30,7 +30,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先の使用状況指標 | ライセンス使用状況ダッシュボードに新しい計測指標が追加されました。 **[!UICONTROL Audience Activationのサイズ]** と **[!UICONTROL データ書き出しのサイズ]** の指標は、ライセンス使用権限に関して、Experience Platformから書き出したデータの量を追跡する便利な方法を提供します。 これらを始めとするライセンス使用状況指標の説明については、[ 利用可能な指標 ](../../dashboards/guides/license-usage.md#available-metrics) のドキュメントを参照してください。 |
+| 宛先の使用状況指標 | ライセンス使用状況ダッシュボードに新しい計測指標が追加されました。 **[!UICONTROL Audience Activationのサイズ]** と **[!UICONTROL データ書き出しのサイズ]** の指標は、ライセンス使用権限に関して、Experience Platformから書き出したデータの量を追跡する便利な方法を提供します。 これらを始めとするライセンス使用状況指標の説明については、[&#x200B; 利用可能な指標 &#x200B;](../../dashboards/guides/license-usage.md#available-metrics) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -46,9 +46,9 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | --- | --- | --- |
 | 拡張機能 | [!DNL Meta] Conversions API の機能強化 | [Meta Conversions API](/help/tags/extensions/server/meta/overview.md) 拡張機能は 3 つ強化されました。 <ul><li>[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) との統合：Conversions API とAdobeの統合の pixelID およびアクセストークンを共有できるようにすることで、シームレスなログインエクスペリエンスを作成します。</li><li>[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) との統合：目的のアクションを完了する可能性が高い人物に広告を配信し、アクションを配信された広告にリンクすることができます。</li><li>[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) との統合：LiveRamp の RampID を CIP フィールドに渡すことができるため、パートナーや Meta と直接 PII を共有する必要がなくなります。 </li></ul> |
 | 拡張機能 | [!DNL LinkedIn] Conversions API | [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) 拡張機能を使用すると、Experience Platform イベントデータを LinkedIn に転送することで、LinkedIn マーケティングキャンペーンの有効性を評価できます。 |
-| 秘密鍵 | [!DNL LinkedIn] OAuth2 シークレット | [[!DNL LinkedIn] OAuth 2 シークレット ](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) を使用すると、イベント転送で、サーバー間インタラクションを [!DNL LinkedIn] に送信できます。 |
-| イベント転送 | タグとイベント転送の更新 | Experience Platformの [ タグ ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) と [ イベント転送 ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja) のパフォーマンスを保持するために、成功と失敗の両方の最新の Development ビルドと Stage ビルドのみが保持されます。 使用されなくなったビルドはすべて削除されます。 さらに、スロットルとレート制限が実装され、少数の大量の API 使用によって他のユーザーの API パフォーマンスが低下することがなくなりました。 |
-| 拡張機能 | 要素、ルールおよび拡張機能 | [ 要素、ルール、拡張機能 ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=ja) がライブラリ出力で並べ替えられ、複数のビルドと同じライブラリのデプロイメント間の一貫性が確保されるようになりました。 |
+| 秘密鍵 | [!DNL LinkedIn] OAuth2 シークレット | [[!DNL LinkedIn] OAuth 2 シークレット &#x200B;](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) を使用すると、イベント転送で、サーバー間インタラクションを [!DNL LinkedIn] に送信できます。 |
+| イベント転送 | タグとイベント転送の更新 | Experience Platformの [&#x200B; タグ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) と [&#x200B; イベント転送 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja) のパフォーマンスを保持するために、成功と失敗の両方の最新の Development ビルドと Stage ビルドのみが保持されます。 使用されなくなったビルドはすべて削除されます。 さらに、スロットルとレート制限が実装され、少数の大量の API 使用によって他のユーザーの API パフォーマンスが低下することがなくなりました。 |
+| 拡張機能 | 要素、ルールおよび拡張機能 | [&#x200B; 要素、ルール、拡張機能 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=ja) がライブラリ出力で並べ替えられ、複数のビルドと同じライブラリのデプロイメント間の一貫性が確保されるようになりました。 |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
 
@@ -69,8 +69,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （Beta）計算フィールドでのハッシュ関数のサポート | 配列または配列から要素を書き出すための [ 特定の ](../../destinations/ui/export-arrays-maps-objects.md) 関数に加えて、追加の [ ハッシュ関数 ](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) を使用して、書き出されたファイルの属性をハッシュ化できるようになりました。 サポートされているハッシュ関数は、`sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32` です。 |
-| （限定的な GA）特定の宛先に対するアカウントオーディエンスのアクティブ化 | Real-Time CDP B2B のお客様は、特定の宛先に対して [ アカウントオーディエンス ](../../segmentation/types/account-audiences.md) をアクティブ化できるようになりました。 この機能について詳しくは、[ アカウントオーディエンスの有効化チュートリアル ](/help/destinations/ui/activate-account-audiences.md) を参照してください。 |
+| （Beta）計算フィールドでのハッシュ関数のサポート | 配列または配列から要素を書き出すための [&#x200B; 特定の &#x200B;](../../destinations/ui/export-arrays-maps-objects.md) 関数に加えて、追加の [&#x200B; ハッシュ関数 &#x200B;](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) を使用して、書き出されたファイルの属性をハッシュ化できるようになりました。 サポートされているハッシュ関数は、`sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32` です。 |
+| （限定的な GA）特定の宛先に対するアカウントオーディエンスのアクティブ化 | Real-Time CDP B2B のお客様は、特定の宛先に対して [&#x200B; アカウントオーディエンス &#x200B;](../../segmentation/types/account-audiences.md) をアクティブ化できるようになりました。 この機能について詳しくは、[&#x200B; アカウントオーディエンスの有効化チュートリアル &#x200B;](/help/destinations/ui/activate-account-audiences.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| サンドボックスツール | サンドボックスツール機能を使用すると、サンドボックス間の設定精度を向上させ、サンドボックス設定の書き出しと読み込みをサンドボックス間でシームレスに行うことができます。 サンドボックスツール機能を使用して、様々なオブジェクトを選択し、それらをパッケージに書き出すことができます。 詳しくは、[ サンドボックスツール UI ガイド ](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
+| サンドボックスツール | サンドボックスツール機能を使用すると、サンドボックス間の設定精度を向上させ、サンドボックス設定の書き出しと読み込みをサンドボックス間でシームレスに行うことができます。 サンドボックスツール機能を使用して、様々なオブジェクトを選択し、それらをパッケージに書き出すことができます。 詳しくは、[&#x200B; サンドボックスツール UI ガイド &#x200B;](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
 
 サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md) を参照してください。
 
@@ -98,7 +98,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| アカウントオーディエンス （限定 GA） | Real-Time Customer Data Platform B2B editionでは、アカウントセグメント化を使用して、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスを完全に簡単かつ高度なものにすることができます。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/types/account-audiences.md) を参照してください。 |
+| アカウントオーディエンス （限定 GA） | Real-Time Customer Data Platform B2B editionでは、アカウントセグメント化を使用して、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスを完全に簡単かつ高度なものにすることができます。 この機能について詳しくは、[&#x200B; アカウントオーディエンスの概要 &#x200B;](../../segmentation/types/account-audiences.md) を参照してください。 |
 
 セグメント化サービスの詳細については、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。
 
@@ -110,8 +110,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| データランディングゾーンの認証を更新しました | 資格情報を表示する際に、データランディングゾーンに指定された有効期限を表示できるようになりました。 アプリケーションで引き続き使用するには、有効期限より前にトークンを更新する必要があります。 指定された有効期限の前にトークンを手動で更新しない場合、次回資格情報を取得する際に自動的に更新され、新しいトークンが提供されます。 詳しくは、[ データランディングゾーンの使用 ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) に関するドキュメントを参照してください。 |
+| データランディングゾーンの認証を更新しました | 資格情報を表示する際に、データランディングゾーンに指定された有効期限を表示できるようになりました。 アプリケーションで引き続き使用するには、有効期限より前にトークンを更新する必要があります。 指定された有効期限の前にトークンを手動で更新しない場合、次回資格情報を取得する際に自動的に更新され、新しいトークンが提供されます。 詳しくは、[&#x200B; データランディングゾーンの使用 &#x200B;](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) に関するドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
-ソースについて詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[&#x200B; ソースの概要 &#x200B;](../../sources/home.md) を参照してください。

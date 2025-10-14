@@ -15,9 +15,9 @@ ht-degree: 3%
 
 プロファイルを強化する SQL にアクセスしてプロファイルインサイトを理解し、独自のインサイトを生成して、プロファイルを構成する顧客とその消費者エクスペリエンスをさらに詳しく調べます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
-Experience Platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL のドキュメントを表示 ](../view-sql.md) を参照してください。
+Experience Platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL のドキュメントを表示 &#x200B;](../view-sql.md) を参照してください。
 
-次のインサイトはすべて、[ プロファイルダッシュボード ](../guides/profiles.md) またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[&#x200B; プロファイルダッシュボード &#x200B;](../guides/profiles.md) またはカスタム [&#x200B; ユーザー定義ダッシュボード &#x200B;](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md) で [&#x200B; 新しいウィジェットの作成と編集 &#x200B;](../customize/overview.md) を使用する方法については、[&#x200B; カスタマイズの概要 &#x200B;](../standard-dashboards.md#create-widget) を参照してください。
 
 ## オーディエンスの重複 (結合ポリシー別) {#audience-overlap-by-merge-policy}
 
@@ -64,7 +64,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ 結合ポリシーウィジェットによるオーディエンスの重複 ](../guides/profiles.md#audience-overlap-by-merge-policy) ドキュメント）を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; 結合ポリシーウィジェットによるオーディエンスの重複 &#x200B;](../guides/profiles.md#audience-overlap-by-merge-policy) ドキュメント）を参照してください。
 
 ## オーディエンス重複レポート {#audience-overlap-report}
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ オーディエンスの重複レポートウィジェットのドキュメント ](../guides/profiles.md#audience-overlap-report) を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; オーディエンスの重複レポートウィジェットのドキュメント &#x200B;](../guides/profiles.md#audience-overlap-report) を参照してください。
 
 ## オーディエンス （数） {#audiences}
 
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-このinsightの外観と機能については、[Audiences ウィジェットのドキュメント ](../guides/profiles.md#audiences) を参照してください。
+このinsightの外観と機能については、[Audiences ウィジェットのドキュメント &#x200B;](../guides/profiles.md#audiences) を参照してください。
 
 ## 宛先ステータスにマッピングされたオーディエンス {#audiences-mapped-to-destination-status}
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ 宛先ステータスウィジェットにマッピングされたオーディエンス ](../guides/profiles.md#audiences-mapped-to-destination-status) ドキュメントを参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; 宛先ステータスウィジェットにマッピングされたオーディエンス &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) ドキュメントを参照してください。
 
 ## オーディエンスサイズ {#audiences-size}
 
@@ -224,7 +224,7 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ オーディエンスサイズウィジェットのドキュメント ](../guides/profiles.md#audiences-size) を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; オーディエンスサイズウィジェットのドキュメント &#x200B;](../guides/profiles.md#audiences-size) を参照してください。
 
 ## スコアの顧客 AI 分布 {#customer-ai-distribution-of-scores}
 
@@ -361,7 +361,7 @@ SELECT b.model_name,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ スコアの顧客 AI 分布ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-distribution-of-scores) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; スコアの顧客 AI 分布ウィジェットのドキュメント &#x200B;](../guides/profiles.md#customer-ai-distribution-of-scores) を参照してください。
 
 ## 顧客 AI スコアリングの概要 {#customer-ai-scoring-summary}
 
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ 顧客 AI スコア概要ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-scoring-summary) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; 顧客 AI スコア概要ウィジェットのドキュメント &#x200B;](../guides/profiles.md#customer-ai-scoring-summary) を参照してください。
 
 ## ID の重複 {#identity-overlap}
 
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ID の重複ウィジェットのドキュメント ](../guides/profiles.md#identity-overlap) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID の重複ウィジェットのドキュメント &#x200B;](../guides/profiles.md#identity-overlap) を参照してください。
 
 ## プロファイル数 {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-このinsightの外観と機能について詳しくは、[ プロファイル数ウィジェットガイド ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=ja#profile-count) を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; プロファイル数ウィジェットガイド &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=ja#profile-count) を参照してください。
 
-このinsightのアピアランスと機能について詳しくは、[ プロファイル数ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; プロファイル数ウィジェットのドキュメント &#x200B;](../guides/profiles.md#profile-count) を参照してください。
 
 ## プロファイル数の変更 {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変更ウィジェットのドキュメント ](../guides/profiles.md#profile-count-change) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; プロファイル数の変更ウィジェットのドキュメント &#x200B;](../guides/profiles.md#profile-count-change) を参照してください。
 
 ## プロファイル数の変化のトレンド {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-change-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; プロファイル数の変化のトレンドウィジェットのドキュメント &#x200B;](../guides/profiles.md#profile-count-change-trend) を参照してください。
 
 ## プロファイル数のトレンド {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ プロファイル数のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; プロファイル数のトレンドウィジェットのドキュメント &#x200B;](../guides/profiles.md#profile-count-trend) を参照してください。
 
 ## ID 別プロファイル {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ID 別プロファイル ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID 別プロファイル ウィジェットのドキュメント &#x200B;](../guides/profiles.md#profiles-by-identity) を参照してください。
 
 ## プロファイル数の変化のトレンド {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profiles-count-change-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; プロファイル数の変化のトレンドウィジェットのドキュメント &#x200B;](../guides/profiles.md#profiles-count-change-trend) を参照してください。
 
 ## プロファイル数の変化のトレンド (ID 別) {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別プロファイル数の変化のトレンド ](../guides/profiles.md#profiles-count-change-trend-by-identity) のドキュメントを参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別プロファイル数の変化のトレンド &#x200B;](../guides/profiles.md#profiles-count-change-trend-by-identity) のドキュメントを参照してください。
 
 ## 単一の ID プロファイル {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ 単一の ID プロファイルウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; 単一の ID プロファイルウィジェットのドキュメント &#x200B;](../guides/profiles.md#single-identity-profiles) を参照してください。
 
 ## 単一の ID プロファイル (ID 別) {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) のドキュメントを参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別の単一の ID プロファイル &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) のドキュメントを参照してください。
 
 ## セグメント化されていないプロファイル {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-このinsightのアピアランスと機能について詳しくは、[ セグメント化されていないプロファイルウィジェットのドキュメント ](../guides/profiles.md#unsegmented-profiles) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[&#x200B; セグメント化されていないプロファイルウィジェットのドキュメント &#x200B;](../guides/profiles.md#unsegmented-profiles) を参照してください。
 
 ## 次の手順
 
 このドキュメントでは、ダッシュボードインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。
 
-PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
+PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 &#x200B;](../view-sql.md) を参照してください。
 
-また、[ オーディエンス ](./audiences.md)、[ アカウントプロファイル ](./account-profiles.md) および [ 宛先 ](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。
+また、[&#x200B; オーディエンス &#x200B;](./audiences.md)、[&#x200B; アカウントプロファイル &#x200B;](./account-profiles.md) および [&#x200B; 宛先 &#x200B;](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

@@ -17,9 +17,9 @@ ht-degree: 59%
 
 ## はじめに
 
-Attribution AIを使用すると、スコアを Parquet ファイル形式でダウンロードできます。 このチュートリアルでは、[ はじめに ](./getting-started.md) ガイドのAttribution AIスコアのダウンロードの節を読み、完了している必要があります。
+Attribution AIを使用すると、スコアを Parquet ファイル形式でダウンロードできます。 このチュートリアルでは、[&#x200B; はじめに &#x200B;](./getting-started.md) ガイドのAttribution AIスコアのダウンロードの節を読み、完了している必要があります。
 
-さらに、Attribution AIのスコアにアクセスするには、実行ステータスが成功したサービスインスタンスが必要です。 新しいサービス インスタンスを作成するには、[Attribution AI ユーザーガイド ](./user-guide.md) を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+さらに、Attribution AIのスコアにアクセスするには、実行ステータスが成功したサービスインスタンスが必要です。 新しいサービス インスタンスを作成するには、[Attribution AI ユーザーガイド &#x200B;](./user-guide.md) を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 ## データセット ID の検索 {#dataset-id}
 
@@ -259,11 +259,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![端末](./images/download-scores/terminal-output.png)
 
-ダウンロードされたスコアは Parquet 形式になり、スコアを表示するには [!DNL Spark] シェルまたは Parquet リーダーが必要になります。 生のスコア表示の場合は、[Apache Parquet ツール ](https://parquet.apache.org/docs/) を使用できます。 Parquet ツールは、[!DNL Spark] でデータを分析できます。
+ダウンロードされたスコアは Parquet 形式になり、スコアを表示するには [!DNL Spark] シェルまたは Parquet リーダーが必要になります。 生のスコア表示の場合は、[Apache Parquet ツール &#x200B;](https://parquet.apache.org/docs/) を使用できます。 Parquet ツールは、[!DNL Spark] でデータを分析できます。
 
 ## 次の手順
 
-このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順について説明しました。 スコア出力について詳しくは、[ 属性 AI 入力および出力 ](./input-output.md) ドキュメントを参照してください。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順について説明しました。 スコア出力について詳しくは、[&#x200B; 属性 AI 入力および出力 &#x200B;](./input-output.md) ドキュメントを参照してください。
 
 ## Snowflakeを使用したスコアへのアクセス
 

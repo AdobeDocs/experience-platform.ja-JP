@@ -13,7 +13,7 @@ ht-degree: 73%
 
 # Adobe Experience Platform のアクセシビリティ
 
-アクセシビリティとは、視覚、聴覚、認知、運動など、様々な障害のあるユーザーが、可能な限り少ない労力でソフトウェア製品を使用できるようにするための一連の機能を指します。アドビは、アクセシビリティにおいて業界をリードする企業です。すべてのユーザーにとって利用しやすいリッチで魅力的なコンテンツを作成するよう開発者を促すことで、卓越した web エクスペリエンスの作成をサポートします。Adobeのアクセシビリティへの取り組みについて詳しくは、[Adobeのアクセシビリティ ](https://www.adobe.com/accessibility.html) を参照してください。
+アクセシビリティとは、視覚、聴覚、認知、運動など、様々な障害のあるユーザーが、可能な限り少ない労力でソフトウェア製品を使用できるようにするための一連の機能を指します。アドビは、アクセシビリティにおいて業界をリードする企業です。すべてのユーザーにとって利用しやすいリッチで魅力的なコンテンツを作成するよう開発者を促すことで、卓越した web エクスペリエンスの作成をサポートします。Adobeのアクセシビリティへの取り組みについて詳しくは、[Adobeのアクセシビリティ &#x200B;](https://www.adobe.com/accessibility.html) を参照してください。
 
 Adobe Experience Platform は、音声認識ソフトウェアやスクリーンリーダーなどの支援デバイスを使用するユーザーを含め、すべての個人に、アクセシブルで利用制限のない機能を提供することに全力を注いでいます。Experience Platform は、あらゆるタイプのユーザーのニーズに応えるように継続的に強化されており、視覚障害、聴覚障害、運動障害またはその他の障害を持つ個人も対象とした世界標準に準拠しています。
 
@@ -21,8 +21,8 @@ Experience Platformでサポートされているその他のアクセシビリ�
 
 Experience Platform でサポートされている一般的なアクセシビリティ機能について詳しくは、 [アクセシビリティ機能ガイド](features.md)を参照してください。
 
-Experience Platform ユーザーインターフェイスの特定のセクションにおけるカスタムアクセシビリティ機能については、[Experience Platform ガイドのカスタムアクセシビリティソリューション ](custom.md) を参照してください。
+Experience Platform ユーザーインターフェイスの特定のセクションにおけるカスタムアクセシビリティ機能については、[Experience Platform ガイドのカスタムアクセシビリティソリューション &#x200B;](custom.md) を参照してください。
 
-アクセシビリティ準拠の目標を達成するために、Experience Platform では、Web Content Accessibility Guidelines（WCAG）2.1 Level A および Level AA で国際的に認められたベストプラクティスに従っています。Experience Platformのアクセシビリティに関する最近の改善について詳しくは、最新の [Experience Platform リリースノート ](../release-notes/latest/latest.md) を参照してください。
+アクセシビリティ準拠の目標を達成するために、Experience Platform では、Web Content Accessibility Guidelines（WCAG）2.1 Level A および Level AA で国際的に認められたベストプラクティスに従っています。Experience Platformのアクセシビリティに関する最近の改善について詳しくは、最新の [Experience Platform リリースノート &#x200B;](../release-notes/latest/latest.md) を参照してください。
 
 アドビのアプリケーションが各コンプライアンスレベルをどのように満たしているかについて詳しくは、 [アクセシビリティ適合性レポート](https://www.adobe.com/accessibility/compliance.html)（ACR）のドキュメントを参照してください。

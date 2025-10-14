@@ -54,7 +54,7 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 ## 手動フィーチャー変換 {#manual-transformations}
 
-`CREATE MODEL` ステートメントでカスタムデータの前処理を定義するには、`TRANSFORM` 句を使用可能な任意の数の変換関数と組み合わせて使用します。 これらの手動による前処理関数は、`TRANSFORM` 句の外部でも使用できます。 [ 以下のトランスフォーマーの節 ](#available-transformations) で説明するすべての変換を使用して、データを手動で前処理できます。
+`CREATE MODEL` ステートメントでカスタムデータの前処理を定義するには、`TRANSFORM` 句を使用可能な任意の数の変換関数と組み合わせて使用します。 これらの手動による前処理関数は、`TRANSFORM` 句の外部でも使用できます。 [&#x200B; 以下のトランスフォーマーの節 &#x200B;](#available-transformations) で説明するすべての変換を使用して、データを手動で前処理できます。
 
 ### 主な特徴 {#key-characteristics}
 
@@ -85,7 +85,7 @@ AS SELECT * FROM df;
 
 ## 使用可能な変換 {#available-transformations}
 
-利用可能な変換は 19 個あります。 これらの変換は、[ 一般変換 ](#general-transformations)、[ 数値変換 ](#numeric-transformations)、[ カテゴリ変換 ](#categorical-transformations) および [ テキスト変換 ](#textual-transformations) に分割されます。
+利用可能な変換は 19 個あります。 これらの変換は、[&#x200B; 一般変換 &#x200B;](#general-transformations)、[&#x200B; 数値変換 &#x200B;](#numeric-transformations)、[&#x200B; カテゴリ変換 &#x200B;](#categorical-transformations) および [&#x200B; テキスト変換 &#x200B;](#textual-transformations) に分割されます。
 
 ### 一般的な変換 {#general-transformations}
 
@@ -97,7 +97,7 @@ AS SELECT * FROM df;
 
 #### 数値インプター {#numeric-imputer}
 
-**数値入力** 変換サービスは、データセット内の欠落値を補完します。 欠落している値が含まれている列の平均値、中央値、モードのいずれかを使用します。 入力列は `DoubleType` または `FloatType` にしてください。 詳細と例については、[Spark アルゴリズムのドキュメント ](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer) を参照してください。
+**数値入力** 変換サービスは、データセット内の欠落値を補完します。 欠落している値が含まれている列の平均値、中央値、モードのいずれかを使用します。 入力列は `DoubleType` または `FloatType` にしてください。 詳細と例については、[Spark アルゴリズムのドキュメント &#x200B;](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer) を参照してください。
 
 >[!NOTE]
 >

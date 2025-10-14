@@ -122,7 +122,7 @@ curl -X GET \
 | `id` | 変更されたリソースの `$id`。 この値は、通常、リクエストパスで指定されたリソースを表しますが、変更のソースである場合は、依存リソースを表す場合があります。 |
 | `xdmType` | 変更されたリソースのタイプ。 |
 | `action` | 行われた変更のタイプ。 |
-| `path` | 変更または追加された特定のフィールドへのパスを示す [JSON ポインター ](../../landing/api-fundamentals.md#json-pointer) 文字列。 |
+| `path` | 変更または追加された特定のフィールドへのパスを示す [JSON ポインター &#x200B;](../../landing/api-fundamentals.md#json-pointer) 文字列。 |
 | `value` | 新しいフィールドまたは更新されたフィールドに割り当てられた値。 |
 
 {style="table-layout:auto"}

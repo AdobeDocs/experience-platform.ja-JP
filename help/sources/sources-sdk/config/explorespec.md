@@ -84,4 +84,4 @@ ht-degree: 6%
 
 ## 次の手順
 
-探索仕様を入力したら、[!DNL Flow Service] API を使用して完全な接続仕様を作成できます。 詳しくは [ セルフサービスソース（Batch SDK） API ガイド ](../api/api-overview.md) を参照してください。
+探索仕様を入力したら、[!DNL Flow Service] API を使用して完全な接続仕様を作成できます。 詳しくは [&#x200B; セルフサービスソース（Batch SDK） API ガイド &#x200B;](../api/api-overview.md) を参照してください。

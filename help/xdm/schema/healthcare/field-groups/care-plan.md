@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # [!UICONTROL &#x200B; ケア計画 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; ケアプラン &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) の標準スキーマフィールドグループです。 患者またはグループのヘルスケアプランをキャプチャする単一のオブジェクトタイプのフィールド `healthcareCarePlan` を提供します。
+[!UICONTROL &#x200B; ケアプラン &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) の標準スキーマフィールドグループです。 患者またはグループのヘルスケアプランをキャプチャする単一のオブジェクトタイプのフィールド `healthcareCarePlan` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/care-plan/care-plan.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/care-plan/care-plan.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL アクティビティ] | `activity` | オブジェクトの配列 | 計画の一部として発生した、または発生が予定されているアクションを識別します。 詳しくは、[ 以下の節 ](#activity) を参照してください。 |
+| [!UICONTROL アクティビティ] | `activity` | オブジェクトの配列 | 計画の一部として発生した、または発生が予定されているアクションを識別します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#activity) を参照してください。 |
 | [!UICONTROL &#x200B; 住所 &#x200B;] | `addresses` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) の配列 | は、ケアプランが処理する条件または関心を識別します。 |
 | [!UICONTROL &#x200B; 基準 &#x200B;] | `basedOn` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | このケアプランによって全体または一部が履行される、より高レベルのリクエストリソース。 |
 | [!UICONTROL &#x200B; ケアチーム &#x200B;] | `careTeam` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | この計画で想定されるケアに関与すると予想されるすべての人物および組織を特定します。 |
@@ -46,14 +46,14 @@ ht-degree: 4%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.schema.json)
 
 ## `activity` {#activity}
 
 `activity` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ アクティビティ構造 ](../../../images/healthcare/field-groups/care-plan/activity.png)
+![&#x200B; アクティビティ構造 &#x200B;](../../../images/healthcare/field-groups/care-plan/activity.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

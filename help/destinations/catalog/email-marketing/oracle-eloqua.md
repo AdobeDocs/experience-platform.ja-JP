@@ -14,7 +14,7 @@ ht-degree: 44%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) は、B2B マーケターや組織がマーケティングキャンペーンやセールスリードの生成を管理するのを支援するために、[!DNL Oracle] が提供するマーケティング自動化用のソフトウェア as a service （SaaS）プラットフォームです。
 
-オーディエンスデータを [!DNL Oracle Eloqua] に送信するには、まずAdobe Experience Platformで [ 宛先に接続 ](#connect-destination) してから、ストレージの場所から [!DNL Oracle Eloqua] に [ データの読み込みを設定 ](#import-data-into-eloqua) する必要があります。
+オーディエンスデータを [!DNL Oracle Eloqua] に送信するには、まずAdobe Experience Platformで [&#x200B; 宛先に接続 &#x200B;](#connect-destination) してから、ストレージの場所から [!DNL Oracle Eloqua] に [&#x200B; データの読み込みを設定 &#x200B;](#import-data-into-eloqua) する必要があります。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -22,7 +22,7 @@ ht-degree: 44%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -48,7 +48,7 @@ Adobeでは、SFTP ストレージを使用してメールマーケティング�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[ アクセス制御の概要 ](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -96,19 +96,19 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### 宛先属性 {#destination-attributes}
 
-この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは [ 和集合スキーマ ](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[ メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス ](overview.md#best-practices) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは [&#x200B; 和集合スキーマ &#x200B;](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[&#x200B; メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス &#x200B;](overview.md#best-practices) を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Oracle Eloqua] の宛先の場合、Experience Platformは、指定されたストレージの場所に `.csv` ファイルを保存します。 ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) を参照してください。
+[!DNL Oracle Eloqua] の宛先の場合、Experience Platformは、指定されたストレージの場所に `.csv` ファイルを保存します。 ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 &#x200B;](../../ui/activate-batch-profile-destinations.md#verify) を参照してください。
 
 ## [!DNL Oracle Eloqua] へのデータの読み込みの設定 {#import-data-into-eloqua}
 
-[!DNL Experience Platform] を [!DNL SFTP] ストレージに接続した後、ストレージの場所から [!DNL Oracle Eloqua] へのデータの読み込みを設定する必要があります。 これを実行する方法については、[!DNL Oracle Eloqua Help Center] の [ 連絡先またはアカウントの読み込み ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) を参照してください。
+[!DNL Experience Platform] を [!DNL SFTP] ストレージに接続した後、ストレージの場所から [!DNL Oracle Eloqua] へのデータの読み込みを設定する必要があります。 これを実行する方法については、[!DNL Oracle Eloqua Help Center] の [&#x200B; 連絡先またはアカウントの読み込み &#x200B;](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) を参照してください。

@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # [!UICONTROL &#x200B; 入金詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 入金詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、財務預金に関する詳細を取得するスキーマに単一の `personalFinances.deposits` フィールドを提供します。
+[!UICONTROL &#x200B; 入金詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、財務預金に関する詳細を取得するスキーマに単一の `personalFinances.deposits` フィールドを提供します。
 
 ![](../../images/field-groups/deposit-details.png)
 
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json) を参照してください。

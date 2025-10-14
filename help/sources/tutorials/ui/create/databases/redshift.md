@@ -39,7 +39,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![AWS Redshift ソースカードが選択されているソースカタログ ](../../../../images/tutorials/create/redshift/catalog.png)
+![AWS Redshift ソースカードが選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/redshift/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
@@ -47,7 +47,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のアカウントを使用するには、アカウントディレクトリから [!DNL AWS Redshift] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ ソースワークフローのアカウントディレクトリが表示されます。ここでは、既存のアカウントが表示されます。](../../../../images/tutorials/create/redshift/existing.png)
+![&#x200B; ソースワークフローのアカウントディレクトリが表示されます。ここでは、既存のアカウントが表示されます。](../../../../images/tutorials/create/redshift/existing.png)
 
 ## 新しいアカウントを作成 {#create}
 
@@ -59,7 +59,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!DNL AWS Redshift] アカウントを Azure 上のExperience Platformに接続するには、入力フォームに認証資格情報を入力し、「**（[!UICONTROL &#x200B; ソースに接続 &#x200B;]）**」を選択します。
 
-![AWS Redshift を Azure 上のExperience Platformに接続するための新しいアカウントインターフェイス ](../../../../images/tutorials/create/redshift/new.png)
+![AWS Redshift を Azure 上のExperience Platformに接続するための新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/redshift/new.png)
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -69,7 +69,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | パスワード | ユーザーアカウントに対応するパスワード。 |
 | データベース | データの取得元となる [!DNL AWS Redshift] データベース。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL AWS Redshift]  を参照してください ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL AWS Redshift]  を参照してください &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
 
 ### AWS上のExperience Platformへの接続 {#aws}
 
@@ -79,7 +79,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しい [!DNL AWS Redshift] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、認証に必要な資格情報を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
 
-![AWS Redshift をAWS上のExperience Platformに接続するための新しいアカウントインターフェイス ](../../../../images/tutorials/create/redshift/aws-auth.png)
+![AWS Redshift をAWS上のExperience Platformに接続するための新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/redshift/aws-auth.png)
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -90,8 +90,8 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | データベース | データの取得元となる [!DNL AWS Redshift] データベース。 |
 | スキーマ | [!DNL AWS Redshift] データベースに関連付けられたスキーマの名前。 データベースアクセス権を付与するユーザーが、このスキーマにもアクセスできることを確認する必要があります。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL AWS Redshift]  を参照してください ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL AWS Redshift]  を参照してください &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL AWS Redshift] データベースとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ データフローを作成して、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
+このチュートリアルでは、[!DNL AWS Redshift] データベースとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[&#x200B; データフローを作成して、データベースからExperience Platformにデータを取り込む &#x200B;](../../dataflow/databases.md) ことができます。

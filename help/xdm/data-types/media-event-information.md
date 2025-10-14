@@ -13,14 +13,14 @@ ht-degree: 5%
 
 [!UICONTROL &#x200B; メディアイベント情報 &#x200B;] は、エクスペリエンスイベントに関連するメディアの詳細情報を記述する、標準の Experience Data Model （XDM）データタイプです。
 
-![ メディアイベント情報データタイプの図。](../images/data-types/media-event-information.png)
+![&#x200B; メディアイベント情報データタイプの図。](../images/data-types/media-event-information.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | メディアは、エクスペリエンスイベントに関連する詳細情報です。 このデータタイプは、[ メディアデータ収集 ](./media-collection-details.md) と [ メディアデータレポート ](./media-reporting-details.md) の両方に使用されます。 |
+| `mediaCollection` | [!UICONTROL mediaDetails] | メディアは、エクスペリエンスイベントに関連する詳細情報です。 このデータタイプは、[&#x200B; メディアデータ収集 &#x200B;](./media-collection-details.md) と [&#x200B; メディアデータレポート &#x200B;](./media-reporting-details.md) の両方に使用されます。 |
 | `mediaEventTimestamp` | [!UICONTROL 文字列] | メディア・イベントが発生した時刻。 |
 | `mediaEventType` | [!UICONTROL 文字列] | メディアイベントタイプ。 |
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json) を参照してください。

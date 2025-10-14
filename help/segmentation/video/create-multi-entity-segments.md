@@ -19,10 +19,10 @@ ht-degree: 17%
 
 # Experience Platform UI での複数エンティティセグメントの作成
 
-次のビデオは、動的セグメントの作成について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 マルチエンティティのセグメント化について詳しくは、[ マルチエンティティのセグメント化 ](../tutorials/multi-entity-segmentation.md) に関するガイドを参照してください。
+次のビデオは、動的セグメントの作成について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 マルチエンティティのセグメント化について詳しくは、[&#x200B; マルチエンティティのセグメント化 &#x200B;](../tutorials/multi-entity-segmentation.md) に関するガイドを参照してください。
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[ セグメントビルダーガイド ](../ui/segment-builder.md) を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[&#x200B; セグメントビルダーガイド &#x200B;](../ui/segment-builder.md) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345109?quality=12&learn=on&captions=jpn)

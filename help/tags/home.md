@@ -31,7 +31,7 @@ Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ
 
 右側のパネルの製品ヘルプのを使用して、タグの詳細を確認し、その他の使用可能なリソースを表示します。
 
-![ データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
+![&#x200B; データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
 
 ### 拡張機能 {#extensions}
 

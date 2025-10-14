@@ -16,7 +16,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->アクセスポリシーをデータ使用ポリシーと混同しないでください。データ使用ポリシーは、組織内のどのユーザーがアクセス権を持つかではなく、Adobe Experience Platformでのデータの使用方法を制御します。 詳しくは、[ データ使用ポリシー ](../../../data-governance/policies/create.md) の作成に関するガイドを参照してください。
+>アクセスポリシーをデータ使用ポリシーと混同しないでください。データ使用ポリシーは、組織内のどのユーザーがアクセス権を持つかではなく、Adobe Experience Platformでのデータの使用方法を制御します。 詳しくは、[&#x200B; データ使用ポリシー &#x200B;](../../../data-governance/policies/create.md) の作成に関するガイドを参照してください。
 
 <!-- ## Create a new policy
 
@@ -128,17 +128,17 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ポリシーに関連付けられたサンドボックスを表示するには、「**[!UICONTROL ポリシー]** タブをクリックします。
 
-![ 使用可能な既存のポリシーのリストを表示するポリシーページ ](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 次に、ポリシーを選択し、「**[!UICONTROL サンドボックス]**」タブを選択します。 ポリシーに関連付けられているサンドボックスのリストが表示されます。
 
-![ 使用可能な既存のポリシーのリストを表示するポリシーページ ](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### すべてのサンドボックスにポリシーを追加
 
 「**[!UICONTROL サンドボックス]**」タブの「自動インクルード **[!UICONTROL 切り替えを使用して、すべてのサンドボックスのポリシーをアクティベート]** ます。
 
-![ 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![&#x200B; 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
 
 **[!UICONTROL 自動インクルードを有効にする]** ダイアログが表示され、選択を確認するように求められます。 「**[!UICONTROL 有効]**」を選択して、設定を完了します。
 
@@ -156,15 +156,15 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 「**[!UICONTROL サンドボックス]**」タブの **[!UICONTROL 自動インクルード]** 切り替えを使用して、すべてのサンドボックスのポリシーを無効にします。
 
-![ 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![&#x200B; 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
 
 「**[!UICONTROL サンドボックス]**」タブで「**[!UICONTROL サンドボックスを追加]**」を選択し、このポリシーを適用するサンドボックスを選択します。
 
-![ ポリシーに追加されたサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![&#x200B; ポリシーに追加されたサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 サンドボックスのリストが表示されます。 追加するサンドボックスをリストから選択します。 または、検索バーを使用してサンドボックスを検索します。 「**[!UICONTROL 保存]**」を選択します。
 
-![ ポリシーに追加できる既存のサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックスを追加 &#x200B;] ページ ](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![&#x200B; ポリシーに追加できる既存のサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックスを追加 &#x200B;] ページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 サンドボックスを削除するには、サンドボックス名の横にある **X** アイコンを選択します。
 
-![ サンドボックスのリストを表示する「[!UICONTROL &#x200B; サンドボックス &#x200B;]」タブ。削除する [!UICONTROL X] がハイライト表示されます。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![&#x200B; サンドボックスのリストを表示する「[!UICONTROL &#x200B; サンドボックス &#x200B;]」タブ。削除する [!UICONTROL X] がハイライト表示されます。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
 **[!UICONTROL 削除]** ダイアログが表示され、選択を確認するように求められます。 「**[!UICONTROL 確認]**」を選択して削除を完了します。
 
-![[!UICONTROL &#x200B; 確認 &#x200B;] をハイライト表示した [!UICONTROL &#x200B; 削除 &#x200B;] ダイアログ ](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![[!UICONTROL &#x200B; 確認 &#x200B;] をハイライト表示した [!UICONTROL &#x200B; 削除 &#x200B;] ダイアログ &#x200B;](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -211,4 +211,4 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ## 次の手順
 
-ポリシーをアクティブにすると、次の手順 [ 役割の権限の管理 ](permissions.md) に進むことができます。
+ポリシーをアクティブにすると、次の手順 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) に進むことができます。

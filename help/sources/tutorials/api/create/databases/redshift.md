@@ -27,7 +27,7 @@ ht-degree: 30%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## [!DNL AWS Redshift] を Azure 上のExperience Platformに接続 {#azure}
 
@@ -45,7 +45,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 | `database` | データの取得元となる [!DNL AWS Redshift] データベース。 |
 | `connectionSpec.id` |接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL AWS Redshift] の接続仕様 ID は `3416976c-a9ca-4bba-901a-1f08f66978ff` です。 |
 
-基本について詳しくは、この [[!DNL AWS Redshift]  ドキュメント ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html) を参照してください。
+基本について詳しくは、この [[!DNL AWS Redshift]  ドキュメント &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html) を参照してください。
 
 ### Azure [#azure-base] 上のExperience Platformに [!DNL AWS Redshift] のベース接続を作成する
 
@@ -206,5 +206,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL AWS Redshift] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

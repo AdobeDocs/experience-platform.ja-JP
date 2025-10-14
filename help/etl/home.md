@@ -568,7 +568,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### レコードのコンプライアンススキーマの検証
 
-データの書き込み中に、XDM スキーマで定義された検証ルールに従ってデータの検証を選択できます。スキーマの検証について詳しくは、[ [!DNL GitHub] の ETL エコシステム統合リファレンスコード](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)を参照してください。
+データの書き込み中に、XDM スキーマで定義された検証ルールに従ってデータの検証を選択できます。スキーマの検証について詳しくは、[&#x200B; [!DNL GitHub] の ETL エコシステム統合リファレンスコード](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)を参照してください。
 
 [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md) にある参照実装を使用している場合は、`-DenableSchemaValidation=true` システムプロパティを使用して、この実装のスキーマ検証を有効にできます。
 

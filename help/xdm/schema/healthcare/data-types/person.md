@@ -16,14 +16,14 @@ ht-degree: 8%
 
 [!UICONTROL &#x200B; 人物 &#x200B;] は、一般的な人物レコードに関する情報を提供する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![Person データタイプの構造 ](../../../images/healthcare/data-types/person/person.png)
+![Person データタイプの構造 &#x200B;](../../../images/healthcare/data-types/person/person.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL アドレス] | `address` | [[!UICONTROL Address]](../data-types/address.md) の配列 | 人物の 1 つ以上のアドレス。 |
-| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 健康状態について本人とコミュニケーションをとるために使用される言語。 詳しくは、[ 以下の節 ](#communication) を参照してください。 |
+| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 健康状態について本人とコミュニケーションをとるために使用される言語。 詳しくは、[&#x200B; 以下の節 &#x200B;](#communication) を参照してください。 |
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | この人物の人間 ID。 |
-| [!UICONTROL &#x200B; 人物リンクの詳細 &#x200B;] | `link` | オブジェクトの配列 | 同じ人物に関するリソースへのリンク。 詳しくは、[ 以下の節 ](#link) を参照してください。 |
+| [!UICONTROL &#x200B; 人物リンクの詳細 &#x200B;] | `link` | オブジェクトの配列 | 同じ人物に関するリソースへのリンク。 詳しくは、[&#x200B; 以下の節 &#x200B;](#link) を参照してください。 |
 | [!UICONTROL &#x200B; 組織の管理 &#x200B;] | `managingOrganization` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 患者レコードの保管者である組織。 |
 | [!UICONTROL &#x200B; 配偶者の有無 &#x200B;] | `maritalStatus` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 人の婚姻（または民事）の地位 |
 | [!UICONTROL 名前] | `name` | [[!UICONTROL &#x200B; 人名 &#x200B;]](../data-types/human-name.md) の配列 | 人物に関連付けられた名前。 |
@@ -36,14 +36,14 @@ ht-degree: 8%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)
 
 ## `communication` {#communication}
 
 `communication` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 通信構造 ](../../../images/healthcare/data-types/person/communication.png)
+![&#x200B; 通信構造 &#x200B;](../../../images/healthcare/data-types/person/communication.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ ht-degree: 8%
 
 `link` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ リンク構造 ](../../../images/healthcare/data-types/person/link.png)
+![&#x200B; リンク構造 &#x200B;](../../../images/healthcare/data-types/person/link.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

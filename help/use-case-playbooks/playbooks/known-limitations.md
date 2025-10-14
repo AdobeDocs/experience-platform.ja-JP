@@ -22,9 +22,9 @@ ht-degree: 1%
 
 * 生成されたスキーマの場合、プレイブックの 1 つのインスタンスでスキーマが生成され、編集した場合、プレイブックの別のインスタンスを有効にすると、別のスキーマ *生成されません* が生成されます。 代わりに、編集したスキーマをインスタンス内でも引き続き使用します。
 
-* [ データ認識機能 ](/help/use-case-playbooks/playbooks/data-awareness.md) を使用して、スキーマを感動的サンドボックスから開発用サンドボックスに昇格させると、次のようなエラーが表示される場合があります。
+* [&#x200B; データ認識機能 &#x200B;](/help/use-case-playbooks/playbooks/data-awareness.md) を使用して、スキーマを感動的サンドボックスから開発用サンドボックスに昇格させると、次のようなエラーが表示される場合があります。
 
-![ スキーママッピングワークフローに表示されるエラー。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+![&#x200B; スキーママッピングワークフローに表示されるエラー。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 これは、スキーマから生成された一部のフィールドが、コピー先の開発サンドボックスのスキーマに存在しないためです。 これらのフィールドが何であるかを調べます。 その後、開発用サンドボックスに戻ると、次のことができます。
 

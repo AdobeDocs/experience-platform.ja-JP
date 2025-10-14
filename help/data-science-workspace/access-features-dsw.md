@@ -21,11 +21,11 @@ ht-degree: 15%
 
 次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスの概要を説明します。
 
-![DSW タブ ](./images/access/platform-tabs.png)
+![DSW タブ &#x200B;](./images/access/platform-tabs.png)
 
 - **ノートブック：** Experience Platform上のデータを調査、分析、モデル化するためのインタラクティブな開発環境（[JupyterLab](./jupyterlab/overview.md)）を提供します。
-- **モデル：** 高度な機械学習のレシピとモデルを作成、公開、保存するためのツールを提供します。 詳しくは、[ 機械学習モデルの作成と公開 ](./models-recipes/create-publish-model.md) チュートリアルを参照してください。
-- **サービス：** [AI/ML サービスなど、Adobeが提供するサービスと ](../intelligent-services/home.md)Data Science Workspaceで作成したカスタムサービスの両方が含まれます。
+- **モデル：** 高度な機械学習のレシピとモデルを作成、公開、保存するためのツールを提供します。 詳しくは、[&#x200B; 機械学習モデルの作成と公開 &#x200B;](./models-recipes/create-publish-model.md) チュートリアルを参照してください。
+- **サービス：** [AI/ML サービスなど、Adobeが提供するサービスと &#x200B;](../intelligent-services/home.md)Data Science Workspaceで作成したカスタムサービスの両方が含まれます。
 
 「サービス」タブのみが表示されるのはなぜですか。
 
@@ -78,4 +78,4 @@ Experience Platform のアクセス制御は、[Adobe Admin Console](https://adm
 
 このドキュメントでは、Data Science Workspaceで使用できる様々なタイプのアクセスと機能について説明しました。
 
-日常的なワークフロー全体など、Data Science Workspaceについて詳しくは、まず [Data Science Workspaceのチュートリアル ](./walkthrough.md) ドキュメントをお読みください。 一般的な情報については、[Data Science Workspaceの概要 ](./home.md) を参照してください。
+日常的なワークフロー全体など、Data Science Workspaceについて詳しくは、まず [Data Science Workspaceのチュートリアル &#x200B;](./walkthrough.md) ドキュメントをお読みください。 一般的な情報については、[Data Science Workspaceの概要 &#x200B;](./home.md) を参照してください。

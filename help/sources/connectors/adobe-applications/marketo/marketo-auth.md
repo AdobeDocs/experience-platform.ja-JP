@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Marketo] にログインし、上部のナビゲーションバーから「**[!DNL Admin]**」を選択します。
 
-![ 新しい役割の管理者 ](../images/marketo/home.png)
+![&#x200B; 新しい役割の管理者 &#x200B;](../images/marketo/home.png)
 
 *[!DNL Users & Role]s* ページには、ユーザー、ロール、およびログイン履歴に関する情報が含まれています。 新しい役割を作成するには、上部のヘッダーから「**[!DNL Roles]**」を選択し、「**[!DNL New Role]**」を選択します。
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 新しいサービスにわかりやすい表示名を指定し、**[!DNL Service]** ドロップダウンメニューから「**[!DNL Custom]**」を選択します。 適切な説明を入力し、プロビジョニングするユーザーを **[!DNL API Only User]** ドロップダウンメニューから選択します。 必要な詳細を入力したら、「**[!DNL Create]**」を選択して新しいカスタムサービスを作成します。
 
-![ 作成 ](../images/marketo/create.png)
+![&#x200B; 作成 &#x200B;](../images/marketo/create.png)
 
 ## クライアント ID とクライアントシークレットの取得
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 クライアント ID とクライアント秘密鍵を含むダイアログボックスが表示されます。
 
-![ 資格情報 ](../images/marketo/credentials.png)
+![&#x200B; 資格情報 &#x200B;](../images/marketo/credentials.png)
 
 ## Munchkin ID の取得
 
@@ -105,4 +105,4 @@ ht-degree: 0%
 
 ![munchkin-Id](../images/marketo/munchkin-id.png)
 
-クライアント ID とクライアントシークレットを組み合わせると、Munchkin ID を使用して、Experience Platform時に新しいアカウントを設定し、[ 新しいソース接続を作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) するこ  [!DNL Marketo]  ができます。
+クライアント ID とクライアントシークレットを組み合わせると、Munchkin ID を使用して、Experience Platform時に新しいアカウントを設定し、[&#x200B; 新しいソース接続を作成 &#x200B;](../../../tutorials/ui/create/adobe-applications/marketo.md) するこ  [!DNL Marketo]  ができます。

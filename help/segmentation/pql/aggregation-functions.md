@@ -12,7 +12,7 @@ ht-degree: 45%
 
 # 集計関数
 
-集計関数は、[!DNL Profile Query Language] （PQL）配列内の複数の値をグループ化して、1 つの要約値を形成するために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+集計関数は、[!DNL Profile Query Language] （PQL）配列内の複数の値をグループ化して、1 つの要約値を形成するために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## カウント
 

@@ -86,7 +86,7 @@ B2B マーケターは、マーケティングファネルの最上位で複数�
 
 スコアリングジョブは毎日実行され、結果はプロファイル属性およびアカウント属性として保存され、セグメント定義およびパーソナライゼーションで使用できます。 標準の分析インサイトは、アカウントの概要ダッシュボードでも使用できます。
 
-[ リードおよびアカウントの予測スコアリングの管理 ](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) サービスの管理方法について詳しくは、ドキュメントを参照してください。
+[&#x200B; リードおよびアカウントの予測スコアリングの管理 &#x200B;](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) サービスの管理方法について詳しくは、ドキュメントを参照してください。
 
 ## リードおよびアカウントの予測スコアリング結果の表示 {#how-to-view}
 
@@ -106,15 +106,15 @@ B2B マーケターは、マーケティングファネルの最上位で複数�
 
 次に、リストからプロファイルを選択します。
 
-![ 顧客プロファイル ](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+![&#x200B; 顧客プロファイル &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
 **[!UICONTROL 詳細]** ページに、予測スコアが含まれるようになりました。 予測スコアの横にあるグラフアイコンをクリックします。
 
-![ 顧客プロファイル予測スコア ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![&#x200B; 顧客プロファイル予測スコア &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 ポップアップダイアログには、スコア、全体的なスコア分布、このスコアに影響を与えた上位の要因およびスコアの目標の定義が表示されます。
 
-![ 顧客プロファイル予測スコアの詳細 ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![&#x200B; 顧客プロファイル予測スコアの詳細 &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## リードおよびアカウントの予測スコアリングジョブの監視 {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ B2B マーケターは、マーケティングファネルの最上位で複数�
 * 次のスコアリングジョブ（日付）
 * 次回のトレーニング作業（日付）
 
-詳しくは、[ リードおよびアカウントの予測スコアリングに関するジョブの監視 ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) のドキュメントを参照してください。
+詳しくは、[&#x200B; リードおよびアカウントの予測スコアリングに関するジョブの監視 &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) のドキュメントを参照してください。

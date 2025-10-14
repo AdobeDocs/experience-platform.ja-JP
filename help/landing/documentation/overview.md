@@ -17,7 +17,7 @@ ht-degree: 48%
 >
 >Adobe Experience Platform のドキュメントは最近移動されました。新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
-Adobe Experience Platformのドキュメントは、Experience Platformの多くの機能およびサービスで利用できます。 Experience Platformのドキュメントにアクセスするには、[ ドキュメントのランディングページ ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) に戻り、表示するガイドを選択します。
+Adobe Experience Platformのドキュメントは、Experience Platformの多くの機能およびサービスで利用できます。 Experience Platformのドキュメントにアクセスするには、[&#x200B; ドキュメントのランディングページ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) に戻り、表示するガイドを選択します。
 
 ## Experience Platform ドキュメントのタイプ
 

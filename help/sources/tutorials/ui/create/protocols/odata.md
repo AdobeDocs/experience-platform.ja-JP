@@ -25,7 +25,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL OData] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/protocols.md) に関するチュートリアルに進むことができます。
+既に有効な [!DNL OData] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/protocols.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -35,7 +35,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | ---------- | ----------- |
 | `url` | [!DNL OData] サービスのルート URL。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL OData]  を参照してください ](https://www.odata.org/getting-started/basic-tutorial/)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL OData]  を参照してください &#x200B;](https://www.odata.org/getting-started/basic-tutorial/)。
 
 ## [!DNL OData] アカウントの接続
 
@@ -55,7 +55,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、接続、名前、説明（オプション）、[!DNL OData] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/odata/connect.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/odata/connect.png)
 
 ### 既存のアカウント
 
@@ -65,4 +65,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL OData] アカウントとの接続を確立しました。次のチュートリアルに進み、[ プロトコルデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/protocols.md) を行いましょう。
+このチュートリアルでは、[!DNL OData] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; プロトコルデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/protocols.md) を行いましょう。

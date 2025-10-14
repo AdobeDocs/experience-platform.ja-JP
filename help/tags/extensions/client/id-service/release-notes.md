@@ -15,13 +15,13 @@ ht-degree: 79%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-このドキュメントでは、Adobe Experience Cloud ID サービスタグ拡張機能のリリースノートについて説明します。 Experience Cloud ID サービス自体のリリースノートについては、[ID サービスのドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
+このドキュメントでは、Adobe Experience Cloud ID サービスタグ拡張機能のリリースノートについて説明します。 Experience Cloud ID サービス自体のリリースノートについては、[ID サービスのドキュメント &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
 ## 2022 年 10 月 17 日（PT）
 
 ### Experience Cloud ID Extension 5.5.0
 
-* この拡張機能で、[ 訪問者 JS クライアント ](https://github.com/Adobe-Marketing-Cloud/id-service) のバージョン 5.5.0 がサポートされるようになりました。 詳しくは、[ 訪問者のリリースノート ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
+* この拡張機能で、[&#x200B; 訪問者 JS クライアント &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service) のバージョン 5.5.0 がサポートされるようになりました。 詳しくは、[&#x200B; 訪問者のリリースノート &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
 
 ## 2022 年 3 月 9 日（Pt）
 

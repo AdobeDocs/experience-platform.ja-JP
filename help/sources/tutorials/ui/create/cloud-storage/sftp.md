@@ -30,7 +30,7 @@ ht-degree: 25%
 
 ### 必要な資格情報の収集
 
-認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
+認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド &#x200B;](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
 
 ## [!DNL SFTP] サーバーへの接続
 
@@ -60,7 +60,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL SFTP] アカウントの名前と説明（オプション）を入力します。
 
-![SFTP の新規アカウント画面 ](../../../../images/tutorials/create/sftp/new.png)
+![SFTP の新規アカウント画面 &#x200B;](../../../../images/tutorials/create/sftp/new.png)
 
 [!DNL SFTP] ソースは、基本認証と SSH 公開鍵を使用した認証の両方をサポートしています。
 
@@ -77,9 +77,9 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 この手順では、最大同時接続数を設定したり、フォルダーパスを定義したり、[!DNL SFTP] サーバーのチャンクを有効または無効にしたりすることもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-認証について詳しくは、[ の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
+認証について詳しくは、[&#x200B; の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
 
-![ 基本認証を使用した SFTP ソースの新しいアカウント画面 ](../../../../images/tutorials/create/sftp/password.png)
+![&#x200B; 基本認証を使用した SFTP ソースの新しいアカウント画面 &#x200B;](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH 公開鍵認証 ]
 
@@ -93,12 +93,12 @@ SSH 公開鍵ベースの資格情報を使用するには、「**[!UICONTROL SS
 
 この手順では、最大同時接続数を設定したり、フォルダーパスを定義したり、[!DNL SFTP] サーバーのチャンクを有効または無効にしたりすることもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-認証について詳しくは、[ の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
+認証について詳しくは、[&#x200B; の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
 
-![SSH 公開鍵を使用した SFTP ソースの新しいアカウント画面 ](../../../../images/tutorials/create/sftp/ssh.png)
+![SSH 公開鍵を使用した SFTP ソースの新しいアカウント画面 &#x200B;](../../../../images/tutorials/create/sftp/ssh.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、SFTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、SFTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む &#x200B;](../../dataflow/batch/cloud-storage.md) ことができます。

@@ -14,9 +14,9 @@ ht-degree: 2%
 
 ## オーディエンスのフィルタリング {#filter-audiences}
 
-重複分析の特定のオーディエンスをフィルタリングするには、フィルターアイコン（![ フィルターアイコン](../../../images/icons/filter-icon-white.png)）を選択して [!UICONTROL &#x200B; フィルター &#x200B;] ダイアログを開きます。 ここから、重複テンプレートにオーディエンスを追加または削除して、分析を絞り込むことができます。
+重複分析の特定のオーディエンスをフィルタリングするには、フィルターアイコン（![&#x200B; フィルターアイコン](../../../images/icons/filter-icon-white.png)）を選択して [!UICONTROL &#x200B; フィルター &#x200B;] ダイアログを開きます。 ここから、重複テンプレートにオーディエンスを追加または削除して、分析を絞り込むことができます。
 
-![ フィルターアイコンがハイライト表示された詳細オーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-filter-icon.png)
+![&#x200B; フィルターアイコンがハイライト表示された詳細オーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-filter-icon.png)
 
 [!UICONTROL &#x200B; フィルター &#x200B;] ダイアログが表示されます。 重複分析のオーディエンスを選択するには、**[!UICONTROL オーディエンス]** ドロップダウンからオーディエンス名を選択します。 追加したオーディエンスの名前は、ドロップダウンの下にタグと共に表示されます。 追加したら、「X」を名前で選択して削除できます。 適用したすべてのフィルターを削除するには、「**[!UICONTROL すべてクリア]**」を選択します。
 
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 フィルターが適用されると（スクリーンショットの例では [!UICONTROL &#x200B; アモキシリンセグメント &#x200B;]、表示されるオーディエンスデータが絞り込まれます。 追加する追加オーディエンスは、[!UICONTROL &#x200B; 詳細オーディエンスの重複 &#x200B;] グラフの上にある [!UICONTROL &#x200B; フィルタリング条件 &#x200B;] タグの横に表示されます。
 
-![ 高度なオーディエンスの重複ダッシュボードと、Amoxicilin セグメントによるフィルタリングがハイライト表示されています。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
+![&#x200B; 高度なオーディエンスの重複ダッシュボードと、Amoxicilin セグメントによるフィルタリングがハイライト表示されています。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
 
 ## 高度なオーディエンスの重複テーブル {#advanced-audience-overlaps-table}
 
@@ -44,13 +44,13 @@ ht-degree: 2%
 
 オーディエンスをフィルタリングして分析した後は、オフラインでの分析やレポート作成のためにデータを書き出すことができます。 インサイトをエクスポートするには、テーブルの右上にある **[!UICONTROL エクスポート]** を選択します。 印刷PDFダイアログが表示され、データをPDFとして保存するか、印刷することができます。
 
-![ 書き出しがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
+![&#x200B; 書き出しがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
 
 [!UICONTROL &#x200B; テンプレート &#x200B;] の概要に戻るには、「**[!UICONTROL テンプレート]**」を選択します。
 
-![ テンプレートがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-navigation.png)
+![&#x200B; テンプレートがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-navigation.png)
 
 ## 次の手順
 
-このドキュメントでは、オーディエンスの重複を分析し、**[!UICONTROL 詳細なオーディエンスの重複]** ダッシュボードを使用してデータに基づく意思決定を行う方法について説明しました。 オーディエンスのセグメント化とターゲティング戦略をさらに最適化するには、貴重なインサイトを提供する他の Data Distiller テンプレートを参照します。 引き続きオーディエンスエンゲージメントとセグメント化の取り組みを強化するには、[ オーディエンスの傾向 ](./trends.md)、[ オーディエンス比較 ](./comparison.md) および [ オーディエンス ID の重複 ](./identity-overlaps.md) の UI ガイドを参照してください。
+このドキュメントでは、オーディエンスの重複を分析し、**[!UICONTROL 詳細なオーディエンスの重複]** ダッシュボードを使用してデータに基づく意思決定を行う方法について説明しました。 オーディエンスのセグメント化とターゲティング戦略をさらに最適化するには、貴重なインサイトを提供する他の Data Distiller テンプレートを参照します。 引き続きオーディエンスエンゲージメントとセグメント化の取り組みを強化するには、[&#x200B; オーディエンスの傾向 &#x200B;](./trends.md)、[&#x200B; オーディエンス比較 &#x200B;](./comparison.md) および [&#x200B; オーディエンス ID の重複 &#x200B;](./identity-overlaps.md) の UI ガイドを参照してください。
 

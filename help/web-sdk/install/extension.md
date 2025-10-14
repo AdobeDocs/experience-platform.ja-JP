@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobeでは、Web SDK を実装および設定するための専用のタグ拡張機能を提供しています。 データ収集コードをデプロイおよび管理する場合にAdobeが推奨する主な手段は、この実装方法です。
 
-[ 前提条件 ](overview.md) を満たしたら、次の手順を使用して Web SDK タグ拡張機能をデプロイできます。
+[&#x200B; 前提条件 &#x200B;](overview.md) を満たしたら、次の手順を使用して Web SDK タグ拡張機能をデプロイできます。
 
 ## タグ内での拡張機能のインストール
 
@@ -24,7 +24,7 @@ Adobeでは、Web SDK を実装および設定するための専用のタグ拡�
 1. **[!UICONTROL Adobe Experience Platform Web SDK]** 拡張機能を見つけてインストールします。
 1. 各環境に適したサンドボックスとデータストリームを選択し、「**[!UICONTROL 保存]**」をクリックします。
 
-詳しくは、[Web SDK タグ拡張機能の設定 ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) に関するドキュメントを参照してください。
+詳しくは、[Web SDK タグ拡張機能の設定 &#x200B;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) に関するドキュメントを参照してください。
 
 ## タグコードを開発用にPublish
 
@@ -43,4 +43,4 @@ Adobeでは、Web SDK を実装および設定するための専用のタグ拡�
 
 ## 実装に入力して実稼動環境に公開します
 
-拡張機能自体の詳細については [Web SDK 拡張機能の概要 ](../../tags/extensions/client/web-sdk/overview.md) を参照してください。タグインターフェイスの操作の詳細については [ タグの概要 ](../../tags/home.md) を参照してください。
+拡張機能自体の詳細については [Web SDK 拡張機能の概要 &#x200B;](../../tags/extensions/client/web-sdk/overview.md) を参照してください。タグインターフェイスの操作の詳細については [&#x200B; タグの概要 &#x200B;](../../tags/home.md) を参照してください。

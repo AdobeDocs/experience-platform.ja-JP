@@ -19,12 +19,12 @@ ht-degree: 13%
 
 # Experience Platform UI でのストリーミングセグメント化
 
-次のビデオは、ストリーミングセグメント化について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 ストリーミングセグメント化の詳細と UI でストリーミングセグメント化を実行する方法については、[ ストリーミングセグメント化 UI ガイド ](../methods/streaming-segmentation.md) を参照してください。
+次のビデオは、ストリーミングセグメント化について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 ストリーミングセグメント化の詳細と UI でストリーミングセグメント化を実行する方法については、[&#x200B; ストリーミングセグメント化 UI ガイド &#x200B;](../methods/streaming-segmentation.md) を参照してください。
 
-Segmentation API を使用したストリーミングセグメント化に関心がある場合は、[ ストリーミングセグメント化 API ガイド ](../methods/streaming-segmentation.md) を参照してください。
+Segmentation API を使用したストリーミングセグメント化に関心がある場合は、[&#x200B; ストリーミングセグメント化 API ガイド &#x200B;](../methods/streaming-segmentation.md) を参照してください。
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ ストリーミングセグメント化 UI ガイド ](../methods/streaming-segmentation.md) を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[&#x200B; ストリーミングセグメント化 UI ガイド &#x200B;](../methods/streaming-segmentation.md) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40064?quality=12&learn=on&captions=jpn)

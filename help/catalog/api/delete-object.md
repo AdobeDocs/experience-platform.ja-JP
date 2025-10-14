@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->`DELETE /batches/{ID}` エンドポイントは非推奨（廃止予定）になりました。 バッチを削除するには、[ バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) を使用する必要があります。
+>`DELETE /batches/{ID}` エンドポイントは非推奨（廃止予定）になりました。 バッチを削除するには、[&#x200B; バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) を使用する必要があります。
 
 | パラメーター | 説明 |
 | --- | --- |

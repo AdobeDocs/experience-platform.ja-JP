@@ -17,15 +17,15 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->このドキュメントでは、データタイプについて説明します。 同じ名前のフィールドグループについては、[[!UICONTROL Telecom Subscription] フィールドグループリファレンスガイド ](../field-groups/profile/telecom-subscription.md) を参照してください。
+>このドキュメントでは、データタイプについて説明します。 同じ名前のフィールドグループについては、[[!UICONTROL Telecom Subscription] フィールドグループリファレンスガイド &#x200B;](../field-groups/profile/telecom-subscription.md) を参照してください。
 >
->通信業界に関係のないサブスクリプションタイプを説明している場合は、代わりに汎用 [[!UICONTROL &#x200B; サブスクリプション &#x200B;] データタイプ ](./subscription.md) を使用してください。
+>通信業界に関係のないサブスクリプションタイプを説明している場合は、代わりに汎用 [[!UICONTROL &#x200B; サブスクリプション &#x200B;] データタイプ &#x200B;](./subscription.md) を使用してください。
 
 ![Telecom Subscription structure](../images/data-types/telecom-subscription/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `devices` | オブジェクトの配列 | プランに関連付けられたデバイスやアクセサリのリストを表します。 各配列項目の想定される構造について詳しくは、以下の [ 節 ](#devices) を参照してください。 |
+| `devices` | オブジェクトの配列 | プランに関連付けられたデバイスやアクセサリのリストを表します。 各配列項目の想定される構造について詳しくは、以下の [&#x200B; 節 &#x200B;](#devices) を参照してください。 |
 | `subscriber` | [[!UICONTROL &#x200B; 人物 &#x200B;]](./person.md) | サブスクリプションの所有者を表します。 |
 | `ID` | 文字列 | 購読インスタンスの一意の ID。 |
 | `billingPeriod` | 文字列 | 請求の間隔。 |
@@ -54,14 +54,14 @@ ht-degree: 20%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
 
 ## `devices` {#devices}
 
 `devices` はオブジェクトの配列で、各オブジェクトはサブスクリプションに関連付けられたデバイスまたはアクセサリを表します。
 
-![ デバイスアレイ構造 ](../images/data-types/telecom-subscription/devices.png)
+![&#x200B; デバイスアレイ構造 &#x200B;](../images/data-types/telecom-subscription/devices.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

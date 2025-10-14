@@ -40,7 +40,7 @@ Experience Platform サービスであるAdobe Experience Platform データガ�
 
 カタログは、取り込んだデータをデータセットにまとめ、各データセットには、含んだデータのラベル付けと分類に使用できるメタデータが含まれています。
 
-サービスについて詳しくは、[ カタログサービスの概要 ](../../catalog/home.md) を参照してください。 Experience Platformでデータセットを管理する方法については、[ データセットの概要 ](../../catalog/datasets/overview.md) を参照してください。
+サービスについて詳しくは、[&#x200B; カタログサービスの概要 &#x200B;](../../catalog/home.md) を参照してください。 Experience Platformでデータセットを管理する方法については、[&#x200B; データセットの概要 &#x200B;](../../catalog/datasets/overview.md) を参照してください。
 
 ## プライバシー {#privacy}
 
@@ -52,15 +52,15 @@ EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プ�
 
 Adobe Experience Platform Privacy Serviceは、これらのリクエストの管理に役立つ RESTful API とユーザーインターフェイスを提供します。 Privacy Serviceを使用すると、Adobe Experience Cloud アプリケーションから非公開または個人的な顧客データに対するアクセスまたは削除のリクエストを送信でき、法的および組織のプライバシー規制の自動的な準拠が容易になります。
 
-詳しくは、[Privacy Serviceの概要 ](../../privacy-service/home.md) を参照してください。
+詳しくは、[Privacy Serviceの概要 &#x200B;](../../privacy-service/home.md) を参照してください。
 
 ### 同意処理 {#consent}
 
 多くの法的プライバシー規制では、データ収集、パーソナライゼーション、その他のマーケティングのユースケースに関して、アクティブで特定の同意に対する要件が導入されています。 これらの要件を満たすために、Experience Platformでは、個々のお客様のプロファイルで同意情報を取得し、それらの環境設定をダウンストリーム Experience Platform ワークフローでの各顧客データの使用方法における決定要因として使用できます。
 
-Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 ](./consent/adobe/overview.md) に関する概要を参照してください。
+Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 &#x200B;](./consent/adobe/overview.md) に関する概要を参照してください。
 
-IAB Transparency and Consent Framework （TCF） 2.0 に従って顧客の同意データを処理する方法については、[Experience Platformでの IAB TCF 2.0 のサポート ](./consent/iab/overview.md) に関する概要を参照してください。
+IAB Transparency and Consent Framework （TCF） 2.0 に従って顧客の同意データを処理する方法については、[Experience Platformでの IAB TCF 2.0 のサポート &#x200B;](./consent/iab/overview.md) に関する概要を参照してください。
 
 ## セキュリティ {#security}
 

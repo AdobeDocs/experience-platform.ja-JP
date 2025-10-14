@@ -18,10 +18,10 @@ ht-degree: 2%
 `orderby` クエリパラメーターを使用して、応答を並べ替えることができます。 次のリソースは、API で並べ替えることができます。
 
 * [接続](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Source接続 ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [ ターゲット接続 ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [ フロー ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [ 実行中 ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [Source接続 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [&#x200B; ターゲット接続 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
+* [&#x200B; フロー &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
+* [&#x200B; 実行中 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
 パラメーターを使用するには、その値を、並べ替えの基準にする特定のプロパティ（例：`?orderby=name`）に設定する必要があります。 値の前には、昇順の場合はプラス記号（`+`）を、降順の場合はマイナス記号（`-`）を付けることができます。 順序付けのプレフィックスが指定されていない場合、デフォルトではリストが昇順で並べ替えられます。
 
@@ -44,7 +44,7 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 >[!NOTE]
 >
->プロパティが配列項目内にネストされている場合は、パスの配列に角括弧（`[]`）を追加する必要があります。 例については、[ 配列プロパティのフィルタリング ](#arrays) の節を参照してください。
+>プロパティが配列項目内にネストされている場合は、パスの配列に角括弧（`[]`）を追加する必要があります。 例については、[&#x200B; 配列プロパティのフィルタリング &#x200B;](#arrays) の節を参照してください。
 
 **ソーステーブル名が `lead` であるすべてのソース接続を返します。**
 

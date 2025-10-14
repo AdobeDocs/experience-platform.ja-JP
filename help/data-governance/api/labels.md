@@ -18,7 +18,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->`/labels` エンドポイントは、データ使用ラベルの取得、作成、更新のみに使用されます。ラベルを削除することはできません。 ただし、API 呼び出しを使用して、データセットとフィールドにラベルを追加または削除できます。 手順については、[ データセットラベルの管理 ](../labels/dataset-api.md) ドキュメントのガイドを参照してください。
+>`/labels` エンドポイントは、データ使用ラベルの取得、作成、更新のみに使用されます。ラベルを削除することはできません。 ただし、API 呼び出しを使用して、データセットとフィールドにラベルを追加または削除できます。 手順については、[&#x200B; データセットラベルの管理 &#x200B;](../labels/dataset-api.md) ドキュメントのガイドを参照してください。
 
 ## はじめに
 
@@ -166,7 +166,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->データセットからラベルを削除する場合は、[Dataset Service API](../labels/dataset-api.md#remove) または [ データセット UI](../labels/user-guide.md#remove-labels-from-a-dataset) を使用して、PUTリクエストを実行できます。
+>データセットからラベルを削除する場合は、[Dataset Service API](../labels/dataset-api.md#remove) または [&#x200B; データセット UI](../labels/user-guide.md#remove-labels-from-a-dataset) を使用して、PUTリクエストを実行できます。
 
 **API 形式**
 

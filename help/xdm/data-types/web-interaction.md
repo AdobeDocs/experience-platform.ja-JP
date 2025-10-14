@@ -15,7 +15,7 @@ ht-degree: 10%
 
 [!UICONTROL Web インタラクション &#x200B;] は、最初のページ読み込みが完了した後に Web ページで発生したインタラクションに関する情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 単一ページ web アプリ（SPA）など、新しいページ読み込みをトリガーとしないリッチ web アプリケーションでのインタラクションを記録することを目的としています。
 
-![web インタラクション画像 ](../images/data-types/web-interaction.PNG){width=500}
+![web インタラクション画像 &#x200B;](../images/data-types/web-interaction.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -28,5 +28,5 @@ ht-degree: 10%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)

@@ -17,10 +17,10 @@ Destination SDKで宛先コネクタを作成する場合、宛先に書き出�
 
 | オーディエンスデータタイプ | 説明 | ユースケース |
 |---------|----------|---------|
-| [ 人物オーディエンス ](../../../../segmentation/types/people-audiences.md) | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](../../../../segmentation/types/account-audiences.md) | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](../../../../segmentation/types/prospect-audiences.md) | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](../../../../catalog/datasets/overview.md) | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](../../../../segmentation/types/people-audiences.md) | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](../../../../segmentation/types/account-audiences.md) | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](../../../../segmentation/types/prospect-audiences.md) | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](../../../../catalog/datasets/overview.md) | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 サポートされているオーディエンスデータタイプは、作成した宛先のタイプによって異なります。
 以下の表を参照して、どの宛先タイプがどのオーディエンスデータタイプをサポートしているかを理解してください。
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 アカウントベースのマーケティングを行う [!DNL B2B] しい宛先を設定する場合は、宛先にアカウントオーディエンスサポートを追加することを検討してください。 例えば、アカウントベースのオーディエンスを使用して、[!DNL Chief Operating Officer (COO)] または [!DNL Chief Marketing Officer (CMO)] という役職のユーザーの連絡先情報を持たないすべてのアカウントのレコードを取得できます。
 
-アカウントオーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [ 宛先設定 ](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+アカウントオーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
 
 ```json
 "sources":[
@@ -259,9 +259,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 見込み客オーディエンスのエクスポート {#prospect}
 
-まだ顧客ではないが、ターゲットオーディエンスと特性を共有する個人をターゲットにする場合は、見込み客オーディエンスサポートを宛先に追加することを検討してください。 見込み客プロファイルを使用すると、信頼できるサードパーティパートナーの属性で顧客プロファイルを補完できます。 詳しくは、この [ 見込み客のユースケース ](../../../../rtcdp/partner-data/prospecting.md) を参照してください。
+まだ顧客ではないが、ターゲットオーディエンスと特性を共有する個人をターゲットにする場合は、見込み客オーディエンスサポートを宛先に追加することを検討してください。 見込み客プロファイルを使用すると、信頼できるサードパーティパートナーの属性で顧客プロファイルを補完できます。 詳しくは、この [&#x200B; 見込み客のユースケース &#x200B;](../../../../rtcdp/partner-data/prospecting.md) を参照してください。
 
-見込み客オーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [ 宛先設定 ](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+見込み客オーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
 
 
 ```json
@@ -395,7 +395,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出す場合は、宛先にデータセット書き出しサポートを追加することを検討してください。 このデータは、レポート、データサイエンスワークフロー、その他の多くのユースケースに使用できます。 例えば、管理者、データエンジニアまたはアナリストは、Experience Platformからデータをエクスポートして Data Warehouse と同期したり、[!DNL BI] Analysis Tools や外部の Cloud [!DNL ML] ツールで使用したり、システムに長期保存のニーズに応じて保存したりできます。
 
-データセットの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [ 宛先設定 ](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+データセットの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
 
 ```json
 "sources":[

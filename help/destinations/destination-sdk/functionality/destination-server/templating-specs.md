@@ -17,7 +17,7 @@ ht-degree: 88%
 
 テンプレート仕様は、リアルタイム（ストリーミング）宛先用の宛先サーバー設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 &#x200B;](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介して宛先用のテンプレート仕様を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

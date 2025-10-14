@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `address` | RFC2822 および後続の標準で一般的に定義されているメールの技術的アドレス （例：`name@domain.com`）。<br><br>XDM では、検証に合格するために、メールアドレスに有効なトップレベルドメインが含まれている必要があります。 Internet Assigned Numbers Authority （IANA）が定義する有効な最上位ドメインの完全なリストについては、次の [ ドキュメント ](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) を参照してください。 |
+| `address` | RFC2822 および後続の標準で一般的に定義されているメールの技術的アドレス （例：`name@domain.com`）。<br><br>XDM では、検証に合格するために、メールアドレスに有効なトップレベルドメインが含まれている必要があります。 Internet Assigned Numbers Authority （IANA）が定義する有効な最上位ドメインの完全なリストについては、次の [&#x200B; ドキュメント &#x200B;](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) を参照してください。 |
 | `label` | 利用可能な追加の表示情報。 例えば、メールに `John Smith smithjr@company.uk` というMicrosoft Outlook リッチアドレス表示がある場合、`John Smith` はこのフィールドに配置されます。 |
 | `primary` | これが個人のプライマリメールアドレスかどうかを示します。 プロファイルは、特定の時点で `primary` メールアドレスを 1 つのみ持つことができます。 |
 | `status` | 電子メールアドレスが現在使用できるかどうかを示します |
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 メールアドレスデータタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)

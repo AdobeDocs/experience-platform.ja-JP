@@ -13,7 +13,7 @@ ht-degree: 27%
 
 Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics データを取り込むことができます。 ADC を通じて取り込まれた一部のデータは、Analytics フィールドから Experience Data Model （XDM）フィールドに直接マッピングできますが、他のデータでは、変換と特定の関数を正常にマッピングする必要があります。
 
-![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 ](../images/analytics-data-experience-platform.png)
+![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 &#x200B;](../images/analytics-data-experience-platform.png)
 
 ## ストリーミングメディアパラメーター
 

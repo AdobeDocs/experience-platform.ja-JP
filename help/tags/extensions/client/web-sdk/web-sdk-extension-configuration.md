@@ -19,13 +19,13 @@ ht-degree: 3%
 
 ## Web SDK タグ拡張機能のインストール {#install}
 
-Web SDK タグ拡張機能には、プロパティをインストールする必要があります。 まだ行っていない場合は、[ タグプロパティの作成 ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ja) に関するドキュメントを参照してください。
+Web SDK タグ拡張機能には、プロパティをインストールする必要があります。 まだ行っていない場合は、[&#x200B; タグプロパティの作成 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ja) に関するドキュメントを参照してください。
 
 プロパティを作成したら、プロパティを開き、左側のバーにある **[!UICONTROL 拡張機能]** タブを選択します。
 
 「**[!UICONTROL カタログ]**」タブを選択します。 使用可能な拡張機能のリストから、[!DNL Web SDK] の拡張機能を見つけて **[!UICONTROL インストール]** を選択します。
 
-![Web SDK拡張機能が選択されたタグ UI を示す画像 ](assets/web-sdk-install.png)
+![Web SDK拡張機能が選択されたタグ UI を示す画像 &#x200B;](assets/web-sdk-install.png)
 
 **[!UICONTROL インストール]** を選択した後、web SDK タグ拡張機能を設定し、設定を保存する必要があります。
 
@@ -52,27 +52,27 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
    * **[!UICONTROL Advertising]**：このコンポーネントには、Adobe Advertisingに必要なすべてのJavaScript コードが含まれています。 また、アトリビューション測定への広告データの使用方法を定義するために、[!UICONTROL SDK インスタンス &#x200B;] セクションの [!UICONTROL 0&rbrace;Adobe Advertising&rbrace; 設定とタグルールの &#x200B;]Advertising[!UICONTROL &#x200B; 設定も追加されます。]
    * **[!UICONTROL オーディエンス]**：このコンポーネントを使用すると、URL や cookie ベースの宛先などのAudience Manager統合や、ID の同期を有効にできます。
    * **[!UICONTROL 同意]**：このコンポーネントは、同意統合を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ 同意を設定 ](action-types.md#set-consent) アクションタイプ
+      * [&#x200B; 同意を設定 &#x200B;](action-types.md#set-consent) アクションタイプ
    * **[!UICONTROL コンテキスト]**：このコンポーネントを使用すると、コンテキストデータを自動的に収集できます。
    * **[!UICONTROL イベントの結合]**: _非推奨_。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ イベント結合 ID](action-types.md#data) データ要素
+      * [&#x200B; イベント結合 ID](action-types.md#data) データ要素
       * **[!UICONTROL イベント結合 ID をリセット]** アクションタイプ
    * **[!UICONTROL Media Analytics ブリッジ]**：このコンポーネントは、Media Analytics インターフェイスを使用してEdge Network Streaming Media を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [Media Analytics トラッカーを取得 ](action-types.md#get-media-analytics-tracker) アクションタイプ
+      * [Media Analytics トラッカーを取得 &#x200B;](action-types.md#get-media-analytics-tracker) アクションタイプ
    * **[!UICONTROL Personalization]**：このコンポーネントは、Adobe TargetとAdobe Journey Optimizerの統合を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ 提案の適用 ](action-types.md#apply-propositions) アクションタイプ
+      * [&#x200B; 提案の適用 &#x200B;](action-types.md#apply-propositions) アクションタイプ
    * **[!UICONTROL プッシュ通知]**：このコンポーネントは、Adobe Journey Optimizerの web プッシュ通知を有効にします。
    * **[!UICONTROL ルールエンジン]**：このコンポーネントは、Adobe Journey Optimizer オンデバイス判定を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ ルールセットを評価 ](action-types.md#evaluate-rulesets) アクションタイプ
-      * [ ルールセット項目を登録 ](event-types.md#subscribe-ruleset-items) イベントタイプ
+      * [&#x200B; ルールセットを評価 &#x200B;](action-types.md#evaluate-rulesets) アクションタイプ
+      * [&#x200B; ルールセット項目を登録 &#x200B;](event-types.md#subscribe-ruleset-items) イベントタイプ
    * **[!UICONTROL ストリーミングメディア]**：このコンポーネントは、Edge Network Streaming Media を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ メディアイベントを送信 ](action-types.md#send-media-event) アクションタイプ
+      * [&#x200B; メディアイベントを送信 &#x200B;](action-types.md#send-media-event) アクションタイプ
 
 ## インスタンス設定を指定 {#general}
 
 ページ上部の設定オプションは、データのルーティング先と、サーバーで使用する設定をAdobe Experience Platformに指示します。
 
-![ タグ UI の web SDK タグ拡張機能の一般設定を示す画像 ](assets/web-sdk-ext-general.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能の一般設定を示す画像 &#x200B;](assets/web-sdk-ext-general.png)
 
 * **[!UICONTROL 名前]**:Adobe Experience Platform Web SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 この名前は、タグ設定を持つ複数の組織にデータを送信する場合に使用します。 インスタンス名のデフォルトは `alloy` です。 ただし、インスタンス名を任意の有効なJavaScript オブジェクト名に変更できます。
 * **[!UICONTROL IMS 組織 ID]**:Adobeでデータを送信する組織の ID です。 ほとんどの場合、自動入力されるデフォルト値を使用します。 ページ上に複数のインスタンスがある場合、データの送信先の 2 番目の組織の値をこのフィールドに入力します。
@@ -89,11 +89,11 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 リクエストがEdge Networkに送信されると、データストリーム ID がサーバーサイド設定の参照に使用されます。 Web サイト上でコードを変更することなく、設定を更新できます。
 
-データストリームの設定方法については、[ データストリーム ](../../../../datastreams/overview.md) に関するガイドを参照してください。
+データストリームの設定方法については、[&#x200B; データストリーム &#x200B;](../../../../datastreams/overview.md) に関するガイドを参照してください。
 
 使用可能なドロップダウンメニューからデータストリームを選択するか、**[!UICONTROL 値を入力]** を選択して、各環境のカスタムデータストリーム ID を入力できます。
 
-![ タグ UI の Web SDK タグ拡張機能のデータストリーム設定を示す画像 ](assets/web-sdk-ext-datastreams.png)
+![&#x200B; タグ UI の Web SDK タグ拡張機能のデータストリーム設定を示す画像 &#x200B;](assets/web-sdk-ext-datastreams.png)
 
 ## プライバシー設定の指定 {#privacy}
 
@@ -101,7 +101,7 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 デフォルトの同意レベルは、ユーザープロファイルに保存されません。
 
-![ タグ UI の web SDK タグ拡張機能のプライバシー設定を示す画像 ](assets/web-sdk-ext-privacy.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能のプライバシー設定を示す画像 &#x200B;](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL &#x200B; デフォルトの同意レベル &#x200B;] | 説明 |
 | --- | --- |
@@ -118,13 +118,13 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 この節では、ユーザー ID の処理に関する Web SDKの動作を定義できます。
 
-![ タグ UI の Web SDK タグ拡張機能の ID 設定を示す画像 ](assets/web-sdk-ext-identity.png)
+![&#x200B; タグ UI の Web SDK タグ拡張機能の ID 設定を示す画像 &#x200B;](assets/web-sdk-ext-identity.png)
 
 * **[!UICONTROL VisitorAPI から ECID を移行]**：このオプションはデフォルトで有効になっています。 この機能が有効な場合、SDKは `AMCV` および `s_ecid` Cookie を読み取り、`AMCV` が使用する [!DNL Visitor.js] Cookie を設定できます。 この機能は、一部のページがまだ [!DNL Visitor.js] を使用している可能性があるので、Web SDKに移行する際に重要です。 このオプションを使用すると、SDKは引き続き同じ [!DNL ECID] を使用できるので、ユーザーが 2 人の異なるユーザーとして識別されることはありません。
 * **[!UICONTROL サードパーティ cookie を使用]**：このオプションを有効にすると、Web SDKはユーザー ID をサードパーティ cookie に保存しようとします。 成功した場合、ユーザーは、各ドメインで個別のユーザーとして識別されるのではなく、複数のドメインを移動する際に単一のユーザーとして識別されます。 このオプションが有効になっている場合、ブラウザーがサードパーティ cookie をサポートしていない場合や、ユーザーによってサードパーティ cookie が許可されないように設定されている場合には、SDKでサードパーティ cookie にユーザー ID を格納できない可能性があります。 この場合、SDKはファーストパーティドメインにのみ ID を保存します。
 
   >[!IMPORTANT]
-  >&#x200B;>サードパーティ cookie は、Web SDKの [ ファーストパーティデバイス ID](../../../../web-sdk/identity/first-party-device-ids.md) 機能と互換性がありません。
+  >&#x200B;>サードパーティ cookie は、Web SDKの [&#x200B; ファーストパーティデバイス ID](../../../../web-sdk/identity/first-party-device-ids.md) 機能と互換性がありません。
   >&#x200B;>ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方の機能を同時に使用することはできません。
   >
 
@@ -132,7 +132,7 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 このセクションでは、パーソナライズされたコンテンツの読み込み中にページの特定の部分を非表示にする方法を設定できます。 これにより、訪問者にはパーソナライズされたページのみが表示されます。
 
-![ タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 ](assets/web-sdk-ext-personalization.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 &#x200B;](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Target を at.js から web SDKに移行]**:at.js [!DNL Web SDK] または `mbox` ライブラリで使用される従来の `mboxEdgeCluster` および `1.x` cookie の読み取りと書き込みを `2.x` で行えるようにする場合は、このオプションを使用します。 これにより、訪問者プロファイルを維持しながら、Web SDKを使用するページから at.js `1.x` または `2.x` ライブラリを使用するページに（その逆も同様に）移行できます。
 
@@ -148,13 +148,13 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 >[!IMPORTANT]
 >
->事前非表示スニペットを使用する場合、Adobeでは [!DNL CSS] 事前非表示スタイル [ で使用したのと同じ ](#prehiding-style) ルールを使用することをお勧めします。
+>事前非表示スニペットを使用する場合、Adobeでは [!DNL CSS] 事前非表示スタイル [&#x200B; で使用したのと同じ &#x200B;](#prehiding-style) ルールを使用することをお勧めします。
 
 ## データ収集設定の指定 {#data-collection}
 
 データ収集設定を管理します。 [`configure`](/help/web-sdk/commands/configure/overview.md) コマンドを使用すると、JavaScript ライブラリの同様の設定を利用できます。
 
-![ タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](assets/web-sdk-ext-collection.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](assets/web-sdk-ext-collection.png)
 
 * **[!UICONTROL On before event send callback]**:Adobeに送信されるペイロードを評価して変更するコールバック関数。 コールバック関数内の `content` 変数を使用して、ペイロードを変更します。 このコールバックは、JavaScript ライブラリの [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) と同等のタグです。
 * **[!UICONTROL 内部リンククリック数を収集]**：サイトまたはプロパティ内部のリンクトラッキングデータの収集を有効にするチェックボックス。 このチェックボックスを有効にすると、イベントのグループ化オプションが表示されます。
@@ -187,14 +187,14 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 収集されたデータには、メディアプレイバック、一時停止、完了およびその他の関連イベントに関する情報を含めることができます。 収集したら、このデータをAdobe Experience PlatformやAdobe Analyticsに送信して、レポートを生成できます。 この機能は、web サイトでのメディア消費行動を追跡および把握するための包括的なソリューションを提供します。
 
-![ タグ UI の web SDK タグ拡張機能の Media Collection 設定を示す画像 ](assets/media-collection.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能の Media Collection 設定を示す画像 &#x200B;](assets/media-collection.png)
 
 
 * **[!UICONTROL Channel]**：メディアコレクションが実行されるチャネルの名前。 例：`Video channel`。
 * **[!UICONTROL Player Name]**：メディアプレーヤーの名前。
 * **[!UICONTROL アプリケーションのバージョン]**：メディアプレーヤーアプリケーションのバージョン。
-* **[!UICONTROL メイン ping 間隔]**：メインコンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[ 自動的にトラッキングされるセッション ](../../../../web-sdk/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。
-* **[!UICONTROL 広告 ping 間隔]**：広告コンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](../../../../web-sdk/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます
+* **[!UICONTROL メイン ping 間隔]**：メインコンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../../../../web-sdk/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。
+* **[!UICONTROL 広告 ping 間隔]**：広告コンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../../../../web-sdk/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます
 
 ## データストリームの上書きの設定 {#datastream-overrides}
 
@@ -207,7 +207,7 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 1. 最初に、[データストリーム設定ページ](/help/datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
 2. 次に、Web SDK コマンドまたは Web SDK タグ拡張機能を使用して、上書きをEdge Networkに送信する必要があります。
 
-データストリーム設定を上書きする方法について詳しくは、データストリーム [ 設定の上書きドキュメント ](/help/datastreams/overrides.md) を参照してください。
+データストリーム設定を上書きする方法について詳しくは、データストリーム [&#x200B; 設定の上書きドキュメント &#x200B;](/help/datastreams/overrides.md) を参照してください。
 
 Web SDK コマンドを使用して上書きを渡す代わりに、以下に示すタグ拡張機能画面で上書きを設定できます。
 
@@ -219,11 +219,11 @@ Web SDK コマンドを使用して上書きを渡す代わりに、以下に示
 
 デフォルトでは、データストリーム設定の上書きは無効になっています。 「**[!UICONTROL データストリーム設定を一致させる]**」オプションがデフォルトで選択されています。
 
-![ データストリーム設定がデフォルト設定を上書きすることを示す web SDK タグ拡張機能ユーザーインターフェイス ](assets/datastream-override-default.png)
+![&#x200B; データストリーム設定がデフォルト設定を上書きすることを示す web SDK タグ拡張機能ユーザーインターフェイス &#x200B;](assets/datastream-override-default.png)
 
 タグ拡張機能でデータストリームの上書きを有効にするには、ドロップダウンメニューから「**[!UICONTROL 有効]**」を選択します。
 
-![ データストリーム設定の上書きの有効設定を示す web SDK タグ拡張機能ユーザーインターフェイス ](assets/datastream-override-enabled.png)
+![&#x200B; データストリーム設定の上書きの有効設定を示す web SDK タグ拡張機能ユーザーインターフェイス &#x200B;](assets/datastream-override-enabled.png)
 
 データストリーム設定の上書きを有効にすると、以下に説明する各サービスの上書きを設定できます。
 

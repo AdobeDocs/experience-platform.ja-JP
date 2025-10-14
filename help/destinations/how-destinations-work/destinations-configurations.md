@@ -55,7 +55,7 @@ Experience Platform の宛先への書き出し動作について考える際は
 アクティベーションワークフローで使用できる様々なオプションと手順について詳しくは、以下を参照してください。
 
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [エンタープライズ宛先に対するオーディエンスデータの有効化 ](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [エンタープライズ宛先に対するオーディエンスデータの有効化 &#x200B;](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [オンデマンドでのファイルのバッチ宛先への書き出し](/help/destinations/ui/export-file-now.md)
 * [クラウドストレージの宛先へのデータセットの書き出し](/help/destinations/ui/export-datasets.md)

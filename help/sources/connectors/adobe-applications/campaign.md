@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのManaged Services プラットフォームであり、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理およびクロスチャネル実行のための環境となります。 詳しくは、[Adobe Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja) を参照してください。
+Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのManaged Services プラットフォームであり、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理およびクロスチャネル実行のための環境となります。 詳しくは、[Adobe Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja) を参照してください。
 
 Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campaign v8 の配信ログとトラッキングログデータをAdobe Experience Platformに取り込むことができます。
 
@@ -30,23 +30,23 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 
 >[!IMPORTANT]
 >
->Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスできる必要があります。 クライアントコンソールのダウンロードおよびインストール方法については、[Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=ja) を参照してください。
+>Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスできる必要があります。 クライアントコンソールのダウンロードおよびインストール方法については、[Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=ja) を参照してください。
 
 クライアントコンソールから Campaign v8 インスタンスにログインします。 「[!DNL Explorer]」タブで、「[!DNL Administration]」を選択し、「[!DNL Configuration]」を選択します。 次に、「[!DNL Data schemas]」を選択して、名前またはラベルの `broadLog` フィルターを適用します。 表示されるリストで、`broadLogRcp` という名前の受信者配信ログソーススキーマを選択します。
 
-![ エクスプローラタブが選択されたAdobe Campaign v8 クライアントコンソールでは、管理、設定、データスキーマノードが展開され、フィルタリングが「broad」に設定されています。](./images/campaign/explorer.png)
+![&#x200B; エクスプローラタブが選択されたAdobe Campaign v8 クライアントコンソールでは、管理、設定、データスキーマノードが展開され、フィルタリングが「broad」に設定されています。](./images/campaign/explorer.png)
 
 次に、「**データ**」タブを選択します。
 
-![ 「データ」タブが選択されたAdobe Campaign v8 クライアントコンソール ](./images/campaign/data.png)
+![&#x200B; 「データ」タブが選択されたAdobe Campaign v8 クライアントコンソール &#x200B;](./images/campaign/data.png)
 
 データパネルで右クリックまたはキーストロークして、コンテキストメニューを開きます。 ここから **リストを設定…** を選択します
 
-![ コンテキストメニューが開き、「リストを設定」オプションが選択されているAdobe Campaign v8 クライアントコンソール ](./images/campaign/configure.png)
+![&#x200B; コンテキストメニューが開き、「リストを設定」オプションが選択されているAdobe Campaign v8 クライアントコンソール &#x200B;](./images/campaign/configure.png)
 
 リスト設定ウィンドウが開き、目的のフィールドを既存のリストに追加して、データパネルにデータを表示できるインターフェイスが表示されます。
 
-![ 表示可能な受信者配信ログの設定のリスト ](./images/campaign/list-configuration.png)
+![&#x200B; 表示可能な受信者配信ログの設定のリスト &#x200B;](./images/campaign/list-configuration.png)
 
 これで、前の手順で追加された設定フィールドを含む、受信者配信ログを表示できます。
 
@@ -54,7 +54,7 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 >
 >同じ手順を繰り返しますが、トラッキングログデータを表示す `tracking` にはフィルターを適用します。
 
-![ 最終変更名、配信チャネル、内部配信名、ラベルの情報と共に表示される受信者配信ログ ](./images/campaign/recipient-delivery-logs.png)
+![&#x200B; 最終変更名、配信チャネル、内部配信名、ラベルの情報と共に表示される受信者配信ログ &#x200B;](./images/campaign/recipient-delivery-logs.png)
 
 ### スキーマの作成 {#create-a-schema}
 
@@ -64,17 +64,17 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 >
 >Campaign データを [!DNL Real-Time Customer Profile] に取り込むには、XDM ExperienceEvent スキーマがプロファイル対応である必要があります。
 
-スキーマの作成方法に関する詳細な手順については、[UI での XDM スキーマの作成 ](../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
+スキーマの作成方法に関する詳細な手順については、[UI での XDM スキーマの作成 &#x200B;](../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
 
 ### データセットの作成 {#create-a-dataset}
 
-最後に、スキーマのデータセットを作成する必要があります。 データセットの作成方法に関する詳細な手順については、[UI でのデータセットの作成 ](../../../catalog/datasets/user-guide.md) に関するガイドを参照してください。
+最後に、スキーマのデータセットを作成する必要があります。 データセットの作成方法に関する詳細な手順については、[UI でのデータセットの作成 &#x200B;](../../../catalog/datasets/user-guide.md) に関するガイドを参照してください。
 
 ## Experience Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 
 Campaign クライアントコンソールでデータログにアクセスし、スキーマとデータセットを作成したら、ソース接続を作成して、Campaign Managed Services データをExperience Platformに取り込みます。
 
-Campaign v8 の配信ログおよびトラッキングログデータを Experience Platfrom に取り込む方法について詳しくは、[UI での Campaigned Managed Services ソース接続の作成 ](../../tutorials/ui/create/adobe-applications/campaign.md) に関するガイドを参照してください。
+Campaign v8 の配信ログおよびトラッキングログデータを Experience Platfrom に取り込む方法について詳しくは、[UI での Campaigned Managed Services ソース接続の作成 &#x200B;](../../tutorials/ui/create/adobe-applications/campaign.md) に関するガイドを参照してください。
 
 >[!IMPORTANT]
 >

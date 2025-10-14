@@ -94,7 +94,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 
 >[!NOTE]
 >
->[!DNL Experience Data Model] （XDM）記述子の `xdm:sourceProperty` および `xdm:destinationProperty` 属性を処理する場合、`properties` キーはすべて JSON ポインター文字列から **除外** する必要があります。 詳しくは、[!DNL Schema Registry] API 開発者ガイドの [ 記述子 ](../xdm/api/descriptors.md) に関するサブガイドを参照してください。
+>[!DNL Experience Data Model] （XDM）記述子の `xdm:sourceProperty` および `xdm:destinationProperty` 属性を処理する場合、`properties` キーはすべて JSON ポインター文字列から **除外** する必要があります。 詳しくは、[!DNL Schema Registry] API 開発者ガイドの [&#x200B; 記述子 &#x200B;](../xdm/api/descriptors.md) に関するサブガイドを参照してください。
 
 ## JSON パッチ {#json-patch}
 
@@ -126,4 +126,4 @@ JSON スキーマは、JSON データの構造を記述して検証するため�
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Experience Platform] 用の JSON ベースのリソースの管理に関連するテクノロジーと構文の一部を紹介しました。 ベストプラクティスなど、Experience Platform API の操作について詳しくは、[ はじめる前に ](api-guide.md) を参照してください。 よくある質問への回答については、[Experience Platform トラブルシューティングガイド ](troubleshooting.md) を参照してください。
+このドキュメントでは、[!DNL Experience Platform] 用の JSON ベースのリソースの管理に関連するテクノロジーと構文の一部を紹介しました。 ベストプラクティスなど、Experience Platform API の操作について詳しくは、[&#x200B; はじめる前に &#x200B;](api-guide.md) を参照してください。 よくある質問への回答については、[Experience Platform トラブルシューティングガイド &#x200B;](troubleshooting.md) を参照してください。

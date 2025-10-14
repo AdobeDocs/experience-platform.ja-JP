@@ -13,11 +13,11 @@ ht-degree: 4%
 
 # Adobe [!DNL Real-Time CDP] のドキュメント {#rtcdp-documentation}
 
-Adobe Real-Time Customer Data Platform（Real-Time CDP）を使用すると、複数の企業ソースから既知および匿名のデータを統合して顧客プロファイルを作成できます。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。 詳しくは、[Real-Time CDPの概要 ](/help/rtcdp/overview.md) を参照してください。
+Adobe Real-Time Customer Data Platform（Real-Time CDP）を使用すると、複数の企業ソースから既知および匿名のデータを統合して顧客プロファイルを作成できます。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。 詳しくは、[Real-Time CDPの概要 &#x200B;](/help/rtcdp/overview.md) を参照してください。
 
 ## 新着情報 {#whats-new}
 
-Real-Time CDPの製品およびドキュメントの最新の機能強化を確認します。 機能、改善点、修正の包括的なリストについては、詳細な[リリースノート](/help/release-notes/latest/latest.md)を参照してください。[ 月次リリースノートのドキュメントの更新セクション ](/help/release-notes/latest/latest.md#documentation-updates) にアクセスして、ドキュメントの最新の変更について常に最新の状態に保ちます。
+Real-Time CDPの製品およびドキュメントの最新の機能強化を確認します。 機能、改善点、修正の包括的なリストについては、詳細な[リリースノート](/help/release-notes/latest/latest.md)を参照してください。[&#x200B; 月次リリースノートのドキュメントの更新セクション &#x200B;](/help/release-notes/latest/latest.md#documentation-updates) にアクセスして、ドキュメントの最新の変更について常に最新の状態に保ちます。
 
 >[!BEGINTABS]
 
@@ -47,7 +47,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 >[!TAB  データのエクスポート ]
 
-データセットの書き出し機能が一般提供されるようになりました。 [ 購入したExperience Platform アプリに基づいて書き出すことができるデータセット ](../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[ データセットを書き出すためのガードレール ](/help/destinations/guardrails.md#dataset-exports) を確認します。
+データセットの書き出し機能が一般提供されるようになりました。 [&#x200B; 購入したExperience Platform アプリに基づいて書き出すことができるデータセット &#x200B;](../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[&#x200B; データセットを書き出すためのガードレール &#x200B;](/help/destinations/guardrails.md#dataset-exports) を確認します。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
@@ -106,7 +106,7 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
 * データの使用に適用される様々な規制、制限、ポリシーに準拠しながら、データを管理していることを理解する。
 * 顧客に売り込み、チャネルをまたいでエクスペリエンスをパーソナライズします。
 
-![Adobe Real-Time CDPの 4 つの柱を示すスライドから抜粋 ](/help/rtcdp/assets/rtcdp-four-pillars.png)
+![Adobe Real-Time CDPの 4 つの柱を示すスライドから抜粋 &#x200B;](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
 以下の製品ドキュメントリンクを参照して、Adobe Real-Time CDPの 4 つのコア柱が企業のユースケースの達成にどのように役立つかを理解します。
 

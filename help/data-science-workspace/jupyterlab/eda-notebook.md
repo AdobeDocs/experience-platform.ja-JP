@@ -28,7 +28,7 @@ EDA ノートブックの例は、web ベースデータを念頭に置いて最
 
 ## はじめに
 
-このガイドを読む前に、[!DNL JupyterLab] の概要およびデータサイエンスワークスペース内での役割を[[!DNL JupyterLab] ユーザーガイド](./overview.md)で確認してください。さらに、独自のデータを使用している場合は、[ [!DNL Jupyterlab] ノートブックでのデータアクセス](./access-notebook-data.md)に関するドキュメントを確認してください。このガイドでは、ノートブックのデータ制限に関する重要な事項を説明します。
+このガイドを読む前に、[!DNL JupyterLab] の概要およびデータサイエンスワークスペース内での役割を[[!DNL JupyterLab] ユーザーガイド](./overview.md)で確認してください。さらに、独自のデータを使用している場合は、[&#x200B; [!DNL Jupyterlab] ノートブックでのデータアクセス](./access-notebook-data.md)に関するドキュメントを確認してください。このガイドでは、ノートブックのデータ制限に関する重要な事項を説明します。
 
 このノートブックでは、Analytics Analysis Workspace にある Adobe Analytics エクスペリエンスイベントデータ形式の中央値データセットを使用します。 EDA ノートブックを使用するには、`target_table` および `target_table_id` の値を持つデータテーブルを定義する必要があります。任意の中央値データセットを使用できます。
 
@@ -70,7 +70,7 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Adobe Experience Platform [!DNL Query Service] への接続
 
-Experience Platformの [!DNL JupyterLab] を使用すると、[!DNL Python] ノートブックで SQL を使用して [ クエリサービス ](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) を通じてデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
+Experience Platformの [!DNL JupyterLab] を使用すると、[!DNL Python] ノートブックで SQL を使用して [&#x200B; クエリサービス &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) を通じてデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
 
 [!DNL JupyterLab] で [!DNL Query Service] を使用する前に、[[!DNL Query Service] SQL 構文](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=ja)について実践的に理解していることを確認してください。
 

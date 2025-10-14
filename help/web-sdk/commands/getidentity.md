@@ -42,7 +42,7 @@ Web SDK タグ拡張機能では、タグ拡張機能 UI を通じてこのコ�
 
   [!DNL ECID] と [!DNL CORE ID] を同時にリクエストできます。 例：`"namespaces": ["ECID","CORE"]`。
 
-* **`edgeConfigOverrides`**: [ データストリーム設定の上書きオブジェクト ](datastream-overrides.md)。
+* **`edgeConfigOverrides`**: [&#x200B; データストリーム設定の上書きオブジェクト &#x200B;](datastream-overrides.md)。
 
 ```js
 alloy("getIdentity",{
@@ -52,7 +52,7 @@ alloy("getIdentity",{
 
 ## 応答オブジェクト
 
-このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
+このコマンドを使用して [&#x200B; 応答を処理 &#x200B;](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
 
 * **`identity.ECID`**：訪問者の ECID を含む文字列。
 * **`identity.CORE`**：訪問者のコア ID を含む文字列。

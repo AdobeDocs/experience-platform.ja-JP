@@ -261,9 +261,9 @@ XDM データの横にあるデータベースアイコンを選択し、`pageVi
 
 Experience Platform UI で、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]** に移動し、web サイトの訪問者をキャプチャするオーディエンスを作成します。
 
-![ オーディエンスに移動する方法の表示 ](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![&#x200B; オーディエンスに移動する方法の表示 &#x200B;](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[ エッジセグメント化 ](/help/segmentation/methods/edge-segmentation.md) でオーディエンスを設定する必要があります。
+訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[&#x200B; エッジセグメント化 &#x200B;](/help/segmentation/methods/edge-segmentation.md) でオーディエンスを設定する必要があります。
 
 エッジオーディエンスに対しては、必ず [active-on-edge 結合ポリシー](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)も設定してください。
 
@@ -287,4 +287,4 @@ Real-Time CDP のパートナーデータサポートを通じて達成される
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

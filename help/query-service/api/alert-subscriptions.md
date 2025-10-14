@@ -17,7 +17,7 @@ Adobe Experience Platform クエリサービスを使用すると、アドホッ
 
 ## 基本を学ぶ
 
-このガイドで使用するエンドポイントは、Adobe Experience Platform [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、Adobe Experience Platform [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Adobe Experience Platform クエリサービスを使用すると、アドホッ
 
 >[!IMPORTANT]
 >
->`delay` または [!UICONTROL &#x200B; クエリ実行遅延 &#x200B;] のアラートタイプは、現在、Query Service API でサポートされていません。 このアラートは、指定したしきい値を超えてスケジュールされたクエリの実行の結果に遅延がある場合に通知します。 このアラートを使用するには、クエリが完了または失敗せずに該当する期間に実行されたときにアラートをトリガーにするカスタム時間を設定する必要があります。 UI でこのアラートを設定する方法については、[ クエリスケジュール ](../ui/query-schedules.md#alerts-for-query-status) ドキュメントまたは [ インラインクエリアクションのガイド ](../ui/monitor-queries.md#query-run-delay) を参照してください。
+>`delay` または [!UICONTROL &#x200B; クエリ実行遅延 &#x200B;] のアラートタイプは、現在、Query Service API でサポートされていません。 このアラートは、指定したしきい値を超えてスケジュールされたクエリの実行の結果に遅延がある場合に通知します。 このアラートを使用するには、クエリが完了または失敗せずに該当する期間に実行されたときにアラートをトリガーにするカスタム時間を設定する必要があります。 UI でこのアラートを設定する方法については、[&#x200B; クエリスケジュール &#x200B;](../ui/query-schedules.md#alerts-for-query-status) ドキュメントまたは [&#x200B; インラインクエリアクションのガイド &#x200B;](../ui/monitor-queries.md#query-run-delay) を参照してください。
 
 | アラートタイプ | 説明 |
 |---|---|
@@ -165,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `alerts.assetId` | アラートを特定のクエリに関連付けたクエリ ID。 |
-| `alerts.id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| `alerts.id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント &#x200B;](../../observability/alerts/ui.md) を参照してください。 |
 | `alerts.status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
 | `alerts.alertType` | アラートのタイプ。スケジュール済みクエリで使用できるアラート状態は 5 つありますが、アドホッククエリで使用できるアラート状態は 4 つのみです。 `quarantine` アラートは、スケジュールされたクエリでのみ使用できます。 また、`delay` アラートの設定は、Experience Platform UI からのみ行えます。 そのため、ここでは `delay` について説明しません。 使用可能なアラートは次のとおりです。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li><li>`quarantine`：スケジュールされたクエリ実行が強制隔離状態になる際にアクティブ化します。</li></ul> |
 | `alerts._links` | このアラート ID に関連する情報の取得、更新、編集、削除に使用できる、使用可能なメソッドおよびエンドポイントに関する情報を提供します。 |
@@ -294,7 +294,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `assetId` | アラートはこの ID に関連付けられています。ID は、クエリ ID またはスケジュール ID のどちらかです。 |
-| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント &#x200B;](../../observability/alerts/ui.md) を参照してください。 |
 | `status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
 | `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のとおりです。 <ul><li>`start`：クエリの実行が開始されると、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合、ユーザーに通知します。</li></ul> |
 | `subscriptions.emailNotifications` | アラートのメール受信を申し込んだユーザーのアドビ登録メールアドレスの配列。 |
@@ -512,7 +512,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| `name` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント &#x200B;](../../observability/alerts/ui.md) を参照してください。 |
 | `assetId` | アラートを特定のクエリに関連付けたクエリ ID。 |
 | `status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
 | `alertType` | アラートのタイプ。スケジュール済みクエリで使用できるアラート状態は 5 つありますが、アドホッククエリで使用できるアラート状態は 4 つのみです。 `quarantine` アラートは、スケジュールされたクエリでのみ使用できます。 また、`delay` アラートの設定は、Experience Platform UI からのみ行えます。 そのため、ここでは `delay` について説明しません。 使用可能なアラートは次のとおりです。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li><li>`quarantine`：スケジュールされたクエリ実行が強制隔離状態になる際にアクティブ化します。</li></ul> |
@@ -613,7 +613,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント &#x200B;](../../observability/alerts/ui.md) を参照してください。 |
 | `_links` | このアラート ID に関連する情報の取得、更新、編集、削除に使用できる、使用可能なメソッドおよびエンドポイントに関する情報を提供します。 |
 
 ## アラートの有効／無効を切り替える {#enable-or-disable-alert}
@@ -673,7 +673,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Experience Platform アラートダッシュボードのドキュメント &#x200B;](../../observability/alerts/ui.md) を参照してください。 |
 | `assetId` | アラートはこの ID に関連付けられています。ID は、クエリ ID またはスケジュール ID のどちらかです。 |
 | `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のとおりです。 <ul><li>`start`：クエリの実行が開始されると、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> |
 | `status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |

@@ -55,7 +55,7 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 ### 名前空間の優先度設定
 
-[Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用してデータを取り込む場合は、ID サービスが AAID をブロックするので、Adobe Analytics ID （AAID）よりも ECID の優先度を高める必要があります。 ECID に優先順位を付けることで、AAID ではなく ECID に未認証のイベントを保存するようリアルタイム顧客プロファイルに指示できます。
+[Adobe Analytics ソースコネクタ &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用してデータを取り込む場合は、ID サービスが AAID をブロックするので、Adobe Analytics ID （AAID）よりも ECID の優先度を高める必要があります。 ECID に優先順位を付けることで、AAID ではなく ECID に未認証のイベントを保存するようリアルタイム顧客プロファイルに指示できます。
 
 ### XDM エクスペリエンスイベント {#xdm-experience-events}
 
@@ -149,7 +149,7 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 グラフのシミュレーションでは、この取り込みは次のようになります。
 
-![ サンプルグラフがレンダリングされたグラフシミュレーション UI](../images/implementation/example-graph.png " レンダリングされたグラフの例を示すグラフシミュレーション UI"){zoomable="yes"}
+![&#x200B; サンプルグラフがレンダリングされたグラフシミュレーション UI](../images/implementation/example-graph.png " レンダリングされたグラフの例を示すグラフシミュレーション UI"){zoomable="yes"}
 
 >[!TAB  ユーザー識別子のない認証済みイベント ]
 
@@ -185,15 +185,15 @@ ID サービスの実装プロセスの最初の手順は、必要な権限が�
 * [!UICONTROL ID 設定の表示 &#x200B;]：この権限を適用して、ID 名前空間の参照ページで一意の名前空間と名前空間の優先度を表示できるようにします。
 * [!UICONTROL ID 設定の編集 &#x200B;]:ID 設定を編集および保存できるようにするために、この権限を適用します。
 
-権限について詳しくは、[ 権限ガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
+権限について詳しくは、[&#x200B; 権限ガイド &#x200B;](../../access-control/abac/ui/permissions.md) を参照してください。
 
 ## ID 名前空間の作成 {#namespace}
 
-データで名前空間が必要な場合、まず組織に適した名前空間を作成する必要があります。 カスタム名前空間の作成手順については、[UI でのカスタム名前空間の作成 ](../features/namespaces.md#create-custom-namespaces) に関するガイドを参照してください。
+データで名前空間が必要な場合、まず組織に適した名前空間を作成する必要があります。 カスタム名前空間の作成手順については、[UI でのカスタム名前空間の作成 &#x200B;](../features/namespaces.md#create-custom-namespaces) に関するガイドを参照してください。
 
 ## グラフシミュレーションツールの使用 {#graph-simulation}
 
-次に、ID サービス UI ワークスペースの [ グラフシミュレーションツール ](./graph-simulation.md) に移動します。 グラフシミュレーションツールを使用して、様々な一意の名前空間や名前空間の優先度設定で作成された ID グラフをシミュレートできます。
+次に、ID サービス UI ワークスペースの [&#x200B; グラフシミュレーションツール &#x200B;](./graph-simulation.md) に移動します。 グラフシミュレーションツールを使用して、様々な一意の名前空間や名前空間の優先度設定で作成された ID グラフをシミュレートできます。
 
 様々な設定を作成することで、グラフシミュレーションツールを使用して、ID 最適化アルゴリズムと特定の設定が、グラフの動作に与える影響をより深く理解できます。
 
@@ -201,7 +201,7 @@ ID サービスの実装プロセスの最初の手順は、必要な権限が�
 
 グラフがどのように動作するかを把握したら、ID サービス UI ワークスペースの [ID 設定 UI](./identity-settings-ui.md) に移動します。 ID 設定 UI にアクセスするには、左側のナビゲーションから **[!UICONTROL ID]** を選択してから、**[!UICONTROL 設定]** を選択します。
 
-![ 設定ボタンが強調表示された ID 参照ページ](../images/implementation/settings.png " 設定ボタンがハイライト表示された ID 参照ページ。"){zoomable="yes"}
+![&#x200B; 設定ボタンが強調表示された ID 参照ページ](../images/implementation/settings.png " 設定ボタンがハイライト表示された ID 参照ページ。"){zoomable="yes"}
 
 ID 設定 UI を使用して、一意の名前空間を指定し、優先順に名前空間を設定します。
 
@@ -209,7 +209,7 @@ ID 設定 UI を使用して、一意の名前空間を指定し、優先順に�
 >
 >設定の適用が完了したら、新しい設定が ID サービスに反映されるまで少なくとも 24 時間かかるので、データの取り込みに進む前に少なくとも 24 時間待つ必要があります。
 
-詳しくは、[ID 設定 UI ガイド ](./identity-settings-ui.md) を参照してください。
+詳しくは、[ID 設定 UI ガイド &#x200B;](./identity-settings-ui.md) を参照してください。
 
 ## XDM スキーマの作成 {#schema}
 
@@ -217,13 +217,13 @@ ID 設定 UI を使用して、一意の名前空間を指定し、優先順に�
 
 リアルタイム顧客プロファイルにデータを取り込むには、スキーマに、プライマリ ID として指定されたフィールドが少なくとも 1 つ含まれていることを確認する必要があります。 プライマリ ID を設定することで、特定のスキーマをプロファイル取り込みに対して有効にできます。
 
-スキーマの作成方法について詳しくは、[UI での XDM スキーマの作成 ](../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
+スキーマの作成方法について詳しくは、[UI での XDM スキーマの作成 &#x200B;](../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
 
 ## データセットの作成 {#dataset}
 
 次に、取り込むデータの構造を提供するデータセットを作成します。 データセットは、スキーマ（列）とフィールド（行）で構成されるデータコレクション（通常はテーブル）を格納し管理するための構造です。データセットはスキーマと連携し、リアルタイム顧客プロファイルにデータを取り込むには、データセットがプロファイル取り込みに対して有効になっている必要があります。 データセットをプロファイルで有効にするには、プロファイルの取り込みが有効になっているスキーマを参照する必要があります。
 
-データセットの作成方法については、[ データセット UI ガイド ](../../catalog/datasets/user-guide.md) を参照してください。
+データセットの作成方法については、[&#x200B; データセット UI ガイド &#x200B;](../../catalog/datasets/user-guide.md) を参照してください。
 
 ## データの取り込み {#ingest}
 
@@ -237,7 +237,7 @@ ID 設定 UI を使用して、一意の名前空間を指定し、優先順に�
 
 上記のすべての項目を完了したら、データをExperience Platformに取り込み始めることができます。 様々な方法でデータ取り込みを実行できます。 次のサービスを使用してデータをExperience Platformに取り込むことができます。
 
-* [ バッチおよびストリーミング取得 ](../../ingestion/home.md)
+* [&#x200B; バッチおよびストリーミング取得 &#x200B;](../../ingestion/home.md)
 * [Experience Platformでのデータ収集](../../collection/home.md)
 * [Experience Platform ソース](../../sources/home.md)
 
@@ -257,7 +257,7 @@ ID ダッシュボードを使用すると、全体的な ID 数とグラフ数�
 
 表示されるウィンドウを使用して、折りたたまれたグラフの情報を表示します。 この例では、メールと電話の両方が一意の名前空間としてマークされているので、サンドボックスには折りたたまれたグラフはありません。
 
-![ 複数の ID を持つグラフのポップアップウィンドウ。](../images/implementation/graphs.png " 複数の ID を持つグラフのポップアップウィンドウ。"){zoomable="yes"}
+![&#x200B; 複数の ID を持つグラフのポップアップウィンドウ。](../images/implementation/graphs.png " 複数の ID を持つグラフのポップアップウィンドウ。"){zoomable="yes"}
 
 ## 付録 {#appendix}
 
@@ -273,7 +273,7 @@ ID 設定と一意の名前空間を実装する際に参照できる追加情�
 
 この例では、CRMID に対するリンクが解除されたまま、`{loginID: ID_C}` が残っています。 したがって、この loginID を関連付ける必要がある人物エンティティはあいまいなままになります。
 
-![ 「ぶら下がっている」 loginID シナリオを含むグラフの例。](../images/graph-examples/dangling_example.png " ダングリング loginID シナリオを含むグラフの例。"){zoomable="yes"}
+![&#x200B; 「ぶら下がっている」 loginID シナリオを含むグラフの例。](../images/graph-examples/dangling_example.png " ダングリング loginID シナリオを含むグラフの例。"){zoomable="yes"}
 
 >[!TAB loginID は CRMID にリンクされています ]
 

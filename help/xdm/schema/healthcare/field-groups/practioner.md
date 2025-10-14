@@ -16,15 +16,15 @@ ht-degree: 8%
 
 [!UICONTROL Practioner] は、[[!DNL XDM Individual Profile] class](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、ヘルスケアまたは関連サービスのプロビジョニングに直接または間接的に関与するユーザーに関する情報を含む、単一のオブジェクトタイプのフィールド `healthcarePractioner` ータを提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/practitioner/practitioner.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/practitioner/practitioner.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL アドレス] | `address` | [[!UICONTROL Address]](../data-types/address.md) の配列 | 勤務地を超える実務担当者の住所（自宅住所など）。 |
-| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 実務担当者とのコミュニケーションに使用できる言語。 詳しくは、以下の [ 節 ](#communication) を参照してください |
+| [!UICONTROL &#x200B; 連絡 &#x200B;] | `communication` | オブジェクトの配列 | 実務担当者とのコミュニケーションに使用できる言語。 詳しくは、以下の [&#x200B; 節 &#x200B;](#communication) を参照してください |
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | この役割のこの人物に適用される識別子。 |
 | [!UICONTROL 名前] | `name` | [[!UICONTROL &#x200B; 人名 &#x200B;]](../data-types/human-name.md) の配列 | 実践者に関連付けられた名前。 |
-| [!UICONTROL &#x200B; 資格 &#x200B;] | `qualification` | オブジェクトの配列 | 医療従事者によるケアの提供を承認または許可する公式の資格、認定、認定、トレーニング、ライセンス、またはそれに類似するもの。 詳しくは、[ 以下の節 ](#qualification) を参照してください。 |
+| [!UICONTROL &#x200B; 資格 &#x200B;] | `qualification` | オブジェクトの配列 | 医療従事者によるケアの提供を承認または許可する公式の資格、認定、認定、トレーニング、ライセンス、またはそれに類似するもの。 詳しくは、[&#x200B; 以下の節 &#x200B;](#qualification) を参照してください。 |
 | [!UICONTROL &#x200B; 連絡先詳細 &#x200B;] | `telecom` | [[!UICONTROL &#x200B; 連絡先 &#x200B;]](../data-types/contact-point.md) の配列 | 実務担当者の連絡先の詳細。 |
 | [!UICONTROL &#x200B; アクティブ &#x200B;] | `active` | ブール値 | 実務担当者レコードが有効に使用されているかどうかを示します。 |
 | [!UICONTROL &#x200B; 生年月日 &#x200B;] | `birthDate` | 日付 | 実務担当者の生年月日。 |
@@ -34,14 +34,14 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/practitioner.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/practitioner.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/practitioner.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/practitioner.schema.json)
 
 ## `communication` {#communication}
 
 `communication` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 通信構造 ](../../../images/healthcare/field-groups/practitioner/communication.png)
+![&#x200B; 通信構造 &#x200B;](../../../images/healthcare/field-groups/practitioner/communication.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ ht-degree: 8%
 
 `qualification` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 認定構造 ](../../../images/healthcare/field-groups/practitioner/qualification.png)
+![&#x200B; 認定構造 &#x200B;](../../../images/healthcare/field-groups/practitioner/qualification.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

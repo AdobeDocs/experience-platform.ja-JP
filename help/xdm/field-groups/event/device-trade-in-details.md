@@ -17,9 +17,9 @@ ht-degree: 18%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; デバイス下取り詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 下取り価格、元のデバイス ID、新しいデバイス ID など、デバイスの下取りトランザクションを記述する単一フィールド（`deviceTradeInDetails`）が提供されます。
+[!UICONTROL &#x200B; デバイス下取り詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 下取り価格、元のデバイス ID、新しいデバイス ID など、デバイスの下取りトランザクションを記述する単一フィールド（`deviceTradeInDetails`）が提供されます。
 
-![ デバイス下取り詳細構造 ](../../images/field-groups/device-trade-in-details.png)
+![&#x200B; デバイス下取り詳細構造 &#x200B;](../../images/field-groups/device-trade-in-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -31,5 +31,5 @@ ht-degree: 18%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)

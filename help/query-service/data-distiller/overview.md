@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## ガードレール
 
-ライセンスの使用権限に関連して、クエリサービスデータのデフォルトの使用制限に関する [ クエリサービスガードレール ](../guardrails.md) ドキュメントを参照してください。
+ライセンスの使用権限に関連して、クエリサービスデータのデフォルトの使用制限に関する [&#x200B; クエリサービスガードレール &#x200B;](../guardrails.md) ドキュメントを参照してください。
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

@@ -16,7 +16,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
-> IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+> IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して、IBM DB2 （以下「DB2」と呼びます）ソースコネクタを作成する手順について説明します。
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な DB2 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
+既に有効な DB2 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -42,7 +42,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `username` | DB2 データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
 
-基本について詳しくは、[ この DB2 ドキュメント ](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html) を参照してください。
+基本について詳しくは、[&#x200B; この DB2 ドキュメント &#x200B;](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html) を参照してください。
 
 ## IBM DB2 アカウントの接続
 
@@ -62,7 +62,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、DB2 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/ibm-db2/new.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/ibm-db2/new.png)
 
 ### 既存のアカウント
 
@@ -72,4 +72,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、DB2 アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、DB2 アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

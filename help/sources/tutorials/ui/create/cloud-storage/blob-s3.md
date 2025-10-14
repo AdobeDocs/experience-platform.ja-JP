@@ -18,6 +18,6 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Experience Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Experience Platform] では、[!DNL Azure Blob] からデータを取り込み、バッチを [!DNL Amazon S3] って取り込むことができます。
 
-[!DNL Azure Blob] ソースコネクタの使用方法の詳細については、[[!DNL Azure Blob]  ソースコネクタガイド ](./blob.md) を参照してください。
+[!DNL Azure Blob] ソースコネクタの使用方法の詳細については、[[!DNL Azure Blob]  ソースコネクタガイド &#x200B;](./blob.md) を参照してください。
 
-[!DNL Amazon S3] ソースコネクタの使用方法の詳細については、[[!DNL Amazon S3]  ソースコネクタガイド ](./blob.md) を参照してください。
+[!DNL Amazon S3] ソースコネクタの使用方法の詳細については、[[!DNL Amazon S3]  ソースコネクタガイド &#x200B;](./blob.md) を参照してください。

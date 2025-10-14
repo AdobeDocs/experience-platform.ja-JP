@@ -11,17 +11,17 @@ ht-degree: 1%
 
 # [!DNL Snap Pixel] 拡張機能の概要
 
-[[!DNL Snap Pixel]](https://businesshelp.snapchat.com/s/article/snap-pixel-about) は、web サイト上での貴重なユーザーインタラクションをキャプチャできるようにするJavaScript ベースの分析ツールです。 購入、サインアップ、その他のコンバージョンなどの重要な訪問者アクションは、[ 広告マネージャー ](http://ads.snapchat.com/) に自動的に送信され、広告、キャンペーン、コンバージョンパスなどのパフォーマンスを測定および最適化できます。
+[[!DNL Snap Pixel]](https://businesshelp.snapchat.com/s/article/snap-pixel-about) は、web サイト上での貴重なユーザーインタラクションをキャプチャできるようにするJavaScript ベースの分析ツールです。 購入、サインアップ、その他のコンバージョンなどの重要な訪問者アクションは、[&#x200B; 広告マネージャー &#x200B;](http://ads.snapchat.com/) に自動的に送信され、広告、キャンペーン、コンバージョンパスなどのパフォーマンスを測定および最適化できます。
 
 [!DNL Snap Pixel] タグ拡張機能を使用すると、[!DNL Snap Pixel] の機能をクライアントサイドのタグライブラリに直接統合できます。 このドキュメントでは、拡張機能をインストールし、タグ管理ルール内でその機能を実装する方法の概要を説明します。
 
-[!DNL Snap Pixel] タグ拡張機能を使用すると、既存のクライアント側タグライブラリに [!DNL Snap Pixel] の機能を効率的に統合できます。 このドキュメントでは、拡張機能をインストールし、タグ管理 [ ルール ](../../../ui/managing-resources/rules.md) 内でその機能を設定する方法の概要を説明します。
+[!DNL Snap Pixel] タグ拡張機能を使用すると、既存のクライアント側タグライブラリに [!DNL Snap Pixel] の機能を効率的に統合できます。 このドキュメントでは、拡張機能をインストールし、タグ管理 [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) 内でその機能を設定する方法の概要を説明します。
 
 ## 前提条件 {#prerequisites}
 
-拡張機能を使用するには、[!DNL Snap] へのアクセス権を持つ有効な [!DNL Ads Manager] アカウントが必要です。 [ 新しいを作成  [!DNL Snap Pixel]](https://forbusiness.snapchat.com/advertising/snap-pixel#about) し、そのピクセル ID をコピーして、アカウントの拡張機能を設定する必要があります。 既存の [!DNL Snap Pixel] がある場合は、その ID を使用するだけです。
+拡張機能を使用するには、[!DNL Snap] へのアクセス権を持つ有効な [!DNL Ads Manager] アカウントが必要です。 [&#x200B; 新しいを作成  [!DNL Snap Pixel]](https://forbusiness.snapchat.com/advertising/snap-pixel#about) し、そのピクセル ID をコピーして、アカウントの拡張機能を設定する必要があります。 既存の [!DNL Snap Pixel] がある場合は、その ID を使用するだけです。
 
-[!DNL Snap Pixel] と共に [!DNL Snap Conversions API] を使用して、クライアントサイドとサーバーサイドの両方から同じイベントを送信することをお勧めします。 このアプローチは、[!DNL Snap Pixel] ーザーだけではキャプチャできないイベントを回復するのに役立ちます。 サーバーサイド実装に統合する手順については、[[!DNL Snap]  イベント転送用の Conversions API 拡張機能 ](../../server/snap/overview.md) を参照してください。 サーバーサイド拡張機能を使用するには、組織が [ イベント転送 ](../../../ui/event-forwarding/overview.md) にアクセスできる必要があることに注意してください。
+[!DNL Snap Pixel] と共に [!DNL Snap Conversions API] を使用して、クライアントサイドとサーバーサイドの両方から同じイベントを送信することをお勧めします。 このアプローチは、[!DNL Snap Pixel] ーザーだけではキャプチャできないイベントを回復するのに役立ちます。 サーバーサイド実装に統合する手順については、[[!DNL Snap]  イベント転送用の Conversions API 拡張機能 &#x200B;](../../server/snap/overview.md) を参照してください。 サーバーサイド拡張機能を使用するには、組織が [&#x200B; イベント転送 &#x200B;](../../../ui/event-forwarding/overview.md) にアクセスできる必要があることに注意してください。
 
 ## 拡張機能のインストール {#install}
 
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL Snap Pixel] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![ データ収集 UI で [!UICONTROL Snap Pixel] 拡張機能用に選択されている [!UICONTROL &#x200B; インストール &#x200B;] ボタン ](./images/install.png)
+![&#x200B; データ収集 UI で [!UICONTROL Snap Pixel] 拡張機能用に選択されている [!UICONTROL &#x200B; インストール &#x200B;] ボタン &#x200B;](./images/install.png)
 
 表示される設定ビューで、拡張機能をアカウントにリンクするには、以前にコピーしたピクセル ID を指定する必要があります。 ID を入力に直接貼り付けることも、代わりに既存のデータ要素を選択することもできます。
 
 完了したら「**[!UICONTROL 保存]**」を選択します。
 
-![ 拡張機能の設定ビューでデータ要素として提供された [!DNL Pixel] ID。](./images/configure.png)
+![&#x200B; 拡張機能の設定ビューでデータ要素として提供された [!DNL Pixel] ID。](./images/configure.png)
 
 拡張機能がインストールされ、タグルールで様々なアクションを使用できるようになりました。
 
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 [!UICONTROL &#x200B; 購入イベントを送信 &#x200B;] アクションの設定が完了したら、「**[!UICONTROL 変更を保持]**」を選択して、ルール設定に追加します。
 
-![ データ収集 UI でルール用に選択された [!UICONTROL &#x200B; 購入イベントを送信 &#x200B;] アクションタイプ ](./images/action-type.png)
+![&#x200B; データ収集 UI でルール用に選択された [!UICONTROL &#x200B; 購入イベントを送信 &#x200B;] アクションタイプ &#x200B;](./images/action-type.png)
 
 ルールの全体的な設定に満足したら、「**[!UICONTROL ライブラリに保存]**」を選択します。
 
-更新を適用するには、新しいタグ [ ビルド ](../../../ui/publishing/builds.md) を公開して、ライブラリに対する変更を有効にします。
+更新を適用するには、新しいタグ [&#x200B; ビルド &#x200B;](../../../ui/publishing/builds.md) を公開して、ライブラリに対する変更を有効にします。
 
 ## データを受信 [!DNL Snap] ていることを確認します。 {#confirm}
 

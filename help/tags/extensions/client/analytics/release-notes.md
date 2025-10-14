@@ -15,7 +15,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)AppMeasurementのリリースノート &rbrace; を参照してください。
+>[AppMeasurementのJavaScript ライブラリ &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)AppMeasurementのリリースノート &rbrace; を参照してください。
 
 ## 2024 年 10 月 28 日（Pt）
 
@@ -23,7 +23,7 @@ ht-degree: 70%
 
 **機能**:
 
-* ユーザーが [ 変数を設定アクション ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) の JSON バージョンを表示および編集できる新機能を追加しました。 Adobe Web SDK拡張機能には、JSON を提供することで [Analytics 変数への入力 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) を行うアクションも含まれています。 JSON データを AA 拡張機能から Web SDK拡張機能にコピーすると、移行するお客様は各変数を手動で追加する代わりに、一度に複数の設定を簡単に転送できます。
+* ユーザーが [&#x200B; 変数を設定アクション &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) の JSON バージョンを表示および編集できる新機能を追加しました。 Adobe Web SDK拡張機能には、JSON を提供することで [Analytics 変数への入力 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) を行うアクションも含まれています。 JSON データを AA 拡張機能から Web SDK拡張機能にコピーすると、移行するお客様は各変数を手動で追加する代わりに、一度に複数の設定を簡単に転送できます。
 
 ## 2024 年 8 月 12 日（Pt）
 
@@ -61,7 +61,7 @@ ht-degree: 70%
 
 **バグ修正**:
 
-* 高エントロピー [User-Agent クライアントヒント ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ja) API の不具合があるブラウザー向けに、エラー処理を追加しました。
+* 高エントロピー [User-Agent クライアントヒント &#x200B;](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ja) API の不具合があるブラウザー向けに、エラー処理を追加しました。
 * [Header](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) Content-Type POSTが `x-www-form-urlencoded` を既定で使用するように変更されました。
 
 ## 2022 年 9 月 23 日（Pt）
@@ -71,7 +71,7 @@ ht-degree: 70%
 **機能**:
 
 * AppMeasurement v2.23.0 にアップグレードしました。
-* 最新バージョンのAppMeasurementでサポートされているように、拡張機能は高エントロピー [user-agent クライアントヒント ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) を収集できるようになりました。
+* 最新バージョンのAppMeasurementでサポートされているように、拡張機能は高エントロピー [user-agent クライアントヒント &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) を収集できるようになりました。
 
 ## 2022 年 2 月 28 日（Pt）
 

@@ -15,18 +15,18 @@ ht-degree: 0%
 
 ## 拡張機能バージョンビューの基本を学ぶ
 
-[Assurance の設定 ](../tutorials/implement-assurance.md) 後に、**ホーム** ビューで「**[!UICONTROL 拡張機能バージョン]**」を選択します
+[Assurance の設定 &#x200B;](../tutorials/implement-assurance.md) 後に、**ホーム** ビューで「**[!UICONTROL 拡張機能バージョン]**」を選択します
 
-![ 拡張機能のバージョン ](./images/versions/versions-extension.png)
+![&#x200B; 拡張機能のバージョン &#x200B;](./images/versions/versions-extension.png)
 
 ## バージョンが最新かどうかを確認します
 
 このビュー内に、各 Mobile SDK の最新バージョンと、インストールした現在のバージョン（該当する場合）の両方がテーブルに表示されます。 特定のバージョンが最新バージョンと同期している場合、そのインストール済みバージョンには緑色のバッジが表示されます。 それ以外の場合は、バッジが赤で表示されます。
 
-![ 拡張機能のバージョン比較 ](./images/versions/versions-extension-version.png)
+![&#x200B; 拡張機能のバージョン比較 &#x200B;](./images/versions/versions-extension-version.png)
 
 ## バージョンを書き出し
 
 ビューの右上にある「**[!UICONTROL バージョンを書き出し]**」を選択すると、すべての拡張機能情報と、クライアントが使用するプラットフォームを含む JSON ペイロードが表示されます。 このデータを JSON ファイルに書き出すか、クリップボードにコピーするかを選択できます。
 
-![ 拡張機能バージョンのエクスポート ](./images/versions/versions-extension-export.png)
+![&#x200B; 拡張機能バージョンのエクスポート &#x200B;](./images/versions/versions-extension-export.png)

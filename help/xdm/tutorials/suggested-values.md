@@ -13,13 +13,13 @@ ht-degree: 1%
 
 エクスペリエンスデータモデル（XDM）の任意の文字列フィールドについて、フィールドが取り込むことができる値を事前定義済みのセットに制限する **enum** を定義できます。 列挙フィールドにデータを取り込もうとすると、その値が設定で定義されている値と一致しない場合、取り込みは拒否されます。
 
-列挙とは異なり、文字列フィールドに **推奨値** を追加しても、取り込むことができる値は制限されません。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[ セグメント化 UI](../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
+列挙とは異なり、文字列フィールドに **推奨値** を追加しても、取り込むことができる値は制限されません。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[&#x200B; セグメント化 UI](../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
 
 >[!NOTE]
 >
 >フィールドの更新された推奨値がセグメント化 UI に反映されるまでに、約 5 分の遅延があります。
 
-このガイドでは、[ スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、[UI ガイドの列挙と推奨値 ](../ui/fields/enum.md) を参照してください。
+このガイドでは、[&#x200B; スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、[UI ガイドの列挙と推奨値 &#x200B;](../ui/fields/enum.md) を参照してください。
 
 ## 前提条件
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 * [スキーマ構成の基本](../schema/composition.md)
 * [Schema Registry API ガイド](../api/overview.md)
 
-既存のフィールドを更新する場合は、[ 列挙と推奨値の進化ルール ](../ui/fields/enum.md#evolution) を確認することを強くお勧めします。 結合に参加するスキーマの推奨値を管理している場合は、[ 列挙と推奨値の結合ルール ](../ui/fields/enum.md#merging) を参照してください。
+既存のフィールドを更新する場合は、[&#x200B; 列挙と推奨値の進化ルール &#x200B;](../ui/fields/enum.md#evolution) を確認することを強くお勧めします。 結合に参加するスキーマの推奨値を管理している場合は、[&#x200B; 列挙と推奨値の結合ルール &#x200B;](../ui/fields/enum.md#merging) を参照してください。
 
 ## 構成
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## 標準フィールドへの推奨値の追加 {#add-suggested-standard}
 
-標準の文字列フィールドの `meta:enum` を拡張するには、特定のスキーマで問題となっているフィールドに [ わかりやすい名前記述子 ](../api/descriptors.md#friendly-name) を作成します。
+標準の文字列フィールドの `meta:enum` を拡張するには、特定のスキーマで問題となっているフィールドに [&#x200B; わかりやすい名前記述子 &#x200B;](../api/descriptors.md#friendly-name) を作成します。
 
 >[!NOTE]
 >
 >文字列フィールドの推奨値は、スキーマレベルでのみ追加できます。 つまり、あるスキーマでの標準フィールドの `meta:enum` を拡張しても、同じ標準フィールドを使用する他のスキーマには影響しません。
 
-次のリクエストは、`sourceSchema` で識別されるスキーマの標準 `eventType` フィールド（[XDM ExperienceEvent クラス ](../classes/experienceevent.md) によって提供）に推奨値を追加します。
+次のリクエストは、`sourceSchema` で識別されるスキーマの標準 `eventType` フィールド（[XDM ExperienceEvent クラス &#x200B;](../classes/experienceevent.md) によって提供）に推奨値を追加します。
 
 ```curl
 curl -X POST \
@@ -220,9 +220,9 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 >
 >標準フィールドとは異なり、カスタムフィールドの `meta:enum` を更新すると、そのフィールドを使用する他のすべてのスキーマに影響します。 変更がスキーマ間に反映されないようにする場合は、代わりに、新しいカスタムリソースを作成することを検討してください。
 >
->* [ カスタムクラスの作成 ](../api/classes.md#create)
->* [ カスタムフィールドグループの作成 ](../api/field-groups.md#create)
->* [ カスタムデータタイプの作成 ](../api/data-types.md#create)
+>* [&#x200B; カスタムクラスの作成 &#x200B;](../api/classes.md#create)
+>* [&#x200B; カスタムフィールドグループの作成 &#x200B;](../api/field-groups.md#create)
+>* [&#x200B; カスタムデータタイプの作成 &#x200B;](../api/data-types.md#create)
 
 次のリクエストは、カスタムデータタイプが提供する「ロイヤルティレベル」フィールドの `meta:enum` を更新します。
 
@@ -274,4 +274,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このガイドでは、Schema Registry API の文字列フィールドの推奨値を管理する方法について説明しました。 様々なフィールドタイプの作成方法について詳しくは、[API でのカスタムフィールドの定義 ](./custom-fields-api.md) に関するガイドを参照してください。
+このガイドでは、Schema Registry API の文字列フィールドの推奨値を管理する方法について説明しました。 様々なフィールドタイプの作成方法について詳しくは、[API でのカスタムフィールドの定義 &#x200B;](./custom-fields-api.md) に関するガイドを参照してください。

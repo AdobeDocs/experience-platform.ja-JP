@@ -52,16 +52,16 @@ ht-degree: 11%
 | セッションエンドポイント | セッションデータの API エンドポイント。 | `/api/public/v3/data_lake_apis/sessions.json` |
 | ページビューエンドポイント | ページビューデータの API エンドポイント。 | `/api/public/v3/data_lake_apis/page_views.json` |
 
-ユーザー名、パスワード、ドメインおよびアクセストークンの取得方法について詳しくは、[[!DNL PathFactory]  サポートセンター ](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の取得と管理に関する包括的なガイドを提供します。
+ユーザー名、パスワード、ドメインおよびアクセストークンの取得方法について詳しくは、[[!DNL PathFactory]  サポートセンター &#x200B;](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の取得と管理に関する包括的なガイドを提供します。
 
 ### Experience Platformに対する権限の設定
 
-**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL PathFactory] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL PathFactory] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/ui/overview.md) を参照してください。
 
 ## [!DNL PathFactory] をExperience Platformに接続 {#pathfactory-connect}
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL PathFactory] をExperience Platformに接続する方法について説明しています。
 
-* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL PathFactory]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/pathfactory.md)。
-* [UI を使用してアカウ  [!DNL PathFactory]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/pathfactory.md)。
-* [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。
+* [&#x200B; ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL PathFactory]  ータを取り込みます &#x200B;](../../tutorials/api/create/marketing-automation/pathfactory.md)。
+* [UI を使用してアカウ  [!DNL PathFactory]  トをExperience Platformに接続します &#x200B;](../../tutorials/ui/create/marketing-automation/pathfactory.md)。
+* [UI を使用したソース接続のデータフローの作成 &#x200B;](../../tutorials/ui/dataflow/marketing-automation.md)。

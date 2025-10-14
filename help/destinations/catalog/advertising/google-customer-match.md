@@ -14,13 +14,13 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
-> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA[）（](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)EU ユーザー同意ポリシー [）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、](https://developers.google.com/display-video/api/guides/getting-started/overview)Google Ads API[、](https://digital-markets-act.ec.europa.eu/index_en)Customer Match および [Display &amp; Video 360 API](https://www.google.com/about/company/user-consent-policy/) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
+> Googleは、欧州連合（EU）の [&#x200B; デジタル市場法 &#x200B;](https://developers.google.com/google-ads/api/docs/start) （DMA[）（](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)EU ユーザー同意ポリシー [）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、](https://developers.google.com/display-video/api/guides/getting-started/overview)Google Ads API[、](https://digital-markets-act.ec.europa.eu/index_en)Customer Match および [Display &amp; Video 360 API](https://www.google.com/about/company/user-consent-policy/) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
 > &#x200B;><br/>
 > &#x200B;>EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
 > &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
+> &#x200B;>Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [&#x200B; 同意ポリシー &#x200B;](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
 > &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
+> &#x200B;>Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[&#x200B; セグメントビルダー &#x200B;](../../../segmentation/home.md#segment-definitions) 内の [&#x200B; セグメント定義 &#x200B;](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) を使用すると、Googleが所有および運営するプロパティ（[!DNL Search]、[!DNL Shopping]、[!DNL Gmail] など）をまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。
 
@@ -50,7 +50,7 @@ ht-degree: 15%
 
 ## [!DNL Google Customer Match] 宛先のデータガバナンス {#data-governance}
 
-Experience Platformの一部の宛先には、宛先プラットフォームに送信される、または宛先プラットフォームから受信するデータに対する、特定のルールと義務があります。 お客様は、お客様のデータの制限事項や義務を理解し、Adobe Experience Platformおよび宛先プラットフォームでのデータの使用方法を理解する責任を負います。 Adobe Experience Platformには、これらのデータ使用義務の一部を管理するのに役立つデータガバナンスツールが用意されています。 データガバナンスツールとポリシーについて [ 詳細情報 ](../../../data-governance/labels/overview.md) します。
+Experience Platformの一部の宛先には、宛先プラットフォームに送信される、または宛先プラットフォームから受信するデータに対する、特定のルールと義務があります。 お客様は、お客様のデータの制限事項や義務を理解し、Adobe Experience Platformおよび宛先プラットフォームでのデータの使用方法を理解する責任を負います。 Adobe Experience Platformには、これらのデータ使用義務の一部を管理するのに役立つデータガバナンスツールが用意されています。 データガバナンスツールとポリシーについて [&#x200B; 詳細情報 &#x200B;](../../../data-governance/labels/overview.md) します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -60,8 +60,8 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | `IDFA` | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| `phone_sha256_e.164` | SHA256 アルゴリズムでハッシュ化された E164 形式の電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
-| `email_lc_sha256` | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| `phone_sha256_e.164` | SHA256 アルゴリズムでハッシュ化された E164 形式の電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 &#x200B;](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| `email_lc_sha256` | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 &#x200B;](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | `user_id` | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 | `address_info_first_name` | ユーザーの名 | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_last_name`、`address_info_country_code`、`address_info_postal_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
 | `address_info_last_name` | ユーザーの姓 | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_first_name`、`address_info_country_code`、`address_info_postal_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
@@ -76,7 +76,7 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -94,9 +94,9 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 ## [!DNL Google Customer Match] アカウントの前提条件 {#google-account-prerequisites}
 
-Experience Platformで [!DNL Google Customer Match] の宛先を設定する前に、[!DNL Customer Match]Googleのサポートドキュメント [ に概説されている ](https://support.google.com/google-ads/answer/6299717) の使用に関するGoogleのポリシーを読んで遵守してください。
+Experience Platformで [!DNL Google Customer Match] の宛先を設定する前に、[!DNL Customer Match]Googleのサポートドキュメント [&#x200B; に概説されている &#x200B;](https://support.google.com/google-ads/answer/6299717) の使用に関するGoogleのポリシーを読んで遵守してください。
 
-次に、[!DNL Google] アカウントが [!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。
+次に、[!DNL Google] アカウントが [!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。
 
 ### 許可リスト {#allowlist}
 
@@ -127,13 +127,13 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 Googleのハッシュ要件およびその他のアクティベーションに関する制限事項について詳しくは、Googleのドキュメントの次の節を参照してください。
 
-* [[!DNL Customer Match]  メールアドレス、アドレスまたはユーザー ID を使用 ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match]  考慮事項 ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
-* [[!DNL Customer Match]  電話番号を使用 ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match]  メールアドレス、アドレスまたはユーザー ID を使用 &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match]  考慮事項 &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match]  電話番号を使用 &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match]  モバイルデバイス ID](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要 ](../../../ingestion/batch-ingestion/overview.md) および [ ストリーミング取り込みの概要 ](../../../ingestion/streaming-ingestion/overview.md) を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要 &#x200B;](../../../ingestion/batch-ingestion/overview.md) および [&#x200B; ストリーミング取り込みの概要 &#x200B;](../../../ingestion/streaming-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化する場合は、上記のリンクで概説されているGoogleの要件に必ず準拠してください。
 
@@ -145,7 +145,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 ### カスタム名前空間の使用 {#custom-namespaces}
 
-`User_ID` 名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag] を使用して独自の識別情報を同期させる必要があります。 詳しくは、[Google公式ドキュメント ](https://support.google.com/google-ads/answer/9199250) を参照してください。
+`User_ID` 名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag] を使用して独自の識別情報を同期させる必要があります。 詳しくは、[Google公式ドキュメント &#x200B;](https://support.google.com/google-ads/answer/9199250) を参照してください。
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -168,7 +168,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -198,16 +198,16 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 **[!UICONTROL セグメントスケジュール]** 手順では、[!UICONTROL &#x200B; または &#x200B;] のオーディエンスを [!DNL IDFA] に送信する際に [!DNL GAID] アプリ ID[!DNL Google Customer Match] を指定する必要があります。
 
-![ アクティベーションワークフローのセグメントスケジュール手順でハイライト表示された「Google顧客一致アプリ ID」フィールド ](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![&#x200B; アクティベーションワークフローのセグメントスケジュール手順でハイライト表示された「Google顧客一致アプリ ID」フィールド &#x200B;](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-[!DNL App ID] の検索方法について詳しくは、[Googleの公式ドキュメントを参照するか ](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)Google担当者にお問い合わせください。
+[!DNL App ID] の検索方法について詳しくは、[Googleの公式ドキュメントを参照するか &#x200B;](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)Google担当者にお問い合わせください。
 
 ### マッピング例：[!DNL Google Customer Match] でのオーディエンスデータのアクティブ化 {#example-gcm}
 
@@ -216,9 +216,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ソースフィールドを選択中：
 
 * 使用しているメールアドレスがハッシュ化されていない場合は、`Email` 名前空間をソース ID として選択します。
-* `Email_LC_SHA256` の [!DNL Experience Platform] メールハッシュ要件 [!DNL Google Customer Match] に従って、[ へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、](#hashing-requirements) 名前空間をソース ID として選択します。
+* `Email_LC_SHA256` の [!DNL Experience Platform] メールハッシュ要件 [!DNL Google Customer Match] に従って、[&#x200B; へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、](#hashing-requirements) 名前空間をソース ID として選択します。
 * ハッシュ化されていない電話番号がデータに含まれている場合は、`PHONE_E.164` 名前空間をソース ID として選択します。 [!DNL Experience Platform] は、[!DNL Google Customer Match] の要件に準拠するために電話番号をハッシュ化します。
-* `Phone_SHA256_E.164`[!DNL Experience Platform] 電話番号ハッシュ要件 [!DNL Facebook] に従って、[ へのデータ取り込みで電話番号をハッシュ化した場合は、](#phone-number-hashing-requirements) 名前空間をソース ID として選択します。
+* `Phone_SHA256_E.164`[!DNL Experience Platform] 電話番号ハッシュ要件 [!DNL Facebook] に従って、[&#x200B; へのデータ取り込みで電話番号をハッシュ化した場合は、](#phone-number-hashing-requirements) 名前空間をソース ID として選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `IDFA` 名前空間 [!DNL Apple] 選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `GAID` 名前空間 [!DNL Android] 選択します。
 * データが他のタイプの識別子で構成されている場合は、ソース ID として `Custom` 名前空間を選択します。
@@ -230,17 +230,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 * ソース名前空間が `IDFA` または `GAID` の場合は、`IDFA` または `GAID` 名前空間をターゲット ID として選択します。
 * ソース名前空間がカスタム名前空間の場合は、`User_ID` 名前空間をターゲット ID として選択します。
 
-![ アクティベーションワークフローのマッピング手順に表示される、ソースフィールドとターゲットフィールドの ID マッピング。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![&#x200B; アクティベーションワークフローのマッピング手順に表示される、ソースフィールドとターゲットフィールドの ID マッピング。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
 
 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
 
-![ アクティベーションワークフローのマッピング手順でハイライト表示されている変換コントロールを適用 ](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![&#x200B; アクティベーションワークフローのマッピング手順でハイライト表示されている変換コントロールを適用 &#x200B;](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## 宛先の監視 {#monitor-destination}
 
-宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [ モニタリング機能 ](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
+宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [&#x200B; モニタリング機能 &#x200B;](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
 
 >[!IMPORTANT]
 >
@@ -260,4 +260,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [ 前提条件 ](#google-account-prerequisites) に準拠していない場合に発生します。 この問題を修正するには、Googleに問い合わせて、自分のアカウントが許可リストに登録されており、[!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。
+このエラーは、顧客アカウントが [&#x200B; 前提条件 &#x200B;](#google-account-prerequisites) に準拠していない場合に発生します。 この問題を修正するには、Googleに問い合わせて、自分のアカウントが許可リストに登録されており、[!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。

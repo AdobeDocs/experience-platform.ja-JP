@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-または、Experience Platform UI を使用して、データセットをプロファイルに対して有効にすることもできます。 プロファイルに対してデータセットを有効としてマークする方法について詳しくは、[ リアルタイム顧客プロファイルのデータセットを有効にする ](../../../catalog/datasets/user-guide.md#enable-profile) ドキュメントを参照してください。
+または、Experience Platform UI を使用して、データセットをプロファイルに対して有効にすることもできます。 プロファイルに対してデータセットを有効としてマークする方法について詳しくは、[&#x200B; リアルタイム顧客プロファイルのデータセットを有効にする &#x200B;](../../../catalog/datasets/user-guide.md#enable-profile) ドキュメントを参照してください。
 
 以下のクエリの例では、`id` をプライマリ ID 列として持つ `decile_table` データセットが作成され、名前空間 `IDFA` が設定されています。 また、マップデータタイプの `decile1Month` という名前のフィールドもあります。 作成されたテーブル （`decile_table`）はプロファイルに対して有効になっています。
 
@@ -75,7 +75,7 @@ Created Table DataSet Id
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-[ALTER TABLE](../../sql/syntax.md#alter-table) コマンドと [CTAS 問合せの一部としてのラベル ](../../sql/syntax.md#create-table-as-select) の使用について詳しくは、SQl 構文のドキュメントを参照してください。
+[ALTER TABLE](../../sql/syntax.md#alter-table) コマンドと [CTAS 問合せの一部としてのラベル &#x200B;](../../sql/syntax.md#create-table-as-select) の使用について詳しくは、SQl 構文のドキュメントを参照してください。
 
 ## SQL を使用した派生データセットの管理に役立つ構成
 
@@ -123,7 +123,7 @@ ALTER TABLE table_name DROP LABEL 'PROFILE';
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-この SQL ステートメントは、API 呼び出しを使用する代わりの効率的な方法を提供します。 詳しくは、方法 [datasets API を使用してReal-Time CDPで使用するデータセットを無効にする ](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile) に関するドキュメントを参照してください。
+この SQL ステートメントは、API 呼び出しを使用する代わりの効率的な方法を提供します。 詳しくは、方法 [datasets API を使用してReal-Time CDPで使用するデータセットを無効にする &#x200B;](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile) に関するドキュメントを参照してください。
 
 ### データセットの更新を許可して機能を挿入する {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ ALTER TABLE table_name ADD LABEL 'UPSERT';
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-この SQL ステートメントは、API 呼び出しを使用する代わりの効率的な方法を提供します。 詳しくは、方法 [Real-Time CDPでデータセットを有効にし、データセット API を使用して UPSERT する ](../../../catalog/datasets/enable-upsert.md#enable-the-dataset) に関するドキュメントを参照してください。
+この SQL ステートメントは、API 呼び出しを使用する代わりの効率的な方法を提供します。 詳しくは、方法 [Real-Time CDPでデータセットを有効にし、データセット API を使用して UPSERT する &#x200B;](../../../catalog/datasets/enable-upsert.md#enable-the-dataset) に関するドキュメントを参照してください。
 
 ### データセットの更新および挿入機能を無効にする {#disable-upsert-functionality-for-dataset}
 
@@ -174,7 +174,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 (3 rows)
 ```
 
-例から、`table_with_a_decile` がプロファイルに対して有効になっており、前述のように [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset)、[&#39;PROFILE&#39;などのラベルが適用されてい ](#enable-existing-dataset-for-profile) ことがわかります。
+例から、`table_with_a_decile` がプロファイルに対して有効になっており、前述のように [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset)、[&#39;PROFILE&#39;などのラベルが適用されてい &#x200B;](#enable-existing-dataset-for-profile) ことがわかります。
 
 ### SQL でのフィールドグループの作成
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 このステートメントが正常に実行されると、作成されたフィールドグループ ID が返されます。 例：`c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`。
 
-代替方法について詳しくは、[ スキーマエディターで新しいフィールドグループを作成する ](../../../xdm/ui/resources/field-groups.md#create) または [ スキーマレジストリ API](../../../xdm/api/field-groups.md#create) を使用する）方法に関するドキュメントを参照してください。
+代替方法について詳しくは、[&#x200B; スキーマエディターで新しいフィールドグループを作成する &#x200B;](../../../xdm/ui/resources/field-groups.md#create) または [&#x200B; スキーマレジストリ API](../../../xdm/api/field-groups.md#create) を使用する）方法に関するドキュメントを参照してください。
 
 ### フィールドグループをドロップ
 

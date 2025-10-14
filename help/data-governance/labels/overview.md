@@ -38,7 +38,7 @@ Adobe Experience Platform では、関連する[データガバナンスポリ�
 
 データセットレベルのラベルを継承する以外に、デフォルトでは、セグメントは関連するデータセットからフィールドレベルのラベルをすべて継承します。したがって、セグメントから除外する属性をより容易に識別し、除外するフィールドのラベルを継承しないようにすることができます。
 
-Experience Platformでの自動適用の動作方法について詳しくは、[ 自動ポリシーの適用 ](../enforcement/auto-enforcement.md) の概要を参照してください。
+Experience Platformでの自動適用の動作方法について詳しくは、[&#x200B; 自動ポリシーの適用 &#x200B;](../enforcement/auto-enforcement.md) の概要を参照してください。
 
 ### Adobe Audience Manager データ書き出しのコントロールからの継承
 
@@ -57,7 +57,7 @@ Experience Platformでの自動適用の動作方法について詳しくは、[
 
 ### UI の使用
 
-[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!UICONTROL スキーマ]** ワークスペースを使用して [ エクスペリエンスデータモデル（XDM）スキーマにラベルを適用 ](../../xdm/tutorials/labels.md) したり、代わりにデータ使用ラベルユーザーガイドを参照して、**[!UICONTROL ポリシー]** UI で [ カスタムラベルを作成および管理 ](./user-guide.md) する方法を学んだりできます。
+[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!UICONTROL スキーマ]** ワークスペースを使用して [&#x200B; エクスペリエンスデータモデル（XDM）スキーマにラベルを適用 &#x200B;](../../xdm/tutorials/labels.md) したり、代わりにデータ使用ラベルユーザーガイドを参照して、**[!UICONTROL ポリシー]** UI で [&#x200B; カスタムラベルを作成および管理 &#x200B;](./user-guide.md) する方法を学んだりできます。
 
 >[!IMPORTANT]
 >
@@ -67,7 +67,7 @@ Experience Platformでの自動適用の動作方法について詳しくは、[
 
 [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
 
-[データセットサービス API ](https://www.adobe.io/experience-platform-apis/references/dataset-service/)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
+[データセットサービス API &#x200B;](https://www.adobe.io/experience-platform-apis/references/dataset-service/)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
 
 ## 次の手順
 

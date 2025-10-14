@@ -16,19 +16,19 @@ ht-degree: 6%
 
 [!UICONTROL Coverage] は、[[!DNL Plan] class](../../../classes/plan.md) の標準スキーマフィールドグループです。 保険プランの高レベルの識別子と記述子、通常は保険カードに表示される情報を提供することを目的とした、単一のオブジェクトタイプのフィールド `healthcareCoverage` ールが提供されます。この情報は、医療製品およびサービスの提供に対する支払いの一部または全部に使用できます。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/coverage/coverage.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/coverage/coverage.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL &#x200B; プラン受益者 &#x200B;] | `beneficiary` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 商品またはサービスが提供された場合に保険の給付を受ける当事者および患者。 |
-| [!UICONTROL クラス] | `class` | オブジェクトの配列 | アンダーライター固有の分類子のスイート。 詳しくは、[ 以下の節 ](#class) を参照してください。 |
+| [!UICONTROL クラス] | `class` | オブジェクトの配列 | アンダーライター固有の分類子のスイート。 詳しくは、[&#x200B; 以下の節 &#x200B;](#class) を参照してください。 |
 | [!UICONTROL &#x200B; 連絡先 &#x200B;] | `contract` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | この保険契約を構成する保険証券。 |
-| [!UICONTROL &#x200B; 受益者の費用等 &#x200B;] | `costToBeneficiary` | オブジェクトの配列 | コストカテゴリと関連金額を示すコードのスイート。ポリシーに詳しく記載されており、ヘルスカードに含まれている場合があります。 詳しくは、[ 以下の節 ](#cost-to-beneficiary) を参照してください。 |
-| [!UICONTROL &#x200B; 例外 &#x200B;] | `exception` | オブジェクトの配列 | 患者のコストとその有効期間に対する例外または削減を示すコードのスイート。 詳しくは、[ 以下の節 ](#exception) を参照してください。 |
+| [!UICONTROL &#x200B; 受益者の費用等 &#x200B;] | `costToBeneficiary` | オブジェクトの配列 | コストカテゴリと関連金額を示すコードのスイート。ポリシーに詳しく記載されており、ヘルスカードに含まれている場合があります。 詳しくは、[&#x200B; 以下の節 &#x200B;](#cost-to-beneficiary) を参照してください。 |
+| [!UICONTROL &#x200B; 例外 &#x200B;] | `exception` | オブジェクトの配列 | 患者のコストとその有効期間に対する例外または削減を示すコードのスイート。 詳しくは、[&#x200B; 以下の節 &#x200B;](#exception) を参照してください。 |
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | 保険業者によって発行された補償範囲の識別子。 |
 | [!UICONTROL &#x200B; 保険計画 &#x200B;] | `insurancePlan` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 保険プランの詳細、給付および費用は、この保険の補償範囲を構成します。 |
 | [!UICONTROL &#x200B; 保険者 &#x200B;] | `insurer` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | プログラムまたはプラン引受人、支払者または保険会社。 |
-| [!UICONTROL &#x200B; 支払期限 &#x200B;] | `paymentBy` | オブジェクトの配列 | 支払い当事者へのリンク、およびオプションで支払いに責任があるもの。 詳しくは、[ 以下の節 ](#payment-by) を参照してください。 |
+| [!UICONTROL &#x200B; 支払期限 &#x200B;] | `paymentBy` | オブジェクトの配列 | 支払い当事者へのリンク、およびオプションで支払いに責任があるもの。 詳しくは、[&#x200B; 以下の節 &#x200B;](#payment-by) を参照してください。 |
 | [!UICONTROL &#x200B; 補償開始日および終了日 &#x200B;] | `period` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) | カバレッジがアクティブである期間。 開始日が指定されていない場合は、開始日が不明であることを示します。終了日が指定されていない場合は、カバレッジが進行中であることを示します。 |
 | [!UICONTROL &#x200B; 保険契約者 &#x200B;] | `policyHolder` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 保険証券を保有する当事者。 |
 | [!UICONTROL &#x200B; 受益関係 &#x200B;] | `relationship` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | サブスクライバーに対する受取人の関係。 |
@@ -44,14 +44,14 @@ ht-degree: 6%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.schema.json)
 
 ## `class` {#class}
 
 `class` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ クラス構造 ](../../../images/healthcare/field-groups/coverage/class.png)
+![&#x200B; クラス構造 &#x200B;](../../../images/healthcare/field-groups/coverage/class.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ ht-degree: 6%
 
 `costToBeneficiary` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 受取人コスト構造 ](../../../images/healthcare/field-groups/coverage/cost-to-beneficiary.png)
+![&#x200B; 受取人コスト構造 &#x200B;](../../../images/healthcare/field-groups/coverage/cost-to-beneficiary.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ ht-degree: 6%
 
 `exception` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 例外構造 ](../../../images/healthcare/field-groups/coverage/exception.png)
+![&#x200B; 例外構造 &#x200B;](../../../images/healthcare/field-groups/coverage/exception.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -88,7 +88,7 @@ ht-degree: 6%
 
 `paymentBy` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 組織内支払 ](../../../images/healthcare/field-groups/coverage/payment-by.png)
+![&#x200B; 組織内支払 &#x200B;](../../../images/healthcare/field-groups/coverage/payment-by.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

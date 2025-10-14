@@ -22,18 +22,18 @@ ht-degree: 5%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+- [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## アカウントの更新
 
-[Experience Platform UI にログインし ](https://platform.adobe.com) 左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 上部のヘッダーから **[!UICONTROL アカウント]** を選択して、既存のアカウントを表示します。
+[Experience Platform UI にログインし &#x200B;](https://platform.adobe.com) 左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 上部のヘッダーから **[!UICONTROL アカウント]** を選択して、既存のアカウントを表示します。
 
 ![カタログ](../../images/tutorials/update/catalog.png)
 
 **[!UICONTROL アカウント]** ページが表示されます。 このページには、ソース、ユーザー名、データフロー数、作成日などの、表示可能なアカウントのリストが表示されます。
 
-左上のフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。
+左上のフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 
@@ -59,4 +59,4 @@ ht-degree: 5%
 
 このチュートリアルでは、[!UICONTROL Sources] ワークスペースを正常に使用して、既存のソースアカウントの情報を更新しました。
 
-[!DNL Flow Service] API を使用してプログラムでこれらの操作を実行する手順については、[Flow Service API を使用した接続情報の更新 ](../../tutorials/api/update.md) に関するチュートリアルを参照してください。
+[!DNL Flow Service] API を使用してプログラムでこれらの操作を実行する手順については、[Flow Service API を使用した接続情報の更新 &#x200B;](../../tutorials/api/update.md) に関するチュートリアルを参照してください。

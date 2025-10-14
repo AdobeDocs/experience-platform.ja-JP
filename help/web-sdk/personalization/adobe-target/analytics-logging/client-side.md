@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-Adobe Experience Platform web SDKを使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) データを収集できます。
+Adobe Experience Platform web SDKを使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) データを収集できます。
 
 クライアントサイドログとは、関連する [!DNL Target] データがクライアントサイドで返され、ユーザーがデータを収集して Analytics と共有できることを意味します。 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ja) を使用して手動で Analytics にデータを送信する場合は、このオプションを有効にしてください。
 
@@ -40,9 +40,9 @@ Adobe Experience Platform web SDKを使用すると、web アプリケーショ�
 
 ### Analytics クライアントサイドログを有効にする {#enable-analytics-client-side-logging}
 
-実装で Analytics クライアントサイドログが有効であると見なすには、[ データストリーム ](../../../../datastreams/overview.md) でAdobe Analytics設定を無効にする必要があります。
+実装で Analytics クライアントサイドログが有効であると見なすには、[&#x200B; データストリーム &#x200B;](../../../../datastreams/overview.md) でAdobe Analytics設定を無効にする必要があります。
 
-![Analytics データストリーム設定が無効 ](../assets/disable-analytics-datastream.png)
+![Analytics データストリーム設定が無効 &#x200B;](../assets/disable-analytics-datastream.png)
 
 ### SDKから [!DNL A4T] データを取得して、Analytics に送信します {#a4t-to-analytics}
 
@@ -52,7 +52,7 @@ Target Edgeは、提案レスポンスを計算する際、Analytics のクラ�
 
 フローは次のようになります。
 
-![ クライアントサイドログフロー ](../assets/analytics-client-side-logging.png)
+![&#x200B; クライアントサイドログフロー &#x200B;](../assets/analytics-client-side-logging.png)
 
 次に、Analytics クライアントサイドログが有効になっている場合の `interact` 応答の例を示します。 Analytics レポートを使用するアクティビティに関する提案の場合は、`scopeDetails.characteristics.analyticsToken` のプロパティが表示されます。
 
@@ -467,11 +467,11 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer アクティビティ {#visual-experience-composer-acitivties}
 
-Web SDKを使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) を使用して作成されたオファーを処理できます。
+Web SDKを使用すると、[Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) を使用して作成されたオファーを処理できます。
 
 >[!NOTE]
 >
->このユースケースの実装手順は、[ フォームベースの Experience Composer アクティビティ ](#form-based-composer) の手順と非常によく似ています。 詳しくは、前の節を参照してください。
+>このユースケースの実装手順は、[&#x200B; フォームベースの Experience Composer アクティビティ &#x200B;](#form-based-composer) の手順と非常によく似ています。 詳しくは、前の節を参照してください。
 
 自動レンダリングが有効になっている場合は、ページで実行された提案から Analytics トークンを収集できます。 ベストプラクティスは、Experience Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Web SDKがレンダリングしようとしたものをフィルタリングすることです。
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Web SDKでの A4T データのクライアントサイドログについて説明しました。 Edge Networkで A4T データを処理する方法について詳しくは、[ サーバーサイドログ ](server-side.md) に関するガイドを参照してください。
+このガイドでは、Web SDKでの A4T データのクライアントサイドログについて説明しました。 Edge Networkで A4T データを処理する方法について詳しくは、[&#x200B; サーバーサイドログ &#x200B;](server-side.md) に関するガイドを参照してください。

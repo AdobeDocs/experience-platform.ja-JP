@@ -96,4 +96,4 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし
 
-[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システム [!DNL Schema Editor] ドキュメント ](../../xdm/home.md) を参照してください。
+[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システム [!DNL Schema Editor] ドキュメント &#x200B;](../../xdm/home.md) を参照してください。

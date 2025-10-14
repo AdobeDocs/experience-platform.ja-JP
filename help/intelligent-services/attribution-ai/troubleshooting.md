@@ -21,7 +21,7 @@ ht-degree: 97%
 
 Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。アドビでは、experience.adobe.com を信頼できるドメインにするために、Chrome でこの問題に鋭意取り組んでいるところです。
 
-![ エラー画像 ](./images/faq/error.PNG){width=500}
+![&#x200B; エラー画像 &#x200B;](./images/faq/error.PNG){width=500}
 
 ### 推奨される修正
 

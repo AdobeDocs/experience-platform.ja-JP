@@ -25,7 +25,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な ADLS Gen2 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
+既に有効な ADLS Gen2 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -38,7 +38,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `servicePrincipalKey` | アプリケーションのキー。 |
 | `tenant` | アプリケーションを含むテナント情報。 |
 
-これらの値について詳しくは、[ この  [!DNL ADLS Gen2]  ドキュメント ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
+これらの値について詳しくは、[&#x200B; この  [!DNL ADLS Gen2]  ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
 
 ## [!DNL ADLS Gen2] アカウントを接続
 
@@ -68,4 +68,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL ADLS Gen2] アカウントとの接続を確立しました。次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。
+このチュートリアルでは、[!DNL ADLS Gen2] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。

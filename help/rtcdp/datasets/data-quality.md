@@ -17,4 +17,4 @@ Adobe Real-time Customer Data Platform（Real-Time CDP）を使用すると、�
 
 Real-Time CDPは、Adobe Experience Platformをベースに構築され、多くのExperience Platformサービスと機能を利用します。 したがって、データは取り込みと同時に確実にチェックされ、検証されます。
 
-データの取り込み時のチェックとベストプラクティスについて詳しくは、[ データ品質ドキュメント ](../../ingestion/quality/overview.md) を参照してください。
+データの取り込み時のチェックとベストプラクティスについて詳しくは、[&#x200B; データ品質ドキュメント &#x200B;](../../ingestion/quality/overview.md) を参照してください。

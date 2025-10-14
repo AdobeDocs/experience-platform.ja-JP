@@ -15,7 +15,7 @@ ht-degree: 7%
 
 [!UICONTROL Person] は、個々のユーザーを記述する標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、顧客、連絡先、所有者など、様々な役割を果たす人物を表すことができます。
 
-![person 画像 ](../images/data-types/person.PNG){width=500}
+![person 画像 &#x200B;](../images/data-types/person.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -32,5 +32,5 @@ ht-degree: 7%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.schema.json)

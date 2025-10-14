@@ -12,20 +12,20 @@ ht-degree: 64%
 
 # Web SDK 拡張機能リリースノート
 
-このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート ](/help/web-sdk/release-notes.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート &#x200B;](/help/web-sdk/release-notes.md) を参照してください。
 
 ## バージョン 2.33.0 - 2025年9月24日（PT）
 
 **新機能**
 
 - プッシュ通知の表示がサポートされるようになりました
-- Adobe Experience Platform Web SDKの [ バージョン 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) が含まれます。
 
 ## バージョン 2.32.0 - 2025年9月4日（PT）
 
 **新機能**
 
-- Adobe Experience Platform Web SDKの [ バージョン 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) が含まれます。
 - 新しいカスタムビルドコンポーネントとして、Adobe Advertisingがサポートされるようになりました。 拡張機能の設定と送信イベント呼び出しでを設定します。
 - プロファイルにプッシュ購読の詳細を記録できるようになりました。 これは、新しいアクション「サブスクリプションの詳細をプッシュ」を通じておこなわれます
 
@@ -36,13 +36,13 @@ ht-degree: 64%
 ## バージョン 2.31.1 - 2025年7月31日（PT）
 
 - カスタムビルドが実行されない問題を修正しました。
-- Adobe Experience Platform Web SDKの [ バージョン 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) が含まれます。
 
 ## バージョン 2.31.0 - 2025年7月24日（PT）
 
 **新機能**
 
-- Adobe Experience Platform Web SDKの [ バージョン 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) が含まれます。
 
 **修正点および改善点**
 
@@ -52,7 +52,7 @@ ht-degree: 64%
 
 **既知の問題**
 
-- v2.31.0 のリリース後、[ カスタムコンポーネントビルド ](/help/web-sdk/install/create-custom-build.md) プロセスに問題が見つかりました。 カスタムビルドは引き続き動作しますが、現在はすべてのコンポーネントがビルドに含まれているため、コンポーネントの選択に関係なく、フルサイズのパッケージが作成されます。 この問題の修正は開発中です。 カスタムコンポーネントの選択を使用してビルドサイズを最小限に抑える場合は、将来のリリースを待つことをお勧めします。
+- v2.31.0 のリリース後、[&#x200B; カスタムコンポーネントビルド &#x200B;](/help/web-sdk/install/create-custom-build.md) プロセスに問題が見つかりました。 カスタムビルドは引き続き動作しますが、現在はすべてのコンポーネントがビルドに含まれているため、コンポーネントの選択に関係なく、フルサイズのパッケージが作成されます。 この問題の修正は開発中です。 カスタムコンポーネントの選択を使用してビルドサイズを最小限に抑える場合は、将来のリリースを待つことをお勧めします。
 
 ## バージョン 2.30.1 - 2025年5月27日（PT）
 
@@ -66,7 +66,7 @@ ht-degree: 64%
 
 - サードパーティ cookie を有効にする際に、データ要素を指定できるようになりました。
 - コードフィールドにクリアボタンを追加しました。
-- Adobe Experience Platform Web SDKの [ バージョン 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) が含まれます。
 
 **修正点および改善点**
 
@@ -82,13 +82,13 @@ ht-degree: 64%
 
 **新機能**
 
-- カスタム Web SDK ビルドを作成し、必要なコンポーネントをタグ拡張機能ユーザーインターフェイスから選択できるようになりました。 その結果、未使用のコンポーネントを除外することで、ビルドのサイズが小さくなる可能性があります。 [ カスタム Web SDK ビルドの作成 ](web-sdk-extension-configuration.md#custom-build) に関するドキュメントを参照してください。
-- Adobe Experience Platform Web SDKの [ バージョン 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) が含まれます。
+- カスタム Web SDK ビルドを作成し、必要なコンポーネントをタグ拡張機能ユーザーインターフェイスから選択できるようになりました。 その結果、未使用のコンポーネントを除外することで、ビルドのサイズが小さくなる可能性があります。 [&#x200B; カスタム Web SDK ビルドの作成 &#x200B;](web-sdk-extension-configuration.md#custom-build) に関するドキュメントを参照してください。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) が含まれます。
 
 **修正点および改善点**
 
-- [ 変数を更新 ](action-types.md#update-variable) アクションで欠落しているデータ要素の正常な処理を追加しました。 以前は、データ要素が欠落した「変数を更新」アクションを編集すると、エラーメッセージが表示されていました。 別のデータ要素を選択できるようになり、変数の更新アクションのすべての設定が引き続き適用されます。 データ要素は、削除された場合や、タグプロパティが重複している場合、欠落する可能性があります。
-- [ID でリダイレクト ](action-types.md#redirect-with-identity) アクションで新しいタブを開く機能のサポートを追加しました。 これで、アクションを使用する場合、ブラウザーをリダイレクトする際に、アンカータグの `target` 属性が使用されるようになりました。
+- [&#x200B; 変数を更新 &#x200B;](action-types.md#update-variable) アクションで欠落しているデータ要素の正常な処理を追加しました。 以前は、データ要素が欠落した「変数を更新」アクションを編集すると、エラーメッセージが表示されていました。 別のデータ要素を選択できるようになり、変数の更新アクションのすべての設定が引き続き適用されます。 データ要素は、削除された場合や、タグプロパティが重複している場合、欠落する可能性があります。
+- [ID でリダイレクト &#x200B;](action-types.md#redirect-with-identity) アクションで新しいタブを開く機能のサポートを追加しました。 これで、アクションを使用する場合、ブラウザーをリダイレクトする際に、アンカータグの `target` 属性が使用されるようになりました。
 - 設定の上書きでAdobe Audience Managerを無効にできなかった問題を修正しました。
 
 ## バージョン 2.28.0 - 2025年1月23日（PT）
@@ -102,14 +102,14 @@ ht-degree: 64%
 **新機能**
 
 - XDM オブジェクト内の技術名と表示名を切り替える新機能が追加されました。
-- Adobe Experience Platform Web SDKの [ バージョン 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) が含まれます。
+- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) が含まれます。
 
 ## バージョン 2.27.0 - 2024年10月31日（PT）
 
 **新機能**
 
-- [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) に、Experience Cloud ソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
-- メディアセッションに [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md) を作成できるようになりました。
+- [&#x200B; データストリームの上書き &#x200B;](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) に、Experience Cloud ソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
+- メディアセッションに [&#x200B; データストリームの上書き &#x200B;](../web-sdk/web-sdk-extension-configuration.md) を作成できるようになりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます。
 
@@ -126,12 +126,12 @@ Adobe Experience Platform Web SDK のバージョン 2.23.0 が含まれます�
 **新機能**
 
 - イベントの監視フック `triggered` 追加しました。
-- [ ガイド付きイベント ](action-types.md#instance)、[ デフォルトのパーソナライゼーションをリクエスト ](action-types.md#personalization)、[ ルールセット項目を登録 ](event-types.md#subscribe-ruleset-items) および [ ルールセットを評価 ](action-types.md#evaluate-rulesets) が一般入手可能になりました。
+- [&#x200B; ガイド付きイベント &#x200B;](action-types.md#instance)、[&#x200B; デフォルトのパーソナライゼーションをリクエスト &#x200B;](action-types.md#personalization)、[&#x200B; ルールセット項目を登録 &#x200B;](event-types.md#subscribe-ruleset-items) および [&#x200B; ルールセットを評価 &#x200B;](action-types.md#evaluate-rulesets) が一般入手可能になりました。
 
 **修正点および改善点**
 
 - 重複した変数データ要素が相互に上書きされる可能性がある問題を修正しました。
-- [ デフォルトパーソナライゼーションをリクエスト ](action-types.md#personalization) ガイド付きイベントを使用する際に、ビジュアルパーソナライゼーションの決定が自動的に有効になりました。
+- [&#x200B; デフォルトパーソナライゼーションをリクエスト &#x200B;](action-types.md#personalization) ガイド付きイベントを使用する際に、ビジュアルパーソナライゼーションの決定が自動的に有効になりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.22.0 が含まれます。
 
@@ -167,7 +167,7 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 
 **修正点および改善点**
 
-- [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
+- [&#x200B; 変数を更新 &#x200B;](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
 - [!UICONTROL &#x200B; アクションで使用することが推奨されるイベントタイプから &#x200B;] メディア `sendEvent` イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
@@ -385,7 +385,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-- イベントを送信アクション UI に [ 「ドキュメントのアンロード中」 ](/help/web-sdk/commands/sendevent/documentunloading.md) チェックボックスを追加しました。
+- イベントを送信アクション UI に [&#x200B; 「ドキュメントのアンロード中」 &#x200B;](/help/web-sdk/commands/sendevent/documentunloading.md) チェックボックスを追加しました。
 - [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 - デフォルトの同意フィールドにツールヒントを追加しました。
 - [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドを使用する際のAdobeの同意 2.0 標準のサポートを追加しました。

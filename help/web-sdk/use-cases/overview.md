@@ -14,4 +14,4 @@ ht-degree: 3%
 
 Adobe Experience Platform Web SDK は、Adobe Analytics、Audience Manager、Target、Experience Platformなど、他のAdobeソリューションを使用して、様々なパーソナライゼーションのユースケースを強化します。
 
-サポートされるユースケースの実装について詳しくは、[Web SDK ユースケースプロジェクトページ ](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=) の対応するドキュメントを参照してください。
+サポートされるユースケースの実装について詳しくは、[Web SDK ユースケースプロジェクトページ &#x200B;](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=) の対応するドキュメントを参照してください。

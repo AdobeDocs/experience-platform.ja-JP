@@ -38,11 +38,11 @@ ht-degree: 51%
 | `password` | [!DNL Azure File Storage] インスタンスのパスワード |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure File Storage] の接続仕様 ID は `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` です。 |
 
-基本について詳しくは、[Azure ファイルストレージのドキュメント ](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) を参照してください。
+基本について詳しくは、[Azure ファイルストレージのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -106,4 +106,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure File Storage] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用したサードパーティのクラウドストレージの調査 ](../../explore/cloud-storage.md) 方法を説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure File Storage] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用したサードパーティのクラウドストレージの調査 &#x200B;](../../explore/cloud-storage.md) 方法を説明します。

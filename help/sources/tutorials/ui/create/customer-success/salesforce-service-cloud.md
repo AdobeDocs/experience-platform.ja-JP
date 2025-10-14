@@ -22,7 +22,7 @@ ht-degree: 18%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Salesforce Service Cloud] 接続がある場合は、このドキュメントの残りの部分をスキップし、[ カスタマーサクセスのためのデータフローの設定 ](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
+既に有効な [!DNL Salesforce Service Cloud] 接続がある場合は、このドキュメントの残りの部分をスキップし、[&#x200B; カスタマーサクセスのためのデータフローの設定 &#x200B;](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -46,7 +46,7 @@ ht-degree: 18%
 | セキュリティトークン | [!DNL Salesforce Service Cloud] ユーザーアカウントのセキュリティ トークン。 |
 | API バージョン | （オプション）使用している [!DNL Salesforce Service Cloud] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
-認証について詳しくは、[ この  [!DNL Salesforce Service Cloud]  認証ガイド ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm) を参照してください。
+認証について詳しくは、[&#x200B; この  [!DNL Salesforce Service Cloud]  認証ガイド &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm) を参照してください。
 
 >[!TAB OAuth2 クライアント資格情報 ]
 
@@ -59,7 +59,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce Service Cl
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce Service Cloud] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | API バージョン | 使用している [!DNL Salesforce Service Cloud] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
-[!DNL Salesforce Service Cloud] に対する OAuth の使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
+[!DNL Salesforce Service Cloud] に対する OAuth の使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth 認証フローのガイド &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 
@@ -83,13 +83,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のアカウントを使用するには、**[!UICONTROL 既存のアカウント]** を選択し、表示されるリストから目的のアカウントを選択します。 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 
-![ 組織内に既に存在する、認証済みのSalesforce Service Cloud アカウントのリスト。](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+![&#x200B; 組織内に既に存在する、認証済みのSalesforce Service Cloud アカウントのリスト。](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### 新しいアカウントを作成
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Salesforce Service Cloud] アカウントの名前と説明を入力します。
 
-![ 適切な認証資格情報を提供することで、新しいSalesforce Service Cloud アカウントを作成できるインターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+![&#x200B; 適切な認証資格情報を提供することで、新しいSalesforce Service Cloud アカウントを作成できるインターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
 
 次に、新しいアカウントに使用する認証タイプを選択します。
 
@@ -106,7 +106,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Salesforce アカウント作成用の基本認証インターフェイス ](../../../../images/tutorials/create/salesforce-service-cloud/basic.png)
+![Salesforce アカウント作成用の基本認証インターフェイス &#x200B;](../../../../images/tutorials/create/salesforce-service-cloud/basic.png)
 
 >[!TAB OAuth2 クライアント資格情報 ]
 
@@ -119,10 +119,10 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Salesforce アカウント作成用の OAuth インターフェイス ](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
+![Salesforce アカウント作成用の OAuth インターフェイス &#x200B;](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/customer-success.md) を行いましょう。
+このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/customer-success.md) を行いましょう。

@@ -37,7 +37,7 @@ Azure 上のExperience Platformに接続するには、次の認証資格情報�
 | `connectionString` | [!DNL PostgreSQL] アカウントに関連付けられた接続文字列。 [!DNL PostgreSQL] の接続文字列パターンは `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}` です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL PostgreSQL] の接続仕様 ID は `74a1c565-4e59-48d7-9d67-7c03b8a13137` です。 この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+詳しくは、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/) を参照してください。
 
 >[!TAB  基本認証 ]
 
@@ -53,7 +53,7 @@ Azure 上のExperience Platformに接続するには、次の認証資格情報�
 | `sslMode` | 接続に適用する [!DNL Secure Sockets Layer] （SSL）方式。 使用可能な値は次のとおりです。 <ul><li>`Disable`:SSL を無効にするには、このオプションを使用します。 サーバーに SSL 設定が必要な場合、接続は失敗します。</li><li>`Allow`：このオプションを使用して、SSL 接続を許可します。 非 SSL 接続は、サーバーがサポートしている場合でも使用できます。</li><li>`Prefer`：サーバーが SSL 接続をサポートしている場合に、SSL 接続を優先させるには、このオプションを使用します。 このオプションでは、非 SSL 接続も可能です。</li><li>`Require`：このオプションを使用して、SSL 接続を必須にします。 サーバーが SSL をサポートしていない場合、接続は失敗します。</li><li>`Verify-Ca`: サーバーが SSL をサポートしていない場合に、接続の失敗時にサーバー証明書を検証するには、このオプションを使用します。</li><li>`Verify-Full`: サーバーが SSL をサポートしていない場合に、接続の失敗時にホストの名前を使用してサーバー証明書を検証するには、このオプションを使用します。</li></ul> |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL PostgreSQL] の接続仕様 ID は `74a1c565-4e59-48d7-9d67-7c03b8a13137` です。 この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+詳しくは、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/) を参照してください。
 
 >[!ENDTABS]
 
@@ -75,7 +75,7 @@ Azure 上のExperience Platformに接続するには、次の認証資格情報�
 | `sslMode` | サーバーサポートに応じて、SSL を適用するかどうかを制御するブール値。 この設定のデフォルトは `false` です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL PostgreSQL] の接続仕様 ID は `74a1c565-4e59-48d7-9d67-7c03b8a13137` です。 この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+詳しくは、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/) を参照してください。
 
 ## API を使用した [!DNL PostgreSQL] のExperience Platformへの接続
 

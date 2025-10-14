@@ -23,7 +23,7 @@ SQL オーディエンス拡張機能を使用して、既存のディメンシ�
 
 オーディエンスを作成、管理およびアクティブ化するには、次の手順に従います。 作成されたオーディエンスは「オーディエンスフロー」にシームレスに統合されるので、ベースオーディエンスとターゲットファイルベースの宛先（CSV アップロードやクラウドストレージの場所など）からセグメントを作成して、顧客アウトリーチに活用できます。 「オーディエンスフロー」とは、オーディエンスを作成、管理およびアクティブ化し、宛先間のシームレスな統合を確保する完全なプロセスを指します。
 
-「オーディエンスフロー」の一部として、次の SQL コマンドを使用してAdobe Experience Platform内のオーディエンスを [ 作成 ](#create-audience)、[ 変更 ](#add-profiles-to-audience) および [ 削除 ](#delete-audience) します。
+「オーディエンスフロー」の一部として、次の SQL コマンドを使用してAdobe Experience Platform内のオーディエンスを [&#x200B; 作成 &#x200B;](#create-audience)、[&#x200B; 変更 &#x200B;](#add-profiles-to-audience) および [&#x200B; 削除 &#x200B;](#delete-audience) します。
 
 ### オーディエンスの作成 {#create-audience}
 
@@ -45,7 +45,7 @@ AS (select_query)
 | `table_name` | テーブルとオーディエンスの名前。 |
 | `primary_identity` | オーディエンスのプライマリ ID 列を指定します。 |
 | `identity_namespace` | ID の名前空間。 既存の名前空間を使用することも、新しい名前空間を作成することもできます。 使用可能な名前空間を表示するには、`SHOW NAMESPACES` コマンドを使用します。 新しい名前空間を作成するには、`CREATE NAMESPACE` を使用します。 例：`CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
-| `select_query` | オーディエンスを定義する SELECT ステートメント。 SELECT クエリの構文は、[SELECT クエリ ](../sql/syntax.md#select-queries) セクションにあります。 |
+| `select_query` | オーディエンスを定義する SELECT ステートメント。 SELECT クエリの構文は、[SELECT クエリ &#x200B;](../sql/syntax.md#select-queries) セクションにあります。 |
 
 {style="table-layout:auto"}
 
@@ -294,7 +294,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### 自動オーディエンス登録と可用性 {#registration-and-availability}
 
-SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL &#x200B; オリジン &#x200B;] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Experience Platform UI 内でのオーディエンスの表示、管理、作成の方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
+SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL &#x200B; オリジン &#x200B;] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Experience Platform UI 内でのオーディエンスの表示、管理、作成の方法について詳しくは、[&#x200B; オーディエンスポータルの概要 &#x200B;](../../segmentation/ui/audience-portal.md) を参照してください。
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -304,7 +304,7 @@ SQL 拡張機能を使用して作成されたオーディエンスは、オー�
 
 [!DNL Amazon S3]、[!DNL SFTP]、[!DNL Azure Blob] など、任意のファイルベースの宛先に対してオーディエンスをターゲティングすることで、オーディエンスをアクティブ化します。 エンリッチメントされたオーディエンス属性は、必要に応じてさらに絞り込み、フィルタリングするために使用できます。
 
-![ パブリック宛先とプライベート宛先/カスタム宛先を表示する、Adobe Experience Platform宛先タイプのフローチャート（バッチオプションとストリーミングオプションを含む） ](../images/data-distiller/sql-audiences/destination-types.png)。
+![&#x200B; パブリック宛先とプライベート宛先/カスタム宛先を表示する、Adobe Experience Platform宛先タイプのフローチャート（バッチオプションとストリーミングオプションを含む） &#x200B;](../images/data-distiller/sql-audiences/destination-types.png)。
 
 ## 機能の説明 {#faqs}
 
@@ -382,7 +382,7 @@ Data Distiller オーディエンスは、Adobe Journey Optimizerでも使用で
 
 次に、Experience Platform Audience Management 戦略をさらに開発し最適化するために、次のドキュメントを参照してください。
 
-- **オーディエンスの評価を調べる**:[Adobe Experience Platformのオーディエンス評価方法 ](../../segmentation/home.md#evaluate-segments)：リアルタイム更新のためのストリーミングセグメント化、スケジュールに沿った処理またはオンデマンド処理のためのバッチセグメント化、Edge Networkでの即時評価のためのエッジセグメント化）について説明します。
-- **宛先との統合**:Experience Platform宛先 UI を使用して、[ オンデマンドでファイルをバッチ宛先に書き出す ](../../destinations/ui/export-file-now.md) 方法に関するガイドを参照してください。
-- **オーディエンスパフォーマンスの確認**：様々なチャネルにおける SQL 定義オーディエンスのパフォーマンスを分析します。 データインサイトを使用すると、オーディエンスの定義とターゲティング戦略を調整および改善できます。 Adobe Real-Time CDPで SQL クエリにアクセスしてオーディエンスインサイトに適応させる方法については、[ オーディエンスインサイト ](../../dashboards/insights/audiences.md) に関するドキュメントを参照してください。 その後、オーディエンスダッシュボードをカスタマイズして独自のインサイトを作成し、生のデータを実用的な情報に変換することで、これらのインサイトを効果的に視覚化し、より良い意思決定に使用できます。
+- **オーディエンスの評価を調べる**:[Adobe Experience Platformのオーディエンス評価方法 &#x200B;](../../segmentation/home.md#evaluate-segments)：リアルタイム更新のためのストリーミングセグメント化、スケジュールに沿った処理またはオンデマンド処理のためのバッチセグメント化、Edge Networkでの即時評価のためのエッジセグメント化）について説明します。
+- **宛先との統合**:Experience Platform宛先 UI を使用して、[&#x200B; オンデマンドでファイルをバッチ宛先に書き出す &#x200B;](../../destinations/ui/export-file-now.md) 方法に関するガイドを参照してください。
+- **オーディエンスパフォーマンスの確認**：様々なチャネルにおける SQL 定義オーディエンスのパフォーマンスを分析します。 データインサイトを使用すると、オーディエンスの定義とターゲティング戦略を調整および改善できます。 Adobe Real-Time CDPで SQL クエリにアクセスしてオーディエンスインサイトに適応させる方法については、[&#x200B; オーディエンスインサイト &#x200B;](../../dashboards/insights/audiences.md) に関するドキュメントを参照してください。 その後、オーディエンスダッシュボードをカスタマイズして独自のインサイトを作成し、生のデータを実用的な情報に変換することで、これらのインサイトを効果的に視覚化し、より良い意思決定に使用できます。
 

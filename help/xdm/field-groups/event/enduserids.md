@@ -18,7 +18,7 @@ ht-degree: 15%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; エンドユーザー ID 詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、複数のAdobeアプリケーションをまたいで個人の ID 情報を記述するために使用されます。 フィールドグループは、ルートレベルの `endUserIDs` オブジェクトを提供します。このオブジェクトには、データが取り込まれると値が自動的に更新される読み取り専用の `_experience` フィールドが含まれています。
+[!UICONTROL &#x200B; エンドユーザー ID 詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、複数のAdobeアプリケーションをまたいで個人の ID 情報を記述するために使用されます。 フィールドグループは、ルートレベルの `endUserIDs` オブジェクトを提供します。このオブジェクトには、データが取り込まれると値が自動的に更新される読み取り専用の `_experience` フィールドが含まれています。
 
 ![](../../images/field-groups/enduserids.png){width=700}
 
@@ -37,5 +37,5 @@ ht-degree: 15%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

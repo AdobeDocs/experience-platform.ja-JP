@@ -16,7 +16,7 @@ ht-degree: 40%
 
 このドキュメントでは、Adobe Experience Platform [!DNL Query Service] でクエリを記述する際に知っておくべき重要な詳細を説明します。
 
-[!DNL Query Service] で使用される SQL 構文について詳しくは、[SQL 構文ドキュメント ](../sql/syntax.md) を参照してください。
+[!DNL Query Service] で使用される SQL 構文について詳しくは、[SQL 構文ドキュメント &#x200B;](../sql/syntax.md) を参照してください。
 
 ## クエリ実行モデル
 
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] には、インタラクティブ
 
 ### インタラクティブクエリの実行
 
-クエリは、[!DNL Query Service] UI または [ 接続されたクライアントを使用 ](../clients/overview.md) して送信することで、インタラクティブに実行できます。 接続したクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返されるかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
+クエリは、[!DNL Query Service] UI または [&#x200B; 接続されたクライアントを使用 &#x200B;](../clients/overview.md) して送信することで、インタラクティブに実行できます。 接続したクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返されるかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
 
 インタラクティブクエリの実行には、次の制限があります。
 
@@ -311,11 +311,11 @@ LIMIT 50;
 
 ## 重複の除外
 
-クエリサービスでは、データの重複排除、またはデータからの重複行の削除をサポートしています。 重複排除について詳しくは、[ クエリサービスの重複排除ガイド ](../key-concepts/deduplication.md) を参照してください。
+クエリサービスでは、データの重複排除、またはデータからの重複行の削除をサポートしています。 重複排除について詳しくは、[&#x200B; クエリサービスの重複排除ガイド &#x200B;](../key-concepts/deduplication.md) を参照してください。
 
 ## クエリサービスでのタイムゾーンの計算
 
-クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで永続化されたデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法について詳しくは、[FAQ タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法 ](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) の節を参照してください。
+クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで永続化されたデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法について詳しくは、[FAQ タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法 &#x200B;](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) の節を参照してください。
 
 ## 次の手順
 

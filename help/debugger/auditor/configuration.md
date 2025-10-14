@@ -15,7 +15,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 ](./overview.md) を参照してください。
+>Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 &#x200B;](./overview.md) を参照してください。
 
 構成テストでは、実装内の特定の設定や値、または競合の可能性をスキャンします。Experience Platform Auditor は、他のルールや推奨されるベストプラクティスに照らしてタグを評価します。
 

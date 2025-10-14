@@ -47,4 +47,4 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、Adobe
 
 ## 次の手順
 
-[!DNL Segmentation Service] API を使用して呼び出すには、左側のナビゲーションを使用して、または [ 開発者ガイドの概要内で、使用可能なエンドポイントガイドの 1 つを選択 ](./overview.md) ます。
+[!DNL Segmentation Service] API を使用して呼び出すには、左側のナビゲーションを使用して、または [&#x200B; 開発者ガイドの概要内で、使用可能なエンドポイントガイドの 1 つを選択 &#x200B;](./overview.md) ます。

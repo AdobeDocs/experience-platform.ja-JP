@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL &#x200B; 残高移動 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 残高移動 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.balanceTransfers` オブジェクトを提供します。このスキーマは、口座間の金融残高移動に関する詳細をキャプチャします。
+[!UICONTROL &#x200B; 残高移動 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.balanceTransfers` オブジェクトを提供します。このスキーマは、口座間の金融残高移動に関する詳細をキャプチャします。
 
 ![](../../images/field-groups/balance-transfers.png)
 
@@ -23,4 +23,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json) を参照してください。

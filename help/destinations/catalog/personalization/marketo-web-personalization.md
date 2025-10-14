@@ -16,9 +16,9 @@ ht-degree: 64%
 
 この拡張機能は、Web Personalizationおよびコンテンツ AI アプリケーション用 [!DNL Marketo's] スクリプトをデプロイします。 Web Personalization[!DNL Marketo]、コンテンツを一意に識別し、web 訪問者特性に合わせてパーソナライズします。例えば、匿名訪問者に対する firstmographics や、既知の訪問者に対する [!DNL Marketo] Engagement Platform 内の様々な行動属性などです。 [!DNL Marketo] ContentAI には、B2B の顧客に固有の、web およびメールキャンペーン用の AI を活用したレコメンデーションおよびパーソナライゼーションの機能が含まれています。
 
-[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoの web パーソナライゼーションとコンテンツ AI について詳しくは、[Web Personalizationの概要 ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=ja) を参照してください。
+[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoの web パーソナライゼーションとコンテンツ AI について詳しくは、[Web Personalizationの概要 &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=ja) を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![Marketto Web パーソナライゼーション拡張機能](../../assets/catalog/personalization/marketo-web-personalization/catalog.png)
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL Marketo Web Personalization] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

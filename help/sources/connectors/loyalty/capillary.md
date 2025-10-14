@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Capillary Technologies] は、世界中の 300 以上のブランドから信頼されている、主要なロイヤルティおよびエンゲージメントプラットフォームです。 [!DNL Capillary Streaming Events] ソースを使用すると、ビジネスが顧客プロファイル、ロイヤルティデータ、トランザクションイベントを、[!DNL Capillary] からAdobe Experience Platformへとシームレスにストリーミングできるようになります。 [!DNL Capillary] ソースを接続すると、リアルタイムのパーソナライゼーション、高度なオーディエンスのセグメント化、オムニチャネルキャンペーンオーケストレーションが可能になります。
 
@@ -42,7 +42,7 @@ ht-degree: 7%
 | クライアント秘密鍵 | クライアント ID で発行されたクライアント秘密鍵 | `xxxxxxxxxxxxxxxxxx` |
 | 組織 ID | Adobe組織 ID | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
 
-アクセストークンの生成について詳しくは、[Adobe認証ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/) を参照してください。
+アクセストークンの生成について詳しくは、[Adobe認証ガイド &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/) を参照してください。
 
 ### アクセストークンの生成
 

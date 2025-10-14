@@ -20,4 +20,4 @@ Adobe Experience Platformのストリームコネクタは、[!DNL Apache Kafka 
 - 認証済みのデータ収集
 - メッセージのバッチ処理によるネットワーク呼び出しの削減とスループットの向上
 
-コネクタの設定方法など、[!DNL Kafka] コネクタの詳細については、[ はじめる前に ](https://github.com/adobe/experience-platform-streaming-connect) を参照してください。 ワークフローについて詳しくは、「[Developer Guide](https://www.adobe.com/go/kafka-connector-developer-guide)」を参照してください。
+コネクタの設定方法など、[!DNL Kafka] コネクタの詳細については、[&#x200B; はじめる前に &#x200B;](https://github.com/adobe/experience-platform-streaming-connect) を参照してください。 ワークフローについて詳しくは、「[Developer Guide](https://www.adobe.com/go/kafka-connector-developer-guide)」を参照してください。

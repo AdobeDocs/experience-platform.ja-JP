@@ -20,7 +20,7 @@ ht-degree: 11%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `namespace` | オブジェクト | 指定された `id` 属性に関連付けられた名前空間を示す、単一の文字列フィールド（`code`）を含むオブジェクト。 |
-| `authenticatedState` | 文字列 | 観測されたエクスペリエンスイベントの時点での、この ID の認証状態。 使用できる値と定義については、[ 付録 ](#authenticatedState) を参照してください。 |
+| `authenticatedState` | 文字列 | 観測されたエクスペリエンスイベントの時点での、この ID の認証状態。 使用できる値と定義については、[&#x200B; 付録 &#x200B;](#authenticatedState) を参照してください。 |
 | `id` | 文字列 | 関連する名前空間でのコンシューマーの ID。 |
 | `primary` | ブール値 | これが個人のプライマリ ID であるかどうかを示します。 各個人は、1 つのプライマリ ID のみを持つことができます。 |
 | `xid` | 文字列 | 存在する場合、この値は、すべての名前空間内のすべての名前空間スコープ識別子全体で一意の名前空間間識別子を表します。 |
@@ -29,8 +29,8 @@ ht-degree: 11%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## 付録
 

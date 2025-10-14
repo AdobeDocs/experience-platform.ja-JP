@@ -42,14 +42,14 @@ Real-Time CDPを使用すると、次のことができます。
 * Adobe Sensei による AI や機械学習を活用して、マーケター向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-詳しくは、[Real-Time Customer Data Platform ドキュメント ](../../rtcdp/overview.md) を参照してください。
+詳しくは、[Real-Time Customer Data Platform ドキュメント &#x200B;](../../rtcdp/overview.md) を参照してください。
 
 **主な特長**
 
 | 機能 | 説明 |
 |---|---|
 | 宛先 | Adobe [!DNL Real-Time Customer Data Platform] でサポートされている出力先プラットフォームとの事前定義済みの統合により、シームレスにパートナーに対してデータをアクティブ化できます。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
-| ホームページの指標ダッシュボード | Real-Time Customer Data Platform（Real-Time CDP）ホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の [Real-Time Customer Data Platform指標に関する節を参照し ](#real-time-customer-data-platform-metrics) ください。 |
+| ホームページの指標ダッシュボード | Real-Time Customer Data Platform（Real-Time CDP）ホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の [Real-Time Customer Data Platform指標に関する節を参照し &#x200B;](#real-time-customer-data-platform-metrics) ください。 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
 **[!DNL Real-Time Customer Data Platform]指標**
@@ -60,7 +60,7 @@ Real-Time CDPにログインすると、指標ダッシュボードを含むReal
 
 Real-Time CDPにログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。 この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると、ダッシュボードが自動的に更新され、そのデータに関する情報が表示されます。
 
-詳しくは、[Real-Time Customer Data Platform指標の概要を参照してください ](../../rtcdp/home-page-dashboards.md)
+詳しくは、[Real-Time Customer Data Platform指標の概要を参照してください &#x200B;](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
@@ -136,7 +136,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし。
 
-[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システム [!DNL Schema Editor] ドキュメント ](../../xdm/home.md) を参照してください。
+[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システム [!DNL Schema Editor] ドキュメント &#x200B;](../../xdm/home.md) を参照してください。
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
@@ -158,7 +158,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 * なし。
 
-[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、[!DNL Real-Time Customer Profile] ークフローについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
+[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、[!DNL Real-Time Customer Profile] ークフローについて詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -187,4 +187,4 @@ Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを�
 
 * なし。
 
-[!DNL Segmentation Service] について詳しくは、「セグメント化サービスの概要 [ を参照してください ](../../segmentation/home.md)。
+[!DNL Segmentation Service] について詳しくは、「セグメント化サービスの概要 [&#x200B; を参照してください &#x200B;](../../segmentation/home.md)。

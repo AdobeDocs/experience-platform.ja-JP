@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # アカウントプロファイルインサイト
 
-[ アカウントプロファイル ](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+[&#x200B; アカウントプロファイル &#x200B;](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 インサイトを強化する SQL へのアクセスにより、B2B データをより深く理解し、高度にカスタマイズされた再利用可能なインサイトを生成して、顧客アカウント情報をさらに詳しく調べることができます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-次のインサイトはすべて、[ アカウントプロファイルダッシュボード ](../guides/account-profiles.md) または [ カスタムダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[&#x200B; アカウントプロファイルダッシュボード &#x200B;](../guides/account-profiles.md) または [&#x200B; カスタムダッシュボード &#x200B;](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md) で [&#x200B; 新しいウィジェットの作成と編集 &#x200B;](../customize/overview.md) を使用する方法については、[&#x200B; カスタマイズの概要 &#x200B;](../standard-dashboards.md#create-widget) を参照してください。
 
 ## 追加されたアカウントプロファイル {#account-profiles-added}
 
@@ -507,6 +507,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## 次の手順
 
-このドキュメントでは、アカウントプロファイルダッシュボードのインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。 SQL を使用してカスタムインサイトを生成する方法については、[Query Pro モードの概要 ](../sql-insights-query-pro-mode/overview.md) を参照してください。
+このドキュメントでは、アカウントプロファイルダッシュボードのインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。 SQL を使用してカスタムインサイトを生成する方法については、[Query Pro モードの概要 &#x200B;](../sql-insights-query-pro-mode/overview.md) を参照してください。
 
 また、[Profiles](./profiles.md)、[Audiences](./audiences.md) および [Destinations](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

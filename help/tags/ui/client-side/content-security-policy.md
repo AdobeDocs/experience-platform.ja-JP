@@ -82,7 +82,7 @@ CSP はデフフォルトでインラインスクリプトを許可しないた�
 
 >[!NOTE]
 >
->CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Experience Platformでのハッシュの使用制限について詳しくは、[Subresource Integrity （SRI）ガイド ](./sri.md) を参照してください。
+>CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Experience Platformでのハッシュの使用制限について詳しくは、[Subresource Integrity （SRI）ガイド &#x200B;](./sri.md) を参照してください。
 
 ### nonce で許可 {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 このドキュメントを読むと、タグライブラリファイルとインラインスクリプトを受け入れるように CSP ヘッダーを設定する方法を理解できます。
 
-追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、[Experience Platformにおける SRI の互換性 ](./sri.md) に関するガイドを参照してください。
+追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、[Experience Platformにおける SRI の互換性 &#x200B;](./sri.md) に関するガイドを参照してください。

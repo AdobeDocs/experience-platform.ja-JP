@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドを読んで、[!DNL Capillary Streaming Events] と [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Capillary] アカウントからAdobe Experience Platformにデータをストリーミングする方法を学びます。
 
@@ -22,16 +22,16 @@ ht-degree: 9%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Capillary Streaming Events]  概要 ](../../../../connectors/loyalty/capillary.md) を参照してください。
+認証について詳しくは、[[!DNL Capillary Streaming Events]  概要 &#x200B;](../../../../connectors/loyalty/capillary.md) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) に関するガイドを参照してください。
+Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) に関するガイドを参照してください。
 
 >[!BEGINSHADEBOX]
 
@@ -263,8 +263,8 @@ The [!DNL Capillary] source supports the following events:
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを行うことで、ターゲット XDM スキーマを作成することができます。 ターゲット XDM スキーマの作成方法に関する詳細な手順については、次のガイドを参照してください。
 
-* [API を使用したスキーマの作成 ](../../../../../xdm/api/schemas.md)。
-* [UI を使用したスキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md)。
+* [API を使用したスキーマの作成 &#x200B;](../../../../../xdm/api/schemas.md)。
+* [UI を使用したスキーマの作成 &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md)。
 
 作成したら、後でターゲットデータセットとマッピングにターゲット XDM スキーマ `$id` が必要になります。
 
@@ -272,7 +272,7 @@ The [!DNL Capillary] source supports the following events:
 
 データセットは、データのコレクションのためのストレージと管理の構成体で、通常は、列（スキーマ）と行（フィールド）を持つテーブルのように構造化されます。 Experience Platformに正常に取り込まれたデータは、データセットとしてデータレイク内に保存されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用します。
 
-ペイロードにターゲットスキーマの ID を指定しながら [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に対して POST リクエストを実行することで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成 ](../../../../../catalog/api/create-dataset.md) に関するガイドを参照してください。
+ペイロードにターゲットスキーマの ID を指定しながら [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に対して POST リクエストを実行することで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成 &#x200B;](../../../../../catalog/api/create-dataset.md) に関するガイドを参照してください。
 
 
 ## ターゲット接続の作成 {#target}
@@ -316,7 +316,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-次に、ターゲットデータセットが準拠するターゲットスキーマにソースデータをマッピングします。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep]  の ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントに対して POST リクエストを実行します。 ターゲット XDM スキーマ ID と、作成するマッピングセットの詳細を含めます。
+次に、ターゲットデータセットが準拠するターゲットスキーマにソースデータをマッピングします。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep]  の &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントに対して POST リクエストを実行します。 ターゲット XDM スキーマ ID と、作成するマッピングセットの詳細を含めます。
 
 次のように、キャピラリフィールドを対応する XDM スキーマフィールドにマッピングします。
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 >[!TIP]
 >
->データをマッピングする準備が整ったら、[ イベントとプロファイルのマッピング ](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [ ファイルをデータ準備にインポート ](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
+>データをマッピングする準備が整ったら、[&#x200B; イベントとプロファイルのマッピング &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [&#x200B; ファイルをデータ準備にインポート &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
 
 ### データフローの作成 {#flow}
 
@@ -425,6 +425,6 @@ curl -X POST \
 その他の操作については、次のドキュメントを参照してください
 
 * [データフローの監視](../../../../../dataflows/ui/monitor-sources.md)
-* [ データフローの更新 ](../../../ui/update-dataflows.md)
-* [ データフローの削除 ](../../../ui/delete.md)
-* [ ソースアカウントを更新 ](../../../ui/update.md)
+* [&#x200B; データフローの更新 &#x200B;](../../../ui/update-dataflows.md)
+* [&#x200B; データフローの削除 &#x200B;](../../../ui/delete.md)
+* [&#x200B; ソースアカウントを更新 &#x200B;](../../../ui/update.md)

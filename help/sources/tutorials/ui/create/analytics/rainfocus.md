@@ -14,13 +14,13 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->[!DNL RainFocus] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL RainFocus] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このチュートリアルでは、[!DNL RainFocus] アカウントを連携し、イベント管理と Analytics データをAdobe Experience Platformにストリーミングする方法について説明します。
 
 >[!IMPORTANT]
 >
->このソースコネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、clientcare<span>@rainfocus.comまで直接ご連絡いただくか、[[!DNL RainFocus]  ヘルプセンター ](https://help.rainfocus.com/hc/en-us) をご覧ください。
+>このソースコネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、clientcare<span>@rainfocus.comまで直接ご連絡いただくか、[[!DNL RainFocus]  ヘルプセンター &#x200B;](https://help.rainfocus.com/hc/en-us) をご覧ください。
 
 ## はじめに
 
@@ -49,7 +49,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 *[!UICONTROL Analytics]* カテゴリ内で、「**[!UICONTROL RainFocus Experience]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![RainFocus ソースが選択されているExperience Platform UI のソースカタログ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![RainFocus ソースが選択されているExperience Platform UI のソースカタログ &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## データの選択
 
@@ -62,13 +62,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 **RainFocus** からダウンロードしたサンプル JSON ペイロードをアップロードします。
 
-![ ソースワークフローのデータを選択ステップ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-upload.png)
+![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-upload.png)
 
 ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、検索フィールドユーティリティを使用して、スキーマ内から特定の項目にアクセスすることもできます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのデータプレビュー手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
+![&#x200B; ソースワークフローのデータプレビュー手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
 
 ## データフローの詳細
 
@@ -76,17 +76,17 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのデータフローの詳細手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
+![&#x200B; ソースワークフローのデータフローの詳細手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
 ## マッピング {#mapping}
 
 マッピング手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[&#x200B; データ準備 UI ガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのマッピングステップ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
+![&#x200B; ソースワークフローのマッピングステップ &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
 ## レビュー
 
@@ -97,7 +97,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 データフローをレビューしたら、「**終了**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ ソースワークフローのレビュー手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
+![&#x200B; ソースワークフローのレビュー手順。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
 ## ストリーミングエンドポイント URL の取得 {#get-your-streaming-endpoint-url}
 
@@ -105,14 +105,14 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ストリーミングエンドポイントを取得するには、作成したデータフローの *[!UICONTROL データフローアクティビティ]* ページに移動し、*[!UICONTROL プロパティ]* パネルの下部からエンドポイントをコピーします。
 
-![ ストリーミングエンドポイント URL がハイライト表示されたソースワークスペースのデータフローアクティビティページ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
+![&#x200B; ストリーミングエンドポイント URL がハイライト表示されたソースワークスペースのデータフローアクティビティページ &#x200B;](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
 ## RainFocus での統合プロファイルのアクティブ化
 
 データフローが完了し、ストリーミングエンドポイント URL を取得したら、[!DNL RainFocus] で [!DNL Integration Profile] をアクティブ化できます。
 
 * [[!DNL RainFocus] platform](https://app.rainfocus.com) にログインします。 プライマリナビゲーションで、「**[!DNL Libraries]**」と「**[!DNL Integration Profiles]**」を選択します。
-* [ 前提条件 ](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus) の一部として、前の手順で作成した [!DNL Integration Profile] を開きます。
+* [&#x200B; 前提条件 &#x200B;](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus) の一部として、前の手順で作成した [!DNL Integration Profile] を開きます。
 * Experience Platformのデータフローからコピーした **データフロー ID** と **ストリーミングエンドポイント** を貼り付けて、「**保存**」を選択します。
 
 ## 次の手順
@@ -123,8 +123,8 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 次のドキュメントでは、[!DNL RainFocus] ソースに関するニュアンスについて詳しく説明します。
 
-* [RainFocus ヘルプセンター ](https://help.rainfocus.com/hc/en-us)
-* [Adobe Developer ポータルでのAdobe サービスアカウント（JWT）の作成 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
+* [RainFocus ヘルプセンター &#x200B;](https://help.rainfocus.com/hc/en-us)
+* [Adobe Developer ポータルでのAdobe サービスアカウント（JWT）の作成 &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [API でのスキーマの作成](../../../../../xdm/tutorials/create-schema-api.md)
 * [UI でのスキーマの作成](../../../../../xdm/tutorials/create-schema-ui.md)
-* [UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja)
+* [UI での ID フィールドの定義 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja)

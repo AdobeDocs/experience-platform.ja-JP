@@ -16,18 +16,18 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする ](../field-groups/profile/consents.md) めに使用されます。
+>このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする &#x200B;](../field-groups/profile/consents.md) めに使用されます。
 >
->特定のマーケティング環境設定フィールドに `subscriptions` マップが必要ない場合は、代わりに [ 基本マーケティングフィールドデータタイプ ](./marketing-field.md) を使用できます。
+>特定のマーケティング環境設定フィールドに `subscriptions` マップが必要ない場合は、代わりに [&#x200B; 基本マーケティングフィールドデータタイプ &#x200B;](./marketing-field.md) を使用できます。
 
 ![](../images/data-types/marketing-field-subscriptions.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `reason` | 文字列 | 顧客がマーケティングユースケースをオプトアウトする場合、この文字列フィールドは、顧客がオプトアウトした理由を表します。 |
-| `subscriptions` | マップ | 特定のサブスクリプションの顧客マーケティング環境設定のマップ。 詳しくは、[ 購読 ](#subscriptions) の節を参照してください。 |
+| `subscriptions` | マップ | 特定のサブスクリプションの顧客マーケティング環境設定のマップ。 詳しくは、[&#x200B; 購読 &#x200B;](#subscriptions) の節を参照してください。 |
 | `time` | 日時 | マーケティング環境設定が変更された際の ISO 8601 タイムスタンプ（該当する場合）。 |
-| `val` | 文字列 | このマーケティングユースケースに対して顧客が提供した環境設定の選択。 使用可能な値と定義については、[ 次の節 ](#val) を参照してください。 |
+| `val` | 文字列 | このマーケティングユースケースに対して顧客が提供した環境設定の選択。 使用可能な値と定義については、[&#x200B; 次の節 &#x200B;](#val) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `val` | サブスクリプションの [ 同意値 ](#val)。 |
+| `val` | サブスクリプションの [&#x200B; 同意値 &#x200B;](#val)。 |
 | `type` | サブスクリプションのタイプ。 15 文字以下の場合、任意の説明文字列を指定できます。 |
 | `topics` | 購読している顧客の興味のある領域を表す文字列の配列。関連するコンテンツを送信するために使用できます。 |
 | `subscribers` | 特定のサブスクリプションを購読している一連の識別子（メールアドレスや電話番号など）を表す、オプションのマップタイプフィールド。 このオブジェクトの各キーは、問題の識別子を表し、次の 2 つのサブプロパティが含まれています。 <ul><li>`time`:ID が登録された日時の ISO 8601 タイムスタンプ（該当する場合）。</li><li>`source`：購読者の発信元。 15 文字以下の場合、任意の説明文字列を指定できます。</li></ul> |
@@ -105,5 +105,5 @@ ht-degree: 1%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)

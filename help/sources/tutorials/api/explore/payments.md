@@ -183,4 +183,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、支払いシステムを調べ、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [ 支払いシステムからデータを収集し、Experience Platformに取り込む ](../collect/payments.md) ことができます。
+このチュートリアルに従って、支払いシステムを調べ、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [&#x200B; 支払いシステムからデータを収集し、Experience Platformに取り込む &#x200B;](../collect/payments.md) ことができます。

@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # [!UICONTROL &#x200B; 目標 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 目標 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、患者、グループ、組織のケアの意図した目的を説明する、単一のオブジェクトタイプフィールド `healthcareGoal` を提供します。
+[!UICONTROL &#x200B; 目標 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、患者、グループ、組織のケアの意図した目的を説明する、単一のオブジェクトタイプフィールド `healthcareGoal` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/goal/goal.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/goal/goal.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ ht-degree: 6%
 | [!UICONTROL ソース] | `source` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 患者や医療従事者など、目標のソースを示します。 |
 | [!UICONTROL &#x200B; コード化可能な概念を開始 &#x200B;] | `startCodeableConcept` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | その後、目標を説得する必要があるイベント。 |
 | [!UICONTROL &#x200B; 件名 |]`subject` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 目標が設定されているユーザー、グループ、または組織を識別します。 |
-| [!UICONTROL Target] | `target` | オブジェクトの配列 | 目標の特定の手順のタイムラインを示します。 詳しくは、[ 以下の節 ](#target) を参照してください。 |
+| [!UICONTROL Target] | `target` | オブジェクトの配列 | 目標の特定の手順のタイムラインを示します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#target) を参照してください。 |
 | [!UICONTROL &#x200B; コンティニュアス &#x200B;] | `continous` | ブール値 | 目標を達成した後、目標を維持するために継続的なアクティビティが必要かどうかを示します。 |
 | [!UICONTROL &#x200B; ライフサイクルステータス &#x200B;] | `lifecycleStatus` | 文字列 | 目標のライフサイクルのステータス。 このプロパティの値は、次の既知の列挙値のいずれかに等しい必要があります。 <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |
 | [!UICONTROL &#x200B; 開始日 &#x200B;] | `startDate` | 日付 | 目標の達成を開始する日付。 |
@@ -40,14 +40,14 @@ ht-degree: 6%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
 
 ## `target` {#target}
 
 `target` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ ターゲット構造 ](../../../images/healthcare/field-groups/goal/target.png)
+![&#x200B; ターゲット構造 &#x200B;](../../../images/healthcare/field-groups/goal/target.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

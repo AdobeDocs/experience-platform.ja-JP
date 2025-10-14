@@ -24,12 +24,12 @@ ht-degree: 6%
 | `lastActivityDate` | 日時 | ソースシステムの最後のアクティビティの日付。 |
 | `lastReferencedDate` | 日時 | ソースシステムの最終参照日。 |
 | `lastUpdatedBy` | 文字列 | このレコードを最後に更新した人物の名前。 |
-| `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 この値は、結合の競合が発生した場合の優先度を決定するために [ 属性結合ポリシー ](../../profile/api/merge-policies.md#attribute-merge) で使用されます。 |
+| `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 この値は、結合の競合が発生した場合の優先度を決定するために [&#x200B; 属性結合ポリシー &#x200B;](../../profile/api/merge-policies.md#attribute-merge) で使用されます。 |
 | `lastViewedDate` | 日時 | ソースシステムの最終表示日。 |
 
 {style="table-layout:auto"}
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

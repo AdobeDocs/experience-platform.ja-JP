@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Assurance が機能しない場合は、一般的に発生する問題を解決するために、次の問題のトピックの候補を参照してください。
 
-よりスムーズな実装を有効にし、潜在的な問題を見つけるには、「はじめに」セクションの [ デバッグログを有効にする ](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/) に従って SDK ログをオンにします。
+よりスムーズな実装を有効にし、潜在的な問題を見つけるには、「はじめに」セクションの [&#x200B; デバッグログを有効にする &#x200B;](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/) に従って SDK ログをオンにします。
 
 SDK API を使用して SDK ログレベルを変更 [`setLogLevel`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setloglevel) きます。
 
@@ -21,17 +21,17 @@ SDK API を使用して SDK ログレベルを変更 [`setLogLevel`](https://dev
 
 ### QR コードがアプリを開かない
 
-* リンクに直接アクセスします。 **セッションの詳細** からリンクをコピーします。 デバイスのブラウザーアドレスバーに貼り付けて開きます。 開かない場合は、[ アプリがリンクを開かない ](#app-does-not-open-link) の節を参照してください。
+* リンクに直接アクセスします。 **セッションの詳細** からリンクをコピーします。 デバイスのブラウザーアドレスバーに貼り付けて開きます。 開かない場合は、[&#x200B; アプリがリンクを開かない &#x200B;](#app-does-not-open-link) の節を参照してください。
 * 別の QR リーダーを使用してください。 iOS 11 以降の場合は、フォトアプリを使用して QR コードを読み取ります。
 
 ### アプリがリンクを開かない
 
 * アプリでディープリンク実装が正しく設定されていることを確認します。
    * **Android:** 個のディープリンク（アプリのリンク）
-      * [ アプリコンテキストへのディープリンクの作成 ](https://developer.android.com/training/app-links/deep-linking)
+      * [&#x200B; アプリコンテキストへのディープリンクの作成 &#x200B;](https://developer.android.com/training/app-links/deep-linking)
    * **iOS:** カスタム URL スキームまたはユニバーサル リンク
-      * [ アプリのカスタム URL スキームの定義 ](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
-      * [ アプリ内のユニバーサルリンクのサポート ](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
+      * [&#x200B; アプリのカスタム URL スキームの定義 &#x200B;](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+      * [&#x200B; アプリ内のユニバーサルリンクのサポート &#x200B;](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
 >[!INFO]
 >
@@ -41,7 +41,7 @@ SDK API を使用して SDK ログレベルを変更 [`setLogLevel`](https://dev
 
 * デバイスの Web ブラウザを使用して、デバイスのインターネット接続を確認します。
 * アプリが Assurance サービスに正常に接続したことがない場合は、Assurance が正しく設定されていることを確認します。 [Adobe Experience Platform Assurance](./tutorials/implement-assurance.md) SDK ライブラリのインストール手順を参照してください。
-* セッションがリンクと一致し、期待されるセッションに対して正しく入力されていることを確認します。 [ ログメッセージ「OrgID 情報を利用できません」 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) を参照してください（これは一般的ではなく、複数の ORG インスタンスにアクセスできる場合にのみ関係します）。
+* セッションがリンクと一致し、期待されるセッションに対して正しく入力されていることを確認します。 [&#x200B; ログメッセージ「OrgID 情報を利用できません」 &#x200B;](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) を参照してください（これは一般的ではなく、複数の ORG インスタンスにアクセスできる場合にのみ関係します）。
 
 ### Adobe Analyticsのデバッグ
 

@@ -18,13 +18,13 @@ ht-degree: 40%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; デモグラフィックの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの `person` オブジェクトを提供し、そのサブフィールドは個人に関する情報を記述します。
+[!UICONTROL &#x200B; デモグラフィックの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの `person` オブジェクトを提供し、そのサブフィールドは個人に関する情報を記述します。
 
 ![](../../images/field-groups/demographic-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `person.name` | [ 人物名 ](../../data-types/person-name.md) | サブフィールドが人物の名前の様々な要素を記述するオブジェクト。 |
+| `person.name` | [&#x200B; 人物名 &#x200B;](../../data-types/person-name.md) | サブフィールドが人物の名前の様々な要素を記述するオブジェクト。 |
 | `person.birthDate` | 日付 | 人物の誕生の完全な日付（ISO 8601 タイムスタンプの形式）。 |
 | `person.birthDayAndMonth` | 文字列 | 生年月日（月日）。MM-DD 形式で指定します。このフィールドは、生年月日の日と月がわかるが、年がわからない場合に使用します。 |
 | `person.birthYear` | 整数 | 世紀を含む、個人が生まれた年（1989 年など）。 このフィールドは、正式な生年月日ではなく、年齢のみがわかる場合に使用します。 |
@@ -37,5 +37,5 @@ ht-degree: 40%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)

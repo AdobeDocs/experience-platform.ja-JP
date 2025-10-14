@@ -13,7 +13,7 @@ ht-degree: 13%
 
 [!UICONTROL &#x200B; 払戻項目 &#x200B;] は、注文に関連付けられた払い戻しに関連する取得情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。
 
-![ 払戻品目データタイプの図。](../images/data-types/refund-item.png)
+![&#x200B; 払戻品目データタイプの図。](../images/data-types/refund-item.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
@@ -27,5 +27,5 @@ ht-degree: 13%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)

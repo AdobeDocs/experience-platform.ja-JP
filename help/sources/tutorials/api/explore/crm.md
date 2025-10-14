@@ -171,4 +171,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、CRM システムを探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [CRM システムからデータを収集し、Experience Platformに取り込む ](../collect/crm.md) ことができます。
+このチュートリアルでは、CRM システムを探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [CRM システムからデータを収集し、Experience Platformに取り込む &#x200B;](../collect/crm.md) ことができます。

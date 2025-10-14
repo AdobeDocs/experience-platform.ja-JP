@@ -19,7 +19,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ## はじめに {#getting-started}
 
-- [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
 - [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
@@ -62,9 +62,9 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL グラフが更新されました]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](/help/images/icons/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
+ソース名の横にあるフィルターアイコン ![&#x200B; フィルターアイコン &#x200B;](/help/images/icons/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
 
-![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-identities/sources-filter.png)
+![&#x200B; フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-identities/sources-filter.png)
 
 または、切り替えスイッチで **[!UICONTROL データフロー]** を選択して、過去 24 時間の組織のデータフローの ID 処理の詳細を表示できます。
 
@@ -87,13 +87,13 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL グラフが更新されました]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
+データフロー実行開始時間の横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
 
-![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
+![&#x200B; フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
 
 [!UICONTROL &#x200B; データフロー実行の詳細 &#x200B;] ページには、[!DNL Identity] データフロー実行に関する詳細（組織 ID やデータフロー実行 ID など）が表示されます。 また、このページには、取り込みプロセスでエラーが発生した場合に、[!DNL Identity Service] から提供される対応するエラーコードとエラーメッセージも表示されます。
 
-![ 選択したデータフローに関する詳細情報を示すダッシュボードが表示されます。](../assets/ui/monitor-identities/dataflow-run-details.png)
+![&#x200B; 選択したデータフローに関する詳細情報を示すダッシュボードが表示されます。](../assets/ui/monitor-identities/dataflow-run-details.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 

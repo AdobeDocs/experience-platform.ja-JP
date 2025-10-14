@@ -13,21 +13,21 @@ ht-degree: 18%
 
 # Experience Platform UI を使用した Azure の顧客管理キーの設定と設定
 
-このドキュメントでは、UI を使用してExperience Platformで顧客管理キー（CMK）機能を有効にする Azure 固有の手順について説明します。 AWS固有の手順については、[AWS設定ガイド ](../aws/ui-set-up.md) を参照してください。
+このドキュメントでは、UI を使用してExperience Platformで顧客管理キー（CMK）機能を有効にする Azure 固有の手順について説明します。 AWS固有の手順については、[AWS設定ガイド &#x200B;](../aws/ui-set-up.md) を参照してください。
 
-API を使用して Azure でホストされるExperience Platform インスタンスのこのプロセスを完了する手順については、[API CMK 設定ドキュメント ](./api-set-up.md) を参照してください。
+API を使用して Azure でホストされるExperience Platform インスタンスのこのプロセスを完了する手順については、[API CMK 設定ドキュメント &#x200B;](./api-set-up.md) を参照してください。
 
 ## 前提条件
 
 Adobe Experience Platformの「[!UICONTROL &#x200B; 暗号化 &#x200B;]」セクションを表示および訪問するには、役割を作成し、その役割に [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を割り当てておく必要があります。 [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を持つユーザーは組織で CMK を有効にできます。
 
-Experience Platformでの役割と権限の割り当てについて詳しくは、[ 権限の設定に関するドキュメント ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
+Experience Platformでの役割と権限の割り当てについて詳しくは、[&#x200B; 権限の設定に関するドキュメント &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
 
 CMK を有効にするには、次の設定で [[!DNL Azure] Key Vault](./azure-key-vault-config.md) を設定する必要があります。
 
 * [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [ ソフト削除を有効にする ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [ 役割ベースのアクセス制御  [!DNL Azure]  使用したアクセスの設定 ](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [&#x200B; ソフト削除を有効にする &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [&#x200B; 役割ベースのアクセス制御  [!DNL Azure]  使用したアクセスの設定 &#x200B;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Key Vault [!DNL Azure]  設定](./azure-key-vault-config.md)
 
 ## CMK アプリのセットアップ {#register-app}
@@ -38,25 +38,25 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 [!UICONTROL &#x200B; 暗号化設定 &#x200B;] ダッシュボードを表示するには、左側のナビゲーションサイドバーの **[!UICONTROL 管理]** 見出しの下にある [!UICONTROL &#x200B; 暗号化 &#x200B;] を選択します。
 
-![ 暗号化と顧客管理キーカードがハイライト表示された暗号化設定ダッシュボード。](../../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
+![&#x200B; 暗号化と顧客管理キーカードがハイライト表示された暗号化設定ダッシュボード。](../../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
 **[!UICONTROL 設定]** を選択して、[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] 表示を開きます。 このワークスペースには、以下に説明する手順を完了し、Azure Key Vault との統合を実行するために必要なすべての値が含まれています。
 
 ### 認証 URL をコピー {#copy-authentication-url}
 
-登録プロセスを開始するには、[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビューから組織のアプリケーション認証 URL をコピーし、[!DNL Azure] 環境 **[!DNL Key Vault Crypto Service Encryption User]** ージに貼り付けます。 [ 役割の割り当て ](#assign-to-role) 方法について詳しくは、次の節を参照してください。
+登録プロセスを開始するには、[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビューから組織のアプリケーション認証 URL をコピーし、[!DNL Azure] 環境 **[!DNL Key Vault Crypto Service Encryption User]** ージに貼り付けます。 [&#x200B; 役割の割り当て &#x200B;](#assign-to-role) 方法について詳しくは、次の節を参照してください。
 
-コピーアイコン（![ コピーアイコンを選択します。](../../../../images/icons/copy.png)）を選択します [!UICONTROL &#x200B; アプリケーション認証 URL]。
+コピーアイコン（![&#x200B; コピーアイコンを選択します。](../../../../images/icons/copy.png)）を選択します [!UICONTROL &#x200B; アプリケーション認証 URL]。
 
-![ アプリケーション認証 URL セクションがハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー。](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
+![&#x200B; アプリケーション認証 URL セクションがハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー。](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
 [!UICONTROL &#x200B; アプリケーション認証 URL] をコピーしてブラウザーに貼り付け、認証ダイアログを開きます。 「**[!DNL Accept]**」を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。 認証を確定すると、Experience Cloud ランディングページにリダイレクトされます。
 
-![ 「同意する [!UICONTROL &#x200B; がハイライト表示されたMicrosoft権限リクエストダイアログ &#x200B;]](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![&#x200B; 「同意する [!UICONTROL &#x200B; がハイライト表示されたMicrosoft権限リクエストダイアログ &#x200B;]](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->複数の [!DNL Microsoft Azure] 購読がある場合、Experience Platform インスタンスを間違った Key Vault に接続できる可能性があります。 この場合、CMK ディレクトリ ID のアプリケーション認証 URL 名の `common` セクションを入れ替える必要があります。<br>[!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページから CMK ディレクトリ ID をコピーします <br>![ ディレクトリ ID が強調表示された [!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページ。](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> 次に、ブラウザーのアドレスバーにペーストします。<br>![ アプリケーション認証 URL の「共通」セクションがハイライト表示されたGoogle ブラウザーページ。](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>複数の [!DNL Microsoft Azure] 購読がある場合、Experience Platform インスタンスを間違った Key Vault に接続できる可能性があります。 この場合、CMK ディレクトリ ID のアプリケーション認証 URL 名の `common` セクションを入れ替える必要があります。<br>[!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページから CMK ディレクトリ ID をコピーします <br>![&#x200B; ディレクトリ ID が強調表示された [!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページ。](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> 次に、ブラウザーのアドレスバーにペーストします。<br>![&#x200B; アプリケーション認証 URL の「共通」セクションがハイライト表示されたGoogle ブラウザーページ。](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### CMK アプリを役割に割り当てます。 {#assign-to-role}
 
@@ -80,7 +80,7 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビューで提供される [!UICONTROL &#x200B; アプリケーション ID] と、[!DNL Microsoft Azure] アプリケーションの概要で提供される [!DNL Application ID] を比較することで、アプリケーションを検証できます。
 
-![ アプリケーション ID がハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー ](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
+![&#x200B; アプリケーション ID がハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
 Azure ツールの検証に必要な詳細がすべてExperience Platform UI に含まれています。 このレベルの精度は、他の Azure ツールを使用して、これらのアプリケーションの監視と Key Vault へのアクセスをログに記録する機能を強化したい多くのユーザーに提供されます。 これらの識別子を理解することは、その目的のために、またAdobe サービスが鍵にアクセスするのを助けるために重要です。
 
@@ -102,11 +102,11 @@ CMK アプリを [!DNL Azure] にインストールすると、暗号化キー�
 
 [!DNL Key vault URI] を取得したら、[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] 表示に戻り、わかりやすい **[!UICONTROL 設定名]** を入力します。 次に、Azure キーの詳細ページから取得した [!DNL Key Identifier] を **[!UICONTROL Key Vault キー識別子]** に追加し、「保存 **」** 選択します。
 
-![[!UICONTROL Configuration name] および [!UICONTROL Key Vault キー識別子 &#x200B;] セクションがハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー ](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
+![[!UICONTROL Configuration name] および [!UICONTROL Key Vault キー識別子 &#x200B;] セクションがハイライト表示された [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] ビュー &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 
 [!UICONTROL &#x200B; 暗号化設定ダッシュボード &#x200B;] に戻ります。 [!UICONTROL &#x200B; 顧客管理キー &#x200B;] 設定のステータスが [!UICONTROL &#x200B; 処理中 &#x200B;] と表示されます。
 
-![ 顧客管理キー  カード上にハイライト表示された [!UICONTROL &#x200B; 処理中 &#x200B;] を含む [!UICONTROL &#x200B; 暗号化設定 &#x200B;] ダッシュボード ](../../../images/governance-privacy-security/customer-managed-keys/processing.png)
+![&#x200B; 顧客管理キー  カード上にハイライト表示された [!UICONTROL &#x200B; 処理中 &#x200B;] を含む [!UICONTROL &#x200B; 暗号化設定 &#x200B;] ダッシュボード &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/processing.png)
 
 ## 設定のステータスの確認 {#check-status}
 

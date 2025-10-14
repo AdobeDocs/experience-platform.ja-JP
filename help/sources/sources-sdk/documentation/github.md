@@ -17,17 +17,17 @@ ht-degree: 2%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[&#x200B; ドキュメントを参照するために Git リポジトリをローカルに設定する &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[&#x200B; 大幅な変更点に対する GitHub 投稿ワークフロー &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
 
 ## GitHub 環境の設定
 
-GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ ](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
+GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
 
 ![platform-repo](../assets/platform-repo.png)
 
 次に、「**分岐**」を選択します。
 
-![ 分岐 ](../assets/fork.png)
+![&#x200B; 分岐 &#x200B;](../assets/fork.png)
 
 分岐が完了したら、「**マスター**」を選択し、表示されるドロップダウンメニューに新しいブランチの名前を入力します。 ブランチの名前は作業を格納するために使用されるため、わかりやすい名前を指定し、「**ブランチを作成**」を選択します。
 
@@ -47,11 +47,11 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 ソースファイルに `YOURSOURCE.md` という名前を付けます。YOURSOURCE は、Experience Platformでのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md` にします。
 
-![git インターフェイス ](../assets/git-interface.png)
+![git インターフェイス &#x200B;](../assets/git-interface.png)
 
 ## ソースのドキュメントページを作成する
 
-新しいソースのドキュメント化を開始するには、[sources documentation template](./template.md) のコンテンツを GitHub web エディターに貼り付けます。 テンプレートは [ こちら ](../assets/api-template.zip) からダウンロードすることもできます。
+新しいソースのドキュメント化を開始するには、[sources documentation template](./template.md) のコンテンツを GitHub web エディターに貼り付けます。 テンプレートは [&#x200B; こちら &#x200B;](../assets/api-template.zip) からダウンロードすることもできます。
 
 テンプレートを GitHub web エディターインターフェイスにコピーしたら、テンプレートに記載されている手順に従って、ソースに関連する情報を含んだ値を編集します。
 
@@ -59,7 +59,7 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 完了したら、ブランチでファイルをコミットします。
 
-![ コミット ](../assets/commit.png)
+![&#x200B; コミット &#x200B;](../assets/commit.png)
 
 ## レビュー用にドキュメントを送信
 

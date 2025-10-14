@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Databricks] ソースを利用できます。
 >
->* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
+>* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Databricks] は、データ分析、機械学習、AI 用に設計されたクラウドベースのプラットフォームです。 [!DNL Databricks] を使用すると、データソリューションを大規模に構築、デプロイ、管理するための総合的な環境を統合および提供できます。
 

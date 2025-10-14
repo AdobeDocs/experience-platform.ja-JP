@@ -14,7 +14,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
-> [!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+> [!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Generic REST API] ソースコネクタを作成する手順を説明します。
 
@@ -22,8 +22,8 @@ ht-degree: 23%
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
@@ -89,4 +89,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、汎用 REST API アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/protocols.md) を行いましょう。
+このチュートリアルでは、汎用 REST API アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/protocols.md) を行いましょう。

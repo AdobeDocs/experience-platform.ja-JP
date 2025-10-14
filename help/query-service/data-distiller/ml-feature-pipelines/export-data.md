@@ -11,9 +11,9 @@ ht-degree: 6%
 
 # 外部 ML 環境へのデータの書き出し
 
-このドキュメントでは、Data Distillerで作成された準備済みトレーニングデータセットを、ML 環境がモデルのトレーニングとスコアリングのために読み取ることができるクラウドストレージの場所に共有する方法を説明します。 この例では、トレーニングデータセットを [ データランディングゾーン（DLZ） ](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) に書き出しています。 必要に応じて、機械学習環境を操作するためにストレージの宛先を変更できます。
+このドキュメントでは、Data Distillerで作成された準備済みトレーニングデータセットを、ML 環境がモデルのトレーニングとスコアリングのために読み取ることができるクラウドストレージの場所に共有する方法を説明します。 この例では、トレーニングデータセットを [&#x200B; データランディングゾーン（DLZ） &#x200B;](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) に書き出しています。 必要に応じて、機械学習環境を操作するためにストレージの宛先を変更できます。
 
-[ 宛先用のフローサービス ](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、計算された機能のデータセットを適切なクラウドストレージの場所にランディングすることで、機能パイプラインを完了するために使用されます。
+[&#x200B; 宛先用のフローサービス &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、計算された機能のデータセットを適切なクラウドストレージの場所にランディングすることで、機能パイプラインを完了するために使用されます。
 
 ## ソース接続の作成 {#create-source-connection}
 

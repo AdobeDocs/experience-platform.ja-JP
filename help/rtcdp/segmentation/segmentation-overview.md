@@ -23,7 +23,7 @@ Real-Time CDP は Adobe Experience Platform をベースに構築され、多く
 
 ## [!DNL Audience Builder]
 
-[!DNL Platform] を使用すると、セグメント定義を簡単に作成してアクセスでき、様々な構成要素を使用してオーディエンスをさらに特徴付けることができます。 Audience Builder の使用方法について詳しくは、[Audience Builder ガイド ](./audience-builder.md) を参照してください。
+[!DNL Platform] を使用すると、セグメント定義を簡単に作成してアクセスでき、様々な構成要素を使用してオーディエンスをさらに特徴付けることができます。 Audience Builder の使用方法について詳しくは、[Audience Builder ガイド &#x200B;](./audience-builder.md) を参照してください。
 
 ## 顧客 AI
 

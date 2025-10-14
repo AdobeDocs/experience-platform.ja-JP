@@ -32,7 +32,7 @@ ht-degree: 4%
 
 **[!UICONTROL 目標を定義]** 画面が表示されます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標タイプを選択します。
 
-![ 目標を選択 ](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
+![&#x200B; 目標を選択 &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
 **[!UICONTROL 目標の詳細]** ダイアログが開きます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標フィールド名を選択します。
 
@@ -76,7 +76,7 @@ ht-degree: 4%
 
 ![plas-score-additional-information](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
-前回の実行詳細の下に表示されるエラーコードについて詳しくは、このドキュメントの [AI パイプラインエラーコードのリード ](#leads-ai-pipeline-error-codes) の節を参照してください。
+前回の実行詳細の下に表示されるエラーコードについて詳しくは、このドキュメントの [AI パイプラインエラーコードのリード &#x200B;](#leads-ai-pipeline-error-codes) の節を参照してください。
 
 ## スコアを編集
 

@@ -17,7 +17,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->[!DNL Pinterest Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Pinterest Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Pinterest Ads] ソースコネクタを作成する手順を説明します。
 
@@ -25,7 +25,7 @@ ht-degree: 25%
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md):Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]  システム &#x200B;](../../../../../xdm/home.md):Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -38,15 +38,15 @@ ht-degree: 25%
 * [!DNL Pinterest] 広告アカウント ID。
 * 必要 [!DNL Pinterest] 応じて、キャンペーン、広告グループまたは広告 ID のいずれか
 
-これらの接続プロパティについて詳しくは、[[!DNL Pinterest Ads]  概要 ](../../../../connectors/advertising/pinterest-ads.md#prerequisites) を参照してください。
+これらの接続プロパティについて詳しくは、[[!DNL Pinterest Ads]  概要 &#x200B;](../../../../connectors/advertising/pinterest-ads.md#prerequisites) を参照してください。
 
 ### Experience Platform スキーマの作成 {#create-platform-schema}
 
-また、[!DNL Pinterst Ads] ソースに使用するExperience Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+また、[!DNL Pinterst Ads] ソースに使用するExperience Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 &#x200B;](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![Pinterest広告用のExperience Platform スキーマの例 ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Pinterest広告用のExperience Platform スキーマの例 &#x200B;](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-[!DNL Pinterest] キャンペーン、広告グループおよび広告 API でサポートされるフィールドのリストについては、[[!DNL Pinterest]  フィールド ](#pinterest-fields) の節を参照してください。
+[!DNL Pinterest] キャンペーン、広告グループおよび広告 API でサポートされるフィールドのリストについては、[[!DNL Pinterest]  フィールド &#x200B;](#pinterest-fields) の節を参照してください。
 
 ## [!DNL Pinterest Ads] アカウントを接続 {#connect-account}
 
@@ -56,7 +56,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 *Advertising* カテゴリで、「**[!UICONTROL Pinterest広告]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Experience Platformのソースカタログ ](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
+![Experience Platformのソースカタログ &#x200B;](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
 **[!UICONTROL Pinterest Ads アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -64,13 +64,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Pinterest Ads] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ ソースワークフローの既存のアカウントステップ ](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントステップ &#x200B;](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
 ### 新規アカウント {#new-account}
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ ソースワークフローの新しいアカウント手順。](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
+![&#x200B; ソースワークフローの新しいアカウント手順。](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
 
 
@@ -80,7 +80,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 | フィールド | 説明 |
 | --- | --- |
-| [!UICONTROL ad_account_id] | [!DNL Pinterest Ads] 広告アカウント ID。 ガイダンスが必要な場合は、[[!DNL Pinterest]  広告マネージャーでの ID の検索に関するガイド ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) を参照してください。 |
+| [!UICONTROL ad_account_id] | [!DNL Pinterest Ads] 広告アカウント ID。 ガイダンスが必要な場合は、[[!DNL Pinterest]  広告マネージャーでの ID の検索に関するガイド &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) を参照してください。 |
 | [!UICONTROL object_type] | 情報を取得する [!DNL Pinterest] Analytics API の種類に応じて、**campaigns**、**広告グループ** または **広告** のいずれかを選択します。 |
 | [!UICONTROL object_ids] | 選択したオブジェクトの ID。 **Pinterest Business Hub**/**広告アカウント概要**/**キャンペーン**/**広告グループ**/**広告** の [!DNL Pinterest] ページに移動し、それぞれの名前の下に記載されている必須の ID をコピーします。 |
 
@@ -90,11 +90,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 値を指定したら、「**[!UICONTROL 選択]**」を選択します。 指定した値が有効な場合、インターフェイスの右側の部分（プレビューデータ）が入力されます。
 
-![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
+![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 広告データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
+このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; 広告データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/advertising.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -109,11 +109,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 | `Day` | 1 |
 | `Hour` | 24 |
 
-[!DNL Pinterest Ads] データフローのスケジュール設定について詳しくは、[ 概要のガードレールの節  [!DNL Pinterest Ads]  を参照してください ](../../../../connectors/advertising/pinterest-ads.md#guardrails)。
+[!DNL Pinterest Ads] データフローのスケジュール設定について詳しくは、[&#x200B; 概要のガードレールの節  [!DNL Pinterest Ads]  を参照してください &#x200B;](../../../../connectors/advertising/pinterest-ads.md#guardrails)。
 
 スケジュールの値を指定したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのスケジュール手順 ](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
+![&#x200B; ソースワークフローのスケジュール手順 &#x200B;](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
 
 ### 検証 {#validation}
 

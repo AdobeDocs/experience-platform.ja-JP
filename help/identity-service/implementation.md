@@ -23,7 +23,7 @@ ht-degree: 62%
 
 ## 追加の ID 名前空間
 
-Experience Platform オファーには様々な標準名前空間がありますが、ID を適切に分類するために、追加の名前空間を作成する必要がある場合があります。詳しくは、[ 組織のカスタム名前空間の作成 ](./features/namespaces.md) に関するガイドを参照してください。
+Experience Platform オファーには様々な標準名前空間がありますが、ID を適切に分類するために、追加の名前空間を作成する必要がある場合があります。詳しくは、[&#x200B; 組織のカスタム名前空間の作成 &#x200B;](./features/namespaces.md) に関するガイドを参照してください。
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Experience Platform オファーには様々な標準名前空間があります
 
 ## エクスペリエンスデータモデル（XDM）に ID データを含める
 
-Experience Platformが顧客データを整理するための標準化されたフレームワークとして、エクスペリエンスデータモデル（XDM）を使用すると、Experience PlatformやExperience Platformとやり取りする他のサービス間でデータを共有および理解できます。 詳しくは、[XDM システムの概要 ](../xdm/home.md) を参照してください。
+Experience Platformが顧客データを整理するための標準化されたフレームワークとして、エクスペリエンスデータモデル（XDM）を使用すると、Experience PlatformやExperience Platformとやり取りする他のサービス間でデータを共有および理解できます。 詳しくは、[XDM システムの概要 &#x200B;](../xdm/home.md) を参照してください。
 
 レコードスキーマと時系列スキーマは両方、ID データを含める手段を備えています。データが取得されると、異なる名前空間のデータフラグメントが共通の ID データを共有していることが判明した場合、ID グラフはデータフラグメント間に新しい関係を作成します。
 
@@ -48,15 +48,15 @@ ID フィールドでは、共通の PII データを共有している ID を�
 >*  結果の ID の名前空間は、フィールドにラベルが付けられた時点で提供されます。
 >* フィールドが配列オブジェクトの下にない限り、フィールドは ID としてマークできます。
 
-詳しくは、[UI での ID フィールドの定義 ](../xdm/ui/fields/identity.md) に関するガイドを参照してください。
+詳しくは、[UI での ID フィールドの定義 &#x200B;](../xdm/ui/fields/identity.md) に関するガイドを参照してください。
 
 ## データセットの ID サービスに対する設定
 
-ストリーミング取得プロセス中、ID サービスはレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、ID サービスを有効にする必要があります。詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定 ](../profile/tutorials/dataset-configuration.md) に関するチュートリアルを参照してください。
+ストリーミング取得プロセス中、ID サービスはレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、ID サービスを有効にする必要があります。詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定 &#x200B;](../profile/tutorials/dataset-configuration.md) に関するチュートリアルを参照してください。
 
 ## ID サービスへのデータの取得
 
-ID サービスは、[ バッチ取得 ](../ingestion/batch-ingestion/overview.md) または [ ストリーミング取得 ](../ingestion/streaming-ingestion/overview.md) のいずれかによってExperience Platformに送信される XDM 準拠のデータを使用します。
+ID サービスは、[&#x200B; バッチ取得 &#x200B;](../ingestion/batch-ingestion/overview.md) または [&#x200B; ストリーミング取得 &#x200B;](../ingestion/streaming-ingestion/overview.md) のいずれかによってExperience Platformに送信される XDM 準拠のデータを使用します。
 
 次のビデオは、 ID サービスを理解できるようサポートすることを目的としています。このビデオでは、データフィールドに ID としてラベルを付け、ID データを取り込んで、データが Adobe Experience Platform ID サービスのプライベートグラフに到達したことを確認する方法を説明します。
 

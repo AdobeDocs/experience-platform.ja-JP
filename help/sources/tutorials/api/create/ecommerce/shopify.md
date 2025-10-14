@@ -37,11 +37,11 @@ ht-degree: 49%
 | `accessToken` | [!DNL Shopify] ユーザーアカウントのアクセストークン。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Shopify] の接続仕様 ID は `4f63aa36-bd48-4e33-bb83-49fbcd11c708` です。 |
 
-はじめに詳しくは、この [Shopify 認証ドキュメント ](https://shopify.dev/concepts/about-apis/authentication) を参照してください。
+はじめに詳しくは、この [Shopify 認証ドキュメント &#x200B;](https://shopify.dev/concepts/about-apis/authentication) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -105,5 +105,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Shopify] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [API を使用した、E-Commerce データをExperience Platformに取り込むデータフロー  [!DNL Flow Service]  作成](../../collect/ecommerce.md)

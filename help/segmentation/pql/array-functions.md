@@ -12,7 +12,7 @@ ht-degree: 57%
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language] （PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+[!DNL Profile Query Language] （PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## 次に含まれる
 

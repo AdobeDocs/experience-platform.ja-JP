@@ -13,7 +13,7 @@ ht-degree: 19%
 
 # 顧客管理キー用の [!DNL Azure] Key Vault の設定
 
-顧客管理キー（CMK）は、[!DNL Microsoft Azure] Key Vault とAWS [!DNL Key Management Service (KMS)] の両方からのキーをサポートします。 実装が [!DNL Azure] でホストされている場合は、次の手順に従って Key Vault を作成します。 AWSでホストされる実装については、[AWS KMS 設定ガイド ](../aws/configure-kms.md) を参照してください。
+顧客管理キー（CMK）は、[!DNL Microsoft Azure] Key Vault とAWS [!DNL Key Management Service (KMS)] の両方からのキーをサポートします。 実装が [!DNL Azure] でホストされている場合は、次の手順に従って Key Vault を作成します。 AWSでホストされる実装については、[AWS KMS 設定ガイド &#x200B;](../aws/configure-kms.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -25,11 +25,11 @@ ht-degree: 19%
 
 [!DNL Azure] ポータルにログインし、検索バーを使用してサービスのリストの下にある **[!DNL Key vaults]** を見つけます。
 
-![ 検索結果で [!DNL Key vaults] がハイライト表示されている [!DNL Microsoft Azure] の検索機能 ](../../../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
+![&#x200B; 検索結果で [!DNL Key vaults] がハイライト表示されている [!DNL Microsoft Azure] の検索機能 &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
 
 サービスを選択すると、**[!DNL Key vaults]** ページが表示されます。 ここから **[!DNL Create]** を選択します。 
 
-![[!DNL Create] がハイライト表示された [!DNL Microsoft Azure] の [!DNL Key vaults] ダッシュボード ](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+![[!DNL Create] がハイライト表示された [!DNL Microsoft Azure] の [!DNL Key vaults] ダッシュボード &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
 提供されたフォームを使用して、名前や割り当てられたリソースグループなど、Key Vault の基本的な詳細を入力します。
 
@@ -37,13 +37,13 @@ ht-degree: 19%
 >
 >ほとんどのオプションはデフォルト値のままでかまいませんが、**必ずソフト削除および消去保護オプションを有効にしてください**。これらの機能を有効にしないと、Key Vault が削除された場合、データへのアクセスが失われる可能性があります。
 >
->![ ソフト削除および消去保護がハイライト表示された [!DNL Microsoft Azure] [!DNL Create a Key Vault] ワークフロー ](../../../images/governance-privacy-security/customer-managed-keys/basic-config.png)
+>![&#x200B; ソフト削除および消去保護がハイライト表示された [!DNL Microsoft Azure] [!DNL Create a Key Vault] ワークフロー &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
 ここから、Key Vault の作成ワークフローを続け、組織のポリシーに従って様々なオプションを設定します。
 
 **[!DNL Review + create]** の手順に達したら、検証中に Key Vault の詳細を確認できます。 検証に問題がなければ、「**[!DNL Create]**」を選択してプロセスを完了します。
 
-![ 「作成」がハイライト表示されたMicrosoft Azure Key Vault の「レビューと作成」ページ ](../../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+![&#x200B; 「作成」がハイライト表示されたMicrosoft Azure Key Vault の「レビューと作成」ページ &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## アクセスを設定 {#configure-access}
 
@@ -61,17 +61,17 @@ ht-degree: 19%
 >
 >Key Vault が制限付きネットワークアクセスを使用する場合、Adobeでは次の静的 IP アドレスを追加することをお勧めします。`20.88.123.53` この IP アドレスを追加することで、Adobe サービスは接続性をより効果的に監視し、アクセスの問題が検出された場合に Platform 内アラートを提供できます。
 >
->Adobeの IP アドレスを許可リストするタイミング、アラートの仕組み、主要なアクセス失敗通知への応答方法について詳しくは、[Azure CMK のアラートと IP アクセスの設定 ](./alerts-and-ip-access.md) を参照してください。
+>Adobeの IP アドレスを許可リストするタイミング、アラートの仕組み、主要なアクセス失敗通知への応答方法について詳しくは、[Azure CMK のアラートと IP アクセスの設定 &#x200B;](./alerts-and-ip-access.md) を参照してください。
 >
 >Key Vault が既に公開ネットワークアクセスを許可するように設定されている場合は、それ以上のアクションは必要ありません。
 
-![[!DNL Networking] と [!DNL Allow trusted Microsoft surfaces to bypass this firewall] の例外がハイライト表示された [!DNL Microsoft Azure] の「[!DNL Networking]」タブ ](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
+![[!DNL Networking] と [!DNL Allow trusted Microsoft surfaces to bypass this firewall] の例外がハイライト表示された [!DNL Microsoft Azure] の「[!DNL Networking]」タブ &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### キーの生成 {#generate-a-key}
 
 Key Vault を作成したら、新しいキーを生成できます。 「**[!DNL Keys]**」タブに移動し、「**[!DNL Generate/Import]**」を選択します。
 
-![[!DNL Generate import] がハイライト表示された [!DNL Azure] の「[!DNL Keys]」タブ ](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
+![[!DNL Generate import] がハイライト表示された [!DNL Azure] の「[!DNL Keys]」タブ &#x200B;](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
 提供されたフォームを使用してキーの名前を指定し、キータイプに **RSA** または **RSA-HSM** のいずれかを選択します。 [!DNL Azure] ホスト実装の場合、**[!DNL RSA key size]** は、[!DNL Azure Cosmos DB] に必要な **3072** ビット以上である必要があります。 [!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
 
@@ -85,7 +85,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 設定されたキーが、Vault のキーのリストに表示されます。
 
-![ キー名がハイライト表示された [!DNL Keys] ワークスペース。](../../../images/governance-privacy-security/customer-managed-keys/key-added.png)
+![&#x200B; キー名がハイライト表示された [!DNL Keys] ワークスペース。](../../../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
 ## 次の手順
 

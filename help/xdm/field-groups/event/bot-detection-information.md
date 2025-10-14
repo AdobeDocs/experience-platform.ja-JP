@@ -11,9 +11,9 @@ ht-degree: 8%
 
 # [!UICONTROL &#x200B; ボット検出 &#x200B;] フィールドグループ
 
-[!UICONTROL &#x200B; ボット検出 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、ボット生成トラフィックに関する情報を提供します。
+[!UICONTROL &#x200B; ボット検出 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、ボット生成トラフィックに関する情報を提供します。
 
-![ 「ボット検出 [!UICONTROL &#x200B; フィールドグループ &#x200B;] 図 ](../../images/field-groups/bot-detection-information.png)
+![&#x200B; 「ボット検出 [!UICONTROL &#x200B; フィールドグループ &#x200B;] 図 &#x200B;](../../images/field-groups/bot-detection-information.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
@@ -24,5 +24,5 @@ ht-degree: 8%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)

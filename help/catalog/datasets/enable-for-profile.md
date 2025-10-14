@@ -19,7 +19,7 @@ ht-degree: 92%
    - [新しいデータセットの作成](#create-a-dataset-enabled-for-profile-and-identity)
    - [既存のデータセットの設定](#configure-an-existing-dataset)
 1. [データセットへのデータの取り込み](#ingest-data-into-the-dataset)
-1. [ リアルタイム顧客プロファイルによるデータ取り込みの確認 ](#confirm-data-ingest-by-real-time-customer-profile)
+1. [&#x200B; リアルタイム顧客プロファイルによるデータ取り込みの確認 &#x200B;](#confirm-data-ingest-by-real-time-customer-profile)
 1. [ID サービスによるデータ取り込みの確認](#confirm-data-ingest-by-identity-service)
 
 ## はじめに

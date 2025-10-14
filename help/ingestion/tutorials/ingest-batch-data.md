@@ -84,7 +84,7 @@ Adobe Experience Platformでは、データをバッチファイルとして [!D
 
 デフォルトでは、この切り替えはオフになっています。[!DNL Profile] をオンに切り替えた場合、データセットに取り込まれたすべてのデータは、個人を識別して [!DNL Real-Time Profile] ータを結び付けるのに役立つように使用されます。
 
-ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、[ID サービス ](../../identity-service/home.md) ドキュメントを参照してください。
+ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、[ID サービス &#x200B;](../../identity-service/home.md) ドキュメントを参照してください。
 
 データセットの [!DNL Real-Time Customer Profile] を有効にするには、「**[!UICONTROL 情報]**」タブの **[!UICONTROL プロファイル]** 切り替えスイッチをクリックします。
 
@@ -146,7 +146,7 @@ ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、
 
 データセットを作成し、データを [!DNL Experience Platform] に正常に取り込んだので、これらの手順を繰り返して、新しいデータセットを作成したり、既存のデータセットにさらにデータを取り込んだりできます。
 
-バッチ取り込みについて詳しくは、[ バッチ取り込みの概要 ](../batch-ingestion/overview.md) を参照し、以下のビデオを視聴して知識を補ってください。
+バッチ取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要 &#x200B;](../batch-ingestion/overview.md) を参照し、以下のビデオを視聴して知識を補ってください。
 
 >[!WARNING]
 >

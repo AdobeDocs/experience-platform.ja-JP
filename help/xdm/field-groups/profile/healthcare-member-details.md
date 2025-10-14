@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # [!UICONTROL &#x200B; ヘルスケアメンバーの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; ヘルスケア会員詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、連絡先情報、主治医、医療保険情報など、医療サービスまたはケアを受ける人の詳細を収集します。
+[!UICONTROL &#x200B; ヘルスケア会員詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループで、連絡先情報、主治医、医療保険情報など、医療サービスまたはケアを受ける人の詳細を収集します。
 
-![ フィールドグループ構造 ](../../images/field-groups/healthcare-member-details/structure.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../images/field-groups/healthcare-member-details/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の自宅の住所。 |
 | `homePhone` | [[!UICONTROL &#x200B; 電話番号 &#x200B;]](../../data-types/phone-number.md) | 人物の自宅電話番号。 |
 | `mailingAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の住所。 |
-| `memberDetails` | オブジェクト | その人物のヘルスケア関連の属性および関係に関する詳細な情報を含むオブジェクト。 オブジェクトの構造について詳しくは、次の [ サブセクション ](#memberDetails) を参照してください。 |
+| `memberDetails` | オブジェクト | その人物のヘルスケア関連の属性および関係に関する詳細な情報を含むオブジェクト。 オブジェクトの構造について詳しくは、次の [&#x200B; サブセクション &#x200B;](#memberDetails) を参照してください。 |
 | `mobilePhone` | [[!UICONTROL &#x200B; 電話番号 &#x200B;]](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
 | `person` | [[!UICONTROL &#x200B; 人物 &#x200B;]](../../data-types/person.md) | 個人のヘルスケアメンバーシップに関連する個々のアクター、連絡先または所有者。 |
 | `personalEmail` | [[!UICONTROL &#x200B; メールアドレス &#x200B;]](../../data-types/email-address.md) | 人物の個人メールアドレス。 |
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 `memberDetails` は、その人物の医療関連の属性と関係に関する詳細な情報を含むオブジェクトです。 `memberDetails` の構造は次のとおりです。
 
-![memberDetails 構造 ](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![memberDetails 構造 &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-このフィールドグループを一般的な [ ヘルスケア業界のユースケース ](../../schema/industries/healthcare.md) のサービスに使用する方法について詳しくは、業界スキーマのドキュメントを参照してください。
+このフィールドグループを一般的な [&#x200B; ヘルスケア業界のユースケース &#x200B;](../../schema/industries/healthcare.md) のサービスに使用する方法について詳しくは、業界スキーマのドキュメントを参照してください。

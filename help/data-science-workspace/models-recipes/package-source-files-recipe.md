@@ -36,7 +36,7 @@ ht-degree: 43%
 
 ## レシピの作成
 
-レシピを作成するには、まず、ソースファイルをパッケージ化してアーカイブファイルを作成します。Source ファイルは、特定の問題を目の前で解決するために使用される機械学習ロジックとアルゴリズムを定義し、[!DNL Python]、R、PySpark、Scala のいずれかで記述されます。 構築されたアーカイブファイルは、Docker イメージの形式を取ります。 ビルドが完了すると、パッケージ化されたアーカイブファイルが [!DNL Data Science Workspace] に読み込まれ、[UI で ](./import-packaged-recipe-ui.md) または [API を使用して ](./import-packaged-recipe-api.md) レシピが作成されます。
+レシピを作成するには、まず、ソースファイルをパッケージ化してアーカイブファイルを作成します。Source ファイルは、特定の問題を目の前で解決するために使用される機械学習ロジックとアルゴリズムを定義し、[!DNL Python]、R、PySpark、Scala のいずれかで記述されます。 構築されたアーカイブファイルは、Docker イメージの形式を取ります。 ビルドが完了すると、パッケージ化されたアーカイブファイルが [!DNL Data Science Workspace] に読み込まれ、[UI で &#x200B;](./import-packaged-recipe-ui.md) または [API を使用して &#x200B;](./import-packaged-recipe-api.md) レシピが作成されます。
 
 ### Docker ベースのモデルオーサリング {#docker-based-model-authoring}
 
@@ -71,7 +71,7 @@ Docker ホスト、ユーザー名、パスワードの値を書き留めます�
 
 >[!NOTE]
 >
->Sourceの URL は、以下に概説されている手順を完了した後に提供されます。 設定ファイルについては、以降の [ 次の手順 ](#next-steps) のチュートリアルで説明します。
+>Sourceの URL は、以下に概説されている手順を完了した後に提供されます。 設定ファイルについては、以降の [&#x200B; 次の手順 &#x200B;](#next-steps) のチュートリアルで説明します。
 
 ### ソースファイルのパッケージ化
 
@@ -177,7 +177,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-次に、ディレクトリ `experience-platform-dsw-reference/recipes/scala` に移動すると、スクリプト `login.sh` および `build.sh` が見つかります。 これらのスクリプトは、Docker へのログインと Docker イメージのビルドに使用されます。 [Docker 資格情報 ](#docker-based-model-authoring) の準備ができている場合は、次のコマンドをターミナルに順に入力します。
+次に、ディレクトリ `experience-platform-dsw-reference/recipes/scala` に移動すると、スクリプト `login.sh` および `build.sh` が見つかります。 これらのスクリプトは、Docker へのログインと Docker イメージのビルドに使用されます。 [Docker 資格情報 &#x200B;](#docker-based-model-authoring) の準備ができている場合は、次のコマンドをターミナルに順に入力します。
 
 ```BASH
 # for logging in to Docker

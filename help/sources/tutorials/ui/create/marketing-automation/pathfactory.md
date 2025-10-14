@@ -22,7 +22,7 @@ ht-degree: 18%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL PathFactory] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したExperience Platformへのマーケティング自動化データの取り込み ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
+既に [!DNL PathFactory] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したExperience Platformへのマーケティング自動化データの取り込み &#x200B;](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
@@ -36,7 +36,7 @@ Experience Platformで PathFactory アカウントにアクセスするには、
 | アクセストークン | システムと PathFactory 間の安全な通信を確保するために、API 認証に使用される一意のトークン。 |
 | API エンドポイント | データにアクセスするための特定の API エンドポイント：訪問者、セッションおよびページビュー。 各エンドポイントは、取得可能な様々なデータセットに対応します。 **メモ：** これらは [!DNL PathFactory] で事前定義され、アクセスする予定のデータに固有です。 <ul><li>**訪問者エンドポイント**:`/api/public/v3/data_lake_apis/visitors.json`</li><li>**セッション エンドポイント**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**ページビューエンドポイント**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-資格情報の保護および使用方法に関するガイダンスと、アクセストークンの取得および更新に関する情報については、[PathFactory サポートセンター ](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
+資格情報の保護および使用方法に関するガイダンスと、アクセストークンの取得および更新に関する情報については、[PathFactory サポートセンター &#x200B;](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
 
 
 ## [!DNL PathFactory] アカウントを接続
@@ -47,7 +47,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!UICONTROL &#x200B; マーケティングオートメーション &#x200B;] カテゴリで、**[!UICONTROL PathFactory]** を選択してから **[!UICONTROL 設定]** を選択します。
 
-![ ソースカタログと PathFactory ソースが選択されています。](../../../../images/tutorials/create/pathfactory/catalog.png)
+![&#x200B; ソースカタログと PathFactory ソースが選択されています。](../../../../images/tutorials/create/pathfactory/catalog.png)
 
 **[!UICONTROL PathFactory に接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
 
@@ -63,8 +63,8 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のアカウントがある場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。
 
-![ 既存の PathFactory アカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/pathfactory/existing.png)
+![&#x200B; 既存の PathFactory アカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/pathfactory/existing.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL PathFactory] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/marketing-automation.md) を行いましょう。
+このチュートリアルでは、[!DNL PathFactory] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[&#x200B; マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 &#x200B;](../../dataflow/marketing-automation.md) を行いましょう。

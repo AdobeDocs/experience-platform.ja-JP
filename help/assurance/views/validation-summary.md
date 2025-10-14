@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ## 検証エディターの概要
 
-[Assurance の設定 ](../tutorials/implement-assurance.md) 後、「ホーム **[!UICONTROL ビューで]** 「**[!UICONTROL 検証エディター]**」を選択します。
+[Assurance の設定 &#x200B;](../tutorials/implement-assurance.md) 後、「ホーム **[!UICONTROL ビューで]** 「**[!UICONTROL 検証エディター]**」を選択します。
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 

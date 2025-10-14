@@ -38,11 +38,11 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 サービスを有効にするには、サイドバーの **[!UICONTROL プロファイル]** を選択してから、**[!UICONTROL 設定]** を選択します。
 
-![ プロファイルと設定を強調表示したExperience Platform UI。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![&#x200B; プロファイルと設定を強調表示したExperience Platform UI。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
 [!UICONTROL &#x200B; 関連アカウントを有効にする &#x200B;] の横にある切り替えを選択してサービスを有効にし、「**[!UICONTROL 保存]**」を選択します。
 
-![ 切り替えと保存を強調表示したアカウント設定画面 ](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![&#x200B; 切り替えと保存を強調表示したアカウント設定画面 &#x200B;](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## 仕組み {#how-it-works}
 
@@ -54,16 +54,16 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 処理ジョブが成功すると、アカウントプロファイルグループの各メンバーには、関連するアカウント リストがタグ付けされます。 アカウントプロファイルページの **関連アカウント** タブでリストを表示し、セグメント定義で関連するアカウントを使用できます。
 
-[ プロファイルエンリッチメント関連アカウントジョブ ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) について詳しくは、ドキュメントを参照してください。
+[&#x200B; プロファイルエンリッチメント関連アカウントジョブ &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) について詳しくは、ドキュメントを参照してください。
 
 ## 関連するアカウントの表示方法 {#how-to-view}
 
 Experience PlatformUI で参照しているアカウントに関連するアカウントを表示できます。
 
-[UI で関連アカウントを検索する方法 ](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab) について詳しくは、ドキュメントを参照してください。
+[UI で関連アカウントを検索する方法 &#x200B;](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab) について詳しくは、ドキュメントを参照してください。
 
 ## 関連するアカウントの使用方法 {#how-to-use}
 
 セグメント化でアカウントと関連アカウントを使用できます。 セグメント定義で関連するアカウントを使用するかどうかの決定は、マーケティングユースケースによって異なります。 例えば、メールマーケティングや広告キャンペーンに関連するアカウントを使用すると、より広いリーチと引き換えに、精度を下げることができます。
 
-関連するアカウントを使用する [ セグメント化の例 ](/help/rtcdp/segmentation/b2b.md#related-accounts) を参照してください。
+関連するアカウントを使用する [&#x200B; セグメント化の例 &#x200B;](/help/rtcdp/segmentation/b2b.md#related-accounts) を参照してください。

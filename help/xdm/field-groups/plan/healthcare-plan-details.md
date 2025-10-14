@@ -11,7 +11,7 @@ ht-degree: 9%
 
 # [!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] は、[[!UICONTROL &#x200B; プラン &#x200B;] クラス ](../../classes/plan.md) の標準スキーマフィールドグループです。 医療プランに関連するプロパティをキャプチャする単一のオブジェクトタイプのフィールド `healthcarePlanDetails` を提供します。
+[!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] は、[[!UICONTROL &#x200B; プラン &#x200B;] クラス &#x200B;](../../classes/plan.md) の標準スキーマフィールドグループです。 医療プランに関連するプロパティをキャプチャする単一のオブジェクトタイプのフィールド `healthcarePlanDetails` を提供します。
 
 ![](../../images/field-groups/plan/healthcare-plan-details.png)
 
@@ -29,4 +29,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json) を参照してください。

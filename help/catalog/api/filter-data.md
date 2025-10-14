@@ -15,7 +15,7 @@ ht-degree: 68%
 
 パフォーマンスを向上させ、関連する結果を取得するには、クエリパラメーターを使用して API 応答データ [!DNL Catalog Service] フィルタリングします。
 
-API の [!DNL Catalog] オブジェクトに対する一般的なフィルタリングメソッドについて説明します。 API インタラクションについて詳しくは、このドキュメントを [ カタログ開発者ガイド ](getting-started.md) と共に使用してください。 一般的 [!DNL Catalog Service] 情報については、[[!DNL Catalog]  概要 ](../home.md) を参照してください。
+API の [!DNL Catalog] オブジェクトに対する一般的なフィルタリングメソッドについて説明します。 API インタラクションについて詳しくは、このドキュメントを [&#x200B; カタログ開発者ガイド &#x200B;](getting-started.md) と共に使用してください。 一般的 [!DNL Catalog Service] 情報については、[[!DNL Catalog]  概要 &#x200B;](../home.md) を参照してください。
 
 ## 返されるオブジェクトの制限 {#limit-returned-objects}
 

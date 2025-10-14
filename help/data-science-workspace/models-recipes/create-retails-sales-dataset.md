@@ -27,7 +27,7 @@ ht-degree: 41%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 - [!DNL Adobe Experience Platform]へのアクセス。[!DNL Experience Platform] の組織にアクセスできない場合は、続行する前にシステム管理者に問い合わせてください。
-- [!DNL Experience Platform] API 呼び出しをおこなうための認証。このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
+- [!DNL Experience Platform] API 呼び出しをおこなうための認証。このチュートリアルを正しく完了するには、『[&#x200B; Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`

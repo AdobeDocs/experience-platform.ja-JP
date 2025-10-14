@@ -27,4 +27,4 @@ ht-degree: 5%
 
 ## 次の手順
 
-詳細な手順と例については、[ 完全なガイド ](../advanced-statistics/examples/statistics-and-ml-bot-filtering.md) を参照してください。
+詳細な手順と例については、[&#x200B; 完全なガイド &#x200B;](../advanced-statistics/examples/statistics-and-ml-bot-filtering.md) を参照してください。

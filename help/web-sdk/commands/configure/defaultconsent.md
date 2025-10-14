@@ -75,7 +75,7 @@ Web SDK には、2 つの補完的な同意設定コマンドがあります。
 
 ## Web SDK タグ拡張機能を使用したデフォルトの同意の設定
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、**[!UICONTROL デフォルトの同意]** の下で目的のラジオボタンを選択します。
+[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、**[!UICONTROL デフォルトの同意]** の下で目的のラジオボタンを選択します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

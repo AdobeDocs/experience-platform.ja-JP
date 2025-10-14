@@ -23,7 +23,7 @@ Adobe Experience Platform でデータを取得するプロセスは、複数の
 
 データ取得通知を受け取るには、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を使用して、Experience Platform統合に Webhook を登録する必要があります。
 
-これを実行する方法に関する詳細な手順については、[ 購読  [!DNL Adobe I/O Event]  通知 ](../../observability/alerts/subscribe.md) のチュートリアルに従ってください。
+これを実行する方法に関する詳細な手順については、[&#x200B; 購読  [!DNL Adobe I/O Event]  通知 &#x200B;](../../observability/alerts/subscribe.md) のチュートリアルに従ってください。
 
 >[!IMPORTANT]
 >
@@ -65,13 +65,13 @@ Webhook を正常に登録し、新しいデータが取り込まれたら、イ
 | `event_id` | 通知の一意の、システムで生成された ID。 |
 | `event` | 通知をトリガーしたイベントの詳細を含むオブジェクト。 |
 | `event.xdm:datasetId` | 取り込みイベントが適用されるデータセットの ID。 |
-| `event.xdm:eventCode` | データセットに対してトリガーされたイベントのタイプを示すステータスコード。 特定の値とその定義については、[ 付録 ](#event-codes) を参照してください。 |
+| `event.xdm:eventCode` | データセットに対してトリガーされたイベントのタイプを示すステータスコード。 特定の値とその定義については、[&#x200B; 付録 &#x200B;](#event-codes) を参照してください。 |
 
-イベント通知の完全なスキーマを表示するには、[ 公開 GitHub リポジトリ ](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json) を参照してください。
+イベント通知の完全なスキーマを表示するには、[&#x200B; 公開 GitHub リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json) を参照してください。
 
 ## 次の手順
 
-プロジェクトに [!DNL Experience Platform] 通知を登録すると、[!UICONTROL &#x200B; プロジェクトの概要 &#x200B;] から受信したイベントを表示できます。 イベントのトレース方法について詳しくは、[Adobe I/O Eventsのトレース ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
+プロジェクトに [!DNL Experience Platform] 通知を登録すると、[!UICONTROL &#x200B; プロジェクトの概要 &#x200B;] から受信したイベントを表示できます。 イベントのトレース方法について詳しくは、[Adobe I/O Eventsのトレース &#x200B;](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
 
 ## 付録
 

@@ -26,9 +26,9 @@ Analytics でデータが処理されると、処理後のステータスとデ�
 続行する前に、次のサービスを利用していることを確認してください。
 
 - [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform アシュランス ](https://experience.adobe.com/assurance)
+- [Adobe Experience Platform アシュランス &#x200B;](https://experience.adobe.com/assurance)
 
-アプリケーションに Assurance をインストールする方法については、[Assurance 実装ガイド ](../tutorials/implement-assurance.md) を参照してください。
+アプリケーションに Assurance をインストールする方法については、[Assurance 実装ガイド &#x200B;](../tutorials/implement-assurance.md) を参照してください。
 
 ## ストリーミングメディア用 Adobe Analyticsでの Assurance の使用
 
@@ -38,15 +38,15 @@ Analytics でデータが処理されると、処理後のステータスとデ�
 
 追加したら、「**[!UICONTROL Adobe Analytics**&#x200B;[!UICONTROL 」セクションの &#x200B;]&#x200B;**Media Analytics イベント]** ビューを選択して、セッショントラッキングを検証します。
 
-![ 選択 ](./images/adobe-analytics-streaming-media/select.png)
+![&#x200B; 選択 &#x200B;](./images/adobe-analytics-streaming-media/select.png)
 
 **[!UICONTROL Media Analytics イベント]** ビューでは、セッション ID （VSID）で検索およびフィルタリングして、特定のメディアセッションを表示できます。 追加のイベントの詳細を表示するには、特定のイベントを選択します。
 
-![ メディアイベント ](./images/adobe-analytics-streaming-media/media-events.png)
+![&#x200B; メディアイベント &#x200B;](./images/adobe-analytics-streaming-media/media-events.png)
 
 API 呼び出しをより簡単に確認するには、**[!UICONTROL 再生ヘッド更新イベントを非表示にする]** フィルターを選択して再生ヘッド更新イベントを非表示にすることもできます。
 
-![ 再生ヘッドを非表示 ](./images/adobe-analytics-streaming-media/hide-playhead.png)
+![&#x200B; 再生ヘッドを非表示 &#x200B;](./images/adobe-analytics-streaming-media/hide-playhead.png)
 
 >[!INFO]
 >
@@ -54,4 +54,4 @@ API 呼び出しをより簡単に確認するには、**[!UICONTROL 再生ヘ�
 
 後処理されたデータを表示するには、セッション開始イベントを見つけ、セッションが完了したことをステータス列で検証します。 完了したら、イベントをクリックして、イベントの詳細表示でメディアセッションの概要を表示します。 詳細については、下にスクロールして、後処理の詳細を見つけます。
 
-![Postで処理されたビュー ](./images/adobe-analytics-streaming-media/post-processed-view.png)
+![Postで処理されたビュー &#x200B;](./images/adobe-analytics-streaming-media/post-processed-view.png)

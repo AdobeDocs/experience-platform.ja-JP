@@ -16,7 +16,7 @@ ht-degree: 39%
 
 >[!IMPORTANT]
 >
->このガードレール ページに加えて、販売注文と対応する [ 製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
+>このガードレール ページに加えて、販売注文と対応する [&#x200B; 製品説明 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
 
 ## 基本を学ぶ
 
@@ -35,7 +35,7 @@ ID データに適用される静的上限の概要を次の表に示します�
 
 | ガードレール | 上限 | メモ |
 | --- | --- | --- |
-| グラフ内の ID 数 | 50 | 50 個のリンクされた ID を含むグラフが更新されると、ID サービスは「先入れ先出し」メカニズムを適用し、最も古い ID を削除して、このグラフの最新の ID 用のスペースを作成します（**メモ**：リアルタイム顧客プロファイルは影響を受けません）。 削除は、ID タイプとタイムスタンプに基づいて行われます。上限は、サンドボックスレベルで適用されます。詳しくは、[ 削除ロジックについて ](#deletion-logic) の節を参照してください。 |
+| グラフ内の ID 数 | 50 | 50 個のリンクされた ID を含むグラフが更新されると、ID サービスは「先入れ先出し」メカニズムを適用し、最も古い ID を削除して、このグラフの最新の ID 用のスペースを作成します（**メモ**：リアルタイム顧客プロファイルは影響を受けません）。 削除は、ID タイプとタイムスタンプに基づいて行われます。上限は、サンドボックスレベルで適用されます。詳しくは、[&#x200B; 削除ロジックについて &#x200B;](#deletion-logic) の節を参照してください。 |
 | 単一のバッチ取り込みの ID へのリンク数 | 50 | 1 つのバッチに、不要なグラフ結合を引き起こす異常な ID が含まれている場合があります。 これを防ぐために、ID サービスは、既に 50 以上の ID にリンクされている ID を取り込みません。 |
 | XDM レコード内の ID 数 | 20 | 最低限必要な XDM レコード数は 2 です。 |
 | カスタム名前空間の数 | なし | 作成できるカスタム名前空間の数に制限はありません。 |
@@ -102,13 +102,13 @@ ID サービスは、受信データを継続的に監視して、大規模で�
 削除は ID サービスのデータにのみ発生し、リアルタイム顧客プロファイルには発生しません。
 
 * この動作により、単一の ECID を持つプロファイルがより多く作成される可能性があります。これは、ECID が ID グラフに含まれなくなったためです。
-* アドレス可能なオーディエンスの使用権限番号の範囲内に収まるようにするには、[ 偽名プロファイルデータの有効期限 ](../profile/pseudonymous-profiles.md) を有効にして、古いプロファイルを削除することをお勧めします。
+* アドレス可能なオーディエンスの使用権限番号の範囲内に収まるようにするには、[&#x200B; 偽名プロファイルデータの有効期限 &#x200B;](../profile/pseudonymous-profiles.md) を有効にして、古いプロファイルを削除することをお勧めします。
 
 #### リアルタイムプライマリプロファイルと WebSDK：顧客 ID 削除
 
 CRMID に対して認証済みイベントを保持する場合は、プライマリ ID を ECID から CRMID に変更することをお勧めします。 この変更を実装する手順については、次のドキュメントを参照してください。
 
-* [Experience Platform タグ用に ID マップを設定します ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
+* [Experience Platform タグ用に ID マップを設定します &#x200B;](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
 * [Experience Platform Web SDKの ID データ](../web-sdk/identity/overview.md#using-identitymap)
 
 ### サンプルシナリオ
@@ -199,7 +199,7 @@ ECID:35577 を削除した結果、削除された ECID:35577 で CRMID:60013 �
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービス用の [&#x200B; エンドツーエンドの待ち時間の図 &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

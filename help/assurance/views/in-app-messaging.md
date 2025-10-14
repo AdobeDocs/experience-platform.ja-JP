@@ -17,7 +17,7 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 **[!UICONTROL デバイス上のメッセージ]** タブの上部には、**[!UICONTROL メッセージ]** ドロップダウンがあります。 これには、アシュランスセッションで受信したすべてのメッセージが含まれます。 メッセージがこのリストにない場合は、アプリに受信されたことはありません。
 
-![ メッセージ ](./images/in-app-messaging/message.png)
+![&#x200B; メッセージ &#x200B;](./images/in-app-messaging/message.png)
 
 メッセージを選択すると、そのメッセージに関する多くの情報が表示されます（以下の節を参照）。
 
@@ -25,13 +25,13 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 右側のパネルには、メッセージのプレビューを表示する **[!UICONTROL メッセージプレビュー]** パネルがあります。 **[!UICONTROL デバイスでシミュレート]** を選択すると、セッションに現在接続されているすべてのデバイスにそのメッセージが送信されます。
 
-![ プレビュー ](./images/in-app-messaging/preview.png)
+![&#x200B; プレビュー &#x200B;](./images/in-app-messaging/preview.png)
 
 ### メッセージの動作
 
 **[!UICONTROL メッセージプレビュー]** ペインの下には、「**[!UICONTROL メッセージの動作]** タブがあります。 これには、メッセージの表示方法に関するすべての詳細が含まれます。 この情報には、位置情報、アニメーション、スワイプジェスチャー、外観設定が含まれます。
 
-![ 動作 ](./images/in-app-messaging/gestures.png)
+![&#x200B; 動作 &#x200B;](./images/in-app-messaging/gestures.png)
 
 ### 「情報」タブ
 
@@ -39,7 +39,7 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 **[!UICONTROL キャンペーンを表示]** を選択して、AJOでメッセージを開いて検査または編集することもできます。
 
-![ 情報 ](./images/in-app-messaging/info.png)
+![&#x200B; 情報 &#x200B;](./images/in-app-messaging/info.png)
 
 ### 「ルール」タブ
 
@@ -49,11 +49,11 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 この例では、ルールに対する 3 つの異なる条件を示しています。 （イベントリスト、「分析」タブ、またはタイムラインの）イベントを選択すると、そのイベントはこれらのルールに対して評価されます。 イベントが条件に一致する場合は、緑色のチェックマークが表示されます。
 
-![ ルールの一致 ](./images/in-app-messaging/rule-match.png)
+![&#x200B; ルールの一致 &#x200B;](./images/in-app-messaging/rule-match.png)
 
 イベントが一致しない場合は、赤いアイコンが表示されます。
 
-![ ルールの不一致 ](./images/in-app-messaging/rule-mismatch.png)
+![&#x200B; ルールの不一致 &#x200B;](./images/in-app-messaging/rule-mismatch.png)
 
 3 つの条件がすべて現在のイベントに一致する場合、メッセージが表示されます。
 
@@ -61,13 +61,13 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 「**[!UICONTROL 分析]**」タブには、ルールに関する追加のインサイトが表示されます。 ここでは、メッセージルールがイベントにどれだけ近いかに基づいて、セッション内のすべてのイベントをフィルタリングします。
 
-![ 分析 ](./images/in-app-messaging/analyze.png)
+![&#x200B; 分析 &#x200B;](./images/in-app-messaging/analyze.png)
 
 **[!UICONTROL [ ルール ] タブ]** セクションの例では、3 つの条件がルールに含まれています。 このタブには、各イベントがルールのどの割合で一致するかが表示されます。 イベントの大部分は 33% で一致し（3 つの条件のいずれか）、残りは 100% で一致します。
 
 その結果、一致に近くてもルールに完全には一致しないイベントを見つけることができます。
 
-![ しきい値 ](./images/in-app-messaging/threshold.png)
+![&#x200B; しきい値 &#x200B;](./images/in-app-messaging/threshold.png)
 
 **[!UICONTROL しきい値に一致]** スライダーを使用すると、表示するイベントをフィルタリングできます。 例えば、50%～90% に設定すると、3 つの条件のいずれか 2 つに一致するイベントのリストを取得できます。
 
@@ -75,7 +75,7 @@ Adobe Experience Platform Assurance のアプリ内メッセージビューで�
 
 「**[!UICONTROL インタラクション]**」タブには、トラッキング目的でEdgeに送信されたインタラクションイベントのリストが表示されます。
 
-![ インタラクション ](./images/in-app-messaging/interactions.png)
+![&#x200B; インタラクション &#x200B;](./images/in-app-messaging/interactions.png)
 
 通常、メッセージが表示されるたびに 4 つのインタラクションイベントが発生します。
 
@@ -91,13 +91,13 @@ trigger > display > interact > dismiss
 
 「**[!UICONTROL 検証]**」タブは、現在のセッションに対して検証を実行し、アプリがアプリ内メッセージ用に正しく設定されているかどうかを確認します。
 
-![ 検証 ](./images/in-app-messaging/validation.png)
+![&#x200B; 検証 &#x200B;](./images/in-app-messaging/validation.png)
 
 エラーが見つかった場合は、それらのエラーの修正方法の詳細が提供されます。
 
 ## イベントリスト
 
-![ 検証 ](./images/in-app-messaging/event-list.png)
+![&#x200B; 検証 &#x200B;](./images/in-app-messaging/event-list.png)
 
 「**[!UICONTROL イベントリスト]**」タブには、アプリ内メッセージに関連する、アシュランスセッション内のすべてのイベントが一覧表示されます。 ここに表示されるイベントの一部を次に示します。
 

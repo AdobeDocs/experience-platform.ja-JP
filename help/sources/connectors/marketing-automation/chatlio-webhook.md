@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[!DNL Chatlio] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Chatlio] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -36,14 +36,14 @@ Experience Platformは、ストリーミングアプリケーションからの�
 
 [!DNL Chatlio] ソース接続を作成する前に、次の点を確認する必要があります。
 
-* [!DNL Chatlio] アカウント。 アカウントをまだお持ちでない場合は、[[!DNL Chatlio]  サインアップページ ](https://chatlio.com/app/#/signup) にアクセスし、アカウントを登録、作成してください。
-* アカウントの登録が完了したら、[[!DNL Chatlio]  設定ドキュメント ](https://chatlio.com/docs/setup/) に従ってアカウントの設定を完了します。
+* [!DNL Chatlio] アカウント。 アカウントをまだお持ちでない場合は、[[!DNL Chatlio]  サインアップページ &#x200B;](https://chatlio.com/app/#/signup) にアクセスし、アカウントを登録、作成してください。
+* アカウントの登録が完了したら、[[!DNL Chatlio]  設定ドキュメント &#x200B;](https://chatlio.com/docs/setup/) に従ってアカウントの設定を完了します。
 
 ### Webhook[!DNL Chatlio] 設定 {#set-up-webhook}
 
 データフローが正常に作成されたら、イベントについてExperience Platformに通知する Webhook を設定する必要 [!DNL Chatlio] あります。 Webhook は、顧客属性が変更されたとき、またはユーザーがメッセージを開いてこの情報を [!DNL Chatlio] ソースに送信したときにすぐに通知します。
 
-詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook) に関するチュ  [!DNL Chatlio]  トリアルを参照してください。
+詳しくは、[&#x200B; ストリーミングエンドポイント URL の取得 &#x200B;](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) および [Webhook の設定 &#x200B;](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook) に関するチュ  [!DNL Chatlio]  トリアルを参照してください。
 
 ## [!DNL Chatlio] をExperience Platformに接続 {#connect-to-platform}
 
@@ -51,7 +51,7 @@ Experience Platformは、ストリーミングアプリケーションからの�
 
 ### API を使用した [!DNL Chatlio] のExperience Platformへの接続 {#connect-to-platform-using-api}
 
-* [ソース接続を作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Chatlio] ](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
+* [ソース接続を作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Chatlio] &#x200B;](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
 
 ### UI を使用した [!DNL Chatlio] のExperience Platformへの接続 {#connect-to-platform-using-ui}
 

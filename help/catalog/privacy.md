@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて [ プロファイルのプライバシーリクエスト処理 ](../profile/privacy.md) に関するガイドを参照してください。
+>このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて [&#x200B; プロファイルのプライバシーリクエスト処理 &#x200B;](../profile/privacy.md) に関するガイドを参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -149,11 +149,11 @@ curl -X POST \
 
 UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL Products]** の下の **[!UICONTROL AEP Data Lake]** を選択し、Data Lake に保存されたデータのジョブを処理します。
 
-![ プライバシーリクエスト作成ダイアログで選択された Data Lake 製品を示す画像 ](./images/privacy/product-value.png)
+![&#x200B; プライバシーリクエスト作成ダイアログで選択された Data Lake 製品を示す画像 &#x200B;](./images/privacy/product-value.png)
 
 ### API の使用
 
-API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。データレイクの ID は、`type` 値に `unregistered` を使用し、該当するデータセットに追加された [ プライバシーラベル ](#privacy-labels) の 1 つと一致する `namespace` 値を使用する必要があります。
+API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。データレイクの ID は、`type` 値に `unregistered` を使用し、該当するデータセットに追加された [&#x200B; プライバシーラベル &#x200B;](#privacy-labels) の 1 つと一致する `namespace` 値を使用する必要があります。
 
 さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。データレイクにリクエストを送信する場合、配列には値 `aepDataLake` が含まれている必要があります。
 
@@ -200,19 +200,19 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platformは、組織に属するすべての [ サンドボックス ](../sandboxes/home.md) でプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
+>Experience Platformは、組織に属するすべての [&#x200B; サンドボックス &#x200B;](../sandboxes/home.md) でプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
 
 ## リクエスト処理の削除
 
 [!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Experience Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、7 日以内にレコードがデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Experience Platform] サービスからもアクセスできません。
 
-プライバシーリクエストに `ProfileService` または `identity` も含めた場合、関連するデータは個別に処理されます。 詳しくは、[ プロファイルのリクエスト処理の削除 ](../profile/privacy.md#delete) の節を参照してください。
+プライバシーリクエストに `ProfileService` または `identity` も含めた場合、関連するデータは個別に処理されます。 詳しくは、[&#x200B; プロファイルのリクエスト処理の削除 &#x200B;](../profile/privacy.md#delete) の節を参照してください。
 
 ## 次の手順
 
 このドキュメントでは、データレイクのプライバシーリクエストの処理に関する重要な概念を紹介しました。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
 
-[!DNL Profile] Store のプライバシーリクエストを処理する手順については、[ リアルタイム顧客プロファイルのプライバシーリクエスト処理 ](../profile/privacy.md) に関するドキュメントを参照してください。
+[!DNL Profile] Store のプライバシーリクエストを処理する手順については、[&#x200B; リアルタイム顧客プロファイルのプライバシーリクエスト処理 &#x200B;](../profile/privacy.md) に関するドキュメントを参照してください。
 
 ## 付録
 

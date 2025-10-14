@@ -23,7 +23,7 @@ Adobe Experience PlatformのReal-Time CDP データモデルは、プロファ�
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [&#x200B; パッケージ &#x200B;](../../packaging.md)、[&#x200B; ガードレール &#x200B;](../../guardrails.md#query-accelerated-store) および [&#x200B; ライセンス &#x200B;](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 
@@ -226,6 +226,6 @@ LIMIT  5000
 
 次の画像は、レポートインサイトデータモデルを使用して可能なカスタムビジュアライゼーションの例を示しています。
 
-![ 新しいレポートインサイトデータモデルから作成された宛先およびオーディエンスウィジェット別の一致数。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
+![&#x200B; 新しいレポートインサイトデータモデルから作成された宛先およびオーディエンスウィジェット別の一致数。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
 カスタムデータモデルは、ユーザー定義のダッシュボードワークスペースで使用可能なデータモデルのリストに表示されます。カスタムデータモデルの活用方法について詳しくは、[ユーザー定義ダッシュボードガイド](../../../dashboards/standard-dashboards.md)を参照してください。

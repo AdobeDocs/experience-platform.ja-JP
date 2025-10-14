@@ -18,6 +18,6 @@ ht-degree: 7%
 
 このビデオでは、Experience Platformの概要と、解決されるビジネス上の課題の一部を説明します。
 
-詳細については、まず [Experience Platformの概要を読んでください ](../home.md)。
+詳細については、まず [Experience Platformの概要を読んでください &#x200B;](../home.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428496?quality=12&learn=on&captions=jpn)

@@ -36,9 +36,9 @@ ht-degree: 35%
 
 ### [!DNL SugarCRM] 用のExperience Platform スキーマの作成
 
-[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 &#x200B;](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![SugarCRM イベントのスキーマ例を示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+![SugarCRM イベントのスキーマ例を示すExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
@@ -52,7 +52,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 *CRM* カテゴリ内で、「**[!UICONTROL SugarCRM イベント]**」、「**[!UICONTROL データを追加]**」の順に選択します。
 
-![SugarCRM イベントカードを含むカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
+![SugarCRM イベントカードを含むカタログのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
 **[!UICONTROL SugarCRM イベントアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -60,17 +60,17 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL SugarCRM Events] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![SugarCRM イベントアカウントを既存のアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![SugarCRM イベントアカウントを既存のアカウントに接続するためのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### 新規アカウント
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![SugarCRM イベントアカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-events/new.png)
+![SugarCRM イベントアカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SugarCRM Events] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。
+このチュートリアルでは、[!DNL SugarCRM Events] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/crm.md) を行いましょう。
 
 ## その他のリソース
 
@@ -88,7 +88,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 * 操作しているオブジェクトタイプに応じて、以下の [!DNL SugarMarket] のイベントページに表示されるカウントに対して集計データを検証できます。
 
-![ アカウントのリストを表示する SugarMarket アカウントページからのスクリーンショット ](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
+![&#x200B; アカウントのリストを表示する SugarMarket アカウントページからのスクリーンショット &#x200B;](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
 
 >[!NOTE]
 >

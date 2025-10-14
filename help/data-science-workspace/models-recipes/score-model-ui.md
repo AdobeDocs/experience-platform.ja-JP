@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] でのスコアリング
 
 最も最適なトレーニング実行を見つけて、その設定をスコアリングに使用します。次に、名前に添付されているハイパーリンクを選択して、目的のトレーニング実行を開きます。
 
-![ トレーニング実行を選択 ](../images/models-recipes/score/select-run.png)
+![&#x200B; トレーニング実行を選択 &#x200B;](../images/models-recipes/score/select-run.png)
 
 トレーニング実行 **[!UICONTROL 評価]** タブで、画面右上の **[!UICONTROL スコア]** を選択します。 新しいスコアリングワークフローが開始されます。
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] でのスコアリング
 
 スコアリング構成を確認して確認し、 **[!UICONTROL 完了]**  を選択してスコアリング実行を作成して実行します。 **[!UICONTROL スコアリング実行]** タブに移動し、**[!UICONTROL 保留]**&#x200B;ステータスの新しいスコアリング実行が表示されます。
 
-![ 「スコアリング実行」タブ ](../images/models-recipes/score/scoring_runs_tab.png)
+![&#x200B; 「スコアリング実行」タブ &#x200B;](../images/models-recipes/score/scoring_runs_tab.png)
 
 スコアリング実行は、次のいずれかのステータスで表示できます。
 - 保留中
@@ -75,11 +75,11 @@ Adobe Experience Platform [!DNL Data Science Workspace] でのスコアリング
 
 トレーニング実行 **[!UICONTROL 評価]** ページにリダイレクトされます。 トレーニング実行評価ページの上部付近にある「**[!UICONTROL スコアリング実行]**」タブを選択して、既存のスコアリング実行のリストを表示します。
 
-![ 評価ページ ](../images/models-recipes/score/view_scoring_runs.png)
+![&#x200B; 評価ページ &#x200B;](../images/models-recipes/score/view_scoring_runs.png)
 
 次に、スコアリング実行を選択して実行の詳細を表示します。
 
-![ 実行の詳細 ](../images/models-recipes/score/view_details.png)
+![&#x200B; 実行の詳細 &#x200B;](../images/models-recipes/score/view_details.png)
 
 選択したスコアリング実行のステータスが「完了」または「失敗」の場合は、「アクティビティ・ログの表示 **[!UICONTROL リンクが使用可能]** なります。 スコアリング実行が失敗した場合、実行ログは失敗の理由の判断に役立つ情報を提供できます。 実行ログをダウンロードするには、「**[!UICONTROL アクティビティログを表示]**」を選択します。
 

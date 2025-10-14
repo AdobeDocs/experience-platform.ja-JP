@@ -32,11 +32,11 @@ ht-degree: 57%
 | `connectionString` | [!DNL GreenPlum] インスタンスへの接続に使用する接続文字列。 [!DNL GreenPlum] の接続文字列パターンは `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` です |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL GreenPlum] の接続仕様 ID は `37b6bf40-d318-4655-90be-5cd6f65d334b` です。 |
 
-接続文字列の取得について詳しくは、[ この GreenPlum ドキュメント ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html) を参照してください。
+接続文字列の取得について詳しくは、[&#x200B; この GreenPlum ドキュメント &#x200B;](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -98,5 +98,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL GreenPlum] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

@@ -21,7 +21,7 @@ Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Consol
 
 >[!NOTE]
 >
->データ収集を使用してユーザーの権限を設定する手順については、[Admin Consoleの権限の管理 ](../../../collection/permissions.md) に関するチュートリアルを参照してください。
+>データ収集を使用してユーザーの権限を設定する手順については、[Admin Consoleの権限の管理 &#x200B;](../../../collection/permissions.md) に関するチュートリアルを参照してください。
 
 ## 権限タイプ
 
@@ -121,4 +121,4 @@ UI でタグプロパティを作成すると製品で使用できるように�
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform のタグで使用できる権限の概要を説明しました。Adobe Admin Consoleでタグ用の製品プロファイルを設定する手順については、「[ データ収集用のユーザー権限の管理 ](../../../collection/permissions.md) に関するガイドを参照してください。
+このドキュメントでは、Experience Platform のタグで使用できる権限の概要を説明しました。Adobe Admin Consoleでタグ用の製品プロファイルを設定する手順については、「[&#x200B; データ収集用のユーザー権限の管理 &#x200B;](../../../collection/permissions.md) に関するガイドを参照してください。

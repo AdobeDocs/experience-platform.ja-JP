@@ -40,7 +40,7 @@ Experience Platform上のバケットにアクセスするには、次の資格�
 
 >[!IMPORTANT]
 >
->**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../../../access-control/ui/overview.md) を参照してください。
+>**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../../../access-control/ui/overview.md) を参照してください。
 
 ## [!DNL Acxiom] アカウントを接続
 
@@ -54,13 +54,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 >
 >**[!UICONTROL データを追加]** と表示されるソースカードは、ソースに認証済みアカウントが既にあることを意味します。 一方、**[!UICONTROL 設定]** と表示されるソースカードは、そのソースを使用するために、資格情報を提供し、新しいアカウントを作成する必要があることを意味します。
 
-![Acxiom ソースが選択されているソース・カタログ ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+![Acxiom ソースが選択されているソース・カタログ &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 ### 新しいアカウントを作成
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、説明（オプション）、[!DNL Acxiom] 資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -80,13 +80,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 リストからアカウントを選択して、そのアカウントの詳細を表示します。 アカウントを選択したら、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 
 ## データを選択
 
 取り込むファイルを目的のバケットおよびサブディレクトリから選択します。 区切り文字と圧縮タイプを定義したら、データのプレビューを指定できます。 ファイルを選択したら、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ ソースワークフローのデータとファイルのプレビューインターフェイスを選択します ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)。
+![&#x200B; ソースワークフローのデータとファイルのプレビューインターフェイスを選択します &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)。
 
 >[!NOTE]
 >
@@ -104,13 +104,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 データセットは、スキーマ（列）とフィールド（行）で構成されるデータコレクション（通常はテーブル）を格納し管理するための構造です。Experience Platformに正常に取り込まれたデータは、データレイク内にデータセットとして保持されます。 新しいデータセットを使用するには、「**[!UICONTROL 新しいデータセット]**」を選択します。
 
-![ 新しいデータセットインターフェイス ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
+![&#x200B; 新しいデータセットインターフェイス &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
 
 | 新しいデータセットの詳細 | 説明 |
 | --- | --- |
 | 出力データセット名 | 新しいデータセットの名前。 |
 | 説明 | （任意）データセットの目的の簡単な説明。 |
-| スキーマ | 組織に存在するスキーマのドロップダウンリスト。 ソース設定プロセスの前に、独自のスキーマを作成することもできます。 詳しくは、[UI でのスキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。 |
+| スキーマ | 組織に存在するスキーマのドロップダウンリスト。 ソース設定プロセスの前に、独自のスキーマを作成することもできます。 詳しくは、[UI でのスキーマの作成 &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。 |
 
 >[!TAB 既存のデータセットを使用する]
 
@@ -118,7 +118,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 **[!UICONTROL 詳細検索]** を選択すると、組織のすべてのデータセットを示すウィンドウが表示されます。これには、リアルタイム顧客プロファイルに取り込むことができるかどうかなど、それぞれの詳細が含まれます。
 
-![ 既存のデータセットインターフェイス。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
+![&#x200B; 既存のデータセットインターフェイス。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
 
 >[!ENDTABS]
 
@@ -126,22 +126,22 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 この手順の間に、データセットがプロファイルに対して有効になっている場合、**[!UICONTROL プロファイルデータセット]** 切り替えスイッチを選択して、プロファイル取り込み用のデータを有効にすることができます。 また、[!UICONTROL &#x200B; エラー診断 &#x200B;] および [!UICONTROL &#x200B; 部分取り込み &#x200B;] を有効にすることもできます。
 
-* **エラー診断** - **エラー診断** を選択して、API を使用して後で参照できるエラー診断を生成するようにソースに指示します。 詳しくは、[ エラー診断の概要 ](../../../../../ingestion/quality/error-diagnostics.md) を参照してください
-* **部分取り込みを有効にする** – 部分バッチ取り込みは、特定のしきい値に到達するまで、エラーを含むデータを取り込む機能です。 この機能を使用すると、誤ったデータがすべて個別にバッチ処理されると同時に、無効な理由の詳細も含めて、正しいデータをすべてAdobe Experience Platformに取り込むことができます。  詳しくは、[ 部分取り込みの概要 ](../../../../../ingestion/batch-ingestion/partial.md) を参照してください
+* **エラー診断** - **エラー診断** を選択して、API を使用して後で参照できるエラー診断を生成するようにソースに指示します。 詳しくは、[&#x200B; エラー診断の概要 &#x200B;](../../../../../ingestion/quality/error-diagnostics.md) を参照してください
+* **部分取り込みを有効にする** – 部分バッチ取り込みは、特定のしきい値に到達するまで、エラーを含むデータを取り込む機能です。 この機能を使用すると、誤ったデータがすべて個別にバッチ処理されると同時に、無効な理由の詳細も含めて、正しいデータをすべてAdobe Experience Platformに取り込むことができます。  詳しくは、[&#x200B; 部分取り込みの概要 &#x200B;](../../../../../ingestion/batch-ingestion/partial.md) を参照してください
 
-![ データフローの詳細設定インターフェイス ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
+![&#x200B; データフローの詳細設定インターフェイス &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformは、ユーザーが登録できるイベントベースのアラートを作成でき、これらのオプションは、これらをトリガーにする実行中のデータフローです。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformは、ユーザーが登録できるイベントベースのアラートを作成でき、これらのオプションは、これらをトリガーにする実行中のデータフローです。  詳しくは、[&#x200B; アラートの概要 &#x200B;](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 ## マッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [&#x200B; マッピングガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
-![ マッピングインターフェイス ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
+![&#x200B; マッピングインターフェイス &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
 ## データフロー取り込みのスケジュール
 
@@ -154,7 +154,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 | 開始時間 | 見込み実行のタイムスタンプ（UTC タイムゾーンで表示）。 |
 | バックフィル | バックフィルは、最初に取り込むデータを決定します。 バックフィルが有効になっている場合、指定されたパス内の現在のすべてのファイルが、最初にスケジュールされた取り込み時に取り込まれます。 バックフィルが無効になっている場合は、最初の取り込みの実行から開始時刻の間に読み込まれたファイルのみが取り込まれます。 開始時間より前に読み込まれたファイルは取り込まれません。 |
 
-![ スケジューリング設定インターフェイス ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
+![&#x200B; スケジューリング設定インターフェイス &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
 ## データフローのレビュー
 
@@ -165,7 +165,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 * **スケジュール** – 取り込みスケジュールのアクティブな期間、頻度、間隔を表示します。
 データフローをレビューしたら、「終了」をクリックし、データフローが作成されるまでしばらく待ちます。
 
-![ レビューページ ](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
+![&#x200B; レビューページ &#x200B;](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
 
 ## 次の手順
 
@@ -173,15 +173,15 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング ](../../monitor.md) のチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング &#x200B;](../../monitor.md) のチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 ](../../update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するチュートリアルを参照してください。
 
 ### データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 ](../../delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 &#x200B;](../../delete.md) のチュートリアルを参照してください。
 
 ## その他のリソース {#additional-resources}
 

@@ -13,7 +13,7 @@ ht-degree: 21%
 
 [!UICONTROL &#x200B; 広告ブレーク &#x200B;] は、タイムド広告がタイムドメディアにどのように挿入されるかを説明する、標準の Experience Data Model （XDM）データタイプです。
 
-![ データタイプ構造 ](../images/data-types/ad-break.png)
+![&#x200B; データタイプ構造 &#x200B;](../images/data-types/ad-break.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 21%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.schema.json)

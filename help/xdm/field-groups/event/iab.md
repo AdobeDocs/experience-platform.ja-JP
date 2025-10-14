@@ -19,19 +19,19 @@ ht-degree: 1%
 >
 >イベントデータに記録された同意値は、自動適用ワークフローでは考慮されません。 自動適用を実行するには、同意値を XDM 個人プロファイル クラスに取り込み、リアルタイム顧客プロファイルに対して有効にする必要があります。
 >
->XDM 個人プロファイルクラス向けのフィールドグループについては、代わりに次の [ ドキュメント ](../profile/iab.md) を参照してください。
+>XDM 個人プロファイルクラス向けのフィールドグループについては、代わりに次の [&#x200B; ドキュメント &#x200B;](../profile/iab.md) を参照してください。
 
-[!UICONTROL IAB TCF 2.0 Consent] は、同意の変更パターンを経時的に追跡するために、タイムスタンプ付きのシリーズ IAB 同意文字列をキャプチャするために使用される [[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。
+[!UICONTROL IAB TCF 2.0 Consent] は、同意の変更パターンを経時的に追跡するために、タイムスタンプ付きのシリーズ IAB 同意文字列をキャプチャするために使用される [[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。
 
 ![](../../images/field-groups/iab-event.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `consentStrings` | [ 同意文字列 ](../../data-types/consent-string.md) の配列 | イベントに関連付けられた同意文字列値の配列。 |
+| `consentStrings` | [&#x200B; 同意文字列 &#x200B;](../../data-types/consent-string.md) の配列 | イベントに関連付けられた同意文字列値の配列。 |
 
 {style="table-layout:auto"}
 
-このフィールドグループのユースケースについては、[Experience Platformでの IAB TCF 2.0 のサポート ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
+このフィールドグループのユースケースについては、[Experience Platformでの IAB TCF 2.0 のサポート &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

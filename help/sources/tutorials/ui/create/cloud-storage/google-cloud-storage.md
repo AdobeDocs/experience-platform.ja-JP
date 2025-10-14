@@ -43,7 +43,7 @@ Experience Platformで [!DNL Google Cloud Storage] データにアクセスす�
 | バケット名 | [!DNL Google Cloud Storage] バケットの名前。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
 | フォルダーパス | アクセス権を付与するフォルダーへのパス。 |
 
-これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
+これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 &#x200B;](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
 
 必要な資格情報を収集したら、次の手順に従って [!DNL Google Cloud Storage] アカウントをExperience Platformにリンクできます。
 
@@ -55,7 +55,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 [!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Google クラウドストレージ]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![ ソースカタログページを表示しているExperience Platform UI 画面 ](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
+![&#x200B; ソースカタログページを表示しているExperience Platform UI 画面 &#x200B;](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
 **[!UICONTROL Google クラウドストレージに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -63,7 +63,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 既存のアカウントに接続するには、接続する [!DNL Google Cloud Storage] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![Google Cloud Storage ソースの既存のアカウントページを表示しているExperience Platform UI 画面 ](../../../../images/tutorials/create/google-cloud-storage/existing.png)
+![Google Cloud Storage ソースの既存のアカウントページを表示しているExperience Platform UI 画面 &#x200B;](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ### 新しいアカウント
 
@@ -76,4 +76,4 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Google Cloud Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、[!DNL Google Cloud Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む &#x200B;](../../dataflow/batch/cloud-storage.md) ことができます。

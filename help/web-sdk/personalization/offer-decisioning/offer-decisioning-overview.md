@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] は、Offer Decisioningで管理され�
 
 ## 用語
 
-Offer Decisioningを使用する際は、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer Decisioning用語集 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=ja) を参照してください。
+Offer Decisioningを使用する際は、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer Decisioning用語集 &#x200B;](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=ja) を参照してください。
 
 * **決定範囲：** Offer Decisioningの場合、決定範囲は、Offer Decisioning サービスでオファーを提案するために使用するアクティビティ ID とプレースメント ID を含む、Base64 でエンコードされた JSON の文字列です。
 
@@ -45,21 +45,21 @@ Offer Decisioningを使用する際は、以下の用語を理解することが
   >
   >決定範囲の値は、UI の **アクティビティの概要** ページからコピーできます。
 
-  ![ 決定コピーの設定 ](assets/decision-scope-copy.png)
+  ![&#x200B; 決定コピーの設定 &#x200B;](assets/decision-scope-copy.png)
 
-* **データストリーム：** 詳しくは、[ データストリーム ](/help/datastreams/overview.md) ドキュメントを参照してください。
+* **データストリーム：** 詳しくは、[&#x200B; データストリーム &#x200B;](/help/datastreams/overview.md) ドキュメントを参照してください。
 
-* **ID**：詳しくは、[Experience Platform Web SDKでの ID サービスの使用方法 ](../../identity/overview.md) を概要するこのドキュメントをお読みください。
+* **ID**：詳しくは、[Experience Platform Web SDKでの ID サービスの使用方法 &#x200B;](../../identity/overview.md) を概要するこのドキュメントをお読みください。
 
 ## Offer Decisioningの有効化
 
 Offer Decisioningを有効にするには、次の手順を実行します。
 
-1. [ データストリーム ](/help/datastreams/overview.md) でAdobe Experience Platformを有効にし、「Offer Decisioning」ボックスをオンにします。
+1. [&#x200B; データストリーム &#x200B;](/help/datastreams/overview.md) でAdobe Experience Platformを有効にし、「Offer Decisioning」ボックスをオンにします。
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 手順に従って [SDKをインストール ](/help/web-sdk/install/overview.md) します（SDKはスタンドアロンで、または UI を使用してインストールできます。 詳しくは、[ タグのクイックスタートガイド ](/help/tags/quick-start/quick-start.md)）を参照してください。
+1. 手順に従って [SDKをインストール &#x200B;](/help/web-sdk/install/overview.md) します（SDKはスタンドアロンで、または UI を使用してインストールできます。 詳しくは、[&#x200B; タグのクイックスタートガイド &#x200B;](/help/tags/quick-start/quick-start.md)）を参照してください。
 1. `personalization.decisionScopes` を使用してOffer DecisioningのSDKを設定します。 Offer Decisioning固有のその他の手順を以下に示します。
 
    * スタンドアロンのSDKのインストール
@@ -94,13 +94,13 @@ Offer Decisioningを有効にするには、次の手順を実行します。
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. [ ルール ](/help/tags/ui/managing-resources/rules.md) を作成します。
+      1. [&#x200B; ルール &#x200B;](/help/tags/ui/managing-resources/rules.md) を作成します。
 
          * Experience Platform Web SDKのイベントを送信アクションを追加し、関連する `decisionScopes` をアクションの設定に追加します。
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. 設定したすべての関連するルール、データ要素、拡張機能を含む [ ライブラリを作成して公開します ](/help/tags/ui/publishing/libraries.md)
+      1. 設定したすべての関連するルール、データ要素、拡張機能を含む [&#x200B; ライブラリを作成して公開します &#x200B;](/help/tags/ui/publishing/libraries.md)
 
 ## リクエストと応答のサンプル
 
@@ -135,7 +135,7 @@ Offer Decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | この [ID サービスのドキュメント ](../../identity/overview.md) を参照してください。 | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> メモ：ユーザーは、API 呼び出しに `ECID` パラメーターを含める必要はありません。 このパラメーターは、必要に応じて、呼び出しに自動的に追加されます。 |
+| `identityMap` | ○ | この [ID サービスのドキュメント &#x200B;](../../identity/overview.md) を参照してください。 | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> メモ：ユーザーは、API 呼び出しに `ECID` パラメーターを含める必要はありません。 このパラメーターは、必要に応じて、呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID とプレースメント ID を含む JSON の Base64 エンコードされた文字列の配列。 | リクエストあたり最大 30`decisionScopes`。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **応答**
@@ -232,7 +232,7 @@ Offer Decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | この [ID サービスのドキュメント ](../../identity/overview.md) を参照してください。 | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> メモ：ユーザーは、API 呼び出しに `ECID` パラメーターを含める必要はありません。 このパラメーターは、必要に応じて、呼び出しに自動的に追加されます。 |
+| `identityMap` | ○ | この [ID サービスのドキュメント &#x200B;](../../identity/overview.md) を参照してください。 | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> メモ：ユーザーは、API 呼び出しに `ECID` パラメーターを含める必要はありません。 このパラメーターは、必要に応じて、呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID とプレースメント ID を含む JSON の Base64 エンコードされた文字列の配列。 | リクエストあたり最大 30`decisionScopes`。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **応答**

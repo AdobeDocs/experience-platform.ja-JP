@@ -27,15 +27,15 @@ Audience Managerからオーディエンスを取り込み、ソーシャルお�
 
 **[!UICONTROL 管理]**/**[!UICONTROL 権限]**/**[!UICONTROL 役割]** に移動し、「**[!UICONTROL 拡張アクティベーションのデフォルトの役割]**」を選択します。
 
-![ 役割ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/expanded-activation-role.png)
+![&#x200B; 役割ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/expanded-activation-role.png)
 
 「**[!UICONTROL ユーザー]**」タブに移動し、「**[!UICONTROL ユーザーを追加]**」を選択します。
 
-![ ユーザーページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-users.png)
+![&#x200B; ユーザーページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-users.png)
 
 使用可能なリストから新しく作成したユーザーを選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![ ユーザーを追加ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-user.png)
+![&#x200B; ユーザーを追加ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-user.png)
 
 これでユーザーアカウントが作成され、正しい役割に割り当てられました。 これで、**[!UICONTROL 拡張アクティベーション]** ユーザーインターフェイスにアクセスする準備が整いました。
 
@@ -45,7 +45,7 @@ Audience Managerからオーディエンスを取り込み、ソーシャルお�
 
 この情報は、**[!UICONTROL 管理]**/**[!UICONTROL ライセンスの使用状況]** ページに移動すると確認できます。
 
-![ ライセンス使用画面を示す拡張アクティベーションユーザーインターフェイス画像。](assets/license-usage.png)
+![&#x200B; ライセンス使用画面を示す拡張アクティベーションユーザーインターフェイス画像。](assets/license-usage.png)
 
 このページには、次の情報が表示されます。
 
@@ -55,13 +55,13 @@ Audience Managerからオーディエンスを取り込み、ソーシャルお�
 
   >[!TIP]
   >
-  >[Audience Managerソースコネクタ ](../sources/connectors/adobe-applications/audience-manager.md) を介してハッシュ化されたメールを取り込みます。 詳しくは、[ オーディエンスのアクティブ化方法 ](activate-audiences.md) に関するドキュメントを参照してください。
+  >[Audience Managerソースコネクタ &#x200B;](../sources/connectors/adobe-applications/audience-manager.md) を介してハッシュ化されたメールを取り込みます。 詳しくは、[&#x200B; オーディエンスのアクティブ化方法 &#x200B;](activate-audiences.md) に関するドキュメントを参照してください。
 
 * **[!UICONTROL 使用状況]**：取り込んだハッシュ化されたメールの数。
 * **[!UICONTROL 使用状況 %]**：使用したライセンス量の割合。
 
-Experience Platformでのライセンスの使用について詳しくは、[ ライセンスの使用に関するドキュメント ](../dashboards/guides/license-usage.md) を参照してください。
+Experience Platformでのライセンスの使用について詳しくは、[&#x200B; ライセンスの使用に関するドキュメント &#x200B;](../dashboards/guides/license-usage.md) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-展開されたアクティベーションへの適切なアクセス権を持つユーザーアカウントを少なくとも 1 つ設定したので、そのアカウントを使用して [ オーディエンスをアクティブ化 ](activate-audiences.md) できます。
+展開されたアクティベーションへの適切なアクセス権を持つユーザーアカウントを少なくとも 1 つ設定したので、そのアカウントを使用して [&#x200B; オーディエンスをアクティブ化 &#x200B;](activate-audiences.md) できます。

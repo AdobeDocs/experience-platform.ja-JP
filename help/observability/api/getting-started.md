@@ -17,7 +17,7 @@ ht-degree: 51%
 
 ## API 呼び出し例の読み取り
 
-[!DNL Observability Insights] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、[Experience Platform トラブルシューテングガイド ](../../landing/troubleshooting.md) の API 呼び出し例の読み方に関する節を参照してください。
+[!DNL Observability Insights] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、[Experience Platform トラブルシューテングガイド &#x200B;](../../landing/troubleshooting.md) の API 呼び出し例の読み方に関する節を参照してください。
 
 ## 必須ヘッダー
 
@@ -33,4 +33,4 @@ ht-degree: 51%
 
 ## 次の手順
 
-[!DNL Observability Insights] API を使用した呼び出しを開始するには、[ 指標エンドポイントガイド ](./metrics.md) に進みます。
+[!DNL Observability Insights] API を使用した呼び出しを開始するには、[&#x200B; 指標エンドポイントガイド &#x200B;](./metrics.md) に進みます。

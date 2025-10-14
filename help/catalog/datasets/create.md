@@ -19,7 +19,7 @@ ht-degree: 80%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ バッチ取り込み ](../../ingestion/batch-ingestion/overview.md)：データ [!DNL Experience Platform] バッチファイルとして取り込むことができます。
+* [&#x200B; バッチ取り込み &#x200B;](../../ingestion/batch-ingestion/overview.md)：データ [!DNL Experience Platform] バッチファイルとして取り込むことができます。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 

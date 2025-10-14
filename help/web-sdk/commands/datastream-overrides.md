@@ -17,13 +17,13 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->データストリームの上書きに関するエンドツーエンドの設定手順について詳しくは、[ データストリーム設定の上書き ](../../datastreams/overrides.md#configure-overrides) のドキュメントを参照してください。
+>データストリームの上書きに関するエンドツーエンドの設定手順について詳しくは、[&#x200B; データストリーム設定の上書き &#x200B;](../../datastreams/overrides.md#configure-overrides) のドキュメントを参照してください。
 
 データストリーム設定の上書きは、次の 2 つの手順で行います。
 
-1. 最初に、データストリーム UI 内の [ データストリーム設定ページ ](../../datastreams/configure.md) でデータストリーム設定の上書きを定義する必要があります。 上書きの設定方法については、[ データストリーム設定の上書き ](../../datastreams/overrides.md#configure-overrides) のドキュメントを参照してください。
+1. 最初に、データストリーム UI 内の [&#x200B; データストリーム設定ページ &#x200B;](../../datastreams/configure.md) でデータストリーム設定の上書きを定義する必要があります。 上書きの設定方法については、[&#x200B; データストリーム設定の上書き &#x200B;](../../datastreams/overrides.md#configure-overrides) のドキュメントを参照してください。
 2. UI でデータストリームの上書きを設定したら、次のいずれかの方法で上書きをEdge Networkに送信する必要があります。
-   * Web SDK 経由 [ タグ拡張機能 ](#tag-extension)。
+   * Web SDK 経由 [&#x200B; タグ拡張機能 &#x200B;](#tag-extension)。
    * [`sendEvent`](../commands/sendevent/overview.md) または [`configure`](../commands/configure/overview.md) Web SDK コマンドを使用する。
    * Mobile SDK [`sendEvent`](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network) コマンドを使用します。
 
@@ -31,13 +31,13 @@ Web SDK 設定と特定のコマンド（[`sendEvent`](sendevent/overview.md) �
 
 >[!NOTE]
 >
->設定の上書きをExperience Cloudサービスに *無効* する場合は、そのサービスがデータストリーム設定で最初に *有効* されていることを確認する必要があります。 データストリームにサービスを追加する方法について詳しくは、[ データストリームの設定 ](../../datastreams/configure.md#add-services) 方法に関するドキュメントを参照してください。
+>設定の上書きをExperience Cloudサービスに *無効* する場合は、そのサービスがデータストリーム設定で最初に *有効* されていることを確認する必要があります。 データストリームにサービスを追加する方法について詳しくは、[&#x200B; データストリームの設定 &#x200B;](../../datastreams/configure.md#add-services) 方法に関するドキュメントを参照してください。
 
 ## Web SDK タグ拡張機能を使用して、データストリームの上書きをEdge Networkに送信します {#tag-extension}
 
-設定手順について詳しくは、Web SDK タグ拡張機能からの [ データストリームの上書きの設定 ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) に関するドキュメントを参照してください。
+設定手順について詳しくは、Web SDK タグ拡張機能からの [&#x200B; データストリームの上書きの設定 &#x200B;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) に関するドキュメントを参照してください。
 
-Web SDK タグ拡張機能からデータストリームの上書きを設定する場合は、[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、**[!UICONTROL データストリーム設定の上書き]** の下で目的の各フィールドを設定します。
+Web SDK タグ拡張機能からデータストリームの上書きを設定する場合は、[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、**[!UICONTROL データストリーム設定の上書き]** の下で目的の各フィールドを設定します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
@@ -62,7 +62,7 @@ Web SDK タグ拡張機能からデータストリームの上書きを設定す
 
 ## Web SDK JavaScript ライブラリを介して上書きをEdge Networkに送信します {#library}
 
-データ収集 UI で [ データストリームの上書きの設定 ](../../datastreams/overrides.md) を行った後、Web SDK JavaScript ライブラリを介して、上書きをEdge Networkーに送信できるようになりました。
+データ収集 UI で [&#x200B; データストリームの上書きの設定 &#x200B;](../../datastreams/overrides.md) を行った後、Web SDK JavaScript ライブラリを介して、上書きをEdge Networkーに送信できるようになりました。
 
 Web SDK を使用している場合、`edgeConfigOverrides` コマンドを使用して上書きをEdge Networkに送信することは、データストリーム設定の上書きをアクティブ化する 2 番目および最後の手順です。
 

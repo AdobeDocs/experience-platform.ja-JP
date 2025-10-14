@@ -15,7 +15,7 @@ Adobe Experience Platform Debugger は、Adobe Target の実装で作成され�
 
 ## 前提条件
 
-Experience Platform Debugger を Target に使用するには、web サイトで [at.js ライブラリ ](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) バージョン 1.x 以降を使用している必要があります。 それより前のバージョンはサポートされていません。
+Experience Platform Debugger を Target に使用するには、web サイトで [at.js ライブラリ &#x200B;](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) バージョン 1.x 以降を使用している必要があります。 それより前のバージョンはサポートされていません。
 
 ## Experience Platform Debugger の初期化
 
@@ -23,13 +23,13 @@ Experience Platform Debugger を Target に使用するには、web サイトで
 
 左側のナビゲーションの「**[!DNL Target]**」を選択します。 互換性のあるバージョンの at.js がサイトで動作していることをExperience Platform Debugger が検出した場合は、Adobe Target実装の詳細が表示されます。
 
-![Experience Platform Debugger で選択された Target ビュー（現在表示されているブラウザーページでAdobe Targetがアクティブであることを示します） ](../images/solutions/target/target-initialized.png)
+![Experience Platform Debugger で選択された Target ビュー（現在表示されているブラウザーページでAdobe Targetがアクティブであることを示します） &#x200B;](../images/solutions/target/target-initialized.png)
 
 ## グローバル設定情報
 
 実装のグローバル設定に関する情報は、Experience Platform Debugger の Target ビューの上部に表示されます。
 
-![Experience Platform Debugger 内で強調表示されている Target のグローバル設定情報 ](../images/solutions/target/global-config.png)
+![Experience Platform Debugger 内で強調表示されている Target のグローバル設定情報 &#x200B;](../images/solutions/target/global-config.png)
 
 | 名前 | 説明 |
 | --- | --- |
@@ -44,11 +44,11 @@ Experience Platform Debugger を Target に使用するには、web サイトで
 
 「**[!DNL Network Requests]**」を選択すると、ページ上で行われた各ネットワークリクエストの概要情報が表示されます。
 
-![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/network-requests.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション &#x200B;](../images/solutions/target/network-requests.png)
 
 ページ上でアクション（ページの再読み込みなど）を実行すると、新しい列がテーブルに自動的に追加されるので、アクションのシーケンスと、リクエスト間での値の変化を確認できます。
 
-![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/new-request.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション &#x200B;](../images/solutions/target/new-request.png)
 
 次の値が取り込まれます。
 
@@ -98,13 +98,13 @@ Experience Platform Debugger を Target に使用するには、web サイトで
 
 特定のネットワークイベントのパラメーターの詳細を表示するには、該当するテーブルセルを選択します。 ポップオーバーが表示され、説明や値など、パラメーターの詳細情報が表示されます。 値が JSON オブジェクトの場合、ダイアログには、オブジェクト構造の完全にナビゲーション可能なビューが含まれます。
 
-![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/request-param-details.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション &#x200B;](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 「**[!DNL Configuration]**」を選択すると、Target の追加のデバッグツールの選択を有効または無効にすることができます。
 
-![Experience Platform Debugger 内で選択された Target の「[!DNL Configuration Requests]」セクション ](../images/solutions/target/configuration.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Configuration Requests]」セクション &#x200B;](../images/solutions/target/configuration.png)
 
 | デバッグツール | 説明 |
 | --- | --- |

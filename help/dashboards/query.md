@@ -19,13 +19,13 @@ Adobe Experience Platformは、Experience PlatformUI 内で使用可能なダッ
 
 Adobe Experience Platform [!DNL Query Service] は、標準の SQL を使用してデータレイクのデータに対してクエリを実行できるようにすることで、マーケターがデータからのインサイトを得るのをサポートしています。 [!DNL Query Service] は、データレイク内のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりして、レポートや機械学習で使用したり、リアルタイム顧客プロファイルに取り込んだりできる、ユーザーインターフェイスおよび API を提供します。
 
-[!DNL Query Service] とExperience Platform内での役割について詳しくは、[[!DNL Query Service]  概要 ](../query-service/home.md) を参照してください。
+[!DNL Query Service] とExperience Platform内での役割について詳しくは、[[!DNL Query Service]  概要 &#x200B;](../query-service/home.md) を参照してください。
 
 ## 使用可能なデータセットへのアクセス
 
 [!DNL Query Service] を使用して、プロファイル、オーディエンス、宛先の各ダッシュボードに対して未加工データセットをクエリできます。 使用可能なデータセットを表示するには、Experience PlatformUI の左側のナビゲーションで「**データセット**」を選択して、データセットダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが準拠するスキーマ、最新の取得実行のステータスなど）が表示されます。
 
-![ 左側のナビゲーションで「データセット」タブがハイライト表示されたデータセット参照ダッシュボード。](./images/query/browse-datasets.png)
+![&#x200B; 左側のナビゲーションで「データセット」タブがハイライト表示されたデータセット参照ダッシュボード。](./images/query/browse-datasets.png)
 
 ### システム生成データセット {#system-generated-datasets}
 
@@ -35,11 +35,11 @@ Adobe Experience Platform [!DNL Query Service] は、標準の SQL を使用し�
 
 システム生成データセットを表示するには、フィルターアイコン（![A フィルターアイコン](/help/images/icons/filter.png)）は、検索バーの左側にあります。
 
-![ フィルターアイコンがハイライト表示されたデータセットの「参照」タブ。](./images/query/filter-datasets.png)
+![&#x200B; フィルターアイコンがハイライト表示されたデータセットの「参照」タブ。](./images/query/filter-datasets.png)
 
 サイドバーに、「プロファイルに含める [!UICONTROL &#x200B; と「システムデータセットを表示 &#x200B;] という 2 つのトグルが表示されます。[!UICONTROL &#x200B; が表示され &#x200B;] す。 [!UICONTROL &#x200B; システムデータセットを表示 &#x200B;] の切替スイッチを選択して、システム生成データセットをデータセットの参照可能なリスト内に含めます。
 
-![ 「システムデータセットを表示」切替スイッチがハイライト表示されたデータセット「参照」タブ。](./images/query/show-system-datasets.png)
+![&#x200B; 「システムデータセットを表示」切替スイッチがハイライト表示されたデータセット「参照」タブ。](./images/query/show-system-datasets.png)
 
 ### プロファイル属性データセット {#profile-attribute-datasets}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準の SQL を使用し�
 
 このデータセットの命名規則は、**Segmentdefinition-Snapshot-Export** の後に英数字が続きます。例：`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、[Experience Platform UI のデータセットビューアを使用して、 ](../catalog/datasets/user-guide.md)データセットをプレビューし、調査します。
+各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、[Experience Platform UI のデータセットビューアを使用して、 &#x200B;](../catalog/datasets/user-guide.md)データセットをプレビューし、調査します。
 
 ### 宛先メタデータデータセット
 
@@ -86,7 +86,7 @@ DIM の宛先データセットの完全なスキーマを理解するには、E
 
 CDP インサイトデータモデル機能は、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化する SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび KPI のユースケースに関する CDP レポートを作成できます。
 
-CDP レポートは、プロファイルデータと、そのオーディエンスおよび宛先との関係に関するインサイトを提供します。 [CDP インサイトデータモデルを特定の KPI 使用例に適用する ](./data-models/cdp-insights-data-model-b2c.md) 方法について詳しくは、CDP インサイトデータモデルのドキュメントを参照してください。
+CDP レポートは、プロファイルデータと、そのオーディエンスおよび宛先との関係に関するインサイトを提供します。 [CDP インサイトデータモデルを特定の KPI 使用例に適用する &#x200B;](./data-models/cdp-insights-data-model-b2c.md) 方法について詳しくは、CDP インサイトデータモデルのドキュメントを参照してください。
 
 ## クエリの例
 

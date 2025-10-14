@@ -49,10 +49,10 @@ ht-degree: 29%
 | `sasKeyName` | 承認ルールの名前。SAS キー名とも呼ばれます。 |
 | `sasKey` | [!DNL Event Hubs] 名前空間のプライマリキー。 [!DNL Event Hubs] リストを入力するには、`sasKey` が対応する `sasPolicy` に `manage` 権限が設定されている必要があります。 |
 | `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
-| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
+| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
-[!DNL Event Hubs] の共有アクセス署名（SAS）認証について詳しくは、[[!DNL Azure] SAS の使用に関するガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+[!DNL Event Hubs] の共有アクセス署名（SAS）認証について詳しくは、[[!DNL Azure] SAS の使用に関するガイド &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
@@ -63,7 +63,7 @@ ht-degree: 29%
 | `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
 | `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
 
-[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
+[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
 
 >[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
@@ -73,15 +73,15 @@ ht-degree: 29%
 | `clientId` | アプリに割り当てられたアプリケーション ID。 この ID は、[!DNL Azure Active Directory] ーザーを登録した [!DNL Microsoft Entra ID] ポータルから取得できます。 |
 | `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
 | `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
-| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
+| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 
 >[!ENDTABS]
 
-これらの値について詳しくは、[ この Event Hubs ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+これらの値について詳しくは、[&#x200B; この Event Hubs ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -383,7 +383,7 @@ curl -X POST \
 | `params.eventHubName` | [!DNL Event Hubs] ソースの名前。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
 | `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest` を使用すると、最新のデータから読み取りを開始でき、`earliest` を使用すると、ストリーム内の最初の使用可能なデータから読み取りを開始できます。 このパラメーターはオプションです。指定しない場合、デフォルトは `earliest` になります。 |
-| `params.consumerGroup` | [!DNL Event Hubs] に使用するパブリッシュまたは購読のメカニズム。 このパラメーターはオプションです。指定しない場合、デフォルトは `$Default` になります。 詳しくは、この [[!DNL Event Hubs]  イベントコンシューマーに関するガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **メモ**:[!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
+| `params.consumerGroup` | [!DNL Event Hubs] に使用するパブリッシュまたは購読のメカニズム。 このパラメーターはオプションです。指定しない場合、デフォルトは `$Default` になります。 詳しくは、この [[!DNL Event Hubs]  イベントコンシューマーに関するガイド &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **メモ**:[!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
 
 >[!NOTE]
 >
@@ -391,4 +391,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Event Hubs] ソース接続を作成しました。 次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Event Hubs] ソース接続を作成しました。 次のチュートリアルでは、このソース接続 ID を使用して、[&#x200B; [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。

@@ -41,8 +41,8 @@ ht-degree: 7%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
@@ -87,9 +87,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | プライベートエンドポイントの名前。 |
-| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
-| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
-| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
+| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [&#x200B; からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
+| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [&#x200B; に関する &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
+| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [&#x200B; に関する  [!DNL Azure]  ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
 
@@ -120,9 +120,9 @@ curl -X POST \
 | --- | --- |
 | `id` | 新しく作成したプライベートエンドポイントの ID。 |
 | `name` | プライベートエンドポイントの名前。 |
-| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
-| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
-| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
+| `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [&#x200B; からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
+| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [&#x200B; に関する &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
+| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [&#x200B; に関する  [!DNL Azure]  ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
 | `state` | プライベートエンドポイントの現在の状態。 有効な状態は次のとおりです。 <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -583,7 +583,7 @@ curl -X POST \
 | `name` | ベース接続の名前。 |
 | `description` | （オプション）接続に関する追加情報を提供する説明。 |
 | `auth.specName` | ソースをExperience Platformに接続するために使用される認証。 |
-| `auth.params.connectionString` | [!DNL Azure Blob Storage] 接続文字列。 詳しくは、[[!DNL Azure Blob Storage] API 認証ガイド ](../api/create/cloud-storage/blob.md) を参照してください。 |
+| `auth.params.connectionString` | [!DNL Azure Blob Storage] 接続文字列。 詳しくは、[[!DNL Azure Blob Storage] API 認証ガイド &#x200B;](../api/create/cloud-storage/blob.md) を参照してください。 |
 | `auth.params.usePrivateLink` | プライベートエンドポイントを使用しているかどうかを判断するブール値。 プライベートエンドポイントを使用している場合、この値を `true` に設定します。 |
 | `connectionSpec.id` | [!DNL Azure Blob Storage] の接続仕様 ID |
 | `connectionSpec.version` | [!DNL Azure Blob Storage] 接続仕様 ID のバージョン。 |
@@ -840,7 +840,7 @@ API のプライベートリンクを使用する方法について [!DNL Azure]
 
 [!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] ソースに対するプライベートエンドポイントリクエストを承認するには、[!DNL Azure Portal] にログインします。 左側のナビゲーションで「**[!DNL Data storage]**」を選択し、「**[!DNL Security + networking]**」タブに移動して「**[!DNL Networking]**」を選択します。 次に、「**[!DNL Private endpoints]**」を選択して、お使いのアカウントに関連付けられているプライベートエンドポイントとその現在の接続状態のリストを表示します。 保留中のリクエストを承認するには、目的のエンドポイントを選択し、「**[!DNL Approve]**」をクリックします。
 
-![ 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
+![&#x200B; 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
 
 <!--
 

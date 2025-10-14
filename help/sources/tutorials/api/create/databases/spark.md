@@ -16,7 +16,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->[!DNL Azure HDInsights] コネクタの [!DNL Apache Spark] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Azure HDInsights] コネクタの [!DNL Apache Spark] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -42,11 +42,11 @@ ht-degree: 48%
 | `password` | ユーザーに対応するパスワード。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Spark] の接続仕様 ID は `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` です。 |
 
-基本について詳しくは、[ この Spark ドキュメント ](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview) を参照してください。
+基本について詳しくは、[&#x200B; この Spark ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -113,5 +113,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Spark] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

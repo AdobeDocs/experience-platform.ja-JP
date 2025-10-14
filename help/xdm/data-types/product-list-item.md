@@ -32,11 +32,11 @@ ht-degree: 21%
 | `productAddMethod` | [!UICONTROL 文字列] | 訪問者によってリストに商品項目を追加するために使用されたメソッド。 |
 | `productImageUrl` | [!UICONTROL 文字列] | 商品のメイン画像の URL。 |
 | `quantity` | [!UICONTROL &#x200B; 整数 &#x200B;] | 顧客が製品を必要と示した数量。 |
-| `unitOfMeasureCode` | [!UICONTROL 文字列] | `quantity` プロパティに関連する商品の標準 [ 測定単位コード ](https://ucum.org/ucum)。 |
+| `unitOfMeasureCode` | [!UICONTROL 文字列] | `quantity` プロパティに関連する商品の標準 [&#x200B; 測定単位コード &#x200B;](https://ucum.org/ucum)。 |
 
 {style="table-layout:auto"}
 
 住所データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json)

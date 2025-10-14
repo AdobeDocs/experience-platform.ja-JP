@@ -20,7 +20,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 ## はじめに
 
-開始する前に、[ 概要 ](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
+開始する前に、[&#x200B; 概要 &#x200B;](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
 
 ## 割り当て量と処理タイムライン {#quotas}
 
@@ -67,7 +67,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 >[!TIP]
 >
->現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
+>現在のクォータの使用状況または使用権限層を確認するには、[&#x200B; クォータのリファレンス ガイド &#x200B;](../api/quota.md) を参照してください。
 
 ## レコード削除作業指示のリスト {#list}
 
@@ -247,7 +247,7 @@ curl -X POST \
 | `description` | レコード削除作業指示の説明。 |
 | `action` | レコード削除作業指示に対してリクエストされたアクション。 特定の ID に関連付けられているレコードを削除するには、`delete_identity` を使用します。 |
 | `datasetId` | データセットの一意の ID。 特定のデータセットのデータセット ID を使用するか、`ALL` を使用してすべてのデータセットをターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br> データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つだけであることに注意してください。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。 |
-| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント ](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
+| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント &#x200B;](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
 
 **応答**
 

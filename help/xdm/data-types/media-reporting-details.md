@@ -22,7 +22,7 @@ ht-degree: 2%
 >以下に説明するフィールドは、リクエストの作成に直接使用されません。 代わりに、Adobe Experience PlatformまたはAdobe Analyticsに送信されるフィールドのコレクションがリクエストデータから組み立てられ、指標がサーバーインフラストラクチャによって組み込まれるか処理されます。 Experience Platformは様々なタイプのユーザーイベントを収集しますが、ユーザーに返されるレポートは、`media.sessionStart`、`media.adStart`、`media.sessionComplete` などの特定のイベントに焦点を当てています。 つまり、収集時に 12 種類のイベントを送信しても、レポートには、以下に示す 5 つのイベントに基づく分類のみが表示されます。
 
 +++選択すると、[!UICONTROL &#x200B; メディアレポートの詳細 &#x200B;] データタイプの図が表示されます。
-![ メディアレポートの詳細 [!UICONTROL &#x200B; データタイプ &#x200B;] 図 ](../images/data-types/media-reporting-details.png)
+![&#x200B; メディアレポートの詳細 [!UICONTROL &#x200B; データタイプ &#x200B;] 図 &#x200B;](../images/data-types/media-reporting-details.png)
 +++
 
 | 表示名 | プロパティ | データタイプ | 説明 |

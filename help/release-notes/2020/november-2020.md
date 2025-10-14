@@ -36,7 +36,7 @@ Adobe Experience Platform の新機能：
 
 Adobeによって Data Lake が Gen1 から Gen2 に移行される間、ユーザーは Data Lake から読み取ることはできますが、Data Lake に書き込まれるすべての機能に影響が及びます。 Adobeがシステム管理者に連絡して、移行の影響について詳細に話し合い、特定の組織に対する移行日時を確認します。
 
-詳しくは、[Data Lake 移行ガイド ](../../landing/adls2-gen2-migration.md) を参照してください。
+詳しくは、[Data Lake 移行ガイド &#x200B;](../../landing/adls2-gen2-migration.md) を参照してください。
 
 ## [!DNL Access control] {#access-control}
 
@@ -102,7 +102,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | ------- | ----------- |
 | [!DNL JupyterLab] Recipe Builder テンプレート | ノートブックとレシピの要件の使用状況とバージョンが更新されました。 ML Runtime のベース画像 [!DNL Python]、[!DNL Python] 3.6.7 および [!DNL Conda] 環境のみを使用するように更新されました。 |
 
-詳しくは、[Jupyter Notebooks を使用したレシピの作成 ](../../data-science-workspace/jupyterlab/create-a-model.md) のドキュメントを参照してください。
+詳しくは、[Jupyter Notebooks を使用したレシピの作成 &#x200B;](../../data-science-workspace/jupyterlab/create-a-model.md) のドキュメントを参照してください。
 
 ## [!DNL Destinations] Service {#destinations}
 
@@ -137,7 +137,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | ------- | ----------- |
 | 消費者エクスペリエンスイベント（CEE）データセット | CEE データセットの作成で、スキーマエディターを使用したデータセットへの ID フィールドの追加がサポートされるようになりました。 アトリビューション AI と顧客 AI は、イベントを組み合わせるためにプライマリ ID を使用します。 |
 
-詳しくは、『インテリジェントサービスデータ準備ガイド』の [ データセットへの ID フィールドの追加 ](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) に関する節を参照してください。
+詳しくは、『インテリジェントサービスデータ準備ガイド』の [&#x200B; データセットへの ID フィールドの追加 &#x200B;](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) に関する節を参照してください。
 
 ### アトリビューション AI
 
@@ -159,7 +159,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | 上位のコンバージョンパス | 「パス分析」タブにある新しいインサイトグラフ。 このグラフには、最もコンバージョンの多かったマーケティングチャネルタッチポイントのシーケンスを示す上位 5 つのコンバージョンパスのリストが含まれています。 |
 | タッチポイント有効性 | は、モデルがタッチポイントの有効性を測定する 3 つの最も重要な変数に関する詳細なインサイトを提供します。 変数は、タッチした正数と負数のパスの比率、タッチポイントの効率およびタッチポイントの量です。 |
 
-詳しくは、[ アトリビューション AI の概要 ](../../intelligent-services/attribution-ai/overview.md) を参照してください。
+詳しくは、[&#x200B; アトリビューション AI の概要 &#x200B;](../../intelligent-services/attribution-ai/overview.md) を参照してください。
 
 ### 顧客 AI
 
@@ -177,7 +177,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | 予測目標 | 何かが「起こる」か「起こらない」かを予測する新しいオプションにより、予測目標を作成する柔軟性が向上しました。 さらに、複数のイベントが使用されている場合に、「すべての」イベントが発生するか、いずれかの」イベントが発生するかを予測するオプションが追加されました。 |
 | 影響要因のドリルダウン | 傾向の上位影響要因バケットにドリルダウンが含まれるようになりました。 ドリルダウンは、傾向バケット内の上位の影響要因のそれぞれに対する値のより深いレベルの概要です。 |
 
-詳しくは、[ 顧客 AI の概要 ](../../intelligent-services/customer-ai/overview.md) を参照してください。
+詳しくは、[&#x200B; 顧客 AI の概要 &#x200B;](../../intelligent-services/customer-ai/overview.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -190,7 +190,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 結合ポリシーワークフローの更新 | Experience Platformが結合ポリシー設定を新しい段階的なワークフローにアップグレードしました。 このワークフローを使用すると、ユーザーは複数のプロファイルデータセットのデータフラグメントを統合し、それらのデータセット間でのデータの結合方法に優先度を設定して、各個人の包括的なビューを作成できます。 ユーザーは、適切な結合メソッド（順序付きタイムスタンプまたはデータセットの優先順位）を選択し、プロファイルデータセットに ExperienceEvent データセットを追加することで、選択した XDM 個人プロファイルデータセットを結合できます。 |
 | 結合スキーマビュー | Experience Platform UI を使用すると、結合スキーマに関与するすべてのスキーマとデータセットに関する情報や、ID フィールドや関係フィールドなどのサーフェスのキー属性を、より簡単に見つけることができます。 これらの更新により、プロファイルが正しく設定され、ID が正しくステッチされ、データが正常に取り込まれていることをトラブルシューティングおよび検証する機能が向上します。 |
 
-[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
+[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルについて詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
 ## [!DNL Sources] {#sources}
 
@@ -202,15 +202,15 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| [!DNL Shopify] | [!DNL Flow Service] API または UI を使用して、[!DNL Shopify] を [!DNL Experience Platform] に接続できるようになりました。詳しくは、[Shopify コネクタの概要 ](../../sources/connectors/ecommerce/shopify.md) を参照してください。 |
+| [!DNL Shopify] | [!DNL Flow Service] API または UI を使用して、[!DNL Shopify] を [!DNL Experience Platform] に接続できるようになりました。詳しくは、[Shopify コネクタの概要 &#x200B;](../../sources/connectors/ecommerce/shopify.md) を参照してください。 |
 
 **主な特長**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 接続情報を更新 | [!DNL Flow Service] API と UI を使用して、既存のバッチ接続の名前、説明および資格情報を更新できるようになりました。 詳しくは、[Flow Service API を使用した接続の更新 ](../../sources/tutorials/api/update.md) および [UI を使用したアカウント詳細の編集 ](../../sources/tutorials/ui/monitor.md) に関するチュートリアルを参照してください。 |
-| 接続の削除 | エラーを含むバッチ接続や不要になったバッチ接続は、[!DNL Flow Service] API と UI を使用して削除できるようになりました。 詳しくは、[ フローサービス API を使用した接続の削除 ](../../sources/tutorials/api/delete.md) および [UI を使用したアカウントの削除 ](../../sources/tutorials/ui/delete-accounts.md) に関するチュートリアルを参照してください。 |
-| 階層マッピング | データ取り込みプロセス中に、JSON や Parquet などの階層ソースファイルをプレビューできます。 詳しくは、[UI でのクラウドストレージコネクタ用のデータフローの設定 ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) に関するチュートリアルを参照してください。 |
+| 接続情報を更新 | [!DNL Flow Service] API と UI を使用して、既存のバッチ接続の名前、説明および資格情報を更新できるようになりました。 詳しくは、[Flow Service API を使用した接続の更新 &#x200B;](../../sources/tutorials/api/update.md) および [UI を使用したアカウント詳細の編集 &#x200B;](../../sources/tutorials/ui/monitor.md) に関するチュートリアルを参照してください。 |
+| 接続の削除 | エラーを含むバッチ接続や不要になったバッチ接続は、[!DNL Flow Service] API と UI を使用して削除できるようになりました。 詳しくは、[&#x200B; フローサービス API を使用した接続の削除 &#x200B;](../../sources/tutorials/api/delete.md) および [UI を使用したアカウントの削除 &#x200B;](../../sources/tutorials/ui/delete-accounts.md) に関するチュートリアルを参照してください。 |
+| 階層マッピング | データ取り込みプロセス中に、JSON や Parquet などの階層ソースファイルをプレビューできます。 詳しくは、[UI でのクラウドストレージコネクタ用のデータフローの設定 &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) に関するチュートリアルを参照してください。 |
 | ストリーミングソースでのマッピングの API サポート | API を使用して、ストリーミングソースとのマッピング機能を実行できるようになりました。 |
 | クラウドストレージソースのカスタム区切り文字の API サポート | クラウドストレージソースを使用して、CSV 区切り以外のファイルを収集できるようになりました。 タブ、コンマ、パイプ、セミコロン、ハッシュなど、任意の 1 列の区切り文字を使用して、任意の形式のフラットファイルを収集できます。 |
 | Adobe Audience Manager コネクタのサンドボックスサポート | Audience Manager コネクタは、サンドボックス対応になりました。 ユーザーはコネクタを有効にして、Audience Manager データセットを任意のサンドボックス（実稼動以外のサンドボックスを含む）にルーティングできます。 設定は、組織ごとに 1 つのサンドボックスに制限されます。 |

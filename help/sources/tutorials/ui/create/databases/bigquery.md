@@ -31,7 +31,7 @@ ht-degree: 14%
 
 ### 必要な資格情報の収集
 
-必要な認証情報の収集に関する詳細な手順については、[[!DNL Google BigQuery]  認証ガイド ](../../../../connectors/databases/bigquery.md#prerequisites) を参照してください。
+必要な認証情報の収集に関する詳細な手順については、[[!DNL Google BigQuery]  認証ガイド &#x200B;](../../../../connectors/databases/bigquery.md#prerequisites) を参照してください。
 
 ## ソースカタログのナビゲート {#navigate}
 
@@ -43,13 +43,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Google BigQuery が選択されているソースカタログ ](../../../../images/tutorials/create/google-big-query/catalog.png)
+![Google BigQuery が選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、接続する [!DNL Google BigQuery] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ 既存のアカウントのリストが表示されている既存のアカウントページ。](../../../../images/tutorials/create/google-big-query/existing.png)
+![&#x200B; 既存のアカウントのリストが表示されている既存のアカウントページ。](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## 新しいアカウントを作成 {#create}
 
@@ -57,7 +57,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-big-query/new.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Azure 上のExperience Platformへの接続 {#azure}
 
@@ -67,15 +67,15 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  基本認証の使用 ]
 
-基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[ プロジェクト、クライアント ID、クライアント秘密鍵、更新トークン、（オプション）大きな結果データセット ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) の値を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[&#x200B; プロジェクト、クライアント ID、クライアント秘密鍵、更新トークン、（オプション）大きな結果データセット ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) の値を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ 基本認証が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-big-query/basic-auth.png)
+![&#x200B; 基本認証が選択された新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/google-big-query/basic-auth.png)
 
 >[!TAB  サービス認証の使用 ]
 
-サービス認証を使用するには、「**[!UICONTROL サービス認証]**」を選択し、[ プロジェクト ID、キーファイルの内容、（オプション）大きな結果データセット ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) の値を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+サービス認証を使用するには、「**[!UICONTROL サービス認証]**」を選択し、[&#x200B; プロジェクト ID、キーファイルの内容、（オプション）大きな結果データセット ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) の値を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ サービス認証が選択された新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-big-query/service-auth.png)
+![&#x200B; サービス認証が選択された新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-big-query/service-auth.png)
 
 >[!ENDTABS]
 
@@ -91,7 +91,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * **キーファイルの内容**: サービスアカウントの認証に使用されるキーファイル。 この値は [[!DNL Google Cloud service accounts] dashboard](https://console.cloud.google.com) から取得できます。 キーファイルのコンテンツは JSON 形式です。 Experience Platformへの認証時に、[!DNL Base64] でこれをエンコードする必要があります。
 * **データセット ID**:[!DNL Google BigQuery] のデータセット ID。 この ID は、データテーブルがある場所を表し、大きな結果セットをサポートできるようにするには、事前に作成する必要があります。
 
-![AWS接続用の新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-big-query/aws.png)
+![AWS接続用の新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/google-big-query/aws.png)
 
 ## サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
 
@@ -101,4 +101,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Google BigQuery] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Google BigQuery] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/databases.md) を行いましょう。

@@ -18,7 +18,7 @@ ht-degree: 79%
 
 [!DNL D&B Visitor Intelligence] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[D&amp;B の Web サイト](https://www.dnb.com/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![D&amp;B 訪問者インテリジェンス拡張機能](../../assets/catalog/personalization/dnb/catalog.png)
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 D&amp;B 訪問者インテリジェンス拡張機能をインストールするには、以下を実行します。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## 次の手順：
 
-このドキュメントを読むことで、Adobe Experience Platformのデータを機械学習モデルで使用できる機能（変数）に変換する方法を学びました。 Experience Platformから機能パイプラインを作成して、機械学習環境でカスタムモデルにフィードする次の手順は、[ 機能データセットの書き出し ](./export-data.md) です。
+このドキュメントを読むことで、Adobe Experience Platformのデータを機械学習モデルで使用できる機能（変数）に変換する方法を学びました。 Experience Platformから機能パイプラインを作成して、機械学習環境でカスタムモデルにフィードする次の手順は、[&#x200B; 機能データセットの書き出し &#x200B;](./export-data.md) です。

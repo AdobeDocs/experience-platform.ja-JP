@@ -36,7 +36,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 | `password` | [!DNL Veeva CRM] ユーザーアカウントのパスワード。 |
 | `securityToken` | [!DNL Veeva CRM] ユーザーアカウントのセキュリティ トークン。 |
 
-基本について詳しくは、この [[!DNL Veeva CRM]  ドキュメント ](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
+基本について詳しくは、この [[!DNL Veeva CRM]  ドキュメント &#x200B;](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
 
 ## [!DNL Veeva CRM] アカウントの接続
 
@@ -66,4 +66,4 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Veeva CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。
+このチュートリアルでは、[!DNL Veeva CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/crm.md) を行いましょう。

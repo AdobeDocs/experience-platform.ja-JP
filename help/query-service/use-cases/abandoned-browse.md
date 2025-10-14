@@ -24,9 +24,9 @@ ht-degree: 0%
 
 このワークフローデモは、いくつかのAdobe Experience Platform サービスに依存しています。 次の機能やサービスについて理解を深めることをお勧めします。
 
-* [Experience Data Model （XDM）スキーマ構成の基本 ](../../xdm/schema/composition.md)
-* [ データセットの作成とデータの取り込み ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) 方法
-* [Adobe Analytics ソースコネクタを使用してデータを取り込む ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ja) 法
+* [Experience Data Model （XDM）スキーマ構成の基本 &#x200B;](../../xdm/schema/composition.md)
+* [&#x200B; データセットの作成とデータの取り込み &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) 方法
+* [Adobe Analytics ソースコネクタを使用してデータを取り込む &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ja) 法
 * [セグメント化](../../segmentation/home.md)
 * [宛先](../../destinations/home.md)
 
@@ -73,13 +73,13 @@ Adobe Experience Platformは、データリポジトリと、効率的かつ信�
 
 ## 次の手順
 
-このドキュメントを読むことで、[!DNL Query Service] がデータの品質やセグメント化の容易さだけでなく、エンドツーエンドのワークフロー全体におけるデータアーキテクチャ内の重要性にどのような影響を与えるかを理解できるようになりました。 [!DNL Query Service] でAdobe Analyticsを使用する該当する SQL の例については、[Adobe Analytics マーチャンダイジング変数のユースケース ](./merchandising-variables.md) を参照してください。
+このドキュメントを読むことで、[!DNL Query Service] がデータの品質やセグメント化の容易さだけでなく、エンドツーエンドのワークフロー全体におけるデータアーキテクチャ内の重要性にどのような影響を与えるかを理解できるようになりました。 [!DNL Query Service] でAdobe Analyticsを使用する該当する SQL の例については、[Adobe Analytics マーチャンダイジング変数のユースケース &#x200B;](./merchandising-variables.md) を参照してください。
 
-組織の戦略的ビジネスインサイトに対する [!DNL Query Service] の利点を示すその他のドキュメントには、[ ボットフィルタリングのユースケース ](./bot-filtering.md) があります。
+組織の戦略的ビジネスインサイトに対する [!DNL Query Service] の利点を示すその他のドキュメントには、[&#x200B; ボットフィルタリングのユースケース &#x200B;](./bot-filtering.md) があります。
 
 また、次のドキュメントは、[!DNL Query Service] の機能を理解するうえで役に立ちます。
 
 * [クエリ実行のガイダンス](../best-practices/writing-queries.md)
-* [ データアセット組織のガイダンス ](../best-practices/organize-data-assets.md)。
+* [&#x200B; データアセット組織のガイダンス &#x200B;](../best-practices/organize-data-assets.md)。
 
 

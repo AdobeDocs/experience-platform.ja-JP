@@ -15,7 +15,7 @@ ht-degree: 14%
 
 Adobe Experience Platform には、組織に対して有効にできる定義済みのアラートルールがいくつか用意されています。 このドキュメントでは、これらのアドビが提供するアラートルールの詳細を説明します。Experience Platform のアラートに関する一般的な情報については、[アラートの概要](./overview.md)を参照してください。
 
-[Experience Platform UI でアラートルールを表示 ](./ui.md) すると、各ルールを個別に登録できます。 ただし、[I/O イベント通知](./subscribe.md)を通じてアラートを登録する場合、アラートルールは異なる登録パッケージに整理されます。以下の表は、各ルールと、対応する I/O イベント購読名を示しています。
+[Experience Platform UI でアラートルールを表示 &#x200B;](./ui.md) すると、各ルールを個別に登録できます。 ただし、[I/O イベント通知](./subscribe.md)を通じてアラートを登録する場合、アラートルールは異なる登録パッケージに整理されます。以下の表は、各ルールと、対応する I/O イベント購読名を示しています。
 
 ## ソース {#sources}
 
@@ -55,7 +55,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 ## プロファイル {#profile}
 
-次のアラートルールは、[ リアルタイム顧客プロファイル ](../../profile/home.md) に特化しています。
+次のアラートルールは、[&#x200B; リアルタイム顧客プロファイル &#x200B;](../../profile/home.md) に特化しています。
 
 | I/O イベントの登録 | アラートルール | 説明 | ペイロードスキーマ |
 | --- | --- | --- | --- |
@@ -99,7 +99,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 ## クエリサービス {#query-services}
 
-次のアラートルールは、[ クエリサービス ](../../query-service/home.md) に特化しています。
+次のアラートルールは、[&#x200B; クエリサービス &#x200B;](../../query-service/home.md) に特化しています。
 
 | I/O イベントの登録 | アラートルール | 説明 | ペイロードスキーマ |
 | --- | --- | --- | --- |
@@ -111,7 +111,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 ## 監査 {#audit}
 
-次のアラートルールは、[ 監査イベント ](../../landing/governance-privacy-security/audit-logs/overview.md) に特化しています。
+次のアラートルールは、[&#x200B; 監査イベント &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) に特化しています。
 
 | I/O イベントの登録 | アラートルール | 説明 | ペイロードスキーマ |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 ## 処理能力 {#capacity}
 
-次のアラート・ルールは、[ 容量管理 ](../../landing/license-usage-and-guardrails/capacity.md) に特化しています。
+次のアラート・ルールは、[&#x200B; 容量管理 &#x200B;](../../landing/license-usage-and-guardrails/capacity.md) に特化しています。
 
 | I/O イベントの登録 | アラートルール | 説明 | ペイロードスキーマ |
 | --- | --- | --- | --- |

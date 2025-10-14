@@ -16,7 +16,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
-> HP [!DNL Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+> HP [!DNL Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して HP [!DNL Vertica] ソースコネクタを作成する手順について説明します。
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な HP [!DNL Vertica] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
+既に有効な HP [!DNL Vertica] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -39,7 +39,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | ---------- | ----------- |
 | `connectionString` | HP [!DNL Vertica] インスタンスへの接続に使用する接続文字列。 HP [!DNL Vertica] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です |
 
-基本について詳しくは、[ この HP [!DNL Vertica] document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm) を参照してください。
+基本について詳しくは、[&#x200B; この HP [!DNL Vertica] document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm) を参照してください。
 
 ## HP [!DNL Vertica] アカウントの接続
 
@@ -59,7 +59,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、HP [!DNL Vertica] の資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/hp-vertica/new.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/hp-vertica/new.png)
 
 ### 既存のアカウント
 
@@ -69,4 +69,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、HP [!DNL Vertica] アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、HP [!DNL Vertica] アカウントへの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

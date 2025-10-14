@@ -18,9 +18,9 @@ ht-degree: 71%
 
 [!DNL JW Player Analytics] （Beta）は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
-![JW Analytics 拡張機能 ](../../assets/catalog/analytics/jw-analytics/catalog.png)
+![JW Analytics 拡張機能 &#x200B;](../../assets/catalog/analytics/jw-analytics/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL JW Player Analytics] （Beta）拡張機能をインストールするには：
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,7 +42,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [JW Player Analytics （Beta）拡張機能のページ ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) を参照してください。
+拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [JW Player Analytics （Beta）拡張機能のページ &#x200B;](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) を参照してください。
 
 拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) （タグドキュメント）を参照してください。
 

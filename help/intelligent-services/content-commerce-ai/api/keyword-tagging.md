@@ -42,7 +42,7 @@ POST /services/v2/predict
 
 表示される入力パラメーターについて詳しくは、ペイロード例の下の表を参照してください。
 
-この [ サンプル pdf](../pdf-files/simple-text.pdf) ファイルは、このドキュメントで示す例で使用されています。
+この [&#x200B; サンプル pdf](../pdf-files/simple-text.pdf) ファイルは、このドキュメントで示す例で使用されています。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \

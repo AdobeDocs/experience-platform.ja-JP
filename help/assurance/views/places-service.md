@@ -19,7 +19,7 @@ ht-degree: 0%
 
 開始するには、次の手順を実行します。
 
-1. [Assurance を設定 ](../tutorials/implement-assurance.md) します。
+1. [Assurance を設定 &#x200B;](../tutorials/implement-assurance.md) します。
 2. イベントを表示するには、左側のメニューから「**Places Service**」セクションの下の **イベント表示** を選択します。
 
 ![](./images/places-service/places-view.png)

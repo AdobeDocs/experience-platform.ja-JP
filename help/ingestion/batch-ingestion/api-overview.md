@@ -13,15 +13,15 @@ ht-degree: 64%
 
 # バッチ取得開発者ガイド
 
-このドキュメントでは、Adobe Experience Platformで [ バッチ取得 API エンドポイント ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) を使用する際の包括的なガイドを提供します。 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [ バッチ取得 API の概要 ](overview.md) をお読みください。
+このドキュメントでは、Adobe Experience Platformで [&#x200B; バッチ取得 API エンドポイント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) を使用する際の包括的なガイドを提供します。 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [&#x200B; バッチ取得 API の概要 &#x200B;](overview.md) をお読みください。
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[ バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) の一部です。 バッチ取得は、サポートされているオブジェクトタイプに対して基本的な CRUD 操作を実行できる RESTful API を通じて提供されます。
+このガイドで使用する API エンドポイントは、[&#x200B; バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) の一部です。 バッチ取得は、サポートされているオブジェクトタイプに対して基本的な CRUD 操作を実行できる RESTful API を通じて提供されます。
 
-続行する前に、[ バッチ取得 API の概要 ](overview.md) および [ はじめる前に ](getting-started.md) を確認してください。
+続行する前に、[&#x200B; バッチ取得 API の概要 &#x200B;](overview.md) および [&#x200B; はじめる前に &#x200B;](getting-started.md) を確認してください。
 
 ## JSON ファイルの取得
 
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->[ 正しい形式の JSON データファイルの例 ](#data-transformation-for-batch-ingestion) については、付録の節を参照してください。
+>[&#x200B; 正しい形式の JSON データファイルの例 &#x200B;](#data-transformation-for-batch-ingestion) については、付録の節を参照してください。
 
 **API 形式**
 
@@ -623,7 +623,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->[ 適切な形式の CSV データファイルの例 ](#data-transformation-for-batch-ingestion) については、付録の節を参照してください。
+>[&#x200B; 適切な形式の CSV データファイルの例 &#x200B;](#data-transformation-for-batch-ingestion) については、付録の節を参照してください。
 
 **API 形式**
 
@@ -760,10 +760,10 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 バッチにパッチを適用するには、次の操作が必要です。
 
-- **プロファイルおよび属性の更新が有効になっているデータセット。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを `unifiedProfile` 配列に追加する必要があります。 データセットの作成またはアップサート用の既存のデータセットの設定の手順について詳しくは、[ プロファイル更新のためのデータセットの有効化 ](../../catalog/datasets/enable-upsert.md) に関するチュートリアルに従ってください。
+- **プロファイルおよび属性の更新が有効になっているデータセット。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを `unifiedProfile` 配列に追加する必要があります。 データセットの作成またはアップサート用の既存のデータセットの設定の手順について詳しくは、[&#x200B; プロファイル更新のためのデータセットの有効化 &#x200B;](../../catalog/datasets/enable-upsert.md) に関するチュートリアルに従ってください。
 - **パッチを適用するフィールドと、プロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するためのデータ形式は、通常のバッチ取得プロセスと似ています。 必要な入力は Parquet ファイルであり、更新するフィールドに加えて、プロファイルストアのデータと一致させるために、アップロードされたデータに ID フィールドが含まれている必要があります。
 
-プロファイルとアップサートが有効なデータセットと、パッチを適用するフィールドおよび必要な ID フィールドを含む Parquet ファイルが完成したら、[Parquet ファイルの取り込み ](#ingest-parquet-files) の手順に従って、バッチ取り込みを使用してパッチを完了できます。
+プロファイルとアップサートが有効なデータセットと、パッチを適用するフィールドおよび必要な ID フィールドを含む Parquet ファイルが完成したら、[Parquet ファイルの取り込み &#x200B;](#ingest-parquet-files) の手順に従って、バッチ取り込みを使用してパッチを完了できます。
 
 ## バッチの再生
 
@@ -921,7 +921,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取得用のデータ変換
 
-データファイルを [!DNL Experience Platform] に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられている [ エクスペリエンスデータモデル（XDM） ](../../xdm/home.md) スキーマに準拠している必要があります。
+データファイルを [!DNL Experience Platform] に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられている [&#x200B; エクスペリエンスデータモデル（XDM） &#x200B;](../../xdm/home.md) スキーマに準拠している必要があります。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

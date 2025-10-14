@@ -16,7 +16,7 @@ ht-degree: 24%
 
 [SendGrid](https://www.sendgrid.com) は、トランザクションメールとマーケティングメール用の一般的な顧客コミュニケーションプラットフォームです。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) を利用しているので、ファーストパーティのメールプロファイルを書き出し、ビジネスニーズに合わせて新しい SendGrid オーディエンス内でそれらをアクティブ化できます。
+この [!DNL Adobe Experience Platform][&#x200B; 宛先 &#x200B;](/help/destinations/home.md) は [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) を利用しているので、ファーストパーティのメールプロファイルを書き出し、ビジネスニーズに合わせて新しい SendGrid オーディエンス内でそれらをアクティブ化できます。
 
 SendGrid は、SendGrid API と通信するための認証メカニズムとして API ベアラートークンを使用します。
 
@@ -25,12 +25,12 @@ SendGrid は、SendGrid API と通信するための認証メカニズムとし�
 宛先の設定を開始する前に、次の項目が必要です。
 
 1. SendGrid アカウントが必要です。
-   * SendGrid [ サインアップ ](https://signup.sendgrid.com/) ページに移動して、SendGrid アカウントをまだ持っていない場合は、登録して作成します。
+   * SendGrid [&#x200B; サインアップ &#x200B;](https://signup.sendgrid.com/) ページに移動して、SendGrid アカウントをまだ持っていない場合は、登録して作成します。
 1. SendGrid ポータルにログインした後、API トークンも生成する必要があります。
-1. SendGrid web サイトに移動し、**[!DNL Settings]** / **[!DNL API Keys]** ページにアクセスします。 または、[SendGrid ドキュメント ](https://app.sendgrid.com/settings/api_keys) を参照して、SendGrid アプリの適切なセクションにアクセスします。
+1. SendGrid web サイトに移動し、**[!DNL Settings]** / **[!DNL API Keys]** ページにアクセスします。 または、[SendGrid ドキュメント &#x200B;](https://app.sendgrid.com/settings/api_keys) を参照して、SendGrid アプリの適切なセクションにアクセスします。
 1. 最後に、「**[!DNL Create API Key]**」ボタンを選択します。
-   * 実行するアクションに関するガイダンスが必要な場合は、[SendGrid ドキュメント ](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) を参照してください。
-   * プログラムによって API キーを生成する場合は、[SendGrid ドキュメント ](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys) を参照してください。
+   * 実行するアクションに関するガイダンスが必要な場合は、[SendGrid ドキュメント &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) を参照してください。
+   * プログラムによって API キーを生成する場合は、[SendGrid ドキュメント &#x200B;](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys) を参照してください。
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
@@ -75,7 +75,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -89,7 +89,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 1. SendGrid 宛先の設定に役立つウィザードが表示されます。 **新しい宛先を設定** を選択して新しい宛先を作成します。
    ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
-1. 「**新規アカウント**」オプションを選択し、「**Bearer トークン** 値を入力します。 この値は、前述の *前提条件の節* で説明した [API キー ](#prerequisites) です。
+1. 「**新規アカウント**」オプションを選択し、「**Bearer トークン** 値を入力します。 この値は、前述の *前提条件の節* で説明した [API キー &#x200B;](#prerequisites) です。
    ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
 1. **宛先に接続** を選択します。 指定した SendGrid *API キー* が有効で、UI に **接続済み** ステータスと緑色のチェックマークが表示された場合、次の手順に進んで、追加の情報フィールドに入力できます。
@@ -115,8 +115,8 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -172,7 +172,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 1. オーディエンスの概要を監視し、プロファイルの数がデータセット内で作成された数に対応していることを確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
-1. [SendGrid マーケティングリスト/リスト API の作成 ](https://docs.sendgrid.com/api-reference/lists/create-list) は、*list_name* 属性の値とデータエクスポートのタイムスタンプを結合して、SendGrid 内に一意の連絡先リストを作成するために使用されます。 SendGrid サイトに移動し、名前パターンに準拠する新しい連絡先リストが作成されているかどうかを確認します。
+1. [SendGrid マーケティングリスト/リスト API の作成 &#x200B;](https://docs.sendgrid.com/api-reference/lists/create-list) は、*list_name* 属性の値とデータエクスポートのタイムスタンプを結合して、SendGrid 内に一意の連絡先リストを作成するために使用されます。 SendGrid サイトに移動し、名前パターンに準拠する新しい連絡先リストが作成されているかどうかを確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
@@ -189,8 +189,8 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 ## その他のリソース {#additional-resources}
 
 この SendGrid 宛先は、以下の API を利用します。
-* [SendGrid マーケティングリスト/リスト API の作成 ](https://docs.sendgrid.com/api-reference/lists/create-list)
-* [SendGrid マーケティング連絡先/連絡先 API の追加または更新 ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
+* [SendGrid マーケティングリスト/リスト API の作成 &#x200B;](https://docs.sendgrid.com/api-reference/lists/create-list)
+* [SendGrid マーケティング連絡先/連絡先 API の追加または更新 &#x200B;](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
 
 ### 制限 {#limits}
 

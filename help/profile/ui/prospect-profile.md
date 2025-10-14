@@ -22,13 +22,13 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 
 **[!UICONTROL 参照]** ページが表示されます。 組織のすべての見込み客プロファイルのリストが表示されます。
 
-![ 「[!UICONTROL &#x200B; プロファイル &#x200B;]」ボタンがハイライト表示され、見込み客プロファイルの [!UICONTROL &#x200B; 参照 &#x200B;] ページが表示されます。](../images/prospect-profile/browse-profiles.png)
+![&#x200B; 「[!UICONTROL &#x200B; プロファイル &#x200B;]」ボタンがハイライト表示され、見込み客プロファイルの [!UICONTROL &#x200B; 参照 &#x200B;] ページが表示されます。](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
->顧客プロファイルと見込み客プロファイルの間の参照機能のほとんどは同じですが、結合ポリシーで見込み客プロファイルを参照 **できません**。 これは、見込み客プロファイルが、システムで設計された時間ベースの結合ポリシーによって自動的に管理されるからです。 結合ポリシーについて詳しくは、[ 結合ポリシーの概要 ](../merge-policies/overview.md) を参照してください。
+>顧客プロファイルと見込み客プロファイルの間の参照機能のほとんどは同じですが、結合ポリシーで見込み客プロファイルを参照 **できません**。 これは、見込み客プロファイルが、システムで設計された時間ベースの結合ポリシーによって自動的に管理されるからです。 結合ポリシーについて詳しくは、[&#x200B; 結合ポリシーの概要 &#x200B;](../merge-policies/overview.md) を参照してください。
 
-プロファイルの参照について詳しくは、[ プロファイルユーザーガイドの「参照」の節 ](./user-guide.md#browse-identity) を参照してください。
+プロファイルの参照について詳しくは、[&#x200B; プロファイルユーザーガイドの「参照」の節 &#x200B;](./user-guide.md#browse-identity) を参照してください。
 
 ## 見込み客プロファイルの詳細 {#profile-details}
 
@@ -38,21 +38,21 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 
 特定の見込み客プロファイルに関する詳細を表示するには、[!UICONTROL &#x200B; 参照 &#x200B;] ページでプロファイルを選択します。
 
-![ 参照ページで見込み客プロファイルがハイライト表示されている様子 ](../images/prospect-profile/select-specific-profile.png)
+![&#x200B; 参照ページで見込み客プロファイルがハイライト表示されている様子 &#x200B;](../images/prospect-profile/select-specific-profile.png)
 
 プロファイルやオーディエンスメンバーシップに関連付けられた属性など、見込み客プロファイルに関する情報が表示されます。
 
-![ 見込み客プロファイルの詳細ページが表示されます。](../images/prospect-profile/profile-details.png)
+![&#x200B; 見込み客プロファイルの詳細ページが表示されます。](../images/prospect-profile/profile-details.png)
 
-これらのタブについて詳しくは、[ プロファイルユーザーガイドのプロファイルの詳細を表示の節 ](./user-guide.md#profile-detail) を参照してください。
+これらのタブについて詳しくは、[&#x200B; プロファイルユーザーガイドのプロファイルの詳細を表示の節 &#x200B;](./user-guide.md#profile-detail) を参照してください。
 
 また、「**[!UICONTROL JSON を表示]**」を選択して、すべての属性を JSON 形式で表示することもできます。
 
-![ 見込み客プロファイルの詳細ページで「[!UICONTROL JSON を表示 &#x200B;]」ボタンがハイライト表示されます。](../images/prospect-profile/profile-select-view-json.png)
+![&#x200B; 見込み客プロファイルの詳細ページで「[!UICONTROL JSON を表示 &#x200B;]」ボタンがハイライト表示されます。](../images/prospect-profile/profile-select-view-json.png)
 
 [!UICONTROL JSON を表示 &#x200B;] ダイアログが表示されます。 見込み客プロファイルの属性が JSON 形式で表示されるようになりました。
 
-![ 見込み客プロファイルの属性は JSON 形式で表示されます。](../images/prospect-profile/profile-view-json.png)
+![&#x200B; 見込み客プロファイルの属性は JSON 形式で表示されます。](../images/prospect-profile/profile-view-json.png)
 
 ## 推奨されるユースケース {#use-cases}
 
@@ -62,4 +62,4 @@ Experience Platformの見込み客プロファイル機能を他のExperience Pl
 
 ## 次の手順
 
-このガイドを読むと、Adobe Experience Platformで見込み客プロファイルを使用する方法を理解できます。 これらの見込み客プロファイルをオーディエンスでどのように使用できるかを詳しくは、[ 見込み客オーディエンスガイド ](../../segmentation/types/prospect-audiences.md) を参照してください。
+このガイドを読むと、Adobe Experience Platformで見込み客プロファイルを使用する方法を理解できます。 これらの見込み客プロファイルをオーディエンスでどのように使用できるかを詳しくは、[&#x200B; 見込み客オーディエンスガイド &#x200B;](../../segmentation/types/prospect-audiences.md) を参照してください。

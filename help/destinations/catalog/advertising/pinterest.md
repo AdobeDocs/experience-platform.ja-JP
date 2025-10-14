@@ -21,14 +21,14 @@ ht-degree: 37%
 
 ## 前提条件 {#prerequisites}
 
-* ユーザーは、オーディエンスを追加する広告主アカウントにアクセスできるPinterest アカウントで認証する必要があります。 広告主アカウントの共有について詳しくは [ こちら ](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts) を参照してください。 特に、ユーザーには「オーディエンス」アクセスレベルが必要になります。
-* 顧客リストの ID 形式について詳しくは [ こちら ](https://help.pinterest.com/en/business/article/audience-targeting) を参照してください。
+* ユーザーは、オーディエンスを追加する広告主アカウントにアクセスできるPinterest アカウントで認証する必要があります。 広告主アカウントの共有について詳しくは [&#x200B; こちら &#x200B;](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts) を参照してください。 特に、ユーザーには「オーディエンス」アクセスレベルが必要になります。
+* 顧客リストの ID 形式について詳しくは [&#x200B; こちら &#x200B;](https://help.pinterest.com/en/business/article/audience-targeting) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
 [!DNL Pinterest Customer List] の宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
 
-宛先アクティベーションワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、目的の ID をターゲットフィールド *pinterest_audience* にマッピングします。 ID は、Pinterestへのデータ取り込み時に区別されて解決されます。
+宛先アクティベーションワークフローの [&#x200B; マッピング手順 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、目的の ID をターゲットフィールド *pinterest_audience* にマッピングします。 ID は、Pinterestへのデータ取り込み時に区別されて解決されます。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -61,13 +61,13 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-この宛先を [ 設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
+この宛先を [&#x200B; 設定 &#x200B;](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -81,11 +81,11 @@ Pinterest トークンは 30 日ごとに期限切れになります。 トー�
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** に移動します。
 2. （任意）ページで使用可能なフィルターを使用して、Pinterest アカウントのみを表示します。
-   ![Pinterest アカウントのみを表示するようにフィルター ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+   ![Pinterest アカウントのみを表示するようにフィルター &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
 3. 更新するアカウントを選択し、省略記号を選択して **[!UICONTROL 詳細を編集]** を選択します。
-   ![ 詳細コントロールの編集を選択 ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+   ![&#x200B; 詳細コントロールの編集を選択 &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
 4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、Pinterest資格情報を使用して再認証します。
-   ![ 「OAuth に再接続」オプションを使用したモーダルウィンドウ ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+   ![&#x200B; 「OAuth に再接続」オプションを使用したモーダルウィンドウ &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 > 
@@ -101,8 +101,8 @@ Pinterest トークンは 30 日ごとに期限切れになります。 トー�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -112,7 +112,7 @@ Pinterest トークンは 30 日ごとに期限切れになります。 トー�
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[Pinterest ヘルプセンター ](https://help.pinterest.com/en/business/article/audience-targeting) ページを参照してください。
+詳しくは、[Pinterest ヘルプセンター &#x200B;](https://help.pinterest.com/en/business/article/audience-targeting) ページを参照してください。
 
 +++ 変更ログを表示
 

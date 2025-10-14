@@ -52,8 +52,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Adform] 拡張機能 | [!DNL Adform] のサーバーサイド拡張機能を使用すると、企業は ECID を使用してオフサイトでオーディエンスを簡単にリターゲティングできます。 このサーバーサイド拡張機能は、サードパーティ cookie や cookie 代替 ID には依存しません。 さらに、これは完全にサーバーサイドで行われるので、追加のピクセルや他のクライアントサイドの変更は必要ありません。 詳しくは、[Adform 拡張機能の概要 ](/help/tags/extensions/server/adform/overview.md) を参照してください。 |
-| [!DNL Amazon] Web イベント API 拡張機能 | [!DNL Amazon] Conversions API 拡張機能を使用すると、広告主は web サイトとのやり取りを [!DNL Amazon] と直接共有でき、アトリビューション、データ信頼性およびキャンペーンの最適化が向上します。 この拡張機能はイベント転送をサポートしており、正確なレポートを実現する適切な重複排除を確保しながら、購入、買い物かごへの追加など、コンバージョンイベントを送信できます。 詳しくは、[Amazon拡張機能の概要 ](/help/tags/extensions/server/amazon/overview.md) を参照してください。 |
+| [!DNL Adform] 拡張機能 | [!DNL Adform] のサーバーサイド拡張機能を使用すると、企業は ECID を使用してオフサイトでオーディエンスを簡単にリターゲティングできます。 このサーバーサイド拡張機能は、サードパーティ cookie や cookie 代替 ID には依存しません。 さらに、これは完全にサーバーサイドで行われるので、追加のピクセルや他のクライアントサイドの変更は必要ありません。 詳しくは、[Adform 拡張機能の概要 &#x200B;](/help/tags/extensions/server/adform/overview.md) を参照してください。 |
+| [!DNL Amazon] Web イベント API 拡張機能 | [!DNL Amazon] Conversions API 拡張機能を使用すると、広告主は web サイトとのやり取りを [!DNL Amazon] と直接共有でき、アトリビューション、データ信頼性およびキャンペーンの最適化が向上します。 この拡張機能はイベント転送をサポートしており、正確なレポートを実現する適切な重複排除を確保しながら、購入、買い物かごへの追加など、コンバージョンイベントを送信できます。 詳しくは、[Amazon拡張機能の概要 &#x200B;](/help/tags/extensions/server/amazon/overview.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -65,8 +65,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 宛先 | 説明 |
 | --- | --- |
-| [Marketo Engage人物同期 ](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobeは、id マップに複数のメールが存在する場合にお客様に影響を与える問題を修正するために、[!DNL Marketo Engage Person Sync] の宛先を更新しました。 |
-| [ （V2） Pega CDH リアルタイムオーディエンス接続 ](/help/destinations/catalog/personalization/pega-v2.md) | Pega アカウントに複数の Pega Customer Decision Hub アプリケーションが設定されている場合は、Adobe Experience Platformの [!DNL (V2) Pega Customer Decision Hub Realtime Audience] 宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。 |
+| [Marketo Engage人物同期 &#x200B;](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobeは、id マップに複数のメールが存在する場合にお客様に影響を与える問題を修正するために、[!DNL Marketo Engage Person Sync] の宛先を更新しました。 |
+| [&#x200B; （V2） Pega CDH リアルタイムオーディエンス接続 &#x200B;](/help/destinations/catalog/personalization/pega-v2.md) | Pega アカウントに複数の Pega Customer Decision Hub アプリケーションが設定されている場合は、Adobe Experience Platformの [!DNL (V2) Pega Customer Decision Hub Realtime Audience] 宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。 |
 
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 **修正、機能強化およびその他のお知らせ** {#destinations-fixes-and-enhancements}
 
 - **データセット書き出しの終了日の実施が 2025 年 9 月 1 日（PT）に延期**\
-  [2024 年 9 月リリース ](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality) の一環として、Adobeでは、（そのリリースより前に *作成されたデータセット書き出しデータフローに対して、デフォルトの終了日を 2025 年 5 月 1 日（PT* と設定しました。 Adobeでは、この実施期限を 2025 年 9 月 1 日 **まで延長し、お客様がスケジュールを更新するための時間を追加できるように** りました。 データセット書き出しデータフローの終了日を編集する方法については、[ データセットの書き出しチュートリアル ](../../destinations/ui/export-datasets.md#schedule-dataset-export) のスケジュールの節を参照してください。
+  [2024 年 9 月リリース &#x200B;](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality) の一環として、Adobeでは、（そのリリースより前に *作成されたデータセット書き出しデータフローに対して、デフォルトの終了日を 2025 年 5 月 1 日（PT* と設定しました。 Adobeでは、この実施期限を 2025 年 9 月 1 日 **まで延長し、お客様がスケジュールを更新するための時間を追加できるように** りました。 データセット書き出しデータフローの終了日を編集する方法については、[&#x200B; データセットの書き出しチュートリアル &#x200B;](../../destinations/ui/export-datasets.md#schedule-dataset-export) のスケジュールの節を参照してください。
 
 - **LiveRamp オンボーディングの失敗した SFTP 転送の処理を改善**\
   Adobeでは、SFTP を使用した [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) 宛先へのファイル書き出しに影響する問題の修正を実装しました。 一時的なサーバーサイドの問題が原因でファイル転送が失敗したり、失敗した試行からの一時ファイルがサーバーに残ったりすることがあります。 これらの削除不可能なファイルは、Adobeが上書きする権限を持っていなかったので、以降の再試行をブロックしました。\
@@ -93,11 +93,11 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 必須以外のフィールドには、引き続き null 値を使用できます。 ベストプラクティスについて詳しくは、[ データモデリングのベストプラクティス ](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
+| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 必須以外のフィールドには、引き続き null 値を使用できます。 ベストプラクティスについて詳しくは、[&#x200B; データモデリングのベストプラクティス &#x200B;](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity}
 
@@ -111,7 +111,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 {style="table-layout:auto"}
 
-詳しくは、[[!DNL Identity Graph Linking Rules]  ドキュメント ](../../identity-service/identity-graph-linking-rules/overview.md) を参照してください。
+詳しくは、[[!DNL Identity Graph Linking Rules]  ドキュメント &#x200B;](../../identity-service/identity-graph-linking-rules/overview.md) を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -121,11 +121,11 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL オーディエンスの上書き | 既存のプロファイルを新しい SQL クエリの結果で上書きすることで、オーディエンスメンバーシップを更新します。 これにより、古いレコードを削除し、更新されたレコードを 1 回の操作で挿入することで、動的オーディエンスをより効率的に管理できます。 詳しくは、[SQL オーディエンス拡張機能ガイド ](../../query-service/data-distiller-audiences/overview.md#replace-audience) を参照してください。 |
-| クエリ結果のダウンロードとコピー | [ クエリ結果を CSV、XLSX、JSON ファイルなどのクエリエディターから直接ダウンロードする ](../../query-service/ui/overview.md#download-query-results) または [ 結果をクリップボードにコピーする ](../../query-service/ui/overview.md#copy-results) コンマ区切り値（CSV）としてダウンロードし、Excel などのスプレッドシートアプリケーションですばやく使用できます。 これらの機能強化により、オフラインでの分析、レポート作成およびデータ検証のワークフローが合理化されます。 |
-| クエリ結果を全画面で表示する | [ クエリのプレビュー結果は全画面ダイアログで表示されます ](../../query-service/ui/overview.md#view-results) 読みやすさを向上したり、大きなデータセットを簡単にスキャンしたり、コピーする行を選択したりできます。 フルスクリーンビューは、サイズ変更可能なグリッドレイアウトを提供し、幅の広いテーブルや詳細な出力をより効率的にレビューするのに役立ちます。 |
-| モデル予測での列選択の強化 | 特定の列を選択し、拡張 `model_predict` 構文を使用してエイリアスを適用します。 特性ベクトルや確率スコアなどの中間予測結果を取得します。 拡張選択には、機能フラグのアクティブ化が必要です。 構文例および機能フラグの詳細については、[ モデルライフサイクルドキュメント ](../../query-service/advanced-statistics/models.md#select-specific-output-fields) を参照してください。 |
-| CREATE TABLE と INSERT INTO を使用したモデル予測出力の保存 | [CREATE TABLE AS SELECT を使用して、選択した予測出力を新しいテーブルに保存するか、または INSERT INTO SELECT を使用して、既存のテーブルに挿入 ](../../query-service/advanced-statistics/models.md#predict)。 拡張列選択を有効にすると、特性ベクトルや確率などの中間結果も最終的な予測と共に保持できます。 使用例については、[SQL 構文ドキュメント ](../../query-service/sql/syntax.md#create-table-as-select) を参照してください。 |
+| SQL オーディエンスの上書き | 既存のプロファイルを新しい SQL クエリの結果で上書きすることで、オーディエンスメンバーシップを更新します。 これにより、古いレコードを削除し、更新されたレコードを 1 回の操作で挿入することで、動的オーディエンスをより効率的に管理できます。 詳しくは、[SQL オーディエンス拡張機能ガイド &#x200B;](../../query-service/data-distiller-audiences/overview.md#replace-audience) を参照してください。 |
+| クエリ結果のダウンロードとコピー | [&#x200B; クエリ結果を CSV、XLSX、JSON ファイルなどのクエリエディターから直接ダウンロードする &#x200B;](../../query-service/ui/overview.md#download-query-results) または [&#x200B; 結果をクリップボードにコピーする &#x200B;](../../query-service/ui/overview.md#copy-results) コンマ区切り値（CSV）としてダウンロードし、Excel などのスプレッドシートアプリケーションですばやく使用できます。 これらの機能強化により、オフラインでの分析、レポート作成およびデータ検証のワークフローが合理化されます。 |
+| クエリ結果を全画面で表示する | [&#x200B; クエリのプレビュー結果は全画面ダイアログで表示されます &#x200B;](../../query-service/ui/overview.md#view-results) 読みやすさを向上したり、大きなデータセットを簡単にスキャンしたり、コピーする行を選択したりできます。 フルスクリーンビューは、サイズ変更可能なグリッドレイアウトを提供し、幅の広いテーブルや詳細な出力をより効率的にレビューするのに役立ちます。 |
+| モデル予測での列選択の強化 | 特定の列を選択し、拡張 `model_predict` 構文を使用してエイリアスを適用します。 特性ベクトルや確率スコアなどの中間予測結果を取得します。 拡張選択には、機能フラグのアクティブ化が必要です。 構文例および機能フラグの詳細については、[&#x200B; モデルライフサイクルドキュメント &#x200B;](../../query-service/advanced-statistics/models.md#select-specific-output-fields) を参照してください。 |
+| CREATE TABLE と INSERT INTO を使用したモデル予測出力の保存 | [CREATE TABLE AS SELECT を使用して、選択した予測出力を新しいテーブルに保存するか、または INSERT INTO SELECT を使用して、既存のテーブルに挿入 &#x200B;](../../query-service/advanced-statistics/models.md#predict)。 拡張列選択を有効にすると、特性ベクトルや確率などの中間結果も最終的な予測と共に保持できます。 使用例については、[SQL 構文ドキュメント &#x200B;](../../query-service/sql/syntax.md#create-table-as-select) を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service]  の概要](../../query-service/home.md)を参照してください。
 
@@ -137,11 +137,11 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| サンドボックスツールプラグインサポートの拡張 | サンドボックスツールでジャーニーオブジェクトを複製する際、カスタムアクションを依存オブジェクトとしてコピーできるようになりました。 さらに、既存のアクションを選択して、ターゲットサンドボックスで再利用できます。 また、個別にパッケージに追加することもできます。 サポートされるAdobe Journey Optimizer オブジェクトについて詳しくは、[ サンドボックスツール ](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) ガイドを参照してください。 |
+| サンドボックスツールプラグインサポートの拡張 | サンドボックスツールでジャーニーオブジェクトを複製する際、カスタムアクションを依存オブジェクトとしてコピーできるようになりました。 さらに、既存のアクションを選択して、ターゲットサンドボックスで再利用できます。 また、個別にパッケージに追加することもできます。 サポートされるAdobe Journey Optimizer オブジェクトについて詳しくは、[&#x200B; サンドボックスツール &#x200B;](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) ガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
-サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。
+サンドボックスについて詳しくは、[&#x200B; サンドボックスの概要 &#x200B;](../../sandboxes/home.md) を参照してください。
 
 ## ソース {#sources}
 
@@ -153,7 +153,7 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースを使用できるようになりました。 このソースを使用して、[!DNL Algolia] ユーザープロファイルのアフィニティ データをExperience Platformに取り込みます。 その後、このデータを使用して、web サイト、e コマースプラットフォーム、アプリケーションに高性能の検索ソリューションを提供することで、ユーザーエンゲージメント、コンバージョン率および全体的な顧客体験を向上させることができます。 詳しくは、Experience Platformへのデータの取り込み [ 方法に関するガイドを参照し  [!DNL Algolia User Profiles]  ください ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md)。 |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースを使用できるようになりました。 このソースを使用して、[!DNL Algolia] ユーザープロファイルのアフィニティ データをExperience Platformに取り込みます。 その後、このデータを使用して、web サイト、e コマースプラットフォーム、アプリケーションに高性能の検索ソリューションを提供することで、ユーザーエンゲージメント、コンバージョン率および全体的な顧客体験を向上させることができます。 詳しくは、Experience Platformへのデータの取り込み [&#x200B; 方法に関するガイドを参照し  [!DNL Algolia User Profiles]  ください &#x200B;](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md)。 |
 | [!DNL Azure Databricks] の [!BADGE Beta]{type=Informative} API サポート | [!DNL Azure Databricks] ソースを API で使用できるようになりました。 [!DNL Flow Service] API を使用して [!DNL Databricks] アカウントを接続し、[!DNL Databricks] データをExperience Platformに取り込みます。 詳しくは、[[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
@@ -164,7 +164,7 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 | --- | --- |
 | ストリーミングメディアデータをExperience Platformに取り込むための XDM フィールドを更新しました。 | 新しい XDM フィールドグループ `mediaReporting` を使用して、Adobe Analytics ソースを介してストリーミングメディアデータをExperience Platformに取り込めるようになりました。 このフィールドは、`media.mediaTimed` フィールドを置き換えます。</br> <br>3 か月の移行期間中、`media.mediaTimed` フィールドへのデータ取り込みは続行されます。 ただし、2025 年 7 月末で、`media.mediaTimed` フィールドは完全に非推奨となり、Experience Platform スキーマ UI に表示されなくなります。また、データは `mediaReporting` フィールドを使用してのみ送信されます。</br><br>2025 年 4 月 22 日（PT）より前にストリーミングメディアデータを Platform に収集する Analytics ソースを実装している場合は、新しいフィールドグループを使用してデータを送信するように既存の設定を移行する必要があります。 この移行は、2025 年 7 月末までに完了する必要があります。 移行サポートについては、Adobe アカウントチームにお問い合わせください。 |
 | [!DNL MariaDB] および [!DNL PostgreSQL] の新しい認証タイプ | 基本認証を使用して、Experience Platformで [!DNL MariaDB] および [!DNL PostgreSQL] ソースを認証できるようになりました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| [!DNL Amazon Redshift] の行レベルのフィルタリングのサポート | Experience Platform上の [!DNL Amazon Redshift] データに対して、行レベルのフィルタリング機能を使用できます。 詳しくは、[API でのソースの行レベルデータのフィルタリング ](../../sources/tutorials/api/filter.md) に関するガイドを参照してください。 |
+| [!DNL Amazon Redshift] の行レベルのフィルタリングのサポート | Experience Platform上の [!DNL Amazon Redshift] データに対して、行レベルのフィルタリング機能を使用できます。 詳しくは、[API でのソースの行レベルデータのフィルタリング &#x200B;](../../sources/tutorials/api/filter.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -184,6 +184,6 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 
 {style="table-layout:auto"}
 
-独自のプレイブックを作成して共有する方法については、[ 独自のプレイブックの作成と共有 ](/help/use-case-playbooks/playbooks/author.md) ドキュメントを参照してください。
+独自のプレイブックを作成して共有する方法については、[&#x200B; 独自のプレイブックの作成と共有 &#x200B;](/help/use-case-playbooks/playbooks/author.md) ドキュメントを参照してください。
 
-詳しくは、[ ユースケースプレイブックの概要 ](/help/use-case-playbooks/playbooks/overview.md) を参照してください。プレイブックの機能の概要、目的、エンドツーエンドのデモ（インスタンスを作成する方法や、生成されたアセットを他のサンドボックス環境に読み込む方法など）が示されています。
+詳しくは、[&#x200B; ユースケースプレイブックの概要 &#x200B;](/help/use-case-playbooks/playbooks/overview.md) を参照してください。プレイブックの機能の概要、目的、エンドツーエンドのデモ（インスタンスを作成する方法や、生成されたアセットを他のサンドボックス環境に読み込む方法など）が示されています。

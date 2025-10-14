@@ -20,7 +20,7 @@ ht-degree: 82%
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md)：[!DNL Experience Platform] にデータを送信するメソッド。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 
-[!DNL Data Prep] API エンドポイントへの呼び出しを正常におこなうには、[Experience Platform API の概要 ](../../landing/api-guide.md) を読み、必要なヘッダーとサンプル API 呼び出しの読み込み方法を確認してください。
+[!DNL Data Prep] API エンドポイントへの呼び出しを正常におこなうには、[Experience Platform API の概要 &#x200B;](../../landing/api-guide.md) を読み、必要なヘッダーとサンプル API 呼び出しの読み込み方法を確認してください。
 
 ## 次の手順
 

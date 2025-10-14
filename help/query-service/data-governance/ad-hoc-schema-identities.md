@@ -17,8 +17,8 @@ Adobe Experience Platform クエリサービスでは、SQL `ALTER TABLE` コマ
 
 データセット列をプライマリまたはセカンダリ ID としてラベル付けするには、`ALTER TABLE` SQL コマンドを理解し、データプライバシー要件を十分に理解している必要があります。 このドキュメントを続行する前に、次のドキュメントを確認してください。
 
-* [`ALTER TABLE` コマンドの SQL 構文ガイド ](../sql/syntax.md)
-* 詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
+* [`ALTER TABLE` コマンドの SQL 構文ガイド &#x200B;](../sql/syntax.md)
+* 詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../data-governance/home.md) を参照してください。
 
 ## 制約を追加 {#add-constraints}
 

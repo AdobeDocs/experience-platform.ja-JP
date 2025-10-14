@@ -43,7 +43,7 @@ Real-Time CDP B2B Edition とそれに対応する B2C Edition を区別する�
 
 B2B のデータと機能をReal-Time CDPとExperience Platform アクティベーションの両製品に提供する B2B と B2P の新しいエディションを購入できます。
 
-Real-Time CDP B2B editionについて詳しくは、[ 概要 ](../../rtcdp/overview.md) を参照してください。
+Real-Time CDP B2B editionについて詳しくは、[&#x200B; 概要 &#x200B;](../../rtcdp/overview.md) を参照してください。
 
 ### 新しい Marketo データソースおよび宛先コネクタ {#marketo}
 
@@ -62,7 +62,7 @@ Real-Time CDP B2B editionについて詳しくは、[ 概要 ](../../rtcdp/overv
 |-----------|--------------|
 | 標準 B2B XDM クラス | Real-Time Customer Data Platform B2B editionには、アカウント、オポチュニティ、キャンペーンなどといった、B2B の基本的なデータエンティティに関する詳細をキャプチャする複数の標準 XDM が用意されています。 |
 
-B2B データエンティティのキャプチャについて詳しくは、[Real-Time Customer Data Platform B2B editionのスキーマ ](../../rtcdp/schemas/b2b.md) ドキュメントを参照してください。
+B2B データエンティティのキャプチャについて詳しくは、[Real-Time Customer Data Platform B2B editionのスキーマ &#x200B;](../../rtcdp/schemas/b2b.md) ドキュメントを参照してください。
 
 ### （ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
 

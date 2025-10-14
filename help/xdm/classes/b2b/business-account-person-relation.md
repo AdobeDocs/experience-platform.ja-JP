@@ -13,11 +13,11 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
+>このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
 [!UICONTROL XDM ビジネスアカウントユーザー関係 &#x200B;] は、ビジネスアカウントに関連付けられたユーザーの必要最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
 
-![UI に表示される XDM ビジネスアカウントユーザー関係クラスの構造 ](../../images/classes/b2b/business-account-person-relation.png)
+![UI に表示される XDM ビジネスアカウントユーザー関係クラスの構造 &#x200B;](../../images/classes/b2b/business-account-person-relation.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ ht-degree: 12%
 | `accountPersonID` | 文字列 | アカウント – 人物関係エンティティの一意の ID。 |
 | `currencyCode` | 文字列 | アカウントと人物の間の関係に使用される ISO 4217 通貨コード。 |
 | `isActive` | ブール値 | アカウントと人物の間の関係がアクティブかどうかを示します。 |
-| `isDeleted` | ブール値 | このアカウントと担当者の関係がMarketo Engageで削除されたかどうかを示します。<br><br>[Marketo ソースコネクタを使用 ](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
+| `isDeleted` | ブール値 | このアカウントと担当者の関係がMarketo Engageで削除されたかどうかを示します。<br><br>[Marketo ソースコネクタを使用 &#x200B;](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
 | `isDirect` | ブール値 | これがアカウントと人物の間の直接の関係であるかどうかを示します。 |
 | `isPrimary` | ブール値 | ユーザーがこのアカウントのプライマリ連絡先かどうかを示します。 |
 | `personID` | 文字列 | アカウントと人物の関係における人物の一意の ID。 |
@@ -41,4 +41,4 @@ ht-degree: 12%
 
 {style="table-layout:auto"}
 
-このクラスが他の B2B クラスと概念的にどのように関連し、Real-Time CDP UI でこれらの関係を確立する方法については、[Adobe Experience Platform B2B Edition のスキーマの関係 ](../../tutorials/relationship-b2b.md) に関するガイドを参照してください。
+このクラスが他の B2B クラスと概念的にどのように関連し、Real-Time CDP UI でこれらの関係を確立する方法については、[Adobe Experience Platform B2B Edition のスキーマの関係 &#x200B;](../../tutorials/relationship-b2b.md) に関するガイドを参照してください。

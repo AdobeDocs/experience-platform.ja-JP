@@ -29,11 +29,11 @@ ht-degree: 0%
 >
 >[!UICONTROL SQL を表示 &#x200B;] 切替スイッチを有効にした場合、この機能を無効にするまでは、グローバルフィルターおよびウィジェットレベルのフィルターを変更できません。
 
-![ 「[!UICONTROL SQL を表示 &#x200B;]」切替スイッチがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
+![&#x200B; 「[!UICONTROL SQL を表示 &#x200B;]」切替スイッチがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
 
 個々のinsightに [!UICONTROL SQL を表示 &#x200B;] テキストを表示する切替スイッチを有効にします。
 
-![ 「SQL を表示 [!UICONTROL &#x200B; がハイライト表示されたinsight]](./images/view-sql/insight-view-sql.png)
+![&#x200B; 「SQL を表示 [!UICONTROL &#x200B; がハイライト表示されたinsight]](./images/view-sql/insight-view-sql.png)
 
 **[!UICONTROL SQL を表示]** を選択して、ウィジェットの SQL を含むダイアログを開きます。
 
@@ -43,20 +43,20 @@ insightのタイトルと、それを生成する SQL を含むダイアログ�
 
 >[!TIP]
 >
->コピーアイコン（![ コピーアイコンを選択すると、SQL 文全体をクリップボードにコピーできます。](/help/images/icons/copy.png)）を選択します。
+>コピーアイコン（![&#x200B; コピーアイコンを選択すると、SQL 文全体をクリップボードにコピーできます。](/help/images/icons/copy.png)）を選択します。
 
-![SQL 文がハイライト表示されたinsightダイアログ ](./images/view-sql/sql-dialog.png)
+![SQL 文がハイライト表示されたinsightダイアログ &#x200B;](./images/view-sql/sql-dialog.png)
 
 「**[!UICONTROL SQL を実行]**」を選択して、クエリが事前入力されたクエリエディターを開きます。
 
-![ 「[!UICONTROL SQL を実行 &#x200B;] がハイライト表示されたinsight ダイアログ ](./images/view-sql/run-sql.png)
+![&#x200B; 「[!UICONTROL SQL を実行 &#x200B;] がハイライト表示されたinsight ダイアログ &#x200B;](./images/view-sql/run-sql.png)
 
 ## 既存の SQL を編集 {#edit-sql}
 
 クエリエディターが表示されます。 レポートのニーズに合った方法で、ステートメントを編集し、platform データをクエリできるようになりました。 新しいクエリテンプレートを適切な名前で保存します。
 
-![ 選択したinsight SQL が事前入力されたクエリエディター。](./images/view-sql/edit-sql.png)
+![&#x200B; 選択したinsight SQL が事前入力されたクエリエディター。](./images/view-sql/edit-sql.png)
 
 ## 次の手順
 
-このドキュメントでは、標準ダッシュボードまたはユーザー定義ダッシュボード内のinsightの SQL にアクセスする方法を確認しました。 [Real-Time Customer Data Platform Insights データモデルのドキュメント ](./data-models/cdp-insights-data-model-b2c.md) を読むことをお勧めします。 このドキュメントには、マーケティングおよび KPI のニーズに合わせてカスタマイズされた、Real-Time CDP レポート用の SQL テンプレートのカスタマイズに関するインサイトが含まれています。
+このドキュメントでは、標準ダッシュボードまたはユーザー定義ダッシュボード内のinsightの SQL にアクセスする方法を確認しました。 [Real-Time Customer Data Platform Insights データモデルのドキュメント &#x200B;](./data-models/cdp-insights-data-model-b2c.md) を読むことをお勧めします。 このドキュメントには、マーケティングおよび KPI のニーズに合わせてカスタマイズされた、Real-Time CDP レポート用の SQL テンプレートのカスタマイズに関するインサイトが含まれています。

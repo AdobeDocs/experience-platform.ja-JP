@@ -15,7 +15,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure] などのデータベースプロバイダーとのネイティブ接続を提供します。 これらのシステムから [!DNL Experience Platform] にデータを取り込むことができます。
 

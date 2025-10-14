@@ -11,24 +11,24 @@ ht-degree: 5%
 
 # [!DNL Oracle DB] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
-このガイドでは、[!DNL Oracle DB]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法について説明します。
+このガイドでは、[!DNL Oracle DB]API[[!DNL Flow Service]  を使用して &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Oracle] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Flow Service] ています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Oracle DB]  概要 ](../../../../connectors/databases/oracle.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL Oracle DB]  概要 &#x200B;](../../../../connectors/databases/oracle.md#prerequisites) を参照してください。
 
 ## [!DNL Oracle DB] を Azure 上のExperience Platformに接続 {#azure}
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、一意の ID （`id`）と対応する接続を含め、新しく作成されたベース接続の詳細が返されます。 ID を使用して [ ソース接続を作成 ](../../collect/database-nosql.md#create-a-source-connection) し、`etag` を使用して [ アカウントを更新 ](../../update.md) できます。
+リクエストが成功した場合は、一意の ID （`id`）と対応する接続を含め、新しく作成されたベース接続の詳細が返されます。 ID を使用して [&#x200B; ソース接続を作成 &#x200B;](../../collect/database-nosql.md#create-a-source-connection) し、`etag` を使用して [&#x200B; アカウントを更新 &#x200B;](../../update.md) できます。
 
 +++応答を表示
 
@@ -182,4 +182,4 @@ curl -X POST \
 
 ## データのデータフロー [!DNL Oracle DB] 作成
 
-[!DNL Oracle DB] アカウントに正常に接続したので、次は [ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../collect/database-nosql.md) ことができます。
+[!DNL Oracle DB] アカウントに正常に接続したので、次は [&#x200B; データフローを作成し、データベースからExperience Platformにデータを取り込む &#x200B;](../../collect/database-nosql.md) ことができます。

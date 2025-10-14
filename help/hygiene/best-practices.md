@@ -15,11 +15,11 @@ Advanced Data Lifecycle Management UI と Data Hygiene API を使用して、ク
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、Data Lifecycle ワークスペースと [Data Hygiene API](./api/overview.md) について、実際に理解している必要があります。 このドキュメントを続行する前に、[ 高度なデータライフサイクル管理 ](./home.md)、[ レコード削除リクエストの作成 ](./ui/record-delete.md) または [UI でのデータセット有効期限 ](./ui/dataset-expiration.md) や API に関するガイドを熟知してください。
+このガイドでは、Data Lifecycle ワークスペースと [Data Hygiene API](./api/overview.md) について、実際に理解している必要があります。 このドキュメントを続行する前に、[&#x200B; 高度なデータライフサイクル管理 &#x200B;](./home.md)、[&#x200B; レコード削除リクエストの作成 &#x200B;](./ui/record-delete.md) または [UI でのデータセット有効期限 &#x200B;](./ui/dataset-expiration.md) や API に関するガイドを熟知してください。
 
 ## 作業指示の作成ガイドライン {#work-order-creation-guidelines}
 
-Data Hygiene API の `/workorder` エンドポイントを使用して、Experience Platformのレコード削除リクエストをプログラムで管理できます。 このエンドポイントを使用すると、削除リクエストの作成、そのステータスの確認、既存のリクエストの更新をおこなうことができます。 API を使用してこれらのアクションを実行する方法については、[ 作業指示エンドポイントのドキュメント ](./api/workorder.md) を参照してください。
+Data Hygiene API の `/workorder` エンドポイントを使用して、Experience Platformのレコード削除リクエストをプログラムで管理できます。 このエンドポイントを使用すると、削除リクエストの作成、そのステータスの確認、既存のリクエストの更新をおこなうことができます。 API を使用してこれらのアクションを実行する方法については、[&#x200B; 作業指示エンドポイントのドキュメント &#x200B;](./api/workorder.md) を参照してください。
 
 >[!TIP]
 >
@@ -41,13 +41,13 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Experie
 
 ## データセットの有効期限 {#dataset-expiration}
 
-短時間のみ有効なデータのデータセットクリーンアップの自動設定。 Data Hygiene API の `/ttl` エンドポイントを使用して、指定した時間または日付に基づいてデータセットの有効期限をクリーンアップ用にスケジュールします。 [ データセット有効期限の作成 ](./api/dataset-expiration.md) および [ 受け入れ可能なクエリパラメーター ](./api/dataset-expiration.md#query-params) の方法については、データセット有効期限のエンドポイントガイドを参照してください。
+短時間のみ有効なデータのデータセットクリーンアップの自動設定。 Data Hygiene API の `/ttl` エンドポイントを使用して、指定した時間または日付に基づいてデータセットの有効期限をクリーンアップ用にスケジュールします。 [&#x200B; データセット有効期限の作成 &#x200B;](./api/dataset-expiration.md) および [&#x200B; 受け入れ可能なクエリパラメーター &#x200B;](./api/dataset-expiration.md#query-params) の方法については、データセット有効期限のエンドポイントガイドを参照してください。
 
 ## 作業指示およびデータセットの有効期限ステータスの監視 {#monitor}
 
 **I/O イベント** を使用すると、データライフサイクル管理の進行状況を効率的に監視できます。 I/O イベントは、Experience Platform内の様々なサービスの変更や更新に関する通知をリアルタイムで受け取るためのメカニズムです。
 
-I/O イベントアラートを設定済みの Webhook に送信して、アクティビティ監視を自動化できます。 Webhook を介してアラートを受信するには、Adobe Developer ConsoleでExperience Platform アラートの Webhook を登録する必要があります。 詳しくは、[Adobe I/O イベント通知の登録 ](../observability/alerts/subscribe.md) のガイドを参照してください。
+I/O イベントアラートを設定済みの Webhook に送信して、アクティビティ監視を自動化できます。 Webhook を介してアラートを受信するには、Adobe Developer ConsoleでExperience Platform アラートの Webhook を登録する必要があります。 詳しくは、[Adobe I/O イベント通知の登録 &#x200B;](../observability/alerts/subscribe.md) のガイドを参照してください。
 
 次のデータ・ライフサイクル・メソッドおよびガイドラインを使用して、ジョブ・ステータスを効果的に取得および監視します。
 

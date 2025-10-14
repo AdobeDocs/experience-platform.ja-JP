@@ -21,7 +21,7 @@ ht-degree: 36%
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、[!DNL Algolia] しい宛先接続とデータフローを作成する手順を説明します。
 
-![ アルゴリアの宛先を含む宛先カタログ ](../../assets/catalog/personalization/algolia/catalog.png)
+![&#x200B; アルゴリアの宛先を含む宛先カタログ &#x200B;](../../assets/catalog/personalization/algolia/catalog.png)
 
 ## ユースケース {#use-cases}
 
@@ -43,8 +43,8 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**、**[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**、**[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 ## サポートされている ID {#supported-identities}
 
@@ -62,7 +62,7 @@ ht-degree: 36%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -93,9 +93,9 @@ ht-degree: 36%
 * **[!UICONTROL アプリケーション ID]**:[!DNL Algolia] アプリケーション ID は、[!DNL Algolia] アカウントに割り当てられた一意の ID です。
 * **[!UICONTROL API キー]**:[!DNL Algolia] API キーは、[!DNL Algolia] の検索およびインデックス作成サービスに対する API リクエストの認証および承認に使用される資格情報です。
 
-これらの資格情報について詳しくは、[!DNL Algolia] [ 認証ドキュメント ](https://www.algolia.com/doc/tools/cli/get-started/authentication/) を参照してください。
+これらの資格情報について詳しくは、[!DNL Algolia] [&#x200B; 認証ドキュメント &#x200B;](https://www.algolia.com/doc/tools/cli/get-started/authentication/) を参照してください。
 
-![ 新規アカウント ](../../assets/catalog/personalization/algolia/connection.png)
+![&#x200B; 新規アカウント &#x200B;](../../assets/catalog/personalization/algolia/connection.png)
 
 ### 宛先の詳細を入力
 
@@ -118,8 +118,8 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* ID を書き出すには、ID グラフの表示 [ アクセス制御権限 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* ID を書き出すには、ID グラフの表示 [&#x200B; アクセス制御権限 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)を参照してください。
 
@@ -143,10 +143,10 @@ ht-degree: 36%
 
 詳しくは、次の [!DNL Algolia] ドキュメントを参照してください。
 
-* [ 高度なPersonalizationとは ](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/)
-* [ ユーザープロファイル ](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/concepts/user-profiles/)
-* [ ルールコンテキストを持つセグメントユーザー ](https://www.algolia.com/doc/guides/personalization/advanced-personalization/implement/guides/segment-users-with-rule-contexts/#assign-a-segment-context-at-query-time)
+* [&#x200B; 高度なPersonalizationとは &#x200B;](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/)
+* [&#x200B; ユーザープロファイル &#x200B;](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/concepts/user-profiles/)
+* [&#x200B; ルールコンテキストを持つセグメントユーザー &#x200B;](https://www.algolia.com/doc/guides/personalization/advanced-personalization/implement/guides/segment-users-with-rule-contexts/#assign-a-segment-context-at-query-time)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、Experience Platformから [!DNL Algolia] アプリケーションにオーディエンスを書き出すデータフローを正常に作成しました。 [!DNL Algolia] プラットフォームについて詳しくは、[Algolia のドキュメント ](https://www.algolia.com/doc/) を参照してください。
+このチュートリアルでは、Experience Platformから [!DNL Algolia] アプリケーションにオーディエンスを書き出すデータフローを正常に作成しました。 [!DNL Algolia] プラットフォームについて詳しくは、[Algolia のドキュメント &#x200B;](https://www.algolia.com/doc/) を参照してください。

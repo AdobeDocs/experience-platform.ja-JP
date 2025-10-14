@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage] ソース接続とデータフローを作成する前に、まず [!DNL Marketo] で [Adobe組織 ID をマッピング ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ja) したことを確認する必要があります。 さらに、ソース接続とデータフローを作成する前に、[B [!DNL Marketo] B2B 名前空間とスキーマの自動入力 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) が完了していることも確認する必要があります。
+>[!DNL Marketo Engage] ソース接続とデータフローを作成する前に、まず [!DNL Marketo] で [Adobe組織 ID をマッピング &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ja) したことを確認する必要があります。 さらに、ソース接続とデータフローを作成する前に、[B [!DNL Marketo] B2B 名前空間とスキーマの自動入力 &#x200B;](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) が完了していることも確認する必要があります。
 
 このチュートリアルでは、UI で [!DNL Marketo Engage]（以下「[!DNL Marketo]」）ソースコネクタを作成し、B2B データを Adobe Experience Platform に取り込む手順について説明します。
 
@@ -21,13 +21,13 @@ ht-degree: 43%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [B2B 名前空間とスキーマ自動生成ユーティリティ ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 名前空間とスキーマ自動生成ユーティリティを使用すると、[!DNL Postman] を使用して B2B 名前空間とスキーマの値を自動生成できます。 [!DNL Marketo] ソース接続とデータフローを作成する前に、まず B2B 名前空間とスキーマを完了する必要があります。
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [B2B 名前空間とスキーマ自動生成ユーティリティ &#x200B;](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 名前空間とスキーマ自動生成ユーティリティを使用すると、[!DNL Postman] を使用して B2B 名前空間とスキーマの値を自動生成できます。 [!DNL Marketo] ソース接続とデータフローを作成する前に、まず B2B 名前空間とスキーマを完了する必要があります。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [Experience Data Model（XDM）](../../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)：UI でスキーマを作成および編集する方法について説明します。
 * [ID 名前空間](../../../../../identity-service/features/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
@@ -53,7 +53,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![ ソースカタログとMarketo Engage ソースが選択されています。](../../../../images/tutorials/create/marketo/catalog.png)
+![&#x200B; ソースカタログとMarketo Engage ソースが選択されています。](../../../../images/tutorials/create/marketo/catalog.png)
 
 **[!UICONTROL Marketo Engage アカウントの接続]**&#x200B;ページが表示されます。このページでは、新しいアカウントを使用するか、既存のアカウントにアクセスできます。
 
@@ -65,7 +65,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 新しいMarketo アカウントを認証するための新しいアカウントインターフェイス。](../../../../images/tutorials/create/marketo/new.png)
+![&#x200B; 新しいMarketo アカウントを認証するための新しいアカウントインターフェイス。](../../../../images/tutorials/create/marketo/new.png)
 
 >[!TAB  既存のアカウントを使用 ]
 
@@ -73,7 +73,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
-![ 既存のMarketo アカウントを選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/marketo/existing.png)
+![&#x200B; 既存のMarketo アカウントを選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/marketo/existing.png)
 
 >[!ENDTABS]
 
@@ -89,7 +89,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 取得するデータセットを選択します。 これにより、インターフェイスが更新され、データセットのプレビューが表示されます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ プレビューインターフェイス ](../../../../images/tutorials/create/marketo/preview.png)
+![&#x200B; プレビューインターフェイス &#x200B;](../../../../images/tutorials/create/marketo/preview.png)
 
 ## データセットとデータフローの詳細の指定 {#provide-dataset-and-dataflow-details}
 
@@ -105,13 +105,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいデータセットを使用するには、「**[!UICONTROL 新しいデータセット]**」を選択し、データセットの名前とオプションの説明を入力します。 また、データセットが準拠するエクスペリエンスデータモデル（XDM）スキーマを選択する必要があります。
 
-![ 新しいデータセット選択インターフェイス ](../../../../images/tutorials/create/marketo/new-dataset.png)
+![&#x200B; 新しいデータセット選択インターフェイス &#x200B;](../../../../images/tutorials/create/marketo/new-dataset.png)
 
 >[!TAB 既存のデータセットを使用する]
 
 既存のデータセットがある場合は、「**[!UICONTROL 既存のデータセット]**」を選択し、「**[!UICONTROL 詳細検索]**」オプションを使用すると、組織内のすべてのデータセットのウィンドウが表示されます。これには、リアルタイム顧客プロファイルへの取り込みが有効になっているかどうかなど、それぞれの詳細が含まれます。
 
-![ 既存のデータセット選択インターフェイス ](../../../../images/tutorials/create/marketo/existing-dataset.png)
+![&#x200B; 既存のデータセット選択インターフェイス &#x200B;](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
@@ -124,7 +124,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 データセットがリアルタイム顧客プロファイルに対して有効になっている場合、この手順の間に **[!UICONTROL プロファイルデータセット]** を切り替えて、プロファイル取り込み用のデータを有効にすることができます。 また、この手順を使用して、**[!UICONTROL エラー診断]** および **[!UICONTROL 部分取り込み]** を有効にすることもできます。
 
 * **[!UICONTROL エラー診断]**: **[!UICONTROL エラー診断]** を選択して、データセットアクティビティとデータフローステータスを監視する際に後で参照できるエラー診断を生成するようにソースに指示します。
-* **[!UICONTROL 部分取り込み]**: [ 部分バッチ取り込み ](../../../../../ingestion/batch-ingestion/partial.md) とは、設定可能な特定のしきい値まで、エラーを含んだデータを取り込む機能です。 この機能を使用すると、正確なデータをすべてExperience Platformに正常に取り込みながら、不正なデータがすべて無効な理由に関する情報と共に個別にバッチ処理されます。
+* **[!UICONTROL 部分取り込み]**: [&#x200B; 部分バッチ取り込み &#x200B;](../../../../../ingestion/batch-ingestion/partial.md) とは、設定可能な特定のしきい値まで、エラーを含んだデータを取り込む機能です。 この機能を使用すると、正確なデータをすべてExperience Platformに正常に取り込みながら、不正なデータがすべて無効な理由に関する情報と共に個別にバッチ処理されます。
 
 この手順では、**[!UICONTROL サンプルデータフロー]** を有効にして、データの取り込みを制限し、人物 ID を含むすべての履歴データの取り込みに伴う追加コストを回避できます。
 
@@ -139,13 +139,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!ENDSHADEBOX]
 
-![ データフローの詳細ページのデータフロー設定セクション。](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
+![&#x200B; データフローの詳細ページのデータフロー設定セクション。](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
 
 さらに、会社データセットからデータを取り込む場合、**[!UICONTROL 未要求のアカウントを除外]** を有効にして、未要求のアカウントを取り込みから除外できます。
 
 個人がフォームに入力すると、[!DNL Marketo] は、他のデータを含まない会社名に基づいて幻のアカウントレコードを作成します。 新しいデータフローの場合、未要求アカウントを除外する切替スイッチはデフォルトで有効になっています。 既存のデータフローの場合、この機能を有効または無効にして、既存のデータではなく、新しく取り込んだデータに変更を適用できます。
 
-![ 未要求アカウントを除外 ](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![&#x200B; 未要求アカウントを除外 &#x200B;](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## [!DNL Marketo] データセットのソースフィールドをターゲットの XDM フィールドにマッピング
 
@@ -166,7 +166,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッピングインターフェイスの使用に関する包括的な手順については、[データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md)を参照してください。
 
-![Marketo データのマッピングインターフェイス ](../../../../images/tutorials/create/marketo/mapping.png)
+![Marketo データのマッピングインターフェイス &#x200B;](../../../../images/tutorials/create/marketo/mapping.png)
 
 マッピングセットの準備が整ったら「 **[!UICONTROL 次へ]**」を選択し、新しいデータフローが作成されるまでしばらく待ちます。
 
@@ -179,7 +179,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローをレビューしたら、「**[!UICONTROL 保存して取り込み]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ 取り込み前にデータフローの詳細を確認できるレビューページ ](../../../../images/tutorials/create/marketo/review.png)
+![&#x200B; 取り込み前にデータフローの詳細を確認できるレビューページ &#x200B;](../../../../images/tutorials/create/marketo/review.png)
 
 ## データフローの監視
 
@@ -207,13 +207,13 @@ Experience Platformが設定の問題を検出すると、次のエラーメッ�
 
 #### [!DNL Munchkin ID] は適切な組織にマッピングされていません
 
-使用しているExperience Platform組織に [!DNL Munchkin ID] がマッピングされていない場合、認証は拒否されます。 [[!DNL Marketo]  インターフェイス ](https://app-sjint.marketo.com/#MM0A1) を使用して、[!DNL Munchkin ID] と組織の間のマッピングを設定します。
+使用しているExperience Platform組織に [!DNL Munchkin ID] がマッピングされていない場合、認証は拒否されます。 [[!DNL Marketo]  インターフェイス &#x200B;](https://app-sjint.marketo.com/#MM0A1) を使用して、[!DNL Munchkin ID] と組織の間のマッピングを設定します。
 
 ![Marketo インスタンスがAdobe組織に正しくマッピングされていないことを示すエラーメッセージ。](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 
 #### プライマリ ID がありません
 
-プライマリ ID がない場合、データフローは保存に失敗し、取り込まれません。 データフローを設定する前に、[ プライマリ ID が XDM スキーマ内に存在する ](../../../../../xdm/tutorials/create-schema-ui.md) ことを確認してください。
+プライマリ ID がない場合、データフローは保存に失敗し、取り込まれません。 データフローを設定する前に、[&#x200B; プライマリ ID が XDM スキーマ内に存在する &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md) ことを確認してください。
 
 ![XDM スキーマにプライマリ ID がないことを示すエラーメッセージ。](../../../../images/tutorials/create/marketo/no-primary-identity.png)
 

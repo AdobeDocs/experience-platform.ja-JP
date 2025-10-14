@@ -91,7 +91,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 ストリーミングまたはエッジセグメント化の対象となる **新規または編集** セグメント定義は **必ず**、「Edgeでアクティブ」結合ポリシー上にある必要があります。
 
-アクティブな結合ポリシーが設定されていない場合は、[ 結合ポリシーを設定 ](../../profile/merge-policies/ui-guide.md#configure) し、エッジでアクティブに設定する必要があります。
+アクティブな結合ポリシーが設定されていない場合は、[&#x200B; 結合ポリシーを設定 &#x200B;](../../profile/merge-policies/ui-guide.md#configure) し、エッジでアクティブに設定する必要があります。
 
 
 +++
@@ -112,12 +112,12 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 >[!NOTE]
 >
->ストリーミングセグメント化を機能させるには、スケジュールされたセグメント化を組織で有効にする必要があります。 スケジュールに沿ったセグメント化を有効にする方法について詳しくは、[Audience Portal の概要 ](../ui/audience-portal.md#scheduled-segmentation) を参照してください。
+>ストリーミングセグメント化を機能させるには、スケジュールされたセグメント化を組織で有効にする必要があります。 スケジュールに沿ったセグメント化を有効にする方法について詳しくは、[Audience Portal の概要 &#x200B;](../ui/audience-portal.md#scheduled-segmentation) を参照してください。
 
 | クエリタイプ | 詳細 | クエリ | 例 |
 | ---------- | ------- | ----- | ------- |
 | 24 時間未満の時間枠内での単一イベント | 24 時間未満の時間枠内に 1 つの受信イベントを参照する任意のセグメント定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内の単一イベントの例](../images/methods/streaming/single-event.png) |
-| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 | `homeAddress.country.equals("US", false)` | ![ 表示されるプロファイル属性の例 ](../images/methods/streaming/profile-attribute.png) |
+| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 | `homeAddress.country.equals("US", false)` | ![&#x200B; 表示されるプロファイル属性の例 &#x200B;](../images/methods/streaming/profile-attribute.png) |
 | 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内にプロファイル属性を持つ単一イベントの例](../images/methods/streaming/single-event-with-profile-attribute.png) |
 | 24 時間の相対時間枠内に複数のイベントがある | **過去 24 時間以内に**&#x200B;複数のイベントを参照し、（オプションで）1 つ以上のプロファイル属性を持つ任意のセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![プロファイル属性を持つ複数イベントの例](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
@@ -186,7 +186,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 Segmentation Service API または UI のオーディエンスポータルを使用して、ストリーミングセグメント化を使用して評価されるオーディエンスを作成できます。
 
-セグメント定義が [ 適格なルールセット ](#eligible-rulesets) のいずれかと一致する場合、ストリーミングを有効にすることができます。
+セグメント定義が [&#x200B; 適格なルールセット &#x200B;](#eligible-rulesets) のいずれかと一致する場合、ストリーミングを有効にすることができます。
 
 >[!BEGINTABS]
 
@@ -285,21 +285,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 +++
 
-このエンドポイントの使用について詳しくは、[ セグメント定義エンドポイントガイド ](../api/segment-definitions.md) を参照してください。
+このエンドポイントの使用について詳しくは、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](../api/segment-definitions.md) を参照してください。
 
 >[!TAB  オーディエンスポータル ]
 
 オーディエンスポータルで、「**[!UICONTROL オーディエンスを作成]**」を選択します。
 
-![ オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/streaming/select-create-audience.png)
+![&#x200B; オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/streaming/select-create-audience.png)
 
 ポップオーバーが表示されます。 **[!UICONTROL ルールを作成]** を選択して、セグメントビルダーに入ります。
 
-![ オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/streaming/select-build-rules.png)
+![&#x200B; オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/streaming/select-build-rules.png)
 
-セグメントビルダー内で、[ 適格なルールセット ](#eligible-rulesets) の 1 つに一致するセグメント定義を作成します。 セグメント定義がストリーミングセグメント化の対象になると、**[!UICONTROL 評価方法]** として **[!UICONTROL ストリーミング]** を選択できるようになります。
+セグメントビルダー内で、[&#x200B; 適格なルールセット &#x200B;](#eligible-rulesets) の 1 つに一致するセグメント定義を作成します。 セグメント定義がストリーミングセグメント化の対象になると、**[!UICONTROL 評価方法]** として **[!UICONTROL ストリーミング]** を選択できるようになります。
 
-![ セグメント定義が表示されます。 評価タイプがハイライト表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることが示されています。](../images/methods/streaming/streaming-evaluation-method.png)
+![&#x200B; セグメント定義が表示されます。 評価タイプがハイライト表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることが示されています。](../images/methods/streaming/streaming-evaluation-method.png)
 
 セグメント定義の作成について詳しくは、[セグメントビルダーガイド](../ui/segment-builder.md)を参照してください。
 
@@ -435,15 +435,15 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 >[!TAB  オーディエンスポータル ]
 
-オーディエンスポータルのフィルターを使用すると、組織内でストリーミングセグメント化が有効になっているすべてのオーディエンスを取得できます。 ![ フィルターアイコン ](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
+オーディエンスポータルのフィルターを使用すると、組織内でストリーミングセグメント化が有効になっているすべてのオーディエンスを取得できます。 ![&#x200B; フィルターアイコン &#x200B;](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
 
 ![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png)
 
 使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL &#x200B; ストリーミング &#x200B;]」を選択します。 このフィルターを使用すると、ストリーミングセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
 
-![ ストリーミングの更新頻度が選択され、ストリーミングセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
+![&#x200B; ストリーミングの更新頻度が選択され、ストリーミングセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
 
-Experience Platformでのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md) を参照してください。
+Experience Platformでのオーディエンスの表示について詳しくは、[&#x200B; オーディエンスポータルガイド &#x200B;](../ui/audience-portal.md) を参照してください。
 
 >[!ENDTABS]
 
@@ -453,7 +453,7 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 オーディエンスポータルでオーディエンスを選択すると、オーディエンスの詳細ページが表示されます。 オーディエンスの詳細の概要、選定されたプロファイルの量の推移、オーディエンスがアクティブ化されている宛先など、オーディエンスに関する情報が表示されます。
 
-![ ストリーミングセグメント化を使用して評価されたオーディエンスに関するオーディエンスの詳細ページが表示されます。](../images/methods/streaming/audience-details.png)
+![&#x200B; ストリーミングセグメント化を使用して評価されたオーディエンスに関するオーディエンスの詳細ページが表示されます。](../images/methods/streaming/audience-details.png)
 
 ストリーミングが有効なオーディエンスの場合は、**[!UICONTROL プロファイルの推移]** カードが表示され、合計選定済み指標と新しいオーディエンスの更新済み指標が表示されます。
 
@@ -461,9 +461,9 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 **[!UICONTROL 更新された新しいオーディエンス]** 指標は、ストリーミングセグメント化によるオーディエンスサイズの変化を示す折れ線グラフで表されます。 ドロップダウンを調整して、過去 24 時間、先週または過去 30 日間を表示できます。
 
-![ プロファイルの推移カードがハイライト表示されています。](../images/methods/streaming/profiles-over-time.png)
+![&#x200B; プロファイルの推移カードがハイライト表示されています。](../images/methods/streaming/profiles-over-time.png)
 
-オーディエンスの詳細については、[ オーディエンスポータルの概要 ](../ui/audience-portal.md#audience-details) を参照してください。
+オーディエンスの詳細については、[&#x200B; オーディエンスポータルの概要 &#x200B;](../ui/audience-portal.md#audience-details) を参照してください。
 
 ## 次の手順
 
@@ -471,4 +471,4 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 Adobe Experience Platform ユーザーインターフェイスの使用について詳しくは、[セグメント化ユーザーガイド](./overview.md)を参照してください。
 
-ストリーミングセグメント化に関するよくある質問については、[FAQ のストリーミングセグメント化の節 ](../faq.md#streaming-segmentation) を参照してください。
+ストリーミングセグメント化に関するよくある質問については、[FAQ のストリーミングセグメント化の節 &#x200B;](../faq.md#streaming-segmentation) を参照してください。

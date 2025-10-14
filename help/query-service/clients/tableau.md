@@ -19,7 +19,7 @@ ht-degree: 10%
 >
 > このガイドは、[!DNL Tableau] へのアクセス権を既に持ち、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Tableau] について詳しくは、[official [!DNL Tableau] documentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm) を参照してください。
 
-[Tableau を使用して PostgreSQL サーバーに接続する ](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) 方法については、Tableau の公式 Web サイトで説明しています。 接続設定のダイアログが表示されたら、Adobe Experience Platformと接続するために、Experience Platformの資格情報をパラメーターフィールドに入力します。 必要な接続パラメーターのリストを以下に示します。
+[Tableau を使用して PostgreSQL サーバーに接続する &#x200B;](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) 方法については、Tableau の公式 Web サイトで説明しています。 接続設定のダイアログが表示されたら、Adobe Experience Platformと接続するために、Experience Platformの資格情報をパラメーターフィールドに入力します。 必要な接続パラメーターのリストを以下に示します。
 
 | 接続パラメーター | 説明 |
 |---|---|
@@ -30,13 +30,13 @@ ht-degree: 10%
 | **[!DNL Username]** | これはExperience Platformの組織 ID です。 Experience Platform **[!UICONTROL ユーザー名]** 資格情報の値を使用します。 ID は、`ORG_ID@AdobeOrg` の形式になります。 |
 | **[!DNL Password]** | この英数字の文字列は、Experience Platform **[!UICONTROL パスワード]** 資格情報です。 有効期限のない認証情報を使用する場合、この値は `technicalAccountID` からの連結引数と、設定 JSON ファイルでダウンロードされた `credential` です。 パスワードの値は {technicalAccountId}:{credential} 形式で指定します。 有効期限のない資格情報用の設定 JSON ファイルは、Adobeがコピーを保持しない、初期化中の 1 回限りのダウンロードです。 |
 
-ユーザー名、パスワード、ログイン資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
+ユーザー名、パスワード、ログイン資格情報の検索について詳しくは、[&#x200B; 資格情報ガイド &#x200B;](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
 
 >[!IMPORTANT]
 >
->Tableau またはPower BIのユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
+>Tableau またはPower BIのユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 &#x200B;](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
 
-接続する前に、「**[!UICONTROL SSL が必要]** ボックスがオンになっていることを確認します。 Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートについては、[SSL モードのドキュメント ](./ssl-modes.md) を参照してください。
+接続する前に、「**[!UICONTROL SSL が必要]** ボックスがオンになっていることを確認します。 Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートについては、[SSL モードのドキュメント &#x200B;](./ssl-modes.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -46,4 +46,4 @@ ht-degree: 10%
 
 ## 次の手順
 
-[!DNL Query Service] に接続したので、[!DNL Tableau] を使用してクエリを記述できます。 クエリの作成および実行方法について詳しくは、[ クエリの実行 ](../best-practices/writing-queries.md) に関するガイドを参照してください。
+[!DNL Query Service] に接続したので、[!DNL Tableau] を使用してクエリを記述できます。 クエリの作成および実行方法について詳しくは、[&#x200B; クエリの実行 &#x200B;](../best-practices/writing-queries.md) に関するガイドを参照してください。

@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL Return] は、Return Merchandise Authorization （RMA）に関連する重要な情報をキャプチャする標準の Experience Data Model （XDM）データタイプです。
 
-![ 戻り値のデータタイプの図。](../images/data-types/return.png)
+![&#x200B; 戻り値のデータタイプの図。](../images/data-types/return.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
@@ -25,5 +25,5 @@ ht-degree: 8%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)

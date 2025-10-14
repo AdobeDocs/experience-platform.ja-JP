@@ -13,7 +13,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能です。 データは、7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
@@ -23,8 +23,8 @@ ht-degree: 10%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## [!DNL Data Landing Zone] からExperience Platformへのファイルの取り込み
 
@@ -38,7 +38,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「[!DNL Data Landing Zone]」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![ データランディングゾーンが選択されたソースカタログ ](../../../../images/tutorials/create/dlz/catalog.png)
+![&#x200B; データランディングゾーンが選択されたソースカタログ &#x200B;](../../../../images/tutorials/create/dlz/catalog.png)
 
 [!UICONTROL &#x200B; データを追加 &#x200B;] 手順が表示され、Experience Platformに取り込むデータを選択およびプレビューするためのインターフェイスが利用できます。
 
@@ -47,7 +47,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 Experience Platformに取り込むファイルを選択し、適切なインターフェイスでプレビュー画面が更新されるまでしばらく待ちます。
 
-![ ソースワークスペースのデータインターフェイスの追加。](../../../../images/tutorials/create/dlz/add-data.png)
+![&#x200B; ソースワークスペースのデータインターフェイスの追加。](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -59,9 +59,9 @@ Experience Platformに取り込むファイルを選択し、適切なインタ�
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークスペースのデータプレビューページ。](../../../../images/tutorials/create/dlz/file-detection.png)
+![&#x200B; ソースワークスペースのデータプレビューページ。](../../../../images/tutorials/create/dlz/file-detection.png)
 
-クラウドストレージソースのデータフローを作成する方法に関する詳細な手順のガイドについては、[Experience Platformにデータを取り込むためのクラウドストレージデータフローの作成 ](../../dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。
+クラウドストレージソースのデータフローを作成する方法に関する詳細な手順のガイドについては、[Experience Platformにデータを取り込むためのクラウドストレージデータフローの作成 &#x200B;](../../dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。
 
 ## [!DNL Data Landing Zone] 資格情報の取得
 
@@ -69,7 +69,7 @@ Experience Platformに取り込むファイルを選択し、適切なインタ�
 
 資格情報を取得するには、**[!UICONTROL データランディングゾーン]** カードを選択し、表示される右側のパネルから資格情報をコピーします。
 
-![ データランディングゾーンの表示オプションのリスト。](../../../../images/tutorials/create/dlz/view-credentials.png)
+![&#x200B; データランディングゾーンの表示オプションのリスト。](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ポップオーバーが表示され、コンテナ名、SAS トークン、ストレージアカウント名、SAS URI および有効期限が表示されます。
 
@@ -85,20 +85,20 @@ Experience Platformに取り込むファイルを選択し、適切なインタ�
 
 ソースカタログページから資格情報を更新するには、[!DNL Data Landing Zone] ールカードで省略記号（**`...`**）を選択してから、「**[!UICONTROL 資格情報を更新]**」を選択します。
 
-![ ソースカードを使用して資格情報を更新します。](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+![&#x200B; ソースカードを使用して資格情報を更新します。](../../../../images/tutorials/create/dlz/refresh-with-card.png)
 
 ポップアップウィンドウが表示され、続行する前に確認を求められます。 準備が整ったら、「**[!UICONTROL 認証情報を更新]**」を選択します。
 
-![ 認証情報を更新の確認ウィンドウ ](../../../../images/tutorials/create/dlz/confirm.png)
+![&#x200B; 認証情報を更新の確認ウィンドウ &#x200B;](../../../../images/tutorials/create/dlz/confirm.png)
 
 >[!TAB  右側のパネルを使用 ]
 
 右側のパネルを使用して資格情報を更新するには、**[!UICONTROL データランディングゾーン]** ソースカードを選択してから **[!UICONTROL その他のアクション]** を選択します。 次に、「**[!UICONTROL 認証情報を更新]**」を選択し、表示されるポップアップウィンドウを使用して確認します。
 
-![ 右側のパネルを使用して資格情報を更新します ](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)。
+![&#x200B; 右側のパネルを使用して資格情報を更新します &#x200B;](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)。
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Landing Zone] コンテナにアクセスし、資格情報を取得して更新する方法を学びました。 次は、[ クラウドストレージからExperience Platformにデータを取り込むためのデータフローの作成 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
+このチュートリアルでは、[!DNL Data Landing Zone] コンテナにアクセスし、資格情報を取得して更新する方法を学びました。 次は、[&#x200B; クラウドストレージからExperience Platformにデータを取り込むためのデータフローの作成 &#x200B;](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。

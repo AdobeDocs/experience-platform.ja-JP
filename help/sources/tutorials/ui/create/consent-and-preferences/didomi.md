@@ -15,14 +15,14 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->[!DNL Didomi] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Didomi] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、UI のソースワークスペースを使用して [!DNL Didomi] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 >[!IMPORTANT]
 >
 >* このドキュメントページは、*Didomi* チームが作成したものです。 お問い合わせや更新のリクエストについては、*support@didomi.io* まで直接ご連絡ください。
->* 接続を生成する手順については、[Didomi Adobe ソースコネクタのドキュメント ](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector) を参照してください。
+>* 接続を生成する手順については、[Didomi Adobe ソースコネクタのドキュメント &#x200B;](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector) を参照してください。
 
 ## 基本を学ぶ
 
@@ -35,7 +35,7 @@ ht-degree: 14%
 
 ### [!DNL Didomi] アカウントの設定
 
-続行する前に、「概要 [[!DNL Didomi]  に記載されている前提条件の手順を読んで完了し、アカウントをExperience Platformに正常に接続していることを確認してください ](../../../../connectors/consent-and-preferences/didomi.md#prerequisites)。
+続行する前に、「概要 [[!DNL Didomi]  に記載されている前提条件の手順を読んで完了し、アカウントをExperience Platformに正常に接続していることを確認してください &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#prerequisites)。
 
 ## ソースカタログのナビゲート
 
@@ -51,7 +51,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## ソースデータスキーマの追加
 
-次に、*[!UICONTROL データを選択]* インターフェイスを使用して、（前提条件の手順でダウンロードした [JSON ファイルをアップロード ](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) ます。
+次に、*[!UICONTROL データを選択]* インターフェイスを使用して、（前提条件の手順でダウンロードした [JSON ファイルをアップロード &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) ます。
 
 プレビューインターフェイスを使用して、ペイロードのファイル構造を表示できます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -90,17 +90,17 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformは、ユーザーが登録できるイベントベースのアラートを作成でき、これらのオプションは、これらをトリガーにする実行中のデータフローです。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformは、ユーザーが登録できるイベントベースのアラートを作成でき、これらのオプションは、これらをトリガーにする実行中のデータフローです。  詳しくは、[&#x200B; アラートの概要 &#x200B;](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## マッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [&#x200B; マッピングガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 マッピングは、**からExperience Platform データセットに** 目的のデータ [!DNL Didomi] を転送するために特別に使用されます。 これらの目的は、ユーザーの同意の選択肢（分析、パーソナライゼーション、広告のためなど）を表し、この統合で許可される唯一のマッピングフィールドです。
 
-[ Webhook 設定から ](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) ダウンロードしたサンプル Webhook ペイロード [!DNL Didomi] を使用して、各 [!DNL Didomi] の目的をAdobe データセットの適切なフィールドにマッピングします。
+[&#x200B; Webhook 設定から &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) ダウンロードしたサンプル Webhook ペイロード [!DNL Didomi] を使用して、各 [!DNL Didomi] の目的をAdobe データセットの適切なフィールドにマッピングします。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -145,12 +145,12 @@ Experience Platform UI で、次の操作を行います。
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング ](../../../../../dataflows/ui/monitor-sources.md) のチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング &#x200B;](../../../../../dataflows/ui/monitor-sources.md) のチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 ](../../update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するチュートリアルを参照してください。
 
 ### データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 ](../../delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 &#x200B;](../../delete.md) のチュートリアルを参照してください。

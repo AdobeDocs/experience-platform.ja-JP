@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `sendMediaEvent`
 
-`sendMediaEvent` コマンドは、Web SDK `streamingMedia` コンポーネントの一部です。 このコンポーネントを使用すると、web サイト上のメディアセッションに関連するデータを収集できます。 このコンポーネントの設定方法については、`streamingMedia` [ ドキュメント ](configure/streamingmedia.md) を参照してください。
+`sendMediaEvent` コマンドは、Web SDK `streamingMedia` コンポーネントの一部です。 このコンポーネントを使用すると、web サイト上のメディアセッションに関連するデータを収集できます。 このコンポーネントの設定方法については、`streamingMedia` [&#x200B; ドキュメント &#x200B;](configure/streamingmedia.md) を参照してください。
 
 `sendMediaEvent` コマンドを使用して、メディアのプレイバック、一時停止、完了、プレーヤーの状態の更新、およびその他の関連イベントをトラッキングします。
 

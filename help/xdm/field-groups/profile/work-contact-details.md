@@ -18,20 +18,20 @@ ht-degree: 14%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループには、勤務先住所、勤務先メールアドレス、勤務先電話番号、人物が所属する組織など、個人に関する職業情報を取得する複数のフィールドが用意されています。
+[!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループには、勤務先住所、勤務先メールアドレス、勤務先電話番号、人物が所属する組織など、個人に関する職業情報を取得する複数のフィールドが用意されています。
 
 ![](../../images/field-groups/work-contact-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `workAddress` | [ 郵送先住所 ](../../data-types/postal-address.md) | 人物の仕事用住所を表します。 |
-| `workEmail` | [ メールアドレス ](../../data-types/email-address.md) | 人物の仕事用電子メールアドレスを表します。 |
-| `workPhone` | [ 電話番号 ](../../data-types/phone-number.md) | 人物の仕事用電話番号を表します。 |
+| `workAddress` | [&#x200B; 郵送先住所 &#x200B;](../../data-types/postal-address.md) | 人物の仕事用住所を表します。 |
+| `workEmail` | [&#x200B; メールアドレス &#x200B;](../../data-types/email-address.md) | 人物の仕事用電子メールアドレスを表します。 |
+| `workPhone` | [&#x200B; 電話番号 &#x200B;](../../data-types/phone-number.md) | 人物の仕事用電話番号を表します。 |
 | `organizations` | 文字列（配列） | ユーザーが属する組織を表す自由形式の文字列の配列。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)

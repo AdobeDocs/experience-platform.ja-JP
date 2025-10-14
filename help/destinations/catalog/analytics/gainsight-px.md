@@ -31,8 +31,8 @@ ht-degree: 37%
 ## 前提条件 {#prerequisites}
 
 * [!DNL Gainsight] サポートチームに連絡し、サブスクリプションの外部セグメント機能のアクティベーションをリクエストします。
-* [ 会社の詳細ページ ](https://app.aptrinsic.com/settings/subscription) の下部にある「**[!UICONTROL 新しいシークレットの生成]**」ボタンを使用して、PX サブスクリプションの OAuth シークレット値を生成します
-  ![Gainsight PX の「新しいシークレットの生成」ボタンを示す会社の詳細画面 ](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
+* [&#x200B; 会社の詳細ページ &#x200B;](https://app.aptrinsic.com/settings/subscription) の下部にある「**[!UICONTROL 新しいシークレットの生成]**」ボタンを使用して、PX サブスクリプションの OAuth シークレット値を生成します
+  ![Gainsight PX の「新しいシークレットの生成」ボタンを示す会社の詳細画面 &#x200B;](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## サポートされている ID {#supported-identities}
 
@@ -50,7 +50,7 @@ Gainsight PX は、以下の表に示す ID のアクティブ化をサポート
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---|---|---|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -78,18 +78,18 @@ Gainsight PX は、以下の表に示す ID のアクティブ化をサポート
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![ 認証スクリーンショット ](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
+![&#x200B; 認証スクリーンショット &#x200B;](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
 * **[!UICONTROL パスワード]**:[[!DNL Gainsight PX]](https://app.aptrinsic.com) へのログインに使用するパスワード
-* **[!UICONTROL クライアント ID]**: [ 会社の詳細ページ ](https://app.aptrinsic.com/settings/subscription) の Gainsight PX サブスクリプション ID
-* **[!UICONTROL クライアントシークレット]**:[!DNL Gainsight PX] UI の [ 会社の詳細ページ ](https://app.aptrinsic.com/settings/subscription) の下部に生成される OAuth 秘密鍵。
+* **[!UICONTROL クライアント ID]**: [&#x200B; 会社の詳細ページ &#x200B;](https://app.aptrinsic.com/settings/subscription) の Gainsight PX サブスクリプション ID
+* **[!UICONTROL クライアントシークレット]**:[!DNL Gainsight PX] UI の [&#x200B; 会社の詳細ページ &#x200B;](https://app.aptrinsic.com/settings/subscription) の下部に生成される OAuth 秘密鍵。
 * **[!UICONTROL ユーザー名]**:[[!DNL Gainsight PX]](https://app.aptrinsic.com) UI へのログインに使用するメール
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 名前と説明フィールドへの入力方法を示す、Experience Platformユーザーインターフェイスの宛先の詳細画面 ](../../assets/catalog/analytics/gainsight-px/destination_details.png)
+![&#x200B; 名前と説明フィールドへの入力方法を示す、Experience Platformユーザーインターフェイスの宛先の詳細画面 &#x200B;](../../assets/catalog/analytics/gainsight-px/destination_details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -101,7 +101,7 @@ Gainsight PX は、以下の表に示す ID のアクティブ化をサポート
 >[!IMPORTANT]
 >
 >* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -115,13 +115,13 @@ Gainsight PX は、以下の表に示す ID のアクティブ化をサポート
 
 以下に示す例では、ソースフィールドは、ターゲット名前空間 IDENTIFY_ID にマッピングされる XDM プロファイル属性です。
 
-![ ソース値とターゲット値の選択方法を示す ID 名前空間のサンプルマッピング画面 ](../../assets/catalog/analytics/gainsight-px/mapping_attribute.png)
+![&#x200B; ソース値とターゲット値の選択方法を示す ID 名前空間のサンプルマッピング画面 &#x200B;](../../assets/catalog/analytics/gainsight-px/mapping_attribute.png)
 
 #### ID 名前空間のマッピング {#map-identity-namespace}
 
 以下に示す例では、ソースフィールドは ID 名前空間（**[!UICONTROL ECID]**）であり、ターゲット名前空間 **[!UICONTROL IDENTIFY_ID]** にマッピングされます。
 
-![ ソース値とターゲット値の選択方法を示すマッピング画面の属性例 ](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
+![&#x200B; ソース値とターゲット値の選択方法を示すマッピング画面の属性例 &#x200B;](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

@@ -120,21 +120,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 +++
 
-このエンドポイントの使用について詳しくは、[ セグメント定義エンドポイントガイド ](../api/segment-definitions.md) を参照してください。
+このエンドポイントの使用について詳しくは、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](../api/segment-definitions.md) を参照してください。
 
 >[!TAB  オーディエンスポータル ]
 
 オーディエンスポータルで、「**[!UICONTROL オーディエンスを作成]**」を選択します。
 
-![ オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/batch/select-create-audience.png)
+![&#x200B; オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/batch/select-create-audience.png)
 
 ポップオーバーが表示されます。 **[!UICONTROL ルールを作成]** を選択して、セグメントビルダーに入ります。
 
-![ オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/batch/select-build-rules.png)
+![&#x200B; オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/batch/select-build-rules.png)
 
 セグメント定義を作成したら、**[!UICONTROL 評価方法]** として **[!UICONTROL バッチ]** を選択します。
 
-![ セグメント定義が表示されます。 評価タイプがハイライト表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることが示されています。](../images/methods/batch/batch-evaluation-method.png)
+![&#x200B; セグメント定義が表示されます。 評価タイプがハイライト表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることが示されています。](../images/methods/batch/batch-evaluation-method.png)
 
 セグメント定義の作成について詳しくは、[セグメントビルダーガイド](../ui/segment-builder.md)を参照してください。
 
@@ -271,15 +271,15 @@ curl -X GET \
 
 >[!TAB  オーディエンスポータル ]
 
-Audience Portal のフィルターを使用すると、組織内でバッチセグメント化が有効になっているすべてのオーディエンスを取得できます。 ![ フィルターアイコン ](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
+Audience Portal のフィルターを使用すると、組織内でバッチセグメント化が有効になっているすべてのオーディエンスを取得できます。 ![&#x200B; フィルターアイコン &#x200B;](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
 
 ![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png)
 
 使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL &#x200B; バッチ &#x200B;]」を選択します。 このフィルターを使用すると、バッチセグメント化を使用して評価される、組織内のすべてのオーディエンスが表示されます。
 
-![ バッチ更新頻度が選択され、バッチセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/batch/filter-batch.png)
+![&#x200B; バッチ更新頻度が選択され、バッチセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/batch/filter-batch.png)
 
-Experience Platformでのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md) を参照してください。
+Experience Platformでのオーディエンスの表示について詳しくは、[&#x200B; オーディエンスポータルガイド &#x200B;](../ui/audience-portal.md) を参照してください。
 
 >[!ENDTABS]
 
@@ -287,6 +287,6 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 このガイドでは、Adobe Experience Platformでバッチセグメント化を使用して評価できるセグメント定義の作成方法について説明します。
 
-Experience Platform ユーザーインターフェイスの使用方法について詳しくは、[ セグメント化ユーザーガイド ](../ui/overview.md) を参照してください。
+Experience Platform ユーザーインターフェイスの使用方法について詳しくは、[&#x200B; セグメント化ユーザーガイド &#x200B;](../ui/overview.md) を参照してください。
 
-バッチセグメント化に関するよくある質問については、[FAQ のバッチセグメント化に関する節 ](../faq.md#batch-segmentation) を参照してください。
+バッチセグメント化に関するよくある質問については、[FAQ のバッチセグメント化に関する節 &#x200B;](../faq.md#batch-segmentation) を参照してください。

@@ -77,7 +77,7 @@ SQL を使用して、トレーニングに使用するデータセットを参�
 
 >[!TIP]
 >
->サポートされている関数や `CREATE MODEL` と `CREATE TABLE` の両方での使用方法など、`TRANSFORM` 句の完全なリファレンスについては、SQL 構文ドキュメントの [`TRANSFORM` 句を参照してください ](../sql/syntax.md#transform)
+>サポートされている関数や `CREATE MODEL` と `CREATE TABLE` の両方での使用方法など、`TRANSFORM` 句の完全なリファレンスについては、SQL 構文ドキュメントの [`TRANSFORM` 句を参照してください &#x200B;](../sql/syntax.md#transform)
 
 ## モデルの更新 {#update}
 
@@ -177,7 +177,7 @@ SELECT * FROM ctas_transform_table LIMIT 1;
 
 - **ベクトル出力**：変換によってベクトルタイプの出力が生成されると、自動的に配列に変換されます。
 - **バッチ再利用制限**:`TRANSFORM` で作成された表は、表の作成時にのみ変換を適用できます。 `INSERT INTO` で挿入された新しいデータのバッチは、**自動的には変換されません**。 新しいデータに同じ変換ロジックを適用するには、新しい `CREATE TABLE AS SELECT` （CTAS）ステートメントを使用してテーブルを再作成する必要があります。
-- **モデル再利用の制限**:`TRANSFORM` を使用して作成されたテーブルは、`CREATE MODEL` ステートメントで直接使用できません。 モデルの作成中に `TRANSFORM` ロジックを再定義する必要があります。 ベクトルタイプの出力を生成する変換は、モデルトレーニング中はサポートされません。 詳しくは、[ フィーチャー変換出力データタイプ ](./feature-transformation.md#available-transformations) を参照してください。
+- **モデル再利用の制限**:`TRANSFORM` を使用して作成されたテーブルは、`CREATE MODEL` ステートメントで直接使用できません。 モデルの作成中に `TRANSFORM` ロジックを再定義する必要があります。 ベクトルタイプの出力を生成する変換は、モデルトレーニング中はサポートされません。 詳しくは、[&#x200B; フィーチャー変換出力データタイプ &#x200B;](./feature-transformation.md#available-transformations) を参照してください。
 
 >[!NOTE]
 >
@@ -285,4 +285,4 @@ DROP MODEL IF EXISTS modelName modelVersion ;
 
 ## 次の手順
 
-このドキュメントでは、Data Distillerを使用して信頼できるモデルを作成、トレーニング、管理するために必要なベース SQL 構文を確認しました。 次に、[ 高度な統計モデルの実装 ](./implement-models/implement-models.md) ドキュメントを参照して、使用可能な様々な信頼できるモデルと、SQL ワークフロー内で効果的に実装する方法について学びます。 [ 機能エンジニアリング ](./feature-engineering.md) ドキュメントを確認し、モデルトレーニングに最適なデータが準備されていることを確認します。
+このドキュメントでは、Data Distillerを使用して信頼できるモデルを作成、トレーニング、管理するために必要なベース SQL 構文を確認しました。 次に、[&#x200B; 高度な統計モデルの実装 &#x200B;](./implement-models/implement-models.md) ドキュメントを参照して、使用可能な様々な信頼できるモデルと、SQL ワークフロー内で効果的に実装する方法について学びます。 [&#x200B; 機能エンジニアリング &#x200B;](./feature-engineering.md) ドキュメントを確認し、モデルトレーニングに最適なデータが準備されていることを確認します。

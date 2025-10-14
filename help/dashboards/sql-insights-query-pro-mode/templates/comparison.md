@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## オーディエンス比較の設定 {#set-audience-comparisons}
 
-より有意義なインサイトと比較を可能にするには、システムフィルターを使用して、分析するオーディエンスセグメントや期間を正確にターゲットにします。 フィルターアイコン（![ フィルターアイコンを選択します。](../../../images/icons/filter-icon-white.png)）を選択して、2 つの異なるオーディエンス（[!UICONTROL &#x200B; オーディエンス A] および [!UICONTROL &#x200B; オーディエンス B]）を選択し、比較する特定のパラメーターを設定します。
+より有意義なインサイトと比較を可能にするには、システムフィルターを使用して、分析するオーディエンスセグメントや期間を正確にターゲットにします。 フィルターアイコン（![&#x200B; フィルターアイコンを選択します。](../../../images/icons/filter-icon-white.png)）を選択して、2 つの異なるオーディエンス（[!UICONTROL &#x200B; オーディエンス A] および [!UICONTROL &#x200B; オーディエンス B]）を選択し、比較する特定のパラメーターを設定します。
 
-![ オーディエンス比較ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
+![&#x200B; オーディエンス比較ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
 
 [!UICONTROL &#x200B; フィルター &#x200B;] ダイアログが表示されます。 分析する最初のオーディエンスを選択するには、「**[!UICONTROL オーディエンス A を選択]**」ドロップダウンを選択します。 この例では、`California Patients` がオーディエンス A として選択されています。このオーディエンスは、フィルターの適用後、比較の左側に表示されます。
 
@@ -30,11 +30,11 @@ ht-degree: 0%
 
 オーディエンスと日付範囲を設定したら、「**[!UICONTROL 適用]**」を選択して [!UICONTROL &#x200B; オーディエンス比較 &#x200B;] ダッシュボードを更新します。
 
-![ 「適用」がハイライト表示されたオーディエンス比較ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
+![&#x200B; 「適用」がハイライト表示されたオーディエンス比較ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
 
 ダッシュボードに、オーディエンスごとに並べて表示される比較グラフが表示されるようになりました。
 
-![ 各オーディエンスの指標を比較するいくつかのグラフが表示されたオーディエンス比較ダッシュボード ](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
+![&#x200B; 各オーディエンスの指標を比較するいくつかのグラフが表示されたオーディエンス比較ダッシュボード &#x200B;](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
 
 ## 使用可能なオーディエンス比較グラフ {#available-charts}
 
@@ -57,9 +57,9 @@ ht-degree: 0%
 
 「**[!UICONTROL テンプレート]**」を選択して [!UICONTROL &#x200B; テンプレート &#x200B;] の概要に戻ります。
 
-![ テンプレートがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/navigation.png)
+![&#x200B; テンプレートがハイライト表示された高度なオーディエンスの重複ビュー。](../../images/sql-insights-query-pro-mode/templates/navigation.png)
 
 ## 次の手順
 
-このドキュメントでは、**オーディエンス比較** ダッシュボードを使用して、様々なオーディエンスグループ間で主要指標を比較する方法について説明しました。 オーディエンスのセグメント化およびターゲティング戦略を継続的に改善するには、さらなるインサイトを提供する他の Data Distiller テンプレートを参照します。 意思決定をさらに強化し、エンゲージメントの取り組みを最適化するには、[ オーディエンスの傾向 ](./trends.md)、[ オーディエンス ID の重複 ](./identity-overlaps.md) および [ 高度なオーディエンスの重複 ](./overlaps.md) の UI ガイドを参照してください。
+このドキュメントでは、**オーディエンス比較** ダッシュボードを使用して、様々なオーディエンスグループ間で主要指標を比較する方法について説明しました。 オーディエンスのセグメント化およびターゲティング戦略を継続的に改善するには、さらなるインサイトを提供する他の Data Distiller テンプレートを参照します。 意思決定をさらに強化し、エンゲージメントの取り組みを最適化するには、[&#x200B; オーディエンスの傾向 &#x200B;](./trends.md)、[&#x200B; オーディエンス ID の重複 &#x200B;](./identity-overlaps.md) および [&#x200B; 高度なオーディエンスの重複 &#x200B;](./overlaps.md) の UI ガイドを参照してください。
 

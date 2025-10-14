@@ -16,7 +16,7 @@ ht-degree: 8%
 
 エクスペリエンスデータモデル（XDM）では、[!UICONTROL &#x200B; 場所 &#x200B;] クラスは、トラベルホールやスポーツアリーナなど、ライブイベントの場所情報をキャプチャします。
 
-![Location クラス構造 ](../../../images/healthcare/classes/location.png)
+![Location クラス構造 &#x200B;](../../../images/healthcare/classes/location.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -24,4 +24,4 @@ ht-degree: 8%
 | [!UICONTROL &#x200B; 場所の識別子 &#x200B;] | `locationID` | [!UICONTROL 文字列] | 場所の一意の ID。 |
 | [!UICONTROL &#x200B; 場所名 &#x200B;] | `locationName` | [!UICONTROL 文字列] | 場所の名前。 |
 
-クラスを [[!UICONTROL Location] フィールドグループ ](../field-groups/location.md) で拡張して、場所に関する詳細を記述できます。
+クラスを [[!UICONTROL Location] フィールドグループ &#x200B;](../field-groups/location.md) で拡張して、場所に関する詳細を記述できます。

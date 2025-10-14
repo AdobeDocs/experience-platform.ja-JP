@@ -14,7 +14,7 @@ ht-degree: 33%
 
 # エンティティエンドポイント （プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
+Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[&#x200B; プロファイルユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
@@ -1257,7 +1257,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 次の手順
 
-このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[ データアクセスの概要 ](../../data-access/home.md) を参照してください。
+このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[&#x200B; データアクセスの概要 &#x200B;](../../data-access/home.md) を参照してください。
 
 ## 付録 {#appendix}
 

@@ -20,7 +20,7 @@ Real-time Customer Data PlatformおよびAdobe Journey Optimizer向けに設計�
 * ユーザー権限の設定
 * メール、プッシュ、SMS 通知用のJourney Optimizer チャネルサーフェスの設定（Journey Optimizer プレイブックを使用する予定の場合）
 
-Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。 [ ユースケースプレイブックを操作する ](../playbooks/navigate.md) 方法、および [ インスピレーションにつながるサンドボックス ](../playbooks/navigate.md) の基本を学ぶ方法については、ドキュメントをお読みください。
+Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。 [&#x200B; ユースケースプレイブックを操作する &#x200B;](../playbooks/navigate.md) 方法、および [&#x200B; インスピレーションにつながるサンドボックス &#x200B;](../playbooks/navigate.md) の基本を学ぶ方法については、ドキュメントをお読みください。
 
 ## ユースケースプレイブックの設定 – ビデオチュートリアル {#video}
 
@@ -51,17 +51,17 @@ Experience PlatformUI で豊富なユースケースプレイブックのギャ�
 
 **必要な権限**
 
-必要な権限を追加するには、権限 UI で、他の開発用サンドボックスに使用される権限を含め、新しいユースケースプレイブックサンドボックスを [ 設定済みの役割 ](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role) に含めます。
+必要な権限を追加するには、権限 UI で、他の開発用サンドボックスに使用される権限を含め、新しいユースケースプレイブックサンドボックスを [&#x200B; 設定済みの役割 &#x200B;](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role) に含めます。
 
-![ 役割のプレイブックサンドボックスは既に設定済み ](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
+![&#x200B; 役割のプレイブックサンドボックスは既に設定済み &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
 
 **プレイブックの役割の設定：**
 
-または、[ 必要な権限 ](/help/access-control/home.md#sandboxes-and-permissions) を持つ新しい役割を追加することも検討できます。
+または、[&#x200B; 必要な権限 &#x200B;](/help/access-control/home.md#sandboxes-and-permissions) を持つ新しい役割を追加することも検討できます。
 
-基本的なプレイブックタスクに必要な権限を持つ [ 新しい役割を設定 ](/help/access-control/abac/ui/permissions.md) します。 以下に示すように、役割を作成し、それに新しいサンドボックスを追加します。
+基本的なプレイブックタスクに必要な権限を持つ [&#x200B; 新しい役割を設定 &#x200B;](/help/access-control/abac/ui/permissions.md) します。 以下に示すように、役割を作成し、それに新しいサンドボックスを追加します。
 
-![ 役割を作成してサンドボックスに追加する ](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
+![&#x200B; 役割を作成してサンドボックスに追加する &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
 
 **プレイブックインスタンスの権限**
 
@@ -81,11 +81,11 @@ Experience PlatformUI で豊富なユースケースプレイブックのギャ�
 
 次の画像は、プレイブックとプレイブックによって生成されたアセットの表示、作成、管理にユーザーに推奨される権限のスナップショットを示しています。
 
-![ プレイブックのすべてのインスタンスを作成するために必要なすべての権限項目のスナップショット ](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
+![&#x200B; プレイブックのすべてのインスタンスを作成するために必要なすべての権限項目のスナップショット &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
 
 **役割にユーザーを追加**
 
-上記のように [ 新しい役割を作成 ](/help/access-control/abac/ui/permissions.md#managing-users-for-role) したら、自分自身をユーザーとして追加します。 表示のみのアクセス権を持つ別のユーザーセットに対して、制限付きアクセスの役割を作成する場合、これらの権限に関連付けられている必要なビュー項目のみを含めます。
+上記のように [&#x200B; 新しい役割を作成 &#x200B;](/help/access-control/abac/ui/permissions.md#managing-users-for-role) したら、自分自身をユーザーとして追加します。 表示のみのアクセス権を持つ別のユーザーセットに対して、制限付きアクセスの役割を作成する場合、これらの権限に関連付けられている必要なビュー項目のみを含めます。
 
 ## Journey Optimizerでのサンドボックスおよびチャネルサーフェスの設定 {#configure-channel-surfaces}
 
@@ -95,11 +95,11 @@ Journey Optimizerでプレイブックのインスタンスを作成するには
 
 ### メールチャネルサーフェス
 
-Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[ メールチャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ja) のドキュメントを参照してください。
+Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[&#x200B; メールチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ja) のドキュメントを参照してください。
 
 ### SMS チャネルサーフェス
 
-SMS チャネルサーフェスを作成するには、まず SMS API 認証情報を作成し、優先ベンダー（Sinch など）を選択します。 SMS チャネルサーフェスに名前を付け（例：SMS マーケティング）、設定を選択し、送信者番号を入力します。 ページの右上にある「**送信**」を選択して、SMS チャネルサーフェスを保存します。 [SMS チャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms) に関するドキュメントを参照してください。
+SMS チャネルサーフェスを作成するには、まず SMS API 認証情報を作成し、優先ベンダー（Sinch など）を選択します。 SMS チャネルサーフェスに名前を付け（例：SMS マーケティング）、設定を選択し、送信者番号を入力します。 ページの右上にある「**送信**」を選択して、SMS チャネルサーフェスを保存します。 [SMS チャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms) に関するドキュメントを参照してください。
 
 また、注文確認などのトランザクションメッセージを含むプレイブックのチャネルを設定します。
 
@@ -111,8 +111,8 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 次に、チャネル設定で確認したチャネル、プラットフォームおよびアプリを選択します。 **送信** を選択して、プッシュチャネルサーフェスを作成します。
 
-[ プッシュチャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=ja) に関するドキュメントを参照してください。
+[&#x200B; プッシュチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=ja) に関するドキュメントを参照してください。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントのすべての手順を完了したので、左側のナビゲーションにユースケースプレイブックが表示された開発用サンドボックスを作成しました。 また、プレイブックの表示と管理、アセットの生成に必要な権限をチームメンバーに付与する方法についても理解しました。 次のステップとして、[ 適切なプレイブックを選択する ](/help/use-case-playbooks/playbooks/choose.md) 方法と、それから [ インスタンスを作成する ](/help/use-case-playbooks/playbooks/create-share-reuse.md) 方法を参照してください。
+このドキュメントのすべての手順を完了したので、左側のナビゲーションにユースケースプレイブックが表示された開発用サンドボックスを作成しました。 また、プレイブックの表示と管理、アセットの生成に必要な権限をチームメンバーに付与する方法についても理解しました。 次のステップとして、[&#x200B; 適切なプレイブックを選択する &#x200B;](/help/use-case-playbooks/playbooks/choose.md) 方法と、それから [&#x200B; インスタンスを作成する &#x200B;](/help/use-case-playbooks/playbooks/create-share-reuse.md) 方法を参照してください。

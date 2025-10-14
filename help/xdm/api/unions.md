@@ -31,7 +31,7 @@ ht-degree: 39%
 
 ### セグメントメンバーシップマップ
 
-`segmentMembership` マップには、セグメント定義の評価結果が格納されます。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` た、Experience Platformに取り込まれた事前評価済みオーディエンスを格納して、Adobe Audience Managerなどの他のソリューションと統合できます。 詳しくは、[API を使用したオーディエンスの作成 ](../../segmentation/tutorials/create-a-segment.md) に関するチュートリアルを参照してください。
+`segmentMembership` マップには、セグメント定義の評価結果が格納されます。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` た、Experience Platformに取り込まれた事前評価済みオーディエンスを格納して、Adobe Audience Managerなどの他のソリューションと統合できます。 詳しくは、[API を使用したオーディエンスの作成 &#x200B;](../../segmentation/tutorials/create-a-segment.md) に関するチュートリアルを参照してください。
 
 ## 和集合のリストの取得 {#list}
 
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 和集合メンバーシップのスキーマを有効にする {#enable}
 
-スキーマをそのクラスの和集合に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これを実現するには、`union` という単一の文字列値を持つ `meta:immutableTags` 配列を、当該のスキーマに追加するPATCH リクエストを行います。 詳しい例については、[ スキーマエンドポイントガイド ](./schemas.md#union) を参照してください。
+スキーマをそのクラスの和集合に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これを実現するには、`union` という単一の文字列値を持つ `meta:immutableTags` 配列を、当該のスキーマに追加するPATCH リクエストを行います。 詳しい例については、[&#x200B; スキーマエンドポイントガイド &#x200B;](./schemas.md#union) を参照してください。
 
 ## 和集合でのスキーマのリスト {#list-schemas}
 

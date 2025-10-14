@@ -21,13 +21,13 @@ Attribution AI はインテリジェントサービスの一部で、顧客と�
 
 [!DNL Adobe Experience Platform] UI で、左側のナビゲーションの **[!UICONTROL サービス]** を選択します。 **[!UICONTROL Services]** ブラウザーが開き、利用可能なアドビのインテリジェントサービスが表示されます。アトリビューション AI のコンテナで、「**[!UICONTROL 開く]** を選択します。
 
-![ モデルへのアクセス ](./images/user-guide/open_Attribution_ai.png)
+![&#x200B; モデルへのアクセス &#x200B;](./images/user-guide/open_Attribution_ai.png)
 
 Attribution AI サービスページが表示されます。このページには、アトリビューション AI のサービスモデルが一覧表示され、モデルの名前、コンバージョンイベント、モデルの実行頻度、最終更新のステータスなど、そのサービスモデルに関する情報が表示されます。
 
 **[!UICONTROL モデルを作成]** コンテナの右下にある「**[!UICONTROL スコアリングされたコンバージョンイベントの合計]** 指標を見つけることができます。 この指標は、すべてのサンドボックス環境と削除されたサービスモデルを含め、現在の暦年にアトリビューション AI によってスコアリングされたコンバージョンイベントの合計数を追跡します。
 
-![ 合計コンバージョン数 ](./images/user-guide/total_conversions.png)
+![&#x200B; 合計コンバージョン数 &#x200B;](./images/user-guide/total_conversions.png)
 
 サービスモデルは、UI の右側にあるコントロールを使用して、編集、複製、削除できます。 これらのコントロールを表示するには、既存の **[!UICONTROL サービスモデル]** からモデルを選択します。 コントロールには、次の情報が含まれます。
 
@@ -37,7 +37,7 @@ Attribution AI サービスページが表示されます。このページに�
 - **[!UICONTROL データソース]**：使用されているデータセットへのリンク。 アトリビューション AI で複数のデータセットが使用されている場合、「複数」に続いてデータセット数が表示されます。 ハイパーリンクを選択すると、データセットのプレビューポップオーバーが表示されます。
 - **[!UICONTROL 前回の実行詳細]**：実行が失敗した場合にのみ表示されます。 実行が失敗した理由（エラーコードなど）に関する情報がここに表示されます。
 
-![ サイドペイン ](./images/user-guide/multiple-datasets-pane.png)
+![&#x200B; サイドペイン &#x200B;](./images/user-guide/multiple-datasets-pane.png)
 
 - **[!UICONTROL コンバージョンイベント]**：このモデル用に設定されたコンバージョンイベントの概要。
 - **[!UICONTROL ルックバックウィンドウ]**：定義した時間枠で、コンバージョンイベントのタッチポイントまでの日数を示します。
@@ -47,11 +47,11 @@ Attribution AI サービスページが表示されます。このページに�
 
 開始するには、「**[!UICONTROL モデルを作成]**」を選択します。
 
-![ モデルを作成 ](./images/user-guide/landing_page.png)
+![&#x200B; モデルを作成 &#x200B;](./images/user-guide/landing_page.png)
 
 次に、アトリビューション AI の設定ページが表示され、サービスモデルの名前と説明（オプション）を入力できます。
 
-![ モデルの命名 ](./images/user-guide/naming_instance.png)
+![&#x200B; モデルの命名 &#x200B;](./images/user-guide/naming_instance.png)
 
 ## データの選択 {#select-data}
 
@@ -61,17 +61,17 @@ Attribution AI サービスページが表示されます。このページに�
 
 使用するデータセットを選択したら、「**[!UICONTROL 追加]**」ボタンを選択して、データセットをデータセットプレビューペインに追加します。
 
-![ データセットを選択 ](./images/user-guide/select-datasets.png)
+![&#x200B; データセットを選択 &#x200B;](./images/user-guide/select-datasets.png)
 
-データセットの横にある情報アイコン ![ 情報アイコン ](/help/images/icons/info.png) を選択すると、データセットプレビューポップオーバーが開きます。
+データセットの横にある情報アイコン ![&#x200B; 情報アイコン &#x200B;](/help/images/icons/info.png) を選択すると、データセットプレビューポップオーバーが開きます。
 
-![ データセットの選択と検索 ](./images/user-guide/dataset-preview.png)
+![&#x200B; データセットの選択と検索 &#x200B;](./images/user-guide/dataset-preview.png)
 
 データセットプレビューには、最終更新時間、ソーススキーマ、最初の 10 列のプレビューなどのデータが含まれています。
 
 ワークフローに沿って移動するときにドラフトを保存するには、「**[!UICONTROL 保存]**」を選択します。 ドラフトモデル設定を保存して、ワークフローの次のステップに進むこともできます。 **[!UICONTROL 保存して続行]** を使用して、モデル設定の際にドラフトを作成して保存します。 この機能を使用すると、モデル設定のドラフトを作成および保存できます。特に、設定ワークフローで多くのフィールドを定義する必要がある場合に便利です。
 
-![ 「保存して保存」および「続行」がハイライト表示された Data Science Services アトリビューション AI タブの作成ワークフロー ](./images/user-guide/aai-save-save-&-exit.png)
+![&#x200B; 「保存して保存」および「続行」がハイライト表示された Data Science Services アトリビューション AI タブの作成ワークフロー &#x200B;](./images/user-guide/aai-save-save-&-exit.png)
 
 ### データセットの完全性 {#dataset-completeness}
 
@@ -83,7 +83,7 @@ Attribution AI サービスページが表示されます。このページに�
 >
 >データセットの完全性は、アトリビューション AI の最大トレーニングウィンドウ（1 年）を使用して計算されます。 つまり、データセットの完了度の値を表示する際に、1 年以上前のデータは考慮されません。
 
-![ データセットの完全性 ](./images/user-guide/dataset-completeness.png)
+![&#x200B; データセットの完全性 &#x200B;](./images/user-guide/dataset-completeness.png)
 
 ### ID を選択 {#identity}
 
@@ -95,15 +95,15 @@ ID マップ（フィールド）に基づいて複数のデータセットを�
 
 ID を選択するには、ID 列にある下線付きの値を選択します。 「ID を選択」ポップオーバーが表示されます。
 
-![ 同じ名前空間を選択 ](./images/user-guide/aai-identity-map-save-and-exit.png)
+![&#x200B; 同じ名前空間を選択 &#x200B;](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 名前空間内で複数の ID を使用できる場合は、ユースケースに合った正しい ID フィールドを選択するようにしてください。 例えば、メール名前空間内では、仕事用メールと個人用メールの 2 つのメール ID を使用できます。 ユースケースによっては、個人のメールが入力され、個々の予測により役立つ可能性が高くなります。 つまり、ID として `EMAIL (personalEmail.address)` を選択します。
 
-![ データセットキーが選択されていません ](./images/user-guide/aai-identity-namespace.png)
+![&#x200B; データセットキーが選択されていません &#x200B;](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
-> データセットに有効な ID タイプ（名前空間）が存在しない場合は、[ スキーマエディター ](../../xdm/schema/composition.md#identity) を使用してプライマリ ID を設定し、ID 名前空間に割り当てる必要があります。 名前空間と ID について詳しくは、[ID サービス名前空間 ](../../identity-service/features/namespaces.md) ドキュメントを参照してください。
+> データセットに有効な ID タイプ（名前空間）が存在しない場合は、[&#x200B; スキーマエディター &#x200B;](../../xdm/schema/composition.md#identity) を使用してプライマリ ID を設定し、ID 名前空間に割り当てる必要があります。 名前空間と ID について詳しくは、[ID サービス名前空間 &#x200B;](../../identity-service/features/namespaces.md) ドキュメントを参照してください。
 
 ## メディアチャネルとキャンペーンフィールドのマッピング {#aai-mapping}
 
@@ -207,7 +207,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 Attribution AI の最後のページは、トレーニングとスコアリングの設定に使用する **[!UICONTROL Advanced]** ページです。
 
-![ 新しいページセットオプション ](./images/user-guide/advanced_settings_set_options.png)
+![&#x200B; 新しいページセットオプション &#x200B;](./images/user-guide/advanced_settings_set_options.png)
 
 ### トレーニングのスケジュール設定
 
@@ -229,7 +229,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 デフォルトでは、標準スキーマのサービスモデルごとにスコアデータセットが作成されます。 コンバージョンイベントとタッチポイントの設定に基づいて、スコアリングデータセット出力に列を追加するよう選択できます。 入力データセットから列を選択することから開始して、ハンバーガーアイコンの上でマウスの左ボタンを押しながらドラッグ&amp;ドロップして、順序を変更できます。
 
-![ スコアデータセット列の追加 ](./images/user-guide/Add-score-dataset.png)
+![&#x200B; スコアデータセット列の追加 &#x200B;](./images/user-guide/Add-score-dataset.png)
 
 ### 地域ベースのモデリング（オプション） {#region-based-modeling-optional}
 
@@ -267,7 +267,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ## 次の手順
 
-このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（最大 24 時間）、[ アトリビューション AI インサイトを検出 ](./discover-insights.md)、準備が整います。 さらに、スコアリング結果をダウンロードする場合は、[ スコアのダウンロード ](./download-scores.md) ドキュメントを参照してください。
+このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（最大 24 時間）、[&#x200B; アトリビューション AI インサイトを検出 &#x200B;](./discover-insights.md)、準備が整います。 さらに、スコアリング結果をダウンロードする場合は、[&#x200B; スコアのダウンロード &#x200B;](./download-scores.md) ドキュメントを参照してください。
 
 ## その他のリソース
 

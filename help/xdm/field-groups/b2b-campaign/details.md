@@ -11,9 +11,9 @@ ht-degree: 5%
 
 # [!UICONTROL XDM ビジネスキャンペーン詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL XDM ビジネスキャンペーン詳細 &#x200B;] は、[[!UICONTROL XDM ビジネスキャンペーン &#x200B;] クラス ](../../classes/b2b/business-campaign.md) の標準スキーマフィールドグループで、ビジネスキャンペーンに関する詳細情報をキャプチャするものです。
+[!UICONTROL XDM ビジネスキャンペーン詳細 &#x200B;] は、[[!UICONTROL XDM ビジネスキャンペーン &#x200B;] クラス &#x200B;](../../classes/b2b/business-campaign.md) の標準スキーマフィールドグループで、ビジネスキャンペーンに関する詳細情報をキャプチャするものです。
 
-![UI に表示される XDM ビジネスキャンペーン詳細フィールドグループの構造 ](../../images/field-groups/b2b/business-campaign-details.png)
+![UI に表示される XDM ビジネスキャンペーン詳細フィールドグループの構造 &#x200B;](../../images/field-groups/b2b/business-campaign-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `expectedResponse` | [!UICONTROL 文字列] | キャンペーンに対して期待される応答。 |
 | `integrationPartnerName` | [!UICONTROL 文字列] | このキャンペーンと統合しているパートナーの名前。 |
 | `isActive` | [!UICONTROL &#x200B; ブール値 &#x200B;] | このキャンペーンがアクティブかどうかを示します。 |
-| `isDeleted` | [!UICONTROL &#x200B; ブール値 &#x200B;] | このキャンペーンがMarketo Engageで削除されているかどうかを示します。<br><br>[Marketo ソースコネクタを使用 ](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
+| `isDeleted` | [!UICONTROL &#x200B; ブール値 &#x200B;] | このキャンペーンがMarketo Engageで削除されているかどうかを示します。<br><br>[Marketo ソースコネクタを使用 &#x200B;](../../../sources/connectors/adobe-applications/marketo/marketo.md) すると、Marketoで削除されたすべてのレコードがリアルタイム顧客プロファイルに自動的に反映されます。 ただし、これらのプロファイルに関連するレコードは、引き続きデータレイクに保持される場合があります。 `isDeleted` を `true` に設定すると、フィールドを使用して、データレイクのクエリ時にソースから削除されたレコードをフィルターで除外できます。 |
 | `lastActivityDate` | [!UICONTROL &#x200B; 日時 &#x200B;] | キャンペーンに関連付けられた最後のアクティビティの ISO 8601 タイムスタンプ。 |
 | `timeZone` | [!UICONTROL 文字列] | キャンペーンが動作するタイムゾーン。 |
 | `timeZoneDelivery` | [!UICONTROL 文字列] | キャンペーンが動作する配信タイムゾーン。 |
@@ -41,4 +41,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json) を参照してください。

@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDKでは、Interactive Advertising Bureau Transpa
 
 IAB TCF 2.0 で Web SDKを実装するには、エクスペリエンスデータモデル（XDM）とエクスペリエンスイベントに関する十分な知識が必要です。 開始する前に、次のドキュメントを確認してください。
 
-- [ エクスペリエンスデータモデル（XDM）システムの概要 ](../../../xdm/home.md)：標準化と相互運用性は、Adobe Experience Platformを支える重要な概念です。 Adobeが推進する [!DNL Experience Data Model (XDM)] は、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス（顧客体験）管理のスキーマを定義する取り組みです。
+- [&#x200B; エクスペリエンスデータモデル（XDM）システムの概要 &#x200B;](../../../xdm/home.md)：標準化と相互運用性は、Adobe Experience Platformを支える重要な概念です。 Adobeが推進する [!DNL Experience Data Model (XDM)] は、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス（顧客体験）管理のスキーマを定義する取り組みです。
 
 ## Experience Platformの統合
 
@@ -32,7 +32,7 @@ SDKを使用してAdobe Experience Platformに同意データを送信するに�
 - スキーマが [!DNL XDM Individual Profile] クラスに基づいており、[!DNL Real-Time Customer Profile] で使用できるよう有効化された TCF 2.0 同意フィールドが含まれるデータセット。
 - Experience Platformと前述のプロファイル対応データセットで設定されたデータストリーム。
 
-必要なデータセットとデータストリームの作成方法については、[TCF 2.0 への準拠 ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。
+必要なデータセットとデータストリームの作成方法については、[TCF 2.0 への準拠 &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。
 
 ## Audience Managerの統合
 
@@ -51,7 +51,7 @@ Real-Time CDPとAudience Managerのオーディエンスは、顧客の現在の
 - [!DNL Experience Event] プライバシースキーマフィールドグループを持つ、[!DNL XDM Experience Event] クラスに基づくデータセット。
 - 上記の [!DNL XDM Experience Event] データセットで設定されたデータストリーム。
 
-XDM エクスペリエンスイベントを Analytics ヒットに変換する方法について詳しくは、[Web SDKを使用したAdobe Analyticsへのデータ送信 ](/help/web-sdk/use-cases/adobe-analytics.md) を参照してください。
+XDM エクスペリエンスイベントを Analytics ヒットに変換する方法について詳しくは、[Web SDKを使用したAdobe Analyticsへのデータ送信 &#x200B;](/help/web-sdk/use-cases/adobe-analytics.md) を参照してください。
 
 ## Adobe Experience Platform Web SDKの統合
 
@@ -86,4 +86,4 @@ Adobe Experience Platform Web SDKには、エクスペリエンスイベント�
 
 ## 次の手順
 
-これで、IAB Transparency &amp; Consent Framework 2.0 の基本的な理解が整いました。IAB TCF 2.0 の使用に関するガイド [ タグ付き ](./with-tags.md) または [ タグなし ](./without-tags.md) のいずれかを参照してください。
+これで、IAB Transparency &amp; Consent Framework 2.0 の基本的な理解が整いました。IAB TCF 2.0 の使用に関するガイド [&#x200B; タグ付き &#x200B;](./with-tags.md) または [&#x200B; タグなし &#x200B;](./without-tags.md) のいずれかを参照してください。

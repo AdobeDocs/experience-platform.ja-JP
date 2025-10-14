@@ -11,7 +11,7 @@ ht-degree: 12%
 
 # 分析データからのマーチャンダイジング変数の返しと使用
 
-クエリサービスを使用して、Adobe AnalyticsからAdobe Experience Platformにデータセットとして取り込まれたデータを管理します。 次の節では、Analytics データセットのマーチャンダイジング変数にアクセスするために使用できるクエリの例について説明します。 Analytics ソースを使用した [Adobe Analytics データの取り込みとマッピングの方法 ](../../sources/connectors/adobe-applications/mapping/analytics.md) について詳しくは、ドキュメントを参照してください。
+クエリサービスを使用して、Adobe AnalyticsからAdobe Experience Platformにデータセットとして取り込まれたデータを管理します。 次の節では、Analytics データセットのマーチャンダイジング変数にアクセスするために使用できるクエリの例について説明します。 Analytics ソースを使用した [Adobe Analytics データの取り込みとマッピングの方法 &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) について詳しくは、ドキュメントを参照してください。
 
 ## マーチャンダイジング変数 {#merchandising-variables}
 
@@ -26,7 +26,7 @@ Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特�
 
 これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、顧客の検索結果で、製品ごとの「割引額」や製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
-製品構文の使用について詳しくは、Adobe Analyticsのドキュメント [ 製品構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-product-syntax) を参照してください。
+製品構文の使用について詳しくは、Adobe Analyticsのドキュメント [&#x200B; 製品構文を使用した eVar の実装 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-product-syntax) を参照してください。
 
 以下の節では、[!DNL Analytics] データセットのマーチャンダイジング変数にアクセスするために必要な XDM フィールドの概要を説明します。
 
@@ -127,7 +127,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 | 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
 | 内部検索：冬帽子 | 12.99 | 1 | 1 | 1 |
 
-コンバージョン変数構文の使用について詳しくは、Adobe Analyticsのドキュメント [ コンバージョン変数構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-conversion-variable-syntax) を参照してください。
+コンバージョン変数構文の使用について詳しくは、Adobe Analyticsのドキュメント [&#x200B; コンバージョン変数構文を使用した eVar の実装 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-conversion-variable-syntax) を参照してください。
 
 [!DNL Analytics] データセットでコンバージョン変数構文を生成するための XDM フィールドを以下に示します。
 
@@ -220,4 +220,4 @@ LIMIT 100
 
 このドキュメントでは、product 構文を使用してマーチャンダイジングeVarを返し、コンバージョン変数の構文を使用して値を特定の商品にバインドする方法について、より深く理解する必要があります。
 
-まだ行っていない場合は、次の [Web およびモバイルインタラクションに関する分析インサイトのドキュメント ](./analytics-insights.md) を参照してください。 これは一般的なユースケースを示し、クエリサービスを使用して web およびモバイルのAdobe Analytics データから実用的なインサイトを作成する方法を示しています。
+まだ行っていない場合は、次の [Web およびモバイルインタラクションに関する分析インサイトのドキュメント &#x200B;](./analytics-insights.md) を参照してください。 これは一般的なユースケースを示し、クエリサービスを使用して web およびモバイルのAdobe Analytics データから実用的なインサイトを作成する方法を示しています。

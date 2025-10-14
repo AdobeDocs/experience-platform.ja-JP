@@ -28,7 +28,7 @@ Adobe Experience Platformに取り込まれるデータは、エクスペリエ�
 * [エクスペリエンスデータモデルl（XDM）システム](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md):Experience Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
 * [[!DNL Data Governance]](../../data-governance/home.md):[!DNL Data Governance] を使用して、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保する方法について説明します。
-* [ 属性ベースのアクセス制御 ](../../access-control/abac/overview.md)：属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにするAdobe Experience Platformの機能です。 属性は、アドホックまたは通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
+* [&#x200B; 属性ベースのアクセス制御 &#x200B;](../../access-control/abac/overview.md)：属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにするAdobe Experience Platformの機能です。 属性は、アドホックまたは通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
 
 ## アドホックスキーマの作成
 
@@ -44,11 +44,11 @@ Adobe Experience Platformに取り込まれるデータは、エクスペリエ�
 
 Experience Platform UI でアドホックスキーマの表示を有効にするには、フィルターアイコン（![A フィルターアイコン](/help/images/icons/filter.png)）を選択し、表示される左側のパネルで「**[!UICONTROL &#x200B; アドホックスキーマを表示 &#x200B;]」を選択します。
 
-![ 「アドホックスキーマを表示」切替スイッチが有効になっているスキーマダッシュボードのフィルターオプションの左側のパネル。](../images/data-governance/adhoc-schema-toggle.png)
+![&#x200B; 「アドホックスキーマを表示」切替スイッチが有効になっているスキーマダッシュボードのフィルターオプションの左側のパネル。](../images/data-governance/adhoc-schema-toggle.png)
 
 使用可能なリストから、最近作成したアドホックスキーマの名前を選択します。 アドホックスキーマ構造のビジュアライゼーションが表示されます。
 
-![ アドホックスキーマの構造図の例 ](../images/data-governance/adhoc-schema-structure-diagram.png)
+![&#x200B; アドホックスキーマの構造図の例 &#x200B;](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## ガバナンスラベルの編集
 
@@ -56,27 +56,27 @@ Experience Platform UI でアドホックスキーマの表示を有効にする
 
 ## スキーマまたはフィールドのラベルの編集
 
-スキーマ全体のラベルを編集するには、鉛筆アイコン（![ 鉛筆アイコン。](/help/images/icons/edit.png)）を選択し、[!UICONTROL &#x200B; ラベル &#x200B;] タブのスキーマ名の横に移動します。
+スキーマ全体のラベルを編集するには、鉛筆アイコン（![&#x200B; 鉛筆アイコン。](/help/images/icons/edit.png)）を選択し、[!UICONTROL &#x200B; ラベル &#x200B;] タブのスキーマ名の横に移動します。
 
-![ 鉛筆アイコンがハイライト表示されたスキーマワークスペースのラベル表示。](../images/data-governance/edit-entire-schema-labels.png)
+![&#x200B; 鉛筆アイコンがハイライト表示されたスキーマワークスペースのラベル表示。](../images/data-governance/edit-entire-schema-labels.png)
 
 既存のフィールドにラベルを適用するには、リストから 1 つ以上のフィールドを選択し、右側のサイドバーで [!UICONTROL &#x200B; ガバナンスラベルを編集 &#x200B;] を選択します。
 
-![ 右側のサイドバーで「ガバナンスラベルを編集」オプションがハイライト表示された、スキーマワークスペースのラベルビュー。](../images/data-governance/edit-governance-labels.png)
+![&#x200B; 右側のサイドバーで「ガバナンスラベルを編集」オプションがハイライト表示された、スキーマワークスペースのラベルビュー。](../images/data-governance/edit-governance-labels.png)
 
 ## ラベルを編集ポップオーバー
 
 [!UICONTROL &#x200B; ラベルを編集 &#x200B;] ポップオーバーが表示されます。 この表示では、UI を使用して既存のガバナンスラベルを作成または編集できます。
 
-![ ラベルを編集ポップオーバー。](../images/data-governance/edit-labels-popover.png)
+![&#x200B; ラベルを編集ポップオーバー。](../images/data-governance/edit-labels-popover.png)
 
-[ 選択したスキーマまたはフィールドのラベルを作成または編集 ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) する方法に関するガイダンスのドキュメントを参照してください。
+[&#x200B; 選択したスキーマまたはフィールドのラベルを作成または編集 &#x200B;](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) する方法に関するガイダンスのドキュメントを参照してください。
 
 >[!NOTE]
 >
 >新しいラベルを作成するか、既存のラベルを編集するには、組織の管理者権限が必要です。 管理者権限がない場合は、システム管理者に連絡してアクセス権を手配してください。
 
-ラベルは、権限ワークスペースを使用して作成することもできます。 手順については、[ 権限ワークスペースでのラベルの作成に関するガイド ](../../access-control/abac/ui/labels.md) を参照してください。
+ラベルは、権限ワークスペースを使用して作成することもできます。 手順については、[&#x200B; 権限ワークスペースでのラベルの作成に関するガイド &#x200B;](../../access-control/abac/ui/labels.md) を参照してください。
 
 適切なレベルの属性ベースのアクセス制御が適用されると、ユーザーがアクセスできないデータにアクセスしようとすると、クエリサービスを介して実行されるすべてのクエリに次のシステム動作が適用されます。
 

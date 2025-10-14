@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # [!UICONTROL &#x200B; サポートサイト検索 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; サポートのサイト検索 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 単一の `siteKnowledge.supportSiteSearch` オブジェクトをスキーマに提供し、サポートサイト検索に関する情報を取得します。
+[!UICONTROL &#x200B; サポートのサイト検索 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 単一の `siteKnowledge.supportSiteSearch` オブジェクトをスキーマに提供し、サポートサイト検索に関する情報を取得します。
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json) を参照してください。

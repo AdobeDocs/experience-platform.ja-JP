@@ -54,7 +54,7 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-データの監視および検証方法 [!DNL Experience Platform] ついて詳しくは、[ データフローの監視に関するドキュメント ](./monitor-data-ingestion.md) を参照してください。
+データの監視および検証方法 [!DNL Experience Platform] ついて詳しくは、[&#x200B; データフローの監視に関するドキュメント &#x200B;](./monitor-data-ingestion.md) を参照してください。
 
 ## ID 値の検証
 
@@ -65,4 +65,4 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 | ECID | <ul><li>ECID の ID 値はちょうど 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li></ul> | <ul><li>ECID の ID 値がちょうど 38 文字でない場合、そのレコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、そのレコードはスキップされます。</li></ul> |
 | ECID 以外 | ID 値は 1024 文字を超えることはできません。 | ID 値が 1024 文字を超える場合、そのレコードはスキップされます。 |
 
-[!DNL Identity Service] ガードレールについて詳しくは、[[!DNL Identity Service]  ガードレールの概要 ](../../identity-service/guardrails.md) を参照してください。
+[!DNL Identity Service] ガードレールについて詳しくは、[[!DNL Identity Service]  ガードレールの概要 &#x200B;](../../identity-service/guardrails.md) を参照してください。

@@ -16,23 +16,23 @@ ht-degree: 9%
 
 [!UICONTROL &#x200B; 可用性 &#x200B;] は、項目の可用性データを記述する標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ 可用性データタイプ構造 ](../../../images/healthcare/data-types/availability/availability.png)
+![&#x200B; 可用性データタイプ構造 &#x200B;](../../../images/healthcare/data-types/availability/availability.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL &#x200B; 利用可能時間 &#x200B;] | `availableTime` | オブジェクトの配列 | 項目が使用可能な時間。 詳しくは、[ 以下の節 ](#available-time) を参照してください。 |
-| [!UICONTROL &#x200B; 利用不可の時間 &#x200B;] | `notAvailableTime` | 文字列 | 指定された理由で項目が使用できない時間。 詳しくは、[ 以下の節 ](#not-available-time) を参照してください。 |
+| [!UICONTROL &#x200B; 利用可能時間 &#x200B;] | `availableTime` | オブジェクトの配列 | 項目が使用可能な時間。 詳しくは、[&#x200B; 以下の節 &#x200B;](#available-time) を参照してください。 |
+| [!UICONTROL &#x200B; 利用不可の時間 &#x200B;] | `notAvailableTime` | 文字列 | 指定された理由で項目が使用できない時間。 詳しくは、[&#x200B; 以下の節 &#x200B;](#not-available-time) を参照してください。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.schema.json)
 
 ## `availableTime` {#available-time}
 
 `availableTime` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 使用可能な時間構造 ](../../../images/healthcare/data-types/availability/available-time.png)
+![&#x200B; 使用可能な時間構造 &#x200B;](../../../images/healthcare/data-types/availability/available-time.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ ht-degree: 9%
 
 `notAvailableTime` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 使用できない時間構造 ](../../../images/healthcare/data-types/availability/not-available-time.png)
+![&#x200B; 使用できない時間構造 &#x200B;](../../../images/healthcare/data-types/availability/not-available-time.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

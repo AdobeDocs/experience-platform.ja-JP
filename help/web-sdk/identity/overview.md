@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Web SDKの ID データ
 
-Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
+Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） &#x200B;](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
 
 このドキュメントでは、Web SDKを使用して [!DNL ECIDs] と [!DNL CORE IDs] を管理する方法の概要を説明します。
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） ](.
 
 Web SDKでは、Cookie を使用して [!DNL ECIDs] ーザーの割り当てとトラッキングを行います。この際、これらの Cookie がどのように生成されるかを設定できる複数の手段を使用できます。
 
-Web サイトに新しいユーザーが到達すると、[Adobe Experience Cloud ID サービスは ](../../identity-service/home.md) そのユーザーのデバイス ID Cookie の設定を試みます。
+Web サイトに新しいユーザーが到達すると、[Adobe Experience Cloud ID サービスは &#x200B;](../../identity-service/home.md) そのユーザーのデバイス ID Cookie の設定を試みます。
 
 * 初回の訪問者の場合、[!DNL ECID] が生成され、Experience PlatformEdge Networkからの最初の応答で返されます。
 * 再訪問者の場合、[!DNL ECID] は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie から取得され、Edge Networkによってリクエストペイロードに追加されます。
@@ -29,8 +29,8 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 デバイスの識別に Cookie を使用する場合、Edge Networkを操作するには次の 2 つの方法があります。
 
-1. `adobedc.net` を指す CNAME を独自のドメインに作成します。 このメソッドは、[ ファーストパーティデータ収集 ](#first-party) と呼ばれます。
-1. データをEdge Networkドメイン `adobedc.net` に直接送信します。 この方法は、[ サードパーティのデータ収集 ](#third-party) と呼ばれます。
+1. `adobedc.net` を指す CNAME を独自のドメインに作成します。 このメソッドは、[&#x200B; ファーストパーティデータ収集 &#x200B;](#first-party) と呼ばれます。
+1. データをEdge Networkドメイン `adobedc.net` に直接送信します。 この方法は、[&#x200B; サードパーティのデータ収集 &#x200B;](#third-party) と呼ばれます。
 
 以下の節で説明するように、使用するデータ収集方法は、ブラウザー間の Cookie の有効期間に直接影響します。
 
@@ -38,7 +38,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 サードパーティ cookie を有効にしたGoogle Chromeを使用し、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の cookie が設定されていない場合、最初のEdge Networkリクエストは `demdex.net` ドメインを通過し、demdex cookie が設定されます。 この cookie には [!DNL CORE ID] が含まれています。 これは一意のユーザー ID で、[!DNL ECID] とは異なります。
 
-実装によっては、[ にアクセス  [!DNL CORE ID]](#retrieve-coreid) する必要があります。
+実装によっては、[&#x200B; にアクセス  [!DNL CORE ID]](#retrieve-coreid) する必要があります。
 
 ### ファーストパーティデータ収集 {#first-party}
 
@@ -56,7 +56,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 ### Adobe Experience Cloud アプリケーションへの cookie の有効期間の影響 {#lifespans}
 
-ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/ja/docs/target) または [Offer decisioning&rbrace; を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/ja/docs/target/using/integrate/ajo/offer-decision) 場合があります。
+ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/ja/docs/target) または [Offer decisioning&rbrace; を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/integrate/ajo/offer-decision) 場合があります。
 
 例えば、過去 7 日間にユーザーが 3 回表示した項目を、ホームページに昇格させるパーソナライゼーションエクスペリエンスを作成した場合を考えてみましょう。
 
@@ -70,12 +70,12 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 ユースケースに応じて、[!DNL ECID] にアクセスする方法は 2 つあります。
 
-* [ データ収集用の  [!DNL ECID]  ルーデータ準備の取得 ](#retrieve-ecid-data-prep)：これは、使用する推奨の方法です。
-* [`getIdentity()` コマンドを使用して  [!DNL ECID]  を取得 ](#retrieve-ecid-getidentity)：このメソッドは、クライアントサイドで [!DNL ECID] 情報が必要な場合にのみ使用します。
+* [&#x200B; データ収集用の  [!DNL ECID]  ルーデータ準備の取得 &#x200B;](#retrieve-ecid-data-prep)：これは、使用する推奨の方法です。
+* [`getIdentity()` コマンドを使用して  [!DNL ECID]  を取得 &#x200B;](#retrieve-ecid-getidentity)：このメソッドは、クライアントサイドで [!DNL ECID] 情報が必要な場合にのみ使用します。
 
 ### データ収集のためのデータ準備を使用した [!DNL ECID] ータの取得 {#retrieve-ecid-data-prep}
 
-[ データ収集のためのデータ準備 ](../../datastreams/data-prep.md) を使用して、[!DNL ECID] を [!DNL XDM] フィールドにマッピングします。 [!DNL ECID] にアクセスする場合は、この方法をお勧めします。
+[&#x200B; データ収集のためのデータ準備 &#x200B;](../../datastreams/data-prep.md) を使用して、[!DNL ECID] を [!DNL XDM] フィールドにマッピングします。 [!DNL ECID] にアクセスする場合は、この方法をお勧めします。
 
 それには、ソースフィールドを次のパスに設定します。
 
@@ -92,7 +92,7 @@ xdm.identityMap.ECID[0].id
 
 >[!IMPORTANT]
 >
->クライアント側で ECID が必要な場合は、`getIdentity()` コマンドを使用してのみ [!DNL ECID] を取得する必要があります。 ECID のみを XDM フィールドにマッピングする場合は、代わりに [ データ収集のためのデータ準備 ](#retrieve-ecid-data-prep) を使用します。
+>クライアント側で ECID が必要な場合は、`getIdentity()` コマンドを使用してのみ [!DNL ECID] を取得する必要があります。 ECID のみを XDM フィールドにマッピングする場合は、代わりに [&#x200B; データ収集のためのデータ準備 &#x200B;](#retrieve-ecid-data-prep) を使用します。
 
 現在の訪問者の一意の ECID を取得するには、`getIdentity` コマンドを使用します。 [!DNL ECID] ールをまだもっていない初めての訪問者の場合、このコマンドは新しい [!DNL ECID] を生成します。 `getIdentity` た、訪問者の地域 ID も返します。
 
@@ -126,7 +126,7 @@ alloy("getIdentity",{
 
 ## 使用 `identityMap` {#using-identitymap}
 
-XDM [`identityMap` フィールドを使用すると ](../../xdm/schema/composition.md#identityMap) 複数の ID を使用してデバイスやユーザーを識別し、認証状態を設定し、どの識別子をプライマリと見なすかを決定できます。 識別子を `primary` に設定していない場合、プライマリのデフォルト値は `ECID` になります。
+XDM [`identityMap` フィールドを使用すると &#x200B;](../../xdm/schema/composition.md#identityMap) 複数の ID を使用してデバイスやユーザーを識別し、認証状態を設定し、どの識別子をプライマリと見なすかを決定できます。 識別子を `primary` に設定していない場合、プライマリのデフォルト値は `ECID` になります。
 
 `identityMap` フィールドは、`sentEvent` コマンドを使用して更新されます。
 
@@ -151,7 +151,7 @@ alloy("sendEvent", {
 >Adobeでは、`CRMID` などの人物を表す名前空間をプライマリ ID として送信することをお勧めします。
 
 
-`identityMap` 内の各プロパティは、特定 [ID 名前空間 ](../../identity-service/features/namespaces.md) に属する ID を表します。 プロパティ名は、ID 名前空間の記号である必要があります。この記号は、Adobe Experience Platform ユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されます。 プロパティ値は、その ID 名前空間に関連する ID の配列である必要があります。
+`identityMap` 内の各プロパティは、特定 [ID 名前空間 &#x200B;](../../identity-service/features/namespaces.md) に属する ID を表します。 プロパティ名は、ID 名前空間の記号である必要があります。この記号は、Adobe Experience Platform ユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されます。 プロパティ値は、その ID 名前空間に関連する ID の配列である必要があります。
 
 >[!IMPORTANT]
 >
@@ -165,7 +165,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 | `authenticatedState` | 文字列 | **（必須）** ID の認証状態。 有効な値は `ambiguous`、`authenticated`、および `loggedOut` です。 |
 | `primary` | ブール値 | この ID をプロファイル内のプライマリフラグメントとして使用する必要があるかどうかを決定します。 デフォルトでは、ECID がユーザーのプライマリ ID として設定されます。 省略した場合、この値はデフォルトで `false` になります。 |
 
-`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[!DNL ID Service API] から [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja) メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ja) を参照してください。
+`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[!DNL ID Service API] から [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja) メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ja) を参照してください。
 
 ## 訪問者 API から ECID への移行 {#migrating-visitor-api-ecid}
 
@@ -177,8 +177,8 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 
 ### 移行する特性の更新
 
-XDM 形式のデータをAudience Managerに送信する場合、このデータはマイグレーション時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ja#getting-started-with-bulk-management) を使用すると容易になります。
+XDM 形式のデータをAudience Managerに送信する場合、このデータはマイグレーション時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ja#getting-started-with-bulk-management) を使用すると容易になります。
 
 ## イベント転送での使用
 
-現在 [ イベント転送 ](../../tags/ui/event-forwarding/overview.md) を有効にしており、`appmeasurement.js` と `visitor.js` を使用している場合は、イベント転送機能を有効にしておくことができ、問題は発生しません。 バックエンドでは、AdobeはAAM セグメントを取得し、それらを Analytics への呼び出しに追加します。 Analytics への呼び出しにこれらのセグメントが含まれている場合、Analytics はAudience Managerを呼び出してデータを転送しないため、重複したデータ収集はありません。 また、同じセグメント化エンドポイントがバックエンドで呼び出されるので、web SDKを使用する際に場所のヒントは必要ありません。
+現在 [&#x200B; イベント転送 &#x200B;](../../tags/ui/event-forwarding/overview.md) を有効にしており、`appmeasurement.js` と `visitor.js` を使用している場合は、イベント転送機能を有効にしておくことができ、問題は発生しません。 バックエンドでは、AdobeはAAM セグメントを取得し、それらを Analytics への呼び出しに追加します。 Analytics への呼び出しにこれらのセグメントが含まれている場合、Analytics はAudience Managerを呼び出してデータを転送しないため、重複したデータ収集はありません。 また、同じセグメント化エンドポイントがバックエンドで呼び出されるので、web SDKを使用する際に場所のヒントは必要ありません。

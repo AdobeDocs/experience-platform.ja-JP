@@ -26,7 +26,7 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 * [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
 * [Mailchimp タグ](mailchimp-tags.md)
 * [（API）Oracle Eloqua](oracle-eloqua-api.md)
-* [ （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
+* [&#x200B; （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）Oracle Eloqua](oracle-eloqua.md)
 * [（ファイル）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
@@ -74,7 +74,7 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 その他の宛先では、クラウドストレージの場所にファイルを書き出します。 書き出しが完了したら、クラウドストレージの場所からメールマーケティングの宛先にデータを読み込む必要があります。
 
-各メールマーケティングの宛先に対してオーディエンスをアクティブ化する方法については、[ サポートされているメールマーケティングの宛先 ](#supported-destinations) の節のリンクに従ってください。
+各メールマーケティングの宛先に対してオーディエンスをアクティブ化する方法については、[&#x200B; サポートされているメールマーケティングの宛先 &#x200B;](#supported-destinations) の節のリンクに従ってください。
 
 ## その他のリソース {#additional-resources}
 

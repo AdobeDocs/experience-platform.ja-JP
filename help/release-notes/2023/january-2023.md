@@ -163,7 +163,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 

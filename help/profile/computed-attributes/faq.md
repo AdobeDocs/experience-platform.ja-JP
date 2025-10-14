@@ -15,7 +15,7 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## 計算済み属性にアクセスするにはどうすればよいですか？
 
-計算済み属性にアクセスするには、適切な権限（**計算済み属性を表示** と **計算属性を管理**）が必要です。 必要な権限について詳しくは、[ アクセス制御ドキュメント ](../../access-control/home.md) を参照してください。 これらの権限の適用方法については、[ 権限の管理ガイド ](../../access-control/ui/permissions.md) を参照してください。
+計算済み属性にアクセスするには、適切な権限（**計算済み属性を表示** と **計算属性を管理**）が必要です。 必要な権限について詳しくは、[&#x200B; アクセス制御ドキュメント &#x200B;](../../access-control/home.md) を参照してください。 これらの権限の適用方法については、[&#x200B; 権限の管理ガイド &#x200B;](../../access-control/ui/permissions.md) を参照してください。
 
 ## 計算属性計算に貢献するデータセットはどれですか？
 
@@ -31,7 +31,7 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## 更新頻度は選択できますか？ これはどうやって決まるのですか？
 
-更新頻度は、計算属性のルックバック期間に基づいて自動的に決定されます。 詳しくは、計算属性の概要の [ ルックバック期間 ](./overview.md#lookback-periods) の節を参照してください。
+更新頻度は、計算属性のルックバック期間に基づいて自動的に決定されます。 詳しくは、計算属性の概要の [&#x200B; ルックバック期間 &#x200B;](./overview.md#lookback-periods) の節を参照してください。
 
 ## エクスペリエンスイベントデータの有効期限による計算への影響
 
@@ -77,7 +77,7 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 >[!IMPORTANT]
 >
->これは、高速更新が有効 **な** 場合にのみ当てはまります。 高速更新が有効な場合のルックバック期間の変更方法については、[ 高速更新の節 ](./overview.md#fast-refresh) を参照してください。
+>これは、高速更新が有効 **な** 場合にのみ当てはまります。 高速更新が有効な場合のルックバック期間の変更方法については、[&#x200B; 高速更新の節 &#x200B;](./overview.md#fast-refresh) を参照してください。
 
 **毎週** および **毎月** の更新は、どちらも **暦週** の初め（新週の日曜日）または **暦月** の初め（新月の初め）に行われます。初回評価日から 1 週間または 1 か月とは対照的です。
 
@@ -99,4 +99,4 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## Adobe Journey Optimizerで計算済み属性を使用するにはどうすればよいですか？
 
-ジャーニーで計算済み属性を使用するには、`SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加する必要があります。 Experience Platformデータソースの設定について詳しくは、[Adobe Experience Platform データソースガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=ja) を参照してください。
+ジャーニーで計算済み属性を使用するには、`SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加する必要があります。 Experience Platformデータソースの設定について詳しくは、[Adobe Experience Platform データソースガイド &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=ja) を参照してください。

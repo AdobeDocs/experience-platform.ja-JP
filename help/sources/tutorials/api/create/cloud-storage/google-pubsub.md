@@ -22,14 +22,14 @@ ht-degree: 45%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してExperience Platformに正しく接続するために必要 [!DNL PubSub] 追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL PubSub] アカウントを [!DNL Flow Service] に接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
+[!DNL PubSub] アカウントを [!DNL Flow Service] に接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 &#x200B;](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ ht-degree: 45%
 
 >[!ENDTABS]
 
-これらの値について詳しくは、この [[!DNL PubSub]  認証 ](https://cloud.google.com/pubsub/docs/authentication) ドキュメントを参照してください。 サービスアカウントベースの認証を使用するには、こちらの [[!DNL PubSub]  サービスアカウントの作成に関するガイド ](https://cloud.google.com/docs/authentication/production#create_service_account) で、資格情報の生成手順を確認してください。
+これらの値について詳しくは、この [[!DNL PubSub]  認証 &#x200B;](https://cloud.google.com/pubsub/docs/authentication) ドキュメントを参照してください。 サービスアカウントベースの認証を使用するには、こちらの [[!DNL PubSub]  サービスアカウントの作成に関するガイド &#x200B;](https://cloud.google.com/docs/authentication/production#create_service_account) で、資格情報の生成手順を確認してください。
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ ht-degree: 45%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -76,7 +76,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 
 >[!NOTE]
 >
->[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント ](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
+>[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント &#x200B;](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
 
 **API 形式**
 
@@ -264,4 +264,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[&#x200B; [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。

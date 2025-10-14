@@ -13,21 +13,21 @@ ht-degree: 44%
 
 # API を使用した Azure の顧客管理キーの設定と設定
 
-このドキュメントでは、API を使用してAdobe Experience Platformで顧客管理キー（CMK）を有効にする Azure 固有の手順について説明します。 Azure でホストされるExperience Platform インスタンスの UI を使用したこのプロセスを完了する手順については、[UI CMK 設定ドキュメント ](./ui-set-up.md) を参照してください。
+このドキュメントでは、API を使用してAdobe Experience Platformで顧客管理キー（CMK）を有効にする Azure 固有の手順について説明します。 Azure でホストされるExperience Platform インスタンスの UI を使用したこのプロセスを完了する手順については、[UI CMK 設定ドキュメント &#x200B;](./ui-set-up.md) を参照してください。
 
-AWS固有の手順については、[AWS設定ガイド ](../aws/ui-set-up.md) を参照してください。
+AWS固有の手順については、[AWS設定ガイド &#x200B;](../aws/ui-set-up.md) を参照してください。
 
 ## 前提条件
 
 Adobe Experience Platformの「[!UICONTROL &#x200B; 暗号化 &#x200B;]」セクションを表示および訪問するには、役割を作成し、その役割に [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を割り当てておく必要があります。 [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を持つユーザーは組織で CMK を有効にできます。
 
-Experience Platformでの役割と権限の割り当てについて詳しくは、[ 権限の設定に関するドキュメント ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
+Experience Platformでの役割と権限の割り当てについて詳しくは、[&#x200B; 権限の設定に関するドキュメント &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
 
 Azure でホストされるExperience Platform インスタンスに対して CMK を有効にするには、次の設定を使用して [[!DNL Azure] Key Vault](./azure-key-vault-config.md) を設定する必要があります。
 
 * [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [ ソフト削除を有効にする ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [ 役割ベースのアクセス制御  [!DNL Azure]  使用したアクセスの設定 ](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [&#x200B; ソフト削除を有効にする &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [&#x200B; 役割ベースのアクセス制御  [!DNL Azure]  使用したアクセスの設定 &#x200B;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Key Vault [!DNL Azure]  設定](./azure-key-vault-config.md)
 
 ## CMK アプリのセットアップ {#register-app}
@@ -36,7 +36,7 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 ### はじめに
 
-CMK アプリを登録するには、Experience Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Experience Platform API 認証ガイド ](../../../api-authentication.md) を参照してください。
+CMK アプリを登録するには、Experience Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Experience Platform API 認証ガイド &#x200B;](../../../api-authentication.md) を参照してください。
 
 認証ガイドでは、必要である `x-api-key` リクエストヘッダーに独自の一意の値を生成する方法を説明していますが、このガイドのすべての API 操作では、代わりに、静的な値 `acp_provisioning` が使用されます。ただし、`{ACCESS_TOKEN}` と `{ORG_ID}` には独自の値を指定する必要があります。
 
@@ -72,7 +72,7 @@ curl -X GET \
 
 `applicationRedirectUrl` アドレスをコピーしてブラウザーに貼り付け、認証ダイアログを開きます。**[!DNL Accept]** を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。
 
-![ 「同意する [!UICONTROL &#x200B; がハイライト表示されたMicrosoft権限リクエストダイアログ &#x200B;]](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![&#x200B; 「同意する [!UICONTROL &#x200B; がハイライト表示されたMicrosoft権限リクエストダイアログ &#x200B;]](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### CMK アプリを役割に割り当てます。 {#assign-to-role}
 
@@ -139,7 +139,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 設定の名前。この値は、[ 後の手順 ](#check-status) で設定のステータスを確認する際に必要なため、覚えておいてください。 この値は、大文字と小文字を区別します。 |
+| `name` | 設定の名前。この値は、[&#x200B; 後の手順 &#x200B;](#check-status) で設定のステータスを確認する際に必要なため、覚えておいてください。 この値は、大文字と小文字を区別します。 |
 | `type` | 設定タイプ。 `BYOK_CONFIG` に設定する必要があります。 |
 | `imsOrgId` | 組織 ID。 この ID は、`x-gw-ims-org-id` ヘッダーで指定される値と同じである必要があります。 |
 | `configData` | このプロパティには、設定に関する次の詳細が含まれています。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultKeyIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
@@ -230,4 +230,4 @@ curl -X GET \
 
 上記の手順を完了すると、組織で CMK が正常に有効になります。 Azure でホストされるExperience Platform インスタンスの場合、プライマリデータストアに取り込まれたデータは、[!DNL Azure] Key Vault のキーを使用して暗号化および復号化されるようになりました。
 
-Adobe Experience Platformでのデータ暗号化について詳しくは、[ 暗号化ドキュメント ](../../encryption.md) を参照してください。
+Adobe Experience Platformでのデータ暗号化について詳しくは、[&#x200B; 暗号化ドキュメント &#x200B;](../../encryption.md) を参照してください。

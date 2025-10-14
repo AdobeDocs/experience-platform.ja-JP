@@ -35,7 +35,7 @@ Experience Platform UI 内で宛先ダッシュボードに移動するには、
 >
 >Experience Platform を初めて使用し、アクティブな宛先がまだない組織の場合は、宛先ダッシュボードと「[!UICONTROL 概要]」タブは表示されません。 代わりに、左側のナビゲーションから「[!UICONTROL 宛先]」を選択すると、「[!UICONTROL カタログ]」タブが表示されます。「[!UICONTROL カタログ]」タブについて詳しくは、[[!UICONTROL 宛先]ワークスペースガイド](../../destinations/ui/destinations-workspace.md)を参照してください。
 
-![ 最新のスナップショットが強調表示されたExperience Platform UI の宛先の概要。](../images/destinations/snapshot-timestamp.png)
+![&#x200B; 最新のスナップショットが強調表示されたExperience Platform UI の宛先の概要。](../images/destinations/snapshot-timestamp.png)
 
 ### [!UICONTROL 宛先]ダッシュボードの変更 {#modify}
 
@@ -53,7 +53,7 @@ Experience Platform UI 内で宛先ダッシュボードに移動するには、
 
 ### SQL を表示 {#view-sql}
 
-[!UICONTROL &#x200B; 概要 &#x200B;] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
+[!UICONTROL &#x200B; 概要 &#x200B;] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド &#x200B;](../view-sql.md) を参照してください。
 
 ## デフォルトウィジェット {#default-widgets}
 
@@ -66,7 +66,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >[!NOTE]
 >
 >2023 年 7 月 26 日（PT）の時点で、[!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;] および [!UICONTROL &#x200B; 宛先 &#x200B;] 概要ダッシュボードは、過去 6 か月間にビューを変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みモードにリセットされました。
->&#x200B;>デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[ プロファイル ](./profiles.md#default-widgets) および [ オーディエンス ](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
+>&#x200B;>デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[&#x200B; プロファイル &#x200B;](./profiles.md#default-widgets) および [&#x200B; オーディエンス &#x200B;](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -147,9 +147,9 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 ウィジェットに表示されるリストからオーディエンスの名前を選択すると、オーディエンスの詳細に移動します。 また、「**[!UICONTROL すべて表示]**」を選択して、「[!UICONTROL &#x200B; オーディエンス &#x200B;] [!UICONTROL &#x200B; 参照 &#x200B;]」タブに移動し、詳細を表示するオーディエンスの名前を選択します。
 
-Experience Platformでのオーディエンスの操作について詳しくは、[ セグメント化サービスの概要 ](../../segmentation/home.md) を参照してください。
+Experience Platformでのオーディエンスの操作について詳しくは、[&#x200B; セグメント化サービスの概要 &#x200B;](../../segmentation/home.md) を参照してください。
 
-![ 最近アクティブ化されたオーディエンスウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-audiences.png)
+![&#x200B; 最近アクティブ化されたオーディエンスウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-audiences.png)
 
 ### [!UICONTROL 最近アクティブ化されたオーディエンス（宛先別）] {#recently-activated-audiences-by-destination}
 
@@ -164,9 +164,9 @@ Experience Platformでのオーディエンスの操作について詳しくは�
 
 表示されるリストからオーディエンスの名前を選択すると、オーディエンスの詳細を表示できます。
 
-![ 最近アクティブ化されたオーディエンス（宛先別）ウィジェット ](../images/destinations/recently-activated-audiences-by-destination.png)
+![&#x200B; 最近アクティブ化されたオーディエンス（宛先別）ウィジェット &#x200B;](../images/destinations/recently-activated-audiences-by-destination.png)
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
@@ -200,9 +200,9 @@ Experience Platformでのオーディエンスの操作について詳しくは�
 
 ID 列は、オーディエンス内のソース ID のうち、ウィジェットの ID ドロップダウンで選択された ID にマッピングできるものの数をカウントします。
 
-![ 「マッピングされていないオーディエンス （ID 別）」ウィジェット ](../images/destinations/unmapped-audiences-by-identity.png)
+![&#x200B; 「マッピングされていないオーディエンス （ID 別）」ウィジェット &#x200B;](../images/destinations/unmapped-audiences-by-identity.png)
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ### [!UICONTROL マッピングされたオーディエンス（ID 別）] {#mapped-audiences-by-identity}
 
@@ -213,7 +213,7 @@ ID 列は、オーディエンス内のソース ID のうち、ウィジェッ�
 
 このウィジェットは、**マッピングされた**&#x200B;オーディエンスの上位 5 つのリストを表示します。リストは、オーディエンス内に含まれるソース ID の数に従って、多い順に並べられます。カウントされる宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットのドロップダウンから選択できる宛先 ID は、概要ダッシュボードの上部で選択した宛先アカウントフィルターに従って変わります。
 
-![ 「マッピングされたオーディエンス （ID 別）」ウィジェット ](../images/destinations/mapped-audiences-by-identity.png)
+![&#x200B; 「マッピングされたオーディエンス （ID 別）」ウィジェット &#x200B;](../images/destinations/mapped-audiences-by-identity.png)
 
 **[!UICONTROL ID 別にマッピングされたオーディエンス]** ウィジェットには、選択した宛先内のキャンペーンについて、プロファイルの商談のターゲティングが成功する可能性が一目でわかるようにハイライト表示されます。 効率的なターゲットキャンペーンは、宛先に送信されるプロファイルの数ではなく、宛先 ID と適合してアクションにつながる有用なデータを提供する可能性のあるソース ID の数によって決まります。
 
@@ -294,9 +294,9 @@ ID 列は、オーディエンス内のソース ID のうち、ウィジェッ�
 
 ![「すべての宛先のアクティブ化されたオーディエンス」ウィジェット](../images/destinations/activated-audiences-across-all-destinations.png)
 
-「**[!UICONTROL オーディエンス]**」を選択して、宛先の「[!UICONTROL 参照]」タブに移動します。このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。「[[!UICONTROL &#x200B; 参照 &#x200B;] タブについて詳しくは、ドキュメントを参照してください ](../../destinations/ui/destinations-workspace.md#browse)。
+「**[!UICONTROL オーディエンス]**」を選択して、宛先の「[!UICONTROL 参照]」タブに移動します。このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。「[[!UICONTROL &#x200B; 参照 &#x200B;] タブについて詳しくは、ドキュメントを参照してください &#x200B;](../../destinations/ui/destinations-workspace.md#browse)。
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ### [!UICONTROL アクティブ化されたオーディエンス] {#activated-audiences}
 
@@ -310,7 +310,7 @@ ID 列は、オーディエンス内のソース ID のうち、ウィジェッ�
 
 このウィジェットを使用すると、アクティブ化されたオーディエンスの数に基づいて宛先の価値を一目で把握できます。 また、より詳細な情報に容易にアクセスできるので、さらに分析を進めることもできます。
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ## 次の手順
 

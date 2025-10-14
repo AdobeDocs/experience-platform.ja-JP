@@ -21,7 +21,7 @@ ht-degree: 35%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一のExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一のExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Square] ています。
 
@@ -38,11 +38,11 @@ ht-degree: 35%
 | `refreshToken` | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは [!DNL Square] から取得できます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Square] の接続仕様 ID は `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` です。 |
 
-これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
+これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント &#x200B;](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Square] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用した支払い申請の調査 ](../../explore/payments.md) 方法を説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Square] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用した支払い申請の調査 &#x200B;](../../explore/payments.md) 方法を説明します。

@@ -13,7 +13,7 @@ ht-degree: 9%
 
 [!UICONTROL &#x200B; カテゴリデータ &#x200B;] は、製品のカテゴリに関連する情報を記述する標準の Experience Data Model （XDM）データタイプです。
 
-![ カテゴリデータタイプの図。](../images/data-types/category-data.png)
+![&#x200B; カテゴリデータタイプの図。](../images/data-types/category-data.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-----------------|--------------------|-----------|------------------------------------------|
@@ -25,5 +25,5 @@ ht-degree: 9%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)

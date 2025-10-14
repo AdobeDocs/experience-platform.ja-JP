@@ -18,12 +18,12 @@ Adobe Experience Platform web SDKを使用すると、Experience Platform Edge N
 
 Analytics のサーバーサイドログは、データストリーム設定で Analytics が有効になっている場合に有効になります。
 
-![Analytics データストリーム設定が有効 ](../assets/enable-analytics-datastream.png)
+![Analytics データストリーム設定が有効 &#x200B;](../assets/enable-analytics-datastream.png)
 
 次の図は、サーバーサイド Analytics ログが有効な場合のシステム内でのデータのフローを示しています。
 
-![ サーバーサイドログフロー ](../assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイドログフロー &#x200B;](../assets/analytics-server-side-logging.png)
 
 ## 次の手順
 
-このガイドでは、Web SDKでの A4T データのサーバーサイドログについて説明しました。 クライアントサイドでの A4T データの処理方法について詳しくは、[ クライアントサイドログ ](./client-side.md) に関するガイドを参照してください。
+このガイドでは、Web SDKでの A4T データのサーバーサイドログについて説明しました。 クライアントサイドでの A4T データの処理方法について詳しくは、[&#x200B; クライアントサイドログ &#x200B;](./client-side.md) に関するガイドを参照してください。

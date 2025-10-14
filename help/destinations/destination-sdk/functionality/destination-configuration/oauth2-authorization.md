@@ -12,7 +12,7 @@ ht-degree: 78%
 
 # OAuth 2 認証
 
-Destination SDKでは、宛先に対して、複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク ](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
+Destination SDKでは、宛先に対して、複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク &#x200B;](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
 
 ここでは、宛先でサポートされている様々な OAuth 2 認証フローについて説明し、Destination SDKの OAuth 2 認証を設定する手順を示します。
 
@@ -55,7 +55,7 @@ Destination SDKでは、宛先に対して、複数の認証方式をサポー�
 
 ### Destination SDK で行う必要があること {#to-do-in-destination-sdk}
 
-Experience Platformで宛先用に OAuth 2 認証を設定するには、`customerAuthenticationConfigurations` パラメーターの [ 宛先設定 ](../../authoring-api/destination-configuration/create-destination-configuration.md) に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
+Experience Platformで宛先用に OAuth 2 認証を設定するには、`customerAuthenticationConfigurations` パラメーターの [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
 
 ## サポートされる OAuth 2 付与タイプ {#oauth2-grant-types}
 
@@ -93,7 +93,7 @@ Adobeが OAuth 2 認証用に設計したシステム：
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -142,7 +142,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 >
 > 以下の設定の `username` および `password` に対して、任意のパラメーターを追加する必要はありません。宛先設定で `"grant": "OAUTH2_PASSWORD"` を追加すると、システムは、宛先を認証する際に、ユーザーに Experience Platform UI でユーザー名およびパスワードを指定することをリクエストします。
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -180,7 +180,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {

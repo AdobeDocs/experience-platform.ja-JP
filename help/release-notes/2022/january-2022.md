@@ -35,7 +35,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 | 新しいアラートルール | データの取り込み、ID、プロファイル、セグメント化、アクティブ化に関連するワークフローで、いくつかの新しいアラートルールが使用できるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 | ソースデータフローのコンテキスト内アラート | 登録して、取り込みワークフロー中のデータフローのステータスに関するアラートメッセージを受け取れるようになりました。詳しくは、[UI でのソースアラートの購読](../../sources/tutorials/ui/alerts.md)でのガイドを参照してください。 |
 
-Experience Platformのアラートについて詳しくは、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。
+Experience Platformのアラートについて詳しくは、[&#x200B; アラートの概要 &#x200B;](../../observability/alerts/overview.md) を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 同じページと次のページのパーソナライゼーション | この [ 同じページと次のページのパーソナライゼーション機能 ](../../destinations/ui/activate-edge-personalization-destinations.md) は、マーケティングチャネルと顧客チャネルの一貫性を保つために、Edge Network上のアプリケーションのユーザーを共有し、ターゲティング可能なビューで表示します。 このパーソナライゼーションは、[Adobe Target 接続](../../destinations/catalog/personalization/adobe-target-connection.md)そして[カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md)を通じて使用することができます。同じページまたは次のページのパーソナライゼーションキャンペーンを設定するには、[専用チュートリアル](../../destinations/ui/activate-edge-personalization-destinations.md)を参照してください。 |
+| 同じページと次のページのパーソナライゼーション | この [&#x200B; 同じページと次のページのパーソナライゼーション機能 &#x200B;](../../destinations/ui/activate-edge-personalization-destinations.md) は、マーケティングチャネルと顧客チャネルの一貫性を保つために、Edge Network上のアプリケーションのユーザーを共有し、ターゲティング可能なビューで表示します。 このパーソナライゼーションは、[Adobe Target 接続](../../destinations/catalog/personalization/adobe-target-connection.md)そして[カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md)を通じて使用することができます。同じページまたは次のページのパーソナライゼーションキャンペーンを設定するには、[専用チュートリアル](../../destinations/ui/activate-edge-personalization-destinations.md)を参照してください。 |
 | バッチ宛先の監視とセグメントレベルの指標 | 宛先の監視機能がストリーミングの宛先から拡張され、アクティベーションデータフローのバッチ宛先とセグメントレベルの指標も含まれるようになりました。 詳しくは、[宛先ダッシュボードの監視](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)、[セグメントジョブダッシュボードの監視](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)および[セグメントレベル表示](/help/dataflows/ui/monitor-destinations.md#segment-level-view)を参照してください。 |
 | UI での既存のバッチアクティベーションデータフロー編集のスケジュール設定 | このリリースでは、既存のアクティベーションデータフローのスケジュールをバッチ保存先に編集するオプションが導入されています。 詳しくは、[プロファイルの宛先を一括でアクティブ化する](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。 |
 | Marketo 宛先の強化機能 | Marketo Engage を使用する Experience Platform ユーザーは、[Marketo 宛先コネクタ](/help/destinations/catalog/adobe/marketo-engage.md)を介して新規担当者レコードを Experience Platform から Marketo Engage にプッシュする新機能を使用して、Marketo データベースを最大化できます。<br> オーディエンスセグメントを Experience Platform から Marketo Engage に送信する際に、Marketo Engage データベースにまだ存在しないセグメント内の人物をデータベースに自動的に追加できます。 詳しくは、[Adobe Experience Platform セグメントを Marketo 静的リストにプッシュ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja)を参照してください（チュートリアルの手順 9 では、新規担当者レコードを Marketo にプッシュする方法を説明します）。 |

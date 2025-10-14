@@ -25,7 +25,7 @@ Adobe Experience Platform内のダッシュボードは、Experience Platform �
 
 ダッシュボードのダウンロードを開始するには、ダウンロードするダッシュボード（例えば、 [!UICONTROL プロファイル] ダッシュボード）に移動し、ダッシュボードの右上隅にあるその他のオプションメニュー（**`...`**）を選択します。次に、「**[!UICONTROL ダウンロード]**」を選択します。
 
-![ 省略記号と「ダウンロード」ドロップダウンがハイライト表示されたExperience Platform プロファイルダッシュボード。](images/download/download-button.png)
+![&#x200B; 省略記号と「ダウンロード」ドロップダウンがハイライト表示されたExperience Platform プロファイルダッシュボード。](images/download/download-button.png)
 
 ## PDF のプレビュー
 
@@ -33,11 +33,11 @@ Adobe Experience Platform内のダッシュボードは、Experience Platform �
 
 印刷メニューを使用すると、保存する PDF をプレビューできます。 PDFは、Experience Platform UI に表示されるダッシュボードウィジェットを忠実に表現したものです。PDFのサイズは、現在表示されているすべてのダッシュボードウィジェットを 1 ページに表示するように自動的に調整されます。
 
-![ 印刷オプションパネルを右に配置した、単一ページ形式で表示されるプロファイルの概要 ](images/download/download-chrome-print.png)
+![&#x200B; 印刷オプションパネルを右に配置した、単一ページ形式で表示されるプロファイルの概要 &#x200B;](images/download/download-chrome-print.png)
 
 PDF には、Experience Platform のロゴ、ダッシュボードの名前、ユーザー名、ダッシュボードがダウンロードされた日時を含む、自動生成されたヘッダーが含まれています。 この情報は読み取り専用で、PDF では編集できません。
 
-![ 自動生成されたヘッダーがハイライト表示された印刷プレビューのクローズアップ。](images/download/download-pdf.png)
+![&#x200B; 自動生成されたヘッダーがハイライト表示された印刷プレビューのクローズアップ。](images/download/download-pdf.png)
 
 ## PDF として保存
 
@@ -47,7 +47,7 @@ PDF のプレビュー後、「**保存**」を選択して、PDF の保存先�
 >
 >必要に応じて、「**宛先**」ドロップダウンを使用して「**PDF として保存**」を選択できます（そのオプションが自動的に選択されていない場合）。
 
-![ 宛先ドロップダウンの「PDFとして保存」印刷オプションがハイライト表示された、単一ページ形式で表示されるプロファイルの概要。](images/download/download-chrome-print-destination.png)
+![&#x200B; 宛先ドロップダウンの「PDFとして保存」印刷オプションがハイライト表示された、単一ページ形式で表示されるプロファイルの概要。](images/download/download-chrome-print-destination.png)
 
 ## ダッシュボードの PDF のカスタマイズ
 
@@ -55,11 +55,11 @@ PDF のプレビュー後、「**保存**」を選択して、PDF の保存先�
 
 例えば、プロファイルダッシュボードの外観を変更して、3 つの標準ウィジェットの上に、いくつかの全幅ウィジェットを含めることができます。
 
-![ 細長いウィジェットを示すプロファイルダッシュボードが表示されます。](images/download/download-modify.png)
+![&#x200B; 細長いウィジェットを示すプロファイルダッシュボードが表示されます。](images/download/download-modify.png)
 
 更新されたダッシュボードをダウンロードするように選択すると、カスタマイズされたプロファイルダッシュボードの外観に合った新しい PDF プレビューが表示されます。 また、表示されるすべてのウィジェットが 1 ページの PDF に含まれるように、PDF のサイズが自動的に調整されます。
 
-![ 印刷オプションパネルを右に配置した、単一ページ形式で表示されるプロファイルの概要 ](images/download/download-chrome-print-modified.png)
+![&#x200B; 印刷オプションパネルを右に配置した、単一ページ形式で表示されるプロファイルの概要 &#x200B;](images/download/download-chrome-print-modified.png)
 
 ダッシュボードのカスタマイズの詳細については、まず [ダッシュボードのカスタマイズの概要](customize/overview.md) を参照してください。
 

@@ -12,7 +12,7 @@ ht-degree: 6%
 
 [!UICONTROL &#x200B; 外部Source システム監査詳細 &#x200B;] は、標準のエクスペリエンスデータモデル（XDM）フィールドグループで、プロパティを参照し、コンテキストメタデータを追加することで、コアの「外部Source システム監査属性」データタイプを拡張します。 これにより、詳細な監査トラッキングと、外部ソースからの柔軟なデータ統合が可能になります。
 
-![ 外部Source システム監査詳細フィールドグループのスキーマ図。](../../images/field-groups/shared/external-source-system-audit-details.png)
+![&#x200B; 外部Source システム監査詳細フィールドグループのスキーマ図。](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
@@ -22,4 +22,4 @@ ht-degree: 6%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)

@@ -25,29 +25,29 @@ Postmanは、API 開発のコラボレーションプラットフォームで、
 
 ## Postman コレクション {#collections}
 
-使用可能なすべてのPostman コレクションを含んだフォルダーは、[Experience Platform Postman サンプル GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) にアクセスすることで見つけることができます。 または、Adobe I/Oの [API リファレンスドキュメント ](https://www.adobe.com/go/platform-api-reference-en) に、個々の Swagger ファイルにPostman コレクションリンクが記載されています。
+使用可能なすべてのPostman コレクションを含んだフォルダーは、[Experience Platform Postman サンプル GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) にアクセスすることで見つけることができます。 または、Adobe I/Oの [API リファレンスドキュメント &#x200B;](https://www.adobe.com/go/platform-api-reference-en) に、個々の Swagger ファイルにPostman コレクションリンクが記載されています。
 
 Postman コレクションをダウンロードするには、GitHub ページの **[!DNL Raw]** を選択して、生の JSON ファイルを新しいタブに読み込みます。 次に、右クリックして「**[!DNL Save as]**」を選択し、選択したローカルの保存先にファイルを保存します。
 
-![ 生の JSON](./images/api-guide/raw-collection.PNG)
+![&#x200B; 生の JSON](./images/api-guide/raw-collection.PNG)
 
 ## Postman コレクションの読み込み {#import}
 
-[Postman コレクション ](#collections) を利用するには、環境を設定する必要があります。 環境の設定が完了したら、右上隅の **[!DNL Manage Environments]** セレクターを選択します。
+[Postman コレクション &#x200B;](#collections) を利用するには、環境を設定する必要があります。 環境の設定が完了したら、右上隅の **[!DNL Manage Environments]** セレクターを選択します。
 
-![ 環境セレクターを管理 ](./images/api-guide/environment-selector.png)
+![&#x200B; 環境セレクターを管理 &#x200B;](./images/api-guide/environment-selector.png)
 
 ポップオーバーが表示され、現在の環境がすべて表示されます。 コレクションを読み込むには、「**[!DNL import]**」を選択します。
 
-![ 読み込みボタン ](./images/api-guide/import-collection.png)
+![&#x200B; 読み込みボタン &#x200B;](./images/api-guide/import-collection.png)
 
 読み込むファイルを選択するよう求められます。 読み込むPostman コレクションファイルを選択します。 選択すると、コレクションが「コレクション」タブの左パネルに表示されます。
 
-![ 入力されたコレクション ](./images/api-guide/imported-collection.png)
+![&#x200B; 入力されたコレクション &#x200B;](./images/api-guide/imported-collection.png)
 
-各コレクションには、CRUD 操作を正常に実行するために必要になる可能性のある異なるキーと値のペアがあります。 必要な値、ヒント、例については、サービスの [API 開発者ガイド ](api-guide.md#api-guides) を参照してください。
+各コレクションには、CRUD 操作を正常に実行するために必要になる可能性のある異なるキーと値のペアがあります。 必要な値、ヒント、例については、サービスの [API 開発者ガイド &#x200B;](api-guide.md#api-guides) を参照してください。
 
-Postman UI と使用可能な機能について詳しくは、[Postman ドキュメント ](https://learning.postman.com/docs/getting-started/navigating-postman/) を参照してください。
+Postman UI と使用可能な機能について詳しくは、[Postman ドキュメント &#x200B;](https://learning.postman.com/docs/getting-started/navigating-postman/) を参照してください。
 
 ### 実稼動以外で使用するためのPostmanによるアクセストークンの生成
 
@@ -55,10 +55,10 @@ Postman UI と使用可能な機能について詳しくは、[Postman ドキュ
 >
 >Identity Management サービス（IMS）のPostman コレクションで説明されているように、表記されている生成方法は **実稼動以外での使用** に適しています。 ローカル署名は、サードパーティホストからJavaScript ライブラリを読み込み、リモート署名は、Adobeが所有および運用する web サービスに秘密鍵を送信します。 Adobeはこの秘密鍵を保存しませんが、実稼働キーは誰とも共有しないでください。
 
-以下のビデオでは、[Identity Management サービス（IMS）のPostman コレクションを使用しています。このコレクションは ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 公開されている GitHub リポジトリからダウンロードできます。
+以下のビデオでは、[Identity Management サービス（IMS）のPostman コレクションを使用しています。このコレクションは &#x200B;](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 公開されている GitHub リポジトリからダウンロードできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34080/?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 
-このドキュメントでは、Postman環境、コレクションおよびコレクションの読み込み方法を紹介しました。 Postmanの準備が整ったら、[Experience Platform入門ガイドにアクセスして、必要なヘッダー、例 ](api-guide.md) および各Experience Platform サービスで使用可能な [API ガイド ](api-guide.md#api-guides) のリストを確認してください。
+このドキュメントでは、Postman環境、コレクションおよびコレクションの読み込み方法を紹介しました。 Postmanの準備が整ったら、[Experience Platform入門ガイドにアクセスして、必要なヘッダー、例 &#x200B;](api-guide.md) および各Experience Platform サービスで使用可能な [API ガイド &#x200B;](api-guide.md#api-guides) のリストを確認してください。

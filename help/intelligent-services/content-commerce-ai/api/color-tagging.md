@@ -32,7 +32,7 @@ ht-degree: 6%
 
 このドキュメントに示す例では、次の画像が使用されました。
 
-![ テスト画像 ](../images/QQAsset1.jpg)
+![&#x200B; テスト画像 &#x200B;](../images/QQAsset1.jpg)
 
 **API 形式**
 

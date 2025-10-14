@@ -22,11 +22,11 @@ ht-degree: 19%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL MariaDB] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
+既に [!DNL MariaDB] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL MariaDB]  概要 ](../../../../connectors/databases/mariadb.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL MariaDB]  概要 &#x200B;](../../../../connectors/databases/mariadb.md#prerequisites) を参照してください。
 
 ## ソースカタログのナビゲート
 
@@ -38,13 +38,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![MariaDB カードが選択された UI のソースカタログ ](../../../../images/tutorials/create/maria-db/catalog.png)
+![MariaDB カードが選択された UI のソースカタログ &#x200B;](../../../../images/tutorials/create/maria-db/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL MariaDB] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/maria-db/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/maria-db/existing.png)
 
 ## 新しいアカウントを作成 {#create}
 
@@ -52,7 +52,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/maria-db/new.png)
+![&#x200B; アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/maria-db/new.png)
 
 ### Experience Platformへの接続
 
@@ -62,16 +62,16 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  アカウントキー認証 ]
 
-アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[ 接続文字列 ](../../../../connectors/databases/mariadb.md#azure)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[&#x200B; 接続文字列 &#x200B;](../../../../connectors/databases/mariadb.md#azure)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
 
-![ 「アカウントキー認証」が選択されたソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/account-key.png)
+![&#x200B; 「アカウントキー認証」が選択されたソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/maria-db/account-key.png)
 
 >[!TAB  基本認証 ]
 
-基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[ 認証資格情報 ](../../../../connectors/databases/mariadb.md#azure) の値を入力して「**[!UICONTROL ソースに接続]**」を選択します。
+基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[&#x200B; 認証資格情報 &#x200B;](../../../../connectors/databases/mariadb.md#azure) の値を入力して「**[!UICONTROL ソースに接続]**」を選択します。
 
-![ ソースワークフローで「基本認証」が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
+![&#x200B; ソースワークフローで「基本認証」が選択された新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
 
-このチュートリアルでは、[!DNL MariaDB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL MariaDB] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/databases.md) を行いましょう。

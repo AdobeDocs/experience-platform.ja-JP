@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Real-Time CDP Insights データモデル B2B edition
 
-B2B editionのReal-Time CDP Insights データモデルは、[ アカウントプロファイル ](https://experienceleague.adobe.com/ja/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
+B2B editionのReal-Time CDP Insights データモデルは、[&#x200B; アカウントプロファイル &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
 
 >[!AVAILABILITY]
 >
->この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、利用可能な [Real-Time CDP エディション ](../../rtcdp/overview.md#rtcdp-editions) のドキュメントを参照するか、Adobe担当者にお問い合わせください。
+>この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、利用可能な [Real-Time CDP エディション &#x200B;](../../rtcdp/overview.md#rtcdp-editions) のドキュメントを参照するか、Adobe担当者にお問い合わせください。
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## 前提条件
 
-このガイドでは、カスタムダッシュボードに関する十分な知識が必要です。 このガイドに進む前に、[ カスタムダッシュボードの作成方法 ](../standard-dashboards.md) に関するドキュメントを参照してください。
+このガイドでは、カスタムダッシュボードに関する十分な知識が必要です。 このガイドに進む前に、[&#x200B; カスタムダッシュボードの作成方法 &#x200B;](../standard-dashboards.md) に関するドキュメントを参照してください。
 
 ## Real-Time CDP B2B インサイトレポートとユースケース {#B2B-insight-reports-and-use-cases}
 
@@ -48,11 +48,11 @@ Real-Time CDP B2B レポートは、アカウントプロファイルデータ�
 
 次の図は、各データセット内の関連データフィールド、データタイプおよびデータセットをリンクする外部キーを示しています。
 
-![ アカウントプロファイルモデルのエンティティ関係図。](../images/data-models/account-profile-model.png)
+![&#x200B; アカウントプロファイルモデルのエンティティ関係図。](../images/data-models/account-profile-model.png)
 
 #### 業界のユースケース別の新しいアカウント {#accounts-by-industry}
 
-[!UICONTROL &#x200B; 業界別の新規アカウント &#x200B;] インサイトに使用されるロジックは、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 詳しくは、[[!UICONTROL &#x200B; 業界別の新しいアカウント &#x200B;] ウィジェットのドキュメント ](../guides/account-profiles.md#accounts-by-industry) を参照してください。
+[!UICONTROL &#x200B; 業界別の新規アカウント &#x200B;] インサイトに使用されるロジックは、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 詳しくは、[[!UICONTROL &#x200B; 業界別の新しいアカウント &#x200B;] ウィジェットのドキュメント &#x200B;](../guides/account-profiles.md#accounts-by-industry) を参照してください。
 
 >[!TIP]
 >
@@ -97,7 +97,7 @@ LIMIT 5000;
 
 #### タイプ別の新規アカウントのユースケース {#accounts-by-type}
 
-[!UICONTROL &#x200B; タイプ別の新規口座 &#x200B;] インサイトで使用されるロジックは、タイプ別の口座の数値分類を返します。 このインサイトは、リソース割り当てやマーケティング戦略など、ビジネス戦略と運用のガイドにするのに役立ちます。 詳しくは、[[!UICONTROL &#x200B; タイプ別の新しいアカウント &#x200B;] ウィジェットのドキュメント ](../guides/account-profiles.md#accounts-by-type) を参照してください。
+[!UICONTROL &#x200B; タイプ別の新規口座 &#x200B;] インサイトで使用されるロジックは、タイプ別の口座の数値分類を返します。 このインサイトは、リソース割り当てやマーケティング戦略など、ビジネス戦略と運用のガイドにするのに役立ちます。 詳しくは、[[!UICONTROL &#x200B; タイプ別の新しいアカウント &#x200B;] ウィジェットのドキュメント &#x200B;](../guides/account-profiles.md#accounts-by-type) を参照してください。
 
 [!UICONTROL &#x200B; タイプ別の新しいアカウント &#x200B;] インサイトを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -132,4 +132,4 @@ LIMIT  5000;
 
 次の図は、各データセット内の関連データフィールドを示しています。
 
-![ 商談モデルのエンティティ関係図。](../images/data-models/opportunity-model.png)
+![&#x200B; 商談モデルのエンティティ関係図。](../images/data-models/opportunity-model.png)

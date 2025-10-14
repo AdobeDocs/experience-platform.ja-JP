@@ -47,7 +47,7 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 2. **CDP または Connection SKU**：クライアントサイドとサーバーサイドのシームレスな通信を可能にするには、Adobe Customer Data Platform （CDP）PrimeまたはUltimate SKU、または Connection SKU が必要です。
 
 3. **Adobe Experience Platform Edge Networkの設定**:
-   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[ イベント転送の概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
+   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[&#x200B; イベント転送の概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
    * この手順は、Adform のサーバーサイドエンドポイントにデータを効率的に送信するために重要です。
 
 これらの前提条件が満たされたら、引き続き [!DNL Adform] 拡張機能の設定とデプロイを行うことができます。
@@ -115,4 +115,4 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 
 ## 次の手順
 
-これで、Adform とAdobeのサーバーサイド機能との統合方法を理解し、既存のインフラストラクチャ内での統合の実現可能性を評価できるようになりました。 詳しくは、[Adform の公式ドキュメント ](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) を参照してください。
+これで、Adform とAdobeのサーバーサイド機能との統合方法を理解し、既存のインフラストラクチャ内での統合の実現可能性を評価できるようになりました。 詳しくは、[Adform の公式ドキュメント &#x200B;](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) を参照してください。

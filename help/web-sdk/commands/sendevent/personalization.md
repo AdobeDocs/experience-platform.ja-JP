@@ -13,7 +13,7 @@ ht-degree: 0%
 
 `personalization` オブジェクトには、ユーザーに応じてユーザーエクスペリエンスをカスタマイズできるプロパティがいくつか含まれています。 ユーザーごとに表示されるコンテンツをカスタマイズできる原動力になるので、Adobe TargetまたはAdobe Journey Optimizerの実装で特に価値があります。
 
-詳しくは、パーソナライズされたコンテンツの [ レンダリング ](../../personalization/rendering-personalization-content.md) 方法に関するドキュメントを参照してください。
+詳しくは、パーソナライズされたコンテンツの [&#x200B; レンダリング &#x200B;](../../personalization/rendering-personalization-content.md) 方法に関するドキュメントを参照してください。
 
 <!--
 ## Properties within this object

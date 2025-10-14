@@ -39,7 +39,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `servicePrincipalId` | [!DNL Data Explorer] データベースへの接続に使用する一意のサービスプリンシパル ID。 |
 | `servicePrincipalKey` | [!DNL Data Explorer] データベースへの接続に使用する一意のサービスプリンシパルキー。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL Data Explorer]  を参照してください ](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL Data Explorer]  を参照してください &#x200B;](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
 
 ## [!DNL Azure Data Explorer] アカウントの接続
 
@@ -59,7 +59,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL Data Explorer] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/data-explorer/new.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/data-explorer/new.png)
 
 ### 既存のアカウント
 
@@ -69,4 +69,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Explorer] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Data Explorer] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

@@ -257,11 +257,11 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 
 API を動的に呼び出し、応答を使用してドロップダウンメニューのオプションを動的に入力する場合は、動的ドロップダウンセレクターを使用できます。
 
-動的ドロップダウンセレクターは、UI の [ 通常のドロップダウンセレクター ](#dropdown-selectors) と同じように見えます。 唯一の違いは、値が API から動的に取得される点です。
+動的ドロップダウンセレクターは、UI の [&#x200B; 通常のドロップダウンセレクター &#x200B;](#dropdown-selectors) と同じように見えます。 唯一の違いは、値が API から動的に取得される点です。
 
 動的ドロップダウンセレクターを作成するには、次の 2 つのコンポーネントを設定する必要があります。
 
-**手順 1.以下に示すように、動的 API 呼び出し用の `responseFields` テンプレートを使用して [ 宛先サーバーを作成 ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) する** 要があります。
+**手順 1.以下に示すように、動的 API 呼び出し用の `responseFields` テンプレートを使用して [&#x200B; 宛先サーバーを作成 &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) する** 要があります。
 
 ```json
 {
@@ -338,7 +338,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 ]
 ```
 
-`destinationServerId` パラメーターを、手順 1 で作成した宛先サーバーの ID に設定します。 宛先サーバー ID は、[ 宛先サーバー設定の取得 ](../../authoring-api/destination-server/retrieve-destination-server.md) API 呼び出しの応答で確認できます。
+`destinationServerId` パラメーターを、手順 1 で作成した宛先サーバーの ID に設定します。 宛先サーバー ID は、[&#x200B; 宛先サーバー設定の取得 &#x200B;](../../authoring-api/destination-server/retrieve-destination-server.md) API 呼び出しの応答で確認できます。
 
 ## ネストされた顧客データフィールドの作成 {#nested-fields}
 
@@ -350,7 +350,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 
 >[!TIP]
 >
->2024 年 4 月のリリース以降、ネストされたフィールドに `isRequired` パラメーターを設定できるようになりました。 例えば、以下の設定スニペットでは、ネストされた最初の 2 つのフィールドが必須としてマークされており（ハイライト表示された行 xxx）、ユーザーはフィールドの値を選択しない限り続行できません。 必須フィールドについて詳しくは、[ サポートされるパラメーター ](#supported-parameters) の節を参照してください。
+>2024 年 4 月のリリース以降、ネストされたフィールドに `isRequired` パラメーターを設定できるようになりました。 例えば、以下の設定スニペットでは、ネストされた最初の 2 つのフィールドが必須としてマークされており（ハイライト表示された行 xxx）、ユーザーはフィールドの値を選択しない限り続行できません。 必須フィールドについて詳しくは、[&#x200B; サポートされるパラメーター &#x200B;](#supported-parameters) の節を参照してください。
 
 ```json {line-numbers="true" highlight="11,20"}
     {

@@ -28,7 +28,7 @@ ht-degree: 56%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Experience Platform] API を呼び出すには、まず [ 認証チュートリアル ](../../landing/api-authentication.md) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず [&#x200B; 認証チュートリアル &#x200B;](../../landing/api-authentication.md) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -61,7 +61,7 @@ ht-degree: 56%
 - `GET /batches`：組織内のバッチのリストを返します
 - `GET /dataSetFiles`：組織内のファイルのリストを返します
 
-[!DNL Catalog] API のエンドポイントの包括的なリストについては、[API リファレンス ](https://developer.adobe.com/experience-platform-apis/references/catalog/) を参照してください。
+[!DNL Catalog] API のエンドポイントの包括的なリストについては、[API リファレンス &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) を参照してください。
 
 ## 組織でバッチのリストを取得する
 

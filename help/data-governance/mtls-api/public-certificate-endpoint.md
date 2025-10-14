@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## はじめに
 
-続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーとサンプル API 呼び出しの解釈方法に関する重要な詳細を確認してください。
+続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーとサンプル API 呼び出しの解釈方法に関する重要な詳細を確認してください。
 
 ## API パス {#paths}
 
@@ -118,10 +118,10 @@ Adobeは、公開 mTLS 証明書のライフサイクルを自動化して、継
 
 >[!NOTE]
 >
->これらのタイムラインは、証明書の有効期間を最大 47 日に短縮することを目的とした [CA/B フォーラムガイドライン ](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) に従って、時間の経過と共に短縮されます。
+>これらのタイムラインは、証明書の有効期間を最大 47 日に短縮することを目的とした [CA/B フォーラムガイドライン &#x200B;](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) に従って、時間の経過と共に短縮されます。
 
 API を使用した自動取得をサポートするには、統合を更新する必要があります。 手動での証明書のダウンロードや静的コピーは、証明書の有効期限が切れたり失効したりする可能性があるので、信頼しないでください。
 
 ## 次の手順
 
-API を使用して公開証明書を取得した後、統合を更新し、証明書の有効期限が切れる前に、このエンドポイントを定期的に呼び出します。 この呼び出しをインタラクティブにテストするには、[MTLS API リファレンスページ ](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) を参照してください。 証明書ベースの統合に関するより幅広いガイダンスについては、[Adobe Experience Platformでのデータ暗号化の概要 ](../../landing/governance-privacy-security/encryption.md) または [ データガバナンスの概要 ](../home.md) を参照してください。
+API を使用して公開証明書を取得した後、統合を更新し、証明書の有効期限が切れる前に、このエンドポイントを定期的に呼び出します。 この呼び出しをインタラクティブにテストするには、[MTLS API リファレンスページ &#x200B;](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) を参照してください。 証明書ベースの統合に関するより幅広いガイダンスについては、[Adobe Experience Platformでのデータ暗号化の概要 &#x200B;](../../landing/governance-privacy-security/encryption.md) または [&#x200B; データガバナンスの概要 &#x200B;](../home.md) を参照してください。

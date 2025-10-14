@@ -26,7 +26,7 @@ ht-degree: 4%
 
 事前ビルドバージョンは CDN で使用できます。 CDN のライブラリをページで直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小形式と非縮小形式で利用できます。 デバッグの目的では、非縮小バージョンが役立ちます。
 
-詳しくは [JavaScript ライブラリを使用した web SDKのインストール ](/help/web-sdk/install/library.md) を参照してください。
+詳しくは [JavaScript ライブラリを使用した web SDKのインストール &#x200B;](/help/web-sdk/install/library.md) を参照してください。
 
 ## ライブラリの設定
 
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ja) を参照してください。
+`applyOffers` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ja) を参照してください。
 
 
 ### Web SDKの使用
@@ -453,7 +453,7 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions` コマンドについて詳しくは、[ 専用ドキュメント ](../../personalization/rendering-personalization-content.md#applypropositions) を参照してください。
+`applyPropositions` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](../../personalization/rendering-personalization-content.md#applypropositions) を参照してください。
 
 ## イベントの追跡方法
 
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## レスポンストークンの活用方法
 
-Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
 ### at.js の使用
 
@@ -871,14 +871,14 @@ adobe.target.getOffers({
 }
 ```
 
-`tnta`Data Insertion API[ を使用して、Analytics ペイロード（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) トークン）を Analytics ヒットに含める必要があります。
+`tnta`Data Insertion API[&#x200B; を使用して、Analytics ペイロード（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) トークン）を Analytics ヒットに含める必要があります。
 
 #### Analytics サーバーサイドログ
 
 Analytics サーバーサイドログは、at.js 設定で `analyticsLogging: server_side` を設定するか、`window.targetglobalSettings` オブジェクトを上書きすることで有効にできます。
 その後、データは次のようにフローします。
 
-![Analytics サーバーサイドログのワークフローを示す図 ](assets/a4t-server-side-atjs.png)
+![Analytics サーバーサイドログのワークフローを示す図 &#x200B;](assets/a4t-server-side-atjs.png)
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
 
@@ -893,9 +893,9 @@ Web SDKは、次の項目もサポートしています。
 
 Analytics クライアントサイドログは、その DataStream 設定に対してAdobe Analyticsが無効になっている場合に有効になります。
 
-![Analytics クライアントサイドログのワークフローを示す図 ](assets/analytics-disabled-datastream-config.png)
+![Analytics クライアントサイドログのワークフローを示す図 &#x200B;](assets/analytics-disabled-datastream-config.png)
 
-顧客は、`tnta`Data Insertion API[ を使用して Analytics と共有する必要がある Analytics トークン（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)）にアクセスできます
+顧客は、`tnta`Data Insertion API[&#x200B; を使用して Analytics と共有する必要がある Analytics トークン（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)）にアクセスできます
 `sendEvent` コマンドを連結してで、結果として得られる提案配列を繰り返し処理します。
 
 **例**
@@ -931,7 +931,7 @@ alloy("sendEvent", {
 
 次の図は、Analytics クライアントサイドが有効な場合のデータフローを示しています。
 
-![Analytics クライアントサイドログのデータフロー図 ](assets/analytics-client-side-logging.png)
+![Analytics クライアントサイドログのデータフロー図 &#x200B;](assets/analytics-client-side-logging.png)
 
 #### Analytics サーバーサイドログ
 
@@ -944,7 +944,7 @@ alloy("sendEvent", {
 
 サーバーサイド分析ログが有効な場合のシステムへのデータのフローは次のとおりです。
 
-![ サーバーサイド分析ログのデータフローを示す図 ](assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイド分析ログのデータフローを示す図 &#x200B;](assets/analytics-server-side-logging.png)
 
 ## Target のグローバル設定方法
 
@@ -1154,7 +1154,7 @@ Web SDKは、Target サードパーティ ID をサポートしています。 �
 
 1. データストリーム設定ページで Target サードパーティ ID を含む名前空間を設定します。
 
-![ 「ターゲットサードパーティ ID 名前空間」フィールドを示すデータストリーム UI](assets/mbox-3-party-id-setup.png)
+![&#x200B; 「ターゲットサードパーティ ID 名前空間」フィールドを示すデータストリーム UI](assets/mbox-3-party-id-setup.png)
 
 1. 次のように、sendEvent コマンドごとに、その ID 名前空間を送信します。
 
@@ -1249,7 +1249,7 @@ At.js は、次のデバッグ機能を公開します。
 * mbox のデバッグ - at.js はすべてのアクションをログに記録します
 * Target Trace - Bullseye で生成された mbox トレーストークンを使用すると、決定プロセスに関与した詳細を含むトレースオブジェクトをオブジェクトの下で使用でき `window.___target_trace` す。
 
-注意：これらのデバッグ機能はすべて、[Adobe Experience Platform Debuggerの機能強化で利用でき ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
+注意：これらのデバッグ機能はすべて、[Adobe Experience Platform Debuggerの機能強化で利用でき &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
 
 ### Web SDKの使用
 
@@ -1257,6 +1257,6 @@ Web SDKを使用する場合、複数のデバッグ機能があります。
 
 * [Assurance](/help/assurance/home.md) の使用
 * [Web SDKのデバッグが有効](/help/web-sdk/use-cases/debugging.md)
-* [Web SDK モニタリングフック ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
+* [Web SDK モニタリングフック &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
 * [Adobe Experience Platform Debugger](/help/debugger/home.md) の使用
 * ターゲット トレース

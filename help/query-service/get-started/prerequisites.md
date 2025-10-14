@@ -14,9 +14,9 @@ ht-degree: 3%
 
 組織がAdobe Experience Platformのプロビジョニングが完了すると、管理者から [!DNL Query Service] へのアクセス権を付与できるようになります。 ただし、[!DNL Query Service] が提供するすべての機能を利用する前に、まずデータをAdobe Experience Platformに取り込む必要があります。
 
-この [ データ取り込みのチュートリアルビデオ ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) では、データセットの作成、データセットとスキーマのマッピング、データセットへのデータの追加および取り込みの確認に関する概要を説明します。 [ 取り込みの概要ドキュメント ](../../ingestion/home.md) にはこれを補完する機能があり、より詳細な情報や他の学習リソースへのリンクを提供しています。
+この [&#x200B; データ取り込みのチュートリアルビデオ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) では、データセットの作成、データセットとスキーマのマッピング、データセットへのデータの追加および取り込みの確認に関する概要を説明します。 [&#x200B; 取り込みの概要ドキュメント &#x200B;](../../ingestion/home.md) にはこれを補完する機能があり、より詳細な情報や他の学習リソースへのリンクを提供しています。
 
-データをAdobe Experience Platformに取り込んだら、[[!DNL Query Editor] Experience Platform UI の ](../ui/user-guide.md) または [[!DNL Query Service] API](../api/getting-started.md) を使用して [!DNL Query Service] の操作を開始できます。 これらの各ツールの使用方法に関する完全なドキュメントは、それぞれのセクションに記載されています。
+データをAdobe Experience Platformに取り込んだら、[[!DNL Query Editor] Experience Platform UI の &#x200B;](../ui/user-guide.md) または [[!DNL Query Service] API](../api/getting-started.md) を使用して [!DNL Query Service] の操作を開始できます。 これらの各ツールの使用方法に関する完全なドキュメントは、それぞれのセクションに記載されています。
 
 ## 次の手順
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 - [クエリサービスの SQL 構文](../sql/syntax.md)
 - [SQL を使用した派生データセットの作成](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[ 放棄された参照のユースケースのプレゼンテーション ](../use-cases/abandoned-browse.md#video-example) をご覧ください。
+また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[&#x200B; 放棄された参照のユースケースのプレゼンテーション &#x200B;](../use-cases/abandoned-browse.md#video-example) をご覧ください。
 
 [!DNL Query Service] の理解を深めるために、次のリソースが役立ちます。
 

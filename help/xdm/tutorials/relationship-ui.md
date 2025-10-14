@@ -35,21 +35,21 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->ソースおよび宛先スキーマの両方が同じクラスに属する場合は、専用の関係フィールドを **使用しない** でください。 この場合は、和集合スキーマ UI を使用して関係を確認します。 これを行う方法については、結合スキーマ UI ガイドの [ 関係を表示 ](../../profile/ui/union-schema.md#view-relationships) の節を参照してください。
+>ソースおよび宛先スキーマの両方が同じクラスに属する場合は、専用の関係フィールドを **使用しない** でください。 この場合は、和集合スキーマ UI を使用して関係を確認します。 これを行う方法については、結合スキーマ UI ガイドの [&#x200B; 関係を表示 &#x200B;](../../profile/ui/union-schema.md#view-relationships) の節を参照してください。
 
 このドキュメントでは、[!DNL Experience Platform] ユーザーインターフェイスのスキーマエディターを使用して、2 つのスキーマ間の関係を定義するチュートリアルを提供します。 API を使用してスキーマ関係を定義する手順については、[スキーマレジストリ API を使用した関係の定義](relationship-api.md)についてのチュートリアルを参照してください。
 
 >[!NOTE]
 >
->Adobe Real-Time Customer Data Platform B2B editionで多対 1 の関係を作成する手順については、[B2B の関係の作成 ](./relationship-b2b.md) に関するガイドを参照してください。
+>Adobe Real-Time Customer Data Platform B2B editionで多対 1 の関係を作成する手順については、[B2B の関係の作成 &#x200B;](./relationship-b2b.md) に関するガイドを参照してください。
 
 ## はじめに
 
 このチュートリアルでは、[!DNL Experience Platform] UI の [!DNL XDM System] とスキーマエディターに関する十分な知識が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience Platformの XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
+* [Experience Platformの XDM システム &#x200B;](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
-* [ を使用したスキーマの作成  [!DNL Schema Editor]](create-schema-ui.md)：ス [!DNL Schema Editor] ーマの操作の基本を説明するチュートリアル。
+* [&#x200B; を使用したスキーマの作成  [!DNL Schema Editor]](create-schema-ui.md)：ス [!DNL Schema Editor] ーマの操作の基本を説明するチュートリアル。
 
 ## ソースおよび参照スキーマの定義
 
@@ -57,7 +57,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->関係を確立するには、両方のスキーマにプライマリ ID が定義され、[!DNL Real-Time Customer Profile] が有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成チュートリアルの [ プロファイルで使用するスキーマの有効化 ](./create-schema-ui.md#profile) に関する節を参照してください。
+>関係を確立するには、両方のスキーマにプライマリ ID が定義され、[!DNL Real-Time Customer Profile] が有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成チュートリアルの [&#x200B; プロファイルで使用するスキーマの有効化 &#x200B;](./create-schema-ui.md#profile) に関する節を参照してください。
 
 スキーマ関係は、**参照スキーマ** 内の別のフィールドを指す **ソーススキーマ** 内の専用フィールドで表されます。 以下の手順では、「[!DNL Loyalty Members]」がソーススキーマになり、「[!DNL Hotels]」が参照スキーマとして機能します。
 
@@ -73,11 +73,11 @@ ht-degree: 21%
 
 参照スキーマ「[!DNL Hotels]」は、カスタム「[!DNL Hotels]」クラスに基づいており、ホテルを説明するフィールドを含んでいます。 関係に参加するには、参照スキーマにプライマリ ID も定義され、[!UICONTROL &#x200B; プロファイル &#x200B;] に対して有効になっている必要があります。 この場合、は `_tenantId.hotelId` カスタムの「[!DNL Hotel ID]」 ID 名前空間を使用して、スキーマのプライマリ ID として機能します。
 
-![ プロファイルに対して有効にする ](../images/tutorials/relationship/hotels.png)
+![&#x200B; プロファイルに対して有効にする &#x200B;](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->カスタム ID 名前空間の作成方法については、[ID サービスドキュメント ](../../identity-service/features/namespaces.md#manage-namespaces) を参照してください。
+>カスタム ID 名前空間の作成方法については、[ID サービスドキュメント &#x200B;](../../identity-service/features/namespaces.md#manage-namespaces) を参照してください。
 
 ## 関係フィールドグループの作成
 
@@ -113,15 +113,15 @@ ht-degree: 21%
 
 キャンバスで「`preferredHotel`」フィールドを選択し、**[!UICONTROL フィールドプロパティ]** サイドバーで **[!UICONTROL 関係を追加]** を選択します。
 
-![ フィールドプロパティのサイドバーで「関係を追加」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/add-relationship.png)
+![&#x200B; フィールドプロパティのサイドバーで「関係を追加」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/add-relationship.png)
 
 [!UICONTROL &#x200B; 関係を追加 &#x200B;] ダイアログが表示されます。 このダイアログから、関係フィールドを設定するために必要なパラメーターを設定できます。 Real-Time CDP B2C ユーザーの場合は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を **のみ** 設定できます。
 
 >[!NOTE]
 >
->Real-Time CDP B2B editionにアクセスできる場合は、キャンバスの右側のパネルのコントロールを使用して関係フィールドを定義したり、[ 同じダイアログ ](./relationship-b2b.md#relationship-field) を使用して多対 1 の関係を構築したりできます。
+>Real-Time CDP B2B editionにアクセスできる場合は、キャンバスの右側のパネルのコントロールを使用して関係フィールドを定義したり、[&#x200B; 同じダイアログ &#x200B;](./relationship-b2b.md#relationship-field) を使用して多対 1 の関係を構築したりできます。
 
-![ 関係を追加ダイアログ ](../images/tutorials/relationship/add-relationship-dialog.png)
+![&#x200B; 関係を追加ダイアログ &#x200B;](../images/tutorials/relationship/add-relationship-dialog.png)
 
 **[!UICONTROL 参照スキーマ]** のドロップダウンを使用し、関係の参照スキーマを選択します（この例では「[!DNL Hotels]」）。
 
@@ -131,27 +131,27 @@ ht-degree: 21%
 
 参照スキーマの ID 名前空間（この場合は「[!DNL Hotel ID]」）は、**[!UICONTROL 参照 ID 名前空間]** の下に自動的に入力されます。 終了したら「**[!UICONTROL 適用]**」を選択します。
 
-![ 関係パラメーターが設定され、「適用」がハイライト表示された関係を追加ダイアログ ](../images/tutorials/relationship/apply-relationship.png)
+![&#x200B; 関係パラメーターが設定され、「適用」がハイライト表示された関係を追加ダイアログ &#x200B;](../images/tutorials/relationship/apply-relationship.png)
 
 キャンバスで「`preferredHotel`」フィールドが関係としてハイライト表示され、参照スキーマの名前が表示されるようになりました。 「**[!UICONTROL 保存]**」を選択して変更を保存し、ワークフローを完了します。
 
-![ 関係参照と「保存」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship/relationship-save.png)
+![&#x200B; 関係参照と「保存」がハイライト表示されたスキーマエディター &#x200B;](../images/tutorials/relationship/relationship-save.png)
 
 ### 既存の関係フィールドを編集 {#edit-relationship}
 
 参照スキーマを変更するには、既存の関係を持つフィールドを選択し、**[!UICONTROL フィールドプロパティ]** サイドバーで **[!UICONTROL 関係を編集]** を選択します。
 
-![ 「関係を編集」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/edit-relationship.png)
+![&#x200B; 「関係を編集」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/edit-relationship.png)
 
-[!UICONTROL &#x200B; 関係を編集 &#x200B;] ダイアログが表示されます。 ここから、[ 関係フィールドの定義 ](#relationship-field) で説明されているプロセスに従うか、関係を削除できます。 「**[!UICONTROL 関係を削除]**」を選択して、参照スキーマへの関係を削除します。
+[!UICONTROL &#x200B; 関係を編集 &#x200B;] ダイアログが表示されます。 ここから、[&#x200B; 関係フィールドの定義 &#x200B;](#relationship-field) で説明されているプロセスに従うか、関係を削除できます。 「**[!UICONTROL 関係を削除]**」を選択して、参照スキーマへの関係を削除します。
 
-![ 関係を編集ダイアログ ](../images/tutorials/relationship/edit-relationship-dialog.png)
+![&#x200B; 関係を編集ダイアログ &#x200B;](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## 関係のフィルタリングと検索 {#filter-and-search}
 
-[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; 関係 &#x200B;]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
+[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; 関係 &#x200B;]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[&#x200B; スキーマリソースの調査 &#x200B;](../ui/explore.md#lookup) に関するドキュメントを参照してください。
 
-![ スキーマ ワークスペースの「関係」タブ ](../images/tutorials/relationship-b2b/relationship-tab.png)
+![&#x200B; スキーマ ワークスペースの「関係」タブ &#x200B;](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 次の手順
 

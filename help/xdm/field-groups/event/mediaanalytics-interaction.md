@@ -11,9 +11,9 @@ ht-degree: 2%
 
 # [!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 このフィールドグループを使用すると、様々なプラットフォームやチャネルをまたいでメディアコンテンツとのインタラクションを包括的に監視および分析する、強化されたデータフィールドをキャプチャできます。
+[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 このフィールドグループを使用すると、様々なプラットフォームやチャネルをまたいでメディアコンテンツとのインタラクションを包括的に監視および分析する、強化されたデータフィールドをキャプチャできます。
 
-![MediaAnalytics インタラクションの詳細 [!UICONTROL &#x200B; スキーマフィールドグループ &#x200B;] スキーマ図 ](../../images/field-groups/mediaanalytics-interaction.png)
+![MediaAnalytics インタラクションの詳細 [!UICONTROL &#x200B; スキーマフィールドグループ &#x200B;] スキーマ図 &#x200B;](../../images/field-groups/mediaanalytics-interaction.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |---| --- | --- | --- |
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] フィールドグループのフィールドのみを参照します。 Experience Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=ja#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
+>Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] フィールドグループのフィールドのみを参照します。 Experience Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 &#x200B;](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=ja#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
 
 <!-- 
 >[!NOTE]

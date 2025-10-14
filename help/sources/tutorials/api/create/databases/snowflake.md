@@ -16,7 +16,7 @@ ht-degree: 18%
 >
 >Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Snowflake] ソースを利用できます。
 
-[!DNL Snowflake]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+[!DNL Snowflake]API[[!DNL Flow Service]  を使用して &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -27,19 +27,19 @@ ht-degree: 18%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 次の節では、[!DNL Snowflake] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Flow Service] す。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Snowflake]  概要 ](../../../../connectors/databases/snowflake.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL Snowflake]  概要 &#x200B;](../../../../connectors/databases/snowflake.md#prerequisites) を参照してください。
 
 ## [!DNL Snowflake] を Azure 上のExperience Platformに接続 {#azure}
 
 >[!WARNING]
 >
->[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
 
 [!DNL Snowflake] ソースを Azure 上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
@@ -368,5 +368,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Snowflake] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

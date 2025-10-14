@@ -17,7 +17,7 @@ ht-degree: 15%
 >
 >* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
->* [[!DNL Marketo Engage]  標準アクティビティ ](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Marketo Engage]  標準アクティビティ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
@@ -33,7 +33,7 @@ ht-degree: 15%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
 
 ## ソースデータをフィルター {#filter-source-data}
 
@@ -407,7 +407,7 @@ curl -X POST \
 
 ## [!DNL Marketo Engage] のアクティビティエンティティのフィルタリング {#filter-for-marketo}
 
-[[!DNL Marketo Engage]  ソースコネクタ ](../../connectors/adobe-applications/marketo/marketo.md) を使用する場合、行レベルのフィルタリングを使用して、アクティビティエンティティをフィルタリングできます。 現在、フィルターできるのは、アクティビティエンティティと標準アクティビティタイプのみです。 カスタムアクティビティは、引き続き [[!DNL Marketo]  フィールドマッピング ](../../connectors/adobe-applications/mapping/marketo.md) で管理されます。
+[[!DNL Marketo Engage]  ソースコネクタ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md) を使用する場合、行レベルのフィルタリングを使用して、アクティビティエンティティをフィルタリングできます。 現在、フィルターできるのは、アクティビティエンティティと標準アクティビティタイプのみです。 カスタムアクティビティは、引き続き [[!DNL Marketo]  フィールドマッピング &#x200B;](../../connectors/adobe-applications/mapping/marketo.md) で管理されます。
 
 ### [!DNL Marketo] 標準アクティビティタイプ {#marketo-standard-activity-types}
 
@@ -448,7 +448,7 @@ curl -X POST \
 
 ### ドラフトデータフローの作成
 
-まず、[[!DNL Marketo]  データフロー ](../ui/create/adobe-applications/marketo.md) を作成し、ドラフトとして保存します。 ドラフトデータフローの作成方法に関する詳細な手順については、次のドキュメントを参照してください。
+まず、[[!DNL Marketo]  データフロー &#x200B;](../ui/create/adobe-applications/marketo.md) を作成し、ドラフトとして保存します。 ドラフトデータフローの作成方法に関する詳細な手順については、次のドキュメントを参照してください。
 
 * [UI を使用したデータフローのドラフトでの保存](../ui/draft.md)
 * [API を使用したデータフローのドラフトでの保存](../api/draft.md)

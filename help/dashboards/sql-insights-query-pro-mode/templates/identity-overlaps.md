@@ -14,9 +14,9 @@ ht-degree: 1%
 
 ## オーディエンスのフィルタリング {#filter-audiences}
 
-カスタムフィルターを使用して、特定のオーディエンスや ID タイプのターゲット分析を行い、提示されたデータが分析目標に確実に合致するようにします。 分析を開始するには、フィルターアイコン（![ フィルターアイコン。](../../../images/icons/filter-icon-white.png)）を選択します。
+カスタムフィルターを使用して、特定のオーディエンスや ID タイプのターゲット分析を行い、提示されたデータが分析目標に確実に合致するようにします。 分析を開始するには、フィルターアイコン（![&#x200B; フィルターアイコン。](../../../images/icons/filter-icon-white.png)）を選択します。
 
-![ フィルターアイコンがハイライト表示されたオーディエンス ID の重複ダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filter-icon.png)
+![&#x200B; フィルターアイコンがハイライト表示されたオーディエンス ID の重複ダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filter-icon.png)
 
 **[!UICONTROL フィルター]** ダイアログが表示されます。 このビューから、グローバルフィルターを選択して、比較するオーディエンス、結合ポリシーおよび ID を設定します。 各セクションのドロップダウンメニューから分析用の設定を選択します
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 3. 比較する **[!UICONTROL ID A]** と **[!UICONTROL ID B]** を選択します&#x200B;**：比較する 2 つの ID タイプを選択します。 例では、**&#x200B;ID A **&#x200B; は「crmId」として選択され、**&#x200B;ID B** は「メール」として選択されます。
 4. **日付範囲の設定**:「今日」などの事前定義済みの範囲を選択するか、カレンダーフィールドを使用して開始日と終了日を手動で設定します。
 
-![ オーディエンス ID 重複ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
+![&#x200B; オーディエンス ID 重複ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
 
 >[!TIP]
 >
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 フィルターを選択したら、「**[!UICONTROL 適用]**」を選択してダッシュボードを更新します。
 
-![ 「適用」がハイライト表示された、オーディエンス ID 重複ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
+![&#x200B; 「適用」がハイライト表示された、オーディエンス ID 重複ダッシュボードのフィルターダイアログ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
 
 ## 使用可能なダッシュボードインサイト {#available-insights}
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 | **[!UICONTROL 重複数]** | 両方の ID が存在するプロファイルの数。 この指標は、オーディエンス内の ID の重複の程度に関するインサイトを提供します。 この情報は、複数の ID が統合プロファイルにどのように効果的に解決されているかを評価するために重要です。これにより、ターゲティングとパーソナライゼーション戦略を改善できます。 |
 | **[!UICONTROL Id A カウント]** | **ID A** を含む、選択したオーディエンスのプロファイルの合計数。 この情報を使用して、オーディエンス内のプライマリ ID タイプの普及率を理解し、重複分析でのその役割を評価します。 |
 
-![ オーディエンス ID 重複ダッシュボードの「オーディエンス ID 重複」テーブル ](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-chart.png)
+![&#x200B; オーディエンス ID 重複ダッシュボードの「オーディエンス ID 重複」テーブル &#x200B;](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-chart.png)
 
 ### ID の分類 {#identity-breakdown}
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 >
 >列にカーソルを合わせると、各 ID タイプのプロファイルの個人数が表示されます。
 
-![ID 分類グラフ ](../../images/sql-insights-query-pro-mode/templates/identity-breakdown-chart.png)
+![ID 分類グラフ &#x200B;](../../images/sql-insights-query-pro-mode/templates/identity-breakdown-chart.png)
 
 ### オーディエンス Id のトレンド {#audience-identity-trends}
 
@@ -70,17 +70,17 @@ ht-degree: 1%
 >
 >グラフの日付にポインタを合わせると、特定の日付におけるオーディエンスの ID の合計数が表示されます。
 
-![ オーディエンス ID のトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-trends-chart.png)
+![&#x200B; オーディエンス ID のトレンドグラフ。](../../images/sql-insights-query-pro-mode/templates/audience-identity-trends-chart.png)
 
 ## インサイトの書き出し {#export-insights}
 
 ID の重複を分析した後、オフラインでの分析やレポート用にデータを書き出すことができます。 データを書き出すには、テーブルの右上にある **[!UICONTROL 書き出し]** を選択します。 印刷PDFダイアログが表示され、視覚化されたデータをPDFとして保存したり印刷したりできます。
 
-![ 書き出しがハイライト表示されたオーディエンス ID の重複ダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
+![&#x200B; 書き出しがハイライト表示されたオーディエンス ID の重複ダッシュボード。](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
 
 **オーディエンス ID の重複** ダッシュボードは、選択したオーディエンス間で様々な ID がどのように交差するかについての重要なインサイトを提供します。 これらのインサイトを活用することで、ID ステッチ戦略を調整し、冗長性を軽減し、オーディエンスのセグメント化をより正確かつ効果的にします。
 
 ## 次の手順
 
-このドキュメントでは、**オーディエンス ID の重複** ダッシュボードを使用して、選択したオーディエンスの ID の重複に関する貴重なインサイトを得る方法を説明しました。 オーディエンスのセグメント化と ID 管理の理解をさらに深めるには、包括的なインサイトを提供する他の Data Distiller テンプレートを参照します。 ターゲット設定とエンゲージメントの戦略を引き続き改善するには、[ オーディエンスの傾向 ](./trends.md)、[ オーディエンス比較 ](./comparison.md) および [ 高度なオーディエンスの重複 ](./overlaps.md) の UI ガイドを参照してください。
+このドキュメントでは、**オーディエンス ID の重複** ダッシュボードを使用して、選択したオーディエンスの ID の重複に関する貴重なインサイトを得る方法を説明しました。 オーディエンスのセグメント化と ID 管理の理解をさらに深めるには、包括的なインサイトを提供する他の Data Distiller テンプレートを参照します。 ターゲット設定とエンゲージメントの戦略を引き続き改善するには、[&#x200B; オーディエンスの傾向 &#x200B;](./trends.md)、[&#x200B; オーディエンス比較 &#x200B;](./comparison.md) および [&#x200B; 高度なオーディエンスの重複 &#x200B;](./overlaps.md) の UI ガイドを参照してください。
 

@@ -20,13 +20,13 @@ Adobe Real-Time CDP オーディエンスは、2 つの方法で Magnite スト�
 
 1. オーディエンスを 1 日 1 回だけ配信する必要がある場合や、1 日に 1 回だけ配信する必要がある場合は、Magnite:Batch 宛先を使用できます。この宛先は、毎日の S3 バッチファイル配信を通じてオーディエンスを Magnite ストリーミングに配信します。 これらのバッチオーディエンスは、リアルタイムオーディエンスとは異なり、Magnite プラットフォームに無期限に保存されます。リアルタイムオーディエンスは数日しか保存されません。
 
-2. ただし、オーディエンスをより頻繁に配信する（または配信する）必要がある場合は、[Magnite リアルタイム ](/help/destinations/catalog/advertising/magnite-streaming.md) 宛先を使用する必要があります。 リアルタイムの宛先を使用する場合、Magnite Streaming はリアルタイムでオーディエンスを受け取りますが、Magnite はリアルタイムのオーディエンスをプラットフォームに一時的に保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite Real-Time 宛先を使用する場合は、Magnite:Batch 宛先 *リアルタイム宛先に対して有効化する各オーディエンス* また、Batch 宛先に対して有効化する必要があります。
+2. ただし、オーディエンスをより頻繁に配信する（または配信する）必要がある場合は、[Magnite リアルタイム &#x200B;](/help/destinations/catalog/advertising/magnite-streaming.md) 宛先を使用する必要があります。 リアルタイムの宛先を使用する場合、Magnite Streaming はリアルタイムでオーディエンスを受け取りますが、Magnite はリアルタイムのオーディエンスをプラットフォームに一時的に保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite Real-Time 宛先を使用する場合は、Magnite:Batch 宛先 *リアルタイム宛先に対して有効化する各オーディエンス* また、Batch 宛先に対して有効化する必要があります。
 
 まとめると、Adobe Real-Time CDP オーディエンスを 1 日に 1 回だけ配信する場合は、Magnite:Batch 宛先のみを使用し、オーディエンスは 1 日に 1 回配信されます。 Adobe Real-Time CDP オーディエンスをリアルタイムで配信する場合は、*両方* Magnite:Batch 宛先および Magnite Real-Time 宛先を使用します。 詳しくは、Magnite：ストリーミングをご覧ください。
 
 
 Magnite：バッチの宛先、その宛先への接続方法およびバッチの宛先に対してAdobe Real-Time CDP オーディエンスをアクティブ化する方法について詳しくは、以下のドキュメントを引き続き参照してください。
-リアルタイムの宛先について詳しくは、代わりに [ このドキュメントページ ](magnite-streaming.md) を参照してください。
+リアルタイムの宛先について詳しくは、代わりに [&#x200B; このドキュメントページ &#x200B;](magnite-streaming.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -72,7 +72,7 @@ Magnite：バッチ宛先は、Adobe CDP から *任意* ID ソースを受け�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ Magnite：バッチ宛先は、Adobe CDP から *任意* ID ソースを受け�
 | 項目 | タイプ | メモ |
 |-----------------------------|----------|----------|
 | 書き出しタイプ | オーディエンスのエクスポート | Magnite：バッチ宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | バッチ | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、バッチ [ ファイルベースの宛先 ](/help/destinations/destination-types.md) を参照してください。 |
+| 書き出し頻度 | バッチ | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、バッチ [&#x200B; ファイルベースの宛先 &#x200B;](/help/destinations/destination-types.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 新しいアカウントを作成し、初めて宛先に認証するには、必要な「S3 アクセスキー」および「S3 シークレットキー」フィールド（アカウントマネージャーを通じて提供）に入力し、「宛先に接続 **[!UICONTROL を選択し]** す。
 
-![ 宛先設定認証フィールドが未入力 ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
+![&#x200B; 宛先設定認証フィールドが未入力 &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 >[!NOTE]
 >
->会社名は、Magnite で設定し、[ 宛先への認証 ](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
+>会社名は、Magnite で設定し、[&#x200B; 宛先への認証 &#x200B;](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
 
-![ 宛先設定認証フィールドに値が入力されています ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![&#x200B; 宛先設定認証フィールドに値が入力されています &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 次の画面、「ガバナンスポリシーと実施アクション （オプション）」では、関連するデータガバナンスポリシーをオプションで選択できます。 「データの書き出し」は、通常、Magnite：バッチ宛先に対して選択されます。
 
-![ オプションのガバナンスポリシーと実施アクション ](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![&#x200B; オプションのガバナンスポリシーと実施アクション &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
 選択したら、「**[!UICONTROL 作成]**」を選択します。このオプションの画面をスキップする場合は、
 
@@ -142,18 +142,18 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
 「**[!UICONTROL Source]**」フィールドでは、デバイスの任意の属性や ID を選択することができます。 この例では、「DeviceId」というカスタム IdentityMap を選択しました
-![ 目的のデータフィールドを device_id フィールドにマッピングする ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+![&#x200B; 目的のデータフィールドを device_id フィールドにマッピングする &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 **[!UICONTROL ターゲットフィールド]** で以下を実行します。
-![ 適切なデバイスタイプのターゲット ID を選択し ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) す。詳しくは、[ サポートされる ID](#supported-identities) を参照してください。
+![&#x200B; 適切なデバイスタイプのターゲット ID を選択し &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) す。詳しくは、[&#x200B; サポートされる ID](#supported-identities) を参照してください。
 この例では、&lbrace;2&#x200B;**[!UICONTROL Target フィールド]** がカスタム IdentityMap:DeviceID として定義されているので、&lbrace;Source フィールド **:magnite_deviceId_CUSTOM を選択しています。**
 
 >[!NOTE]
@@ -187,4 +187,4 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 ## その他のリソース {#additional-resources}
 
-その他のヘルプドキュメントについては、[Magnite ヘルプセンター ](https://help.magnite.com/help) を参照してください。
+その他のヘルプドキュメントについては、[Magnite ヘルプセンター &#x200B;](https://help.magnite.com/help) を参照してください。

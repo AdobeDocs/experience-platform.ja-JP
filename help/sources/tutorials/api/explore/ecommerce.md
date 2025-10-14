@@ -196,4 +196,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、**[!UICONTROL e コマース]** 接続を探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [e コマースデータを収集し、Experience Platformに取り込む ](../collect/ecommerce.md) ことができます。
+このチュートリアルでは、**[!UICONTROL e コマース]** 接続を探索し、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [e コマースデータを収集し、Experience Platformに取り込む &#x200B;](../collect/ecommerce.md) ことができます。

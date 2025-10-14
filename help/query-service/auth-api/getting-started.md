@@ -37,11 +37,11 @@ Data Distiller Authorization API を使用すると、Adobe Experience Platform�
 
 - **許可される IP 範囲を定義**：これらの定義された範囲の IP アドレスまたは CIDR ブロックのみが、クエリサービスを通じて SQL を使用してExperience Platformのデータにアクセスできます。
 - **IP 範囲チェックの実施**：許可されている範囲外の IP からの接続は拒否されます。
-- **監査およびアラート機能**：拒否された接続を含むすべてのアクセス試行が、監査イベントとして記録されます。 これらのイベントは、[Adobe Experience Platform監査ログ ](../../landing/governance-privacy-security/audit-logs/overview.md) で利用でき、潜在的なセキュリティ侵害を監視できます。
+- **監査およびアラート機能**：拒否された接続を含むすべてのアクセス試行が、監査イベントとして記録されます。 これらのイベントは、[Adobe Experience Platform監査ログ &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) で利用でき、潜在的なセキュリティ侵害を監視できます。
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Data Distiller Authorization API を呼び出すには、[Experience Platform API 認証チュートリアル ](../../landing/api-authentication.md) を完了する必要があります。このチュートリアルでは、API 呼び出しで必要なヘッダーの値を提供します。 各リクエストに次のヘッダーを含めます。
+Data Distiller Authorization API を呼び出すには、[Experience Platform API 認証チュートリアル &#x200B;](../../landing/api-authentication.md) を完了する必要があります。このチュートリアルでは、API 呼び出しで必要なヘッダーの値を提供します。 各リクエストに次のヘッダーを含めます。
 
 - **認証**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`
@@ -50,7 +50,7 @@ Data Distiller Authorization API を呼び出すには、[Experience Platform AP
 
 >[!NOTE]
 >
-> サンドボックスについて詳しくは、[ サンドボックスの概要に関するドキュメント ](../../sandboxes/home.md) を参照してください。
+> サンドボックスについて詳しくは、[&#x200B; サンドボックスの概要に関するドキュメント &#x200B;](../../sandboxes/home.md) を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のヘッダーも必要です。
 
@@ -65,6 +65,6 @@ Data Distiller Authorization API を呼び出すには、[Experience Platform AP
 
 各 API 呼び出しの例では、リクエストの形式を設定し応答を解釈する方法を示しているので、クエリサービスでのデータへの安全なアクセスを強制するのに役立ちます。
 
-IP 制限の設定と検証の具体的な手順については、[IP アクセスエンドポイントのドキュメント ](./ip-access.md) および [IP 検証エンドポイントのドキュメント ](./validate.md) を参照してください。
+IP 制限の設定と検証の具体的な手順については、[IP アクセスエンドポイントのドキュメント &#x200B;](./ip-access.md) および [IP 検証エンドポイントのドキュメント &#x200B;](./validate.md) を参照してください。
 
-統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。
+統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。

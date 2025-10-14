@@ -30,7 +30,7 @@ ht-degree: 68%
 * [!DNL The Weather Channel] から使用する気象データのライセンスを取得する必要があります。 その後、アカウントで有効にします。
 * 気象データは、データストリームを通じてのみ使用できます。天気データを使用するには、[!DNL Web SDK]、[!DNL Mobile Edge Extension] または [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を使用してこのデータを含める必要があります。
 * データストリームは、[[!UICONTROL 位置情報]](../configure.md#advanced-options)を有効にしておく必要があります。
-* 使用しているスキーマに [ 天気フィールドグループ ](#schema-configuration) を追加します。
+* 使用しているスキーマに [&#x200B; 天気フィールドグループ &#x200B;](#schema-configuration) を追加します。
 
 ## プロビジョニング {#provisioning}
 
@@ -62,7 +62,7 @@ ht-degree: 68%
 
 ### Adobe Customer Journey Analytics {#cja}
 
-[!DNL Adobe Customer Journey Analytics] では、データストリームで指定されたデータセットで気象データを利用できます。天気属性が [ スキーマに追加 ](#prerequisites-prerequisites) されている限り、[!DNL Customer Journey Analytics] で [ データビューに追加 ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=ja) できます。
+[!DNL Adobe Customer Journey Analytics] では、データストリームで指定されたデータセットで気象データを利用できます。天気属性が [&#x200B; スキーマに追加 &#x200B;](#prerequisites-prerequisites) されている限り、[!DNL Customer Journey Analytics] で [&#x200B; データビューに追加 &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=ja) できます。
 
 ### Real-Time Customer Data Platform {#rtcdp}
 

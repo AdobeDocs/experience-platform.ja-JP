@@ -33,7 +33,7 @@ Web SDK でページイベントの上部と下部を使用することで、マ
 
 ## Top of page イベントの例 {#top-of-page}
 
-以下のコードサンプルは、自動的にレンダリングされた提案に対して、パーソナライゼーションをリクエストするが [ 表示イベントを送信 ](../personalization/display-events.md#send-sendEvent-calls) しない、ページイベントのトップ設定の例を示しています。 [ ディスプレイイベント ](../personalization/display-events.md#send-sendEvent-calls) は、ページ下部イベントの一部として送信されます。
+以下のコードサンプルは、自動的にレンダリングされた提案に対して、パーソナライゼーションをリクエストするが [&#x200B; 表示イベントを送信 &#x200B;](../personalization/display-events.md#send-sendEvent-calls) しない、ページイベントのトップ設定の例を示しています。 [&#x200B; ディスプレイイベント &#x200B;](../personalization/display-events.md#send-sendEvent-calls) は、ページ下部イベントの一部として送信されます。
 
 >[!BEGINTABS]
 
@@ -63,7 +63,7 @@ alloy("sendEvent", {
 
 >[!TAB  自動レンダリングの提案 ]
 
-以下のコードサンプルは、ページ上で自動的にレンダリングされたが、「ページの先頭 [ イベントで表示イベントが抑制された提案の表示イベントを送信するページイベント設定の下 ](#top-of-page) 例を示しています。
+以下のコードサンプルは、ページ上で自動的にレンダリングされたが、「ページの先頭 [&#x200B; イベントで表示イベントが抑制された提案の表示イベントを送信するページイベント設定の下 &#x200B;](#top-of-page) 例を示しています。
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | パラメーター | 必須／オプション | 説明 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 必須 | この節では、手動でレンダリングした提案を定義します。 提案 `ID`、`scope`、`scopeDetails` を含める必要があります。 手動でレンダリングされたコンテンツの表示イベントを記録する方法について詳しくは、[ 手動でのパーソナライゼーションのレンダリング ](../personalization/rendering-personalization-content.md#manually) に関するドキュメントを参照してください。 手動でレンダリングしたパーソナライゼーションコンテンツを、ページヒットの下部に含める必要があります。 |
+| `xdm._experience.decisioning.propositions` | 必須 | この節では、手動でレンダリングした提案を定義します。 提案 `ID`、`scope`、`scopeDetails` を含める必要があります。 手動でレンダリングされたコンテンツの表示イベントを記録する方法について詳しくは、[&#x200B; 手動でのパーソナライゼーションのレンダリング &#x200B;](../personalization/rendering-personalization-content.md#manually) に関するドキュメントを参照してください。 手動でレンダリングしたパーソナライゼーションコンテンツを、ページヒットの下部に含める必要があります。 |
 | `xdm._experience.decisioning.propositionEventType` | 必須 | このパラメーターを `display: 1` に設定します。 |
 | `xdm` | オプション | このセクションを使用して、ページイベントの下部に必要なすべてのデータを含めます。 |
 
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub のサンプル {#github-sample}
 
-[ このアドレス ](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) にあるサンプルは、Experience Platformおよび Web SDK を使用して、ページ上部でパーソナライゼーションをリクエストし、下部で分析指標を送信する方法を示しています。 サンプルをダウンロードしてローカルで実行すると、ページイベントの上位と下位の仕組みを理解できます。
+[&#x200B; このアドレス &#x200B;](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) にあるサンプルは、Experience Platformおよび Web SDK を使用して、ページ上部でパーソナライゼーションをリクエストし、下部で分析指標を送信する方法を示しています。 サンプルをダウンロードしてローカルで実行すると、ページイベントの上位と下位の仕組みを理解できます。

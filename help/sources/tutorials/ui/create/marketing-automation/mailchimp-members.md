@@ -19,8 +19,8 @@ ht-degree: 63%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## 必要な資格情報の収集
 
@@ -36,7 +36,7 @@ ht-degree: 63%
 | 認証テスト URL | 認証テスト URL は、Experience Platformに接続する際に認証情報を検証 [!DNL Mailchimp] るために使用されます。 これを指定しない場合、代わりにソース接続の作成手順の間に資格情報が自動的にチェックされます。 |
 | アクセストークン | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
-Oauth 2 を使用したExperience Platformへの [!DNL Mailchimp] アカウント認証の詳細については、こちらの [[!DNL Mailchimp] OAuth 2 の使用に関するドキュメント ](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
+Oauth 2 を使用したExperience Platformへの [!DNL Mailchimp] アカウント認証の詳細については、こちらの [[!DNL Mailchimp] OAuth 2 の使用に関するドキュメント &#x200B;](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
 
 ### 基本認証
 
@@ -97,4 +97,4 @@ OAuth 2 を使用するには、「[!UICONTROL OAuth 2 更新コード &#x200B;]
 
 ## 次の手順
 
-[!DNL Mailchimp] アカウントが認証され、[!DNL Mailchimp Members] データが選択されたので、データフローの作成を開始して、データをExperience Platformに取り込むことができます。 データフローの作成方法に関する詳細な手順については、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/marketing-automation.md) のドキュメントを参照してください。
+[!DNL Mailchimp] アカウントが認証され、[!DNL Mailchimp Members] データが選択されたので、データフローの作成を開始して、データをExperience Platformに取り込むことができます。 データフローの作成方法に関する詳細な手順については、[&#x200B; マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 &#x200B;](../../dataflow/marketing-automation.md) のドキュメントを参照してください。

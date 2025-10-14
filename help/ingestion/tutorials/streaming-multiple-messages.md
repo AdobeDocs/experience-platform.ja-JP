@@ -22,10 +22,10 @@ ht-degree: 58%
 
 このチュートリアルでは、Adobe Experience Platform [!DNL Data Ingestion] について実際に理解している必要があります。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-- [ データ取り込みの概要 ](../home.md)：取り込み方法や Data Connectors など、[!DNL Experience Platform Data Ingestion] の中心概念について説明します。
-- [ ストリーミング取得の概要 ](../streaming-ingestion/overview.md)：ストリーミング取得のワークフローと構成要素（ストリーミング接続、データセット、[!DNL XDM Individual Profile]、[!DNL XDM ExperienceEvent] など）。
+- [&#x200B; データ取り込みの概要 &#x200B;](../home.md)：取り込み方法や Data Connectors など、[!DNL Experience Platform Data Ingestion] の中心概念について説明します。
+- [&#x200B; ストリーミング取得の概要 &#x200B;](../streaming-ingestion/overview.md)：ストリーミング取得のワークフローと構成要素（ストリーミング接続、データセット、[!DNL XDM Individual Profile]、[!DNL XDM ExperienceEvent] など）。
 
-また、このチュートリアルでは、API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要 [!DNL Experience Platform] あります。 認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。このヘッダーは、サンプル呼び出しで次のように示されます。
+また、このチュートリアルでは、API を正しく呼び出すために、[Adobe Experience Platformへの認証 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要 [!DNL Experience Platform] あります。 認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。このヘッダーは、サンプル呼び出しで次のように示されます。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -510,7 +510,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ヘッダーで無効な組織 ID が使用されているので、3 番目のメッセージは失敗しました。 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。 使用しているストリーミング接続に一致する組織 ID を判断するには、[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) を使用して `GET inlet` リクエストを実行します。 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
 
-4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。メッセージのヘッダーと本文でスキーマを修正すると、DCCS 検証に合格し、[!DNL Experience Platform] に正常に送信できます。 また、メッセージ本文は、[!DNL Experience Platform] でストリーミング検証に合格するために、`{DATASET_ID}` の XDM スキーマに一致するように更新する必要があります。 Experience Platformに正常にストリーミングされたメッセージはどうなるかについて詳しくは、このチュートリアルの [ 取り込まれたメッセージを確認 ](#confirm-messages-ingested) の節を参照してください。
+4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。メッセージのヘッダーと本文でスキーマを修正すると、DCCS 検証に合格し、[!DNL Experience Platform] に正常に送信できます。 また、メッセージ本文は、[!DNL Experience Platform] でストリーミング検証に合格するために、`{DATASET_ID}` の XDM スキーマに一致するように更新する必要があります。 Experience Platformに正常にストリーミングされたメッセージはどうなるかについて詳しくは、このチュートリアルの [&#x200B; 取り込まれたメッセージを確認 &#x200B;](#confirm-messages-ingested) の節を参照してください。
 
 ### [!DNL Experience Platform] から失敗したメッセージを取得
 

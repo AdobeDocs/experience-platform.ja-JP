@@ -17,6 +17,6 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Experience Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Experience Platform] では、[!DNL Azure Blob] と S3 からデータをバッチで取り込むことができます。
 
-[!DNL Azure Blob] コネクタについて詳しくは、[[!DNL Azure Blob]  コネクタの概要 ](./blob.md) を参照してください。
+[!DNL Azure Blob] コネクタについて詳しくは、[[!DNL Azure Blob]  コネクタの概要 &#x200B;](./blob.md) を参照してください。
 
-[!DNL Amazon S3] コネクタについて詳しくは、[[!DNL Amazon S3]  コネクタの概要 ](./s3.md) を参照してください。
+[!DNL Amazon S3] コネクタについて詳しくは、[[!DNL Amazon S3]  コネクタの概要 &#x200B;](./s3.md) を参照してください。

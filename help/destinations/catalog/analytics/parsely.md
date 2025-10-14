@@ -18,7 +18,7 @@ ht-degree: 77%
 
 Parse.ly はAdobe Experience Platformの Analytics 拡張機能です。 拡張機能の機能について詳しくは、「[Parse.ly Analytics](https://www.parse.ly/)」を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![Parse.ly Analytics 拡張機能](../../assets/catalog/analytics/parsely/catalog.png)
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL Parse.ly] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

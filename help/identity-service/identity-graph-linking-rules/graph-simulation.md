@@ -16,7 +16,7 @@ ht-degree: 2%
 >title="グラフシミュレーション"
 >abstract="グラフをシミュレートして、ID サービスが ID をリンクする方法や ID 最適化アルゴリズムの仕組みを理解します。"
 
-[!DNL Graph Simulation] は、ID サービス UI のツールで、特定の ID の組み合わせでの ID グラフの動作と、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) の設定方法をシミュレートするために使用できます。
+[!DNL Graph Simulation] は、ID サービス UI のツールで、特定の ID の組み合わせでの ID グラフの動作と、[ID 最適化アルゴリズム &#x200B;](./identity-optimization-algorithm.md) の設定方法をシミュレートするために使用できます。
 
 ID サービス UI ワークスペースでの [!DNL Graph Simulation] インターフェイスの使用について詳しくは、次のビデオをご覧ください。
 
@@ -28,7 +28,7 @@ ID グラフの動作をより深く理解するために [!DNL Graph Simulation
 
 Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスできます。 左側のナビゲーションから **[!UICONTROL ID]** を選択し、上部のヘッダーから **[!UICONTROL グラフシミュレーション]** を選択します。
 
-![Adobe Experience Platform UI のグラフシミュレーションインターフェイス ](../images/graph-simulation/graph-simulation.png)
+![Adobe Experience Platform UI のグラフシミュレーションインターフェイス &#x200B;](../images/graph-simulation/graph-simulation.png)
 
 [!DNL Graph Simulation] インターフェイスは、次の 3 つのセクションに分けることができます。
 
@@ -38,19 +38,19 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 イベント：**[!UICONTROL イベント]** パネルを使用して ID を追加し、グラフをシミュレートします。 完全修飾 ID には、ID 名前空間とそれに対応する ID 値が必要です。 グラフをシミュレートするには、少なくとも 2 つの ID を追加する必要があります。 **[!UICONTROL 例を読み込み]** を選択して、事前設定済みのイベントとアルゴリズム設定を入力することもできます。
 
-![ グラフシミュレーションツールのイベントパネル ](../images/graph-simulation/events.png)
+![&#x200B; グラフシミュレーションツールのイベントパネル &#x200B;](../images/graph-simulation/events.png)
 
 >[!TAB  アルゴリズム設定 ]
 
 アルゴリズム設定：**[!UICONTROL アルゴリズム設定]** パネルを使用して、名前空間の最適化アルゴリズムを追加および設定します。 名前空間をドラッグ&amp;ドロップして、それぞれの優先度ランキングを変更できます。 **[!UICONTROL グラフごとに一意]** を選択して、名前空間が一意かどうかを判断することもできます。
 
-![ グラフシミュレーションツールのアルゴリズム設定。](../images/graph-simulation/algorithm-configuration.png)
+![&#x200B; グラフシミュレーションツールのアルゴリズム設定。](../images/graph-simulation/algorithm-configuration.png)
 
 >[!TAB  シミュレーショングラフビューア ]
 
 シミュレート・グラフ・ビューア：シミュレート・グラフ・ビューアには、追加したイベントと構成したアルゴリズムに基づいて結果グラフが表示されます。 2 つの ID 間の直線は、リンクが確立されていることを意味します。 点線は、リンクが削除されたことを示します。
 
-![ シミュレーショングラフの例を含んだ、シミュレーショングラフビューアパネル ](../images/graph-simulation/simulated-graph.png)
+![&#x200B; シミュレーショングラフの例を含んだ、シミュレーショングラフビューアパネル &#x200B;](../images/graph-simulation/simulated-graph.png)
 
 >[!ENDTABS]
 
@@ -58,11 +58,11 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 開始するには、「**[!UICONTROL イベントを追加]**」を選択します。
 
-![ 「イベントを追加」ボタンが選択されています。](../images/graph-simulation/add-events.png)
+![&#x200B; 「イベントを追加」ボタンが選択されています。](../images/graph-simulation/add-events.png)
 
 ポップアップウィンドウが [!UICONTROL &#x200B; イベント #1] に表示されます。 ここから、ID 名前空間と ID 値の組み合わせを入力します。 ドロップダウンメニューを使用して、ID 名前空間を選択できます。 または、名前空間の最初の数文字を入力したあと、ドロップダウンメニューに表示されるオプションを選択することもできます。 名前空間を選択したら、名前空間に対応する ID 値を指定します。
 
-![ 空のインターフェイスを持つイベント #1 ウィンドウ。](../images/graph-simulation/event-one.png)
+![&#x200B; 空のインターフェイスを持つイベント #1 ウィンドウ。](../images/graph-simulation/event-one.png)
 
 >[!TIP]
 >
@@ -78,17 +78,17 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 [!UICONTROL &#x200B; イベント &#x200B;] インターフェイスが更新され、最初のイベントが表示されます。この場合のインターフェイスは `{Email: tom@acme.com, ECID: 111}` です。
 
-![{Email:tom@acme.com、ECID:111} を使用した更新されたイベントインターフェイス ](../images/graph-simulation/add-second-event.png)
+![{Email:tom@acme.com、ECID:111} を使用した更新されたイベントインターフェイス &#x200B;](../images/graph-simulation/add-second-event.png)
 
 次に、同じ手順を繰り返して、2 番目のイベントを追加します。 イベント #2 の場合、最初の ID として `{Email: summer@acme.com}` を追加してから、2 番目の ID と同じ `{ECID: 111}` を追加します。これにより、`{Email: summer@acme.com}, {ECID: 111}` という 2 番目のイベントが作成されます。 完了したら、`{Email: tom@acme.com, ECID: 111}` 用と `{Email: summer@acme.com}, {ECID: 111}` 用の 2 つのイベントが必要です。
 
-![2 つのイベントを含む更新されたイベントインターフェイス ](../images/graph-simulation/two-events.png)
+![2 つのイベントを含む更新されたイベントインターフェイス &#x200B;](../images/graph-simulation/two-events.png)
 
 ### 例を読み込む {#load-example}
 
 「**[!UICONTROL 例を読み込み]**」を選択して、事前設定されたアルゴリズムとイベント設定を含むサンプルグラフを設定します。
 
-![ 「例を読み込み」オプションが選択されています。](../images/graph-simulation/load-example.png)
+![&#x200B; 「例を読み込み」オプションが選択されています。](../images/graph-simulation/load-example.png)
 
 ポップアップウィンドウが開き、次の中から選択できる使用可能なグラフシナリオが表示されます。
 
@@ -98,37 +98,37 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 | 無効な (一意でない) 電話 | 無効または一意でない電話とは、2 人の異なるユーザーが同じ電話番号を使用してアカウントを作成するシナリオを指します。 | 母親と娘は、共有されている自宅の電話番号を使用して、e コマースアカウントに新規登録します。 |
 | 「無効」な ID 値 | 「無効な」 ID 値は、誤った実装が原因で ID サービスが一意でない IDFA を生成するシナリオを指します。 | WebSDK は、コードの実装の問題に起因する各イベントの `user_null` 値を誤って送信します。 |
 
-![ 使用可能な事前設定の例を表示するウィンドウ。共有デバイス、無効な電話、無効な ID 値です。](../images/graph-simulation/example-options.png)
+![&#x200B; 使用可能な事前設定の例を表示するウィンドウ。共有デバイス、無効な電話、無効な ID 値です。](../images/graph-simulation/example-options.png)
 
 任意のオプションを選択して、事前設定済みのイベントおよびアルゴリズムで [!DNL Graph Simulation] を読み込みます。 事前に読み込まれたグラフシナリオの例に対して、さらに設定を加えることもできます。
 
-![ 無効な電話に対して設定されたイベントとアルゴリズム。](../images/graph-simulation/example-loaded.png)
+![&#x200B; 無効な電話に対して設定されたイベントとアルゴリズム。](../images/graph-simulation/example-loaded.png)
 
 終了したら、「**[!UICONTROL シミュレート]**」を選択します。
 
-![ 無効な電話をシミュレートしたグラフの例。](../images/graph-simulation/example-simulated.png)
+![&#x200B; 無効な電話をシミュレートしたグラフの例。](../images/graph-simulation/example-simulated.png)
 
 ### テキストバージョンを使用 {#use-text-version}
 
 テキストモードを使用してイベントを設定することもできます。 テキストモードを使用するには、「設定」アイコンを選択し、「**[!UICONTROL テキスト （詳細ユーザー）]**」を選択します。
 
-![ 設定アイコンが選択されています。](../images/graph-simulation/settings.png)
+![&#x200B; 設定アイコンが選択されています。](../images/graph-simulation/settings.png)
 
 テキストモードを使用して、ID を手動で入力できます。 入力した名前空間に対応する ID 値をコロン（`:`）で区切り、ID をコンマ（`,`）で区切ります。 異なるイベントを区別するには、イベントごとに新しい行を使用します。
 
-![ テキストモードのバージョンを使用したイベントパネル ](../images/graph-simulation/text-version.png)
+![&#x200B; テキストモードのバージョンを使用したイベントパネル &#x200B;](../images/graph-simulation/text-version.png)
 
 ### イベントを編集 {#edit-event}
 
 イベントを編集するには、特定のイベントの横にある省略記号（`...`）を選択し、**[!UICONTROL 編集]** を選択します。
 
-![ イベントを編集アイコンを選択 ](../images/graph-simulation/edit.png)
+![&#x200B; イベントを編集アイコンを選択 &#x200B;](../images/graph-simulation/edit.png)
 
 ### イベントを削除 {#delete-event}
 
 イベントを削除するには、特定のイベントの横にある省略記号（`...`）を選択し、「**[!UICONTROL 削除]**」を選択します。
 
-![ 削除イベントアイコンが選択されています。](../images/graph-simulation/delete.png)
+![&#x200B; 削除イベントアイコンが選択されています。](../images/graph-simulation/delete.png)
 
 ## アルゴリズムの設定 {#configure-algorithm}
 
@@ -138,11 +138,11 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 イベントを追加したら、グラフのシミュレーションに使用するアルゴリズムを設定できます。 開始するには、「**[!UICONTROL 設定を追加]**」を選択します。
 
-![ アルゴリズム設定パネル ](../images/graph-simulation/add-config.png)
+![&#x200B; アルゴリズム設定パネル &#x200B;](../images/graph-simulation/add-config.png)
 
 空の設定行が表示されます。 まず、イベントに使用したのと同じ名前空間を入力します。 この場合は、電子メールを入力して開始します。 名前空間を入力すると、[!UICONTROL ID シンボル &#x200B;] および [!UICONTROL ID タイプ &#x200B;] の列が自動入力されます。
 
-![ 最初の設定エントリ。](../images/graph-simulation/add-namespace.png)
+![&#x200B; 最初の設定エントリ。](../images/graph-simulation/add-namespace.png)
 
 次に、同じ手順を繰り返し、2 つ目の名前空間（この場合は ECID）を追加します。 すべての名前空間を入力したら、その優先度と一意性の設定を開始できます。
 
@@ -153,7 +153,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 終了したら、「**[!UICONTROL シミュレート]**」を選択します。
 
-![ すべての名前空間が設定されています。](../images/graph-simulation/all-namespaces.png)
+![&#x200B; すべての名前空間が設定されています。](../images/graph-simulation/all-namespaces.png)
 
 ## シミュレーショングラフを表示
 
@@ -170,7 +170,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 * 電子メールは、アルゴリズム設定手順で一意として指定されました。 したがって、グラフに存在できるのは、メール名前空間を持つ 1 つの ID のみです。
 * `{Email: tom@acme.com}` と `{ECID: 111}` の間のリンクは、最初に確立された ID でした（イベント #1）。 これは最も古いリンクなので、削除されます。
 
-![ シミュレーショングラフの例を含んだ、シミュレーショングラフビューアパネル ](../images/graph-simulation/simulated-graph.png)
+![&#x200B; シミュレーショングラフの例を含んだ、シミュレーショングラフビューアパネル &#x200B;](../images/graph-simulation/simulated-graph.png)
 
 ## 次の手順
 

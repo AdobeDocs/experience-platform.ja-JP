@@ -23,4 +23,4 @@ ht-degree: 1%
 
 ## 次の手順
 
-チャーン予測モデルを作成して適用する方法については、[ 完全なガイド ](../advanced-statistics/examples/predict-customer-churn.md) を参照してください。
+チャーン予測モデルを作成して適用する方法については、[&#x200B; 完全なガイド &#x200B;](../advanced-statistics/examples/predict-customer-churn.md) を参照してください。

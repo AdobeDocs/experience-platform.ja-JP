@@ -15,7 +15,7 @@ ht-degree: 6%
 
 ## はじめに
 
-`/rpc/csv2schema` エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。 先に進む前に、[ はじめる前に ](./getting-started.md) のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意のAdobe Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+`/rpc/csv2schema` エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。 先に進む前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意のAdobe Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 `/rpc/csv2schema` エンドポイントは、[!DNL Schema Registry] でサポートされているリモート プロシージャ コール （RPC）の一部です。 [!DNL Schema Registry] API の他のエンドポイントとは異なり、RPC エンドポイントには `Accept` や `Content-Type` などの追加のヘッダーは必要なく、`CONTAINER_ID` も使用しません。 代わりに、以下の API 呼び出しで示すように、`/rpc` 名前空間を使用する必要があります。
 
@@ -32,11 +32,11 @@ ht-degree: 6%
 | 5 | `fieldPath` | 必須 | フィールドの完全な XED ドット表記パス。 標準フィールドグループのすべてのフィールド（`fieldGroupName` に示されている）を含めるには、値を `ALL` に設定します。 |
 | 6 | `displayName` | オプション | フィールドのタイトル、またはわかりやすい表示名。 また、タイトルのエイリアスも指定できます（存在する場合）。 |
 | 7 | `fieldDescription` | オプション | フィールドの説明。 また、説明が存在する場合は、その説明のエイリアスを指定することもできます。 |
-| 8 | `dataType` | （説明を参照） | フィールドの [ 基本データタイプ ](../schema/field-constraints.md#basic-types) を示します。 すべてのカスタムフィールドに必須です。<br><br>`dataType` が `object` に設定されている場合、`properties` または `$ref` のいずれかを同じ行に対しても定義する必要がありますが、両方に定義する必要はありません。 |
+| 8 | `dataType` | （説明を参照） | フィールドの [&#x200B; 基本データタイプ &#x200B;](../schema/field-constraints.md#basic-types) を示します。 すべてのカスタムフィールドに必須です。<br><br>`dataType` が `object` に設定されている場合、`properties` または `$ref` のいずれかを同じ行に対しても定義する必要がありますが、両方に定義する必要はありません。 |
 | 9 | `isRequired` | オプション | データ取り込みにフィールドが必須かどうかを示します。 |
 | 10 | `isArray` | オプション | フィールドが示された `dataType` の配列であるかどうかを示します。 |
 | 11 | `isIdentity` | オプション | フィールドが ID フィールドであるかどうかを示します。 |
-| 12 | `identityNamespace` | `isIdentity` が true の場合は必須 | ID フィールドの [ID 名前空間 ](../../identity-service/features/namespaces.md)。 |
+| 12 | `identityNamespace` | `isIdentity` が true の場合は必須 | ID フィールドの [ID 名前空間 &#x200B;](../../identity-service/features/namespaces.md)。 |
 | 13 | `isPrimaryIdentity` | オプション | フィールドがスキーマのプライマリ ID であるかどうかを示します。 |
 | 14 | `minimum` | オプション | （数値フィールドのみ） フィールドの最小値。 |
 | 15 | `maximum` | オプション | （数値フィールドのみ） フィールドの最大値。 |
@@ -51,7 +51,7 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-CSV ファイルの形式を決定するには、次の [CSV テンプレート ](../assets/sample-csv-template.csv) を参照してください。
+CSV ファイルの形式を決定するには、次の [CSV テンプレート &#x200B;](../assets/sample-csv-template.csv) を参照してください。
 
 ## CSV ファイルからの書き出しペイロードの作成
 
@@ -83,7 +83,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `csv-file` | ローカルマシンに保存されている CSV テンプレートへのパス。 |
-| `schema-class-id` | このスキーマが採用する XDM [ クラス ](../schema/composition.md#class) の `$id`。 |
+| `schema-class-id` | このスキーマが採用する XDM [&#x200B; クラス &#x200B;](../schema/composition.md#class) の `$id`。 |
 | `schema-name` | スキーマの表示名。 |
 | `schema-description` | スキーマの説明。 |
 
@@ -362,4 +362,4 @@ curl -X POST \
 
 CSV ファイルから書き出しペイロードを生成したら、そのペイロードを `/rpc/import` エンドポイントに送信して、スキーマを生成できます。
 
-エクスポートペイロードからスキーマを生成する方法について詳しくは、[ インポートエンドポイントガイド ](./import.md) を参照してください。
+エクスポートペイロードからスキーマを生成する方法について詳しくは、[&#x200B; インポートエンドポイントガイド &#x200B;](./import.md) を参照してください。

@@ -17,7 +17,7 @@ ht-degree: 4%
 
 このドキュメントで示すリクエストの例では、次の画像を使用しました。
 
-![ サンプル画像 ](../images/sample_image.png)
+![&#x200B; サンプル画像 &#x200B;](../images/sample_image.png)
 
 **API 形式**
 

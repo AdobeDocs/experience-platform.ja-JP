@@ -21,7 +21,7 @@ ht-degree: 3%
 
 このドキュメントで示すリクエストの例では、次の画像を使用しました。
 
-![ テスト画像 ](../images/Query_Image.jpeg)
+![&#x200B; テスト画像 &#x200B;](../images/Query_Image.jpeg)
 
 **API 形式**
 
@@ -92,7 +92,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 以下に示す応答の例では、視覚的に類似した次の画像が返されました。
 
-![ 類似画像 ](../images/results.jpg)
+![&#x200B; 類似画像 &#x200B;](../images/results.jpg)
 
 ```json
 {

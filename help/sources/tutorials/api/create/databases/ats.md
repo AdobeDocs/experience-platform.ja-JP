@@ -16,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->[!DNL Azure Table Storage] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Azure Table Storage] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -40,11 +40,11 @@ ht-degree: 54%
 | `connectionString` | [!DNL Azure Table Storage] インスタンスへの接続に使用する接続文字列。 [!DNL Azure Table Storage] の接続文字列のパターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure Table Storage] の接続仕様 ID は `ecde33f2-c56f-46cc-bdea-ad151c16cd69` です。 |
 
-接続文字列の取得について詳しくは、[ この  [!DNL Azure Table Storage]  ドキュメント ](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) を参照してください。
+接続文字列の取得について詳しくは、[&#x200B; この  [!DNL Azure Table Storage]  ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -106,5 +106,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure Table Storage] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

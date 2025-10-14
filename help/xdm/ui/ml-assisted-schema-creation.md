@@ -22,43 +22,43 @@ ML スキーマの生成を使用すると、新しいデータソースをす�
 
 ## はじめに
 
-このチュートリアルでは、スキーマ作成の要件について十分に理解している必要があります。 このガイドを進める前に、[ スキーマの作成および編集の UI ガイド ](./resources/schemas.md) を参照する必要があります。
+このチュートリアルでは、スキーマ作成の要件について十分に理解している必要があります。 このガイドを進める前に、[&#x200B; スキーマの作成および編集の UI ガイド &#x200B;](./resources/schemas.md) を参照する必要があります。
 
-このガイドでは、機械学習（ML）アルゴリズムを使用してスキーマを作成し、サンプルデータからスキーマを生成する方法について説明します。 スキーマの作成について詳しくは、[ 手動スキーマ作成ワークフローガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) を参照してください。また、スキーマ作成プロセスを理解しやすくするために、スキーマエディターの [ フィールドベースのワークフロー ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/field-based-workflows) に関するドキュメントを参照してください。
+このガイドでは、機械学習（ML）アルゴリズムを使用してスキーマを作成し、サンプルデータからスキーマを生成する方法について説明します。 スキーマの作成について詳しくは、[&#x200B; 手動スキーマ作成ワークフローガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) を参照してください。また、スキーマ作成プロセスを理解しやすくするために、スキーマエディターの [&#x200B; フィールドベースのワークフロー &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/field-based-workflows) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->[!DNL Schema Registry] API を使用してスキーマを作成することもできます。 API を使用して手動でスキーマを作成するには、まず [[!DNL Schema Registry]  開発者ガイド ](../api/getting-started.md) を参照してから、[API を使用したスキーマの作成 ](../tutorials/create-schema-api.md) に関するチュートリアルを試してください。
+>[!DNL Schema Registry] API を使用してスキーマを作成することもできます。 API を使用して手動でスキーマを作成するには、まず [[!DNL Schema Registry]  開発者ガイド &#x200B;](../api/getting-started.md) を参照してから、[API を使用したスキーマの作成 &#x200B;](../tutorials/create-schema-api.md) に関するチュートリアルを試してください。
 
 ## スキーマ作成ワークフローに移動します。 {#navigate-to-schema-creation-workflow}
 
 Experience Platform UI の左側のナビゲーションから、「**[!UICONTROL スキーマ]** ワークスペースを選択します。 **[!UICONTROL スキーマ]** ワークスペースが表示されます。 **[!UICONTROL スキーマを作成]** を選択して、新しいスキーマを追加し、スキーマ作成ワークフローを開始します。
 
-![ 左側のナビゲーションでスキーマがハイライト表示され、スキーマを作成したスキーマワークスペース。](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
+![&#x200B; 左側のナビゲーションでスキーマがハイライト表示され、スキーマを作成したスキーマワークスペース。](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 
 ## スキーマの作成 {#create-a-schema}
 
 [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ダイアログが表示されます。 **[ML-Assisted]** スキーマ作成オプションを選択し、続いて **[!UICONTROL 選択]** を選択して選択内容を確定します。
 
-![[!UICONTROL ML – 支援 [!UICONTROL &#x200B; がハイライト表示された &#x200B;] スキーマを作成 &#x200B;] ダイアログ ](../images/ui/ml-schema-creation/use-sample-csv.png)
+![[!UICONTROL ML – 支援 [!UICONTROL &#x200B; がハイライト表示された &#x200B;] スキーマを作成 &#x200B;] ダイアログ &#x200B;](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### 基本クラスを選択 {#select-base-class}
 
 [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローが表示されます。 スキーマの基本クラスを選択し、続いて **[!UICONTROL 次へ]** を選択します。
 
-![ クラスと「次へ」がハイライト表示されたスキーマの詳細ワークスペース。](../images/ui/ml-schema-creation/select-base-class.png)
+![&#x200B; クラスと「次へ」がハイライト表示されたスキーマの詳細ワークスペース。](../images/ui/ml-schema-creation/select-base-class.png)
 
 ### CSV ファイルのアップロード {#upload-csv}
 
 作成ワークフローの **[!UICONTROL データを選択]** ステージが表示されます。 「**[!UICONTROL ファイルをアップロード]**」セクションで、「**[!UICONTROL ファイルを選択]** または「**[!UICONTROL ファイルをドラッグ&amp;ドロップ]**」セクションを選択します。 コンピューターから.csv ファイルを選択して、スキーマを生成します。
 
-![ ファイルのアップロードセクションがハイライト表示されたスキーマ作成ワークフローのデータを選択ステージ。](../images/ui/ml-schema-creation/upload-files.png)
+![&#x200B; ファイルのアップロードセクションがハイライト表示されたスキーマ作成ワークフローのデータを選択ステージ。](../images/ui/ml-schema-creation/upload-files.png)
 
 ### データのプレビュー {#preview-data}
 
 「[!UICONTROL &#x200B; ファイルをアップロード &#x200B;]」セクションにはインポートした CSV ファイルの名前が表示され、「**[!UICONTROL プレビュー]**」セクションにはアップロードしたファイルのサンプルデータの行が表示されます。 「**[!UICONTROL 次へ]**」を選択して、ワークフローを続行します。
 
-![ プレビューセクションでハイライト表示されたサンプルデータの行、および「次へ」がハイライト表示されています。](../images/ui/ml-schema-creation/preview-data.png)
+![&#x200B; プレビューセクションでハイライト表示されたサンプルデータの行、および「次へ」がハイライト表示されています。](../images/ui/ml-schema-creation/preview-data.png)
 
 ### スキーマのレビューと編集 {#review-schema}
 
@@ -73,17 +73,17 @@ Experience Platform UI の左側のナビゲーションから、「**[!UICONTRO
 | [!UICONTROL &#x200B; データタイプ &#x200B;] | フィールドに保存されるデータのタイプ （例：`String`、`Date`）。 |
 | [!UICONTROL &#x200B; フィールドグループ &#x200B;] | 使用またはコンテキストに基づくフィールドの分類（例：[!UICONTROL &#x200B; デモグラフィックの詳細 &#x200B;]、[!UICONTROL Commerceの詳細 &#x200B;]）。 |
 
-![ スキーマ作成ワークフローのレビューと編集ステージ ](../images/ui/ml-schema-creation/schema-recommendation.png)
+![&#x200B; スキーマ作成ワークフローのレビューと編集ステージ &#x200B;](../images/ui/ml-schema-creation/schema-recommendation.png)
 
 #### フィールドを追加 {#add-field}
 
 スキーマにフィールドを追加するには、「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
 
-![ 「新しいフィールドを追加」がハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/add-new-field.png)
+![&#x200B; 「新しいフィールドを追加」がハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/add-new-field.png)
 
 [!UICONTROL &#x200B; フィールドを選択 &#x200B;] ダイアログが表示されます。 ダイアログには、現在のスキーマの図が含まれています。 目的のフィールドを選択し、「**[選択]**」を選択して、スキーマに新しいフィールドを追加します。 必要に応じて、「**[キャンセル]**」を選択してダイアログを閉じます。
 
-![ フィールドが選択され「選択」がハイライト表示されたフィールドを選択ダイアログ ](../images/ui/ml-schema-creation/select-field-dialog.png)
+![&#x200B; フィールドが選択され「選択」がハイライト表示されたフィールドを選択ダイアログ &#x200B;](../images/ui/ml-schema-creation/select-field-dialog.png)
 
 推奨スキーマに新しい行が表示されます。 これで、フィールドを編集できます。
 
@@ -91,7 +91,7 @@ Experience Platform UI の左側のナビゲーションから、「**[!UICONTRO
 
 フィールドを編集するには、編集する行の鉛筆アイコンを選択します。 詳細パネルが右側に表示され、カスタムフィールドマッピングを編集できます。 詳細パネルには、[!UICONTROL &#x200B; ターゲットフィールド &#x200B;]、[!UICONTROL &#x200B; 表示名 &#x200B;]、[!UICONTROL &#x200B; データタイプ &#x200B;]、および [!UICONTROL &#x200B; フィールドグループ &#x200B;] が含まれています。 必要な変更を加え、「**[!UICONTROL 適用]**」を選択して確定します。 鉛筆アイコンをもう一度選択して、詳細パネルを閉じます。
 
-![ 鉛筆アイコンと詳細パネルがハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/edit-field.png)
+![&#x200B; 鉛筆アイコンと詳細パネルがハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/edit-field.png)
 
 #### フィールドを削除 {#remove-field}
 
@@ -101,28 +101,28 @@ Experience Platform UI の左側のナビゲーションから、「**[!UICONTRO
 >
 >この項目を削除するときに確認ダイアログが表示されません。
 
-![ マイナスアイコンがハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/remove-field.png)
+![&#x200B; マイナスアイコンがハイライト表示されたスキーマ作成ワークフローのレビューと編集ステージ。](../images/ui/ml-schema-creation/remove-field.png)
 
 #### 推奨スキーマを承認 {#approve}
 
 推奨スキーマを承認して **[!UICONTROL スキーマを作成]** ワークフローを続行するには、「**[次へ]**」を選択します。
 
-![ 「次へ」がハイライト表示された、スキーマ作成ワークフローのレビューと編集ステージ ](../images/ui/ml-schema-creation/next.png)
+![&#x200B; 「次へ」がハイライト表示された、スキーマ作成ワークフローのレビューと編集ステージ &#x200B;](../images/ui/ml-schema-creation/next.png)
 
 ### スキーマに名前を付けて保存 {#name-and-save}
 
 作成ワークフローの **[!UICONTROL 名前を付けて保存]** ステージが表示されます。 **[スキーマ表示名]** と説明（オプション）を入力します。 「**[スキーマの生成]**」セクションには、ML で生成されたスキーマの図が表示されます。 「**[完了]**」を選択して、スキーマ作成ワークフローを完了します。
 
-![ 「完了」がハイライト表示されたスキーマ作成ワークフローの「名前を付けてスキーマを保存」ステージ ](../images/ui/ml-schema-creation/name-and-save.png)
+![&#x200B; 「完了」がハイライト表示されたスキーマ作成ワークフローの「名前を付けてスキーマを保存」ステージ &#x200B;](../images/ui/ml-schema-creation/name-and-save.png)
 
 ### スキーマエディターで表示 {#view-in-editor}
 
 スキーマエディターが表示され、新しく作成したスキーマがキャンバスに表示されます。 「**[!UICONTROL 保存]**」を選択して、「[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースに戻ります。
 
-![ML で生成された名前付きスキーマを表示するスキーマエディター ](../images/ui/ml-schema-creation/schema-editor.png)
+![ML で生成された名前付きスキーマを表示するスキーマエディター &#x200B;](../images/ui/ml-schema-creation/schema-editor.png)
 
 ## 次の手順
 
 スキーマを作成したら、スキーマエディターを使用して、必要に応じてさらに変更を加えることができます。 これで、新しいスキーマをデータソースと統合し、データ分析に使用する準備が整いました。
 
-スキーマエディターの使用について詳しくは、[ 既存のスキーマの編集 ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#edit) ガイドを参照してください。
+スキーマエディターの使用について詳しくは、[&#x200B; 既存のスキーマの編集 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#edit) ガイドを参照してください。

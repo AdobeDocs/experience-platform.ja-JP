@@ -18,9 +18,9 @@ ht-degree: 67%
 
 [!DNL Marketo’s Munchkin] JavaScriptを使用すると、[!DNL Marketo] ランディングページや外部 web ページへのエンドユーザーページの訪問およびクリックをトラッキングできます。
 
-[!DNL Marketo Munchkin] は、Adobe Experience Platformのメール拡張機能です。 Marketo Munchkinについて詳しくは、Marketo ドキュメントの [ リードトラッキング ](https://developers.marketo.com/javascript-api/lead-tracking/) を参照してください。
+[!DNL Marketo Munchkin] は、Adobe Experience Platformのメール拡張機能です。 Marketo Munchkinについて詳しくは、Marketo ドキュメントの [&#x200B; リードトラッキング &#x200B;](https://developers.marketo.com/javascript-api/lead-tracking/) を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![Marketo Munchkin 拡張機能](../../assets/catalog/email/marketo-munchkin/catalog.png)
 
@@ -34,7 +34,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 [!DNL Marketo Munchkin] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

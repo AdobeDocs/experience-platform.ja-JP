@@ -15,7 +15,7 @@ ht-degree: 38%
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、オーディエンスに関する重要な情報を表示できるダッシュボードが用意されています。 このガイドでは、UI での [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードへのアクセスおよび操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
-Experience Platform ユーザーインターフェイス内のAdobe Experience Platform セグメント化サービスのすべての機能の概要については、[ セグメント化サービス UI ガイド ](../../segmentation/ui/overview.md) を参照してください。
+Experience Platform ユーザーインターフェイス内のAdobe Experience Platform セグメント化サービスのすべての機能の概要については、[&#x200B; セグメント化サービス UI ガイド &#x200B;](../../segmentation/ui/overview.md) を参照してください。
 
 ## [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードデータ
 
@@ -35,7 +35,7 @@ Experience Platform UI 内の [!UICONTROL &#x200B; オーディエンス &#x200B
 >
 >Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
 
-![[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボード [!UICONTROL &#x200B; 概要 &#x200B;] タブ（[!UICONTROL &#x200B; オーディエンス &#x200B;] および [!UICONTROL &#x200B; 概要 &#x200B;] がハイライト表示されています ](../images/audiences/dashboard-overview.png)。
+![[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボード [!UICONTROL &#x200B; 概要 &#x200B;] タブ（[!UICONTROL &#x200B; オーディエンス &#x200B;] および [!UICONTROL &#x200B; 概要 &#x200B;] がハイライト表示されています &#x200B;](../images/audiences/dashboard-overview.png)。
 
 ### [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードの変更 {#modify}
 
@@ -53,7 +53,7 @@ Experience Platform UI 内の [!UICONTROL &#x200B; オーディエンス &#x200B
 
 ### SQL を表示 {#view-sql}
 
-[!UICONTROL &#x200B; 概要 &#x200B;] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
+[!UICONTROL &#x200B; 概要 &#x200B;] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド &#x200B;](../view-sql.md) を参照してください。
 
 ## オーディエンスを選択 {#select-audience}
 
@@ -65,9 +65,9 @@ Experience Platform UI 内の [!UICONTROL &#x200B; オーディエンス &#x200B
 >
 >選択可能なオーディエンスのリストには、プロファイル数が 0 を超えるオーディエンスのみが表示されます。
 
-![ グローバルオーディエンスドロップダウンメニューがハイライト表示されているオーディエンスダッシュボードの「概要」タブ ](../images/audiences/change-audience.png)
+![&#x200B; グローバルオーディエンスドロップダウンメニューがハイライト表示されているオーディエンスダッシュボードの「概要」タブ &#x200B;](../images/audiences/change-audience.png)
 
-![ 使用可能なすべてのオーディエンスを表示する [!UICONTROL &#x200B; オーディエンスを選択 &#x200B;] ダイアログ ](../images/audiences/select-audience-dialog.png)
+![&#x200B; 使用可能なすべてのオーディエンスを表示する [!UICONTROL &#x200B; オーディエンスを選択 &#x200B;] ダイアログ &#x200B;](../images/audiences/select-audience-dialog.png)
 
 ## ウィジェットと指標 {#widgets-and-metrics}
 
@@ -75,7 +75,7 @@ Experience Platform UI 内の [!UICONTROL &#x200B; オーディエンス &#x200B
 
 最新のスナップショットの日時が、オーディエンスドロップダウンの横の [!UICONTROL &#x200B; 概要 &#x200B;] タブ上部に表示されます。 すべてのウィジェットデータは、その日時の時点で正確です。 スナップショットのタイムスタンプは UTC で指定されます。個々のユーザーや組織のタイムゾーンではありません。
 
-![ ウィジェットのタイムスタンプがハイライト表示されたオーディエンスの「概要」タブ ](../images/audiences/widget-timestamp.png)
+![&#x200B; ウィジェットのタイムスタンプがハイライト表示されたオーディエンスの「概要」タブ &#x200B;](../images/audiences/widget-timestamp.png)
 
 ## デフォルトウィジェット {#default-widgets}
 
@@ -89,11 +89,11 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >[!NOTE]
 >
 >2023 年 7 月 26 日（PT）の時点で、[!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;] および [!UICONTROL &#x200B; 宛先 &#x200B;] 概要ダッシュボードは、過去 6 か月間にビューを変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みモードにリセットされました。
->デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[ プロファイル ](./profiles.md#default-widgets) および [ 宛先 ](./destinations.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
+>デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[&#x200B; プロファイル &#x200B;](./profiles.md#default-widgets) および [&#x200B; 宛先 &#x200B;](./destinations.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
 
 ## 顧客 AI ウィジェット {#customer-ai-audiences-widgets}
 
-顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI では、既存の消費者エクスペリエンスイベントデータを分析して **チャーンまたはコンバージョンの傾向スコア** を予測します。 これらの高精度な顧客傾向モデルにより、より正確なセグメント化とターゲティングが可能になります。 [ スコアの分布 ](#customer-ai-distribution-of-scores) および [ スコアの概要 ](#customer-ai-scoring-summary) インサイトは、オーディエンスの除算を示します。 傾向が高/低/中のプロファイルと、それらのプロファイルがプロファイル数間でどのように分配されるかをハイライトします。
+顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI では、既存の消費者エクスペリエンスイベントデータを分析して **チャーンまたはコンバージョンの傾向スコア** を予測します。 これらの高精度な顧客傾向モデルにより、より正確なセグメント化とターゲティングが可能になります。 [&#x200B; スコアの分布 &#x200B;](#customer-ai-distribution-of-scores) および [&#x200B; スコアの概要 &#x200B;](#customer-ai-scoring-summary) インサイトは、オーディエンスの除算を示します。 傾向が高/低/中のプロファイルと、それらのプロファイルがプロファイル数間でどのように分配されるかをハイライトします。
 
 * [[!UICONTROL 顧客 AI スコア付けの概要]](#customer-ai-scoring-summary)
 * [[!UICONTROL スコアの顧客 AI 分布]](#customer-ai-distribution-of-scores)
@@ -111,21 +111,21 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >ビジュアライゼーションがコンバージョンの傾向スコアの場合、高スコアは緑色で表示され、低スコアは赤色で表示されます。 チャーンの傾向を予測する場合は、これが逆となり、高いスコアは赤、低いスコアは緑で表示されます。選択した傾向タイプに関係なく、メディアバケットは黄色のままです。
 
-傾向スコアを決定する AI モデルは、ウィジェットタイトルの下のドロップダウンセレクターから選択します。 ドロップダウンには、設定済みのすべての顧客 AI モデルのリストが含まれています。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 詳しくは、[ 顧客 AI インスタンスの設定方法 ](../../intelligent-services/customer-ai/user-guide/configure.md) のドキュメントを参照してください。
+傾向スコアを決定する AI モデルは、ウィジェットタイトルの下のドロップダウンセレクターから選択します。 ドロップダウンには、設定済みのすべての顧客 AI モデルのリストが含まれています。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 詳しくは、[&#x200B; 顧客 AI インスタンスの設定方法 &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md) のドキュメントを参照してください。
 
 >[!NOTE]
 >
->「概要」タブのすぐ下のドロップダウンを選択して、分析に含めるプロファイルを決定する結合ポリシーを変更します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
+>「概要」タブのすぐ下のドロップダウンを選択して、分析に含めるプロファイルを決定する結合ポリシーを変更します。 簡単な説明については [&#x200B; 結合ポリシー &#x200B;](#merge-policies) の節、詳細については [&#x200B; 結合ポリシーの概要 &#x200B;](../../profile/merge-policies/overview.md) を参照してください。
 
 選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。
 
-![ 「[!UICONTROL &#x200B; スコアの顧客 AI 分布 &#x200B;] ウィジェットと [!UICONTROL &#x200B; モデルの詳細を表示 &#x200B;] がハイライト表示されたExperience Platform オーディエンスダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
+![&#x200B; 「[!UICONTROL &#x200B; スコアの顧客 AI 分布 &#x200B;] ウィジェットと [!UICONTROL &#x200B; モデルの詳細を表示 &#x200B;] がハイライト表示されたExperience Platform オーディエンスダッシュボード &#x200B;](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細なモデルインサイト ページが表示されます。
 
-![ 顧客 AI 用のインサイトページ ](../images/profiles/customer-ai-insights-page.png)
+![&#x200B; 顧客 AI 用のインサイトページ &#x200B;](../images/profiles/customer-ai-insights-page.png)
 
-顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
+顧客 AI について詳しくは、[&#x200B; インサイトの獲得 UI ガイド &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
 ### [!UICONTROL 顧客 AI スコア付けの概要] {#customer-ai-scoring-summary}
 
@@ -140,15 +140,15 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >ビジュアライゼーションがコンバージョンの傾向スコアの場合、高スコアは緑色で表示され、低スコアは赤色で表示されます。 チャーンの傾向を予測する場合は、これが逆となり、高いスコアは赤、低いスコアは緑で表示されます。選択した傾向タイプに関係なく、メディアバケットは黄色のままです。
 
-ウィジェットタイトルの下にあるドロップダウンメニューには、設定済みのすべての顧客 AI モデルのリストが表示されます。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 手順について詳しくは、[ 顧客 AI インスタンスの設定方法 ](../../intelligent-services/customer-ai/user-guide/configure.md) に関するドキュメントを参照してください。
+ウィジェットタイトルの下にあるドロップダウンメニューには、設定済みのすべての顧客 AI モデルのリストが表示されます。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 手順について詳しくは、[&#x200B; 顧客 AI インスタンスの設定方法 &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
+>計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [&#x200B; 結合ポリシー &#x200B;](#merge-policies) の節、詳細については [&#x200B; 結合ポリシーの概要 &#x200B;](../../profile/merge-policies/overview.md) を参照してください。
 
-![ 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
+![&#x200B; 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
 
-「**[!UICONTROL モデルの詳細を表示]**」を選択して、選択した顧客 AI モデルの詳細なインサイトページに移動します。 顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
+「**[!UICONTROL モデルの詳細を表示]**」を選択して、選択した顧客 AI モデルの詳細なインサイトページに移動します。 顧客 AI について詳しくは、[&#x200B; インサイトの獲得 UI ガイド &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -176,9 +176,9 @@ Adobeには、オーディエンスに関連する様々な指標を視覚化す
 
 **[!UICONTROL オーディエンスサイズ]** のウィジェットには、スナップショットが作成された時点での、選択したオーディエンス内での結合プロファイルの合計数が表示されます。 この数は、プロファイルデータにオーディエンス結合ポリシーを適用してプロファイルフラグメントを結合し、オーディエンス内の個々のユーザーに対して単一のプロファイルを形成した結果です。
 
-フラグメントと結合プロファイルについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
+フラグメントと結合プロファイルについて詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
-![[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットがハイライト表示された [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードの概要 ](../images/audiences/audience-size.png)
+![[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットがハイライト表示された [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードの概要 &#x200B;](../images/audiences/audience-size.png)
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
@@ -197,7 +197,7 @@ Adobeには、オーディエンスに関連する様々な指標を視覚化す
 
 ![オーディエンスサイズトレンドウィジェット用の自動キャプションダイアログ。](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
 
-オーディエンスの評価、およびプロファイルがオーディエンスにどのように適合し、終了するかについて詳しくは、[ セグメント化サービスのドキュメント ](../../segmentation/home.md) を参照してください。
+オーディエンスの評価、およびプロファイルがオーディエンスにどのように適合し、終了するかについて詳しくは、[&#x200B; セグメント化サービスのドキュメント &#x200B;](../../segmentation/home.md) を参照してください。
 
 ### [!UICONTROL オーディエンスサイズの変更のトレンド] {#audience-size-change-trend}
 
@@ -266,9 +266,9 @@ Adobeには、オーディエンスに関連する様々な指標を視覚化す
 
 顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその個々の顧客に関連付けられます。 このような状況では、複数の ID からのフラグメントを含んだ複数のプロファイルが組織に存在する可能性があります。
 
-ID について詳しくは、[ID サービスのドキュメント ](../../identity-service/home.md) を参照してください。
+ID について詳しくは、[ID サービスのドキュメント &#x200B;](../../identity-service/home.md) を参照してください。
 
-![ID の重複ウィジェットがハイライト表示された [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードの概要 ](../images/audiences/identity-overlap.png)
+![ID の重複ウィジェットがハイライト表示された [!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードの概要 &#x200B;](../images/audiences/identity-overlap.png)
 
 ### [!UICONTROL ID 別プロファイル] {#profiles-by-identity}
 
@@ -285,7 +285,7 @@ ID について詳しくは、[ID サービスのドキュメント ](../../iden
 
 機械学習モデルは、データの全体的な分布と主要なディメンションを分析することにより、データインサイトを自動的に生成します。
 
-ID について詳しくは、[ID サービスのドキュメント ](../../identity-service/home.md) を参照してください。
+ID について詳しくは、[ID サービスのドキュメント &#x200B;](../../identity-service/home.md) を参照してください。
 
 ### 予定されているアクティベーション {#scheduled-activations}
 
@@ -297,4 +297,4 @@ ID について詳しくは、[ID サービスのドキュメント ](../../iden
 
 ## 次の手順
 
-このドキュメントを通して、[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードを見つけ、表示するオーディエンスを選択できるようになりました。 また、使用可能なウィジェットに表示される指標についても理解できました。 Experience Platform UI でのオーディエンスの操作について詳しくは、[ セグメント化サービス UI ガイド ](../../segmentation/ui/overview.md) を参照してください。
+このドキュメントを通して、[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードを見つけ、表示するオーディエンスを選択できるようになりました。 また、使用可能なウィジェットに表示される指標についても理解できました。 Experience Platform UI でのオーディエンスの操作について詳しくは、[&#x200B; セグメント化サービス UI ガイド &#x200B;](../../segmentation/ui/overview.md) を参照してください。

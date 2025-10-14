@@ -14,7 +14,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->セルフサービスソースのストリーミング SDKはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>セルフサービスソースのストリーミング SDKはベータ版です。 ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 セルフサービスソース（ストリーミング SDK）を使用すると、独自のソースを統合してストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
@@ -24,17 +24,17 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 
 ### 統合
 
-* [ ストリーミングSDKの新しい接続仕様を作成 ](create.md) します。
-* [ 新しい接続仕様 ID でストリーミングフロー仕様を更新します ](update-flow-specs.md)。
-* [ ストリーミングソースをテストして送信します ](submit.md)。
+* [&#x200B; ストリーミングSDKの新しい接続仕様を作成 &#x200B;](create.md) します。
+* [&#x200B; 新しい接続仕様 ID でストリーミングフロー仕様を更新します &#x200B;](update-flow-specs.md)。
+* [&#x200B; ストリーミングソースをテストして送信します &#x200B;](submit.md)。
 
 ### ドキュメント
 
-* ソースのドキュメント化を開始するには、[ セルフサービスソースのドキュメント作成の概要 ](../documentation/doc-overview.md) を参照してください。
-* GitHub を使用してドキュメントを作成する手順については、[GitHub web インターフェイスの使用 ](../documentation/github.md) に関するガイドを参照してください。
-* ローカルマシンを使用してドキュメントを作成する手順については、[ テキストエディターの使用 ](../documentation/text-editor.md) に関するガイドを参照してください。
-* [ ストリーミング SDK API ドキュメントテンプレートを使用して、API にソースをドキュメント化する ](streaming-template-api.md)。
-* [ ストリーミング SDK UI ドキュメントテンプレートを使用して、UI にソースをドキュメント化します ](streaming-template-ui.md)。
+* ソースのドキュメント化を開始するには、[&#x200B; セルフサービスソースのドキュメント作成の概要 &#x200B;](../documentation/doc-overview.md) を参照してください。
+* GitHub を使用してドキュメントを作成する手順については、[GitHub web インターフェイスの使用 &#x200B;](../documentation/github.md) に関するガイドを参照してください。
+* ローカルマシンを使用してドキュメントを作成する手順については、[&#x200B; テキストエディターの使用 &#x200B;](../documentation/text-editor.md) に関するガイドを参照してください。
+* [&#x200B; ストリーミング SDK API ドキュメントテンプレートを使用して、API にソースをドキュメント化する &#x200B;](streaming-template-api.md)。
+* [&#x200B; ストリーミング SDK UI ドキュメントテンプレートを使用して、UI にソースをドキュメント化します &#x200B;](streaming-template-ui.md)。
 
 以下のドキュメントテンプレートもダウンロードできます。
 
@@ -51,8 +51,8 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 
 このガイドには、Adobe Experience Platformの次のコンポーネントに関する十分な知識も必要です。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## API 呼び出し例の読み取り
 
@@ -72,7 +72,7 @@ Experience Platform API を呼び出すには、まず[認証に関するチュ�
 
 >[!NOTE]
 >
->Experience Platformのサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../../sandboxes/home.md) を参照してください。
+>Experience Platformのサンドボックスについて詳しくは、[&#x200B; サンドボックスのドキュメント &#x200B;](../../../sandboxes/home.md) を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -80,4 +80,4 @@ Experience Platform API を呼び出すには、まず[認証に関するチュ�
 
 ## 次の手順
 
-セルフサービスソース（ストリーミングSDK）を使用して新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。
+セルフサービスソース（ストリーミングSDK）を使用して新しいソースの作成を開始するには、[&#x200B; 新しいソースの作成 &#x200B;](./create.md) に関するチュートリアルを参照してください。

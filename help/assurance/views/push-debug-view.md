@@ -15,7 +15,7 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 ## クライアント
 
-![ プッシュクライアント ](./images/push-debug-view/clients.png)
+![&#x200B; プッシュクライアント &#x200B;](./images/push-debug-view/clients.png)
 
 クライアントドロップダウンには、この Assurance セッションに接続した一意の各クライアントのリストがあります。 クライアントは、一意のデバイスまたはデバイス用の一意のアプリインストールです。 例えば、Android デバイスとiOS デバイスがセッションに接続されている場合、これらのクライアントは「クライアント」ドロップダウンに表示されます。
 
@@ -29,7 +29,7 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 何かが期待どおりに動作しない場合は、その問題の修正方法の詳細を示すアラートが表示されます。
 
-![ 無効な状態 ](./images/push-debug-view/invalid-state.png)
+![&#x200B; 無効な状態 &#x200B;](./images/push-debug-view/invalid-state.png)
 
 ### クライアントの詳細
 
@@ -43,7 +43,7 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 有効な場合、パネルにはデバイスの ECID、プッシュトークン、アプリケーションのアプリ ID、メッセージプラットフォームおよびプッシュトークンが拒否リストに登録されているかどうかが表示されます。 トークンは、ユーザーがアプリをアンインストールした、アプリのプッシュメッセージを無効にするなど、様々な理由で拒否リストに表示される可能性があります。
 
-![ ブロック ](./images/push-debug-view/deny-list-blocked.png)
+![&#x200B; ブロック &#x200B;](./images/push-debug-view/deny-list-blocked.png)
 
 最後に、パネルの下部には、この特定のプロファイルを新しいタブで開くリンクがあります。
 
@@ -59,13 +59,13 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 様々なiOSおよびAndroidのプッシュ機能をテストするように設定できるパネルがいくつか用意されています。 設定が完了したら、「**[!UICONTROL テストプッシュ通知を送信]**」を選択して、メッセージを送信します。
 
-![ プッシュの送信 ](./images/push-debug-view/send.png)
+![&#x200B; プッシュの送信 &#x200B;](./images/push-debug-view/send.png)
 
 ### メッセージ
 
 **[!UICONTROL メッセージ]** パネルで、メッセージのタイトルと本文を指定できます。 サイレント通知機能は、ここで有効にすることもできます。
 
-![ メッセージペイン ](./images/push-debug-view/message-pane.png)
+![&#x200B; メッセージペイン &#x200B;](./images/push-debug-view/message-pane.png)
 
 ### プッシュターゲット
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 **[!UICONTROL 設定を検証]** タブに緑色のチェックマークが 3 つ表示されている場合、この情報がデフォルトで提供されます。 ただし、アプリが完全に設定されていない場合でも、独自のプッシュトークンとチャネル設定を指定できます。
 
-![ ターゲットペイン ](./images/push-debug-view/target-pane.png)
+![&#x200B; ターゲットペイン &#x200B;](./images/push-debug-view/target-pane.png)
 
 ### クリック動作
 
@@ -81,13 +81,13 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 ディープリンクを使用する場合は、アプリ開発者が作成する必要があります。
 
-![ 動作ウィンドウ ](./images/push-debug-view/click-behavior.png)
+![&#x200B; 動作ウィンドウ &#x200B;](./images/push-debug-view/click-behavior.png)
 
 ### リッチメディア
 
 **[!UICONTROL リッチメディア]** パネルを使用すると、画像、ビデオ、GIFなど、メッセージに追加のメディアを追加できます。 この機能を有効にするには、アプリ開発者がアプリにコードを追加する必要があります。
 
-![ リッチ ウィンドウ ](./images/push-debug-view/rich-pane.png)
+![&#x200B; リッチ ウィンドウ &#x200B;](./images/push-debug-view/rich-pane.png)
 
 ### ボタン
 
@@ -95,23 +95,23 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 この機能を有効にするには、アプリ開発者がアプリにコードを追加する必要があります。
 
-![ ボタンペイン ](./images/push-debug-view/buttons-pane.png)
+![&#x200B; ボタンペイン &#x200B;](./images/push-debug-view/buttons-pane.png)
 
 ### カスタムデータ
 
 **[!UICONTROL カスタムデータ]** パネルでは、プッシュ通知にカスタムデータを追加できます。 各キーと値のペアはメッセージと共にメタデータとして送信され、開発者はこれを使用して強力なエクスペリエンスを作成し、トラッキングを追加できます。
 
-![ カスタム ウィンドウ ](./images/push-debug-view/custom-pane.png)
+![&#x200B; カスタム ウィンドウ &#x200B;](./images/push-debug-view/custom-pane.png)
 
 ## テスト結果
 
 メッセージを送信すると、「テスト結果 **[!UICONTROL セクションがメッセージのプッシュサービスからデータを受け取ります]**。 ここでは、メッセージがGoogleまたはiOSのメッセージングサービスに送信されたかどうかを確認できます。
 
-![ テストの結果 ](./images/push-debug-view/test-results.png)
+![&#x200B; テストの結果 &#x200B;](./images/push-debug-view/test-results.png)
 
 問題が発生した場合は、ここに表示されます。
 
-![ テスト結果のエラー ](./images/push-debug-view/test-error.png)
+![&#x200B; テスト結果のエラー &#x200B;](./images/push-debug-view/test-error.png)
 
 ## アドバンス
 
@@ -119,4 +119,4 @@ Adobe Experience Platform Assurance 内のプッシュデバッグビューは�
 
 **[!UICONTROL テストプッシュ通知を送信]** ボタンの横には、ポップアップメニューを含む省略記号のセットがあります。 ここから、メッセージペイロードを表示できます。 これにより、リモートメッセージサービスに送信される正確なメッセージを確認できます。 このペイロードを確認したり、コピーしてデスクトップのプッシュテストツールに貼り付けたりすることもできます。
 
-![ カスタム ウィンドウ ](./images/push-debug-view/message-payload.png)
+![&#x200B; カスタム ウィンドウ &#x200B;](./images/push-debug-view/message-payload.png)

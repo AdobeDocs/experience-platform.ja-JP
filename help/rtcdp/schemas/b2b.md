@@ -13,11 +13,11 @@ ht-degree: 47%
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
-Adobe Real-Time Customer Data Platform B2B editionには、アカウント、オポチュニティ、キャンペーンなどといった [ 基本的な B2B データエンティティに関する詳細をキャプチャする ](../../xdm/schema/composition.md#class) エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B editionを使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
+Adobe Real-Time Customer Data Platform B2B editionには、アカウント、オポチュニティ、キャンペーンなどといった [&#x200B; 基本的な B2B データエンティティに関する詳細をキャプチャする &#x200B;](../../xdm/schema/composition.md#class) エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B editionを使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
 
 >[!IMPORTANT]
 >
->B2B スキーマは、Experience Platform アプリケーション（[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) など）で使用できます。 <br/> ただし、（内のプロファイル） B2B スキーマを（リアルタイム顧客プロファイル [ に加えるには、Real-Time CDP B2B editionへのアクセス権が必要 ](../../profile/home.md) す。
+>B2B スキーマは、Experience Platform アプリケーション（[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) など）で使用できます。 <br/> ただし、（内のプロファイル） B2B スキーマを（リアルタイム顧客プロファイル [&#x200B; に加えるには、Real-Time CDP B2B editionへのアクセス権が必要 &#x200B;](../../profile/home.md) す。
 
 Real-Time CDP B2B editionには、次の標準クラスが用意されています。
 

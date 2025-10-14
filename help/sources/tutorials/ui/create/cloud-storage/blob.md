@@ -17,7 +17,7 @@ ht-degree: 18%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md):Experience Platformでカスタマーエクスペリエンスデータを整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]  システム &#x200B;](../../../../../xdm/home.md):Experience Platformでカスタマーエクスペリエンスデータを整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -34,7 +34,7 @@ Experience Platformでは、外部ストレージから取り込む次のファ�
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Azure Blob Storage]  概要 ](../../../../connectors/cloud-storage/blob.md#authentication) を参照してください。
+認証について詳しくは、[[!DNL Azure Blob Storage]  概要 &#x200B;](../../../../connectors/cloud-storage/blob.md#authentication) を参照してください。
 
 ## ソースカタログのナビゲート
 
@@ -46,13 +46,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >新しい接続の場合はソースに **[!UICONTROL 設定]** が表示され、アカウントが既に存在する場合は **[!UICONTROL データを追加]** が表示されます。
 
-![ ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
+![&#x200B; ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
 
 ## 既存のアカウントを使用
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Azure Blob Storage] アカウントを選択します。
 
-![Azure Blob Storage の既存のソースインターフェイス ](../../../../images/tutorials/create/blob/existing.png)
+![Azure Blob Storage の既存のソースインターフェイス &#x200B;](../../../../images/tutorials/create/blob/existing.png)
 
 ## 新しいアカウントを作成
 
@@ -68,22 +68,22 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 **[!UICONTROL アカウントキー認証]** を選択し、`connectionString`、`container`、`folderPath` を入力します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ 新しいアカウント作成手順のアカウントキー認証オプション。](../../../../images/tutorials/create/blob/account-key.png)
+![&#x200B; 新しいアカウント作成手順のアカウントキー認証オプション。](../../../../images/tutorials/create/blob/account-key.png)
 
 >[!TAB  共有アクセス署名 ]
 
 **[!UICONTROL 共有アクセス署名]** を選択し、`sasUri`、`container` および `folderPath` を指定します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ 新しいアカウント作成手順の共有アクセス署名認証オプション ](../../../../images/tutorials/create/blob/sas.png)
+![&#x200B; 新しいアカウント作成手順の共有アクセス署名認証オプション &#x200B;](../../../../images/tutorials/create/blob/sas.png)
 
 >[!TAB  サービスプリンシパルベースの認証 ]
 
 **[!UICONTROL サービスプリンシパルベースの認証]** を選択し、`serviceEndpoint`、`servicePrincipalId`、`servicePrincipalKey`、`accountKind`、`tenant`、`container` および `folderPath` を入力します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ 新しいアカウント作成手順のサービスプリンシパルベースの認証オプション。](../../../../images/tutorials/create/blob/service-principal.png)
+![&#x200B; 新しいアカウント作成手順のサービスプリンシパルベースの認証オプション。](../../../../images/tutorials/create/blob/service-principal.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Azure Blob Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、[!DNL Azure Blob Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む &#x200B;](../../dataflow/batch/cloud-storage.md) ことができます。

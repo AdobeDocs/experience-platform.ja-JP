@@ -16,9 +16,9 @@ ht-degree: 63%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL IdentityMap] は、[[!UICONTROL XDM ExperienceEvent] クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md) [[!UICONTROL XDM Individual Profile] クラス ](../../classes/individual-profile.md) の互換性のあるフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
+[!UICONTROL IdentityMap] は、[[!UICONTROL XDM ExperienceEvent] クラスの標準スキーマフィールドグループで &#x200B;](../../classes/experienceevent.md) [[!UICONTROL XDM Individual Profile] クラス &#x200B;](../../classes/individual-profile.md) の互換性のあるフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
 
-![[!UICONTROL IdentityMap] スキーマフィールドグループの図 ](../../images/field-groups/identitymap.png)
+![[!UICONTROL IdentityMap] スキーマフィールドグループの図 &#x200B;](../../images/field-groups/identitymap.png)
 
 メリットとデメリットを含むそのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap)の ID マップの節を参照してください。
 
@@ -38,4 +38,4 @@ ht-degree: 63%
 }
 ```
 
-フィールドグループについて詳しくは、公開 XDM リポジトリの [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) を参照してください。
+フィールドグループについて詳しくは、公開 XDM リポジトリの [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) を参照してください。

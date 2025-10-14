@@ -17,4 +17,4 @@ Adobe Experience Platform では、複数のソースからデータを組み合
 
 RESTful API とExperience Platform ユーザーインターフェイスを使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。 また、データソースに関する環境設定を指定し、結合中に競合が発生した場合にどのデータの優先順位を持つかを指定することもできます。
 
-結合ポリシーと、結合ポリシーがExperience Platform内で果たす役割について詳しくは、まず [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) をお読みください。
+結合ポリシーと、結合ポリシーがExperience Platform内で果たす役割について詳しくは、まず [&#x200B; 結合ポリシーの概要 &#x200B;](../../profile/merge-policies/overview.md) をお読みください。

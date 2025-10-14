@@ -35,7 +35,7 @@ Real-Time CDP でサポートされるプロファイル機能に加えて、Rea
 
 ## プロファイルビューアー
 
-Experience Platformでは、顧客プロファイルを簡単に表示し、様々な属性を使用して特定のプロファイルを検索できます。 Experience Platform内でのプロファイルの表示方法について詳しくは、[ プロファイル参照の概要 ](profile-browse.md) を参照してください。
+Experience Platformでは、顧客プロファイルを簡単に表示し、様々な属性を使用して特定のプロファイルを検索できます。 Experience Platform内でのプロファイルの表示方法について詳しくは、[&#x200B; プロファイル参照の概要 &#x200B;](profile-browse.md) を参照してください。
 
 ## 次の手順
 

@@ -24,7 +24,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 [!UICONTROL プロファイル] ダッシュボードなどの任意のダッシュボードから、「**[!UICONTROL ダッシュボードを変更]**」を選択して、既存のウィジェットのサイズを変更し、並べ替えることができます。
 
-![ 「変更」ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
+![&#x200B; 「変更」ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
 
 ## ウィジェットの並べ替え
 
@@ -40,13 +40,13 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 >
 >ウィジェットのサイズを調整すると、周囲のウィジェットは動的に再配置されます。このため、一部のウィジェットが追加の行に移動し、スクロールしなければすべてのウィジェットを表示できなくなる場合があります。
 
-![ サイズ変更されたウィジェットがハイライト表示されたプロファイルダッシュボード。](../images/customization/resize-widget.png)
+![&#x200B; サイズ変更されたウィジェットがハイライト表示されたプロファイルダッシュボード。](../images/customization/resize-widget.png)
 
 ## ダッシュボードの更新内容の保存
 
 ウィジェットの移動とサイズ変更が完了したら、「**[!UICONTROL 保存して終了]**」を選択して変更内容を保存し、メインのダッシュボードビューに戻ります。変更を保存しない場合は、「**[!UICONTROL キャンセル]**」を選択してダッシュボードをリセットし、メインのダッシュボード表示に戻ります。
 
-![ 「キャンセル」と「保存して終了」の両方がハイライト表示されたプロファイルダッシュボード。](../images/customization/save-changes.png)
+![&#x200B; 「キャンセル」と「保存して終了」の両方がハイライト表示されたプロファイルダッシュボード。](../images/customization/save-changes.png)
 
 ## ウィジェットライブラリ
 
@@ -54,7 +54,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 [!UICONTROL ウィジェットライブラリ] にアクセスして操作する手順については、 [ウィジェットライブラリガイド](widget-library.md) を参照してください。
 
-![ 「標準」と「カスタム」がハイライト表示されたウィジェットライブラリワークスペース ](../images/customization/widget-library.png)
+![&#x200B; 「標準」と「カスタム」がハイライト表示されたウィジェットライブラリワークスペース &#x200B;](../images/customization/widget-library.png)
 
 ## 次の手順
 

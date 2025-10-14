@@ -24,11 +24,11 @@ ht-degree: 30%
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):[!DNL Experience Platform] がエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらを作成する方法については、[ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) または [ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) に関するチュートリアルを参照してください。
+さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらを作成する方法については、[&#x200B; レコードデータのストリーミング &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md) または [&#x200B; 時系列データのストリーミング &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) に関するチュートリアルを参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -696,9 +696,9 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 
 ## 次の手順
 
-このチュートリアルでは、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用してデータをExperience Platformに取り込めるようにしました。 UI でストリーミング接続を作成する手順については、[ ストリーミング接続の作成チュートリアル ](../../../ui/create/streaming/http.md) を参照してください。
+このチュートリアルでは、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用してデータをExperience Platformに取り込めるようにしました。 UI でストリーミング接続を作成する手順については、[&#x200B; ストリーミング接続の作成チュートリアル &#x200B;](../../../ui/create/streaming/http.md) を参照してください。
 
-データをExperience Platformにストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
+データをExperience Platformにストリーミングする方法については、[&#x200B; 時系列データのストリーミング &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [&#x200B; レコードデータのストリーミング &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
 
 ## 付録
 

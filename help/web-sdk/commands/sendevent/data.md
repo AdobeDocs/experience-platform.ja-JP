@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # `data`
 
-`data` オブジェクトを使用すると、XDM スキーマに一致しないAdobeにペイロードを送信できます。 Adobe Analytics、Adobe Target、Adobe Audience Managerに直接データを送信するなど、XDM 以外のシナリオで役立ちます。 データがデータストリームに到達したら、[ データ準備のマッピング ](/help/data-prep/ui/mapping.md) を使用して、XDM フィールドを `data` オブジェクトの各フィールドに割り当てることができます。
+`data` オブジェクトを使用すると、XDM スキーマに一致しないAdobeにペイロードを送信できます。 Adobe Analytics、Adobe Target、Adobe Audience Managerに直接データを送信するなど、XDM 以外のシナリオで役立ちます。 データがデータストリームに到達したら、[&#x200B; データ準備のマッピング &#x200B;](/help/data-prep/ui/mapping.md) を使用して、XDM フィールドを `data` オブジェクトの各フィールドに割り当てることができます。
 
 >[!IMPORTANT]
 >
@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Adobe Analyticsで `data` オブジェクトを使用します {#analytics}
 
-Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、[!DNL AppMeasurement] 変数と同じ構文を使用するように設定されているので、Web SDK へのアップグレードプロセスが簡素化されます。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング ](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。
+Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、[!DNL AppMeasurement] 変数と同じ構文を使用するように設定されているので、Web SDK へのアップグレードプロセスが簡素化されます。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。

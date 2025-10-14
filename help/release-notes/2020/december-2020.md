@@ -33,9 +33,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データフローの透明性 | ソースと宛先のデータフローを監視できます。 詳しくは、[ ソースの監視に関するチュートリアル ](../../dataflows/ui/monitor-sources.md) または [ 宛先の監視に関するチュートリアル ](../../dataflows/ui/monitor-destinations.md) を参照してください。 |
+| データフローの透明性 | ソースと宛先のデータフローを監視できます。 詳しくは、[&#x200B; ソースの監視に関するチュートリアル &#x200B;](../../dataflows/ui/monitor-sources.md) または [&#x200B; 宛先の監視に関するチュートリアル &#x200B;](../../dataflows/ui/monitor-destinations.md) を参照してください。 |
 
-データフローについて詳しくは、[ データフローの概要 ](../../dataflows/home.md) を参照してください。
+データフローについて詳しくは、[&#x200B; データフローの概要 &#x200B;](../../dataflows/home.md) を参照してください。
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -47,7 +47,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | --- | ---|
 | Adobe Experience Platform Intelligence パッケージアドオン | Adobe Experience Platform Intelligence パッケージのアドオンは、次のような主な機能をさらに活用できる、Data Science Workspaceのアップグレードです。 <li> UI 駆動モデルの実験と評価。</li><li> スケジュールされたトレーニングと推論ジョブを使用してモデルをデプロイし、運用する機能。</li><li> Tensorflow モデル（GPU コンピューティング）でのディープラーニングのサポート。</li><li> Spark ベースの分散コンピューティングで、大規模なデータセット（10 MM +行）に対してトレーニングとスコアリングを行います。</li><li>さらに件</li> |
 
-Adobe Experience Platform Intelligence パッケージアドオンについて詳しくは、[Data Science Workspaceのアクセスと機能 ](../../data-science-workspace/access-features-dsw.md) に関するドキュメントを参照してください。
+Adobe Experience Platform Intelligence パッケージアドオンについて詳しくは、[Data Science Workspaceのアクセスと機能 &#x200B;](../../data-science-workspace/access-features-dsw.md) に関するドキュメントを参照してください。
 
 ## [!DNL Sources] {#sources}
 
@@ -59,7 +59,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| ストリーミングソースのアカウントと接続の詳細を更新 | [!DNL Flow Service] API と UI を使用して、既存のストリーミング接続の名前、説明、資格情報を更新できるようになりました。 詳しくは、[API を使用した接続の更新 ](../../sources/tutorials/api/update.md) および [UI を使用したアカウント詳細の編集 ](../../sources/tutorials/ui/monitor.md) に関するチュートリアルを参照してください。 |
-| データフローの削除 | エラーを含むストリーミングデータフローまたは不要になったストリーミングデータフローを、[!DNL Flow Service] API と UI を使用して削除できるようになりました。 詳しくは、[API を使用したデータフローの削除 ](../../sources/tutorials/api/delete-dataflows.md) および [UI を使用したデータフローの削除 ](../../sources/tutorials/ui/delete.md) のチュートリアルを参照してください。 |
+| ストリーミングソースのアカウントと接続の詳細を更新 | [!DNL Flow Service] API と UI を使用して、既存のストリーミング接続の名前、説明、資格情報を更新できるようになりました。 詳しくは、[API を使用した接続の更新 &#x200B;](../../sources/tutorials/api/update.md) および [UI を使用したアカウント詳細の編集 &#x200B;](../../sources/tutorials/ui/monitor.md) に関するチュートリアルを参照してください。 |
+| データフローの削除 | エラーを含むストリーミングデータフローまたは不要になったストリーミングデータフローを、[!DNL Flow Service] API と UI を使用して削除できるようになりました。 詳しくは、[API を使用したデータフローの削除 &#x200B;](../../sources/tutorials/api/delete-dataflows.md) および [UI を使用したデータフローの削除 &#x200B;](../../sources/tutorials/ui/delete.md) のチュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

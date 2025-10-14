@@ -35,7 +35,7 @@ ht-degree: 44%
 | アクセストークン | アクセストークンは、OAuth 2.0 認証で [!DNL Square] アカウントを認証するために使用されます。 アクセストークンは [!DNL Square] から取得できます。 |
 | 更新トークン | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは [!DNL Square] から取得できます。 |
 
-これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
+これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント &#x200B;](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
 
 必要な資格情報を収集したら、次の手順に従って [!DNL Square] アカウントをExperience Platformにリンクできます。
 
@@ -65,4 +65,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[ 支払いデータをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/payments.md) を行いましょう。
+このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[&#x200B; 支払いデータをExperience Platformに取り込むためのデータフローの作成 &#x200B;](../../dataflow/payments.md) を行いましょう。

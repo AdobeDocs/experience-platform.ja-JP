@@ -17,7 +17,7 @@ ht-degree: 8%
 >
 >* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Databricks] ソースを利用できます。
 >
->* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、UI のソースワークスペースを使用して [!DNL Databricks] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
@@ -25,8 +25,8 @@ ht-degree: 8%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
@@ -51,13 +51,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Azure Databricks ソースカードが選択されているソースカタログ ](../../../../images/tutorials/create/databricks/catalog.png)
+![Azure Databricks ソースカードが選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### 既存のアカウントを使用
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Azure Databricks] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/databricks/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/databricks/existing.png)
 
 ### 新しいアカウントを作成
 
@@ -68,7 +68,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * アクセストークン
 * データベース
 
-![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
+![&#x200B; アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
 
 さらに、[!UICONTROL &#x200B; ステージング SAS URI] 資格情報をコピーして、[!DNL Azure Databricks] 環境に貼り付ける必要があります。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
@@ -76,4 +76,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## データのデータフロー [!DNL Azure Databricks] 作成
 
-[!DNL Azure Databricks] アカウントに正常に接続したので、次は [ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
+[!DNL Azure Databricks] アカウントに正常に接続したので、次は [&#x200B; データフローを作成し、データベースからExperience Platformにデータを取り込む &#x200B;](../../dataflow/databases.md) ことができます。

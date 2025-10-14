@@ -42,7 +42,7 @@ URL への ID の追加は、Adobe Experience Platform Data Collection タグイ
 * **[!UICONTROL ユーザーがクリックしたとき]**：特定の要素
 * **[!UICONTROL CSS セレクターに一致する要素]**:`a[href]`
 
-![ ルールイベント ](../assets/id-sharing-event-configuration.png)
+![&#x200B; ルールイベント &#x200B;](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -57,7 +57,7 @@ URL への ID の追加は、Adobe Experience Platform Data Collection タグイ
 * **[!UICONTROL 演算子]**：正規表現に一致します
 * **[!UICONTROL 右オペランド]**：目的のドメインに一致する正規表現。 例：`adobe.com$|behance.com$`
 
-![ ルールの条件 ](../assets/id-sharing-condition-configuration.png)
+![&#x200B; ルールの条件 &#x200B;](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,7 +68,7 @@ URL に ID を追加します。
 * **[!UICONTROL 拡張機能]**：Adobe Experience Platform Web SDK
 * **[!UICONTROL アクションタイプ]**:ID を使用したリダイレクト
 
-![ ルールアクション ](../assets/id-sharing-action-configuration.png)
+![&#x200B; ルールアクション &#x200B;](../assets/id-sharing-action-configuration.png)
 
 +++
 
@@ -104,4 +104,4 @@ document.addEventListener("click", event => {
 
 ## 応答オブジェクト
 
-このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトには、ID 情報がクエリ文字列パラメーターとして追加された **`url`** という新しい URL が含まれます。
+このコマンドを使用して [&#x200B; 応答を処理 &#x200B;](command-responses.md) する場合、応答オブジェクトには、ID 情報がクエリ文字列パラメーターとして追加された **`url`** という新しい URL が含まれます。

@@ -20,7 +20,7 @@ ht-degree: 29%
 
 現在、Experience Platformでは、以下に示すAdobeの宛先をサポートしています。
 
-接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [ 接続 ](../../destination-types.md#connections) を参照してください。
+接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [&#x200B; 接続 &#x200B;](../../destination-types.md#connections) を参照してください。
 
 ### 接続
 
@@ -30,7 +30,7 @@ ht-degree: 29%
 * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage 接続](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate 接続](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
+* [Federated Audience Composition 接続 &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### 拡張機能
 
@@ -49,4 +49,4 @@ ht-degree: 29%
 
 Experience Platform オーディエンス共有機能を使用すると、Experience Platform オーディエンスを他のAdobeの宛先と共有できます。 詳しくは、次のページ （Audience Manager ドキュメントポータルで開く）を参照してください。
 
-* [ コアサービスの統合を通じた、Adobe Audience Manager、Adobe Advertising Cloud およびAdobe TargetとのExperience Platform オーディエンスの共有 ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+* [&#x200B; コアサービスの統合を通じた、Adobe Audience Manager、Adobe Advertising Cloud およびAdobe TargetとのExperience Platform オーディエンスの共有 &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)

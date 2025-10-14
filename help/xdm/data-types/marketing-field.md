@@ -16,9 +16,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする ](../field-groups/profile/consents.md) めに使用されます。
+>このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする &#x200B;](../field-groups/profile/consents.md) めに使用されます。
 >
->特定のマーケティング環境設定フィールドに `subscriptions` マップが必要な場合は、代わりに [ 購読データタイプのマーケティングフィールド ](./marketing-field-subscriptions.md) を使用する必要があります。
+>特定のマーケティング環境設定フィールドに `subscriptions` マップが必要な場合は、代わりに [&#x200B; 購読データタイプのマーケティングフィールド &#x200B;](./marketing-field-subscriptions.md) を使用する必要があります。
 
 ![](../images/data-types/marketing-field.png)
 
@@ -50,5 +50,5 @@ ht-degree: 1%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Web SDKでのファーストパーティデバイス ID の使用
 
-Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） ](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) を cookie を使用して web サイトの訪問者に割り当て、ユーザーの行動を追跡します。 cookie の有効期間に関するブラウザーの制限に対応するために、ファーストパーティデバイス ID （FPID）と呼ばれる独自のデバイス識別子を設定および管理できます。
+Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) を cookie を使用して web サイトの訪問者に割り当て、ユーザーの行動を追跡します。 cookie の有効期間に関するブラウザーの制限に対応するために、ファーストパーティデバイス ID （FPID）と呼ばれる独自のデバイス識別子を設定および管理できます。
 
 >[!NOTE]
 >
@@ -20,15 +20,15 @@ Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） ](h
 
 >[!IMPORTANT]
 >
->ファーストパーティデバイス ID は Web SDKの [ サードパーティ cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 機能と互換性がありません。 ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方を同時に使用することはできません。
+>ファーストパーティデバイス ID は Web SDKの [&#x200B; サードパーティ cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 機能と互換性がありません。 ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方を同時に使用することはできません。
 
 ## 前提条件 {#prerequisites}
 
-開始する前に、ECID や `identityMap` など、web SDKでの ID データの仕組みに精通していることを確認してください。 詳しくは、[Web SDKの ID データ ](./overview.md) に関する概要を参照してください。
+開始する前に、ECID や `identityMap` など、web SDKでの ID データの仕組みに精通していることを確認してください。 詳しくは、[Web SDKの ID データ &#x200B;](./overview.md) に関する概要を参照してください。
 
 ## ファーストパーティデバイス ID のフォーマット要件 {#formatting-requirements}
 
-Edge Networkは、[UUIDv4 形式 ](https://datatracker.ietf.org/doc/html/rfc4122) に準拠する ID のみを受け付けます。 UUIDv4 形式でないデバイス ID は拒否されます。
+Edge Networkは、[UUIDv4 形式 &#x200B;](https://datatracker.ietf.org/doc/html/rfc4122) に準拠する ID のみを受け付けます。 UUIDv4 形式でないデバイス ID は拒否されます。
 
 * [!DNL UUIDs] はユニークでランダムであり、衝突の可能性はごくわずかです。
 * IP アドレスやその他の個人を特定できる情報（PII）を使用して [!DNL UUIDv4] ーザーをシードすることはできません。
@@ -109,7 +109,7 @@ ID の優先順位は次の順序で設定されます。
 
 このプロセスを説明するために、以前にサイトを訪問した顧客が関与するシナリオや、[!DNL FPID] 移行がAdobe ソリューションでその顧客を特定する方法にどのような影響を与えるかを考えてみましょう。
 
-![FPID への移行後、訪問間に顧客の ID 値が更新される方法を示す図 ](../assets/identity/tracking/visits.png)
+![FPID への移行後、訪問間に顧客の ID 値が更新される方法を示す図 &#x200B;](../assets/identity/tracking/visits.png)
 
 >[!IMPORTANT]
 >
@@ -127,13 +127,13 @@ ID の優先順位は次の順序で設定されます。
 
 ## ファーストパーティデバイス ID （FPID）の使用 {#using-fpid}
 
-ファーストパーティデバイス ID （[!DNL FPIDs]）は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS [!DNL CNAME] または [!DNL JavaScript] コードとは異なり、DNS [A レコード ](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAAA レコード ](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）を使用するサーバーを使用して設定する場合に最も効果的です。
+ファーストパーティデバイス ID （[!DNL FPIDs]）は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS [!DNL CNAME] または [!DNL JavaScript] コードとは異なり、DNS [A レコード &#x200B;](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAAA レコード &#x200B;](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）を使用するサーバーを使用して設定する場合に最も効果的です。
 
 >[!IMPORTANT]
 >
 >[!DNL A] または [!DNL AAAA] レコードは、cookie の設定とトラッキングでのみサポートされています。 データ収集の主な方法は、[!DNL DNS CNAME] を使用することです。 [!DNL FPIDs] は、[!DNL A] または [!DNL AAAA] レコードを使用して設定され、[!DNL CNAME] を使用してAdobeに送信されます。
 >
->[Adobe管理証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でもサポートされています。
+>[Adobe管理証明書プログラム &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でもサポートされています。
 
 [!DNL FPID] cookie が設定されると、その値を取得し、イベントデータが収集されたときにAdobeに送信できます。 収集された [!DNL FPIDs] は、Adobe Experience Cloud アプリケーションの主要識別子である [!DNL ECIDs] を生成するために使用されます。
 
@@ -164,17 +164,17 @@ Web SDKを Web サイト `mywebsite.com` ージに実装する場合を考えて
 
 >[!IMPORTANT]
 >
->この機能を使用するには、[ ファーストパーティデータ収集 ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を有効にしておく必要があります。
+>この機能を使用するには、[&#x200B; ファーストパーティデータ収集 &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を有効にしておく必要があります。
 
 **手順 2. データストリームの**&#x200B;[!UICONTROL &#x200B; ファーストパーティ ID Cookie &#x200B;]&#x200B;**機能を有効にする**
 
-CNAME を設定したら、データストリームで「**[!UICONTROL ファーストパーティ ID Cookie]**」オプションを有効にする必要があります。 この設定は、ファーストパーティデバイス ID を参照する際に、この値を [ID マップ ](#identityMap) で参照するのではなく、指定された Cookie を参照するようにEdge Networkに指示します。
+CNAME を設定したら、データストリームで「**[!UICONTROL ファーストパーティ ID Cookie]**」オプションを有効にする必要があります。 この設定は、ファーストパーティデバイス ID を参照する際に、この値を [ID マップ &#x200B;](#identityMap) で参照するのではなく、指定された Cookie を参照するようにEdge Networkに指示します。
 
-データストリームの設定方法については、[ データストリーム設定ドキュメント ](../../datastreams/configure.md#advanced-options) を参照してください。
+データストリームの設定方法については、[&#x200B; データストリーム設定ドキュメント &#x200B;](../../datastreams/configure.md#advanced-options) を参照してください。
 
-Adobe Experience Cloudとの連携方法について詳しくは、[ ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) に関するドキュメントを参照してください。
+Adobe Experience Cloudとの連携方法について詳しくは、[&#x200B; ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) に関するドキュメントを参照してください。
 
-![ ファーストパーティ ID の Cookie 設定を強調表示したデータストリーム設定を示す Platform UI 画像 ](../assets/first-party-id-datastreams.png)
+![&#x200B; ファーストパーティ ID の Cookie 設定を強調表示したデータストリーム設定を示す Platform UI 画像 &#x200B;](../assets/first-party-id-datastreams.png)
 
 この設定を有効にする場合、[!DNL FPID] が保存されていると期待される Cookie の名前を指定する必要があります。
 

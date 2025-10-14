@@ -15,7 +15,7 @@ Adobe Experience Platformでは、エクスペリエンスデータモデル（X
 
 このドキュメントでは、web およびモバイル分析データからインサイトを作成する際の一般的なユースケースを示す、様々な SQL クエリのサンプルを提供します。
 
-分析データの取り込みとマッピングについて詳しくは、[Analytics フィールドのマッピングに関するドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md) を参照してください。
+分析データの取り込みとマッピングについて詳しくは、[Analytics フィールドのマッピングに関するドキュメント &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) を参照してください。
 
 ## はじめに
 

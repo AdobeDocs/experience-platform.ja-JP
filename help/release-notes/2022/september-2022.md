@@ -84,7 +84,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 {style="table-layout:auto"}
 
-Experience Platformの監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
+Experience Platformの監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[&#x200B; 監査ログの概要 &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -116,7 +116,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 {style="table-layout:auto"}
 
-Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
+Experience Platformのデータ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -155,7 +155,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 列挙と推奨値の UI のサポート | Experience Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに対して [ 推奨値を追加または削除 ](../../xdm/ui/fields/enum.md) ができるようになりました。 |
+| 列挙と推奨値の UI のサポート | Experience Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに対して [&#x200B; 推奨値を追加または削除 &#x200B;](../../xdm/ui/fields/enum.md) ができるようになりました。 |
 
 **新しい XDM コンポーネント**
 
@@ -190,7 +190,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity-service}
 

@@ -21,11 +21,11 @@ ht-degree: 11%
 >
 > このガイドは、[!DNL RStudio] へのアクセス権を既に持ち、使用方法に精通していることを前提としています。 [!DNL RStudio] について詳しくは、[official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/) を参照してください。
 > 
-> さらに、クエリサービスで [!DNL RStudio] を使用するには、[!DNL PostgreSQL] JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、[[!DNL PostgreSQL]  公式サイト ](https://jdbc.postgresql.org/download/) からダウンロードできます。
+> さらに、クエリサービスで [!DNL RStudio] を使用するには、[!DNL PostgreSQL] JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、[[!DNL PostgreSQL]  公式サイト &#x200B;](https://jdbc.postgresql.org/download/) からダウンロードできます。
 
 ## [!DNL RStudio] インターフェイスでの [!DNL Query Service] 接続の作成
 
-[!DNL RStudio] をインストールしたら、RJDBC パッケージをインストールする必要があります。 [ コマンドラインを使用してデータベースを接続する ](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) 方法については、公式の Post ドキュメントを参照してください。
+[!DNL RStudio] をインストールしたら、RJDBC パッケージをインストールする必要があります。 [&#x200B; コマンドラインを使用してデータベースを接続する &#x200B;](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) 方法については、公式の Post ドキュメントを参照してください。
 
 Mac OS を使用している場合は、メニューバーから **[!UICONTROL ツール]** を選択し、その後ドロップダウンメニューから **[!UICONTROL パッケージをインストール]** を選択できます。 または、RStudio UI から「**[!DNL Packages]**」タブを選択し、「**[!DNL Install]**」を選択します。
 
@@ -47,9 +47,9 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、SSL モードを使用した接続方法については、[[!DNL Query Service] SSL ドキュメント ](./ssl-modes.md) を参照し `verify-full` ください。
+>Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、SSL モードを使用した接続方法については、[[!DNL Query Service] SSL ドキュメント &#x200B;](./ssl-modes.md) を参照し `verify-full` ください。
 
-データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
+データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[&#x200B; 資格情報ガイド &#x200B;](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
 
 コンソール出力内のメッセージで、クエリサービスへの接続を確認します。
 
@@ -57,7 +57,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 [!DNL Query Service] に接続したので、SQL 文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、[ エクスペリエンスイベント ](../../xdm/classes/experienceevent.md) を含むデータセットを使用し、デバイスの画面の高さを考慮して、web サイトのページビューのヒストグラムを作成します。
+次のクエリでは、[&#x200B; エクスペリエンスイベント &#x200B;](../../xdm/classes/experienceevent.md) を含むデータセットを使用し、デバイスの画面の高さを考慮して、web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## 次の手順
 
-クエリの作成および実行方法について詳しくは、[ クエリの実行 ](../best-practices/writing-queries.md) に関するガイドを参照してください。
+クエリの作成および実行方法について詳しくは、[&#x200B; クエリの実行 &#x200B;](../best-practices/writing-queries.md) に関するガイドを参照してください。

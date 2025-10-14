@@ -18,4 +18,4 @@ ht-degree: 34%
 
 データフローは、データを [!DNL Experience Platform] 間で移動するデータジョブを表します。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、データは [!DNL Identity Service] および [!DNL Real-Time Customer Profile] 最終的に宛先に対してアクティブ化される前に利用されます。
 
-宛先のデータフローの監視について詳しくは、[UI での宛先のデータフローの監視 ](../../dataflows/ui/monitor-destinations.md) チュートリアルをお読みください。
+宛先のデータフローの監視について詳しくは、[UI での宛先のデータフローの監視 &#x200B;](../../dataflows/ui/monitor-destinations.md) チュートリアルをお読みください。

@@ -21,7 +21,7 @@ Adobe Experience Platform データに対して「ファジー」一致を使用
 
 このプロセスの一部として機械学習モデルのトレーニングが必要なため、このドキュメントでは 1 つ以上の機械学習環境に関する実務知識を前提としています。
 
-この例では、[!DNL Python] と [!DNL Jupyter Notebook] 開発環境を使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 これは、[ 公式 Jupyter サイト ](https://jupyter.org/) からダウンロードできます。
+この例では、[!DNL Python] と [!DNL Jupyter Notebook] 開発環境を使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 これは、[&#x200B; 公式 Jupyter サイト &#x200B;](https://jupyter.org/) からダウンロードできます。
 
 開始する前に、必要なライブラリを読み込む必要があります。 [!DNL FuzzyWuzzy] は、[!DNL difflib] ライブラリの上に構築されたオープンソース [!DNL Python] ライブラリで、文字列の照合に使用されます。 [!DNL Levenshtein Distance] を使用して、シーケンスとパターンの違いを計算します。 [!DNL FuzzyWuzzy] には以下の要件があります。
 
@@ -40,11 +40,11 @@ pip install fuzzywuzzy
 pip install fuzzywuzzy[speedup]
 ```
 
-[!DNL Fuzzywuzzy] に関する技術情報については、こちらの [ 公式ドキュメント ](https://pypi.org/project/fuzzywuzzy/) を参照してください。
+[!DNL Fuzzywuzzy] に関する技術情報については、こちらの [&#x200B; 公式ドキュメント &#x200B;](https://pypi.org/project/fuzzywuzzy/) を参照してください。
 
 ### クエリサービスへの接続
 
-接続資格情報を指定して、機械学習モデルをクエリサービスに接続する必要があります。 有効期限のある資格情報と有効期限のない資格情報の両方を指定できます。 必要な資格情報の取得方法について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 [!DNL Jupyter Notebook] を使用している場合は、[ クエリサービスへの接続方法 ](../clients/jupyter-notebook.md) に関する完全なガイドを参照してください。
+接続資格情報を指定して、機械学習モデルをクエリサービスに接続する必要があります。 有効期限のある資格情報と有効期限のない資格情報の両方を指定できます。 必要な資格情報の取得方法について詳しくは、[&#x200B; 資格情報ガイド &#x200B;](../ui/credentials.md) を参照してください。 [!DNL Jupyter Notebook] を使用している場合は、[&#x200B; クエリサービスへの接続方法 &#x200B;](../clients/jupyter-notebook.md) に関する完全なガイドを参照してください。
 
 また、線形代数を有効にするには、必ず [!DNL numpy] パッケージを [!DNL Python] 環境に読み込みます。
 

@@ -25,7 +25,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->このチュートリアルでは、[!DNL Shopify Streaming] アカウントの前提条件の設定を完了している必要があります。 アカウントの設定手順については、[[!DNL Shopify Streaming]  概要 ](../../../../connectors/ecommerce/shopify-streaming.md) を参照してください。
+>このチュートリアルでは、[!DNL Shopify Streaming] アカウントの前提条件の設定を完了している必要があります。 アカウントの設定手順については、[[!DNL Shopify Streaming]  概要 &#x200B;](../../../../connectors/ecommerce/shopify-streaming.md) を参照してください。
 
 ## [!DNL Shopify Streaming] アカウントを接続
 
@@ -35,7 +35,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 **e コマース** カテゴリで、「[!DNL Shopify Streaming]」を選択し、次に **[!UICONTROL データを追加]** を選択します。
 
-![Experience Platform ソースカタログ ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![Experience Platform ソースカタログ &#x200B;](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## データの選択
 
@@ -46,13 +46,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 **[!UICONTROL ファイルをアップロード]** を選択して、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルを [!UICONTROL &#x200B; ファイルをドラッグ&amp;ドロップ &#x200B;] パネルにドラッグ&amp;ドロップすることもできます。
 
-![ ソースワークフローのデータを追加ステップ ](../../../../images/tutorials/create/shopify-streaming/select-data.png)
+![&#x200B; ソースワークフローのデータを追加ステップ &#x200B;](../../../../images/tutorials/create/shopify-streaming/select-data.png)
 
 ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、[!UICONTROL &#x200B; フィールドを検索 &#x200B;] ユーティリティを使用して、スキーマ内から特定の項目にアクセスすることもできます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのプレビュー手順 ](../../../../images/tutorials/create/shopify-streaming/preview.png)
+![&#x200B; ソースワークフローのプレビュー手順 &#x200B;](../../../../images/tutorials/create/shopify-streaming/preview.png)
 
 ## データフローの詳細
 
@@ -60,17 +60,17 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
+![&#x200B; ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
 
 ## マッピング
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=ja) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[&#x200B; データ準備 UI ガイド &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=ja) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/shopify-streaming/mapping.png)
+![&#x200B; ソースワークフローのマッピングステップ &#x200B;](../../../../images/tutorials/create/shopify-streaming/mapping.png)
 
 ## レビュー
 
@@ -81,7 +81,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ ソースワークフローのレビュー手順。](../../../../images/tutorials/create/shopify-streaming/review.png)
+![&#x200B; ソースワークフローのレビュー手順。](../../../../images/tutorials/create/shopify-streaming/review.png)
 
 ## ストリーミングエンドポイント URL の取得
 
@@ -89,8 +89,8 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ストリーミングエンドポイントを取得するには、作成したデータフローの [!UICONTROL &#x200B; データフローアクティビティ &#x200B;] ページに移動し、[!UICONTROL &#x200B; プロパティ &#x200B;] パネルの下部からエンドポイントをコピーします。
 
-![ データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
+![&#x200B; データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Shopify Streaming] アカウントへのソース接続とデータフローを確立しました。 API を使用して [!DNL Shopify Streaming] アカウントを接続する手順については、[Flow Service API を使用したソース接続とデータフローの作成  [!DNL Shopify]  に関するチュートリアルを参照してください ](../../../api/create/ecommerce/shopify-streaming.md)。
+このチュートリアルでは、[!DNL Shopify Streaming] アカウントへのソース接続とデータフローを確立しました。 API を使用して [!DNL Shopify Streaming] アカウントを接続する手順については、[Flow Service API を使用したソース接続とデータフローの作成  [!DNL Shopify]  に関するチュートリアルを参照してください &#x200B;](../../../api/create/ecommerce/shopify-streaming.md)。

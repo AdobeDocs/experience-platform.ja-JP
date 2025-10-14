@@ -20,7 +20,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 >[!NOTE]
 >
->CSV データをExperience Platformに取り込む場合は、[ そのデータを、AI 生成のレコメンデーションで作成された XDM スキーマにマッピング ](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）できます。その際、スキーマを手動で作成する必要はありません。
+>CSV データをExperience Platformに取り込む場合は、[&#x200B; そのデータを、AI 生成のレコメンデーションで作成された XDM スキーマにマッピング &#x200B;](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）できます。その際、スキーマを手動で作成する必要はありません。
 >
 >[!DNL Schema Registry] API を使用してスキーマを作成する場合は、まず[[!DNL Schema Registry] 開発者ガイド](../api/getting-started.md)を参照してから、[API を使用したスキーマの作成](create-schema-api.md)に関するチュートリアルを試してください。
 
@@ -48,19 +48,19 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ダイアログが表示されます。 このダイアログでは、フィールドとフィールドグループを追加して手動でスキーマを作成するか、CSV ファイルをアップロードして ML アルゴリズムを使用してスキーマを生成するかを選択できます。 ダイアログからスキーマ作成ワークフローを選択します。
 
-![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../images/tutorials/create-schema/create-a-schema-dialog.png)
+![&#x200B; ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ &#x200B;](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} 手動または ML で支援されたスキーマの作成 {#manual-or-assisted}
 
-ML アルゴリズムを使用して、アップロードされたファイルに基づいてスキーマ構造をレコメンデーションする方法については、[ 機械学習を利用したスキーマ作成ガイド ](../ui/ml-assisted-schema-creation.md) を参照してください。 この UI ガイドは、手動作成ワークフローを中心としています。
+ML アルゴリズムを使用して、アップロードされたファイルに基づいてスキーマ構造をレコメンデーションする方法については、[&#x200B; 機械学習を利用したスキーマ作成ガイド &#x200B;](../ui/ml-assisted-schema-creation.md) を参照してください。 この UI ガイドは、手動作成ワークフローを中心としています。
 
 ### 基本クラスを選択 {#choose-a-class}
 
-[!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローが表示されます。 次に、スキーマの基本クラスを選択します。 [!UICONTROL XDM 個人プロファイル &#x200B;] のコアクラスと [!UICONTROL XDM ExperienceEvent] の間で、または [!UICONTROL &#x200B; その他 &#x200B;] のクラスが目的に合わない場合は、これらのクラスを選択できます。 [!UICONTROL &#x200B; その他 &#x200B;] クラスオプションを使用すると、[ 新しいクラスを作成 ](#create-new-class) するか、他の既存のクラスから選択できます。
+[!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローが表示されます。 次に、スキーマの基本クラスを選択します。 [!UICONTROL XDM 個人プロファイル &#x200B;] のコアクラスと [!UICONTROL XDM ExperienceEvent] の間で、または [!UICONTROL &#x200B; その他 &#x200B;] のクラスが目的に合わない場合は、これらのクラスを選択できます。 [!UICONTROL &#x200B; その他 &#x200B;] クラスオプションを使用すると、[&#x200B; 新しいクラスを作成 &#x200B;](#create-new-class) するか、他の既存のクラスから選択できます。
 
 これらのクラスについて詳しくは、[[!UICONTROL XDM 個人プロファイル &#x200B;]](../classes/individual-profile.md) および [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) のドキュメントを参照してください。 このチュートリアルでは、「**[!UICONTROL XDM 個人プロファイル]**」に続いて「**[!UICONTROL 次へ]**」を選択します。
 
-![[!UICONTROL XDM 個人プロファイル &#x200B;] オプションと [!UICONTROL &#x200B; 次へ &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフロー ](../images/tutorials/create-schema/individual-profile-base-class.png)
+![[!UICONTROL XDM 個人プロファイル &#x200B;] オプションと [!UICONTROL &#x200B; 次へ &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフロー &#x200B;](../images/tutorials/create-schema/individual-profile-base-class.png)
 
 ### 名前とレビュー {#name-and-review}
 
@@ -76,7 +76,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 テキストフィールドに、人間にとってわかりやすい [!UICONTROL &#x200B; スキーマ表示名 &#x200B;] を入力します。 次に、スキーマの識別に役立つ適切な説明を入力します。 スキーマ構造をレビューし、設定に満足したら、「**[!UICONTROL 完了]**」を選択してスキーマを作成します。
 
-![[!UICONTROL &#x200B; スキーマ表示名 &#x200B;]、[!UICONTROL &#x200B; 説明 &#x200B;]、および [!UICONTROL &#x200B; 完了 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローの [!UICONTROL &#x200B; 名前とレビュー &#x200B;] セクション ](../images/ui/resources/schemas/name-and-review.png)
+![[!UICONTROL &#x200B; スキーマ表示名 &#x200B;]、[!UICONTROL &#x200B; 説明 &#x200B;]、および [!UICONTROL &#x200B; 完了 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローの [!UICONTROL &#x200B; 名前とレビュー &#x200B;] セクション &#x200B;](../images/ui/resources/schemas/name-and-review.png)
 
 ### スキーマの作成 {#compose-your-schema}
 
@@ -86,7 +86,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 >
 >スキーマの表示名と説明（オプション）は、サイドバーの **[!UICONTROL スキーマプロパティ]** から更新できます。 新しい名前を入力すると、キャンバスが自動的に更新され、スキーマの新しい名前が反映されます。
 
-![ 基本クラスとスキーマ図がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
+![&#x200B; 基本クラスとスキーマ図がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
@@ -98,23 +98,23 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 フィールドグループを追加するには、「**[!UICONTROL フィールドグループ]**」サブセクションで「**[!UICONTROL 追加]**」を選択します。
 
-![ 「フィールドグループを追加」ボタンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field-group-button.png)
+![&#x200B; 「フィールドグループを追加」ボタンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field-group-button.png)
 
 新しいダイアログが表示され、使用可能なフィールドグループのリストが表示されます。各フィールドグループは特定のクラスでのみ使用できるものなので、ダイアログには、選択したクラス（この場合は、[!DNL XDM Individual Profile] クラス）に適合するフィールドグループのみがリストされます。標準の XDM クラスを使用している場合、フィールドグループのリストは使用頻度に基づいてインテリジェントに並べ替えられます。
 
-![[!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ ](../images/tutorials/create-schema/field-group-popularity.png)
+![[!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ &#x200B;](../images/tutorials/create-schema/field-group-popularity.png)
 
 左側のパネルでフィルターの 1 つを選択して、標準フィールドグループのリストを特定の[業種](../schema/industries/overview.md)（小売、金融機関、ヘルスケアなど）に絞り込むことができます。
 
-![ 業界フィールドグループがハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ ](../images/tutorials/create-schema/industry-field-groups.png)
+![&#x200B; 業界フィールドグループがハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ &#x200B;](../images/tutorials/create-schema/industry-field-groups.png)
 
 リストからフィールドグループを選択すると、右側のパネルに表示されます。必要に応じて複数のフィールドグループを選択し、各グループを右側のレールのリストに追加してから確認することができます。また、現在選択されているフィールドグループの右側にアイコンが表示され、提供されるフィールドの構造をプレビューできます。
 
-![ 選択したフィールドグループのプレビューアイコンがハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ ](../images/tutorials/create-schema/preview-field-group-button.png)
+![&#x200B; 選択したフィールドグループのプレビューアイコンがハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ &#x200B;](../images/tutorials/create-schema/preview-field-group-button.png)
 
 フィールドグループをプレビューする際に、右側のパネルに、フィールドグループのスキーマに関する詳細な説明が表示されます。また、提供されたキャンバスでフィールドグループのフィールド間を移動することもできます。別のフィールドを選択すると、右側のパネルが更新され、該当するフィールドの詳細が表示されます。プレビューが完了したら「**[!UICONTROL 戻る]**」を選択して、フィールドグループ選択ダイアログに戻ります。
 
-![ デモグラフィックの詳細フィールドグループがプレビューされた [!UICONTROL &#x200B; プレビューフィールドグループ &#x200B;] ダイアログ ](../images/tutorials/create-schema/preview-field-group.png)。
+![&#x200B; デモグラフィックの詳細フィールドグループがプレビューされた [!UICONTROL &#x200B; プレビューフィールドグループ &#x200B;] ダイアログ &#x200B;](../images/tutorials/create-schema/preview-field-group.png)。
 
 このチュートリアルでは、「**[!UICONTROL デモグラフィックの詳細]**」フィールドグループを選択し、次に「**[!UICONTROL フィールドグループを追加]**」をクリックします。
 
@@ -122,13 +122,13 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 スキーマキャンバスが再び表示されます。「**[!UICONTROL フィールドグループ]**」セクションには[!UICONTROL デモグラフィックの詳細]がリストされ、「**[!UICONTROL 構造]**」セクションにはフィールドグループによって提供されたフィールドが含まれます。「**[!UICONTROL フィールドグループ]**」セクションでフィールドグループの名前を選択して、キャンバス内で提供される特定のフィールドをハイライト表示できます。
 
-![ デモグラフィックの詳細フィールドグループがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/demographic-details-structure.png)
+![&#x200B; デモグラフィックの詳細フィールドグループがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/demographic-details-structure.png)
 
 >[!NOTE]
 >
 >スキーマエディター内では、標準（Adobeが生成した）クラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
 >
->![ 南京錠アイコンがハイライトされたスキーマエディター ](../images/ui/explore/padlock-icon-highlight.png)
+>![&#x200B; 南京錠アイコンがハイライトされたスキーマエディター &#x200B;](../images/ui/explore/padlock-icon-highlight.png)
 
 このフィールドグループでは、データタイプが「[!UICONTROL ユーザー]」の最上位の名前 `person` の下にいくつかのフィールドが提供されます。このフィールドグループは、名前、生年月日、性別など、個人に関する情報を説明します。
 
@@ -150,7 +150,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 キャンバスが再び表示され、追加したフィールドグループが「**[!UICONTROL 構成]**」セクションの「**[!UICONTROL フィールドグループ]**」にリストされます。また、スキーマ構造に追加されたそれらの複合フィールドも表示されます。
 
-![ 新しい複合スキーマ構造がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/updated-structure.png)
+![&#x200B; 新しい複合スキーマ構造がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/updated-structure.png)
 
 ## カスタムフィールドグループの定義 {#define-field-group}
 
@@ -163,7 +163,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 新しいフィールドグループを作成するには、前と同様に「**[!UICONTROL フィールドグループ]**」サブセクションの「**[!UICONTROL 追加]**」を選択しますが、今回は、表示されるダイアログの上部付近の「**[!UICONTROL 新しいフィールドグループを作成]**」を選択します。次に、新しいフィールドグループの表示名と説明を入力するように求められます。 このチュートリアルでは、新しいフィールドグループに「[!DNL Custom Loyalty Details]」という名前を付けたうえで、「**[!UICONTROL フィールドグループを追加]**」を選択します。
 
-![[!UICONTROL &#x200B; 新しいフィールドグループを作成 &#x200B;]、[!UICONTROL &#x200B; 表示名 &#x200B;] および [!UICONTROL &#x200B; 説明 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ ](../images/tutorials/create-schema/create-new-field-group.png)
+![[!UICONTROL &#x200B; 新しいフィールドグループを作成 &#x200B;]、[!UICONTROL &#x200B; 表示名 &#x200B;] および [!UICONTROL &#x200B; 説明 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; フィールドグループを追加 &#x200B;] ダイアログ &#x200B;](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >
@@ -177,11 +177,11 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 まず、キャンバスでスキーマ名の横にある&#x200B;**プラス（＋）**&#x200B;アイコンを選択します。
 
-![ プラスアイコンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field.png)
+![&#x200B; プラスアイコンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field.png)
 
 「[!UICONTROL 名称未設定フィールド]」プレースホルダーがキャンバスに表示されます。また、右側のパネルが更新されて、このフィールドの設定オプションが表示されます。
 
-![[!UICONTROL &#x200B; 名称未設定フィールド &#x200B;] とスキーマ [!UICONTROL &#x200B; フィールドプロパティ &#x200B;] がハイライト表示されたスキーマエディター ](../images/tutorials/create-schema/untitled-field.png)
+![[!UICONTROL &#x200B; 名称未設定フィールド &#x200B;] とスキーマ [!UICONTROL &#x200B; フィールドプロパティ &#x200B;] がハイライト表示されたスキーマエディター &#x200B;](../images/tutorials/create-schema/untitled-field.png)
 
 このシナリオでは、スキーマには、人物の現在のロイヤルティ層の詳細を記述するオブジェクトタイプのフィールドが必要です。 右側のパネルのコントロールを使用して、関連フィールドを保持するのに使用される「[!UICONTROL オブジェクト]」タイプの `loyaltyTier` フィールドの作成を開始します。
 
@@ -189,11 +189,11 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
-![ スキーマに追加されたロイヤルティ層オブジェクトを含むスキーマエディター [!UICONTROL &#x200B; フィールドプロパティ &#x200B;] がハイライト表示されている様子 ](../images/tutorials/create-schema/loyalty-tier-object.png)
+![&#x200B; スキーマに追加されたロイヤルティ層オブジェクトを含むスキーマエディター [!UICONTROL &#x200B; フィールドプロパティ &#x200B;] がハイライト表示されている様子 &#x200B;](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 変更内容が適用され、新しく作成された `loyaltyTier` オブジェクトが表示されます。これはカスタムフィールドなので、組織のテナント ID を名前空間とするオブジェクト内に自動的にネストされ、先頭にアンダースコアが付きます（この例では `_tenantId`）。
 
-![ スキーマ図でハイライト表示されたテナント ID とロイヤルティ層を含むスキーマエディター。](../images/tutorials/create-schema/tenant-id.png)
+![&#x200B; スキーマ図でハイライト表示されたテナント ID とロイヤルティ層を含むスキーマエディター。](../images/tutorials/create-schema/tenant-id.png)
 
 >[!NOTE]
 >
@@ -203,7 +203,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 `loyaltyTier` オブジェクトの横にある&#x200B;**プラス（＋）**&#x200B;アイコンを選択して、サブフィールドの追加を開始します。新規フィールドプレースホルダーが表示され、「**[!UICONTROL フィールドプロパティ]**」セクションがキャンバスの右側に表示されます。
 
-![ テナント ID と新しいサブフィールドがスキーマ図のロイヤルティ層に追加されたスキーマエディター。](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
+![&#x200B; テナント ID と新しいサブフィールドがスキーマ図のロイヤルティ層に追加されたスキーマエディター。](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 各フィールドには、次の情報が必要です。
 
@@ -214,9 +214,9 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 * **[!UICONTROL 型]：**&#x200B;フィールドのデータタイプ。これには、基本的なスカラータイプと、[!DNL Schema Registry] に定義されている任意のデータタイプが含まれます。例：[!UICONTROL 文字列]、[!UICONTROL 整数]、[!UICONTROL ブーリアン]、[!UICONTROL 人物]、[!UICONTROL 住所]、[!UICONTROL 電話番号]など
 * **[!UICONTROL 説明]：**&#x200B;フィールドの説明（オプション）は、200 文字以内で指定してください。
 
-`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL &#x200B; 文字列 &#x200B;]」に設定すると、デフォルト値、形式、最大長など、制約を適用するためのオプションが **[!UICONTROL フィールドプロパティ]** セクションに自動的に入力されます。 詳しくは、[ データ検証フィールドのベストプラクティス ](../schema/best-practices.md#data-validation-fields) に関するドキュメントを参照してください。
+`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL &#x200B; 文字列 &#x200B;]」に設定すると、デフォルト値、形式、最大長など、制約を適用するためのオプションが **[!UICONTROL フィールドプロパティ]** セクションに自動的に入力されます。 詳しくは、[&#x200B; データ検証フィールドのベストプラクティス &#x200B;](../schema/best-practices.md#data-validation-fields) に関するドキュメントを参照してください。
 
-![ 新しい ID フィールドのフィールドプロパティ値がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/string-constraints.png)
+![&#x200B; 新しい ID フィールドのフィールドプロパティ値がハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/string-constraints.png)
 
 `id` はランダムに生成されるフリーフォーム文字列なので、それ以上の制約は必要ありません。「**[!UICONTROL 適用]**」を選択して変更を適用します。
 
@@ -234,7 +234,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 完了すると、`loyaltyTier` オブジェクトには `id`、`currentThreshold`、`nextThreshold`、および `effectiveDate` のフィールドが含まれます。
 
-![ ロイヤルティ層オブジェクトがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
+![&#x200B; ロイヤルティ層オブジェクトがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## フィールドグループへの列挙フィールドの追加 {#enum}
 
@@ -256,7 +256,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 このチュートリアルでは、スキーマ内の `loyaltyTier` オブジェクトには、階層クラスを記述する新しい列挙型フィールドが必要です。値は 4 つのオプションのうちいずれかになります。このフィールドをスキーマに追加するには、`loyaltyTier` オブジェクトの横にある&#x200B;**プラス (+)** アイコンを選択し、**[!UICONTROL フィールド名]**&#x200B;および&#x200B;**[!UICONTROL 表示名]**&#x200B;の必須フィールドに入力します。**[!UICONTROL タイプ]**&#x200B;の場合、「[!UICONTROL 文字列]」を選択します。
 
-![ 階層クラスオブジェクトが追加され、[!UICONTROL &#x200B; フィールドプロパティ &#x200B;] でハイライト表示されたスキーマエディター ](../images/tutorials/create-schema/tier-class-type.png)
+![&#x200B; 階層クラスオブジェクトが追加され、[!UICONTROL &#x200B; フィールドプロパティ &#x200B;] でハイライト表示されたスキーマエディター &#x200B;](../images/tutorials/create-schema/tier-class-type.png)
 
 タイプを選択すると、フィールドに対して追加のチェックボックスが表示されます。これには、**[!UICONTROL 配列]**、**[!UICONTROL 列挙と推奨値]**、**[!UICONTROL ID]**、および&#x200B;**[!UICONTROL 関係]**&#x200B;のチェックボックスが含まれます。
 
@@ -264,7 +264,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 すべてのフィールドプロパティの入力が完了したら、「**[!UICONTROL 適用]**」を選択し、`tierClass` フィールドから `loyaltyTier` オブジェクトに追加します。
 
-![ 「適用 [!UICONTROL &#x200B; がハイライト表示された状態で列挙および推奨値フィールドのプロパティが完了し &#x200B;] した ](../images/tutorials/create-schema/tier-class-enum.png)
+![&#x200B; 「適用 [!UICONTROL &#x200B; がハイライト表示された状態で列挙および推奨値フィールドのプロパティが完了し &#x200B;] した &#x200B;](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#datatype}
 
@@ -274,7 +274,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 `loyaltyTier` オブジェクトをデータタイプに変換するには、キャンバスで `loyaltyTier` フィールドを選択し、エディターの右側にある「**[!UICONTROL フィールドプロパティ]**」の下にある「**[!UICONTROL 新しいデータタイプに変換]**」を選択します。 
 
-![loyaltyTier オブジェクトと [!UICONTROL &#x200B; 新しいデータタイプに変換 &#x200B;] がハイライト表示されたスキーマエディター ](../images/tutorials/create-schema/convert-data-type.png)
+![loyaltyTier オブジェクトと [!UICONTROL &#x200B; 新しいデータタイプに変換 &#x200B;] がハイライト表示されたスキーマエディター &#x200B;](../images/tutorials/create-schema/convert-data-type.png)
 
 オブジェクトが正常に変換されたことを確認する通知が表示されます。 キャンバスでは、`loyaltyTier` フィールドにリンクアイコンが表示され、右側のパネルはデータタイプが「[!DNL Loyalty Tier]」であることを示しています。
 
@@ -290,11 +290,11 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 スキーマに、基本クラスで指定されるフィールドに加えて、複数のフィールドグループが含まれるようになりました。 より大きなスキーマを扱う場合は、左側のパネルでフィールドグループ名の横にあるチェックボックスをオンにして、表示されるフィールドを、目的のフィールドグループが指定するフィールドのみにフィルタリングできます。
 
-![ スキーマ図のサイズを小さくするために、スキーマエディターの「フィールドグループ」セクションで選択されるチェックボックスがいくつかあります。](../images/tutorials/create-schema/filter-by-field-group.png)
+![&#x200B; スキーマ図のサイズを小さくするために、スキーマエディターの「フィールドグループ」セクションで選択されるチェックボックスがいくつかあります。](../images/tutorials/create-schema/filter-by-field-group.png)
 
 スキーマ内の特定のフィールドを検索する場合は、検索バーを使用すると、表示されるフィールドを、その下に指定されるフィールドグループに関係なく、名前でフィルタリングすることもできます。
 
-![ 関連する結果がキャンバス上でハイライト表示されたスキーマエディターの検索フィールド。](../images/tutorials/create-schema/search.png)
+![&#x200B; 関連する結果がキャンバス上でハイライト表示されたスキーマエディターの検索フィールド。](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
@@ -322,7 +322,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 次に、ドロップダウンの定義済み名前空間のリストから **[!UICONTROL ID 名前空間]** を指定する必要があります。このフィールドは顧客のメールアドレスなので、ドロップダウンから「[!UICONTROL メール]」を選択します。「**[!UICONTROL 適用]**」を選択し、`personalEmail.address` フィールドへの更新を確認します。
 
-![ メールアドレスがハイライト表示され、プライマリ ID のチェックボックスが有効になっているスキーマエディター。](../images/tutorials/create-schema/primary-identity.png)
+![&#x200B; メールアドレスがハイライト表示され、プライマリ ID のチェックボックスが有効になっているスキーマエディター。](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 変更を適用すると、`personalEmail.address` のアイコンに ID フィールドになったことを示す指紋記号が表示されます。このフィールドは、**[!UICONTROL ID]** の下の左側のレールにも表示されます。
 
-![ スキーマ構成サイドバーでメールアドレスと ID フィールドがハイライト表示されたスキーマエディター ](../images/tutorials/create-schema/identity-applied.png)
+![&#x200B; スキーマ構成サイドバーでメールアドレスと ID フィールドがハイライト表示されたスキーマエディター &#x200B;](../images/tutorials/create-schema/identity-applied.png)
 
 これで、`personalEmail.address` フィールドに取り込まれたすべてのデータを使用して、その個人を識別し、その顧客の単一のビューを結び付けることができます。[!DNL Experience Platform] での ID の操作について詳しくは、[[!DNL Identity Service]](../../identity-service/home.md) のドキュメントを参照してください。
 
@@ -340,17 +340,17 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 スキーマを [!DNL Real-Time Customer Profile] で使用できるようにするには、プライマリ ID が定義されている必要があります。先にプライマリ ID を定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
 
-![ プライマリ ID が見つからないダイアログ。](../images/tutorials/create-schema/missing-primary-identity.png)
+![&#x200B; プライマリ ID が見つからないダイアログ。](../images/tutorials/create-schema/missing-primary-identity.png)
 
 「ロイヤルティメンバー」スキーマを [!DNL Profile] で使用できるようにするには、まず、キャンバスでスキーマタイトルを選択します。
 
 エディターの右側に、表示名、説明、タイプなど、スキーマに関する情報が表示されます。こうした情報に加えて、「**[!UICONTROL プロファイル]**」切り替えボタンも表示されます。
 
-![ スキーマルートと「プロファイルで有効にする」切替スイッチがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/profile-toggle.png)
+![&#x200B; スキーマルートと「プロファイルで有効にする」切替スイッチがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/profile-toggle.png)
 
 「**[!UICONTROL プロファイル]**」を選択すると、ポップアップが表示されて、[!DNL Profile] に対してスキーマを有効にするかどうかを確認するように求められます。
 
-![ プロファイル確認のために有効にするダイアログ ](../images/tutorials/create-schema/enable-profile.png)
+![&#x200B; プロファイル確認のために有効にするダイアログ &#x200B;](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
@@ -362,7 +362,7 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 スキーマエディター内で、クイックアクションを実行して、スキーマの JSON 構造をコピーしたり、スキーマを削除したりできます。 ビューの上部にある「[!UICONTROL &#x200B; 詳細 &#x200B;]」を選択すると、クイックアクションを含むドロップダウンが表示されます。
 
-![ 「その他」ボタンがハイライト表示され、ドロップダウンオプションが表示されたスキーマエディター。](../images/tutorials/create-schema/more-actions.png)
+![&#x200B; 「その他」ボタンがハイライト表示され、ドロップダウンオプションが表示されたスキーマエディター。](../images/tutorials/create-schema/more-actions.png)
 
 ### スキーマの削除 {#delete-a-schema}
 

@@ -33,11 +33,11 @@ ht-degree: 89%
 
 タグには、権限ベースのユーザー管理システムがあります。つまり、個々の権限を明示的に付与する必要があります。これらの権限はグループに割り当てられ、ユーザーはアクセス権を取得するために適切なグループに追加されます。組織がデータ収集へのアクセス権を持っている場合でも、管理者から明示的に権限が付与されるまで、個々のユーザーは何も実行できません。
 
-グループを作成し、タグのユーザーを追加する方法について詳しくは、[ データ収集権限ガイド ](../../collection/permissions.md) を参照してください。
+グループを作成し、タグのユーザーを追加する方法について詳しくは、[&#x200B; データ収集権限ガイド &#x200B;](../../collection/permissions.md) を参照してください。
 
 ## 2. にログインする
 
-タグ権限がAdobe IDに追加されたら、Experience Platform UI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloud ログイン画面 ](https://experience.adobe.com/) に直接移動し、「データ収集 **[!UICONTROL または]** 4&rbrace;Experience Platform **を選択します。**
+タグ権限がAdobe IDに追加されたら、Experience Platform UI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloud ログイン画面 &#x200B;](https://experience.adobe.com/) に直接移動し、「データ収集 **[!UICONTROL または]** 4&rbrace;Experience Platform **を選択します。**
 
 >[!NOTE]
 >

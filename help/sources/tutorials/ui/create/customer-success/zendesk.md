@@ -31,17 +31,17 @@ Experience Platformで [!DNL Zendesk] アカウントにアクセスするには
 | サブドメイン | 登録プロセス中に作成された、アカウントに固有の一意のドメイン。 | `yoursubdomain` |
 | アクセストークン | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-[!DNL Zendesk] ソースの認証について詳しくは、[[!DNL Zendesk]  ソースの概要 ](../../../../connectors/customer-success/zendesk.md) を参照してください。
+[!DNL Zendesk] ソースの認証について詳しくは、[[!DNL Zendesk]  ソースの概要 &#x200B;](../../../../connectors/customer-success/zendesk.md) を参照してください。
 
-![Zendesk API トークン ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![Zendesk API トークン &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### [!DNL Zendesk] 用のExperience Platform スキーマの作成
 
-[!DNL Zendesk] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL Zendesk] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 &#x200B;](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
 [!DNL Zendesk Search API] に必要な [!DNL Zendesk] スキーマに関する追加のガイダンスについては、以下の [limits](#limits) の節を参照してください。
 
-![ スキーマを作成 ](../../../../images/tutorials/create/zendesk/schema.png)
+![&#x200B; スキーマを作成 &#x200B;](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## [!DNL Zendesk] アカウントを接続
 
@@ -75,7 +75,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/customer-success.md) を行いましょう。
+このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[&#x200B; カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの作成 &#x200B;](../../dataflow/customer-success.md) を行いましょう。
 
 ## その他のリソース
 
@@ -87,15 +87,15 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 Experience Platform UI の左側のナビゲーションから **[!UICONTROL データセット]** を選択して、[!UICONTROL &#x200B; データセット &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; データセットアクティビティ &#x200B;] 画面には、実行の詳細が表示されます。
 
-![ アクティビティページ ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
+![&#x200B; アクティビティページ &#x200B;](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
 次に、表示するデータフローのデータフロー実行 ID を選択して、そのデータフロー実行に関する特定の詳細を確認します。
 
-![ データフローページ ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
+![&#x200B; データフローページ &#x200B;](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
 最後に、「**[!UICONTROL データセットをプレビュー]**」を選択して、取り込まれたデータを表示します。
 
-![Zendesk データセット ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
+![Zendesk データセット &#x200B;](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
 また、[!DNL Zendesk] / [!DNL Customers] ページのデータに対してExperience Platform データを検証することもできます。
 
@@ -107,7 +107,7 @@ Experience Platform UI の左側のナビゲーションから **[!UICONTROL デ
 
 >[!TIP]
 >
->API について詳しくは、[Zendesk Search API/検索結果の書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を参照してください。
+>API について詳しくは、[Zendesk Search API/検索結果の書き出し &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を参照してください。
 
 | ソース | タイプ |
 |---|---|
@@ -152,8 +152,8 @@ Experience Platform UI の左側のナビゲーションから **[!UICONTROL デ
 
 ### 制限 {#limits}
 
-* [Zendesk Search API/検索結果の書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) は、1 ページあたり最大 1000 レコードを返します。
+* [Zendesk Search API/検索結果の書き出し &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) は、1 ページあたり最大 1000 レコードを返します。
    * ``filter[type]`` パラメーターの値は ``user`` に設定されているので、Zendesk 接続はユーザーのみを返します。
    * ページごとの結果の数は、``page[size]`` パラメーターで管理されます。 値は ``100`` に設定されます。 これは、Zendesk によって設定された速度低下制約の影響を軽減するために行われます。
-   * [ 制限 ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) および [ ページネーション ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1) を参照してください。
-   * また、[ カーソルのページネーションを使用したリスト内のページ分割 ](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/) も参照してください。
+   * [&#x200B; 制限 &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) および [&#x200B; ページネーション &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1) を参照してください。
+   * また、[&#x200B; カーソルのページネーションを使用したリスト内のページ分割 &#x200B;](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/) も参照してください。

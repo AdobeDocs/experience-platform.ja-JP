@@ -45,7 +45,7 @@ ht-degree: 89%
 
 同じ拡張機能開発手法を使用して、自社内でのみ使用できる独自のプライベート拡張機能を構築する方を選択するお客様も多くいます。
 
-拡張機能を開発するには、[ 拡張機能の開発の概要 ](./extension-dev/overview.md) ページを参照してください。
+拡張機能を開発するには、[&#x200B; 拡張機能の開発の概要 &#x200B;](./extension-dev/overview.md) ページを参照してください。
 
 ## タグは会社のセキュリティ基準を満たしているか？
 
@@ -73,7 +73,7 @@ ht-degree: 89%
 
 ## タグはどのブラウザーをサポートしていますか？
 
-サポートされているブラウザーを [ こちら ](./extension-dev/browsers.md) 参照してください。
+サポートされているブラウザーを [&#x200B; こちら &#x200B;](./extension-dev/browsers.md) 参照してください。
 
 ほとんどの Adobe クライアントは、ユーザーエクスペリエンスを向上させるため、シングルページアプリケーション、およびインタラクティブな Ajax を多用した Web サイトやページなど、現在のブラウザーの最新の Web プラットフォーム機能を活用しています。ほとんどの顧客が自社のサイトでより新しいアプローチを使用しようと移行する中で、こうしたアプローチを可能にするタグのようなソリューションを求めています。
 
@@ -83,7 +83,7 @@ ht-degree: 89%
 
 ## マイアカウントの読み込み中に UI でエラーが発生したのはなぜですか？
 
-アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Consoleで製品プロファイルを設定して UI のデータ収集機能へのアクセスを許可する方法については、[ 権限の管理 ](../collection/permissions.md) に関するガイドを参照してください。
+アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Consoleで製品プロファイルを設定して UI のデータ収集機能へのアクセスを許可する方法については、[&#x200B; 権限の管理 &#x200B;](../collection/permissions.md) に関するガイドを参照してください。
 
 ## UI でプロパティを追加できないのはなぜですか？
 
@@ -93,4 +93,4 @@ Adobe Admin Console で製品プロファイルを設定して「プロパティ
 
 ## 他に質問がある場合
 
-他に質問がある場合は、[Adobe Experience Platform Data Collection コミュニティページ ](https://adobe.com/go/launchme) のExperience Leagueで質問するか、[ コミュニティSlackワークスペース ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) に参加して、開発者や技術実装に関するトピックを検索できます。
+他に質問がある場合は、[Adobe Experience Platform Data Collection コミュニティページ &#x200B;](https://adobe.com/go/launchme) のExperience Leagueで質問するか、[&#x200B; コミュニティSlackワークスペース &#x200B;](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) に参加して、開発者や技術実装に関するトピックを検索できます。

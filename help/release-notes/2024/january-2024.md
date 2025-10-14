@@ -35,11 +35,11 @@ Experience Platformの既存の機能に対するアップデート：
 
 [!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] を使い始めるには、次のドキュメントページを参照してください。
 
-- [ 概要ページ ](/help/use-case-playbooks/playbooks/overview.md) を読んで、目的や可用性に関する情報を理解し、プレイブックが検出からインスタンスの作成、生成されたアセットの他のサンドボックス環境への読み込みにどのように機能するかを示すエンドツーエンドのデモを取得します。
-- 製品別にグループ化されたすべての [ 使用可能なプレイブック ](/help/use-case-playbooks/playbooks/playbooks-list.md) のリストを取得します（Real-Time CDPまたはJourney Optimizer）
-- プレイブックとプレイブックで生成されたアセットを使用するためのすべての [ 必要な権限 ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) に関する情報を取得します。
+- [&#x200B; 概要ページ &#x200B;](/help/use-case-playbooks/playbooks/overview.md) を読んで、目的や可用性に関する情報を理解し、プレイブックが検出からインスタンスの作成、生成されたアセットの他のサンドボックス環境への読み込みにどのように機能するかを示すエンドツーエンドのデモを取得します。
+- 製品別にグループ化されたすべての [&#x200B; 使用可能なプレイブック &#x200B;](/help/use-case-playbooks/playbooks/playbooks-list.md) のリストを取得します（Real-Time CDPまたはJourney Optimizer）
+- プレイブックとプレイブックで生成されたアセットを使用するためのすべての [&#x200B; 必要な権限 &#x200B;](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) に関する情報を取得します。
 - 生成されたアセットを他のサンドボックス環境にコピーできる [&#128279;](/help/use-case-playbooks/playbooks/data-awareness.md) データ認識機能  について説明します
-- ユースケースプレイブックの使用でエラーや問題が発生した場合は、[ トラブルシューティングのヒント ](/help/use-case-playbooks/playbooks/troubleshooting.md) を入手します。
+- ユースケースプレイブックの使用でエラーや問題が発生した場合は、[&#x200B; トラブルシューティングのヒント &#x200B;](/help/use-case-playbooks/playbooks/troubleshooting.md) を入手します。
 
 ## 属性ベースのアクセス制御 {#abac}
 
@@ -51,7 +51,7 @@ Experience Platformの既存の機能に対するアップデート：
 
 | ドキュメントの更新 | 説明 |
 | --- | --- |
-| 属性ベースのアクセス制御についてドキュメントに記載された新しい API エンドポイント | [ アクセス制御 API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/access-control/) には、属性ベースのアクセス制御 API の役割、ポリシー、製品エンドポイントが含まれるようになりました。 これらのエンドポイントを使用して、指定されたサンドボックス内の特定のリソースでユーザーの関連する役割、ポリシー、製品を取得できます。 |
+| 属性ベースのアクセス制御についてドキュメントに記載された新しい API エンドポイント | [&#x200B; アクセス制御 API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/access-control/) には、属性ベースのアクセス制御 API の役割、ポリシー、製品エンドポイントが含まれるようになりました。 これらのエンドポイントを使用して、指定されたサンドボックス内の特定のリソースでユーザーの関連する役割、ポリシー、製品を取得できます。 |
 
 {style="table-layout:auto"}
 
@@ -65,11 +65,11 @@ Experience Platformの既存の機能に対するアップデート：
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しいマッパー関数 | <ul><li>`object_to_map`: `object_to_map` 関数を使用して、マップ データ タイプを作成します。 この関数は、複数の異なる構文をサポートします。 詳しくは、[ 階層の関数 – オブジェクト ](../../data-prep/functions.md#objects) に関するガイドを参照してください。 </li><li>`to_map`: `to_map` 関数を使用して、オブジェクトを使用して指定されたフィールド名と値のペアでマップを作成します。 詳しくは、[ 階層の関数 – マップ ](../../data-prep/functions.md#map) に関するガイドを参照してください。 </li><li>`array_to_map`: `array_to_map` 関数を使用すると、オブジェクト配列を使用して、指定されたフィールド名と値のペアでマップを作成できます。 詳しくは、[ 階層の関数 – マップ ](../../data-prep/functions.md#map) に関するガイドを参照してください。 |
+| 新しいマッパー関数 | <ul><li>`object_to_map`: `object_to_map` 関数を使用して、マップ データ タイプを作成します。 この関数は、複数の異なる構文をサポートします。 詳しくは、[&#x200B; 階層の関数 – オブジェクト &#x200B;](../../data-prep/functions.md#objects) に関するガイドを参照してください。 </li><li>`to_map`: `to_map` 関数を使用して、オブジェクトを使用して指定されたフィールド名と値のペアでマップを作成します。 詳しくは、[&#x200B; 階層の関数 – マップ &#x200B;](../../data-prep/functions.md#map) に関するガイドを参照してください。 </li><li>`array_to_map`: `array_to_map` 関数を使用すると、オブジェクト配列を使用して、指定されたフィールド名と値のペアでマップを作成できます。 詳しくは、[&#x200B; 階層の関数 – マップ &#x200B;](../../data-prep/functions.md#map) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
-データ準備について詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
+データ準備について詳しくは、[&#x200B; データ準備の概要 &#x200B;](../../data-prep/home.md) を参照してください。
 
 ## ダッシュボード {#dashboards}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL を表示 | 「SQL を表示」切替スイッチを使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを使用してオンデマンドでクエリを実行できるようになりました。 Real-time Customer Data Platform のインサイトを強化する SQL にアクセスすると、データモデルの分析の背後にあるロジックを理解するのに役立ちます。 この透明性により、Adobe Real-time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。<br>40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成します。 SQL は、Experience League ドキュメントの [ プロファイル ](../../dashboards/insights/profiles.md)、[ オーディエンス ](../../dashboards/insights/audiences.md) および [ 宛先 ](../../dashboards/insights/destinations.md) インサイトでも使用できます。 これらのドキュメントでは、標準のインサイトを使用して回答できるビジネスユースケースをハイライト表示しています。 詳しくは、[insight SQL の表示 ](../../dashboards/view-sql.md) に関するガイドを参照してください。 |
+| SQL を表示 | 「SQL を表示」切替スイッチを使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを使用してオンデマンドでクエリを実行できるようになりました。 Real-time Customer Data Platform のインサイトを強化する SQL にアクセスすると、データモデルの分析の背後にあるロジックを理解するのに役立ちます。 この透明性により、Adobe Real-time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。<br>40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成します。 SQL は、Experience League ドキュメントの [&#x200B; プロファイル &#x200B;](../../dashboards/insights/profiles.md)、[&#x200B; オーディエンス &#x200B;](../../dashboards/insights/audiences.md) および [&#x200B; 宛先 &#x200B;](../../dashboards/insights/destinations.md) インサイトでも使用できます。 これらのドキュメントでは、標準のインサイトを使用して回答できるビジネスユースケースをハイライト表示しています。 詳しくは、[insight SQL の表示 &#x200B;](../../dashboards/view-sql.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [ パブリッシュ接続 ](../../destinations/catalog/advertising/pubmatic.md) | オーディエンスデータを [!DNL PubMatic Connect] プラットフォームに送信するには、この宛先を使用します。 |
+| [&#x200B; パブリッシュ接続 &#x200B;](../../destinations/catalog/advertising/pubmatic.md) | オーディエンスデータを [!DNL PubMatic Connect] プラットフォームに送信するには、この宛先を使用します。 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Amazon S3 の宛先の新しい **想定される役割** 認証タイプ | Experience Platformでアカウントキーと秘密鍵を共有しない場合は、Experience PlatformをAmazon S3 バケットに接続する際に、新しく想定されるロール認証タイプを使用します。 新しい認証方法について詳しくは、Amazon S3 ドキュメントの [ 認証の節 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) を参照してください。 |
+| Amazon S3 の宛先の新しい **想定される役割** 認証タイプ | Experience Platformでアカウントキーと秘密鍵を共有しない場合は、Experience PlatformをAmazon S3 バケットに接続する際に、新しく想定されるロール認証タイプを使用します。 新しい認証方法について詳しくは、Amazon S3 ドキュメントの [&#x200B; 認証の節 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -115,11 +115,11 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | ドキュメントの更新 | 説明 |
 | --- | --- |
-| ドキュメントの再構築 | ID サービスに関するドキュメントが再構成され、ID サービス内の概念の表示方法と明確さが改善されました。<ul><li>一般的なカスタマージャーニーの詳細なユースケースの例、ID サービスが ID をどのようにリンクさせるかの分類、Experience Platform エコシステム内で ID サービスが果たす役割の概要については、[ID サービスの概要ページ ](../../identity-service/home.md) を参照してください。</li><li>2 つのサービスの連携方法と目的、プロセス、入力、出力の違いについて詳しくは、[ID サービスとリアルタイム顧客プロファイルの関係について ](../../identity-service/identity-and-profile.md) に関するガイドを参照してください。</li><li>様々なシナリオやタイムスタンプでの ID グラフの動作を示す説明とビジュアライゼーションについては、[ID サービスリンクロジックガイド ](../../identity-service/features/identity-linking-logic.md) を参照してください。</li></ul> |
+| ドキュメントの再構築 | ID サービスに関するドキュメントが再構成され、ID サービス内の概念の表示方法と明確さが改善されました。<ul><li>一般的なカスタマージャーニーの詳細なユースケースの例、ID サービスが ID をどのようにリンクさせるかの分類、Experience Platform エコシステム内で ID サービスが果たす役割の概要については、[ID サービスの概要ページ &#x200B;](../../identity-service/home.md) を参照してください。</li><li>2 つのサービスの連携方法と目的、プロセス、入力、出力の違いについて詳しくは、[ID サービスとリアルタイム顧客プロファイルの関係について &#x200B;](../../identity-service/identity-and-profile.md) に関するガイドを参照してください。</li><li>様々なシナリオやタイムスタンプでの ID グラフの動作を示す説明とビジュアライゼーションについては、[ID サービスリンクロジックガイド &#x200B;](../../identity-service/features/identity-linking-logic.md) を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
 
-ID サービスについて詳しくは、[ID サービスの概要 ](../../identity-service/home.md) を参照してください。
+ID サービスについて詳しくは、[ID サービスの概要 &#x200B;](../../identity-service/home.md) を参照してください。
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -129,7 +129,7 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 
 | 機能 | 説明 |
 | --- | --- |
-| [Real-Time CDP ホームページを更新 ](https://experience.adobe.com) | <ul><li>**プロファイルウィジェット**：プロファイルウィジェットを使用して、プロファイルの概要ページに移動し、組織のプロファイル指標を表示できるようになりました。</li><li>**プロファイル指標カード**：ホームページダッシュボードのプロファイル指標カードに、それぞれの結合ポリシーに応じて、組織内のプロファイルの合計数が表示されるようになりました。</li><li>**スキーマウィジェット**：スキーマウィジェットを使用して、UI のスキーマ作成ワークフローに移動できるようになりました。</li></ul> |
+| [Real-Time CDP ホームページを更新 &#x200B;](https://experience.adobe.com) | <ul><li>**プロファイルウィジェット**：プロファイルウィジェットを使用して、プロファイルの概要ページに移動し、組織のプロファイル指標を表示できるようになりました。</li><li>**プロファイル指標カード**：ホームページダッシュボードのプロファイル指標カードに、それぞれの結合ポリシーに応じて、組織内のプロファイルの合計数が表示されるようになりました。</li><li>**スキーマウィジェット**：スキーマウィジェットを使用して、UI のスキーマ作成ワークフローに移動できるようになりました。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -137,12 +137,12 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 
 | ドキュメントの更新 | 説明 |
 | --- | --- |
-| 新しいReal-Time CDP ドキュメントのホームページ | 製品、ガードレール、サンプルのユースケースなどの概要については、[ 新しいReal-Time CDP ドキュメントのホームページ ](/help/rtcdp/home.md) を参照してください。 |
-| Real-Time CDPのユースケースの概要 | 組織がReal-Time CDPで実現できるサンプルユースケースのコレクションについては、[ 新しいサンプルユースケースの概要ページ ](/help/rtcdp/use-case-guides/overview.md) を参照してください。 |
+| 新しいReal-Time CDP ドキュメントのホームページ | 製品、ガードレール、サンプルのユースケースなどの概要については、[&#x200B; 新しいReal-Time CDP ドキュメントのホームページ &#x200B;](/help/rtcdp/home.md) を参照してください。 |
+| Real-Time CDPのユースケースの概要 | 組織がReal-Time CDPで実現できるサンプルユースケースのコレクションについては、[&#x200B; 新しいサンプルユースケースの概要ページ &#x200B;](/help/rtcdp/use-case-guides/overview.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-Real-Time CDPについて詳しくは、[Real-Time CDPの概要 ](../../rtcdp/overview.md) を参照してください。
+Real-Time CDPについて詳しくは、[Real-Time CDPの概要 &#x200B;](../../rtcdp/overview.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -156,7 +156,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 {style="table-layout:auto"}
 
-リアルタイム顧客プロファイルについて詳しくは、[ プロファイルの概要 ](../../profile/home.md) を参照してください。
+リアルタイム顧客プロファイルについて詳しくは、[&#x200B; プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -167,7 +167,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 機能 | 説明 |
 | ------- | ----------- |
 | 外部で生成されたオーディエンスのアップロード | 列の最大数が **25** に増えました。 |
-| セグメントビルダーの予測 | 見積もりプロファイルと認定プロファイルが、オーディエンスプロパティセクションに表示されるようになりました。 この変更について詳しくは、[ セグメントビルダー UI ガイド ](../../segmentation/ui/segment-builder.md) を参照してください。 |
+| セグメントビルダーの予測 | 見積もりプロファイルと認定プロファイルが、オーディエンスプロパティセクションに表示されるようになりました。 この変更について詳しくは、[&#x200B; セグメントビルダー UI ガイド &#x200B;](../../segmentation/ui/segment-builder.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] ソース | ソースカタログの [!DNL Oracle NetSuite] の統合機能を使用すると、[[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) および [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) アカウントからExperience Platformにデータを取り込むことができます。 |
 | [!BADGE Beta]{type=Informative} [!DNL Braze Currents] ソース | ソースカタログの [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 統合を使用して、[!DNL Braze] アカウントからExperience Platformにデータを取り込みます。 |
-| バッチソースのキーペア認証 [!DNL Snowflake] サポート | バッチデータ用の新しい [!DNL Snowflake] アカウントを作成する際に、キーペア認証を使用できるようになりました。 詳しくは、[&#128279;](../../sources/tutorials/ui/create/databases/snowflake.md)API を使用したアカウントの作成  [!DNL Snowflake]  または [UI を使用したアカウントの作成 ](../../sources/tutorials/api/create/databases/snowflake.md) に関するガイドを参照し  [!DNL Snowflake]  ください 。 |
+| バッチソースのキーペア認証 [!DNL Snowflake] サポート | バッチデータ用の新しい [!DNL Snowflake] アカウントを作成する際に、キーペア認証を使用できるようになりました。 詳しくは、[&#128279;](../../sources/tutorials/ui/create/databases/snowflake.md)API を使用したアカウントの作成  [!DNL Snowflake]  または [UI を使用したアカウントの作成 &#x200B;](../../sources/tutorials/api/create/databases/snowflake.md) に関するガイドを参照し  [!DNL Snowflake]  ください 。 |
 
 {style="table-layout:auto"}
 

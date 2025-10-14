@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDKには、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、web SDKのログを取得したりするのに役立ちます。
 
-[ デバッグ ](commands/configure/debugenabled.md) を有効にしているかどうかに関係なく、Web SDKはモニタリング機能をトリガーします。
+[&#x200B; デバッグ &#x200B;](commands/configure/debugenabled.md) を有効にしているかどうかに関係なく、Web SDKはモニタリング機能をトリガーします。
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -236,7 +236,7 @@ onContentHiding(data) {
 
 ## NPM パッケージの使用時に監視フックを指定する方法 {#specify-monitoring-npm}
 
-[NPM パッケージ ](install/npm.md) を通じて Web SDKを使用している場合は、以下に示すように、`createInstance` 関数でモニタリングフックを指定できます。
+[NPM パッケージ &#x200B;](install/npm.md) を通じて Web SDKを使用している場合は、以下に示すように、`createInstance` 関数でモニタリングフックを指定できます。
 
 ```js
 var monitor = {

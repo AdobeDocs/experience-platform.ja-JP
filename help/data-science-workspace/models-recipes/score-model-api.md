@@ -20,7 +20,7 @@ ht-degree: 74%
 >
 >このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
-このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。Sensei Machine Learning API のすべてのエンドポイントのリストについては、[ このドキュメント ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) を参照してください。
+このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。Sensei Machine Learning API のすべてのエンドポイントのリストについては、[&#x200B; このドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) を参照してください。
 
 ## スコアリングのためのスケジュールされた実験の作成
 

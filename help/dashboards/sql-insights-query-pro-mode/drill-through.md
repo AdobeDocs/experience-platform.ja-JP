@@ -18,15 +18,15 @@ ht-degree: 0%
 
 ドリルスルーを作成するには、まずダッシュボード・ビューから **[!UICONTROL 編集]** を選択します。
 
-![ 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/drill-through.png)
+![&#x200B; 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/drill-through.png)
 
 ドリルスルーするチャートの省略記号を選択し、「**[!UICONTROL 編集]**」を選択します。
 
-![ 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![&#x200B; 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 [!UICONTROL &#x200B; プロパティ &#x200B;] パネルで、切替スイッチを使用して **[!UICONTROL ドリルスルーを有効にする]** を有効にし、ドロップダウンを使用して **[!UICONTROL ターゲット・ダッシュボード]** を選択します。 「**[!UICONTROL フィルターのパススルー]**」の切替スイッチが有効になっていることを確認してから、「**[!UICONTROL 保存して閉じる]**」を選択します。
 
-![ 「ドリルスルーの使用可能」、「ターゲット・ダッシュボード」および「フィルタ・パススルー」がハイライト表示されたチャートのプロパティ・パネル。](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
+![&#x200B; 「ドリルスルーの使用可能」、「ターゲット・ダッシュボード」および「フィルタ・パススルー」がハイライト表示されたチャートのプロパティ・パネル。](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
 >[!INFO]
 >
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 ドリルスルーを表示するには、ダッシュボード・ビューからチャートの省略記号を選択し、「**[!UICONTROL ドリルスルー]**」を選択します。
 
-![ ドリルスルーがハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
+![&#x200B; ドリルスルーがハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
 
 ドリルスルー・ターゲット・ダッシュボードが表示されます。 複数レベルのドリルスルーがある場合は、この手順を繰り返します。
 
-![ ドリルスルーがハイライト表示されたターゲットダッシュボード ](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
+![&#x200B; ドリルスルーがハイライト表示されたターゲットダッシュボード &#x200B;](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
 
 >[!NOTE]
 >
@@ -50,16 +50,16 @@ ht-degree: 0%
 
 ドリルスルーを削除するには、まずダッシュボード・ビューから **[!UICONTROL 編集]** を選択します。
 
-![ 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/drill-through.png)
+![&#x200B; 「編集」がハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/drill-through.png)
 
 ドリルスルーを削除するチャートの省略記号を選択し、「**[!UICONTROL 編集]**」を選択します。
 
-![ 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![&#x200B; 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 [!UICONTROL &#x200B; プロパティ &#x200B;] パネルで、無効にする切替スイッチ **[!UICONTROL ドリルスルーを有効にする]** を選択してから、「**[!UICONTROL 保存して閉じる]** を選択します。
 
-![ 「ドリルスルーの有効化 [!UICONTROL &#x200B; が強調表示された切替スイッチが使用不可になっているグラフのプロパティ &#x200B;] パネル ](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![&#x200B; 「ドリルスルーの有効化 [!UICONTROL &#x200B; が強調表示された切替スイッチが使用不可になっているグラフのプロパティ &#x200B;] パネル &#x200B;](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## 次の手順
 
-このドキュメントでは、ダッシュボードのドリルスルーの作成方法を確認しました。 また、[ ガイド付きデザインモードガイド ](../standard-dashboards.md) を使用して、Adobe Experience Platform UI で既存のデータモデルからグラフを生成する方法についても説明します。
+このドキュメントでは、ダッシュボードのドリルスルーの作成方法を確認しました。 また、[&#x200B; ガイド付きデザインモードガイド &#x200B;](../standard-dashboards.md) を使用して、Adobe Experience Platform UI で既存のデータモデルからグラフを生成する方法についても説明します。

@@ -23,13 +23,13 @@ ht-degree: 23%
 
 ## はじめに
 
-このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド ](./overview.md) を参照して、[!DNL JupyterLab] の概要とデータサイエンスWorkspace内での役割を確認してください。
+このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド &#x200B;](./overview.md) を参照して、[!DNL JupyterLab] の概要とデータサイエンスWorkspace内での役割を確認してください。
 
 ## ノートブックのデータ制限 {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->PySpark と Scala ノートブックの場合、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが表示されます。 これは、通常、ドライバーまたはエグゼキューターのメモリが不足していることを意味します。 このエラーを解決するには、「バッチ [ モード ](#mode) に切り替えてみてください。
+>PySpark と Scala ノートブックの場合、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが表示されます。 これは、通常、ドライバーまたはエグゼキューターのメモリが不足していることを意味します。 このエラーを解決するには、「バッチ [&#x200B; モード &#x200B;](#mode) に切り替えてみてください。
 
 次の情報は、読み取り可能なデータの最大量、使用されたデータのタイプ、データの読み取りに要する推定期間を定義します。
 
@@ -115,7 +115,7 @@ PySpark と Scala ノートブックでデータセットを読み取る場合�
 
 ## Python ノートブック {#python-notebook}
 
-[!DNL Python] ノートブックを使用すると、データセットにアクセスする際に、データにページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター Python ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー ](./overview.md#launcher) の節を参照してください。
+[!DNL Python] ノートブックを使用すると、データセットにアクセスする際に、データにページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター Python ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー &#x200B;](./overview.md#launcher) の節を参照してください。
 
 以下の Python ドキュメントでは、以下の概念の概要を説明しています。
 
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### [!DNL Python] の [!DNL Query Service] を使用したクエリデータ {#query-data-python}
 
-[!DNL Experience Platform] 上の [!DNL JupyterLab] では、[!DNL Python] ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス ](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) 経由でデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
+[!DNL Experience Platform] 上の [!DNL JupyterLab] では、[!DNL Python] ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) 経由でデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
 
 [!DNL JupyterLab] で [!DNL Query Service] を使用する前に、[[!DNL Query Service] SQL 構文](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=ja)について実践的に理解していることを確認してください。
 
@@ -242,7 +242,7 @@ df = dataset_reader.\
 
 ## R ノートブック {#r-notebooks}
 
-r ノートブックを使用すると、データセットにアクセスする際にデータのページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター R ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー ](./overview.md#launcher) の節を参照してください。
+r ノートブックを使用すると、データセットにアクセスする際にデータのページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター R ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー &#x200B;](./overview.md#launcher) の節を参照してください。
 
 以下の R ドキュメントでは、次の概念の概要を説明します。
 
@@ -361,7 +361,7 @@ spark = SparkSession.builder.getOrCreate()
 
 ### %dataset を使用した PySpark 3 ノートブックの読み取りと書き込み {#magic}
 
-[!DNL Spark] 2.4 の導入に伴い、PySpark 3 （[!DNL Spark] 2.4）ノートブックで使用するた `%dataset` のカスタムマジックが提供されています。 IPython カーネルで利用可能なマジックコマンドについて詳しくは、[IPython マジックドキュメント ](https://ipython.readthedocs.io/en/stable/interactive/magics.html) を参照してください。
+[!DNL Spark] 2.4 の導入に伴い、PySpark 3 （[!DNL Spark] 2.4）ノートブックで使用するた `%dataset` のカスタムマジックが提供されています。 IPython カーネルで利用可能なマジックコマンドについて詳しくは、[IPython マジックドキュメント &#x200B;](https://ipython.readthedocs.io/en/stable/interactive/magics.html) を参照してください。
 
 
 **用途**
@@ -398,7 +398,7 @@ spark = SparkSession.builder.getOrCreate()
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
 
 JupyterLab buy では、次の方法を使用して、上記の例を自動生成できます。
 
@@ -498,7 +498,7 @@ Scala では、`clientContext` を読み込んでExperience Platformの値を取
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -553,7 +553,7 @@ Scala では、`clientContext` を読み込んでExperience Platformの値を取
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -641,7 +641,7 @@ timedf.show()
 
 ## 次の手順
 
-このドキュメントでは、JupyterLab ノートブックを使用したデータセットへのアクセスに関する一般的なガイドラインを説明しました。 データセットのクエリに関する詳細な例については、[JupyterLab ノートブックのクエリサービス ](./query-service.md) ドキュメントを参照してください。 データセットの調査および視覚化の方法について詳しくは、[ ノートブックを使用したデータの分析 ](./analyze-your-data.md) のドキュメントを参照してください。
+このドキュメントでは、JupyterLab ノートブックを使用したデータセットへのアクセスに関する一般的なガイドラインを説明しました。 データセットのクエリに関する詳細な例については、[JupyterLab ノートブックのクエリサービス &#x200B;](./query-service.md) ドキュメントを参照してください。 データセットの調査および視覚化の方法について詳しくは、[&#x200B; ノートブックを使用したデータの分析 &#x200B;](./analyze-your-data.md) のドキュメントを参照してください。
 
 ## [!DNL Query Service] のオプションの SQL フラグ {#optional-sql-flags-for-query-service}
 

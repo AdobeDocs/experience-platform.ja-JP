@@ -16,7 +16,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
-> データテーブルを調べるには、表形式のソースに対して有効なベース接続 ID が必要です。 この ID を持っていない場合は、次のチュートリアルで、表形式のソースのベース接続 ID を作成する手順を確認してください。 <ul><li>[広告](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[ カスタマーサクセス ](../../../home.md#customer-success)</li><li>[データベース](../../../home.md#database)</li><li>[E コマース ](../../../home.md#ecommerce)</li><li>[ マーケティングの自動処理 ](../../../home.md#marketing-automation)</li><li>[ 支給 ](../../../home.md#payments)</li><li>[ プロトコル ](../../../home.md#protocols)</li></ul>
+> データテーブルを調べるには、表形式のソースに対して有効なベース接続 ID が必要です。 この ID を持っていない場合は、次のチュートリアルで、表形式のソースのベース接続 ID を作成する手順を確認してください。 <ul><li>[広告](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[&#x200B; カスタマーサクセス &#x200B;](../../../home.md#customer-success)</li><li>[データベース](../../../home.md#database)</li><li>[E コマース &#x200B;](../../../home.md#ecommerce)</li><li>[&#x200B; マーケティングの自動処理 &#x200B;](../../../home.md#marketing-automation)</li><li>[&#x200B; 支給 &#x200B;](../../../home.md#payments)</li><li>[&#x200B; プロトコル &#x200B;](../../../home.md#protocols)</li></ul>
 
 ## はじめに
 
@@ -27,7 +27,7 @@ ht-degree: 16%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ## データテーブルの探索
 

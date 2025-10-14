@@ -20,7 +20,7 @@ Adobe Experience Platform では、個々の顧客の全体像を把握するた
 
 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、API を使用して結合ポリシーを操作する手順を説明します。
 
-UI を使用して結合ポリシーを使用するには、『 [ 結合ポリシーのユーザガイド ](../merge-policies/ui-guide.md) 』を参照してください。 一般的な結合ポリシーとそのExperience Platform内での役割について詳しくは、まず [ 結合ポリシーの概要 ](../merge-policies/overview.md) をお読みください。
+UI を使用して結合ポリシーを使用するには、『 [&#x200B; 結合ポリシーのユーザガイド &#x200B;](../merge-policies/ui-guide.md) 』を参照してください。 一般的な結合ポリシーとそのExperience Platform内での役割について詳しくは、まず [&#x200B; 結合ポリシーの概要 &#x200B;](../merge-policies/overview.md) をお読みください。
 
 ## はじめに
 
@@ -72,10 +72,10 @@ UI を使用して結合ポリシーを使用するには、『 [ 結合ポリ�
 | `id` | 作成時に割り当てられる、システムで生成された一意の ID |
 | `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
-| `schema.name` | [`schema`](#schema) オブジェクトの一部で、`name` フィールドには、結合ポリシーが関連付けられる XDM スキーマクラスが含まれます。 スキーマとクラスについて詳しくは、[XDM のドキュメント ](../../xdm/home.md) を参照してください。 |
+| `schema.name` | [`schema`](#schema) オブジェクトの一部で、`name` フィールドには、結合ポリシーが関連付けられる XDM スキーマクラスが含まれます。 スキーマとクラスについて詳しくは、[XDM のドキュメント &#x200B;](../../xdm/home.md) を参照してください。 |
 | `version` | 結合ポリシ [!DNL Experience Platform] のバージョンが維持されました。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
-| `attributeMerge` | [ 属性の結合 ](#attribute-merge) データが競合する場合に結合ポリシーがプロファイル属性に優先順位を付ける方法を示すオブジェクト。 |
+| `attributeMerge` | [&#x200B; 属性の結合 &#x200B;](#attribute-merge) データが競合する場合に結合ポリシーがプロファイル属性に優先順位を付ける方法を示すオブジェクト。 |
 | `isActiveOnEdge` | この結合ポリシーをエッジで使用できるかどうかを示すブール値。 デフォルトでは、この値は `false` です。 |
 | `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
 | `updateEpoch` | 結合ポリシーの最後の更新日。 |
@@ -105,7 +105,7 @@ UI を使用して結合ポリシーを使用するには、『 [ 結合ポリ�
 
 ### ID グラフ {#identity-graph}
 
-[Adobe Experience Platform ID サービス ](../../identity-service/home.md) は、[!DNL Experience Platform] でグローバルおよび各組織に使用される ID グラフを管理します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
+[Adobe Experience Platform ID サービス &#x200B;](../../identity-service/home.md) は、[!DNL Experience Platform] でグローバルおよび各組織に使用される ID グラフを管理します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
 
 **ID グラフオブジェクト**
 
@@ -190,7 +190,7 @@ UI を使用して結合ポリシーを使用するには、『 [ 結合ポリ�
     }
 ```
 
-XDM とExperience Platformでのスキーマの使用について詳しくは、まず [XDM システムの概要 ](../../xdm/home.md) を参照してください。
+XDM とExperience Platformでのスキーマの使用について詳しくは、まず [XDM システムの概要 &#x200B;](../../xdm/home.md) を参照してください。
 
 ## 結合ポリシーへのアクセス {#access-merge-policies}
 

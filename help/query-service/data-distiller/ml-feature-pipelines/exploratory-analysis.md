@@ -15,7 +15,7 @@ ht-degree: 14%
 
 ## はじめに
 
-このガイドを進める前に、[!DNL Python] ノートブックにデータDistillerへの接続が作成されていることを確認します。 [ ノートブックをデータDistillerに接続 ](./establish-connection.md) する手順については  [!DNL Python]  ドキュメントを参照してください。
+このガイドを進める前に、[!DNL Python] ノートブックにデータDistillerへの接続が作成されていることを確認します。 [&#x200B; ノートブックをデータDistillerに接続 &#x200B;](./establish-connection.md) する手順については  [!DNL Python]  ドキュメントを参照してください。
 
 ## 基本統計の取得 {#basic-statistics}
 
@@ -42,7 +42,7 @@ df
 
 ## 大規模なデータセットのサンプルバージョンの作成 {#create-dataset-sample}
 
-クエリするデータセットが非常に大きい場合、または探索的なクエリによる正確な結果が必要でない場合は、データDistillerのクエリで使用できる [ サンプリング機能 ](../../key-concepts/dataset-samples.md) を使用します。 これは 2 段階のプロセスです。
+クエリするデータセットが非常に大きい場合、または探索的なクエリによる正確な結果が必要でない場合は、データDistillerのクエリで使用できる [&#x200B; サンプリング機能 &#x200B;](../../key-concepts/dataset-samples.md) を使用します。 これは 2 段階のプロセスです。
 
 - まず、データセットを **分析** して、指定したサンプリング率のサンプルバージョンを作成します
 - 次に、データセットのサンプルバージョンをクエリします。 サンプリングされたデータセットに適用する関数に応じて、出力を数値にスケーリングして、データセット全体に対応することができます
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![ イベント結果のイベントのピアソン相関性の棒グラフ ](../../images/data-distiller/pearson-correlations.png)
+![&#x200B; イベント結果のイベントのピアソン相関性の棒グラフ &#x200B;](../../images/data-distiller/pearson-correlations.png)
 
 ## 次の手順
 
-このドキュメントでは、Data Distillerを使用して [!DNL Python] ノートブックのデータを調査および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成し、機械学習環境でカスタムモデルをフィードする次の手順は、[ 機械学習用の機能をエンジニアリング ](./feature-engineering.md) することです。
+このドキュメントでは、Data Distillerを使用して [!DNL Python] ノートブックのデータを調査および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成し、機械学習環境でカスタムモデルをフィードする次の手順は、[&#x200B; 機械学習用の機能をエンジニアリング &#x200B;](./feature-engineering.md) することです。

@@ -15,7 +15,7 @@ Adobe サービスを操作する際、`edgeBasePath` プロパティは対象�
 
 ## Web SDK タグ拡張機能を使用したEdgeのベースパス
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL Edgeのベースパス]**」テキストフィールドに目的のテキストを入力します。
+[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL Edgeのベースパス]**」テキストフィールドに目的のテキストを入力します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

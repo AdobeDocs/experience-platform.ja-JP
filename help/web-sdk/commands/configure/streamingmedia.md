@@ -20,10 +20,10 @@ ht-degree: 6%
 Web SDK の `streamingMedia` コンポーネントを使用するには、次の前提条件を満たす必要があります。
 
 * Adobe Experience PlatformやAdobe Analyticsにアクセスできることを確認します。
-* Web SDK バージョン 2.20.0 以降を使用する必要があります。 最新バージョンのインストール方法については、[Web SDK インストールの概要 ](../../install/overview.md) を参照してください。
+* Web SDK バージョン 2.20.0 以降を使用する必要があります。 最新バージョンのインストール方法については、[Web SDK インストールの概要 &#x200B;](../../install/overview.md) を参照してください。
 * 使用しているデータストリームの「**[[!UICONTROL Media Analytics]](../../../datastreams/configure.md#advanced-options)**」オプションを有効にします。
 * データストリームで使用するスキーマに、メディアコレクションのスキーマフィールドが含まれていることを確認してください。
-* [ タグ拡張機能 ](#tag-extension) または [JavaScript ライブラリ ](#library) を使用して、このページで示すように Web SDK 設定でストリーミングメディア機能を設定します。
+* [&#x200B; タグ拡張機能 &#x200B;](#tag-extension) または [JavaScript ライブラリ &#x200B;](#library) を使用して、このページで示すように Web SDK 設定でストリーミングメディア機能を設定します。
 
 ## Web SDK タグ拡張機能を使用したストリーミングメディアの設定 {#tag-extension}
 
@@ -33,7 +33,7 @@ Web SDK タグ拡張機能でストリーミングメディアを設定するに
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
-1. **[!UICONTROL Web SDK タグ拡張機能設定ページ]** の説明に従って、[ ストリーミングメディア ](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) 設定を行います。
+1. **[!UICONTROL Web SDK タグ拡張機能設定ページ]** の説明に従って、[&#x200B; ストリーミングメディア &#x200B;](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) 設定を行います。
 
 ## Web SDK JavaScript ライブラリを使用したストリーミングメディアの設定 {#library}
 
@@ -58,5 +58,5 @@ alloy("configure", {
 | `channel` | 文字列 | ○ | ストリーミングメディアコレクションが発生するチャネルの名前。 例：`Video channel`。 |
 | `playerName` | 文字列 | ○ | メディアプレーヤーの名前。 |
 | `appVersion` | 文字列 | × | メディアプレーヤーアプリケーションのバージョン。 |
-| `mainPingInterval` | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
-| `adPingInterval` | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
+| `mainPingInterval` | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
+| `adPingInterval` | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |

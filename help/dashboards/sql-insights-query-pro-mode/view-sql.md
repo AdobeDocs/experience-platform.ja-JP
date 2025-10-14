@@ -11,22 +11,22 @@ ht-degree: 2%
 
 # SQL を表示 {#view-sql}
 
-[query pro モード ](./overview.md#query-pro-mode) で [ カスタムインサイト ](./overview.md) を作成したら、「SQL を表示」機能を使用してグラフに入力する SQL を表示できます。
+[query pro モード &#x200B;](./overview.md#query-pro-mode) で [&#x200B; カスタムインサイト &#x200B;](./overview.md) を作成したら、「SQL を表示」機能を使用してグラフに入力する SQL を表示できます。
 
 カスタムダッシュボードから、任意のウィジェットの省略記号（`...`）を選択して、「[!UICONTROL &#x200B; さらに表示 &#x200B;]」および「[!UICONTROL SQL を表示 &#x200B;]」オプションにアクセスします。
 
-![ インサイトの省略記号ドロップダウンメニューと、「さらに表示」オプションおよび「SQL を表示」オプションがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
+![&#x200B; インサイトの省略記号ドロップダウンメニューと、「さらに表示」オプションおよび「SQL を表示」オプションがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 
 カスタマイズされたインサイトの背後にある SQL を表示するには、「**[!UICONTROL SQL を表示]**」オプションを選択します。 ダイアログのタイトルには、インサイトの名前が付けられます。 このビューから SQL をクリップボードにコピーして、クエリ作成モードで今後のグラフオーサリングのベースとして使用したり、SQL をクエリエディターで直接開いたりできます。 「**[!UICONTROL SQL を実行]**」を選択して、クエリエディターでクエリを開きます。
 
-![ 「SQL および SQL を実行」オプションがハイライト表示された状態で、インサイトの SQL を表示するダイアログ。](../images/sql-insights-query-pro-mode/view-sql.png)
+![&#x200B; 「SQL および SQL を実行」オプションがハイライト表示された状態で、インサイトの SQL を表示するダイアログ。](../images/sql-insights-query-pro-mode/view-sql.png)
 
 「**[!UICONTROL 閉じる]**」を選択してダイアログを閉じます。
 
-![ 「閉じる」オプションがハイライト表示された状態で、インサイトの SQL を表示するダイアログ ](../images/sql-insights-query-pro-mode/close-sql-dialog.png)
+![&#x200B; 「閉じる」オプションがハイライト表示された状態で、インサイトの SQL を表示するダイアログ &#x200B;](../images/sql-insights-query-pro-mode/close-sql-dialog.png)
 
 ## 次の手順
 
-このドキュメントでは、カスタムインサイトの背後にある SQL の表示方法を確認しました。 [ カスタムグラフと SQL 分析の表形式の結果を比較 ](./view-more.md) する方法については、詳細を表示ドキュメントを参照してください。
+このドキュメントでは、カスタムインサイトの背後にある SQL の表示方法を確認しました。 [&#x200B; カスタムグラフと SQL 分析の表形式の結果を比較 &#x200B;](./view-more.md) する方法については、詳細を表示ドキュメントを参照してください。
 
-また、[ ガイド付きデザインモードガイド ](../standard-dashboards.md) を使用して、Adobe Experience Platform UI で既存のデータモデルからグラフを生成する方法についても説明します。
+また、[&#x200B; ガイド付きデザインモードガイド &#x200B;](../standard-dashboards.md) を使用して、Adobe Experience Platform UI で既存のデータモデルからグラフを生成する方法についても説明します。

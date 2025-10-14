@@ -76,7 +76,7 @@ Platform 内でイベント転送を設定して、収集したユーザー行�
 
 オフサイトのリターゲティング拡張機能が、Adobe Experience Platform Data Collection の有効なイベントルールにアタッチされていることを確認します。 通常、`page load` ーザーや特定のユーザーのインタラクションなど、主要なアクションを実行するグローバルルールを作成する必要があります。
 
-拡張機能の設定について詳しくは、[ イベント転送 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) ドキュメントを参照してください。
+拡張機能の設定について詳しくは、[&#x200B; イベント転送 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) ドキュメントを参照してください。
 
 ## その他のユースケース {#other-use-cases}
 
@@ -84,6 +84,6 @@ Platform 内でイベント転送を設定して、収集したユーザー行�
 
 Real-Time CDPのパートナーデータサポートを通じて有効になるユースケースについて確認できます。
 
-- パートナーデータを使用して [ 新規顧客を獲得および獲得 ](./prospecting.md) します。
+- パートナーデータを使用して [&#x200B; 新規顧客を獲得および獲得 &#x200B;](./prospecting.md) します。
 - パートナー支援による訪問者認識を使用して [&#128279;](./offsite-retargeting.md) オンサイトエクスペリエンスをパーソナライズ  します。
 - パートナー提供の属性を使用して [&#128279;](./supplement-first-party-profiles.md) ファーストパーティプロファイルを補完  ます。

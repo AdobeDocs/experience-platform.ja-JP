@@ -28,14 +28,14 @@ ht-degree: 19%
 | `screenWidth` | 文字列 | デフォルトの向きにおける、デバイスのアクティブなディスプレイの水平方向のピクセル数。 |
 | `type` | 文字列 | トラッキングされるデバイスのタイプ。 使用できる値は次のとおりです。 <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | 文字列 | デバイスの識別子。これは、使用されているハードウェアを識別する DeviceAtlas またはその他のサービスの識別子である可能性があります。 |
-| `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。 使用可能な値について詳しくは、[ 付録 ](#typeIDService) を参照してください。 |
+| `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。 使用可能な値について詳しくは、[&#x200B; 付録 &#x200B;](#typeIDService) を参照してください。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
 
 ## 付録
 

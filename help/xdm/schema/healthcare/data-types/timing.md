@@ -16,7 +16,7 @@ ht-degree: 8%
 
 [!UICONTROL &#x200B; タイミング &#x200B;] は、定期的に発生する可能性のあるイベントに関する情報を提供するタイミングスケジュールを記述する、標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ タイミングデータタイプの構造 ](../../../images/healthcare/data-types/timing.png)
+![&#x200B; タイミングデータタイプの構造 &#x200B;](../../../images/healthcare/data-types/timing.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -26,5 +26,5 @@ ht-degree: 8%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/timing.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/timing.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/timing.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/timing.schema.json)

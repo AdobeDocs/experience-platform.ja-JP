@@ -11,7 +11,7 @@ ht-degree: 7%
 
 # [!UICONTROL &#x200B; ヘルスケア薬品 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; ヘルスケア薬品 &#x200B;] は、[[!UICONTROL &#x200B; 投薬 &#x200B;] クラス ](../../classes/medication.md) の標準スキーマフィールドグループです。 ブランド名、ロット番号、数量などの詳細を収集する単一のオブジェクトタイプのフィールド `medication` を提供します。
+[!UICONTROL &#x200B; ヘルスケア薬品 &#x200B;] は、[[!UICONTROL &#x200B; 投薬 &#x200B;] クラス &#x200B;](../../classes/medication.md) の標準スキーマフィールドグループです。 ブランド名、ロット番号、数量などの詳細を収集する単一のオブジェクトタイプのフィールド `medication` を提供します。
 
 ![](../../images/field-groups/healthcare-medication.png)
 
@@ -32,4 +32,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) を参照してください。

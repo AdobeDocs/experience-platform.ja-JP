@@ -56,7 +56,7 @@ npx @adobe/reactor-scaffold
 例えば、ユーザーのブラウザーが Chrome であるか、iPad を使用しているか、またはユーザーが特定のドメインを使用しているかどうかを返すことができます。
 * [アクションのタイプ](./web/action-types.md)：イベントの発生時に実行するアクション。例えば、分析ビーコンの送信、オファーの表示、cookie の保存、サポートチャットの開始などを実行できます。
 * [データ要素のタイプ](./web/data-element-types.md)：データ要素のタイプにより、データが取得されます。このデータは、ローカルストレージ、Cookie、DOM 要素、またはカスタムの場所に存在する場合があります。
-* [ 共有モジュール ](./web/shared.md) （web のみ）：共有モジュールは、拡張機能が他の拡張機能と通信できるメカニズムです。
+* [&#x200B; 共有モジュール &#x200B;](./web/shared.md) （web のみ）：共有モジュールは、拡張機能が他の拡張機能と通信できるメカニズムです。
 * [表示](./web/views.md)：イベント、条件、アクション、またはデータ要素の各タイプには、ユーザーが設定を指定できるビューが用意されている場合があります。
 * Exchange URL （web およびエッジのみ）:Adobeの公開カタログに拡張機能が公開されたら、ここにリスト URL を指定します。
 * アイコンのパス：拡張機能用のアイコンファイルへのパス。
@@ -69,4 +69,4 @@ npx @adobe/reactor-scaffold
 
 ## 次の手順
 
-* [ 送信プロセスの概要 ](./submit/overview.md) に従い、タグエコシステム内でテストするための拡張機能を [ 検証 ](./submit/upload-and-test.md#validate) および [ アップロード ](./submit/upload-and-test.md#integration) する準備をします。
+* [&#x200B; 送信プロセスの概要 &#x200B;](./submit/overview.md) に従い、タグエコシステム内でテストするための拡張機能を [&#x200B; 検証 &#x200B;](./submit/upload-and-test.md#validate) および [&#x200B; アップロード &#x200B;](./submit/upload-and-test.md#integration) する準備をします。

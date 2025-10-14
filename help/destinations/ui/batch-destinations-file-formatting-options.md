@@ -26,7 +26,7 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 ## CSV ファイルのファイル形式設定 {#file-configuration}
 
-ファイル形式オプションを表示するには、[ 宛先に接続 ](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
+ファイル形式オプションを表示するには、[&#x200B; 宛先に接続 &#x200B;](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
 
 >[!IMPORTANT]
 >

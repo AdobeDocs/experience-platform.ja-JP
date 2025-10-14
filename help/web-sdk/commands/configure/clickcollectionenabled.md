@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Web SDKは、**開いたシャドウ DOM** 要素内のリンクの自動クリックトラッキングをサポートしています。
 
-最新の多くの Web サイトでは、[Web コンポーネント ](https://developer.mozilla.org/en-US/docs/Web/Web_Components) を使用して、再利用可能でカプセル化されたユーザーインターフェイス要素を構築しています。 これらのコンポーネントでは、多くの場合、[**シャドウ DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) と呼ばれるテクノロジーを使用して、内部構造とスタイルをページの他の部分から分離します。
+最新の多くの Web サイトでは、[Web コンポーネント &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) を使用して、再利用可能でカプセル化されたユーザーインターフェイス要素を構築しています。 これらのコンポーネントでは、多くの場合、[**シャドウ DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) と呼ばれるテクノロジーを使用して、内部構造とスタイルをページの他の部分から分離します。
 
 シャドウ DOM には次の 2 種類があります。
 
@@ -46,7 +46,7 @@ Web SDKは、`<a>` および `<area>` HTML要素に対するすべてのクリ�
 
 ## Web SDK タグ拡張機能を使用した自動リンクトラッキングの有効化 {#tag-extension}
 
-この変数は、タグ拡張機能によって自動的に管理されるので、明示的に設定する必要はありません。 [ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に次のいずれかを選択すると、該当するリンクトラッキングデータが収集されます。
+この変数は、タグ拡張機能によって自動的に管理されるので、明示的に設定する必要はありません。 [&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に次のいずれかを選択すると、該当するリンクトラッキングデータが収集されます。
 
 * [!UICONTROL &#x200B; 内部リンククリック数の収集 &#x200B;]
 * [!UICONTROL &#x200B; 外部リンククリック数の収集 &#x200B;]

@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする ](../field-groups/profile/consents.md) めに使用されます。
+>このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする &#x200B;](../field-groups/profile/consents.md) めに使用されます。
 
 ![](../images/data-types/personalization-field.png)
 
@@ -46,5 +46,5 @@ ht-degree: 1%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.schema.json)

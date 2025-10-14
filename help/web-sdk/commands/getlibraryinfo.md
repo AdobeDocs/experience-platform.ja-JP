@@ -33,7 +33,7 @@ alloy("getLibraryInfo").then(function(result) {
 
 ## 応答オブジェクト
 
-このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
+このコマンドを使用して [&#x200B; 応答を処理 &#x200B;](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
 
 * **`libraryInfo.commands`**：このバージョンの Web SDK がサポートするコマンドの配列。
 * **`libraryInfo.configs`**：このバージョンの Web SDK がサポートする設定の配列。

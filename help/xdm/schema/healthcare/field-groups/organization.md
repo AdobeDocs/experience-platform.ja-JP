@@ -14,9 +14,9 @@ ht-degree: 7%
 
 # [!UICONTROL &#x200B; 組織 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 組織 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 共通の目的を持つ人物または組織のグループに関す `healthcareOrganization` 情報を含む、単一のオブジェクトタイプのフィールドを提供します。
+[!UICONTROL &#x200B; 組織 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 共通の目的を持つ人物または組織のグループに関す `healthcareOrganization` 情報を含む、単一のオブジェクトタイプのフィールドを提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/organization/organization.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/organization/organization.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | ---| --- | --- | --- |
@@ -24,7 +24,7 @@ ht-degree: 7%
 | [!UICONTROL &#x200B; 終点 &#x200B;] | `endpoint` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | 組織で動作するサービスへのアクセスを提供するテクニカルエンドポイント。 |
 | [!UICONTROL 識別子] | `indentifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | 複数の異なるシステムをまたいで組織を識別するために使用される識別子。 |
 | [!UICONTROL &#x200B; 組織の一部 &#x200B;] | `partOf` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | この組織が属する組織。 |
-| [!UICONTROL &#x200B; 資格 &#x200B;] | `qualification` | オブジェクトの配列 | 組織によるケアの提供を承認または承認する、公式の認定、認定、トレーニング、指定、およびライセンス。 詳しくは、[ 以下の節 ](#qualification) を参照してください。 |
+| [!UICONTROL &#x200B; 資格 &#x200B;] | `qualification` | オブジェクトの配列 | 組織によるケアの提供を承認または承認する、公式の認定、認定、トレーニング、指定、およびライセンス。 詳しくは、[&#x200B; 以下の節 &#x200B;](#qualification) を参照してください。 |
 | [!UICONTROL タイプ] | `type` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 組織の種類。 |
 | [!UICONTROL &#x200B; アクティブ &#x200B;] | `active` | ブール値 | 組織のレコードがまだ有効に使用されているかどうか。 |
 | [!UICONTROL &#x200B; エイリアス &#x200B;] | `alias` | 文字列の配列 | 組織の別名（旧称）のリスト。 |
@@ -33,14 +33,14 @@ ht-degree: 7%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/coverage.schema.json)
 
 ## `qualification` {#qualification}
 
 `qualification` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 認定構造 ](../../../images/healthcare/field-groups/organization/qualification.png)
+![&#x200B; 認定構造 &#x200B;](../../../images/healthcare/field-groups/organization/qualification.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

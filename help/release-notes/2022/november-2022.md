@@ -31,7 +31,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 |  イベント転送用の [!DNL Google Ads Enhanced Conversions] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、コンバージョンデータを [!DNL Google Ads] に送信できるようになりました。詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。 |
 |  イベント転送用の [!DNL Microsoft Azure] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。 |
 
-Experience Platformのデータ収集機能について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
+Experience Platformのデータ収集機能について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -45,4 +45,4 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。

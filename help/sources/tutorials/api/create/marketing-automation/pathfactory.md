@@ -13,18 +13,18 @@ ht-degree: 24%
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このドキュメントでは、[!DNL PathFactory]API[[!DNL Flow Service]  を使用して ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) のベース接続を作成する方法について説明します。
+このドキュメントでは、[!DNL PathFactory]API[[!DNL Flow Service]  を使用して &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) のベース接続を作成する方法について説明します。
 
 ## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 次の節では、[!DNL PathFactory] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Flow Service] す。
 
@@ -40,7 +40,7 @@ Experience Platformで PathFactory アカウントにアクセスするには、
 | アクセストークン | システムと [!DNL PathFactory] ーザー間の安全な通信を確保するために、API 認証に使用される一意のトークン。 |
 | API エンドポイント | データにアクセスするための特定の API エンドポイント：訪問者、セッションおよびページビュー。 各エンドポイントは、取得可能な様々なデータセットに対応します。 **メモ：** これらは [!DNL PathFactory] で事前定義され、アクセスする予定のデータに固有です。 <ul><li>**訪問者エンドポイント**:`/api/public/v3/data_lake_apis/visitors.json`</li><li>**セッション エンドポイント**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**ページビューエンドポイント**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-資格情報の保護および使用方法、アクセストークンの取得および更新方法について詳しくは、[[!DNL PathFactory]  サポートセンター ](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
+資格情報の保護および使用方法、アクセストークンの取得および更新方法について詳しくは、[[!DNL PathFactory]  サポートセンター &#x200B;](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
 
 ## ベース接続の作成
 
@@ -105,5 +105,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PathFactory] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、マーケティング自動化データをExperience Platformに取り込むデータフローの作成](../../collect/marketing-automation.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、マーケティング自動化データをExperience Platformに取り込むデータフローの作成](../../collect/marketing-automation.md)

@@ -17,13 +17,13 @@ Privacy Serviceを使用すると、お客様がデータストアから個人�
 
 ## はじめに {#getting-started}
 
-このガイドでは、[Privacy Service](./home.md) およびAdobe Experience Cloud アプリケーション全体のデータ主体（顧客）からのアクセスリクエストと削除リクエストを管理する方法について実際に理解している必要があります。 また、[UI でのプライバシージョブリクエストの作成 ](./ui/user-guide.md#create-a-new-privacy-job-request) または [API](./api/overview.md) に関するガイドを読み、これらの操作をプログラムで実行する方法を理解しておくことをお勧めします。
+このガイドでは、[Privacy Service](./home.md) およびAdobe Experience Cloud アプリケーション全体のデータ主体（顧客）からのアクセスリクエストと削除リクエストを管理する方法について実際に理解している必要があります。 また、[UI でのプライバシージョブリクエストの作成 &#x200B;](./ui/user-guide.md#create-a-new-privacy-job-request) または [API](./api/overview.md) に関するガイドを読み、これらの操作をプログラムで実行する方法を理解しておくことをお勧めします。
 
 ## 前提条件 {#prerequisites}
 
 Adobe Experience Platform Privacy Serviceへのアクセスは、Adobe Admin Consoleの詳細な役割ベースの権限によって制御されます。 Privacy ServiceUI と API で特定の機能を使用するには、製品プロファイルで関連する権限が必要です。 追加の権限が必要な場合は、システム管理者にお問い合わせください。
 
-管理者に関する詳細は、[Privacy Serviceの権限の管理 ](./permissions.md) に関するガイドを参照してください。
+管理者に関する詳細は、[Privacy Serviceの権限の管理 &#x200B;](./permissions.md) に関するガイドを参照してください。
 
 ## プライバシージョブ作成のガイドライン {#creation-guidelines}
 
@@ -47,11 +47,11 @@ Adobe Experience Platform Privacy Serviceへのアクセスは、Adobe Admin Con
 - **Webhook 設定：** 送信されたジョブのステータスが変更されたときにプッシュ通知を受信する Webhook を設定します。 これにより、リアルタイムの監視が容易になります。
 - **通知：** ジョブと製品の両方のレベルで通知を使用して、リクエストの進行状況を監視するのに役立ちます。
 
-Privacy Service通知のイベント登録のセットアップ手順と通知ペイロードの解釈方法については、[Privacy Serviceイベントの登録 ](./privacy-events.md) に関するドキュメントを参照してください。
+Privacy Service通知のイベント登録のセットアップ手順と通知ペイロードの解釈方法については、[Privacy Serviceイベントの登録 &#x200B;](./privacy-events.md) に関するドキュメントを参照してください。
 
 ### フィルターに基づくすべてのジョブの取得 {#retrieve-filtered-responses-for-all-jobs}
 
-指定したフィルターに基づいてすべてのプライバシージョブデータを取得するには、**`/jobs` エンドポイントに対してGETリクエストを実行します**。 この API 呼び出しは、1 回のリクエストで大量のジョブ ID の現在のジョブステータスの概要を表示する場合に役立ちます。 詳細な製品応答はありませんが、[`/jobs/{jobID}` エンドポイント ](#retrieve-detailed-responses-for-specific-jobs) を使用して見つけることができます。
+指定したフィルターに基づいてすべてのプライバシージョブデータを取得するには、**`/jobs` エンドポイントに対してGETリクエストを実行します**。 この API 呼び出しは、1 回のリクエストで大量のジョブ ID の現在のジョブステータスの概要を表示する場合に役立ちます。 詳細な製品応答はありませんが、[`/jobs/{jobID}` エンドポイント &#x200B;](#retrieve-detailed-responses-for-specific-jobs) を使用して見つけることができます。
 
 `/jobs` エンドポイントへのGETリクエストは、多数のジョブ ID のステータスデータを収集または比較するために最適ですが、通常のポーリングタイプのアクティビティ向けには **ありません** 使用できます。
 
@@ -59,15 +59,15 @@ Privacy Service通知のイベント登録のセットアップ手順と通知�
 
 - **クエリパラメーター：** 特定のフィルターを使用して、結果を絞り込みます。例：データ範囲、規制タイプおよびステータス（処理中、完了など）。
 
-組織内の現在のすべてのプライバシージョブのリストは、Privacy ServiceUI から表示できます。 ジョブリクエストリストをフィルタリングする方法については、[UI ドキュメントのプライバシージョブの管理 ](./ui/user-guide.md#job-requests) を参照してください。 または、[Privacy ServiceAPI での/job エンドポイントの使用 ](./api/privacy-jobs.md) に関するドキュメントを参照してください。
+組織内の現在のすべてのプライバシージョブのリストは、Privacy ServiceUI から表示できます。 ジョブリクエストリストをフィルタリングする方法については、[UI ドキュメントのプライバシージョブの管理 &#x200B;](./ui/user-guide.md#job-requests) を参照してください。 または、[Privacy ServiceAPI での/job エンドポイントの使用 &#x200B;](./api/privacy-jobs.md) に関するドキュメントを参照してください。
 
-[ 使用可能なクエリパラメーターフィルター ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs) の詳細については、Privacy ServiceAPI ドキュメントを参照してください。
+[&#x200B; 使用可能なクエリパラメーターフィルター &#x200B;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs) の詳細については、Privacy ServiceAPI ドキュメントを参照してください。
 
 ### 1 つのジョブに対する詳細な応答の取得 {#retrieve-detailed-responses-for-specific-jobs}
 
 1 つのジョブに対する詳細な応答を取得するには、**/jobs/{jobID} エンドポイントに対してGETリクエストを実行します**。 この方法は、製品固有の応答や成功メッセージなど、より深い情報収集を目的としています。 このエンドポイントの呼び出しは、どの製品が応答し、どの製品がまだ保留中かを確認する最適な方法ですが、通常のポーリングアクティビティ向けでは **ありません** です。
 
-[ 特定のジョブのステータスを確認する方法 ](./api/privacy-jobs.md#check-status) について詳しくは、`/jobs/{JOB_ID}` エンドポイントのドキュメントを参照してください。
+[&#x200B; 特定のジョブのステータスを確認する方法 &#x200B;](./api/privacy-jobs.md#check-status) について詳しくは、`/jobs/{JOB_ID}` エンドポイントのドキュメントを参照してください。
 
 ### 理想的なシナリオの例 {#ideal-scenario}
 
@@ -77,7 +77,7 @@ Webhook を使用すると、システムはレコードを自動的に更新し
 
 ## リクエストデータへのアクセス {#access-request-data}
 
-データ主体の情報が要求されると、各サービスは、データの保存方法や使用方法に合った形式でデータを返します。 すべてのサービスがリクエストを完了すると、このデータをダウンロードできるように、ジョブの詳細に.ZIP アーカイブファイルの URL が指定されます。 [ プライバシージョブの結果をダウンロードする方法 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=ja#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) について詳しくは、トラブルシューティングガイドを参照してください。
+データ主体の情報が要求されると、各サービスは、データの保存方法や使用方法に合った形式でデータを返します。 すべてのサービスがリクエストを完了すると、このデータをダウンロードできるように、ジョブの詳細に.ZIP アーカイブファイルの URL が指定されます。 [&#x200B; プライバシージョブの結果をダウンロードする方法 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=ja#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) について詳しくは、トラブルシューティングガイドを参照してください。
 
 データ・アーカイブの管理に関する重要事項を次に示します。
 
@@ -96,8 +96,8 @@ Privacy Serviceリクエストを行う際には、次の技術的な考慮事�
 - **データ保持期間：** ジョブのグループの最大ルックバック期間は 60 日で、クエリの最大期間は 30 日（開始日/終了日）です。
 - **ゲートウェイタイムアウト：** 要求が 60 秒を超えると、ゲートウェイからドロップされる可能性があることに注意してください。
 - **エラー処理：** エラーメッセージを十分に確認し、必要に応じてリクエストを再送信します。 Privacy Serviceは、エラーの後にジョブを自動的に再処理しません。
-- **HTTP 429 エラーについて：** HTTP 429 エラーメッセージと、問題を軽減するために必要な手順について確認します。 HTTP 429 エラーは、「リクエストが多すぎます」が原因です。 問題の解決方法について詳しくは、トラブルシューティングガイドの [ 一般的なエラーメッセージ ](./troubleshooting-guide.md#common-error-messages) の節を参照してください。
+- **HTTP 429 エラーについて：** HTTP 429 エラーメッセージと、問題を軽減するために必要な手順について確認します。 HTTP 429 エラーは、「リクエストが多すぎます」が原因です。 問題の解決方法について詳しくは、トラブルシューティングガイドの [&#x200B; 一般的なエラーメッセージ &#x200B;](./troubleshooting-guide.md#common-error-messages) の節を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むことで、Privacy Serviceを効率的かつ効果的に使用するために必要な知識とプラクティスを得ることができました。 次に、Privacy Serviceに関するよくある質問への回答と API でよく発生するエラーに関する情報については、[ トラブルシューティングガイド ](./troubleshooting-guide.md) を参照してください。
+このドキュメントを読むことで、Privacy Serviceを効率的かつ効果的に使用するために必要な知識とプラクティスを得ることができました。 次に、Privacy Serviceに関するよくある質問への回答と API でよく発生するエラーに関する情報については、[&#x200B; トラブルシューティングガイド &#x200B;](./troubleshooting-guide.md) を参照してください。

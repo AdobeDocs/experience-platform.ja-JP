@@ -14,7 +14,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Capillary] データベースをAdobe Experience Platformに接続する方法について説明します。
 
@@ -37,13 +37,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![ キャピラリーストリーミングイベントカードが選択された UI のソースカタログ ](../../../../images/tutorials/create/capillary/catalog.png)
+![&#x200B; キャピラリーストリーミングイベントカードが選択された UI のソースカタログ &#x200B;](../../../../images/tutorials/create/capillary/catalog.png)
 
 ## データの選択
 
 次に、*[!UICONTROL データを選択]* インターフェイスを使用して、サンプルの JSON ファイルをアップロードし、ソーススキーマを定義します。 この手順では、プレビューインターフェイスを使用して、ペイロードのファイル構造を表示できます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/capillary/select-data.png)
+![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/capillary/select-data.png)
 
 ## データフローの詳細
 
@@ -72,25 +72,25 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データセットを設定したら、名前、説明（オプション）、アラート設定など、データフローの詳細を指定する必要があります。
 
-![ データフローの詳細インターフェイス ](../../../../images/tutorials/create/capillary/dataflow-detail.png)
+![&#x200B; データフローの詳細インターフェイス &#x200B;](../../../../images/tutorials/create/capillary/dataflow-detail.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。これらのオプションを使用すると、実行中のデータフローでこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。これらのオプションを使用すると、実行中のデータフローでこれらのアラートをトリガーできます。  詳しくは、[&#x200B; アラートの概要 &#x200B;](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## マッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI の [&#x200B; マッピングガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 >[!TIP]
 >
->データをマッピングする準備が整ったら、[ イベントとプロファイルのマッピング ](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [ ファイルをデータ準備にインポート ](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
+>データをマッピングする準備が整ったら、[&#x200B; イベントとプロファイルのマッピング &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [&#x200B; ファイルをデータ準備にインポート &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
 
-![Capilary のマッピングインターフェイス ](../../../../images/tutorials/create/capillary/mappings.png)
+![Capilary のマッピングインターフェイス &#x200B;](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## レビュー
 
@@ -101,10 +101,10 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 詳細が正しいことを確認したら、「**[!UICONTROL 終了]**」を選択します。
 
-![ ソースワークフローのレビューステップ ](../../../../images/tutorials/create/capillary/review.png)
+![&#x200B; ソースワークフローのレビューステップ &#x200B;](../../../../images/tutorials/create/capillary/review.png)
 
 ## ストリーミングエンドポイント URL の取得
 
 接続が作成されると、ソースの詳細ページが表示されます。 このページには、以前に実行したデータフロー、ID、ストリーミングエンドポイント URL など、新しく作成した接続の詳細が表示されます。
 
-![ ストリーミングエンドポイント URL。](../../../../images/tutorials/create/capillary/endpoint-url.png)
+![&#x200B; ストリーミングエンドポイント URL。](../../../../images/tutorials/create/capillary/endpoint-url.png)

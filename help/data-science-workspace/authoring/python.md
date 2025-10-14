@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
-次のドキュメントでは、Data Science Workspaceで使用する Python を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス ](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
+次のドキュメントでは、Data Science Workspaceで使用する Python を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス &#x200B;](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
 
 ## データセットの読み取り
 
@@ -164,4 +164,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 次の手順
 
-Adobe Experience Platform Data Science Workspaceは、上記のコードサンプルを使用してデータの読み取りと書き込みを行うレシピサンプルを提供します。 Python を使用してデータにアクセスする方法について詳しくは、[Data Science Workspace Python GitHub リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail) を参照してください。
+Adobe Experience Platform Data Science Workspaceは、上記のコードサンプルを使用してデータの読み取りと書き込みを行うレシピサンプルを提供します。 Python を使用してデータにアクセスする方法について詳しくは、[Data Science Workspace Python GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail) を参照してください。

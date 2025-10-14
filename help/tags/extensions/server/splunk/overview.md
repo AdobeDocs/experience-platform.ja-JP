@@ -93,6 +93,6 @@ UI に Splunk イベントコレクター拡張機能をインストールする
 
 このドキュメントでは、UI で Splunk イベント転送拡張機能をインストールおよび設定する方法について説明しました。 Splunk でのイベントデータの収集について詳しくは、次の公式ドキュメントを参照してください。
 
-* [Splunk web での HTTP イベントコレクターの設定と使用 ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Splunk web での HTTP イベントコレクターの設定と使用 &#x200B;](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [トークンによる認証の設定](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [HTTP イベントコレクターのトラブルシューティング](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)（[考えられるエラーコード](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)の概要も表示）

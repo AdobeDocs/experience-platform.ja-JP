@@ -38,7 +38,7 @@ ht-degree: 59%
 
 [!DNL Real-Time Customer Profile] Access API を使用すると、データセットに読み込まれるバッチデータを取得できます。目的のエンティティを取得できない場合は、[!DNL Profile] でデータセットが有効になっていない可能性があります。データセットが有効になっていることを確認した後、ソースデータの形式と識別子が要件を満たしていることを確認します。
 
-[!DNL Real-Time Customer Profile] API を使用してエンティティにアクセスする方法の詳細な手順については、[ エンティティエンドポイントガイド ](../api/entities.md) （「[!DNL Profile Access] API」とも呼ばれる）を参照してください。
+[!DNL Real-Time Customer Profile] API を使用してエンティティにアクセスする方法の詳細な手順については、[&#x200B; エンティティエンドポイントガイド &#x200B;](../api/entities.md) （「[!DNL Profile Access] API」とも呼ばれる）を参照してください。
 
 ## プロファイルストアデータの更新
 

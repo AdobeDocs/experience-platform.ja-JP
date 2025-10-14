@@ -17,11 +17,11 @@ ht-degree: 26%
 
 >[!NOTE]
 >
-> このチュートリアルで説明する編集操作は、Experience Platform UI でもサポートされています。 詳しくは、[UI での宛先の編集 ](/help/destinations/ui/edit-destination.md) 方法に関するチュートリアルを参照してください。
+> このチュートリアルで説明する編集操作は、Experience Platform UI でもサポートされています。 詳しくは、[UI での宛先の編集 &#x200B;](/help/destinations/ui/edit-destination.md) 方法に関するチュートリアルを参照してください。
 
 ## はじめに {#get-started}
 
-このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、このチュートリアルの内容を試す前に、[ 宛先カタログ ](../catalog/overview.md) から宛先を選択し、[ 宛先に接続 ](../ui/connect-destination.md) および [ データをアクティブ化 ](../ui/activation-overview.md) の手順に従ってください。
+このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、このチュートリアルの内容を試す前に、[&#x200B; 宛先カタログ &#x200B;](../catalog/overview.md) から宛先を選択し、[&#x200B; 宛先に接続 &#x200B;](../ui/connect-destination.md) および [&#x200B; データをアクティブ化 &#x200B;](../ui/activation-overview.md) の手順に従ってください。
 
 >[!NOTE]
 >
@@ -29,8 +29,8 @@ ht-degree: 26%
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [ 宛先 ](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; 宛先 &#x200B;](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してデータフローを正常に更新するために必要な追加情報を示しています。
 
@@ -66,7 +66,7 @@ Experience Platform API を呼び出すには、まず[認証に関するチュ�
 >
 >Experience Platform UI を使用して、宛先の目的のデータフロー ID を取得できます。 **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、目的の宛先データフローを選択して、右側のパネルで宛先 ID を見つけます。 宛先 ID は、次の手順でフロー ID として使用する値です。
 >
-> ![Experience Platform UI を使用した宛先 ID の取得 ](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Experience Platform UI を使用した宛先 ID の取得 &#x200B;](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -248,7 +248,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL &#x200B; オーディエンス ID をオーディエンス名に追加 &#x200B;]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
+次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 &#x200B;](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL &#x200B; オーディエンス ID をオーディエンス名に追加 &#x200B;]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
 
 ```shell
 curl -X PATCH \
@@ -288,7 +288,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、`advertiserId` 宛先接続 [[!DNL Pinterest]  の ](/help/destinations/catalog/advertising/pinterest.md#parameters) パラメーターを更新します。
+次のリクエストは、`advertiserId` 宛先接続 [[!DNL Pinterest]  の &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) パラメーターを更新します。
 
 ```shell
 curl -X PATCH \
@@ -336,7 +336,7 @@ curl -X PATCH \
 
 ベース接続のコンポーネントを更新するには、`PATCH` エンドポイントに `/connections` リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい値を指定します。
 
-ベース接続 ID を取得したのは、[ 前の手順 ](#look-up-dataflow-details) で、既存のデータフローを目的の宛先に調査してパラメーター `baseConnection` を取得したときです。
+ベース接続 ID を取得したのは、[&#x200B; 前の手順 &#x200B;](#look-up-dataflow-details) で、既存のデータフローを目的の宛先に調査してパラメーター `baseConnection` を取得したときです。
 
 >[!IMPORTANT]
 >
@@ -451,8 +451,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して宛先接続の様々なコンポーネントを更新する方法を学びました。 宛先について詳しくは、[ 宛先の概要 ](../home.md) を参照してください。
+このチュートリアルでは、[!DNL Flow Service] API を使用して宛先接続の様々なコンポーネントを更新する方法を学びました。 宛先について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../home.md) を参照してください。

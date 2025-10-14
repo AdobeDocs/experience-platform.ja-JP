@@ -19,7 +19,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->イベントを結合して ID クラスターを作成する方法については、[ID 管理 ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) に関する [!DNL Mixpanel] のドキュメント [!DNL Mixpanel] 参照してください。 また、[ 個別の ID](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) に関するドキュメントを確認して、イベントデータでユーザーを識別する際にどのように使用されるかを理解することをお勧めします。
+>イベントを結合して ID クラスターを作成する方法については、[ID 管理 &#x200B;](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) に関する [!DNL Mixpanel] のドキュメント [!DNL Mixpanel] 参照してください。 また、[&#x200B; 個別の ID](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) に関するドキュメントを確認して、イベントデータでユーザーを識別する際にどのように使用されるかを理解することをお勧めします。
 
 ## ユースケース
 
@@ -31,13 +31,13 @@ ht-degree: 2%
 
 [!DNL Mixpanel] 固有のユースケースについて詳しくは、次のドキュメントを参照してください。
 
-* [ 新規  [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
-* [ [!DNL Mixpanel] について](https://developer.mixpanel.com/docs)
-* [12 [!DNL Mixpanel]  必見 ](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
+* [&#x200B; 新規  [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
+* [&#x200B; [!DNL Mixpanel] について](https://developer.mixpanel.com/docs)
+* [12 [!DNL Mixpanel]  必見 &#x200B;](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## [!DNL Mixpanel] 前提条件 {#prerequisites-mixpanel}
 
-この拡張機能を使用するには、有効な [!DNL Mixpanel] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Mixpanel]  登録ページ ](https://mixpanel.com/register/) に移動し、アカウントを登録して作成してください。
+この拡張機能を使用するには、有効な [!DNL Mixpanel] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Mixpanel]  登録ページ &#x200B;](https://mixpanel.com/register/) に移動し、アカウントを登録して作成してください。
 
 [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) 設定がプロジェクトに対して有効になっていることを確認します。 **[!DNL Settings]**/**[!DNL Project Setting]**/**[!DNL Identity Merge]** に移動し、設定を切り替えます。
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 >
 >これらの方法について詳しくは、[identity management](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) に関する [!DNL Mixpanel] ドキュメントを参照してください。
 >
->[[!DNL Mixpanel] ID 結合機能 ](#prerequisites-mixpanel) が有効になっていることを確認して、ID クラスターが適切に解決されていることを確認します。
+>[[!DNL Mixpanel] ID 結合機能 &#x200B;](#prerequisites-mixpanel) が有効になっていることを確認して、ID クラスターが適切に解決されていることを確認します。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
@@ -62,15 +62,15 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 
 | キータイプ | 説明 | 例 |
 | --- | --- | --- |
-| プロジェクトトークン | [!DNL Mixpanel] アカウントに関連付けられたプロジェクトトークン。 詳しくは、[ プロジェクトトークンの検索 ](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) に関する [!DNL Mixpanel] ドキュメントを参照してください。 | `25470xxxxxxxxxxxxxxxxxxx1289` |
+| プロジェクトトークン | [!DNL Mixpanel] アカウントに関連付けられたプロジェクトトークン。 詳しくは、[&#x200B; プロジェクトトークンの検索 &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) に関する [!DNL Mixpanel] ドキュメントを参照してください。 | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
 ## [!DNL Mixpanel] 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、[ イベント転送プロパティを作成 ](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[&#x200B; イベント転送プロパティを作成 &#x200B;](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
 
 左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。「**[!UICONTROL カタログ]**」タブで、[!DNL Mixpanel] 拡張機能のカードの **[!UICONTROL インストール]** を選択します。
 
-![[!DNL Mixpanel] 拡張機能のインストール ](../../../images/extensions/server/mixpanel/install-extension.png)
+![[!DNL Mixpanel] 拡張機能のインストール &#x200B;](../../../images/extensions/server/mixpanel/install-extension.png)
 
 ## [!DNL Send Event] ルールの作成
 
@@ -87,21 +87,21 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 
 >[!NOTE]
 >
->[!DNL Mixpanel] イベントの標準フィールドについて詳しくは、[ 公式ドキュメント ](https://developer.mixpanel.com/reference/import-events#event) を参照してください。
+>[!DNL Mixpanel] イベントの標準フィールドについて詳しくは、[&#x200B; 公式ドキュメント &#x200B;](https://developer.mixpanel.com/reference/import-events#event) を参照してください。
 
-![ イベント転送ルールアクション設定を追加します ](../../../images/extensions/server/mixpanel/track-event-action.png)。
+![&#x200B; イベント転送ルールアクション設定を追加します &#x200B;](../../../images/extensions/server/mixpanel/track-event-action.png)。
 
 [!UICONTROL &#x200B; イベントの追跡 &#x200B;] アクションがルールに追加されたら、特定のイベントに対してのみ発生するようにルールの条件を設定したり、条件セクションを空のままにして、すべてのイベントに対してルールを発生させることができます。
 
 >[!IMPORTANT]
 >
->Web サイトで [!DNL Mixpanel] SDKを使用している場合は、次の手順 [ 内でのデータの検証  [!DNL Mixpanel]](#validate) に進むことができます。 [!DNL Mixpanel] SDKを使用していない場合は、[ 個別の ID トラッキングルールを作成 ](#create-an-identity-tracking-rule) して、ユーザー ID イベントが発生したときに適切なイベントと `distinct_id` 値が [!DNL Mixpanel] に送信されるようにする必要があります。
+>Web サイトで [!DNL Mixpanel] SDKを使用している場合は、次の手順 [&#x200B; 内でのデータの検証  [!DNL Mixpanel]](#validate) に進むことができます。 [!DNL Mixpanel] SDKを使用していない場合は、[&#x200B; 個別の ID トラッキングルールを作成 &#x200B;](#create-an-identity-tracking-rule) して、ユーザー ID イベントが発生したときに適切なイベントと `distinct_id` 値が [!DNL Mixpanel] に送信されるようにする必要があります。
 
 ## [!DNL Mixpanel] 内のデータの検証 {#validate}
 
 実装が成功し、イベントが収集された場合は、[[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948) 内にイベントが表示されます。
 
-メール値 [!DNL Mixpanel] 入力されたログイン後イベントと、**[!UICONTROL イベントを送信]** を使用する際に作成されたイベントを結合したかどうかを確認します。 正しく実装され [!DNL Mixpanel] 場合は、それらを単一の [ ユーザープロファイル ](https://help.mixpanel.com/hc/en-us/articles/115004501966) に関連付けます。
+メール値 [!DNL Mixpanel] 入力されたログイン後イベントと、**[!UICONTROL イベントを送信]** を使用する際に作成されたイベントを結合したかどうかを確認します。 正しく実装され [!DNL Mixpanel] 場合は、それらを単一の [&#x200B; ユーザープロファイル &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004501966) に関連付けます。
 
 ## 次の手順
 
@@ -110,4 +110,4 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] JavaScript API](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
+Experience Platformのイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。

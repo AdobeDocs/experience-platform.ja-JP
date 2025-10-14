@@ -15,15 +15,15 @@ ht-degree: 4%
 
 ダッシュボードにアクセスするには、左側のナビゲーションで **[!UICONTROL プライバシーコンソール]** を選択します。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/left-nav.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 &#x200B;](../images/governance-privacy-security/privacy-console/left-nav.png)
 
-ここから、コンソールに用意されている [ モニタリングウィジェット ](#widgets) を確認したり、Experience Platformのプライバシー機能に関する [ ユースケースガイド ](#use-case-guides) の 1 つを参照したりできます。
+ここから、コンソールに用意されている [&#x200B; モニタリングウィジェット &#x200B;](#widgets) を確認したり、Experience Platformのプライバシー機能に関する [&#x200B; ユースケースガイド &#x200B;](#use-case-guides) の 1 つを参照したりできます。
 
 ## ウィジェット
 
 [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] には、プライバシー操作の監視に役立つ複数のウィジェットが用意されています。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/widgets.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 &#x200B;](../images/governance-privacy-security/privacy-console/widgets.png)
 
 >[!NOTE]
 >
@@ -33,10 +33,10 @@ ht-degree: 4%
 
 | ウィジェット名 | 説明 |
 | --- | --- |
-| データハイジーン作業指示ステータス | 選択した時間枠の [ データハイジーン ](../../hygiene/home.md) のレコード削除プロセスのステータスを表示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
-| 最近のデータハイジーン作業指示 | システムによって処理されている最新の [ データハイジーン ](../../hygiene/home.md) 作業指示を表示します。 ドロップダウンを使用して、最近作成した作業指示と最近更新した作業指示を切り替えます。 |
-| 最も頻度の高いアクション | 選択した期間に [ 監査ログ ](./audit-logs/overview.md) でキャプチャされたExperience Platformに関する最も頻繁なアクションを示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
-| 最もアクティブなユーザー | 選択した期間、[ 監査ログ ](./audit-logs/overview.md) で記録された、組織内で最もアクティブなExperience Platform ユーザーを表示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
+| データハイジーン作業指示ステータス | 選択した時間枠の [&#x200B; データハイジーン &#x200B;](../../hygiene/home.md) のレコード削除プロセスのステータスを表示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
+| 最近のデータハイジーン作業指示 | システムによって処理されている最新の [&#x200B; データハイジーン &#x200B;](../../hygiene/home.md) 作業指示を表示します。 ドロップダウンを使用して、最近作成した作業指示と最近更新した作業指示を切り替えます。 |
+| 最も頻度の高いアクション | 選択した期間に [&#x200B; 監査ログ &#x200B;](./audit-logs/overview.md) でキャプチャされたExperience Platformに関する最も頻繁なアクションを示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
+| 最もアクティブなユーザー | 選択した期間、[&#x200B; 監査ログ &#x200B;](./audit-logs/overview.md) で記録された、組織内で最もアクティブなExperience Platform ユーザーを表示します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の時間枠を変更します。 |
 | データ主体のリクエスト | 特定の日に [Privacy Service](../../privacy-service/home.md) によって送信され、完了したデータ主体の要求の数を示します。 |
 
 {style="table-layout:auto"}
@@ -45,7 +45,7 @@ ht-degree: 4%
 
 コンソールには、Experience Platformの一般的なプライバシーワークフローを紹介する複数の製品内ガイドが用意されています。これには、基本的な実装のセットアップ方法に関する簡潔な手順も含まれます。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/use-case-guide.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 &#x200B;](../images/governance-privacy-security/privacy-console/use-case-guide.png)
 
 ## 次の手順
 

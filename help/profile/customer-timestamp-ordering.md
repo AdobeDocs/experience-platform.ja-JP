@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platformでは、プロファイルストアへのストリーミング取得を通じてデータを取り込む場合、デフォルトでは、データ順序が保証されるわけではありません。 顧客タイムスタンプの順序付けを使用すると、指定された顧客タイムスタンプに従った最新のメッセージがプロファイルストアに保持されます。 その後、古いメッセージはすべて削除され、セグメント化や宛先などのプロファイルデータを使用するダウンストリームサービスで使用できるようになります **使用できません**。 その結果、プロファイルデータの一貫性が保たれ、プロファイルデータとソースシステムの同期が維持されます。
 
-お客様のタイムスタンプの順序を有効にするには、[ 外部Source システム監査属性フィールドグループ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) 内の `extSourceSystemAudit.lastUpdatedDate` フィールドを使用し、サンドボックスとデータセット情報を担当するAdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアにお問い合わせください。
+お客様のタイムスタンプの順序を有効にするには、[&#x200B; 外部Source システム監査属性フィールドグループ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) 内の `extSourceSystemAudit.lastUpdatedDate` フィールドを使用し、サンドボックスとデータセット情報を担当するAdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアにお問い合わせください。
 
 ## 制約
 

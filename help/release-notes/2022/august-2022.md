@@ -94,7 +94,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムPersonalization]** の宛先では、データ収集に [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を使用する必要があります。 さらに、すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。 |
+| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムPersonalization]** の宛先では、データ収集に [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を使用する必要があります。 さらに、すべてのEdge Network API 呼び出しは、[&#x200B; 認証済みコンテキスト &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。 |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 

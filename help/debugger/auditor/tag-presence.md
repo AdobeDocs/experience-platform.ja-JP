@@ -15,14 +15,14 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 ](./overview.md) を参照してください。
+>Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 &#x200B;](./overview.md) を参照してください。
 
 タグの有無テストは、特定のタグがページに存在するかどうか、およびページのコード内でそれらが適切な場所にあるかどうかを評価します。
 
 | テスト | 重み | 条件 | レコメンデーション |
 | --- | --- | --- | --- |
-| Advertising Cloud - コードプレゼンス | 5 | Advertising Cloud タグは DOM では使用できません。 | [Advertising Cloud タグ拡張機能 ](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用して、Advertising Cloud タグを実装します。 |
-| Advertising Cloud - セグメントピクセルが実装されました | 5 | Advertising Cloud セグメントピクセルを新しい Advertising Cloud の画像専用コンバージョンタグにアップグレードしてください。非推奨の AMO セグメントタグを使用すると、データが失われる可能性があります。 | [Advertising Cloud タグ拡張機能 ](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用して、Advertising Cloud セグメントのピクセルを実装します。 |
+| Advertising Cloud - コードプレゼンス | 5 | Advertising Cloud タグは DOM では使用できません。 | [Advertising Cloud タグ拡張機能 &#x200B;](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用して、Advertising Cloud タグを実装します。 |
+| Advertising Cloud - セグメントピクセルが実装されました | 5 | Advertising Cloud セグメントピクセルを新しい Advertising Cloud の画像専用コンバージョンタグにアップグレードしてください。非推奨の AMO セグメントタグを使用すると、データが失われる可能性があります。 | [Advertising Cloud タグ拡張機能 &#x200B;](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用して、Advertising Cloud セグメントのピクセルを実装します。 |
 | Analytics - DOM にロード済み | 5 | Adobe Analytics タグが検出されませんでした。 | 最新バージョンの Analytics をインストールします。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ja) |
 | Launch - ライブラリが読み込まれました | 5 | `global _satellite` オブジェクトが DOM に見つかりませんでした。つまり、タグライブラリがインストールされていないか、実行に失敗しています。 | タグライブラリがページに実装されており、後続のスクリプトアクティビティでブロックされていないことを確認します。 |
 | Launch – 複数の埋め込みスクリプトを持たない | 5 | 実稼動サイトでは、ページごとに 1 つの埋め込みコードのみを読み込む必要があります。 | 実稼動ライブラリのみがページに読み込まれていることを確認してください。 |

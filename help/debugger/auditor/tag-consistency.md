@@ -15,7 +15,7 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 ](./overview.md) を参照してください。
+>Experience Platform Debugger の auditor テストについて詳しくは、[auditor 機能の概要 &#x200B;](./overview.md) を参照してください。
 
 タグの整合性テストでは、スキャンされたすべてのページで不整合が見られます。 これらの値や設定は、正確なデータ収集をおこなうために、サイト上のすべてのページで同じにする必要があります。
 

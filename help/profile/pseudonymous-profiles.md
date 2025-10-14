@@ -47,11 +47,11 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 >
 >**プロファイル設定の管理** 権限ではデータの有効期限を設定でき、**プロファイルの表示** 権限ではデータの有効期限を表示できます。**ID 名前空間の表示** 権限では、使用可能な ID 名前空間を表示できます。
 >
->Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](../access-control/home.md#permissions) を参照してください。
+>Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../access-control/home.md#permissions) を参照してください。
 
 偽名プロファイルデータの有効期限を組織に追加するには、プロファイルダッシュボードに移動し、「**[!UICONTROL 設定]**」を選択します。
 
-![ プロファイルダッシュボードの「設定」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings.png)
+![&#x200B; プロファイルダッシュボードの「設定」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings.png)
 
 [!UICONTROL &#x200B; プロファイル設定 &#x200B;] ポップオーバーが表示されます。 このポップオーバーでは、偽名プロファイルデータの有効期限の日数と、データの有効期限に使用する ID 名前空間を設定できます。
 
@@ -59,7 +59,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 
 「**[!UICONTROL 適用]**」を選択して、データの有効期限設定を保存します。
 
-![ 組織のプロファイルに偽名プロファイルデータの有効期限を追加するためのポップオーバー。 「適用」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
+![&#x200B; 組織のプロファイルに偽名プロファイルデータの有効期限を追加するためのポップオーバー。 「適用」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## よくある質問 {#faq}
 
@@ -131,12 +131,12 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 
 +++ 回答
 
-- ID サービス [ 「先入れ先出し」削除システムは ](../identity-service/guardrails.md)ID グラフから ECID を削除する可能性があります。このグラフは ID サービスに保存されます。
+- ID サービス [&#x200B; 「先入れ先出し」削除システムは &#x200B;](../identity-service/guardrails.md)ID グラフから ECID を削除する可能性があります。このグラフは ID サービスに保存されます。
 - この削除動作により、ECID のみのプロファイルがリアルタイム顧客プロファイル（プロファイルストア）に保存される場合、偽名プロファイルデータの有効期限は、プロファイルストアからこのプロファイルを削除します。
 
 +++
 
 ## 次の手順
 
-このガイドを読むと、偽名プロファイルデータの有効期限の表示および作成方法を理解できます。 Experience Platform全体のデータ管理について詳しくは、[ データ管理ライセンス使用権限のベストプラクティスガイド ](../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。
+このガイドを読むと、偽名プロファイルデータの有効期限の表示および作成方法を理解できます。 Experience Platform全体のデータ管理について詳しくは、[&#x200B; データ管理ライセンス使用権限のベストプラクティスガイド &#x200B;](../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。
 

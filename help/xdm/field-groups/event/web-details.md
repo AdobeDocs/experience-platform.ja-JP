@@ -17,17 +17,17 @@ ht-degree: 20%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL Web の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの web の詳細イベントに関する情報を記述するために使用されます。
+[!UICONTROL Web の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの web の詳細イベントに関する情報を記述するために使用されます。
 
 ![](../../images/field-groups/web-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `web` | [Web 情報 ](../../data-types/web-information.md) | リンククリック数、web ページの詳細、リファラー情報およびブラウザーの詳細について説明します。 |
+| `web` | [Web 情報 &#x200B;](../../data-types/web-information.md) | リンククリック数、web ページの詳細、リファラー情報およびブラウザーの詳細について説明します。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)

@@ -13,9 +13,9 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Experience Platformで一般に利用可能な CSV マッピング機能について詳しくは、[ 既存のスキーマへの CSV ファイルのマッピング ](./existing-schema.md) に関するドキュメントを参照してください。
+>Experience Platformで一般に利用可能な CSV マッピング機能について詳しくは、[&#x200B; 既存のスキーマへの CSV ファイルのマッピング &#x200B;](./existing-schema.md) に関するドキュメントを参照してください。
 
-CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。マッピング先を [ 既存のスキーマ ](./existing-schema.md) に選択できます。ただし、使用するスキーマや構造が不明な場合は、代わりに、Experience Platform UI 内の機械学習（ML）モデルに基づく動的なレコメンデーションを使用できます。
+CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。マッピング先を [&#x200B; 既存のスキーマ &#x200B;](./existing-schema.md) に選択できます。ただし、使用するスキーマや構造が不明な場合は、代わりに、Experience Platform UI 内の機械学習（ML）モデルに基づく動的なレコメンデーションを使用できます。
 
 ## はじめに
 
@@ -60,7 +60,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 **[!UICONTROL データを選択]**&#x200B;の手順で、左の列を使用して CSV ファイルをアップロードします。**[!UICONTROL ファイルを選択]**&#x200B;を選択して、ファイルを開くエクスプローラーダイアログを開いてファイルを選択するか、直接ファイルを列にドラッグ＆ドロップします。
 
-![[!UICONTROL &#x200B; データを選択 &#x200B;] 手順でハイライト表示された「[!UICONTROL &#x200B; ファイルを選択 &#x200B;]」ボタンおよびドラッグ&amp;ドロップ ](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![[!UICONTROL &#x200B; データを選択 &#x200B;] 手順でハイライト表示された「[!UICONTROL &#x200B; ファイルを選択 &#x200B;]」ボタンおよびドラッグ&amp;ドロップ &#x200B;](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 ファイルをアップロードすると、サンプルデータセクションが表示され、受信したデータの最初の 10 行が表示され、正しくアップロードされたことを確認できます。「**[!UICONTROL 次へ]**」をクリックして続行します。
 
@@ -74,11 +74,11 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 >[!NOTE]
 >
->ソースからターゲットへのフィールドマッピングワークフローでは、様々な条件に基づいて、スキーマ内のすべてのフィールドをフィルタリングできます。 デフォルトの動作では、マッピングされたすべてのフィールドが表示されます。 表示されるフィールドを変更するには、検索入力フィールドの横にあるフィルターアイコンを選択し、ドロップダウンオプションから選択します。<br> ![ フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png " フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。"){width="100" zoomable="yes"}
+>ソースからターゲットへのフィールドマッピングワークフローでは、様々な条件に基づいて、スキーマ内のすべてのフィールドをフィルタリングできます。 デフォルトの動作では、マッピングされたすべてのフィールドが表示されます。 表示されるフィールドを変更するには、検索入力フィールドの横にあるフィルターアイコンを選択し、ドロップダウンオプションから選択します。<br> ![&#x200B; フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png " フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。"){width="100" zoomable="yes"}
 
 ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームのExperience Platform サービスで利用できる状態になります。
 
-![ 「[!UICONTROL &#x200B; 完了 &#x200B;]」ボタンを選択している状態で、CSV マッピングプロセスを完了する。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![&#x200B; 「[!UICONTROL &#x200B; 完了 &#x200B;]」ボタンを選択している状態で、CSV マッピングプロセスを完了する。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### フィールドマッピングの編集 {#edit-mappings}
 
@@ -88,11 +88,11 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 ML モデルを使用すると、CSV フィールドは既存の XDM フィールドグループに自動的にマッピングされます。特定の CSV フィールドのフィールドグループを変更する場合は、スキーマツリーの横にある「**[!UICONTROL 編集]**」を選択します。
 
-![ スキーマツリーの横で選択されている「[!UICONTROL &#x200B; 編集 &#x200B;]」ボタン ](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![&#x200B; スキーマツリーの横で選択されている「[!UICONTROL &#x200B; 編集 &#x200B;]」ボタン &#x200B;](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。ソースフィールドの横にある「編集」アイコン（![編集アイコン](/help/images/icons/edit.png)）を選択して、右側の列の詳細を編集してから、「**[!UICONTROL 適用]**」を選択します。
 
-![ 変更されているソースフィールドの推奨フィールドグループ。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![&#x200B; 変更されているソースフィールドの推奨フィールドグループ。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
 ソースフィールドのスキーマレコメンデーションの調整が終了したら、「**[!UICONTROL 保存]**」を選択して変更を適用します。
 
@@ -100,6 +100,6 @@ ML モデルを使用すると、CSV フィールドは既存の XDM フィー�
 
 このガイドでは、AI で生成されたレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータをExperience Platformに取り込む方法について説明しました。
 
-CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでのExperience Platformへのデータストリーミングについて詳しくは、[ ソースの概要 ](../../../sources/home.md) を参照してください。
+CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでのExperience Platformへのデータストリーミングについて詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../sources/home.md) を参照してください。
 
 また、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** することもできます。 このワークフローでは、CSV ファイルの構造とコンテンツに基づいて、新しいスキーマが自動的に作成されます。 この新しく作成されたスキーマがデータの形式に一致することで、大規模で複雑なデータセットの構造、フィールド、データタイプを定義する際に、時間を節約し、精度を高めることができます。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) を参照してください。

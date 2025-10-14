@@ -25,35 +25,35 @@ ht-degree: 2%
 
 Adobe Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択します。 **[!UICONTROL データセット]** ページが表示されます。 次に、「**[!UICONTROL 参照]**」タブを選択し、アトリビューション AI スコアの出力データセットを見つけます。
 
-![ モデルへのアクセス ](./images/aai-query/datasets_browse.png)
+![&#x200B; モデルへのアクセス &#x200B;](./images/aai-query/datasets_browse.png)
 
 出力データセットを選択します。 データセットアクティビティ ページが表示されます。
 
-![ データセットアクティビティページ ](./images/aai-query/select_preview.png)
+![&#x200B; データセットアクティビティページ &#x200B;](./images/aai-query/select_preview.png)
 
 データセットアクティビティページで、右上隅の **[!UICONTROL データセットをプレビュー]** を選択し、データが期待どおりに取り込まれていることを確認します。
 
-![ データセットをプレビュー ](./images/aai-query/preview_dataset.JPG)
+![&#x200B; データセットをプレビュー &#x200B;](./images/aai-query/preview_dataset.JPG)
 
 データのプレビュー後、右側のパネルでスキーマを選択します。 ポップオーバーが開き、スキーマ名と説明が表示されます。 スコアリングスキーマにリダイレクトするには、スキーマ名のハイパーリンクを選択します。
 
-![ スキーマを選択 ](./images/aai-query/select_schema.png)
+![&#x200B; スキーマを選択 &#x200B;](./images/aai-query/select_schema.png)
 
 スコアリングスキーマを使用すると、値を選択または検索できます。 選択すると、**[!UICONTROL フィールドプロパティ]** サイドパネルが開き、クエリの作成に使用するパスをコピーできます。
 
-![ パスをコピー ](./images/aai-query/copy_path.png)
+![&#x200B; パスをコピー &#x200B;](./images/aai-query/copy_path.png)
 
 ## クエリサービスにアクセス
 
 Experience Platform UI 内からクエリサービスにアクセスするには、左側のナビゲーションで **[!UICONTROL クエリ]** を選択してから、「**[!UICONTROL 参照]** タブを選択します。 以前に保存したクエリのリストが読み込まれます。
 
-![ クエリサービスの参照 ](./images/aai-query/query_tab.png)
+![&#x200B; クエリサービスの参照 &#x200B;](./images/aai-query/query_tab.png)
 
 次に、右上隅の「**[!UICONTROL クエリを作成]**」を選択します。 クエリエディターが読み込まれます。 クエリエディターを使用すると、スコアリングデータを使用したクエリの作成を開始できます。
 
-![ クエリエディター ](./images/aai-query/query_example.png)
+![&#x200B; クエリエディター &#x200B;](./images/aai-query/query_example.png)
 
-クエリエディターについて詳しくは、[ クエリエディターユーザーガイド ](../../query-service/ui/user-guide.md) を参照してください。
+クエリエディターについて詳しくは、[&#x200B; クエリエディターユーザーガイド &#x200B;](../../query-service/ui/user-guide.md) を参照してください。
 
 ## アトリビューションスコア分析用のクエリテンプレート
 

@@ -169,7 +169,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -222,7 +222,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意および環境設定データを [!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[ [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
+| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意および環境設定データを [!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[&#x200B; [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
 | [!DNL Square] のサポート | [!DNL Square] ソースを使用して、支払いデータを [!DNL Square] アカウントからExperience Platformに取り込むことができるようになりました。 |
 | 顧客属性データフローの削除のサポート | 顧客属性ソースコネクタを使用して作成したデータフローを削除できるようになりました。 |
 

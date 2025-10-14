@@ -27,7 +27,7 @@ Reactor API では、秘密鍵は資格情報を表すリソースです。秘�
 
 ## 資格情報
 
-各秘密鍵には、それぞれの資格情報の値を保持する `credentials` 属性が含まれます。[API で秘密鍵を作成 ](../endpoints/secrets.md#create) する場合、以下の節に示すように、秘密鍵のタイプごとに異なる必須属性があります。
+各秘密鍵には、それぞれの資格情報の値を保持する `credentials` 属性が含まれます。[API で秘密鍵を作成 &#x200B;](../endpoints/secrets.md#create) する場合、以下の節に示すように、秘密鍵のタイプごとに異なる必須属性があります。
 
 * [&#39;トークン&#39;](#token)
 * [&#39;simple-http&#39;](#simple-http)
@@ -105,7 +105,7 @@ Reactor API では、秘密鍵は資格情報を表すリソースです。秘�
 
 | 資格情報属性 | データタイプ | 説明 |
 | --- | --- | --- |
-| `scopes` | 配列 | 認証用のGoogle製品スコープを一覧表示します。 次の範囲がサポートされています。<ul><li>[Google広告 ](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | 配列 | 認証用のGoogle製品スコープを一覧表示します。 次の範囲がサポートされています。<ul><li>[Google広告 &#x200B;](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
 `oauth2-google` 秘密鍵を作成した後、応答には `meta.authorization_url` プロパティが含まれます。 Google認証フローを完了するには、この URL をコピーしてブラウザーに貼り付ける必要があります。
 
@@ -113,7 +113,7 @@ Reactor API では、秘密鍵は資格情報を表すリソースです。秘�
 
 `oauth2-google` 秘密鍵の認証 URL は、秘密鍵が作成されてから 1 時間が経過すると有効期限が切れます（`meta.authorization_url_expires_at` で示されます）。 この期間を過ぎると、認証プロセスを更新するために秘密鍵の再認証を行う必要があります。
 
-Reactor API に対して認証リクエストを行うことで `oauth2-google` 秘密鍵を再PATCHする方法について詳しくは、[ 秘密鍵エンドポイントガイド ](../endpoints/secrets.md#reauthorize) を参照してください。
+Reactor API に対して認証リクエストを行うことで `oauth2-google` 秘密鍵を再PATCHする方法について詳しくは、[&#x200B; 秘密鍵エンドポイントガイド &#x200B;](../endpoints/secrets.md#reauthorize) を参照してください。
 
 ## 環境の関係
 

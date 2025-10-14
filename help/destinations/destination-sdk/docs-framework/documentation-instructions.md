@@ -24,21 +24,21 @@ Adobe Experience Platformへようこそ、ここにあなたがいることを�
 
 * 新しい宛先のドキュメントページを作成するためのステップバイステップの手順。
 * 宛先に入力するためのテンプレート。
-* [Markdown の使用に関する一般的な説明 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
-* [Adobeマークダウンフレーバーの具体的な手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions) （Adobeマークダウンフレーバーは、通常のマークダウンと非常によく似ています）。
-* Experience Platformドキュメント品質基準を満たす宛先ページのドキュメントページを作成するのに役立つ [ ベストプラクティスページ ](./authoring-best-practices.md)。
+* [Markdown の使用に関する一般的な説明 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
+* [Adobeマークダウンフレーバーの具体的な手順 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions) （Adobeマークダウンフレーバーは、通常のマークダウンと非常によく似ています）。
+* Experience Platformドキュメント品質基準を満たす宛先ページのドキュメントページを作成するのに役立つ [&#x200B; ベストプラクティスページ &#x200B;](./authoring-best-practices.md)。
 
 ## 前提条件 {#prerequisites}
 
 この記事の手順に従って宛先のドキュメントを作成するには、次の項目が必要です。
 
 * **GitHub アカウント**。 まだアカウントをお持ちでない場合は、[GitHub](https://github.com/) に新規登録してください。
-* **GitHub デスクトップ**。 [ ローカル環境でドキュメントを作成する ](./work-in-local-environment.md) を選択した場合は、[GitHub デスクトップ ](https://desktop.github.com/) を使用する必要があります。
+* **GitHub デスクトップ**。 [&#x200B; ローカル環境でドキュメントを作成する &#x200B;](./work-in-local-environment.md) を選択した場合は、[GitHub デスクトップ &#x200B;](https://desktop.github.com/) を使用する必要があります。
 * Adobeとの統合は、Adobe Experience Platformのステージング環境にデプロイされた宛先でテスト段階にある必要があります。
 
 ## Adobe Experience Platformで宛先に関するドキュメントを作成するための高度な手順 {#high-level-instructions}
 
-大まかに言えば、宛先用にドキュメントを作成するには、Adobe Experience Platform ドキュメントリポジトリの [ 分岐を作成 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository) し、新しいブランチで [ 提供されたドキュメントテンプレート ](./self-service-template.md) を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい出力先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これを行う手順は、さらに下の [ 新しい宛先ページを作成する手順 ](./documentation-instructions.md#steps-to-create-docs-page) にあります。
+大まかに言えば、宛先用にドキュメントを作成するには、Adobe Experience Platform ドキュメントリポジトリの [&#x200B; 分岐を作成 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository) し、新しいブランチで [&#x200B; 提供されたドキュメントテンプレート &#x200B;](./self-service-template.md) を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい出力先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これを行う手順は、さらに下の [&#x200B; 新しい宛先ページを作成する手順 &#x200B;](./documentation-instructions.md#steps-to-create-docs-page) にあります。
 
 <!--
 
@@ -49,9 +49,9 @@ Adobe Experience Platformへようこそ、ここにあなたがいることを�
 
 ## ドキュメントテンプレート {#documentation-template}
 
-ドキュメントページの作成を支援するために、Adobeから [ ドキュメントテンプレート ](./self-service-template.md) が事前入力されました。 テンプレートを編集してプルリクエストを開く手順については、後述します。 Adobeドキュメントチームが、新しい宛先用のドキュメントを確認し、公開します。
+ドキュメントページの作成を支援するために、Adobeから [&#x200B; ドキュメントテンプレート &#x200B;](./self-service-template.md) が事前入力されました。 テンプレートを編集してプルリクエストを開く手順については、後述します。 Adobeドキュメントチームが、新しい宛先用のドキュメントを確認し、公開します。
 
-[ テンプレートをここからダウンロード ](../assets/docs-framework/yourdestination-template.zip) し、ファイルを解凍して `yourdestination.md` ファイルを抽出します。
+[&#x200B; テンプレートをここからダウンロード &#x200B;](../assets/docs-framework/yourdestination-template.zip) し、ファイルを解凍して `yourdestination.md` ファイルを抽出します。
 
 テンプレートを使用してドキュメントページを作成する手順は、後述します。
 
@@ -64,4 +64,4 @@ GitHub web インターフェイスまたはローカル環境を使用して、
 
 ## ベストプラクティス {#best-practices}
 
-宛先ドキュメントページを作成する前と作成中に、[ オーサリングのベストプラクティス ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) を確認してください。 Adobeドキュメントチームがドキュメントのオーサリング時に使用するその他の記述のヒントについては、[Adobeドキュメントのライティングガイダンス ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja) も必ずお読みください。
+宛先ドキュメントページを作成する前と作成中に、[&#x200B; オーサリングのベストプラクティス &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) を確認してください。 Adobeドキュメントチームがドキュメントのオーサリング時に使用するその他の記述のヒントについては、[Adobeドキュメントのライティングガイダンス &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja) も必ずお読みください。

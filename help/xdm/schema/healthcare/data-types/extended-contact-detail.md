@@ -16,7 +16,7 @@ ht-degree: 8%
 
 [!UICONTROL &#x200B; 拡張連絡先詳細 &#x200B;] は、拡張連絡先の情報を記述する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ 拡張連絡先詳細データタイプ構造 ](../../../images/healthcare/data-types/extended-contact-detail.png)
+![&#x200B; 拡張連絡先詳細データタイプ構造 &#x200B;](../../../images/healthcare/data-types/extended-contact-detail.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -29,5 +29,5 @@ ht-degree: 8%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/extendedcontactdetail.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/extendedcontactdetail.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/extendedcontactdetail.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/extendedcontactdetail.schema.json)

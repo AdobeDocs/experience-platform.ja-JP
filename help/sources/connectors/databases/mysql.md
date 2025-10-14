@@ -39,7 +39,7 @@ ht-degree: 5%
 | `connectionString` | アカウントに関連付けられた [!DNL MySQL] の接続文字列。 [!DNL MySQL] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL MySQL] の接続仕様 ID は `26d738e0-8963-47ea-aadf-c60de735468a` です。 |
 
-詳しくは、[[!DNL MySQL]  接続文字列に関するドキュメント ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) を参照してください。
+詳しくは、[[!DNL MySQL]  接続文字列に関するドキュメント &#x200B;](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) を参照してください。
 
 >[!TAB  基本認証 ]
 

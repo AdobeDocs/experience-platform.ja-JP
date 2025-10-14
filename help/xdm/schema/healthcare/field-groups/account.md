@@ -14,22 +14,22 @@ ht-degree: 7%
 
 # [!UICONTROL &#x200B; アカウント &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; アカウント &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 患者または個人のグループに提供される医療サービスに関連するトランザクション、サービス、その他の財務情報（保険証券や請求目的など）を記録するために使用される、単一のオブジェクトタイプのフィールド `healthcareAccount` ータを提供します。
+[!UICONTROL &#x200B; アカウント &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 患者または個人のグループに提供される医療サービスに関連するトランザクション、サービス、その他の財務情報（保険証券や請求目的など）を記録するために使用される、単一のオブジェクトタイプのフィールド `healthcareAccount` ータを提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/account/account.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/account/account.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL &#x200B; 残高 &#x200B;] | `balance` | オブジェクトの配列 | 財務システムによって計算および処理される勘定残高。 詳しくは、以下の [ 節 ](#balances) を参照してください。 |
+| [!UICONTROL &#x200B; 残高 &#x200B;] | `balance` | オブジェクトの配列 | 財務システムによって計算および処理される勘定残高。 詳しくは、以下の [&#x200B; 節 &#x200B;](#balances) を参照してください。 |
 | [!UICONTROL &#x200B; 請求の状況 &#x200B;] | `billingStatus` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | これにより、請求プロセスを通じてアカウントのライフサイクルが追跡されます。 これは、トランザクションがアカウントに割り当てられたときの処理方法を示します。 |
-| [!UICONTROL &#x200B; 対象範囲 &#x200B;] | `coverage` | オブジェクトの配列 | このアカウントのコストをカバーする責任者と、その適用順序。 詳しくは、[ 以下の節 ](#coverage) を参照してください。 |
+| [!UICONTROL &#x200B; 対象範囲 &#x200B;] | `coverage` | オブジェクトの配列 | このアカウントのコストをカバーする責任者と、その適用順序。 詳しくは、[&#x200B; 以下の節 &#x200B;](#coverage) を参照してください。 |
 | [!UICONTROL 通貨] | `currency` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | アカウントのデフォルトの通貨。 |
-| [!UICONTROL &#x200B; 診断 &#x200B;] | `diagnosis` | オブジェクトの配列 | 請求に関連する一連の診断は、請求を作成する処理の前に適切に順序付けることができるアカウントに保存されています。 詳しくは、[ 以下の節 ](#diagnosis) を参照してください。 |
-| [!UICONTROL &#x200B; 保証人 &#x200B;] | `guarantor` | オブジェクトの配列 | 他の支払いオプションが不足している場合、アカウントのバランスを取る担当者。 詳しくは、[ 以下の節 ](#guarantor) を参照してください。 |
+| [!UICONTROL &#x200B; 診断 &#x200B;] | `diagnosis` | オブジェクトの配列 | 請求に関連する一連の診断は、請求を作成する処理の前に適切に順序付けることができるアカウントに保存されています。 詳しくは、[&#x200B; 以下の節 &#x200B;](#diagnosis) を参照してください。 |
+| [!UICONTROL &#x200B; 保証人 &#x200B;] | `guarantor` | オブジェクトの配列 | 他の支払いオプションが不足している場合、アカウントのバランスを取る担当者。 詳しくは、[&#x200B; 以下の節 &#x200B;](#guarantor) を参照してください。 |
 | [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | アカウントの参照に使用される一意の ID。 人間による使用を目的としている場合としていない場合があります（例：クレジットカード番号）。 |
 | [!UICONTROL &#x200B; 所有者 &#x200B;] | `owner` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | サービスエリア、病院、部門などを示します。 アカウントの管理を担当します。 |
-| [!UICONTROL &#x200B; 手順 &#x200B;] | `procedure` | オブジェクトの配列 | 請求に関連する一連の手順は、請求を作成する処理の前に適切に順序付けることができるアカウントに保存されています。 詳しくは、[ 以下の節 ](#procedure) を参照してください。 |
-| [!UICONTROL &#x200B; 関連アカウント &#x200B;] | `relatedAccount` | オブジェクトの配列 | このアカウントに関連するその他の関連アカウント。 詳しくは、[ 以下の節 ](#related-account) を参照してください。 |
+| [!UICONTROL &#x200B; 手順 &#x200B;] | `procedure` | オブジェクトの配列 | 請求に関連する一連の手順は、請求を作成する処理の前に適切に順序付けることができるアカウントに保存されています。 詳しくは、[&#x200B; 以下の節 &#x200B;](#procedure) を参照してください。 |
+| [!UICONTROL &#x200B; 関連アカウント &#x200B;] | `relatedAccount` | オブジェクトの配列 | このアカウントに関連するその他の関連アカウント。 詳しくは、[&#x200B; 以下の節 &#x200B;](#related-account) を参照してください。 |
 | [!UICONTROL &#x200B; 供用期間 &#x200B;] | `servicePeriod` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) | このアカウントに関連付けられているサービスの日付範囲。 |
 | [!UICONTROL 件名] | `subject` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | 費用が発生するエンティティを識別します。 サービスまたは商品の即時の受領者は、対象に関連するエンティティである可能性がありますが、費用は最終的にアカウントの対象によって発生しました。 |
 | [!UICONTROL タイプ] | `type` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | レポートおよび検索目的でアカウントを分類します。 |
@@ -40,14 +40,14 @@ ht-degree: 7%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.schema.json)
 
 ## `balances` {#balances}
 
 `balances` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ バランス構造 ](../../../images/healthcare/field-groups/account/balance.png)
+![&#x200B; バランス構造 &#x200B;](../../../images/healthcare/field-groups/account/balance.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ ht-degree: 7%
 
 `coverage` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ カバレッジ構造 ](../../../images/healthcare/field-groups/account/coverage.png)
+![&#x200B; カバレッジ構造 &#x200B;](../../../images/healthcare/field-groups/account/coverage.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ ht-degree: 7%
 
 `diagnosis` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 診断構造 ](../../../images/healthcare/field-groups/account/diagnosis.png)
+![&#x200B; 診断構造 &#x200B;](../../../images/healthcare/field-groups/account/diagnosis.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ ht-degree: 7%
 
 `guarantor` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ 保証人の構造 ](../../../images/healthcare/field-groups/account/guarantor.png)
+![&#x200B; 保証人の構造 &#x200B;](../../../images/healthcare/field-groups/account/guarantor.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ ht-degree: 7%
 
 `procedure` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ プロシージャ構造 ](../../../images/healthcare/field-groups/account/procedure.png)
+![&#x200B; プロシージャ構造 &#x200B;](../../../images/healthcare/field-groups/account/procedure.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ ht-degree: 7%
 
 `relatedAccount` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![relatedAccount 構造 ](../../../images/healthcare/field-groups/account/related-account.png)
+![relatedAccount 構造 &#x200B;](../../../images/healthcare/field-groups/account/related-account.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

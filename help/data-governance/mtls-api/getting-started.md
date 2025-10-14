@@ -22,7 +22,7 @@ MTLS サービス API ドキュメントには、API 呼び出しの例とリク
 
 ## 必須ヘッダー
 
-また、API ドキュメントでは、Experience Platform エンドポイントを正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
+また、API ドキュメントでは、Experience Platform エンドポイントを正しく呼び出すために、[&#x200B; 認証に関するチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -30,4 +30,4 @@ MTLS サービス API ドキュメントには、API 呼び出しの例とリク
 
 ## 次の手順
 
-MTLS サービス API を使用して呼び出しを行うには、左側のナビゲーションを使用して、または [ 開発者ガイドの概要内で、エンドポイントガイドを選択 ](./overview.md) ます。
+MTLS サービス API を使用して呼び出しを行うには、左側のナビゲーションを使用して、または [&#x200B; 開発者ガイドの概要内で、エンドポイントガイドを選択 &#x200B;](./overview.md) ます。

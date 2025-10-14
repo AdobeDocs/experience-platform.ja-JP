@@ -149,7 +149,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->`_links.cancel` の値を使用して [ 指定したスケジュールされたクエリの実行を停止 ](#immediately-stop-a-run-for-a-specific-scheduled-query) できます。
+>`_links.cancel` の値を使用して [&#x200B; 指定したスケジュールされたクエリの実行を停止 &#x200B;](#immediately-stop-a-run-for-a-specific-scheduled-query) できます。
 
 ### 特定のスケジュール済みクエリ実行の即時トリガー
 

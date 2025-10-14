@@ -106,8 +106,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 指定された URL のポートを返します。 入力が無効な場合は、null を返します。 | <ul><li>URL: **必須** ポートを抽出する必要がある URL です。</li></ul> | get_url_port （URL） | get_url_port&#x200B;（&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;） | 22 |
 | get_url_path | 指定された URL のパスを返します。 デフォルトでは、完全なパスが返されます。 | <ul><li>URL: **必須** パスを抽出する必要がある URL です。</li><li>FULL_PATH: *任意* フルパスを返すかどうかを決定するブール値。 false に設定した場合は、パスの末尾のみが返されます。</li></ul> | get_url_path&#x200B;（URL, FULL_PATH） | get_url_path&#x200B;（&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;） | &quot;//home/joe/&#x200B;employee.csv&quot; |
 | get_url_query_str | 指定された URL のクエリ文字列を、クエリ文字列名とクエリ文字列値のマップとして返します。 | <ul><li>URL: **必須** クエリ文字列の取得元の URL。</li><li>ANCHOR: **必須** クエリ文字列内のアンカーでの処理を決定します。 「retain」、「remove」、「append」の 3 つの値のいずれかです。<br><br> 値が「retain」の場合、アンカーは返された値に添付されます。<br> 値が「削除」の場合、アンカーは返された値から削除されます。<br> 値が「追加」の場合、アンカーは別の値として返されます。</li></ul> | get_url_query_str&#x200B;（URL, ANCHOR） | get_url_query_str&#x200B;（&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;retain&quot;） <br>get_url_query_str&#x200B;（&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;） <br>get_url_query_str&#x200B; &#x200B; &#x200B;（&quot;foo://example.comは：8042/over/there で？name=ferret#nose&quot;, &quot;append&quot;） | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
-| get_url_encoded | この関数は、URL を入力として受け取り、特殊文字を ASCII 文字に置換つまりエンコードします。 特殊文字の詳細については、このドキュメントの付録の [ 特殊文字のリスト ](#special-characters) を参照してください。 | <ul><li>URL: **必須** ASCII 文字で置き換えるかエンコードする特殊文字を含む入力 URL。</li></ul> | get_url_encoded （URL） | get_url_encoded （&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;） | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
-| get_url_decoded | この関数は、URL を入力として受け取り、ASCII 文字を特殊文字にデコードします。  特殊文字の詳細については、このドキュメントの付録の [ 特殊文字のリスト ](#special-characters) を参照してください。 | <ul><li>URL: **必須** 特殊文字にデコードする ASCII 文字を含む入力 URL。</li></ul> | get_url_decoded （URL） | get_url_decoded （&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;） | https</span>://example.com/partneralliance_asia-pacific_2022 |
+| get_url_encoded | この関数は、URL を入力として受け取り、特殊文字を ASCII 文字に置換つまりエンコードします。 特殊文字の詳細については、このドキュメントの付録の [&#x200B; 特殊文字のリスト &#x200B;](#special-characters) を参照してください。 | <ul><li>URL: **必須** ASCII 文字で置き換えるかエンコードする特殊文字を含む入力 URL。</li></ul> | get_url_encoded （URL） | get_url_encoded （&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;） | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | この関数は、URL を入力として受け取り、ASCII 文字を特殊文字にデコードします。  特殊文字の詳細については、このドキュメントの付録の [&#x200B; 特殊文字のリスト &#x200B;](#special-characters) を参照してください。 | <ul><li>URL: **必須** 特殊文字にデコードする ASCII 文字を含む入力 URL。</li></ul> | get_url_decoded （URL） | get_url_decoded （&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;） | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->左右にスクロールして、テーブルの内容をすべて表示してください。 `date` 関数の詳細については、『 [ データ形式処理ガイド ](./data-handling.md#dates) の日付の節を参照してください。
+>左右にスクロールして、テーブルの内容をすべて表示してください。 `date` 関数の詳細については、『 [&#x200B; データ形式処理ガイド &#x200B;](./data-handling.md#dates) の日付の節を参照してください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -150,16 +150,16 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 無効にする | 属性の値を `null` に設定します。 これは、フィールドをターゲットスキーマにコピーしない場合に使用する必要があります。 | | nullify （） | nullify （） | `null` |
 | get_keys | キーと値のペアを解析し、すべてのキーを返します。 | <ul><li>OBJECT: **必須** キーの抽出元のオブジェクト。</li></ul> | get_keys （OBJECT） | get_keys （{&quot;book1&quot;: &quot;Pride and Predial&quot;, &quot;book2&quot;: &quot;1984&quot;}） | `["book1", "book2"]` |
 | get_values | キーと値のペアを解析し、指定されたキーに基づいて文字列の値を返します。 | <ul><li>STRING: **必須** 解析する文字列。</li><li>KEY: **必須** 値を抽出する必要があるキー。</li><li>VALUE_DELIMITER: **必須** フィールドと値を区切る区切り文字です。 `null` または空の文字列を指定した場合、この値は `:` になります。</li><li>FIELD_DELIMITER: *任意* フィールドと値のペアを区切る区切り文字です。 `null` または空の文字列を指定した場合、この値は `,` になります。</li></ul> | get_values （STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER） | get_values （\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;） | John |
-| map_get_values | マップとキー入力を受け取ります。 入力が 1 つのキーである場合、この関数はそのキーに関連付けられた値を返します。 入力が文字列配列の場合、この関数は指定されたキーに対応するすべての値を返します。 入力マップに重複したキーがある場合、戻り値はキーを重複排除し、一意の値を返す必要があります。 | <ul><li>MAP: **必須** 入力マップデータ。</li><li>KEY: **必須** キーは、単一の文字列または文字列配列にすることができます。 他のプリミティブ型（data / number）が指定された場合は、文字列として扱われます。</li></ul> | get_values （MAP, KEY） | コードサンプルについては、[ 付録 ](#map_get_values) を参照してください。 | |
-| map_has_keys | 1 つ以上の入力キーが指定されている場合、この関数は true を返します。 文字列配列が入力として指定されている場合、この関数は、見つかった最初のキーに対して true を返します。 | <ul><li>MAP: **必須** 入力マップデータ</li><li>KEY: **必須** キーは、単一の文字列または文字列配列にすることができます。 他のプリミティブ型（data / number）が指定された場合は、文字列として扱われます。</li></ul> | map_has_keys （MAP, KEY） | コードサンプルについては、[ 付録 ](#map_has_keys) を参照してください。 | |
-| add_to_map | 少なくとも 2 つの入力を受け付けます。 任意の数のマップを入力として指定できます。 データ準備は、すべての入力からのすべてのキーと値のペアを持つ単一のマップを返します。 1 つ以上のキーが（同じマップ内またはマップ間で）繰り返される場合、Data Prep ではキーの重複が排除されるので、最初のキーと値のペアは入力に渡された順序で保持されます。 | MAP: **必須** 入力マップデータ。 | add_to_map （MAP 1, MAP 2, MAP 3, ...） | コードサンプルについては、[ 付録 ](#add_to_map) を参照してください。 | |
-| object_to_map （構文 1） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>KEY: **必須** キーは文字列である必要があります。 整数や日付などの他のプリミティブ値が指定されている場合、それらは文字列に自動変換され、文字列として扱われます。</li><li>ANY_TYPE: **必須** マップを除く、サポートされる任意の XDM データタイプを参照します。</li></ul> | object_to_map （KEY, ANY_TYPE, KEY, ANY_TYPE, ...） | コードサンプルについては、[ 付録 ](#object_to_map) を参照してください。 | |
-| object_to_map （構文 2） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>OBJECT: **必須** 受信オブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指すことができます。</li></ul> | object_to_map （OBJECT） | コードサンプルについては、[ 付録 ](#object_to_map) を参照してください。 |
-| object_to_map （構文 3） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>OBJECT: **必須** 受信オブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指すことができます。</li></ul> | object_to_map （OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY） | コードサンプルについては、[ 付録 ](#object_to_map) を参照してください。 |
+| map_get_values | マップとキー入力を受け取ります。 入力が 1 つのキーである場合、この関数はそのキーに関連付けられた値を返します。 入力が文字列配列の場合、この関数は指定されたキーに対応するすべての値を返します。 入力マップに重複したキーがある場合、戻り値はキーを重複排除し、一意の値を返す必要があります。 | <ul><li>MAP: **必須** 入力マップデータ。</li><li>KEY: **必須** キーは、単一の文字列または文字列配列にすることができます。 他のプリミティブ型（data / number）が指定された場合は、文字列として扱われます。</li></ul> | get_values （MAP, KEY） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#map_get_values) を参照してください。 | |
+| map_has_keys | 1 つ以上の入力キーが指定されている場合、この関数は true を返します。 文字列配列が入力として指定されている場合、この関数は、見つかった最初のキーに対して true を返します。 | <ul><li>MAP: **必須** 入力マップデータ</li><li>KEY: **必須** キーは、単一の文字列または文字列配列にすることができます。 他のプリミティブ型（data / number）が指定された場合は、文字列として扱われます。</li></ul> | map_has_keys （MAP, KEY） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#map_has_keys) を参照してください。 | |
+| add_to_map | 少なくとも 2 つの入力を受け付けます。 任意の数のマップを入力として指定できます。 データ準備は、すべての入力からのすべてのキーと値のペアを持つ単一のマップを返します。 1 つ以上のキーが（同じマップ内またはマップ間で）繰り返される場合、Data Prep ではキーの重複が排除されるので、最初のキーと値のペアは入力に渡された順序で保持されます。 | MAP: **必須** 入力マップデータ。 | add_to_map （MAP 1, MAP 2, MAP 3, ...） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#add_to_map) を参照してください。 | |
+| object_to_map （構文 1） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>KEY: **必須** キーは文字列である必要があります。 整数や日付などの他のプリミティブ値が指定されている場合、それらは文字列に自動変換され、文字列として扱われます。</li><li>ANY_TYPE: **必須** マップを除く、サポートされる任意の XDM データタイプを参照します。</li></ul> | object_to_map （KEY, ANY_TYPE, KEY, ANY_TYPE, ...） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#object_to_map) を参照してください。 | |
+| object_to_map （構文 2） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>OBJECT: **必須** 受信オブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指すことができます。</li></ul> | object_to_map （OBJECT） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#object_to_map) を参照してください。 |
+| object_to_map （構文 3） | この関数を使用して、マップ データタイプを作成します。 | <ul><li>OBJECT: **必須** 受信オブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指すことができます。</li></ul> | object_to_map （OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#object_to_map) を参照してください。 |
 
 {style="table-layout:auto"}
 
-オブジェクトのコピーフィーチャーについては、以下の [ 節を参照してください ](#object-copy)。
+オブジェクトのコピーフィーチャーについては、以下の [&#x200B; 節を参照してください &#x200B;](#object-copy)。
 
 ### 階層 – 配列 {#arrays}
 
@@ -178,10 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 入力サイズを返します。 | <ul><li>入力：**必須** サイズの検索しようとしているオブジェクト。</li></ul> | size_of （INPUT） | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | この関数は、入力配列全体のすべての要素を Profile の配列の末尾に追加するために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイルに配列を追加する配列。</li></ul> | upsert_array_append （ARRAY） | `upsert_array_append([123, 456])` | [123、456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace （ARRAY） | `upsert_array_replace([123, 456], 1)` | [123、456] |
-| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} array_to_string | 指定された区切り文字を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合する前にフラット化されます。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>SEPARATOR: **必須** 配列の要素の結合に使用する区切り文字。</li><li>配列：**必須** 結合される配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「こんにちは；world」 |
-| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} filterArray* | 述語に基づいて指定された配列をフィルタリングします。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>配列：**必須** フィルタリングされる配列</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
-| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} transformArray* | 述語に基づいて指定された配列を変換します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>ARRAY: **必須** 変換する配列。</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | ` transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
-| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} flattenArray* | 指定された（多次元の）配列を 1 次元配列にフラット化します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>ARRAY: **必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
+| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} array_to_string | 指定された区切り文字を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合する前にフラット化されます。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>SEPARATOR: **必須** 配列の要素の結合に使用する区切り文字。</li><li>配列：**必須** 結合される配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「こんにちは；world」 |
+| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} filterArray* | 述語に基づいて指定された配列をフィルタリングします。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>配列：**必須** フィルタリングされる配列</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
+| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} transformArray* | 述語に基づいて指定された配列を変換します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>ARRAY: **必須** 変換する配列。</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | ` transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
+| [!BADGE &#x200B; 宛先のみ &#x200B;]{type=Informative} flattenArray* | 指定された（多次元の）配列を 1 次元配列にフラット化します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md) を参照してください。 | <ul><li>ARRAY: **必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | この関数は、オブジェクト配列とキーを入力として受け取り、値をキー、配列要素を値としてキーのフィールドのマップを返します。 | <ul><li>入力：**必須** 最初の null 以外のオブジェクトを検索するオブジェクト配列</li><li>KEY: **必須** キーは、オブジェクト配列内のフィールド名で、値としてオブジェクトである必要があります。</li></ul> | array_to_map （OBJECT[]INPUTS, KEY） | コードサンプルについては、[ 付録 ](#object_to_map) を参照してください。 |
+| array_to_map | この関数は、オブジェクト配列とキーを入力として受け取り、値をキー、配列要素を値としてキーのフィールドのマップを返します。 | <ul><li>入力：**必須** 最初の null 以外のオブジェクトを検索するオブジェクト配列</li><li>KEY: **必須** キーは、オブジェクト配列内のフィールド名で、値としてオブジェクトである必要があります。</li></ul> | array_to_map （OBJECT[]INPUTS, KEY） | コードサンプルについては、[&#x200B; 付録 &#x200B;](#object_to_map) を参照してください。 |
 | object_to_map | この関数は、オブジェクトを引数として受け取り、キーと値のペアのマップを返します。 | <ul><li>入力：**必須** 最初の null 以外のオブジェクトを検索するオブジェクト配列</li></ul> | object_to_map （OBJECT_INPUT） | &quot;object_to_map （address）を指定します。入力内容は&quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2 : \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;}&quot;です | 指定されたフィールド名と値のペアを持つマップ、または入力が null の場合は null を返します。 例：`"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | この関数は、キーと値のペアのリストを受け取り、キーと値のペアのマップを返します。 | | to_map （OBJECT_INPUT） | &quot;to_map （\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;）&quot; | 指定されたフィールド名と値のペアを持つマップ、または入力が null の場合は null を返します。 例：`"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -272,7 +272,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 * 電話 – 画面が小さいモバイルデバイス（通常は 7&quot;未満）
 * モバイル – まだ識別されていないモバイルデバイス。 このモバイルデバイスは、eReader、タブレット、電話、時計などであり得る。
 
-デバイスフィールド値について詳しくは、このドキュメントの付録の [ デバイスフィールド値のリスト ](#device-field-values) を参照してください。
+デバイスフィールド値について詳しくは、このドキュメントの付録の [&#x200B; デバイスフィールド値のリスト &#x200B;](#device-field-values) を参照してください。
 
 >[!NOTE]
 >

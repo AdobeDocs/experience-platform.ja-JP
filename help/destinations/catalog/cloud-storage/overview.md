@@ -78,4 +78,4 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 ## 次の手順 {#next-steps}
 
-使用する [ サポートされているクラウド宛先 ](#supported-destinations) の 1 つを選択した後、[ 宛先への接続チュートリアル ](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [ 書き出し ](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。
+使用する [&#x200B; サポートされているクラウド宛先 &#x200B;](#supported-destinations) の 1 つを選択した後、[&#x200B; 宛先への接続チュートリアル &#x200B;](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [&#x200B; 書き出し &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。

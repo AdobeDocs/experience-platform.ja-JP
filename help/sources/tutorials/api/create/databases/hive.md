@@ -16,7 +16,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->[!DNL Azure HDInsights] コネクタの [!DNL Apache Hive] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Azure HDInsights] コネクタの [!DNL Apache Hive] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -42,11 +42,11 @@ ht-degree: 47%
 | `password` | ユーザーに対応するパスワード。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Hive] の接続仕様 ID は `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` です。 |
 
-基本について詳しくは、[ この Hive ドキュメント ](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted) を参照してください。
+基本について詳しくは、[&#x200B; この Hive ドキュメント &#x200B;](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -108,5 +108,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用してベース接続に [!DNL Apache Hive] ール [!DNL Azure HDInsights] 作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

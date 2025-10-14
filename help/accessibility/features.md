@@ -37,7 +37,7 @@ Experience Platform は、完全なキーボードアクセシビリティのサ
 
 Experience Platform は、カラーコントラストの要件を含め、 [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) への準拠に努めています。Experience Platform UI は、低視力や色覚異常のユーザーからアクセス可能な視聴エクスペリエンスを確実に提供するために、アプリケーションを十分なコントラストで表示します。
 
-![ Experience Platform UI のホームページに表示されるカラーパレットとコントラスト。](images/homepage.png)
+![&#x200B; Experience Platform UI のホームページに表示されるカラーパレットとコントラスト。](images/homepage.png)
 
 ## 必須フィールドの検証
 

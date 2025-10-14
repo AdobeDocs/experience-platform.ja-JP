@@ -15,8 +15,8 @@ ht-degree: 29%
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-Time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。
 
-UI での [!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードへのアクセス方法と操作方法について、およびダッシュボードに表示される利用可能な指標について詳しくは、[[!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードガイド ](../../dashboards/guides/profiles.md) を参照してください。
+UI での [!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードへのアクセス方法と操作方法について、およびダッシュボードに表示される利用可能な指標について詳しくは、[[!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードガイド &#x200B;](../../dashboards/guides/profiles.md) を参照してください。
 
 Experience Platform ユーザーインターフェイス内のすべてのダッシュボード機能の概要については、最初に[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
-![ プロファイルダッシュボードが表示されます。](../images/profile-dashboard/dashboard-overview.png)
+![&#x200B; プロファイルダッシュボードが表示されます。](../images/profile-dashboard/dashboard-overview.png)

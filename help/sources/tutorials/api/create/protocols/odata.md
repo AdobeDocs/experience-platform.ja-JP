@@ -36,11 +36,11 @@ ht-degree: 59%
 | `url` | [!DNL Generic OData] サービスのルート URL。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Generic Generic OData] の接続仕様 ID は `8e6b41a8-d998-4545-ad7d-c6a9fff406c3` です。 |
 
-基本について詳しくは、[ このドキュメント  [!DNL Generic OData]  を参照してください ](https://www.odata.org/getting-started/basic-tutorial/)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL Generic OData]  を参照してください &#x200B;](https://www.odata.org/getting-started/basic-tutorial/)。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -102,5 +102,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Generic REST OData] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、プロトコルデータをExperience Platformに取り込むデータフローの作成](../../collect/protocols.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、プロトコルデータをExperience Platformに取り込むデータフローの作成](../../collect/protocols.md)

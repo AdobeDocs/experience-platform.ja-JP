@@ -27,7 +27,7 @@ Adobe Experience Platformは、データパートナーアプリケーション�
 
 ## IP アドレスの許可リスト
 
-ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス ](../../ip-address-allow-list.md) を参照してください。
+ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス &#x200B;](../../ip-address-allow-list.md) を参照してください。
 
 ## ファイルとディレクトリの命名制約
 
@@ -53,4 +53,4 @@ Adobe Experience Platformは、データパートナーアプリケーション�
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Merkury] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Merkury]  に関するガイドに進むことができ ](../../tutorials/ui/create/data-partners/merkury.md) す。
+このドキュメントでは、[!DNL Merkury] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Merkury]  に関するガイドに進むことができ &#x200B;](../../tutorials/ui/create/data-partners/merkury.md) す。

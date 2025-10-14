@@ -53,7 +53,7 @@ Web SDK がクエリ文字列の `ECID` 値を受け入れるために、追加�
 
 モバイルから web への ID 共有では、`adobe_mc` パラメーターを使用します。 `adobe_mc` パラメーターが存在し、有効な場合、Edge Networkに対して行われた最初のリクエストで、クエリ文字列からの `ECID` が ID マップに自動的に追加されます。 それ以降のEdge Networkインタラクションでは、すべてその `ECID` が使用されます。
 
-モバイルアプリから WebView に訪問者 ID を渡す方法について詳しくは、[WebView の処理 ](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=ja#implementation) に関するドキュメントを参照してください。
+モバイルアプリから WebView に訪問者 ID を渡す方法について詳しくは、[WebView の処理 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=ja#implementation) に関するドキュメントを参照してください。
 
 ## クロスドメイン ID 共有の実装 {#cross-domain-sharing}
 

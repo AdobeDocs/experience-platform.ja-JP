@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->[!DNL Shopify Streaming] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Shopify Streaming] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformは、ストリーミングアプリケーションからのデータ取り込みをサポートしています。 ストリーミングプロバイダーのサポートには、[!DNL Shopify] が含まれます。
 
@@ -23,11 +23,11 @@ Adobe Experience Platformは、ストリーミングアプリケーションか�
 
 次の節では、[!DNL Shopify Streaming] ソースを使用する前に完了する必要のある手順の概要を説明します。
 
-[!DNL Shopify] API に接続するには、有効な [!DNL Shopify] パートナーアカウントが必要です。 パートナーアカウントをお持ちでない場合は、[[!DNL Shopify]  パートナーダッシュボード ](https://www.shopify.com/partners) を使用して登録してください。
+[!DNL Shopify] API に接続するには、有効な [!DNL Shopify] パートナーアカウントが必要です。 パートナーアカウントをお持ちでない場合は、[[!DNL Shopify]  パートナーダッシュボード &#x200B;](https://www.shopify.com/partners) を使用して登録してください。
 
 ### アプリケーションの作成
 
-有効な [!DNL Shopify] パートナーアカウントを使用すると、パートナーダッシュボードで続行してアプリを作成できます。 [!DNL Shopify] でアプリを作成する方法の包括的な手順については、[[!DNL Shopify]  はじめる前にガイド ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token) を参照してください。
+有効な [!DNL Shopify] パートナーアカウントを使用すると、パートナーダッシュボードで続行してアプリを作成できます。 [!DNL Shopify] でアプリを作成する方法の包括的な手順については、[[!DNL Shopify]  はじめる前にガイド &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token) を参照してください。
 
 アプリが作成されたら、[!DNL Shopify] ーザーパートナーダッシュボードの「**クライアント資格情報**」タブから **クライアント ID** および **クライアント秘密鍵** を取得します。 クライアント ID とクライアント秘密鍵は、次の手順で認証コードとアクセストークンを取得するために使用されます。
 
@@ -127,7 +127,7 @@ curl -X POST \
 | パラメーター | 説明 |
 | --- | --- | 
 | `webhook.address` | ストリーミングメッセージが送信される http エンドポイント。 |
-| `webhook.topic` | Webhook サブスクリプションのトピック。 詳しくは、[[!DNL Shopify] webhook イベントトピックガイド ](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics) を参照してください。 |
+| `webhook.topic` | Webhook サブスクリプションのトピック。 詳しくは、[[!DNL Shopify] webhook イベントトピックガイド &#x200B;](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics) を参照してください。 |
 | `webhook.format` | データの形式。 |
 
 **応答**

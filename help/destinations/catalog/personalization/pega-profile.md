@@ -20,7 +20,7 @@ Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、Pegasystems が作成および管理します。 お問い合わせや更新のリクエストについては、Pega に直接お問い合わせください [ こちら ](mailto:support@pega.com)。
+>この宛先コネクタとドキュメントページは、Pegasystems が作成および管理します。 お問い合わせや更新のリクエストについては、Pega に直接お問い合わせください [&#x200B; こちら &#x200B;](mailto:support@pega.com)。
 
 ## ユースケース
 
@@ -68,7 +68,7 @@ Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -82,7 +82,7 @@ Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL
 
 [!DNL Amazon S3] への認証接続を確立したら、宛先の次の情報を指定します。
 
-![Pega プロファイルコネクタの宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![Pega プロファイルコネクタの宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
 宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL 次へ]**」を選択します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
@@ -106,10 +106,10 @@ Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -117,17 +117,17 @@ Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL
 
 ## データの書き出しを検証する {#exported-data}
 
-[!DNL Pega Profile Connector] の宛先の場合、[!DNL Experience Platform] は、指定されたAmazon S3 ストレージの場所に `.csv` ファイルを作成します。 ファイルについて詳しくは、オーディエンスの有効化チュートリアルの [ プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
+[!DNL Pega Profile Connector] の宛先の場合、[!DNL Experience Platform] は、指定されたAmazon S3 ストレージの場所に `.csv` ファイルを作成します。 ファイルについて詳しくは、オーディエンスの有効化チュートリアルの [&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 S3 からプロファイルデータが正常に読み込まれると、[!DNL Pega Customer] プロファイルデータストアにデータが挿入されます。 次の図に示すように、読み込まれた顧客プロファイルデータを [!DNL Pega Customer Profile Designer] で検証できます。
-![ 顧客プロファイルDesignerでAdobe プロファイルデータを検証できる UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![&#x200B; 顧客プロファイルDesignerでAdobe プロファイルデータを検証できる UI 画面の画像 &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-ま [!DNL Pega Customer Decision Hub]、データ管理者は、次の図に示 [!DNL Customer Profile Designer] ように、S3 からプロファイルデータを定期的に読み込むように、データジョブを設定できます。 データジョブを設定して [!DNL Amazon S3] からプロファイルデータをインポートする方法について詳しくは、[ その他のリソース ](#additional-resources) を参照してください。
-![ 顧客プロファイルDesignerでデータジョブを設定する UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+ま [!DNL Pega Customer Decision Hub]、データ管理者は、次の図に示 [!DNL Customer Profile Designer] ように、S3 からプロファイルデータを定期的に読み込むように、データジョブを設定できます。 データジョブを設定して [!DNL Amazon S3] からプロファイルデータをインポートする方法について詳しくは、[&#x200B; その他のリソース &#x200B;](#additional-resources) を参照してください。
+![&#x200B; 顧客プロファイルDesignerでデータジョブを設定する UI 画面の画像 &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## その他のリソース {#additional-resources}
 
-[!DNL Pega Customer Decision Hub] の [ データジョブのインポート ](https://academy.pega.com/topic/import-data-jobs/v1) を参照してください。
+[!DNL Pega Customer Decision Hub] の [&#x200B; データジョブのインポート &#x200B;](https://academy.pega.com/topic/import-data-jobs/v1) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

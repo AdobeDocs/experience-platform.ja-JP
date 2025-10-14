@@ -13,11 +13,11 @@ ht-degree: 6%
 
 複数のサンドボックスでベストプラクティスを標準化する「ゴールデンサンドボックス」パッケージを作成して、サンドボックスツールを使用した中核的な拠点（COE）を有効にします。
 
-![ 異なる組織間でのパッケージの書き出しの概要 ](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
+![&#x200B; 異なる組織間でのパッケージの書き出しの概要 &#x200B;](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## このユースケースを検討する理由 {#why-this-use-case}
 
-多くの大企業や企業は、異なる組織、チーム、地域または開発環境に対して複数のサンドボックスを使用しています。 [ サンドボックスツール ](../ui/sandbox-tooling.md) の機能を活用すると、ゴールデンサンドボックスパッケージを作成して、複数のサンドボックスにわたる組織の標準の一貫性、コンプライアンス、整合性を確保できます。
+多くの大企業や企業は、異なる組織、チーム、地域または開発環境に対して複数のサンドボックスを使用しています。 [&#x200B; サンドボックスツール &#x200B;](../ui/sandbox-tooling.md) の機能を活用すると、ゴールデンサンドボックスパッケージを作成して、複数のサンドボックスにわたる組織の標準の一貫性、コンプライアンス、整合性を確保できます。
 
 このゴールデンサンドボックスパッケージは、主要な設定を効率的に共有するための中核的な拠点となります。 サンドボックスツールを使用すると、複数のサンドボックスにわたってパッケージを簡単に読み込むことができます。 また、パッケージを追加の組織で共有して、広く一貫性を保つこともできます。
 
@@ -39,7 +39,7 @@ ht-degree: 6%
 
 ### 使用する UI 機能、Experience Platform コンポーネントおよびExperience Cloud製品 {#ui-functionality-and-elements}
 
-このユースケースを正常に実装するには、Adobe Experience Platformの複数の領域を使用する必要があります。 これらすべての領域に必要な [ 属性ベースのアクセス制御権限 ](../../access-control/abac/overview.md) があることを確認するか、システム管理者に必要な権限の付与を依頼してください。
+このユースケースを正常に実装するには、Adobe Experience Platformの複数の領域を使用する必要があります。 これらすべての領域に必要な [&#x200B; 属性ベースのアクセス制御権限 &#x200B;](../../access-control/abac/overview.md) があることを確認するか、システム管理者に必要な権限の付与を依頼してください。
 
 - [サンドボックスツール](../ui/sandbox-tooling.md)
 - [サンドボックス管理](../ui/user-guide.md)
@@ -63,25 +63,25 @@ ht-degree: 6%
 
 ### ゴールデンサンドボックスの作成
 
-卓越したセンターを実現するための最初の手順は、ゴールデンサンドボックスを作成することです。 このサンドボックスには、ベストプラクティスを表すベースライン設定を含める必要があります。 このゴールデンサンドボックスを作成するには、Experience Platformでの [ 新しいサンドボックスの作成 ](../ui/user-guide.md#create-a-new-sandbox) に関するガイドに従ってください。
+卓越したセンターを実現するための最初の手順は、ゴールデンサンドボックスを作成することです。 このサンドボックスには、ベストプラクティスを表すベースライン設定を含める必要があります。 このゴールデンサンドボックスを作成するには、Experience Platformでの [&#x200B; 新しいサンドボックスの作成 &#x200B;](../ui/user-guide.md#create-a-new-sandbox) に関するガイドに従ってください。
 
-サンドボックスを作成したら、[ スキーマ ](../../xdm/ui/resources/schemas.md#create-a-new-schema)、[ データセット ](../../catalog/datasets/user-guide.md#create-a-dataset)、[ オーディエンス ](../../segmentation/ui/segment-builder.md) などのベースラインオブジェクト設定の作成を開始します。 続行する前に、設定を確認してください。
+サンドボックスを作成したら、[&#x200B; スキーマ &#x200B;](../../xdm/ui/resources/schemas.md#create-a-new-schema)、[&#x200B; データセット &#x200B;](../../catalog/datasets/user-guide.md#create-a-dataset)、[&#x200B; オーディエンス &#x200B;](../../segmentation/ui/segment-builder.md) などのベースラインオブジェクト設定の作成を開始します。 続行する前に、設定を確認してください。
 
 ### サンドボックスを 1 つのパッケージにエクスポート
 
-サンドボックスにベースラインオブジェクト設定が含まれたので、サンドボックスツールを使用してパッケージに書き出す準備が整いました。 [ サンドボックス全体の書き出し ](../ui/sandbox-tooling.md#export-an-entire-sandbox) のガイドに従って、ゴールデンサンドボックスパッケージを作成します。
+サンドボックスにベースラインオブジェクト設定が含まれたので、サンドボックスツールを使用してパッケージに書き出す準備が整いました。 [&#x200B; サンドボックス全体の書き出し &#x200B;](../ui/sandbox-tooling.md#export-an-entire-sandbox) のガイドに従って、ゴールデンサンドボックスパッケージを作成します。
 
 ### 関連するサンドボックスへのパッケージの読み込み
 
-パッケージが作成されたので、このパッケージを関連するサンドボックスに読み込むことができます。 ベストプラクティスは、サンドボックス全体を含むパッケージを空のサンドボックスに読み込むことです。 サンドボックスツールを使用すると、Experience Platform内のサンドボックスに簡単に [ サンドボックスパッケージ全体を読み込む ](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) ことができます。
+パッケージが作成されたので、このパッケージを関連するサンドボックスに読み込むことができます。 ベストプラクティスは、サンドボックス全体を含むパッケージを空のサンドボックスに読み込むことです。 サンドボックスツールを使用すると、Experience Platform内のサンドボックスに簡単に [&#x200B; サンドボックスパッケージ全体を読み込む &#x200B;](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) ことができます。
 
 ### 複数の組織をまたいだパッケージの共有
 
-サンドボックスツールを使用すると、作成したパッケージを様々な組織で共有できます。 [ パッケージ共有ガイド ](../../sandboxes/ui/sharing-packages-across-orgs.md) に従って、ゴールデンサンドボックスパッケージを共有します。
+サンドボックスツールを使用すると、作成したパッケージを様々な組織で共有できます。 [&#x200B; パッケージ共有ガイド &#x200B;](../../sandboxes/ui/sharing-packages-across-orgs.md) に従って、ゴールデンサンドボックスパッケージを共有します。
 
 ### 監査ログを使用したインポートとエクスポートの監視
 
-パッケージをインポートまたはエクスポートする際に、Experience Platformの **[!UICONTROL ジョブ]** ダッシュボードを使用してジョブのステータスを監視できます。 ジョブの監視について詳しくは、[ 読み込みの詳細の監視 ](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details) に関するガイドを参照してください。
+パッケージをインポートまたはエクスポートする際に、Experience Platformの **[!UICONTROL ジョブ]** ダッシュボードを使用してジョブのステータスを監視できます。 ジョブの監視について詳しくは、[&#x200B; 読み込みの詳細の監視 &#x200B;](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details) に関するガイドを参照してください。
 
 ### ゴールデンサンドボックスを定期的に更新する
 
@@ -89,7 +89,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
-> 上記の手順は、Experience Platformのユーザーインターフェイスのプロセスに従います。 様々なエンドポイントを介して API を使用して、同じ手順に従うことができます。 API を使用して各リクエストを実行する方法については、`sandboxes` [ エンドポイントガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/api/sandboxes#create) および `packages` [ エンドポイントガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/sandbox-tooling-api/packages) を参照してください。
+> 上記の手順は、Experience Platformのユーザーインターフェイスのプロセスに従います。 様々なエンドポイントを介して API を使用して、同じ手順に従うことができます。 API を使用して各リクエストを実行する方法については、`sandboxes` [&#x200B; エンドポイントガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/api/sandboxes#create) および `packages` [&#x200B; エンドポイントガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/sandbox-tooling-api/packages) を参照してください。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 

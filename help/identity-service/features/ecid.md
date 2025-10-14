@@ -35,4 +35,4 @@ ECID を使用すると、次のことができます。
 * アプリやモバイル web コンテンツでの ECID の使用方法については、[アプリとモバイル web 間の訪問者トラッキング](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=ja#sdk-reference-ios)のドキュメントを参照してください。
 * [タグ](../../tags/home.md)を使用すると、これらのツールの導入が管理しやすくなります。
 * ECID を使用して GDPR などのプライバシー規制への準拠を促進する方法については、[Privacy Service のドキュメント](../../privacy-service/identity-data.md)を参照してください。
-* Experience Platformのコンテキストでの ECID について詳しくは、[ID サービスの概要 ](../home.md) および [ID 名前空間の概要 ](./namespaces.md) を参照してください。
+* Experience Platformのコンテキストでの ECID について詳しくは、[ID サービスの概要 &#x200B;](../home.md) および [ID 名前空間の概要 &#x200B;](./namespaces.md) を参照してください。

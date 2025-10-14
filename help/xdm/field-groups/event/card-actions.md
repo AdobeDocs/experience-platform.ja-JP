@@ -11,7 +11,7 @@ ht-degree: 24%
 
 # [!UICONTROL &#x200B; カードアクション &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; カードアクション &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.cardActions` フィールドを提供します。このスキーマは、カードタイプ、アクティベーションステータス、ロックステータスなど、カードアクションに関する詳細を収集します。
+[!UICONTROL &#x200B; カードアクション &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.cardActions` フィールドを提供します。このスキーマは、カードタイプ、アクティベーションステータス、ロックステータスなど、カードアクションに関する詳細を収集します。
 
 ![](../../images/field-groups/card-actions.png)
 
@@ -31,4 +31,4 @@ ht-degree: 24%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json) を参照してください。

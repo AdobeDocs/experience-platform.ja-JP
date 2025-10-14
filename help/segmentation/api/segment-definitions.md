@@ -15,7 +15,7 @@ ht-degree: 24%
 
 >[!WARNING]
 >
->Segmentation Service API を使用した B2B エンティティを使用したオーディエンスの作成は非推奨（廃止予定）になりました。 アカウント、アカウントと人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー、商談、商談と人物の関係などの B2B エンティティを使用してオーディエンスを作成できなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレード ](../../rtcdp/b2b-architecture-upgrade.md) に関するガイドを参照してください。
+>Segmentation Service API を使用した B2B エンティティを使用したオーディエンスの作成は非推奨（廃止予定）になりました。 アカウント、アカウントと人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー、商談、商談と人物の関係などの B2B エンティティを使用してオーディエンスを作成できなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレード &#x200B;](../../rtcdp/b2b-architecture-upgrade.md) に関するガイドを参照してください。
 
 Adobe Experience Platformでは、プロファイルのグループから特定の属性や動作のグループを定義するセグメント定義を作成できます。 セグメント定義は、[!DNL Profile Query Language] （PQL）で記述されたクエリをカプセル化するオブジェクトです。 セグメント定義は、オーディエンスを作成するためのプロファイルに適用されます。 このオブジェクト（セグメント定義）は、PQL述語とも呼ばれます。 PQLの述語は、[!DNL Real-Time Customer Profile] に提供するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
@@ -23,7 +23,7 @@ Adobe Experience Platformでは、プロファイルのグループから特定�
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## セグメント定義のリストの取得 {#list}
 
@@ -780,4 +780,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
 
 ## 次の手順
 
-このガイドを読むことで、セグメント定義の仕組みについて理解が深まりました。 セグメントの作成について詳しくは、「セグメントの作成 [ チュートリアルを参照し ](../tutorials/create-a-segment.md) ください。
+このガイドを読むことで、セグメント定義の仕組みについて理解が深まりました。 セグメントの作成について詳しくは、「セグメントの作成 [&#x200B; チュートリアルを参照し &#x200B;](../tutorials/create-a-segment.md) ください。

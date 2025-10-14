@@ -17,7 +17,7 @@ Adobe Experience Platform Assuranceは、[Adobe Experience Cloud](https://www.ad
 >
 > プロジェクト Griffon は **Assurance** になりました。
 >
-> Project Griffon が、Adobe Experience Cloudの **すべて** のお客様がAssuranceとして一般公開されました。 この移行について詳しくは、[ ユーザーアクセスガイド ](./user-access.md) を参照してください。
+> Project Griffon が、Adobe Experience Cloudの **すべて** のお客様がAssuranceとして一般公開されました。 この移行について詳しくは、[&#x200B; ユーザーアクセスガイド &#x200B;](./user-access.md) を参照してください。
 
 >[!INFO]
 >
@@ -31,7 +31,7 @@ Adobe Experience Platform Assuranceは、[Adobe Experience Cloud](https://www.ad
 
 ### 何が変わってるの？
 
-10 月 15 日（PT） - Assuranceへのアクセスは、Admin Consoleを通じて管理されます。 引き続きアクセスが中断されないようにするには、[ ユーザーアクセスガイド ](./user-access.md) を参照してください。
+10 月 15 日（PT） - Assuranceへのアクセスは、Admin Consoleを通じて管理されます。 引き続きアクセスが中断されないようにするには、[&#x200B; ユーザーアクセスガイド &#x200B;](./user-access.md) を参照してください。
 
 既存のAssuranceの統合、セッションおよびイベントでは、それ以外の変更や中断は行われません。 Assuranceには、[https://griffon.adobe.com](https://griffon.adobe.com) から引き続きアクセスできます **または**&#x200B;[https://experience.adobe.com/assurance](https://experience.adobe.com/assurance) を使用する（およびブックマークする）ことができます。
 
@@ -90,6 +90,6 @@ Assuranceには、次のセキュリティ対策が講じられています。
 
 ## はじめに
 
-Assuranceを設定するには、まずAssurance拡張機能をアプリケーションにインストールする必要があります。 その方法については、[Assurance拡張機能の実装 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) に関するチュートリアルを参照してください。
+Assuranceを設定するには、まずAssurance拡張機能をアプリケーションにインストールする必要があります。 その方法については、[Assurance拡張機能の実装 &#x200B;](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) に関するチュートリアルを参照してください。
 
-Assuranceをアプリに追加した後、デバイスに接続できるAssurance セッションを作成できます。 Assuranceの使用方法については、[Assuranceの使用に関するガイド ](./tutorials/using-assurance.md) を参照してください。
+Assuranceをアプリに追加した後、デバイスに接続できるAssurance セッションを作成できます。 Assuranceの使用方法については、[Assuranceの使用に関するガイド &#x200B;](./tutorials/using-assurance.md) を参照してください。

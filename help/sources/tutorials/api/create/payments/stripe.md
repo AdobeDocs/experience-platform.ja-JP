@@ -12,22 +12,22 @@ ht-degree: 40%
 
 # API を使用した、[!DNL Stripe] アカウントからExperience Platformへの支払いデータの取り込み
 
-[!DNL Stripe]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) からAdobe Experience Platformに支払いデータを取り込む方法については、次のチュートリアルをお読みください。
+[!DNL Stripe]API[[!DNL Flow Service]  を使用して &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) からAdobe Experience Platformに支払いデータを取り込む方法については、次のチュートリアルをお読みください。
 
 ## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 認証
 
-認証資格情報の取得方法について詳しくは、[[!DNL Stripe]  概要 ](../../../../connectors/payments/stripe.md) を参照してください。
+認証資格情報の取得方法について詳しくは、[[!DNL Stripe]  概要 &#x200B;](../../../../connectors/payments/stripe.md) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## [!DNL Stripe] をExperience Platformに接続
 
@@ -79,7 +79,7 @@ curl -X POST \
 | `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。 [!DNL Stripe] の接続仕様 ID は `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` で、この ID は固定されています。 |
 | `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
-| `auth.params.accessToken` | [!DNL Stripe] アカウントのアクセストークン。 アクセストークンの取得手順については、[[!DNL Stripe]  認証ガイド ](../../../../connectors/payments/stripe.md#prerequisites) を参照してください。 |
+| `auth.params.accessToken` | [!DNL Stripe] アカウントのアクセストークン。 アクセストークンの取得手順については、[[!DNL Stripe]  認証ガイド &#x200B;](../../../../connectors/payments/stripe.md#prerequisites) を参照してください。 |
 
 **応答**
 
@@ -521,7 +521,7 @@ curl -X POST \
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | データレイクに対応する接続仕様 ID。 この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 | `data.format` | 取り込む [!DNL Stripe] データの形式。 |
-| `params.dataSetId` | ターゲットデータセットの ID この ID は、[ ターゲットデータセットの作成 ](#target-dataset) によって生成されます。 |
+| `params.dataSetId` | ターゲットデータセットの ID この ID は、[&#x200B; ターゲットデータセットの作成 &#x200B;](#target-dataset) によって生成されます。 |
 
 **応答**
 
@@ -785,10 +785,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `xdmSchema` | ターゲット XDM スキーマの ID。 この ID は、[ ターゲット XDM スキーマ ](#target-schema) を作成することで生成されます。 |
+| `xdmSchema` | ターゲット XDM スキーマの ID。 この ID は、[&#x200B; ターゲット XDM スキーマ &#x200B;](#target-schema) を作成することで生成されます。 |
 | `destinationXdmPath` | ソース属性がマッピングされている XDM フィールド。 |
 | `sourceAttribute` | マッピングされるソースデータフィールド。 |
-| `identity` | フィールドを [ID サービス ](../../../../../identity-service/home.md) に保持するかどうかを定義するブール値。 |
+| `identity` | フィールドを [ID サービス &#x200B;](../../../../../identity-service/home.md) に保持するかどうかを定義するブール値。 |
 | `version` | 使用しているマッピングバージョン。 |
 
 +++
@@ -896,20 +896,20 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら [!DNL Flow Service] API の/flows エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細を更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら [!DNL Flow Service] API の/flows エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細を更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。

@@ -29,7 +29,7 @@ Adobe Experience Platformのデータ取得は、Experience Platformが様々な
 |------- | -----------|
 | バッチ取得を使用したプロファイルレコードのアップサートまたはパッチ適用 | リアルタイム顧客プロファイルで、バッチ取り込みを使用して個々のプロファイルレコードデータのプロファイル属性を更新できるようになりました。 詳しくは、[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。 |
 
-データをExperience Platformに取り込む方法については、[ データ取得に関するドキュメント ](../../ingestion/home.md) を参照してください。
+データをExperience Platformに取り込む方法については、[&#x200B; データ取得に関するドキュメント &#x200B;](../../ingestion/home.md) を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -52,7 +52,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | [!DNL Data Landing Zone] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) または[ユーザーインターフェイス](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)を使用して、[!DNL Data Landing Zone] ソース接続を作成できるようになりました。[!DNL Data Landing Zone] はExperience Platformによってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスであり、ファイルをExperience Platformに取り込むための安全なクラウドベースのファイルストレージ機能にアクセスできます。 詳しくは、[[!DNL Data Landing Zone] 概要](../../sources/connectors/cloud-storage/data-landing-zone.md)を参照してください。 |
-| [!DNL Snowflake] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/databases/snowflake.md) を使用して [!DNL Snowflake] ソース接続を作成し、[!DNL Snowflake] データベースからExperience Platformにデータを取り込むことができるようになりました。 詳しくは、[[!DNL Snowflake]  の概要](../../sources/connectors/databases/snowflake.md)を参照してください。 |
+| [!DNL Snowflake] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) または [&#x200B; ユーザーインターフェイス &#x200B;](../../sources/tutorials/ui/create/databases/snowflake.md) を使用して [!DNL Snowflake] ソース接続を作成し、[!DNL Snowflake] データベースからExperience Platformにデータを取り込むことができるようになりました。 詳しくは、[[!DNL Snowflake]  の概要](../../sources/connectors/databases/snowflake.md)を参照してください。 |
 | [!DNL SFTP] ソースの機能強化 | [!DNL SFTP] ソース接続を作成する際に、カスタムポート番号を手動で設定できます。詳しくは、[[!DNL SFTP]  の概要](../../sources/connectors/cloud-storage/sftp.md)を参照してください。 |
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。

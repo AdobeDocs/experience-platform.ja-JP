@@ -17,13 +17,13 @@ ht-degree: 82%
 
 ## 用語 {#terminology}
 
-このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 &rbrace; を参照してください。 [この機能に直接関連する用語については ](/help/destinations/destination-sdk/glossary.md)Destination SDK用語集 &rbrace; を参照してください。
+このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 &rbrace; を参照してください。 [この機能に直接関連する用語については &#x200B;](/help/destinations/destination-sdk/glossary.md)Destination SDK用語集 &rbrace; を参照してください。
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 
 Destination SDK では、認証に [Adobe I/O](https://www.adobe.io/) ゲートウェイを使用します。 Destination SDK エンドポイントへの API 呼び出しを行うには、API 呼び出しで特定のヘッダーを指定する必要があります。 Adobe Exchange チームと協力して、[Adobe デベロッパーコンソール](https://developer.adobe.com/console)への認証を設定してください。
 
-Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。[API キー、組織 ID およびクライアント秘密鍵の生成」ステップからチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret) 開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。[API キー、組織 ID およびクライアント秘密鍵の生成」ステップからチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret) 開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {ORG_ID}`（組織 ID とも呼ばれます）

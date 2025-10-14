@@ -15,9 +15,9 @@ ht-degree: 11%
 
 [!UICONTROL Web ページの詳細 &#x200B;] は、標準のエクスペリエンスデータモデル（XDM）データタイプで、ExperienceEvent によって記録されたように、読み込まれて表示された web ページに関する詳細を記述するものです。
 
-データタイプは、シングルページ web アプリケーション（SPA）のページの完全な詳細と初期ページの読み込みを目的としています。 読み込まれたページで発生し、新しいページ読み込みをトリガーしないインタラクションについては、[web インタラクション ](./web-interaction.md) データタイプを参照してください。
+データタイプは、シングルページ web アプリケーション（SPA）のページの完全な詳細と初期ページの読み込みを目的としています。 読み込まれたページで発生し、新しいページ読み込みをトリガーしないインタラクションについては、[web インタラクション &#x200B;](./web-interaction.md) データタイプを参照してください。
 
-![Web ページの詳細 ](../images/data-types/web-page-details.PNG){width="500"}
+![Web ページの詳細 &#x200B;](../images/data-types/web-page-details.PNG){width="500"}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -34,5 +34,5 @@ ht-degree: 11%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)

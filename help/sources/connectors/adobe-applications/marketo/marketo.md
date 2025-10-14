@@ -25,7 +25,7 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 >[!IMPORTANT]
 >
->[ リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) を使用したセグメント化にすべてのMarketo データセットを使用するには、[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。 Real-Time CDP B2B editionがない場合でも、Marketo ソースを使用して、人物およびアクティビティデータセットからリアルタイム顧客プロファイルにデータを取り込み、セグメント化できます。
+>[&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../../rtcdp/b2b-overview.md) を使用したセグメント化にすべてのMarketo データセットを使用するには、[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。 Real-Time CDP B2B editionがない場合でも、Marketo ソースを使用して、人物およびアクティビティデータセットからリアルタイム顧客プロファイルにデータを取り込み、セグメント化できます。
 
 このドキュメントでは、コネクタの認証方法、[!DNL Marketo Engage] フィールドをエクスペリエンスデータモデル（XDM）にマッピングする方法、コネクタのデータ待ち時間など、[!DNL Marketo Engage] ソースコネクタの概要を説明します。
 
@@ -37,11 +37,11 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 [!DNL Marketo Engage] をExperience Platformに接続するには、まず `munchkinId`、`clientId`、`clientSecret` の値を取得する必要があります。
 
-資格情報を取得するには、[Marketo ソースコネクタの認証 ](./marketo-auth.md) ドキュメントで説明されている手順を参照してください。
+資格情報を取得するには、[Marketo ソースコネクタの認証 &#x200B;](./marketo-auth.md) ドキュメントで説明されている手順を参照してください。
 
 ## B2B 名前空間とスキーマ自動生成ユーティリティの設定
 
-次に、B2B 名前空間とスキーマ自動生成ユーティリティを使用して、Experience Platform開発者コンソールとPostman環境を設定します。 これにより、B2B 名前空間とスキーマに自動入力できます。 手順について詳しくは、[B2B 名前空間とスキーマ自動生成ユーティリティの設定 ](./marketo-namespaces.md) に関するガイドを参照してください。
+次に、B2B 名前空間とスキーマ自動生成ユーティリティを使用して、Experience Platform開発者コンソールとPostman環境を設定します。 これにより、B2B 名前空間とスキーマに自動入力できます。 手順について詳しくは、[B2B 名前空間とスキーマ自動生成ユーティリティの設定 &#x200B;](./marketo-namespaces.md) に関するガイドを参照してください。
 
 ## エクスペリエンスデータモデル（XDM）
 
@@ -49,7 +49,7 @@ XDM は公開ドキュメント化された仕様で、ダウンストリーム 
 
 XDM 標準規格に準拠することで、データをExperience Platform エコシステムに均一に組み込むことができ、データの配信と情報収集が容易になります。
 
-XDM とExperience Platformでの役割について詳しくは、[XDM システムの概要 ](../../../../xdm/home.md) を参照してください。
+XDM とExperience Platformでの役割について詳しくは、[XDM システムの概要 &#x200B;](../../../../xdm/home.md) を参照してください。
 
 ## [!DNL Marketo Engage] から XDM へのフィールドマッピング
 
@@ -85,10 +85,10 @@ XDM とExperience Platformでの役割について詳しくは、[XDM システ�
 
 次のドキュメントでは、[!DNL Marketo Engage] ソース接続の作成に関する詳細情報を提供します。
 
-* [!DNL Marketo Engage] データをExperience Platformに接続する方法について詳しくは、[UI でのソース接続の作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) に関するチュー  [!DNL Marketo Engage]  リアルを参照してください。
-   * スキーマの設定とカスタムアクティビティデータの取り込み方法について詳しくは、[ カスタムアクティビティデータのソース接続とデータフローの作成 ](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md) に関するチュ  [!DNL Marketo Engage]  トリアルを参照してください
-   * [!DNL Person] データセットから [!DNL Activity] データセットに ECID マッピングを移行する方法について詳しくは、[ECID マッピング移行ガイド ](./migration.md) を参照してください。
-* [!DNL Marketo Engage] で使用される B2B 名前空間とスキーマの基盤となる設定について詳しくは、[B2B 名前空間とスキーマ ](./marketo-namespaces.md) のドキュメントを参照してください。
-* [!DNL Marketo Engage] munchkin ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo Engage]  認証ガイド ](./marketo-auth.md) を参照してください。
-* [!DNL Marketo Engage] のデータセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo Engage]  フィールドマッピング ](../mapping/marketo.md) に関するドキュメントを参照してください。
+* [!DNL Marketo Engage] データをExperience Platformに接続する方法について詳しくは、[UI でのソース接続の作成 &#x200B;](../../../tutorials/ui/create/adobe-applications/marketo.md) に関するチュー  [!DNL Marketo Engage]  リアルを参照してください。
+   * スキーマの設定とカスタムアクティビティデータの取り込み方法について詳しくは、[&#x200B; カスタムアクティビティデータのソース接続とデータフローの作成 &#x200B;](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md) に関するチュ  [!DNL Marketo Engage]  トリアルを参照してください
+   * [!DNL Person] データセットから [!DNL Activity] データセットに ECID マッピングを移行する方法について詳しくは、[ECID マッピング移行ガイド &#x200B;](./migration.md) を参照してください。
+* [!DNL Marketo Engage] で使用される B2B 名前空間とスキーマの基盤となる設定について詳しくは、[B2B 名前空間とスキーマ &#x200B;](./marketo-namespaces.md) のドキュメントを参照してください。
+* [!DNL Marketo Engage] munchkin ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo Engage]  認証ガイド &#x200B;](./marketo-auth.md) を参照してください。
+* [!DNL Marketo Engage] のデータセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo Engage]  フィールドマッピング &#x200B;](../mapping/marketo.md) に関するドキュメントを参照してください。
 * [!DNL Real-Time Customer Data Platform B2B Edition] とその機能に関する一般的な情報については、[[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) のドキュメントを参照してください。

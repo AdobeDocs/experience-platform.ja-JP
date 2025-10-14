@@ -18,7 +18,7 @@ ht-degree: 44%
 
 以下の節では、[!DNL Query Service] API を使用して作成できる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
-Experience Platform UI を使用してテンプレートを作成する方法について詳しくは、[UI クエリテンプレートのドキュメント ](../ui/query-templates.md) を参照してください。
+Experience Platform UI を使用してテンプレートを作成する方法について詳しくは、[UI クエリテンプレートのドキュメント &#x200B;](../ui/query-templates.md) を参照してください。
 
 ### クエリテンプレートのリストの取得
 
@@ -109,7 +109,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して [ クエリテンプレートを削除 ](#delete-a-specified-query-template) できます。
+>`_links.delete` の値を使用して [&#x200B; クエリテンプレートを削除 &#x200B;](#delete-a-specified-query-template) できます。
 
 ### クエリテンプレートの作成
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して [ クエリテンプレートを削除 ](#delete-a-specified-query-template) できます。
+>`_links.delete` の値を使用して [&#x200B; クエリテンプレートを削除 &#x200B;](#delete-a-specified-query-template) できます。
 
 ### 指定されたクエリテンプレートの取得
 
@@ -234,7 +234,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して [ クエリテンプレートを削除 ](#delete-a-specified-query-template) できます。
+>`_links.delete` の値を使用して [&#x200B; クエリテンプレートを削除 &#x200B;](#delete-a-specified-query-template) できます。
 
 ### 指定されたクエリテンプレートの更新
 
@@ -310,7 +310,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して [ クエリテンプレートを削除 ](#delete-a-specified-query-template) できます。
+>`_links.delete` の値を使用して [&#x200B; クエリテンプレートを削除 &#x200B;](#delete-a-specified-query-template) できます。
 
 ### 指定されたクエリテンプレートの削除
 

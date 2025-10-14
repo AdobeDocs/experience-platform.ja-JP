@@ -49,7 +49,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -69,9 +69,9 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 >[!IMPORTANT]
 > 
->宛先を作成するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先を作成するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先を作成するには、[ 宛先設定のチュートリアル ](../../ui/connect-destination.md) に示されている手順に従います。
+この宛先を作成するには、[&#x200B; 宛先設定のチュートリアル &#x200B;](../../ui/connect-destination.md) に示されている手順に従います。
 
 ### 宛先の詳細
 
@@ -79,7 +79,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 * **[!UICONTROL 名前]**：宛先の名前。
 * **[!UICONTROL 説明]**：宛先の説明。
-* **[!UICONTROL データストリーム ID]**：選定オーディエンスでエンリッチメントするデータストリーム ID。 この ID は、[ データストリームマネージャー ](/help/datastreams/overview.md) で取得できます。
+* **[!UICONTROL データストリーム ID]**：選定オーディエンスでエンリッチメントするデータストリーム ID。 この ID は、[&#x200B; データストリームマネージャー &#x200B;](/help/datastreams/overview.md) で取得できます。
 * **[!UICONTROL 統合エイリアス]**：統合エイリアス。
 
 ### アラート
@@ -100,7 +100,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先を作成したら、宛先に必要なオーディエンスをアクティブ化できます。
 

@@ -47,9 +47,9 @@ ID 最適化アルゴリズムを使用して、ID サービスの人物エン�
 
 ID サービスの名前空間には、重要な暗黙の相対順序があります。 ピラミッドのような構造のグラフを考えてみましょう。 上のレイヤに 1 つのノード、中央のレイヤに 2 つのノード、下のレイヤに 4 つのノードがあります。 名前空間の優先度は、人物エンティティが正確に表されるようにするために、この相対順序を反映する必要があります。
 
-名前空間の優先度とその完全な機能および使用方法について詳しくは、[ 名前空間優先度ガイド ](./namespace-priority.md) を参照してください。
+名前空間の優先度とその完全な機能および使用方法について詳しくは、[&#x200B; 名前空間優先度ガイド &#x200B;](./namespace-priority.md) を参照してください。
 
-![ グラフレイヤーと名前空間の優先度。](../images/namespace-priority/graph-layers.png " グラフレイヤーと名前空間の優先度。"){zoomable="yes"}
+![&#x200B; グラフレイヤーと名前空間の優先度。](../images/namespace-priority/graph-layers.png " グラフレイヤーと名前空間の優先度。"){zoomable="yes"}
 
 ## プロセス {#process}
 
@@ -95,7 +95,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 * ただし、一意の名前空間設定により、グラフごとに最大 1 つの CRMID 名前空間と 1 つのメール名前空間が設定されるので、ID 最適化アルゴリズムはグラフを 2 つに分割します。
    * 最後に、John は最後に認証されたユーザーなので、ラップトップを表す ECID は、Jane の代わりに彼のグラフにリンクされたままになります。
 
-![ 共有デバイスの場合。](../images/identity-settings/shared-device-case-one.png " 共有デバイスの場合 "){zoomable="yes"}
+![&#x200B; 共有デバイスの場合。](../images/identity-settings/shared-device-case-one.png " 共有デバイスの場合 "){zoomable="yes"}
 
 >[!TAB  例 2]
 
@@ -112,7 +112,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
    * その結果、ID 最適化アルゴリズムによって古いリンク（この場合は、`timestamp=1` にリンクされていた Jane の CRMID）が削除されます。
    * ただし、Jane の CRMID は ID サービスのグラフとしては存在しなくなりますが、リアルタイム顧客プロファイルのプロファイルとしては引き続き存在します。 これは、ID グラフに 2 つ以上のリンクされた ID を含める必要があり、リンクを削除した結果、Jane の CRMID にリンクする別の ID がなくなったためです。
 
-![ ケース 2：共有デバイス。](../images/identity-settings/shared-device-case-two.png " 共有デバイスの場合 2。"){zoomable="yes"}
+![&#x200B; ケース 2：共有デバイス。](../images/identity-settings/shared-device-case-two.png " 共有デバイスの場合 2。"){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 
 ID 最適化アルゴリズムを使用すると、偽の電子メールや電話番号などの不正な ID 値が、複数の異なる ID グラフに伝わることはありません。
 
-![ 悪いメール取り込みの図。](../images/identity-settings/bad-email.png " 悪いメール取り込みの図。"){zoomable="yes"}
+![&#x200B; 悪いメール取り込みの図。](../images/identity-settings/bad-email.png " 悪いメール取り込みの図。"){zoomable="yes"}
 
 ## 匿名イベントの関連付け
 
@@ -154,7 +154,7 @@ ECID には未認証（匿名）イベントが格納されるのに対して、
       * 最初のログインの前に `timestamp=1`、および
       * Kevin の 1 回目のログインと 2 回目のログインの間に匿名でブラウジングを行う際に、Nora が行ったアクティビティ。
 
-![ 匿名イベント関連付けを示す図。](../images/identity-settings/anon-event-association.png " 匿名イベントの関連付けを示す図。"){zoomable="yes"}
+![&#x200B; 匿名イベント関連付けを示す図。](../images/identity-settings/anon-event-association.png " 匿名イベントの関連付けを示す図。"){zoomable="yes"}
 
 
 ## 次の手順

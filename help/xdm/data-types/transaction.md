@@ -14,7 +14,7 @@ ht-degree: 7%
 
 [!UICONTROL &#x200B; トランザクション &#x200B;] は、金融取引の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
-![ トランザクションの構造 ](../images/data-types/transaction.png)
+![&#x200B; トランザクションの構造 &#x200B;](../images/data-types/transaction.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

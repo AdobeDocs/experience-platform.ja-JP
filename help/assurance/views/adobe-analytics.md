@@ -17,19 +17,19 @@ Analytics イベントを使用すると、SDK イベントをより詳細に把
 
 このビューを使用するには、次の手順を実行します。
 
-1. [Adobe Experience Platform Assurance を設定します ](../tutorials/implement-assurance.md)。
-2. [Assurance セッションを作成して接続します ](../tutorials/using-assurance.md)。
+1. [Adobe Experience Platform Assurance を設定します &#x200B;](../tutorials/implement-assurance.md)。
+2. [Assurance セッションを作成して接続します &#x200B;](../tutorials/using-assurance.md)。
 3. 左側のナビゲーションの Assurance UI **ホーム** 表示メニュー）で、「**分析イベント**」を選択します。 このオプションが表示されない場合は、ウィンドウの左下にある **設定** を選択し、**Analytics イベント** を追加して、**保存** を選択します。
 
 ## Analytics Edge ビュー
 
 **Analytics または** Edge Edge **モバイル拡張機能を使用している場合は、Edge Network Bridge** ビューを使用します。 このビューは、右上隅の「Analytics Edge ビュー」切り替えスイッチがアクティブ化され、現在のセッションでEdge ネットワークを介して送信された Analytics イベントを表示すると有効になります。 これには、ライフサイクル拡張機能、Edge拡張機能、Edge Bridge拡張機能によって発生したすべてのイベントが含まれます。
 
-![Analytics Edge ビューに切り替えた切り替えを示す画像 ](./images/adobe-analytics/edge-analytics-view-toggle.png)
+![Analytics Edge ビューに切り替えた切り替えを示す画像 &#x200B;](./images/adobe-analytics/edge-analytics-view-toggle.png)
 
 Analytics Edge ビューには、クライアントがディスパッチした Analytics 関連のEdge イベントとライフサイクルイベントに関する情報が表示されます。 リストでイベントを選択すると、右側のイベントの詳細表示パネルに、デバイスを離れた後にクライアント SDK およびアップストリームサービスで処理されたイベントが表示されます。 これにより、の呼び出しから生じたイベントのチェーンを簡単に表示できます。
 
-![Edge Bridge シナリオ用の Analytics Edge ビューの様々なコンポーネントを示す画像 ](./images/adobe-analytics/edgebridge-analytics-events.png)
+![Edge Bridge シナリオ用の Analytics Edge ビューの様々なコンポーネントを示す画像 &#x200B;](./images/adobe-analytics/edgebridge-analytics-events.png)
 
 リスト内の **後処理データ** イベントは、データが正常に処理され、Adobe Analyticsに送信されたことを確認します。 このイベントまたは処理済みデータが見つからない場合、ユーザーはリスト内の各イベントを展開して、詳細なデバッグ情報を表示できます。
 
@@ -51,17 +51,17 @@ Edge リクエストイベントまたは Analytics トラックイベントの�
 
 Analytics Edgeの検証ビューを使用すると、Analytics Edge セッションに関連する検証スクリプトの結果を簡単に確認できます。 バリデーターによって表示されるエラーには、修正する場所へのリンクが含まれている場合や、エラー状態のイベントが表示されている場合があります。
 
-![Analytics Edge ビューの「バリデーター」タブを示す画像 ](./images/adobe-analytics/edge-analytics-validation-view.png)
+![Analytics Edge ビューの「バリデーター」タブを示す画像 &#x200B;](./images/adobe-analytics/edge-analytics-validation-view.png)
 
 ## Analytics イベントビュー
 
 **Adobe Analytics** モバイル拡張機能を使用している場合は、Analytics イベントビューを使用します。 このビューを使用すると、アクションの追跡、状態の追跡、ライフサイクルイベントなど、接続したクライアントから送信された Analytics イベントを簡単に確認できます。 このビューは、右上の「Analytics Edge ビュー」の切り替えが無効になっている場合にアクティブになります。
 
-![Analytics ビューに切り替えた切り替えを示す画像 ](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
+![Analytics ビューに切り替えた切り替えを示す画像 &#x200B;](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
 
 イベントテーブルの Analytics イベントの 1 つを選択すると、イベントがどのように処理されたかの詳細を右側のパネルに表示できます。
 
-![Analytics イベントビューの様々なコンポーネントを示す画像 ](./images/adobe-analytics/analytics-events.png)
+![Analytics イベントビューの様々なコンポーネントを示す画像 &#x200B;](./images/adobe-analytics/analytics-events.png)
 
 ### 後処理ステータス
 
@@ -77,7 +77,7 @@ SDK がAdobe Analyticsでネットワークリクエストを送信すると、A
 | `Error` | エラーが原因で、ネットワーク要求が失敗しました。 エラーの詳細は、イベントの詳細表示に表示されます。 |
 | `Unauthorized` | ユーザーには、Adobe Analytics レポートスイートへのアクセス権がありません。 |
 | `Unavailable` | Adobe Analytics リクエストに対応する `AnalyticsResponse` イベントがありません。 |
-| `No Debug Flag` | 現在のAdobe Analyticsまたは Assurance SDK バージョンでは、Analytics のデバッグ機能がサポートされていない可能性があります。 詳しくは、[ トラブルシューティングガイド ](../troubleshooting.md) を参照してください。 |
+| `No Debug Flag` | 現在のAdobe Analyticsまたは Assurance SDK バージョンでは、Analytics のデバッグ機能がサポートされていない可能性があります。 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting.md) を参照してください。 |
 | `Expired` | `AnalyticsTrack` または `LifecycleStart` イベントが 24 時間より古い。 |
 
 ### イベントの詳細表示
@@ -92,4 +92,4 @@ Analytics のトラックイベントの場合、詳細ビューには次の部�
 
 検証ビューを使用すると、Analytics に関連する検証スクリプトで結果を簡単に確認できます。 バリデーターによって表示されるエラーには、修正する場所へのリンクが含まれている場合や、エラー状態のイベントが表示されている場合があります。
 
-![Analytics ビューで「バリデーター」タブを示す画像 ](./images/adobe-analytics/analytics-validation-view.png)
+![Analytics ビューで「バリデーター」タブを示す画像 &#x200B;](./images/adobe-analytics/analytics-validation-view.png)

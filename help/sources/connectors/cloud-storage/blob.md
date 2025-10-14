@@ -59,7 +59,7 @@ ht-degree: 21%
 | `folderPath` | ファイルが配置されている、指定されたコンテナ内のパス。 これは、コンテナ内のオプションのサブディレクトリパス（仮想フォルダー）です。 空白の場合は、コンテナのルートが使用されます。 |
 | `connectionSpec.id` | 接続仕様 ID は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。 [!DNL Azure Blob Storage] の接続仕様 ID は `4c10e202-c428-4796-9208-5f1f5732b1cf` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-[!DNL Azure Blob Storage] でのアカウントキー認証の使用方法について詳しくは、公式の [Microsoft Azure 認証ガイド ](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication) を参照してください。
+[!DNL Azure Blob Storage] でのアカウントキー認証の使用方法について詳しくは、公式の [Microsoft Azure 認証ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication) を参照してください。
 
 >[!TAB  共有アクセス署名 ]
 
@@ -67,12 +67,12 @@ ht-degree: 21%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `SasURI` | アカウントを接続するための代替認証タイプとして使用できる共有アクセス署名 URI。 SAS URI パターンは `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}` です。 詳しくは、この [!DNL Azure] ドキュメント [ 共有アクセス署名 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) を参照してください。 |
+| `SasURI` | アカウントを接続するための代替認証タイプとして使用できる共有アクセス署名 URI。 SAS URI パターンは `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}` です。 詳しくは、この [!DNL Azure] ドキュメント [&#x200B; 共有アクセス署名 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) を参照してください。 |
 | `container` | データファイルが格納されている [!DNL Azure Blob Storage] コンテナの名前。 コンテナは、ファイルシステム内のディレクトリと同様に、一連の BLOB を整理します。 |
 | `folderPath` | ファイルが配置されている、指定されたコンテナ内のパス。 これは、コンテナ内のオプションのサブディレクトリパス（仮想フォルダー）です。 空白の場合は、コンテナのルートが使用されます。 |
 | `connectionSpec.id` | 接続仕様 ID は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。 [!DNL Azure Blob Storage] の接続仕様 ID は `4c10e202-c428-4796-9208-5f1f5732b1cf` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-[!DNL Azure Blob Storage] で共有アクセス署名を使用する方法について詳しくは、公式の [Microsoft Azure 認証ガイド ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) を参照してください。
+[!DNL Azure Blob Storage] で共有アクセス署名を使用する方法について詳しくは、公式の [Microsoft Azure 認証ガイド &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) を参照してください。
 
 >[!TAB  サービスプリンシパルベースの認証 ]
 
@@ -89,7 +89,7 @@ ht-degree: 21%
 | `folderPath` | ファイルが配置されている、指定されたコンテナ内のパス。 これは、コンテナ内のオプションのサブディレクトリパス（仮想フォルダー）です。 空白の場合は、コンテナのルートが使用されます。 |
 | `connectionSpec.id` | 接続仕様 ID は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。 Azure Blob Storage の接続仕様 ID は `4c10e202-c428-4796-9208-5f1f5732b1cf` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
-[!DNL Azure Blob Storage] でのサービスプリンシパルベースの認証の使用方法について詳しくは、公式の [Microsoft Azure 認証ガイド ](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication) を参照してください。
+[!DNL Azure Blob Storage] でのサービスプリンシパルベースの認証の使用方法について詳しくは、公式の [Microsoft Azure 認証ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication) を参照してください。
 
 >[!ENDTABS]
 

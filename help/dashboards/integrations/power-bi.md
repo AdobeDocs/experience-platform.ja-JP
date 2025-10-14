@@ -17,7 +17,7 @@ Power BI レポートテンプレート機能を使用すると、Adobe Experien
 
 ## はじめに
 
-このチュートリアルを続行する前に、Experience Platformの [ スキーマ構成 ](../../xdm/schema/composition.md)、および [ 和集合スキーマ ](../../xdm/schema/composition.md#union) を通じてリアルタイム顧客プロファイルに属性が含まれる方法を確認することをお勧めします。
+このチュートリアルを続行する前に、Experience Platformの [&#x200B; スキーマ構成 &#x200B;](../../xdm/schema/composition.md)、および [&#x200B; 和集合スキーマ &#x200B;](../../xdm/schema/composition.md#union) を通じてリアルタイム顧客プロファイルに属性が含まれる方法を確認することをお勧めします。
 
 Power BI アプリケーション統合をインストールするには、ユーザーはまず次のExperience Platform権限を取得している必要があります。
 
@@ -118,7 +118,7 @@ JSON 資格情報ファイルをアップロードして検証にパスするこ
 >
 >ダッシュボードを Power BI 環境にインストールするには、特定のダッシュボードに対する編集権限を有効にしておく必要があります。
 
-![ 標準のPower BI プロファイルウィジェットを使用したExperience Platform プロファイルテンプレートレポート。](../images/power-bi/profile-report-template.png)
+![&#x200B; 標準のPower BI プロファイルウィジェットを使用したExperience Platform プロファイルテンプレートレポート。](../images/power-bi/profile-report-template.png)
 
 ダッシュボードを Power BI にインストールすると、デフォルトではレポートテンプレートがすべてのユーザーに表示されます。任意のレポートテンプレートへのアクセスを制限する場合は、該当するユーザーのアクセスを Power BI 環境内で無効にしてください。
 
@@ -144,7 +144,7 @@ JSON 資格情報ファイルをアップロードして検証にパスするこ
 
 ## Power BI アプリケーション統合の削除
 
-ダッシュボードを削除するには、ダッシュボードインベントリに移動し、ダッシュボード名の横にある削除アイコン（![ 削除アイコン ](/help/images/icons/delete.png)）を選択します。
+ダッシュボードを削除するには、ダッシュボードインベントリに移動し、ダッシュボード名の横にある削除アイコン（![&#x200B; 削除アイコン &#x200B;](/help/images/icons/delete.png)）を選択します。
 
 >[!NOTE]
 >

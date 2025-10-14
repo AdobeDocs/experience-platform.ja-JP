@@ -11,7 +11,7 @@ ht-degree: 6%
 
 # [!UICONTROL &#x200B; 見積依頼詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 見積依頼の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `quotes` オブジェクトを提供します。これは、保険契約、医療、製造オーダー、ハイテクなど、様々なタイプの見積もりに対するリクエストプロセスの詳細を収集します。
+[!UICONTROL &#x200B; 見積依頼の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `quotes` オブジェクトを提供します。これは、保険契約、医療、製造オーダー、ハイテクなど、様々なタイプの見積もりに対するリクエストプロセスの詳細を収集します。
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json) を参照してください。
+フィールドグループについて詳しくは、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json) を参照してください。

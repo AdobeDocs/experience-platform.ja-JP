@@ -14,7 +14,7 @@ ht-degree: 33%
 
 # UI での Customer Attributes ソース接続の作成
 
-このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに取り込むために、UI でソース接続を作成する手順を説明します。 顧客属性について詳しくは、[ 顧客属性の概要 ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=ja) を参照してください。
+このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに取り込むために、UI でソース接続を作成する手順を説明します。 顧客属性について詳しくは、[&#x200B; 顧客属性の概要 &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=ja) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!IMPORTANT]
 >
->顧客属性データフローは削除できますが、対応するデータセットはデータフローの削除後も残ります。 データセットを手動で削除する手順については、[ データセットの削除 ](../../../../../catalog/datasets/user-guide.md) に関するガイドを参照してください。
+>顧客属性データフローは削除できますが、対応するデータセットはデータフローの削除後も残ります。 データセットを手動で削除する手順については、[&#x200B; データセットの削除 &#x200B;](../../../../../catalog/datasets/user-guide.md) に関するガイドを参照してください。
 
 新しい接続を作成するには、リストからデータソースを選択して、「**[!UICONTROL 次へ]**」を選択します。
 

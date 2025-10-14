@@ -73,7 +73,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 
 [!UICONTROL &#x200B; 権限 &#x200B;] では、役割のリソースワークスペースに、その役割に対してアクティブなサンドボックスと権限が表示されます。
 
-![ 選択したカテゴリと権限のリストを含む役割のリソースワークスペース。](./images/permissions.png)
+![&#x200B; 選択したカテゴリと権限のリストを含む役割のリソースワークスペース。](./images/permissions.png)
 
 次の表に、Experience Platformと権限で管理されるアプリケーションの両方で使用可能なリソースカテゴリの概要を示します。
 
@@ -132,7 +132,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の管理 &#x200B;] | プラン設定を表示および変更する機能。 |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の表示 &#x200B;] | 計画の構成への読取り専用アクセス |
 | [!DNL AI Assistant] | [!UICONTROL AI アシスタントを有効にする &#x200B;] | [[!DNL [AI assistant]]](../ai-assistant/access.md) の質問をする能力。 |
-| [!DNL AI Assistant] | [!UICONTROL &#x200B; 運用インサイトの表示 &#x200B;] | へのアクセスで、[ 運用インサイト ](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
+| [!DNL AI Assistant] | [!UICONTROL &#x200B; 運用インサイトの表示 &#x200B;] | へのアクセスで、[&#x200B; 運用インサイト &#x200B;](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
 | [!DNL AI Assistant] | [!UICONTROL &#x200B; コンテンツを生成 &#x200B;] | ユーザーが [!DNL AI Assistant] を使用してコンテンツを生成できるようにします。 |
 | [!DNL AI Assistant] | [!UICONTROL &#x200B; ブランドキットの管理 &#x200B;] | ユーザーが [!DNL AI Assistant] を使用してブランドガイドラインを作成できるようにします。 |
 | [!DNL Alerts] | [!UICONTROL アラート履歴の表示] | アラート履歴への読み取り専用アクセス。 |
@@ -203,7 +203,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Governance] | [!UICONTROL &#x200B; 使用状況ラベルの管理 &#x200B;] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
-| [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Experience Platform アクティビティを記録した [ 監査ログ ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
+| [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Experience Platform アクティビティを記録した [&#x200B; 監査ログ &#x200B;](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
 | [!DNL Data Governance] | [!UICONTROL &#x200B; プライバシーコンソールを表示 &#x200B;] | プライバシーコンソールへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
@@ -228,7 +228,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先を表示する読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先接続および宛先アカウントの読み取り、作成、削除へのアクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能また、この権限の場合は、宛先をアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] または [!UICONTROL &#x200B; 宛先の管理 &#x200B;] のいずれかを付与する必要があります。 |
-| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [ マッピングステップ ](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [&#x200B; マッピングステップ &#x200B;](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Federated Data] | [!UICONTROL Federated Data の管理 &#x200B;] | スキーマ、モデル、コンポジションの作成など、すべての連合データ機能にアクセスする機能。 |

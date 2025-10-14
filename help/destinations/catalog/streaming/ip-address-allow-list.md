@@ -22,8 +22,8 @@ ht-degree: 4%
 
 このページで説明する IP 範囲は、次の宛先に適用されます。
 
-* [ 高度なエンタープライズ宛先 ](../../destination-types.md#advanced-enterprise-destinations):[HTTP API 宛先 ](./http-destination.md)、[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
-* [Pega CDH リアルタイムオーディエンス ](../../destination-types.md#streaming-destinations)、[Salesforce Marketing Cloud](/help/destinations/catalog/personalization/pega-v2.md) との API ベースの統合、[Oracle Eloqua](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) などの [ ストリーミングオーディエンス書き出し宛先 ](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* [&#x200B; 高度なエンタープライズ宛先 &#x200B;](../../destination-types.md#advanced-enterprise-destinations):[HTTP API 宛先 &#x200B;](./http-destination.md)、[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Pega CDH リアルタイムオーディエンス &#x200B;](../../destination-types.md#streaming-destinations)、[Salesforce Marketing Cloud](/help/destinations/catalog/personalization/pega-v2.md) との API ベースの統合、[Oracle Eloqua](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) などの [&#x200B; ストリーミングオーディエンス書き出し宛先 &#x200B;](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
 * [Destination SDK](../../destination-sdk/getting-started.md) 経由で作成されたパブリックまたはプライベートの宛先
 
 Experience Platformからこれらの宛先への送信トラフィックは、常にこのページにリストされている IP を経由します。
@@ -36,7 +36,7 @@ Experience Platformからこれらの宛先への送信トラフィックは、�
 
 組織のポリシーで受信トラフィックの IP を許可リストに加える許可リストに加えるする必要がある場合は、上記の宛先を使用する前に、次のカテゴリの IP 範囲をページに追加する必要があります。
 
-1. すべての [ グローバル IP アドレス ](#global)
+1. すべての [&#x200B; グローバル IP アドレス &#x200B;](#global)
 2. グローバル IP アドレスに加えて、プロビジョニングする地域に対応する IP アドレスを、ページの下部にあるリストから追加します。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
 
 ## グローバル IP アドレス {#global}
@@ -77,7 +77,7 @@ Experience Platformからこれらの宛先への送信トラフィックは、�
 
 ## VA6:AWSで稼働する米国およびアメリカのお客様 {#aws}
 
-以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 &#x200B;](../../../landing/multi-cloud.md) を参照してください。
 
 * `3.209.222.108`
 * `3.211.230.204`

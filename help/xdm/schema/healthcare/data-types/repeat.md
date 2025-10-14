@@ -16,7 +16,7 @@ ht-degree: 7%
 
 [!UICONTROL &#x200B; 繰り返し &#x200B;] は、イベントがスケジュールされるタイミングを説明する一連のルールを提供する、標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
-![ 繰り返しデータタイプ構造 ](../../../images/healthcare/data-types/reference.png)
+![&#x200B; 繰り返しデータタイプ構造 &#x200B;](../../../images/healthcare/data-types/reference.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -40,5 +40,5 @@ ht-degree: 7%
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.schema.json)

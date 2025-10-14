@@ -79,7 +79,7 @@ Experience Platformで、左側のナビゲーションにある「**[!UICONTROL
 
 Experience Platformで、左側のナビゲーションにある **[!UICONTROL モデル]** タブを選択し、参照タブを選択して既存のモデルを表示します。 評価するモデルの名前にアタッチされているハイパーリンクを探して選択します。
 
-![ モデルを選択 ](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
+![&#x200B; モデルを選択 &#x200B;](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
 既存のトレーニング実行と現在のトレーニングステータスが表示されます。完了したトレーニング実行が複数ある場合、モデル評価グラフで、様々なトレーニング実行にわたって評価指標を比較できます。 グラフ上のドロップダウンリストを使用して、評価指標を選択します。
 
@@ -93,11 +93,11 @@ Experience Platformで、左側のナビゲーションにある **[!UICONTROL �
 
 特定のトレーニング実行を選択すると、評価ページを開いてその実行の詳細が表示されます。 これは、実行が完了する前でも実行できます。評価ページでは、トレーニング実行に固有の、その他の評価指標、設定パラメーターおよびビジュアライゼーションを表示できます。
 
-![ ログをプレビュー ](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+![&#x200B; ログをプレビュー &#x200B;](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
 
 また、実行の詳細を確認するアクティビティログをダウンロードすることもできます。ログは、失敗した実行で何が起きたかを確認するのに特に役立ちます。
 
-![ アクティビティログ ](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+![&#x200B; アクティビティログ &#x200B;](../images/models-recipes/train-evaluate-ui/activity_logs.png)
 
 ハイパーパラメーターはトレーニングできず、異なる組み合わせのハイパーパラメーターをテストすることでモデルを最適化する必要があります。最適化されたモデルに到達するまで、このモデルのトレーニングと評価のプロセスを繰り返します。
 

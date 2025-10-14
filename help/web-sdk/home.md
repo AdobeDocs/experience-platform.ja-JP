@@ -15,8 +15,8 @@ Adobe Experience Platform Web SDKは、Adobe Experience Cloudのお客様がAdob
 
 Web SDKは次の 2 つの方法で実装できます。
 
-* [Web SDK タグ拡張機能 ](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。 詳しくは、[Web SDKを使用したAdobe Experience Cloudの実装 ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) 方法に関するチュートリアルを参照してください。
-* [Web SDK JavaScript ライブラリ ](install/library.md) を使用した手動実装。
+* [Web SDK タグ拡張機能 &#x200B;](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。 詳しくは、[Web SDKを使用したAdobe Experience Cloudの実装 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) 方法に関するチュートリアルを参照してください。
+* [Web SDK JavaScript ライブラリ &#x200B;](install/library.md) を使用した手動実装。
 
 このガイドには、Web SDK JavaScript ライブラリとタグ拡張機能の両方を使用してExperience Cloud ソリューションを操作する手順が含まれています。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform [!DNL Web SDK] と [!DNL Edge Network] の概要につ
 
 ## Web SDK に置き換わるライブラリ {#sdks}
 
-Web SDKは、既存のライブラリの機能を統合するためにゼロから構築された新しいオープンソースライブラリです。 タグの実行順序、バージョンの不整合、依存関係の管理に関する問題に対処し、[!DNL Experience Cloud] ールを実装するための新しい [ オープンソース ](https://github.com/adobe/alloy) 方法を提供します。
+Web SDKは、既存のライブラリの機能を統合するためにゼロから構築された新しいオープンソースライブラリです。 タグの実行順序、バージョンの不整合、依存関係の管理に関する問題に対処し、[!DNL Experience Cloud] ールを実装するための新しい [&#x200B; オープンソース &#x200B;](https://github.com/adobe/alloy) 方法を提供します。
 
 Web SDKは、次のものに代わるものです。
 
@@ -68,7 +68,7 @@ Web SDKは、次のものに代わるものです。
 
 ## 既存のライブラリから Web SDK への移行 {#migrating-to-web-sdk}
 
-Adobeは、合理化されたアップグレードパスを提供し、任意の [ 既存のライブラリ ](#sdks) から Web SDKへの移行を簡素化します。 一度にサイト全体を移行しなくても、web サイトの各ページを個別に移行できます。 一部のページでは Web SDKを使用できますが、既存のライブラリは別のページで使用することができ、段階的に移行することができます。
+Adobeは、合理化されたアップグレードパスを提供し、任意の [&#x200B; 既存のライブラリ &#x200B;](#sdks) から Web SDKへの移行を簡素化します。 一度にサイト全体を移行しなくても、web サイトの各ページを個別に移行できます。 一部のページでは Web SDKを使用できますが、既存のライブラリは別のページで使用することができ、段階的に移行することができます。
 
 ### `AT.js` から Web SDKへの移行に関する考慮事項 {#considerations}
 

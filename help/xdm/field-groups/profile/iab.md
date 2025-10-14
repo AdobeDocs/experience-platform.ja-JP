@@ -15,9 +15,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このドキュメントでは、XDM 個人プロファイルクラスの [!UICONTROL IAB TCF 2.0 同意 &#x200B;] スキーマフィールドグループについて説明します。 XDM ExperienceEvent クラスを対象としたフィールドグループについては、代わりに次の [ ドキュメント ](../event/iab.md) を参照してください。
+>このドキュメントでは、XDM 個人プロファイルクラスの [!UICONTROL IAB TCF 2.0 同意 &#x200B;] スキーマフィールドグループについて説明します。 XDM ExperienceEvent クラスを対象としたフィールドグループについては、代わりに次の [&#x200B; ドキュメント &#x200B;](../event/iab.md) を参照してください。
 
-[!UICONTROL IAB TCF 2.0 Consent] は、同意の変更パターンを経時的に追跡するために、タイムスタンプ付きのシリーズ IAB 同意文字列をキャプチャするために使用される [[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。
+[!UICONTROL IAB TCF 2.0 Consent] は、同意の変更パターンを経時的に追跡するために、タイムスタンプ付きのシリーズ IAB 同意文字列をキャプチャするために使用される [[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループです。
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -56,9 +56,9 @@ ht-degree: 1%
 >
 >上記の例では、単一の名前空間と値のペアを使用して顧客の ID を表していますが、他の名前空間のキーを追加して、各名前空間に複数の ID 値を設定でき、それぞれに独自の TCF 同意環境設定のセットを持たせることができます。
 
-各 ID 値に対して、ID の TCF 同意値を提供する `identityIABConsent` プロパティを指定する必要があります。 このプロパティの値は、[[!UICONTROL &#x200B; 同意文字列 &#x200B;] データタイプ ](../../data-types/consent-string.md) に準拠している必要があります。
+各 ID 値に対して、ID の TCF 同意値を提供する `identityIABConsent` プロパティを指定する必要があります。 このプロパティの値は、[[!UICONTROL &#x200B; 同意文字列 &#x200B;] データタイプ &#x200B;](../../data-types/consent-string.md) に準拠している必要があります。
 
-このフィールドグループのユースケースについては、[Experience Platformでの IAB TCF 2.0 のサポート ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
+このフィールドグループのユースケースについては、[Experience Platformでの IAB TCF 2.0 のサポート &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

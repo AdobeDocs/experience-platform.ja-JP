@@ -21,7 +21,7 @@ ht-degree: 4%
 > 
 > さらに、[!DNL Postico] はmacOS デバイスで **のみ** 使用できます。
 
-[!DNL Postico] をクエリサービスに接続するには、[!DNL Postico] を開き、「**[!DNL New Favorite]**」を選択します。 接続設定のダイアログが表示されます。 ここから、Adobe Experience Platformに接続するパラメーター値を入力できます。 以下の接続設定を入力します。 [Postico を使用して PostgreSQL サーバに接続する ](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) 方法は、公式の Postico Web サイトからも参照できます。
+[!DNL Postico] をクエリサービスに接続するには、[!DNL Postico] を開き、「**[!DNL New Favorite]**」を選択します。 接続設定のダイアログが表示されます。 ここから、Adobe Experience Platformに接続するパラメーター値を入力できます。 以下の接続設定を入力します。 [Postico を使用して PostgreSQL サーバに接続する &#x200B;](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) 方法は、公式の Postico Web サイトからも参照できます。
 
 | 接続パラメーター | 説明 |
 |---|---|
@@ -31,7 +31,7 @@ ht-degree: 4%
 | **[!DNL Password]** | この英数字の文字列は、Experience Platform **[!UICONTROL パスワード]** 資格情報です。 有効期限のない認証情報を使用する場合、この値は `technicalAccountID` からの連結引数と、設定 JSON ファイルでダウンロードされた `credential` です。 パスワードの値は {technicalAccountId}:{credential} 形式で指定します。 有効期限のない資格情報用の設定 JSON ファイルは、Adobeがコピーを保持しない、初期化中の 1 回限りのダウンロードです。 |
 | **[!DNL Database]** | Experience Platform **[!UICONTROL Database]** 資格情報の値 `prod:all` を使用します。 |
 
-データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
+データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[&#x200B; 資格情報ガイド &#x200B;](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Experience Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
 
 資格情報を挿入したら、「**[!DNL Connect]**」を選択してクエリサービスに接続します。
 
@@ -41,7 +41,7 @@ Experience Platformに接続すると、クエリサービスで以前に作成�
 
 新しい SQL クエリを作成するには、サイドバーから「**[!DNL SQL Query]**」を選択します。 または、キーボードショートカット（⇧⌘T）を使用してクエリビューに移動し、実行するクエリを入力します。 終了したら、「**[!DNL Execute Statement]**」を選択してクエリを実行します。 完了したクエリ実行の結果を示すテーブルが表示されます。
 
-[ クエリビューの使用 ](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html) について詳しくは、公式の Postico ドキュメントを参照してください。
+[&#x200B; クエリビューの使用 &#x200B;](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html) について詳しくは、公式の Postico ドキュメントを参照してください。
 
 ## 次の手順
 

@@ -15,9 +15,9 @@ ht-degree: 3%
 
 宛先を強化する SQL にアクセスして宛先インサイトを理解し、独自のインサイトを生成して、Adobe Experience Platformから宛先プラットフォームへのデータのアクティブ化をさらに詳しく調べます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
-PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
+PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 &#x200B;](../view-sql.md) を参照してください。
 
-次のインサイトはすべて、[ 宛先ダッシュボード ](../guides/destinations.md) またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[&#x200B; 宛先ダッシュボード &#x200B;](../guides/destinations.md) またはカスタム [&#x200B; ユーザー定義ダッシュボード &#x200B;](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md) で [&#x200B; 新しいウィジェットの作成と編集 &#x200B;](../customize/overview.md) を使用する方法については、[&#x200B; カスタマイズの概要 &#x200B;](../standard-dashboards.md#create-widget) を参照してください。
 
 ## アクティブ化されたオーディエンス {#activated-audiences}
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ アクティブ化されたオーディエンスウィジェットのドキュメント ](../guides/destinations.md#activated-audiences) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; アクティブ化されたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#activated-audiences) を参照してください。
 
 ## すべての宛先にわたってアクティブ化されたオーディエンス {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ すべての宛先にわたるアクティブ化されたオーディエンス ](../guides/destinations.md#activated-audiences-across-all-destinations) のウィジェットドキュメントを参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; すべての宛先にわたるアクティブ化されたオーディエンス &#x200B;](../guides/destinations.md#activated-audiences-across-all-destinations) のウィジェットドキュメントを参照してください。
 
 ## 宛先プラットフォーム別のアクティブな宛先 {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 宛先プラットフォーム別のアクティブな宛先ウィジェットのドキュメント ](../guides/destinations.md#active-destinations-by-destination-platform) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; 宛先プラットフォーム別のアクティブな宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform) を参照してください。
 
 ## オーディエンスサイズのトレンド {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ オーディエンスサイズのトレンドウィジェットのドキュメント ](../guides/destinations.md#audience-size-trend) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; オーディエンスサイズのトレンドウィジェットのドキュメント &#x200B;](../guides/destinations.md#audience-size-trend) を参照してください。
 
 ## 一般的なオーディエンス {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 一般的なオーディエンスウィジェットのドキュメント ](../guides/destinations.md#common-audiences) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; 一般的なオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#common-audiences) を参照してください。
 
 ## 宛先ステータス {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 宛先ステータスウィジェットのドキュメント ](../guides/destinations.md#destination-status) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; 宛先ステータスウィジェットのドキュメント &#x200B;](../guides/destinations.md#destination-status) を参照してください。
 
 ## 宛先数 {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-このインサイトのアピアランスと機能について詳しくは、[ 宛先数ウィジェットのドキュメント ](../guides/destinations.md#destinations-count) を参照してください。
+このインサイトのアピアランスと機能について詳しくは、[&#x200B; 宛先数ウィジェットのドキュメント &#x200B;](../guides/destinations.md#destinations-count) を参照してください。
 
 ## マッピングされたオーディエンスの正常性 {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ マッピングされたオーディエンスの正常性ウィジェットのドキュメント ](../guides/destinations.md#mapped-audience-health) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; マッピングされたオーディエンスの正常性ウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audience-health) を参照してください。
 
 ## マッピングされたオーディエンス {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ マッピングされたオーディエンスウィジェットのドキュメント ](../guides/destinations.md#mapped-audiences) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; マッピングされたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audiences) を参照してください。
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 最も使用されている宛先ウィジェットのドキュメント ](../guides/destinations.md#most-used-destinations) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; 最も使用されている宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#most-used-destinations) を参照してください。
 
 ## 最近アクティブ化されたオーディエンス {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-このインサイトの外観と機能については、[ 最近アクティブ化されたオーディエンスウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences) を参照してください。
+このインサイトの外観と機能については、[&#x200B; 最近アクティブ化されたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences) を参照してください。
 
 ## 最近アクティブ化されたセグメント（宛先別） {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 最近アクティブ化されたオーディエンス （宛先別）ウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences-by-destination) を参照してください。
+このインサイトの外観と機能について詳しくは、[&#x200B; 最近アクティブ化されたオーディエンス （宛先別）ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination) を参照してください。
 
 ## 最近作成した宛先 {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-このインサイトのアピアランスと機能について詳しくは、[ 最近作成した宛先ウィジェットのドキュメント ](../guides/destinations.md#recently-created-destinations) を参照してください。
+このインサイトのアピアランスと機能について詳しくは、[&#x200B; 最近作成した宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-created-destinations) を参照してください。
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 このドキュメントでは、ダッシュボードインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 これらの SQL クエリを編集および反復して、独自のインサイトを生成できるようになりました。
 
-PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
+PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 &#x200B;](../view-sql.md) を参照してください。
 
-また、[ プロファイル ](./profiles.md)、[ アカウントプロファイル ](./account-profiles.md) および [ オーディエンス ](./audiences.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。
+また、[&#x200B; プロファイル &#x200B;](./profiles.md)、[&#x200B; アカウントプロファイル &#x200B;](./account-profiles.md) および [&#x200B; オーディエンス &#x200B;](./audiences.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

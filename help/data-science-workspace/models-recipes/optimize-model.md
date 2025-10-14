@@ -99,7 +99,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 > 以下は実行しないでください。 `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-レシピで定義した後は、レシピで有効にします。これは、プロジェクトの `resources` フォルダーの [ application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルで実行されます。ここでは、`evaluation.class` が `Evaluator.scala` で定義された `Evaluator` に設定されます。
+レシピで定義した後は、レシピで有効にします。これは、プロジェクトの `resources` フォルダーの [&#x200B; application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルで実行されます。ここでは、`evaluation.class` が `Evaluator.scala` で定義された `Evaluator` に設定されます。
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator

@@ -39,11 +39,11 @@ ht-degree: 50%
 | `refreshToken` | OAuth 統合を最初に認証する際に取得した更新トークン。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL HubSpot] の接続仕様 ID は `cc6a4487-9e91-433e-a3a3-9cf6626c1806` です。 |
 
-基本について詳しくは、この [HubSpot ドキュメント ](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview) を参照してください。
+基本について詳しくは、この [HubSpot ドキュメント &#x200B;](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -111,5 +111,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL HubSpot] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、マーケティング自動化データをExperience Platformに取り込むデータフローの作成](../../collect/marketing-automation.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、マーケティング自動化データをExperience Platformに取り込むデータフローの作成](../../collect/marketing-automation.md)

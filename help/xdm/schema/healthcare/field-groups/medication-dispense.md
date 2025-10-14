@@ -14,9 +14,9 @@ ht-degree: 4%
 
 # [!UICONTROL &#x200B; 投薬調剤 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL &#x200B; 投薬調剤 &#x200B;] は、[[!DNL Medication]  クラス ](../../../classes/medication.md)、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 指定された人または患者に対して調剤される、または調剤された薬に関する情報を収集する単一のオブジェクトタイプのフィールド `healthcareMedicationDispense` を提供します。
+[!UICONTROL &#x200B; 投薬調剤 &#x200B;] は、[[!DNL Medication]  クラス &#x200B;](../../../classes/medication.md)、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 指定された人または患者に対して調剤される、または調剤された薬に関する情報を収集する単一のオブジェクトタイプのフィールド `healthcareMedicationDispense` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ ht-degree: 4%
 | [!UICONTROL &#x200B; 実行されていない理由 &#x200B;] | `notPerformedReason` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) | 薬が調剤されなかった理由。 |
 | [!UICONTROL &#x200B; 注 &#x200B;] | `note` | [[!UICONTROL Annotation]](../data-types/annotation.md) の配列 | 調剤に関する追加情報。 |
 | [!UICONTROL &#x200B; 一部 &#x200B;] | `partOf` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | 調剤をトリガーした手順または投薬リクエスト。 |
-| [!UICONTROL &#x200B; 実行者 &#x200B;] | `performer` | オブジェクトの配列 | ディスペンシングイベントを実行したユーザーまたは内容を示します。 詳しくは、[ 以下の節 ](#performer) を参照してください。 |
+| [!UICONTROL &#x200B; 実行者 &#x200B;] | `performer` | オブジェクトの配列 | ディスペンシングイベントを実行したユーザーまたは内容を示します。 詳しくは、[&#x200B; 以下の節 &#x200B;](#performer) を参照してください。 |
 | [!UICONTROL &#x200B; 数量 &#x200B;] | `quantity` | [[!UICONTROL &#x200B; 単純量 &#x200B;]](../data-types/simple-quantity.md) | 測定単位を含む、調剤された薬の量。 |
 | [!UICONTROL &#x200B; 受信者 &#x200B;] | `receiver` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | 薬を受け取った人、または薬が届いた場所を特定します。 |
 | [!UICONTROL 件名] | `subject` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | 薬を投与する個人またはグループを表すリソースへのリンク。 |
@@ -50,14 +50,14 @@ ht-degree: 4%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.schema.json)
 
 ## `performer` {#performer}
 
 `performer` はオブジェクトの配列として指定されます。 各オブジェクトの構造については、以下で説明します。
 
-![ パフォーマンス構造 ](../../../images/healthcare/field-groups/medication-dispense/performer.png)
+![&#x200B; パフォーマンス構造 &#x200B;](../../../images/healthcare/field-groups/medication-dispense/performer.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |

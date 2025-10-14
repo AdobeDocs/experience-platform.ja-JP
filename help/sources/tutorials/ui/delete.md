@@ -35,7 +35,7 @@ ht-degree: 18%
 
 左上のフィルターアイコン（![filter-icon](/help/images/icons/filter.png)）を選択して、並べ替えパネルを開きます。
 
-![ データフロー ](../../images/tutorials/delete/dataflows.png)
+![&#x200B; データフロー &#x200B;](../../images/tutorials/delete/dataflows.png)
 
 並べ替えパネルには、すべてのソースのリストが表示されます。 リストから複数のソースを選択して、選択した特定のソースに関連付けられたフィルター適用済みのデータフローの選択にアクセスできます。
 
@@ -51,14 +51,14 @@ ht-degree: 18%
 
 最終確認ダイアログボックスが表示されます。 「**[!UICONTROL 削除]**」を選択してプロセスを完了します。
 
-![ 確認 ](../../images/tutorials/delete/confirm.png)
+![&#x200B; 確認 &#x200B;](../../images/tutorials/delete/confirm.png)
 
 しばらくすると、画面の下部に確認ボックスが表示され、削除が成功したことを確認します。
 
-![ 確認 ](../../images/tutorials/delete/confirmed.png)
+![&#x200B; 確認 &#x200B;](../../images/tutorials/delete/confirmed.png)
 
 ## 次の手順
 
 このチュートリアルでは、[!UICONTROL Sources] ワークスペースを使用して既存のデータフローを正常に削除しました。
 
-API 呼び出しを使用してプログラムでこれらの操作を実行する手順については、[Flow Service API を使用したデータフローの削除 ](../../tutorials/api/delete-dataflows.md) に関するチュートリアルを参照してください。
+API 呼び出しを使用してプログラムでこれらの操作を実行する手順については、[Flow Service API を使用したデータフローの削除 &#x200B;](../../tutorials/api/delete-dataflows.md) に関するチュートリアルを参照してください。

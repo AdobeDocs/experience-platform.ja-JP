@@ -16,7 +16,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
-> [!DNL Azure HDInsights] コネクタの [!DNL Apache Spark] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+> [!DNL Azure HDInsights] コネクタの [!DNL Apache Spark] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイス [!DNL Azure HDInsights] 使用してソースコネクタ上に [!DNL Apache Spark] を作成する手順を説明します。
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Spark] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
+既に有効な [!DNL Spark] 接続がある場合は、このドキュメントの残りの部分をスキップして、[&#x200B; データフローの設定 &#x200B;](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -41,7 +41,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | `username` | [!DNL Spark] サーバーへのアクセスに使用するユーザー名。 |
 | `password` | ユーザーに対応するパスワード。 |
 
-基本について詳しくは、[ この Spark ドキュメント ](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview) を参照してください。
+基本について詳しくは、[&#x200B; この Spark ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview) を参照してください。
 
 ## [!DNL Spark] アカウントを接続
 
@@ -71,4 +71,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Spark] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Spark] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

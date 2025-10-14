@@ -17,18 +17,18 @@ ht-degree: 18%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL PostgreSQL] ています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) に関するガイドを参照してください。
+Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) に関するガイドを参照してください。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL PostgreSQL]  概要 ](../../../../connectors/databases/postgres.md) を参照してください。
+認証について詳しくは、[[!DNL PostgreSQL]  概要 &#x200B;](../../../../connectors/databases/postgres.md) を参照してください。
 
 ### 接続文字列の SSL 暗号化を有効にする
 
@@ -263,5 +263,5 @@ curl -X POST \
 
 [!DNL PostgreSQL] データベースとExperience Platformの間に接続を作成したので、次の手順に進んで、[!DNL PostgreSQL] データをExperience Platformに取り込むことができます。 詳しくは、次のドキュメントを参照してください。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、データベースデータをExperience Platformに取り込むデータフローの作成](../../collect/database-nosql.md)

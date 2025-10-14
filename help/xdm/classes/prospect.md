@@ -27,7 +27,7 @@ ht-degree: 16%
 | `_id` | [!UICONTROL 文字列] | レコードに対してシステムで生成された一意の文字列識別子。 このフィールドは、個々のレコードの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのレコードを検索するために使用されます。<br><br> このフィールドはシステムで生成されるので、データ取り込み時に明示的な値を提供しません。 ただし、必要に応じて、独自の一意の ID 値を指定することもできます。 |
 | `createdByBatchID` | [!UICONTROL 文字列] | レコードを作成する原因となった取り込まれたバッチの ID。 |
 | `modifiedByBatchID` | [!UICONTROL 文字列] | レコードを更新する原因となった、最後に取り込まれたバッチの ID。 |
-| `partnerID` | [!UICONTROL 文字列] | 通常、個々の見込み客を識別する一意の偽名 ID。 パートナー ID とAdobe Experience Platform内で使用可能な他の ID 型について詳しくは、[ID 型 ](../../identity-service/features/namespaces.md#identity-type) に関するドキュメントを参照してください。 |
+| `partnerID` | [!UICONTROL 文字列] | 通常、個々の見込み客を識別する一意の偽名 ID。 パートナー ID とAdobe Experience Platform内で使用可能な他の ID 型について詳しくは、[ID 型 &#x200B;](../../identity-service/features/namespaces.md#identity-type) に関するドキュメントを参照してください。 |
 | `repositoryCreatedBy` | [!UICONTROL 文字列] | レコードを作成したユーザーの ID。 |
 | `repositoryLastModifiedBy` | [!UICONTROL 文字列] | レコードを最後に変更したユーザーの ID。 レコードが作成されると、`modifiedByUser` の値が `createdByUser` の値として設定されます。 |
 

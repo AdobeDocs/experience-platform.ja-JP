@@ -20,9 +20,9 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->このガイドでは、[!DNL Profile API] での書き出しジョブの使用について説明します。 Adobe Experience Platform Segmentation Service の書き出しジョブの管理方法については、[Segmentation API での書き出しジョブ ](../../profile/api/export-jobs.md) に関するガイドを参照してください。
+>このガイドでは、[!DNL Profile API] での書き出しジョブの使用について説明します。 Adobe Experience Platform Segmentation Service の書き出しジョブの管理方法については、[Segmentation API での書き出しジョブ &#x200B;](../../profile/api/export-jobs.md) に関するガイドを参照してください。
 
-エクスポートジョブの作成に加えて、`/entities` エンドポイント（「[!DNL Profile Access]」とも呼ばれる）を使用して [!DNL Profile] データにアクセスすることもできます。 詳しくは、[ エンティティエンドポイントガイド ](./entities.md) を参照してください。 UI を使用してデータにアクセス [!DNL Profile] る手順については、[ ユーザーガイド ](../ui/user-guide.md) を参照してください。
+エクスポートジョブの作成に加えて、`/entities` エンドポイント（「[!DNL Profile Access]」とも呼ばれる）を使用して [!DNL Profile] データにアクセスすることもできます。 詳しくは、[&#x200B; エンティティエンドポイントガイド &#x200B;](./entities.md) を参照してください。 UI を使用してデータにアクセス [!DNL Profile] る手順については、[&#x200B; ユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
@@ -36,9 +36,9 @@ ht-degree: 53%
 
 データ [!DNL Profile] 書き出す場合は、まずターゲットデータセットを作成する必要があります。 データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 
-重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータを書き出すには、データセットが [!DNL XDM Individual Profile] 結合スキーマ（`https://ns.adobe.com/xdm/context/profile__union`）に基づいている必要があります。 結合スキーマは、同じクラスを共有するスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 この場合、これは [!DNL XDM Individual Profile] クラスです。 和集合表示スキーマについて詳しくは、『スキーマ構成の基本ガイド』の [ 和集合の節 ](../../xdm/schema/composition.md#union) を参照してください。
+重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータを書き出すには、データセットが [!DNL XDM Individual Profile] 結合スキーマ（`https://ns.adobe.com/xdm/context/profile__union`）に基づいている必要があります。 結合スキーマは、同じクラスを共有するスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 この場合、これは [!DNL XDM Individual Profile] クラスです。 和集合表示スキーマについて詳しくは、『スキーマ構成の基本ガイド』の [&#x200B; 和集合の節 &#x200B;](../../xdm/schema/composition.md#union) を参照してください。
 
-このチュートリアルの手順では、[!DNL Catalog] API を使用して [!DNL XDM Individual Profile] 和集合スキーマを参照するデータセットを作成する方法の概要を説明します。 [!DNL Experience Platform] ユーザーインターフェイスを使用して、結合スキーマを参照するデータセットを作成することもできます。 UI の使用手順については、[ オーディエンスの書き出しについてのこの UI チュートリアル ](../../segmentation/tutorials/create-dataset-export-segment.md) で概要を説明していますが、こちらも適用できます。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
+このチュートリアルの手順では、[!DNL Catalog] API を使用して [!DNL XDM Individual Profile] 和集合スキーマを参照するデータセットを作成する方法の概要を説明します。 [!DNL Experience Platform] ユーザーインターフェイスを使用して、結合スキーマを参照するデータセットを作成することもできます。 UI の使用手順については、[&#x200B; オーディエンスの書き出しについてのこの UI チュートリアル &#x200B;](../../segmentation/tutorials/create-dataset-export-segment.md) で概要を説明していますが、こちらも適用できます。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[新しいエクスポートジョブを開始する](#initiate)手順に直接進むことができます。
 
@@ -442,7 +442,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
 
 ### その他のエクスポートペイロードの例
 
-[ 書き出しジョブの開始 ](#initiate) の節で示した API 呼び出しの例では、プロファイル（レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、エクスポートするデータ型を 1 つのみに制限する、追加のリクエストペイロードの例を示します。
+[&#x200B; 書き出しジョブの開始 &#x200B;](#initiate) の節で示した API 呼び出しの例では、プロファイル（レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、エクスポートするデータ型を 1 つのみに制限する、追加のリクエストペイロードの例を示します。
 
 次のペイロードは、プロファイルデータのみを含み（イベントを含まない）、書き出しジョブを作成します。
 
@@ -492,4 +492,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
 
 ### オーディエンスの書き出し
 
-また、書き出しジョブエンドポイントを使用して、データの代わりにオーディエンス [!DNL Profile] 書き出すこともできます。 詳しくは、[Segmentation API での書き出しジョブ ](../../segmentation/api/export-jobs.md) に関するガイドを参照してください。
+また、書き出しジョブエンドポイントを使用して、データの代わりにオーディエンス [!DNL Profile] 書き出すこともできます。 詳しくは、[Segmentation API での書き出しジョブ &#x200B;](../../segmentation/api/export-jobs.md) に関するガイドを参照してください。

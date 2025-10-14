@@ -12,7 +12,7 @@ ht-degree: 79%
 
 # 論理量指定子関数
 
-論理量指定子を使用して、[!DNL Profile Query Language] の配列で条件をアサートできます（PQL）。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+論理量指定子を使用して、[!DNL Profile Query Language] の配列で条件をアサートできます（PQL）。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## exists
 

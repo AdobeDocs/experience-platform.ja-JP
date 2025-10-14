@@ -11,17 +11,17 @@ ht-degree: 1%
 
 # 日付フィルターの作成 {#create-date-filter}
 
-日付でインサイトをフィルタリングするには、日付制約を受け入れる SQL クエリにパラメーターを追加する必要があります。 これは、query pro mode insight 作成ワークフローの一部として行われます。 インサイトに合わせて SQL を入力する方法については、[query pro モードのドキュメント ](../overview.md#query-pro-mode) を参照してください。
+日付でインサイトをフィルタリングするには、日付制約を受け入れる SQL クエリにパラメーターを追加する必要があります。 これは、query pro mode insight 作成ワークフローの一部として行われます。 インサイトに合わせて SQL を入力する方法については、[query pro モードのドキュメント &#x200B;](../overview.md#query-pro-mode) を参照してください。
 
 クエリパラメーターを使用すると、実行時に追加する値のプレースホルダーとして機能する動的データを操作できます。 これらのプレースホルダー値は UI を通じて更新でき、技術の低いユーザーが日付範囲に基づいてインサイトを更新できるようになります。
 
-クエリパラメーターに慣れていない場合は、ドキュメント [ パラメーター化クエリの実装方法に関するガイダンス ](../../../query-service/ui/parameterized-queries.md) を参照してください。
+クエリパラメーターに慣れていない場合は、ドキュメント [&#x200B; パラメーター化クエリの実装方法に関するガイダンス &#x200B;](../../../query-service/ui/parameterized-queries.md) を参照してください。
 
 ## ダッシュボードへの日付フィルターの適用 {#apply-date-filter}
 
 日付フィルターを適用するには、「**[!UICONTROL フィルターを追加]**」を選択し、ダッシュボード表示のドロップダウンメニューから「**[!UICONTROL 日付フィルター]**」を選択します。
 
-![ 「フィルターを追加」とドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/add-filter.png)
+![&#x200B; 「フィルターを追加」とドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/add-filter.png)
 
 次の日付フィルタリングオプションが表示されます。
 
@@ -31,17 +31,17 @@ ht-degree: 1%
 | カスタム日付範囲 | 複数のプリセット値から 1 つ以上のカスタム日付を選択するか、カスタム日付範囲を指定します。 |
 | カスタム日付 | 最初の値から選択するか、ダッシュボードの開始日を指定します。 |
 
-![3 つのカスタム日付選択オプションがハイライト表示された日付フィルターを作成ダイアログ ](../../images/sql-insights-query-pro-mode/create-date-filter.png)
+![3 つのカスタム日付選択オプションがハイライト表示された日付フィルターを作成ダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/create-date-filter.png)
 
 ### カスタム日付フィルターを作成しない
 
 定義済みの日付フィルターを適用するには、「**[!UICONTROL カスタム日付なし]**」を選択した後、含める定義済みの日付オプションを選択します。 最後に、ドロップダウンを使用してデフォルトの日付範囲を選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![ カスタム日付フィルターを含めず、「保存」がハイライト表示された日付フィルターを作成ダイアログ ](../../images/sql-insights-query-pro-mode/no-custom-date-filter.png)
+![&#x200B; カスタム日付フィルターを含めず、「保存」がハイライト表示された日付フィルターを作成ダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/no-custom-date-filter.png)
 
 ダッシュボードに戻ります。ダッシュボードには、以前に選択したデフォルトの日付範囲が表示されます。 ドロップダウンメニューを使用して、別のプリセットの日付範囲を選択します。
 
-![ ドロップダウンがハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/no-custom-date-filter-results.png)
+![&#x200B; ドロップダウンがハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/no-custom-date-filter-results.png)
 
 ### カスタム日付範囲フィルターの作成
 
@@ -51,11 +51,11 @@ ht-degree: 1%
 >
 >事前定義済みの日付オプションを選択する必要はありません。
 
-![ カスタムの日付範囲フィルター、カスタム、保存がハイライト表示された日付フィルターを作成ダイアログ ](../../images/sql-insights-query-pro-mode/custom-date-range-filter.png)
+![&#x200B; カスタムの日付範囲フィルター、カスタム、保存がハイライト表示された日付フィルターを作成ダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/custom-date-range-filter.png)
 
 ダッシュボードに戻ります。ダッシュボードには、以前に指定したカスタムデータ範囲が表示されます。 ドロップダウンメニューを使用して、別のプリセットの日付範囲を選択します。
 
-![ カスタムの日付がハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-date-range-filter-results.png)
+![&#x200B; カスタムの日付がハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-date-range-filter-results.png)
 
 ### カスタム日付フィルターの作成
 
@@ -65,21 +65,21 @@ ht-degree: 1%
 >
 >事前定義済みの日付オプションを選択する必要はありません。
 
-![ カスタム日付フィルター、カスタム、保存がハイライト表示された日付フィルターを作成ダイアログ ](../../images/sql-insights-query-pro-mode/custom-date-filter.png)
+![&#x200B; カスタム日付フィルター、カスタム、保存がハイライト表示された日付フィルターを作成ダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/custom-date-filter.png)
 
 ダッシュボードに戻り、以前に指定したカスタムデータが表示されます。 別の日付を選択するには、ドロップダウンメニューを使用します。
 
-![ カスタムの日付がハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-date-filter-results.png)
+![&#x200B; カスタムの日付がハイライト表示されたデフォルトの日付範囲を表示するカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/custom-date-filter-results.png)
 
 ## 日付フィルターの削除 {#delete-date-filter}
 
-日付フィルターを削除するには、「フィルターを削除」アイコン（![ フィルターを削除アイコン。](/help/images/icons/filter-delete.png)）を選択します。
+日付フィルターを削除するには、「フィルターを削除」アイコン（![&#x200B; フィルターを削除アイコン。](/help/images/icons/filter-delete.png)）を選択します。
 
-![ フィルター削除アイコンがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/delete-date-filter.png)
+![&#x200B; フィルター削除アイコンがハイライト表示されたカスタムダッシュボード。](../../images/sql-insights-query-pro-mode/delete-date-filter.png)
 
 ## SQL を編集して日付クエリパラメーターを含める {#include-date-parameters}
 
-次に、SQL に日付範囲を許可するクエリパラメーターが含まれていることを確認します。 まだ SQL にクエリパラメーターを組み込んでいない場合は、インサイトを編集してこれらのパラメーターを含めます。 [ インサイトを編集 ](../overview.md#edit) する手順については、ドキュメントを参照してください。
+次に、SQL に日付範囲を許可するクエリパラメーターが含まれていることを確認します。 まだ SQL にクエリパラメーターを組み込んでいない場合は、インサイトを編集してこれらのパラメーターを含めます。 [&#x200B; インサイトを編集 &#x200B;](../overview.md#edit) する手順については、ドキュメントを参照してください。
 
 >[!TIP]
 >
@@ -114,11 +114,11 @@ LIMIT  0;
 >
 >query pro モードで文を作成する場合、SQL 文を実行してグラフを作成するには、各パラメータにサンプル値を指定する必要があります。 ステートメントを作成するときに指定するサンプル値は、実行時に日付（またはグローバル） フィルターに選択する実際の値に置き換えられます。
 
-![SQL で日付パラメーターがハイライト表示された [!UICONTROL SQL を入力 &#x200B;] ダイアログ ](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
+![SQL で日付パラメーターがハイライト表示された [!UICONTROL SQL を入力 &#x200B;] ダイアログ &#x200B;](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
 
 ## 各インサイトでの日付パラメーターの有効化 {#enable-date-parameters}
 
-適切なパラメーターをインサイトの SQL に組み込むと、ウィジェットコンポーザーで `Start_date` 変数と `End_date` 変数を切り替えできます。 インサイトの編集方法については、[query pro mode ウィジェットの母集団の節 ](../overview.md#populate-widget) を参照してください。
+適切なパラメーターをインサイトの SQL に組み込むと、ウィジェットコンポーザーで `Start_date` 変数と `End_date` 変数を切り替えできます。 インサイトの編集方法については、[query pro mode ウィジェットの母集団の節 &#x200B;](../overview.md#populate-widget) を参照してください。
 
 ウィジェットコンポーザーから、「トグル」を選択して、`Start_date` パラメーターと `End_date` パラメーターを有効にします。
 

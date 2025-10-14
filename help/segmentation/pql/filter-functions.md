@@ -12,7 +12,7 @@ ht-degree: 66%
 
 # フィルター関数
 
-フィルター関数は、[!DNL Profile Query Language] （PQL）の配列内のデータをフィルタリングするために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+フィルター関数は、[!DNL Profile Query Language] （PQL）の配列内のデータをフィルタリングするために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## フィルター
 

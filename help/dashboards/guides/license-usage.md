@@ -138,7 +138,7 @@ Adobe Experience Platformの [!UICONTROL &#x200B; ライセンスの使用状況
 
 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセス方法と操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
-Experience Platform UI の一般的な概要については、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
+Experience Platform UI の一般的な概要については、[Experience Platform UI ガイド &#x200B;](../../landing/ui-guide.md) を参照してください。
 
 ## [!UICONTROL &#x200B; ライセンス使用状況 &#x200B;] ダッシュボードデータ
 
@@ -156,7 +156,7 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 
 >[!NOTE]
 >
->ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 ダッシュボードを表示するには、「ライセンス使用状況ダッシュボードを表示」権限をユーザーに付与する必要があります。 アクセス権限の付与手順については、[ ダッシュボード権限ガイド ](../permissions.md) を参照してください。
+>ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 ダッシュボードを表示するには、「ライセンス使用状況ダッシュボードを表示」権限をユーザーに付与する必要があります。 アクセス権限の付与手順については、[&#x200B; ダッシュボード権限ガイド &#x200B;](../permissions.md) を参照してください。
 
 ## [!UICONTROL &#x200B; 指標 &#x200B;] タブ {#metrics-tab}
 
@@ -178,7 +178,7 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 >
 >消費レポートは、サンドボックスタイプによって累積されます。 [!UICONTROL &#x200B; 実稼動 &#x200B;] または [!UICONTROL &#x200B; 開発 &#x200B;] を選択すると、そのタイプのすべてのサンドボックスの合計使用量が表示されます。
 
-![ 指標、ライセンス量、使用状況データのリストが表示されているライセンス使用状況ダッシュボードの「指標」タブ ](../images/license-usage/metrics-tab.png)
+![&#x200B; 指標、ライセンス量、使用状況データのリストが表示されているライセンス使用状況ダッシュボードの「指標」タブ &#x200B;](../images/license-usage/metrics-tab.png)
 
 >[!WARNING]
 >
@@ -202,11 +202,11 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 
 各グラフには、データをフィルタリングするためのドロップダウンメニューが含まれています。 日付範囲ドロップダウンを使用して、ルックバック期間（デフォルト：過去 30 日間）を調整するか、サンドボックスドロップダウンを使用して、特定の実稼動用または開発用サンドボックスの使用状況を表示します。
 
-![ 履歴使用状況グラフ、サンドボックステーブル、エクスポートボタンを含んだアドレス可能なオーディエンス指標の詳細ビュー ](../images/license-usage/metric-details-view.png)
+![&#x200B; 履歴使用状況グラフ、サンドボックステーブル、エクスポートボタンを含んだアドレス可能なオーディエンス指標の詳細ビュー &#x200B;](../images/license-usage/metric-details-view.png)
 
 また、**[!UICONTROL カスタム日付]** を選択して、表示する期間を選択することもできます。
 
-![ カスタムの日付範囲オプションがハイライト表示されたライセンス使用状況ダッシュボードの「概要」タブ。](../images/license-usage/custom-date-range.png)
+![&#x200B; カスタムの日付範囲オプションがハイライト表示されたライセンス使用状況ダッシュボードの「概要」タブ。](../images/license-usage/custom-date-range.png)
 
 ### CSV の書き出し {#export-metric-usage-data}
 
@@ -232,7 +232,7 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 >
 >アドオンの [!UICONTROL &#x200B; ライセンス額 &#x200B;] は、コア製品の合計ライセンス額に含まれています。 アドオンは個別に追跡されるのではなく、関連する製品の機能を向上させます。 例えば、5 つのサンドボックスのパックを 1 組をアドオンとして購入した場合、金額はベース製品の金額に追加されます。 アドオンテーブルには、アドオンに固有の [!UICONTROL &#x200B; ライセンス額 &#x200B;] が表示されますが、実際の使用状況は基本製品を通じて追跡されます。
 
-![ コア製品とアドオンのテーブルが表示されているライセンス使用状況ダッシュボードの「製品」タブ ](../images/license-usage/products-tab.png)
+![&#x200B; コア製品とアドオンのテーブルが表示されているライセンス使用状況ダッシュボードの「製品」タブ &#x200B;](../images/license-usage/products-tab.png)
 
 ### 予測される使用状況 {#predicted-usage}
 
@@ -254,11 +254,11 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 
 >[!IMPORTANT]
 >
->予測は毎週金曜日に更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
+>予測は毎週金曜日に更新されます。 更新日は、情報アイコン（![&#x200B; この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
 
 [!UICONTROL &#x200B; コア製品 &#x200B;] テーブルの「[!UICONTROL &#x200B; 製品 &#x200B;]」タブで、製品の使用権限の概要を表示します。
 
-![ 製品と予測される使用状況列がハイライト表示された [!UICONTROL &#x200B; ライセンス使用状況 &#x200B;] [!UICONTROL &#x200B; 「製品 &#x200B;]」タブ ](../images/license-usage/product-predicted-usage.png)
+![&#x200B; 製品と予測される使用状況列がハイライト表示された [!UICONTROL &#x200B; ライセンス使用状況 &#x200B;] [!UICONTROL &#x200B; 「製品 &#x200B;]」タブ &#x200B;](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
@@ -310,7 +310,7 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 | [!UICONTROL &#x200B; プロファイル充実度パック数 &#x200B;] | 追加のプロファイルリッチネスパックごとに、許可される合計データ量がプロファイルあたり 25 KB 増加します。 |
 | [!UICONTROL &#x200B; クエリサービス計算時間 &#x200B;] | バッチクエリの実行時に、クエリサービスエンジンがデータレイクに対してデータの読み取り、処理、書き戻しを行うために必要な時間の測定値。 |
 | [!UICONTROL &#x200B; ストリーミングセグメント化パック数 &#x200B;] | パックでは、ストリーミングフローを通じて新しいデータをセグメント化サービスに入力すると、ユーザープロファイルのセグメントメンバーシップが更新されます。セグメントメンバーシップは、過去の行動を考慮せずに、現在のユーザープロファイル属性と現在のイベントの値に基づいて評価されます。ストリーミングセグメント化は共有機能です。 |
-| [!UICONTROL &#x200B; 合計データ量 &#x200B;] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 合計データ量は、**合計データ量= アドレス可能なオーディエンス ×平均プロファイル充実度** の式を使用して計算されます。 この指標は、プロファイルストアにのみ保存されたデータを反映し、データレイクのストレージを除外します。 プロファイルベースのエンゲージメントに関連するデータについて、より焦点を絞ったビューを提供します。 詳しくは、[ 合計データ量に関するよくある質問 ](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
+| [!UICONTROL &#x200B; 合計データ量 &#x200B;] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 合計データ量は、**合計データ量= アドレス可能なオーディエンス ×平均プロファイル充実度** の式を使用して計算されます。 この指標は、プロファイルストアにのみ保存されたデータを反映し、データレイクのストレージを除外します。 プロファイルベースのエンゲージメントに関連するデータについて、より焦点を絞ったビューを提供します。 詳しくは、[&#x200B; 合計データ量に関するよくある質問 &#x200B;](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
 | [!UICONTROL &#x200B; データエグレスの合計量 &#x200B;] | Adobe Experience Platformからサードパーティのデータウェアハウスに書き出されたデータの年間累積量です。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
@@ -324,10 +324,10 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 | ライセンス | 商品の説明 |
 | --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 標準</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービス、インテリジェントサービス ](https://helpx.adobe.com/jp/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービス、インテリジェントサービス &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD アクティベーション</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL （最大 50M）</li></ul> | [Adobe Experience Platformのライセンス認証 ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD アクティベーション</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL （最大 50M）</li></ul> | [Adobe Experience Platformのライセンス認証 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZERPRIME:OD</li><li>JOURNEY OPTIMIZERULTIMATE:OD</li><li>UNP AJO PRIME スターター：OD</li><li>UNP AJO ULTIMATE スターター：OD</li><li>UNP Real-Time CDP:OD プロファイルオーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -338,4 +338,4 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 
 このドキュメントを読むと、ライセンス使用状況ダッシュボードを見つけ、購入した各製品、すべての実稼動または開発用サンドボックス、特定のサンドボックスの使用状況指標を表示できるようになります。 組織が購入したライセンスに基づいて、組織で使用可能な指標に関する詳細を確認できます。
 
-Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
+Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド &#x200B;](../../landing/ui-guide.md) を参照してください。

@@ -18,7 +18,7 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、`clientcare@rainfocus.com` まで直接ご連絡いただくか、RainFocus [ ヘルプセンター ](https://help.rainfocus.com/hc/en-us) をご覧ください。
+>宛先コネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、`clientcare@rainfocus.com` まで直接ご連絡いただくか、RainFocus [&#x200B; ヘルプセンター &#x200B;](https://help.rainfocus.com/hc/en-us) をご覧ください。
 
 ## ユースケース {#use-cases}
 
@@ -58,7 +58,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -78,7 +78,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -86,7 +86,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![RainFocus 宛先コネクタの認証の詳細を指定 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
+![RainFocus 宛先コネクタの認証の詳細を指定 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
 * **[!UICONTROL クライアント ID]**:RainFocus API プロファイルから提供された [!DNL Client ID] を入力します。
 * **[!UICONTROL クライアント秘密鍵]**:RainFocus API プロファイルから提供される [!DNL Client Secret] を入力します。
@@ -97,7 +97,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![RainFocus 宛先コネクタの接続の詳細を指定する ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
+![RainFocus 宛先コネクタの接続の詳細を指定する &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -113,7 +113,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -123,7 +123,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 * **メール** は、**ターゲットフィールド/ID 名前空間を選択/メール** を使用して、ターゲットフィールドとしてマッピングする必要があります
 
-![ プロファイルと ID のフィールドをマッピングする方法 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
+![&#x200B; プロファイルと ID のフィールドをマッピングする方法 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
 
 追加のプロファイルフィールドをマッピングすることをお勧めします。マッピングすると、[!DNL RainFocus] の参加者プロファイルが完全に入力されます。 [!DNL RainFocus] では、次のターゲットフィールドを使用できます。
 
@@ -148,9 +148,9 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 一連のプロファイルが [!DNL RainFocus] に送信されたら、[!DNL RainFocus] で API プロファイルのログを使用して、プロファイルが正常に取り込まれていることを検証します。
 
-![RainFocus での API プロファイルへのログの表示 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
+![RainFocus での API プロファイルへのログの表示 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
 
-![ プロファイルが正常に取り込まれていることを検証 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
+![&#x200B; プロファイルが正常に取り込まれていることを検証 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -158,4 +158,4 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 ## その他のリソース {#additional-resources}
 
-* [RainFocus ストリーミングSourceコネクタ ](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus ストリーミングSourceコネクタ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/connectors/analytics/rainfocus)

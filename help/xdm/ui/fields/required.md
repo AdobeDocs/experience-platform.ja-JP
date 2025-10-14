@@ -18,24 +18,24 @@ ht-degree: 0%
 >
 >スキーマフィールドが必須であるかどうかに関係なく、Experience Platformは、取り込まれたフィールドの `null` 値または空の値を受け入れません。 レコードまたはイベント内の特定のフィールドに値がない場合、そのフィールドのキーは取り込みペイロードから除外する必要があります。
 
-Adobe Experience Platform ユーザーインターフェイスで [ 新しいフィールドを定義 ](./overview.md#define) する際に、右側のパネルの「**[!UICONTROL 必須]**」チェックボックスをオンにして、必須フィールドとして設定できます。 「**[!UICONTROL 適用]**」を選択して、スキーマに変更を適用します。
+Adobe Experience Platform ユーザーインターフェイスで [&#x200B; 新しいフィールドを定義 &#x200B;](./overview.md#define) する際に、右側のパネルの「**[!UICONTROL 必須]**」チェックボックスをオンにして、必須フィールドとして設定できます。 「**[!UICONTROL 適用]**」を選択して、スキーマに変更を適用します。
 
-![ 必須チェックボックス ](../../images/ui/fields/required/root.png)
+![&#x200B; 必須チェックボックス &#x200B;](../../images/ui/fields/required/root.png)
 
 フィールドがテナント ID オブジェクトのルートレベル属性の場合、そのパスは、左側のパネルの **[!UICONTROL 必須フィールド]** のすぐ下に表示されます。
 
-![ ルートレベルの必須フィールド ](../../images/ui/fields/required/applied.png)
+![&#x200B; ルートレベルの必須フィールド &#x200B;](../../images/ui/fields/required/applied.png)
 
 ただし、必須フィールドが、それ自体は必須としてマークされていないオブジェクト内にネストされている場合、ネストされたフィールドは、左側のパネルの **[!UICONTROL 必須フィールド]** の下に表示されません。
 
 次の例では、「`internalSKU`」フィールドは必須として設定されていますが、その親オブジェクト `SKUs` は必須ではありません。 この場合、子フィールド `internalSKU` が必須としてマークされて `SKUs` ても、データの取り込み時に除外された場合は、検証エラーは発生しません。 つまり、`SKUs` はオプションですが、含めるイベントに `internalSKU` フィールドを含める必要があります。
 
-![ ネストされた必須フィールド ](../../images/ui/fields/required/nested.png)
+![&#x200B; ネストされた必須フィールド &#x200B;](../../images/ui/fields/required/nested.png)
 
 スキーマでネストされたフィールドを常に必須にする場合は、すべての親フィールドも必要に応じて設定する必要があります（テナント ID オブジェクトを除く）。
 
-![ 親と子の必須フィールド ](../../images/ui/fields/required/parent-and-child.png)
+![&#x200B; 親と子の必須フィールド &#x200B;](../../images/ui/fields/required/parent-and-child.png)
 
 ## 次の手順
 
-このガイドでは、UI で必須フィールドを定義する方法について説明しました。 [!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 ](./overview.md#special) の概要を参照してください。
+このガイドでは、UI で必須フィールドを定義する方法について説明しました。 [!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 &#x200B;](./overview.md#special) の概要を参照してください。

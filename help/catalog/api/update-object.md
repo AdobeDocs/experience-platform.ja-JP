@@ -69,7 +69,7 @@ curl -X PATCH \
 
 次の呼び出し例は、[RFC-6902](https://tools.ietf.org/html/rfc6902) で説明されている JSON パッチを使用してオブジェクトを更新する方法を示しています。
 
-JSON パッチ構文について詳しくは、[API の基本ガイド ](../../landing/api-fundamentals.md#json-patch) を参照してください。
+JSON パッチ構文について詳しくは、[API の基本ガイド &#x200B;](../../landing/api-fundamentals.md#json-patch) を参照してください。
 
 **API 形式**
 

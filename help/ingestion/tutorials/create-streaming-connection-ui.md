@@ -18,4 +18,4 @@ ht-degree: 42%
 
 ストリーミング接続を登録すると、[!DNL Experience Platform] にデータをストリーミングするために使用できる一意の URL が得られます。
 
-ストリーミング接続の作成方法については、[HTTP API ソース UI ガイド ](../../sources/tutorials/ui/create/streaming/http.md) を参照してください。
+ストリーミング接続の作成方法については、[HTTP API ソース UI ガイド &#x200B;](../../sources/tutorials/ui/create/streaming/http.md) を参照してください。

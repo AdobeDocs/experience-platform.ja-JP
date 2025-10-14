@@ -16,11 +16,11 @@ ht-degree: 0%
 
 `thirdPartyCookiesEnabled` プロパティは、[`getIdentity`](../getidentity.md) 呼び出しで [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) を要求できるかどうかを制御します。
 
-このオプションを有効にすると、Web SDK はAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、コールトゥAudience Managerは無効になります。 詳しくは、Audience Managerユーザーガイドの [Demdex ドメインの呼び出しについて ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
+このオプションを有効にすると、Web SDK はAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、コールトゥAudience Managerは無効になります。 詳しくは、Audience Managerユーザーガイドの [Demdex ドメインの呼び出しについて &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
 
 ## Web SDK タグ拡張機能を使用してサードパーティ Cookie を有効にする
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の場合は、「**[!UICONTROL サードパーティ Cookie を使用]**」チェックボックスを選択します。
+[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の場合は、「**[!UICONTROL サードパーティ Cookie を使用]**」チェックボックスを選択します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

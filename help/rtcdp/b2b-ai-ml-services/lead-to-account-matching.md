@@ -48,15 +48,15 @@ ht-degree: 3%
 
 b2b.companyName、b2b.companyWebsite および b2b.personKey.sourceKey 属性は、B2B person スキーマの b2b フィールドグループに配置できます。
 
-属性を表示する ![B2B 人物スキーマ ](/help/rtcdp/accounts/images/b2b-person-schema.png)
+属性を表示する ![B2B 人物スキーマ &#x200B;](/help/rtcdp/accounts/images/b2b-person-schema.png)
 
 workEmail 属性は、B2B person スキーマの最上位のフィールドグループとして見つけることができます。
 
-workEmail を表示する ![B2B 人物スキーマ ](/help/rtcdp/accounts/images/b2b-person-workemail.png)
+workEmail を表示する ![B2B 人物スキーマ &#x200B;](/help/rtcdp/accounts/images/b2b-person-workemail.png)
 
 プロファイルは、一致スコアが内部の信頼性しきい値を超えた場合にのみ最適に一致します。 結果は、既存のアカウント人物関係 XDM の新しいシステムデータセットに保存されます。
 
-リードとアカウントのマッチングサービスは、24 時間に 1 回の新しいユーザープロファイルのスナップショットが使用可能になったときに実行されます。 [ リードとアカウントのマッチングの設定 ](/help/rtcdp/accounts/account-profile-ui-guide.md) について詳しくは、ドキュメントを参照してください。
+リードとアカウントのマッチングサービスは、24 時間に 1 回の新しいユーザープロファイルのスナップショットが使用可能になったときに実行されます。 [&#x200B; リードとアカウントのマッチングの設定 &#x200B;](/help/rtcdp/accounts/account-profile-ui-guide.md) について詳しくは、ドキュメントを参照してください。
 
 ## リードとアカウントのマッチング出力の表示方法 {#how-to-view}
 
@@ -64,14 +64,14 @@ workEmail を表示する ![B2B 人物スキーマ ](/help/rtcdp/accounts/images
 
 データセットをプレビューするには、右上の **[!UICONTROL データセットをプレビュー]** を選択します。
 
-![ 新しいデータセット ](/help/rtcdp/accounts/images/b2b-dataset-output.png)
+![&#x200B; 新しいデータセット &#x200B;](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
 データセットには、一致したアカウント情報と、選択したデータセットの一致スコアが含まれます。 「**[!UICONTROL 関係Source]**」フィールドは、リードとアカウントのマッチングプロセスによって決定されたかどうかを示します。
 
-![ データセットの信頼性スコアと出力のプレビュー ](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
+![&#x200B; データセットの信頼性スコアと出力のプレビュー &#x200B;](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
 ## リードとアカウントのマッチングジョブの監視 {#monitoring-jobs}
 
 ダッシュボードを使用して、リードとアカウントの一致するジョブのジョブステータスおよび関連指標を監視できます。
 
-[ リードとアカウントのマッチングのジョブ監視 ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) について詳しくは、ドキュメントを参照してください。
+[&#x200B; リードとアカウントのマッチングのジョブ監視 &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) について詳しくは、ドキュメントを参照してください。

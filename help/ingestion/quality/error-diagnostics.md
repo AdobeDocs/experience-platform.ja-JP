@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **応答**
 
-応答が成功すると、診断が保存された場所の詳細を示す `path` オブジェクトを含む JSON オブジェクトが返されます。 応答は、`path` オブジェクトを [JSON 行 ](https://jsonlines.readthedocs.io/en/latest/) 形式で返します。
+応答が成功すると、診断が保存された場所の詳細を示す `path` オブジェクトを含む JSON オブジェクトが返されます。 応答は、`path` オブジェクトを [JSON 行 &#x200B;](https://jsonlines.readthedocs.io/en/latest/) 形式で返します。
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 ### ステータスの確認 {#check-status}
 
-取り込まれたバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[ カタログエンドポイントガイド ](../../catalog/api/list-objects.md) を参照してください。
+取り込まれたバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[&#x200B; カタログエンドポイントガイド &#x200B;](../../catalog/api/list-objects.md) を参照してください。
 
 **API 形式**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BATCH_ID}` | ステータスを確認するバッチの `id` 値。 |
-| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[ カタログデータのフィルタリング ](../../catalog/api/filter-data.md) に関するガイドを参照してください。 |
+| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[&#x200B; カタログデータのフィルタリング &#x200B;](../../catalog/api/filter-data.md) に関するガイドを参照してください。 |
 
 **リクエスト**
 
@@ -374,7 +374,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 }
 ```
 
-その後、[ 診断取得エンドポイント ](#retrieve-diagnostics) を使用して、エラーに関する詳細情報を取得できます。
+その後、[&#x200B; 診断取得エンドポイント &#x200B;](#retrieve-diagnostics) を使用して、エラーに関する詳細情報を取得できます。
 
 エラーファイルを取得する応答の例を以下に示します。
 

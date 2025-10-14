@@ -33,7 +33,7 @@ ht-degree: 23%
 | `is_set` 関数 | `is_set` 関数を使用すると、ソースデータ内の属性の存在を確認できます。 `is_set` を `is_empty` と組み合わせて使用すると、属性の存在と、属性内の値の存在の両方を確認できます。 |
 | `get_values` 関数 | `get_values` 関数を使用すると、指定されたキーの入力マップから値を取得できます。 |
 
-詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
+詳しくは、[&#x200B; データ準備の概要 &#x200B;](../../data-prep/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | プロファイルプレビュー API への追加 | プロファイルプレビュー API （`/previewsamplestatus`）に、組織全体の合計プロファイルフラグメントの分類を表示する機能と、ID 名前空間全体でのプロファイルフラグメントの分布を表示する機能が含まれるようになりました。 |
 | 結合スキーマビューの更新 | Experience Platform UI を使用すると、結合スキーマに関与するすべてのスキーマとデータセットに関する情報や、ID フィールドや関係フィールドなどのサーフェスのキー属性を、より簡単に見つけることができます。 これらの更新により、プロファイルが正しく設定され、ID が正しくステッチされ、データが正常に取り込まれていることをトラブルシューティングおよび検証する機能が向上します。 |
 
-[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、[!DNL Real-Time Customer Profile] ークフローについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
+[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、[!DNL Real-Time Customer Profile] ークフローについて詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -58,7 +58,7 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 | ------- | ----------- |
 | ストリーミングセグメント化制限の削除 | ルックバック期間の 7 日間の制限が削除されました。 |
 
-[!DNL Segmentation Service] について詳しくは、[ セグメント化の概要 ](../../segmentation/home.md) を参照してください
+[!DNL Segmentation Service] について詳しくは、[&#x200B; セグメント化の概要 &#x200B;](../../segmentation/home.md) を参照してください
 
 ## ソース {#sources}
 
@@ -70,8 +70,8 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| SFTP 用の SSH 認証のサポート | RSA/DSA Open SSH キーを使用して、SFTP アカウントを [!DNL Experience Platform] に接続できます。 詳しくは、[SFTP の概要 ](../../sources/connectors/cloud-storage/sftp.md) を参照してください。 |
-| UX の向上 | データ取り込みプロセス中に、データセットの [!DNL Profile] を有効にできます。 詳しくは、[ クラウドストレージデータフローワークフロー ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。 |
+| SFTP 用の SSH 認証のサポート | RSA/DSA Open SSH キーを使用して、SFTP アカウントを [!DNL Experience Platform] に接続できます。 詳しくは、[SFTP の概要 &#x200B;](../../sources/connectors/cloud-storage/sftp.md) を参照してください。 |
+| UX の向上 | データ取り込みプロセス中に、データセットの [!DNL Profile] を有効にできます。 詳しくは、[&#x200B; クラウドストレージデータフローワークフロー &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
 

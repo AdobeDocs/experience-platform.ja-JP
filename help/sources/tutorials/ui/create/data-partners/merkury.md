@@ -32,7 +32,7 @@ Experience Platform上のバケットにアクセスするには、次の資格�
 | 秘密鍵 | バケットの秘密鍵 ID。 この値は [!DNL Merkury] チームから取得できます。 |
 | バケット名 | これは、ファイルが共有される Merkury バケットです。 この値は [!DNL Merkury] チームから取得できます。 |
 
-[!DNL Merkury] の設定およびその他の前提条件について詳しくは、[[!DNL Merkury]  ソースの概要 ](../../../../connectors/data-partners/merkury.md) を参照してください。
+[!DNL Merkury] の設定およびその他の前提条件について詳しくは、[[!DNL Merkury]  ソースの概要 &#x200B;](../../../../connectors/data-partners/merkury.md) を参照してください。
 
 ## Merkury アカウントを接続
 
@@ -42,7 +42,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 **[!UICONTROL データパートナー]** カテゴリで、「**[!UICONTROL Merkury]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
 
-![Merkury ソースが選択されているソースカタログ ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
+![Merkury ソースが選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
 
 **[!UICONTROL Merkury に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -78,13 +78,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 * インターフェイスの左側はディレクトリブラウザーで、[!DNL Merkury] のファイル階層が表示されています。
 * インターフェイスの右側の部分では、互換性のあるフォルダーまたはファイルから最大 100 行のデータをプレビューできます。
 
-![ 取り込むデータを選択できるソースワークフローのファイルおよびフォルダーディレクトリ。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/add-data.png)
+![&#x200B; 取り込むデータを選択できるソースワークフローのファイルおよびフォルダーディレクトリ。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/add-data.png)
 
 ルートフォルダーを選択して、フォルダー階層にアクセスします。 ここから 1 つのフォルダーを選択して、フォルダー内のすべてのファイルを再帰的に取り込むことができます。 フォルダー全体を取り込む場合、そのフォルダー内のすべてのファイルでデータ形式とスキーマが同じであることを確認する必要があります。
 
 フォルダーを選択すると、右側のインターフェイスが更新され、選択したフォルダー内の最初のファイルの内容と構造のプレビューが表示されます。
 
-![ 取り込み用に選択されたデータとファイルのプレビューインターフェイス。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
+![&#x200B; 取り込み用に選択されたデータとファイルのプレビューインターフェイス。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
 
 
 この手順の間に、続行する前にデータに対していくつかの設定を行うことができます。 まず、**[!UICONTROL データ形式]** を選択し、表示されるドロップダウンパネルでファイルに適したデータ形式を選択します。
@@ -129,13 +129,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 データを既存のデータセットに取り込むには、**[!UICONTROL 既存のデータセット]**&#x200B;を選択します。「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のデータセットのリストをスクロールすると、既存のデータセットを取得できます。データセットを選択したら、データフローの名前と説明を入力します。
 
-![ 既存のデータセットインターフェイス。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
+![&#x200B; 既存のデータセットインターフェイス。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
 
 ### 新しいデータセットの使用
 
 データを新しいデータセットに取り込むには、「**[!UICONTROL 新しいデータセット]**」を選択して、出力データセット名とオプションの説明を入力します。次に、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のスキーマのリストをスクロールして、マッピングするスキーマを選択します。スキーマを選択したら、データフローの名前と説明を指定します。
 
-![ 新しいデータセットインターフェイス ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
+![&#x200B; 新しいデータセットインターフェイス &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
 
 ### プロファイルおよびエラー診断の有効化
 
@@ -161,11 +161,11 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[&#x200B; データ準備 UI ガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ マッピングインターフェイス ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
+![&#x200B; マッピングインターフェイス &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
 
 ## 取り込み実行のスケジュール
 
@@ -175,7 +175,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 >
 >1 回限りの取り込み中は、インターバルとバックフィルは表示されません。
 
-![ スケジュールインターフェイス ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/schedule.png)
+![&#x200B; スケジュールインターフェイス &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/schedule.png)
 
 取り込み頻度を `Minute`、`Hour`、`Day`、`Week` のいずれかに設定した場合は、取り込みごとに設定された時間枠を確立する間隔を設定する必要があります。 例えば、取り込み頻度を `Day` に設定し、間隔を `15` に設定すると、データフローは 15 日ごとにデータを取り込むようにスケジュールされます。
 
@@ -206,7 +206,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」をクリックし、データフローが作成されるまでしばらく待ちます。
 
-![ レビューページ ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
+![&#x200B; レビューページ &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
 ## 次の手順
 
@@ -214,12 +214,12 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング ](../../monitor.md) のチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング &#x200B;](../../monitor.md) のチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 ](../../update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するチュートリアルを参照してください。
 
 ### データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 ](../../delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 &#x200B;](../../delete.md) のチュートリアルを参照してください。

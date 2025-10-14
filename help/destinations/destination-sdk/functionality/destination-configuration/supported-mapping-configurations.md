@@ -64,11 +64,11 @@ Destination SDK で作成されたリアルタイム（ストリーミング）�
 
 ユーザーは、ターゲットフィールドマッピングを選択する際に、ターゲットのカスタム属性の名前を手動で入力する必要があります。
 
-![ カスタム属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![&#x200B; カスタム属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ ストリーミング宛先のカスタム属性への XDM 属性マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![&#x200B; ストリーミング宛先のカスタム属性への XDM 属性マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### ID 名前空間のパートナー ID 名前空間へのマッピング {#streaming-identity-to-identity}
 
@@ -76,7 +76,7 @@ Destination SDK で作成されたリアルタイム（ストリーミング）�
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ ストリーミング宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![&#x200B; ストリーミング宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## ファイルベースの宛先でサポートされるマッピング {#batch-mappings}
 
@@ -118,11 +118,11 @@ Destination SDK で作成されたファイルベースの宛先は、以下の�
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ ファイルベースの宛先のカスタム属性への XDM マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![&#x200B; ファイルベースの宛先のカスタム属性への XDM マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 ユーザーは、デフォルトの名前のままでも、ターゲットフィールドの選択画面でカスタム属性名を入力することもできます。
 
-![ ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![&#x200B; ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### ID 名前空間のカスタム属性へのマッピング {#batch-identity-to-custom}
 
@@ -130,11 +130,11 @@ Destination SDK で作成されたファイルベースの宛先は、以下の�
 
 ID 名前空間をソースフィールドとして選択する場合、ターゲットフィールドは、同等の ID 名前空間に自動的に設定されます。ターゲットフィールドをカスタム属性に置き換えるには、ユーザーは、ターゲットフィールドの選択画面でカスタム属性名を入力する必要があります。
 
-![ ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![&#x200B; ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ ファイルベースの宛先のカスタム属性への ID マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![&#x200B; ファイルベースの宛先のカスタム属性への ID マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### ID 名前空間のパートナー ID 名前空間へのマッピング {#batch-identity-to-identity}
 
@@ -144,7 +144,7 @@ ID 名前空間をソースフィールドとして選択する場合、ター�
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ ファイルベースの宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![&#x200B; ファイルベースの宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 次の手順 {#next-steps}

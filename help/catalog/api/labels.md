@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Dataset Service API のデータ使用ラベル
 
-Catalog Service API とは別に、[!DNL Dataset Service] API は、データセットのデータ使用ラベルを管理するためのエンドポイントを提供します。 これらのエンドポイントを呼び出す手順については、Adobe Experience Platform データガバナンスドキュメントの [API を使用したデータ使用ラベルの管理 ](../../data-governance/labels/dataset-api.md) に関するガイドを参照してください。
+Catalog Service API とは別に、[!DNL Dataset Service] API は、データセットのデータ使用ラベルを管理するためのエンドポイントを提供します。 これらのエンドポイントを呼び出す手順については、Adobe Experience Platform データガバナンスドキュメントの [API を使用したデータ使用ラベルの管理 &#x200B;](../../data-governance/labels/dataset-api.md) に関するガイドを参照してください。

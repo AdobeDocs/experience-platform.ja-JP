@@ -13,9 +13,9 @@ ht-degree: 8%
 
 ## 概要 {#overview}
 
-このページでは、Destination SDKを使用して、カスタムの [ ファイル形式オプション ](configure-file-formatting-options.md) およびカスタムの [ ファイル名設定 ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) を持つファイルベースの宛先を設定し、[ 見込み客オーディエンス ](/help/destinations/ui/activate-prospect-audiences.md) を書き出す方法について説明します。 このガイドの例では、見込み客プロファイルのオーディエンスをAmazon S3 の場所に書き出す方法を説明しています。
+このページでは、Destination SDKを使用して、カスタムの [&#x200B; ファイル形式オプション &#x200B;](configure-file-formatting-options.md) およびカスタムの [&#x200B; ファイル名設定 &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) を持つファイルベースの宛先を設定し、[&#x200B; 見込み客オーディエンス &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) を書き出す方法について説明します。 このガイドの例では、見込み客プロファイルのオーディエンスをAmazon S3 の場所に書き出す方法を説明しています。
 
-また、STFP やその他のストレージの場所を設定して、見込み客オーディエンスを書き出すこともできます。 覚えておくべき重要な部分は、以下のスニペットを [ 手順 2](#create-destination-configuration) の宛先設定に追加して、[ ワークフローで見込み客オーディエンスを書き出す ](/help/destinations/ui/activate-prospect-audiences.md) を宛先に有効にすることです。
+また、STFP やその他のストレージの場所を設定して、見込み客オーディエンスを書き出すこともできます。 覚えておくべき重要な部分は、以下のスニペットを [&#x200B; 手順 2](#create-destination-configuration) の宛先設定に追加して、[&#x200B; ワークフローで見込み客オーディエンスを書き出す &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) を宛先に有効にすることです。
 
 ```json
   "sources": [
@@ -23,15 +23,15 @@ ht-degree: 8%
   ],
 ```
 
-以下で使用されるパラメーターについて詳しくは、[Destinations SDK の設定オプション ](../../functionality/configuration-options.md) を参照してください。
+以下で使用されるパラメーターについて詳しくは、[Destinations SDK の設定オプション &#x200B;](../../functionality/configuration-options.md) を参照してください。
 
 ## 前提条件 {#prerequisites}
 
-以下に説明する手順に進む前に、[Destination SDKの概要 ](../../getting-started.md) ページを読んで、Destination SDKAPI を使用するために必要な認証資格情報およびその他の前提条件について確認してください。
+以下に説明する手順に進む前に、[Destination SDKの概要 &#x200B;](../../getting-started.md) ページを読んで、Destination SDKAPI を使用するために必要な認証資格情報およびその他の前提条件について確認してください。
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、`/destination-server` エンドポイントを使用して [ サーバーとファイル設定を作成 ](../../authoring-api/destination-server/create-destination-server.md) します。
+まず、`/destination-server` エンドポイントを使用して [&#x200B; サーバーとファイル設定を作成 &#x200B;](../../authoring-api/destination-server/create-destination-server.md) します。
 
 **API 形式**
 
@@ -42,7 +42,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **リクエスト**
 
 次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。
-以下のペイロードには、ユーザーがExperience PlatformUI で定義できるカスタム [CSV ファイル形式 ](../../functionality/destination-server/file-formatting.md) 設定パラメーターを含む、一般的なAmazon S3 設定が含まれています。
+以下のペイロードには、ユーザーがExperience PlatformUI で定義できるカスタム [CSV ファイル形式 &#x200B;](../../functionality/destination-server/file-formatting.md) 設定パラメーターを含む、一般的なAmazon S3 設定が含まれています。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -133,7 +133,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 前の手順で宛先サーバーとファイル形式設定を作成したら、`/destinations` API エンドポイントを使用して宛先設定を作成できるようになりました。
 
-[ 手順 1](#create-server-file-configuration) のサーバー設定をこの宛先設定に接続するには、以下の API リクエストの `destinationServerId` の値を、[ 手順 1](#create-server-file-configuration) で宛先サーバーを作成する際に取得した値に置き換えます。
+[&#x200B; 手順 1](#create-server-file-configuration) のサーバー設定をこの宛先設定に接続するには、以下の API リクエストの `destinationServerId` の値を、[&#x200B; 手順 1](#create-server-file-configuration) で宛先サーバーを作成する際に取得した値に置き換えます。
 
 **API 形式**
 
@@ -417,9 +417,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 上記の設定に基づいて、Experience Platformカタログには、使用する新しいプライベート宛先カードが表示されるようになりました。
 
-![ 選択した宛先カードを含む宛先カタログページを示す画面録画。](../../assets/guides/batch/destination-card.gif)
+![&#x200B; 選択した宛先カードを含む宛先カタログページを示す画面録画。](../../assets/guides/batch/destination-card.gif)
 
-以下の画像と録画では、[ ファイルベースの宛先のアクティベーションワークフロー ](../../../ui/activate-batch-profile-destinations.md) のオプションが、宛先設定で選択したオプションにどのように一致するかを確認してください。
+以下の画像と録画では、[&#x200B; ファイルベースの宛先のアクティベーションワークフロー &#x200B;](../../../ui/activate-batch-profile-destinations.md) のオプションが、宛先設定で選択したオプションにどのように一致するかを確認してください。
 
 宛先に関する詳細を入力する場合、設定で設定したカスタムデータフィールドが、どのようなフィールドで表示されるかを確認してください。
 
@@ -427,15 +427,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >カスタムデータフィールドを宛先設定に追加した順序は、UI には反映されません。 カスタムデータフィールドは、常に、以下の画面録画で表示される順序で表示されます。
 
-![ 宛先の詳細の入力 ](../../assets/guides/batch/file-configuration-options.gif)
+![&#x200B; 宛先の詳細の入力 &#x200B;](../../assets/guides/batch/file-configuration-options.gif)
 
 書き出し間隔をスケジュールする際には、`batchConfig` 設定で設定したフィールドが各フィールドにどのように表示されるかを確認してください。
-![ スケジュール オプションのエクスポート ](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)
+![&#x200B; スケジュール オプションのエクスポート &#x200B;](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)
 
 ファイル名の設定オプションを表示すると、設定で設定した `filenameConfig` のオプションが、表示されるフィールドでどのように表れているかに注意してください。
-![ ファイル名設定オプション ](../../assets/guides/batch/file-naming-options.gif)
+![&#x200B; ファイル名設定オプション &#x200B;](../../assets/guides/batch/file-naming-options.gif)
 
-上記のフィールドを調整する場合は、[ 手順 1](#create-server-file-configuration) および [2](#create-destination-configuration) を繰り返し、必要に応じて設定を変更します。
+上記のフィールドを調整する場合は、[&#x200B; 手順 1](#create-server-file-configuration) および [2](#create-destination-configuration) を繰り返し、必要に応じて設定を変更します。
 
 ## 手順 4:（オプション）宛先のPublish {#publish-destination}
 

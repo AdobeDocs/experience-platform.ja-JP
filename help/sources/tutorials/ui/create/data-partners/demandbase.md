@@ -20,12 +20,12 @@ ht-degree: 9%
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B editionは、B2B サービスモデルで業務を行うマーケター向けに設計されています。 複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 前提条件
 
-認証資格情報の取得方法について詳しくは、[[!DNL Demandbase Intent]  概要 ](../../../../connectors/data-partners/demandbase.md) を参照してください。
+認証資格情報の取得方法について詳しくは、[[!DNL Demandbase Intent]  概要 &#x200B;](../../../../connectors/data-partners/demandbase.md) を参照してください。
 
 ## ソースカタログのナビゲート {#navigate}
 
@@ -37,7 +37,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![ 「Demandbase Intent」カードが選択されているソースカタログ ](../../../../images/tutorials/create/demandbase/catalog.png)
+![&#x200B; 「Demandbase Intent」カードが選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/demandbase/catalog.png)
 
 ## 認証 {#authentication}
 
@@ -47,7 +47,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 アカウントを選択したら、「**[!UICONTROL 次へ]**」を選択して次の手順に進みます。
 
-![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/demandbase/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/demandbase/existing.png)
 
 ### 新しいアカウントを作成 {#create}
 
@@ -59,7 +59,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * **秘密アクセスキー**:[!DNL Demandbase] の秘密アクセスキー。 これは、Base-64 でエンコードされた 40 文字の文字列で、Experience Platformに対してアカウントを認証するために必要です。
 * **バケット名**：データの取得元となる [!DNL Demandbase] バケット。
 
-![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/demandbase/new.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/demandbase/new.png)
 
 ## データフローの詳細を入力 {#provide-dataflow-details}
 
@@ -69,7 +69,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * **説明**:（任意）データフローの簡単な説明または追加情報。
 * **ドメインソース**：ソースアカウントレコードをExperience Platform アカウントと照合するドメインまたは web サイトフィールド。 この値は、設定によって異なる場合があります。 指定しない場合、ドメインのデフォルト値は `accountOrganization.website` になります。
 
-![ ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/demandbase/dataflow-detail.png)
+![&#x200B; ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/demandbase/dataflow-detail.png)
 
 ## データフローのスケジュール {#schedule-dataflow}
 
@@ -82,7 +82,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローの取り込みスケジュールを設定したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのスケジュールインターフェイス ](../../../../images/tutorials/create/demandbase/scheduling.png)
+![&#x200B; ソースワークフローのスケジュールインターフェイス &#x200B;](../../../../images/tutorials/create/demandbase/scheduling.png)
 
 ## データフローのレビュー {#review-dataflow}
 
@@ -91,7 +91,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * **接続**：ソースのタイプ、選択したソースファイルの関連パスおよびそのソースファイル内の列の数を表示します。
 * **スケジュール**：取り込みスケジュールのアクティブな期間、頻度、間隔を表示します。
 
-![ ソースワークフローのレビューインターフェイス ](../../../../images/tutorials/create/demandbase/review.png)
+![&#x200B; ソースワークフローのレビューインターフェイス &#x200B;](../../../../images/tutorials/create/demandbase/review.png)
 
 ## 次の手順
 
@@ -99,12 +99,12 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング ](../../../../../dataflows/ui/monitor-sources.md) のチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング &#x200B;](../../../../../dataflows/ui/monitor-sources.md) のチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 ](../../update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するチュートリアルを参照してください。
 
 ### データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 ](../../delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 &#x200B;](../../delete.md) のチュートリアルを参照してください。

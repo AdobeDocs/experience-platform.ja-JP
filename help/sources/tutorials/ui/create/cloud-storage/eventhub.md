@@ -50,7 +50,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用して [!
 | SAS キー名 | 承認ルールの名前。SAS キー名とも呼ばれます。 |
 | SAS キー | [!DNL Event Hub] 名前空間のプライマリキー。 [!DNL Event Hubs] リストを入力するには、`sasKey` が対応する `sasPolicy` に `manage` 権限が設定されている必要があります。 |
 | 名前空間 | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
-| イベントハブ名 | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
+| イベントハブ名 | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
@@ -61,7 +61,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用して [!
 | クライアントシークレットの値 | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
 | 名前空間 | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
 
-[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
+[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
 
 >[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
@@ -71,9 +71,9 @@ Adobe Experience Platform ユーザーインターフェイスを使用して [!
 | クライアント ID | アプリに割り当てられたアプリケーション ID。 この ID は、[!DNL Azure Active Directory] ーザーを登録した [!DNL Microsoft Entra ID] ポータルから取得できます。 |
 | クライアントシークレットの値 | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
 | 名前空間 | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
-| イベントハブ名 | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
+| イベントハブ名 | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 
-[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
+[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド &#x200B;](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
 
 >[!ENDTABS]
 
@@ -87,7 +87,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 [!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Azure Event Hubs]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Azure Event Hubs が選択されているソースカタログ ](../../../../images/tutorials/create/eventhub/catalog.png)
+![Azure Event Hubs が選択されているソースカタログ &#x200B;](../../../../images/tutorials/create/eventhub/catalog.png)
 
 **[!UICONTROL Azure Event Hubs に接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -95,7 +95,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のアカウントを使用するには、使用する [!DNL Event Hubs] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ 既存の Azure Event Hubs ソースアカウントのリスト。](../../../../images/tutorials/create/eventhub/existing.png)
+![&#x200B; 既存の Azure Event Hubs ソースアカウントのリスト。](../../../../images/tutorials/create/eventhub/existing.png)
 
 ### 新規アカウント
 
@@ -105,7 +105,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Event Hubs] アカウントの名前と説明（オプション）を入力します。
 
-![Azure Event Hubs の新しいアカウント作成インターフェイス ](../../../../images/tutorials/create/eventhub/new.png)
+![Azure Event Hubs の新しいアカウント作成インターフェイス &#x200B;](../../../../images/tutorials/create/eventhub/new.png)
 
 >[!BEGINTABS]
 
@@ -123,23 +123,23 @@ SAS 認証を使用して [!DNL Event Hubs] アカウントを作成するには
 
 認証資格情報を入力したら、「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Azure Event Hubs の SAS 認証インターフェイス ](../../../../images/tutorials/create/eventhub/sas.png)
+![Azure Event Hubs の SAS 認証インターフェイス &#x200B;](../../../../images/tutorials/create/eventhub/sas.png)
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
 Event Hub Azure Active Directory 認証で [!DNL Event Hubs] アカウントを作成するには、「[!UICONTROL &#x200B; アカウント認証 &#x200B;]」ドロップダウンメニューを使用して、「**[!UICONTROL Event Hub Azure Active Directory]**」を選択します。 次に、[!UICONTROL &#x200B; テナント ID]、[!UICONTROL &#x200B; クライアント ID]、[!UICONTROL &#x200B; クライアントシークレット値 &#x200B;]、および [!UICONTROL &#x200B; 名前空間 &#x200B;] の値を指定します。
 
-![Azure Event Hub Azure Active Directory 認証 ](../../../../images/tutorials/create/eventhub/active-directory.png)
+![Azure Event Hub Azure Active Directory 認証 &#x200B;](../../../../images/tutorials/create/eventhub/active-directory.png)
 
 >[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
 Event Hub スコープ Azure Active Directory 認証の [!DNL Event Hubs] アカウントを作成するには、[[!UICONTROL &#x200B; アカウント認証 &#x200B;]] ドロップダウン メニューを使用し、[**[!UICONTROL Event Hub スコープ Azure Active Directory]**] を選択します。 次に、[!UICONTROL &#x200B; テナント ID]、[!UICONTROL &#x200B; クライアント ID]、[!UICONTROL &#x200B; クライアントシークレット値 &#x200B;]、[!UICONTROL &#x200B; 名前空間 &#x200B;]、[!UICONTROL &#x200B; イベントハブ名 &#x200B;] の値を指定します。
 
-![Azure Activity Directory 認証を範囲とする Azure イベントハブ ](../../../../images/tutorials/create/eventhub/scoped.png)
+![Azure Activity Directory 認証を範囲とする Azure イベントハブ &#x200B;](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Event Hubs] アカウントをExperience Platformに接続しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/streaming/cloud-storage-streaming.md) ことができます。
+このチュートリアルでは、[!DNL Event Hubs] アカウントをExperience Platformに接続しました。 次のチュートリアルに進み、[&#x200B; データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む &#x200B;](../../dataflow/streaming/cloud-storage-streaming.md) ことができます。

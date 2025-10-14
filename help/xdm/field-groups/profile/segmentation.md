@@ -17,13 +17,13 @@ ht-degree: 20%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、セグメントメンバーシップに関する情報（個人が属するセグメント、最終選定時間、メンバーシップの有効期限など）を取得する単一のマップフィールドを提供します。
+[!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、セグメントメンバーシップに関する情報（個人が属するセグメント、最終選定時間、メンバーシップの有効期限など）を取得する単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
 >`segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力したり、更新したりしないでください。 セグメント化ジョブの実行時に、システムによって各プロファイルの `segmentMembership` マップが自動的に更新されます。
 
-![ プロファイルセグメント化 ](../../images/data-types/profile-segmentation.png){width=400}
+![&#x200B; プロファイルセグメント化 &#x200B;](../../images/data-types/profile-segmentation.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -86,5 +86,5 @@ ht-degree: 20%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

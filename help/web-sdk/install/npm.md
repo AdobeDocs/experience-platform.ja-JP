@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # NPM パッケージを使用して web SDKをインストールします
 
-Adobe Experience Platform Web SDKは、[NPM パッケージ ](https://www.npmjs.com) として入手できます。 NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript ライブラリのビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015 （ES6）モジュールを公開します。
+Adobe Experience Platform Web SDKは、[NPM パッケージ &#x200B;](https://www.npmjs.com) として入手できます。 NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript ライブラリのビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015 （ES6）モジュールを公開します。
 
 ```bash
 npm install @adobe/alloy
@@ -30,7 +30,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->NPM パッケージは CommonJS モジュールに依存しているので、バンドラーを使用する場合は、バンドラーが CommonJS モジュールをサポートしていることを確認します。 [Rollup](https://rollupjs.org) などの一部のバンドラーには、CommonJS のサポートを提供する [ プラグイン ](https://www.npmjs.com/package/@rollup/plugin-commonjs) が必要です。
+>NPM パッケージは CommonJS モジュールに依存しているので、バンドラーを使用する場合は、バンドラーが CommonJS モジュールをサポートしていることを確認します。 [Rollup](https://rollupjs.org) などの一部のバンドラーには、CommonJS のサポートを提供する [&#x200B; プラグイン &#x200B;](https://www.npmjs.com/package/@rollup/plugin-commonjs) が必要です。
 
 ## ECMAScript 5 モジュールとしてのパッケージの使用
 

@@ -30,7 +30,7 @@ Web SDK 2.25.0 以降でサポートされています。
 
 ## Web SDK タグ拡張機能を使用したコレクション設定のクリック
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の際には、次のいずれかのオプションを選択します。
+[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の際には、次のいずれかのオプションを選択します。
 
 * [!UICONTROL &#x200B; 内部リンクの収集 &#x200B;]
    * [!UICONTROL &#x200B; イベントのグループ化オプション &#x200B;]:

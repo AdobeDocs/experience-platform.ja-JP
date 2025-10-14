@@ -11,24 +11,24 @@ ht-degree: 42%
 
 # Flow Service API を使用した [!DNL Oracle NetSuite Entities] のソース接続とデータフローの作成
 
-[!DNL Oracle NetSuite Activities Entities]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) アカウントからAdobe Experience Platformに連絡先と顧客データを取り込む方法については、次のチュートリアルをお読みください。
+[!DNL Oracle NetSuite Activities Entities]API[[!DNL Flow Service]  を使用して &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) アカウントからAdobe Experience Platformに連絡先と顧客データを取り込む方法については、次のチュートリアルをお読みください。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Oracle NetSuite Entities] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Flow Service] ています。
 
 ### 認証
 
-認証資格情報の取得方法について詳しくは、[[!DNL Oracle NetSuite]  概要 ](../../../../connectors/marketing-automation/oracle-netsuite.md) を参照してください。
+認証資格情報の取得方法について詳しくは、[[!DNL Oracle NetSuite]  概要 &#x200B;](../../../../connectors/marketing-automation/oracle-netsuite.md) を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## [!DNL Oracle NetSuite Entities] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
@@ -83,10 +83,10 @@ curl -X POST \
 | `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
-| `auth.params.clientId` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `7fce.....b42f` に似た 64 文字の文字列です。 |
-| `auth.params.clientSecret` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `5c98.....1b46` に似た 64 文字の文字列です。 |
+| `auth.params.clientId` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[&#x200B; こちら &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `7fce.....b42f` に似た 64 文字の文字列です。 |
+| `auth.params.clientSecret` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[&#x200B; こちら &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `5c98.....1b46` に似た 64 文字の文字列です。 |
 | `auth.params.accessTokenUrl` | [!DNL NetSuite] アクセストークン URL。`https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` と同様に、ACCOUNT_ID を [!DNL NetSuite] アカウント ID に置き換えます。 |
-| `auth.params.accessToken` | アクセストークンの値は、[OAuth 2.0 認証コード付与フロー ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) チュートリアルの [ 手順 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) の最後に生成されます。 アクセストークンの有効期限は 60 分のみ有効です。 値は、`eyJr......f4V0` と同様の JSON web トークン（JWT）として書式設定された 1024 文字の文字列です。 |
+| `auth.params.accessToken` | アクセストークンの値は、[OAuth 2.0 認証コード付与フロー &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) チュートリアルの [&#x200B; 手順 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) の最後に生成されます。 アクセストークンの有効期限は 60 分のみ有効です。 値は、`eyJr......f4V0` と同様の JSON web トークン（JWT）として書式設定された 1024 文字の文字列です。 |
 
 **応答**
 
@@ -983,20 +983,20 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。

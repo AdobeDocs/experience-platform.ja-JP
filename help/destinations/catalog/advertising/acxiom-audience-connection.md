@@ -14,9 +14,9 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->[!DNL Acxiom Audience Connection] の宛先はベータ版です。 この宛先コネクタとドキュメントページは、[!DNL Acxiom] チームが作成および管理します。 お問い合わせや更新のリクエストについては、Acxiom に直接お問い合わせください [ こちら ](mailto:acxiom-adobe-help@acxiom.com)。
+>[!DNL Acxiom Audience Connection] の宛先はベータ版です。 この宛先コネクタとドキュメントページは、[!DNL Acxiom] チームが作成および管理します。 お問い合わせや更新のリクエストについては、Acxiom に直接お問い合わせください [&#x200B; こちら &#x200B;](mailto:acxiom-adobe-help@acxiom.com)。
 
-[!DNL Acxiom Audience Connection] の宛先を使用すると、[!DNL Acxiom's]Real ID™[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。
+[!DNL Acxiom Audience Connection] の宛先を使用すると、[!DNL Acxiom's]Real ID™[&#x200B; テクノロジー &#x200B;](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。
 
 このチュートリアルでは、[!DNL Acxiom Audience Connection] ユーザーインターフェイスを使用して [!DNL Adobe Experience Platform] 宛先コネクタを作成する手順を説明します。 このコネクタは、オーディエンスを作成し、選択した宛先に配信するために使用されます。
 
@@ -33,7 +33,7 @@ ht-degree: 14%
 ## 前提条件 {#prerequisites}
 
 * **利用条件を確認する：** 新しい [!DNL Acxiom Audience Connection] の宛先を設定する前に、利用条件を読み、署名す [!DNL Acxiom's] 必要があります。 実行した受注が完了すると、基本契約へのリンクが表示されます。 契約書に署名するまで、Experience Platformの宛先カタログに [!DNL Acxiom Audience Connection] の宛先カードは表示されません。 契約書に同意して署名すると、オンボーディングプロセス [!DNL Adobe] 完了し、[!DNL Acxiom Audience Connection] の宛先カードが表示されます。
-* **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 ](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
+* **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -61,14 +61,14 @@ ht-degree: 14%
 
 * **セグメントカテゴリ**：セグメントの対象となるターゲットカテゴリまたは垂直方向です。 例：金融サービス、自動車、医療など
 
-![LG 広告の宛先の詳細 ](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png)
+![LG 広告の宛先の詳細 &#x200B;](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png)
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -97,11 +97,11 @@ ht-degree: 14%
 | Phone | 個人の電話番号（市外局番+番号） <br> デフォルトでは、このフィールドは、レコードを一意にするための重複排除キーとして使用されます。 | × | 11 | 10 |
 
 **[!UICONTROL Source フィールド]** 列で、対応するターゲットフィールドにマッピングする各ソース属性の名前を入力するか、矢印アイコンを選択して **[!UICONTROL ソースフィールドを選択]** 画面を開きます。<br>
-![ マッピング画面 ](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
+![&#x200B; マッピング画面 &#x200B;](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 すべてのフィールドをマッピングしたら、「**[!UICONTROL 次へ]**」を選択します。
 
-標準スキーマを使用していない場合 [!DNL Adobe's]、クエリサービスを使用して [ 標準スキーマにフィールド名を入力する方法について詳しくは ](../../../query-service/ui/overview.md) クエリサービス UI ガイド [!DNL Adobe] ドキュメントを参照してください。
+標準スキーマを使用していない場合 [!DNL Adobe's]、クエリサービスを使用して [&#x200B; 標準スキーマにフィールド名を入力する方法について詳しくは &#x200B;](../../../query-service/ui/overview.md) クエリサービス UI ガイド [!DNL Adobe] ドキュメントを参照してください。
 
 ### レビュー {#review}
 
@@ -109,7 +109,7 @@ ht-degree: 14%
 
 結果に満足している場合は、「**[!UICONTROL 完了]**」を選択して、宛先をアクティベートします。
 
-![ オーディエンスをレビュー ](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
+![&#x200B; オーディエンスをレビュー &#x200B;](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
 ## トラブルシューティング {#troubleshooting}
 

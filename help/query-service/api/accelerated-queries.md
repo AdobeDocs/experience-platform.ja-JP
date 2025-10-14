@@ -18,7 +18,7 @@ Data Distiller SKU の一部である [Query Service API](https://developer.adob
 
 ## はじめに
 
-Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKU に関連する [ パッケージ ](../packaging.md) および [ ガードレール ](../guardrails.md#query-accelerated-store) および [ ライセンス ](../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKU に関連する [&#x200B; パッケージ &#x200B;](../packaging.md) および [&#x200B; ガードレール &#x200B;](../guardrails.md#query-accelerated-store) および [&#x200B; ライセンス &#x200B;](../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 以下の節では、 Query Service API を使用して、ステートレスな方法でクエリ高速ストアにアクセスするために必要な API 呼び出しについて説明します。各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 

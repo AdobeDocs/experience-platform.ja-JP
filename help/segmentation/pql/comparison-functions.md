@@ -12,7 +12,7 @@ ht-degree: 89%
 
 # 比較関数
 
-比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
 
 ## Equals
 

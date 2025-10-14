@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-`edgeDomain` プロパティを使用すると、Web SDK がデータを送信するドメインを変更できます。 このプロパティは、[ ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を使用している組織でよく使用されます。 データは組織自身のドメインに送信され、CNAME レコードがそのデータをAdobeに転送します。
+`edgeDomain` プロパティを使用すると、Web SDK がデータを送信するドメインを変更できます。 このプロパティは、[&#x200B; ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を使用している組織でよく使用されます。 データは組織自身のドメインに送信され、CNAME レコードがそのデータをAdobeに転送します。
 
-[ ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を設定する際に、組織がこのプロパティの正しい値を決定します。 通常、組織はこの目的で専用のサブドメインを使用します。 例えば、ドメイン `example.com` を使用する場合、`data.example.com` でファーストパーティ cookie を設定できます。
+[&#x200B; ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を設定する際に、組織がこのプロパティの正しい値を決定します。 通常、組織はこの目的で専用のサブドメインを使用します。 例えば、ドメイン `example.com` を使用する場合、`data.example.com` でファーストパーティ cookie を設定できます。
 
 ## Web SDK タグ拡張機能を使用したエッジドメインの設定
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL Edge ドメイン]**」テキストフィールドを設定します。
+[&#x200B; タグ拡張機能の設定 &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL Edge ドメイン]**」テキストフィールドを設定します。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。

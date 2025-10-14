@@ -136,18 +136,18 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | [[!UICONTROL &#x200B; コンテンツコンポーネント詳細 &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` が [!UICONTROL &#x200B; コンテンツコンポーネントの詳細 &#x200B;] から削除されました |
 | フィールドグループ | [[!UICONTROL AJO エンティティタグ &#x200B;]](https://github.com/adobe/xdm/pull/1672/files) | ジャーニーまたはキャンペーンに対応する [!UICONTROL AJO エンティティフィールド &#x200B;] にAJO エンティティタグを追加しました |
 | フィールドグループ | （複数） | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールドをいくつか追加しました &#x200B;]](https://github.com/adobe/xdm/pull/1671/files) |
-| フィールドグループ | （複数） | [ メディアレポート [!UICONTROL &#x200B; 用に複数の XDM イベントタイプを追加 &#x200B;]](https://github.com/adobe/xdm/pull/1670/files) ました。 |
+| フィールドグループ | （複数） | [&#x200B; メディアレポート [!UICONTROL &#x200B; 用に複数の XDM イベントタイプを追加 &#x200B;]](https://github.com/adobe/xdm/pull/1670/files) ました。 |
 | フィールドグループ | [!UICONTROL Workfront変更イベント &#x200B;] | `Full Record` フィールドグループと `Accessor Employee Ids` フィールドグループが追加されました。 |
 | データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL &#x200B; 払い戻し金額 &#x200B;] が追加され、項目の払い戻し金額が表示されました。 |
 | データタイプ | [[!UICONTROL &#x200B; 受注 &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | この注文の払い戻しのリストに [!UICONTROL &#x200B; 払い戻しリスト &#x200B;] が追加されました。 |
 | データタイプ | [[!UICONTROL &#x200B; 商品リスト項目 &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | この商品のカテゴリデータのリストに商品カテゴリを追加しました。 |
-| データタイプ | [!UICONTROL &#x200B; セッションの詳細情報 &#x200B;] | [ レポートに使用されるメディアストリームのタイプを示す ](https://github.com/adobe/xdm/pull/1676/files)`pev3` 文字列フィールドを追加しました。 また、リダイレクトが発生したかどうかを示す `pccr` プロパティも追加しました。 |
-| データタイプ | [!UICONTROL &#x200B; 購買依頼表 &#x200B;] | [ 要求リスト プロパティ ](https://github.com/adobe/xdm/pull/1675/files) を提供します。 名前、ID、説明が含まれます。 |
-| データタイプ | [!UICONTROL Commerce] | [Commerce データ型が更新され ](https://github.com/adobe/xdm/pull/1675/files)`requisitionListOpens`、`requisitionListAdds`、`requisitionListRemovals`、および `requisitionList` が含まれるようになりました。 |
+| データタイプ | [!UICONTROL &#x200B; セッションの詳細情報 &#x200B;] | [&#x200B; レポートに使用されるメディアストリームのタイプを示す &#x200B;](https://github.com/adobe/xdm/pull/1676/files)`pev3` 文字列フィールドを追加しました。 また、リダイレクトが発生したかどうかを示す `pccr` プロパティも追加しました。 |
+| データタイプ | [!UICONTROL &#x200B; 購買依頼表 &#x200B;] | [&#x200B; 要求リスト プロパティ &#x200B;](https://github.com/adobe/xdm/pull/1675/files) を提供します。 名前、ID、説明が含まれます。 |
+| データタイプ | [!UICONTROL Commerce] | [Commerce データ型が更新され &#x200B;](https://github.com/adobe/xdm/pull/1675/files)`requisitionListOpens`、`requisitionListAdds`、`requisitionListRemovals`、および `requisitionList` が含まれるようになりました。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、[XDM システムの概要 ](../../xdm/home.md) を参照してください。
+Experience Platformの XDM について詳しくは、[XDM システムの概要 &#x200B;](../../xdm/home.md) を参照してください。
 
 ## クエリサービス {#query-service}
 

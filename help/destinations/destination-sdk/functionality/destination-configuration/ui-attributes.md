@@ -110,9 +110,9 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 以下の画像に示すように、宛先にロゴアイコンを追加できます。
 
-![ アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![&#x200B; アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-宛先カードにロゴを追加するには、[ レビュー用に宛先を送信 ](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
+宛先カードにロゴを追加するには、[&#x200B; レビュー用に宛先を送信 &#x200B;](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
 
 ## 次の手順 {#next-steps}
 

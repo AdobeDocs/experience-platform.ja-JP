@@ -18,19 +18,19 @@ ht-degree: 13%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; 環境の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md) デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理的情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報をキャプチャするために使用されます。
+[!UICONTROL &#x200B; 環境の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラスの標準スキーマフィールドグループで &#x200B;](../../classes/experienceevent.md) デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理的情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報をキャプチャするために使用されます。
 
 ![](../../images/field-groups/environment-details.png){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `device` | [ デバイス ](../../data-types/device.md) | （通常は cookie で） セッションをまたいでトラッキング可能な、識別されたデバイス、アプリケーションまたはデバイスブラウザーインスタンスを表します。 |
+| `device` | [&#x200B; デバイス &#x200B;](../../data-types/device.md) | （通常は cookie で） セッションをまたいでトラッキング可能な、識別されたデバイス、アプリケーションまたはデバイスブラウザーインスタンスを表します。 |
 | `environment` | [環境](../../data-types/environment.md) | イベント観測の状況コンテキストに関する情報を表します。特に、ネットワークやソフトウェアバージョンなどの一時的な情報を説明します。 |
-| `placeContext` | [ 場所の背景 ](../../data-types/place-context.md) | イベントの観測に関連する一時的な状況を表します。 例えば、ロケール固有の情報（天気、現地時間、交通量、曜日、勤務日と休日、勤務時間など）が含まれます。 |
+| `placeContext` | [&#x200B; 場所の背景 &#x200B;](../../data-types/place-context.md) | イベントの観測に関連する一時的な状況を表します。 例えば、ロケール固有の情報（天気、現地時間、交通量、曜日、勤務日と休日、勤務時間など）が含まれます。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)

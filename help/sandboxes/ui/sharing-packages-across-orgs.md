@@ -15,11 +15,11 @@ ht-degree: 0%
 
 - **プライベートパッケージ**
 
-[ プライベートパッケージ ](#private-packages) は、ソース組織から共有リクエストを承認した組織とのみ共有できます。
+[&#x200B; プライベートパッケージ &#x200B;](#private-packages) は、ソース組織から共有リクエストを承認した組織とのみ共有できます。
 
 - **パブリックパッケージ**
 
-[ パブリックパッケージ ](#public-packages) は、追加の承認なしでインポートできます。 これらのパッケージは、パートナーの web サイト、ブログ、プラットフォームで共有できます。 パッケージペイロードを使用すると、これらのチャネルからターゲット組織にパッケージをコピーして貼り付けることができます。
+[&#x200B; パブリックパッケージ &#x200B;](#public-packages) は、追加の承認なしでインポートできます。 これらのパッケージは、パートナーの web サイト、ブログ、プラットフォームで共有できます。 パッケージペイロードを使用すると、これらのチャネルからターゲット組織にパッケージをコピーして貼り付けることができます。
 
 ## プライベートパッケージ {#private-packages}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 組織のパートナーシックリクエストを作成するには、「**[!UICONTROL サンドボックス]**&#x200B;**[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL パートナー組織を管理]**」を選択します。
 
-![ 「パートナー組織」タブと「パートナー組織を管理」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
+![&#x200B; 「パートナー組織」タブと「パートナー組織を管理」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
 [!UICONTROL &#x200B; パッケージパートナー管理 &#x200B;] ダイアログで、組織 ID を「**[!UICONTROL 組織 ID を入力]**」に入力し、Enter キー（Windows）または return キー（Mac）を押します。 組織 ID は、以下の **[!UICONTROL 選択した組織 ID]** の節に表示されます。 ID を追加したら、「**[!UICONTROL 確認]**」を選択します。
 
@@ -41,29 +41,29 @@ ht-degree: 0%
 >
 >コンマ区切りリストを使用するか、各組織 ID を入力してから enter キーを押すことにより、一度に複数の組織 ID を入力できます。
 
-![ 「組織 ID を入力」、「選択した組織 ID」、「確認」がハイライト表示されたパッケージパートナー組織ダイアログ ](../images/ui/sandbox-tooling/private-enter-org-id.png)
+![&#x200B; 「組織 ID を入力」、「選択した組織 ID」、「確認」がハイライト表示されたパッケージパートナー組織ダイアログ &#x200B;](../images/ui/sandbox-tooling/private-enter-org-id.png)
 
 共有リクエストがパートナー組織に正常に送信され、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パートナー組織]**」タブが表示され、「**[!UICONTROL 送信リクエスト]**」が表示されます。
 
-![ 送信リクエストがハイライト表示された「パートナー組織」タブ ](../images/ui/sandbox-tooling/private-outgoing-request.png)
+![&#x200B; 送信リクエストがハイライト表示された「パートナー組織」タブ &#x200B;](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
 ### パートナーシックリクエストを承認 {#authorize-request}
 
 組織のパートナーシックリクエストを承認するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL 受信リクエスト]**」を選択します。
 
-![ 「パートナー組織」タブと「受信リクエスト」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
+![&#x200B; 「パートナー組織」タブと「受信リクエスト」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
 この段階でのリクエストの現在の **[!UICONTROL ステータス]** は、**保留中** です。 リクエストを承認するには、選択したリクエストの横にある省略記号（`...`）を選択し、ドロップダウンから **[!UICONTROL 承認]** を選択します。
 
-![ 「承認」がハイライト表示されたドロップダウンメニューを表示する受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approve-partner-org.png)
+![&#x200B; 「承認」がハイライト表示されたドロップダウンメニューを表示する受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
 **[!UICONTROL パートナー組織リクエストを確認]** ダイアログに、組織パートナーシップリクエストの詳細が表示されます。 承認の [!UICONTROL &#x200B; 理由 &#x200B;] を入力し、「**[!UICONTROL 承認]**」を選択します。
 
-![ 「理由」と「承認」がハイライト表示されたパートナー組織リクエストを確認ダイアログ ](../images/ui/sandbox-tooling/private-approval-partner-org.png)
+![&#x200B; 「理由」と「承認」がハイライト表示されたパートナー組織リクエストを確認ダイアログ &#x200B;](../images/ui/sandbox-tooling/private-approval-partner-org.png)
 
 「[!UICONTROL &#x200B; 受信リクエスト &#x200B;]」ページが開き、リクエストのステータスが「承認済み **[!UICONTROL に更新されました]**。
 
-![ 承認済みがハイライト表示された受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approved-partner-org.png)
+![&#x200B; 承認済みがハイライト表示された受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
 このワークフロー/プロセスを使用して、組織とソース組織の間でパッケージを共有します。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 複数オブジェクトパッケージを承認済みのパートナー組織に共有するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
 
-![ パッケージを共有がハイライト表示されたドロップダウンメニューを表示するパッケージのリスト。](../images/ui/sandbox-tooling/private-share-package.png)
+![&#x200B; パッケージを共有がハイライト表示されたドロップダウンメニューを表示するパッケージのリスト。](../images/ui/sandbox-tooling/private-share-package.png)
 
 **[!UICONTROL パッケージを共有]** ダイアログの「**[!UICONTROL 設定を共有]**」ドロップダウンで、パッケージを共有する組織を選択し、「**[!UICONTROL 確認]**」を選択します。
 
@@ -85,13 +85,13 @@ ht-degree: 0%
 >
 >複数の組織を選択できます。 選択した組織は、[!UICONTROL &#x200B; 共有設定 &#x200B;] ドロップダウンの下に表示されます。
 
-![ 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ ](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+![&#x200B; 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ &#x200B;](../images/ui/sandbox-tooling/private-share-package-confirm.png)
 
 #### サンドボックスパッケージ全体の共有 {#entire-sandbox-packages}
 
 サンドボックスパッケージ全体を承認済みパートナー組織に共有するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;] **[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
 
-![ パッケージのリストを表示する「パッケージ」タブ。ドロップダウンメニューが表示されます。](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+![&#x200B; パッケージのリストを表示する「パッケージ」タブ。ドロップダウンメニューが表示されます。](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
 
 **[!UICONTROL パッケージを共有]** ダイアログの「**[!UICONTROL 設定を共有]**」ドロップダウンで、パッケージを共有する組織を選択し、「**[!UICONTROL 確認]**」を選択します。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 >
 >複数の組織を選択できます。 選択した組織は、[!UICONTROL &#x200B; 共有設定 &#x200B;] ドロップダウンの下に表示されます。
 
-![ 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ ](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+![&#x200B; 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ &#x200B;](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
 
 
 ## 公開パッケージ {#public-packages}
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 パッケージの可用性タイプを更新するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）を選択し、ドロップダウンメニューから **[!UICONTROL 公開パッケージに更新]** を選択します。
 
-![ 「パッケージ」タブと「パブリックパッケージに更新」が強調表示されたドロップダウンオプションメニューを持つサンドボックス UI](../images/ui/sandbox-tooling/update-to-public.png)
+![&#x200B; 「パッケージ」タブと「パブリックパッケージに更新」が強調表示されたドロップダウンオプションメニューを持つサンドボックス UI](../images/ui/sandbox-tooling/update-to-public.png)
 
 **[!UICONTROL パッケージの可用性を公開に変更]** ダイアログで、パッケージ名が正しいことを確認し、「**[!UICONTROL 確認]**」を選択します。
 
@@ -118,38 +118,38 @@ ht-degree: 0%
 >
 > パッケージを公開すると、プライベートに戻すことはできません。
 
-![ 「確認」がハイライト表示されたパッケージの可用性を公開ダイアログに変更 ](../images/ui/sandbox-tooling/change-package-availability.png)
+![&#x200B; 「確認」がハイライト表示されたパッケージの可用性を公開ダイアログに変更 &#x200B;](../images/ui/sandbox-tooling/change-package-availability.png)
 
 ### パッケージペイロードを使用したパッケージの共有
 
 公開パッケージを共有するには、パッケージの横にある省略記号（`...`）を選択し、「**[!UICONTROL パッケージペイロードをコピー]**」を選択します。
 
-![ 個々のパッケージのドロップダウンメニューが表示され、「パッケージペイロードをコピー」がハイライト表示されたサンドボックス UI。](../images/ui/sandbox-tooling/copy-package-payload.png)
+![&#x200B; 個々のパッケージのドロップダウンメニューが表示され、「パッケージペイロードをコピー」がハイライト表示されたサンドボックス UI。](../images/ui/sandbox-tooling/copy-package-payload.png)
 
 **[!UICONTROL パッケージペイロードをコピー]** ダイアログに、パッケージ名とペイロードが表示されます。 **[!UICONTROL パッケージペイロードをコピー]** を選択して、パッケージに関連付けられたペイロードをコピーします。
 
-![ 「パッケージペイロードをコピー」がハイライト表示された JSON ペイロードを示す「パッケージペイロードをコピー」ダイアログボックス。](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+![&#x200B; 「パッケージペイロードをコピー」がハイライト表示された JSON ペイロードを示す「パッケージペイロードをコピー」ダイアログボックス。](../images/ui/sandbox-tooling/confirm-payload-copy.png)
 
 ### パッケージペイロードを使用して新しいパッケージを作成します
 
 パッケージペイロードを使用してパッケージを作成するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]** タブに移動します。 次に、「**[!UICONTROL パッケージを作成]**」を選択します。
 
-![ 「パッケージを作成」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/create-package.png)
+![&#x200B; 「パッケージを作成」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/create-package.png)
 
 **[!UICONTROL パッケージを作成]** ダイアログで、**[!UICONTROL パッケージペイロードを貼り付け]** するオプションを選択してから **[!UICONTROL 選択]** を選択します。
 
-![ 「パッケージペイロードを貼り付け」を選択し、「選択」がハイライト表示されたパッケージを作成ダイアログ ](../images/ui/sandbox-tooling/create-package-options.png)
+![&#x200B; 「パッケージペイロードを貼り付け」を選択し、「選択」がハイライト表示されたパッケージを作成ダイアログ &#x200B;](../images/ui/sandbox-tooling/create-package-options.png)
 
 コピーしたパッケージペイロードをテキストフィールドに貼り付けて、「作成 **[!UICONTROL を選択し]** す。
 
-![ 空のテキストフィールドと「作成」がハイライト表示されたパッケージを作成ダイアログ ](../images/ui/sandbox-tooling/paste-payload.png)
+![&#x200B; 空のテキストフィールドと「作成」がハイライト表示されたパッケージを作成ダイアログ &#x200B;](../images/ui/sandbox-tooling/paste-payload.png)
 
 共有リクエストの現在のステータスを表示するには、**[!UICONTROL 共有ステータス]** に移動します。 リクエストの現在のステータスは、「**[!UICONTROL 共有ステータス]** 列に表示されます。
 
-![ 保留中のペイロードリクエストが表示されている「共有ステータス」タブ ](../images/ui/sandbox-tooling/sharing-status.png)
+![&#x200B; 保留中のペイロードリクエストが表示されている「共有ステータス」タブ &#x200B;](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、サンドボックスツール機能を使用して、様々な組織でパッケージを共有する方法について説明しました。 詳しくは、[ サンドボックスツールガイド ](../ui/sandbox-tooling.md) を参照してください。
+このドキュメントでは、サンドボックスツール機能を使用して、様々な組織でパッケージを共有する方法について説明しました。 詳しくは、[&#x200B; サンドボックスツールガイド &#x200B;](../ui/sandbox-tooling.md) を参照してください。
 
-Sandbox API を使用して様々な操作を実行する方法については、『 [ サンドボックス開発者ガイド ](../api/getting-started.md) 』を参照してください。 Experience Platformのサンドボックスの概要については、[ 概要ドキュメント ](../home.md) を参照してください。
+Sandbox API を使用して様々な操作を実行する方法については、『 [&#x200B; サンドボックス開発者ガイド &#x200B;](../api/getting-started.md) 』を参照してください。 Experience Platformのサンドボックスの概要については、[&#x200B; 概要ドキュメント &#x200B;](../home.md) を参照してください。

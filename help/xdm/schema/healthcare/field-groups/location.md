@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # [!UICONTROL &#x200B; 場所 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL Location] は、[[!DNL Location]  クラス ](../classes/location.md) の標準スキーマフィールドグループです。 場所の詳細と位置情報を取得する単一のオブジェクトタイプフィールド `healthcareLocation` を提供します。
+[!UICONTROL Location] は、[[!DNL Location]  クラス &#x200B;](../classes/location.md) の標準スキーマフィールドグループです。 場所の詳細と位置情報を取得する単一のオブジェクトタイプフィールド `healthcareLocation` を提供します。
 
-![ フィールドグループ構造 ](../../../images/healthcare/field-groups/location.png)
+![&#x200B; フィールドグループ構造 &#x200B;](../../../images/healthcare/field-groups/location.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
@@ -41,5 +41,5 @@ ht-degree: 6%
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.schema.json)

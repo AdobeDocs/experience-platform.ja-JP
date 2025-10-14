@@ -15,7 +15,7 @@ Experience Platform は、ID 名前空間を使用して、特定の ID のタ�
 
 作成する宛先のタイプ（ストリーミングまたはファイルベース）に応じて、次の ID 名前空間要件に注意してください。
 
-* Destination SDKでリアルタイム（ストリーミング）宛先を作成する場合、ユーザーがプロファイル属性や ID をマッピングできる [ パートナースキーマの設定 ](schema-configuration.md) に加えて、宛先プラットフォームでサポートされている *少なくとも 1 つ* ID 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化されたメールと [!DNL IDFA] を受け入れる場合、これら 2 つの ID をとして定義する必要があります [ 詳しくは、このドキュメントの後半で説明します ](#supported-parameters)。
+* Destination SDKでリアルタイム（ストリーミング）宛先を作成する場合、ユーザーがプロファイル属性や ID をマッピングできる [&#x200B; パートナースキーマの設定 &#x200B;](schema-configuration.md) に加えて、宛先プラットフォームでサポートされている *少なくとも 1 つ* ID 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化されたメールと [!DNL IDFA] を受け入れる場合、これら 2 つの ID をとして定義する必要があります [&#x200B; 詳しくは、このドキュメントの後半で説明します &#x200B;](#supported-parameters)。
 
   >[!IMPORTANT]
   >
@@ -31,7 +31,7 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 * ユーザーは、[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
 * ユーザーは、[カスタム ID 名前空間](../../../../identity-service/features/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して、サポートされる ID 名前空間を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -100,7 +100,7 @@ ID について詳しくは、[ID 名前空間の概要](../../../../identity-se
 
 Experience Platformのお客様は、ハッシュ化された形式またはプレーンテキストでExperience Platformにデータを取り込むことを選択できます。 宛先プラットフォームがハッシュ化されたデータとハッシュ化されていないデータの両方を受け入れる場合、宛先に書き出される際に、Experience Platformがソースフィールド値をハッシュ化する必要があるかどうかを顧客が選択できるようにすることができます。
 
-以下の設定は、Experience Platform UI のマッピング手順でオプションの [ 変換を適用 ](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) オプションを有効にします。
+以下の設定は、Experience Platform UI のマッピング手順でオプションの [&#x200B; 変換を適用 &#x200B;](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) オプションを有効にします。
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{

@@ -22,10 +22,10 @@ ht-degree: 74%
 
 このチュートリアルでは、[!DNL Experience Data Model] （XDM）システムに関する十分な知識が必要です。 このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
 
-- [XDM システムの概要 ](../home.md): XDM と [!DNL Experience Platform] での実装の概要。
+- [XDM システムの概要 &#x200B;](../home.md): XDM と [!DNL Experience Platform] での実装の概要。
 - [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的なコンポーネントの概要。
 
-このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+このチュートリアルを開始する前に、[&#x200B; 開発者ガイド &#x200B;](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 ## アドホッククラスの作成
 
@@ -311,4 +311,4 @@ curl -X GET \
 
 このチュートリアルに従い、新しいアドホックスキーマを作成しました。別のチュートリアルの一部としてこのドキュメントにたどり着いた場合は、アドホックスキーマの `$id` を使用し、指示に従ってワークフローを完了することができるようになりました。
 
-[!DNL Schema Registry] API の使用に関する詳細は、[ 開発者ガイド ](../api/getting-started.md) を参照してください。
+[!DNL Schema Registry] API の使用に関する詳細は、[&#x200B; 開発者ガイド &#x200B;](../api/getting-started.md) を参照してください。

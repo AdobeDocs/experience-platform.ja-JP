@@ -23,8 +23,8 @@ ht-degree: 45%
 
 [!DNL Azure Event Hubs] ストレージへのリアルタイムアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
-* [!DNL Azure Event Hubs] について詳しくは、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) を参照してください。
-* プログラムによってに接続する [!DNL Azure Event Hubs] は、[ ストリーミング宛先 API チュートリアル ](../../api/streaming-destinations.md) を参照してください。
+* [!DNL Azure Event Hubs] について詳しくは、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) を参照してください。
+* プログラムによってに接続する [!DNL Azure Event Hubs] は、[&#x200B; ストリーミング宛先 API チュートリアル &#x200B;](../../api/streaming-destinations.md) を参照してください。
 * Experience Platform ユーザーインターフェイスを使用して [!DNL Azure Event Hubs] に接続するには、以下の節を参照してください。
 
 ![UI でのAWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -41,7 +41,7 @@ ht-degree: 45%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -65,7 +65,7 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -73,24 +73,24 @@ ht-degree: 45%
 
 #### 標準認証 {#standard-authentication}
 
-![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
 **[!UICONTROL 標準認証]** タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
 * **[!UICONTROL SAS キー名]**：認証ルールの名前。SAS キー名とも呼ばれます。
-* **[!UICONTROL SAS キー]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
-* **[!UICONTROL 名前空間]**:[!DNL Azure Event Hubs] 名前空間を入力します。 [!DNL Azure Event Hubs] 名前空間について詳しくは、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
+* **[!UICONTROL SAS キー]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+* **[!UICONTROL 名前空間]**:[!DNL Azure Event Hubs] 名前空間を入力します。 [!DNL Azure Event Hubs] 名前空間について詳しくは、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 
 #### 共有アクセス署名（SAS）認証 {#sas-authentication}
 
-![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 **[!UICONTROL 標準認証]** タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
 * **[!UICONTROL SAS キー名]**：認証ルールの名前。SAS キー名とも呼ばれます。
-* **[!UICONTROL SAS キー]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
-* **[!UICONTROL 名前空間]**:[!DNL Azure Event Hubs] 名前空間を入力します。 [!DNL Azure Event Hubs] 名前空間について詳しくは、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
-* **[!UICONTROL イベントハブ名]**:[!DNL Azure Event Hub] ーザー名を入力します。 [!DNL Azure Event Hubs] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
+* **[!UICONTROL SAS キー]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+* **[!UICONTROL 名前空間]**:[!DNL Azure Event Hubs] 名前空間を入力します。 [!DNL Azure Event Hubs] 名前空間について詳しくは、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
+* **[!UICONTROL イベントハブ名]**:[!DNL Azure Event Hub] ーザー名を入力します。 [!DNL Azure Event Hubs] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -106,7 +106,7 @@ ht-degree: 45%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![Azure Event Hubs 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+![Azure Event Hubs 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
 * **[!UICONTROL 名前]**：接続の名前を入力し [!DNL Azure Event Hubs] す。
 * **[!UICONTROL 説明]**：接続の説明を入力します。  例：「Premium 層のお客様」、「Kitesheving に興味のあるお客様」。
@@ -124,10 +124,10 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* [ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、Azure Event Hubs 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* [&#x200B; 同意ポリシーの評価 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、Azure Event Hubs 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
-この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 
@@ -147,7 +147,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Azure Event Hubs] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>**メモ**:Azure Event Hubs 宛先の書き出し動作は、2025 年 9 月リリースで更新されました。 以下で強調表示されている新しい動作は、現在、このリリース以降に作成された新しい Azure Event Hubs 宛先にのみ適用されます。 既存の Azure Event Hubs 宛先の場合、古い書き出し動作を引き続き使用するか、Adobeに連絡して、マッピングされたオーディエンスのみが書き出される新しい動作に移行できます。 すべての組織は、2026 年に徐々に新しい動作に移行されます。<br><br> <span class="preview"> **新しい書き出し動作**：宛先にマッピングされ、変更されたセグメントは、segmentMembership オブジェクトに含まれます。 シナリオによっては、複数の呼び出しを使用して書き出される場合があります。また、シナリオによっては、変更されていない一部のセグメントも呼び出しに含まれる場合があります。いずれの場合も、データフローでマッピングされたセグメントのみが書き出されます。</span></li><br>**古い動作**:`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。 これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ [ 結合ポリシー ](/help/profile/merge-policies/overview.md) に属する場合、プロファイルが選定された他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 <li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Azure Event Hubs] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Azure Event Hubs] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>**メモ**:Azure Event Hubs 宛先の書き出し動作は、2025 年 9 月リリースで更新されました。 以下で強調表示されている新しい動作は、現在、このリリース以降に作成された新しい Azure Event Hubs 宛先にのみ適用されます。 既存の Azure Event Hubs 宛先の場合、古い書き出し動作を引き続き使用するか、Adobeに連絡して、マッピングされたオーディエンスのみが書き出される新しい動作に移行できます。 すべての組織は、2026 年に徐々に新しい動作に移行されます。<br><br> <span class="preview"> **新しい書き出し動作**：宛先にマッピングされ、変更されたセグメントは、segmentMembership オブジェクトに含まれます。 シナリオによっては、複数の呼び出しを使用して書き出される場合があります。また、シナリオによっては、変更されていない一部のセグメントも呼び出しに含まれる場合があります。いずれの場合も、データフローでマッピングされたセグメントのみが書き出されます。</span></li><br>**古い動作**:`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。 これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ [&#x200B; 結合ポリシー &#x200B;](/help/profile/merge-policies/overview.md) に属する場合、プロファイルが選定された他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 <li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Azure Event Hubs] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -155,9 +155,9 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 例えば、[!DNL Azure Event Hubs] の宛先に対するこのデータフローについて考えてみましょう。ここでは、3 つのオーディエンスがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
-![Amazon Kinesis 宛先のデータフロー ](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis 宛先のデータフロー &#x200B;](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクト（以下の [ 書き出されたデータ ](#exported-data) の節を参照）に、その特定のプロファイルがメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示されることがあります。 プロファイルが **デロリアンを保有する顧客** セグメントの対象となり、かつ **基本サイトアクティブおよび市区町村 – ダラス** セグメントのメンバーでもある場合、他の 2 つのオーディエンスもデータ書き出しの `segmentMembership` オブジェクトに存在します。これは、これらが **デロリアンを保有する顧客** セグメントと同じ結合ポリシーを共有する場合、データフローでマッピングされるためです。
+宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクト（以下の [&#x200B; 書き出されたデータ &#x200B;](#exported-data) の節を参照）に、その特定のプロファイルがメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示されることがあります。 プロファイルが **デロリアンを保有する顧客** セグメントの対象となり、かつ **基本サイトアクティブおよび市区町村 – ダラス** セグメントのメンバーでもある場合、他の 2 つのオーディエンスもデータ書き出しの `segmentMembership` オブジェクトに存在します。これは、これらが **デロリアンを保有する顧客** セグメントと同じ結合ポリシーを共有する場合、データフローでマッピングされるためです。
 
 プロファイル属性の観点から、上記でマッピングした 4 つの属性に対する変更によって、書き出しの宛先が決定し、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
 
@@ -273,6 +273,6 @@ HTTP API 宛先へのリクエストが失敗した場合、Experience Platform 
 
 >[!MORELIKETHIS]
 >
->* [Azure Event Hubs に接続し、Flow Service API を使用してデータをアクティブ化する ](../../api/streaming-destinations.md)
->* [AWS Kinesis の宛先 ](./amazon-kinesis.md)
+>* [Azure Event Hubs に接続し、Flow Service API を使用してデータをアクティブ化する &#x200B;](../../api/streaming-destinations.md)
+>* [AWS Kinesis の宛先 &#x200B;](./amazon-kinesis.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)

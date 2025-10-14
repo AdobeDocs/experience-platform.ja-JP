@@ -16,17 +16,17 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->説明している ERD は、この業界のユースケースに合わせてデータをモデル化する方法の推奨事項です。 Experience Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で構築する必要があります。 詳しくは、UI での [ スキーマ ](../../ui/resources/schemas.md) および [ 関係 ](../../tutorials/relationship-ui.md) の管理に関するガイドを参照してください。
+>説明している ERD は、この業界のユースケースに合わせてデータをモデル化する方法の推奨事項です。 Experience Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で構築する必要があります。 詳しくは、UI での [&#x200B; スキーマ &#x200B;](../../ui/resources/schemas.md) および [&#x200B; 関係 &#x200B;](../../tutorials/relationship-ui.md) の管理に関するガイドを参照してください。
 
 次の凡例を使用して、この ERD を解釈します。
 
-* に示されている各エンティティは、基になる [ エクスペリエンスデータモデル（XDM）クラス ](../composition.md#class) に基づいています。
+* に示されている各エンティティは、基になる [&#x200B; エクスペリエンスデータモデル（XDM）クラス &#x200B;](../composition.md#class) に基づいています。
 * 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールド（サブフィールド）を表します。
 * 特定のエンティティで最も重要なフィールドは、赤でハイライト表示されます。
 * 個々の顧客の識別に使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの 1 つは「プライマリ ID」としてマークされます。
 * エンティティ関係は、cookie ベースのイベントでは多くの場合、トランザクションを行った個人を特定できないので、非依存としてマークされます。
 
-![ 旅行ホスピタリティデータモデルの ERD の例 ](../../images/industries/travel-hospitality.png)
+![&#x200B; 旅行ホスピタリティデータモデルの ERD の例 &#x200B;](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ ht-degree: 4%
 
 | ユースケース | 推奨されるクラスおよびフィールドグループ |
 | --- | --- |
-| 今後のホテル予約で、市場内のお客様やゲストにクロスセルのダイニングやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 人口統計の詳細 ](../../field-groups/profile/demographic-details.md)</li><li>[ 個人の連絡先の詳細 ](../../field-groups/profile/personal-contact-details.md)</li><li>[ 仕事用連絡先の詳細 ](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
-| 今後のホテル予約で、インマーケットのお客様やゲストにダイニングやその他の居住者のアトラクションをアップセル。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 人口統計の詳細 ](../../field-groups/profile/demographic-details.md)</li><li>[ 個人の連絡先の詳細 ](../../field-groups/profile/personal-contact-details.md)</li><li>[ 仕事用連絡先の詳細 ](../../field-groups/profile/work-contact-details.md)</li><li>[ ロイヤルティの詳細 ](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
-| 今後のホテル予約を持つ市場内のお客様やゲストにアップセルのホテルやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 人口統計の詳細 ](../../field-groups/profile/demographic-details.md)</li><li>[ 個人の連絡先の詳細 ](../../field-groups/profile/personal-contact-details.md)</li><li>[ 仕事用連絡先の詳細 ](../../field-groups/profile/work-contact-details.md)</li><li>[ ロイヤルティの詳細 ](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
-| 今後のホテル予約を持つ市場内のお客様やゲストにアップセルのフライトやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[フライト予約](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 人口統計の詳細 ](../../field-groups/profile/demographic-details.md)</li><li>[ 個人の連絡先の詳細 ](../../field-groups/profile/personal-contact-details.md)</li><li>[ 仕事用連絡先の詳細 ](../../field-groups/profile/work-contact-details.md)</li><li>[ ロイヤルティの詳細 ](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| 今後のホテル予約で、市場内のお客様やゲストにクロスセルのダイニングやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[&#x200B; 人口統計の詳細 &#x200B;](../../field-groups/profile/demographic-details.md)</li><li>[&#x200B; 個人の連絡先の詳細 &#x200B;](../../field-groups/profile/personal-contact-details.md)</li><li>[&#x200B; 仕事用連絡先の詳細 &#x200B;](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
+| 今後のホテル予約で、インマーケットのお客様やゲストにダイニングやその他の居住者のアトラクションをアップセル。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[&#x200B; 人口統計の詳細 &#x200B;](../../field-groups/profile/demographic-details.md)</li><li>[&#x200B; 個人の連絡先の詳細 &#x200B;](../../field-groups/profile/personal-contact-details.md)</li><li>[&#x200B; 仕事用連絡先の詳細 &#x200B;](../../field-groups/profile/work-contact-details.md)</li><li>[&#x200B; ロイヤルティの詳細 &#x200B;](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| 今後のホテル予約を持つ市場内のお客様やゲストにアップセルのホテルやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[&#x200B; 人口統計の詳細 &#x200B;](../../field-groups/profile/demographic-details.md)</li><li>[&#x200B; 個人の連絡先の詳細 &#x200B;](../../field-groups/profile/personal-contact-details.md)</li><li>[&#x200B; 仕事用連絡先の詳細 &#x200B;](../../field-groups/profile/work-contact-details.md)</li><li>[&#x200B; ロイヤルティの詳細 &#x200B;](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| 今後のホテル予約を持つ市場内のお客様やゲストにアップセルのフライトやその他の居住者のアトラクション。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[フライト予約](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[&#x200B; 人口統計の詳細 &#x200B;](../../field-groups/profile/demographic-details.md)</li><li>[&#x200B; 個人の連絡先の詳細 &#x200B;](../../field-groups/profile/personal-contact-details.md)</li><li>[&#x200B; 仕事用連絡先の詳細 &#x200B;](../../field-groups/profile/work-contact-details.md)</li><li>[&#x200B; ロイヤルティの詳細 &#x200B;](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}

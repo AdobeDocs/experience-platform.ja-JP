@@ -17,17 +17,17 @@ ht-degree: 19%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL &#x200B; キャンペーンマーケティング詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、キャンペーングループ、名前、トラッキングコードなどのマーケティングキャンペーン情報を記述するために使用されます。
+[!UICONTROL &#x200B; キャンペーンマーケティング詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス &#x200B;](../../classes/experienceevent.md) の標準スキーマフィールドグループで、キャンペーングループ、名前、トラッキングコードなどのマーケティングキャンペーン情報を記述するために使用されます。
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `marketing` | [ マーケティング ](../../data-types/marketing.md) | キャンペーングループ、名前、トラッキングコードなど、マーケティングキャンペーン情報を説明するオブジェクト。 |
+| `marketing` | [&#x200B; マーケティング &#x200B;](../../data-types/marketing.md) | キャンペーングループ、名前、トラッキングコードなど、マーケティングキャンペーン情報を説明するオブジェクト。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
-* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
+* [&#x200B; 入力された例 &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [&#x200B; 完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

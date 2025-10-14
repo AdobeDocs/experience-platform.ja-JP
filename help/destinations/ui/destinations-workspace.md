@@ -32,7 +32,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 「**[!UICONTROL カタログ]**」タブには、データを送信できる [!DNL Experience Platform] で使用可能なすべての宛先のリストが表示されます。
 
-![ 複数の宛先が表示されている宛先カタログ ](../assets/ui/workspace/catalog.png)
+![&#x200B; 複数の宛先が表示されている宛先カタログ &#x200B;](../assets/ui/workspace/catalog.png)
 
 [!DNL Experience Platform] ユーザーインターフェイスには、宛先カタログページに対して複数の検索およびフィルターオプションが用意されています。
 
@@ -40,7 +40,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 * **[!UICONTROL カテゴリ]**&#x200B;コントロールを使用した宛先のフィルタリング。
 * **[!UICONTROL すべての宛先]**&#x200B;と&#x200B;**[!UICONTROL 宛先]**&#x200B;を切り替えます。**[!UICONTROL すべての宛先]**&#x200B;を選択すると、使用可能なすべての [!DNL Experience Platform] の宛先が表示されます。 **[!UICONTROL 宛先]**&#x200B;を選択すると、接続を確立した宛先のみを表示できます。
 * 選択して、**[!UICONTROL 接続]**&#x200B;および／または&#x200B;**[!UICONTROL 拡張機能]**&#x200B;のタイプを表示します。 2 つのカテゴリの違いを理解するには、[宛先のタイプとカテゴリ](../destination-types.md)を参照してください。
-* サポートされている [ データタイプ ](/help/destinations/destination-sdk/functionality/destination-configuration/audience-data-type.md) に基づいて、使用可能な宛先をフィルタリングします。 人物オーディエンス、アカウントオーディエンス、見込み客オーディエンス、データセット書き出しから選択します。
+* サポートされている [&#x200B; データタイプ &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/audience-data-type.md) に基づいて、使用可能な宛先をフィルタリングします。 人物オーディエンス、アカウントオーディエンス、見込み客オーディエンス、データセット書き出しから選択します。
 
 宛先カードには、プライマリとセカンダリのコントロールオプションが含まれます。 主な制御には [!UICONTROL &#x200B; 設定 &#x200B;]、[!UICONTROL &#x200B; アクティブ化 &#x200B;]、[!UICONTROL &#x200B; オーディエンスをアクティブ化 &#x200B;] または [!UICONTROL &#x200B; データセットを書き出し &#x200B;] が含まれます。 セカンダリ制御を使用すると、オプションを表示できます。 これらの制御については、以下で説明します。
 
@@ -70,7 +70,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> [ 検索バー ](#search-browse) から特定のデータフローを検索し、[ サイドバーフィルター ](#filter-options-browse) を使用して結果をさらに絞り込みます。
+> [&#x200B; 検索バー &#x200B;](#search-browse) から特定のデータフローを検索し、[&#x200B; サイドバーフィルター &#x200B;](#filter-options-browse) を使用して結果をさらに絞り込みます。
 
 宛先の切替スイッチを **[!UICONTROL 有効/無効]** オンにすると、それぞれ **[!UICONTROL 有効]** または **[!UICONTROL 無効]** に設定されます。 また、**[!UICONTROL オーディエンス]**/**[!UICONTROL 参照]** を選択し、検査するオーディエンスを選択すると、データのフロー先を表示することもできます。
 
@@ -78,13 +78,13 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 >
 > ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 > 
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ オーディエンスをアクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL オーディエンスをアクティブ化]** コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ 宛先を編集コントロール ](/help/images/icons/edit.png)**[!UICONTROL &#x200B; 宛先を編集 &#x200B;]**&#x200B;コントロールを使用して、既存の宛先接続を編集します。 詳しくは、[ 宛先の編集 ](/help/destinations/ui/edit-destination.md) に関するチュートリアルを参照してください。
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ マーケティングアクションの編集コントロール ](/help/images/icons/edit-marketing-actions.svg)**[!UICONTROL マーケティングアクションの編集]** コントロールを使用して、選択した宛先の [ マーケティングアクションの変更 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行います。
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ 削除コントロール ](/help/images/icons/delete.png)**[!UICONTROL 削除]** コントロールを使用して、既存の宛先への接続を [ 削除 ](delete-destinations.md) します。
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ モニタリングで表示コントロール ](/help/images/icons/monitoring.png)**[!UICONTROL モニタリングで表示]** コントロールを使用して、[ モニタリングダッシュボード ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) にこの宛先のアクティブ化情報を表示します。
-> * `...` 名前 [!UICONTROL &#x200B; 列で省略記号（]）を選択し、![ アラートを購読 ](/help/images/icons/alert-add.png)**[!UICONTROL アラートを購読]** コントロールを使用して、宛先データフローアラートを購読できます。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートについて詳しくは、[ コンテキスト内宛先アラートの配信登録 ](alerts.md) を参照してください。
-> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ タグを管理 ](/help/images/icons/manage-tags.png)**[!UICONTROL タグを管理]** コントロールを使用して、宛先にタグを追加または宛先からタグを削除します。 タグの使用について詳しくは、[ 宛先タグの管理 ](#manage-tags) の節を参照してください。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; オーディエンスをアクティブ化コントロール &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL オーディエンスをアクティブ化]** コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; 宛先を編集コントロール &#x200B;](/help/images/icons/edit.png)**[!UICONTROL &#x200B; 宛先を編集 &#x200B;]**&#x200B;コントロールを使用して、既存の宛先接続を編集します。 詳しくは、[&#x200B; 宛先の編集 &#x200B;](/help/destinations/ui/edit-destination.md) に関するチュートリアルを参照してください。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; マーケティングアクションの編集コントロール &#x200B;](/help/images/icons/edit-marketing-actions.svg)**[!UICONTROL マーケティングアクションの編集]** コントロールを使用して、選択した宛先の [&#x200B; マーケティングアクションの変更 &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行います。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; 削除コントロール &#x200B;](/help/images/icons/delete.png)**[!UICONTROL 削除]** コントロールを使用して、既存の宛先への接続を [&#x200B; 削除 &#x200B;](delete-destinations.md) します。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; モニタリングで表示コントロール &#x200B;](/help/images/icons/monitoring.png)**[!UICONTROL モニタリングで表示]** コントロールを使用して、[&#x200B; モニタリングダッシュボード &#x200B;](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) にこの宛先のアクティブ化情報を表示します。
+> * `...` 名前 [!UICONTROL &#x200B; 列で省略記号（]）を選択し、![&#x200B; アラートを購読 &#x200B;](/help/images/icons/alert-add.png)**[!UICONTROL アラートを購読]** コントロールを使用して、宛先データフローアラートを購読できます。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートについて詳しくは、[&#x200B; コンテキスト内宛先アラートの配信登録 &#x200B;](alerts.md) を参照してください。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; タグを管理 &#x200B;](/help/images/icons/manage-tags.png)**[!UICONTROL タグを管理]** コントロールを使用して、宛先にタグを追加または宛先からタグを削除します。 タグの使用について詳しくは、[&#x200B; 宛先タグの管理 &#x200B;](#manage-tags) の節を参照してください。
 
 「[!UICONTROL &#x200B; 参照 &#x200B;] タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
@@ -95,20 +95,20 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 | [!UICONTROL &#x200B; 前回のデータフロー実行ステータス &#x200B;] | 前回のデータフロー実行のステータス。データフロー実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
 | [!UICONTROL &#x200B; 前回のデータフロー実行日 &#x200B;] | 前回のデータフローが実行された日時。列ヘッダーを選択して、並べ替えオプション（**[!UICONTROL 昇順で並べ替え]**、**[!UICONTROL 降順で並べ替え]**）にアクセスします。 データフローの実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL &#x200B; アカウントの有効期限 &#x200B;] | この宛先への接続認証が期限切れになる日付。 <br> 有効期限の前に警告アイコン ![ 警告：アカウントの有効期限アイコン ](/help/images/icons/alert-expiration.png) が表示され、接続が期限切れになり、更新が必要になる可能性があることを警告します。 期限切れ接続へのデータフローは停止しているので、アクティベーションワークフローを再開するには再認証する必要があります。 <br>**重要**：この列は現在、[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md) および [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) の連携でのみ使用できます。<br> ![ 「参照」タブでのアカウントの有効期限に関する警告の例 ](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
+| [!UICONTROL &#x200B; アカウントの有効期限 &#x200B;] | この宛先への接続認証が期限切れになる日付。 <br> 有効期限の前に警告アイコン ![&#x200B; 警告：アカウントの有効期限アイコン &#x200B;](/help/images/icons/alert-expiration.png) が表示され、接続が期限切れになり、更新が必要になる可能性があることを警告します。 期限切れ接続へのデータフローは停止しているので、アクティベーションワークフローを再開するには再認証する必要があります。 <br>**重要**：この列は現在、[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md) および [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) の連携でのみ使用できます。<br> ![&#x200B; 「参照」タブでのアカウントの有効期限に関する警告の例 &#x200B;](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
-| [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されているオーディエンスの数を示します。 このコントロールを選択すると、アクティブ化されたオーディエンスの詳細が表示されます。 アクティブ化されたオーディエンスについて詳しくは、宛先詳細ページの [ アクティベーションデータ ](/help/destinations/ui/destination-details-page.md#activation-data) を参照してください。 |
+| [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されているオーディエンスの数を示します。 このコントロールを選択すると、アクティブ化されたオーディエンスの詳細が表示されます。 アクティブ化されたオーディエンスについて詳しくは、宛先詳細ページの [&#x200B; アクティベーションデータ &#x200B;](/help/destinations/ui/destination-details-page.md#activation-data) を参照してください。 |
 | [!UICONTROL 作成日] | 宛先に対するアクティブ化フローが作成された日時。 上下の矢印記号を選択すると、アクティベーションフローを新しい順または古い順に並べ替えることができます。 |
 | [!UICONTROL &#x200B; 変更 &#x200B;] | 宛先に対するアクティブ化フローが最後に変更された日時。 |
 | [!UICONTROL ステータス] | `Enabled` または `Disabled`。データがこの宛先に対してアクティブ化されているかどうかを示します。 |
-| [!UICONTROL アクセスラベル] | この宛先データフローに追加されたアクセスラベルを表示します。 詳しくは、[ 宛先データフローへのアクセスラベルの適用 ](/help/access-control/abac/apply-access-labels-destinations.md) を参照してください。 |
+| [!UICONTROL アクセスラベル] | この宛先データフローに追加されたアクセスラベルを表示します。 詳しくは、[&#x200B; 宛先データフローへのアクセスラベルの適用 &#x200B;](/help/access-control/abac/apply-access-labels-destinations.md) を参照してください。 |
 | [!UICONTROL タグ] | この宛先データフローに追加されたタグを表示します。 タグを使用してデータフローを整理および分類し、管理を容易にします。 |
 
 宛先の行をクリックすると、宛先 ID、説明、アクティブ化されたオーディエンスの数など、宛先に関する詳細情報が右側のパネルに表示されます。
 
 ![宛先行をクリック](../assets/ui/workspace/click-destination-row.png)
 
-宛先名を選択して、この宛先に対してアクティブ化されたオーディエンスに関する情報を表示します。 **[!UICONTROL 宛先を編集]** をクリックして [ 宛先設定を変更 ](/help/destinations/ui/edit-destination.md) または **[!UICONTROL オーディエンスをアクティブ化]** をクリックして、新しいオーディエンスをデータフローに追加します。
+宛先名を選択して、この宛先に対してアクティブ化されたオーディエンスに関する情報を表示します。 **[!UICONTROL 宛先を編集]** をクリックして [&#x200B; 宛先設定を変更 &#x200B;](/help/destinations/ui/edit-destination.md) または **[!UICONTROL オーディエンスをアクティブ化]** をクリックして、新しいオーディエンスをデータフローに追加します。
 
 ### 「参照」タブでのデータフローのフィルタリング {#filter-browse}
 
@@ -120,15 +120,15 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!NOTE]
 >
-> 検索ボックスを使用してデータフローを検索する場合、結果には、[ ユーザーアクセスラベル ](/help/access-control/abac/apply-access-labels-destinations.md) が表示を制限するデータフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 そのようなデータフローを選択すると、右側のパネルに情報が表示されず、必要なラベルにアクセスできないユーザーは、データフローへのオーディエンスのマッピングやスケジュールの編集などの変更を実行できません。
+> 検索ボックスを使用してデータフローを検索する場合、結果には、[&#x200B; ユーザーアクセスラベル &#x200B;](/help/access-control/abac/apply-access-labels-destinations.md) が表示を制限するデータフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 そのようなデータフローを選択すると、右側のパネルに情報が表示されず、必要なラベルにアクセスできないユーザーは、データフローへのオーディエンスのマッピングやスケジュールの編集などの変更を実行できません。
 
-![ 「参照」タブでの宛先データフロー検索のアニメーションデモ ](../assets/ui/workspace/search.gif)
+![&#x200B; 「参照」タブでの宛先データフロー検索のアニメーションデモ &#x200B;](../assets/ui/workspace/search.gif)
 
 ### フィルターオプション {#filter-options-browse}
 
 左側のサイドバーのフィルターを使用して、検索を絞り込みます。
 
-![ 「参照」タブの宛先フィルター ](../assets/ui/workspace/destination-filters.png)
+![&#x200B; 「参照」タブの宛先フィルター &#x200B;](../assets/ui/workspace/destination-filters.png)
 
 * **[!UICONTROL 宛先プラットフォーム]**：特定の宛先プラットフォーム（[!DNL Amazon S3]、[!DNL Facebook Custom Audience]、[!DNL LinkedIn Matched Audience] など）でデータフローをフィルタリングします。 複数のプラットフォームを同時に選択できます。
 * **[!UICONTROL 任意のタグがある]**：特定のタグが割り当てられているデータフローをフィルタリングします。 これにより、カスタムタグ付けに基づいてデータフローを整理および検索できます。
@@ -149,7 +149,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 フィルターを適用すると、検索バーの下にタグとして表示されます。
 
-![ アクティブなフィルターがタグとして検索バーの下に表示される ](../assets/ui/workspace/active-filters.png)
+![&#x200B; アクティブなフィルターがタグとして検索バーの下に表示される &#x200B;](../assets/ui/workspace/active-filters.png)
 
 ここでは、次のことができます。
 
@@ -164,7 +164,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 データフローにタグを追加するには、「名前 `...` 列の省略記号（**[!UICONTROL ）を選択し、コンテキストメニューから]** タグを管理 **[!UICONTROL を選択し]** す。
 「**[!UICONTROL タグ]**」フィールドに新しいタグの名前を入力し、「**[!UICONTROL 保存]**」を選択して変更を適用します。
 
-![ タグの選択および作成オプションを表示するタグを管理ダイアログ ](../assets/ui/workspace/tags.gif)
+![&#x200B; タグの選択および作成オプションを表示するタグを管理ダイアログ &#x200B;](../assets/ui/workspace/tags.gif)
 
 データフローからタグを削除するには、「`...` 名前 **[!UICONTROL 」列の省略記号（]**）を選択し、コンテキストメニューから「**[!UICONTROL タグを管理]**」を選択した後、削除するタグの `X` アイコンを選択します。
 
@@ -183,7 +183,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * `...`Platform[!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ アクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL &#x200B; アクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; オーディエンスをアクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; データセットを書き出し &#x200B;]**&#x200B;コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * `...`Platform[!UICONTROL &#x200B; 列の省略記号（]）を選択し、![&#x200B; アクティブ化コントロール &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL &#x200B; アクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; オーディエンスをアクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; データセットを書き出し &#x200B;]**&#x200B;コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
 > * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![詳細を編集コントロール](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集&#x200B;]**&#x200B;コントロールを使用して、既存の宛先アカウントの詳細を[更新](update-accounts.md)します。
 > * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![削除コントロール](/help/images/icons/delete.png)**[!UICONTROL 削除&#x200B;]**&#x200B;コントロールを使用して、既存の宛先アカウントを[削除](delete-destination-account.md)します。
 
@@ -191,13 +191,13 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 | 要素 | 説明 |
 |---|---|
-| [!UICONTROL 名前] | 宛先の [ 設定中 ](connect-destination.md#authenticate) に宛先アカウントに割り当てた名前。 列ヘッダーを選択して、並べ替えオプション（**[!UICONTROL 昇順で並べ替え]**、**[!UICONTROL 降順で並べ替え]**）にアクセスします。 |
+| [!UICONTROL 名前] | 宛先の [&#x200B; 設定中 &#x200B;](connect-destination.md#authenticate) に宛先アカウントに割り当てた名前。 列ヘッダーを選択して、並べ替えオプション（**[!UICONTROL 昇順で並べ替え]**、**[!UICONTROL 降順で並べ替え]**）にアクセスします。 |
 | [!UICONTROL 宛先] | 接続を設定した宛先コネクタ。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先へのアカウント接続タイプを表します。宛先に応じて、認証オプションは次のとおりです。 <ul><li>メールマーケティングの宛先の場合：S3、FTP、Azure Blob のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li><li>OAuth 1 または OAuth 2 認証</li><li>ベアラートークン認証</li></ul> |
-| [!UICONTROL ユーザー名] | [ 宛先に接続ワークフロー ](../catalog/email-marketing/overview.md#connect-destination) で選択したユーザー名。 |
+| [!UICONTROL ユーザー名] | [&#x200B; 宛先に接続ワークフロー &#x200B;](../catalog/email-marketing/overview.md#connect-destination) で選択したユーザー名。 |
 | [!UICONTROL 接続] | 宛先に対して作成された基本情報に接続された、一意の成功した宛先データフローの数を表します。 |
 | [!UICONTROL &#x200B; 認可日 &#x200B;] | この宛先への接続が承認された日付。 |
-| [!UICONTROL 有効期限] | この宛先への接続認証が期限切れになる日付。 <br> 警告アイコン ![ アカウントの有効期限が切れた警告アイコン。](/help/images/icons/alert-expiration.png) は有効期限より前に表示され、接続の有効期限が切れ、更新が必要になる可能性があることを警告します。 期限切れ接続へのデータフローは停止しているので、アクティベーションワークフローを再開するには再認証する必要があります。 <br>**重要**：この列は現在、[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md) および [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) 接続でのみ使用できます。<br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| [!UICONTROL 有効期限] | この宛先への接続認証が期限切れになる日付。 <br> 警告アイコン ![&#x200B; アカウントの有効期限が切れた警告アイコン。](/help/images/icons/alert-expiration.png) は有効期限より前に表示され、接続の有効期限が切れ、更新が必要になる可能性があることを警告します。 期限切れ接続へのデータフローは停止しているので、アクティベーションワークフローを再開するには再認証する必要があります。 <br>**重要**：この列は現在、[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md) および [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) 接続でのみ使用できます。<br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -209,13 +209,13 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 テーブルの上部にある検索バーを使用すると、名前でアカウントをすばやく見つけることができます。 入力中、結果は自動的にフィルターされ、一致するアカウントのみが表示されます。
 
-![ 「アカウント」タブの検索バー。](../assets/ui/workspace/accounts-search.gif)
+![&#x200B; 「アカウント」タブの検索バー。](../assets/ui/workspace/accounts-search.gif)
 
 #### フィルターオプション {#filter-options-accounts}
 
 左側のサイドバーのフィルターを使用して、検索を絞り込みます。
 
-![ 「アカウント」タブのアカウントフィルター ](../assets/ui/workspace/account-filters.png)
+![&#x200B; 「アカウント」タブのアカウントフィルター &#x200B;](../assets/ui/workspace/account-filters.png)
 
 * **[!UICONTROL 宛先プラットフォーム]**：特定の宛先プラットフォーム（例：[!DNL Microsoft Bing]、[!DNL Amazon S3]、[!DNL Facebook Custom Audiences]、[!DNL LinkedIn Matched Audiences] など）でアカウントをフィルタリングします。 複数のプラットフォームを同時に選択できます。
 * **[!UICONTROL 作成者]**：アカウントを作成したユーザーでアカウントをフィルタリングします。 このフィルターを使用して、特定のチームメンバーが作成したアカウントを検索します。
@@ -224,7 +224,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 フィルターを適用すると、検索バーの下にタグとして表示されます。
 
-![ 「アカウント」タブにタグとして表示されたアクティブなフィルター ](../assets/ui/workspace/accounts-active-filters.png)
+![&#x200B; 「アカウント」タブにタグとして表示されたアクティブなフィルター &#x200B;](../assets/ui/workspace/accounts-active-filters.png)
 
 ここでは、次のことができます。
 

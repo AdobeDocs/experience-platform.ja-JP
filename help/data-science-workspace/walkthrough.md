@@ -22,7 +22,7 @@ ht-degree: 0%
 
 このドキュメントでは、Adobe Experience Platform Data Science Workspace コースで期待される学習成果について説明します。 コースを表示するには、Adobe IDを使用してExperience Leagueにログインする必要があります。
 
-[ データサイエンティスト向け Data Science Workspaceの概要 ](https://experienceleague.adobe.com/?lang=ja&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) コースは、JupyterLab Notebooks を使用してインサイトとクエリデータを取得、プロファイル対応データセットを作成、自動機械学習モデルを公開、Adobeアプリケーションと非Adobeアプリケーションの両方で機械学習のインサイトをアクティブ化する方法を学ぶデータサイエンティスト向けに設計されています。
+[&#x200B; データサイエンティスト向け Data Science Workspaceの概要 &#x200B;](https://experienceleague.adobe.com/?lang=ja&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=ja) コースは、JupyterLab Notebooks を使用してインサイトとクエリデータを取得、プロファイル対応データセットを作成、自動機械学習モデルを公開、Adobeアプリケーションと非Adobeアプリケーションの両方で機械学習のインサイトをアクティブ化する方法を学ぶデータサイエンティスト向けに設計されています。
 
 ## コースの前提条件
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## 次の手順
 
-データサイエンスWorkspaceコースを完了したら、[Sensei Machine Learning API ガイドにアクセスして ](./api/getting-started.md)RESTful API を利用して学習したすべてのことを行う方法などを確認してください。
+データサイエンスWorkspaceコースを完了したら、[Sensei Machine Learning API ガイドにアクセスして &#x200B;](./api/getting-started.md)RESTful API を利用して学習したすべてのことを行う方法などを確認してください。
 
 
 

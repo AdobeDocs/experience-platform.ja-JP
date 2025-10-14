@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## はじめに
 
-Adobe Experience Platform API を使用するには、まず [ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了して、必要なヘッダーに必要な値を収集する必要があります。 Experience Platform API について詳しくは、[Experience Platform API の概要ドキュメント ](../../landing/api-guide.md) を参照してください。
+Adobe Experience Platform API を使用するには、まず [&#x200B; 認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了して、必要なヘッダーに必要な値を収集する必要があります。 Experience Platform API について詳しくは、[Experience Platform API の概要ドキュメント &#x200B;](../../landing/api-guide.md) を参照してください。
 
 このチュートリアルのすべての API 呼び出しに必要なヘッダーは、次のとおりです。
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功すると、HTTP ステータス 200 （OK）とデータセット重複レポートが返されます。 レポートには、データセットとそれぞれのプロファイル数のコンマ区切りリストを含む `data` オブジェクトが含まれています。 レポートの読み方について詳しくは、このチュートリアルの後半の [ データセット重複レポートデータの解釈 ](#interpret-the-report) に関する節を参照してください。
+リクエストが成功すると、HTTP ステータス 200 （OK）とデータセット重複レポートが返されます。 レポートには、データセットとそれぞれのプロファイル数のコンマ区切りリストを含む `data` オブジェクトが含まれています。 レポートの読み方について詳しくは、このチュートリアルの後半の [&#x200B; データセット重複レポートデータの解釈 &#x200B;](#interpret-the-report) に関する節を参照してください。
 
 ```json
 {
@@ -68,7 +68,7 @@ curl -X GET \
 
 ### Postmanを使用したデータセット重複レポートの生成
 
-Postmanは、API 開発用の共同プラットフォームで、API 呼び出しを視覚化するのに役立ちます。 これは、[Postmanの web サイトから無料でダウンロードでき ](https://www.postman.com)API 呼び出しを実行するための使いやすい UI を提供します。 以下のスクリーンショットでは、Postman インターフェイスを使用しています。
+Postmanは、API 開発用の共同プラットフォームで、API 呼び出しを視覚化するのに役立ちます。 これは、[Postmanの web サイトから無料でダウンロードでき &#x200B;](https://www.postman.com)API 呼び出しを実行するための使いやすい UI を提供します。 以下のスクリーンショットでは、Postman インターフェイスを使用しています。
 
 **リクエスト**
 
@@ -95,7 +95,7 @@ Postmanを使用してデータセット重複レポートをリクエストす�
 
 **応答**
 
-リクエストが成功すると、HTTP ステータス 200 （OK）とデータセット重複レポートが返されます。 レポートには、データセットとそれぞれのプロファイル数のコンマ区切りリストを含む `data` オブジェクトが含まれています。 レポートの読み方について詳しくは、[ データセット重複レポートデータの解釈 ](#interpret-the-report) の節を参照してください。
+リクエストが成功すると、HTTP ステータス 200 （OK）とデータセット重複レポートが返されます。 レポートには、データセットとそれぞれのプロファイル数のコンマ区切りリストを含む `data` オブジェクトが含まれています。 レポートの読み方について詳しくは、[&#x200B; データセット重複レポートデータの解釈 &#x200B;](#interpret-the-report) の節を参照してください。
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
@@ -132,4 +132,4 @@ Postmanを使用してデータセット重複レポートをリクエストす�
 
 ## 次の手順
 
-このチュートリアルを完了すると、リアルタイム顧客プロファイル API を使用してデータセット重複レポートを生成できるようになります。 API とExperience Platform UI の両方でのプロファイルデータの操作について詳しくは、まず [ プロファイルの概要に関するドキュメント ](../home.md) をお読みください。
+このチュートリアルを完了すると、リアルタイム顧客プロファイル API を使用してデータセット重複レポートを生成できるようになります。 API とExperience Platform UI の両方でのプロファイルデータの操作について詳しくは、まず [&#x200B; プロファイルの概要に関するドキュメント &#x200B;](../home.md) をお読みください。

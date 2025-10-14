@@ -24,11 +24,11 @@ ht-degree: 44%
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platform Data Science Workspaceに関する十分な知識が必要です。 このチュートリアルを開始する前に、[Data Science Workspaceの概要 ](../home.md) を参照して、サービスの概要を確認してください。
+このチュートリアルでは、Adobe Experience Platform Data Science Workspaceに関する十分な知識が必要です。 このチュートリアルを開始する前に、[Data Science Workspaceの概要 &#x200B;](../home.md) を参照して、サービスの概要を確認してください。
 
-このチュートリアルを進めるには、既存の ML エンジン、ML インスタンス、および実験が必要です。 API でこれらを作成する手順については、[ パッケージ化されたレシピの読み込み ](./import-packaged-recipe-api.md) に関するチュートリアルを参照してください。
+このチュートリアルを進めるには、既存の ML エンジン、ML インスタンス、および実験が必要です。 API でこれらを作成する手順については、[&#x200B; パッケージ化されたレシピの読み込み &#x200B;](./import-packaged-recipe-api.md) に関するチュートリアルを参照してください。
 
-最後に、このチュートリアルを開始する前に、デベロッパーガイドの [ はじめに ](../api/getting-started.md) の節を参照して、このチュートリアルで使用される必須ヘッダーなど、[!DNL Sensei Machine Learning] API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+最後に、このチュートリアルを開始する前に、デベロッパーガイドの [&#x200B; はじめに &#x200B;](../api/getting-started.md) の節を参照して、このチュートリアルで使用される必須ヘッダーなど、[!DNL Sensei Machine Learning] API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`

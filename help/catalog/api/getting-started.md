@@ -22,8 +22,8 @@ ht-degree: 58%
 [!DNL Catalog] は、[!DNL Experience Platform] 内の複数の種類のリソースおよび操作のメタデータを追跡します。 このデベロッパーガイドでは、これらのリソースの作成と管理に関わる様々な [!DNL Experience Platform] サービスについて、実際に理解している必要があります。
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
-* [ バッチ取り込み ](../../ingestion/batch-ingestion/overview.md):[!DNL Experience Platform] が CSV や Parquet などのデータファイルからデータを取り込んで保存する方法。
-* [ ストリーミング取得 ](../../ingestion/streaming-ingestion/overview.md):[!DNL Experience Platform] がクライアントサイドおよびサーバーサイドのデバイスから、リアルタイムにデータを取得して保存する方法。
+* [&#x200B; バッチ取り込み &#x200B;](../../ingestion/batch-ingestion/overview.md):[!DNL Experience Platform] が CSV や Parquet などのデータファイルからデータを取り込んで保存する方法。
+* [&#x200B; ストリーミング取得 &#x200B;](../../ingestion/streaming-ingestion/overview.md):[!DNL Experience Platform] がクライアントサイドおよびサーバーサイドのデバイスから、リアルタイムにデータを取得して保存する方法。
 
 次の節では、[!DNL Catalog Service] API の呼び出しを正しくおこなうために知っておく必要がある、または手元に用意しておく必要がある追加情報を提供します。
 
@@ -65,4 +65,4 @@ ht-degree: 58%
 
 このガイドの例のほとんどは `/dataSets` エンドポイントを使用しますが、原則は [!DNL Catalog] 内の他のエンドポイント（`/batches` など）にも適用できます。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
 
-[!DNL Catalog] API がデータ取り込みにどのように関係するかを示す詳細なワークフローについては、[ データセットの作成 ](../datasets/create.md) に関するチュートリアルを参照してください。
+[!DNL Catalog] API がデータ取り込みにどのように関係するかを示す詳細なワークフローについては、[&#x200B; データセットの作成 &#x200B;](../datasets/create.md) に関するチュートリアルを参照してください。

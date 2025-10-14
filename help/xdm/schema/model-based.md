@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->データ削除に関する考慮事項は、すべてのモデルベースのスキーマ実装に適用されます。 これらのスキーマを使用するアプリケーションでは、削除が関連データセット、コンプライアンス要件およびダウンストリームプロセスに与える影響を理解する必要があります。 実装する前に、削除シナリオを計画し、[ データハイジーンのガイダンス ](../../hygiene/ui/record-delete.md#model-based-record-delete) を確認してください。
+>データ削除に関する考慮事項は、すべてのモデルベースのスキーマ実装に適用されます。 これらのスキーマを使用するアプリケーションでは、削除が関連データセット、コンプライアンス要件およびダウンストリームプロセスに与える影響を理解する必要があります。 実装する前に、削除シナリオを計画し、[&#x200B; データハイジーンのガイダンス &#x200B;](../../hygiene/ui/record-delete.md#model-based-record-delete) を確認してください。
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ ht-degree: 0%
 
 ## モデルベースのスキーマと標準の XDM スキーマの違い
 
-Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
+Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
 
-従来のモデルでは、レコードと時系列スキーマは [ 和集合スキーマ ](../api/unions.md) に参加します（[ 和集合スキーマ UI ガイド ](../../profile/ui/union-schema.md) も参照）。 これらのスキーマは、共有 [ フィールドグループ ](./composition.md#field-group) が更新されると自動的に進化します。また、カスタムフィールドはテナント名前空間の下にネストする必要があります。 このモデルは強力ですが、オンボーディングの速度が低下したり、未使用のフィールドを含む過度に複雑なスキーマが生成されたり、追加のデータマッピングや変換が必要になったりする可能性があります。 これらの要因により、学習曲線が増加し、継続的なメンテナンス作業が増えます。
+従来のモデルでは、レコードと時系列スキーマは [&#x200B; 和集合スキーマ &#x200B;](../api/unions.md) に参加します（[&#x200B; 和集合スキーマ UI ガイド &#x200B;](../../profile/ui/union-schema.md) も参照）。 これらのスキーマは、共有 [&#x200B; フィールドグループ &#x200B;](./composition.md#field-group) が更新されると自動的に進化します。また、カスタムフィールドはテナント名前空間の下にネストする必要があります。 このモデルは強力ですが、オンボーディングの速度が低下したり、未使用のフィールドを含む過度に複雑なスキーマが生成されたり、追加のデータマッピングや変換が必要になったりする可能性があります。 これらの要因により、学習曲線が増加し、継続的なメンテナンス作業が増えます。
 
 モデルベースのスキーマは、結合スキーマの依存関係を削除します。これにより、共有フィールドグループからの自動更新が排除され、テナント名前空間の制限なしで直接フィールドを定義できるようになります。 プライマリキー、関係、初期スキーマデザインを明示的に制御できるので、作成時にニーズに合わせてデータを簡単にモデル化できます。
 
@@ -122,7 +122,7 @@ Experience Platformの標準 XDM スキーマは、レコード、時系列ま�
 >
 >記述子はスキーマ定義メタデータの一部であり、データ行には保存されません。
 
-スキーマエディターで記述子を作成する手順については、[ スキーマエディターでの記述子の作成 ](../tutorials/relationship-ui.md) を参照してください。 API ベースの作成については、[API を使用した記述子の作成 ](../tutorials/relationship-api.md) を参照してください。
+スキーマエディターで記述子を作成する手順については、[&#x200B; スキーマエディターでの記述子の作成 &#x200B;](../tutorials/relationship-ui.md) を参照してください。 API ベースの作成については、[API を使用した記述子の作成 &#x200B;](../tutorials/relationship-api.md) を参照してください。
 
 ## 関係のサポート {#relationship-support}
 
@@ -167,7 +167,7 @@ Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-past
 }
 ```
 
-関係記述子のタイプと構文の一覧については、[descriptors API リファレンス ](../api/descriptors.md) を参照してください。これらの概念を実際に適用する方法については、チュートリアルに従って [API で関係を定義 ](../tutorials/relationship-api.md) または [UI で関係を作成 ](../tutorials/relationship-ui.md) してください。
+関係記述子のタイプと構文の一覧については、[descriptors API リファレンス &#x200B;](../api/descriptors.md) を参照してください。これらの概念を実際に適用する方法については、チュートリアルに従って [API で関係を定義 &#x200B;](../tutorials/relationship-api.md) または [UI で関係を作成 &#x200B;](../tutorials/relationship-ui.md) してください。
 
 >[!NOTE]
 >
@@ -195,7 +195,7 @@ Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-past
 * **データの一貫性**：関連するデータセットでは、削除操作中に一貫性を維持する必要があります
 * **削除計画**：設計フェーズでは、接続されたすべてのデータセットとアプリケーションにわたるダウンストリームの影響を考慮します
 
-実装ガイダンスについては、[ モデルベースのデータセットからのレコードの削除 ](../../hygiene/ui/record-delete.md#model-based-record-delete) を参照してください。
+実装ガイダンスについては、[&#x200B; モデルベースのデータセットからのレコードの削除 &#x200B;](../../hygiene/ui/record-delete.md#model-based-record-delete) を参照してください。
 
 ## 制限事項と考慮事項 {#limitations}
 

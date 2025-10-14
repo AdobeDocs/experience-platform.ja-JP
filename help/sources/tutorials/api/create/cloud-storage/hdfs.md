@@ -16,7 +16,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -35,12 +35,12 @@ ht-degree: 43%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `url` | URL は、[!DNL HDFS] に匿名で接続するために必要な認証パラメーターを定義します。 この値の取得方法について詳しくは、[ この  [!DNL HDFS]  ドキュメント ](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html) を参照してください。 |
+| `url` | URL は、[!DNL HDFS] に匿名で接続するために必要な認証パラメーターを定義します。 この値の取得方法について詳しくは、[&#x200B; この  [!DNL HDFS]  ドキュメント &#x200B;](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html) を参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL AdWords] の接続仕様 ID は `54e221aa-d342-4707-bcff-7a4bceef0001` です。 |
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -100,4 +100,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL HDFS] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用したサードパーティのクラウドストレージの調査 ](../../explore/cloud-storage.md) 方法を説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL HDFS] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用したサードパーティのクラウドストレージの調査 &#x200B;](../../explore/cloud-storage.md) 方法を説明します。

@@ -35,7 +35,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 | ---------- | ----------- |
 | `connectionString` | [!DNL GreenPlum] インスタンスへの接続に使用する接続文字列。 [!DNL GreenPlum] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です |
 
-基本について詳しくは、[ この GreenPlum ドキュメント ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html) を参照してください。
+基本について詳しくは、[&#x200B; この GreenPlum ドキュメント &#x200B;](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html) を参照してください。
 
 ## [!DNL GreenPlum] アカウントの接続
 
@@ -55,7 +55,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL GreenPlum] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ 接続 ](../../../../images/tutorials/create/greenplum/new.png)
+![&#x200B; 接続 &#x200B;](../../../../images/tutorials/create/greenplum/new.png)
 
 ### 既存のアカウント
 
@@ -65,4 +65,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL GreenPlum] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL GreenPlum] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

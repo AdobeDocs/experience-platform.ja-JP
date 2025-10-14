@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 関連するアカウントのプロファイルエンリッチメント {#related-accounts}
 
-[!UICONTROL &#x200B; 関連するアカウント &#x200B;] ダッシュボードには、基本的な指標と、[ 関連するアカウント ](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメントに固有の毎日のジョブのステータスが表示されます。
+[!UICONTROL &#x200B; 関連するアカウント &#x200B;] ダッシュボードには、基本的な指標と、[&#x200B; 関連するアカウント &#x200B;](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメントに固有の毎日のジョブのステータスが表示されます。
 
 ![Experience Platform UI のプロファイルエンリッチメントジョブ監視画面に移動する方法を示す視覚的な指標。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
@@ -40,9 +40,9 @@ ht-degree: 4%
 
 ## リードとアカウントのマッチングプロファイルのエンリッチメント {#lead-to-account-matching}
 
-[!UICONTROL &#x200B; リードからアカウントへのマッチング &#x200B;] ダッシュボードには、「リードからアカウントへのマッチング [ プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示さ ](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) ます。
+[!UICONTROL &#x200B; リードからアカウントへのマッチング &#x200B;] ダッシュボードには、「リードからアカウントへのマッチング [&#x200B; プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示さ &#x200B;](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) ます。
 
-![ リードとアカウントのマッチングプロファイルのエンリッチメント ](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![&#x200B; リードとアカウントのマッチングプロファイルのエンリッチメント &#x200B;](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
 リードとアカウントのマッチングプロファイルエンリッチメントジョブでは、次の指標を使用できます。
 
@@ -58,9 +58,9 @@ ht-degree: 4%
 
 ## リードおよびアカウントの予測スコアリングプロファイルのエンリッチメント {#predictive-lead-to-account-scoring}
 
-[!UICONTROL &#x200B; リードおよびアカウントの予測スコアリング &#x200B;] ダッシュボードには、[ リードおよびアカウントの予測スコアリング ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示されます。
+[!UICONTROL &#x200B; リードおよびアカウントの予測スコアリング &#x200B;] ダッシュボードには、[&#x200B; リードおよびアカウントの予測スコアリング &#x200B;](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示されます。
 
-![ リードおよびアカウントの予測スコアリングプロファイルエンリッチメント ](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+![&#x200B; リードおよびアカウントの予測スコアリングプロファイルエンリッチメント &#x200B;](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
 リードおよびアカウントの予測スコアリングプロファイルエンリッチメントジョブでは、次の指標を使用できます。
 
@@ -77,17 +77,17 @@ ht-degree: 4%
 
 この節では、モニタリングインターフェイスの様々なユーザーインターフェイス（UI）オプションについて説明します。これらのオプションを使用すると、ページに表示される指標をフィルタリングできます。
 
-矢印アイコン（![ 矢印アイコン ](/help/images/icons/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードには、プロファイルエンリッチメントジョブに関する情報が一目で確認できます。
+矢印アイコン（![&#x200B; 矢印アイコン &#x200B;](/help/images/icons/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードには、プロファイルエンリッチメントジョブに関する情報が一目で確認できます。
 
-![ 矢印アイコン UI コントロールを表示する画面録画。](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![&#x200B; 矢印アイコン UI コントロールを表示する画面録画。](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
 **[!UICONTROL 指標とグラフ]** トグルを使用して、最新の指標を表示するビューを閉じます。
 
-![ 「指標とグラフ」トグルを表示する画面録画。](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
+![&#x200B; 「指標とグラフ」トグルを表示する画面録画。](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
 **[!UICONTROL 失敗のみを表示]** 切替スイッチを使用すると、失敗したプロファイルエンリッチメントジョブのみを表示できます。
 
-![ 「失敗のみを表示」切替スイッチを表示する画面録画。](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
+![&#x200B; 「失敗のみを表示」切替スイッチを表示する画面録画。](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 
 ## 次の手順 {#next-steps}
 

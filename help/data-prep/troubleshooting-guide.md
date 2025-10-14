@@ -12,7 +12,7 @@ ht-degree: 28%
 
 # [!DNL Data Prep] トラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform [!DNL Data Prep] に関するよくある質問に対する回答と、一般的なエラーのトラブルシューティングガイドを示します。Experience Platform API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform [!DNL Data Prep] に関するよくある質問に対する回答と、一般的なエラーのトラブルシューティングガイドを示します。Experience Platform API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
 
 ## FAQ
 
@@ -46,7 +46,7 @@ ht-degree: 28%
 
 データ準備マッピングインターフェイスを使用して、必要なデータを持つ列のみをマッピングして、列レベルのフィルタリングを実行できます。 また、計算フィールドを使用して、サポート関数を使用してデータを変換することもできます。
 
-行レベルのフィルタリングは、現在、[Adobe Analytics ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering) でのみ使用できます。
+行レベルのフィルタリングは、現在、[Adobe Analytics ソースコネクタ &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering) でのみ使用できます。
 
 取り込み後に、Data Distiller を使用して、SQL を使用してデータを消去、整形、操作できます。 ただし、このプロセスでは、不正なレコードを含むバッチを削除し、SQL の結果から作成された新しいバッチを再度取り込む必要があります。
 

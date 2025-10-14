@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
+>このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
 [!UICONTROL XDM ビジネスキャンペーンメンバー &#x200B;] は、ビジネスキャンペーンに関連する連絡先またはリードを記述する標準のエクスペリエンスデータモデル（XDM）クラスです。
 
-![UI に表示される XDM ビジネスキャンペーンメンバークラスの構造 ](../../images/classes/b2b/business-campaign-members.png)
+![UI に表示される XDM ビジネスキャンペーンメンバークラスの構造 &#x200B;](../../images/classes/b2b/business-campaign-members.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -29,6 +29,6 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-このクラスが他の B2B クラスとどのように概念的に関係し、Real-Time CDP UI でこれらの関係を確立する方法については、Adobe Experience Platform B2B Edition の [ スキーマの関係に関するガイドを参照してください ](../../tutorials/relationship-b2b.md)
+このクラスが他の B2B クラスとどのように概念的に関係し、Real-Time CDP UI でこれらの関係を確立する方法については、Adobe Experience Platform B2B Edition の [&#x200B; スキーマの関係に関するガイドを参照してください &#x200B;](../../tutorials/relationship-b2b.md)
 
 このクラスと互換性のあるその他のフィールドについては、[[!UICONTROL XDM ビジネスキャンペーンメンバーの詳細 &#x200B;]](../../field-groups/b2b-campaign-members/details.md) のフィールドグループ参照を参照してください。

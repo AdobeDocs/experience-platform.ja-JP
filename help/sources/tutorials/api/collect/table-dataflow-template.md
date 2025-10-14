@@ -18,21 +18,21 @@ ht-degree: 13%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ バッチ取り込み ](../../../../ingestion/batch-ingestion/overview.md)：大量のデータをバッチで効率的にアップロードする方法を説明します。
-* [ カタログサービス ](../../../../catalog/datasets/overview.md):Experience Platform内のデータセットを整理し、追跡します。
-* [ データ準備 ](../../../../data-prep/home.md)：受信データを変換し、スキーマ要件に合わせてマッピングします。
-* [ データフロー ](../../../../dataflows/home.md)：ソースから宛先にデータを移動するパイプラインを設定および管理します。
-* [ エクスペリエンスデータモデル（XDM）スキーマ ](../../../../xdm/home.md):Experience Platformで使用できるように、XDM スキーマを使用してデータを構造化します。
-* [ サンドボックス ](../../../../sandboxes/home.md)：実稼動データに影響を与えることなく、分離された環境で安全にテストおよび開発できます。
-* [ ソース ](../../../home.md)：外部データソースをExperience Platformに接続する方法を説明します。
+* [&#x200B; バッチ取り込み &#x200B;](../../../../ingestion/batch-ingestion/overview.md)：大量のデータをバッチで効率的にアップロードする方法を説明します。
+* [&#x200B; カタログサービス &#x200B;](../../../../catalog/datasets/overview.md):Experience Platform内のデータセットを整理し、追跡します。
+* [&#x200B; データ準備 &#x200B;](../../../../data-prep/home.md)：受信データを変換し、スキーマ要件に合わせてマッピングします。
+* [&#x200B; データフロー &#x200B;](../../../../dataflows/home.md)：ソースから宛先にデータを移動するパイプラインを設定および管理します。
+* [&#x200B; エクスペリエンスデータモデル（XDM）スキーマ &#x200B;](../../../../xdm/home.md):Experience Platformで使用できるように、XDM スキーマを使用してデータを構造化します。
+* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md)：実稼動データに影響を与えることなく、分離された環境で安全にテストおよび開発できます。
+* [&#x200B; ソース &#x200B;](../../../home.md)：外部データソースをExperience Platformに接続する方法を説明します。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ### ベース接続を作成
 
-ソースのデータフローを正常に作成するには、完全に認証されたソースアカウントと、それに対応するベース接続 ID が必要です。 この ID をお持ちでない場合は、[ ソースカタログ ](../../../home.md) を参照して、ベース接続を作成できるソースのリストを確認してください。
+ソースのデータフローを正常に作成するには、完全に認証されたソースアカウントと、それに対応するベース接続 ID が必要です。 この ID をお持ちでない場合は、[&#x200B; ソースカタログ &#x200B;](../../../home.md) を参照して、ベース接続を作成できるソースのリストを確認してください。
 
 ### ターゲット XDM スキーマの作成 {#target-schema}
 
@@ -40,8 +40,8 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを行うことで、ターゲット XDM スキーマを作成することができます。 ターゲット XDM スキーマの作成手順について詳しくは、次のガイドを参照してください。
 
-* [API を使用したスキーマの作成 ](../../../../xdm/api/schemas.md)。
-* [UI を使用したスキーマの作成 ](../../../../xdm/tutorials/create-schema-ui.md)。
+* [API を使用したスキーマの作成 &#x200B;](../../../../xdm/api/schemas.md)。
+* [UI を使用したスキーマの作成 &#x200B;](../../../../xdm/tutorials/create-schema-ui.md)。
 
 作成したら、後でターゲットデータセットとマッピングにターゲット XDM スキーマ `$id` が必要になります。
 
@@ -49,7 +49,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 
 データセットは、スキーマ（列）とフィールド（行）で構成されるデータコレクション（通常はテーブル）を格納し管理するための構造です。Experience Platformに正常に取り込まれたデータは、データセットとしてデータレイク内に保存されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用します。
 
-ペイロードにターゲットスキーマの ID を指定しながら [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に対して POST リクエストを実行することで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成 ](../../../../catalog/api/create-dataset.md) に関するガイドを参照してください。
+ペイロードにターゲットスキーマの ID を指定しながら [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に対して POST リクエストを実行することで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成 &#x200B;](../../../../catalog/api/create-dataset.md) に関するガイドを参照してください。
 
 >[!TIP]
 >
@@ -183,7 +183,7 @@ curl -X POST \
 | `data.format` | データの形式。 この値を、テーブルベースのソース（データベース、CRM、マーケティング自動化プロバイダーなど）の `tabular` に設定します。 |
 | `params.tableName` | Experience Platformに取得するソースアカウント内のテーブルの名前。 |
 | `params.columns` | Experience Platformに取り込むデータの特定のテーブル列。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [&#x200B; の使用に関するガイドを参照し &#x200B;](../change-data-capture.md) ください。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 
 **応答**
@@ -246,7 +246,7 @@ curl -X POST \
 
 ## マッピング {#mapping}
 
-次に、ソースデータを、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep]  の ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントに POST リクエストを実行し、ターゲット XDM スキーマ ID と、作成するマッピングセットの詳細を指定します。
+次に、ソースデータを、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep]  の &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントに POST リクエストを実行し、ターゲット XDM スキーマ ID と、作成するマッピングセットの詳細を指定します。
 
 **API 形式**
 
@@ -746,11 +746,11 @@ curl -X POST \
 
 Experience Platform ユーザーインターフェイスを使用して、データフローの作成を検証できます。 Experience Platform UI の *[!UICONTROL ソース]* カタログに移動し、ヘッダータブから **[!UICONTROL データフロー]** を選択します。 次に、[!UICONTROL &#x200B; データフロー名 &#x200B;] 列を使用し、[!DNL Flow Service] API を使用して作成したデータフローを見つけます。
 
-![Experience Platform UI のソースワークスペースのデータフローインターフェイス ](../../../images/tutorials/validations/dataflows-interface.png)
+![Experience Platform UI のソースワークスペースのデータフローインターフェイス &#x200B;](../../../images/tutorials/validations/dataflows-interface.png)
 
 [!UICONTROL &#x200B; データフローアクティビティ &#x200B;] インターフェイスを通じて、データフローをさらに検証できます。 右側のパネルを使用して、データフローの [!UICONTROL API の使用状況 &#x200B;] 情報を表示します。 このセクションには、[!DNL Flow Service] のデータフロー作成プロセス中に生成されたのと同じデータフロー ID、データセット ID およびマッピング ID が表示されます。
 
-![ ソースワークスペースのデータフロービューページ ](../../../images/tutorials/validations/api-usage.png)
+![&#x200B; ソースワークスペースのデータフロービューページ &#x200B;](../../../images/tutorials/validations/api-usage.png)
 
 ## 次の手順
 
@@ -758,12 +758,12 @@ Experience Platform ユーザーインターフェイスを使用して、デー
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローの監視方法について詳しくは、[ アカウントとデータフローの監視 ](../../../../dataflows/ui/monitor-sources.md) に関するチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 データフローの監視方法について詳しくは、[&#x200B; アカウントとデータフローの監視 &#x200B;](../../../../dataflows/ui/monitor-sources.md) に関するチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[ ソースデータフローの更新 ](../../api/update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[&#x200B; ソースデータフローの更新 &#x200B;](../../api/update-dataflows.md) に関するチュートリアルを参照してください。
 
 ## データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[ データフローの削除 ](../../api/delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[&#x200B; データフローの削除 &#x200B;](../../api/delete.md) のチュートリアルを参照してください。

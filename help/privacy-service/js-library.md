@@ -45,9 +45,9 @@ ht-degree: 55%
 [!DNL Privacy JS Library] の使用を開始するには、次のいずれかの方法を使用して、マシンにインストールする必要があります。
 
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
-* [Experience Cloud GitHub リポジトリからダウンロード ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* [Experience Cloud GitHub リポジトリからダウンロード &#x200B;](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-タグ拡張機能を使用してライブラリをインストールすることもできます。 詳しくは、[Adobeプライバシータグ拡張機能 ](../tags/extensions/client/privacy/overview.md) の概要を参照してください。
+タグ拡張機能を使用してライブラリをインストールすることもできます。 詳しくは、[Adobeプライバシータグ拡張機能 &#x200B;](../tags/extensions/client/privacy/overview.md) の概要を参照してください。
 
 ## [!DNL Privacy JS Library] のインスタンス化
 
@@ -170,7 +170,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Privacy JS Library] のコア機能について説明しました。 ライブラリを使用して ID のリストを取得した後、それらの ID を使用して、[!DNL Privacy Service] API へのデータアクセス要求および削除要求を作成できます。 詳しくは、[Privacy ServiceAPI ガイド ](api/overview.md) を参照してください。
+このドキュメントでは、[!DNL Privacy JS Library] のコア機能について説明しました。 ライブラリを使用して ID のリストを取得した後、それらの ID を使用して、[!DNL Privacy Service] API へのデータアクセス要求および削除要求を作成できます。 詳しくは、[Privacy ServiceAPI ガイド &#x200B;](api/overview.md) を参照してください。
 
 ## 付録
 

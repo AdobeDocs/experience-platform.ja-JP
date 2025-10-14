@@ -52,11 +52,11 @@ Adobe Experience Platform スキーマとして、Experience-Platform 統合ア�
 
 また、外部オーディエンスは、新しいセグメント定義のコンポーネントとして使用し、その属性ルールを新しいセグメント定義に追加することもできます。
 
-現在、外部オーディエンスとしてサポートされているのはAdobe Audience Managerのみで、今後、有効になるソースも追加されます。 Experience PlatformでのAdobe Audience Manager オーディエンスの使用について詳しくは、[Adobe Audience Manager ドキュメント内のオーディエンス共有ガイド ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja) を参照してください。
+現在、外部オーディエンスとしてサポートされているのはAdobe Audience Managerのみで、今後、有効になるソースも追加されます。 Experience PlatformでのAdobe Audience Manager オーディエンスの使用について詳しくは、[Adobe Audience Manager ドキュメント内のオーディエンス共有ガイド &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja) を参照してください。
 
 ### セグメント定義の共有
 
-Experience Platformで作成したセグメント定義は、他の [Adobe Experience Cloud コアサービス ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたはコンサルタントに問い合わせる必要があります。
+Experience Platformで作成したセグメント定義は、他の [Adobe Experience Cloud コアサービス &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたはコンサルタントに問い合わせる必要があります。
 
 ## その他のデータタイプ
 

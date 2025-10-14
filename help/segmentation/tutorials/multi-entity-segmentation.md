@@ -19,10 +19,10 @@ ht-degree: 13%
 マルチエンティティのセグメント化には、セグメント化に関連する様々なAdobe Experience Platform サービスについての十分な知識が必要です。 このガイドを進める前に、次のドキュメントを確認してください。
 
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-   * [ プロファイルガードレール ](../../profile/guardrails.md):[!DNL Profile] でサポートされるデータモデルを作成するためのベストプラクティス。
+   * [&#x200B; プロファイルガードレール &#x200B;](../../profile/guardrails.md):[!DNL Profile] でサポートされるデータモデルを作成するためのベストプラクティス。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
-   * [ スキーマ構成の基本 ](../../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成するためのベストプラクティスについて説明します。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
+   * [&#x200B; スキーマ構成の基本 &#x200B;](../../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成するためのベストプラクティスについて説明します。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 ## ユースケース
 
@@ -58,4 +58,4 @@ ht-degree: 13%
 
 ## マルチエンティティセグメント定義の評価とアクセス
 
-セグメント定義を作成したら、Segmentation API を使用して結果を評価し、アクセスできます。 マルチエンティティセグメント定義の評価は、標準セグメント定義の評価と非常に似ています。 このプロセスは、Segmentation API を使用してのみ実行できます。 API を使用してセグメント定義を評価およびアクセスする方法を示す詳細なガイドについては、チュートリアル [ セグメント定義の評価とアクセス ](./evaluate-a-segment.md) を参照してください。
+セグメント定義を作成したら、Segmentation API を使用して結果を評価し、アクセスできます。 マルチエンティティセグメント定義の評価は、標準セグメント定義の評価と非常に似ています。 このプロセスは、Segmentation API を使用してのみ実行できます。 API を使用してセグメント定義を評価およびアクセスする方法を示す詳細なガイドについては、チュートリアル [&#x200B; セグメント定義の評価とアクセス &#x200B;](./evaluate-a-segment.md) を参照してください。

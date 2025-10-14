@@ -31,23 +31,23 @@ Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!
 * 一方、サービスアカウントは **プリンシパル** です。サービスアカウントにリソースへのアクセス [!DNL Google Cloud] 許可できます。 例えば、サービスアカウントに、特定のプロジェクトでの Compute 管理者ロール `(roles/compute.admin)` 付与できます。 これにより、サービスアカウントがその特定のプロジェクトの Compute Engine リソースを管理できるようになります。
 * 一方、サービスアカウントもリソースです。他のプリンシパルにサービスアカウントへのアクセス権限を付与することができます。 たとえば、サービス アカウントに対してサービス アカウントのユーザーの役割 `(roles/iam.serviceAccountUser)` をユーザーに付与して、そのサービス アカウントをリソースに関連付けることができます。 または、サービス アカウント管理者の役割 `(roles/iam.serviceAccountAdmin)` をユーザーに付与して、そのユーザーがサービス アカウントの表示、編集、無効化、削除などのタスクを完了できるようにすることもできます。
 
-ユースケースに適した認証タイプの決定について詳しくは、[[!DNL Google]  認証方法に関するガイド ](https://cloud.google.com/docs/authentication) を参照してください。
+ユースケースに適した認証タイプの決定について詳しくは、[[!DNL Google]  認証方法に関するガイド &#x200B;](https://cloud.google.com/docs/authentication) を参照してください。
 
 サービスアカウントを作成するには、以下に説明する手順に従います。
 
 最初に [!DNL Google Developer Console] ージの [!DNL IAM] ページに移動し、「**[!DNL Create Service Account]**」を選択します。
 
-![Google Developer Consoleのサービスアカウントを作成ウィンドウ ](../../images/tutorials/create/google-pubsub/create-service-account.png)
+![Google Developer Consoleのサービスアカウントを作成ウィンドウ &#x200B;](../../images/tutorials/create/google-pubsub/create-service-account.png)
 
 次に、サービス アカウントの表示名と ID を入力し、[**[!DNL Create and Continue]**] をクリックします。
 
-![Google Developer Consoleのサービスアカウントの詳細 ](../../images/tutorials/create/google-pubsub/service-account-details.png)
+![Google Developer Consoleのサービスアカウントの詳細 &#x200B;](../../images/tutorials/create/google-pubsub/service-account-details.png)
 
 ### サービスアカウントキーの生成 {#generate-service-account-keys}
 
 サービスアカウントのキーを生成するには、サービスアカウントページでキーヘッダーを選択します。 そこから「**[!DNL Add key]**」を選択し、ドロップダウンメニューから「**[!DNL Create new key]**」を選択します。 また、このパネルを使用して、既存のキーをアップロードすることもできます。
 
-![Google Developer Consoleのキーを追加ウィンドウ ](../../images/tutorials/create/google-pubsub/add-key.png)
+![Google Developer Consoleのキーを追加ウィンドウ &#x200B;](../../images/tutorials/create/google-pubsub/add-key.png)
 
 成功すると、秘密鍵がコンピューターに保存され、ファイルがダウンロードされることを示すメッセージが表示されます。 その後、Experience Platformで [!DNL Google PubSub] アカウントを作成する際に、このファイルの内容を資格情報として使用できます。
 
@@ -55,7 +55,7 @@ Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!
 
 トピックおよびサブスクリプションレベルで権限を付与するには、トピックのコンソールページに移動してから「**[!DNL Show info panel]**」を選択します。 次に、「[!DNL Permissions]」タブで「[!DNL Add Principal]」を選択し、権限と共にサービスアカウントプリンシパルを追加します。
 
-![ トピックおよび購読レベルで権限を付与できる、Google Developer Consoleのポップアップウィンドウ ](../../images/tutorials/create/google-pubsub/add-principal.png)
+![&#x200B; トピックおよび購読レベルで権限を付与できる、Google Developer Consoleのポップアップウィンドウ &#x200B;](../../images/tutorials/create/google-pubsub/add-principal.png)
 
 ## 最適な [!DNL Google PubSub usage] ークフローの構成 {#optimal-configurations}
 
@@ -65,7 +65,7 @@ Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!
 
 [!DNL Google Developer Console] を使用して **受信確認の期限を延長** します。 これにより、設定した時間に従って [!DNL Google Publisher] ーザーが待機してからメッセージを再送信することができます。 この遅延は、加入者レベルでの不要な負荷の低減に役立ちます。
 
-![Google Developer Consoleの受信確認期限インターフェイス ](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
+![Google Developer Consoleの受信確認期限インターフェイス &#x200B;](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
 
 **[!DNL exactly one delivery]** を有効にします。 この設定は、受信確認期限が切れる前に、サブスクリプションに送信されたメッセージが再送信されないことを保証するように [!DNL Google Publisher] ーザーに通知します。 この設定を使用すると、受信確認メッセージがサブスクリプションに再送信されなくなります。
 
@@ -73,7 +73,7 @@ Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!
 
 **[!DNL Retry after exponential backoff delay]** を有効にすると、サーバーにさらに圧倒されるリスクを軽減できます。 [!DNL Google Developer Console] でこの設定を有効にすると、一時的なエラー（通常は自分自身を解決する一時的なエラー）を適切に軽減できます。これは、別の接続を試す前に、システムがより多くの時間を回復できるようにするためです。
 
-![Google Developer Consoleの「再試行ポリシー」ウィンドウ ](../../images/tutorials/create/google-pubsub/retry-policy.png)
+![Google Developer Consoleの「再試行ポリシー」ウィンドウ &#x200B;](../../images/tutorials/create/google-pubsub/retry-policy.png)
 
 ピーク時の読み込み時に未確認のデータが失われないようにするには、**サブスクリプションメッセージの保持期間を 24 時間以上に設定** する必要があります。 さらに、**デッドレタートピックを有効にする** ことで、まれなエッジケースでもデータ損失が発生しないようにします。
 

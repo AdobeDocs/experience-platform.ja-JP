@@ -39,7 +39,7 @@ ht-degree: 47%
 | `password` | 認証のために [!DNL Cassandra] サーバーに接続するためのパスワード。 |
 | `connectionSpec.id` | 接続の作成に必要な一意の ID。 [!DNL Cassandra] の接続仕様 ID は `a8f4d393-1a6b-43f3-931f-91a16ed857f4` です。 |
 
-基本について詳しくは、[ この Cassandra ドキュメント ](https://cassandra.apache.org/doc/latest/operating/security.html#authentication) を参照してください。
+基本について詳しくは、[&#x200B; この Cassandra ドキュメント &#x200B;](https://cassandra.apache.org/doc/latest/operating/security.html#authentication) を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Cassandra] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した [Flow Service API を使用したデータベースの調査 ](../../explore/database-nosql.md) 方法を説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Cassandra] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した [Flow Service API を使用したデータベースの調査 &#x200B;](../../explore/database-nosql.md) 方法を説明します。
