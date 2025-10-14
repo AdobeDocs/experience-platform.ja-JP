@@ -3,10 +3,10 @@ title: Azure Event Hubs Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 9%
+source-wordcount: '633'
+ht-degree: 8%
 
 ---
 
@@ -32,18 +32,20 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 ### [!DNL Event Hubs] とExperience Platformの並列処理を強化
 
-並列処理とは、複数の処理ユニットで同じタスクを同時に実行することで、処理の高速化と高性能化を図ることを指します。 パーティションを増やすか、[!DNL Event Hubs] アカウントの処理単位を増やすことで、[!DNL Event Hubs] 側の並列処理を増やすことができます。 詳しくは、この [[!DNL Event Hubs]  拡大縮小に関するドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
+並列処理とは、複数の処理ユニットで同じタスクを同時に実行することで、処理の高速化と高性能化を図ることを指します。 パーティションを増やすか、[!DNL Event Hubs] アカウントの処理単位を増やすことで、[!DNL Event Hubs] 側の並列処理を増やすことができます。 詳しくは、この [[!DNL Event Hubs]  拡大縮小に関するドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
 
 Experience Platform側の取り込み速度を上げるには、Experience Platformが [!DNL Event Hubs] パーティションから読み取るソースコネクタのタスク数を増やす必要があります。 [!DNL Event Hubs] 側の並列性を高めたら、Adobeの担当者に連絡して、新しいパーティションに基づいてExperience Platform タスクを拡張してください。 現在、このプロセスは自動化されていません。
 
 ## 仮想ネットワークを使用して [!DNL Event Hubs] をExperience Platformに接続する
 
-ファイアウォール対策を有効にしながらExperience Platformに接続する [!DNL Event Hubs] うに、仮想ネットワークを設定できます。 仮想ネットワークを設定するには、この [[!DNL Event Hubs]  ネットワークのルールセットのドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照し、次の手順に従います。
+Experience Platformは、仮想ネットワークを介した [!DNL Event Hubs] への接続をサポートしています。 これにより、パブリックインターネットではなく、安全なプライベート接続を介してデータを転送できます。 Experience Platform VNet を許可リストに加えるすると、既存のファイアウォールによる保護を維持しながら、[!DNL Event Hubs] プライベートバックボーンを通じて [!DNL Azure] トラフィックを安全にルーティングできます。
+
+仮想ネットワークを設定するには、この [[!DNL Event Hubs]  ネットワークのルールセットのドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照し、次の手順に従います。
 
 * REST API パネルから **試す** を選択します。
 * 同じブラウザーの資格情報を使用して [!DNL Azure] アカウントを認証します。
 * Experience Platformに取り込む [!DNL Event Hubs] 名前空間、リソースグループ、サブスクリプションを選択してから、「**実行**」を選択します。
-* 表示される JSON 本文で、内 `properties` の下に次のExperience Platform サブネット `virtualNetworkRules` 追加します。
+* 表示される JSON 本文で、内 `virtualNetworkRules` の下に次のExperience Platform サブネット `properties` 追加します。
 
 
 >[!IMPORTANT]
@@ -119,7 +121,7 @@ Experience Platform サブネットの様々なリージョンについては、
 }
 ```
 
-ネットワーク ルール セットの詳細については、次の [[!DNL Event Hubs]  ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
+ネットワーク ルール セットの詳細については、次の [[!DNL Event Hubs]  ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
 
 ## [!DNL Event Hubs] をExperience Platformに接続
 
