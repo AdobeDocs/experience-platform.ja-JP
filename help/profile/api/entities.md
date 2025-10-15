@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 33%
+source-wordcount: '2141'
+ht-degree: 30%
 
 ---
 
 # エンティティエンドポイント （プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[&#x200B; プロファイルユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
+Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
@@ -66,6 +66,10 @@ GET /access/entities?{QUERY_PARAMETERS}
 - `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.profile` です。
 - `entityId`：取得しようとしているエンティティの ID。
 - `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+さらに、次のクエリパラメーターの使用を *強く* 推奨します。
+
+- `mergePolicyId`: データのフィルタリングに使用する結合ポリシーの ID。 結合ポリシーが指定されていない場合、組織のデフォルトの結合ポリシーが使用されます。
 
 有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -180,6 +184,10 @@ B2B アカウントデータにアクセスするには、次のクエリパラ�
 - `entityId`：取得しようとしているエンティティの ID。
 - `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
 
+さらに、次のクエリパラメーターの使用を *強く* 推奨します。
+
+- `mergePolicyId`: データのフィルタリングに使用する結合ポリシーの ID。 結合ポリシーが指定されていない場合、組織のデフォルトの結合ポリシーが使用されます。
+
 有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
 **リクエスト**
@@ -271,6 +279,10 @@ B2B オポチュニティエンティティにアクセスするには、次の�
 - `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.opportunity` です。
 - `entityId`：取得しようとしているエンティティの ID。
 - `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+さらに、次のクエリパラメーターの使用を *強く* 推奨します。
+
+- `mergePolicyId`: データのフィルタリングに使用する結合ポリシーの ID。 結合ポリシーが指定されていない場合、組織のデフォルトの結合ポリシーが使用されます。
 
 有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -1207,7 +1219,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->次の B2B エンティティに対する削除リクエストは非推奨（廃止予定）になりました。
+>エンティティを削除エンドポイントは、2025 年 10 月末までに非推奨（廃止予定）になります。 レコードの削除操作を実行する場合は、代わりに [ データライフサイクルレコード削除 API ワークフロー ](/help/hygiene/api/workorder.md) または [ データライフサイクルレコード削除 UI ワークフロー ](/help/hygiene/ui/record-delete.md) を使用できます。
+>
+>さらに、次の B2B エンティティに対する削除リクエストは、既に非推奨（廃止予定）になっています。
 >
 >- アカウント
 >- アカウントと人物の関係
@@ -1257,7 +1271,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 次の手順
 
-このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[&#x200B; データアクセスの概要 &#x200B;](../../data-access/home.md) を参照してください。
+このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[ データアクセスの概要 ](../../data-access/home.md) を参照してください。
 
 ## 付録 {#appendix}
 
@@ -1276,7 +1290,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 | `relatedEntityId` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、関連するプロファイルエンティティの ID を指定します **必須**。 この値は、`entityId` と同じ規則に従います 。 | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は `relatedEntityId` で指定したエンティティの ID 名前空間を指定する必要があります。 | `relatedEntityIdNS=CRMID` |
 | `fields` | 応答で返されるデータをフィルターします。取得したデータに含めるスキーマフィールドの値を指定します。複数のフィールドの場合、値はコンマで区切り、スペースは使用しません。 | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 返されるデータを制御する結合ポリシーを識別します。 呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイル結合も ID ステッチも行われません。 | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *推奨* 返されるデータを制御する結合ポリシーを識別します。 呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。リクエストしているスキーマにデフォルトの結合ポリシーが定義されていない場合、API は HTTP 422 エラーステータスコードを返します。 | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | 取得したエンティティの並べ替え順（タイムスタンプ別）。 これは `(+/-)timestamp` として記述され、デフォルトは `+timestamp` です。 | `orderby=-timestamp` |
 | `startTime` | エンティティをフィルター処理する開始時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | エンティティのフィルタリングの終了時間をミリ秒単位で指定します。 | `endTime=1539838510` |
