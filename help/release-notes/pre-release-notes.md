@@ -2,10 +2,10 @@
 title: Experience Platformのプレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 16%
+source-wordcount: '1008'
+ht-degree: 15%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025 年 10 月**
 
@@ -36,7 +36,7 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能または更新された機能**
 
@@ -46,7 +46,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 {style="table-layout:auto"}
 
-アラートについて詳しくは、[[!DNL Observability Insights]  概要 &#x200B;](../observability/home.md) を参照してください。
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../observability/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -57,18 +57,20 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 宛先 | 説明 |
 | --- | --- |
 | [!DNL AdForm] | この宛先を使用して、Adobe Real-Time CDP オーディエンスを [!DNL AdForm] に送信し、Experience Cloud ID （ECID）と [!DNL AdForm] の ID Fusion に基づいてアクティブ化します。 [!DNL AdForm] の ID Fusion は、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化できる ID 解決サービスです。 |
-| `Amazon Ads` | `firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country` などの個人識別子のサポートを追加しました。 これらのフィールドをターゲット ID としてマッピングすると、オーディエンスの一致率を向上させることができます。 |
+| [!DNL Amazon Ads] | `firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country` などの個人識別子のサポートを追加しました。 これらのフィールドをターゲット ID としてマッピングすると、オーディエンスの一致率を向上させることができます。 |
+| [!DNL Snowflake Batch] （限定提供） | ライブ [!DNL Snowflake] データ共有を作成して、毎日のオーディエンスの更新を共有テーブルとして直接アカウントに受け取ります。 この統合は、現在、VA7 地域でプロビジョニングされたお客様の組織で利用できます。 |
+| [!DNL Snowflake Streaming] （限定提供） | ライブオーディ [!DNL Snowflake] ンスデータ共有を作成して、ストリーミングオーディエンスの更新を共有テーブルとして直接アカウントに受け取ります。 この統合は、現在、VA7 地域でプロビジョニングされたお客様の組織で利用できます。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL AES256] 宛先での [!DNL Amazon S3] サーバーサイド暗号化のサポート | [!DNL Amazon S3] の宛先では、サーバーサイドの暗号化 [!DNL AES256] サポートするようになり、書き出したデータのセキュリティを強化します。 この暗号化方法は、[!DNL Amazon S3] 宛先接続を設定または更新する際に設定できます。この方法では、業界標準の [!DNL AES256] 暗号化アルゴリズムを使用して、保存時にデータが暗号化されます。 詳しくは、[[!DNL Amazon]  ドキュメント &#x200B;](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html) を参照してください。 |
-| [&#x200B; オーディエンスレベルの監視をサポートする新しい宛先 &#x200B;](../dataflows/ui/monitor-destinations.md#audience-level-view) | 以下の宛先で、オーディエンスレベルの監視がサポートされるようになりました。 <ul><li>[!DNL Airship Tags]</li><li>（API） [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>（V1） [!DNL Pega CDH Realtime Audience]</li><li>（V2） [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Account Engagement</li><li>[!DNL The Trade Desk]</li></ul> |
-| データセット書き出しガードレールの修正 | データセット書き出しガードレールの修正が実装されました。 以前は、XDM エクスペリエンスイベントスキーマに基づい _タイムスタンプ列を含むが_ 含まない）一部のデータセットがエクスペリエンスイベントデータセットとして誤って扱われ、書き出しが 365 日のルックバックウィンドウに制限されていました。 ドキュメント化された 365 日間のルックバックガードレールは、エクスペリエンスイベントデータセットにのみ適用されるようになりました。 XDM エクスペリエンスイベントスキーマ以外のスキーマを使用するデータセットは、100 億レコードのガードレールで管理されるようになりました。 一部のお客様では、データセットの書き出し数が増加し、365 日間のルックバックウィンドウで誤って失敗する場合があります。 これにより、ルックバックウィンドウが長い予測ワークフローのデータセットを書き出すことができます。 詳しくは、[&#x200B; データセット書き出しガードレール &#x200B;](../destinations/guardrails.md#dataset-exports) を参照してください。 |
+| [!DNL AES256] 宛先での [!DNL Amazon S3] サーバーサイド暗号化のサポート | [!DNL Amazon S3] の宛先では、サーバーサイドの暗号化 [!DNL AES256] サポートするようになり、書き出したデータのセキュリティを強化します。 この暗号化方法は、[!DNL Amazon S3] 宛先接続を設定または更新する際に設定できます。この方法では、業界標準の [!DNL AES256] 暗号化アルゴリズムを使用して、保存時にデータが暗号化されます。 詳しくは、[[!DNL Amazon]  ドキュメント ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html) を参照してください。 |
+| [ オーディエンスレベルの監視をサポートする新しい宛先 ](../dataflows/ui/monitor-destinations.md#audience-level-view) | 以下の宛先で、オーディエンスレベルの監視がサポートされるようになりました。 <ul><li>[!DNL Airship Tags]</li><li>（API） [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>（V1） [!DNL Pega CDH Realtime Audience]</li><li>（V2） [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Account Engagement</li><li>[!DNL The Trade Desk]</li></ul> |
+| データセット書き出しガードレールの修正 | データセット書き出しガードレールの修正が実装されました。 以前は、XDM エクスペリエンスイベントスキーマに基づい _タイムスタンプ列を含むが_ 含まない）一部のデータセットがエクスペリエンスイベントデータセットとして誤って扱われ、書き出しが 365 日のルックバックウィンドウに制限されていました。 ドキュメント化された 365 日間のルックバックガードレールは、エクスペリエンスイベントデータセットにのみ適用されるようになりました。 XDM エクスペリエンスイベントスキーマ以外のスキーマを使用するデータセットは、100 億レコードのガードレールで管理されるようになりました。 一部のお客様では、データセットの書き出し数が増加し、365 日間のルックバックウィンドウで誤って失敗する場合があります。 これにより、ルックバックウィンドウが長い予測ワークフローのデータセットを書き出すことができます。 詳しくは、[ データセット書き出しガードレール ](../destinations/guardrails.md#dataset-exports) を参照してください。 |
 | エンタープライズ宛先に関するオーディエンスレベルのレポートの強化 | エンタープライズの宛先に関するオーディエンスレベルのレポートロジックの改善。 このリリース以降、選択した宛先に関連するオーディエンスのみを含んだ、より正確なオーディエンスレポート番号が表示されるようになります。 この監視の調整により、データフローでマッピングされたオーディエンスのみがレポートに含まれるようになり、実際のデータのアクティブ化に関するインサイトが明確になります。 これは、アクティブ化されるデータの量には影響しません。純粋に、レポートの精度を向上させるための監視機能の強化にすぎません。 |
 
-詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
+詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
