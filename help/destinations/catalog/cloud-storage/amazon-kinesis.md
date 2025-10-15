@@ -4,10 +4,10 @@ title: Amazon Kinesis 接続
 description: Amazon Kinesis ストレージへのリアルタイムアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
+source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 48%
+source-wordcount: '1978'
+ht-degree: 52%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 48%
 
 [!DNL Amazon Kinesis] ストレージへのリアルタイムアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
-* [!DNL Amazon Kinesis] について詳しくは、[Amazon ドキュメント &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) を参照してください。
-* プログラムによってに接続する [!DNL Amazon Kinesis] は、[&#x200B; ストリーミング宛先 API チュートリアル &#x200B;](../../api/streaming-destinations.md) を参照してください。
+* [!DNL Amazon Kinesis] について詳しくは、[Amazon ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) を参照してください。
+* プログラムによってに接続する [!DNL Amazon Kinesis] は、[ ストリーミング宛先 API チュートリアル ](../../api/streaming-destinations.md) を参照してください。
 * Experience Platform ユーザーインターフェイスを使用して [!DNL Amazon Kinesis] に接続するには、以下の節を参照してください。
 
 ![UI でのAmazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -41,7 +41,7 @@ ht-degree: 48%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -100,13 +100,13 @@ ht-degree: 48%
 
 {style="table-layout:auto"}
 
-データストリームのアクセス制御 [!DNL Kinesis] ついて詳しくは、次の [[!DNL Kinesis]  ドキュメント &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
+データストリームのアクセス制御 [!DNL Kinesis] ついて詳しくは、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -114,7 +114,7 @@ ht-degree: 48%
 
 以下のフィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![Amazon Kinesis 認証の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![Amazon Kinesis 認証の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]アクセスキーと秘密鍵**: [!DNL Amazon Web Services] で `access key - secret access key` ペアを生成して、[!DNL Amazon Kinesis] アカウントにExperience Platform アクセス権を付与します。 詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **[!UICONTROL Region]**：データのストリーミング先 [!DNL Amazon Web Services] リージョンを示します。
@@ -133,7 +133,7 @@ ht-degree: 48%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![Amazon Kinesis の宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![Amazon Kinesis の宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL 名前]**:[!DNL Amazon Kinesis] への接続の名前を指定します
 * **[!UICONTROL 説明]**:[!DNL Amazon Kinesis] への接続の説明を指定します。
@@ -159,10 +159,10 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* [&#x200B; 同意ポリシーの評価 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、Amazon Kinesis 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* [ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、Amazon Kinesis 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)
 
-この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 
@@ -182,7 +182,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Amazon Kinesis] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>**メモ**:Amazon Kinesis の宛先の書き出し動作が 2025 年 9 月リリースで更新されました。 以下で強調表示されている新しい動作は、現在、このリリース以降に作成された新しいAmazon Kinesis の宛先にのみ適用されます。 既存のAmazon Kinesis の宛先の場合、古い書き出し動作を引き続き使用するか、Adobeにお問い合わせの上、マッピングされたオーディエンスのみが書き出される新しい動作に移行してください。 すべての組織は、2026 年に徐々に新しい動作に移行されます。<br><br> <span class="preview"> **新しい書き出し動作**：宛先にマッピングされ、変更されたセグメントは、segmentMembership オブジェクトに含まれます。 シナリオによっては、複数の呼び出しを使用して書き出される場合があります。また、シナリオによっては、変更されていない一部のセグメントも呼び出しに含まれる場合があります。いずれの場合も、データフローでマッピングされたセグメントのみが書き出されます。</span></li><br>**古い動作**:`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。 これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ [&#x200B; 結合ポリシー &#x200B;](/help/profile/merge-policies/overview.md) に属する場合、プロファイルが選定された他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 <li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Amazon Kinesis] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Amazon Kinesis] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。なお、これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属する場合、プロファイルが適していた他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Amazon Kinesis] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -190,9 +190,9 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 例えば、[!DNL Amazon Kinesis] の宛先に対するこのデータフローについて考えてみましょう。ここでは、3 つのオーディエンスがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
-![Amazon Kinesis 宛先のデータフロー &#x200B;](../../assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis 宛先のデータフロー ](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクト（以下の [&#x200B; 書き出されたデータ &#x200B;](#exported-data) の節を参照）に、その特定のプロファイルがメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示されることがあります。 プロファイルが **デロリアンを保有する顧客** セグメントの対象となり、かつ **基本サイトアクティブおよび市区町村 – ダラス** セグメントのメンバーでもある場合、他の 2 つのオーディエンスもデータ書き出しの `segmentMembership` オブジェクトに存在します。これは、これらが **デロリアンを保有する顧客** セグメントと同じ結合ポリシーを共有する場合、データフローでマッピングされるためです。
+宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクト（以下の [ 書き出されたデータ ](#exported-data) の節を参照）に、その特定のプロファイルがメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示されることがあります。 プロファイルが **デロリアンを保有する顧客** セグメントの対象となり、かつ **基本サイトアクティブおよび市区町村 – ダラス** セグメントのメンバーでもある場合、他の 2 つのオーディエンスもデータ書き出しの `segmentMembership` オブジェクトに存在します。これは、これらが **デロリアンを保有する顧客** セグメントと同じ結合ポリシーを共有する場合、データフローでマッピングされるためです。
 
 プロファイル属性の観点から、上記でマッピングした 4 つの属性に対する変更によって、書き出しの宛先が決定し、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
 
@@ -308,6 +308,6 @@ HTTP API 宛先へのリクエストが失敗した場合、Experience Platform 
 
 >[!MORELIKETHIS]
 >
->* [Amazon Kinesis に接続し、Flow Service API を使用してデータを有効化する &#x200B;](../../api/streaming-destinations.md)
->* [Azure Event Hubs の宛先 &#x200B;](./azure-event-hubs.md)
+>* [Amazon Kinesis に接続し、Flow Service API を使用してデータを有効化する ](../../api/streaming-destinations.md)
+>* [Azure Event Hubs の宛先 ](./azure-event-hubs.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
