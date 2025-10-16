@@ -2,39 +2,35 @@
 title: API を使用したGoogle広告のExperience Platformへの接続
 description: Flow Service API を使用してAdobe Experience PlatformをGoogle Ads に接続する方法について説明します。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 28%
+source-wordcount: '457'
+ht-degree: 27%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL Google Ads] のExperience Platformへの接続
-
->[!NOTE]
->
->[!DNL Google Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
+# [!DNL Google Ads] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Google Ads] アカウントをAdobe Experience Platformに接続する方法については、このチュートリアルをお読みください。
+[!DNL Google Ads]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法については、このチュートリアルをお読みください。
 
-## はじめに
+## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Google Ads] ています。
+次の節では、[!DNL Google Ads] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Flow Service] ています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Google Ads]  ソースの概要 &#x200B;](../../../../connectors/advertising/ads.md) を参照してください。
+認証について詳しくは、[[!DNL Google Ads]  ソースの概要 ](../../../../connectors/advertising/ads.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -72,7 +68,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -91,7 +87,7 @@ curl -X POST \
 | `auth.params.refreshToken` | [!DNL Google Ads] アカウントの更新トークン。 |
 | `auth.params.clientID` | [!DNL Google Ads] アカウントのクライアント ID。 |
 | `auth.params.clientSecret` | [!DNL Google Ads] アカウントのクライアント秘密鍵。 |
-| `auth.params.googleAdsApiVersion` | 使用している [!DNL Google Ads] API のバージョン。 Experience Platformでサポートされている最新バージョンは `v17` です。 |
+| `auth.params.googleAdsApiVersion` | 使用している [!DNL Google Ads] API のバージョン。 Experience Platformは現在、バージョン `v19` 以降をサポートしています。 互換性を確保するために、これらのサポート対象バージョンのいずれかを使用していることを確認します。 |
 | `connectionSpec.id` | [!DNL Google Ads] 接続仕様 ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
 
 **応答**
@@ -107,7 +103,7 @@ curl -X POST \
 
 ## 広告データを取り込むデータフローの作成
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Google Ads] ベース接続を作成し、[!DNL Google Ads] アカウントをExperience Platformに接続しました。 このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Google Ads] API を使用して [!DNL Flow Service] ベース接続を作成し、[!DNL Google Ads] アカウントをExperience Platformに接続しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [&#x200B; [!DNL Flow Service] API を使用した、広告データをExperience Platformに取り込むデータフローの作成](../../collect/advertising.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service] API を使用した、広告データをExperience Platformに取り込むデータフローの作成](../../collect/advertising.md)
