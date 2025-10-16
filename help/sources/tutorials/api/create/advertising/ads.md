@@ -13,24 +13,24 @@ ht-degree: 27%
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-[!DNL Google Ads]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法については、このチュートリアルをお読みください。
+[!DNL Google Ads]API[[!DNL Flow Service]  を使用して &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) アカウントをAdobe Experience Platformに接続する方法については、このチュートリアルをお読みください。
 
 ## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Google Ads] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Flow Service] ています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Google Ads]  ソースの概要 ](../../../../connectors/advertising/ads.md) を参照してください。
+認証について詳しくは、[[!DNL Google Ads]  ソースの概要 &#x200B;](../../../../connectors/advertising/ads.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -105,5 +105,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Google Ads] API を使用して [!DNL Flow Service] ベース接続を作成し、[!DNL Google Ads] アカウントをExperience Platformに接続しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、広告データをExperience Platformに取り込むデータフローの作成](../../collect/advertising.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API を使用した、広告データをExperience Platformに取り込むデータフローの作成](../../collect/advertising.md)

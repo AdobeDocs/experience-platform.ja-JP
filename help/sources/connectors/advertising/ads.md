@@ -13,7 +13,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->[!DNL Google Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Google Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -27,7 +27,7 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 ### Experience Platformに対する権限の設定
 
-**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Google Ads] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Google Ads] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/ui/overview.md) を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -36,8 +36,8 @@ Adobe Experience Platform には、サードパーティの広告システムか
 | 資格情報 | 説明 |
 | --- | --- |
 | `clientCustomerId` | クライアントカスタマー ID は、[!DNL Google Ads] API で管理する [!DNL Google Ads] クライアントアカウントに対応するアカウント番号です。 この ID は `123-456-7890` のテンプレートに従います。 |
-| `loginCustomerId` | ログインカスタマー ID は、[!DNL Google Ads] manager アカウントに対応するアカウント番号であり、特定の運用顧客からレポートデータを取得するために使用されます。 ログインカスタマー ID について詳しくは、[[!DNL Google Ads] API ドキュメント ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id) を参照してください。 |
-| `developerToken` | 開発者トークンを使用すると、[!DNL Google Ads] API にアクセスできます。 同じ開発者トークンを使用して、すべての [!DNL Google Ads] アカウントに対してリクエストを行うことができます。 [ マネージャーアカウントにログイン ](https://ads.google.com/home/tools/manager-accounts/) してデベロッパートークンを取得し、[!DNL API Center] のページに移動します。 |
+| `loginCustomerId` | ログインカスタマー ID は、[!DNL Google Ads] manager アカウントに対応するアカウント番号であり、特定の運用顧客からレポートデータを取得するために使用されます。 ログインカスタマー ID について詳しくは、[[!DNL Google Ads] API ドキュメント &#x200B;](https://developers.google.com/search-ads/reporting/concepts/login-customer-id) を参照してください。 |
+| `developerToken` | 開発者トークンを使用すると、[!DNL Google Ads] API にアクセスできます。 同じ開発者トークンを使用して、すべての [!DNL Google Ads] アカウントに対してリクエストを行うことができます。 [&#x200B; マネージャーアカウントにログイン &#x200B;](https://ads.google.com/home/tools/manager-accounts/) してデベロッパートークンを取得し、[!DNL API Center] のページに移動します。 |
 | `refreshToken` | 更新トークンは認証の一部 [!DNL OAuth2] す。 このトークンを使用すると、有効期限が切れた後にアクセストークンを再生成できます。 |
 | `clientId` | クライアント ID は、クライアント秘密鍵と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせると、[!DNL Google] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
 | `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせると、[!DNL Google] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
