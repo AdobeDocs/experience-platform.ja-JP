@@ -14,7 +14,7 @@ ht-degree: 71%
 
 ## 概要 {#overview}
 
-この拡張機能により、イベントをAdobe Video Analytics に接続するため [!DNL JW Player][!DNL JW Player] アダプターがインストールされます。 Adobe Video Analytics の機能を活用して、顧客のビデオ視聴習慣を把握するための詳細なインサイトを得ます。
+この拡張機能により、イベントをAdobe Video Analytics に接続するため [!DNL JW Player]&#x200B;[!DNL JW Player] アダプターがインストールされます。 Adobe Video Analytics の機能を活用して、顧客のビデオ視聴習慣を把握するための詳細なインサイトを得ます。
 
 [!DNL JW Player Analytics] （Beta）は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) の拡張機能のページを参照してください。
 

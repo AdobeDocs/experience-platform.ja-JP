@@ -47,7 +47,7 @@ Experience Platform UI で、左側のナビゲーションレールの「**[!UI
 
 ![&#x200B; 顧客管理キーカードで「設定」がハイライト表示されたExperience Platform暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] が表示されます。 [!UICONTROL &#x200B; 顧客管理キー &#x200B;][!UICONTROL &#x200B; 暗号化設定 &#x200B;] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
+[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] が表示されます。 [!UICONTROL &#x200B; 顧客管理キー &#x200B;]&#x200B;[!UICONTROL &#x200B; 暗号化設定 &#x200B;] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 

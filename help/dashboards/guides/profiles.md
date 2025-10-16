@@ -79,9 +79,9 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![&#x200B; プロファイル ID がハイライト表示された「プロファイルの参照」タブ。](../images/profiles/profile-id.png)
 
-[!UICONTROL &#x200B; プロファイル &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースには、そのプロファイルに固有の情報を伝える事前設定済みのウィジェットがいくつか表示されます。 この情報により、プロファイルの主要な属性を一目で把握できます。 独自のウィジェットを作成して、[!UICONTROL &#x200B; プロファイル &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースをカスタマイズすることもできます。 詳しくは、[&#x200B; ウィジェットの追加方法 &#x200B;](#add-widgets) の節を参照してください。
+[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースには、そのプロファイルに固有の情報を伝える事前設定済みのウィジェットがいくつか表示されます。 この情報により、プロファイルの主要な属性を一目で把握できます。 独自のウィジェットを作成して、[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースをカスタマイズすることもできます。 詳しくは、[&#x200B; ウィジェットの追加方法 &#x200B;](#add-widgets) の節を参照してください。
 
-![&#x200B; 「[!UICONTROL &#x200B; 詳細 &#x200B;] タブがハイライト表示された [!UICONTROL &#x200B; プロファイル &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペース。](../images/profiles/profile-details-workspace.png)
+![&#x200B; 「[!UICONTROL &#x200B; 詳細 &#x200B;] タブがハイライト表示された [!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペース。](../images/profiles/profile-details-workspace.png)
 
 ### プロファイルの詳細ウィジェット {#widgets}
 
@@ -125,7 +125,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ### ウィジェットを追加 {#add-widgets}
 
-カスタマイズしたウィジェットを [!UICONTROL &#x200B; プロファイル &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに追加するには、「**[!UICONTROL プロファイルの詳細をカスタマイズ]**」を選択します。
+カスタマイズしたウィジェットを [!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに追加するには、「**[!UICONTROL プロファイルの詳細をカスタマイズ]**」を選択します。
 
 ![&#x200B; 「プロファイルの詳細をカスタマイズ [!UICONTROL &#x200B; がハイライト表示されたプロファイルの詳細ワークスペース &#x200B;]](../images/profiles/customize-profile-details.png)
 
@@ -145,7 +145,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![&#x200B; ロイヤルティ属性のチェックボックスと [!UICONTROL &#x200B; 選択 &#x200B;] がハイライト表示された結合スキーマ図 &#x200B;](../images/profiles/union-schema-attributes.png)
 
-完了したウィジェットのプレビューがキャンバスに表示されます。 選択した属性に問題がなければ、「**[!UICONTROL 保存]**」を選択して選択内容を確定し、[!UICONTROL &#x200B; プロファイル &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに戻ります。 新しく作成されたウィジェットがワークスペースに表示されます。
+完了したウィジェットのプレビューがキャンバスに表示されます。 選択した属性に問題がなければ、「**[!UICONTROL 保存]**」を選択して選択内容を確定し、[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに戻ります。 新しく作成されたウィジェットがワークスペースに表示されます。
 
 ![&#x200B; 「保存」がハイライト表示され、ウィジェットのプレビューが表示されたウィジェット作成キャンバス &#x200B;](../images/profiles/widget-preview.png)
 
@@ -502,7 +502,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![オーディエンスサイズウィジェット。](../images/profiles/audiences-size.png)
 
-オーディエンスに関する包括的な情報を確認するには、表示されたリストからオーディエンス名を選択して、[!UICONTROL &#x200B; オーディエンス &#x200B;][!UICONTROL &#x200B; 詳細 &#x200B;] ページに移動します。 また、ウィジェットの最後から **[!UICONTROL すべてのオーディエンスを表示]** を選択し、[!UICONTROL &#x200B; オーディエンス &#x200B;] [!UICONTROL &#x200B; 参照 &#x200B;] タブに移動して既存のオーディエンスを検索できます。
+オーディエンスに関する包括的な情報を確認するには、表示されたリストからオーディエンス名を選択して、[!UICONTROL &#x200B; オーディエンス &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ページに移動します。 また、ウィジェットの最後から **[!UICONTROL すべてのオーディエンスを表示]** を選択し、[!UICONTROL &#x200B; オーディエンス &#x200B;] [!UICONTROL &#x200B; 参照 &#x200B;] タブに移動して既存のオーディエンスを検索できます。
 
 ![&#x200B; オーディエンス名と「すべてのオーディエンスを表示」テキストがハイライト表示されたオーディエンスサイズウィジェット &#x200B;](../images/profiles/audiences-size-view-all-audiences.png)
 

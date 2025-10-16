@@ -39,7 +39,7 @@ Adobe Experience Platformには、一般的なエクスペリエンス管理の�
 
 Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースを開き、「**[!UICONTROL データタイプ]**」タブを選択します。 使用可能なデータタイプのリストが表示されます。 データタイプのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたデータタイプが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。
 
-![ 左側のナビゲーションで [!UICONTROL &#x200B; スキーマ &#x200B;] がハイライト表示され ][!UICONTROL &#x200B; データタイプ &#x200B;] を含む [[!UICONTROL &#x200B; スキーマ ワークスペース。]](../../images/ui/resources/data-types/data-types-tab.png)
+![ 左側のナビゲーションで [!UICONTROL &#x200B; スキーマ &#x200B;] がハイライト表示され ]&#x200B;[!UICONTROL &#x200B; データタイプ &#x200B;] を含む [[!UICONTROL &#x200B; スキーマ ワークスペース。]](../../images/ui/resources/data-types/data-types-tab.png)
 
 ここから、次のオプションを使用できます。
 

@@ -88,7 +88,7 @@ Experience Platformを [!DNL Pinterest] に接続するには、次の入力が�
 | [!UICONTROL &#x200B; イベント ID] | このイベントを識別する一意の ID 文字列。コンバージョン API とPinterest トラッキングの両方を介して取り込まれたイベント間の重複排除に使用できます。 そうしないと、イベントのデータが二重にカウントされ、指標の膨張を報告する可能性があります。 | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL &#x200B; イベントのプロパティ &#x200B;] | イベントのカスタムプロパティを含む JSON オブジェクト。 生の JSON を提供するか、キー値の入力のシンプルなセットを使用するかを選択します。 | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
 
-![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest][!UICONTROL &#x200B; イベントデータ &#x200B;]。](../../../images/extensions/server/pinterest/event-data.png)
+![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest]&#x200B;[!UICONTROL &#x200B; イベントデータ &#x200B;]。](../../../images/extensions/server/pinterest/event-data.png)
 
 次のイベントプロパティを設定できます。
 
@@ -117,7 +117,7 @@ Experience Platformを [!DNL Pinterest] に接続するには、次の入力が�
 | [!UICONTROL &#x200B; クライアントユーザーエージェント &#x200B;] | ユーザーの Web ブラウザーのユーザーエージェント文字列。 | Mozilla/5.0 （platform; rv:geckoversion） Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL &#x200B; 顧客情報データ &#x200B;] | その他の顧客情報を含む JSON オブジェクト。 生の JSON を提供するか、キー値の入力のシンプルなセットを使用するかを選択します。 | { &quot;ph&quot;: &quot;122333445&quot; } |
 
-![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest][!UICONTROL &#x200B; ユーザーデータ &#x200B;]。](../../../images/extensions/server/pinterest/user-data.png)
+![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest]&#x200B;[!UICONTROL &#x200B; ユーザーデータ &#x200B;]。](../../../images/extensions/server/pinterest/user-data.png)
 
 設定可能な顧客情報プロパティは次のとおりです。
 
@@ -153,7 +153,7 @@ Experience Platformを [!DNL Pinterest] に接続するには、次の入力が�
 | コンテンツ ID | 製品 ID のリスト（配列）。 |
 | 目次 | 価格や数量など、商品に関する情報を含んだオブジェクトのリスト（配列）。 |
 
-![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest][!UICONTROL &#x200B; カスタムデータ &#x200B;]。](../../../images/extensions/server/pinterest/custom-data.png)
+![&#x200B; ルールアクションでハイライト表示されている [!DNL Pinterest]&#x200B;[!UICONTROL &#x200B; カスタムデータ &#x200B;]。](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## [!DNL Pinterest] 内のデータの検証
 

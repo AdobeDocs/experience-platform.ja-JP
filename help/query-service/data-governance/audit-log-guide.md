@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Query Service] 監査ログ統合は、クエリ
 
 ## 前提条件
 
-Experience Platform UI 内で監査ログダッシュボードを表示するには、[!DNL Data Governance][!UICONTROL &#x200B; ユーザーアクティビティログを表示 &#x200B;] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
+Experience Platform UI 内で監査ログダッシュボードを表示するには、[!DNL Data Governance]&#x200B;[!UICONTROL &#x200B; ユーザーアクティビティログを表示 &#x200B;] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
 ## [!DNL Query Service] 監査ログのカテゴリ {#audit-log-categories}
 

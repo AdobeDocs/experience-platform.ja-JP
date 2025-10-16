@@ -20,7 +20,7 @@ ht-degree: 48%
 >
 >このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
-[!DNL Adobe Experience Platform][!DNL Query Service] を標準機能として [!DNL JupyterLab] に統合することで、[!DNL Data Science Workspace] で構造化照会言語 (SQL) を使用できます。
+[!DNL Adobe Experience Platform]&#x200B;[!DNL Query Service] を標準機能として [!DNL JupyterLab] に統合することで、[!DNL Data Science Workspace] で構造化照会言語 (SQL) を使用できます。
 
 このチュートリアルでは、 [!DNL Adobe Analytics] データを探索、変換、分析するための一般的なユース ケースのサンプル SQL クエリを示します。
 
