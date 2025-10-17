@@ -16,11 +16,11 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 >[!NOTE]
 >
->拡張機能パッケージを [!UICONTROL  使用権限 ] で共有するには、非公開または公開バージョンが必要です。 「開発」の可用性とマークされたバージョンは、共有の対象ではなく、認証ドロップダウンに表示されません。 これは、以前のバージョン（1.0.0 など）が既に共有されている場合でも適用されます。 新しいバージョン（1.0.1 など）は、受け取り組織によって許可またはインストールされる前に、少なくとも非公開にする必要があります。
+>拡張機能パッケージを [!UICONTROL &#x200B; 使用権限 &#x200B;] で共有するには、非公開または公開バージョンが必要です。 「開発」の可用性とマークされたバージョンは、共有の対象ではなく、認証ドロップダウンに表示されません。 これは、以前のバージョン（1.0.0 など）が既に共有されている場合でも適用されます。 新しいバージョン（1.0.1 など）は、受け取り組織によって許可またはインストールされる前に、少なくとも非公開にする必要があります。
 >
 >プライベート拡張機能パッケージの共有に関するすべてのガイダンスは、後でこれらのパッケージを公開することを選択した場合にも適用されます。 表示、バージョン管理、セキュリティ、互換性、サポート、ドキュメントに関する同じ考慮事項は、パッケージの可用性ステータスに関係なく、引き続き関連性があります。
 
-パブリックおよびプライベート拡張機能パッケージは、[!UICONTROL  使用権限 ] を介して共有できますが、開発用の拡張機能に権限を関連付けることはできません。
+パブリックおよびプライベート拡張機能パッケージは、[!UICONTROL &#x200B; 使用権限 &#x200B;] を介して共有できますが、開発用の拡張機能に権限を関連付けることはできません。
 
 組織は、多くの場合、独自のビジネス要件に合わせてカスタマイズされた特別な拡張機能を開発します。 これらの拡張機能には、公開されるべきではない独自のロジック、カスタム統合、または機密性の高い設定が含まれている場合があります。 使用権限では、次のことを可能にすることで、この課題を解決します。
 
@@ -49,7 +49,7 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 **[!UICONTROL 認証を追加]** を選択します。
 
-![ この組織と共有されている拡張機能のリストを表示する [!UICONTROL  使用権限 ] タブ。[!UICONTROL  認証を追加 ]](../images/shared-extensions/add-authorization.png) がハイライト表示されています。
+![&#x200B; この組織と共有されている拡張機能のリストを表示する [!UICONTROL &#x200B; 使用権限 &#x200B;] タブ。[!UICONTROL &#x200B; 認証を追加 &#x200B;]](../images/shared-extensions/add-authorization.png) がハイライト表示されています。
 
 >[!IMPORTANT]
 >
@@ -59,11 +59,11 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 次に、受入組織の ID を入力し、「**[!UICONTROL 保存]**」を選択します。
 
-![ 選択した拡張機能と、Adobeの組織 ID が入力されていることを示す [!UICONTROL  拡張機能パッケージの使用権限を作成 ] ページがハイライト表示され [!UICONTROL  保存 ]](../images/shared-extensions/save-authorization.png) ます。
+![&#x200B; 選択した拡張機能と、Adobeの組織 ID が入力されていることを示す [!UICONTROL &#x200B; 拡張機能パッケージの使用権限を作成 &#x200B;] ページがハイライト表示され [!UICONTROL &#x200B; 保存 &#x200B;]](../images/shared-extensions/save-authorization.png) ます。
 
-「[!UICONTROL  使用権限 ]」タブに戻ると、拡張機能が **[!UICONTROL 他の組織と共有]** リストに表示されます。 受入組織が承認するまで、ステータスは **承認待ち** と表示されます。承認後、このステータスは **承認済み** に更新されます。
+「[!UICONTROL &#x200B; 使用権限 &#x200B;]」タブに戻ると、拡張機能が **[!UICONTROL 他の組織と共有]** リストに表示されます。 受入組織が承認するまで、ステータスは **承認待ち** と表示されます。承認後、このステータスは **承認済み** に更新されます。
 
-![ 他の組織と共有される拡張機能のリストを表示する [!UICONTROL  使用権限 ] タブ。新しい認証がハイライト表示されます ](../images/shared-extensions/new-authorization.png)
+![&#x200B; 他の組織と共有される拡張機能のリストを表示する [!UICONTROL &#x200B; 使用権限 &#x200B;] タブ。新しい認証がハイライト表示されます &#x200B;](../images/shared-extensions/new-authorization.png)
 
 >[!TIP]
 >
@@ -71,7 +71,7 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 認証がアクティブになると、共有拡張機能のカタログに、他の組織と共有されていることを示す ***共有*** バッジが表示されます。
 
-![ バッジが付いた共有拡張機能を示す [!UICONTROL  カタログ ] タブ ](../images/shared-extensions/sharing-badge.png)
+![&#x200B; バッジが付いた共有拡張機能を示す [!UICONTROL &#x200B; カタログ &#x200B;] タブ &#x200B;](../images/shared-extensions/sharing-badge.png)
 
 ## 共有拡張機能の承認と管理
 
@@ -83,7 +83,7 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 「**この組織と共有** セクションに、**[!UICONTROL 承認待ち]** を含む共有拡張機能のリストが表示されます。 承認する拡張機能を選択し、「**[!UICONTROL 承認]**」を選択します。
 
-![ この組織と共有されている、承認待ちの拡張機能が選択された拡張機能のリストを表示する [!UICONTROL  使用権限 ] タブ。[!UICONTROL  承認 ]](../images/shared-extensions/approve-authorization.png) をハイライト表示しています。
+![&#x200B; この組織と共有されている、承認待ちの拡張機能が選択された拡張機能のリストを表示する [!UICONTROL &#x200B; 使用権限 &#x200B;] タブ。[!UICONTROL &#x200B; 承認 &#x200B;]](../images/shared-extensions/approve-authorization.png) をハイライト表示しています。
 
 >[!NOTE]
 >
@@ -91,15 +91,15 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 **[!UICONTROL Authorization Usages]** ダイアログで **[!UICONTROL OK]** を選択します。
 
-![ ハイライト表示された [!UICONTROL  認証使用状況 ] ダイアログ [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
+![&#x200B; ハイライト表示された [!UICONTROL &#x200B; 認証使用状況 &#x200B;] ダイアログ [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-「[!UICONTROL  使用権限 ]」タブに戻ると、拡張機能のステータスが **承認済み** になったことがわかります。
+「[!UICONTROL &#x200B; 使用権限 &#x200B;]」タブに戻ると、拡張機能のステータスが **承認済み** になったことがわかります。
 
-![ この組織で共有されている拡張機能のリストを表示する [!UICONTROL  使用権限 ] タブ。拡張機能が承認済みステータスでハイライト表示されます ](../images/shared-extensions/approved-authorization.png)
+![&#x200B; この組織で共有されている拡張機能のリストを表示する [!UICONTROL &#x200B; 使用権限 &#x200B;] タブ。拡張機能が承認済みステータスでハイライト表示されます &#x200B;](../images/shared-extensions/approved-authorization.png)
 
 認証が承認されると、拡張機能はカタログで使用できるようになり、他の拡張機能と同様にインストールして使用できます。 共有拡張機能には、別の組織から共有されている拡張機能であることを示す ***受信中*** バッジが表示されます。
 
-![ 「受信中 [!UICONTROL  バッジが付いた共有拡張機能を表示する「カタログ ] タブ ](../images/shared-extensions/receiving-badge.png)
+![&#x200B; 「受信中 [!UICONTROL &#x200B; バッジが付いた共有拡張機能を表示する「カタログ &#x200B;] タブ &#x200B;](../images/shared-extensions/receiving-badge.png)
 
 ## 認証の取り消し
 
@@ -126,6 +126,6 @@ Adobe Experience Platform タグは、拡張機能カタログに公開される
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform内で共有拡張機能を使用する方法について説明します。 拡張機能の開発について詳しくは、[ 拡張機能開発ユーザーガイド ](./getting-started.md) を参照してください。
+このドキュメントでは、Experience Platform内で共有拡張機能を使用する方法について説明します。 拡張機能の開発について詳しくは、[&#x200B; 拡張機能開発ユーザーガイド &#x200B;](./getting-started.md) を参照してください。
 
-Experience Platformの拡張機能の開発のおおまかな概要については、[ 概要ドキュメント ](./overview.md) を参照してください。
+Experience Platformの拡張機能の開発のおおまかな概要については、[&#x200B; 概要ドキュメント &#x200B;](./overview.md) を参照してください。
