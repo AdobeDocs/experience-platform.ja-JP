@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 85%
 
 ---
@@ -185,7 +185,7 @@ ht-degree: 85%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -306,6 +306,7 @@ ht-degree: 85%
    * [サードパーティライブラリのホスト](./extension-dev/third-party-libraries.md)
    * [turbine 自由変数](./extension-dev/turbine.md)
    * [下位互換性規格](./extension-dev/backwards-compatibility.md)
+   * [共有プライベート拡張機能](./extension-dev/shared-private-extensions.md)
 * Reactor API {#api}
    * [概要](./api/overview.md)
    * [Reactor API の認証とアクセス](./api/getting-started.md)
