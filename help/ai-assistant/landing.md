@@ -234,8 +234,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="AI アシスタントにアクセスする" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="AI アシスタントにアクセスする"
+                    <a href="https://video.tv.adobe.com/v/3475920/?captions=jpn&learn=on" title="AI アシスタントにアクセスする" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475920/?captions=jpn&format=jpeg&nocache=1732633204686" alt="AI アシスタントにアクセスする"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -243,12 +243,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="AI アシスタントにアクセスする">AI アシスタントへのアクセス </a>
+                        <a href="https://video.tv.adobe.com/v/3475920/?captions=jpn&learn=on" target="_blank" rel="referrer" title="AI アシスタントにアクセスする">AI アシスタントへのアクセス </a>
                     </p>
                     <p class="is-size-6">[!DNL Permissions] インターフェイスを使用して AI アシスタントにアクセスする方法については、このビデオをご覧ください。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3475920/?captions=jpn&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -271,8 +271,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="オンボーディング時間の短縮" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="オンボーディング時間の短縮"
+                    <a href="https://video.tv.adobe.com/v/3475931/?captions=jpn&learn=on" title="オンボーディング時間の短縮" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475931/?captions=jpn&format=jpeg&nocache=1732633205780" alt="オンボーディング時間の短縮"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -280,11 +280,11 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="オンボーディング時間の短縮"> オンボーディング時間の短縮 </a>
+                        <a href="https://video.tv.adobe.com/v/3475931/?captions=jpn&learn=on" target="_blank" rel="referrer" title="オンボーディング時間の短縮"> オンボーディング時間の短縮 </a>
                     </p>
                     <p class="is-size-6">このビデオでは、AI アシスタントの製品知識を使用してオンボーディング時間を短縮する方法を説明します。</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3475931/?captions=jpn&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>

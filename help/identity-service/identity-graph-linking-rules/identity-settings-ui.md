@@ -19,7 +19,7 @@ ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一�
 
 ID サービス UI ワークスペースでの [!DNL Graph Simulation] インターフェイスの使用について詳しくは、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3458488/?captions=jpn&learn=on&enablevpops)
 
 UI で ID 設定を指定する方法については、このガイドを参照してください。
 

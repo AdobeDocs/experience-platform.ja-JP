@@ -29,7 +29,7 @@ ht-degree: 65%
 
 次のビデオは、製品プロファイルの管理者の管理に関する理解を深めることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475942/?captions=jpn&learn=on)
 
 ## 次の手順
 
