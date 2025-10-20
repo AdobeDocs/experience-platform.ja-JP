@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 90%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 90%
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - ロイヤルティ {#loyalty}
       - [キャピラリーストリーミングイベント](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - マーケティングオートメーション {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -315,6 +316,8 @@ ht-degree: 90%
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - ロイヤルティ {#loyalty}
          - [キャピラリーストリーミングイベント](tutorials/ui/create/loyalty/capillary.md)
+         - [Talon.One ストリーミングイベント](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Talon.One バッチ Source コネクタ](tutorials/ui/create/loyalty/talon-one-batch.md)
       - マーケティングオートメーション {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
