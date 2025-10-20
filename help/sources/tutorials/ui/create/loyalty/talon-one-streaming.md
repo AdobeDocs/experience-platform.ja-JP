@@ -15,7 +15,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->[!DNL Talon.One] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Talon.One] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
 
 UI のソースワークスペースを使用して、[!DNL Talon.One] からAdobe Experience Platformにデータを接続し、ストリーミングする方法については、このガイドを参照してください。
 
@@ -30,7 +30,7 @@ UI のソースワークスペースを使用して、[!DNL Talon.One] からAdo
 
 >[!IMPORTANT]
 >
->アカウントをExperience Platformに接続する前に完了する必要がある前提条件の手順については、[[!DNL Talon.One]  概要 ](../../../../connectors/loyalty/talon-one.md) を参照してください。
+>アカウントをExperience Platformに接続する前に完了する必要がある前提条件の手順については、[[!DNL Talon.One]  概要 &#x200B;](../../../../connectors/loyalty/talon-one.md) を参照してください。
 
 ## ソースカタログのナビゲート
 
@@ -42,13 +42,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Talon.One ストリーミングイベントカードが選択された UI のソースカタログ ](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
+![Talon.One ストリーミングイベントカードが選択された UI のソースカタログ &#x200B;](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## データの選択
 
 次に、*[!UICONTROL データを選択]* インターフェイスを使用して、サンプルの JSON ファイルをアップロードし、ソーススキーマを定義します。 この手順では、プレビューインターフェイスを使用して、ペイロードのファイル構造を表示できます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
+![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
 ## データフローの詳細
 
@@ -77,19 +77,19 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データセットを設定したら、名前、説明（オプション）、アラート設定など、データフローの詳細を指定する必要があります。
 
-![ データフローの詳細インターフェイス ](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
+![&#x200B; データフローの詳細インターフェイス &#x200B;](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。 デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。これらのオプションを使用すると、実行中のデータフローでこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。これらのオプションを使用すると、実行中のデータフローでこれらのアラートをトリガーできます。  詳しくは、[&#x200B; アラートの概要 &#x200B;](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## マッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI の [&#x200B; マッピングガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 <!--
 >[!TIP]
@@ -97,7 +97,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 -->
 
-![Talon.One ストリーミングのマッピングインターフェイス ](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
+![Talon.One ストリーミングのマッピングインターフェイス &#x200B;](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
 
 ## レビュー
 
@@ -108,14 +108,14 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 詳細が正しいことを確認したら、「**[!UICONTROL 終了]**」を選択します。
 
-![ ソースワークフローのレビューステップ ](../../../../images/tutorials/create/talon-one-streaming/review.png)
+![&#x200B; ソースワークフローのレビューステップ &#x200B;](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
 ## ストリーミングエンドポイント URL の取得
 
 接続が作成されると、ソースの詳細ページが表示されます。 このページには、以前に実行したデータフロー、ID、ストリーミングエンドポイント URL など、新しく作成した接続の詳細が表示されます。
 
-![ ストリーミングエンドポイント URL。](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+![&#x200B; ストリーミングエンドポイント URL。](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング ](../../monitor-streaming.md) を参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローのモニタリング方法について詳しくは、[UI でのアカウントとデータフローのモニタリング &#x200B;](../../monitor-streaming.md) を参照してください。
