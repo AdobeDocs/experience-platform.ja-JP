@@ -2,9 +2,9 @@
 title: ID サービスリンクロジック
 description: ID サービスで様々な ID をリンクして顧客の包括的なビューを作成する方法について説明します。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,10 @@ ID 名前空間と ID 値が一致すると、2 つの ID 間のリンクが確�
 
 * **プロファイルレコード**：通常、これらの ID は CRM システムから取得されます。
 * **エクスペリエンスイベント**：これらの ID は、通常、WebSDK 実装またはAdobe Analytics ソースから取得されます。
+
+>[!IMPORTANT]
+>
+>ID サービスでは大文字と小文字が区別されます。 例えば、**abc<span>@gmail.com** と **ABC<span>@GMAIL.COM** は、2 つの異なるメール ID として扱われます。
 
 ## リンクを確立することの意味論的意味
 
@@ -57,7 +61,7 @@ ID サービスのリンクロジックの仕組みを視覚的に表現する�
 * EMAIL:julien<span>@acme.com
 * CRMID:60013ABC
 
-![&#x200B; 既存のグラフ &#x200B;](../images/identity-settings/existing-graph.png)
+![ 既存のグラフ ](../images/identity-settings/existing-graph.png)
 
 >[!TAB  受信データ ]
 
@@ -66,13 +70,13 @@ ID のペアがグラフに取り込まれ、このペアには次が含まれ�
 * CRMID:60013ABC
 * ECID:100066526
 
-![&#x200B; 受信データ &#x200B;](../images/identity-settings/incoming-data.png)
+![ 受信データ ](../images/identity-settings/incoming-data.png)
 
 >[!TAB  更新されたグラフ ]
 
 ID サービスは、CRMID:60013ABC がグラフ内に既に存在することを認識するので、新しい ECID のみをリンクします
 
-![&#x200B; 更新されたグラフ &#x200B;](../images/identity-settings/updated-graph.png)
+![ 更新されたグラフ ](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
@@ -99,9 +103,9 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 | `t=1` | ECID:38652 | ホームページを表示 |
 | `t=2` | ECID:38652、CRMID:31260XYZ | 靴を探す |
 | `t=3` | ECID:44675 | ホームページを表示 |
-| `t=4` | ECID:44675、CRMID:31260XYZ | 購入履歴の表示 |
+| `t=4` | ECID:44675、CRMID: 31260XYZ | 購入履歴の表示 |
 
-各イベントのプライマリ ID は、[&#x200B; データ要素タイプの設定方法 &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
+各イベントのプライマリ ID は、[ データ要素タイプの設定方法 ](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
 
 >[!NOTE]
 >
@@ -112,9 +116,9 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 この例では、次のようになります。
 
 * `t=1` は、デスクトップコンピューター（ECID:38652）を使用し、ホームページの参照を匿名で表示しました。
-* `t=2` は同じデスクトップコンピューターを使用して、（CRMID:31260XYZ）にログインし、靴を検索しました。
+* `t=2` は同じデスクトップコンピューターを使用してログイン（CRMID:31260XYZ）し、靴を検索しました。
    * ユーザーがログインすると、イベントによって ECID と CRMID の両方が ID サービスに送信されます。
-* `t=3` はラップトップ コンピューター（ECID:44675）を使用し、匿名で閲覧しました。
+* `t=3` は、ノートパソコン（ECID:44675）を使用し、匿名で閲覧しました。
 * `t=4` は同じノートパソコンを使用して、（CRMID:31260XYZ）にログインし、購入履歴を確認しました。
 
 
@@ -139,7 +143,7 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 
 >[!TAB timestamp=2]
 
-`timestamp=2` 時点では、顧客は同じラップトップを使用して e コマース web サイトにアクセスします。 ユーザー名とパスワードの組み合わせでログインし、靴を参照します。 ID サービスは、顧客の CRMID:31260XYZ に対応しているので、ログイン時に顧客のアカウントを識別します。 さらに、ID サービスは、両方とも同じデバイスで同じブラウザーを使用しているので、ECID:38562 を CRMID:31260XYZ に関連付けます。
+`timestamp=2` 時点では、顧客は同じラップトップを使用して e コマース web サイトにアクセスします。 ユーザー名とパスワードの組み合わせでログインし、靴を参照します。 ID サービスは、顧客の CRMID:31260XYZ に対応しているので、ログイン時に顧客のアカウントを識別します。 さらに、ID サービスは両方とも同じデバイスで同じブラウザーを使用しているので :38562ECID:31260XYZ を CRMID に関連付けます。
 
 ![timestamp-two](../images/identity-settings/timestamp-two.png)
 
@@ -151,7 +155,7 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 
 >[!TAB timestamp=4]
 
-`timestamp=4` 時点で、顧客は同じタブレットを使用してアカウント（CRMID:31260XYZ）にログインし、購入履歴を表示します。 このイベントは、CRMID:31260XYZ を匿名ブラウジングアクティビティに割り当てられた Cookie 識別子にリンクし、ECID:44675 を顧客 2 の ID グラフにリンクします。44675
+`timestamp=4` 時点で、顧客は同じタブレットを使用し、自分のアカウント（CRMID:31260XYZ）にログインし、購入履歴を表示します。 このイベントは、匿名のブラウジングアクティビティに割り当てられた Cookie 識別子に対して CRMID:31260XYZ をリンクし、ECID:44675 を顧客 2 の ID グラフにリンクします :44675
 
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 
