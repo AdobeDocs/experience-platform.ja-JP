@@ -2,9 +2,9 @@
 title: 拡張機能の開発
 description: このドキュメントでは、タグ拡張機能開発プロセスの一般的な概要と、詳細なプロセスに関するその他のドキュメントへのリンクを示します。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
+source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '443'
 ht-degree: 97%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 97%
 
 * 左側のナビゲーションの [はじめる前に](../getting-started.md) と **拡張機能の開発** の下にあるその他のドキュメントは、拡張機能を理解するための参考資料です。 これには、拡張機能ができること、拡張機能と Adobe Experience Platform 間でのユーザー情報の保存および受け渡し方法、コードのライブラリへのバンドル方法、拡張機能コードが実行時にブラウザーで解釈および使用される方法に関する詳細が含まれます。
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
-* [JSON リント/バリデーター &#x200B;](https://jsonlint.com/)。
+* [JSON リント/バリデーター ](https://jsonlint.com/)。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 拡張機能を使用して、JSON および JSONP をハイライト表示および印刷してください。
 * オブジェクトから JSON スキーマを作成するのに役立つ [jsonschema.net](https://jsonschema.net/#/editor) エディター。
 * [JSON スキーマバリデータ](https://www.jsonschemavalidator.net) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
@@ -45,7 +45,6 @@ ht-degree: 97%
 GitHub には、スタータープロジェクトとしてレビューまたは使用できる拡張機能の例があります。
 
 * [Hello World サンプル拡張機能](https://github.com/adobe/reactor-helloworld-extension)
-* [Facebook サンプル拡張機能](https://github.com/Adobe-Marketing-Cloud-Activation/extension-facebookpixel)
 * [Typekit サンプル拡張機能](https://github.com/jeffchasin/extension-typekit)
 * [Pinterest サンプル拡張機能](https://github.com/jeffchasin/extension-pinterest)
 
