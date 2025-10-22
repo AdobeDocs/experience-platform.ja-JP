@@ -14,7 +14,7 @@ ht-degree: 29%
 
 # エンティティエンドポイント （プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
+Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[&#x200B; プロファイルユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
@@ -1224,7 +1224,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->エンティティを削除エンドポイントは、2025 年 10 月末までに非推奨（廃止予定）になります。 レコードの削除操作を実行する場合は、代わりに [ データライフサイクルレコード削除 API ワークフロー ](/help/hygiene/api/workorder.md) または [ データライフサイクルレコード削除 UI ワークフロー ](/help/hygiene/ui/record-delete.md) を使用できます。
+>エンティティを削除エンドポイントは、2025 年 10 月末までに非推奨（廃止予定）になります。 レコードの削除操作を実行する場合は、代わりに [&#x200B; データライフサイクルレコード削除 API ワークフロー &#x200B;](/help/hygiene/api/workorder.md) または [&#x200B; データライフサイクルレコード削除 UI ワークフロー &#x200B;](/help/hygiene/ui/record-delete.md) を使用できます。
 >
 >さらに、次の B2B エンティティに対する削除リクエストは、既に非推奨（廃止予定）になっています。
 >
@@ -1276,7 +1276,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 次の手順
 
-このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[ データアクセスの概要 ](../../data-access/home.md) を参照してください。
+このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[&#x200B; データアクセスの概要 &#x200B;](../../data-access/home.md) を参照してください。
 
 ## 付録 {#appendix}
 
