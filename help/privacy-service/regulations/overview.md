@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制の概要
 description: このドキュメントでは、Adobe Experience Cloudでサポートされている様々なプライバシー規制の概要について説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2087'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->増加する米国の州のプライバシー法をサポートするために、Privacy Serviceは `regulation_type` の価値観を変えています。 **2025 年 6 月 12 日（PT）** 以降は、州の略語（`ucpa_ut_usa` など）を含んだ新しい値を使用します。 古い値（例：`ucpa_usa`）は **2025 年 7 月 28 日（PT）** 以降は機能しなくなります。
+>増加する米国の州のプライバシー法をサポートするために、Privacy Serviceは `regulation_type` の価値観を変えています。 `ucpa_ut_usa`2025 年 6 月 12 日（PT） **以降は、州の略語（** など）を含んだ新しい値を使用します。 古い値（例：`ucpa_usa`）は **2025 年 7 月 28 日（PT）** 以降は機能しなくなります。
 >
 >リクエストの失敗を避けるために、この期限の前に統合を更新してください。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md) を通じて、次の規則に基づくアクセスリクエストおよび削除リクエストをサポートしています。
 
-| 規則 | `regulation_type` | 説明 |
+| 規制 | `regulation_type` | 説明 |
 |-----------|-------------------|-------------|
 | APA （オーストラリア） | `apa_aus` | この [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) は、個人のプライバシーを促進および保護し、オーストラリア政府機関および組織による個人情報の取り扱いを規制しています。 プライバシー法には、民間部門の組織に適用される原則が含まれています。 例えば、個人には、個人情報が収集される理由と使用方法、アクセス機能、データ消去および個人情報の訂正機能を理解する権利が与えられます。 |
 | CCPA （カリフォルニア州） | `ccpa` | [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) は、米国カリフォルニア州の居住者のプライバシー権と消費者保護を強化します。 CCPA は、カリフォルニア州の居住者に新しいデータプライバシー権を提供します。 これには、個人データにアクセスして削除する権利、個人データが（誰に）販売または公開されているかどうかを知る権利、およびデータを第三者に販売することをオプトアウトする権利が含まれます。 |
@@ -39,12 +39,14 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | MCDPA （ミネソタ州） | `mcdpa_mn_usa` | [[!DNL Minnesota Consumer Data Privacy Act (MCDPA)]](https://www.house.mn.gov/comm/docs/C6hTV3TEt0W2vuhEMtczrQ.pdf) は、ミネソタ州の住民に対し、個人データへのアクセス、訂正、削除、およびコピーの取得の権利を提供している。 また、法的または同様に重要な効果をもたらす決定を促進するために、個人データの販売、ターゲット広告、プロファイリングをオプトアウトする権利を付与します。 同法は、データ管理者に対し、明確なプライバシー通知を提供し、データ保護評価を実施し、合理的なデータセキュリティ対策を維持する義務を課しています。 執行権限は、ミネソタ検事総長に付与されます。 |
 | MCDPA （モンタナ） | `mcdpa_mt_usa` | [[!DNL Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095) は、事業者が収集、共有、販売する個人データの内容と、その利用目的を知る権利を住民に与えます。 また、収集したデータを修正、削除、またはコピーを取得する機能も付与されます。 この法律は、50,000 を超える Montana の消費者のデータを処理する企業に適用されます。 同法は、生体情報や遺伝情報を含む機密性の高い個人データの保護を重視している。 |
 | MHMDA （ワシントン州） | `mhmda_wa_usa` | [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) は、消費者の健康データに関するプライバシー権を強化します。 健康データの開示、消費者の同意、削除権を義務付け、許可なく健康データを販売することを禁止しています。 さらに同法は、医療施設の周辺でジオフェンスを使用することを違法にしている。 |
+| MODPA （メリーランド州） | `modpa_md_usa` | [[!DNL Maryland Online Data Privacy Act]](https://mgaleg.maryland.gov/2024RS/bills/sb/sb0541e.pdf) はメリーランド州の住民に対し、アクセス、訂正、削除、データの持ち運びを含む権利を認めている。 居住者は、ターゲット広告、個人データの販売およびプロファイリングをオプトアウトできます。 管理者は、高リスク処理のために、プライバシーに関する通知を提供し、データ保護評価を実施する必要があります。 MODPA は、メンタルヘルスやリプロダクティブヘルスの施設に関するジオフェンシングを禁止することで際立っています。 同法は、35,000 人以上の消費者からデータを処理する事業者、または 1 万人以上の消費者からデータを処理し、そのデータを販売することで売上高の 20% 以上を得る事業者に適用される。 これは、メリーランド州司法長官によって執行されます。 |
 | NDPA （ネブラスカ州） | `ndpa_ne_usa` | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf) は、ネブラスカ人に対し、自身の個人データに対する権利を提供しています。これには、アクセス、訂正、削除、販売のオプトアウトなどが含まれます。 この法律は、データ処理と個人情報の販売からの収益に関する特定の閾値を満たす企業に適用されます。 また、企業に対しては、適切なデータセキュリティ対策を実施すること、およびコンプライアンスに関する問題を解決するために罰則が科される 30 日間のキュア期間を義務付けています。 |
-| ニュージーランド [!DNL Privacy Act] | `nzpa_nzl` | [&#x200B; ニュージーランド  [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、ニュージーランドの市民や団体の個人情報の収集、使用、開示、保管、アクセスの方法を管理しています。 2020 年に同法の最新版は、これらのプライバシー法に大幅な更新を加えました。 この更新には、新たな犯罪、罰金の増加、データ侵害に対する通知の義務化、個人情報保護委員会の権限強化などが含まれている。 |
+| ニュージーランド [!DNL Privacy Act] | `nzpa_nzl` | [ ニュージーランド  [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、ニュージーランドの市民や団体の個人情報の収集、使用、開示、保管、アクセスの方法を管理しています。 2020 年に同法の最新版は、これらのプライバシー法に大幅な更新を加えました。 この更新には、新たな犯罪、罰金の増加、データ侵害に対する通知の義務化、個人情報保護委員会の権限強化などが含まれている。 |
 | NHDPA （ニューハンプシャー州） | `nhpa_nh_usa` | [[!DNL New Hampshire Privacy Act]](https://www.doj.nh.gov/sites/g/files/ehbemt721/files/inline-documents/sonh/data-privacy-faqs-revised_0.pdf) は、データのアクセス、削除、ポータビリティに関する消費者権を確立することにより、ニューハンプシャー州の住民の個人情報を保護します。 組織はデータ収集と共有の慣行を開示する必要があり、消費者はデータ販売をオプトアウトできます。 この法律は、特定のデータ処理しきい値を満たすビジネスに適用されます。 |
 | NJDPA （ニュージャージー州） | `njdpa_nj_usa` | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF) は、ニュージャージー州の居住者に情報へのアクセス、訂正、および削除の権利を提供することにより、自身の個人データを管理することを許可します。 データ販売とターゲット広告のオプトアウトメカニズムが含まれます。 この法律は、大量の消費者データを処理し、データ使用の透明性を義務付ける企業を対象としています。 |
 | OCPA （オレゴン） | `ocpa_or_usa` | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) （OCPA）は、オレゴンの居住者に個人データの基本的権利を提供し、そのようなデータを処理する企業に義務を課します。 消費者は、自分のデータのコピーを知り、修正し、削除し、取得する権利を持ち、ターゲット広告や販売のためのデータ処理をオプトアウトします。 同法は、機密データの保護強化、特定の目的を超えたデータ処理に対する同意、データ管理者による包括的なプライバシー通知の提供を義務付けています。 |
 | PDPA （タイ） | `pdpa_tha` | この [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者を個人データの違法な収集、使用、開示から保護するために導入されました。 欧州連合（EU）の GDPR に触発されたこの規制は、タイ国民に対し、保存されている個人データへのアクセスまたは削除をリクエストする権利を付与します。 |
+| PIPA （韓国） | `pipa_kor` | [[!DNL Personal Information Protection Act (PIPA)]](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) は、韓国人住民の個人データの処理と保護を規制しています。 PIPA は住民に対し、情報提供、アクセス、複製の取得、訂正・削除・処理停止を求める権利を認めている。 個人情報管理者は、収集の目的を特定し、必要な最小限の範囲で合法的にデータを処理し、データの正確性を確保する必要があります。 また、個人情報保護規則の調査・施行を目的として、個人情報保護委員会を設置しています。 |
 | ql25 （ケベック州） | `ql25_qc_can` | [[!DNL Quebec Law 25]](https://www.canlii.org/en/qc/laws/astat/sq-2021-c-25/latest/sq-2021-c-25.html) （QL25）は、ケベックの居住者のプライバシー権を強化し、グローバル標準に準拠します。 同法は、居住者に対し、個人データへのアクセス、訂正、削除および移転について、明示的な同意、データの最小化および権利を義務付けている。 また、組織は、プライバシー責任者を任命し、プライバシー影響評価を実施し、違反を通知する必要があります。 法的に適用されるコンプライアンス期限と、コンプライアンス違反に対する相当の罰則が適用されます。 |
 | TDPSA （テキサス州） | `tdpsa_tx_usa` | [[!DNL Texas Data Privacy and Security Act]](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=88R&Bill=HB4) （TDPSA）は、テキサス州における消費者の個人データの収集、使用、処理、および処理を規制します。 2024 年 7 月 1 日より、データにアクセス、修正、削除、コピーの取得、ターゲット広告およびデータ販売のオプトアウトを行う権限を居住者に付与します。 この法律は、テキサス州で事業を行う事業体、またはテキサス州の居住者が消費する製品/サービスを製造する事業体に適用されます。中小企業やその他の特定の組織を除きます。 違反行為には民事罰が科されることがある。 |
 | TIPA （テネシー州） | `tipa_tn_usa` | [[!DNL Tennessee Information Protection Act (TIPA)]](https://www.capitol.tn.gov/Bills/113/Bill/HB1181.pdf) はテネシー州の住民に対し、自身の個人情報にアクセスし、訂正し、削除し、その写しを入手する権利を認めている。 また、個人情報の販売、ターゲット広告、および特定の種類のプロファイリングをオプトアウトする権利も提供します。 この法律は、データ処理と収益に関する特定のしきい値を満たす企業に適用され、明確なプライバシー通知、データの最小化、合理的なセキュリティ対策が必要です。 執行権限は、テネシー州の司法長官に付与される。 |
@@ -53,7 +55,7 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 
 {style="table-layout:auto"}
 
-Privacy Service API を使用してアクセスリクエストと削除リクエストを送信、トラッキング、管理する方法については、[&#x200B; プライバシージョブエンドポイントガイド &#x200B;](../api/privacy-jobs.md) を参照してください。 このガイドには、使い始めるのに役立つ例とフォーマットの詳細が含まれています。
+Privacy Service API を使用してアクセスリクエストと削除リクエストを送信、トラッキング、管理する方法については、[ プライバシージョブエンドポイントガイド ](../api/privacy-jobs.md) を参照してください。 このガイドには、使い始めるのに役立つ例とフォーマットの詳細が含まれています。
 
 ## 次の手順
 
@@ -62,4 +64,4 @@ Privacy Service API を使用してアクセスリクエストと削除リクエ
 * [プライバシー規制 FAQ](./faq.md)
 * [プライバシー規制の用語](./terminology.md)
 
-Experience Cloud アプリケーションに保存されたデータに対するカスタマーアクセスリクエストおよび削除リクエストのサポート方法については、[Privacy ServiceおよびExperience Cloud アプリケーション &#x200B;](../experience-cloud-apps.md) のガイドを参照してください。
+Experience Cloud アプリケーションに保存されたデータに対するカスタマーアクセスリクエストおよび削除リクエストのサポート方法については、[Privacy ServiceおよびExperience Cloud アプリケーション ](../experience-cloud-apps.md) のガイドを参照してください。

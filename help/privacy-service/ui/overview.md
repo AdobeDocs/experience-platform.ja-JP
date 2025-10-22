@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI の概要
 description: Privacy Service ユーザーインターフェイスの使用を開始して、様々なExperience Cloud アプリケーションをまたいでプライバシーリクエストを調整および監視します。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 20%
+source-wordcount: '223'
+ht-degree: 21%
 
 ---
 
@@ -22,7 +22,7 @@ Privacy Service UI を使用すると、様々なAdobe Experience Cloud アプ�
 
 >[!NOTE]
 >
->Privacy Service API を使用してプログラムでコンプライアンスリクエストを管理する方法については、[Privacy Service API ガイド &#x200B;](../api/overview.md) を参照してください。 詳しくは、Privacy Service権限の管理 [&#x200B; のドキュメントを参照し &#x200B;](../permissions.md) ください。
+>Privacy Service API を使用してプログラムでコンプライアンスリクエストを管理する方法については、[Privacy Service API ガイド ](../api/overview.md) を参照してください。 詳しくは、Privacy Service権限の管理 [ のドキュメントを参照し ](../permissions.md) ください。
 
 ## [!DNL Privacy Service] UI にログインします
 
@@ -30,17 +30,17 @@ Privacy Service UI を使用すると、様々なAdobe Experience Cloud アプ�
 >
 >[!DNL Privacy Service] UI への認証を行うには、Adobe IDが必要です。
 
-UI にアクセスするには、[Adobe Experience Cloudにログインし &#x200B;](https://experience.adobe.com/) クイックアクセスメニューで **[!UICONTROL プライバシー UI]** を選択します。
+UI にアクセスするには、[Adobe Experience Cloudにログインし ](https://experience.adobe.com/) クイックアクセスメニューで「**[!UICONTROL Privacy Service]**」を選択します。
 
-![&#x200B; プライバシー UI がハイライト表示されたExperience Cloud ダッシュボード。](../images/ui-overview/quick-access.png)
+![Privacy Serviceがハイライト表示されたExperience Cloud ダッシュボード。](../images/ui-overview/quick-access.png)
 
 
 ### [!DNL Experience Platform] からのログイン
 
-Adobe Experience Platform UI にアクセスできる場合は、左側のナビゲーションの「**[!UICONTROL リクエスト]** タブから [!DNL Privacy Service] UI にアクセスすることもできます。
+Adobe Experience Platform UI にアクセスできる場合は、左側のナビゲーションの「[!DNL Privacy Service]」タブから **[!UICONTROL Requests]** UI にアクセスすることもできます。
 
-![&#x200B; 左側のナビゲーションバーで「リクエスト」がハイライト表示されたAdobe Experience Platform UI](../images/ui-overview/platform.png)
+![ 左側のナビゲーションバーで「リクエスト」がハイライト表示されたAdobe Experience Platform UI](../images/ui-overview/platform.png)
 
 ## 次の手順
 
-正常にログインしたので、[!DNL Privacy Service] UI を使用して様々な操作を実行する手順については、[&#x200B; ユーザーガイド &#x200B;](user-guide.md) を参照してください。
+正常にログインしたので、[ UI を使用して様々な操作を実行する手順については、](user-guide.md) ユーザーガイド [!DNL Privacy Service] を参照してください。

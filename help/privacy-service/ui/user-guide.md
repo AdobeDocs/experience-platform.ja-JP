@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI でのプライバシージョブの管理
 description: Privacy Service ユーザーインターフェイスを使用して、様々なExperience Cloud アプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 45%
+source-wordcount: '1689'
+ht-degree: 44%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 45%
 
 ## [!DNL Privacy Service] UI ダッシュボードの参照
 
-[!DNL Privacy Service] UI 用のダッシュボードには、プライバシージョブのステータスを表示できる「[!UICONTROL &#x200B; ステータスレポート &#x200B;]」および「[!UICONTROL &#x200B; ジョブリクエスト &#x200B;]」の 2 つのウィジェットが用意されています。 また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
+[!DNL Privacy Service] UI のダッシュボードには、プライバシージョブのステータスを表示できる「[!UICONTROL Status Report]」および「[!UICONTROL Job Requests]」の 2 つのウィジェットが用意されています。 また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
 
 ![UI ダッシュボード](../images/user-guide/dashboard.png)
 
@@ -36,46 +36,55 @@ ht-degree: 45%
 
 [!DNL Privacy Service] は、複数のプライバシー規制に対するジョブリクエストをサポートしています。 次の表に、UI で表される、サポートされる規制と対応するラベルを示します。
 
-| UI ラベル | 規則 |
-|-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS （オーストラリア） &#x200B;] | [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA （カリフォルニア州） &#x200B;] | [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPA_USA （コロラド州） &#x200B;] | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA （カリフォルニア州） &#x200B;] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA （コネチカット州） &#x200B;] | [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA （デラウェア州） &#x200B;] | [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_USA （フロリダ州） &#x200B;] | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR （欧州連合） &#x200B;] | 欧州連合 [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPPA_USA （米国） &#x200B;] | [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA] （アイオワ州） | [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA （ブラジル） &#x200B;] | ブラジルの「[!DNL General Data Protection Law]」 [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA_USA （ワシントン） &#x200B;] | [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MCDPA_USA （モンタナ） &#x200B;] | [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL NDPA_USA （ネブラスカ州） &#x200B;] | [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL （ニュージーランド） &#x200B;] | ニュージーランド [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA （ニューハンプシャー州） &#x200B;] | [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA （ニュージャージー州） &#x200B;] | [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA USA （オレゴン） &#x200B;] | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA （タイ） &#x200B;] | タイの [!DNL Personal Data Protection Act] |
-| [!UICONTROL QL25_CAN （Quebec） &#x200B;] | [!DNL Quebec Law 25] |
-| [!UICONTROL TDPSA USA （テキサス州） &#x200B;] | [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA （ユタ州） &#x200B;] | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA （バージニア） &#x200B;] | [!DNL Virginia Consumer Data Protection Act] |
+消費者の権利と義務付けられているビジネス義務について説明する各規制の説明については、[ プライバシー規制の概要 ](../regulations/overview.md) を参照してください。
+
+>[!TIP]
+>
+>API 規制タイプは、一般的な利便性のために含まれています。
+
+| UI ラベル | API `regulation_type` | 規制 |
+|-------------------------------------------|-----------------------|----------------|
+| [!UICONTROL APA_AUS (Australia)] | `apa_aus` | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCCA (California)] | `ccpa` | [!DNL California Consumer Privacy Act] （CCPA） |
+| [!UICONTROL CPA_CO_USA (Colorado)] | `cpa_co_usa` | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_CA_USA (California)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act] （CPRA） |
+| [!UICONTROL CTDPA_CT_USA (Connecticut)] | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_DE_USA (Delaware)] | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act] |
+| [!UICONTROL FDBR_FL_USA (Florida)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (European Union)] | `gdpr` | 欧州連合 [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | ブラジルの「[!DNL General Data Protection Law]」 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
+| [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MODPA_MD_USA (Maryland)] | `modpa_md_usa` | [!DNL Maryland Online Data Privacy Act] |
+| [!UICONTROL NDPA_NE_USA (Nebraska)] | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NHPA_NH_USA (New Hampshire)] | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_NJ_USA (New Jersey)] | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | `nzpa_nzl` | ニュージーランド [!DNL Privacy Act] （PA） |
+| [!UICONTROL OCPA_OR_USA (Oregon)] | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)] | `pdpa_tha` | タイの [!DNL Personal Data Protection Act] （PDPA） |
+| [!UICONTROL PIPA_KOR (South Korea)] | `pipa_kor` | 韓国 [!DNL Personal Information Privacy Act] （PIPA） |
+| [!UICONTROL QL25_QC_CAN (Quebec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
+| [!UICONTROL TDPSA_TX_USA (Texas)] | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL TIPA_TN_USA (Tennessee)] | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act] |
+| [!UICONTROL UCPA_UT_USA (Utah)] | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_VA_USA (Virginia)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] （VCDPA） |
 
 {style="table-layout:auto"}
 
-<!-- 
-Waiting:
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
- -->
+<!-- | [!UICONTROL ICDPA_IN_USA (Indiana)]       | `icdpa_in_usa` | [!DNL Indiana Consumer Data Protection Act]| NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL KCDPA_KY_USA (Kentucky)]      | `kcdpa_ky_usa`| [!DNL Kentucky Consumer Data Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL RIDTPPA_RI_USA (Rhode Island)]| `ridtppa_ri_usa` | [!DNL Rhode Island Data Transparency and Privacy Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
 
 >[!NOTE]
 >
->各規制の法的背景について詳しくは、[&#x200B; サポートされるプライバシー規制 &#x200B;](../regulations/overview.md) の概要を参照してください。
+>各規制の法的背景について詳しくは、[ サポートされるプライバシー規制 ](../regulations/overview.md) の概要を参照してください。
 
-それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、「**[!UICONTROL 規制タイプ]**」ドロップダウンメニューを選択し、リストから目的の規制を選択します。
+それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、「**[!UICONTROL Regulation Type]**」ドロップダウンメニューを選択し、リストから目的の規制を選択します。
 
-![&#x200B; 規制タイプのドロップダウンを含むPrivacy Service コンソール。](../images/user-guide/regulation.png)
+![ 規制タイプのドロップダウンを含むPrivacy Service コンソール。](../images/user-guide/regulation.png)
 
 規制の種類を変更すると、ダッシュボードが更新され、選択した規制に適用されるすべての操作、フィルター、ウィジェット、ジョブ作成のダイアログが表示されます。
 
@@ -103,25 +112,25 @@ Waiting:
 
 ### ジョブリクエスト {#job-requests}
 
-[!UICONTROL &#x200B; ジョブリクエスト &#x200B;] ワークスペースには、組織の最近のジョブリクエストに関する詳細がリストされます。 詳細には、リクエストタイプ、現在のステータス、期限、リクエスト者のメールなどが含まれます。 一度に 100 件のレコードのセットが読み込まれます。 デフォルトでは、最近作成されたジョブが上部に表示され、下にスクロールして参照すると、より多くのレコードセットが読み込まれます。
+[!UICONTROL Job Requests] ワークスペースには、組織の最近のジョブリクエストに関する詳細がリストされます。 詳細には、リクエストタイプ、現在のステータス、期限、リクエスト者のメールなどが含まれます。 一度に 100 件のレコードのセットが読み込まれます。 デフォルトでは、最近作成されたジョブが上部に表示され、下にスクロールして参照すると、より多くのレコードセットが読み込まれます。
 
 >[!NOTE]
 >
 >以前作成したジョブのデータには、完了日から 30 日間のみアクセスできます。
 
-[!UICONTROL &#x200B; ジョブリクエスト &#x200B;] タイトルの下の検索バーにキーワードを入力して、リストをフィルタリングできます。 リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy Service API を使用して [&#x200B; 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す &#x200B;](../api/privacy-jobs.md#list) ことができます。
+リストをフィルタリングするには、[!UICONTROL Job Requests] ールタイトルの下にある検索バーにキーワードを入力します。 リストは、入力に応じて自動的にフィルタリングをおこない、検索語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy Service API を使用して [ 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す ](../api/privacy-jobs.md#list) ことができます。
 
 >[!TIP]
 >
 >過去 30 日間のレコードを UI に読み込むには、テーブルを下にスクロールして、さらにレコードのバッチを読み込む必要があります。
 
-![&#x200B; 検索フィールドがハイライト表示されたプライバシーコンソールジョブリクエストセクション &#x200B;](../images/user-guide/job-search.png)
+![ 検索フィールドがハイライト表示されたプライバシーコンソールジョブリクエストセクション ](../images/user-guide/job-search.png)
 
-または、検索ボタンを使用して、特定の日付範囲にまたがるプライバシージョブクエリを実行します。 このアクションは、指定された期間内に組織によって送信されたすべてのプライバシージョブを返します。 **[!UICONTROL リクエスト日]** ドロップダウンメニューを選択して、クエリの開始日と終了日を選択します。 使用できるオプションには、「[!UICONTROL &#x200B; 今日 &#x200B;]」、「[!UICONTROL &#x200B; 過去 7 日間 &#x200B;]」、「[!UICONTROL &#x200B; 過去 2 週間 &#x200B;]」、「[!UICONTROL &#x200B; 過去 30 日間 &#x200B;]」または「[!UICONTROL &#x200B; カスタム &#x200B;] があります。 「[!UICONTROL &#x200B; リクエスト日 &#x200B;]」オプションと共に使用すると、検索機能には、選択した日付範囲の間に送信されたジョブリクエストのみが表示されます。
+または、検索ボタンを使用して、特定の日付範囲にまたがるプライバシージョブクエリを実行します。 このアクションは、指定された期間内に組織によって送信されたすべてのプライバシージョブを返します。 **[!UICONTROL Requested on]** ドロップダウンメニューを選択して、クエリの開始日と終了日を選択します。 使用可能なオプションには、[!UICONTROL Today]、[!UICONTROL Last 7 Days]、[!UICONTROL Last 2 Weeks]、[!UICONTROL Last 30 Days] または [!UICONTROL Custom] があります。 [!UICONTROL Requested on] オプションと共に使用した場合、検索機能には、選択した日付範囲の間に送信されたジョブリクエストのみが表示されます。
 
-![&#x200B; 検索フィールド、「リクエスト対象」ドロップダウンメニュー、「検索」ボタンがハイライト表示された「ジョブリクエスト」セクション &#x200B;](../images/user-guide/requested-on-dropdown-menu.png)
+![ 検索フィールド、「リクエスト対象」ドロップダウンメニュー、「検索」ボタンがハイライト表示された「ジョブリクエスト」セクション ](../images/user-guide/requested-on-dropdown-menu.png)
 
-特定のジョブリクエストの詳細を表示するには、リストからリクエストのジョブ ID を選択して **[!UICONTROL ジョブの詳細]** ページを開きます。
+特定のジョブリクエストの詳細を表示するには、リストからリクエストのジョブ ID を選択して、**[!UICONTROL Job Details]** のページを開きます。
 
 ![GDPR UI のジョブ詳細](../images/user-guide/job-details.png)
 
@@ -129,7 +138,7 @@ Waiting:
 
 ソリューションから追加のデータが提供された場合は、このダイアログで表示できます。このデータは、個々の製品行を選択して表示できます。
 
-完全なジョブデータを CSV ファイルとしてダウンロードするには、ダイアログの右上にある **[!UICONTROL CSV に書き出し]** を選択します。
+完全なジョブデータを CSV ファイルとしてダウンロードするには、ダイアログの右上にある「**[!UICONTROL Export to CSV]**」を選択します。
 
 ## プライバシージョブリクエストの新規作成 {#create-a-new-privacy-job-request}
 
@@ -153,21 +162,21 @@ Waiting:
 
 リクエストビルダーを使用すると、ユーザーインターフェイスで新しいプライバシージョブリクエストを手動で作成できます。リクエストビルダーは、リクエストをユーザーごとに 1 つの ID タイプに制限するので、よりシンプルでより小さなリクエストセットに最適です。より複雑なリクエストについては、代わりに [JSON ファイルをアップロード](#json)する方がよい場合があります。
 
-リクエストビルダーの使用を開始するには、画面の右側にあるステータスレポートウィジェットの下の「**[!UICONTROL リクエストを作成]**」を選択します。
+リクエストビルダーの使用を開始するには、画面の右側にあるステータスレポートウィジェットの下の **[!UICONTROL Create Request]** を選択します。
 
-![&#x200B; リクエストを作成を選択 &#x200B;](../images/user-guide/create-request.png)
+![ リクエストを作成を選択 ](../images/user-guide/create-request.png)
 
-**[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
+**[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するための使用可能なオプションが表示されます。
 
 ![](../images/user-guide/request-builder.png){width=500}
 
-リクエストの **[!UICONTROL ジョブタイプ]** （「削除」または「アクセス」）と 1 つ以上の使用可能な製品をリストから選択します。
+リクエストの **[!UICONTROL Job Type]** （「削除」または「アクセス」）と 1 つ以上の使用可能な製品をリストから選択します。
 
-Privacy Serviceでは、個人データに対して、[!UICONTROL &#x200B; アクセス &#x200B;] （読み取り）、[!UICONTROL &#x200B; 削除 &#x200B;] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
+Privacy Serviceでは、個人データに対して、[!UICONTROL Access] （読み取り）および/または [!UICONTROL Delete] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-**[!UICONTROL 名前空間タイプ]** で、[!DNL Privacy Service] に送信される顧客 ID に適した名前空間タイプを選択します。
+「**[!UICONTROL Namespace type]**」で、[!DNL Privacy Service] に送信する顧客 ID に適した名前空間タイプを選択します。
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
@@ -179,7 +188,7 @@ Privacy Serviceでは、個人データに対して、[!UICONTROL &#x200B; ア�
 
 ![](../images/user-guide/custom-namespace.png){width=500}
 
-完了したら、「**[!UICONTROL 作成]**」をクリックします。
+終了したら「**[!UICONTROL Create]**」を選択します。
 
 ![](../images/user-guide/request-builder-create.png){width=500}
 
@@ -189,15 +198,15 @@ Privacy Serviceでは、個人データに対して、[!UICONTROL &#x200B; ア�
 
 処理するデータサブジェクトごとに複数の ID タイプを使用するリクエストなど、より複雑なリクエストを作成する場合は、JSON ファイルをアップロードしてリクエストを作成できます。
 
-画面の右側にあるステータスレポートウィジェットの下にある **[!UICONTROL リクエストを作成]** の横の矢印を選択します。 表示されるオプションリストから、「**[!UICONTROL Upload JSON]**」を選択します。
+画面の右側にあるステータスレポートウィジェットの下にある、**[!UICONTROL Create Request]** の横の矢印を選択します。 表示されるオプションのリストから、「**[!UICONTROL Upload JSON]**」を選択します。
 
 ![リクエスト作成オプション](../images/user-guide/create-options.png)
 
-**[!UICONTROL Upload JSON]** ダイアログが開き、JSON ファイルをドラッグ＆ドロップできるウィンドウが表示されます。
+**[!UICONTROL Upload JSON]** ダイアログが表示され、JSON ファイルをドラッグ&amp;ドロップするためのウィンドウが表示されます。
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-アップロードする JSON ファイルがない場合は、「**[!UICONTROL Adobe-GDPR-Request.json をダウンロード]**」を選択して、データ主体から収集した値に従って入力できるテンプレートをダウンロードします。
+アップロードする JSON ファイルがない場合は、「**[!UICONTROL Download Adobe-GDPR-Request.json]**」を選択して、データ主体から収集した値に従って入力できるテンプレートをダウンロードします。
 
 
 ![](../images/user-guide/privacy-template.png){width=500}
@@ -205,10 +214,10 @@ Privacy Serviceでは、個人データに対して、[!UICONTROL &#x200B; ア�
 
 コンピューター上で JSON ファイルを探し、ダイアログウィンドウにドラッグします。アップロードが正常に完了すると、ダイアログにファイル名が表示されます。必要に応じて、引き続き JSON ファイルをダイアログにドラッグ＆ドロップして追加できます。
 
-終了したら、「**[!UICONTROL 作成]**」を選択します。 ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
+終了したら「**[!UICONTROL Create]**」を選択します。 ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
 
 ### 次の手順
 
 このドキュメントでは、[!DNL Privacy Service] UI を使用してプライバシージョブを作成し、ジョブの詳細を表示し、処理ステータスを監視して、完了後に結果をダウンロードする方法について説明しました。
 
-[!DNL Privacy Service] API を使用してこれらの操作をプログラムで実行する手順については、[API ガイド &#x200B;](../api/overview.md) を参照してください。
+[!DNL Privacy Service] API を使用してこれらの操作をプログラムで実行する手順については、[API ガイド ](../api/overview.md) を参照してください。
