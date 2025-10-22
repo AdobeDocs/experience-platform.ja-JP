@@ -41,10 +41,10 @@ Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新�
 
 | 機能 | 説明 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
-| Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 詳しくは、[Audience Agent ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience) を参照してください。 |
+| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
+| Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 詳しくは、[Audience Agent ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience) を参照してください。 |
 
-詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
 
 ## アラート {#alerts}
 
@@ -54,11 +54,11 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 | 機能 | 説明 |
 | --- | --- |
-| ストリーミングプロファイル取り込みアラート | データフローレベルでのストリーミング取り込みに関する 2 つの新しいアラートを登録できるようになりました。 <ul><li>ストリーミング取得の失敗率を超えています</li><li>ストリーミング取り込みスキップ率が超過しました</li></ul> プラットフォーム内またはメールのアラートは、デフォルトのしきい値または定義したカスタムのしきい値を超えたときに通知します。 詳しくは、[ プロファイルアラート ](../../observability/alerts/rules.md#profile) ガイドを参照してください。 |
+| ストリーミングプロファイル取り込みアラート | データフローレベルでのストリーミング取り込みに関する 2 つの新しいアラートを登録できるようになりました。 <ul><li>ストリーミング取得の失敗率を超えています</li><li>ストリーミング取り込みスキップ率が超過しました</li></ul> プラットフォーム内またはメールのアラートは、デフォルトのしきい値または定義したカスタムのしきい値を超えたときに通知します。 詳しくは、[&#x200B; プロファイルアラート &#x200B;](../../observability/alerts/rules.md#profile) ガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
-アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../../observability/home.md) を参照してください。
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 &#x200B;](../../observability/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -79,7 +79,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | Experience Platform UI での宛先管理機能の強化 | [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) タブと [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) タブの新しい並べ替え機能により、宛先管理ワークフローが向上します。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 | 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)」タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
 
-詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
+詳しくは、[&#x200B; 宛先の概要 &#x200B;](../../destinations/home.md) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -90,9 +90,9 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 | 機能 | 説明 |
 | ------- | ----------- |
 | リレーショナルスキーマ | リレーショナルスキーマ（以前のモデルベースのスキーマ）を使用して、データモデリングを簡素化します。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 この機能には、時系列データと変更データのキャプチャ機能のサポートが含まれています。 |
-| Data Mirror | リレーショナルスキーマを使用して、クラウドデータウェアハウス（Snowflake、Databricks、BigQuery など）からAdobe Experience Platformに行レベルの変更を取り込みます。 Data Mirrorでは、既存のデータベース構造をデータレイクに直接ミラーリングすることで、アップストリーム ETL を排除し、関係、バージョン管理、削除を保持します。 変更データ取得機能を使用した時系列およびレコードイベントのスキーマ動作はすべてサポートされます。 この機能は現在、Campaign Orchestration のライセンスホルダーで使用でき、この限定リリースを通じてCustomer Journey Analyticsのお客様も含めて拡張される予定です。 詳しくは、[Data Mirror ドキュメント ](../../xdm/data-mirror/overview.md) を参照してください。 アクセスについては、Adobe担当者にお問い合わせください。 |
+| Data Mirror | リレーショナルスキーマを使用して、クラウドデータウェアハウス（Snowflake、Databricks、BigQuery など）からAdobe Experience Platformに行レベルの変更を取り込みます。 Data Mirrorでは、既存のデータベース構造をデータレイクに直接ミラーリングすることで、アップストリーム ETL を排除し、関係、バージョン管理、削除を保持します。 変更データ取得機能を使用した時系列およびレコードイベントのスキーマ動作はすべてサポートされます。 この機能は現在、Campaign Orchestration のライセンスホルダーで使用でき、この限定リリースを通じてCustomer Journey Analyticsのお客様も含めて拡張される予定です。 詳しくは、[Data Mirror ドキュメント &#x200B;](../../xdm/data-mirror/overview.md) を参照してください。 アクセスについては、Adobe担当者にお問い合わせください。 |
 
-詳しくは、[XDM の概要 ](../../xdm/home.md) を参照してください。
+詳しくは、[XDM の概要 &#x200B;](../../xdm/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -108,9 +108,9 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 更新 | 説明 |
 | ------ | ----------- |
-| プロファイル削除 API の廃止 | [ プロファイル削除 API](/help/profile/api/entities.md#delete-entity) は、2025 年 10 月末までに廃止されます。 レコードの削除操作を実行する場合は、代わりに [ データライフサイクルレコード削除 API ワークフロー ](/help/hygiene/api/workorder.md) または [ データライフサイクルレコード削除 UI ワークフロー ](/help/hygiene/ui/record-delete.md) を使用できます。 データライフサイクルワークフローは、エンドツーエンドのライフサイクルトラッキングに加えて、表示および管理できる月次クォータを提供します。 <br/><br/> エンドポイントが非推奨（廃止予定）になると、現在このエンドポイントを使用しているすべてのユーザーが、引き続きこのエンドポイントにアクセスできます。 これの提供終了は別途発表されます。 ご不明な点については、Adobe カスタマーケアにお問い合わせください。 |
+| プロファイル削除 API の廃止 | [&#x200B; プロファイル削除 API](/help/profile/api/entities.md#delete-entity) は、2025 年 10 月末までに廃止されます。 レコードの削除操作を実行する場合は、代わりに [&#x200B; データライフサイクルレコード削除 API ワークフロー &#x200B;](/help/hygiene/api/workorder.md) または [&#x200B; データライフサイクルレコード削除 UI ワークフロー &#x200B;](/help/hygiene/ui/record-delete.md) を使用できます。 データライフサイクルワークフローは、エンドツーエンドのライフサイクルトラッキングに加えて、表示および管理できる月次クォータを提供します。 <br/><br/> エンドポイントが非推奨（廃止予定）になると、現在このエンドポイントを使用しているすべてのユーザーが、引き続きこのエンドポイントにアクセスできます。 これの提供終了は別途発表されます。 ご不明な点については、Adobe カスタマーケアにお問い合わせください。 |
 
-詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
+詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../../profile/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -139,10 +139,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| 一般公開の新しいソース | 次のソースが一般提供されるようになりました。複数のソースコネクタがBetaから GA に更新されました。 <ul><li>[Acxiom のデータ取り込み ](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 見込み客データの取り込み ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury エンタープライズ ](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。これらのソースが完全にサポートされ、実稼動で使用できる状態になりました。 |
-| [!DNL Snowflake] キーペア認証のサポート | キーペア認証をサポートし、Snowflake接続のセキュリティを強化しました。 基本認証（ユーザー名/パスワード）は 2025 年 11 月までに廃止される予定です。セキュリティを向上させるには、キーペア認証に移行することをお勧めします。 詳しくは、[[!DNL Snowflake]  ドキュメント ](../../sources/connectors/databases/snowflake.md) を参照してください。 |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | [[!DNL Capillary Streaming Events]  ソース ](../../sources/connectors/loyalty/capillary.md) を使用すると、[!DNL Capillary] アカウントからExperience Platformにロイヤルティデータをストリーミングできます。 |
+| 一般公開の新しいソース | 次のソースが一般提供されるようになりました。複数のソースコネクタがBetaから GA に更新されました。 <ul><li>[Acxiom のデータ取り込み &#x200B;](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 見込み客データの取り込み &#x200B;](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury エンタープライズ &#x200B;](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。これらのソースが完全にサポートされ、実稼動で使用できる状態になりました。 |
+| [!DNL Snowflake] キーペア認証のサポート | キーペア認証をサポートし、Snowflake接続のセキュリティを強化しました。 基本認証（ユーザー名/パスワード）は 2025 年 11 月までに廃止される予定です。セキュリティを向上させるには、キーペア認証に移行することをお勧めします。 詳しくは、[[!DNL Snowflake]  ドキュメント &#x200B;](../../sources/connectors/databases/snowflake.md) を参照してください。 |
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | [[!DNL Capillary Streaming Events]  ソース &#x200B;](../../sources/connectors/loyalty/capillary.md) を使用すると、[!DNL Capillary] アカウントからExperience Platformにロイヤルティデータをストリーミングできます。 |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) を使用して、[!DNL Relay Network] 統合からExperience Platformにイベントデータをストリーミングします。 |
-| ソースでのプライベートリンクのサポートの一般提供 | 選択したソースグループに対して **プライベートリンク** を使用できるようになりました。 この機能を使用して、ソースが接続できるプライベートエンドポイントを作成します。 プライベートエンドポイントを使用すると、パブリックインターネットをバイパスする接続とデータフローを設定して、機密データのセキュリティとネットワーク分離を強化できます。 プライベートリンクのサポートは、次のソースで利用できます。 <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>。詳しくは、（API での [ プライベートリンクの作成および ](../../sources/tutorials/api/private-link.md)UI での [ プライベートリンクの作成に関するガイドを参照し ](../../sources/tutorials/ui/private-link.md) ください。 |
+| ソースでのプライベートリンクのサポートの一般提供 | 選択したソースグループに対して **プライベートリンク** を使用できるようになりました。 この機能を使用して、ソースが接続できるプライベートエンドポイントを作成します。 プライベートエンドポイントを使用すると、パブリックインターネットをバイパスする接続とデータフローを設定して、機密データのセキュリティとネットワーク分離を強化できます。 プライベートリンクのサポートは、次のソースで利用できます。 <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>。詳しくは、（API での [&#x200B; プライベートリンクの作成および &#x200B;](../../sources/tutorials/api/private-link.md)UI での [&#x200B; プライベートリンクの作成に関するガイドを参照し &#x200B;](../../sources/tutorials/ui/private-link.md) ください。 |
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
