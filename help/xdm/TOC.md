@@ -5,10 +5,10 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 75%
+source-wordcount: '707'
+ht-degree: 73%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 75%
    * [データモデリングのベストプラクティス](schema/best-practices.md)
    * [機密データと個人データ](./schema/sensitive-and-personal-data.md)
    * [XDM フィールドタイプ制約](schema/field-constraints.md)
-   * [モデルベースのスキーマ](./schema/model-based.md)
+   * [リレーショナルスキーマ](./schema/relational.md)
    * [XDM での名前空間](./schema/namespaces.md)
    * 業界のデータモデル {#industries}
       * [概要](./schema/industries/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 75%
          * [投薬依頼](./schema/healthcare/field-groups/medication-request.md)
          * [組織](./schema/healthcare/field-groups/organization.md)
          * [患者](./schema/healthcare/field-groups/patient.md)
-         * [担当者](./schema/healthcare/field-groups/practioner.md)
+         * [実務担当者](./schema/healthcare/field-groups/practioner.md)
          * [スケジュール](./schema/healthcare/field-groups/schedule.md)
       * データタイプ {#data-types}
          * [Address](./schema/healthcare/data-types/address.md)
@@ -154,7 +154,7 @@ ht-degree: 75%
    * プロバイダー {#provider}
       * [ヘルスケア提供組織](./field-groups/provider/healthcare-provider.md)
    * 共有 {#shared}
-      * [外部ソースシステム監査の詳細](./field-groups/shared/external-source-system-audit-details.md)
+      * [外部Source システム監査の詳細](./field-groups/shared/external-source-system-audit-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アカウントの詳細](./data-types/account-details.md)
@@ -168,7 +168,7 @@ ht-degree: 75%
    * [B2B ソース](./data-types/b2b-source.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
-   * [買い物かご](./data-types/cart.md)
+   * [カート](./data-types/cart.md)
    * [カテゴリデータ](./data-types/category-data.md)
    * [チャプター詳細コレクション](./data-types/chapter-details-collection.md)
    * [チャプターの詳細レポート](./data-types/chapter-details-reporting.md)
@@ -227,14 +227,14 @@ ht-degree: 75%
    * [検索](./data-types/search.md)
    * [Session Details Collection](./data-types/session-details-collection.md)
    * [Session Details Reporting](./data-types/session-details-reporting.md)
-   * [発送](./data-types/shipping.md)
+   * [送料](./data-types/shipping.md)
    * [サブスクリプション](./data-types/subscription.md)
    * [通信サブスクリプション](./data-types/telecom-subscription.md)
    * [トランザクション](./data-types/transaction.md)
    * [Web 情報](./data-types/web-information.md)
    * [Web インタラクション](./data-types/web-interaction.md)
    * [Web ページの詳細](./data-types/webpage-details.md)
-* [!UICONTROL &#x200B; スキーマ &#x200B;] UI {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集 {#resources}

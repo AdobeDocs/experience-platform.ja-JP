@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2025年8月
 description: Adobe Experience Platform の 2025年8月のリリースノート。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
+source-git-commit: ba16b870b49ccd13cf927b9460e81976d8be0048
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1474'
 ht-degree: 23%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年8月19日（PT）**
 
@@ -36,7 +36,7 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL Alerts]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -44,7 +44,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 | ------- | ----------- |
 | ストリーミングスループット容量アラート | 3 つの新しいアラートにより、ユーザーはアラートを登録および設定して、ストリーミングスループット容量のパフォーマンスをプロアクティブに管理および監視できます。 新しいアラートには、ストリーミングのスループットが 80%、90% に達した場合、処理能力の制限を超えた場合などが含まれます。 詳細については、「[capacity alert rules](../../observability/alerts/rules.md#capacity) guide」を参照してください。 |
 
-アラートについて詳しくは、[[!DNL Observability Insights]  概要 &#x200B;](../../observability/home.md) を参照してください。
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../../observability/home.md) を参照してください。
 
 ## カタログサービス {#catalog-service}
 
@@ -56,7 +56,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 | --- | --- |
 | リアルタイム顧客プロファイルのデータ保持 | リアルタイム顧客プロファイルのデータ保持期間は **30 日に 1 回** 更新のみ）できます。 |
 
-カタログサービスについて詳しくは、[&#x200B; カタログサービスの概要 &#x200B;](../../catalog/home.md) を参照してください。
+カタログサービスについて詳しくは、[ カタログサービスの概要 ](../../catalog/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -66,7 +66,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 >
 >**データセット書き出しスケジュール拡張機能**
 >
->2024 年 11 月より前に作成されたデータセット書き出しデータフローがある組織の場合、これらのデータフローは **2025 年 9 月 1 日** に機能しなくなります。 2025 年 9 月 1 日（PT）以降もデータの書き出しを維持するためにデータフローが必要な場合、[&#x200B; このガイド &#x200B;](../../destinations/ui/dataset-expiration-update.md) の手順に従って、データセットを書き出す各宛先のスケジュールを拡張する必要があります。
+>2024 年 11 月より前に作成されたデータセット書き出しデータフローがある組織の場合、これらのデータフローは **2025 年 9 月 1 日** に機能しなくなります。 2025 年 9 月 1 日（PT）以降もデータの書き出しを維持するためにデータフローが必要な場合、[ このガイド ](../../destinations/ui/dataset-expiration-update.md) の手順に従って、データセットを書き出す各宛先のスケジュールを拡張する必要があります。
 
 >[!IMPORTANT]
 >
@@ -87,7 +87,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 >
 >**この変更は、次の宛先タイプに適用されます。**
 >
->- [&#x200B; ストリーミングオーディエンス書き出し宛先 &#x200B;](../../destinations/destination-types.md#streaming-destinations) （[Pega CDH リアルタイムオーディエンス &#x200B;](/help/destinations/catalog/personalization/pega-v2.md)、[Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) および [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) との API ベースの統合）
+>- [ ストリーミングオーディエンス書き出し宛先 ](../../destinations/destination-types.md#streaming-destinations) （[Pega CDH リアルタイムオーディエンス ](/help/destinations/catalog/personalization/pega-v2.md)、[Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) および [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) との API ベースの統合）
 >- [Destination SDK](../../destinations/destination-sdk/getting-started.md) 経由で作成されたパブリックまたはプライベートの宛先
 >
 >**対処が必要：** Adobeと連携して API ベースのストリーミング宛先に IP アドレスを許可リストに加える許可リストに加えるした場合、上記の IP アドレスを宛先に追加して、API ベースの宛先へのデータフローが中断されないようにする必要があります。
@@ -96,21 +96,21 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 
 | 宛先 | 説明 |
 | --- | --- |
-| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[&#x200B; テクノロジー &#x200B;](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
+| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
 
 **更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、短期間のうちに、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示される場合があります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 <br> アップグレードが完了し、非推奨カードが宛先カタログから削除されました。 新しいアクティブ化データ フローについては、カタログ内の **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス &#x200B;](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
-| [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] ID サポートの削除 | 2025 年 9 月以降、[!DNL IDFA] は [!DNL IDFA] 宛先でサポートされなくなるので、[!DNL LinkedIn Matched Audiences] をターゲット ID としてマッピングできなくなります。 詳しくは、[!DNL LinkedIn Matched Audiences] 統合 [&#x200B; ドキュメント &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) を参照してください。 この変更は LinkedIn の要件に起因し、Experience Platformの宛先サービスのアップグレードには関係しません。 |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、短期間のうちに、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示される場合があります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は **[!UICONTROL (Deprecated) Microsoft Bing]** に変更され、名前が **[!UICONTROL Microsoft Bing]** の新しいカードが使用できるようになりました。 <br> アップグレードが完了し、非推奨カードが宛先カタログから削除されました。 新しいアクティベーションデータフローについては、カタログの **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL (Deprecated) Microsoft Bing]** の宛先へのアクティブなデータフローがある場合、それらは自動的に更新されるので、ユーザーからのアクションは必要ありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス ](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL Account expiration date]**」タブまたは「**[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)**」タブの「**[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**」列から監視できます。 |
+| [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] ID サポートの削除 | 2025 年 9 月以降、[!DNL IDFA] は [!DNL IDFA] 宛先でサポートされなくなるので、[!DNL LinkedIn Matched Audiences] をターゲット ID としてマッピングできなくなります。 詳しくは、[!DNL LinkedIn Matched Audiences] 統合 [ ドキュメント ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) を参照してください。 この変更は LinkedIn の要件に起因し、Experience Platformの宛先サービスのアップグレードには関係しません。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照 [&#x200B; タブと &#x200B;](../../destinations/ui/destinations-workspace.md#browse) アカウント [&#x200B; タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフロー &#x200B;](../../destinations/ui/destinations-workspace.md#accounts) 改善します。 <br> 特定のデータフローとアカウントを名前で検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングして、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。<br> ![&#x200B; 「参照」タブでの宛先データフロー検索のアニメーションデモ &#x200B;](../../destinations/assets/ui/workspace/search.gif) |
+| 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照 [ タブと ](../../destinations/ui/destinations-workspace.md#browse) アカウント [ タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフロー ](../../destinations/ui/destinations-workspace.md#accounts) 改善します。 <br> 特定のデータフローとアカウントを名前で検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングして、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。<br> ![ 「参照」タブでの宛先データフロー検索のアニメーションデモ ](../../destinations/assets/ui/workspace/search.gif) |
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -120,9 +120,9 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| モデルベースのスキーマ | モデルベースのスキーマを使用して、データモデリングを簡略化できます。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 |
+| リレーショナルスキーマ | リレーショナルスキーマ（以前のモデルベースのスキーマ）を使用して、データモデリングを簡素化します。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 |
 
-詳しくは、[XDM の概要 &#x200B;](../../xdm/home.md) を参照してください。
+詳しくは、[XDM の概要 ](../../xdm/home.md) を参照してください。
 
 <!--
 ## Real-Time Customer Profile {#profile}
@@ -147,10 +147,10 @@ Experience Platform は、デジタルエクスペリエンスアプリケーシ
 
 | 機能 | 説明 |
 | --- | --- |
-| インポート ワークフローでの依存関係オブジェクトの重複排除 | オブジェクトの拡散を避けるために、同じ名前のオブジェクトが検出された場合、サンドボックスツールは常に既存のオブジェクトを再利用するようになりました。 この変更は、次のオブジェクトに適用されます。 <ul><li>スキーマ</li><li>フィールドグループ</li><li>オーディエンス</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> 詳しくは、[&#x200B; サンドボックスツールでサポートされるオブジェクトに関するガイド &#x200B;](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling) を参照してください。 |
-| 組織をまたいだパッケージ共有のサンドボックス全体のサポート | サンドボックスツールで、組織パッケージ共有全体で **サンドボックス全体** タイプインがサポートされるようになりました。 組織全体でサンドボックスパッケージとマルチオブジェクトパッケージの両方を共有できるようになりました。 詳しくは、[&#x200B; サンドボックスツールでサポートされるオブジェクトに関するガイド &#x200B;](../../sandboxes/ui/sharing-packages-across-orgs.md) を参照してください。 |
+| インポート ワークフローでの依存関係オブジェクトの重複排除 | オブジェクトの拡散を避けるために、同じ名前のオブジェクトが検出された場合、サンドボックスツールは常に既存のオブジェクトを再利用するようになりました。 この変更は、次のオブジェクトに適用されます。 <ul><li>スキーマ</li><li>フィールドグループ</li><li>オーディエンス</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> 詳しくは、[ サンドボックスツールでサポートされるオブジェクトに関するガイド ](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling) を参照してください。 |
+| 組織をまたいだパッケージ共有のサンドボックス全体のサポート | サンドボックスツールで、組織パッケージ共有全体で **サンドボックス全体** タイプインがサポートされるようになりました。 組織全体でサンドボックスパッケージとマルチオブジェクトパッケージの両方を共有できるようになりました。 詳しくは、[ サンドボックスツールでサポートされるオブジェクトに関するガイド ](../../sandboxes/ui/sharing-packages-across-orgs.md) を参照してください。 |
 
-サンドボックスについて詳しくは、[&#x200B; サンドボックスの概要 &#x200B;](../../sandboxes/home.md) を参照してください。
+サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -160,7 +160,7 @@ Experience Platform は、デジタルエクスペリエンスアプリケーシ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| オーディエンス見積り | オーディエンスの推定は、サンプリングデータの信頼区間に基づく **範囲** として表示されるようになりました。 予測について詳しくは、[&#x200B; セグメントビルダーガイド &#x200B;](/help/segmentation/ui/segment-builder.md#audience-properties) を参照してください。 |
+| オーディエンス見積り | オーディエンスの推定は、サンプリングデータの信頼区間に基づく **範囲** として表示されるようになりました。 予測について詳しくは、[ セグメントビルダーガイド ](/help/segmentation/ui/segment-builder.md#audience-properties) を参照してください。 |
 
 詳しくは、[[!DNL Segmentation Service] 概要](../../segmentation/home.md)を参照してください。
 

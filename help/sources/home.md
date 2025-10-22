@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 54%
+source-wordcount: '1666'
+ht-degree: 48%
 
 ---
 
@@ -30,7 +30,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ &#x200B;](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [&#x200B; は RainFocus チームによって作成および管理されます &#x200B;](/help/sources/connectors/analytics/rainfocus.md)。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -282,15 +282,15 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## データ取得におけるソースのアクセス制御
 
-データ取得元に対する権限は、Adobe Admin Console で管理できます。権限には、特定の製品プロファイルの「**[!UICONTROL 権限]**」タブからアクセスできます。**[!UICONTROL 権限を編集]**&#x200B;パネルから、**[!UICONTROL データ取得]**&#x200B;メニューのエントリを使用して、ソースに関連する権限にアクセスできます。「**[!UICONTROL ソースの表示]**」権限は、「**[!UICONTROL カタログ]**」タブの使用可能なソースと「**[!UICONTROL 参照]**」タブの認証済みのソースへの読み取り専用アクセス権を付与する一方、「**[!UICONTROL ソースの管理]**」権限は、ソースの作成、編集および無効化に対するフルアクセス権を付与します。
+データ取得元に対する権限は、Adobe Admin Console で管理できます。権限には、特定の製品プロファイルの「**[!UICONTROL Permissions]**」タブからアクセスできます。 **[!UICONTROL Edit Permissions]** のパネルから、**[!UICONTROL data ingestion]** メニューのエントリを使用して、ソースに関連する権限にアクセスできます。 「**[!UICONTROL View Sources]**」権限は、「**[!UICONTROL Catalog]**」タブで使用可能なソースと「**[!UICONTROL Browse]**」タブで認証済みのソースに対する読み取り専用アクセス権を付与し、「**[!UICONTROL Manage Sources]**」権限は、ソースに対する読み取り、作成、編集、無効化のフルアクセス権を付与します。
 
 次の表に、これらの権限の様々な組み合わせに基づく UI の動作の概要を示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL ソースの表示]**&#x200B;オン | 「Catalog」タブ、「Browse」タブ、「Accounts」タブ、「Dataflow」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
-| **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
-| 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
+| **[!UICONTROL View Sources]** On | 「Catalog」タブ、「Browse」タブ、「Accounts」タブ、「Dataflow」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL Manage Sources]** On | **[!UICONTROL View Sources]** に含まれる関数に加えて、は **[!UICONTROL Connect Source]** の **[!UICONTROL Catalog]** オプションと **[!UICONTROL Select Data]** の **[!UICONTROL Browse]** オプションへのアクセス権を付与します。 **[!UICONTROL Manage Sources]** た、**[!UICONTROL DataFlows]** ールの有効/無効を切り替えたり、スケジュールを編集したりできます。 |
+| **[!UICONTROL View Sources]** Off および **[!UICONTROL Manage Sources]** Off | ソースへのすべてのアクセスを取り消します。 |
 
 Adobe Permissions を通じて付与される使用可能な権限の詳細については、[アクセス制御の概要](../access-control/home.md)を参照してください。
 
@@ -304,15 +304,15 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!TIP]
 >
->属性ベースのアクセス制御は次のように動作します。**roles** を作成して、Experience Platform インスタンスとやり取りするユーザーのタイプを分類します。 **ラベル** は、**役割** に適用され、その役割のアクセスを指定します。 **ラベル** は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、それらを *クエリされたリソースに割り当てられたのと同じラベルの役割* に追加する必要があります。 詳しくは、[&#x200B; 属性ベースのアクセス制御エンドツーエンドガイド &#x200B;](../access-control/abac/end-to-end-guide.md) を参照してください。
+>属性ベースのアクセス制御は次のように動作します。**roles** を作成して、Experience Platform インスタンスとやり取りするユーザーのタイプを分類します。 **ラベル** は、**役割** に適用され、その役割のアクセスを指定します。 **ラベル** は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、それらを *クエリされたリソースに割り当てられたのと同じラベルの役割* に追加する必要があります。 詳しくは、[ 属性ベースのアクセス制御エンドツーエンドガイド ](../access-control/abac/end-to-end-guide.md) を参照してください。
 
 - スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーは、アクセス権のあるフィールドのマッピングのみを作成できるようになります。
 - 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用したデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを含む既存のデータフローを更新、削除、有効化または無効化できません。
-- さらに、データフローは、マッピング、ターゲットデータセット、ターゲット接続でまったく同じスキーマ ID とバージョンを持つ必要があります。 これは、標準 XDM スキーマとモデルベースのスキーマの両方に適用されます。
+- さらに、データフローは、マッピング、ターゲットデータセット、ターゲット接続でまったく同じスキーマ ID とバージョンを持つ必要があります。 これは、標準 XDM スキーマとリレーショナルスキーマの両方に適用されます。
 
 >[!NOTE]
 >
->モデルベースのスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[&#x200B; モデルベースのスキーマの概要 &#x200B;](../xdm/schema/model-based.md) を参照してください。
+>リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[ リレーショナルスキーマの概要 ](../xdm/schema/relational.md) を参照してください。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 25%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 25%
 Adobe Experience Platformでは、記述子は、スキーマに動作規則や構造的意味を追加するメタデータです。
 記述子には次のようないくつかのタイプがあります。
 
-- [ID 記述子 &#x200B;](#identity-descriptor) - フィールドを ID としてマークします
-- [プライマリキー記述子 &#x200B;](#primary-key-descriptor) – 一意性を強制します
-- [&#x200B; 関係記述子 &#x200B;](#relationship-descriptor) – 外部キー結合を定義します
-- [&#x200B; 代替表示情報記述子 &#x200B;](#friendly-name) - UI でフィールドの名前を変更できます
+- [ID 記述子 ](#identity-descriptor) - フィールドを ID としてマークします
+- [プライマリキー記述子 ](#primary-key-descriptor) – 一意性を強制します
+- [ 関係記述子 ](#relationship-descriptor) – 外部キー結合を定義します
+- [ 代替表示情報記述子 ](#friendly-name) - UI でフィールドの名前を変更できます
 - [Version](#version-descriptor) および [timestamp](#timestamp-descriptor) 記述子 – イベントの順序および変更検出を追跡します
 
 `/descriptors` API の [!DNL Schema Registry] エンドポイントを使用すると、エクスペリエンスアプリケーション内の記述子をプログラムで管理できます。
@@ -34,11 +34,15 @@ Adobe Experience Platformでは、記述子は、スキーマに動作規則や�
 
 このガイドで使用するエンドポイントは、[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) の一部です。 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-[!DNL Schema Registry] は、標準の記述子に加えて、**プライマリキー**、**バージョン**、**タイムスタンプ** など、モデルベースのスキーマの記述子タイプをサポートしています。 これらは、一意性の強制、バージョン管理の制御、スキーマレベルでの時系列フィールドの定義を行います。 モデルベースのスキーマに慣れていない場合は、先に進む前に [Data Mirrorの概要 &#x200B;](../data-mirror/overview.md) および [&#x200B; モデルベースのスキーマのテクニカルリファレンス &#x200B;](../schema/model-based.md) を確認してください。
+[!DNL Schema Registry] は、標準の記述子に加えて、**プライマリキー**、**バージョン**、**タイムスタンプ** などのリレーショナルスキーマの記述子タイプをサポートしています。 これらは、一意性の強制、バージョン管理の制御、スキーマレベルでの時系列フィールドの定義を行います。 リレーショナルスキーマに慣れていない場合は、先に進む前に [Data Mirrorの概要 ](../data-mirror/overview.md) および [ リレーショナルスキーマのテクニカルリファレンス ](../schema/relational.md) を確認してください。
+
+>[!NOTE]
+>
+>リレーショナルスキーマは、以前はAdobe Experience Platform ドキュメントの以前のバージョンでモデルベースのスキーマと呼ばれていました。 記述子の機能と API エンドポイントは変更されません。 わかりやすくするために、用語のみが更新されました。
 
 >[!IMPORTANT]
 >
->すべての記述子タイプについて詳しくは、[&#x200B; 付録 &#x200B;](#defining-descriptors) を参照してください。
+>すべての記述子タイプについて詳しくは、[ 付録 ](#defining-descriptors) を参照してください。
 
 ## 記述子のリストの取得 {#list}
 
@@ -158,7 +162,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->[!DNL Schema Registry] を使用すると、複数の異なる記述子タイプを定義できます。 記述子タイプごとに、リクエスト本文で送信する専用のフィールドが必要です。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[&#x200B; 付録 &#x200B;](#defining-descriptors) を参照してください。
+>[!DNL Schema Registry] を使用すると、複数の異なる記述子タイプを定義できます。 記述子タイプごとに、リクエスト本文で送信する専用のフィールドが必要です。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[ 付録 ](#defining-descriptors) を参照してください。
 
 **API 形式**
 
@@ -226,11 +230,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **リクエスト**
 
-このリクエストは、基本的に記述子を書き換えるので、リクエスト本文には、そのタイプの記述子を定義するために必要なすべてのフィールドを含める必要があります。 つまり、記述子を更新（PUT）するリクエストペイロードは、同じタイプの記述子を [&#x200B; 作成（POST](#create) するペイロードと同じです。
+このリクエストは、基本的に記述子を書き換えるので、リクエスト本文には、そのタイプの記述子を定義するために必要なすべてのフィールドを含める必要があります。 つまり、記述子を更新（PUT）するリクエストペイロードは、同じタイプの記述子を [ 作成（POST](#create) するペイロードと同じです。
 
 >[!IMPORTANT]
 >
->POST リクエストを使用して記述子を作成する場合と同様に、記述子タイプごとに専用のフィールドをPUT リクエストペイロードで送信する必要があります。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[&#x200B; 付録 &#x200B;](#defining-descriptors) を参照してください。
+>POST リクエストを使用して記述子を作成する場合と同様に、記述子タイプごとに専用のフィールドをPUT リクエストペイロードで送信する必要があります。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[ 付録 ](#defining-descriptors) を参照してください。
 
 次の例では、別の `xdm:sourceProperty` （`mobile phone`）を参照するように ID 記述子を更新し、`xdm:namespace` を `Phone` に変更します。
 
@@ -263,7 +267,7 @@ curl -X PUT \
 }
 ```
 
-記述子を表示するために [&#x200B; 参照（GET）リクエスト &#x200B;](#lookup) を実行すると、フィールドが更新され、PUT リクエストで送信された変更が反映されていることを示します。
+記述子を表示するために [ 参照（GET）リクエスト ](#lookup) を実行すると、フィールドが更新され、PUT リクエストで送信された変更が反映されていることを示します。
 
 ## 記述子の削除 {#delete}
 
@@ -296,7 +300,7 @@ curl -X DELETE \
 
 リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-記述子が削除されたことを確認するには、記述子 [&#x200B; に対して &#x200B;](#lookup) 参照リクエスト `@id` を実行します。 記述子が [!DNL Schema Registry] から削除されたので、応答は HTTP ステータス 404 （見つかりません）を返します。
+記述子が削除されたことを確認するには、記述子 [ に対して ](#lookup) 参照リクエスト `@id` を実行します。 記述子が [!DNL Schema Registry] から削除されたので、応答は HTTP ステータス 404 （見つかりません）を返します。
 
 ## 付録 {#appendix}
 
@@ -316,7 +320,7 @@ curl -X DELETE \
 
 #### ID 記述子 {#identity-descriptor}
 
-ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で説明されているように、「[!UICONTROL sourceSchema]」の「[!DNL Identity]sourceProperty[」が &#x200B;](../../identity-service/home.md) フィールドであることを示します。
+ID 記述子は、[!UICONTROL sourceProperty]Experience Platform ID サービス [!UICONTROL sourceSchema] で説明されているように、「[!DNL Identity]」の「[」が ](../../identity-service/home.md) フィールドであることを示します。
 
 ```json
 {
@@ -388,7 +392,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 関係記述子は、`xdm:sourceProperty` と `xdm:destinationProperty` で説明されているプロパティに基づいて、2 つの異なるスキーマ間の関係を記述します。詳しくは、[2 つのスキーマ間の関係の定義](../tutorials/relationship-api.md)に関するチュートリアルを参照してください。
 
-これらのプロパティを使用して、ソースフィールド（外部キー）と宛先フィールド（[&#x200B; プライマリキー &#x200B;](#primary-key-descriptor) または候補キー）の関係を宣言します。
+これらのプロパティを使用して、ソースフィールド（外部キー）と宛先フィールド（[ プライマリキー ](#primary-key-descriptor) または候補キー）の関係を宣言します。
 
 >[!TIP]
 >
@@ -397,7 +401,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 この API は、次の 2 つのパターンをサポートしています。
 
 - `xdm:descriptorOneToOne`：標準 1:1 関係。
-- `xdm:descriptorRelationship`：新しい作業およびモデルベースのスキーマの一般的なパターン（カーディナリティ、命名および非プライマリキーのターゲットをサポート）。
+- `xdm:descriptorRelationship`：新しい作業およびリレーショナルスキーマの一般的なパターン（カーディナリティ、命名および非プライマリキーターゲットをサポート）。
 
 ##### 1 対 1 の関係（標準スキーマ）
 
@@ -427,9 +431,9 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 | `xdm:destinationVersion` | 参照スキーマのメジャーバージョン。 |
 | `xdm:destinationProperty` | （オプション）参照スキーマ内のターゲットフィールドへのパス。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
 
-##### 一般的な関係（モデルベースのスキーマで、新規プロジェクトに推奨）
+##### 一般的な関係（リレーショナルスキーマで、新規プロジェクトに推奨）
 
-この記述子は、すべての新規実装と、モデルベースのスキーマに使用します。 関係のカーディナリティ（1 対 1 または多対 1 など）を定義し、関係名を指定して、プライマリキー（非プライマリキー）以外の宛先フィールドにリンクできます。
+この記述子は、すべての新規実装とリレーショナルスキーマに使用します。 関係のカーディナリティ（1 対 1 または多対 1 など）を定義し、関係名を指定して、プライマリキー（非プライマリキー）以外の宛先フィールドにリンクできます。
 
 次の例は、一般的な関係記述子の定義方法を示しています。
 
@@ -474,7 +478,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 | 状況 | 使用する記述子 |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| 新しい作業またはモデルベースのスキーマ | `xdm:descriptorRelationship` |
+| 新しい作業またはリレーショナルスキーマ | `xdm:descriptorRelationship` |
 | 標準スキーマの既存の 1:1 マッピング | `xdm:descriptorOneToOne` でのみサポートされる機能が必要な場合を除き、`xdm:descriptorRelationship` を使用し続けます。 |
 | 多対 1 またはオプションのカーディナリティ（`1:1`、`1:0`、`M:1`、`M:0`）が必要 | `xdm:descriptorRelationship` |
 | UI/ダウンストリームが読みやすいように関係名またはタイトルが必要です | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 | 基数 | 1:1 | 1:1、1:0、M:1、M:0 （情報） |
 | 宛先のターゲット | ID/明示的フィールド | デフォルトではプライマリキー、または `xdm:destinationProperty` を使用した非プライマリキー |
 | フィールドの命名 | サポートなし | `xdm:sourceToDestinationName`、`xdm:destinationToSourceName` およびタイトル |
-| 関係適合 | 制限付き | モデルベースのスキーマのプライマリパターン |
+| 関係適合 | 制限付き | リレーショナルスキーマのプライマリパターン |
 
 ##### 制約と検証
 
 一般的な関係記述子を定義する際は、次の要件と推奨事項に従います。
 
-- モデルベースのスキーマの場合は、ルートレベルのソースフィールド（外部キー）を配置します。 これは、取得に関する現在の技術的な制限で、ベストプラクティスの推奨事項だけではありません。
+- リレーショナルスキーマの場合は、ソースフィールド（外部キー）をルートレベルに配置します。 これは、取得に関する現在の技術的な制限で、ベストプラクティスの推奨事項だけではありません。
 - ソースおよび宛先フィールドのデータタイプに互換性があることを確認します（数値、日付、ブール値、文字列）。
 - カーディナリティは情報目的であることに注意してください。ストレージでは適用されません。 カーディナリティを `<source>:<destination>` 形式で指定します。 指定できる値は、`1:1`、`1:0`、`M:1`、`M:0` です。
 
@@ -525,7 +529,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 >[!NOTE]
 >
->UI スキーマエディターでは、バージョン記述子が「[!UICONTROL &#x200B; バージョン識別子 &#x200B;]」として表示されます。
+>UI スキーマエディターでは、バージョン記述子が「[!UICONTROL Version identifier]」と表示されます。
 
 バージョン記述子（`xdm:descriptorVersion`）は、順不同の変更イベントによる競合を検出して防ぐフィールドを指定します。
 
@@ -547,7 +551,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 >[!NOTE]
 >
->UI スキーマエディターでは、タイムスタンプ記述子は「[!UICONTROL &#x200B; タイムスタンプ識別子 &#x200B;] として表示されます。
+>UI スキーマエディターでは、タイムスタンプ記述子は「[!UICONTROL Timestamp identifier]」と表示されます。
 
 タイムスタンプ記述子（`xdm:descriptorTimestamp`）は、`"meta:behaviorType": "time-series"` を含むスキーマのタイムスタンプとして日時フィールドを指定します。
 
@@ -567,7 +571,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 ##### B2B 関係記述子 {#B2B-relationship-descriptor}
 
-Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の方法が導入されており、多対 1 の関係が可能になります。 この新しい関係のタイプは `@type: xdm:descriptorRelationship` である必要があり、ペイロードには `@type: xdm:descriptorOneToOne` の関係よりも多くのフィールドを含める必要があります。 詳しくは、[B2B editionのスキーマ関係の定義 &#x200B;](../tutorials/relationship-b2b.md) に関するチュートリアルを参照してください。
+Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の方法が導入されており、多対 1 の関係が可能になります。 この新しい関係のタイプは `@type: xdm:descriptorRelationship` である必要があり、ペイロードには `@type: xdm:descriptorOneToOne` の関係よりも多くのフィールドを含める必要があります。 詳しくは、[B2B editionのスキーマ関係の定義 ](../tutorials/relationship-b2b.md) に関するチュートリアルを参照してください。
 
 ```json
 {
@@ -587,7 +591,7 @@ Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の�
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 以下のフィールドを使用する場合、値は `xdm:descriptorRelationship` に設定する必要があります。 その他のタイプについて詳しくは、[&#x200B; 関係記述子 &#x200B;](#relationship-descriptor) の節を参照してください。 |
+| `@type` | 定義する記述子のタイプ。 以下のフィールドを使用する場合、値は `xdm:descriptorRelationship` に設定する必要があります。 その他のタイプについて詳しくは、[ 関係記述子 ](#relationship-descriptor) の節を参照してください。 |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要があり、「/」で終わる必要はありません。 パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
@@ -627,7 +631,7 @@ Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の�
 
 #### 非推奨のフィールド記述子
 
-該当するフィールドに [&#x200B; に設定された &#x200B;](../tutorials/field-deprecation-api.md#custom) 属性を追加することで `meta:status` カスタム XDM リソース内のフィールドを非推奨（廃止予定 `deprecated` にすることができます。 ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨（廃止予定）にする場合は、当該のスキーマに非推奨（廃止予定）のフィールド記述子を割り当てて、同じ効果を得ることができます。 [correct `Accept` ヘッダー &#x200B;](../tutorials/field-deprecation-api.md#verify-deprecation) を使用すると、API で検索する際に、スキーマで非推奨になっている標準フィールドを表示できます。
+該当するフィールドに [ に設定された ](../tutorials/field-deprecation-api.md#custom) 属性を追加することで `meta:status` カスタム XDM リソース内のフィールドを非推奨（廃止予定 `deprecated` にすることができます。 ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨（廃止予定）にする場合は、当該のスキーマに非推奨（廃止予定）のフィールド記述子を割り当てて、同じ効果を得ることができます。 [correct `Accept` ヘッダー ](../tutorials/field-deprecation-api.md#verify-deprecation) を使用すると、API で検索する際に、スキーマで非推奨になっている標準フィールドを表示できます。
 
 ```json
 {

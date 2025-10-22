@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '4497'
+source-wordcount: '4259'
 ht-degree: 11%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 11%
 
 このユーザガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。 
 
-* [&#x200B; データセット &#x200B;](overview.md):[!DNL Experience Platform] でのデータ永続性を確保するためのストレージと管理の構成体。
+* [ データセット ](overview.md):[!DNL Experience Platform] でのデータ永続性を確保するためのストレージと管理の構成体。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
-   * [&#x200B; スキーマエディター &#x200B;](../../xdm/tutorials/create-schema-ui.md):[!DNL Schema Editor] ユーザーインターフェイス内の [!DNL Experience Platform] を使用して独自のカスタム XDM スキーマを作成する方法を説明します。
+   * [ スキーマエディター ](../../xdm/tutorials/create-schema-ui.md):[!DNL Schema Editor] ユーザーインターフェイス内の [!DNL Experience Platform] を使用して独自のカスタム XDM スキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：顧客データの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
@@ -57,62 +57,62 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="調整されたキャンペーン"
->abstract="この切替スイッチを有効にすると、選択したデータセットをAdobe Journey Optimizer オーケストレートキャンペーンで使用できるようになります。 データセットでは、モデルベースのスキーマを使用し、スキーマごとに 1 つのデータセットのみを作成する必要があります。"
+>abstract="この切替スイッチを有効にすると、選択したデータセットをAdobe Journey Optimizer オーケストレートキャンペーンで使用できるようになります。 データセットは 1 つのリレーショナルスキーマを使用する必要があり、スキーマごとにデータセットを 1 つだけ作成できます。"
 
-[!DNL Experience Platform] UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、**[!UICONTROL データセット]** ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが準拠するスキーマ、最新の取得実行のステータスなど）が表示されます。
+[!DNL Experience Platform] UI で、左側のナビゲーションで **[!UICONTROL Datasets]** を選択して、**[!UICONTROL Datasets]** ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが準拠するスキーマ、最新の取得実行のステータスなど）が表示されます。
 
-![&#x200B; 左側のナビゲーションバーでデータセット項目がハイライト表示されたExperience Platform UI。](../images/datasets/user-guide/browse-datasets.png)
+![ 左側のナビゲーションバーでデータセット項目がハイライト表示されたExperience Platform UI。](../images/datasets/user-guide/browse-datasets.png)
 
-[!UICONTROL &#x200B; 参照 &#x200B;] タブからデータセットの名前を選択して、その **[!UICONTROL データセットアクティビティ]** 画面にアクセスし、選択したデータセットの詳細を確認します。 「アクティビティ」タブには、消費されるメッセージの割合を視覚化したグラフと、成功および失敗したバッチのリストが含まれます。
+「[!UICONTROL Browse]」タブからデータセットの名前を選択して **[!UICONTROL Dataset activity]** 画面にアクセスし、選択したデータセットの詳細を確認します。 「アクティビティ」タブには、消費されるメッセージの割合を視覚化したグラフと、成功および失敗したバッチのリストが含まれます。
 
-![&#x200B; 選択したデータセットの指標とビジュアライゼーションがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-1.png)
-![&#x200B; 選択したデータセットに関連するサンプルバッチがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-2.png)
+![ 選択したデータセットの指標とビジュアライゼーションがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-1.png)
+![ 選択したデータセットに関連するサンプルバッチがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## その他のアクション {#more-actions}
 
-[!UICONTROL &#x200B; データセット &#x200B;] 詳細ビューから [!UICONTROL &#x200B; 削除 &#x200B;] または [!UICONTROL &#x200B; プロファイルのデータセットを有効にする &#x200B;] ことができます。 使用可能なアクションを表示するには、「**[!UICONTROL ..」を選択します。詳細]** UI の右上にあります。 ドロップダウンメニューが表示されます。
+[!UICONTROL Delete] の詳細ビューから [!UICONTROL Enable a dataset for Profile] または [!UICONTROL Dataset] 行できます。 使用可能なアクションを表示するには、UI の右上にある「**[!UICONTROL ... More]**」を選択します。 ドロップダウンメニューが表示されます。
 
-![[!UICONTROL &#x200B; を持つデータセットワークスペース詳細 &#x200B;] ドロップダウンメニューがハイライト表示されています。](../images/datasets/user-guide/more-actions.png)
+![[!UICONTROL ... More] ドロップダウンメニューがハイライト表示されたデータセットワークスペース。](../images/datasets/user-guide/more-actions.png)
 
-**[!UICONTROL プロファイルのデータセットを有効にする]** を選択すると、確認ダイアログが表示されます。 「**[!UICONTROL 有効にする]**」をクリックして、選択を確定します。
+「**[!UICONTROL Enable a dataset for Profile]**」を選択すると、確認ダイアログが表示されます。 「**[!UICONTROL Enable]**」を選択して、選択内容を確定します。
 
 >[!NOTE]
 >
->プロファイルのデータセットを有効にするには、データセットが準拠するスキーマがリアルタイム顧客プロファイルでの使用に対応している必要があります。 詳しくは、[&#x200B; プロファイルのデータセットを有効にする &#x200B;](#enable-profile) の節を参照してください。
+>プロファイルのデータセットを有効にするには、データセットが準拠するスキーマがリアルタイム顧客プロファイルでの使用に対応している必要があります。 詳しくは、[ プロファイルのデータセットを有効にする ](#enable-profile) の節を参照してください。
 
-![&#x200B; データセットの確認を有効にするダイアログ &#x200B;](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+![ データセットの確認を有効にするダイアログ ](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
 
-「**[!UICONTROL 削除]**」を選択すると、「[!UICONTROL &#x200B; データセットを削除 &#x200B;]」確認ダイアログが表示されます。 「**[!UICONTROL 削除]**」を選択して、選択を確定します。
+**[!UICONTROL Delete]** を選択すると、[!UICONTROL Delete dataset] の確認ダイアログが表示されます。 「**[!UICONTROL Delete]**」を選択して、選択内容を確定します。
 
 >[!NOTE]
 >
 >システムデータセットは削除できません。
 
-「[!UICONTROL &#x200B; 参照 &#x200B;] タブにあるインラインアクションから、リアルタイム顧客プロファイルで使用するデータセットを削除または追加することもできます。 詳しくは、[&#x200B; インラインアクションの節 &#x200B;](#inline-actions) を参照してください。
+「[!UICONTROL Browse]」タブにあるインラインアクションから、リアルタイム顧客プロファイルで使用するデータセットを削除または追加することもできます。 詳しくは、[ インラインアクションの節 ](#inline-actions) を参照してください。
 
-![&#x200B; データセット削除の確認ダイアログ &#x200B;](../images/datasets/user-guide/delete-confirmation-dialog.png)
+![ データセット削除の確認ダイアログ ](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## インラインデータセットのアクション {#inline-actions}
 
 データセット UI で、使用可能な各データセットに対してインラインアクションのコレクションが提供されるようになりました。 管理するデータセットの省略記号（...）を選択して、ポップアップメニューに使用可能なオプションを表示します。 利用可能なアクションは次のとおりです。
 
-* [[!UICONTROL &#x200B; データセットをプレビュー &#x200B;]](#preview)
-* [[!UICONTROL &#x200B; データとアクセスラベルの管理 &#x200B;]](#manage-and-enforce-data-governance)
-* [[!UICONTROL &#x200B; 統合プロファイルを有効にする &#x200B;]](#enable-profile)
-* [[!UICONTROL &#x200B; タグの管理 &#x200B;]](#manage-tags)
-* [[!UICONTROL &#x200B; データ保持ポリシーの設定 &#x200B;]](#data-retention-policy)
-* [[!UICONTROL &#x200B; フォルダーに移動 &#x200B;]](#move-to-folders)
-* [[!UICONTROL &#x200B; 削除 &#x200B;]](#delete).
+* [[!UICONTROL Preview dataset]](#preview)
+* [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
+* [[!UICONTROL Enable unified profile]](#enable-profile)
+* [[!UICONTROL Manage tags]](#manage-tags)
+* [[!UICONTROL Set data retention policy]](#data-retention-policy)
+* [[!UICONTROL Move to folders]](#move-to-folders)
+* [[!UICONTROL Delete]](#delete)。
 
-これらの使用可能なアクションについて詳しくは、それぞれの節を参照してください。 多数のデータセットを同時に管理する方法については、[&#x200B; 一括アクション &#x200B;](#bulk-actions) の節を参照してください。
+これらの使用可能なアクションについて詳しくは、それぞれの節を参照してください。 多数のデータセットを同時に管理する方法については、[ 一括アクション ](#bulk-actions) の節を参照してください。
 
 ### データセットのプレビュー {#preview}
 
-「[!UICONTROL &#x200B; 参照 &#x200B;]」タブのインラインオプションまたは「[!UICONTROL &#x200B; データセットアクティビティ &#x200B;] ビューから、データセットに対して最大 100 行のサンプルデータをプレビューできます。
+「[!UICONTROL Browse]」タブのインラインオプションまたは [!UICONTROL Dataset activity] 表示から、任意のデータセットについて最大 100 行のサンプルデータをプレビューできます。
 
-「[!UICONTROL &#x200B; 参照 &#x200B;]」タブで、データセット名の横にある省略記号（...）を選択し、「[!UICONTROL &#x200B; データセットをプレビュー &#x200B;]」を選択します。 データセットが空の場合、「プレビュー」オプションは非アクティブになります。 または、**[!UICONTROL データセットアクティビティ]** 画面で、画面の右上隅付近の **[!UICONTROL データセットをプレビュー]** を選択します。
+「[!UICONTROL Browse]」タブから、データセット名の横にある省略記号（...）を選択し、「[!UICONTROL Preview dataset]」を選択します。 データセットが空の場合、「プレビュー」オプションは非アクティブになります。 または、**[!UICONTROL Dataset activity]** 画面で、画面の右上隅付近にある **[!UICONTROL Preview dataset]** を選択します。
 
-![&#x200B; 選択したデータセットの「省略記号とデータセットをプレビュー」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/preview-dataset-option.png)
+![ 選択したデータセットの「省略記号とデータセットをプレビュー」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/preview-dataset-option.png)
 
 これにより、プレビューウィンドウが開き、データセットの階層スキーマビューが左側に表示されます。
 
@@ -120,11 +120,11 @@ ht-degree: 11%
 >
 >左側のスキーマ図には、データを含んだフィールドのみが表示されます。 データのないフィールドは、UI を効率化し関連情報に集中するために、自動的に非表示になります。
 
-![&#x200B; データセットの構造に関する情報とサンプル値を含むデータセットプレビューダイアログが表示されます。](../images/datasets/user-guide/preview-dataset.png)
+![ データセットの構造に関する情報とサンプル値を含むデータセットプレビューダイアログが表示されます。](../images/datasets/user-guide/preview-dataset.png)
 
-または、**[!UICONTROL データセットアクティビティ]** 画面で **[!UICONTROL データセットをプレビュー]** を選択してプレビューウィンドウを開き、データセットの構造と値のサンプルを確認します。
+または、**[!UICONTROL Dataset activity]** の画面で「**[!UICONTROL Preview dataset]**」を選択してプレビューウィンドウを開き、データセットの構造と値のサンプルを確認します。
 
-![&#x200B; 「データセットをプレビュー」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-preview.png)
+![ 「データセットをプレビュー」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-preview.png)
 
 データセットプレビューウィンドウでは、データセットの構造とデータを簡単に調べて検証できます。
 
@@ -133,7 +133,7 @@ ht-degree: 11%
 
 次のアニメーションは、ナビゲーションとデータ探査機能を備えたデータセットのプレビューウィンドウを示しています。
 
-![&#x200B; データセットのプレビューウィンドウを示す画面記録。 この録画では、オブジェクト ブラウザのサイドバー、データ タイプ インジケータ、SQL クエリの表示、および書式設定されたデータ テーブルがハイライト表示されます。](../images/datasets/user-guide/dataset-preview-demo.gif)
+![ データセットのプレビューウィンドウを示す画面記録。 この録画では、オブジェクト ブラウザのサイドバー、データ タイプ インジケータ、SQL クエリの表示、および書式設定されたデータ テーブルがハイライト表示されます。](../images/datasets/user-guide/dataset-preview-demo.gif)
 
 データセットプレビューウィンドウには、次のものが含まれます。
 
@@ -146,15 +146,15 @@ ht-degree: 11%
 
 #### 高度なクエリエディターのショートカット {#query-editor-shortcut}
 
-組織が Data Distiller ライセンスを持っている場合は、データセットプレビューウィンドウから [!UICONTROL &#x200B; 詳細クエリエディター &#x200B;] に直接アクセスできます。 このショートカットを使用すると、サンプルデータのプレビューからクエリサービスでのクエリの実行と調整にシームレスに移動できます。
+組織が Data Distiller ライセンスを持っている場合は、データセットプレビューウィンドウから直接 [!UICONTROL Advanced Query Editor] にアクセスできます。 このショートカットを使用すると、サンプルデータのプレビューからクエリサービスでのクエリの実行と調整にシームレスに移動できます。
 
 >[!AVAILABILITY]
 >
->[!UICONTROL &#x200B; 高度なクエリエディター &#x200B;] へのアクセスは、Data Distiller SKU ライセンスを持つ組織に制限されています。 組織が必要なライセンスを持っていない場合、このオプションはデータセットプレビューウィンドウに表示されません。
+>[!UICONTROL Advanced Query Editor] へのアクセスは、Data Distiller SKU ライセンスを持つ組織に制限されます。 組織が必要なライセンスを持っていない場合、このオプションはデータセットプレビューウィンドウに表示されません。
 
-プレビューウィンドウの右上にある「[!UICONTROL &#x200B; 詳細クエリエディター &#x200B;]」を選択して、現在の SQL クエリが事前に読み込まれて実行された状態でクエリサービスを開きます。 クエリを再入力しなくても、SQL の分析または変更を続行できます。
+プレビューウィンドウの右上にある「[!UICONTROL Advanced Query Editor]」を選択して、現在の SQL クエリが事前に読み込まれて実行された状態でクエリサービスを開きます。 クエリを再入力しなくても、SQL の分析または変更を続行できます。
 
-![&#x200B; 右上に「詳細クエリエディター」ボタンが表示されているデータセットのプレビューウィンドウ &#x200B;](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![ 右上に「詳細クエリエディター」ボタンが表示されているデータセットのプレビューウィンドウ ](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
 さらに分析するには、[!DNL Query Service] や [!DNL JupyterLab] などのダウンストリームサービスを使用します。 詳しくは、次のドキュメントを参照してください。
 
@@ -163,9 +163,9 @@ ht-degree: 11%
 
 ### データセットのデータガバナンスの管理と実施 {#manage-and-enforce-data-governance}
 
-「[!UICONTROL &#x200B; 参照 &#x200B;] タブのインラインオプションを選択すると、データセットのデータガバナンスラベルを管理できます。 管理するデータセット名の横にある省略記号（...）をクリックし、ドロップダウンメニューから **[!UICONTROL データおよびアクセスラベルを管理]** を選択します。
+データセットタブのインラインオプションを選択することで、データセットのデータガバナ [!UICONTROL Browse] スラベルを管理できます。 管理するデータセット名の横にある省略記号（...）をクリックし、ドロップダウンメニューから **[!UICONTROL Manage data and access labels]** をクリックします。
 
-スキーマレベルで適用されるデータ使用ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 ラベルについて詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../data-governance/home.md) を参照するか、[&#x200B; データ使用ラベルユーザーガイド &#x200B;](../../data-governance/labels/overview.md) を参照して、データセットに伝播するラベルをスキーマに適用する方法を確認してください。
+スキーマレベルで適用されるデータ使用ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 ラベルについて詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照するか、[ データ使用ラベルユーザーガイド ](../../data-governance/labels/overview.md) を参照して、データセットに伝播するラベルをスキーマに適用する方法を確認してください。
 
 ## リアルタイム顧客プロファイルのデータセットを有効にする {#enable-profile}
 
@@ -174,63 +174,63 @@ ht-degree: 11%
 * スキーマに、ID プロパティとして指定された属性が 1 つ以上あります。
 * スキーマに、プライマリ ID として定義された ID プロパティがあります。
 
-スキーマの [!DNL Profile] 用を有効にする方法については、[&#x200B; スキーマエディターユーザーガイド &#x200B;](../../xdm/tutorials/create-schema-ui.md) を参照してください。
+スキーマの [!DNL Profile] 用を有効にする方法については、[ スキーマエディターユーザーガイド ](../../xdm/tutorials/create-schema-ui.md) を参照してください。
 
-[!UICONTROL &#x200B; 参照 &#x200B;] タブのインラインオプションと [!UICONTROL &#x200B; データセットアクティビティ &#x200B;] ビューの両方で、プロファイルのデータセットを有効にできます。 [!UICONTROL &#x200B; データセット &#x200B;] ワークスペースの [!UICONTROL &#x200B; 参照 &#x200B;] タブで、プロファイルに対して有効にするデータセットの省略記号を選択します。 メニューリストが表示されます。 次に、使用可能なオプションのリストから「**[!UICONTROL 統合プロファイルを有効にする]**」を選択します。
+[!UICONTROL Browse] タブと [!UICONTROL Dataset activity] ビューの両方のインラインオプションから、プロファイルのデータセットを有効にできます。 [!UICONTROL Browse] ワークスペースの「[!UICONTROL Datasets]」タブで、プロファイルに対して有効にするデータセットの省略記号を選択します。 メニューリストが表示されます。 次に、使用可能なオプションのリストから「**[!UICONTROL Enable unified profile]**」を選択します。
 
-![&#x200B; 省略記号と「統合プロファイルを有効にする」がハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/enable-for-profile.png)
+![ 省略記号と「統合プロファイルを有効にする」がハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/enable-for-profile.png)
 
-または、データセットの **[!UICONTROL データセットアクティビティ]** 画面で、**[!UICONTROL プロパティ]** 列内の **[!UICONTROL プロファイル]** 切り替えスイッチを選択します。 有効にすると、データセットに取得されたデータが顧客プロファイルに入力されます。
+または、データセットの **[!UICONTROL Dataset activity]** 画面で、**[!UICONTROL Profile]** 列内の「**[!UICONTROL Properties]**」トグルを選択します。 有効にすると、データセットに取得されたデータが顧客プロファイルに入力されます。
 
 >[!NOTE]
 >
 >データセットに既にデータが含まれており、[!DNL Profile] に対して有効になっている場合、既存のデータは [!DNL Profile] によって自動的には使用されません。 データセットを [!DNL Profile] 用に有効にした後は、既存のデータを再度取り込んで、顧客プロファイルに貢献させることをお勧めします。
 
-![&#x200B; データセットの詳細ページ内でプロファイル切り替えがハイライト表示されています。](../images/datasets/user-guide/enable-dataset-profiles.png)
+![ データセットの詳細ページ内でプロファイル切り替えがハイライト表示されています。](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-プロファイルに対して有効になっているデータセットは、この条件でフィルタリングすることもできます。 詳しくは、[&#x200B; プロファイルが有効なデータセットをフィルタリング &#x200B;](#filter-profile-enabled-datasets) する方法に関する節を参照してください。
+プロファイルに対して有効になっているデータセットは、この条件でフィルタリングすることもできます。 詳しくは、[ プロファイルが有効なデータセットをフィルタリング ](#filter-profile-enabled-datasets) する方法に関する節を参照してください。
 
 ### データセットタグの管理 {#manage-tags}
 
-カスタムで作成したタグを追加して、データセットを整理し、検索、フィルタリング、並べ替えの機能を向上させます。 [!UICONTROL &#x200B; データセット &#x200B;] ワークスペースの [!UICONTROL &#x200B; 参照 &#x200B;] タブで、管理するデータセットの省略記号を選択したあと、ドロップダウンメニューから **[!UICONTROL タグを管理]** を選択します。
+カスタムで作成したタグを追加して、データセットを整理し、検索、フィルタリング、並べ替えの機能を向上させます。 [!UICONTROL Browse] ワークスペースの「[!UICONTROL Datasets]」タブで、管理するデータセットの省略記号を選択し、ドロップダウンメニューから **[!UICONTROL Manage tags]** を選択します。
 
-![&#x200B; 選択したデータセットの省略記号と「タグを管理」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/manage-tags.png)
+![ 選択したデータセットの省略記号と「タグを管理」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/manage-tags.png)
 
-[!UICONTROL &#x200B; タグを管理 &#x200B;] ダイアログが表示されます。 短い説明を入力してカスタムタグを作成するか、既存のタグから選択してデータセットにラベルを付けます。 「**[!UICONTROL 保存]**」を選択して、設定を確定します。
+[!UICONTROL Manage tags] ダイアログが表示されます。 短い説明を入力してカスタムタグを作成するか、既存のタグから選択してデータセットにラベルを付けます。 「**[!UICONTROL Save]**」を選択して、設定を確定します。
 
-![&#x200B; カスタムタグがハイライト表示されたタグを管理ダイアログ &#x200B;](../images/datasets/user-guide/manage-tags-dialog.png)
+![ カスタムタグがハイライト表示されたタグを管理ダイアログ ](../images/datasets/user-guide/manage-tags-dialog.png)
 
-[!UICONTROL &#x200B; タグを管理 &#x200B;] ダイアログでは、データセットから既存のタグを削除することもできます。 削除するタグの横にある「x」をクリックして「保存 **[!UICONTROL をクリックするだ]** です。
+[!UICONTROL Manage tags] ダイアログでは、データセットから既存のタグを削除することもできます。 削除するタグの横にある「x」をクリックして「**[!UICONTROL Save]**」を選択するだけです。
 
-タグをデータセットに追加したら、対応するタグに基づいてデータセットをフィルタリングできます。 詳しくは、[&#x200B; タグでデータセットをフィルターする &#x200B;](#enable-profile) 方法に関する節を参照してください。
+タグをデータセットに追加したら、対応するタグに基づいてデータセットをフィルタリングできます。 詳しくは、[ タグでデータセットをフィルターする ](#enable-profile) 方法に関する節を参照してください。
 
-検出と分類を容易にするためにビジネスオブジェクトを分類する方法について詳しくは、[&#x200B; メタデータ分類の管理 &#x200B;](../../administrative-tags/ui/managing-tags.md) に関するガイドを参照してください。 このガイドでは、適切な権限を持つユーザーがExperience Platform UI で事前定義済みタグを作成し、カテゴリに割り当て、関連するすべての CRUD 操作を管理する方法について説明します。
+検出と分類を容易にするためにビジネスオブジェクトを分類する方法について詳しくは、[ メタデータ分類の管理 ](../../administrative-tags/ui/managing-tags.md) に関するガイドを参照してください。 このガイドでは、適切な権限を持つユーザーがExperience Platform UI で事前定義済みタグを作成し、カテゴリに割り当て、関連するすべての CRUD 操作を管理する方法について説明します。
 
 ### データ保持ポリシーを設定 {#data-retention-policy}
 
-[!UICONTROL &#x200B; データセット &#x200B;] ワークスペースの [!UICONTROL &#x200B; 参照 &#x200B;] タブのインラインアクションメニューを使用して、データセットの有効期限と保持設定を管理します。 この機能を使用して、データをデータレイクおよびプロファイルストアに保持する期間を設定できます。 有効期限は、データがExperience Platformに取り込まれた日時と、設定された保持期間に基づきます。
+データセットワークスペースの「[!UICONTROL Browse]」タブのインラインアクションメニューを使用して、デー [!UICONTROL Datasets] セットの有効期限と保持設定を管理します。 この機能を使用して、データをデータレイクおよびプロファイルストアに保持する期間を設定できます。 有効期限は、データがExperience Platformに取り込まれた日時と、設定された保持期間に基づきます。
 
 >[!IMPORTANT]
 >
->ExperienceEvent データセットの保持ルールを適用または更新するには、ユーザーの役割に **[!UICONTROL データセットの管理]** 権限が含まれている必要があります。 この役割ベースのアクセス制御により、許可されたユーザーのみがデータセット保持設定を変更できるようになります。
+>ExperienceEvent データセットの保持ルールを適用または更新するには、ユーザーの役割に **[!UICONTROL Manage datasets]** 権限が含まれている必要があります。 この役割ベースのアクセス制御により、許可されたユーザーのみがデータセット保持設定を変更できるようになります。
 >
->Adobe Experience Platformでの権限の割り当てについて詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../access-control/home.md#platform-permissions) を参照してください。
+>Adobe Experience Platformでの権限の割り当てについて詳しくは、[ アクセス制御の概要 ](../../access-control/home.md#platform-permissions) を参照してください。
 
 >[!TIP]
 >
 >データレイクには、イベントログ、クリックストリームデータ、一括取り込みレコードなど、分析や処理に使用される生の未処理データが保存されます。 プロファイルストアには、リアルタイムのパーソナライゼーションとアクティベーションをサポートするために、ID ステッチイベントや属性情報など、顧客を特定できるデータが含まれています。
 
-保持期間を設定するには、データセットの横にある省略記号を選択し、ドロップダウンメニューから **[!UICONTROL データ保持ポリシーを設定]** を選択します。
+保持期間を設定するには、データセットの横にある省略記号を選択し、ドロップダウンメニューから **[!UICONTROL Set data retention policy]** を選択します。
 
-![&#x200B; 省略記号と「データ保持ポリシーを設定」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+![ 省略記号と「データ保持ポリシーを設定」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-[!UICONTROL &#x200B; データセットの保持を設定 &#x200B;] ダイアログが表示されます。 このダイアログには、サンドボックスレベルのライセンス使用指標、データセットレベルの詳細および現在のデータ保持設定が表示されます。 これらの指標は、使用権限と比較した使用状況を表示し、データセット固有のストレージおよび保持設定を評価するのに役立ちます。 指標には、データセット名、タイプ、プロファイル有効化ステータス、データレイクとプロファイルストアの使用状況が含まれます。
+[!UICONTROL Set dataset retention] ダイアログが表示されます。 このダイアログには、サンドボックスレベルのライセンス使用指標、データセットレベルの詳細および現在のデータ保持設定が表示されます。 これらの指標は、使用権限と比較した使用状況を表示し、データセット固有のストレージおよび保持設定を評価するのに役立ちます。 指標には、データセット名、タイプ、プロファイル有効化ステータス、データレイクとプロファイルストアの使用状況が含まれます。
 
 >[!NOTE]
 >
 >サンドボックスレベルのライセンス取得済みデータレイクストレージ指標は、まだ開発中で、表示されない場合があります。 ライセンス使用状況の指標の完全な分類については、ライセンス使用状況ダッシュボードを参照してください。 これらの指標の説明については、ドキュメントを参照してください。
 <!-- replace this screenshot with a dataset that enabled unified profile so user can see the Profile TTL settings -->
-![&#x200B; データセット保持を設定ダイアログ &#x200B;](../images/datasets/user-guide/set-data-retention-dialog.png)
+![ データセット保持を設定ダイアログ ](../images/datasets/user-guide/set-data-retention-dialog.png)
 
 データ保持設定ダイアログで、希望する保持期間を設定します。 数値を入力し、ドロップダウンメニューから時間単位（日、月、年）を選択します。 データレイクとプロファイルサービスに対して別々の保持設定を指定できます。
 
@@ -244,7 +244,7 @@ ht-degree: 11%
 
 #### ストレージへの影響に関するインサイト {#storage-impact-insights}
 
-異なる保存ポリシーのストレージへの影響を視覚的に予測するには、「**[!UICONTROL View Experience Event Data distribution]**」を選択します。
+さまざまな保存ポリシーのストレージへの影響を視覚的に予測するには、[**[!UICONTROL View Experience Event Data distribution]**] を選択します。
 
 グラフには、現在選択しているデータセットに対して、様々な保持期間をまたいだエクスペリエンスイベントの分布が表示されます。 各バーにカーソルを合わせると、選択した保持期間が適用された場合に削除されるレコードの正確な数が表示されます。
 
@@ -254,9 +254,9 @@ ht-degree: 11%
 >
 >エクスペリエンスイベント配布グラフは、選択したデータセットに固有で、そのデータのみを反映します。 これは、データレイクに保存されたデータにのみ適用されます。
 
-![&#x200B; エクスペリエンスイベント配布グラフが表示されたデータ保持を設定ダイアログ。](../images/datasets/user-guide/visual-forecast.png)
+![ エクスペリエンスイベント配布グラフが表示されたデータ保持を設定ダイアログ。](../images/datasets/user-guide/visual-forecast.png)
 
-設定に問題がなければ、「**[!UICONTROL 保存]**」を選択して、設定を確定します。
+設定に問題がなければ、「**[!UICONTROL Save]**」を選択して、設定を確定します。
 
 >[!IMPORTANT]
 >
@@ -264,17 +264,17 @@ ht-degree: 11%
 
 保持設定を指定したら、監視 UI を使用して、変更がシステムによって実行されたことを確認します。 監視 UI を使用すると、すべてのデータセットをまたいでデータ保持アクティビティを一元的に表示できます。 そこから、ジョブの実行を追跡し、削除されたデータの量を確認し、保存ポリシーが期待どおりに機能していることを確認できます。
 
-様々なサービス間で保持ポリシーがどのように適用されるかを詳しくは、[&#x200B; プロファイルでのエクスペリエンスイベントデータセットの保持 &#x200B;](../../profile/event-expirations.md) および [&#x200B; データレイクでのエクスペリエンスイベントデータセットの保持 &#x200B;](./experience-event-dataset-retention-ttl-guide.md) に関する専用ガイドを参照してください。 この可視性により、ガバナンス、コンプライアンス、効率的なデータ・ライフサイクル管理がサポートされます。
+様々なサービス間で保持ポリシーがどのように適用されるかを詳しくは、[ プロファイルでのエクスペリエンスイベントデータセットの保持 ](../../profile/event-expirations.md) および [ データレイクでのエクスペリエンスイベントデータセットの保持 ](./experience-event-dataset-retention-ttl-guide.md) に関する専用ガイドを参照してください。 この可視性により、ガバナンス、コンプライアンス、効率的なデータ・ライフサイクル管理がサポートされます。
 
-モニタリングダッシュボードを使用してExperience Platform UI でソースデータフローをトラッキングする方法については、[UI でのソースのデータフローのモニター &#x200B;](../../dataflows/ui/monitor-sources.md) ドキュメントを参照してください。
+モニタリングダッシュボードを使用してExperience Platform UI でソースデータフローをトラッキングする方法については、[UI でのソースのデータフローのモニター ](../../dataflows/ui/monitor-sources.md) ドキュメントを参照してください。
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
-データセットの有効期限の日付範囲を定義するルールと、データ保持ポリシーを設定するためのベストプラクティスについて詳しくは、[&#x200B; よくある質問のページ &#x200B;](../catalog-faq.md) を参照してください。
+データセットの有効期限の日付範囲を定義するルールと、データ保持ポリシーを設定するためのベストプラクティスについて詳しくは、[ よくある質問のページ ](../catalog-faq.md) を参照してください。
 
 #### 保存期間とストレージ指標の可視性の向上 {#retention-and-storage-metrics}
 
-4 つの新しい列により、データ管理をより明確に把握できます。**[!UICONTROL Data Lake Storage]**、**[!UICONTROL Data Lake Retention]**、**[!UICONTROL Profile Storage]**、および **[!UICONTROL Profile Retention]**。 これらの指標は、データレイクとプロファイルサービスの両方で、データが消費するストレージとその保持期間を示します。
+4 つの新しい列により、**[!UICONTROL Data Lake Storage]**、**[!UICONTROL Data Lake Retention]**、**[!UICONTROL Profile Storage]**、**[!UICONTROL Profile Retention]** のデータ管理をより明確に把握できます。 これらの指標は、データレイクとプロファイルサービスの両方で、データが消費するストレージとその保持期間を示します。
 
 この可視性の向上により、十分な情報に基づいた意思決定が可能になり、ストレージ・コストをより効果的に管理できるようになります。 ストレージサイズでデータセットを並べ替えて、現在のサンドボックス内で最大のデータセットを識別します。 これらのインサイトは、データ管理のベストプラクティスをサポートし、ライセンスを取得した使用権限へのコンプライアンスを確保するのに役立ちます。
 
@@ -284,54 +284,54 @@ ht-degree: 11%
 
 | 列タイトル | 説明 |
 |---|---|
-| [!UICONTROL Data Lake の保持 &#x200B;] | データレイク内の各データセットの現在の保持期間。 この値は設定可能で、削除前のデータの保持期間を決定します。 |
-| [!UICONTROL Data Lake ストレージ &#x200B;] | データレイク内の各データセットに対する現在のストレージ使用量。 この指標を使用して、ストレージ制限を管理し、使用状況を最適化します。 |
-| [!UICONTROL &#x200B; プロファイルストレージ &#x200B;] | プロファイルサービス内の各データセットに対する現在のストレージ使用量。 ストレージ消費の監視と、データ管理に関する決定のサポートに役立ちます。 |
-| [!UICONTROL &#x200B; プロファイル保持 &#x200B;] | プロファイルデータセットの現在の保持期間。 この値を更新して、プロファイルデータを保持する期間を制御できます。 |
+| [!UICONTROL Data Lake Retention] | データレイク内の各データセットの現在の保持期間。 この値は設定可能で、削除前のデータの保持期間を決定します。 |
+| [!UICONTROL Data Lake Storage] | データレイク内の各データセットに対する現在のストレージ使用量。 この指標を使用して、ストレージ制限を管理し、使用状況を最適化します。 |
+| [!UICONTROL Profile Storage] | プロファイルサービス内の各データセットに対する現在のストレージ使用量。 ストレージ消費の監視と、データ管理に関する決定のサポートに役立ちます。 |
+| [!UICONTROL Profile Retention] | プロファイルデータセットの現在の保持期間。 この値を更新して、プロファイルデータを保持する期間を制御できます。 |
 
 {style="table-layout:auto"}
 
-ストレージと保持の指標からのインサイトに基づいて対処するには、[&#x200B; データ管理ライセンス使用権限のベストプラクティスガイド &#x200B;](../../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。 これを使用して、取得および保持するデータを管理し、フィルターおよび有効期限ルールを適用し、ライセンス取得済みの使用制限内に収まるようにデータの増加を制御します。
+ストレージと保持の指標からのインサイトに基づいて対処するには、[ データ管理ライセンス使用権限のベストプラクティスガイド ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。 これを使用して、取得および保持するデータを管理し、フィルターおよび有効期限ルールを適用し、ライセンス取得済みの使用制限内に収まるようにデータの増加を制御します。
 
 ### フォルダーに移動 {#move-to-folders}
 
-データセットをフォルダー内に配置すると、データセット管理が向上します。 データセットをフォルダーに移動するには、管理するデータセット名の横にある省略記号（...）を選択し、ドロップダウンメニューから **[!UICONTROL フォルダーに移動]** を選択します。
+データセットをフォルダー内に配置すると、データセット管理が向上します。 データセットをフォルダーに移動するには、管理するデータセット名の横にある省略記号（...）を選択し、ドロップダウンメニューから **[!UICONTROL Move to folder]** を選択します。
 
-![&#x200B; 省略記号と [!UICONTROL &#x200B; フォルダーに移動 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; データセット &#x200B;] ダッシュボード。](../images/datasets/user-guide/move-to-folder.png)
+![ 省略記号と [!UICONTROL Datasets] がハイライト表示された [!UICONTROL Move to folder] ダッシュボード。](../images/datasets/user-guide/move-to-folder.png)
 
-[!UICONTROL &#x200B; データセットをフォルダーに移動 &#x200B;] ダイアログが表示されます。 オーディエンスの移動先フォルダーを選択し、「**[!UICONTROL 移動]**」を選択します。 データセットの移動が成功したことを示すポップアップ通知が表示されます。
+データセット [!UICONTROL Move] フォルダーに追加ダイアログが表示されます。 オーディエンスの移動先のフォルダーを選択し、「**[!UICONTROL Move]**」を選択します。 データセットの移動が成功したことを示すポップアップ通知が表示されます。
 
-![[!UICONTROL &#x200B; 移動 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; 移動 &#x200B;] データセットダイアログ &#x200B;](../images/datasets/user-guide/move-dialog.png)
+![[!UICONTROL Move] がハイライト表示されたデータセットを [!UICONTROL Move] 成ダイアログ ](../images/datasets/user-guide/move-dialog.png)
 
 >[!TIP]
 >
->また、データセットを移動ダイアログから直接フォルダーを作成することもできます。 フォルダーを作成するには、フォルダー作成アイコン（![&#x200B; フォルダーを作成アイコン](/help/images/icons/folder-add.png)）を選択します。
+>また、データセットを移動ダイアログから直接フォルダーを作成することもできます。 フォルダーを作成するには、フォルダー作成アイコン（![ フォルダーを作成アイコン](/help/images/icons/folder-add.png)）を選択します。
 >
->![&#x200B; フォルダー作成アイコンがハイライト表示された [!UICONTROL &#x200B; 移動 &#x200B;] データセットダイアログ &#x200B;](/help/catalog/images/datasets/user-guide/create-folder.png)
+>![ 「フォルダーを作成」アイコンがハイライト表示されたデータセットを [!UICONTROL Move] 成ダイアログ ](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-データセットがフォルダーに含まれたら、特定のフォルダーに属するデータセットのみを表示するように選択できます。 フォルダー構造を開くには、「フォルダーを表示」アイコン（![&#x200B; 「フォルダーを表示」アイコン &#x200B;](/help/images/icons/rail-left.png)）を選択します。 次に、選択したフォルダーを選択して、関連するすべてのデータセットを表示します。
+データセットがフォルダーに含まれたら、特定のフォルダーに属するデータセットのみを表示するように選択できます。 フォルダー構造を開くには、「フォルダーを表示」アイコン（![ 「フォルダーを表示」アイコン ](/help/images/icons/rail-left.png)）を選択します。 次に、選択したフォルダーを選択して、関連するすべてのデータセットを表示します。
 
-![&#x200B; データセットフォルダー構造が表示され、フォルダーを表示アイコンと選択したフォルダーがハイライト表示された [!UICONTROL &#x200B; データセット &#x200B;] ダッシュボード &#x200B;](../images/datasets/user-guide/folder-structure.png)
+![ データセットフォルダー構造が表示された [!UICONTROL Datasets] のダッシュボード、フォルダーを表示アイコン、選択したフォルダーがハイライト表示されています。](../images/datasets/user-guide/folder-structure.png)
 
 ### データセットの削除 {#delete}
 
-「[!UICONTROL &#x200B; 参照 &#x200B;] タブのデータセットインラインアクションまたは [!UICONTROL &#x200B; データセットアクティビティ &#x200B;] ビューの右上からデータセットを削除できます。 [!UICONTROL &#x200B; 参照 &#x200B;] ビューから、削除するデータセット名の横にある省略記号（...）を選択します。 メニューリストが表示されます。 次に、ドロップダウンメニューから「**[!UICONTROL 削除]**」を選択します。
+データセットタブのデータセットインラインアクションまたはデータセットビュ [!UICONTROL Browse] の右上からデー [!UICONTROL Dataset activity] セットを削除できます。 [!UICONTROL Browse] ビューで、削除するデータセット名の横にある省略記号（...）を選択します。 メニューリストが表示されます。 次に、ドロップダウンメニューから「**[!UICONTROL Delete]**」を選択します。
 
-![&#x200B; 選択したデータセットの省略記号と「削除」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/inline-delete-dataset.png)
+![ 選択したデータセットの省略記号と「削除」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/inline-delete-dataset.png)
 
-確認ダイアログが表示されます。 「**[!UICONTROL 削除]**」を選択して確定します。
+確認ダイアログが表示されます。 「**[!UICONTROL Delete]**」を選択して確定します。
 
-または、**[!UICONTROL データセットアクティビティ]** 画面から **[!UICONTROL データセットを削除]** を選択します。
+または、**[!UICONTROL Delete dataset]** 画面から「**[!UICONTROL Dataset activity]**」を選択します。
 
 >[!NOTE]
 >
 >Adobeのアプリケーションやサービス（Adobe Analytics、Adobe Audience Manager、[!DNL Offer Decisioning] など）で作成および使用されたデータセットは、削除できません。
 
-![&#x200B; データセットの詳細ページ内で「データセットを削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/delete-dataset.png)
+![ データセットの詳細ページ内で「データセットを削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/delete-dataset.png)
 
-確認ボックスが表示されます。「**[!UICONTROL 削除]**」を選択して、データセットの削除を確定します。
+確認ボックスが表示されます。「**[!UICONTROL Delete]**」を選択して、データセットの削除を確認します。
 
-![&#x200B; 削除の確認モーダルが表示され、「削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/confirm-delete.png)
+![ 削除の確認モーダルが表示され、「削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/confirm-delete.png)
 
 ### プロファイル対応データセットの削除
 
@@ -341,39 +341,39 @@ ht-degree: 11%
 
 ## データセットの検索とフィルタリング {#search-and-filter}
 
-使用可能なデータセットのリストを検索またはフィルタリングするには、フィルターアイコン（![&#x200B; フィルターアイコン](/help/images/icons/filter.png)）を選択します。 左側のパネルに一連のフィルターオプションが表示されます。 使用可能なデータセットをフィルタリングするには、いくつかの方法があります。 例えば、[[!UICONTROL &#x200B; システムデータセットを表示 &#x200B;]](#show-system-datasets)、[[!UICONTROL &#x200B; プロファイルに含まれる &#x200B;]](#filter-profile-enabled-datasets)、[[!UICONTROL &#x200B; タグ &#x200B;]](#filter-by-tag)、[[!UICONTROL &#x200B; 作成日 &#x200B;]](#filter-by-creation-date)、[[!UICONTROL &#x200B; 変更日 &#x200B;]、[!UICONTROL &#x200B; 作成者 &#x200B;]](#filter-by-creation-date)、[[!UICONTROL &#x200B; スキーマ &#x200B;]](#filter-by-schema) などです。
+使用可能なデータセットのリストを検索またはフィルタリングするには、フィルターアイコン（![ フィルターアイコン](/help/images/icons/filter.png)）を選択します。 左側のパネルに一連のフィルターオプションが表示されます。 使用可能なデータセットをフィルタリングするには、いくつかの方法があります。 これには、[[!UICONTROL Show System Datasets]](#show-system-datasets)、[[!UICONTROL Included in profile]](#filter-profile-enabled-datasets)、[[!UICONTROL Tags]](#filter-by-tag)、[[!UICONTROL Creation date]](#filter-by-creation-date)、[[!UICONTROL Modified date]、[!UICONTROL Created by]](#filter-by-creation-date) および [[!UICONTROL Schema]](#filter-by-schema) が含まれます。
 
 適用されたフィルターのリストは、フィルタリングされた結果の上に表示されます。
 
-![&#x200B; 適用されたフィルターのリストがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/applied-filters.png)
+![ 適用されたフィルターのリストがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/applied-filters.png)
 
 ### システムデータセットを表示 {#show-system-datasets}
 
-デフォルトでは、データを取り込んだデータセットのみが表示されます。 システム生成データセットを表示する場合は、「**[!UICONTROL システムデータセットを表示]** セクションの [!UICONTROL &#x200B; はい &#x200B;] チェックボックスを選択します。 システム生成データセットは、他のコンポーネントの処理にのみ使用されます。 例えば、システム生成プロファイル書き出しデータセットを使用して、プロファイルダッシュボードを処理します。
+デフォルトでは、データを取り込んだデータセットのみが表示されます。 システム生成データセットを表示する場合は、「**[!UICONTROL Yes]**」セクションの「[!UICONTROL Show system datasets]」チェックボックスを選択します。 システム生成データセットは、他のコンポーネントの処理にのみ使用されます。 例えば、システム生成プロファイル書き出しデータセットを使用して、プロファイルダッシュボードを処理します。
 
-![&#x200B; 「[!UICONTROL &#x200B; システムデータセットを表示 &#x200B;] セクションがハイライト表示されたデータセットワークスペースのフィルターオプション。](../images/datasets/user-guide/show-system-datasets.png)
+![[!UICONTROL Show system datasets] のセクションがハイライト表示されたデータセットワークスペースのフィルターオプション。](../images/datasets/user-guide/show-system-datasets.png)
 
 ### プロファイル対応データセットのフィルタリング {#filter-profile-enabled-datasets}
 
-プロファイルデータが有効になっているデータセットは、データの取り込み後に顧客プロファイルの入力に使用されます。 詳しくは、[&#x200B; プロファイル用データセットの有効化 &#x200B;](#enable-profile) の節を参照してください。
+プロファイルデータが有効になっているデータセットは、データの取り込み後に顧客プロファイルの入力に使用されます。 詳しくは、[ プロファイル用データセットの有効化 ](#enable-profile) の節を参照してください。
 
-プロファイルで有効になっているかどうかに基づいてデータセットをフィルタリングするには、フィルターオプションから [!UICONTROL &#x200B; はい &#x200B;] チェックボックスを選択します。
+プロファイルに対して有効になっているかどうかに基づいてデータセットをフィルタリングするには、フィルターオプションから「[!UICONTROL Yes]」チェックボックスを選択します。
 
-![&#x200B; 「プロファイルに含まれる [!UICONTROL &#x200B; セクションがハイライト表示されたデータセットワークスペースのフィルターオプショ &#x200B;]。](../images/datasets/user-guide/included-in-profile.png)
+![[!UICONTROL Included in Profile] のセクションがハイライト表示されたデータセットワークスペースのフィルターオプション。](../images/datasets/user-guide/included-in-profile.png)
 
 ### タグでデータセットをフィルター {#filter-by-tag}
 
-[!UICONTROL &#x200B; タグ &#x200B;] 入力にカスタムタグ名を入力し、使用可能なオプションのリストからタグを選択して、そのタグに対応するデータセットを検索およびフィルタリングします。
+[!UICONTROL Tags] 入力にカスタムタグ名を入力し、使用可能なオプションのリストからタグを選択して、そのタグに対応するデータセットを検索およびフィルタリングします。
 
-![[!UICONTROL &#x200B; タグ &#x200B;] 入力とフィルターアイコンがハイライト表示されたデータセットワークスペースのフィルターオプション。](../images/datasets/user-guide/filter-tags.png)
+![[!UICONTROL Tags] 入力とフィルターアイコンがハイライト表示されたデータセットワークスペースのフィルターオプション。](../images/datasets/user-guide/filter-tags.png)
 
 ### 作成日でデータセットをフィルタリング {#filter-by-creation-date}
 
-データセットは、カスタム期間の作成日でフィルタリングできます。 これを使用して、履歴データを除外したり、特定の時系列データのインサイトとレポートを生成したりできます。 各フィールドのカレンダーアイコンを選択して、[!UICONTROL &#x200B; 開始日 &#x200B;] と [!UICONTROL &#x200B; 終了日 &#x200B;] を選択します。 その後、その条件に準拠するデータセットのみが「参照」タブに表示されます。
+データセットは、カスタム期間の作成日でフィルタリングできます。 これを使用して、履歴データを除外したり、特定の時系列データのインサイトとレポートを生成したりできます。 各フィールドのカレンダーアイコンを選択して、[!UICONTROL Start date] と [!UICONTROL End date] を選択します。 その後、その条件に準拠するデータセットのみが「参照」タブに表示されます。
 
 ### 変更日でデータセットをフィルタリング {#filter-by-modified-date}
 
-作成日のフィルターと同様に、最終変更日に基づいてデータセットをフィルタリングできます。 「[!UICONTROL &#x200B; 変更日 &#x200B;]」セクションで、各フィールドのカレンダーアイコンを選択して、[!UICONTROL &#x200B; 開始日 &#x200B;] と [!UICONTROL &#x200B; 終了日 &#x200B;] を選択します。 その後は、その期間中に変更されたデータセットのみが「参照」タブに表示されます。
+作成日のフィルターと同様に、最終変更日に基づいてデータセットをフィルタリングできます。 [!UICONTROL Modified date] セクションで、各フィールドのカレンダーアイコンを選択して [!UICONTROL Start date] と [!UICONTROL End date] を選択します。 その後は、その期間中に変更されたデータセットのみが「参照」タブに表示されます。
 
 ### スキーマでフィルター {#filter-by-schema}
 
@@ -381,11 +381,11 @@ ht-degree: 11%
 
 ## 一括アクション {#bulk-actions}
 
-バルクアクションを使用すると、運用効率を高め、多数のデータセットに対して複数のアクションを同時に実行できます。 [&#x200B; フォルダーに移動 &#x200B;](#move-to-folders)、[&#x200B; タグを編集 &#x200B;](#manage-tags)、[&#x200B; 削除 &#x200B;](#delete) データセットなどの一括アクションを使用して、時間を節約し、整理されたデータ構造を維持できます。
+バルクアクションを使用すると、運用効率を高め、多数のデータセットに対して複数のアクションを同時に実行できます。 [ フォルダーに移動 ](#move-to-folders)、[ タグを編集 ](#manage-tags)、[ 削除 ](#delete) データセットなどの一括アクションを使用して、時間を節約し、整理されたデータ構造を維持できます。
 
 一度に複数のデータセットに対してアクションを実行するには、各行のチェックボックスで個々のデータセットを選択するか、列ヘッダーチェックボックスでページ全体を選択します。 選択すると、一括アクションバーが表示されます。
 
-![&#x200B; 多数のデータセットが選択され、一括アクションバーがハイライト表示されたデータセットの「参照」タブ。](../images/datasets/user-guide/bulk-actions.png)
+![ 多数のデータセットが選択され、一括アクションバーがハイライト表示されたデータセットの「参照」タブ。](../images/datasets/user-guide/bulk-actions.png)
 
 データセットに一括アクションを適用する場合、次の条件が適用されます。
 
@@ -394,15 +394,15 @@ ht-degree: 11%
 
 ## 作成日でデータセットを並べ替え {#sort}
 
-[!UICONTROL &#x200B; 参照 &#x200B;] タブのデータセットは、昇順または降順で並べ替えることができます。 [!UICONTROL &#x200B; 作成済み &#x200B;] または [!UICONTROL &#x200B; 最終更新済み &#x200B;] 列見出しを選択して、昇順と降順を切り替えます。 選択すると、列ヘッダーの横に上向き矢印または下向き矢印が表示されて、このことが列に示されます。
+「[!UICONTROL Browse]」タブのデータセットは、日付の昇順または降順で並べ替えることができます。 [!UICONTROL Created] または [!UICONTROL Last updated] の列見出しを選択して、昇順と降順を切り替えます。 選択すると、列ヘッダーの横に上向き矢印または下向き矢印が表示されて、このことが列に示されます。
 
-![&#x200B; 「作成」列と「最終更新」列がハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/ascending-descending-columns.png)
+![ 「作成」列と「最終更新」列がハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## データセットの作成 {#create}
 
-新しいデータセットを作成するには、まず **[!UICONTROL データセット]** ダッシュボードの **[!UICONTROL データセットを作成]** を選択します。
+新しいデータセットを作成するには、まず、**[!UICONTROL Create dataset]** ダッシュボードで **[!UICONTROL Datasets]** を選択します。
 
-![&#x200B; 「データセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-create.png)
+![ 「データセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-create.png)
 
 次の画面に、新しいデータセットを作成するための次の 2 つのオプションが表示されます。
 
@@ -411,55 +411,55 @@ ht-degree: 11%
 
 ### 既存スキーマからのデータセットの作成 {#schema}
 
-**[!UICONTROL データセットを作成]** 画面で、「**[!UICONTROL スキーマからデータセットを作成]**」を選択して、新しい空のデータセットを作成します。
+**[!UICONTROL Create dataset]** 画面で「**[!UICONTROL Create dataset from schema]**」を選択して、新しい空のデータセットを作成します。
 
-![&#x200B; 「スキーマからデータセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/create-dataset-schema.png)
+![ 「スキーマからデータセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/create-dataset-schema.png)
 
-「**[!UICONTROL スキーマ選択]**」手順が表示されます。スキーマリストを参照し、データセットが従うスキーマを選択してから、「**[!UICONTROL 次へ]**」を選択します。
+**[!UICONTROL Select schema]** の手順が表示されます。 スキーマリストを参照し、データセットが従うスキーマを選択してから **[!UICONTROL Next]** を選択します。
 
-![&#x200B; スキーマのリストが表示されています。 データセットの作成に使用されるスキーマがハイライト表示されます。](../images/datasets/user-guide/select-schema.png)
+![ スキーマのリストが表示されています。 データセットの作成に使用されるスキーマがハイライト表示されます。](../images/datasets/user-guide/select-schema.png)
 
-**[!UICONTROL データセットの設定]**&#x200B;手順が表示されます。データセットに名前とオプションの説明を入力し、「**[!UICONTROL 完了]**」を選択してデータセットを作成します。
+**[!UICONTROL Configure dataset]** の手順が表示されます。 データセットに名前とオプションの説明を入力し、「**[!UICONTROL Finish]**」を選択してデータセットを作成します。
 
-![&#x200B; データセットの設定の詳細が挿入されます。 データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-schema.png)
+![ データセットの設定の詳細が挿入されます。 データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-schema.png)
 
-データセットは、スキーマフィルターを使用して、UI で使用可能なデータセットのリストからフィルタリングできます。 詳しくは、[&#x200B; スキーマでデータセットをフィルタリング &#x200B;](#filter-by-schema) する方法に関する節を参照してください。
+データセットは、スキーマフィルターを使用して、UI で使用可能なデータセットのリストからフィルタリングできます。 詳しくは、[ スキーマでデータセットをフィルタリング ](#filter-by-schema) する方法に関する節を参照してください。
 
 ### CSV ファイルを使用したデータセットの作成 {#csv}
 
-CSV ファイルを使用してデータセットを作成する場合、アドホックスキーマが作成され、指定された CSV ファイルと一致する構造のデータセットが提供されます。**[!UICONTROL データセットを作成]** 画面で、「**[!UICONTROL CSV ファイルからデータセットを作成]**」を選択します。
+CSV ファイルを使用してデータセットを作成する場合、アドホックスキーマが作成され、指定された CSV ファイルと一致する構造のデータセットが提供されます。**[!UICONTROL Create dataset]** 画面で、「**[!UICONTROL Create dataset from CSV file]**」を選択します。
 
-![&#x200B; 「CSV ファイルからデータセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/create-dataset-csv.png)
+![ 「CSV ファイルからデータセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/create-dataset-csv.png)
 
-**[!UICONTROL 設定]**&#x200B;手順が表示されます。名前とオプションの説明をデータセットに入力し、「**[!UICONTROL 次へ]**」を選択します。
+**[!UICONTROL Configure]** の手順が表示されます。 名前とオプションの説明をデータセットに入力し、「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; データセットの設定の詳細が挿入されます。 データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-csv.png)
+![ データセットの設定の詳細が挿入されます。 データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-csv.png)
 
-**[!UICONTROL データを追加]**&#x200B;手順が表示されます。CSV ファイルを画面の中央にドラッグ&amp;ドロップするか、「**[!UICONTROL 参照]** を選択してファイルディレクトリを参照して、アップロードします。 ファイルのサイズは 10 ギガバイトまでです。CSV ファイルがアップロードされたら、「**[!UICONTROL 保存]**」を選択して、データセットを作成します。
+**[!UICONTROL Add data]** の手順が表示されます。 CSV ファイルを画面の中央にドラッグ&amp;ドロップするか、「**[!UICONTROL Browse]**」を選択してファイルディレクトリを参照して、アップロードします。 ファイルのサイズは 10 ギガバイトまでです。CSV ファイルがアップロードされたら、「**[!UICONTROL Save]**」を選択して、データセットを作成します。
 
 >[!NOTE]
 >
 >CSV 列名は、英数字で始まる必要があり、文字、数字、アンダースコアのみを含めることができます。
 
-![&#x200B; データを追加画面が表示されます。 データセット用の CSV ファイルをアップロードできる場所がハイライト表示されます。](../images/datasets/user-guide/add-csv-data.png)
+![ データを追加画面が表示されます。 データセット用の CSV ファイルをアップロードできる場所がハイライト表示されます。](../images/datasets/user-guide/add-csv-data.png)
 
 ## データ取得の監視
 
-[!DNL Experience Platform] UI の左側のナビゲーションで「**[!UICONTROL モニタリング]**」を選択します。 「**[!UICONTROL 監視]**」ダッシュボードを使用すると 、バッチ取得またはストリーミング取得から受信データのステータスを表示できます。個々のバッチのステータスを表示するには、**[!UICONTROL エンドツーエンドのバッチ]** または **[!UICONTROL エンドツーエンドのストリーミング]** を選択します。 ダッシュボードには、成功、失敗、または進行中のものを含め、すべてのバッチまたはストリーミング取得の実行が一覧表示されます。 各リストには、バッチ ID、ターゲットデータセットの名前、取得したレコード数など、バッチの詳細が表示されます。ターゲットデータセットが [!DNL Profile] に対して有効になっている場合、取り込まれた ID とプロファイルレコードの数も表示されます。
+[!DNL Experience Platform] UI で、左側のナビゲーションの「**[!UICONTROL Monitoring]**」を選択します。 **[!UICONTROL Monitoring]** ダッシュボードでは、バッチ取り込みまたはストリーミング取り込みからのインバウンドデータのステータスを表示できます。 個々のバッチのステータスを表示するには、「**[!UICONTROL Batch end-to-end]**」または「**[!UICONTROL Streaming end-to-end]**」を選択します。 ダッシュボードには、成功、失敗、または進行中のものを含め、すべてのバッチまたはストリーミング取得の実行が一覧表示されます。 各リストには、バッチ ID、ターゲットデータセットの名前、取得したレコード数など、バッチの詳細が表示されます。ターゲットデータセットが [!DNL Profile] に対して有効になっている場合、取り込まれた ID とプロファイルレコードの数も表示されます。
 
-![&#x200B; エンドツーエンドの監視バッチ画面が表示されます。 「監視」と「バッチからバッチ」の両方がハイライト表示されます。](../images/datasets/user-guide/batch-listing.png)
+![ エンドツーエンドの監視バッチ画面が表示されます。 「監視」と「バッチからバッチ」の両方がハイライト表示されます。](../images/datasets/user-guide/batch-listing.png)
 
-個々の **[!UICONTROL バッチ ID]** を選択して **[!UICONTROL バッチの概要]** ダッシュボードにアクセスし、バッチの詳細（バッチの取り込みに失敗した場合のエラーログなど）を確認できます。
+個々のア **[!UICONTROL Batch ID]** ットを選択して **[!UICONTROL Batch overview]** ダッシュボードにアクセスし、バッチの詳細（バッチの取り込みに失敗した場合のエラーログなど）を確認できます。
 
-![&#x200B; 選択したバッチの詳細が表示されます。 これには、取り込まれたレコード数、失敗したレコード数、バッチステータス、ファイルサイズ、取り込みの開始時刻と終了時刻、データセットとバッチ ID、組織 ID、データセット名、アクセス情報が含まれます。](../images/datasets/user-guide/batch-overview.png)
+![ 選択したバッチの詳細が表示されます。 これには、取り込まれたレコード数、失敗したレコード数、バッチステータス、ファイルサイズ、取り込みの開始時刻と終了時刻、データセットとバッチ ID、組織 ID、データセット名、アクセス情報が含まれます。](../images/datasets/user-guide/batch-overview.png)
 
-バッチを削除する場合は、ダッシュボードの右上付近にある **[!UICONTROL バッチを削除]** を選択します。 バッチを削除すると、バッチの元の取り込み先のデータセットからレコードも削除されます。
+バッチを削除する場合は、ダッシュボードの右上付近にある「**[!UICONTROL Delete batch]**」を選択します。 バッチを削除すると、バッチの元の取り込み先のデータセットからレコードも削除されます。
 
 >[!NOTE]
 >
 >取り込んだデータがプロファイルに対して有効になっており、処理されている場合、バッチを削除しても、そのデータはプロファイルストアから削除されません。
 
-![&#x200B; データセットの詳細ページで「バッチを削除」ボタンがハイライト表示されています。](../images/datasets/user-guide/delete-batch.png)
+![ データセットの詳細ページで「バッチを削除」ボタンがハイライト表示されています。](../images/datasets/user-guide/delete-batch.png)
 
 ## 次の手順
 
