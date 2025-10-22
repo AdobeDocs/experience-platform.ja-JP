@@ -5,22 +5,20 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
+source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 30%
+source-wordcount: '2211'
+ht-degree: 29%
 
 ---
 
 # エンティティエンドポイント （プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[&#x200B; プロファイルユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
+Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
 このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
-
->[!BEGINSHADEBOX]
 
 ## エンティティの解決
 
@@ -28,7 +26,16 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 
 この機能強化により、Experience Platformでは同じエンティティを表す複数のレコードを識別して統合できるので、データの一貫性が向上し、より正確なオーディエンスのセグメント化が可能になります。
 
-以前は、アカウントとオポチュニティは、ID グラフベースの解決に依存しており、過去のすべての取り込み履歴を含め、ID を接続していました。 新しいエンティティ解決アプローチでは、ID は最新のデータのみに基づいてリンクされます
+以前は、アカウントとオポチュニティは、ID グラフベースの解決に依存しており、過去のすべての取り込み履歴を含め、ID を接続していました。 新しいエンティティ解決アプローチでは、ID は最新のデータのみに基づいてリンクされます。
+
+- アカウントとオポチュニティは、時間の優先順位に基づくマージによって解決されます。
+   - アカウント：`b2b_account` 名前空間を使用する ID
+   - オポチュニティ：`b2b_opportunity` 名前空間を使用する ID。
+- その他のエンティティはすべて単に統合され、プライマリ ID の重複のみが、時間の優先順位に基づくマージとマージされます。
+
+>[!NOTE]
+>
+>エンティティの解決でサポートされているのは `b2b_account` と `b2b_opportunity` だけです。 他の名前空間の ID は、エンティティの解決には使用されません。 カスタム名前空間を使用している場合、アカウントとオポチュニティを見つけることができません。
 
 ### エンティティの解決はどのように機能しますか？
 
@@ -36,8 +43,6 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 - **後**:DUNS 番号が追加 ID として使用され、アカウントの DUNS 番号が CRM などのソースシステムで更新された場合、アカウント ID は新しい DUNS 番号にのみリンクされ、アカウントの現在の状態がより正確に反映されます。
 
 このアップデートの結果、[!DNL Profile Access] API は、エンティティ解決ジョブサイクルが完了した後の、最新の結合プロファイルビューを反映するようになりました。 さらに、一貫性のあるデータにより、セグメント化、アクティブ化、分析などのユースケースの精度と一貫性が向上します。
-
->[!ENDSHADEBOX]
 
 ## エンティティの取得 {#retrieve-entity}
 
@@ -1219,7 +1224,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->エンティティを削除エンドポイントは、2025 年 10 月末までに非推奨（廃止予定）になります。 レコードの削除操作を実行する場合は、代わりに [&#x200B; データライフサイクルレコード削除 API ワークフロー &#x200B;](/help/hygiene/api/workorder.md) または [&#x200B; データライフサイクルレコード削除 UI ワークフロー &#x200B;](/help/hygiene/ui/record-delete.md) を使用できます。
+>エンティティを削除エンドポイントは、2025 年 10 月末までに非推奨（廃止予定）になります。 レコードの削除操作を実行する場合は、代わりに [ データライフサイクルレコード削除 API ワークフロー ](/help/hygiene/api/workorder.md) または [ データライフサイクルレコード削除 UI ワークフロー ](/help/hygiene/ui/record-delete.md) を使用できます。
 >
 >さらに、次の B2B エンティティに対する削除リクエストは、既に非推奨（廃止予定）になっています。
 >
@@ -1271,7 +1276,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 次の手順
 
-このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[&#x200B; データアクセスの概要 &#x200B;](../../data-access/home.md) を参照してください。
+このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Experience Platform] に保存されている他のデータリソースにアクセスする方法については、[ データアクセスの概要 ](../../data-access/home.md) を参照してください。
 
 ## 付録 {#appendix}
 
