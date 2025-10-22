@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform用語集
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 12%
 
 ---
@@ -227,7 +227,7 @@ ht-degree: 12%
 
 **イベント**：イベントは、プロファイルに関連付けられた動作データです。
 
-**Experience Data Model （XDM）**&#x200B;[!DNL Experience Data Model] （XDM）は、標準スキーマを使用してExperience PlatformおよびAdobe Experience Cloud アプリケーションで使用するデータを統合するオープンソースフレームワークです。 XDM は、データの構造化と高速化を標準化し、大量のデータから洞察を得るプロセスを簡素化します。
+**Experience Data Model （XDM）**[!DNL Experience Data Model] （XDM）は、標準スキーマを使用してExperience PlatformおよびAdobe Experience Cloud アプリケーションで使用するデータを統合するオープンソースフレームワークです。 XDM は、データの構造化と高速化を標準化し、大量のデータから洞察を得るプロセスを簡素化します。
 
 **実験**：実験とは、実稼動データのサンプル部分でインスタンスをトレーニングし、トレーニング済みモデルを作成するプロセスです。 これは、ホールドアウトテストデータセットに対してテストされるトレーニング済みモデルとは異なります。また、これは、実際にはサンプルモデリングプロジェクトを意味する一部の機械学習フレームワークでの実験の概念とも異なります。
 
@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **ライブラリ**：タグのコンテキストでは、ライブラリとは、クライアントデバイス上でタグライブラリがどのように動作するかの手順を含んだビジネスロジックのセットです。
 
-**ルックアップエンティティ**：データモデリングのコンテキストでは、ルックアップエンティティは、個々のユーザーに関連付けることができる概念を表しますが、個人を識別するために直接使用することはできません。 このカテゴリに該当するエンティティは、カスタム Experience Data Model （XDM）クラスに基づくスキーマで表し、[&#x200B; スキーマ関係 &#x200B;](../xdm/tutorials/relationship-ui.md) を介してプロファイルエンティティにリンクする必要があります。
+**ルックアップエンティティ**：データモデリングのコンテキストでは、ルックアップエンティティは、個々のユーザーに関連付けることができる概念を表しますが、個人を識別するために直接使用することはできません。 このカテゴリに該当するエンティティは、カスタム Experience Data Model （XDM）クラスに基づくスキーマで表し、[ スキーマ関係 ](../xdm/tutorials/relationship-ui.md) を介してプロファイルエンティティにリンクする必要があります。
 
 ## M
 
@@ -387,7 +387,7 @@ ht-degree: 12%
 
 **パーソナライズされたオファー**：パーソナライズされたオファーは、実施要件ルールおよび制約に基づいてカスタマイズできるマーケティングメッセージです。
 
-**PIPA** （韓国）:[[!DNL Personal Information Protection Act]  （PIPA） &#x200B;](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) は、韓国居住者の個人データの処理と保護を規制します。 PIPA は、通知、アクセス、コピーの取得、訂正、削除、または処理の停止を求める権利を付与する。 個人情報管理者は、収集の目的を特定し、必要な最小限の範囲で合法的にデータを処理し、データの正確性を確保する必要があります。 また、個人情報保護規則の調査・施行を目的として、個人情報保護委員会を設置しています。
+**PIPA** （韓国）:[[!DNL Personal Information Protection Act]  （PIPA） ](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) は、韓国居住者の個人データの処理と保護を規制します。 PIPA は、通知、アクセス、コピーの取得、訂正、削除、または処理の停止を求める権利を付与する。 個人情報管理者は、収集の目的を特定し、必要な最小限の範囲で合法的にデータを処理し、データの正確性を確保する必要があります。 また、個人情報保護規則の調査・施行を目的として、個人情報保護委員会を設置しています。
 
 **プレースメント**：プレースメントとは、エンドユーザーに対してオファーが表示される場所またはコンテキストです。
 
