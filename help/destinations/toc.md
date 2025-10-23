@@ -5,7 +5,7 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 73241750bdb310abf28cd4b1bcb4ba3ec43a6f39
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 73%
@@ -24,7 +24,7 @@ ht-degree: 73%
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
    * [ストリーミング宛先のオーディエンスライフサイクル](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API チュートリアル {#api}
-   * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でファイルベースのメールマーケティングの宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
    * [アドホックアクティベーション API を介して、バッチ宛先に対するオーディエンスをアクティブ化します。](./api/ad-hoc-activation-api.md)
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットの書き出し](/help/destinations/api/export-datasets.md)
-   * [&#x200B; 宛先の API 応答の並べ替えとフィルタリング &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -72,7 +72,7 @@ ht-degree: 73%
       * [（Beta）Marketo Engage人物同期接続](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
-      * [Federated Audience Composition 接続 &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * 広告の宛先{#advertising}
       * [（Beta） Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [（Beta） Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
@@ -146,8 +146,6 @@ ht-degree: 73%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [（Beta）Snowflake ストリーミング接続](./catalog/cloud-storage/snowflake.md)
-      * [（Beta）Snowflake バッチ接続](./catalog/cloud-storage/snowflake-batch.md)
       * [許可リストに加える ファイルベースのクラウドストレージの宛先の IP アドレス。](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}
       * [Hubspot 接続](./catalog/crm/hubspot.md)
@@ -188,7 +186,7 @@ ht-degree: 73%
    * タグ拡張機能 {#launch-extensions}
       * [タグ拡張機能の概要](./catalog/launch-extensions/overview.md)
    * マーケティングオートメーション {#marketing-automation}
-      * [RainFocus 参加者プロファイル &#x200B;](/help/destinations/catalog/marketing-automation/rainfocus.md)
+      * [RainFocus 参加者プロファイル ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * モバイルエンゲージメントの宛先 {#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
       * [Airship Attributes 接続](./catalog/mobile-engagement/airship-attributes.md)
@@ -237,6 +235,9 @@ ht-degree: 73%
       * [Medallia 接続](./catalog/voice/medallia-connector.md)
       * [Medallia 拡張機能](./catalog/voice/medallia.md)
       * [Talk URL Inbox 拡張機能](./catalog/voice/talkurl.md)
+   * ウェアハウスの宛先 {#warehouse}
+      * [Snowflake バッチ接続](./catalog/warehouses/snowflake-batch.md)
+      * [Snowflake ストリーミング接続](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
    * [概要](./destination-sdk/overview.md)
    * [統合の前提条件](./destination-sdk/integration-prerequisites.md)
