@@ -3,16 +3,16 @@ title: アクセスラベルを使用した宛先データフローへのユー�
 description: アクセスラベルを使用して宛先データフローへのユーザーアクセスを管理し、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようにする方法を説明します。
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: e1b8ca463146d300b48257304778a82aa745df73
+source-git-commit: de71e9e7825ab9a3eaf1e06d03046636406493db
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1019'
 ht-degree: 1%
 
 ---
 
 # アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理
 
-Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;]](overview.md) 機能の一部として、[&#x200B; 宛先データフロー &#x200B;](../../dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。
+Real-Time CDPの [[!UICONTROL attribute-based access control]](overview.md) 機能の一部として、[ 宛先データフロー ](../../dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。
 
 アクセスラベルを特定の宛先に追加すると、そのラベルが割り当てられている役割へのアクセス権を持つユーザーのみが、その宛先データフローを表示および編集できます。 宛先データフローがラベルでマークされていない場合、組織に属するすべてのユーザーに表示されます。
 
@@ -20,18 +20,18 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 ## 前提条件 {#prerequisites}
 
-この機能の使用を開始する前に、完了すべき次の前提条件に注意してください。 [!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;] について理解を深めるために、Adobeでは次の記事も参照することをお勧めします。
+この機能の使用を開始する前に、完了すべき次の前提条件に注意してください。 [!UICONTROL attribute-based access control] について理解を深めるために、Adobeでは次の記事も読むことをお勧めします。
 
 * [属性ベースのアクセス制御の概要](/help/access-control/abac/overview.md)
 * [属性ベースのアクセス制御エンドツーエンドガイド](/help/access-control/abac/end-to-end-guide.md)
 
 ### 権限 UI へのアクセス {#access-permissions-ui}
 
-[!UICONTROL &#x200B; 権限 &#x200B;] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。 開始するには、[&#x200B; 権限の節 &#x200B;](/help/access-control/abac/end-to-end-guide.md#permissions) を参照してください。
+[!UICONTROL Permissions] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。 開始するには、[ 権限の節 ](/help/access-control/abac/end-to-end-guide.md#permissions) を参照してください。
 
 ### 役割、ラベルの作成、ユーザーの割り当て {#create-roles-labels-assign-users}
 
-[!UICONTROL &#x200B; 権限 &#x200B;] UI へのアクセス権を取得したら、ユーザーまたはチームのメンバーは、役割を設定し、それらの役割に必要なラベルを追加する必要があります。 最後に、特定のラベルでラベル付けされたリソースにアクセスする必要があるユーザーを役割に追加する必要があります。 以下のドキュメントの節を参照してください。
+[!UICONTROL permissions] UI へのアクセス権を取得したら、ユーザーまたはチームのメンバーは、役割を設定し、それらの役割に必要なラベルを追加する必要があります。 最後に、特定のラベルでラベル付けされたリソースにアクセスする必要があるユーザーを役割に追加する必要があります。 以下のドキュメントの節を参照してください。
 
 * [新しい役割の作成](/help/access-control/abac/ui/roles.md)
 * [役割へのラベルの追加](/help/access-control/abac/end-to-end-guide.md#label-roles)
@@ -41,7 +41,7 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 データフローにアクセスラベルを適用するには、まず目的の宛先に接続し、データを書き出すデータフローを作成する必要があります。
 
-[&#x200B; 宛先への接続 &#x200B;](/help/destinations/ui/connect-destination.md) および [&#x200B; 宛先へのデータのアクティベート &#x200B;](/help/destinations/ui/activation-overview.md) に関するガイドを参照してください。 次に、[&#x200B; 使用可能なコネクタのカタログ &#x200B;](/help/destinations/catalog/overview.md) から目的の宛先を選択します。
+[ 宛先への接続 ](/help/destinations/ui/connect-destination.md) および [ 宛先へのデータのアクティベート ](/help/destinations/ui/activation-overview.md) に関するガイドを参照してください。 次に、[ 使用可能なコネクタのカタログ ](/help/destinations/catalog/overview.md) から目的の宛先を選択します。
 
 ## 既に使用可能です：他のExperience Platform リソースにアクセスラベルを適用してください {#apply-labels-other-resources}
 
@@ -55,13 +55,13 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 特定のデータフローにアクセスラベルを適用するには：
 
-1. **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、ユーザーアクセスを制限したい宛先データフローを見つけます。
-1. [!UICONTROL &#x200B; 名前 &#x200B;] 列の省略記号（`...`）を選択し、![&#x200B; 詳細を編集コントロール &#x200B;](/help/images/icons/key.png)**[!UICONTROL アクセスラベルを適用]** コントロールを使用して新しいラベルを追加し、データフローの既存のラベルを管理します。
-   ![&#x200B; 宛先ワークスペースの参照表示で「アクセスラベルを適用」を選択します。](/help/access-control/images/olac/apply-access-labels.png)
-1. 宛先データフローに追加するラベルを選択して、「**[!UICONTROL 保存]**」を選択します。
-   ![&#x200B; 宛先データフローに適用するのアクセスラベルを選択します。](/help/access-control/images/olac/view-access-labels.png)
+1. **[!UICONTROL Destinations]**/**[!UICONTROL Browse]** に移動し、ユーザーアクセスを制限する宛先データフローを見つけます。
+1. `...` 列の省略記号（[!UICONTROL Name]）を選択し、![ 詳細を編集コントロール ](/help/images/icons/key.png)**[!UICONTROL Apply access labels]** コントロールを使用して、新しいラベルを追加し、データフローの既存のラベルを管理します。
+   ![ 宛先ワークスペースの参照表示で「アクセスラベルを適用」を選択します。](/help/access-control/images/olac/apply-access-labels.png)
+1. 宛先データフローに追加するラベルを選択し、「**[!UICONTROL Save]**」を選択します。
+   ![ 宛先データフローに適用するのアクセスラベルを選択します。](/help/access-control/images/olac/view-access-labels.png)
 1. データフローに、UI にアクセスラベルが表示されていることに注意してください。
-   ![&#x200B; 選択したデータフローを含む複数の宛先データフローの表示アクセスラベルの表示方法。](/help/access-control/images/olac/dataflow-with-access-label.png)
+   ![ 選択したデータフローを含む複数の宛先データフローの表示アクセスラベルの表示方法。](/help/access-control/images/olac/dataflow-with-access-label.png)
 
 宛先データフローがラベルでマークされていない場合は、すべてのユーザーに対して表示されます。 データフローが 1 つ以上のアクセスラベルでマークされている場合、そのデータフローは、同じラベルまたはラベルの組み合わせを持つ役割に属するユーザーに対してのみ表示されます。
 
@@ -73,20 +73,21 @@ Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x2
 
 ## 重要なコールアウトと知っておくべき項目 {#important-callouts}
 
-現在、アクセスラベルを適用できるのは既存のデータフローのみです。 つまり、アクセスラベルを適用する前に、宛先へのデータフローを作成する必要があります。
+* 現在、アクセスラベルを適用できるのは既存のデータフローのみです。 つまり、アクセスラベルを適用する前に、宛先へのデータフローを作成する必要があります。
+* アクセスラベルにアクセスできない場合、宛先データフローにアクセスラベルを適用することはできません。
+* 宛先データフローに複数のラベルを追加する場合、データフローを表示および編集できるユーザーは、少なくとも同じラベルの組み合わせで役割に追加される必要があります。 例えば、ラベル C1、I2、別のカスタムラベルを宛先データフローに適用する場合、これら 3 つのラベルの組み合わせにアクセスできる役割に追加されたユーザーのみが、この特定の宛先データフローを表示および編集できます。
+* ラベル設定へのアクセスが原因でユーザーがアクセス権を持たない宛先データフローは、UI にグレー表示になる場合があります。ユーザーはこれらのデータフローに対してアクションを実行できません。
 
-アクセスラベルにアクセスできない場合、宛先データフローにアクセスラベルを適用することはできません。
-
-宛先データフローに複数のラベルを追加する場合、データフローを表示および編集できるユーザーは、少なくとも同じラベルの組み合わせで役割に追加される必要があります。 例えば、ラベル C1、I2、別のカスタムラベルを宛先データフローに適用する場合、これら 3 つのラベルの組み合わせにアクセスできる役割に追加されたユーザーのみが、この特定の宛先データフローを表示および編集できます。
+![ アクションウィンドウがグレー表示されている宛先の参照カタログ ](../images/olac/destinations-greyed-edit.png)
 
 >[!NOTE]
 >
 > Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルが表示を制限する宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。
 
-![&#x200B; 特定のユーザーのみが複数のラベルが適用された宛先にアクセスできることを示すベン図。](/help/access-control/images/olac/multiple-labels-venn.png)
+![ 特定のユーザーのみが複数のラベルが適用された宛先にアクセスできることを示すベン図。](/help/access-control/images/olac/multiple-labels-venn.png)
 
 ## 次の手順 {#next-steps}
 
 このドキュメントの手順に従うことで、組織のユーザーのサブセットのみが特定の宛先データフローにアクセスできるように、宛先データフローにアクセスラベルを適用する方法を理解できました。
 
-次に、宛先にデータをアクティブ化する際に、[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;] でサポートされる他の機能について詳しく説明します。 例えば、ユーザーのアクセスを [&#x200B; 特定のフィールドのみを表示およびアクティブ化 &#x200B;](/help/access-control/abac/overview.md#destinations) に制限できます。
+次に、宛先に対してデータをアクティブ化する際に、[!UICONTROL attribute-based access control] でサポートされる他の機能について詳しく説明します。 例えば、ユーザーのアクセスを [ 特定のフィールドのみを表示およびアクティブ化 ](/help/access-control/abac/overview.md#destinations) に制限できます。

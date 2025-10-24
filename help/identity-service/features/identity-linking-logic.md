@@ -2,7 +2,7 @@
 title: ID サービスリンクロジック
 description: ID サービスで様々な ID をリンクして顧客の包括的なビューを作成する方法について説明します。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ ID 名前空間と ID 値が一致すると、2 つの ID 間のリンクが確�
 * **プロファイルレコード**：通常、これらの ID は CRM システムから取得されます。
 * **エクスペリエンスイベント**：これらの ID は、通常、WebSDK 実装またはAdobe Analytics ソースから取得されます。
 
->[!IMPORTANT]
->
->ID サービスでは大文字と小文字が区別されます。 例えば、**abc<span>@gmail.com** と **ABC<span>@GMAIL.COM** は、2 つの異なるメール ID として扱われます。
-
 ## リンクを確立することの意味論的意味
 
 ID は、実際のエンティティを表します。 2 つの ID の間でリンクが確立されている場合は、2 つの ID が相互に関連付けられていることを意味します。 次に、この概念を説明するいくつかの例を示します。
@@ -44,6 +40,7 @@ ID は、ID 名前空間と ID 値で構成されます。
 
 * ID 名前空間は、に対する特定の ID 値のコンテキストです。 ID 名前空間の一般的な例としては、CRMID、メール、電話などがあります。
 * ID 値は、実際のエンティティを表す文字列です。 例：「julien<span>@acme.com」はメール名前空間の ID 値にすることができ、555-555-1234 は電話の名前空間に対応する ID 値にすることができます。
+* ID サービスでは大文字と小文字が区別されます。 例えば、**julien<span>@gmail.com** と **JULIEN<span>@GMAIL.COM** は、2 つの異なるメール ID として扱われます。
 
 >[!TIP]
 >
@@ -61,7 +58,7 @@ ID サービスのリンクロジックの仕組みを視覚的に表現する�
 * EMAIL:julien<span>@acme.com
 * CRMID:60013ABC
 
-![&#x200B; 既存のグラフ &#x200B;](../images/identity-settings/existing-graph.png)
+![ 既存のグラフ ](../images/identity-settings/existing-graph.png)
 
 >[!TAB  受信データ ]
 
@@ -70,13 +67,13 @@ ID のペアがグラフに取り込まれ、このペアには次が含まれ�
 * CRMID:60013ABC
 * ECID:100066526
 
-![&#x200B; 受信データ &#x200B;](../images/identity-settings/incoming-data.png)
+![ 受信データ ](../images/identity-settings/incoming-data.png)
 
 >[!TAB  更新されたグラフ ]
 
 ID サービスは、CRMID:60013ABC がグラフ内に既に存在することを認識するので、新しい ECID のみをリンクします
 
-![&#x200B; 更新されたグラフ &#x200B;](../images/identity-settings/updated-graph.png)
+![ 更新されたグラフ ](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
@@ -105,7 +102,7 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 | `t=3` | ECID:44675 | ホームページを表示 |
 | `t=4` | ECID:44675、CRMID: 31260XYZ | 購入履歴の表示 |
 
-各イベントのプライマリ ID は、[&#x200B; データ要素タイプの設定方法 &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
+各イベントのプライマリ ID は、[ データ要素タイプの設定方法 ](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
 
 >[!NOTE]
 >
