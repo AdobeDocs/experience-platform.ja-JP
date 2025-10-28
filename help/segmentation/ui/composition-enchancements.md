@@ -24,21 +24,21 @@ ht-degree: 0%
 
 コンポジションにオーディエンスのエンリッチメントを追加するには、キャンバス内の最上位の **[!UICONTROL Audience]** ブロックを選択します。 オーディエンスに名前を付けた後、「**[!UICONTROL Build rule]**」を選択してルールビルダーキャンバスを開きます。
 
-![ オーディエンスブロックがハイライト表示され、「ルールを作成」ボタンも表示されています。](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
+![&#x200B; オーディエンスブロックがハイライト表示され、「ルールを作成」ボタンも表示されています。](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
 ルールビルダーキャンバスが表示されます。 オーディエンスのエンリッチメントのフィルター条件を作成できるようになりました。 このフィルター条件には **必ず** 配列内の属性を含めます。 配列である属性は、組織のスキーマ構造によって異なります。 フィルター条件を作成したら、右側のパネル内で「**[!UICONTROL Delivery]**」を選択します。
 
-![ ルールビルダーキャンバスは、エンリッチメントを許可するオーディエンスの例を示しています。 「配信」ボタンもハイライト表示されます。](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![&#x200B; ルールビルダーキャンバスは、エンリッチメントを許可するオーディエンスの例を示しています。 「配信」ボタンもハイライト表示されます。](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
 
 エンリッチメントに使用するオブジェクト配列を左パネルのリストから選択します。 プロファイル上に配列が 1 つしかない場合は、その配列が自動的に選択されます。 「**[!UICONTROL Save]**」を選択すると、オーディエンス構成に戻ります。
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![ エンリッチメントツリーのスキーマツリーが表示されます。](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![&#x200B; エンリッチメントツリーのスキーマツリーが表示されます。](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
 
 オーディエンス構成内で、[!UICONTROL Audience] ブロックは「[!UICONTROL Rule builder with enhancement]」タイプになりました。 次の日別バッチでオーディエンスをアクティベートするには、「**[!UICONTROL Publish]**」を選択します。
 
-![ オーディエンス ブロックがハイライト表示され、エンリッチメントを含むオーディエンスが追加されたことを示しています。](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
+![&#x200B; オーディエンス ブロックがハイライト表示され、エンリッチメントを含むオーディエンスが追加されたことを示しています。](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
 
 ### 動作の詳細とガードレール
 
@@ -60,4 +60,4 @@ ht-degree: 0%
 
 アクティベーションを高速化すると、コンポジションが評価された直後に、ダウンストリームの宛先に対してオーディエンスをアクティブ化できます。 その結果、宛先がセグメント評価後にアクティベートするように設定されている場合、評価ジョブが終了するまで 24 時間待つ必要がなくなりました。
 
-詳しくは、[ バッチプロファイル宛先に対するオーディエンスのアクティブ化ガイド ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) を参照してください。
+詳しくは、[&#x200B; バッチプロファイル宛先に対するオーディエンスのアクティブ化ガイド &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) を参照してください。
