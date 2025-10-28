@@ -5,10 +5,10 @@ breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ガバナンスポリシーを使用して、データ使用制限を適用します。
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6e9ea451eafd08a72a5f26dabe229fdb7c6c909d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 94%
+source-wordcount: '105'
+ht-degree: 86%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 94%
    * [概要](policies/overview.md)
    * [UI でのポリシー管理](policies/user-guide.md)
    * [API でのポリシー作成](policies/create.md)
+   * [同意ポリシールール構築リファレンス](policies/consent-policy-rule-building-reference.md)
 * ポリシーの適用 {#enforcement}
    * [概要](enforcement/overview.md)
    * [自動適用](enforcement/auto-enforcement.md)
