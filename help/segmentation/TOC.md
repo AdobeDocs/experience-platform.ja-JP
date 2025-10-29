@@ -5,7 +5,7 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
+source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 74%
@@ -17,7 +17,7 @@ ht-degree: 74%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [&#x200B; セグメント化ガードレール &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja#segmentation-guardrails)
+- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
@@ -35,7 +35,7 @@ ht-degree: 74%
    - [オーディエンスダッシュボード](ui/audience-dashboard.md)
    - [オーディエンスポータル](ui/audience-portal.md)
    - [オーディエンス構成](ui/audience-composition.md)
-   - [オーディエンス構成の機能強化](ui/composition-enchancements.md)
+   - [オーディエンス構成の機能強化](ui/composition-enhancements.md)
    - [セグメントビルダー](ui/segment-builder.md)
    - [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)
    - [年の時間制約を無視の更新](ui/ignore-year.md)
