@@ -3,10 +3,10 @@ title: セグメント検索 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API では、セグメント検索を使用して、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返します。 このガイドでは、セグメント検索をより深く理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しが含まれています。
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 44%
+source-wordcount: '1178'
+ht-degree: 45%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 44%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 「はじめに」の節で説明している必要なヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
@@ -38,7 +38,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | パラメーター | 説明 |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} は検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `s={SEARCH_TERM}` | *（任意）*{SEARCH_TERM} は、Microsoftの [Lucene の検索構文 &#x200B;](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax) 実装に準拠するクエリを表します。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [&#x200B; 付録 &#x200B;](#appendix) に記載されています。 |
+| `s={SEARCH_TERM}` | *（任意）*{SEARCH_TERM} は、Microsoftの [Lucene の検索構文 ](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax) 実装に準拠するクエリを表します。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
 
 **リクエスト**
 
@@ -99,7 +99,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} には検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** 検索 {NAMESPACE} る名前空間が含まれています。 |
-| `s={SEARCH_TERM}` | *（任意）* Microsoftの [Lucene の検索構文 &#x200B;](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax) 実装に準拠するクエリが {SEARCH_TERM} に含まれます。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [&#x200B; 付録 &#x200B;](#appendix) に記載されています。 |
+| `s={SEARCH_TERM}` | *（任意）* Microsoftの {SEARCH_TERM}Lucene の検索構文 [ 実装に準拠するクエリが ](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax) に含まれます。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
 | `entityId={ENTITY_ID}` | *（オプション）* 検索を、{ENTITY_ID} で指定した指定フォルダー内に制限します。 |
 | `limit={LIMIT}` | *（オプション）*{LIMIT} は、返される検索結果の数を表します。 デフォルト値は 50 です。 |
 | `page={PAGE}` | *（任意）*{PAGE} は、検索したクエリの結果をページ分割するために使用されるページ番号を表します。 ページ番号は **0** から始まることに注意してください。 |
@@ -223,9 +223,11 @@ curl -X GET \
 
 ## 付録 {#appendix}
 
-次の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次のように記述されます：`s={FieldName}:{SearchExpression}`。 例えば、AAMまたは [!DNL Platform] という名前のセグメント定義を検索するには、次の検索クエリを使用します。`s=segmentName:AAM%20OR%20Platform`
+次の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次のように記述されます：`s={FieldName}:{SearchExpression}`。 例えば、AAMまたは [!DNL Platform] という名前のセグメント定義を検索するには、検索クエリ `s=segmentName:AAM%20OR%20Platform` を使用します。
 
->  ベストプラクティスとして、検索式は、上記の例のようにHTMLでエンコードする必要があります。
+>[!NOTE]
+>
+>ベストプラクティスとして、検索式は、上記の例のようにHTML エンコードする必要があります。
 
 ### 検索フィールド {#search-fields}
 
@@ -244,7 +246,9 @@ curl -X GET \
 
 次の表に、Segment Search API を使用する場合の検索クエリの仕組みを示します。
 
->  次の例は、明確にするために、HTML以外でエンコードされた形式で表示されています。 ベストプラクティスとして、HTMLで検索式をエンコードします。
+>[!NOTE]
+>
+>次の例は、よりわかりやすくするために、HTML以外でエンコードされた形式で表示されています。 ベストプラクティスとして、HTMLが検索式をエンコードします。
 
 | 検索式の例 | 説明 |
 | ------------------------- | ----------- |

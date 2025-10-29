@@ -2,7 +2,7 @@
 title: 高階関数を使用した配列およびマップ データ タイプの管理
 description: クエリサービスの高階関数を使用して、配列とマップのデータタイプを管理する方法を説明します。 一般的なユースケースの例を示しています。
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 **例**
 
-次の SQL の例は、このユースケースを示しています。 クエリは、指定されたテーブルから限られた行のセットを取得し、各項目の `priceTotal` 属性に 73 を掛けて`productListItems`配列を変換します。結果には、 `_id`列、 `productListItems`列および変換された `price_in_inr` 列が含まれます。 選択は、特定のタイムスタンプ範囲に基づいています。
+次の SQL の例は、このユースケースを示しています。 クエリは、指定したテーブルから限定されたローのセットを取得し、各項目の `productListItems` 属性に 73 を掛けて `priceTotal` の配列を変換します。 結果には、`_id`、`productListItems`、変換後の `price_in_inr` 列が含まれます。 選択は、特定のタイムスタンプ範囲に基づいて行われます。
 
 ```sql
 SELECT _id,
@@ -42,11 +42,11 @@ LIMIT  10;
 
 **結果**
 
-この SQL の結果は、以下のようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
  productListItems | price_in_inr
--------------------+----------------
+|-------------------+----------------
 (8376, NULL, NULL) | 611448.0
 {(Burbank Hills Jeans, NULL, NULL), (Thermomax Steel, NULL, NULL), (Bruin Point Shearling Boots, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL), (Timberline Survival Knife, NULL, NULL), (Thermomax Steel, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Lost Prospector Beanie, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL)} | {0.0,0.0.0.0,0,0,0,0,0,0,0,0,0,0,0,0,0.0}
 (84763,NULL, NULL) | 6187699.0
@@ -64,7 +64,7 @@ LIMIT  10;
 
 **例**
 
-以下の SQL の例では、クエリは `geometrixxx_999_xdm_pqs_1batch_10k_rows` テーブルから `productListItems` を取得し、`productListItems` 配列に `123679` と等しい SKU を持つ要素が存在するかどうかを評価します。 次に、特定のタイムスタンプレンジに基づいて結果をフィルタリングし、最終結果を 10 行に制限します。
+以下の SQL の例では、クエリは `productListItems` テーブルから `geometrixxx_999_xdm_pqs_1batch_10k_rows` を取得し、`123679` 配列に `productListItems` と等しい SKU を持つ要素が存在するかどうかを評価します。 次に、特定のタイムスタンプレンジに基づいて結果をフィルタリングし、最終結果を 10 行に制限します。
 
 ```sql
 SELECT productListItems
@@ -80,7 +80,7 @@ AND timestamp < to_timestamp('2017-11-02 00:00:00')limit 10;
 
 ```console
 productListItems
------------------
+|-----------------
 {(123679, NULL,NULL)}
 {(123679, NULL, NULL)}
 {(123679, NULL, NULL), (150196, NULL, NULL)}
@@ -120,7 +120,7 @@ LIMIT 10;
 
 ```console
 productListItems | _filter
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) (123679, NULL, NULL)
 (1346, NULL, NULL) |
 (98347, NULL, NULL) |
@@ -133,11 +133,11 @@ productListItems | _filter
 
 `aggregate(array<T>, A, function<A, T, A>[, function<A, R>]): R`
 
-この集計操作では、初期状態と配列内のすべての要素にバイナリ演算子が適用されます。 また、複数の値を 1 つの状態に減らします。 この縮小後、最終状態は仕上げ関数を使用して最終結果に変換されます。 終了関数は、すべての配列要素にバイナリ演算子を適用した後に取得された最後の状態を取得し、それを使用して最終結果を生成します。
+この集計操作では、初期状態と配列内のすべての要素にバイナリ演算子が適用されます。 また、複数の値を 1 つの状態に減らします。 この縮小後、最終状態は仕上げ関数を使用して最終結果に変換されます。 finish 関数は、すべての配列要素にバイナリ演算子を適用した後に取得した最後の状態を取り、それを使用して最終的な結果を生成します。
 
 **例**
 
-この例ではクエリ指定されたタイムスタンプ範囲内の `productListItems` 配列から最大SKU値を計算し、結果を 2 倍にします。 出力には元の `productListItems` 配列と計算された `max_value`が含まれます。
+このクエリの例では、指定されたタイムスタンプ範囲内の `productListItems` 配列から最大 SKU 値を計算し、結果を 2 倍にします。 出力には、元の `productListItems` 配列と計算された `max_value` が含まれます。
 
 ```sql
 SELECT productListItems,
@@ -159,7 +159,7 @@ LIMIT 50;
 
 ```console
 productListItems | max_value
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) | 247358
 (1346,NULL, NULL) | 2692
 (98347, NULL, NULL) | 196694
@@ -176,7 +176,7 @@ productListItems | max_value
 
 **例**
 
-次のクエリでは、`zip_with` 関数を使用して、2 つの配列から値のペアを作成します。 これを行うには、`Sequence` 関数を使用して生成された整数シーケンスに `productListItems` 配列の SKU 値を追加します。 結果は、元の `productListItems` 列と共に選択され、タイムスタンプの範囲に基づいて制限されます。
+次のクエリでは、`zip_with` 関数を使用して、2 つの配列から値のペアを作成します。 これを行うには、`productListItems` 関数を使用して生成された整数シーケンスに `Sequence` 配列の SKU 値を追加します。 結果は、元の `productListItems` 列と共に選択され、タイムスタンプの範囲に基づいて制限されます。
 
 ```sql
 SELECT productListItems,
@@ -193,7 +193,7 @@ limit 10;
 
 ```console
 productListItems     | zip_with
----------------------+---------
+|---------------------+---------
                      | {(1,NULL), (2,NULL), (3,NULL),(4,NULL), (5,NULL)}
 (123679, NULL, NULL) | {(1,123679), (2,NULL), (3,NULL), (4,NULL), (5,NULL)}
                      | {(1,NULL), (2,NULL),(3,NULL),(4,NULL), (5,NULL)}
@@ -216,7 +216,7 @@ productListItems     | zip_with
 
 **例**
 
-次のクエリでは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entriesを使用してこれらのペアをマップに変換してから、新しく作成された map_from_entries 列と共に元の productListItems 列を選択します。 結果はフィルタリングされ、指定されたタイムスタンプ範囲に基づいて制限されます。
+次のクエリは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entries を使用してこれらのペアをマップに変換し、元の productListItems 列を、新しく作成された map_from_entries 列とともに選択します。 結果は、指定したタイムスタンプ範囲に基づいてフィルタリングされ、制限されます。
 
 ```sql
 SELECT productListItems,      map_from_entries(zip_with(Sequence(1,Size(productListItems)), productListItems, (x,y) -> struct(x, y))) AS map_from_entries
@@ -228,11 +228,11 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、以下のようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -278,7 +278,7 @@ LIMIT  10;
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -321,7 +321,7 @@ limit 10;
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)",2 -> "(123679, NULL, NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)",2 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)",2 -> "(98347, NULL, NULL)"]
@@ -346,7 +346,7 @@ productListItems     | map_from_entries
 
 **例**
 
-クエリは、テーブル`geometrixxx_999_xdm_pqs_1batch_10k_rows`から`identitymap`列を選択し、各行のキー`AAID`に関連付けられた値を抽出します。結果は指定されたタイム・スタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
+クエリは、テーブル `identitymap` から `geometrixxx_999_xdm_pqs_1batch_10k_rows` 列を選択し、各行のキー `AAID` に関連付けられた値を抽出します。 結果は、指定したタイムスタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
 
 ```sql
 SELECT identitymap,
@@ -359,11 +359,11 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、以下のようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            | (3617FBB942466D79-5433F727AD6A0AD, false) 
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] | (533F56A682C059B1-396437F68879F61D, false) 
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            | (22E195F8A8ECCC6A-A39615C93B72A9F, false) 
@@ -401,7 +401,7 @@ LIMIT  10;
 
 ```console
                                                                   identitymap                                            |  size(identitymap) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            |      2  
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] |      2  
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            |      2  
@@ -439,7 +439,7 @@ LIMIT 10;
 
 ```console
 productListItems     | array_distinct(productListItems)
----------------------+---------------------------------
+|---------------------+---------------------------------
                      |
 (123679, NULL, NULL) | (123679, NULL, NULL)
                      |
@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 類似レコードの取得のユースケースの一部として、高階関数の次の例を説明します。 各関数の使用例と使用方法の説明は、このドキュメントの各セクションに記載されています。
 
-[`transform` 関数の例では &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明しています。
+[`transform` 関数の例では ](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明しています。
 
-[`filter` 関数の例では &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
+[`filter` 関数の例では ](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
 
-[`reduce`機能](../use-cases/retrieve-similar-records.md#higher-order-function-solutions)は、さまざまな分析および計画プロセスで極めて重要な累積値または集計を導出する方法を提供します。
+[`reduce` 関数は ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 様々な分析および計画プロセスでピボット可能な累積値または集計を導出する方法を提供します。

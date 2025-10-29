@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDKを使用したパーソナライズさ�
 description: Adobe Experience Platform web SDKを使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes；提案；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDKでは、[Adobe Target、](https://business.adobe.com/jp/products/target/adobe-target.html)Offer Decisioning、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) などのAdobe パーソナライゼーションソリューションからパーソナライゼーショ [&#x200B; されたコンテンツの取得をサポートしてい &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) す。
+Adobe Experience Platform Web SDKでは、[Adobe Target、](https://business.adobe.com/jp/products/target/adobe-target.html)Offer Decisioning、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) などのAdobe パーソナライゼーションソリューションからパーソナライゼーショ [ されたコンテンツの取得をサポートしてい ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) す。
 
-さらに、Web SDKは、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [&#x200B; カスタムパーソナライゼーション接続 &#x200B;](../../destinations/catalog/personalization/custom-personalization.md) などのAdobe Experience Platform パーソナライゼーション宛先を通じて、同じページおよび次のページのパーソナライゼーション機能を強化します。 同じページと次のページのパーソナライゼーションに対応するExperience Platformの設定方法については、[&#x200B; 専用ガイド &#x200B;](../../destinations/ui/activate-edge-personalization-destinations.md) を参照してください。
+さらに、Web SDKは、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [ カスタムパーソナライゼーション接続 ](../../destinations/catalog/personalization/custom-personalization.md) などのAdobe Experience Platform パーソナライゼーション宛先を通じて、同じページおよび次のページのパーソナライゼーション機能を強化します。 同じページと次のページのパーソナライゼーションに対応するExperience Platformの設定方法については、[ 専用ガイド ](../../destinations/ui/activate-edge-personalization-destinations.md) を参照してください。
 
-Adobe Targetの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) およびAdobe Journey Optimizerの [Web キャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) で作成されたコンテンツは、SDKによって自動的に取得され、レンダリングされます。 Adobe Target[&#x200B; フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)、Adobe Journey Optimizer[&#x200B; コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) またはOffer Decisioning内で作成されたコンテンツは、SDKによって自動的にレンダリングすることはできません。 代わりに、SDKを使用してこのコンテンツをリクエストし、手動でコンテンツをレンダリングする必要があります。
+Adobe Targetの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) およびAdobe Journey Optimizerの [Web キャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) で作成されたコンテンツは、SDKによって自動的に取得され、レンダリングされます。 Adobe Target[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)、Adobe Journey Optimizer[ コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) またはOffer Decisioning内で作成されたコンテンツは、SDKによって自動的にレンダリングすることはできません。 代わりに、SDKを使用してこのコンテンツをリクエストし、手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング {#automatic}
 
@@ -298,7 +298,7 @@ alloy("sendEvent", {
 
 ### フリッカーの管理
 
-SDKには、パーソナライゼーションプロセス中に [&#x200B; ちらつきの管理 &#x200B;](../personalization/manage-flicker.md) を行う機能が用意されています。
+SDKには、パーソナライゼーションプロセス中に [ ちらつきの管理 ](../personalization/manage-flicker.md) を行う機能が用意されています。
 
 ## 単一ページアプリケーションで、指標を増分せずに提案をレンダリングします {#applypropositions}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### ユースケース 2：セレクターを持たない提案のレンダリング
 
-このユースケースは、[!DNL Target Form-based Experience Composer] またはAdobe Journey Optimizer [&#x200B; コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) を使用して作成したエクスペリエンスに当てはまります。
+このユースケースは、[!DNL Target Form-based Experience Composer] またはAdobe Journey Optimizer [ コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) を使用して作成したエクスペリエンスに当てはまります。
 
 `applyPropositions` 呼び出しでは、セレクター、アクション、範囲を指定する必要があります。
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Jupyterlab Notebooks でのデータアクセス
 description: このガイドでは、Data Science Workspace内に作成された Jupyter Notebooks を使用してデータにアクセスする方法を重点的に説明します。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
-ht-degree: 23%
+source-wordcount: '3274'
+ht-degree: 22%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 23%
 
 ## はじめに
 
-このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド &#x200B;](./overview.md) を参照して、[!DNL JupyterLab] の概要とデータサイエンスWorkspace内での役割を確認してください。
+このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド ](./overview.md) を参照して、[!DNL JupyterLab] の概要とデータサイエンスWorkspace内での役割を確認してください。
 
 ## ノートブックのデータ制限 {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->PySpark と Scala ノートブックの場合、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが表示されます。 これは、通常、ドライバーまたはエグゼキューターのメモリが不足していることを意味します。 このエラーを解決するには、「バッチ [&#x200B; モード &#x200B;](#mode) に切り替えてみてください。
+>PySpark と Scala ノートブックの場合、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが表示されます。 これは、通常、ドライバーまたはエグゼキューターのメモリが不足していることを意味します。 このエラーを解決するには、「バッチ [ モード ](#mode) に切り替えてみてください。
 
 次の情報は、読み取り可能なデータの最大量、使用されたデータのタイプ、データの読み取りに要する推定期間を定義します。
 
@@ -115,7 +115,7 @@ PySpark と Scala ノートブックでデータセットを読み取る場合�
 
 ## Python ノートブック {#python-notebook}
 
-[!DNL Python] ノートブックを使用すると、データセットにアクセスする際に、データにページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター Python ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー &#x200B;](./overview.md#launcher) の節を参照してください。
+[!DNL Python] ノートブックを使用すると、データセットにアクセスする際に、データにページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター Python ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー ](./overview.md#launcher) の節を参照してください。
 
 以下の Python ドキュメントでは、以下の概念の概要を説明しています。
 
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Python でのデータセットへの書き込み {#write-python}
 
-JupyterLab ノートブックのデータセットに書き込むには、JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下でハイライト表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックにデータを書き込む]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
+JupyterLab ノートブックのデータセットに書き込むには、JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下でハイライト表示）を選択します。 **[!UICONTROL Datasets]** ディレクトリと **[!UICONTROL Schemas]** ディレクトリが表示されます。 「**[!UICONTROL Datasets]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL Write Data in Notebook]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- **[!UICONTROL Notebook にデータを書き込み]** を使用して、選択したデータセットで書き込みセルを生成します。
-- **[!UICONTROL ノートブックのデータを調査]** を使用して、選択したデータセットを含む読み取りセルを生成します。
-- **[!UICONTROL ノートブックのデータをクエリ]** を使用して、選択したデータセットを含む基本的なクエリセルを生成します。
+- **[!UICONTROL Write Data in Notebook]** を使用して、選択したデータセットで書き込みセルを生成します。
+- **[!UICONTROL Explore Data in Notebook]** を使用して、選択したデータセットの読み取りセルを生成します。
+- **[!UICONTROL Query Data in Notebook]** を使用して、選択したデータセットを含む基本クエリセルを生成します。
 
 または、次のコードセルをコピーして貼り付けることができます。 `{DATASET_ID}` と `{PANDA_DATAFRAME}` の両方を交換してください。
 
@@ -173,13 +173,13 @@ dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### [!DNL Python] の [!DNL Query Service] を使用したクエリデータ {#query-data-python}
+### [!DNL Query Service] の [!DNL Python] を使用したクエリデータ {#query-data-python}
 
-[!DNL Experience Platform] 上の [!DNL JupyterLab] では、[!DNL Python] ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) 経由でデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
+[!DNL JupyterLab] 上の [!DNL Experience Platform] では、[!DNL Python] ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス ](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) 経由でデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
 
 [!DNL JupyterLab] で [!DNL Query Service] を使用する前に、[[!DNL Query Service] SQL 構文](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=ja)について実践的に理解していることを確認してください。
 
-[!DNL Query Service] を使用したデータのクエリには、ターゲットデータセットの名前を指定する必要があります。 必要なコードセルを生成するには、**[!UICONTROL データエクスプローラー]**&#x200B;を使用して目的のデータセットを見つけます。データセットリストを右クリックし、「**[!UICONTROL ノートブックのデータをクエリ]**」をクリックして、ノートブックに 2 つのコードセルを生成します。 これら 2 つのセルについて、以下で詳しく説明します。
+[!DNL Query Service] を使用したデータのクエリには、ターゲットデータセットの名前を指定する必要があります。 **[!UICONTROL Data explorer]** を使用して目的のデータセットを見つけることで、必要なコードセルを生成できます。 データセットリストを右クリックし、「**[!UICONTROL Query Data in Notebook]**」をクリックして、ノートブック内に 2 つのコードセルを生成します。 これら 2 つのセルについて、以下で詳しく説明します。
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -214,7 +214,7 @@ FROM {table_name}
 
 ### [!DNL ExperienceEvent] データのフィルタリング {#python-filter}
 
-[!DNL Python] ノートブックの [!DNL ExperienceEvent] データセットにアクセスしてフィルタリングするには、データセット（`{DATASET_ID}`）の ID と、論理演算子を使用して特定の時間範囲を定義するフィルタールールを指定する必要があります。 時間範囲を定義すると、指定されたページ番号は無視され、データセット全体が考慮されます。
+[!DNL ExperienceEvent] ノートブックの [!DNL Python] データセットにアクセスしてフィルタリングするには、データセット（`{DATASET_ID}`）の ID と、論理演算子を使用して特定の時間範囲を定義するフィルタールールを指定する必要があります。 時間範囲を定義すると、指定されたページ番号は無視され、データセット全体が考慮されます。
 
 フィルタリング操作のリストを以下に示します。
 
@@ -242,7 +242,7 @@ df = dataset_reader.\
 
 ## R ノートブック {#r-notebooks}
 
-r ノートブックを使用すると、データセットにアクセスする際にデータのページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター R ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー &#x200B;](./overview.md#launcher) の節を参照してください。
+r ノートブックを使用すると、データセットにアクセスする際にデータのページ番号を付けることができます。 ページネーションを使用してデータを読み取るサンプルコードと使用しないサンプルデータを以下に示します。 使用可能なスターター R ノートブックについて詳しくは、JupyterLab ユーザーガイドの [[!DNL JupyterLab]  ランチャー ](./overview.md#launcher) の節を参照してください。
 
 以下の R ドキュメントでは、次の概念の概要を説明します。
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### R のデータセットへの書き込み {#write-r}
 
-JupyterLab ノートブックのデータセットに書き込むには、JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下でハイライト表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックにデータを書き込む]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
+JupyterLab ノートブックのデータセットに書き込むには、JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下でハイライト表示）を選択します。 **[!UICONTROL Datasets]** ディレクトリと **[!UICONTROL Schemas]** ディレクトリが表示されます。 「**[!UICONTROL Datasets]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL Write Data in Notebook]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- **[!UICONTROL Notebook にデータを書き込み]** を使用して、選択したデータセットで書き込みセルを生成します。
-- **[!UICONTROL ノートブックのデータを調査]** を使用して、選択したデータセットを含む読み取りセルを生成します。
+- **[!UICONTROL Write Data in Notebook]** を使用して、選択したデータセットで書き込みセルを生成します。
+- **[!UICONTROL Explore Data in Notebook]** を使用して、選択したデータセットの読み取りセルを生成します。
 
 または、次のコードセルをコピーして貼り付けることもできます。
 
@@ -361,7 +361,7 @@ spark = SparkSession.builder.getOrCreate()
 
 ### %dataset を使用した PySpark 3 ノートブックの読み取りと書き込み {#magic}
 
-[!DNL Spark] 2.4 の導入に伴い、PySpark 3 （[!DNL Spark] 2.4）ノートブックで使用するた `%dataset` のカスタムマジックが提供されています。 IPython カーネルで利用可能なマジックコマンドについて詳しくは、[IPython マジックドキュメント &#x200B;](https://ipython.readthedocs.io/en/stable/interactive/magics.html) を参照してください。
+[!DNL Spark] 2.4 の導入に伴い、PySpark 3 （`%dataset` 2.4）ノートブックで使用するた [!DNL Spark] のカスタムマジックが提供されています。 IPython カーネルで利用可能なマジックコマンドについて詳しくは、[IPython マジックドキュメント ](https://ipython.readthedocs.io/en/stable/interactive/magics.html) を参照してください。
 
 
 **用途**
@@ -372,7 +372,7 @@ spark = SparkSession.builder.getOrCreate()
 
 **説明**
 
-[!DNL PySpark] notebook （[!DNL Python] 3 カーネル）からデータセットを読み取ったり書き込んだりするためのカスタム [!DNL Data Science Workspace] magic コマンド。
+[!DNL Data Science Workspace] notebook （[!DNL PySpark] 3 カーネル）からデータセットを読み取ったり書き込んだりするためのカスタム [!DNL Python] magic コマンド。
 
 | 名前 | 説明 | 必須 |
 | --- | --- | --- |
@@ -398,14 +398,14 @@ spark = SparkSession.builder.getOrCreate()
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
 
 JupyterLab buy では、次の方法を使用して、上記の例を自動生成できます。
 
-JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下で強調表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックにデータを書き込む]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
+JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下で強調表示）を選択します。 **[!UICONTROL Datasets]** ディレクトリと **[!UICONTROL Schemas]** ディレクトリが表示されます。 「**[!UICONTROL Datasets]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL Write Data in Notebook]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
 
-- **[!UICONTROL ノートブックのデータを調査]** を使用して、読み取りセルを生成します。
-- **[!UICONTROL Notebook にデータを書き込む]** を使用して、書き込みセルを生成します。
+- **[!UICONTROL Explore Data in Notebook]** を使用して、読み取りセルを生成します。
+- **[!UICONTROL Write Data in Notebook]** を使用して、書き込みセルを生成します。
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -498,7 +498,7 @@ Scala では、`clientContext` を読み込んでExperience Platformの値を取
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -534,10 +534,12 @@ df1.show(10)
 
 JupyterLab buy で上記の例を自動生成するには、次の方法を使用します。
 
-JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下で強調表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックのデータを調査]**」オプションを選択します。ノートブックの下部に実行可能コードエントリが表示されます。
+JupyterLab の左側のナビゲーションにある「データ」アイコンタブ（以下で強調表示）を選択します。 **[!UICONTROL Datasets]** ディレクトリと **[!UICONTROL Schemas]** ディレクトリが表示されます。 「**[!UICONTROL Datasets]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL Explore Data in Notebook]**」オプションを選択します。 ノートブックの下部に実行可能コードエントリが表示されます。
+
 および
-- **[!UICONTROL ノートブックのデータを調査]** を使用して、読み取りセルを生成します。
-- **[!UICONTROL Notebook にデータを書き込む]** を使用して、書き込みセルを生成します。
+
+- **[!UICONTROL Explore Data in Notebook]** を使用して、読み取りセルを生成します。
+- **[!UICONTROL Write Data in Notebook]** を使用して、書き込みセルを生成します。
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
@@ -553,7 +555,7 @@ Scala では、`clientContext` を読み込んでExperience Platformの値を取
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を参照してください。
+> 詳しくは、[ トラブルシューティングガイド ](../troubleshooting-guide.md) を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -641,7 +643,7 @@ timedf.show()
 
 ## 次の手順
 
-このドキュメントでは、JupyterLab ノートブックを使用したデータセットへのアクセスに関する一般的なガイドラインを説明しました。 データセットのクエリに関する詳細な例については、[JupyterLab ノートブックのクエリサービス &#x200B;](./query-service.md) ドキュメントを参照してください。 データセットの調査および視覚化の方法について詳しくは、[&#x200B; ノートブックを使用したデータの分析 &#x200B;](./analyze-your-data.md) のドキュメントを参照してください。
+このドキュメントでは、JupyterLab ノートブックを使用したデータセットへのアクセスに関する一般的なガイドラインを説明しました。 データセットのクエリに関する詳細な例については、[JupyterLab ノートブックのクエリサービス ](./query-service.md) ドキュメントを参照してください。 データセットの調査および視覚化の方法について詳しくは、[ ノートブックを使用したデータの分析 ](./analyze-your-data.md) のドキュメントを参照してください。
 
 ## [!DNL Query Service] のオプションの SQL フラグ {#optional-sql-flags-for-query-service}
 

@@ -2,7 +2,7 @@
 title: アドホックデータセットでのプライマリ Id の設定
 description: Adobe Experience Platform クエリサービスでは、SQL ALTER TABLE コマンドを使用して、アドホックスキーマデータセットフィールドの ID またはプライマリ ID を直接設定できます。 この文書では、ALTER TABLE コマンドを使用してプライマリ ID またはセカンダリ ID を設定する方法について説明します。
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -17,8 +17,8 @@ Adobe Experience Platform クエリサービスでは、SQL `ALTER TABLE` コマ
 
 データセット列をプライマリまたはセカンダリ ID としてラベル付けするには、`ALTER TABLE` SQL コマンドを理解し、データプライバシー要件を十分に理解している必要があります。 このドキュメントを続行する前に、次のドキュメントを確認してください。
 
-* [`ALTER TABLE` コマンドの SQL 構文ガイド &#x200B;](../sql/syntax.md)
-* 詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../data-governance/home.md) を参照してください。
+* [`ALTER TABLE` コマンドの SQL 構文ガイド ](../sql/syntax.md)
+* 詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
 
 ## 制約を追加 {#add-constraints}
 
@@ -68,7 +68,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 

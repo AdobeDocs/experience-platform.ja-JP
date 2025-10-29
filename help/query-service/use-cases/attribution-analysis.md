@@ -2,7 +2,7 @@
 title: アトリビューション分析
 description: このドキュメントでは、クエリサービスを使用して、ファーストタッチとラストタッチのマーケティングアトリビューションモデルに基づくマーケティング効果測定手法を作成する方法について説明します。
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 10%
@@ -17,12 +17,12 @@ ht-degree: 10%
 
 このドキュメント全体での SQL の例は、Adobe Analytics データで一般的に使用されるクエリです。 このチュートリアルでは、次のコンポーネントに関する十分な知識が必要です。
 
-* [&#x200B; レポートスイートデータ概要用のAdobe Analytics ソースコネクタ &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md)。
-* [Analytics フィールドマッピングのドキュメント &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) では、クエリサービスで使用する分析データの取り込みとマッピングについて詳しく説明しています。
-* [Attribution IQの概要 &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)
-* [Adobe Analytics アトリビューションパネルガイド &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
+* [ レポートスイートデータ概要用のAdobe Analytics ソースコネクタ ](../../sources/connectors/adobe-applications/mapping/analytics.md)。
+* [Analytics フィールドマッピングのドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md) では、クエリサービスで使用する分析データの取り込みとマッピングについて詳しく説明しています。
+* [Attribution IQの概要 ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [AdobeマーケティングおよびCommerce用語用語集 &#x200B;](https://business.adobe.com/jp/glossary/index.html) も使用される場合があります。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集 ](https://business.adobe.com/glossary/index.html) も使用される場合があります。
 
 次の各ユースケースについて、パラメーター化された SQL クエリの例をテンプレートとして提供し、カスタマイズします。 評価する SQL 例の `{ }` に表示されるパラメータを指定します。
 
@@ -72,7 +72,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 **クエリ構文**
 
@@ -80,7 +80,7 @@ ht-degree: 10%
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターの完全なリストとその説明については、[ アトリビューションクエリパラメーター ](#attribution-query-parameters) の節を参照してください。
 
 **クエリの例**
 
@@ -102,7 +102,7 @@ LIMIT 10
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:02.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:55.0 |              | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
@@ -116,7 +116,7 @@ LIMIT 10
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。
 
 ### ラストタッチ属性 {#second-touch}
 
@@ -149,7 +149,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:02.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:55.0 |              | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
@@ -163,7 +163,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。
 
 ### 有効期限条件を持つファーストタッチ属性 {#first-touch-attribution-with-expiration-condition}
 
@@ -179,7 +179,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターの完全なリストとその説明については、[ アトリビューションクエリパラメーター ](#attribution-query-parameters) の節を参照してください。
 
 **クエリの例**
 
@@ -200,7 +200,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id               |       timestamp       | trackingCode |                   first_touch                   
-----------------------------------+-----------------------+--------------+-------------------------------------------------
+|----------------------------------+-----------------------+--------------+-------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -214,7 +214,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。
 
 ### 有効期限タイムアウトを持つファーストタッチ属性 {#first-touch-attribution-with-expiration-timeout}
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターの完全なリストとその説明については、[ アトリビューションクエリパラメーター ](#attribution-query-parameters) の節を参照してください。
 
 **クエリの例**
 
@@ -251,7 +251,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -265,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。
 
 ### 有効期限条件を持つラストタッチ属性 {#last-touch-attribution-with-expiration-condition}
 
@@ -281,7 +281,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターの完全なリストとその説明については、[ アトリビューションクエリパラメーター ](#attribution-query-parameters) の節を参照してください。
 
 **クエリの例**
 
@@ -302,7 +302,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+------------------------------------------------
+|-----------------------------------+-----------------------+--------------+------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -316,7 +316,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。
 
 ### 有効期限タイムアウトを持つラストタッチ属性 {#last-touch-attribution-with-expiration-timeout}
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターの完全なリストとその説明については、[ アトリビューションクエリパラメーター ](#attribution-query-parameters) の節を参照してください。
 
 **クエリの例**
 
@@ -351,7 +351,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch` 列に表示される結果の分類については、[ 列コンポーネント ](#query-result-column-components) を参照してください。

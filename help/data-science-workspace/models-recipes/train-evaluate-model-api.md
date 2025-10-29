@@ -5,7 +5,7 @@ title: Sensei Machine Learning API を使用したモデルのトレーニング
 type: Tutorial
 description: このチュートリアルでは、Sensei機械学習 API 呼び出しを使用して、モデルを作成、トレーニング、評価する方法を説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 79%
@@ -26,7 +26,7 @@ ht-degree: 79%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-API 呼び出しの作成を開始するには [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)Experience PlatformAPI 認証のチュートリアルに従います。
+API 呼び出しの作成を開始するには [](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)Experience Platform API 認証のチュートリアル } に従います。
 
 このチュートリアルから、次の値を入手できます。
 
@@ -437,6 +437,7 @@ GET 呼び出しを実行すると、次に示すように、`state` にス テ�
 `{EXPERIMENT_ID}`：Experiment Run が含まれる Experiment を表す ID。
 
 `DONE` の状態意外に、次の状態も示されます。
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

@@ -2,10 +2,10 @@
 title: データセットのサンプル
 description: クエリサービスのサンプルデータセットを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。このガイドでは、近似クエリ処理のサンプルを管理する方法について説明します
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -18,12 +18,12 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 クエリサービスでは、近似クエリ処理のためのサンプルの管理に役立つように、データセットサンプルに対して次の操作をサポートしています。
 
 - [データセットのサンプル](#dataset-samples)
-   - [はじめに {#get-started}](#getting-started-get-started)
-   - [均一なランダムデータセットのサンプル {#create-a-sample} ータの作成](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [必要に応じて、{#optional-filter-criteria} のフィルター条件を指定します](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [サンプルのリストの表示 {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [サンプルデータセット {#query-sample-datasets} のクエリ](#query-the-sample-dataset-query-sample-datasets)
-   - [データセットサンプル {#delete-a-sample} 削除](#delete-dataset-samples-delete-a-sample)
+   - [はじめに](#getting-started-get-started)
+   - [均一なランダムデータセットのサンプルの作成](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [フィルター条件の指定（オプション）](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [サンプルのリストの表示](#view-the-list-of-samples-view-list-of-samples)
+   - [サンプルデータセットのクエリ](#query-the-sample-dataset-query-sample-datasets)
+   - [データセットサンプルの削除](#delete-dataset-samples-delete-a-sample)
 
 ## はじめに {#get-started}
 
@@ -83,7 +83,7 @@ SELECT sample_meta('example_dataset_name')
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

@@ -2,10 +2,10 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
-ht-degree: 85%
+source-wordcount: '2344'
+ht-degree: 84%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Platform でタグ拡張機能をテストするには、タグ
 
 API またはコマンドラインツールを使用するには、Adobe I/O に関するテクニカルアカウントが必要です。I/O コンソールでテクニカルアカウントを作成し、アップローダツールを使用して拡張機能パッケージをアップロードする必要があります。
 
-Adobe Experience Platformでタグに使用するテクニカルアカウントの作成については、[Reactor API の概要 &#x200B;](../../api/getting-started.md) ガイドを参照してください。
+Adobe Experience Platformでタグに使用するテクニカルアカウントの作成については、[Reactor API の概要 ](../../api/getting-started.md) ガイドを参照してください。
 
 >[!IMPORTANT]
 >
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > デフォルトでは、アップローダは、サーバー間 Oauth フローについてAdobe I/Oの資格情報を必要とします。 従来の `jwt-auth` 資格情報
-> 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
-> `jwt-auth` のバージョンを実行するには、[&#x200B; こちら &#x200B;](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
+> > 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
+> > `jwt-auth` のバージョンを実行するには、[ こちら ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
 
-アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/O コンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
+アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/O コンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL View]**」を選択します。
 
 - あなたの `clientId` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
 - あなたの `clientSecret` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
@@ -82,11 +82,11 @@ npx @adobe/reactor-uploader
 >
 >アップローダを頻繁に実行する予定がある場合、毎回これらの情報を入力するのが負担になる場合があります。これらは、コマンドラインから引数として渡すこともできます。詳細については、NPM ドキュメントの[コマンドラインの引数に関する節](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)を参照してください。
 
-API を使用して拡張機能のアップロードを直接管理する場合は、拡張機能パッケージの [&#x200B; 作成 &#x200B;](../../api/endpoints/extension-packages.md/#create) または [&#x200B; 更新 &#x200B;](../../api/endpoints/extension-packages.md#update) 呼び出し例の詳細を API ドキュメントで参照してください。
+API を使用して拡張機能のアップロードを直接管理する場合は、拡張機能パッケージの [ 作成 ](../../api/endpoints/extension-packages.md#create) または [ 更新 ](../../api/endpoints/extension-packages.md#update) 呼び出し例の詳細を API ドキュメントで参照してください。
 
 ## 開発プロパティの作成 {#property}
 
-UI にログインして「**[!UICONTROL タグ]**」を選択すると、左側のナビゲーションに [!UICONTROL &#x200B; プロパティ &#x200B;] 画面が表示されます。 プロパティは、デプロイするタグのコンテナであり、1 つまたは複数のサイトで使用できます。
+UI にログインし、左側のナビゲーションで「**[!UICONTROL Tags]**」を選択すると、[!UICONTROL Properties] の画面が表示されます。 プロパティは、デプロイするタグのコンテナであり、1 つまたは複数のサイトで使用できます。
 
 ![](../images/getting-started/properties-screen.png)
 

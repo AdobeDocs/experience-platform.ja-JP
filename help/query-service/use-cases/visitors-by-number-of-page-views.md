@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のトピック；クエリサ
 title: ページビュー数別の訪問者のリスト
 description: エクスペリエンスイベントを使用してクエリを記述し、ページビュー数で整理された訪問者のリストを取得する方法について説明します。
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -12,9 +12,9 @@ ht-degree: 1%
 
 # ページビュー数別の訪問者のリスト
 
-このドキュメントでは、ページビュー数で整理された訪問者のリストを取得するために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [!DNL Experience Events]、[&#x200B; 次の手順の節 &#x200B;](#next-steps) を参照してください。
+このドキュメントでは、ページビュー数で整理された訪問者のリストを取得するために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [、](#next-steps) 次の手順の節 [!DNL Experience Events] を参照してください。
 
-XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 &#x200B;](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 
 ## 目的
 
@@ -34,7 +34,7 @@ LIMIT 10;
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0

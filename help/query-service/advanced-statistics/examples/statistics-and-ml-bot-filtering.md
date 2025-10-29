@@ -1,7 +1,8 @@
 ---
 title: 統計と機械学習を使用したボットフィルタリング
 description: Data Distillerの統計情報と機械学習を使用してボットアクティビティを特定およびフィルタリングし、正確な分析とデータ整合性の向上を実現する方法について説明します。
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -117,7 +118,7 @@ FROM (
 )
 ```
 
-ステートメントは、`mcid` 値と web ページを使用して、`table_count_1_min`、`table_count_5_mins`、`table_count_30_mins` からデータを結合します。 次に、複数の時間間隔にわたって各ユーザーのクリック数を統合し、ユーザーアクティビティの完全な表示を提供します。 最後に、フラグ設定ロジックによって、1 分間に 50 クリックを超えたユーザーが識別され、ボットとしてマークされます（`isBot = 1`）。
+ステートメントは、`table_count_1_min` 値と web ページを使用して、`table_count_5_mins`、`table_count_30_mins`、`mcid` からデータを結合します。 次に、複数の時間間隔にわたって各ユーザーのクリック数を統合し、ユーザーアクティビティの完全な表示を提供します。 最後に、フラグ設定ロジックによって、1 分間に 50 クリックを超えたユーザーが識別され、ボットとしてマークされます（`isBot = 1`）。
 
 ### 出力データセット構造
 
@@ -166,20 +167,20 @@ root
 
 ### トレーニングデータセットの作成 {#build-a-training-dataset}
 
-まず、機械学習モデルが使用できる、フラットなネストされた構造を持つデータセットを準備します（上記を参照）。 これを行う方法について詳しくは、[&#x200B; ネストされたデータ構造の操作ドキュメント &#x200B;](../../key-concepts/nested-data-structures.md) を参照してください。 タイムスタンプ、ユーザー ID および web ページ名でデータをグループ化し、ボットアクティビティのパターンを識別します。
+まず、機械学習モデルが使用できる、フラットなネストされた構造を持つデータセットを準備します（上記を参照）。 これを行う方法について詳しくは、[ ネストされたデータ構造の操作ドキュメント ](../../key-concepts/nested-data-structures.md) を参照してください。 タイムスタンプ、ユーザー ID および web ページ名でデータをグループ化し、ボットアクティビティのパターンを識別します。
 
-### モデルの作成に TRANSFORM 句とOPTIONS句を使用する {#transform-and-preprocess}
+### モデルの作成に TRANSFORM 句とOPTIONS句を使用 {#transform-and-preprocess}
 
 データセットを変換して機械学習モデルを効果的に設定するには、次の手順に従います。 このステップでは、Null 値の処理方法、特性の準備方法、最適なパフォーマンスを得るためのモデルのパラメーターの定義方法について詳しく説明します。
 
 >[!TIP]
 >
->変換の使用とデータの前処理について詳しくは、[&#x200B; 機能変換テクニックのドキュメント &#x200B;](../feature-transformation.md) を参照してください。
+>変換の使用とデータの前処理について詳しくは、[ 機能変換テクニックのドキュメント ](../feature-transformation.md) を参照してください。
 
 1. 数値、文字列、ブールの列に null 値を入力するには、それぞれ `numeric_imputer`、`string_imputer`、`boolean_imputer` 関数を使用します。 この手順により、機械学習アルゴリズムでエラーなくデータを処理できるようになります。
 2. フィーチャ変換を適用して、モデリング用のデータを準備します。 `binarized`、`quantile_discretizer`、`string_indexer` を適用して、列を分類または標準化します。 次に、インプター（`numeric_imputer` と `string_imputer`）の出力を `string_indexer` や `quantile_discretizer` などの後続のトランスフォーマーにフィードして、意味のある機能を作成します。
 3. `vector_assembler` 関数を使用して、変換後の列を 1 つのフィーチャ列に結合します。 次に、`min_max_scaler` を使用してフィーチャーをスケールし、値を正規化してモデルのパフォーマンスを向上させます。 注意：SQL の例では、TRANSFORM 句内で言及されている最後の変換が、機械学習モデルで使用される機能列になります。
-4. OPTIONS句で、モデルの型やその他のハイパーパラメーターを指定します。 例えば、これは分類の問題なので、`decision_tree_classifier` が選択されました。 `max_depth` などの他のパラメーターは、パフォーマンスを向上させるためにモデルを調整するために調整されました（`MAX_DEPTH=4`）。
+4. OPTIONS句でモデルタイプとその他のハイパーパラメーターを指定します。 例えば、これは分類の問題なので、`decision_tree_classifier` が選択されました。 `max_depth` などの他のパラメーターは、パフォーマンスを向上させるためにモデルを調整するために調整されました（`MAX_DEPTH=4`）。
 5. フィーチャを結合し、出力データにラベルを付けます。 SELECT 句を使用して、トレーニング用のデータセットを指定します。 この句には、機能列（`count_per_id`、`web`、`id`）とラベル列（`isBot`）の両方を含める必要があります。これは、アクションがボットである可能性があるかどうかを示します。
 
 ステートメントは、次の例のようになります。
@@ -209,7 +210,7 @@ SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria;
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ FROM   model_evaluate(bot_filtering_model, 1,
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ FROM model_predict(bot_filtering_model, 1,
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 製品購入予測レシピ
 description: 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 89%
@@ -24,6 +24,7 @@ ht-degree: 89%
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 このドキュメントでは、次のような質問に回答します。
+
 * このレシピは誰のために作られたものですか？
 * このレシピは何をするものですか？
 

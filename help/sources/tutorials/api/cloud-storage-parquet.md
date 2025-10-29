@@ -5,9 +5,9 @@ title: Flow Service API を使用したサードパーティのクラウドス�
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、サードパーティのクラウドストレージシステムから Apache Parquet データを取り込む手順を説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1072'
 ht-degree: 44%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 44%
 
 ソースデータを [!DNL Experience Platform] で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要もあります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる [!DNL Experience Platform] データセットを作成します。
 
-[!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[&#x200B; スキーマエディターのチュートリアル &#x200B;](../../../xdm/tutorials/create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
+[!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[ スキーマエディターのチュートリアル ](../../../xdm/tutorials/create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
 
 **API 形式**
 
@@ -259,7 +259,10 @@ curl -X POST \
 
 外部データを [!DNL Experience Platform] に取り込むには、まず [!DNL Experience Platform] のデータセットベース接続を取得する必要があります。
 
-データセットベース接続を作成するには、[&#x200B; データセットベース接続のチュートリアル &#x200B;](./create-dataset-base-connection.md) で説明されている手順に従ってください。
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 データセットベース接続を作成するまで、開発者ガイドに記載されている手順を続行します。 一意の ID （`$id`）を取得して保存し、次の手順のターゲット接続を作成するためのベース接続 ID として使用します。
 

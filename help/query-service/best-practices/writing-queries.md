@@ -5,7 +5,7 @@ title: クエリサービスでのクエリ実行の一般的なガイダンス
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておくべき重要な詳細の概要を説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 40%
@@ -16,7 +16,7 @@ ht-degree: 40%
 
 このドキュメントでは、Adobe Experience Platform [!DNL Query Service] でクエリを記述する際に知っておくべき重要な詳細を説明します。
 
-[!DNL Query Service] で使用される SQL 構文について詳しくは、[SQL 構文ドキュメント &#x200B;](../sql/syntax.md) を参照してください。
+[!DNL Query Service] で使用される SQL 構文について詳しくは、[SQL 構文ドキュメント ](../sql/syntax.md) を参照してください。
 
 ## クエリ実行モデル
 
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] には、インタラクティブ
 
 ### インタラクティブクエリの実行
 
-クエリは、[!DNL Query Service] UI または [&#x200B; 接続されたクライアントを使用 &#x200B;](../clients/overview.md) して送信することで、インタラクティブに実行できます。 接続したクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返されるかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
+クエリは、[!DNL Query Service] UI または [ 接続されたクライアントを使用 ](../clients/overview.md) して送信することで、インタラクティブに実行できます。 接続したクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返されるかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
 
 インタラクティブクエリの実行には、次の制限があります。
 
@@ -86,7 +86,7 @@ LIMIT 1
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -210,7 +210,7 @@ LIMIT 10
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ LIMIT 10
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -232,12 +232,12 @@ LIMIT 10
 
 テーブル内のスキーマに関する詳細を表示するには、`\d {TABLE_NAME}` コマンドを使用します。ここで、`{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
 
-次の例は、`\d luma_midvalues` を使用する場合に表示される、`luma_midvalues` テーブルのスキーマ情報を示しています。
+次の例は、`luma_midvalues` を使用する場合に表示される、`\d luma_midvalues` テーブルのスキーマ情報を示しています。
 
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ LIMIT 10
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```
@@ -311,11 +311,11 @@ LIMIT 50;
 
 ## 重複の除外
 
-クエリサービスでは、データの重複排除、またはデータからの重複行の削除をサポートしています。 重複排除について詳しくは、[&#x200B; クエリサービスの重複排除ガイド &#x200B;](../key-concepts/deduplication.md) を参照してください。
+クエリサービスでは、データの重複排除、またはデータからの重複行の削除をサポートしています。 重複排除について詳しくは、[ クエリサービスの重複排除ガイド ](../key-concepts/deduplication.md) を参照してください。
 
 ## クエリサービスでのタイムゾーンの計算
 
-クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで永続化されたデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法について詳しくは、[FAQ タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法 &#x200B;](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) の節を参照してください。
+クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで永続化されたデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法について詳しくは、[FAQ タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法 ](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) の節を参照してください。
 
 ## 次の手順
 

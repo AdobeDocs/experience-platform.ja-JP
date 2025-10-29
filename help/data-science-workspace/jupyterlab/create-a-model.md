@@ -5,9 +5,9 @@ title: JupyterLab Notebooks を使用したモデルの作成
 type: Tutorial
 description: このチュートリアルでは、JupyterLab ノートブックのレシピビルダーテンプレートを使用してレシピを作成するために必要な手順について説明します。
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 28%
 
 ---
@@ -31,31 +31,31 @@ ht-degree: 28%
 
 ## 必要なアセットのダウンロード {#assets}
 
-このチュートリアルを進める前に、必要なスキーマとデータセットを作成する必要があります。 [Luma 傾向モデルスキーマとデータセットの作成 &#x200B;](../models-recipes/create-luma-data.md) に関するチュートリアルにアクセスして、必要なアセットをダウンロードし、前提条件を設定します。
+このチュートリアルを進める前に、必要なスキーマとデータセットを作成する必要があります。 [Luma 傾向モデルスキーマとデータセットの作成 ](../models-recipes/create-luma-data.md) に関するチュートリアルにアクセスして、必要なアセットをダウンロードし、前提条件を設定します。
 
 ## [!DNL JupyterLab] notebook 環境の基本を学ぶ
 
-レシピをゼロから作成するには、[!DNL Data Science Workspace] 内で行います。 開始するには、[Adobe Experience Platform](https://platform.adobe.com) に移動し、左側の **[!UICONTROL ノートブック]** タブを選択します。 新しいノートブックを作成するには、[!DNL JupyterLab Launcher] ールバーからレシピビルダーテンプレートを選択します。
+レシピをゼロから作成するには、[!DNL Data Science Workspace] 内で行います。 開始するには、[Adobe Experience Platformに移動し ](https://platform.adobe.com) 左側の「**[!UICONTROL Notebooks]**」タブを選択します。 新しいノートブックを作成するには、[!DNL JupyterLab Launcher] ールバーからレシピビルダーテンプレートを選択します。
 
-[!UICONTROL &#x200B; レシピビルダー &#x200B;] ノートブックを使用すると、ノートブック内でトレーニング実行とスコアリング実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアリングの出力に満足したら、レシピを作成し、さらにレシピを使用して機能をモデル化し、モデルとして公開できます。
+[!UICONTROL Recipe Builder] ノートブックを使用すると、ノートブック内でトレーニング実行とスコアリング実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアリングの出力に満足したら、レシピを作成し、さらにレシピを使用して機能をモデル化し、モデルとして公開できます。
 
 >[!NOTE]
 >
->[!UICONTROL &#x200B; レシピビルダー &#x200B;] ノートブックはすべてのファイル形式での作業をサポートしていますが、現在、レシピを作成機能は [!DNL Python] のみをサポートしています。
+>[!UICONTROL Recipe Builder] ノートブックはすべてのファイル形式での作業をサポートしていますが、現在、レシピの作成機能は [!DNL Python] のみをサポートしています。
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-ランチャーから [!UICONTROL &#x200B; レシピビルダー &#x200B;] ノートブックを選択すると、ノートブックが新しいタブで開きます。
+ランチャーから [!UICONTROL Recipe Builder] ノートブックを選択すると、ノートブックは新しいタブで開きます。
 
-上部にある新しいノートブックタブに、追加の 3 つのアクション（**[!UICONTROL トレーニング]**、**[!UICONTROL スコア]**、**[!UICONTROL レシピを作成]** を含むツールバーが読み込まれます。 これらのアイコンは、「レシピビルダー [!UICONTROL &#x200B; ノートブックにのみ表示さ &#x200B;] ます。 ノートブックでレシピを作成した後、これらのアクションについて詳しくは [&#x200B; トレーニングとスコアリングの節 &#x200B;](#training-and-scoring) を参照してください。
+上部の新しいノートブックタブに、追加の 3 つのアクション（**[!UICONTROL Train]**、**[!UICONTROL Score]**、**[!UICONTROL Create Recipe]**）を含むツールバーが読み込まれます。 これらのアイコンは、[!UICONTROL Recipe Builder] ノートブックにのみ表示されます。 ノートブックでレシピを作成した後、これらのアクションについて詳しくは [ トレーニングとスコアリングの節 ](#training-and-scoring) を参照してください。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## [!UICONTROL &#x200B; レシピビルダー &#x200B;] ノートブックの概要
+## [!UICONTROL Recipe Builder] ノートブックの基本を学ぶ
 
 提供されたアセットフォルダーには、Luma の傾向モデル `propensity_model.ipynb` があります。 JupyterLab の「ノートブックをアップロード」オプションを使用して、提供されたモデルをアップロードしノートブックを開きます。
 
-![&#x200B; ノートブックのアップロード &#x200B;](../images/jupyterlab/create-recipe/upload_notebook.png)
+![ ノートブックのアップロード ](../images/jupyterlab/create-recipe/upload_notebook.png)
 
 このチュートリアルの残りの部分では、傾向モデルノートブックで事前定義された次のファイルについて説明します。
 
@@ -69,7 +69,7 @@ ht-degree: 28%
 
 次のビデオチュートリアルでは、Luma 傾向モデル ノートブックについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452493?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### 要件ファイル {#requirements-file}
 
@@ -95,7 +95,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 モデルがトレーニングを実行するには、`trainingDataSetId`、`ACP_DSW_TRAINING_XDM_SCHEMA`、`tenantId` を指定する必要があります。 スコアリングの場合は、さらに `scoringDataSetId`、`tenantId`、`scoringResultsDataSetId ` を指定する必要があります。
 
-データセット ID とスキーマ ID を見つけるには、左側のナビゲーションバー（フォルダーアイコンの下 ![&#128279;](../images/jupyterlab/create-recipe/dataset-tab.png) のノートブック内の「データ」タブ  「データ」タブ）に移動します。 3 つの異なるデータセット ID を指定する必要があります。 `scoringResultsDataSetId` は、モデルのスコアリング結果の保存に使用され、空のデータセットにする必要があります。 これらのデータセットは、以前 [&#x200B; 必須アセット &#x200B;](#assets) 手順で作成されたものです。
+データセット ID とスキーマ ID を見つけるには、左側のナビゲーションバー（フォルダーアイコンの下 ![ のノートブック内の「データ」タブ ](../images/jupyterlab/create-recipe/dataset-tab.png) 「データ」タブ）に移動します。 3 つの異なるデータセット ID を指定する必要があります。 `scoringResultsDataSetId` は、モデルのスコアリング結果の保存に使用され、空のデータセットにする必要があります。 これらのデータセットは、以前 [ 必須アセット ](#assets) 手順で作成されたものです。
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
@@ -103,7 +103,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 テストが完了すると、トレーニングとスコアリングの設定は次のスクリーンショットのようになります。
 
-![&#x200B; 設定 &#x200B;](../images/jupyterlab/create-recipe/config.png)
+![ 設定 ](../images/jupyterlab/create-recipe/config.png)
 
 デフォルトでは、データのトレーニングとスコアリングを行う際に、次の設定パラメーターが設定されます。
 
@@ -123,7 +123,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 ### データの読み込み {#loading-data}
 
-この手順では、[pandas データフレーム](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)を使用します。データは、[!DNL Experience Platform] SDK（`platform_sdk`）を使用して [!DNL Adobe Experience Platform] のファイルから読み込むか、Pandas の `read_csv()` 関数または `read_json()` 関数を使用して外部ソースから読み込むことができます。
+この手順では、[pandas データフレーム](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)を使用します。データは、[!DNL Adobe Experience Platform] SDK（[!DNL Experience Platform]）を使用して `platform_sdk` のファイルから読み込むか、Pandas の `read_csv()` 関数または `read_json()` 関数を使用して外部ソースから読み込むことができます。
 
 - [[!DNL Experience Platform SDK]](#platform-sdk)
 - [外部ソース](#external-sources)
@@ -134,11 +134,12 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 ### [!DNL Experience Platform] SDK {#platform-sdk}
 
-`platform_sdk` データローダーの使用に関する詳細なチュートリアルについては、[Experience Platform SDK ガイド &#x200B;](../authoring/platform-sdk.md) を参照してください。 このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
+`platform_sdk` データローダーの使用に関する詳細なチュートリアルについては、[Experience Platform SDK ガイド ](../authoring/platform-sdk.md) を参照してください。 このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
 
 ### 外部ソース {#external-sources}
 
 この節では、JSON または CSV ファイルを pandas オブジェクトにインポートする方法を示します。Pandas ライブラリの公式ドキュメントについては、次の URL を参照してください。
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -162,7 +163,7 @@ df = pd.read_json(data)
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-その後、`load()` メソッドを使用して、設定（`recipe.conf`）ファイルで設定したトレーニングデータセットを `trainingDataSetId` から取得できます。
+その後、`load()` メソッドを使用して、設定（`trainingDataSetId`）ファイルで設定したトレーニングデータセットを `recipe.conf` から取得できます。
 
 ```PYTHON
 def load(config_properties):
@@ -177,7 +178,8 @@ def load(config_properties):
 
 >[!NOTE]
 >
->[&#x200B; 設定ファイルの節 &#x200B;](#configuration-files) で説明したように、`client_context = get_client_context(config_properties)` を使用してExperience Platformからデータにアクセスする場合、次の設定パラメーターが設定されます。
+>[ 設定ファイルの節 ](#configuration-files) で説明したように、`client_context = get_client_context(config_properties)` を使用してExperience Platformからデータにアクセスする場合、次の設定パラメーターが設定されます。
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -189,23 +191,23 @@ def load(config_properties):
 
 データを読み込んだ後、データをクリーンアップしてデータを準備する必要があります。 この例では、モデルの目標は、顧客が製品を注文するかどうかを予測することです。 モデルは特定の製品を表示しないので、`productListItems` は不要なので、列は削除されます。 次に、1 つの列に 1 つの値または 2 つの値のみを含む追加の列が削除されます。 モデルをトレーニングする場合、目標の予測に役立つ有用なデータのみを保持することが重要です。
 
-![&#x200B; データ準備の例 &#x200B;](../images/jupyterlab/create-recipe/data_prep.png)
+![ データ準備の例 ](../images/jupyterlab/create-recipe/data_prep.png)
 
 不要なデータを削除したら、機能エンジニアリングを開始できます。 この例で使用するデモデータには、セッション情報は含まれていません。 通常は、特定の顧客の現在と過去のセッションに関するデータを取得します。 セッション情報がないため、この例では代わりに、ジャーニーの区切りで現在および過去のセッションを模倣します。
 
-![ジャーニーの区切り &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![ジャーニーの区切り ](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 区切りが完了すると、データにラベルが付けられ、ジャーニーが作成されます。
 
-![&#x200B; データにラベルを付ける &#x200B;](../images/jupyterlab/create-recipe/label_data.png)
+![ データにラベルを付ける ](../images/jupyterlab/create-recipe/label_data.png)
 
 次に、特徴を作成し、過去と現在に分けます。 その後、不要な列はすべて削除され、Luma の顧客に対する過去のジャーニーと現在のジャーニーの両方が残ります。 これらのジャーニーには、顧客が商品を購入したかどうか、購入に至るまでのジャーニーなどの情報が含まれています。
 
-![&#x200B; 最終現在のトレーニング &#x200B;](../images/jupyterlab/create-recipe/final_journey.png)
+![ 最終現在のトレーニング ](../images/jupyterlab/create-recipe/final_journey.png)
 
 ## スコアリングデータローダー {#scoring-data-loader}
 
-スコアリング用のデータのロード手順は、トレーニング・データのロード手順と似ています。 コードをよく見ると、`dataset_reader` の `scoringDataSetId` を除いてすべてが同じであることがわかります。 これは、トレーニングとスコアリングの両方に同じ Luma データソースが使用されるからです。
+スコアリング用のデータのロード手順は、トレーニング・データのロード手順と似ています。 コードをよく見ると、`scoringDataSetId` の `dataset_reader` を除いてすべてが同じであることがわかります。 これは、トレーニングとスコアリングの両方に同じ Luma データソースが使用されるからです。
 
 様々なデータ・ファイルをトレーニングとスコアリングに使用する場合、トレーニングとスコアリングのデータ・ローダーは個別になります。 これにより、必要に応じて、トレーニングデータをスコアリングデータにマッピングするなど、追加の前処理を実行できます。
 
@@ -223,7 +225,7 @@ def load(config_properties):
 
 `score()` 関数には、スコアリングアルゴリズムを含め、モデルの成功度を示す測定値を返す必要があります。`score()` 関数は、スコアリングデータセットラベルとトレーニング済みモデルを使用して、予測された特徴のセットを生成します。次に、これらの予測値が、スコアリングデータセットの実際の特徴と比較されます。この例では、`score()` 関数は、トレーニング済みモデルを使用して、スコアリングデータセットのラベルを使用して特徴を予測します。予測された特徴が返されます。
 
-![def スコア &#x200B;](../images/jupyterlab/create-recipe/def_score.png)
+![def スコア ](../images/jupyterlab/create-recipe/def_score.png)
 
 ## 評価ファイル {#evaluator-file}
 
@@ -235,45 +237,45 @@ def load(config_properties):
 
 この節では、ノートブックにデータを読み込んだ後、データセット内の関連のない列を削除してデータをクリーンアップする `split()` 関数について説明します。 ここからフィーチャーエンジニアリングを実行できます。これは、データ内の既存の未加工フィーチャーから追加の関連フィーチャーを作成するプロセスです。
 
-![Split 関数 &#x200B;](../images/jupyterlab/create-recipe/split.png)
+![Split 関数 ](../images/jupyterlab/create-recipe/split.png)
 
 ### トレーニング済みモデルの評価 {#evaluate-the-trained-model}
 
 `evaluate()` 関数は、モデルがトレーニングされた後に実行され、モデルの成功度を示す指標を返します。 `evaluate()` 関数は、テストデータセットラベルとトレーニング済みモデルを使用して、一連の機能を予測します。 これらの予測値は、テストデータセットの実際の特徴と比較されます。この例で使用される指標は、`precision`、`recall`、`f1`、`accuracy` です。 この関数は、評価指標の配列を含む `metric` オブジェクトを返します。これらの指標は、トレーニング済みモデルのパフォーマンスを評価するために使用されます。
 
-![&#x200B; 評価 &#x200B;](../images/jupyterlab/create-recipe/evaluate.png)
+![ 評価 ](../images/jupyterlab/create-recipe/evaluate.png)
 
 `print(metric)` を追加すると、指標の結果を表示できます。
 
-![&#x200B; 指標の結果 &#x200B;](../images/jupyterlab/create-recipe/evaluate_metric.png)
+![ 指標の結果 ](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
 ## データセーバーファイル {#data-saver-file}
 
-`datasaver.py` ファイルには `save()` 関数が含まれており、スコアリングのテスト中に予測を保存するために使用されます。 `save()` 関数は、予測を受け取り、[!DNL Experience Platform Catalog] API を使用して、`scoring.conf` ファイルで指定した `scoringResultsDataSetId` にデータを書き込みます。 いいよ
+`datasaver.py` ファイルには `save()` 関数が含まれており、スコアリングのテスト中に予測を保存するために使用されます。 `save()` 関数は、予測を受け取り、[!DNL Experience Platform Catalog] API を使用して、`scoringResultsDataSetId` ファイルで指定した `scoring.conf` にデータを書き込みます。 いいよ
 
-![&#x200B; データセーバー &#x200B;](../images/jupyterlab/create-recipe/data_saver.png)
+![ データセーバー ](../images/jupyterlab/create-recipe/data_saver.png)
 
 ## トレーニングとスコアリング {#training-and-scoring}
 
 ノートブックの変更が完了し、レシピをトレーニングする場合は、バーの上部にある関連ボタンを選択して、セルでトレーニング実行を作成できます。 ボタンを選択すると、トレーニングスクリプトからのコマンドと出力のログがノートブック（`evaluator.py` のセルの下）に表示されます。 Conda は、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
 
-スコアリングを実行する前に、少なくとも 1 回はトレーニングを実行する必要があります。「**[!UICONTROL スコアリングを実行]**」ボタンを選択すると、トレーニング中に生成されたトレーニング済みモデルにスコアが付けられます。 スコア付けスクリプトが `datasaver.py` の下に表示されます。
+スコアリングを実行する前に、少なくとも 1 回はトレーニングを実行する必要があります。「**[!UICONTROL Run Scoring]**」ボタンを選択すると、トレーニング中に生成されたトレーニング済みモデルにスコアが付きます。 スコア付けスクリプトが `datasaver.py` の下に表示されます。
 
 デバッグの目的で、非表示の出力を表示する場合は、出力セルの末尾に `debug` を追加し、再実行します。
 
-![&#x200B; トレーニングとスコア &#x200B;](../images/jupyterlab/create-recipe/toolbar_actions.png)
+![ トレーニングとスコア ](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
 ## レシピの作成 {#create-recipe}
 
-レシピの編集が完了し、トレーニング/スコアリング出力に満足したら、右上の **[!UICONTROL レシピを作成]** を選択して、ノートブックからレシピを作成できます。
+レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上の「**[!UICONTROL Create Recipe]**」を選択して、ノートブックからレシピを作成できます。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-「**[!UICONTROL レシピの作成]**」を選択すると、レシピ名を入力するよう求められます。 この名前は、[!DNL Experience Platform] で作成された実際のレシピを表します。
+**[!UICONTROL Create Recipe]** を選択すると、レシピ名を入力するよう求められます。 この名前は、[!DNL Experience Platform] で作成された実際のレシピを表します。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-「**[!UICONTROL OK]**」を選択すると、レシピの作成プロセスが開始されます。 これには時間がかかり、「レシピを作成」ボタンの代わりに進行状況バーが表示されます。 完了したら、「**[!UICONTROL レシピを表示]**」ボタンを選択すると、「**[!UICONTROL ML モデル**&#x200B;[!UICONTROL &#x200B; の下の「レシピ &#x200B;]&#x200B;**」タブに移動]** ます。
+**[!UICONTROL Ok]** を選択すると、レシピの作成プロセスが開始されます。 これには時間がかかり、「レシピを作成」ボタンの代わりに進行状況バーが表示されます。 完了したら、「**[!UICONTROL View Recipes]**」ボタンを選択すると、**[!UICONTROL Recipes]** の下の「**[!UICONTROL ML Models]**」タブに移動します
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -285,6 +287,6 @@ def load(config_properties):
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルを完了することで、[!UICONTROL &#x200B; レシピビルダー &#x200B;] ノートブックで機械学習モデルを作成する方法を学びました。 また、レシピ作成ワークフローにノートブックを使用する方法についても説明しました。
+このチュートリアルを完了することで、[!UICONTROL Recipe Builder] ノートブックで機械学習モデルを作成する方法を学びました。 また、レシピ作成ワークフローにノートブックを使用する方法についても説明しました。
 
 [!DNL Data Science Workspace] 内でリソースを操作する方法を引き続き学習するには、[!DNL Data Science Workspace] のレシピとモデル ドロップダウンを参照してください。

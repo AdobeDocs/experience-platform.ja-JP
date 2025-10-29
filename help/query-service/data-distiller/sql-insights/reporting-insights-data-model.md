@@ -2,7 +2,7 @@
 title: クエリ高速化ストアレポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 77%
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 クエリ高速化ストアにより、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。通常、データは標準の間隔（時間単位、日単位など）で処理され、集計ビューが作成、レポートされます。集計データから生成されたこれらのレポートの分析により、ビジネスパフォーマンスの向上を目的としたインサイトが得られます。クエリ高速化ストアには、キャッシュサービス、同時実行、インタラクティブなエクスペリエンス、ステートレス API が含まれています。ただし、生データのクエリではなく、集計クエリ用にデータが事前処理および最適化されていることを前提としています。
 
-クエリ高速化ストアにより、カスタムデータモデルを作成したり、既存のAdobe Real-Time Customer Data Platform データモデルを拡張したりできます。 その後、任意のレポート／ビジュアライゼーションフレームワークにレポートインサイトを組み込むことができます。[SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
+クエリ高速化ストアにより、カスタムデータモデルを作成したり、既存のAdobe Real-Time Customer Data Platform データモデルを拡張したりできます。 その後、任意のレポート／ビジュアライゼーションフレームワークにレポートインサイトを埋め込むことができます。[SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
 
 Adobe Experience PlatformのReal-Time CDP データモデルは、プロファイル、オーディエンスおよび宛先に関するインサイトを提供し、Real-Time CDP insight ダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、Real-Time CDP データモデルを必要に応じて拡張する方法について説明します。
 
@@ -23,7 +23,7 @@ Adobe Experience PlatformのReal-Time CDP データモデルは、プロファ�
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [&#x200B; パッケージ &#x200B;](../../packaging.md)、[&#x200B; ガードレール &#x200B;](../../guardrails.md#query-accelerated-store) および [&#x200B; ライセンス &#x200B;](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 
@@ -88,7 +88,7 @@ ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audien
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
------------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
+|-----------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping | true           | 9155d3b4-889d-41da-9014-5b174f6fa572
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
@@ -113,7 +113,7 @@ LIMIT  5000 ;
 
 ```console
 ext_custom_audience_id | approximate_count_upper_bound
-------------------------+-------------------------------
+|------------------------+-------------------------------
  23850912218170554      |                          1000
  23850808585120554      |                       1012000
  23850808585220554      |                        100000
@@ -158,7 +158,7 @@ ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audie
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
------------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
+|-----------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | external_seg_dest_map      | true           | 4b4b86b7-2db7-48ee-a67e-4b28cb900810
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping    | true           | b0302c05-28c3-488b-a048-1c635d88dca9
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
@@ -186,7 +186,7 @@ LIMIT  25;
 
 ```console
 ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
-------------------------+------------------+---------------------------+--------------------+----------------+-------------
+|------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
  23850799115790554      | FCA_Test2        | Born in 1970s             | enabled            |     -605911558 |  1899603869
@@ -226,6 +226,6 @@ LIMIT  5000
 
 次の画像は、レポートインサイトデータモデルを使用して可能なカスタムビジュアライゼーションの例を示しています。
 
-![&#x200B; 新しいレポートインサイトデータモデルから作成された宛先およびオーディエンスウィジェット別の一致数。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
+![ 新しいレポートインサイトデータモデルから作成された宛先およびオーディエンスウィジェット別の一致数。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
 カスタムデータモデルは、ユーザー定義のダッシュボードワークスペースで使用可能なデータモデルのリストに表示されます。カスタムデータモデルの活用方法について詳しくは、[ユーザー定義ダッシュボードガイド](../../../dashboards/standard-dashboards.md)を参照してください。

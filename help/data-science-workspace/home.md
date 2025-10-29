@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace の概要
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 99%
@@ -33,6 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は機械学習と人工
 同様に重要な点は、データからインサイトを獲得するためのコストが高くなる可能性があることです。通常、インテリジェントなサービスを提供する機械学習モデルまたはレシピを開発するには、集約的で時間のかかるデータ調査をおこなう熟練したデータサイエンティストが必要です。このプロセスは長く、テクノロジーは複雑であり、熟練したデータサイエンティストを見つけるのは容易ではありません。
 
 Adobe Experience Platform の [!DNL Data Science Workspace] を使用すると、エクスペリエンスに焦点を当てた AI を企業全体に提供し、次の機能を通じてデータからインサイトを導き出し、コード化へと至るプロセスを合理化および加速できます。
+
 - 機械学習フレームワークとランタイム
 - Adobe Experience Platform に保存されたデータへの統合アクセス
 - [!DNL Experience Data Model]（XDM）上に構築された統合データスキーマ
@@ -199,4 +200,4 @@ Adobe Experience Platform のすべてのデータは標準化された XDM ス�
 
 次のビデオを視聴すると、[!DNL Data Science Workspace] に関する理解を深めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412913?quality=12&enable10seconds=on&speedcontrol=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)

@@ -4,10 +4,10 @@ title: Qualtrics の自動化
 description: エクスペリエンスと運用顧客データを同期して、大規模にパーソナライゼーションを解き放ちます。 Qualtrics Experience iD では、Adobe Experience Platformの複数のオペレーショナルデータソースの集計を入力として使用することで、顧客をより深く理解し、目的、感情、エクスペリエンスの要因を理解する際に、ターゲットを絞ったアウトリーチによってギャップを埋めることができます。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1139'
-ht-degree: 29%
+source-wordcount: '1120'
+ht-degree: 26%
 
 ---
 
@@ -21,7 +21,7 @@ Qualtrics Experience iD では、Adobe Experience Platformの複数のオペレ�
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のリクエストについては、[&#x200B; カスタマーサクセスハブ &#x200B;](https://support-portal.qualtrics.com/) にログインして直接ご連絡ください。
+>宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のリクエストについては、[ カスタマーサクセスハブ ](https://support-portal.qualtrics.com/) にログインして直接ご連絡ください。
 
 ## ユースケース {#use-cases}
 
@@ -71,9 +71,9 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
----------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | *Qualtrics Automations* 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
+|---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL Segment export]** | *Qualtrics Automations* 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -95,9 +95,9 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
-* **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL URL]**: [&#128279;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About) ワークフローをトリガーする [JSON イベント &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) で検出された URL を Qualtrics で  ます。 例については、以下のスクリーンショットを参照してください。
+* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
+* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL URL]**: [ ワークフローをトリガーする ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON イベント [ 内で Qualtrics で見つかった URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). 例については、以下のスクリーンショットを参照してください。
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -105,13 +105,13 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -123,11 +123,11 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 マッピングに属性を追加するには、新しいマッピングを追加する際に **カスタム属性** を選択するだけです。 属性には任意の名前を入力できます。 Qualtrics は、属性名に *camelCase* の命名規則を推奨しています（例については、以下のスクリーンショットを参照してください）。
 
-![&#x200B; カスタム属性 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ カスタム属性 ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 可能な属性マッピングの例については、以下のスクリーンショットを参照してください。
 
-![&#x200B; マッピングの例 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![ マッピングの例 ](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
 #### ID のマッピング
 
@@ -140,7 +140,7 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 例については、以下のスクリーンショットを参照してください。
 
-![ID 名前空間 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![ID 名前空間 ](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

@@ -4,9 +4,9 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '5220'
+source-wordcount: '5208'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP PrimeとUltimateのパッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
+>* この機能は、Real-Time CDP PrimeとUltimateのパッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 >[!IMPORTANT]
 >
@@ -32,23 +32,23 @@ ht-degree: 12%
 
 -->
 
-この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など [&#128279;](/help/catalog/datasets/overview.md) データセット  を書き出すために必要なワークフローについて説明します。
+この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[、SFTP の場所または ](/help/catalog/datasets/overview.md) など [!DNL Amazon S3] データセット [!DNL Google Cloud Storage] を書き出すために必要なワークフローについて説明します。
 
 >[!TIP]
 >
->Experience Platform ユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[&#x200B; データセット UI の書き出しチュートリアル &#x200B;](/help/destinations/ui/export-datasets.md) を参照してください。
+>Experience Platform ユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[ データセット UI の書き出しチュートリアル ](/help/destinations/ui/export-datasets.md) を参照してください。
 
 ## 書き出すことができるデータセット {#datasets-to-export}
 
 書き出し可能なデータセットは、Experience Platform アプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
 
-書き出し可能なデータセットについては、[UI チュートリアルページの表 &#x200B;](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照してください。
+書き出し可能なデータセットについては、[UI チュートリアルページの表 ](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照してください。
 
 ## サポートされる宛先 {#supported-destinations}
 
 現在、スクリーンショットでハイライト表示され、以下に示されているクラウドストレージの宛先にデータセットを書き出すことができます。
 
-![&#x200B; データセットの書き出しをサポートする宛先 &#x200B;](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![ データセットの書き出しをサポートする宛先 ](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -62,11 +62,11 @@ ht-degree: 12%
 データセットを書き出すには、次の前提条件に注意してください。
 
 * データセットをクラウドストレージ宛先に書き出すには、正常に[宛先に接続されている](/help/destinations/ui/connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](/help/destinations/catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
-* リアルタイム顧客プロファイルで使用するには、プロファイルデータセットを有効にする必要があります。 このオプションを有効にする方法については、[&#x200B; 詳細情報 &#x200B;](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) を参照してください。
+* リアルタイム顧客プロファイルで使用するには、プロファイルデータセットを有効にする必要があります。 このオプションを有効にする方法については、[ 詳細情報 ](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) を参照してください。
 
 ## はじめに {#get-started}
 
-![&#x200B; 概要 – 宛先の作成およびデータセットの書き出し手順 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![ 概要 – 宛先の作成およびデータセットの書き出し手順 ](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
@@ -77,9 +77,9 @@ ht-degree: 12%
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL データセットの表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットを書き出すには、**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**、**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
-データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に「**[!UICONTROL アクティブ化]**」または「**[!UICONTROL データセットを書き出し]**」コントロールがある場合、適切な権限を持っています。
+データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL Activate]** または **[!UICONTROL Export datasets]** コントロールがある場合、適切な権限を持っています。
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -87,7 +87,7 @@ ht-degree: 12%
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Experience Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -107,11 +107,11 @@ ht-degree: 12%
 
 ### API リファレンスドキュメント {#api-reference-documentation}
 
-このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。Adobe Developer web サイト [&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/) で [!DNL Flow Service] - Destinations API ドキュメントを参照してください。 このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。Adobe Developer web サイト [[!DNL Flow Service]  で ](https://developer.adobe.com/experience-platform-apis/references/destinations/)- Destinations API ドキュメントを参照してください。 このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
 
 ### 用語集 {#glossary}
 
-この API チュートリアルで発生する用語については、API リファレンスドキュメントの [&#x200B; 用語集の節 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) を参照してください。
+この API チュートリアルで発生する用語については、API リファレンスドキュメントの [ 用語集の節 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) を参照してください。
 
 ### 目的の宛先の接続仕様とフロー仕様を収集します {#gather-connection-spec-flow-spec}
 
@@ -119,7 +119,7 @@ ht-degree: 12%
 
 
 | 宛先 | 接続仕様 | フロー仕様 |
----------|----------|---------|
+|---------|----------|---------|
 | [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
 | [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
 | [!DNL Azure Data Lake Gen 2(ADLS Gen2)] | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
@@ -129,7 +129,7 @@ ht-degree: 12%
 
 {style="table-layout:auto"}
 
-様々な [!DNL Flow Service] エンティティを作成するには、これらの ID が必要です。 また、[!DNL Flow Service APIs] から [!DNL Connection Spec] ータを取得できるように、[!DNL Connection Spec] 自体の一部を参照して、特定のエンティティを設定する必要があります。 テーブル内のすべての宛先の接続仕様を取得する例を以下に示します。
+様々な [!DNL Flow Service] エンティティを作成するには、これらの ID が必要です。 また、[!DNL Connection Spec] から [!DNL Connection Spec] ータを取得できるように、[!DNL Flow Service APIs] 自体の一部を参照して、特定のエンティティを設定する必要があります。 テーブル内のすべての宛先の接続仕様を取得する例を以下に示します。
 
 >[!BEGINTABS]
 
@@ -137,7 +137,7 @@ ht-degree: 12%
 
 **リクエスト**
 
-+++[!DNL Amazon S3] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Amazon S3] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -171,7 +171,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Azure Blob Storage] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Azure Blob Storage] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -205,7 +205,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2] の [!DNL connection spec] の取得）
++++[!DNL connection spec] の [!DNL Azure Data Lake Gen 2(ADLS Gen2] の取得）
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -239,7 +239,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Data Landing Zone(DLZ)] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Data Landing Zone(DLZ)] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -273,7 +273,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Google Cloud Storage] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Google Cloud Storage] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -343,7 +343,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## データセットのリストの取得 {#retrieve-list-of-available-datasets}
 
-![&#x200B; データセットの書き出しワークフローの手順 1 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![ データセットの書き出しワークフローの手順 1 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
 アクティベーションの対象となるデータセットのリストを取得するには、まず以下のエンドポイントに対して API 呼び出しを行います。
 
@@ -449,11 +449,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 成功した応答には、アクティブ化の対象となるデータセットのリストが含まれます。 これらのデータセットは、次の手順でソース接続を作成するときに使用できます。
 
-返される各データセットの様々な応答パラメーターについて詳しくは、[&#x200B; データセット API 開発者向けドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。
+返される各データセットの様々な応答パラメーターについて詳しくは、[ データセット API 開発者向けドキュメント ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。
 
 ## ソース接続の作成 {#create-source-connection}
 
-![&#x200B; データセットの書き出しワークフローの手順 2 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![ データセットの書き出しワークフローの手順 2 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
 書き出すデータセットのリストを取得したら、それらのデータセット ID を使用してソース接続を作成できます。
 
@@ -514,20 +514,20 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 また、次の点にも注意してください。
 
-* この手順で作成したソース接続は、そのデータセットが宛先に対してアクティブ化されるように、データフローにリンクされている必要があります。 ソース接続をデータフローにリンクする方法については、[&#x200B; データフローの作成 &#x200B;](#create-dataflow) の節を参照してください。
+* この手順で作成したソース接続は、そのデータセットが宛先に対してアクティブ化されるように、データフローにリンクされている必要があります。 ソース接続をデータフローにリンクする方法については、[ データフローの作成 ](#create-dataflow) の節を参照してください。
 * 作成後にソース接続のデータセット ID を変更することはできません。 ソース接続にデータセットを追加または削除する必要がある場合は、新しいソース接続を作成し、新しいソース接続の ID をデータフローにリンクする必要があります。
 
 ## （ターゲット）ベース接続の作成 {#create-base-connection}
 
-![&#x200B; データセットの書き出しワークフローの手順 3 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![ データセットの書き出しワークフローの手順 3 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-ベース接続は、資格情報を宛先に安全に保存します。 宛先のタイプによって、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、[&#x200B; 接続仕様とフロー仕様の収集 &#x200B;](#gather-connection-spec-flow-spec) の節で説明されているように、最初に目的の宛先の [!DNL connection spec] を取得し、次に応答の `authSpec` を確認します。 サポートされているすべての宛先の `authSpec` プロパティについては、以下のタブを参照してください。
+ベース接続は、資格情報を宛先に安全に保存します。 宛先のタイプによって、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、[!DNL connection spec] 接続仕様とフロー仕様の収集 [ の節で説明されているように、最初に目的の宛先の ](#gather-connection-spec-flow-spec) を取得し、次に応答の `authSpec` を確認します。 サポートされているすべての宛先の `authSpec` プロパティについては、以下のタブを参照してください。
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL auth spec] を表示している [!DNL Amazon S3] - [!DNL Connection spec]
++++[!DNL Amazon S3] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -574,7 +574,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL auth spec] を表示している [!DNL Azure Blob Storage] - [!DNL Connection spec]
++++[!DNL Azure Blob Storage] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -615,7 +615,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
-+++[!DNL auth spec] を表示している [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -671,7 +671,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB  データランディングゾーン（DLZ） ]
 
-+++[!DNL auth spec] を表示している [!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]
++++[!DNL Data Landing Zone(DLZ)] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 >[!NOTE]
 >
@@ -693,7 +693,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL auth spec] を表示している [!DNL Google Cloud Storage] - [!DNL Connection spec]
++++[!DNL Google Cloud Storage] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -738,7 +738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL auth spec] を表示する [!DNL Connection spec]
++++SFTP - [!DNL Connection spec] を表示する [!DNL auth spec]
 
 >[!NOTE]
 >
@@ -840,7 +840,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、Amazon S3 の宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Amazon S3 の宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -891,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、Azure Blob Storage 宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Azure Blob Storage 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法については、Azure Data Lake Gen 2 （ADLS Gen2）宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法については、Azure Data Lake Gen 2 （ADLS Gen2）宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -994,7 +994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->データランディングゾーンの宛先には、認証資格情報は必要ありません。 詳しくは、データランディングゾーンの宛先に関するドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) の節を参照してください。
+>データランディングゾーンの宛先には、認証資格情報は必要ありません。 詳しくは、データランディングゾーンの宛先に関するドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) の節を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1036,7 +1036,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、Google Cloud Storage の宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Google Cloud Storage の宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1087,7 +1087,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1122,7 +1122,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [&#x200B; 宛先への認証 &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1172,7 +1172,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ターゲット接続の作成 {#create-target-connection}
 
-![&#x200B; データセットの書き出しワークフローの手順 4 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![ データセットの書き出しワークフローの手順 4 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 次に、データセットの書き出しパラメーターを保存するターゲット接続を作成する必要があります。 書き出しパラメーターには、場所、ファイル形式、圧縮、その他の詳細が含まれます。 各宛先タイプでサポートされているプロパティについて理解するには、宛先の接続仕様に記載されている `targetSpec` のプロパティを参照します。 サポートされているすべての宛先の `targetSpec` プロパティについては、以下のタブを参照してください。
 
@@ -1631,8 +1631,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Amazon S3] しい宛先のドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先の詳細の入力 [!DNL Amazon S3] の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1684,8 +1684,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Azure Blob Storage] しい宛先のドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 宛先の詳細の入力 [!DNL Azure Blob Storage] の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
@@ -1738,8 +1738,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、Azure [!DNL Data Lake Gen 2(ADLS Gen2)] 宛先ドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、Azure [ 宛先ドキュメントページの ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) 宛先の詳細の入力 [!DNL Data Lake Gen 2(ADLS Gen2)] の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1790,8 +1790,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Data Landing Zone] しい宛先のドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 宛先の詳細の入力 [!DNL Data Landing Zone] の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1842,8 +1842,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Google Cloud Storage] しい宛先のドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 宛先の詳細の入力 [!DNL Google Cloud Storage] の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
@@ -1896,8 +1896,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、SFTP 宛先ドキュメントページの [&#x200B; 宛先の詳細の入力 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
+>>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -1946,7 +1946,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## データフローの作成 {#create-dataflow}
 
-![&#x200B; データセットの書き出しワークフローの手順 5 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![ データセットの書き出しワークフローの手順 5 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
 宛先設定の最後の手順は、データフローを設定することです。 データフローは、以前に作成したエンティティを結び付け、データセット書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて以下のペイロードを使用し、前の手順で取得したエンティティ ID を置き換えます。
 
@@ -1998,9 +1998,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2067,9 +2067,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2137,9 +2137,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2207,9 +2207,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2276,9 +2276,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2346,9 +2346,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [&#x200B; 完全なファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [&#x200B; 増分ファイルのエクスポート &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `interval` | `1` が日の場合は `timeUnit` を選択し、時間単位が `3` の場合は `6`,`9`,`12`,`hour` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
 | `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
@@ -2376,7 +2376,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## データフローの実行の取得 {#get-dataflow-runs}
 
-![&#x200B; データセットの書き出しワークフローの手順 6 を示す図 &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![ データセットの書き出しワークフローの手順 6 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
 データフローの実行を確認するには、Dataflow Runs API を使用します。
 
@@ -2449,11 +2449,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-[&#x200B; データフロー実行 API によって返される様々なパラメーター &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) に関する情報については、API リファレンスドキュメントを参照してください。
+[ データフロー実行 API によって返される様々なパラメーター ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) に関する情報については、API リファレンスドキュメントを参照してください。
 
 ## データセットの正常な書き出しの確認 {#verify}
 
-データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。[&#x200B; データフローの作成 &#x200B;](#create-dataflow) 時に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されます。
+データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。[ データフローの作成 ](#create-dataflow) 時に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されます。
 
 Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 書き出しのたびに、次のパターンに従って新しいフォルダーが作成されます。
 
@@ -2467,7 +2467,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 #### 圧縮されたデータセットファイル {#compressed-dataset-files}
 
-[&#x200B; ターゲット接続の作成 &#x200B;](#create-target-connection) 手順では、圧縮する書き出したデータセットファイルを選択できます。
+[ ターゲット接続の作成 ](#create-target-connection) 手順では、圧縮する書き出したデータセットファイルを選択できます。
 
 2 つのファイルタイプを圧縮した場合、ファイル形式に違いがあることに注意してください。
 
@@ -2477,15 +2477,15 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 既知の制限事項 {#known-limitations}
 
-データセットの書き出しに関する [&#x200B; 既知の制限事項 &#x200B;](/help/destinations/ui/export-datasets.md#known-limitations) を表示します。
+データセットの書き出しに関する [ 既知の制限事項 ](/help/destinations/ui/export-datasets.md#known-limitations) を表示します。
 
 ## よくある質問 {#faq}
 
-データセットの書き出しに関する [&#x200B; よくある質問のリスト &#x200B;](/help/destinations/ui/export-datasets.md#faq) を表示します。
+データセットの書き出しに関する [ よくある質問のリスト ](/help/destinations/ui/export-datasets.md#faq) を表示します。
 
 ## 次の手順 {#next-steps}
 

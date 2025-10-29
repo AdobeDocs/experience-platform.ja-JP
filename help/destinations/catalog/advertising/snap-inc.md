@@ -2,10 +2,10 @@
 title: Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスを書き出す方法を説明します。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 26%
+source-wordcount: '1031'
+ht-degree: 23%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 ## 概要 {#overview}
 
-[Snapchat 広告 &#x200B;](https://forbusiness.snapchat.com/) は、規模や業界に関係なく、あらゆるビジネス向けに作られています。 ビジネスにとって最も重要な人々の行動を刺激するフルスクリーンのデジタル広告で、Snapchatters の日常会話の一部になります。
+[Snapchat 広告 ](https://forbusiness.snapchat.com/) は、規模や業界に関係なく、あらゆるビジネス向けに作られています。 ビジネスにとって最も重要な人々の行動を刺激するフルスクリーンのデジタル広告で、Snapchatters の日常会話の一部になります。
 
 >[!IMPORTANT]
 >
@@ -27,9 +27,9 @@ ht-degree: 26%
 
 この宛先を使用するには、Snapchat 広告アカウントが必要です。 作成方法については、このドキュメントを参照してください。
 
-[Snapchat Advertisingの概要 &#x200B;](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[Snapchat Advertisingの概要 ](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
-## 制限事項 {#limitations}
+## 制限および制約事項 {#limitations}
 
 * Snap Inc は、特定のオーディエンスセグメントに対して複数の ID をサポートしていません。 セグメントをアクティブ化する際は、1 つの ID のみをマッピングしてください。
 * Snap Inc は、セグメント名の変更をサポートしていません。 セグメントの名前を変更するには、セグメントをアクティベート解除し、名前を変更してから、アクティベートする必要があります。
@@ -39,7 +39,7 @@ ht-degree: 26%
 
 *Snap Inc* の宛先では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
-*Snap Inc* の宛先に送信されるすべての識別子は、SHA-256 形式でハッシュ化する必要があります。 宛先に送信する前にプレーンテキスト識別子をハッシュ化するには、宛先のターゲット識別子をマッピングする際に、「**[!UICONTROL 変換を適用]**」オプションをオンにします。
+*Snap Inc* の宛先に送信されるすべての識別子は、SHA-256 形式でハッシュ化する必要があります。 宛先に送信する前にプレーンテキストの識別子をハッシュ化するには、宛先のターゲット識別子をマッピングする際に「**[!UICONTROL Apply transformation]**」オプションをオンにします。
 
 >[!WARNING]
 > 
@@ -65,9 +65,9 @@ ht-degree: 26%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -76,9 +76,9 @@ ht-degree: 26%
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
----------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Snap Inc 宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+|---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL Audience export]** | Snap Inc 宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -86,31 +86,31 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ### 宛先に対する認証 {#authenticate}
 
 宛先を認証するには、次の手順に従います。
 
 1. Adobe Experience Platformの宛先カタログから *Snap Inc* の宛先を見つけて、「**設定**」を選択します。
-2. **[!UICONTROL 宛先に接続]** を選択します。 次の画面にリダイレクトされます：
-   ![&#x200B; 認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+2. 「**[!UICONTROL Connect to destination]**」を選択します。次の画面にリダイレクトされます：
+   ![ 認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat の認証情報を入力し、「**ログイン**」を選択します。
 4. Adobe Experience Platformがアクセスできる Snapchat データが表示されます。 「**続行**」を選択して、接続プロセスを続行します。
 
-![&#x200B; 認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+![ 認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
 「続行」を選択した後、Adobe Experience Platformにリダイレクトされるまで待ちます。
 
 ### 宛先の詳細の入力 {#destination-details}
 
-![&#x200B; 宛先の詳細 &#x200B;](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![ 宛先の詳細 ](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL 次へ]**」を選択します。
+宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL Next]**」を選択します。
 
-* **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
-* **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**：オーディエンスの読み込み先となる広告アカウントに関連付けられている広告アカウント ID。 見つける方法の詳細については、[Snapchat ビジネスヘルプセンターのこのドキュメント &#x200B;](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US) を参照してください。
+* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
+* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL Account ID]**: オーディエンスのインポート先の広告アカウントに関連付けられている広告アカウント ID。 見つける方法の詳細については、[Snapchat ビジネスヘルプセンターのこのドキュメント ](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US) を参照してください。
 
 >[!IMPORTANT]
 > 
@@ -120,27 +120,27 @@ ht-degree: 26%
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
-*Snap Inc* 宛先に対してオーディエンスをアクティブ化すると、Snap Ads Manager の [**オーディエンス** セクション &#x200B;](https://businesshelp.snapchat.com/s/article/audience-sharing) でオーディエンスを表示できるようになります。 このセクションに移動するには、次の手順に従います。
+*Snap Inc* 宛先に対してオーディエンスをアクティブ化すると、Snap Ads Manager の [**オーディエンス** セクション ](https://businesshelp.snapchat.com/s/article/audience-sharing) でオーディエンスを表示できるようになります。 このセクションに移動するには、次の手順に従います。
 
 1. [Snap Ads Manager](https://ads.snapchat.com/) にログインします
 2. 画面の左上隅にあるプルダウンメニューから「**オーディエンス**」を選択します。 Adobe Experience Platformでアクティブ化したオーディエンスがオーディエンスライブラリに表示されます。
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[&#x200B; セグメント化サービスの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments) を参照してください。
+Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

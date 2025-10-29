@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 製品レコメンデーションレシピ
 description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 86%
@@ -27,11 +27,11 @@ ht-degree: 86%
 
 ## このレシピは何をするのですか。
 
-製品レコメンデーションレシピは、機械学習を使用して、顧客の過去の製品とのインタラクションを分析し、製品レコメンデーションのパーソナライズされたリストを迅速かつ容易に生成します。これにより、製品の検出プロセスが最適化され、顧客に対する長時間の非生産的で無関係な検索が排除されます。その結果、製品レコメンデーションのレシピは、顧客の全体的な購入エクスペリエンスを向上させ、エンゲージメントを高め、ブランドロイヤリティーを強化できます。
+製品レコメンデーションレシピは、機械学習を使用して、顧客の過去の製品とのインタラクションを分析し、製品レコメンデーションのパーソナライズされたリストを迅速かつ容易に生成します。これにより、製品の検出プロセスが最適化され、顧客に対する長時間の非生産的で無関係な検索が排除されます。その結果、製品レコメンデーションのレシピは、顧客の全体的な購入エクスペリエンスを向上させ、エンゲージメントを高め、ブランドロイヤルティを強化できます。
 
 ## 使用を始めるにはどうすればよいですか。
 
-Adobe Experience Platform ラボのチュートリアル（下のラボリンクを参照）に従って基本を学べます。このチュートリアルでは、Jupyter Notebook で [notebook to recipe](../jupyterlab/create-a-model.md) ワークフローに従って Product Recommendations レシピを作成し、[!DNL Data Science Workspace] でレシピを実装する方法 [!DNL Experience Platform] 説明します。
+Adobe Experience Platform ラボのチュートリアル（下のラボリンクを参照）に従って基本を学べます。このチュートリアルでは、Jupyter Notebook で [notebook to recipe](../jupyterlab/create-a-model.md) ワークフローに従って Product Recommendations レシピを作成し、[!DNL Experience Platform] でレシピを実装する方法 [!DNL Data Science Workspace] 説明します。
 
 * [実習：Data Science Workspace　で未来を予測](https://expleague.azureedge.net/labs/L777/index.html)
 * [ラボリソース](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
@@ -59,6 +59,7 @@ Adobe Experience Platform ラボのチュートリアル（下のラボリンク
 ## アルゴリズム
 
 製品レコメンデーションレシピは、協調フィルタリングを利用して、顧客向け製品のレコメンデーションレシピのパーソナライズされたリストを生成します。コンテンツベースのアプローチとは異なり、協調フィルタリングは特定の製品に関する情報を必要とせず、一連の製品に対する顧客の過去の好みを利用します。この強力なレコメンデーション手法では、次の 2 つの単純な前提条件を使用します。
+
 * 同様の関心を持つ顧客がいて、購入行動と閲覧行動を比較することでグループ化できます。
 * 顧客は、購入行動や閲覧行動に関して、類似の顧客に基づくレコメンデーションに興味を持つ傾向が強くなります。
 

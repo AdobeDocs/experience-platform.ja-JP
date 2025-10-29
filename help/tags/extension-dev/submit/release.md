@@ -2,10 +2,10 @@
 title: 拡張機能のリリース
 description: Adobe Experience Platform でタグ拡張機能を非公開または公開でリリースする方法について説明します。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 67%
+source-wordcount: '478'
+ht-degree: 64%
 
 ---
 
@@ -37,11 +37,11 @@ npx @adobe/reactor-releaser
 `npx`：npm パッケージをダウンロードして実行できます。実際にはこのパッケージをコンピューターにインストールする必要はありません。これは、リリーサーを実行する最も簡単な方法です。
 
 >[!NOTE]
-> デフォルトでは、リリーサーは、サーバー間 Oauth フローのAdobe I/O資格情報を想定します。 従来の `jwt-auth` 資格情報
-> 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-releaser@v3.1.3` を実行して使用できます。 必要なパラメーター
-> `jwt-auth` のバージョンを実行するには、[&#x200B; こちら &#x200B;](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5) を参照してください。
+> デフォルトでは、リリーサーは、サーバー間 Oauth フローについてAdobe I/Oの資格情報が必要であることを前提としています。 従来の `jwt-auth` 資格情報
+> > 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-releaser@v3.1.3` を実行して使用できます。 必要なパラメーター
+> > `jwt-auth` のバージョンを実行するには、[ こちら ](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5) を参照してください。
 
-リリーサーでは、いくつかの情報のみを入力する必要があります。 `clientId` と `clientSecret` は、Adobe I/Oコンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
+リリーサーでは、いくつかの情報のみを入力する必要があります。 `clientId` と `clientSecret` は、Adobe I/O コンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL View]**」を選択します。
 
 - あなたの `clientId` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
 - あなたの `clientSecret` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
@@ -49,7 +49,7 @@ npx @adobe/reactor-releaser
 リリーサーは、拡張機能マニフェストから `name` フィールドと `platform` フィールドを読み取り、開発可用性で一致する拡張機能パッケージの API をクエリします。
 次に、リリース担当者は、プライベートで利用できるようにする正しい拡張機能パッケージが見つかったことを確認するように求めます。
 
-API を直接使用して、非公開で拡張機能をリリースする場合は、 [拡張機能パッケージを非公開でリリース](../../api/endpoints/extension-packages.md/#private-release) するための呼び出し例の詳細を API ドキュメントで参照してください。
+API を直接使用して、非公開で拡張機能をリリースする場合は、 [拡張機能パッケージを非公開でリリース](/help/tags/api/endpoints/extension-packages.md#private-release) するための呼び出し例の詳細を API ドキュメントで参照してください。
 
 ## 公開リリース
 

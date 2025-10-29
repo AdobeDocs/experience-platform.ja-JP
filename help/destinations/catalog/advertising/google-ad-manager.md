@@ -1,12 +1,12 @@
 ---
 keywords: google アドマネージャー;google 広告;ダブルクリック;DoubleClick AdX;DoubleClick;Google アドマネージャー;Google ad manager;DFP
 title: Google Ad Manager の接続
-description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
+description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 57%
+source-wordcount: '1077'
+ht-degree: 56%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 57%
 
 >[!IMPORTANT]
 >
-> Googleは、欧州連合（EU）の [&#x200B; デジタル市場法 &#x200B;](https://developers.google.com/google-ads/api/docs/start) （DMA[&#128279;](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー &#x200B;](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
-><br/>
->EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
-><br/>
->Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [&#x200B; 同意ポリシー &#x200B;](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
-><br/>
->Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[&#x200B; セグメントビルダー &#x200B;](../../../segmentation/home.md#segment-definitions) 内の [&#x200B; セグメント定義 &#x200B;](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
+> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA[）（](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)EU ユーザー同意ポリシー [）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、](https://developers.google.com/display-video/api/guides/getting-started/overview)Google Ads API[、](https://digital-markets-act.ec.europa.eu/index_en)Customer Match および [Display &amp; Video 360 API](https://www.google.com/about/company/user-consent-policy/) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
+> ><br/>
+> >EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
+> ><br/>
+> >Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
+> ><br/>
+> >Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
 
 [!DNL Google Ad Manager]（以前は [!DNL DoubleClick for Publishers]（DFP）または [!DNL DoubleClick AdX] と呼ばれていました）は、[!DNL Google] の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、web サイト上の広告の表示を管理できます。
@@ -30,7 +30,7 @@ ht-degree: 57%
 [!DNL Google Ad Manager] の宛先に固有な次の詳細に注意ください。
 
 * アクティブ化されたオーディエンスは、[!DNL Google] プラットフォームでプログラム的に作成されます。
-* [!DNL Experience Platform] には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
+* [!DNL Experience Platform] には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲティングサイズについて理解するには、Google でのオーディエンス数を参照します。
 * オーディエンスを [!DNL Google Ad Manager] の宛先にマッピングすると、オーディエンス名が即座に [!DNL Google Ad Manager] ユーザーインターフェイスに表示されます。
 * セグメント母集団が [!DNL Google Ad Manager] で表示されるまで、24～48 時間かかります。また、オーディエンスを [!DNL Google Ad Manager] で表示するには、オーディエンスサイズが 50 以上のプロファイルにする必要があります。 サイズが 50 未満のプロファイルを含むオーディエンスは、[!DNL Google Ad Manager] に入力されません。
 
@@ -56,7 +56,7 @@ ht-degree: 57%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -66,9 +66,9 @@ ht-degree: 57%
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
----------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを Google の宛先に書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+|---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL Audience export]** | オーディエンスのすべてのメンバーを Google の宛先に書き出します。 |
+| 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -80,14 +80,14 @@ ht-degree: 57%
 
 Experience Platformで最初の [!DNL Google Ad Manager] ール先を設定する前に、許可リストへの登録は必須です。 宛先を作成する前に、必ず以下に説明する許可リストへの登録プロセスを完了してください。
 
-1. Adobeをリンクされた Data Management Platform （DMP）として追加するには [&#128279;](https://support.google.com/admanager/answer/3289669?hl=ja)Google Ad Manager のドキュメント &rbrace; に記載されている手順に従います。
-2. [!DNL Google Ad Manager] インターフェイスで、**[!UICONTROL 管理者]** / **[!UICONTROL グローバル設定]** / **[!UICONTROL ネットワーク設定]** に移動し、**[!UICONTROL API アクセス]** スライダーを有効にします。
+1. Adobeをリンクされた Data Management Platform （DMP）として追加するには [](https://support.google.com/admanager/answer/3289669?hl=ja)Google Ad Manager のドキュメント } に記載されている手順に従います。
+2. [!DNL Google Ad Manager] インターフェイスで、**[!UICONTROL Admin]**/**[!UICONTROL Global Settings]**/**[!UICONTROL Network Settings]** に移動し、**[!UICONTROL API Access]** スライダーを有効にします。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -100,13 +100,13 @@ Experience Platformで最初の [!DNL Google Ad Manager] ール先を設定す�
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
-* **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL アカウント ID]**:[!DNL Google] アカウントから [!DNL Audience Link ID] を入力します。 これは、（[!DNL Network code] ではなく） [!DNL Google Ad Manager] ネットワークに関連付けられた特定の識別子です。 これは、[!DNL Google Ad Manager] インターフェイスの **[!UICONTROL 管理者/グローバル設定]** にあります。
-* **[!UICONTROL アカウントタイプ]**：Google のアカウントに応じて、次のいずれかのオプションを選択します。
+* **[!UICONTROL Name]**：この宛先に希望する名前を入力します。
+* **[!UICONTROL Description]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
+* **[!UICONTROL Account ID]**: [!DNL Audience Link ID] アカウントから [!DNL Google] を入力してください。 これは、（[!DNL Google Ad Manager] ではなく） [!DNL Network code] ネットワークに関連付けられた特定の識別子です。 これは、**[!UICONTROL Admin > Global settings]** インターフェイスの [!DNL Google Ad Manager] の下にあります。
+* **[!UICONTROL Account Type]**:Googleのアカウントに応じて、次のいずれかのオプションを選択します。
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
    * [!DNL Google AdX] に `AdX buyer` を使用する
-* **[!UICONTROL オーディエンス ID をオーディエンス名に追加]**:Google Ad Manager のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、`Audience Name (Audience ID)` のように、このオプションを選択します。
+* **[!UICONTROL Append audience ID to audience name]**: Google Ad Manager のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。`Audience Name (Audience ID)`
 
 >[!NOTE]
 >
@@ -116,13 +116,13 @@ Experience Platformで最初の [!DNL Google Ad Manager] ール先を設定す�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -136,5 +136,5 @@ Experience Platformで最初の [!DNL Google Ad Manager] ール先を設定す�
 
 以下は、AdobeのGoogle アカウント ID です。
 
-* **[!UICONTROL アカウント ID]**: 87933855
-* **[!UICONTROL 顧客 ID]**: 89690775
+* **[!UICONTROL Account ID]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775

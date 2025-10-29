@@ -3,7 +3,7 @@ keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 38%
@@ -46,7 +46,7 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 ![マクロを使用してストレージにフォルダーを作成する方法](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-以下の例では、ID `25768be6-ebd5-45cc-8913-12fb3f348615` を持つサンプルオーディエンス `Luxury Audience` を参照しています。
+以下の例では、ID `Luxury Audience` を持つサンプルオーディエンス `25768be6-ebd5-45cc-8913-12fb3f348615` を参照しています。
 
 **マクロ 1：`%SEGMENT_NAME%`**
 
@@ -73,9 +73,10 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 ## データの書き出しのタイプ {#export-type}
 
 クラウドストレージの宛先では、次の書き出しタイプをサポートしています。
+
 * **プロファイルベースの書き出**。 これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスメンバーシップなどを含めることができます。
-* **データセットの書き出し**。 この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 機能について [&#128279;](/help/destinations/ui/export-datasets.md) 詳細を参照 。
+* **データセットの書き出し**。 この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 機能について [ 詳細を参照 ](/help/destinations/ui/export-datasets.md)。
 
 ## 次の手順 {#next-steps}
 
-使用する [&#x200B; サポートされているクラウド宛先 &#x200B;](#supported-destinations) の 1 つを選択した後、[&#x200B; 宛先への接続チュートリアル &#x200B;](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [&#x200B; 書き出し &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。
+使用する [ サポートされているクラウド宛先 ](#supported-destinations) の 1 つを選択した後、[ 宛先への接続チュートリアル ](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [ 書き出し ](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。

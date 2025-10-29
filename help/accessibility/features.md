@@ -4,7 +4,7 @@ title: Experience Platformの一般的なアクセシビリティ機能
 type: Documentation
 description: キーボードナビゲーション、カラーパレットとコントラスト、支援テクノロジーのサポートなど、Adobe Experience Platform でサポートされている一般的なアクセシビリティ機能について説明します。
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 92%
@@ -24,6 +24,7 @@ Adobe Experience Platform は、音声認識ソフトウェアやスクリーン
 Experience Platform は、完全なキーボードアクセシビリティのサポートに努めています。
 
 次のナビゲーション要素はアクセシビリティを容易にします。
+
 * Tab キーは、UI 要素、セクション、メニューグループの間を移動します。
 * 矢印キーは、メニューグループ内を移動し、個々のアクティブな要素にフォーカスを設定します。
 * Shift + Tab キーを押すと、タブ順序の逆方向に移動します。
@@ -37,7 +38,7 @@ Experience Platform は、完全なキーボードアクセシビリティのサ
 
 Experience Platform は、カラーコントラストの要件を含め、 [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) への準拠に努めています。Experience Platform UI は、低視力や色覚異常のユーザーからアクセス可能な視聴エクスペリエンスを確実に提供するために、アプリケーションを十分なコントラストで表示します。
 
-![&#x200B; Experience Platform UI のホームページに表示されるカラーパレットとコントラスト。](images/homepage.png)
+![ Experience Platform UI のホームページに表示されるカラーパレットとコントラスト。](images/homepage.png)
 
 ## 必須フィールドの検証
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupyterLab UI の概要
 description: JupyterLab は、プロジェクト Jupyter の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要のほか、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
-ht-degree: 95%
+source-wordcount: '1831'
+ht-degree: 90%
 
 ---
 
@@ -33,7 +33,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | --- | --- |
 | **カーネル** | カーネルは、ノートブックや他の [!DNL JupyterLab] フロントエンドに、様々なプログラミング言語のコードの実行およびイントロスペクション機能を提供します。[!DNL Experience Platform] には、[!DNL Python]、R、PySpark および [!DNL Spark] での開発をサポートする追加のカーネルが用意されています。詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 | **データアクセス** | 読み取り／書き込み機能を完全にサポートし、既存のデータセットに [!DNL JupyterLab] 内から直接アクセスできます。 |
-| **[!DNL Experience Platform]サービスの統合** | 組み込み統合により、[!DNL JupyterLab] 内から他の [!DNL Experience Platform] サービスを直接利用できます。サポートされているすべての統合のリストについては、[&#x200B; 他のExperience Platform サービスとの統合 &#x200B;](#service-integration) の節を参照してください。 |
+| **[!DNL Experience Platform]サービスの統合** | ビルトインの統合により、[!DNL JupyterLab] 内から他の [!DNL Experience Platform] サービスを直接利用できます。サポートされているすべての統合のリストについては、[ 他のExperience Platform サービスとの統合 ](#service-integration) の節を参照してください。 |
 | **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル </a> に加えて、Experience Platformのサービス間通信を含む、アプリケーションとExperience Platformの間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] （IMS） </a> を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** |  [!DNL Experience Platform] では、[!DNL JupyterLab] は [!DNL Python]、R、および PySpark 用のプリインストールされたライブラリを提供します。サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
 | **ライブラリコントローラー** | プリインストールされたライブラリがニーズを満たさない場合は、Python と R 用に追加のライブラリをインストールできます。追加したライブラリは、[!DNL Experience Platform] の整合性を維持しデータを安全に保つために、分離されたコンテナに一時的に保存されます。詳しくは、[カーネル](#kernels)の節を参照してください。 |
@@ -68,7 +68,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 ### [!DNL JupyterLab] へのアクセス {#access-jupyterlab}
 
-[Adobe Experience Platform](https://platform.adobe.com) で、左側のナビゲーションの&#x200B;**[!UICONTROL ノートブック]**&#x200B;を選択します。 [!DNL JupyterLab] が完全に初期化されるまでしばらく待ちます。
+[Adobe Experience Platform](https://platform.adobe.com) で、左側のナビゲーション列から「**[!UICONTROL Notebooks]**」を選択します。 [!DNL JupyterLab] が完全に初期化されるまでしばらく待ちます。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,7 +112,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 ### [!DNL Python]/R での GPU とメモリサーバーの設定
 
-[!DNL JupyterLab] で、右上隅の歯車アイコンを選択して、*Notebook サーバー設定*&#x200B;を開きます。GPU をオンに切り替えたり、スライダーを使用して必要な量のメモリを割り当てたりできます。割り当てることができるメモリの量は、組織がプロビジョニングした量によって異なります。 「**[!UICONTROL 設定を更新]**」を選択して保存します。
+[!DNL JupyterLab] で、右上隅の歯車アイコンを選択して、*Notebook サーバー設定*&#x200B;を開きます。GPU をオンに切り替えたり、スライダーを使用して必要な量のメモリを割り当てたりできます。割り当てることができるメモリの量は、組織がプロビジョニングした量によって異なります。 保存する **[!UICONTROL Update configs]** を選択します。
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 ### [!DNL JupyterLab] の終了と再起動
 
-[!DNL JupyterLab] では、それ以上リソースを使用しないよう、セッションを終了することができます。**電源アイコン** ![電源アイコン](/help/images/icons/power.png) を選択して開始し、表示されるポップオーバーから「**[!UICONTROL シャットダウン]**」を選択してセッションを終了します。Notebook セッションは、12 時間操作がないと自動的に終了します。
+[!DNL JupyterLab] では、それ以上リソースを使用しないよう、セッションを終了することができます。**電源アイコン** ![ 電源アイコン ](/help/images/icons/power.png) を選択して開始し、表示されるポップオーバーから **[!UICONTROL Shut Down]** を選択してセッションを終了します。 Notebook セッションは、12 時間操作がないと自動的に終了します。
 
-[!DNL JupyterLab] を再起動するには、電源アイコンのすぐ左にある&#x200B;**再起動アイコン** ![再起動アイコン](/help/images/icons/restart.png) を選択し、表示されるポップオーバーから「**[!UICONTROL 再起動]**」を選択します。
+[!DNL JupyterLab] を再起動するには、電源アイコンのすぐ左にある **再起動アイコン**![ 再起動アイコン ](/help/images/icons/restart.png) を選択し、表示されるポップオーバーから **[!UICONTROL Restart]** を選択します。
 
 ![jupyterlab の終了](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -140,7 +140,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 * **セルの移動**：移動するセルの右側にカーソルを置き、セルをクリックして新しい位置にドラッグします。また、あるノートブックから別のノートブックにセルを移動すると、セルとその内容が複製されます。
 
-* **セルの実行**：実行するセルのボディをクリックし、ノートブックメニューの&#x200B;**再生**&#x200B;アイコン（**▶**）をクリックします。カーネルが実行を処理する際には、セルの実行カウンターにアスタリスク（**\***）が表示され、完了時には整数に置き換えられます。
+* **セルを実行：** 実行するセルの本文をクリックし、ノートブックメニューの **再生** アイコン（**▶**）をクリックします。 カーネルが実行を処理する際には、セルの実行カウンターにアスタリスク（**\***）が表示され、完了時には整数に置き換えられます。
 
 * **セルの削除**：削除するセルのボディをクリックし、**はさみ**&#x200B;アイコンをクリックします。
 
@@ -180,7 +180,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | レシピビルダー | [!DNL JupyterLab] でレシピを作成するためのノートブックテンプレート。レシピの作成プロセスを示し、説明するコードとコメントが事前に記入されています。詳細な順を追った説明については、『[ノートブックのレシピチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-model.html?lang=ja)』を参照してください。 |
 | [!DNL Query Service] | [!DNL Query Service] を [!DNL JupyterLab] で直接使用する方法を示し、データを大規模に分析するサンプルワークフローが提供された、事前入力済みのノートブック。 |
 | XDM イベント | データ構造全体に共通の機能に焦点を当てた、ポストバリューエクスペリエンスイベントデータのデータ探索を示す、事前入力済みのノートブック。 |
-| XDM クエリ | エクスペリエンスのイベントデータに関するサンプルのビジネスクエリを示す、事前入力済みのノートブック。 |
+| XDM クエリ | エクスペリエンスイベントデータに関するサンプルのビジネスクエリを示す、事前入力済みのノートブック。 |
 | 集計 | 大量のデータをより小さく管理しやすいチャンクに集約するサンプルワークフローを示す、事前入力済みのノートブック。 |
 | クラスタリング | クラスタリングアルゴリズムを使用したエンドツーエンドの機械学習モデリングプロセスを示す、事前入力済みのノートブック。 |
 
@@ -264,6 +264,7 @@ Python、R、PySpark でサポートされているパッケージのリスト�
 ![例](../images/jupyterlab/user-guide/libraries.PNG)
 
 さらに、次の依存関係が使用されますが、一覧には表示されません。
+
 * CUDA 11.2
 * CUDNN 8.1
 

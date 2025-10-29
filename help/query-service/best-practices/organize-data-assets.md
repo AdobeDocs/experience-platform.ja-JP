@@ -2,7 +2,7 @@
 title: クエリサービスでのデータアセット組織のベストプラクティス
 description: このドキュメントでは、クエリサービスで使用しやすくするために、データを整理する論理的な方法の概要を説明します。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ## はじめに
 
-このドキュメントを続行する前に、[&#x200B; クエリサービス &#x200B;](../home.md) の機能を十分に理解し、[&#x200B; ユーザーインターフェイスガイド &#x200B;](../ui/user-guide.md) を読む必要があります。
+このドキュメントを続行する前に、[ クエリサービス ](../home.md) の機能を十分に理解し、[ ユーザーインターフェイスガイド ](../ui/user-guide.md) を読む必要があります。
 
 ## クエリサービスでのデータの整理
 
 次の例は、標準の SQL 構文を使用してデータを論理的に整理するためにAdobe Experience Platform クエリサービスを通じて使用できる構成を示しています。 まず、データポイントのコンテナとして機能するデータベースを作成する必要があります。 データベースには 1 つ以上のスキーマを含め、各スキーマには、データアセット（データセット、ビュー、一時テーブルなど）への参照を 1 つ以上含めることができます。 これらの参照には、データセット間の関係や関連付けが含まれます。
 
-クエリサービス UI を使用して SQL クエリを作成する方法について詳しくは、[&#x200B; クエリエディターユーザーガイド &#x200B;](../ui/user-guide.md) を参照してください。
+クエリサービス UI を使用して SQL クエリを作成する方法について詳しくは、[ クエリエディターユーザーガイド ](../ui/user-guide.md) を参照してください。
 
 サンドボックス内のデータセットを論理的に整理する次の SQL 構成がサポートされています。
 
@@ -36,7 +36,7 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-例（簡潔にするために少し切り捨てられています）は、スキーマ `schema1` を含むこの方法 `databaseA` 示しています。
+例（簡潔にするために少し切り捨てられています）は、スキーマ `databaseA` を含むこの方法 `schema1` 示しています。
 
 ## スキーマへのデータアセットの関連付け
 
@@ -56,9 +56,9 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## データコンテナからデータアセットへのアクセス
 
-データベース名を適切に修飾することにより、[!DNL PostgreSQL] クライアントは SHOW キーワードを使用して作成した任意のデータ構造に接続できます。 SHOW キーワードの詳細については、SQL 構文ドキュメント内の [SHOW セクション &#x200B;](../sql/syntax.md#show) を参照してください。
+データベース名を適切に修飾することにより、[!DNL PostgreSQL] クライアントは SHOW キーワードを使用して作成した任意のデータ構造に接続できます。 SHOW キーワードの詳細については、SQL 構文ドキュメント内の [SHOW セクション ](../sql/syntax.md#show) を参照してください。
 
-「all」は、サンドボックス内のすべてのデータベースとスキーマコンテナを含むデフォルトのデータベース名です。 `dbname="all"` を使用して [!DNL PostgreSQL] 接続を作成する場合、作成した **任意** データベースおよびスキーマにアクセスして、データを論理的に整理できます。
+「all」は、サンドボックス内のすべてのデータベースとスキーマコンテナを含むデフォルトのデータベース名です。 [!DNL PostgreSQL] を使用して `dbname="all"` 接続を作成する場合、作成した **任意** データベースおよびスキーマにアクセスして、データを論理的に整理できます。
 
 `dbname="all"` 下のすべてのデータベースを一覧表示すると、3 つの使用可能なデータベースが表示されます。
 
@@ -66,7 +66,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,26 +78,26 @@ databaseC
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
 ```
 
-`dbname="databaseA"` を使用して [!DNL PostgreSQL] 接続を作成すると、次の例に示すように、その特定のデータベースに関連付けられている任意のスキーマにアクセスできます。
+[!DNL PostgreSQL] を使用して `dbname="databaseA"` 接続を作成すると、次の例に示すように、その特定のデータベースに関連付けられている任意のスキーマにアクセスできます。
 
 ```sql
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ databaseA      | schema2
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table
@@ -129,7 +129,7 @@ dataset3| table
 
 ## データコンテナからのデータアセットの更新または削除
 
-組織（またはサンドボックス）のデータアセットの量が増えると、データコンテナからデータアセットを更新または削除する必要が生じます。 個々のアセットは、ドット表記を使用して適切なデータベースとスキーマ名を参照することで、組織コンテナから削除できます。 最初の例で `databaseA.schema1` に追加したテーブルとビュー（それぞれ `t1` と `v1`）は、次の例の構文を使用して削除されます。
+組織（またはサンドボックス）のデータアセットの量が増えると、データコンテナからデータアセットを更新または削除する必要が生じます。 個々のアセットは、ドット表記を使用して適切なデータベースとスキーマ名を参照することで、組織コンテナから削除できます。 最初の例で `t1` に追加したテーブルとビュー（それぞれ `v1` と `databaseA.schema1`）は、次の例の構文を使用して削除されます。
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platform クエリサービスで使用するデータアセットの編成と構造に関するベストプラクティスについて、より深く理解しました。 クエリサービスのベストプラクティスについては、[&#x200B; データ重複排除に関するドキュメント &#x200B;](../key-concepts/deduplication.md) を引き続き参照することをお勧めします。
+このドキュメントでは、Adobe Experience Platform クエリサービスで使用するデータアセットの編成と構造に関するベストプラクティスについて、より深く理解しました。 クエリサービスのベストプラクティスについては、[ データ重複排除に関するドキュメント ](../key-concepts/deduplication.md) を引き続き参照することをお勧めします。

@@ -3,10 +3,10 @@ keywords: 飛行船属性；飛行船宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするためのオーディエンス属性として、Adobe オーディエンスデータを Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 31%
+source-wordcount: '1002'
+ht-degree: 28%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 31%
 
 [!DNL Airship] は、主要なカスタマーエンゲージメント Experience Platformであり、カスタマーライフサイクルのあらゆる段階で、ユーザーに対して有意義でパーソナライズされたオムニチャネルメッセージを提供するのを支援します。
 
-この統合では、Adobe プロファイルデータをターゲティングまたはトリガー用の [&#x200B; 属性 &#x200B;](https://docs.airship.com/guides/audience/attributes/) として [!DNL Airship] に渡します。
+この統合では、Adobe プロファイルデータをターゲティングまたはトリガー用の [!DNL Airship] 属性 [ として ](https://docs.airship.com/guides/audience/attributes/) に渡します。
 
-[!DNL Airship] について詳しくは、[Airship のドキュメント &#x200B;](https://docs.airship.com) を参照してください。
+[!DNL Airship] について詳しくは、[Airship のドキュメント ](https://docs.airship.com) を参照してください。
 
 >[!TIP]
 >
@@ -33,7 +33,7 @@ ht-degree: 31%
 
 >[!TIP]
 >
->[&#x200B; このサインアップリンク &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) から [!DNL Airship] アカウントをまだ作成していない場合は、作成します。
+>[!DNL Airship] このサインアップリンク [ から ](https://go.airship.eu/accounts/register/plan/starter/) アカウントをまだ作成していない場合は、作成します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -41,7 +41,7 @@ ht-degree: 31%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -51,9 +51,9 @@ ht-degree: 31%
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
----------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールド（例：メールアドレス、電話番号、姓）や ID と共に書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+|---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL Profile-based]** | セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールド（例：メールアドレス、電話番号、姓）や ID と共に書き出します。 |
+| 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -61,17 +61,17 @@ ht-degree: 31%
 
 Adobe Experience Platform プロファイル属性は [!DNL Airship] 属性に似ており、このページで後述するマッピングツールを使用すると、Experience Platformで簡単に相互にマッピングできます。
 
-[!DNL Airship] プロジェクトには、複数の事前定義済みのデフォルト属性があります。 カスタム属性がある場合は、最初に定義する必要 [!DNL Airship] あります。 詳しくは、[&#x200B; 属性の設定と管理 &#x200B;](https://docs.airship.com/tutorials/audience/attributes/) を参照してください。
+[!DNL Airship] プロジェクトには、複数の事前定義済みのデフォルト属性があります。 カスタム属性がある場合は、最初に定義する必要 [!DNL Airship] あります。 詳しくは、[ 属性の設定と管理 ](https://docs.airship.com/tutorials/audience/attributes/) を参照してください。
 
 ## ベアラートークンの生成 {#bearer-token}
 
-[Airship ダッシュボード **[!UICONTROL 設定]**/**[!UICONTROL API と統合]** に移動し &#x200B;](https://go.airship.com) 左側のメニューで **[!UICONTROL トークン]** を選択します。
+**[!UICONTROL Settings]** Airship ダッシュボード **[!UICONTROL APIs & Integrations]** で [ » ](https://go.airship.com) に移動し、左側のメニューで **[!UICONTROL Tokens]** を選択します。
 
-**[!UICONTROL トークンを作成]** をクリックします。
+「**[!UICONTROL Create Token]**」をクリックします。
 
 トークンのわかりやすい名前（例：「Adobe属性の宛先」）を指定し、ロールで「すべてのアクセス」を選択します。
 
-**[!UICONTROL トークンを作成]** をクリックし、詳細を機密として保存します。
+「**[!UICONTROL Create Token]**」をクリックして、詳細を機密情報として保存します。
 
 ## ユースケース {#use-cases}
 
@@ -89,49 +89,49 @@ Adobe Experience Platformの属性を活用してプロファイル [!DNL Airshi
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
+宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-* **[!UICONTROL ベアラートークン]**:[!DNL Airship] ダッシュボードから生成したベアラートークンです。
+* **[!UICONTROL Bearer token]**:[!DNL Airship] ダッシュボードから生成したベアラートークンです。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL 名前]**：この宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL 説明]**：この宛先の説明を入力します。
-* **[!UICONTROL ドメイン]**：この宛先に適用される [!DNL Airship] データセンターに応じて、米国または欧州のデータセンターを選択します。
+* **[!UICONTROL Name]**：この宛先を識別するのに役立つ名前を入力します。
+* **[!UICONTROL Description]**：この宛先の説明を入力します。
+* **[!UICONTROL Domain]**：この宛先に適用されるデータセンターに応じて、米国または欧州 [!DNL Airship] データセンターを選択します。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
-[!DNL Airship] 属性は、デバイスインスタンスを表すチャネル（例：iPhone）または、ユーザーのすべてのデバイスを共通の識別情報（例：カスタマー ID）にマッピングする名前付きユーザーで設定できます。 スキーマにプレーンテキスト（ハッシュ化されていない）メールアドレスがプライマリ ID として存在する場合は、**[!UICONTROL Source属性のメールフィールドを選択し]** 以下に示すように、**[!UICONTROL ターゲット ID]** の下の右側の列で [!DNL Airship] 名のユーザーにマッピングします。
+[!DNL Airship] 属性は、デバイスインスタンスを表すチャネル（例：iPhone）または、ユーザーのすべてのデバイスを共通の識別情報（例：カスタマー ID）にマッピングする名前付きユーザーで設定できます。 スキーマにプレーンテキスト（ハッシュ化されていない）メールアドレスがプライマリ ID として存在する場合は、**[!UICONTROL Source Attributes]** のメールフィールドを選択し、[!DNL Airship] の下の右側の列にある **[!UICONTROL Target Identities]** という名前のユーザーにマッピングします（下図を参照）。
 
-![&#x200B; 名前付きユーザーマッピング &#x200B;](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![ 名前付きユーザーマッピング ](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 チャネルにマッピングする必要がある識別子（デバイス）については、ソースに基づいて適切なチャネルにマッピングします。 次の画像は、2 つのマッピングの作成方法を示しています。
 
 * [!DNL Airship] iOS チャネルへの IDFA iOS Advertising ID
-* 「Full Name」属性 [!DNL Airship] 対するAdobe `fullName` 属性
+* 「Full Name」属性 `fullName` 対するAdobe [!DNL Airship] 属性
 
 >[!NOTE]
 >
@@ -141,11 +141,11 @@ Adobe Experience Platformの属性を活用してプロファイル [!DNL Airshi
 
 ソースフィールドを選択：
 
-![&#x200B; 飛行船属性への接続 &#x200B;](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
+![ 飛行船属性への接続 ](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 
 ターゲットフィールドを選択：
 
-![&#x200B; 飛行船属性への接続 &#x200B;](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
+![ 飛行船属性への接続 ](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
 
 **Map 属性**
 
@@ -155,11 +155,11 @@ Adobe Experience Platformの属性を活用してプロファイル [!DNL Airshi
 
 ターゲット属性を選択：
 
-![&#x200B; ターゲットフィールドを選択 &#x200B;](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
+![ ターゲットフィールドを選択 ](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
 
 マッピングを確認：
 
-![&#x200B; チャネルマッピング &#x200B;](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![ チャネルマッピング ](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 
 ## データの使用とガバナンス {#data-usage-governance}

@@ -2,24 +2,24 @@
 title: mTLS （Mutual Transport Layer Security）の概要
 description: mTLS を使用して、イベント転送用にAdobeが発行した公開証明書を安全に取得する方法を説明します。
 exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
-source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '605'
 ht-degree: 2%
 
 ---
 
 # 相互トランスポート層セキュリティ（[!DNL mTLS]）の概要
 
-[!UICONTROL &#x200B; 環境 UI] の相互トランスポート層セキュリティ（[!DNL mTLS]）証明書をバインドして、拡張機能のセキュリティを制御します。 [!DNL mTLS] 証明書は、安全な通信におけるサーバーまたはクライアントの ID を証明するデジタル証明書です。 [!DNL mTLS] Service API を使用する場合、これらの証明書は、Adobe Experience Platform イベント転送とのインタラクションを検証し、暗号化するのに役立ちます。 このプロセスは、データを保護するだけでなく、すべての接続が信頼できるパートナーからのものであることを保証します。
+拡張機能のセキュリティを制御するために、[!DNL mTLS] で相互トランスポート層セキュリティ （[!UICONTROL Environments UI]）証明書をバインドします。 [!DNL mTLS] 証明書は、安全な通信におけるサーバーまたはクライアントの ID を証明するデジタル証明書です。 [!DNL mTLS] Service API を使用する場合、これらの証明書は、Adobe Experience Platform イベント転送とのインタラクションを検証し、暗号化するのに役立ちます。 このプロセスは、データを保護するだけでなく、すべての接続が信頼できるパートナーからのものであることを保証します。
 
 ## 新しい環境への [!DNL mTLS] の実装 {#implement-mtls}
 
 イベント転送環境を設定して、ライブラリビルドが Edge ネットワークに正しくデプロイされていることを確認します。 セットアップ時に、デプロイメントのニーズに最適なホスティングオプションを選択できます。 また、安全な通信のために、[!DNL mTLS] 証明書が新しい環境に自動的に追加されます。
 
-新しい環境を作成するには、イベント転送プロパティの左パネルにある「**[!UICONTROL 環境]**」タブを選択し、「**[!UICONTROL 環境を追加]**」を選択します。
+新しい環境を作成するには、イベント転送プロパティの左側のパネルで「**[!UICONTROL Environments]**」タブを選択し、「**[!UICONTROL Add Environment]**」を選択します。
 
-![&#x200B; 既存の環境を示すイベント転送プロパティ。ハイライト表示は [!UICONTROL &#x200B; 環境を追加 &#x200B;] です。](../../../images/extensions/server/cloud-connector/add-environment.png)
+![ 既存の環境を示すイベント転送プロパティ。[!UICONTROL Add Environment] がハイライト表示されています。](../../../images/extensions/server/cloud-connector/add-environment.png)
 
 次のページで、この設定に使用する環境を選択します。 次の 3 つの環境を使用できます。
 
@@ -33,19 +33,19 @@ ht-degree: 2%
 | ステージング | ステージング環境はオプションで、承認済みチームメンバーがライブラリを公開前にテストおよび承認できます。 |
 | 実稼動 | 実稼動環境は、実稼動データに使用されます。 |
 
-![&#x200B; 環境の選択画面。開発用にハイライト表示され [!UICONTROL &#x200B; 選択 &#x200B;] ます &#x200B;](../../../images/extensions/server/cloud-connector/select-environment.png)。
+![ 環境の選択画面。開発用の [!UICONTROL Select] がハイライト表示されています。](../../../images/extensions/server/cloud-connector/select-environment.png)
 
-**[!UICONTROL 環境を作成]** ページで「**[!UICONTROL 名前]**」を入力し、「**[!UICONTROL ホストを選択 &#x200B;***」ドロップダウンメニューから「***Adobe管理]**」を選択します。 **[!UICONTROL 証明書]** は ***自動的に追加*** されます。 最後に、「**[!UICONTROL 保存]** を選択します。
+**[!UICONTROL Create Environment]** ページで **[!UICONTROL Name]** を入力し、***ドロップダウンメニューから「*** Adobe管理 **[!UICONTROL Select Host]**」を選択します。 **[!UICONTROL Certificate]** は ***自動的に追加*** されます。 最後に、「**[!UICONTROL Save]**」を選択します。
 
-![&#x200B; 開発環境を作成ページ、ハイライト表示 [!UICONTROL &#x200B; 名前 &#x200B;]、[!UICONTROL &#x200B; ホストを選択 &#x200B;]、[!UICONTROL &#x200B; 保存 &#x200B;]](../../../images/extensions/server/cloud-connector/create-environment.png)
+![[!UICONTROL Name]、[!UICONTROL Select Host]、[!UICONTROL Save] がハイライト表示された開発環境を作成ページ ](../../../images/extensions/server/cloud-connector/create-environment.png)
 
-環境が正常に作成され、「**[!UICONTROL 環境]**」タブに戻ります。このタブには新しい環境が表示されます。
+環境が正常に作成され、「**[!UICONTROL Environments]**」タブに戻ります。このタブには新しい環境が表示されます。
 
-![&#x200B; 「開発環境」がハイライト表示された「[!UICONTROL &#x200B; 環境 &#x200B;]」タブ &#x200B;](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![ 「開 [!UICONTROL Environments]」タブ。開発環境がハイライト表示されています。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## 環境証明書の詳細の表示 {#view-certificate}
 
-環境の証明書の詳細を表示するには、イベント転送プロパティの左側のパネルで「**[!UICONTROL 環境]**」タブを選択し、詳細を表示する環境を選択します。
+環境の証明書の詳細を表示するには、イベント転送プロパティの左側のパネルで「**[!UICONTROL Environments]**」タブを選択し、詳細を表示する環境を選択します。
 
 次の証明書の詳細が表示されます。
 
@@ -56,25 +56,25 @@ ht-degree: 2%
 | Variable Name | 証明書の変数名。 |
 | ステータス | 証明書の現在のステータス：<ul><li>**デプロイ**：証明書は正常にデプロイされ、アクティブになっています。</li><li>**デプロイ**：証明書はデプロイ中です。</li><li>**デプロイメントが必要**：このステータスは、古い証明書が選択された場合に表示されます。</li></ul> |
 
-![&#x200B; 開発環境を編集ページ、[!UICONTROL &#x200B; 証明書 &#x200B;] の詳細をハイライト表示 &#x200B;](../../../images/extensions/server/cloud-connector/certificate-details.png)
+![ 開発環境を編集ページが開き、[!UICONTROL Certificate] 細がハイライト表示されます。](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### 古い証明書を選択して展開する {#deploy-obsolete-certificate}
 
-古い証明書を使用するには、イベント転送プロパティの左パネルにある「**[!UICONTROL 環境]**」タブに移動し、詳細を表示する環境を選択します。
+古い証明書を使用するには、イベント転送プロパティの左パネルにある「**[!UICONTROL Environments]**」タブに移動し、詳細を表示する環境を選択します。
 
-![&#x200B; 「開発環境」がハイライト表示された「[!UICONTROL &#x200B; 環境 &#x200B;]」タブ &#x200B;](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![ 「開 [!UICONTROL Environments]」タブ。開発環境がハイライト表示されています。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
-**[!UICONTROL 証明書]** ドロップダウンから古い証明書を選択し、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL Certificate]** ドロップダウンから古い証明書を選択し、「**[!UICONTROL Save]**」を選択します。
 
-![&#x200B; 開発環境を編集ページで、古い証明書がハイライト表示された [!UICONTROL &#x200B; 証明書 &#x200B;] ドロップダウンと「保存」がハイライト表示された状態 &#x200B;](../../../images/extensions/server/cloud-connector/obsolete-certificate.png)
+![ 開発環境を編集ページで、古い証明書と「保存」 [!UICONTROL Certificate] ハイライト表示された状態でドロップダウンがハイライト表示されます。](../../../images/extensions/server/cloud-connector/obsolete-certificate.png)
 
-証明書をデプロイするには、**[!UICONTROL 証明書をデプロイ]** ダイアログで **[!UICONTROL 保存してデプロイ]** を選択します。
+証明書をデプロイするには、**[!UICONTROL Save and deploy]** ダイアログで「**[!UICONTROL Deploy Certificate]**」を選択します。
 
-![&#x200B; 「保存してデプロイ」がハイライト表示された証明書をデプロイ &#x200B;](../../../images/extensions/server/cloud-connector/obsolete-certificate-deploy.png) ダイアログ
+![ 「保存してデプロイ」がハイライト表示された証明書をデプロイ ](../../../images/extensions/server/cloud-connector/obsolete-certificate-deploy.png) ダイアログ
 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、イベント転送プロパティの環境を作成し、証明書を追加して、古い証明書を使用する方法を説明しました。 [!DNL mTLS] 証明書について詳しくは、[[!DNL mTLS] Service API の概要 &#x200B;](../../../../data-governance/mtls-api/overview.md) を参照してください
+このドキュメントでは、イベント転送プロパティの環境を作成し、証明書を追加して、古い証明書を使用する方法を説明しました。 [!DNL mTLS] 証明書について詳しくは、[[!DNL mTLS] Service API の概要 ](../../../../data-governance/mtls-api/overview.md) を参照してください
 
-イベント転送ルールで [!DNL mTLS] 証明書を使用する方法については、[Cloud Connector 拡張機能の概要 &#x200B;](../cloud-connector/overview.md/#mtls-rules) を参照してください。
+イベント転送ルールで [!DNL mTLS] 証明書を使用する方法については、[Cloud Connector 拡張機能の概要 ](../cloud-connector/overview.md#mtls-rules) を参照してください。

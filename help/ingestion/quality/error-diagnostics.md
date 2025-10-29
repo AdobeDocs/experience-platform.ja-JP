@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取得エラー診断
 description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理に関する情報と、部分的なバッチ取り込みタイプのリファレンスを提供します。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 36%
@@ -36,7 +36,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] に属するリソースを含む [!DNL Schema Registry] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **応答**
 
-応答が成功すると、診断が保存された場所の詳細を示す `path` オブジェクトを含む JSON オブジェクトが返されます。 応答は、`path` オブジェクトを [JSON 行 &#x200B;](https://jsonlines.readthedocs.io/en/latest/) 形式で返します。
+応答が成功すると、診断が保存された場所の詳細を示す `path` オブジェクトを含む JSON オブジェクトが返されます。 応答は、`path` オブジェクトを [JSON 行 ](https://jsonlines.readthedocs.io/en/latest/) 形式で返します。
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 ### ステータスの確認 {#check-status}
 
-取り込まれたバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[&#x200B; カタログエンドポイントガイド &#x200B;](../../catalog/api/list-objects.md) を参照してください。
+取り込まれたバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[ カタログエンドポイントガイド ](../../catalog/api/list-objects.md) を参照してください。
 
 **API 形式**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BATCH_ID}` | ステータスを確認するバッチの `id` 値。 |
-| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[&#x200B; カタログデータのフィルタリング &#x200B;](../../catalog/api/filter-data.md) に関するガイドを参照してください。 |
+| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[ カタログデータのフィルタリング ](../../catalog/api/filter-data.md) に関するガイドを参照してください。 |
 
 **リクエスト**
 
@@ -214,7 +214,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換または検証が原因で処理できなかった行の数。 この値は、`outputRecordCount` から `inputRecordCount` を引くことで得られます。 この値は、`errorDiagnostics` が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
+| `metrics.failedRecordCount` | 解析、変換または検証が原因で処理できなかった行の数。 この値は、`inputRecordCount` から `outputRecordCount` を引くことで得られます。 この値は、`errorDiagnostics` が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
 
 **エラーを含む応答**
 
@@ -277,8 +277,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換または検証が原因で処理できなかった行の数。 この値は、`outputRecordCount` から `inputRecordCount` を引くことで得られます。 この値は、`errorDiagnostics` が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
-| `errors.recordCount` | 指定されたエラーコードで失敗した行数。 この値は、`errorDiagnostics` が有効になっている場合に **のみ** 生成されます。 |
+| `metrics.failedRecordCount` | 解析、変換または検証が原因で処理できなかった行の数。 この値は、`inputRecordCount` から `outputRecordCount` を引くことで得られます。 この値は、`errorDiagnostics` が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
+| `errors.recordCount` | 指定されたエラーコードで失敗した行数。 この値は、**が有効になっている場合に** のみ `errorDiagnostics` 生成されます。 |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 }
 ```
 
-その後、[&#x200B; 診断取得エンドポイント &#x200B;](#retrieve-diagnostics) を使用して、エラーに関する詳細情報を取得できます。
+その後、[ 診断取得エンドポイント ](#retrieve-diagnostics) を使用して、エラーに関する詳細情報を取得できます。
 
 エラーファイルを取得する応答の例を以下に示します。
 

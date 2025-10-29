@@ -2,7 +2,7 @@
 title: 値の暗号化
 description: Reactor API を使用する際に機密性の高い値を暗号化する方法を説明します。
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 100%
@@ -18,7 +18,7 @@ Adobe Experience Platform でタグを使用する場合、一部のワークフ
 
 ## 公開 GPG キーとチェックサムの取得
 
-[ダウンロード](https://gnupg.org/download/)して最新バージョンの GPG をインストールした後、タグの実稼動環境用の公開 GPG キーを取得する必要があります。
+[ダウンロード](https://gnupg.org/download/)して最新バージョンの GPG をインストールした後、タグの本番環境用の公開 GPG キーを取得する必要があります。
 
 * [GPG キー](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [チェックサム](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
@@ -65,7 +65,7 @@ echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch
 コマンドの出力は次のようになります。
 
 ```shell
------BEGIN PGP MESSAGE-----
+|-----BEGIN PGP MESSAGE-----
 
 hQIMAxJHCI6fydT/ARAAwQ0Y0k7eSAbd0T9seoaWX75G70O2gxAF20KY5FWiZ9/m
 /RkgJwhJusZyEdazC/CmAdfXi9bsVxQT0i06ErUxXfQF0VtweRlcyRBsxzLz6Hr+
@@ -81,7 +81,7 @@ ekGD+p3PyyvxjfS5G/wf9HQZ085+mnjpKFa7fuFBQPbg4WpBadhWrhobthC+hN3S
 SAE9yWU11Y3xpoxqg4y7iYZ6rnX+qP2oUNYxC2/hdhsFbbZtUh4s51qaoLbe0iWB
 OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 =jrfE
------END PGP MESSAGE-----
+|-----END PGP MESSAGE-----
 ```
 
 この出力は、`Tags Data Encryption <launch@adobe.com>` 公開キーに対応する秘密キーを持つシステムによってのみ復号化できます。

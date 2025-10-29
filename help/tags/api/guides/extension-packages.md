@@ -1,13 +1,13 @@
 ---
 title: Reactor API でのプライベート拡張機能パッケージの共有
 description: Reactor API でプライベート拡張機能パッケージを共有するように他の企業を認証する方法を説明します。
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
 
 ---
-
 
 # プライベート拡張機能パッケージの共有
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 拡張機能パッケージの所有者は、Reactor API を通じて、他社の非公開バージョンを利用する権限を付与できます。 1 つの拡張機能パッケージの使用ライセンスが承認された各ビジネスに付与され、この承認は、パッケージの現在および将来のプライベートバージョンすべてに適しています。
 
-このガイドでは、拡張機能パッケージの使用権限を設定する方法の概要を説明します。 認証の構造の JSON の例など、Reactor API で認証を管理する方法に関するガイダンスについて詳しくは、[&#x200B; 拡張機能パッケージ使用承認エンドポイントガイド &#x200B;](../endpoints/extension-package-usage-authorizations.md) を参照してください。
+このガイドでは、拡張機能パッケージの使用権限を設定する方法の概要を説明します。 認証の構造の JSON の例など、Reactor API で認証を管理する方法に関するガイダンスについて詳しくは、[ 拡張機能パッケージ使用承認エンドポイントガイド ](../endpoints/extension-package-usage-authorizations.md) を参照してください。
 
 ## 認証の作成 {#create-authorization}
 
@@ -66,7 +66,7 @@ curl -X POST \
 
 ## 承認を承認 {#approve-authorization}
 
-承認を承認するには、`manage_properties` の権限が必要です。 認証済み会社として、拡張機能パッケージの使用認証に、認証の `ID` を含むPATCHリクエストを送信し、state を `approved` に設定する必要があります。
+承認を承認するには、`manage_properties` の権限が必要です。 認証済み会社として、拡張機能パッケージの使用に関する認証にPATCH リクエストを送信する必要があります。これには、認証の `ID` が含まれ、state を `approved` に設定します。
 
 **API 形式**
 
@@ -82,7 +82,7 @@ PATCH //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORIZ
 
 **リクエスト**
 
-次のPATCHリクエストは、認証の `state` を `approved` に設定します。
+次のPATCH リクエストは、認証 `state` を `approved` に設定します。
 
 ```shell
 curl -X PATCH \
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```
@@ -126,7 +126,7 @@ DELETE //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORI
 
 **リクエスト**
 
-次のDELETEリクエストは、会社の認証権限を削除します。
+次のDELETE リクエストは、会社の認証権限を削除します。
 
 ```shell
 curl -X DELETE \
