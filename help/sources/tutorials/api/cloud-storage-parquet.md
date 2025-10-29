@@ -63,7 +63,7 @@ ht-degree: 44%
 
 ソースデータを [!DNL Experience Platform] で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要もあります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる [!DNL Experience Platform] データセットを作成します。
 
-[!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[ スキーマエディターのチュートリアル ](../../../xdm/tutorials/create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
+[!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[&#x200B; スキーマエディターのチュートリアル &#x200B;](../../../xdm/tutorials/create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
 
 **API 形式**
 

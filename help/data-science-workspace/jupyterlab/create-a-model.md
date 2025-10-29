@@ -31,11 +31,11 @@ ht-degree: 28%
 
 ## 必要なアセットのダウンロード {#assets}
 
-このチュートリアルを進める前に、必要なスキーマとデータセットを作成する必要があります。 [Luma 傾向モデルスキーマとデータセットの作成 ](../models-recipes/create-luma-data.md) に関するチュートリアルにアクセスして、必要なアセットをダウンロードし、前提条件を設定します。
+このチュートリアルを進める前に、必要なスキーマとデータセットを作成する必要があります。 [Luma 傾向モデルスキーマとデータセットの作成 &#x200B;](../models-recipes/create-luma-data.md) に関するチュートリアルにアクセスして、必要なアセットをダウンロードし、前提条件を設定します。
 
 ## [!DNL JupyterLab] notebook 環境の基本を学ぶ
 
-レシピをゼロから作成するには、[!DNL Data Science Workspace] 内で行います。 開始するには、[Adobe Experience Platformに移動し ](https://platform.adobe.com) 左側の「**[!UICONTROL Notebooks]**」タブを選択します。 新しいノートブックを作成するには、[!DNL JupyterLab Launcher] ールバーからレシピビルダーテンプレートを選択します。
+レシピをゼロから作成するには、[!DNL Data Science Workspace] 内で行います。 開始するには、[Adobe Experience Platformに移動し &#x200B;](https://platform.adobe.com) 左側の「**[!UICONTROL Notebooks]**」タブを選択します。 新しいノートブックを作成するには、[!DNL JupyterLab Launcher] ールバーからレシピビルダーテンプレートを選択します。
 
 [!UICONTROL Recipe Builder] ノートブックを使用すると、ノートブック内でトレーニング実行とスコアリング実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアリングの出力に満足したら、レシピを作成し、さらにレシピを使用して機能をモデル化し、モデルとして公開できます。
 
@@ -47,7 +47,7 @@ ht-degree: 28%
 
 ランチャーから [!UICONTROL Recipe Builder] ノートブックを選択すると、ノートブックは新しいタブで開きます。
 
-上部の新しいノートブックタブに、追加の 3 つのアクション（**[!UICONTROL Train]**、**[!UICONTROL Score]**、**[!UICONTROL Create Recipe]**）を含むツールバーが読み込まれます。 これらのアイコンは、[!UICONTROL Recipe Builder] ノートブックにのみ表示されます。 ノートブックでレシピを作成した後、これらのアクションについて詳しくは [ トレーニングとスコアリングの節 ](#training-and-scoring) を参照してください。
+上部の新しいノートブックタブに、追加の 3 つのアクション（**[!UICONTROL Train]**、**[!UICONTROL Score]**、**[!UICONTROL Create Recipe]**）を含むツールバーが読み込まれます。 これらのアイコンは、[!UICONTROL Recipe Builder] ノートブックにのみ表示されます。 ノートブックでレシピを作成した後、これらのアクションについて詳しくは [&#x200B; トレーニングとスコアリングの節 &#x200B;](#training-and-scoring) を参照してください。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -55,7 +55,7 @@ ht-degree: 28%
 
 提供されたアセットフォルダーには、Luma の傾向モデル `propensity_model.ipynb` があります。 JupyterLab の「ノートブックをアップロード」オプションを使用して、提供されたモデルをアップロードしノートブックを開きます。
 
-![ ノートブックのアップロード ](../images/jupyterlab/create-recipe/upload_notebook.png)
+![&#x200B; ノートブックのアップロード &#x200B;](../images/jupyterlab/create-recipe/upload_notebook.png)
 
 このチュートリアルの残りの部分では、傾向モデルノートブックで事前定義された次のファイルについて説明します。
 
@@ -95,7 +95,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 モデルがトレーニングを実行するには、`trainingDataSetId`、`ACP_DSW_TRAINING_XDM_SCHEMA`、`tenantId` を指定する必要があります。 スコアリングの場合は、さらに `scoringDataSetId`、`tenantId`、`scoringResultsDataSetId ` を指定する必要があります。
 
-データセット ID とスキーマ ID を見つけるには、左側のナビゲーションバー（フォルダーアイコンの下 ![ のノートブック内の「データ」タブ ](../images/jupyterlab/create-recipe/dataset-tab.png) 「データ」タブ）に移動します。 3 つの異なるデータセット ID を指定する必要があります。 `scoringResultsDataSetId` は、モデルのスコアリング結果の保存に使用され、空のデータセットにする必要があります。 これらのデータセットは、以前 [ 必須アセット ](#assets) 手順で作成されたものです。
+データセット ID とスキーマ ID を見つけるには、左側のナビゲーションバー（フォルダーアイコンの下 ![&#x200B; のノートブック内の「データ」タブ &#x200B;](../images/jupyterlab/create-recipe/dataset-tab.png) 「データ」タブ）に移動します。 3 つの異なるデータセット ID を指定する必要があります。 `scoringResultsDataSetId` は、モデルのスコアリング結果の保存に使用され、空のデータセットにする必要があります。 これらのデータセットは、以前 [&#x200B; 必須アセット &#x200B;](#assets) 手順で作成されたものです。
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
@@ -103,7 +103,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 テストが完了すると、トレーニングとスコアリングの設定は次のスクリーンショットのようになります。
 
-![ 設定 ](../images/jupyterlab/create-recipe/config.png)
+![&#x200B; 設定 &#x200B;](../images/jupyterlab/create-recipe/config.png)
 
 デフォルトでは、データのトレーニングとスコアリングを行う際に、次の設定パラメーターが設定されます。
 
@@ -134,7 +134,7 @@ Luma 傾向モデルノートブックの場合、要件を更新する必要は
 
 ### [!DNL Experience Platform] SDK {#platform-sdk}
 
-`platform_sdk` データローダーの使用に関する詳細なチュートリアルについては、[Experience Platform SDK ガイド ](../authoring/platform-sdk.md) を参照してください。 このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
+`platform_sdk` データローダーの使用に関する詳細なチュートリアルについては、[Experience Platform SDK ガイド &#x200B;](../authoring/platform-sdk.md) を参照してください。 このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
 
 ### 外部ソース {#external-sources}
 
@@ -178,7 +178,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->[ 設定ファイルの節 ](#configuration-files) で説明したように、`client_context = get_client_context(config_properties)` を使用してExperience Platformからデータにアクセスする場合、次の設定パラメーターが設定されます。
+>[&#x200B; 設定ファイルの節 &#x200B;](#configuration-files) で説明したように、`client_context = get_client_context(config_properties)` を使用してExperience Platformからデータにアクセスする場合、次の設定パラメーターが設定されます。
 >
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -191,19 +191,19 @@ def load(config_properties):
 
 データを読み込んだ後、データをクリーンアップしてデータを準備する必要があります。 この例では、モデルの目標は、顧客が製品を注文するかどうかを予測することです。 モデルは特定の製品を表示しないので、`productListItems` は不要なので、列は削除されます。 次に、1 つの列に 1 つの値または 2 つの値のみを含む追加の列が削除されます。 モデルをトレーニングする場合、目標の予測に役立つ有用なデータのみを保持することが重要です。
 
-![ データ準備の例 ](../images/jupyterlab/create-recipe/data_prep.png)
+![&#x200B; データ準備の例 &#x200B;](../images/jupyterlab/create-recipe/data_prep.png)
 
 不要なデータを削除したら、機能エンジニアリングを開始できます。 この例で使用するデモデータには、セッション情報は含まれていません。 通常は、特定の顧客の現在と過去のセッションに関するデータを取得します。 セッション情報がないため、この例では代わりに、ジャーニーの区切りで現在および過去のセッションを模倣します。
 
-![ジャーニーの区切り ](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![ジャーニーの区切り &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 区切りが完了すると、データにラベルが付けられ、ジャーニーが作成されます。
 
-![ データにラベルを付ける ](../images/jupyterlab/create-recipe/label_data.png)
+![&#x200B; データにラベルを付ける &#x200B;](../images/jupyterlab/create-recipe/label_data.png)
 
 次に、特徴を作成し、過去と現在に分けます。 その後、不要な列はすべて削除され、Luma の顧客に対する過去のジャーニーと現在のジャーニーの両方が残ります。 これらのジャーニーには、顧客が商品を購入したかどうか、購入に至るまでのジャーニーなどの情報が含まれています。
 
-![ 最終現在のトレーニング ](../images/jupyterlab/create-recipe/final_journey.png)
+![&#x200B; 最終現在のトレーニング &#x200B;](../images/jupyterlab/create-recipe/final_journey.png)
 
 ## スコアリングデータローダー {#scoring-data-loader}
 
@@ -225,7 +225,7 @@ def load(config_properties):
 
 `score()` 関数には、スコアリングアルゴリズムを含め、モデルの成功度を示す測定値を返す必要があります。`score()` 関数は、スコアリングデータセットラベルとトレーニング済みモデルを使用して、予測された特徴のセットを生成します。次に、これらの予測値が、スコアリングデータセットの実際の特徴と比較されます。この例では、`score()` 関数は、トレーニング済みモデルを使用して、スコアリングデータセットのラベルを使用して特徴を予測します。予測された特徴が返されます。
 
-![def スコア ](../images/jupyterlab/create-recipe/def_score.png)
+![def スコア &#x200B;](../images/jupyterlab/create-recipe/def_score.png)
 
 ## 評価ファイル {#evaluator-file}
 
@@ -237,23 +237,23 @@ def load(config_properties):
 
 この節では、ノートブックにデータを読み込んだ後、データセット内の関連のない列を削除してデータをクリーンアップする `split()` 関数について説明します。 ここからフィーチャーエンジニアリングを実行できます。これは、データ内の既存の未加工フィーチャーから追加の関連フィーチャーを作成するプロセスです。
 
-![Split 関数 ](../images/jupyterlab/create-recipe/split.png)
+![Split 関数 &#x200B;](../images/jupyterlab/create-recipe/split.png)
 
 ### トレーニング済みモデルの評価 {#evaluate-the-trained-model}
 
 `evaluate()` 関数は、モデルがトレーニングされた後に実行され、モデルの成功度を示す指標を返します。 `evaluate()` 関数は、テストデータセットラベルとトレーニング済みモデルを使用して、一連の機能を予測します。 これらの予測値は、テストデータセットの実際の特徴と比較されます。この例で使用される指標は、`precision`、`recall`、`f1`、`accuracy` です。 この関数は、評価指標の配列を含む `metric` オブジェクトを返します。これらの指標は、トレーニング済みモデルのパフォーマンスを評価するために使用されます。
 
-![ 評価 ](../images/jupyterlab/create-recipe/evaluate.png)
+![&#x200B; 評価 &#x200B;](../images/jupyterlab/create-recipe/evaluate.png)
 
 `print(metric)` を追加すると、指標の結果を表示できます。
 
-![ 指標の結果 ](../images/jupyterlab/create-recipe/evaluate_metric.png)
+![&#x200B; 指標の結果 &#x200B;](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
 ## データセーバーファイル {#data-saver-file}
 
 `datasaver.py` ファイルには `save()` 関数が含まれており、スコアリングのテスト中に予測を保存するために使用されます。 `save()` 関数は、予測を受け取り、[!DNL Experience Platform Catalog] API を使用して、`scoringResultsDataSetId` ファイルで指定した `scoring.conf` にデータを書き込みます。 いいよ
 
-![ データセーバー ](../images/jupyterlab/create-recipe/data_saver.png)
+![&#x200B; データセーバー &#x200B;](../images/jupyterlab/create-recipe/data_saver.png)
 
 ## トレーニングとスコアリング {#training-and-scoring}
 
@@ -263,7 +263,7 @@ def load(config_properties):
 
 デバッグの目的で、非表示の出力を表示する場合は、出力セルの末尾に `debug` を追加し、再実行します。
 
-![ トレーニングとスコア ](../images/jupyterlab/create-recipe/toolbar_actions.png)
+![&#x200B; トレーニングとスコア &#x200B;](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
 ## レシピの作成 {#create-recipe}
 

@@ -17,7 +17,7 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataoperations@yahooinc.comまで直接ご連絡ください ](mailto:dataoperations@yahooinc.com)
+>この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataoperations@yahooinc.comまで直接ご連絡ください &#x200B;](mailto:dataoperations@yahooinc.com)
 
 ## 前提条件 {#prerequisites}
 
@@ -48,7 +48,7 @@ ht-degree: 37%
 }
 ```
 
-[ 分類メタデータ ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) の詳細については、[!DNL DataX] 開発者向けドキュメントを参照してください。
+[&#x200B; 分類メタデータ &#x200B;](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) の詳細については、[!DNL DataX] 開発者向けドキュメントを参照してください。
 
 ## レート制限とガードレール {#rate-limits-guardrails}
 
@@ -56,7 +56,7 @@ ht-degree: 37%
 >
 >[!DNL Verizon Media/Yahoo DataX] に 100 を超えるオーディエンスをアクティブ化すると、宛先からレート制限エラーを受け取る場合があります。 この宛先に対してオーディエンスをアクティブ化する場合、1 つのアクティベーションデータフローでアクティブ化するオーディエンスが 100 個未満になるようにしてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントに新しい宛先を作成します。
 
-[!DNL DataX]DataX ドキュメント [ に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、](https://developer.verizonmedia.com/datax/guide/rate-limits/) れはレート制限されています。
+[!DNL DataX]DataX ドキュメント [&#x200B; に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、](https://developer.verizonmedia.com/datax/guide/rate-limits/) れはレート制限されています。
 
 
 | エラーコード | エラーメッセージ | 説明 |
@@ -96,9 +96,9 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-![Experience Platform UI の Yahoo DataX 宛先カード ](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
+![Experience Platform UI の Yahoo DataX 宛先カード &#x200B;](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -120,10 +120,10 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-宛先にオーディエンスをアクティブ化する手順については、[ 宛先へのプロファイルとオーディエンスのアクティブ化 ](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+宛先にオーディエンスをアクティブ化する手順については、[&#x200B; 宛先へのプロファイルとオーディエンスのアクティブ化 &#x200B;](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -131,4 +131,4 @@ ht-degree: 37%
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[!DNL Yahoo/Verizon Media][ のドキュメント  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/) を参照してください。
+詳しくは、[!DNL Yahoo/Verizon Media][&#x200B; のドキュメント  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/) を参照してください。

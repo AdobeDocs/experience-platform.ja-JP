@@ -297,5 +297,5 @@ ON f.customer_id = l.customer_id);  -- Matches features with their churn labels 
 
 これで、SQL ベースのモデルを作成、評価および使用して顧客チャーンを予測する方法を学びました。 この基盤を使用すると、顧客の行動を分析し、リスクのある顧客を特定し、プロアクティブなリテンション戦略を導入して顧客維持を向上させることができます。 チャーン予測モデルをさらに強化して適用するには、次の手順を検討します。
 
-- プロセスの自動化：継続的な監視とリアルタイムのインサイトのために、モデルをデータパイプラインに統合します。 [SQL を使用してデータセットを検証および処理する方法を確認します ](../../../dashboards/query.md)。
-- モデルのパフォーマンスの監視：新しいデータでモデルを継続的に評価し、精度と関連性を維持します。  Adobe Experience Platform UI で [AI アシスタント ](../../../ai-assistant/landing.md) を使用して、主要なパフォーマンスの変化と [ オーディエンスのトレンドの予測 ](../../../ai-assistant/new-features/audience-forecasting.md) を監視します。
+- プロセスの自動化：継続的な監視とリアルタイムのインサイトのために、モデルをデータパイプラインに統合します。 [SQL を使用してデータセットを検証および処理する方法を確認します &#x200B;](../../../dashboards/query.md)。
+- モデルのパフォーマンスの監視：新しいデータでモデルを継続的に評価し、精度と関連性を維持します。  Adobe Experience Platform UI で [AI アシスタント &#x200B;](../../../ai-assistant/landing.md) を使用して、主要なパフォーマンスの変化と [&#x200B; オーディエンスのトレンドの予測 &#x200B;](../../../ai-assistant/new-features/audience-forecasting.md) を監視します。

@@ -16,25 +16,25 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
 >
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 >
 >[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-このチュートリアルでは、Flow Service API を使用して、ファイルベースの [ メールマーケティングの宛先 ](../catalog/email-marketing/overview.md) を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを使用してデータを書き出す方法を実演します。
+このチュートリアルでは、Flow Service API を使用して、ファイルベースの [&#x200B; メールマーケティングの宛先 &#x200B;](../catalog/email-marketing/overview.md) を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを使用してデータを書き出す方法を実演します。
 
 >[!TIP]
 > 
->Flow Service API を使用してクラウドストレージの宛先に対してデータをアクティブ化する方法については、[ 専用 API チュートリアル ](/help/destinations/api/activate-segments-file-based-destinations.md) を参照してください。
+>Flow Service API を使用してクラウドストレージの宛先に対してデータをアクティブ化する方法については、[&#x200B; 専用 API チュートリアル &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md) を参照してください。
 
 このチュートリアルでは、すべての例で [!DNL Adobe Campaign] の宛先を使用しますが、手順はファイルベースのメールマーケティングの宛先で同じです。
 
-![ 概要 – 宛先の作成およびオーディエンスのアクティブ化の手順 ](../assets/api/email-marketing/overview.png)
+![&#x200B; 概要 – 宛先の作成およびオーディエンスのアクティブ化の手順 &#x200B;](../assets/api/email-marketing/overview.png)
 
-Experience Platform ユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[ 宛先の接続 ](../ui/connect-destination.md) および [ プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化 ](../ui/activate-batch-profile-destinations.md) に関するチュートリアルを参照してください。
+Experience Platform ユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[&#x200B; 宛先の接続 &#x200B;](../ui/connect-destination.md) および [&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化 &#x200B;](../ui/activate-batch-profile-destinations.md) に関するチュートリアルを参照してください。
 
 ## はじめに {#get-started}
 
@@ -862,7 +862,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | S3 接続の場合、ファイルの書き出し先のバケットの名前を指定します。 |
 | `params.path` | S3 接続の場合、ファイルの書き出し先となるストレージの場所のファイルパスを指定します。 |
 | `params.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出しタイプです。 |
-| `params.includeFileManifest` | *オプション*。`true` に設定して、宛先のマニフェストファイル生成を有効にします。 有効にすると、書き出されたデータファイルと共にマニフェストファイルが作成され、書き出されたファイルに関するメタデータが提供されます。 [ サンプル マニフェスト ファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 |
+| `params.includeFileManifest` | *オプション*。`true` に設定して、宛先のマニフェストファイル生成を有効にします。 有効にすると、書き出されたデータファイルと共にマニフェストファイルが作成され、書き出されたファイルに関するメタデータが提供されます。 [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 |
 
 {style="table-layout:auto"}
 
@@ -1041,8 +1041,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
-| `{ETAG}` | 前の手順 `{ETAG}` データフローの作成 [ の応答から ](#create-dataflow) を取得します。 前の手順の応答形式には、引用符がエスケープされています。 リクエストのヘッダーには、エスケープされていない値を使用する必要があります。 以下の例を参照してください。<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag 値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、Experience Platform API リファレンスの [ オーディエンス定義の取得 ](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) を参照してください。 |
+| `{ETAG}` | 前の手順 `{ETAG}` データフローの作成 [&#x200B; の応答から &#x200B;](#create-dataflow) を取得します。 前の手順の応答形式には、引用符がエスケープされています。 リクエストのヘッダーには、エスケープされていない値を使用する必要があります。 以下の例を参照してください。<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag 値は、データフローが正常に更新されるたびに更新されます。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、Experience Platform API リファレンスの [&#x200B; オーディエンス定義の取得 &#x200B;](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、`add` 操作を使用します。 |
 | `path` | 更新するフローの部分を定義します。オーディエンスをデータフローに追加するときは、例で指定したパスを使用します。 |
@@ -1061,7 +1061,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!TIP]
 >
-> 書き出したオーディエンスの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法について詳しくは、[ データフロー内のオーディエンスのコンポーネントの更新 ](/help/destinations/api/update-destination-dataflows.md#update-segment) を参照してください。
+> 書き出したオーディエンスの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法について詳しくは、[&#x200B; データフロー内のオーディエンスのコンポーネントの更新 &#x200B;](/help/destinations/api/update-destination-dataflows.md#update-segment) を参照してください。
 
 **応答**
 
@@ -1253,7 +1253,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

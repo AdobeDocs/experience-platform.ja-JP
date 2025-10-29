@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 類似レコードの取得のユースケースの一部として、高階関数の次の例を説明します。 各関数の使用例と使用方法の説明は、このドキュメントの各セクションに記載されています。
 
-[`transform` 関数の例では ](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明しています。
+[`transform` 関数の例では &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明しています。
 
-[`filter` 関数の例では ](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
+[`filter` 関数の例では &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
 
-[`reduce` 関数は ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 様々な分析および計画プロセスでピボット可能な累積値または集計を導出する方法を提供します。
+[`reduce` 関数は &#x200B;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 様々な分析および計画プロセスでピボット可能な累積値または集計を導出する方法を提供します。

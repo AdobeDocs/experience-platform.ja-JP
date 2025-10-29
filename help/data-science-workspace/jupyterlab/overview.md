@@ -33,7 +33,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | --- | --- |
 | **カーネル** | カーネルは、ノートブックや他の [!DNL JupyterLab] フロントエンドに、様々なプログラミング言語のコードの実行およびイントロスペクション機能を提供します。[!DNL Experience Platform] には、[!DNL Python]、R、PySpark および [!DNL Spark] での開発をサポートする追加のカーネルが用意されています。詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 | **データアクセス** | 読み取り／書き込み機能を完全にサポートし、既存のデータセットに [!DNL JupyterLab] 内から直接アクセスできます。 |
-| **[!DNL Experience Platform]サービスの統合** | ビルトインの統合により、[!DNL JupyterLab] 内から他の [!DNL Experience Platform] サービスを直接利用できます。サポートされているすべての統合のリストについては、[ 他のExperience Platform サービスとの統合 ](#service-integration) の節を参照してください。 |
+| **[!DNL Experience Platform]サービスの統合** | ビルトインの統合により、[!DNL JupyterLab] 内から他の [!DNL Experience Platform] サービスを直接利用できます。サポートされているすべての統合のリストについては、[&#x200B; 他のExperience Platform サービスとの統合 &#x200B;](#service-integration) の節を参照してください。 |
 | **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル </a> に加えて、Experience Platformのサービス間通信を含む、アプリケーションとExperience Platformの間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] （IMS） </a> を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** |  [!DNL Experience Platform] では、[!DNL JupyterLab] は [!DNL Python]、R、および PySpark 用のプリインストールされたライブラリを提供します。サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
 | **ライブラリコントローラー** | プリインストールされたライブラリがニーズを満たさない場合は、Python と R 用に追加のライブラリをインストールできます。追加したライブラリは、[!DNL Experience Platform] の整合性を維持しデータを安全に保つために、分離されたコンテナに一時的に保存されます。詳しくは、[カーネル](#kernels)の節を参照してください。 |
@@ -122,9 +122,9 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 ### [!DNL JupyterLab] の終了と再起動
 
-[!DNL JupyterLab] では、それ以上リソースを使用しないよう、セッションを終了することができます。**電源アイコン** ![ 電源アイコン ](/help/images/icons/power.png) を選択して開始し、表示されるポップオーバーから **[!UICONTROL Shut Down]** を選択してセッションを終了します。 Notebook セッションは、12 時間操作がないと自動的に終了します。
+[!DNL JupyterLab] では、それ以上リソースを使用しないよう、セッションを終了することができます。**電源アイコン** ![&#x200B; 電源アイコン &#x200B;](/help/images/icons/power.png) を選択して開始し、表示されるポップオーバーから **[!UICONTROL Shut Down]** を選択してセッションを終了します。 Notebook セッションは、12 時間操作がないと自動的に終了します。
 
-[!DNL JupyterLab] を再起動するには、電源アイコンのすぐ左にある **再起動アイコン**![ 再起動アイコン ](/help/images/icons/restart.png) を選択し、表示されるポップオーバーから **[!UICONTROL Restart]** を選択します。
+[!DNL JupyterLab] を再起動するには、電源アイコンのすぐ左にある **再起動アイコン**![&#x200B; 再起動アイコン &#x200B;](/help/images/icons/restart.png) を選択し、表示されるポップオーバーから **[!UICONTROL Restart]** を選択します。
 
 ![jupyterlab の終了](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

@@ -25,7 +25,7 @@ ht-degree: 28%
 
 Adobe Experience Platformでは、カスタム機能パイプラインを構築および作成し、Sensei Machine Learning Framework ランタイム（以下「ランタイム」と呼ぶ）を通じて機能エンジニアリングを大規模に実行できます。
 
-このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark で [ モデルオーサリング SDK](./sdk.md) を使用してカスタム機能パイプラインを作成する手順を説明します。
+このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark で [&#x200B; モデルオーサリング SDK](./sdk.md) を使用してカスタム機能パイプラインを作成する手順を説明します。
 
 機能パイプラインが実行されると、次のワークフローが実行されます。
 
@@ -46,7 +46,7 @@ Adobe Experience Platformでは、カスタム機能パイプラインを構築�
 - 変換されたスキーマと、そのスキーマに基づく空のデータセット。
 - 出力スキーマと、そのスキーマに基づく空のデータセット。
 
-上記のデータセットはすべて、[!DNL Experience Platform] UI にアップロードする必要があります。 これを設定するには、Adobeが提供する [bootstrap スクリプト ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) を使用します。
+上記のデータセットはすべて、[!DNL Experience Platform] UI にアップロードする必要があります。 これを設定するには、Adobeが提供する [bootstrap スクリプト &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) を使用します。
 
 ## 機能パイプラインクラス
 
@@ -397,7 +397,7 @@ scoring.dataSaver: MyDatasetSaver
 
 >[!TIP]
 >
->Docker URL がない場合は、[ ソースファイルをレシピにパッケージ化 ](../models-recipes/package-source-files-recipe.md) チュートリアルを参照して、Docker ホスト URL の作成手順を確認してください。
+>Docker URL がない場合は、[&#x200B; ソースファイルをレシピにパッケージ化 &#x200B;](../models-recipes/package-source-files-recipe.md) チュートリアルを参照して、Docker ホスト URL の作成手順を確認してください。
 
 オプションで、次のPostman コレクションを使用して、機能パイプライン API ワークフローの完了に役立てることもできます。
 
@@ -405,27 +405,27 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 機能パイプラインエンジンの作成 {#create-engine-api}
 
-Docker イメージの場所ができたら、[ API を使用して ](../api/engines.md#feature-pipeline-docker) 機能パイプラインエンジンを作成 [!DNL Sensei Machine Learning] するには、`/engines` に POST を実行します。 機能パイプラインエンジンを正常に作成すると、エンジンの一意の ID （`id`）が提供されます。 続行する前に、必ずこの値を保存してください。
+Docker イメージの場所ができたら、[&#x200B; API を使用して &#x200B;](../api/engines.md#feature-pipeline-docker) 機能パイプラインエンジンを作成 [!DNL Sensei Machine Learning] するには、`/engines` に POST を実行します。 機能パイプラインエンジンを正常に作成すると、エンジンの一意の ID （`id`）が提供されます。 続行する前に、必ずこの値を保存してください。
 
 ### MLInstance の作成 {#create-mlinstance}
 
-新しく作成した `engineID` を使用して、[ エンドポイントに対して POST リクエストを実行することで ](../api/mlinstances.md#create-an-mlinstance)MLIstance を作成 `/mlInstance` する必要があります。 リクエストが成功した場合は、次の API 呼び出しで使用される一意の ID （`id`）など、新しく作成された MLInstance の詳細を含むペイロードが返されます。
+新しく作成した `engineID` を使用して、[&#x200B; エンドポイントに対して POST リクエストを実行することで &#x200B;](../api/mlinstances.md#create-an-mlinstance)MLIstance を作成 `/mlInstance` する必要があります。 リクエストが成功した場合は、次の API 呼び出しで使用される一意の ID （`id`）など、新しく作成された MLInstance の詳細を含むペイロードが返されます。
 
 ### Experiment の作成 {#create-experiment}
 
-次に、[ 実験を作成 ](../api/experiments.md#create-an-experiment) する必要があります。 実験を作成するには、MLIstance の一意の ID （`id`）を用意し、`/experiment` エンドポイントに対して POST リクエストを行う必要があります。 応答が成功すると、次の API 呼び出しで使用される一意の ID （`id`）など、新しく作成された実験の詳細を含むペイロードが返されます。
+次に、[&#x200B; 実験を作成 &#x200B;](../api/experiments.md#create-an-experiment) する必要があります。 実験を作成するには、MLIstance の一意の ID （`id`）を用意し、`/experiment` エンドポイントに対して POST リクエストを行う必要があります。 応答が成功すると、次の API 呼び出しで使用される一意の ID （`id`）など、新しく作成された実験の詳細を含むペイロードが返されます。
 
 ### 実験実行機能パイプラインタスクの指定 {#specify-feature-pipeline-task}
 
 実験を作成したら、実験のモードを `featurePipeline` に変更する必要があります。 モードを変更するには、追加の POST を実行して [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) ールに `EXPERIMENT_ID` り、本文で `{ "mode":"featurePipeline"}` を送信して、機能パイプラインの実験を指定します。
 
-完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[ 実験ステータスを取得 ](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
+完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[&#x200B; 実験ステータスを取得 &#x200B;](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
 
 ### 実験実行のトレーニングタスクを指定 {#training}
 
-次に、[ トレーニング実行タスクを指定 ](../api/experiments.md#experiment-training-scoring) する必要があります。 `experiments/{EXPERIMENT_ID}/runs` に POST を送信し、本文でモードを `train` に設定して、トレーニングパラメーターを含んだタスクの配列を送信します。 成功応答は、要求された実験の詳細を含むペイロードを返します。
+次に、[&#x200B; トレーニング実行タスクを指定 &#x200B;](../api/experiments.md#experiment-training-scoring) する必要があります。 `experiments/{EXPERIMENT_ID}/runs` に POST を送信し、本文でモードを `train` に設定して、トレーニングパラメーターを含んだタスクの配列を送信します。 成功応答は、要求された実験の詳細を含むペイロードを返します。
 
-完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[ 実験ステータスを取得 ](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
+完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[&#x200B; 実験ステータスを取得 &#x200B;](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
 
 ### 実験実行のスコアリングタスクを指定 {#scoring}
 
@@ -433,9 +433,9 @@ Docker イメージの場所ができたら、[ API を使用して ](../api/eng
 >
 > この手順を完了するには、実験に関連付けられたトレーニングを 1 回以上成功させる必要があります。
 
-トレーニング実行が正常に完了したら、[ スコアリング実行タスクを指定 ](../api/experiments.md#experiment-training-scoring) する必要があります。 `experiments/{EXPERIMENT_ID}/runs` に POST を実行し、本文で `mode` 属性を「score」に設定します。 スコアリング実験の実行が開始されます。
+トレーニング実行が正常に完了したら、[&#x200B; スコアリング実行タスクを指定 &#x200B;](../api/experiments.md#experiment-training-scoring) する必要があります。 `experiments/{EXPERIMENT_ID}/runs` に POST を実行し、本文で `mode` 属性を「score」に設定します。 スコアリング実験の実行が開始されます。
 
-完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[ 実験ステータスを取得 ](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
+完了したら、にGET リクエストを送信し `/experiments/{EXPERIMENT_ID}`[&#x200B; 実験ステータスを取得 &#x200B;](../api/experiments.md#retrieve-specific)、実験ステータスが更新されるのを待ちます。
 
 スコアリングが完了したら、機能パイプラインは運用可能になります。
 

@@ -101,7 +101,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 > 以下は実行しないでください。 `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-レシピで定義した後は、レシピで有効にします。これは、プロジェクトの `resources` フォルダーの [ application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルで実行されます。ここでは、`evaluation.class` が `Evaluator.scala` で定義された `Evaluator` に設定されます。
+レシピで定義した後は、レシピで有効にします。これは、プロジェクトの `resources` フォルダーの [&#x200B; application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルで実行されます。ここでは、`evaluation.class` が `Evaluator.scala` で定義された `Evaluator` に設定されます。
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
@@ -117,7 +117,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 カスタム評価指標の場合、評価基準に実装する必要がある主なメソッドは `split()` と `evaluate()` の 2 つです。
 
-[!DNL Python] の場合、これらのメソッドは、[ クラスの ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator` で定義されます。 `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
+[!DNL Python] の場合、これらのメソッドは、[&#x200B; クラスの &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator` で定義されます。 `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
 
 [!DNL Python] で評価指標を作成するには、`evaluate()` メソッドと `split()` メソッドを実装する必要があります。
 

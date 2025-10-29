@@ -28,13 +28,13 @@ ht-degree: 41%
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
 - [!DNL Adobe Experience Platform] へのアクセス。 [!DNL Experience Platform] の組織にアクセスする権限がない場合は、続行する前にシステム管理者に問い合わせてください。
-- [!DNL Experience Platform] API 呼び出しを行うための認証。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
+- [!DNL Experience Platform] API 呼び出しを行うための認証。 このチュートリアルを正しく完了するには、『[&#x200B; Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`
    - クライアント秘密鍵：`{CLIENT_SECRET}`
    - クライアント証明書：`{PRIVATE_KEY}`
-- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。このチュートリアルおよびその他の [!DNL Data Science Workspace] チュートリアルに必要なアセットを、[Adobeの公開 Git リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/) からダウンロードします。
+- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。このチュートリアルおよびその他の [!DNL Data Science Workspace] チュートリアルに必要なアセットを、[Adobeの公開 Git リポジトリ &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/) からダウンロードします。
 - [Python >= 2.7](https://www.python.org/downloads/) および次の [!DNL Python] パッケージ：
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)

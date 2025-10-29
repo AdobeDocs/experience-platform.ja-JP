@@ -65,7 +65,7 @@ Attribution AI サービスページが表示されます。このページに�
 - **[!UICONTROL Clone]**: インスタンスを複製します。
 - **[!UICONTROL Delete]**: インスタンスを削除します。
 - **[!UICONTROL Download summary data]**：概要データを含む CSV ファイルをダウンロードします。
-- **[!UICONTROL Access scores]**:**[!UICONTROL Access scores]** を選択すると、[Attribution AI チュートリアルのアクセススコア ](./download-scores.md) にリダイレクトされる。
+- **[!UICONTROL Access scores]**:**[!UICONTROL Access scores]** を選択すると、[Attribution AI チュートリアルのアクセススコア &#x200B;](./download-scores.md) にリダイレクトされる。
 - **[!UICONTROL View run history]**：サービスインスタンスに関連付けられているすべてのスコアリング実行のリストを含むポップオーバーが表示されます。
 
 ![その他のアクション](./images/insights/more-actions.png)
@@ -92,7 +92,7 @@ Attribution AI で新しいインスタンスを作成する場合、必須フ�
 
 >[!NOTE]
 >
->このフィルターは、サービスインスタンスの作成時に、アトリビューション AI ユーザーインターフェイスガイドのオプションの手順 [ 地域ベースのモデリング ](./user-guide.md#region-based-modeling-optional) を実行した場合にのみ存在します。
+>このフィルターは、サービスインスタンスの作成時に、アトリビューション AI ユーザーインターフェイスガイドのオプションの手順 [&#x200B; 地域ベースのモデリング &#x200B;](./user-guide.md#region-based-modeling-optional) を実行した場合にのみ存在します。
 
 このフィルターを使用すると、インスタンス作成プロセスで設定した地域を選択できます。
 
@@ -100,12 +100,12 @@ Attribution AI で新しいインスタンスを作成する場合、必須フ�
 
 **フィルター** アイコンを選択して **[!UICONTROL Add filters]** ールポップオーバーを開くと、追加のフィルターを追加できます。 **[!UICONTROL Add filters]** のポップオーバーを使用すると、チャネル、地域、メディアタイプおよび製品でフィルタリングできます。 サービスインスタンスに適用可能なフィルターのみがポップオーバーによって入力されます。 例えば、地理的データやメディアタイプを指定しなかった場合、これらのフィルター属性はインスタンスで使用できません。
 
-![ 追加フィルター ](./images/insights/additional-filters.png)
+![&#x200B; 追加フィルター &#x200B;](./images/insights/additional-filters.png)
 
-![ フィルターポップオーバー ](./images/insights/filter-popover.png)
+![&#x200B; フィルターポップオーバー &#x200B;](./images/insights/filter-popover.png)
 
 - **[!UICONTROL Channel]:** チャネル属性を選択すると、使用可能なマーケティングチャネルをフィルタリングできます。 複数のチャネルを選択して比較できます。
-- **[!UICONTROL Geography]:** 「地域」属性を選択すると、地域ベースのモデルに基づいて国コードをフィルタリングできます。 データによっては、このフィルターは存在する場合としない場合があります。 国コードは 2 文字です。 国コードの完全なリストについては、[ こちら ](https://datahub.io/core/country-list) を参照してください。
+- **[!UICONTROL Geography]:** 「地域」属性を選択すると、地域ベースのモデルに基づいて国コードをフィルタリングできます。 データによっては、このフィルターは存在する場合としない場合があります。 国コードは 2 文字です。 国コードの完全なリストについては、[&#x200B; こちら &#x200B;](https://datahub.io/core/country-list) を参照してください。
 - **[!UICONTROL Media type]:** メディアタイプ属性を選択すると、定義済みのメディアタイプをフィルタリングできます。
 - **[!UICONTROL Product]:** 製品属性を選択すると、インスタンスの作成に最初に取り込まれた製品をフィルタリングできます。
 
@@ -159,25 +159,25 @@ Attribution AI で新しいインスタンスを作成する場合、必須フ�
 >
 >すべてのタッチポイントおよびポジションにわたる属性モデルの貢献率の合計は、100 に等しくする必要があります。
 
-![ ユーザーパス分類タッチポイント ](./images/insights/user-paths.png)
+![&#x200B; ユーザーパス分類タッチポイント &#x200B;](./images/insights/user-paths.png)
 
 ## 上位のコンバージョンパス
 
 **[!UICONTROL Top conversion paths]** のグラフは、選択した領域の上位のコンバージョンパスでの影響スコアとアルゴリズムスコアを示しています。 このグラフを使用すると、コンバージョンに貢献するタッチポイントと、各タッチポイントのアトリビューションスコアを視覚化できます。 この情報を使用して、特定の領域で最も頻繁に発生するパスを確認し、異なるタッチポイントセット間にパターンが出現するかどうかを確認できます。
 
-![ 最も一般的なユーザーパス ](./images/insights/Touchpoint-paths.png)
+![&#x200B; 最も一般的なユーザーパス &#x200B;](./images/insights/Touchpoint-paths.png)
 
 ## タッチポイント有効性
 
 「**[!UICONTROL Touchpoint Effectiveness]**」タブを選択すると、**[!UICONTROL Touchpoint effectiveness]** カードが読み込まれます。 このカードは、アトリビューション AI のデータ分布を使用して、各タッチポイントの情報を表示します。 このテーブルのデータは、カードの右上に **[!UICONTROL As of]** 付された日付で示される特定の期間のみ生成されます。
 
-![ タッチポイント有効性の選択 ](./images/insights/Touchpoint-effectiveness.png)
+![&#x200B; タッチポイント有効性の選択 &#x200B;](./images/insights/Touchpoint-effectiveness.png)
 
 **[!UICONTROL Touchpoint effectiveness]** カード情報を使用すると、タッチポイントがコンバージョンにどのように貢献するかを把握できます。 また、次のパフォーマンス指標を使用して、各タッチポイントの効果を確認することもできます。
 
 **タッチ済みパス**：この指標は、タッチポイントのコンバージョンに達している/達成していないパスの割合を表示します。 コンバージョンを達成していないパスに対する、コンバージョンを達成しているパスの割合（パーセント）が高い場合は、アトリビューションされたコンバージョンが多くなります。
 
-![ タッチされたパスの指標 ](./images/insights/Touchpoint-metrics.png)
+![&#x200B; タッチされたパスの指標 &#x200B;](./images/insights/Touchpoint-metrics.png)
 
 **効率測定**：この指標は、1～5 のスケールで星を表示します。 スケールは、コンバージョンを行うためのタッチポイントの相対的な重要度を示します。
 

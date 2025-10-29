@@ -38,7 +38,7 @@ Data Science Workspaceを使用すると、[!DNL Jupyter Notebooks] Platform を
 
 [!DNL JupyterLab] を起動すると、Jupyter Notebooks の web ベースのインターフェイスが表示されます。 選択するノートブックタイプに応じて、対応するカーネルが起動します。
 
-使用する環境を比較する際には、各サービスの制限事項を考慮する必要があります。例えば、[ で ](https://pandas.pydata.org/)pandas[!DNL Python] ライブラリを使用している場合、通常のユーザーとして使用できる RAM の上限は 2 GB です。 パワーユーザーの場合でも、20 GB の RAM に制限されます。より大きな計算を処理する場合は、すべてのノートブックインスタンスで共有される 1.5 TB を提供する [!DNL Spark] を使用することは理にかなっています。
+使用する環境を比較する際には、各サービスの制限事項を考慮する必要があります。例えば、[&#x200B; で &#x200B;](https://pandas.pydata.org/)pandas[!DNL Python] ライブラリを使用している場合、通常のユーザーとして使用できる RAM の上限は 2 GB です。 パワーユーザーの場合でも、20 GB の RAM に制限されます。より大きな計算を処理する場合は、すべてのノートブックインスタンスで共有される 1.5 TB を提供する [!DNL Spark] を使用することは理にかなっています。
 
 デフォルトでは、Tensorflow レシピは GPU クラスターで動作し、Python は CPU クラスター内で動作します。
 
@@ -58,13 +58,13 @@ Retail Sales レシピは、同じ Retail Sales データセットを使用し�
 
 >[!NOTE]
 >
->この `data_access_sdk_python` は非推奨となり、推奨されなくなりました。 SDK コードを変換するには、[Experience Platform SDKへのデータアクセスの変換 ](../authoring/platform-sdk.md) チュートリアルを参照してください。 このチュートリアルでも、以下と同じ手順を使用します。
+>この `data_access_sdk_python` は非推奨となり、推奨されなくなりました。 SDK コードを変換するには、[Experience Platform SDKへのデータアクセスの変換 &#x200B;](../authoring/platform-sdk.md) チュートリアルを参照してください。 このチュートリアルでも、以下と同じ手順を使用します。
 
 [!DNL Adobe Experience Platform] ーザーの内部データへのアクセスと、外部データへのアクセスを見直します。 `data_access_sdk_python` ライブラリを使用して、データセットや XDM スキーマなどの内部データにアクセスします。外部データの場合は、pandas [!DNL Python] ライブラリを使用します。
 
 #### 外部データ
 
-Retail Sales ノートブックを開き、「Load Data」ヘッダーを探します。次の [!DNL Python] コードでは、pandas の `DataFrame` データ構造と [read_csv （） ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用して、[!DNL Github] でホストされている CSV を DataFrame に読み込みます。
+Retail Sales ノートブックを開き、「Load Data」ヘッダーを探します。次の [!DNL Python] コードでは、pandas の `DataFrame` データ構造と [read_csv （） &#x200B;](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用して、[!DNL Github] でホストされている CSV を DataFrame に読み込みます。
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -84,7 +84,7 @@ pandas の DataFrame データ構造は、2 次元のラベル付きデータ構
 
 この節では、Retail Sales データセットを使用します。これは、Retail Sales サンプルノートブックで使用されているのと同じデータセットです。
 
-Jupyter Notebook では、左側の **データ** タブ ![ データタブ ](../images/jupyterlab/analyze-data/dataset-tab.png) からデータにアクセスできます。 タブを選択すると、2 つのフォルダーが表示されます。 **[!UICONTROL Datasets]** フォルダーを選択します。
+Jupyter Notebook では、左側の **データ** タブ ![&#x200B; データタブ &#x200B;](../images/jupyterlab/analyze-data/dataset-tab.png) からデータにアクセスできます。 タブを選択すると、2 つのフォルダーが表示されます。 **[!UICONTROL Datasets]** フォルダーを選択します。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -106,7 +106,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-[!DNL Python] 以外のカーネルで作業している場合は、[ このページ ](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) を参照して [!DNL Adobe Experience Platform] ーバー上のデータにアクセスしてください。
+[!DNL Python] 以外のカーネルで作業している場合は、[&#x200B; このページ &#x200B;](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) を参照して [!DNL Adobe Experience Platform] ーバー上のデータにアクセスしてください。
 
 実行可能なセルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。`head()` の出力は、データセットのキーを列にした、データセットの最初の n 行分のテーブルです。`head()` では、出力する行数を指定する整数の引数を受け取ります。デフォルトでは、これは 5 です。
 
@@ -157,7 +157,7 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-つまり、22 店舗が `storeType` `A`、17 店舗が `storeType` `B`、6 店舗が `storeType``C` です。
+つまり、22 店舗が `storeType` `A`、17 店舗が `storeType` `B`、6 店舗が `storeType` `C` です。
 
 #### データの視覚化
 

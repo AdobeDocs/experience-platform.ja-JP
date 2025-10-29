@@ -51,7 +51,7 @@ ht-degree: 30%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -71,7 +71,7 @@ ht-degree: 30%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -79,7 +79,7 @@ ht-degree: 30%
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-* **[!UICONTROL Braze account token]**：これは [!DNL Braze] [!DNL API] キーです。 [!DNL API] キーの取得方法に関する詳細な手順については、[REST API キーの概要 ](https://www.braze.com/docs/api/api_key/) を参照してください。
+* **[!UICONTROL Braze account token]**：これは [!DNL Braze] [!DNL API] キーです。 [!DNL API] キーの取得方法に関する詳細な手順については、[REST API キーの概要 &#x200B;](https://www.braze.com/docs/api/api_key/) を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -99,8 +99,8 @@ ht-degree: 30%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -114,40 +114,40 @@ XDM フィールドを [!DNL Braze] 宛先フィールドに正しくマッピ�
 
 [!UICONTROL Mapping] の手順で、「**[!UICONTROL Add new mapping]**」をクリックします。
 
-![Braze 宛先追加マッピング ](../../assets/catalog/mobile-engagement/braze/mapping.png)
+![Braze 宛先追加マッピング &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
 「[!UICONTROL Source Field]」セクションで、空のフィールドの横にある矢印ボタンをクリックします。
 
-![Braze の宛先Sourceのマッピング ](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Braze の宛先Sourceのマッピング &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 [!UICONTROL Select source field] ウィンドウでは、XDM フィールドの 2 つのカテゴリから選択できます。
 
 * [!UICONTROL Select attributes]：このオプションを使用して、XDM スキーマの特定のフィールドを [!DNL Braze] 属性にマッピングします。
 
-![Braze 宛先マッピングSource属性 ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Braze 宛先マッピングSource属性 &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Select identity namespace]:[!DNL Experience Platform] ID 名前空間を [!DNL Braze] 名前空間にマッピングするには、このオプションを使用します。
 
-![Braze 宛先マッピング Source名前空間 ](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Braze 宛先マッピング Source名前空間 &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 ソースフィールドを選択し、「**[!UICONTROL Select]**」をクリックします。
 
 「[!UICONTROL Target Field]」セクションで、フィールドの右側にあるマッピングアイコンをクリックします。
 
-![Braze 宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
+![Braze 宛先ターゲットマッピング &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 [!UICONTROL Select target field] ウィンドウでは、ターゲットフィールドの次の 2 つのカテゴリから選択できます。
 
 * [!UICONTROL Select identity namespace]：このオプションを使用して、ID 名前空間 [!DNL Experience Platform]ID 名前空間にマッピン [!DNL Braze] します。
 * [!UICONTROL Select custom attributes]：このオプションを使用して、XDM 属性を [!DNL Braze] アカウントで定義したカスタム [!DNL Braze] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Braze] に変更することもできます。 例えば、`lastName` XDM 属性を `Last_Name` のカスタム [!DNL Braze] 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Braze] に作成し、`lastName` XDM 属性をマッピングします。
 
-![ 宛先ターゲットマッピングフィールドのブレーズ化 ](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
+![&#x200B; 宛先ターゲットマッピングフィールドのブレーズ化 &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
 ターゲットフィールドを選択し、「**[!UICONTROL Select]**」をクリックします。
 
 これで、リストにフィールドマッピングが表示されます。
 
-![Braze 宛先マッピングの完了 ](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
+![Braze 宛先マッピングの完了 &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
 
 さらにマッピングを追加するには、前の手順を繰り返します。
 
@@ -162,7 +162,7 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスに、次�
 
 正しいマッピングは次のようになります。
 
-![Braze 宛先マッピングの例 ](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
+![Braze 宛先マッピングの例 &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
 ## 書き出したデータ {#exported-data}
 
@@ -178,4 +178,4 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスに、次�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[ データガバナンスの概要 ](../../../data-governance/home.md) を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../../data-governance/home.md) を参照してください。

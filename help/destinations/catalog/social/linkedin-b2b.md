@@ -15,13 +15,13 @@ ht-degree: 23%
 
 >[!AVAILABILITY]
 >
->Real-Time Customer Data Platformの [Business-to-Business）エディションと ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Person[ エディションを購入する企業は、アカウントオーディエンスを（会社） LinkedIn 宛先に対してアクティブ化する機能を利用 ](/help/rtcdp/overview.md#rtcdp-b2p) きます。
+>Real-Time Customer Data Platformの [Business-to-Business）エディションと &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Person[&#x200B; エディションを購入する企業は、アカウントオーディエンスを（会社） LinkedIn 宛先に対してアクティブ化する機能を利用 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p) きます。
 
-この宛先を使用して、Account-Based Marketing（ABM）のユースケースの [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) をアクティベートします。 **[!UICONTROL (Companies) LinkedIn]** の B2B の宛先を介して、Target アカウント内の関連するペルソナや役割にアドバタイズします。 LinkedIn プラットフォームの [ アカウントターゲティングの詳細については ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)、LinkedIn のドキュメントを参照してください。
+この宛先を使用して、Account-Based Marketing（ABM）のユースケースの [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) をアクティベートします。 **[!UICONTROL (Companies) LinkedIn]** の B2B の宛先を介して、Target アカウント内の関連するペルソナや役割にアドバタイズします。 LinkedIn プラットフォームの [&#x200B; アカウントターゲティングの詳細については &#x200B;](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)、LinkedIn のドキュメントを参照してください。
 
 >[!TIP]
 >
->個々のレベル（または B2C）のユースケースについては、Adobeでは [LinkedIn でマッチしたオーディエンス ](/help/destinations/catalog/social/linkedin.md) の宛先を使用することをお勧めします。
+>個々のレベル（または B2C）のユースケースについては、Adobeでは [LinkedIn でマッチしたオーディエンス &#x200B;](/help/destinations/catalog/social/linkedin.md) の宛先を使用することをお勧めします。
 
 ![Experience Platform UI に表示される LinkedIn アカウントの宛先。](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
 
@@ -31,7 +31,7 @@ ht-degree: 23%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -55,13 +55,13 @@ ht-degree: 23%
 
 [!UICONTROL (Companies) LinkedIn Matched Audience] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
 
-[!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
+[!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 &#x200B;](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -69,7 +69,7 @@ ht-degree: 23%
 
 1. 宛先カタログで [!DNL (Companies) LinkedIn Matched Audiences] の宛先を見つけて、「**[!UICONTROL Set Up]**」を選択します。
 2. **[!UICONTROL Connect to destination]** を選択します。
-   ![LinkedIn への認証 ](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
+   ![LinkedIn への認証 &#x200B;](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. LinkedIn 資格情報を入力し、「**ログイン**」を選択します。
 
 LinkedIn によるログインプロセスが完了したら、次の手順に進むことができます。
@@ -88,10 +88,10 @@ LinkedIn によるログインプロセスが完了したら、次の手順に�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先にアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) をお読みください。
+この宛先にアカウントオーディエンスをアクティブ化する手順については、[&#x200B; アカウントオーディエンスのアクティブ化 &#x200B;](/help/destinations/ui/activate-account-audiences.md) をお読みください。
 
 ## アカウントオーディエンスを **[!UICONTROL (Companies) LinkedIn Matched Audiences]** の宛先に対してアクティブ化する際に、マッピング手順で必要なマッピングペア {#required-mappings}
 
@@ -102,7 +102,7 @@ LinkedIn によるログインプロセスが完了したら、次の手順に�
 | ソースフィールド | ターゲットフィールド |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` （**[!UICONTROL Select Identity namespace]** を選択する際に、**[!UICONTROL Target Field]** ビューでこのフィールドを選択します）。<br> ![ 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` （**[!UICONTROL Select Identity namespace]** を選択する際に、**[!UICONTROL Target Field]** ビューでこのフィールドを選択します）。<br> ![&#x200B; 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

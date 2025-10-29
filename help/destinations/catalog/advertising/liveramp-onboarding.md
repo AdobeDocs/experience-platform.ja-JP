@@ -38,7 +38,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -58,7 +58,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -77,7 +77,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 * **[!UICONTROL Password]**:[!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 **SSH キー認証を使用した SFTP** {#sftp-ssh}
 
@@ -92,7 +92,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -104,7 +104,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![&#x200B; 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -123,7 +123,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -135,13 +135,13 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 * **[!UICONTROL Frequency]**：[!UICONTROL Daily]
 * **[!UICONTROL Date]**：希望する書き出し開始時刻および終了時刻を選択します。
 
-![ オーディエンスのスケジュール設定ステップを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![&#x200B; オーディエンスのスケジュール設定ステップを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 書き出すファイルの名前は現在、ユーザーが設定することはできません。[!DNL LiveRamp - Onboarding] 宛先に書き出すすべてのファイルは、次のテンプレートに基づいて自動的に名前が付けられます。
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![ 書き出すファイルの名前テンプレートを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![&#x200B; 書き出すファイルの名前テンプレートを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 例えば、[!DNL Luma] という名前の組織の場合、書き出すファイルの名前は次のようになります。
 
@@ -187,7 +187,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、[!DNL LiveRamp] 担当者に連絡して、バッチ取り込みを設定するように依頼してください。
 
-ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [ 結合ポリシー ID](../../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。
+ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [&#x200B; 結合ポリシー ID](../../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。
 
 例えば、次のオーディエンスについて考えてみます。
 
@@ -223,11 +223,11 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` と `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節でセグメント化サービスから生じるオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` に [ カスタムアップロード ](../../../segmentation/ui/audience-portal.md#import-audience) としてExperience Platformに読み込まれたオーディエンスを表しています。
+上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` と `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節でセグメント化サービスから生じるオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` に [&#x200B; カスタムアップロード &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) としてExperience Platformに読み込まれたオーディエンスを表しています。
 
-Experience Platformでは [ 結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
+Experience Platformでは [&#x200B; 結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
-つまり、**[!UICONTROL Identities activated]** データフロー実行 **[!UICONTROL Profiles received]** ページの [ と ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) の指標が、オーディエンスごとに表示されるのではなく、同じ結合ポリシーを使用するオーディエンスのグループごとに集計されます。
+つまり、**[!UICONTROL Identities activated]** データフロー実行 **[!UICONTROL Profiles received]** ページの [&#x200B; と &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) の指標が、オーディエンスごとに表示されるのではなく、同じ結合ポリシーを使用するオーディエンスのグループごとに集計されます。
 
 同じ結合ポリシーを使用するオーディエンスのグループに対してデータフロー実行が生成されるので、オーディエンス名は[モニタリングダッシュボード](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に表示されません。
 

@@ -21,27 +21,27 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、*Zeta Global* チームが作成および管理します。 お問い合わせや更新のリクエストについては、チーム [ お問い合わせ ](https://zetaglobal.com/about/contact-us/) までお問い合わせください。
+>宛先コネクタとドキュメントページは、*Zeta Global* チームが作成および管理します。 お問い合わせや更新のリクエストについては、チーム [&#x200B; お問い合わせ &#x200B;](https://zetaglobal.com/about/contact-us/) までお問い合わせください。
 
 ## ユースケース {#use-cases}
 
 ### オーディエンスセグメントの作成 {#use-case-build-audiences}
 
-マーケターは、一意のオーディエンスプロファイルを作成し、最も価値のあるセグメントを特定し、Zeta Marketing Platform がサポートするデジタルチャネルをまたいで使用したいと考えています。 消費者プロファイルの真の 360 ビューを作成し、意味のあるオーディエンスを作成してアクティブ化したいと考えています。 Zeta Marketing Platform がサポートするチャネルの詳細は、[ こちら ](https://zetaglobal.com/platform/integrations/) をご覧ください。
+マーケターは、一意のオーディエンスプロファイルを作成し、最も価値のあるセグメントを特定し、Zeta Marketing Platform がサポートするデジタルチャネルをまたいで使用したいと考えています。 消費者プロファイルの真の 360 ビューを作成し、意味のあるオーディエンスを作成してアクティブ化したいと考えています。 Zeta Marketing Platform がサポートするチャネルの詳細は、[&#x200B; こちら &#x200B;](https://zetaglobal.com/platform/integrations/) をご覧ください。
 
 ### 広告によるユーザーのターゲティング {#use-case-target-users}
 
-広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットに設定することを目的としています。 ゼータ・DSPに関する詳細は、[ こちら ](https://knowledgebase.zetaglobal.com/pug/) をクリックしてください。
+広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットに設定することを目的としています。 ゼータ・DSPに関する詳細は、[&#x200B; こちら &#x200B;](https://knowledgebase.zetaglobal.com/pug/) をクリックしてください。
 
 ## 前提条件 {#prerequisites}
 
 ### Zeta Marketing Platform 前提条件
 
-* Zeta Marketing Platform の宛先への新しい接続を設定する前に、Zeta Marketing Platform アカウントに空の顧客リストを作成する必要があります。 送信するAdobe Experience Platform オーディエンスを受け取るターゲットとして、これらのカスタマーリストのいずれかを指定する必要があります。 [ こちら ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) の手順に従って、ZMP に空の顧客リストを作成できます。
-* Adobe Experience Platformでは、特定の ZMP 宛先インスタンスに対して複数のオーディエンスをアクティブ化できますが、各 ZMP 宛先インスタンスが受け取るExperience Platform オーディエンスは 1 つのみである必要があります。 Experience Platformから複数のオーディエンスを処理するには、各オーディエンスに対して追加の ZMP 宛先インスタンスを作成し、ドロップダウンから別の顧客リストを選択します。 このアプローチにより、ターゲットの ZMP オーディエンスが上書きされなくなります。 詳しくは、[ 宛先の詳細の入力 ](#destination-details) を参照してください。
+* Zeta Marketing Platform の宛先への新しい接続を設定する前に、Zeta Marketing Platform アカウントに空の顧客リストを作成する必要があります。 送信するAdobe Experience Platform オーディエンスを受け取るターゲットとして、これらのカスタマーリストのいずれかを指定する必要があります。 [&#x200B; こちら &#x200B;](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) の手順に従って、ZMP に空の顧客リストを作成できます。
+* Adobe Experience Platformでは、特定の ZMP 宛先インスタンスに対して複数のオーディエンスをアクティブ化できますが、各 ZMP 宛先インスタンスが受け取るExperience Platform オーディエンスは 1 つのみである必要があります。 Experience Platformから複数のオーディエンスを処理するには、各オーディエンスに対して追加の ZMP 宛先インスタンスを作成し、ドロップダウンから別の顧客リストを選択します。 このアプローチにより、ターゲットの ZMP オーディエンスが上書きされなくなります。 詳しくは、[&#x200B; 宛先の詳細の入力 &#x200B;](#destination-details) を参照してください。
 * 次の資格情報を使用して宛先を設定します。
    * ユーザー名：**api**
-   * パスワード：ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
+   * パスワード：ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
@@ -63,7 +63,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -85,7 +85,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [ が必要 ](/help/access-control/home.md#permissions) す。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [&#x200B; が必要 &#x200B;](/help/access-control/home.md#permissions) す。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -94,17 +94,17 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
 * **[!UICONTROL Username]**：`api`
-* **[!UICONTROL Password]**：お使いの ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
+* **[!UICONTROL Password]**：お使いの ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ZMP 設定を示す画像 ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
+![ZMP 設定を示す画像 &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ZMP Account Site Id]**：オーディエンスの送信先となる ZMP **サイト ID**。 サイト ID を表示するには、**設定** / **統合** / **キーとアプリ** セクションに移動します。 詳しくは、[ こちら ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
+* **[!UICONTROL ZMP Account Site Id]**：オーディエンスの送信先となる ZMP **サイト ID**。 サイト ID を表示するには、**設定** / **統合** / **キーとアプリ** セクションに移動します。 詳しくは、[&#x200B; こちら &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 * **[!UICONTROL ZMP Segment]**:Experience Platform オーディエンスで更新する ZMP サイト ID アカウントの顧客リストセグメント。
 
 ### アラートの有効化 {#enable-alerts}
@@ -117,8 +117,8 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL Manage Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL Manage Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -137,13 +137,13 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 * （オプション）メール md5 値を表すソース ID 名前空間をマッピングしたターゲット ID として `email_md5_id` を選択します。 Experience Platformはプレーンテキストを MD5 に変換しないので、メールアドレスがExperience Platform内で既に MD5 フォーマットになっている必要があります
 * 必要に応じて、追加のターゲットマッピングを選択します。
 
-![ID マッピング ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
+![ID マッピング &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 Experience Platformから Zeta Marketing Platform へのオーディエンスアクティベーションが成功すると、ZMP のターゲットカスタマーリストが更新されます。 ターゲット顧客リスト内のカウントとサンプルプロファイルは、正常にアクティブ化された ID の数と等しくなります。
 
-![ZMP の顧客リスト ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
+![ZMP の顧客リスト &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
 Experience Platformからアクティブ化された各オーディエンスメンバーは、ZMP の **オーディエンス**/**人物** にも表示されます。 また、次に示すように、プロファイルが属する **顧客リスト** セグメントを単一顧客ビューで表示することもできます。
 

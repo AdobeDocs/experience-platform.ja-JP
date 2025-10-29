@@ -16,9 +16,9 @@ ht-degree: 31%
 
 [[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。[!DNL Outreach] は、組織がセールスエンゲージメントを自動化、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource) を活用しており、[!DNL Outreach] の見込み客に対応する、オーディエンス内の ID を更新できます。
+この [!DNL Adobe Experience Platform][&#x200B; 宛先 &#x200B;](/help/destinations/home.md) は、[Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource) を活用しており、[!DNL Outreach] の見込み客に対応する、オーディエンス内の ID を更新できます。
 
-[!DNL Outreach] は、認証付与を使用する OAuth 2 を認証メカニズムとして使用して、[!DNL Outreach] [!DNL Update Resource API] と通信します。 [!DNL Outreach] インスタンスを認証する手順は、さらに下の [ 宛先に対する認証 ](#authenticate) の節にあります。
+[!DNL Outreach] は、認証付与を使用する OAuth 2 を認証メカニズムとして使用して、[!DNL Outreach] [!DNL Update Resource API] と通信します。 [!DNL Outreach] インスタンスを認証する手順は、さらに下の [&#x200B; 宛先に対する認証 &#x200B;](#authenticate) の節にあります。
 
 ## ユースケース {#use-cases}
 
@@ -30,7 +30,7 @@ ht-degree: 31%
 
 [!DNL Outreach] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md) に関するAdobeのドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md) に関するAdobeのドキュメントを参照してください。
 
 ### アウトリーチの前提条件 {#prerequisites-destination}
 
@@ -38,7 +38,7 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 #### アウトリーチアカウントが必要です {#prerequisites-account}
 
-アカウントをまだお持ちでない場合は、[!DNL Outreach] [ ログイン ](https://accounts.outreach.io/users/sign_in) ページに移動し、アカウントを登録して作成してください。 詳しくは、[!DNL Outreach] サポート [ ページ ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) も参照してください。
+アカウントをまだお持ちでない場合は、[!DNL Outreach] [&#x200B; ログイン &#x200B;](https://accounts.outreach.io/users/sign_in) ページに移動し、アカウントを登録して作成してください。 詳しくは、[!DNL Outreach] サポート [&#x200B; ページ &#x200B;](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) も参照してください。
 
 [!DNL Outreach] CRM 宛先に対して認証を行う前に、以下の項目をメモしておきます。
 
@@ -49,13 +49,13 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 #### カスタムフィールドラベルの設定 {#prerequisites-custom-fields}
 
-[!DNL Outreach] では、[ 見込み客 ](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview) のカスタムフィールドをサポートしています。 詳しくは、[ アウトリーチでカスタムフィールドを追加する方法 ](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) を参照してください。 識別を容易にするために、デフォルト値を維持するのではなく、対応するオーディエンス名に手動でラベルを更新することをお勧めします。 以下に例を示します。
+[!DNL Outreach] では、[&#x200B; 見込み客 &#x200B;](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview) のカスタムフィールドをサポートしています。 詳しくは、[&#x200B; アウトリーチでカスタムフィールドを追加する方法 &#x200B;](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) を参照してください。 識別を容易にするために、デフォルト値を維持するのではなく、対応するオーディエンス名に手動でラベルを更新することをお勧めします。 以下に例を示します。
 
 カ [!DNL Outreach] タムフィールドを表示している見込み客の設定ページ
-![ 設定ページのカスタムフィールドを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
+![&#x200B; 設定ページのカスタムフィールドを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
 オーディエンス名に一致する [!DNL Outreach] ユーザーにとってわかりやすい *ラベルを持つカスタムフィールドを表示する見込み客の* 設定ページ。 これらのラベルに対して、見込み客ページでオーディエンスステータスを表示できます。
-![ 設定ページの関連するラベルを持つカスタムフィールドを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
+![&#x200B; 設定ページの関連するラベルを持つカスタムフィールドを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 このメッセージが表示された場合は、レートしきい値に準拠するようにオーディエンスの書き出しスケジュールを更新する必要があります。
 
-詳しくは、[[!DNL Outreach]  ドキュメント ](https://api.outreach.io/api/v2/docs#rate-limiting) を参照してください。
+詳しくは、[[!DNL Outreach]  ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#rate-limiting) を参照してください。
 
 ## サポートされる ID {#supported-identities}
 
@@ -83,7 +83,7 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Profile-based]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Outreach] の各セグメントのステータスは、[!UICONTROL Mapping ID] オーディエンススケジュール [ 手順で指定した ](#schedule-segment-export-example) 値に基づいて、Experience Platformの対応するオーディエンスステータスとともに更新されます。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL Profile-based]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Outreach] の各セグメントのステータスは、[!UICONTROL Mapping ID] オーディエンススケジュール [&#x200B; 手順で指定した &#x200B;](#schedule-segment-export-example) 値に基づいて、Experience Platformの対応するオーディエンスステータスとともに更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL Streaming]** | <ul><li> ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
@@ -92,7 +92,7 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 >[!IMPORTANT]
 > 
-> 宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [ が必要 ](/help/access-control/home.md#permissions) す。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> 宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [&#x200B; が必要 &#x200B;](/help/access-control/home.md#permissions) す。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -102,15 +102,15 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 宛先を認証するには、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![ アウトリーチへの認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/authenticate-destination.png)
+![&#x200B; アウトリーチへの認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
 [!DNL Outreach] ログインページが表示されます。 メールを入力します。
 
-![ アウトリーチ UI のスクリーンショットで、アウトリーチを認証するメールを入力するフィールドを示す ](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
+![&#x200B; アウトリーチ UI のスクリーンショットで、アウトリーチを認証するメールを入力するフィールドを示す &#x200B;](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
 
 次に、パスワードを入力します。
 
-![ アウトリーチ UI のスクリーンショットで、アウトリーチに対する認証を行うためのパスワード入力ステップのフィールドを示している ](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
+![&#x200B; アウトリーチ UI のスクリーンショットで、アウトリーチに対する認証を行うためのパスワード入力ステップのフィールドを示している &#x200B;](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
 
 * **[!UICONTROL Username]**:[!DNL Outreach] アカウントのメール。
 * **[!UICONTROL Password]**:[!DNL Outreach] アカウントのパスワード。
@@ -120,7 +120,7 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![ アウトリーチ先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-details.png)
+![&#x200B; アウトリーチ先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -135,8 +135,8 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -145,10 +145,10 @@ Experience Platformから [!DNL Outreach] アカウントにデータを書き�
 Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL Outreach] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 1. [!UICONTROL Mapping] の手順で、「**[!UICONTROL Add new mapping]**」をクリックします。 画面に新しいマッピング行が表示されます。
-   ![ 新しいマッピングの追加方法を示すExperience Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/add-new-mapping.png)
+   ![&#x200B; 新しいマッピングの追加方法を示すExperience Platform UI のスクリーンショット &#x200B;](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. [!UICONTROL Select source field] ウィンドウで、**[!UICONTROL Select identity namespace]** カテゴリを選択し、目的のマッピングを追加します。
-   ![Sourceのマッピングを示すExperience Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/source-mapping.png)
+   ![Sourceのマッピングを示すExperience Platform UI のスクリーンショット &#x200B;](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. [!UICONTROL Select target field] ウィンドウで、ソースフィールドにマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL Select identity namespace]**：このオプションを選択して、ソースフィールドをリストから id 名前空間にマッピングします。
@@ -160,7 +160,7 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
      |---|---|---|
      | `Oid` | `OutreachId` | ○ |
 
-   * **[!UICONTROL Select custom attributes]**：このオプションを選択して、ソースフィールドを、[!UICONTROL Attribute name] フィールドに定義するカスタム属性にマッピングします。 サポートされる属性の包括的なリストについては、[[!DNL Outreach]  見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
+   * **[!UICONTROL Select custom attributes]**：このオプションを選択して、ソースフィールドを、[!UICONTROL Attribute name] フィールドに定義するカスタム属性にマッピングします。 サポートされる属性の包括的なリストについては、[[!DNL Outreach]  見込み客ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
      ![LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png) を使用したターゲットマッピングを示すExperience Platform UI のスクリーンショット
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間に次のようなマッピングを追加します。
@@ -171,11 +171,11 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
      | `person.name.lastName` | `lastName` |
 
    * これらのマッピングの使用例を次に示します。
-     ![ ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
+     ![&#x200B; ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-* [ オーディエンスの書き出しをスケジュール ](../../ui/activate-segment-streaming-destinations.md) 手順を実行する場合は、Experience Platform オーディエンスを [!DNL Outreach] のカスタムフィールド属性に手動でマッピングする必要があります。
+* [&#x200B; オーディエンスの書き出しをスケジュール &#x200B;](../../ui/activate-segment-streaming-destinations.md) 手順を実行する場合は、Experience Platform オーディエンスを [!DNL Outreach] のカスタムフィールド属性に手動でマッピングする必要があります。
 
 * これを行うには、各セグメントを選択し、*フィールドの `N` の* カスタムフィールド [!DNL Outreach] ラベル **[!UICONTROL Mapping ID]** フィールドに対応する数値を入力します。
 
@@ -184,7 +184,7 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
   > * *内で使用される数値 `N` （*） [!UICONTROL Mapping ID] は、[!DNL Outreach] 内の数値が末尾に付いたカスタム属性キーと一致する必要があります。 例：*ラベル `N` カスタムフィールド*。
   > * 指定する必要があるのは数値だけで、カスタムフィールドラベル全体は指定できません。
   > * [!DNL Outreach] では、最大 150 個のカスタムラベルフィールドをサポートしています。
-  > * 詳しくは、[[!DNL Outreach]  見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
+  > * 詳しくは、[[!DNL Outreach]  見込み客ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
 
    * 例：
 
@@ -192,27 +192,27 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
      |---|---|
      | ラベル `4` カスタムフィールド | `4` |
 
-     ![ スケジュールのオーディエンス書き出し時のマッピング ID の例を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![&#x200B; スケジュールのオーディエンス書き出し時のマッピング ID の例を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## データの書き出しを検証する {#exported-data}
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. **[!UICONTROL Destinations]**/**[!UICONTROL Browse]** を選択して、宛先のリストに移動します。
-   ![ 宛先の参照を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/browse-destinations.png)
+   ![&#x200B; 宛先の参照を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/browse-destinations.png)
 
 1. 宛先を選択し、ステータスが「**[!UICONTROL enabled]**」であることを確認します。
-   ![ 選択した宛先の宛先データフロー実行を示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
+   ![&#x200B; 選択した宛先の宛先データフロー実行を示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
-   ![ 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
+   ![&#x200B; 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内で作成された数と一致していることを確認します。
-   ![ セグメントの概要を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/segment.png)
+   ![&#x200B; セグメントの概要を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/segment.png)
 
-1. [!DNL Outreach] web サイトににログインして、[!DNL Apps] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Outreach] の各オーディエンスステータスが、[!UICONTROL Mapping ID] オーディエンスのスケジュール設定 [ 手順で指定された ](#schedule-segment-export-example) 値に基づいて、Experience Platformから対応するオーディエンスステータスに更新されたことがわかります。
+1. [!DNL Outreach] web サイトににログインして、[!DNL Apps] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Outreach] の各オーディエンスステータスが、[!UICONTROL Mapping ID] オーディエンスのスケジュール設定 [&#x200B; 手順で指定された &#x200B;](#schedule-segment-export-example) 値に基づいて、Experience Platformから対応するオーディエンスステータスに更新されたことがわかります。
 
-![ 更新されたオーディエンスステータスを含むアウトリーチ見込み客ページを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![&#x200B; 更新されたオーディエンスステータスを含むアウトリーチ見込み客ページを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -222,10 +222,10 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 
 データフローの実行を確認すると、次のエラーメッセージが表示される場合があります。`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![ 無効なリクエストエラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/error.png)
+![&#x200B; 無効なリクエストエラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/error.png)
 
 このエラーを修正するには、Experience Platformで指定した [!UICONTROL Mapping ID] オーディエンスの [!DNL Outreach] が有効であり、[!DNL Outreach] に存在することを確認します。
 
 ## その他のリソース {#additional-resources}
 
-[[!DNL Outreach]  ドキュメント ](https://api.outreach.io/api/v2/docs/) には、問題のデバッグに使用できる [ エラー応答 ](https://api.outreach.io/api/v2/docs#error-responses) に関する詳細があります。
+[[!DNL Outreach]  ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs/) には、問題のデバッグに使用できる [&#x200B; エラー応答 &#x200B;](https://api.outreach.io/api/v2/docs#error-responses) に関する詳細があります。

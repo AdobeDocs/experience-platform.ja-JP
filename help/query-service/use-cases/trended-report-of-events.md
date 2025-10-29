@@ -16,7 +16,7 @@ ht-degree: 6%
 
 レポートを使用すると、Experience Platform データにアクセスして、組織の戦略的なビジネスインサイトに役立てることができます。 これらのレポートを使用すると、Experience Platform データを様々な方法で調べ、主要な指標をわかりやすい形式で表示し、結果として得られるインサイトを共有できます。
 
-XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 &#x200B;](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 
 ## 目標
 

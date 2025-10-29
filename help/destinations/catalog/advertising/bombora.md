@@ -17,7 +17,7 @@ ht-degree: 25%
 >
 >Real-Time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) 版と [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) 版を購入する企業は、Bombora の宛先に対してアカウントオーディエンスをアクティブ化する機能を利用できます。
 
-[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Bombora キャンペーン用のプロファイルをアクティブ化します。
+[&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Bombora キャンペーン用のプロファイルをアクティブ化します。
 
 ## ユースケース {#use-case}
 
@@ -49,7 +49,7 @@ B2B マーケターは、Real-time CDP でアカウントリストを作成し�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -86,7 +86,7 @@ Bombora では、以下の表で説明されているターゲット ID のマ�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -94,7 +94,7 @@ Bombora では、以下の表で説明されているターゲット ID のマ�
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![ ベアラートークンの追加 ](../../assets/catalog/advertising/bombora/add-bearer-token.png)
+![&#x200B; ベアラートークンの追加 &#x200B;](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
 * **[!UICONTROL Client ID]**:[!DNL Bombora] のクライアント ID を入力します。
 * **[!UICONTROL Client secret]**: [!DNL Bombora] クライアントの秘密鍵を入力します。
@@ -103,7 +103,7 @@ Bombora では、以下の表で説明されているターゲット ID のマ�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先接続に関する情報の追加 ](../..//assets/catalog/advertising/bombora/name-and-description.png)
+![&#x200B; 宛先接続に関する情報の追加 &#x200B;](../..//assets/catalog/advertising/bombora/name-and-description.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -114,10 +114,10 @@ Bombora では、以下の表で説明されているターゲット ID のマ�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先にアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) をお読みください。
+この宛先にアカウントオーディエンスをアクティブ化する手順については、[&#x200B; アカウントオーディエンスのアクティブ化 &#x200B;](/help/destinations/ui/activate-account-audiences.md) をお読みください。
 
 ### 必須のマッピング {#mapping}
 
@@ -130,7 +130,7 @@ Bombora の宛先では、データのアクティベーションを成功させ
 | 任意の値 | `Identity: primaryId` | このマッピングは、Experience Platformが Bombora との接続を確立するために必須です。 この値は Bombora に書き出されませんが、宛先設定に必要です。 ソースフィールドの任意の属性を選択できます。 |
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora はウェブサイトまたはドメインアドレスを使用してアカウントリストを作成します。 |
 
-![ 必須のマッピングを追加 ](../..//assets/catalog/advertising/bombora/mappings.png)
+![&#x200B; 必須のマッピングを追加 &#x200B;](../..//assets/catalog/advertising/bombora/mappings.png)
 
 
 ## 追加のメモと重要な引き出し {#additional-notes}

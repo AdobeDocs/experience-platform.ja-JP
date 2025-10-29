@@ -18,7 +18,7 @@ ht-degree: 29%
 
 この統合では、ターゲティングやトリガーのために、Adobe Experience Platform オーディエンスデータを [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) に渡します。
 
-[!DNL Airship] について詳しくは、[Airship のドキュメント ](https://docs.airship.com) を参照してください。
+[!DNL Airship] について詳しくは、[Airship のドキュメント &#x200B;](https://docs.airship.com) を参照してください。
 
 
 >[!TIP]
@@ -34,7 +34,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 >[!TIP]
 > 
->[!DNL Airship] このサインアップリンク [ から ](https://go.airship.eu/accounts/register/plan/starter/) アカウントをまだ作成していない場合は、作成します。
+>[!DNL Airship] このサインアップリンク [&#x200B; から &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) アカウントをまだ作成していない場合は、作成します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -42,7 +42,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -60,7 +60,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 ## タググループ
 
-Adobe Experience Platform のオーディエンスの概念は、Airship の [Tags](https://docs.airship.com/guides/audience/tags/) に似ていますが、実装にわずかな違いがあります。 この統合は、ユーザーの [Experience Platform セグメントのメンバーシップ ](../../../xdm/field-groups/profile/segmentation.md) のステータスを、[!DNL Airship] タグの有無にマップします。 例えば、`xdm:status` が `realized` に変わるExperience Platform オーディエンスの場合、タグは [!DNL Airship] チャネルまたはこのプロファイルのマッピング先である名前付きユーザーに追加されます。 `xdm:status` が `exited` に変わると、タグは削除されます。
+Adobe Experience Platform のオーディエンスの概念は、Airship の [Tags](https://docs.airship.com/guides/audience/tags/) に似ていますが、実装にわずかな違いがあります。 この統合は、ユーザーの [Experience Platform セグメントのメンバーシップ &#x200B;](../../../xdm/field-groups/profile/segmentation.md) のステータスを、[!DNL Airship] タグの有無にマップします。 例えば、`xdm:status` が `realized` に変わるExperience Platform オーディエンスの場合、タグは [!DNL Airship] チャネルまたはこのプロファイルのマッピング先である名前付きユーザーに追加されます。 `xdm:status` が `exited` に変わると、タグは削除されます。
 
 この統合を有効にするには、という名前の *に* タググループ [!DNL Airship]`adobe-segments` 作成します。
 
@@ -68,11 +68,11 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 >
 >新しいタググループを作成する場合 **オンにしない**、「[!DNL Allow these tags to be set only from your server]」というラジオボタンを使用します。 この操作を行うと、Adobe タグの統合が失敗します。
 
-タググループの作成手順については、[ タググループの管理 ](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) を参照してください。
+タググループの作成手順については、[&#x200B; タググループの管理 &#x200B;](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) を参照してください。
 
 ## ベアラートークンの生成
 
-**[!UICONTROL Settings]** Airship ダッシュボード **[!UICONTROL APIs & Integrations]** で [ » ](https://go.airship.com) に移動し、左側のメニューで **[!UICONTROL Tokens]** を選択します。
+**[!UICONTROL Settings]** Airship ダッシュボード **[!UICONTROL APIs & Integrations]** で [&#x200B; » &#x200B;](https://go.airship.com) に移動し、左側のメニューで **[!UICONTROL Tokens]** を選択します。
 
 「**[!UICONTROL Create Token]**」をクリックします。
 
@@ -98,7 +98,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -126,7 +126,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -134,14 +134,14 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 タグ [!DNL Airship]、デバイスインスタンスを表すチャネル（例：iPhone）または、ユーザーのすべてのデバイスを共通の識別情報（例：カスタマー ID）にマッピングする名前付きユーザーに対して設定できます。 スキーマにプレーンテキスト（ハッシュ化されていない）メールアドレスがプライマリ ID として存在する場合は、**[!UICONTROL Source Attributes]** のメールフィールドを選択し、[!DNL Airship] の下の右側の列にある **[!UICONTROL Target Identities]** という名前のユーザーにマッピングします（下図を参照）。
 
-![ 名前付きユーザーマッピング ](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
+![&#x200B; 名前付きユーザーマッピング &#x200B;](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
 チャネルにマッピングする必要がある識別子（デバイス）については、ソースに基づいて適切なチャネルにマッピングします。 次の画像は、Google Advertising ID を [!DNL Airship] Android チャネルにマッピングする方法を示しています。
 
-![Airship タグへの接続 ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
-![Airship タグへの接続 ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
-![ チャネルマッピング ](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
+![Airship タグへの接続 &#x200B;](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
+![Airship タグへの接続 &#x200B;](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
+![&#x200B; チャネルマッピング &#x200B;](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[ データガバナンスの概要 ](../../../data-governance/home.md) を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../../data-governance/home.md) を参照してください。
