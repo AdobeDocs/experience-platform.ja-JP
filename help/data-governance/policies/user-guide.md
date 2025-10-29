@@ -285,4 +285,4 @@ Map データタイプに含まれるプリミティブフィールドを選択�
 
 次のビデオでは、[!DNL Experience Platform] UI で使用ポリシーを操作する方法のデモを示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37133?captions=jpn&quality=12&learn=on)
