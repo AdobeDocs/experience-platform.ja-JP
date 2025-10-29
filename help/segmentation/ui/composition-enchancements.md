@@ -3,7 +3,7 @@ title: オーディエンス構成の機能強化
 description: オーディエンスのエンリッチメントと迅速なアクティベーションを備えたオーディエンスコンポジションに加えられた機能強化について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -24,21 +24,21 @@ ht-degree: 0%
 
 コンポジションにオーディエンスのエンリッチメントを追加するには、キャンバス内の最上位の **[!UICONTROL Audience]** ブロックを選択します。 オーディエンスに名前を付けた後、「**[!UICONTROL Build rule]**」を選択してルールビルダーキャンバスを開きます。
 
-![&#x200B; オーディエンスブロックがハイライト表示され、「ルールを作成」ボタンも表示されています。](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
+![ オーディエンスブロックがハイライト表示され、「ルールを作成」ボタンも表示されています。](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
 ルールビルダーキャンバスが表示されます。 オーディエンスのエンリッチメントのフィルター条件を作成できるようになりました。 このフィルター条件には **必ず** 配列内の属性を含めます。 配列である属性は、組織のスキーマ構造によって異なります。 フィルター条件を作成したら、右側のパネル内で「**[!UICONTROL Delivery]**」を選択します。
 
-![&#x200B; ルールビルダーキャンバスは、エンリッチメントを許可するオーディエンスの例を示しています。 「配信」ボタンもハイライト表示されます。](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![ ルールビルダーキャンバスは、エンリッチメントを許可するオーディエンスの例を示しています。 「配信」ボタンもハイライト表示されます。](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
 
 エンリッチメントに使用するオブジェクト配列を左パネルのリストから選択します。 プロファイル上に配列が 1 つしかない場合は、その配列が自動的に選択されます。 「**[!UICONTROL Save]**」を選択すると、オーディエンス構成に戻ります。
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![&#x200B; エンリッチメントツリーのスキーマツリーが表示されます。](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![ エンリッチメントツリーのスキーマツリーが表示されます。](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
 
 オーディエンス構成内で、[!UICONTROL Audience] ブロックは「[!UICONTROL Rule builder with enhancement]」タイプになりました。 次の日別バッチでオーディエンスをアクティベートするには、「**[!UICONTROL Publish]**」を選択します。
 
-![&#x200B; オーディエンス ブロックがハイライト表示され、エンリッチメントを含むオーディエンスが追加されたことを示しています。](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
+![ オーディエンス ブロックがハイライト表示され、エンリッチメントを含むオーディエンスが追加されたことを示しています。](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
 
 ### 動作の詳細とガードレール
 
@@ -48,16 +48,20 @@ ht-degree: 0%
 - コンポジション内で使用される最初のブロック **必須** は、ルールベースのオーディエンスです。
 - コンポジション内で他の操作を使用することは **できません**。
 - 公開後は、ルールベースのオーディエンスに対してコンポジションを編集 **できません**。
+
    - ベース *コンポジションまたはルールベースのオーディエンスを変更する場合は* コンポジションをドラフトにコピーしてドラフトを編集できます。
+
 - 単一のオーディエンス内でエンリッチメントペイロードを生成するために使用できるのは **one** オブジェクト配列のみです
+
    - ペイロード配列はオブジェクト内にネストできますが（プロファイルスキーマ内の最大 7 つのレイヤー）、別の配列に含めること **できません**。
    - ペイロード配列の行数は 50 行以下 **する必要があります**。
    - ペイロード内で出力されるすべての列は **プリミティブ型である必要があります**。
    - 配列の最初の **20** 列のみが出力されます。
+
 - 現時点で使用できるオーディエンスコンポジションは **10** のみです
 
 ## アクティベーションの高速化 {#faster-activation}
 
 アクティベーションを高速化すると、コンポジションが評価された直後に、ダウンストリームの宛先に対してオーディエンスをアクティブ化できます。 その結果、宛先がセグメント評価後にアクティベートするように設定されている場合、評価ジョブが終了するまで 24 時間待つ必要がなくなりました。
 
-詳しくは、[&#x200B; バッチプロファイル宛先に対するオーディエンスのアクティブ化ガイド &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) を参照してください。
+詳しくは、[ バッチプロファイル宛先に対するオーディエンスのアクティブ化ガイド ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) を参照してください。

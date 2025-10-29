@@ -1,10 +1,10 @@
 ---
 title: pushNotification
 description: Web SDKのプッシュ通知を設定して、ブラウザーベースのプッシュメッセージを有効にします。
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 2%
+source-wordcount: '510'
+ht-degree: 3%
 
 ---
 
@@ -58,15 +58,15 @@ web-push generate-vapid-keys
 プッシュ通知を有効にして設定するには、次の手順に従います。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
-1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
+1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、**[!UICONTROL Adobe Experience Platform Web SDK]** カードの [!UICONTROL &#x200B; 設定 &#x200B;] をクリックします。
-1. 「**[!UICONTROL カスタムビルドコンポーネント]**」セクションで、**[!UICONTROL プッシュ通知]** を有効にします。
-1. 下にスクロールして、「プッシュ通知 [!UICONTROL &#x200B; セクションを見つけ &#x200B;] す。
-1. VAPID 公開鍵を「**[!UICONTROL VAPID 公開鍵]**」フィールドに入力します。
-1. 「**[!UICONTROL アプリケーション ID]**」フィールドにアプリケーション ID を入力します。
-1. 「**[!UICONTROL トラッキングデータセット ID]**」フィールドにトラッキングデータセット ID を入力します。
-1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
+1. **[!UICONTROL Extensions]** に移動して、**[!UICONTROL Configure]** カードの [!UICONTROL Adobe Experience Platform Web SDK] をクリックします。
+1. 「**[!UICONTROL Custom build components]**」セクションで、「**[!UICONTROL Push notifications]**」を有効にします。
+1. 下にスクロールして、[!UICONTROL Push Notifications] セクションを探します。
+1. VAPID 公開鍵を「**[!UICONTROL VAPID Public Key]**」フィールドに入力します。
+1. 「**[!UICONTROL Application ID]**」フィールドにアプリケーション ID を入力します。
+1. トラッキングデータセット ID を「**[!UICONTROL Tracking Dataset ID]**」フィールドに入力します。
+1. 「**[!UICONTROL Save]**」をクリックして、変更を公開します。
 
 >[!NOTE]
 >
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 次の手順 {#next-steps}
 
-プッシュ通知を設定したら、[`sendPushSubscription`](../sendPushSubscription.md) コマンドを使用してプッシュ購読をAdobe Experience Platformに登録します。
+プッシュ通知を設定したら、[`sendPushSubscription`](../sendpushsubscription.md) コマンドを使用してプッシュ購読をAdobe Experience Platformに登録します。
