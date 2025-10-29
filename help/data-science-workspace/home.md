@@ -200,4 +200,4 @@ Adobe Experience Platform のすべてのデータは標準化された XDM ス�
 
 次のビデオを視聴すると、[!DNL Data Science Workspace] に関する理解を深めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412913?captions=jpn&quality=12&enable10seconds=on&speedcontrol=on)

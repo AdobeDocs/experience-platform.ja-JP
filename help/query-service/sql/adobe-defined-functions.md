@@ -487,4 +487,4 @@ LIMIT 10
 
 次のビデオでは、Adobe Experience Platform インターフェイスおよび PSQL クライアントでクエリを実行する方法を説明します。 さらに、このビデオでは、XDM オブジェクト内の個々のプロパティに関連する例、Adobe定義関数の使用例、CREATE TABLE AS SELECT （CTAS）の使用例も示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34782?captions=jpn&quality=12&learn=on)

@@ -99,7 +99,7 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 >* ビデオで言及されている 2 つの制限は、もはや適用されません。 ビデオの記録時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多くのプロファイル属性フィールドをマッピングできるようになりました。 Marketoの静的リストにまだ存在しないMarketoにオーディエンスメンバーを書き出すこともできます。これらはリストに追加されます。
 >* アクティベーションワークフローの **[!UICONTROL Schedule audience step]**、Marketo V1 では、データをMarketoに正常に書き出すために、**[!UICONTROL Mapping ID]** を手動で追加する必要がありました。 この手動の手順は、Marketo V2 では不要になりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440159?captions=jpn&quality=12)
 
 ## 宛先の監視 {#monitor-destination}
 
