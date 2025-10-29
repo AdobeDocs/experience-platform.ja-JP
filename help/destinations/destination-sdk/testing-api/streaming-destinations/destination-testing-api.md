@@ -26,8 +26,8 @@ ht-degree: 99%
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)を参照してください。
->* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
+>* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
+>* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
 >  &#x200B;>![宛先インスタンス ID の取得方法を示す UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 宛先テスト API 操作の概要 {#get-started}

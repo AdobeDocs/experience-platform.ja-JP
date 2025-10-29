@@ -13,7 +13,7 @@ ht-degree: 22%
 
 ## 概要 {#overview}
 
-Adobe Advertising Cloud [!DNL Demand-Side Platform] （DSP）の宛先を使用すると、認証済みのファーストパーティオーディエンスを承認済みの広告主やユーザーと共有して、DSPでキャンペーンをアクティブ化できます。 DSPとのReal-Time CDP統合について詳しくは、[&#x200B; オーディエンスソースからの認証済みオーディエンスのアクティブ化について &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html) を参照してください。
+Adobe Advertising Cloud [!DNL Demand-Side Platform] （DSP）の宛先を使用すると、認証済みのファーストパーティオーディエンスを承認済みの広告主やユーザーと共有して、DSPでキャンペーンをアクティブ化できます。 DSPとのReal-Time CDP統合について詳しくは、[&#x200B; オーディエンスソースからの認証済みオーディエンスのアクティブ化について &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=ja) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ DSP アカウントを持つメディアエージェンシーは、接客業の�
 
 * DSPのアカウントレベルとキャンペーンレベルを設定して、[!DNL LiveRamp RampID] とのオーディエンス共有を有効にします。これにより、顧客データが [!DNL RampIDs] に変換され、ターゲティング可能なセグメントが作成されます。 DSP アカウントチームがこの設定を実行します。 [!DNL RampID] は、DSPと [!DNL LiveRamp] の間のパートナーシップを通じて利用でき、使用するために独自の [!DNL LiveRamp] メンバーシップは必要ありません。
 * Experience Platform アカウントのExperience Cloud組織 ID。 お使いの ID は、[!DNL Real-Time CDP] ユーザープロファイルページで確認できます。
-* キャンペーンアクティベーション用のオーディエンスを受け取る [[!DNL Real-Time CDP] DSPのソース &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)。 DSP アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
-* DSP アカウントまたは広告主のソースキー。[[!DNL Real-Time CDP]  ソースがDSPで作成される &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) ときに生成されます。 DSP アカウントチームがこのキーを共有します。 [&#x200B; 後述 &#x200B;](#authenticate) のように、Experience Platform内でこのパラメーターを使用して、Advertising Cloud DSP の宛先への宛先接続を作成します。
+* キャンペーンアクティベーション用のオーディエンスを受け取る [[!DNL Real-Time CDP] DSPのソース &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja)。 DSP アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
+* DSP アカウントまたは広告主のソースキー。[[!DNL Real-Time CDP]  ソースがDSPで作成される &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja) ときに生成されます。 DSP アカウントチームがこのキーを共有します。 [&#x200B; 後述 &#x200B;](#authenticate) のように、Experience Platform内でこのパラメーターを使用して、Advertising Cloud DSP の宛先への宛先接続を作成します。
 * メールまたはハッシュ化されたメールで構成される顧客データ。
 
 ## サポートされている ID {#supported-identities}
@@ -72,7 +72,7 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 宛先に接続するには、「[!UICONTROL Connection type]」セクションで次のパラメーターを指定し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイスで作成される &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) 場合に生成されます。 DSP アカウントチームがソースを作成したら、このキーを共有します。
+* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイスで作成される &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja) 場合に生成されます。 DSP アカウントチームがソースを作成したら、このキーを共有します。
 
 ![&#x200B; 接続タイプフィールド &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

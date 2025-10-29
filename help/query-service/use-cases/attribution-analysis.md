@@ -19,10 +19,10 @@ ht-degree: 10%
 
 * [&#x200B; レポートスイートデータ概要用のAdobe Analytics ソースコネクタ &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md)。
 * [Analytics フィールドマッピングのドキュメント &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) では、クエリサービスで使用する分析データの取り込みとマッピングについて詳しく説明しています。
-* [Attribution IQの概要 &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Adobe Analytics アトリビューションパネルガイド &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
+* [Attribution IQの概要 &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)
+* [Adobe Analytics アトリビューションパネルガイド &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集 &#x200B;](https://business.adobe.com/glossary/index.html) も使用される場合があります。
+`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集 &#x200B;](https://business.adobe.com/jp/glossary/index.html) も使用される場合があります。
 
 次の各ユースケースについて、パラメーター化された SQL クエリの例をテンプレートとして提供し、カスタマイズします。 評価する SQL 例の `{ }` に表示されるパラメータを指定します。
 
