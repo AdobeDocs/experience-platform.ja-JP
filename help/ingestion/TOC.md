@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
-user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Experience Platform に取り込みます。
+user-guide-description: バッチまたはストリーミング取得を使用して、データを Experience Platform に取り込みます。
 feature: Data Ingestion
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f1d851afae5ad271e3c7d9d887f614058a262874
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '146'
 ht-degree: 95%
 
 ---
@@ -20,14 +20,15 @@ ht-degree: 95%
    - [概要](streaming-ingestion/overview.md)
    - [Kafka コネクタ](streaming-ingestion/kafka.md)
    - [トラブルシューティング](streaming-ingestion/troubleshooting.md)
-- バッチ取得 {#batch}
+   - [IP アドレスの許可リストに加える](streaming-ingestion/allowlisting.md)
+- バッチ取得{#batch}
    - [バッチ取得 API の概要](batch-ingestion/getting-started.md)
    - [API の概要](batch-ingestion/overview.md)
    - [API デベロッパーガイド](batch-ingestion/api-overview.md)
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
-   - CSV ファイルの XDM へのマッピング {#map-csv}
+   - XDM への CSV ファイルのマッピング {#map-csv}
       - [概要](./tutorials/map-csv/overview.md)
       - [既存のスキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
       - [AI で生成されたレコメンデーションを使用した CSV ファイルのマッピング](./tutorials/map-csv/recommendations.md)
@@ -38,7 +39,7 @@ ht-degree: 95%
    - [レコードデータのストリーミング](tutorials/streaming-record-data.md)
    - [時系列データのストリーミング](tutorials/streaming-time-series-data.md)
    - [複数のメッセージのストリーミング](tutorials/streaming-multiple-messages.md)
-- データ品質と監視 {#quality}
+- データ品質と監視{#quality}
    - [概要](quality/overview.md)
    - [データ取得の監視](quality/monitor-data-ingestion.md)
    - [エラー診断の取得](quality/error-diagnostics.md)
