@@ -53,7 +53,7 @@ Snapchat Ads Manager で [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com
 
 ## データ要素の作成 {#create-data-elements}
 
-[!DNL Snapchat] Conversions API 拡張機能にデータを送信するには、データパラメーターごとに [&#x200B; データ要素 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) を作成します。 次の手順に従います。
+[!DNL Snapchat] Conversions API 拡張機能にデータを送信するには、データパラメーターごとに [&#x200B; データ要素 &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) を作成します。 次の手順に従います。
 
 1. プロパティの **[!UICONTROL Authoring]** 画面で **[!UICONTROL Data Elements]**/**[!UICONTROL Property Info]** に移動し、「**[!UICONTROL Add Data Element]**」を選択します。
 
@@ -79,7 +79,7 @@ Snapchat Ads Manager で [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com
 
 ## 変換イベントを Snap に送信するルールを作成する {#create-snap-rules}
 
-[&#x200B; ルール &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) は、Experience Platformで拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API 拡張機能を使用してコンバージョンイベントを Snap に送信する方法について概説します。
+[&#x200B; ルール &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) は、Experience Platformで拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API 拡張機能を使用してコンバージョンイベントを Snap に送信する方法について概説します。
 
 ### 新しいルールの作成
 

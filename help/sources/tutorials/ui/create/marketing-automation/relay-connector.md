@@ -81,5 +81,5 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 ## その他のリソース
 
-* [Flow Service API を使用して新しい接続仕様を作成する &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [UI を使用したソースへの接続 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Flow Service API を使用して新しい接続仕様を作成する &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [UI を使用したソースへの接続 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

@@ -102,7 +102,7 @@ Experience Platformおよびプラットフォームベースのアプリケー�
 
 Experience Platform API を使用して、サンドボックスのデプロイメントと設定タスクを自動化することもできます。 API を使用すると、サンドボックス設定の書き出し、読み込み、変更などの繰り返しタスクをプログラムで制御でき、自動ワークフローを好む場合は柔軟に操作できます。
 
-サンドボックスツールについて詳しくは、[&#x200B; サンドボックスツールのドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling) を参照してください。
+サンドボックスツールについて詳しくは、[&#x200B; サンドボックスツールのドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/ui/sandbox-tooling) を参照してください。
 
 | ![CDP - パッケージを作成 &#x200B;](./images/whitepaper/create-package.png) | ![CDP-List パッケージ &#x200B;](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ Customer Journey Analyticsを使用して、グローバルサンドボックス
 
 このセグメント共有サービスを使用すると、2 人以上のユーザーが、安全で管理された、プライバシーに配慮した方法でセグメントデータを交換できます。
 
-Segment Match 機能について詳しくは、[Segment Match のドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview) を参照してください。
+Segment Match 機能について詳しくは、[Segment Match のドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/ui/segment-match/overview) を参照してください。
 
 ### 3. グローバルな業務、地域、ブランド固有のアプローチのブレンド
 
