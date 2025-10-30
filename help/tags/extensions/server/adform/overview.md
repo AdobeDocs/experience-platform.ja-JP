@@ -3,7 +3,8 @@ keywords: adform 統合；adform;
 title: 未認証のリターゲティングの Adform 統合
 description: このAdobe Experience Platform統合を使用すると、ECID に基づいてユーザーを再ターゲットできます。
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 3%
@@ -47,7 +48,7 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 2. **CDP または Connection SKU**：クライアントサイドとサーバーサイドのシームレスな通信を可能にするには、Adobe Customer Data Platform （CDP）PrimeまたはUltimate SKU、または Connection SKU が必要です。
 
 3. **Adobe Experience Platform Edge Networkの設定**:
-   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[&#x200B; イベント転送の概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
+   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[ イベント転送の概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
    * この手順は、Adform のサーバーサイドエンドポイントにデータを効率的に送信するために重要です。
 
 これらの前提条件が満たされたら、引き続き [!DNL Adform] 拡張機能の設定とデプロイを行うことができます。
@@ -105,6 +106,7 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 ## 検証とデプロイ
 
 拡張機能がインストールされ、正しく設定されていること、および次を含む必要なすべてのデータ要素がマッピングされていることを確認します。
+
 * [ECID](/help/identity-service/features/ecid.md)
 * ページ名
 * リファラル URL
@@ -115,4 +117,4 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 
 ## 次の手順
 
-これで、Adform とAdobeのサーバーサイド機能との統合方法を理解し、既存のインフラストラクチャ内での統合の実現可能性を評価できるようになりました。 詳しくは、[Adform の公式ドキュメント &#x200B;](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) を参照してください。
+これで、Adform とAdobeのサーバーサイド機能との統合方法を理解し、既存のインフラストラクチャ内での統合の実現可能性を評価できるようになりました。 詳しくは、[Adform の公式ドキュメント ](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) を参照してください。

@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: リリースノート；
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 58%
@@ -18,9 +18,11 @@ ht-degree: 58%
 **リリース日：2020年4月8日**
 
 Adobe Experience Platform の新機能：
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 既存の機能の更新：
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [データガバナンス](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -42,7 +44,7 @@ Adobe Experience Platform の新機能：
 
 * 現在、既知の問題はありません。
 
-[!DNL Intelligent Services] とその機能について詳しくは、[&#x200B; インテリジェントサービスの概要 &#x200B;](../../intelligent-services/home.md) を参照してください。
+[!DNL Intelligent Services] とその機能について詳しくは、[ インテリジェントサービスの概要 ](../../intelligent-services/home.md) を参照してください。
 
 ## [!DNL Experience Data Model]（XDM）システム {#xdm}
 
@@ -78,7 +80,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| UI でのデータ使用ポリシーの管理 | データ使用ポリシーを、[!DNL Experience Platform] UI の **ポリシー** ワークスペース内で管理できるようになりました。 詳しくは、『[ポリシーユーザガイド](../../data-governance/policies/user-guide.md)』を参照してください。 |
+| UI でのデータ使用ポリシーの管理 | データ使用ポリシーを、**UI の** ポリシー [!DNL Experience Platform] ワークスペース内で管理できるようになりました。 詳しくは、『[ポリシーユーザガイド](../../data-governance/policies/user-guide.md)』を参照してください。 |
 
 **既知の問題**
 
@@ -118,7 +120,7 @@ Real-Time CDPでは、50 を超える拡張機能へのデータのアクティ�
 
 * なし
 
-[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 &#x200B;](../../privacy-service/home.md) を読んで開始してください。
+[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 ](../../privacy-service/home.md) を読んで開始してください。
 
 ## ソース {#sources}
 

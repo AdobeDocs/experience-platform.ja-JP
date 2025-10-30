@@ -3,7 +3,7 @@ title: Flow Service API を使用したデータベースソースのデータ�
 type: Tutorial
 description: Flow Service API を使用して、データフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 71%
@@ -16,7 +16,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[&#x200B; ソースカタログ &#x200B;](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
+>* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[ ソースカタログ ](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) に対してサポートされているタイムスタンプは、UTC 時間を指定した TIMESTAMP_NTZ のみです。
 
 ## はじめに
@@ -28,11 +28,11 @@ ht-degree: 71%
    * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | データベースソースの接続 ID。 |
 | `params.tableName` | ソースファイルのパス。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 リレーショナルスキーマと共に使用する場合、変更データキャプチャは、ターゲットデータセットをソースと同期させるために、挿入、更新、削除を追跡します。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要 &#x200B;](../../../../xdm/data-mirror/overview.md) を参照してください。 実装の詳細については、[&#x200B; ソースガイドの change data capture](../change-data-capture.md) および [&#x200B; リレーショナルスキーマテクニカルリファレンス &#x200B;](../../../../xdm/schema/relational.md) を参照してください。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 リレーショナルスキーマと共に使用する場合、変更データキャプチャは、ターゲットデータセットをソースと同期させるために、挿入、更新、削除を追跡します。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要 ](../../../../xdm/data-mirror/overview.md) を参照してください。 実装の詳細については、[ ソースガイドの change data capture](../change-data-capture.md) および [ リレーショナルスキーマテクニカルリファレンス ](../../../../xdm/schema/relational.md) を参照してください。 |
 | `connectionSpec.id` | データベースソースの接続仕様 ID。 データベース仕様 ID の一覧については、[付録](#appendix)を参照してください。 |
 
 **応答**

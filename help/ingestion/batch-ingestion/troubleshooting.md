@@ -4,7 +4,7 @@ solution: Experience Platform
 title: バッチ取得トラブルシューティングガイド
 description: このドキュメントは、Adobe Experience Platform バッチデータ取得 API に関するよくある質問に答えるのに役立ちます。
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 97%
@@ -183,7 +183,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ------ | ---------------------- | ----------- |
 | Abandoned | | クライアントは、予想された時間枠でバッチを完了できませんでした。 |
 | Aborted | | クライアントは、[!DNL Batch Data Ingestion] API を使用して、指定したバッチの中止操作を明示的に呼び出しました。Loaded 状態になったバッチは中止することはできません。 |
-| Active／Success | x | バッチはステージからマスターに正常にプロモートされ、ダウンストリーム消費で使用できるようになりました。**注意**：「Active」と「Success」は同じ意味で使用されます。 |
+| アクティブ／成功 | x | バッチはステージからマスターに正常にプロモートされ、ダウンストリーム消費で使用できるようになりました。**メモ**：「アクティブ」と「成功」は同じ意味で使用されます。 |
 | Archived | | バッチはコールドストレージにアーカイブされています。 |
 | Failed／Failure | | 不良な設定または不正なデータ、あるいはその両方から生じる端末の状態。クライアントがデータを修正して再送信できるように、実行可能なエラーはバッチと共に記録されます。**注意**：「Failed」と「Failure」は同じ意味で使用されます。 |
 | Inactive | x | バッチは正常にプロモーションされましたが、元に戻されたか、期限が切れています。バッチはダウンストリーム消費に使用できなくなりますが、基になるデータは、保持、アーカイブまたはその他の方法で削除されるまでマスターに残ります。 |
@@ -246,7 +246,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 使用できるバッチレベルの指標を教えてください。
 
-Active／Success 状態のバッチに対しては、次のバッチレベルの指標を使用できます。
+アクティブ／成功状態のバッチに対しては、次のバッチレベルの指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
@@ -260,7 +260,7 @@ Active／Success 状態のバッチに対しては、次のバッチレベルの
 
 指標がバッチで使用できない理由は 2 つあります。
 
-1. バッチは、Active／Success の状態に正常に到達していません。
+1. バッチは、アクティブ／成功の状態に正常に到達していません。
 2. バッチは、CSV 取得などの従来のプロモーションパスを使用してプロモーションされました。
 
 ### 異なるステータスコードの意味を教えてください。
@@ -269,7 +269,7 @@ Active／Success 状態のバッチに対しては、次のバッチレベルの
 | ----------- | ----------- |
 | 106 | データセットファイルが空です。 |
 | 118 | CSV ファイルに空のヘッダー行が含まれています。 |
-| 200 | バッチの処理が受け入れられ、「Active」や「Failure」などの最終的な状態にトランジションされます。送信されたバッチは、`GetBatch` エンドポイントを使用して監視できます。 |
+| 200 | バッチの処理が受け入れられ、「アクティブ」や「失敗」などの最終的な状態にトランジションされます。送信されたバッチは、`GetBatch` エンドポイントを使用して監視できます。 |
 | 400 | 不正なリクエストです。バッチ内に不足しているか、重複しているチャンクがある場合に返されます。 |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

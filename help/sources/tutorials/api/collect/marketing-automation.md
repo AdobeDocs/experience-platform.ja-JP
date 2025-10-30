@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;マーケティング自動化システム;マーケティング自動化データの収集
+keywords: Experience Platform;ホーム;人気の高いトピック;マーケティングオートメーションシステム;マーケティングオートメーションデータの収集
 solution: Experience Platform
-title: Flow Service API を使用したマーケティング自動化ソースのデータフローの作成
+title: Flow Service API を使用したマーケティングオートメーションソースのデータフローの作成
 type: Tutorial
-description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタと API を使用して Adobe Experience Platform に取り込む手順を説明します。
+description: このチュートリアルでは、マーケティングオートメーションシステムからデータを取得し、ソースコネクタと API を使用して Adobe Experience Platform に取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 76%
 
 ---
 
-# [!DNL Flow Service] API を使用したマーケティング自動化ソースのデータフロー作成
+# [!DNL Flow Service] API を使用したマーケティングオートメーションソースのデータフロー作成
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、マーケティング自動化ソースからデータを取得し、Experience Platformに取り込む手順を説明します。
 
 >[!NOTE]
 >
->* データフローを作成するには、マーケティング自動化ソースを持つ有効なベース接続 ID が必要となります。 この ID を持っていない場合は、ベース接続を作成できるマーケティング自動化ソースのリストについて、[&#x200B; ソースの概要 &#x200B;](../../../home.md#marketing-automation) を参照してください。
+>* データフローを作成するには、マーケティング自動化ソースを持つ有効なベース接続 ID が必要となります。 この ID を持っていない場合は、ベース接続を作成できるマーケティング自動化ソースのリストについて、[ ソースの概要 ](../../../home.md#marketing-automation) を参照してください。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。
 
 ## はじめに
@@ -30,11 +30,11 @@ ht-degree: 76%
    * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 
@@ -87,9 +87,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | アクセスするサードパーティのマーケティング自動化システムの一意の接続 ID。 |
+| `baseConnectionId` | アクセスするサードパーティのマーケティングオートメーションシステムの一意の接続 ID。 |
 | `params.path` | アクセスするソースファイルのパス。 |
-| `connectionSpec.id` | マーケティング自動化システムの接続仕様 ID。 |
+| `connectionSpec.id` | マーケティングオートメーションシステムの接続仕様 ID。 |
 
 **応答**
 
@@ -248,7 +248,7 @@ curl -X POST \
 
 ## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む役割を果たします。 データフローを作成するには、まずマーケティング自動化データの収集を行うデータフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む役割を果たします。 データフローを作成するには、まずマーケティングオートメーションデータの収集を行うデータフロー仕様を取得する必要があります。
 
 **API 形式**
 
@@ -561,7 +561,7 @@ curl -X GET \
 
 ## データフローの作成
 
-マーケティング自動化データを収集するための最後の手順は、データフローを作成することです。現時点で、次の必要な値の準備ができています。
+マーケティングオートメーションデータを収集するための最後の手順は、データフローを作成することです。現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source)
 * [ターゲット接続 ID](#target)
@@ -656,7 +656,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、マーケティング自動化システムからスケジュールに従ってデータを収集するソースコネクタを作成できます。これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、マーケティングオートメーションシステムからスケジュールに従ってデータを収集するソースコネクタを作成できます。これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

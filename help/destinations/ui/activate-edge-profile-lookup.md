@@ -3,16 +3,16 @@ title: リアルタイムでのエッジプロファイル属性の検索
 description: カスタム Personalizationの宛先とEdge Network API を使用して、エッジプロファイル属性をリアルタイムで検索する方法を説明します
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
 
 # エッジ上でのプロファイル属性のリアルタイム検索
 
-Adobe Experience Platformは、すべてのプロファイルデータの唯一の情報源として [&#x200B; リアルタイム顧客プロファイル &#x200B;](../../profile/home.md) を使用します。 リアルタイムのデータ取得を迅速に行うために、[&#x200B; エッジプロファイル &#x200B;](../../profile/edge-profiles.md) を使用します。これは、[Edge Network](../../collection/home.md#edge) 全体に配布される軽量のプロファイルです。 これにより、迅速でリアルタイムのパーソナライゼーションのユースケースが可能になります。
+Adobe Experience Platformは、すべてのプロファイルデータの唯一の情報源として [ リアルタイム顧客プロファイル ](../../profile/home.md) を使用します。 リアルタイムのデータ取得を迅速に行うために、[ エッジプロファイル ](../../profile/edge-profiles.md) を使用します。これは、[Edge Network](../../collection/home.md#edge) 全体に配布される軽量のプロファイルです。 これにより、迅速でリアルタイムのパーソナライゼーションのユースケースが可能になります。
 
 ## ユースケース {#use-cases}
 
@@ -27,23 +27,23 @@ Adobe Experience Platformは、すべてのプロファイルデータの唯一�
 
 このページで説明するユースケースを設定する場合、次のExperience Platform コンポーネントを使用します。
 
-* [&#x200B; データストリーム &#x200B;](../../datastreams/overview.md)：データストリームは、web SDKから受信したイベントデータを受け取り、エッジプロファイルデータで応答します。
-* [&#x200B; 結合ポリシー &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies):[!UICONTROL Active-On-Edge] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
-* [&#x200B; カスタム Personalization接続 &#x200B;](../catalog/personalization/custom-personalization.md)：プロファイル属性をEdge Networkに送信する新しいカスタムパーソナライゼーション接続を設定します。
-* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): Edge Network API [&#x200B; インタラクティブデータ収集 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 機能を使用して、エッジプロファイルからプロファイル属性をすばやく取得します。
+* [ データストリーム ](../../datastreams/overview.md)：データストリームは、web SDKから受信したイベントデータを受け取り、エッジプロファイルデータで応答します。
+* [ 結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies):[!UICONTROL Active-On-Edge] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
+* [ カスタム Personalization接続 ](../catalog/personalization/custom-personalization.md)：プロファイル属性をEdge Networkに送信する新しいカスタムパーソナライゼーション接続を設定します。
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): Edge Network API [ インタラクティブデータ収集 ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 機能を使用して、エッジプロファイルからプロファイル属性をすばやく取得します。
 
 ## パフォーマンスガードレール {#guardrails}
 
-Edge プロファイルのルックアップのユースケースは、次の表に示す特定のパフォーマンスガードレールの影響を受けます。 Edge Network API ガードレールについて詳しくは、ガードレール [&#x200B; ドキュメントページ &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) を参照してください。
+Edge プロファイルのルックアップのユースケースは、次の表に示す特定のパフォーマンスガードレールの影響を受けます。 Edge Network API ガードレールについて詳しくは、ガードレール [ ドキュメントページ ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) を参照してください。
 
 | Edge Network サービス | Edgeセグメント化 | 1 秒あたりの要求数 |
 |---------|----------|---------|
-| [2&rbrace;Edge Network API を介した &#x200B;](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/) | ○ | 1500 |
-| [2&rbrace;Edge Network API を介した &#x200B;](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/) | × | 1500 |
+| [2}Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [](https://developer.adobe.com/data-collection-apis/docs/api/) | ○ | 1500 |
+| [2}Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [](https://developer.adobe.com/data-collection-apis/docs/api/) | × | 1500 |
 
 ## 手順 1：データストリームの作成と設定 {#create-datastream}
 
-[&#x200B; データストリーム設定 &#x200B;](../../datastreams/configure.md#create-a-datastream) ドキュメントの手順に従って、次の **[!UICONTROL Service]** 設定で新しいデータストリームを作成します。
+[ データストリーム設定 ](../../datastreams/configure.md#create-a-datastream) ドキュメントの手順に従って、次の **[!UICONTROL Service]** 設定で新しいデータストリームを作成します。
 
 * **[!UICONTROL Service]**：[!UICONTROL Adobe Experience Platform]
 * **[!UICONTROL Personalization Destinations]**：有効
@@ -54,16 +54,16 @@ Edge プロファイルのルックアップのユースケースは、次の表
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![ データストリーム設定画面を示すExperience Platform UI 画像。] （../assets/ui/activate-edge-profile-lookup/datastream-config.png） 
+![ データストリーム設定画面を示すExperience Platform UI 画像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## 手順 2:Edge 評価用のオーディエンスの設定 {#audience-edge-evaluation}
 
 Edge でプロファイル属性を検索するには、オーディエンスを Edge 評価用に設定する必要があります。
 
-アクティブ化するオーディエンスの [Edgeでアクティブ化結合ポリシー &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies) がデフォルトとして設定されていることを確認します。 [!DNL Active-On-Edge] 結合ポリシーを使用すると、オーディエンスが常に [&#x200B; エッジ上で &#x200B;](../../segmentation/methods/edge-segmentation.md) 評価され、リアルタイムパーソナライゼーションのユースケースで利用できるようになります。
+アクティブ化するオーディエンスの [Edgeでアクティブ化結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies) がデフォルトとして設定されていることを確認します。 [!DNL Active-On-Edge] 結合ポリシーを使用すると、オーディエンスが常に [ エッジ上で ](../../segmentation/methods/edge-segmentation.md) 評価され、リアルタイムパーソナライゼーションのユースケースで利用できるようになります。
 
-[&#x200B; 結合ポリシーの作成 &#x200B;](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) の手順に従い、必ず「**[!UICONTROL Active-On-Edge Merge Policy]**」切り替えスイッチを有効にします。
+[ 結合ポリシーの作成 ](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) の手順に従い、必ず「**[!UICONTROL Active-On-Edge Merge Policy]**」切り替えスイッチを有効にします。
 
 >[!IMPORTANT]
 >
@@ -77,9 +77,9 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 新しい宛先接続の作成方法に関する詳細な手順については、[宛先接続の作成チュートリアル](../ui/connect-destination.md)に従ってください。
 
-新しい宛先を設定する際に、[&#x200B; 手順 1](#create-datastream) で作成したデータストリームを「**[!UICONTROL Datastream ID]**」フィールドで選択します。 **[!UICONTROL Integration alias]** の場合、宛先名など、今後この宛先接続を識別するのに役立つ任意の値を使用できます。
+新しい宛先を設定する際に、[ 手順 1](#create-datastream) で作成したデータストリームを「**[!UICONTROL Datastream ID]**」フィールドで選択します。 **[!UICONTROL Integration alias]** の場合、宛先名など、今後この宛先接続を識別するのに役立つ任意の値を使用できます。
 
-![&#x200B; 属性を含むカスタム Personalization設定画面を示すExperience Platform UI 画像。](../assets/ui/activate-edge-profile-lookup/destination-config.png)
+![ 属性を含むカスタム Personalization設定画面を示すExperience Platform UI 画像。](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
 +++
 
@@ -89,61 +89,59 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 >[!IMPORTANT]
 > 
-> * データをアクティブ化し、ワークフローの [&#x200B; マッピングステップ &#x200B;](#mapping) を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]** および **[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
+> * データをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]** および **[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 1. **[!UICONTROL Connections > Destinations]** に移動して、「**[!UICONTROL Catalog]**」タブを選択します。
 
-   ![Experience Platform UI でハイライト表示された「宛先カタログ」タブ &#x200B;](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Experience Platform UI でハイライト表示された「宛先カタログ」タブ ](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. **[!UICONTROL Custom Personalization With Attributes]** の宛先カードを見つけ、「**[!UICONTROL Activate audiences]**」を選択します（下図を参照）。
 
-   ![&#x200B; カタログの宛先カードでハイライト表示されたオーディエンスコントロールをアクティブ化 &#x200B;](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![ カタログの宛先カードでハイライト表示されたオーディエンスコントロールをアクティブ化 ](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. 以前に設定した宛先接続を選択し、「**[!UICONTROL Next]**」を選択します。
 
-   ![&#x200B; アクティベーションワークフローの宛先手順を選択します。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![ アクティベーションワークフローの宛先手順を選択します。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. オーディエンスを選択します。 オーディエンス名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするオーディエンスを選択し、「アクティベート **[!UICONTROL Next]**」を選択します。
 
    接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
-   * **[!UICONTROL Segmentation Service]**: Segmentation Service によってExperience Platform内で生成されたオーディエンス。 詳しくは、[&#x200B; セグメント化ドキュメント &#x200B;](../../segmentation/ui/overview.md) を参照してください。
-   * **[!UICONTROL Custom upload]**:Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[&#x200B; オーディエンスの読み込み &#x200B;](../../segmentation/ui/overview.md#import-audience) に関するドキュメントを参照してください。
+   * **[!UICONTROL Segmentation Service]**: Segmentation Service によってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
+   * **[!UICONTROL Custom upload]**:Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/overview.md#import-audience) に関するドキュメントを参照してください。
    * その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
-     ![&#x200B; 複数のオーディエンスがハイライト表示されたアクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+     ![ 複数のオーディエンスがハイライト表示されたアクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. エッジプロファイルで使用できるようにするプロファイル属性を選択します。
 
    * **ソース属性を選択** します。 ソース属性を追加するには、次に示すように、**[!UICONTROL Add new field]** 列の **[!UICONTROL Source field]** コントロールを選択し、目的の XDM 属性フィールドを検索するか、移動します。
 
-     ![&#x200B; マッピングステップでターゲット属性を選択する方法を示す画面録画。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+     ![ マッピングステップでターゲット属性を選択する方法を示す画面録画。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
    * **ターゲット属性を選択**。 ターゲット属性を追加するには、「**[!UICONTROL Add new field]**」列の **[!UICONTROL Target field]** コントロールを選択し、ソース属性をマッピングするカスタム属性名を入力します。
 
-     ![&#x200B; マッピングステップで XDM 属性を選択する方法を示す画面録画 &#x200B;](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
-
-
+     ![ マッピングステップで XDM 属性を選択する方法を示す画面録画 ](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 プロファイル属性のマッピングが完了したら、「**[!UICONTROL Next]**」を選択します。
 
 **[!UICONTROL Review]** のページには、選択内容の概要が表示されます。 「**[!UICONTROL Cancel]**」を選択してフローを中断する **[!UICONTROL Back]**、設定を変更する、または「**[!UICONTROL Finish]**」を選択して選択内容を確定し、プロファイルデータのEdge Networkへの送信を開始します。
 
-![&#x200B; レビュー手順の選択の概要。](../assets/ui/activate-edge-personalization-destinations/review.png)
+![ レビュー手順の選択の概要。](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 +++
 
 +++同意ポリシーの評価
 
-お客様の組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL View applicable consent policies]** を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。 詳しくは、[&#x200B; 同意ポリシーの評価 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+お客様の組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL View applicable consent policies]** を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。 詳しくは、[ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 **データ使用ポリシーのチェック**
 
-**[!UICONTROL Review]** の手順では、Experience Platformはデータ使用ポリシーの違反もチェックします。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [&#x200B; データ使用ポリシー違反 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+**[!UICONTROL Review]** の手順では、Experience Platformはデータ使用ポリシーの違反もチェックします。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
-![&#x200B; データポリシー違反の例 &#x200B;](../assets/common/data-policy-violation.png)
+![ データポリシー違反の例 ](../assets/common/data-policy-violation.png)
 
 +++
 
@@ -151,7 +149,7 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 **[!UICONTROL Review]** の手順では、ページで使用可能なフィルターを使用して、このワークフローの一環としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。 また、表示するテーブル列を切り替えることもできます。
 
-![&#x200B; レビューステップで使用可能なオーディエンスフィルターを示す画面録画。](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
+![ レビューステップで使用可能なオーディエンスフィルターを示す画面録画。](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 
 選択内容に満足し、ポリシー違反が検出されていない場合は、「**[!UICONTROL Finish]**」を選択して選択内容を確定します。
@@ -160,16 +158,17 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 ## 手順 4：エッジ上でのプロファイル属性の検索 {#configure-edge-profile-lookup}
 
-これで [&#x200B; データストリームの設定 &#x200B;](#create-datastream) が完了し、[&#x200B; 属性の宛先接続を使用した新しいカスタム Personalizationが作成されました &#x200B;](#configure-destination) と、この接続を使用して [&#x200B; プロファイル属性を送信 &#x200B;](#activate-audiences) し、Edge Networkを検索できるようになりました。
+これで [ データストリームの設定 ](#create-datastream) が完了し、[ 属性の宛先接続を使用した新しいカスタム Personalizationが作成されました ](#configure-destination) と、この接続を使用して [ プロファイル属性を送信 ](#activate-audiences) し、Edge Networkを検索できるようになりました。
 
 次の手順では、エッジプロファイルからプロファイル属性を取得するようにパーソナライゼーションソリューションを設定します。
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を介してプロファイル属性を取得する必要があります。 さらに、API 呼び出しを認証するには、Edge Network API[&#x200B; インタラクティブデータ収集エンドポイント &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) を介してプロファイル属性を取得する必要があります。
->&#x200B;><br>上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づき、プロファイル属性は使用できません。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を介してプロファイル属性を取得する必要があります。 さらに、API 呼び出しを認証するには、Edge Network API[ インタラクティブデータ収集エンドポイント ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) を介してプロファイル属性を取得する必要があります。
+>
+>上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づき、プロファイル属性は使用できません。
 
-[&#x200B; 手順 1](#create-datastream) で設定したデータストリームは、受信イベントデータを受け入れ、エッジプロファイル情報で応答する準備が整いました。
+[ 手順 1](#create-datastream) で設定したデータストリームは、受信イベントデータを受け入れ、エッジプロファイル情報で応答する準備が整いました。
 
 以下の例に示すように、エッジプロファイル情報を取得するように統合を設定します。
 
@@ -203,7 +202,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | はい。 | [&#x200B; 手順 1](#create-datastream) で作成したデータストリームのデータストリーム ID。 |
+| `dataStreamId` | `String` | はい。 | [ 手順 1](#create-datastream) で作成したデータストリームのデータストリーム ID。 |
 
 ### 応答 {#response}
 
@@ -277,10 +276,10 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 |---------|----------|
 | `payload` | エッジ参照情報を含む `payload` オブジェクト。 応答には、エッジルックアップとは無関係に、複数の追加の `payload` オブジェクトが含まれる場合があります。 |
 | `type` | ペイロードは、タイプ別に応答でグループ化されます。 エッジプロファイル参照のペイロードタイプは、常に `profileLookup` に設定されます。 |
-| `destinationId` | **[!UICONTROL Custom Personalization]** 手順 3[&#x200B; で作成した &#x200B;](#configure-custom-personalization-connection) 接続インスタンスの ID。 |
-| `alias` | [&#x200B; カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先接続を作成する際にユーザーが設定する、宛先接続のエイリアス。 |
-| `attributes` | この配列には、[&#x200B; 手順 3](#configure-custom-personalization-connection) でアクティブ化したオーディエンスのエッジプロファイル属性が含まれます。 |
-| `segments` | この配列には、[&#x200B; 手順 3](#configure-custom-personalization-connection) でアクティブ化したオーディエンスが含まれます。 |
+| `destinationId` | **[!UICONTROL Custom Personalization]** 手順 3[ で作成した ](#configure-custom-personalization-connection) 接続インスタンスの ID。 |
+| `alias` | [ カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先接続を作成する際にユーザーが設定する、宛先接続のエイリアス。 |
+| `attributes` | この配列には、[ 手順 3](#configure-custom-personalization-connection) でアクティブ化したオーディエンスのエッジプロファイル属性が含まれます。 |
+| `segments` | この配列には、[ 手順 3](#configure-custom-personalization-connection) でアクティブ化したオーディエンスが含まれます。 |
 | `type` | オブジェクト `handle` タイプ別にグループ化されます。 エッジプロファイル参照のユースケースでは、`handle` オブジェクトのタイプは常に `activation:pull` です。 |
 | `eventIndex` | Edge Networkは、クライアントから配列の形式でイベントを受け取ります。 配列内のイベントの順序は、処理中に保持され、このインデックスによって反映されます。 イベントのインデックス作成は `0` で始まります。 |
 

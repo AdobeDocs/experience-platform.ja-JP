@@ -2,9 +2,9 @@
 title: AEM Asset Insights 拡張機能の概要
 description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能について説明します。
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-この拡張機能は、[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) と共に使用することを意図しています。具体的には、「pageTracker」プロセスと埋め込みコードが置き換えられます。設定すると、この拡張機能によって Asset *Impression* と *Click* 指標が Adobe Analytics に送信され、その後、AEM Asset Insights レポートに読み込まれます。その後、AEM Asset Insights または Adobe Analytics プロジェクトの Workspace を使用して、アセット指標をレポートできます。
+この拡張機能は、[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) と共に使用することを意図しています。具体的には、「pageTracker」プロセスと埋め込みコードが置き換えられます。設定すると、この拡張機能によって Asset の&#x200B;*インプレッション*&#x200B;と&#x200B;*クリック*&#x200B;指標が Adobe Analytics に送信され、その後、AEM Asset Insights レポートに読み込まれます。その後、AEM Asset Insights または Adobe Analytics プロジェクトの Workspace を使用して、アセット指標をレポートできます。
 
 ## 拡張機能の前提条件
 
@@ -28,22 +28,23 @@ Analytics の AEM Asset レポートには、次の 3 つのディメンショ�
 * アセットのクリック
 
 また、次の 2 つの指標があります。
+
 * アセットのインプレッション
 * アセットのクリック
 
-この拡張機能を使用してレポートを入力するには、Analytics Administrator（**[!UICONTROL Analytics]／[!UICONTROL 管理]／[!UICONTROL レポートスイート]／`<report suite>`／[!UICONTROL 設定を編集]／[!UICONTROL AEM]／[!UICONTROL AEM Assets レポート]**）を使用してこれらのレポートを有効にする必要があります。
+これらのレポートは、この拡張機能を使用して入力する前に、Analytics 管理者（ **[!UICONTROL Analytics]／[!UICONTROL Admin]／[!UICONTROL Report Suites]／`<report suite>`／[!UICONTROL Edit Settings]／[!UICONTROL AEM]／[!UICONTROL AEM Assets Reporting]**&#x200B;を選択）を使用して有効にする必要があります。
 
 Adobe Experience Platform 用の「*Adobe Analytics*」タグ拡張機能は、同じ Web プロパティにインストールする必要があります。
 
 ### Adobe Experience Manager（AEM）
 
-1. 「[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)」を有効にします。AEM で、**[!UICONTROL ツール／Assets]** を選択し、**[!UICONTROL インサイト設定]**&#x200B;パネルを開きます。
+1. 「[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)」を有効にします。AEM で、**[!UICONTROL Tools > Assets]**&#x200B;を選択して、**[!UICONTROL Insights Configuration]** パネルを開きます。
 
 1. 「UUID トラッキング」を無効にします。
 
    >[!IMPORTANT]
    >
-   >AEM Asset 設定の「**[!UICONTROL UUID の追跡を無効化]**」がオンになっている場合、この拡張機能は&#x200B;*機能しません*。デフォルトでは選択解除されています。
+   >AEM Asset 設定の **[!UICONTROL Disable UUID Tracking]** がオンになっている場合、この拡張機能は機能&#x200B;*しません*。デフォルトでは選択解除されています。
 
    ![UUID トラッキングの無効化](images/disableassets.jpg)
 

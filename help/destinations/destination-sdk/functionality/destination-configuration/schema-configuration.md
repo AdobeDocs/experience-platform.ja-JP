@@ -2,9 +2,9 @@
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 77%
 
 ---
@@ -21,7 +21,7 @@ Destination SDK で宛先を作成する場合、宛先プラットフォーム�
 * 宛先内のサポートされるすべての属性のリストを取得するために Experience Platform が動的に呼び出す、動的パートナースキーマを作成します。
 * 宛先プラットフォームが必要とする必須のフィールドマッピングを定義します。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介してスキーマ設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -105,7 +105,7 @@ Destination SDK は、以下の複数のスキーマ設定をサポートしま�
 | `profileRequired` | ブール値 | オプション | ユーザーが Experience Platform から宛先プラットフォームのカスタム属性にプロファイル属性をマッピングできる必要がある場合は、`true` を使用します。 |
 | `segmentRequired` | ブール値 | 必須 | このパラメーターは、Destination SDK に必須で、常に `true` に設定される必要があります。 |
 | `identityRequired` | ブール値 | 必須 | ユーザーが Experience Platform から `profileFields` 配列で定義した属性に [ID タイプ](identity-namespace-configuration.md)をマッピングできる必要がある場合は、`true` に設定します。 |
-| `segmentNamespaceAllowList` | 配列 | オプション | 配列で定義されたオーディエンス名前空間のオーディエンスのみを宛先にマッピングできるようにします。 <br><br> ほとんどの場合、このパラメーターの使用は推奨されません。 代わりに、`"segmentNamespaceDenyList":[]` を使用して、すべてのタイプのオーディエンスを宛先に書き出すことができます。 <br><br> 設定に `segmentNamespaceAllowList` と `segmentNamespaceDenyList` の両方がない場合、ユーザーは [&#x200B; セグメント化サービス &#x200B;](../../../../segmentation/home.md) から生じるオーディエンスのみを書き出すことができます。 <br><br>`segmentNamespaceAllowList` と `segmentNamespaceDenyList` は同時には使用できません。 |
+| `segmentNamespaceAllowList` | 配列 | オプション | 配列で定義されたオーディエンス名前空間のオーディエンスのみを宛先にマッピングできるようにします。 <br><br> ほとんどの場合、このパラメーターの使用は推奨されません。 代わりに、`"segmentNamespaceDenyList":[]` を使用して、すべてのタイプのオーディエンスを宛先に書き出すことができます。 <br><br> 設定に `segmentNamespaceAllowList` と `segmentNamespaceDenyList` の両方がない場合、ユーザーは [ セグメント化サービス ](../../../../segmentation/home.md) から生じるオーディエンスのみを書き出すことができます。 <br><br>`segmentNamespaceAllowList` と `segmentNamespaceDenyList` は同時には使用できません。 |
 | `segmentNamespaceDenyList` | 配列 | オプション | 配列で定義されたオーディエンス名前空間から宛先へのオーディエンスのマッピングをユーザーに制限します。 <br><br>Adobeでは、`"segmentNamespaceDenyList":[]` を設定することで、接触チャネルに関係なく、すべてのオーディエンスの書き出しを許可することをお勧めします。 <br><br>**重要：** `segmentNamespaceDenyList` で `schemaConfig` を指定せず、`segmentNamespaceAllowList` を使用しない場合、システムは自動的に `segmentNamespaceDenyList` を `[]` に設定します。 これにより、今後カスタムオーディエンスが失われるのを防ぎます。 安全のために、Adobeでは、設定で `"segmentNamespaceDenyList":[]` を明示的に設定することをお勧めします。 <br><br>`segmentNamespaceAllowList` と `segmentNamespaceDenyList` は同時には使用できません。 |
 
 {style="table-layout:auto"}
@@ -148,7 +148,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 
 | パラメーター | タイプ | 必須／オプション | 説明 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 文字列 | 必須 | [!DNL Experience Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Experience Platformの顧客が `CUSTOMER_AUTHENTICATION` こちら [&#x200B; で説明しているいずれかの認証方法でお使いのシステムにログインする場合は、](customer-authentication.md) を使用します。 </li><li> アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、資格情報 API を使用して [&#x200B; 資格情報オブジェクトを作成 &#x200B;](../../credentials-api/create-credential-configuration.md)、資格情報オブジェクトの ID を `authenticationId` 宛先配信 [&#x200B; 設定の &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターに渡す必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
+| `dynamicEnum.authenticationRule` | 文字列 | 必須 | [!DNL Experience Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Experience Platformの顧客が `CUSTOMER_AUTHENTICATION` こちら [ で説明しているいずれかの認証方法でお使いのシステムにログインする場合は、](customer-authentication.md) を使用します。 </li><li> アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、資格情報 API を使用して [ 資格情報オブジェクトを作成 ](../../credentials-api/create-credential-configuration.md)、資格情報オブジェクトの ID を `authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターに渡す必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `dynamicEnum.destinationServerId` | 文字列 | 必須 | 動的スキーマサーバーの `instanceId`。この宛先サーバーには、動的スキーマを取得するために Experience Platform が呼び出す API エンドポイントが含まれます。 |
 | `dynamicEnum.value` | 文字列 | 必須 | 動的スキーマサーバー設定で定義された、動的スキーマの名前。 |
 | `dynamicEnum.responseFormat` | 文字列 | 必須 | 動的スキーマを定義する際は、常に `SCHEMA` に設定します。 |
@@ -167,6 +167,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 >[!NOTE]
 >
 >現在、必須のマッピングの以下の組み合わせがサポートされています。
+>
 >* 必須のソースフィールドと必須の宛先フィールドを設定できます。この場合、ユーザーは、2 つのうちどちらかのフィールドを編集または選択できず、選択した方のみを表示できます。
 >* 必須の宛先フィールドのみを設定できます。この場合、ユーザーは、宛先にマッピングするためのソースフィールドを選択できます。
 >
@@ -203,7 +204,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 
 {style="table-layout:auto"}
 
-その結果、Experience Platform UI の **[!UICONTROL Source フィールド]** と **[!UICONTROL ターゲットフィールド]** の両方のセクションが灰色表示になります。
+その結果、Experience Platform UI の **[!UICONTROL Source field]** セクションと **[!UICONTROL Target field]** セクションの両方が灰色表示になります。
 
 ![UI アクティベーションフローでの必須のマッピングの画像。](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 
 {style="table-layout:auto"}
 
-その結果、Experience Platform UI の **[!UICONTROL ターゲットフィールド]** セクションが灰色表示になるのに対して、**[!UICONTROL Source フィールド]** セクションはアクティブになり、ユーザーが操作できます。 **[!UICONTROL 必須キー]**&#x200B;および&#x200B;**[!UICONTROL 重複排除キー]**&#x200B;オプションがアクティブになり、ユーザーは変更できません。
+その結果、Experience Platform UI の **[!UICONTROL Target field]** セクションが灰色表示になるのに対して、**[!UICONTROL Source field]** セクションはアクティブになり、ユーザーが操作できます。 **[!UICONTROL Mandatory key]** オプションと **[!UICONTROL Deduplication key]** オプションがアクティブになり、ユーザーは変更できません。
 
 ![UI アクティベーションフローでの必須のマッピングの画像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -241,7 +242,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 
 ## 外部オーディエンスのサポートの設定 {#external-audiences}
 
-[&#x200B; 外部で生成されたオーディエンス &#x200B;](../../../../segmentation/ui/audience-portal.md#import-audience) のアクティベーションをサポートするように宛先を設定するには、`schemaConfig` の節で以下のスニペットを含めます。
+[ 外部で生成されたオーディエンス ](../../../../segmentation/ui/audience-portal.md#import-audience) のアクティベーションをサポートするように宛先を設定するには、`schemaConfig` の節で以下のスニペットを含めます。
 
 ```json
 "schemaConfig": {
@@ -250,7 +251,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 }
 ```
 
-[&#x200B; の機能について詳しくは、このページの前述の &#x200B;](#attributes-schema)table`segmentNamespaceDenyList` のプロパティの説明を参照してください。
+[ の機能について詳しくは、このページの前述の ](#attributes-schema)table`segmentNamespaceDenyList` のプロパティの説明を参照してください。
 
 ## 次の手順 {#next-steps}
 

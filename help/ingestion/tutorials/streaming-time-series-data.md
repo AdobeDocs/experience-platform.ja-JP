@@ -5,7 +5,7 @@ title: ストリーミング取得 API を使用した時系列データのス�
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 57%
@@ -22,13 +22,13 @@ ht-degree: 57%
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):[!DNL Experience Platform] がエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [&#x200B; スキーマレジストリ開発者ガイド &#x200B;](../../xdm/api/getting-started.md):[!DNL Schema Registry] API の使用可能な各エンドポイントとそれらの呼び出し方法を説明する包括的なガイド。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [ スキーマレジストリ開発者ガイド ](../../xdm/api/getting-started.md):[!DNL Schema Registry] API の使用可能な各エンドポイントとそれらの呼び出し方法を説明する包括的なガイド。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../landing/api-guide.md) を参照してください。
 
 ## XDM ExperienceEvent クラスベースのスキーマの作成
 
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマ名。この名前は一意である必要があります。 |
 | `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | この例では、データを [[!DNL Real-Time Customer Profile]](../../profile/home.md) に保持するために `union` タグが使用されています。 |
+| `meta:immutableTags` | この例では、データを `union` に保持するために [[!DNL Real-Time Customer Profile]](../../profile/home.md) タグが使用されています。 |
 
 **応答** 
 
@@ -300,7 +300,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 >[!NOTE]
 >
->次の API 呼び出しには、認証ヘッダーは必要ありません **&#x200B;**。
+>次の API 呼び出しには、認証ヘッダーは必要ありません ****。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -402,7 +402,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 以前に作成したストリーミング接続の `inletId`。 |
 | `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この ID は、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
-| `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
+| `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |  |
 | `syncValidation.status` | クエリーパラメーター `syncValidation=true` が追加されたので、この値が表示されます。検証が成功した場合、ステータスは `pass` になります。 |
 
 ## 新しく取得した時系列データの取得

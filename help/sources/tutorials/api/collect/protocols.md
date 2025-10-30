@@ -5,7 +5,7 @@ title: Flow Service API を使用したプロトコルソースのデータフ�
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 75%
@@ -18,7 +18,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->* データフローを作成するには、プロトコルソースを持つ有効なベース接続 ID が必要です。 この ID を持っていない場合は、ベース接続を作成できるプロトコルソースのリストについて [&#x200B; ソースの概要 &#x200B;](../../../home.md#protocols) を参照してください。
+>* データフローを作成するには、プロトコルソースを持つ有効なベース接続 ID が必要です。 この ID を持っていない場合は、ベース接続を作成できるプロトコルソースのリストについて [ ソースの概要 ](../../../home.md#protocols) を参照してください。
 
 ## はじめに
 
@@ -29,11 +29,11 @@ ht-degree: 75%
    * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 

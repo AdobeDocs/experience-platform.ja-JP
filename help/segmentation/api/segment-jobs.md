@@ -4,7 +4,7 @@ title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 18%
@@ -13,13 +13,13 @@ ht-degree: 18%
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [&#x200B; セグメント定義 &#x200B;](./segment-definitions.md) と、[!DNL Real-Time Customer Profile] がプロファイルフラグメント間で重複する属性をどのように結合するかを制御する [&#x200B; 結合ポリシー &#x200B;](../../profile/api/merge-policies.md) を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [ セグメント定義 ](./segment-definitions.md) と、[ がプロファイルフラグメント間で重複する属性をどのように結合するかを制御する ](../../profile/api/merge-policies.md) 結合ポリシー [!DNL Real-Time Customer Profile] を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
 このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## セグメントジョッブリストの取得 {#retrieve-list}
 
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 返されるセグメントジョブの開始オフセットを指定します。 | `start=1` |
 | `limit` | 1 ページに返されるセグメントジョブの数を指定します。 | `limit=20` |
 | `status` | ステータスに基づいて結果をフィルターします。サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELLING、CANCELLED です。 | `status=NEW` |
-| `sort` | 返されたセグメントジョブを並べ替えます。`[attributeName]:[desc|asc]` の形式で書き込まれます。 | `sort=creationTime:desc` |
+| `sort` | 返されたセグメントジョブを並べ替えます。`[attributeName]:[desc|asc]`.`sort=creationTime:desc` という形式で記述されます。 |
 | `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 >
 >次の応答はスペースを節約するために切り捨てられており、最初に返されたジョブのみが表示されます。
 
-+++ セグメントジョブのリストを取得する際の応答例です。
++++ セグメントジョブのリストを取得する際の応答例です。 
 
 ```json
 {
@@ -222,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentId` | 評価するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](./segment-definitions.md) を参照してください。 |
+| `segmentId` | 評価するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[ セグメント定義エンドポイントガイド ](./segment-definitions.md) を参照してください。 |
 
 +++
 

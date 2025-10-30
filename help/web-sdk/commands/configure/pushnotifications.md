@@ -1,9 +1,9 @@
 ---
 title: pushNotification
 description: Web SDKのプッシュ通知を設定して、ブラウザーベースのプッシュメッセージを有効にします。
-source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 次の手順 {#next-steps}
 
-プッシュ通知を設定したら、[`sendPushSubscription`](../sendpushsubscription.md) コマンドを使用してプッシュ購読をAdobe Experience Platformに登録します。
+プッシュ通知を設定したら、[sendPushSubscription](../sendpushsubscription.md) コマンドを使用して、プッシュ購読をAdobe Experience Platformに登録します。

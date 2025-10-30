@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 71%
+source-wordcount: '887'
+ht-degree: 69%
 
 ---
 
@@ -40,7 +40,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし
 
-[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システム [!DNL Schema Editor] ドキュメント &#x200B;](../../xdm/home.md) を参照してください。
+[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[!DNL Schema Editor]XDM システム [ ドキュメント ](../../xdm/home.md) を参照してください。
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -53,14 +53,14 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | [!DNL Privacy Service] のブランド変更 | 以前は「GDPR サービス」と呼ばれていましたが、サービスが GDPR に加えてその他の規制をサポートするようになったので、[!DNL Privacy Service] にブランド変更されました。 |
 | 新しい API エンドポイント | [!DNL Privacy Service] API のベースパスが `/data/privacy/gdpr` から `/data/core/privacy/jobs` に更新されました。 |
 | 新しい必須の `regulation` プロパティ | [!DNL Privacy Service] API で新しいジョブを作成する場合は、リクエストペイロードで `regulation` プロパティを指定し、ジョブを追跡する規制を示す必要があります。指定できる値は、`gdpr` と `ccpa` です。 |
-| [!DNL Adobe Primetime Authentication] のサポート | [!DNL Privacy Service] では、製品の値として `primetimeAuthentication` を使用して、Adobe [!DNL Primetime Authentication] からのアクセス /削除リクエストを受け入れるようになりました。 |
-| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい&#x200B;**規制タイプ &#x200B;** ドロップダウン。 |
+| [!DNL Adobe Primetime Authentication] のサポート | [!DNL Privacy Service] では、製品の値として [!DNL Primetime Authentication] を使用して、Adobe `primetimeAuthentication` からのアクセス /削除リクエストを受け入れるようになりました。 |
+| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい「**規制タイプ**」ドロップダウン。 |
 
 **既知の問題**
 
 * なし
 
-[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 &#x200B;](../../privacy-service/home.md) を読んで開始してください。
+[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 ](../../privacy-service/home.md) を読んで開始してください。
 
 ## ソース {#sources}
 
@@ -81,7 +81,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 | カテゴリ | 権限 | 説明 |
 |--- | --- | ---|
 | データ取得 | ソースの管理 | ソースへの読み取り、作成、編集、無効化アクセス |
-| データ取得 | ソースの表示 | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
+| データ取得 | ソースの表示 | 「**[!UICONTROL Catalog]**」タブでの使用可能なソースおよび「**[!UICONTROL Browse]**」タブでの認証済みのソースへの読み取り専用アクセス |
 
 **既知の問題**
 
@@ -104,7 +104,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 | カテゴリ | 権限 | 説明 |
 |--- | --- | ---|
 | 宛先 | 宛先の管理 | 宛先の読み取り、作成、編集、および無効化へのアクセス。 |
-| 宛先 | 宛先の表示 | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**参照**」タブの認証済みの宛先への読み取り専用アクセス。 |
+| 宛先 | 宛先の表示 | 「**[!UICONTROL Catalog]**」タブの使用可能な宛先と「**参照**」タブの認証済みの宛先への読み取り専用アクセス。 |
 | 宛先 | 宛先のアクティブ化 | 宛先に対してデータをアクティブ化する機能。この権限では、製品プロファイルに「宛先の管理」または「宛先の表示」を追加する必要があります。 |
 
 **既知の問題**

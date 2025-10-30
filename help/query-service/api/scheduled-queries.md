@@ -5,10 +5,10 @@ title: スケジュールエンドポイント
 description: 以下の節では、Query Service API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 46%
+source-wordcount: '1409'
+ht-degree: 44%
 
 ---
 
@@ -26,11 +26,11 @@ Query Service スケジュール API を使用して、スケジュールされ�
 >
 >スケジュール済みクエリを管理する際の重要な考慮事項：<ul><li>スケジュールされたクエリは、クエリの作成に使用したアカウント（技術またはユーザー）がアクセス権または権限を失った場合に失敗します。</li><li>スケジュールされたクエリは、API または UI で削除する前に無効にする必要があります。</li><li>終了日を指定せずに無期限にスケジュールすることはできません。終了日は必ず指定する必要があります。</li></ul>
 
-アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[&#x200B; クエリスケジュールのドキュメント &#x200B;](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [&#x200B; エンドツーエンドのテクニカルアカウントの設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
+アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
 
 ## サンプル API 呼び出し
 
-必要な認証ヘッダーを設定したら（『 [API 認証ガイド &#x200B;](../../landing/api-authentication.md) を参照）、[!DNL Query Service] API への呼び出しを開始できます。 以下の節では、一般的な形式を持つ様々な API 呼び出し、必要なヘッダーを含むリクエストの例、応答のサンプルを示します。
+必要な認証ヘッダーを設定したら（『 [API 認証ガイド ](../../landing/api-authentication.md) を参照）、[!DNL Query Service] API への呼び出しを開始できます。 以下の節では、一般的な形式を持つ様々な API 呼び出し、必要なヘッダーを含むリクエストの例、応答のサンプルを示します。
 
 ### スケジュールされたクエリのリストの取得
 
@@ -138,7 +138,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-`/schedules` エンドポイントに POST リクエストをおこなうと、新しいスケジュールされたクエリを作成できます。 API でスケジュールされたクエリを作成すると、クエリエディターでも表示できます。 UI のスケジュール済みクエリについて詳しくは、[&#x200B; クエリエディターのドキュメント &#x200B;](../ui/user-guide.md#scheduled-queries) を参照してください。
+`/schedules` エンドポイントに POST リクエストをおこなうと、新しいスケジュールされたクエリを作成できます。 API でスケジュールされたクエリを作成すると、クエリエディターでも表示できます。 UI のスケジュール済みクエリについて詳しくは、[ クエリエディターのドキュメント ](../ui/user-guide.md#scheduled-queries) を参照してください。
 
 **API 形式**
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | 定義したスケジュールで実行する SQL クエリ。 |
 | `query.name` | スケジュール済みクエリの名前。 |
 | `query.description` | スケジュールされたクエリのオプション説明。 |
-| `schedule.schedule` | クエリの cron スケジュール。Cron 式を作成、検証、理解するためのインタラクティブな方法については、[Crontab.guru](https://crontab.guru/) を参照してください。 この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br> または、次の短縮形の式を使用することもできます。<ul><li>`@once`：クエリは 1 回だけ実行されます。</li><li>`@hourly`：クエリは 1 時間ごとに、その時間の初めに実行されます。 これは cron 式 `0 * * * *` と同等です。</li><li>`@daily`：クエリは 1 日 1 回午前 0 時に実行されます。 これは cron 式 `0 0 * * *` と同等です。</li><li>`@weekly`：クエリは、週に 1 回、日曜日、深夜に実行されます。 これは cron 式 `0 0 * * 0` と同等です。</li><li>`@monthly`：クエリは月に 1 回、月の初日の午前 0 時に実行されます。 これは cron 式 `0 0 1 * *` と同等です。</li><li>`@yearly`: クエリは、年に 1 回、1 月 1 日、深夜に実行されます。 これは cron 式 `0 0 1 1 *` と同等です。 |
+| `schedule.schedule` | クエリの cron スケジュール。Cron 式を作成、検証、理解するためのインタラクティブな方法については、[Crontab.guru](https://crontab.guru/) を参照してください。 この例では、「`30 * * * *`」は、クエリが 1 時間ごとに 30 分のマークで実行されることを意味します。<br><br> または、次の短縮形の式を使用することもできます。<ul><li>`@once`：クエリは 1 回だけ実行されます。</li><li>`@hourly`：クエリは 1 時間ごとに、その時間の初めに実行されます。 これは cron 式 `0 * * * *` と同等です。</li><li>`@daily`：クエリは 1 日 1 回午前 0 時に実行されます。 これは cron 式 `0 0 * * *` と同等です。</li><li>`@weekly`：クエリは、週に 1 回、日曜日、深夜に実行されます。 これは cron 式 `0 0 * * 0` と同等です。</li><li>`@monthly`：クエリは月に 1 回、月の初日の午前 0 時に実行されます。 これは cron 式 `0 0 1 * *` と同等です。</li><li>`@yearly`: クエリは、年に 1 回、1 月 1 日、深夜に実行されます。 これは cron 式 `0 0 1 1 *` と同等です。 |
 | `schedule.startDate` | スケジュール済みクエリの開始日（UTC タイムスタンプ形式）です。 |
 
 **応答**
@@ -234,7 +234,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[&#x200B; 作成したスケジュール済みクエリを削除 &#x200B;](#delete-a-specified-scheduled-query) できます。
+>`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細のリクエスト
 
@@ -317,7 +317,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[&#x200B; 作成したスケジュール済みクエリを削除 &#x200B;](#delete-a-specified-scheduled-query) できます。
+>`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細の更新
 

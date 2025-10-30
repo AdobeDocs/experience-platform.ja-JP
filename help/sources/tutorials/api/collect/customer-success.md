@@ -5,7 +5,7 @@ title: Flow Service API を使用したカスタマーサクセスソースの�
 type: Tutorial
 description: このチュートリアルでは、カスタマーサクセスシステムからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 76%
@@ -18,7 +18,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->* データフローを作成するには、カスタマーサクセスソースを持つ有効なベース接続 ID が必要となります。 この ID を保有していない場合は、ベース接続を作成できるカスタマーサクセスソースのリストについて [&#x200B; ソースの概要 &#x200B;](../../../home.md#customer-success) を参照してください。
+>* データフローを作成するには、カスタマーサクセスソースを持つ有効なベース接続 ID が必要となります。 この ID を保有していない場合は、ベース接続を作成できるカスタマーサクセスソースのリストについて [ ソースの概要 ](../../../home.md#customer-success) を参照してください。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。
 
 ## はじめに
@@ -34,7 +34,7 @@ ht-degree: 76%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 

@@ -2,7 +2,7 @@
 title: Adobe クライアントデータレイヤー拡張機能
 description: Adobe Experience Platform における Adobe クライアントデータレイヤーのタグ拡張について説明します。
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 95%
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## インストール
 
-拡張機能をインストールするには、拡張機能 UI またはデータ収集 UI のExperience Platformカタログに移動し、「Adobeクライアントデータレイヤー」を選択します。
+拡張機能をインストールするには、Experience Platform UI または Data Collection UI の拡張機能カタログに移動し、「Adobe Client Data Layer」を選択します。
 
 ![カタログ内の ACDL 拡張機能ビュー](./images/catalog.png)
 
@@ -51,12 +51,12 @@ ACDL スクリプトは、デフォルトでは、変数名 `adobeDataLayer` で
 
 次のプッシュイベントの例は、リスナーによってトラッキングされます。
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 次のプッシュイベントの例は、リスナーによってトラッキングされません。
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### すべてのイベントをリッスン
 
@@ -64,8 +64,8 @@ ACDL スクリプトは、デフォルトでは、変数名 `adobeDataLayer` で
 
 次のプッシュイベントの例は、リスナーによってトラッキングされます。
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 次のプッシュイベントの例は、リスナーによってトラッキングされません。
 

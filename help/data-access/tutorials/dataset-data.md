@@ -5,7 +5,7 @@ title: Data Access API を使用したデータセットデータの表示
 type: Tutorial
 description: Adobe Experience Platformの Data Access API を使用して、データセットに保存されているデータを検索、アクセス、ダウンロードする方法について説明します。 このドキュメントでは、ページングや部分的なダウンロードなど、Data Access API のユニークな機能の一部を紹介します。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 56%
@@ -28,7 +28,7 @@ ht-degree: 56%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Experience Platform] API を呼び出すには、まず [&#x200B; 認証チュートリアル &#x200B;](../../landing/api-authentication.md) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず [ 認証チュートリアル ](../../landing/api-authentication.md) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -61,7 +61,7 @@ ht-degree: 56%
 - `GET /batches`：組織内のバッチのリストを返します
 - `GET /dataSetFiles`：組織内のファイルのリストを返します
 
-[!DNL Catalog] API のエンドポイントの包括的なリストについては、[API リファレンス &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) を参照してください。
+[!DNL Catalog] API のエンドポイントの包括的なリストについては、[API リファレンス ](https://developer.adobe.com/experience-platform-apis/references/catalog/) を参照してください。
 
 ## 組織でバッチのリストを取得する
 
@@ -416,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## ファイルの一部コンテンツのダウンロード {#download-partial-file-contents}
 
-ファイルから特定のバイト範囲をダウンロードするには、[!DNL Data Access] API への `GET /files/{FILE_ID}` リクエスト中に範囲ヘッダーを指定します。 範囲が指定されていない場合、API はデフォルトでファイル全体をダウンロードします。
+ファイルから特定のバイト範囲をダウンロードするには、`GET /files/{FILE_ID}` API への [!DNL Data Access] リクエスト中に範囲ヘッダーを指定します。 範囲が指定されていない場合、API はデフォルトでファイル全体をダウンロードします。
 
 [前の節](#retrieve-the-metadata-of-a-file)の HEAD の例では、特定のファイルのサイズをバイト単位で示しています。
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{FILE_ID} ` | ファイルの識別子。 |
+| `{FILE_ID}` | ファイルの識別子。 |
 | `{FILE_NAME}` | ファイル名（例：profiles.parquet） |
 
 **リクエスト**

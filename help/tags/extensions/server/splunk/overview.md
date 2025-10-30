@@ -2,10 +2,10 @@
 title: Splunk 拡張機能の概要
 description: Adobe Experience Platform でのイベント転送用の Splunk 拡張機能について説明します。
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 98%
+source-wordcount: '958'
+ht-degree: 95%
 
 ---
 
@@ -61,13 +61,13 @@ UI に Splunk イベントコレクター拡張機能をインストールする
 
 ![UI で選択されている Splunk 拡張機能の設定ボタン](../../../images/extensions/server/splunk/configure.png)
 
-**[!UICONTROL HTTP イベントコレクター URL]** 用に、Splunk プラットフォームインスタンスのアドレスとポートを入力します。 **[!UICONTROL アクセストークン]**&#x200B;の下に、[!DNL Event Collector Token] の値を入力します。終了したら「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL HTTP Event Collector URL]**: Splunk プラットフォームインスタンスのアドレスとポートを入力します。 **[!UICONTROL Access Token]** の下に、[!DNL Event Collector Token] の値を入力します。 終了したら「**[!UICONTROL Save]**」を選択します。
 
 ![UI に入力された設定オプション](../../../images/extensions/server/splunk/input.png)
 
 ## イベント転送ルールの設定 {#config_rule}
 
-新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、 必要に応じて条件を設定します。 ルールのアクションを選択する場合、[!UICONTROL Splunk] 拡張機能を選択してから、[!UICONTROL イベントを作成]アクションタイプを選択します。 追加のコントロールが表示され、Splunk イベントをさらに設定できます。
+新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、 必要に応じて条件を設定します。 ルールのアクションを選択する場合は、[!UICONTROL Splunk] 拡張機能を選択してから、[!UICONTROL Create Event] アクションタイプを選択します。 追加のコントロールが表示され、Splunk イベントをさらに設定できます。
 
 ![アクション設定の定義](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ UI に Splunk イベントコレクター拡張機能をインストールする
 
 | フィールド名 | 説明 |
 | --- | --- |
-| [!UICONTROL イベント&#x200B;]<br><br>**（必須）** | イベントデータの提供方法を指定します。 イベントデータは、HTTP リクエストの JSON オブジェクト内の `event` キーに割り当てることも、生のテキストにすることもできます。この `event` キーは、JSON イベントパケット内のメタデータキーと同じレベルにあります。 `event` キーと値の中括弧内では、データを必要なあらゆる形式（文字列、数値、他の JSON オブジェクトなど）にすることができます。 |
-| [!UICONTROL ホスト] | データを送信するクライアントのホスト名。 |
-| [!UICONTROL ソースタイプ] | イベントデータに割り当てるソースタイプ。 |
-| [!UICONTROL ソース] | イベントデータに割り当てるソース値。 例えば、開発中のアプリからデータを送信する場合は、このキーをアプリの名前に設定します。 |
-| [!UICONTROL インデックス] | イベントデータのインデックスの名前。 トークンにインデックスパラメーターが設定されている場合、ここで指定するインデックスは、許可されたインデックスのリスト内にある必要があります。 |
-| [!UICONTROL 時間] | イベント時間。 デフォルトの時間形式は UNIX 時間（`<sec>.<ms>` 形式）で、ローカルタイムゾーンによって異なります。例： `1433188255.500` は、エポックから 1433188255 秒と 500 ミリ秒後、すなわち 2015年6月1日（月）の午後 7 時:50: 55 分（GMT）を示します。 |
-| [!UICONTROL フィールド] | インデックス時間に定義する明示的なカスタムフィールドを含む、生の JSON オブジェクトまたはキーと値のペアのセットを指定します。 この `fields` キーは、生データには適用されません。<br><br>`fields` プロパティを含むリクエストは、`/collector/event` エンドポイントに送信する必要があります。送信しない場合、インデックスが作成されません。詳しくは、[インデックス付きフィールド抽出](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC)に関する Splunk のドキュメントを参照してください。 |
+| [!UICONTROL Event]<br><br>**（必須）** | イベントデータの提供方法を指定します。 イベントデータは、HTTP リクエストの JSON オブジェクト内の `event` キーに割り当てることも、生のテキストにすることもできます。この `event` キーは、JSON イベントパケット内のメタデータキーと同じレベルにあります。 `event` キーと値の中括弧内では、データを必要なあらゆる形式（文字列、数値、他の JSON オブジェクトなど）にすることができます。 |
+| [!UICONTROL Host] | データを送信するクライアントのホスト名。 |
+| [!UICONTROL Source Type] | イベントデータに割り当てるソースタイプ。 |
+| [!UICONTROL Source] | イベントデータに割り当てるソース値。 例えば、開発中のアプリからデータを送信する場合は、このキーをアプリの名前に設定します。 |
+| [!UICONTROL Index] | イベントデータのインデックスの名前。 トークンにインデックスパラメーターが設定されている場合、ここで指定するインデックスは、許可されたインデックスのリスト内にある必要があります。 |
+| [!UICONTROL Time] | イベント時間。 デフォルトの時間形式は UNIX 時間（`<sec>.<ms>` 形式）で、ローカルタイムゾーンによって異なります。例： `1433188255.500` は、エポックから 1433188255 秒と 500 ミリ秒後、すなわち 2015年6月1日（月）の午後 7 時:50: 55 分（GMT）を示します。 |
+| [!UICONTROL Fields] | インデックス時間に定義する明示的なカスタムフィールドを含む、生の JSON オブジェクトまたはキーと値のペアのセットを指定します。 この `fields` キーは、生データには適用されません。<br><br>`fields` プロパティを含むリクエストは、`/collector/event` エンドポイントに送信する必要があります。送信しない場合、インデックスが作成されません。詳しくは、[インデックス付きフィールド抽出](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC)に関する Splunk のドキュメントを参照してください。 |
 
 ### Splunk 内のデータの検証 {#validate}
 
@@ -93,6 +93,6 @@ UI に Splunk イベントコレクター拡張機能をインストールする
 
 このドキュメントでは、UI で Splunk イベント転送拡張機能をインストールおよび設定する方法について説明しました。 Splunk でのイベントデータの収集について詳しくは、次の公式ドキュメントを参照してください。
 
-* [Splunk web での HTTP イベントコレクターの設定と使用 &#x200B;](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Splunk web での HTTP イベントコレクターの設定と使用 ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [トークンによる認証の設定](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [HTTP イベントコレクターのトラブルシューティング](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)（[考えられるエラーコード](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)の概要も表示）

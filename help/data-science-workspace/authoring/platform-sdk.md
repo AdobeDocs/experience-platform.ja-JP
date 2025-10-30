@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform SDKを使用したモデルのオーサリング
 description: このチュートリアルでは、Python と R の両方で data_access_sdk_python を新しい Python platform_sdk に変換する方法について説明します。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 58%
+source-wordcount: '508'
+ht-degree: 57%
 
 ---
 
@@ -161,7 +161,7 @@ df2
 | より小さい（`<`） | `lt()` |
 | 次よりも小さいか等しい（`<=`） | `le()` |
 | および（`&`） | `And()` |
-| または（`|`） | `Or()` |
+| または（&amp;vert;） | `Or()` |
 
 ## 選択した列によるフィルター {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[!DNL JupyterLab] ノートブックを使用したレシピの作成に関するチュートリアルの [&#x200B; データの準備と機能エンジニアリング &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) の節を参照してください。
+`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[ ノートブックを使用したレシピの作成に関するチュートリアルの ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) データの準備と機能エンジニアリング [!DNL JupyterLab] の節を参照してください。

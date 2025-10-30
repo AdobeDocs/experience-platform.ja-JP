@@ -5,7 +5,7 @@ title: クエリ API エンドポイント
 description: 次の節では、Query Service API の/queries エンドポイントを使用して実行できる呼び出しについて説明します。
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 48%
@@ -16,11 +16,11 @@ ht-degree: 48%
 
 ## サンプル API 呼び出し
 
-次の節では、[!DNL Query Service] API の `/queries` エンドポイントを使用して作成できる呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+次の節では、`/queries` API の [!DNL Query Service] エンドポイントを使用して作成できる呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリのリストの取得
 
-`/queries` エンドポイントに対してGETリクエストを行うことで、組織のすべてのクエリのリストを取得できます。
+`/queries` エンドポイントにGET リクエストを送信すると、組織のすべてのクエリのリストを取得できます。
 
 **API 形式**
 
@@ -223,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->`_links.cancel` の値を使用して [&#x200B; 作成したクエリをキャンセル &#x200B;](#cancel-a-query) できます。
+>`_links.cancel` の値を使用して [ 作成したクエリをキャンセル ](#cancel-a-query) できます。
 
 ### ID によるクエリの取得
 
@@ -294,11 +294,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->`_links.cancel` の値を使用して [&#x200B; 作成したクエリをキャンセル &#x200B;](#cancel-a-query) できます。
+>`_links.cancel` の値を使用して [ 作成したクエリをキャンセル ](#cancel-a-query) できます。
 
 ### クエリのキャンセルまたはソフト削除
 
-`/queries` エンドポイントに対してPATCHリクエストを実行し、リクエストパスにクエリの `id` 値を指定することで、指定したクエリのキャンセルまたはソフト削除をリクエストできます。
+`/queries` エンドポイントに対してPATCH リクエストを実行し、リクエストパスにクエリの `id` 値を指定することで、指定したクエリのキャンセルまたはソフト削除をリクエストできます。
 
 **API 形式**
 
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | リソースに対して実行する操作のタイプ。 指定できる値は、`cancel` および `soft_delete` です。クエリをキャンセルするには、op パラメーターに値 `cancel ` を設定する必要があります。 ソフト削除処理は、GETリクエストでクエリが返されるのを停止しますが、システムからクエリが削除されるわけではありません。 |
+| `op` | リソースに対して実行する操作のタイプ。 指定できる値は、`cancel` および `soft_delete` です。クエリをキャンセルするには、op パラメーターに値 `cancel` を設定する必要があります。 ソフト削除操作は、GET リクエストでクエリが返されるのを停止しますが、システムからクエリが削除されるわけではありません。 |
 
 **応答**
 

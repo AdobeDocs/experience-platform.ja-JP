@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;Flow Service;
 title: Flow Service API を使用したオンデマンド取り込み用のフロー実行の作成
 description: Flow Service API を使用して、オンデマンド取り込み用のフロー実行を作成する方法を説明します
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 10%
@@ -35,7 +35,7 @@ ht-degree: 10%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
 
 ## テーブルベースのソースのフロー実行の作成
 
@@ -86,12 +86,12 @@ curl -X POST \
 | `params.startTime` | オンデマンドフロー実行が開始されるスケジュールされた時間。 この値は Unix 時間で表されます。 |
 | `params.windowStartTime` | データの取得元となる最も古い日時。 この値は Unix 時間で表されます。 |
 | `params.windowEndTime` | データが取得される日時。 この値は Unix 時間で表されます。 |
-| `params.deltaColumn` | 差分列は、データを分割し、新しく取り込んだデータを履歴データから分離するために必要です。 **注**: `deltaColumn` は、firs フロー実行を作成する場合にのみ必要です。 |
-| `params.deltaColumn.name` | delta 列の名前。 |
+| `params.deltaColumn` | 差分列は、データを分割し、新しく取り込んだデータを履歴データから分離するために必要です。 **メモ**:`deltaColumn` は、最初のフロー実行を作成する場合にのみ必要です。 |
+| `params.deltaColumn.name` | 差分列の名前。 |
 
 **応答**
 
-正常な応答は、一意の実行 `id`を含む、新しく作成されたフロー実行の詳細を返します。
+応答が成功すると、一意の実行 `id` など、新しく作成されたフロー実行の詳細が返されます。
 
 ```json
 {
@@ -106,7 +106,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 新しく作成されたフロー実行の ID。 テーブルベースの実行仕様について詳しくは、[&#x200B; フロー仕様の取得 &#x200B;](../api/collect/database-nosql.md#specs) に関するガイドを参照してください。 |
+| `id` | 新しく作成されたフロー実行の ID。 テーブルベースの実行仕様について詳しくは、[ フロー仕様の取得 ](../api/collect/database-nosql.md#specs) に関するガイドを参照してください。 |
 | `etag` | フロー実行のリソースバージョン。 |
 
 <!-- 
@@ -167,7 +167,7 @@ curl -X POST \
 | --- | --- |
 | `flowId` | フロー実行が作成されるフローの ID。 |
 | `params.startTime` | オンデマンドフロー実行が開始されるスケジュールされた時間。 この値は Unix 時間で表されます。 |
-| `params.windowStartTime` | データの取得元となる最も古い日時。 この値は UNIX 時間で表されます。 |
+| `params.windowStartTime` | データの取得元となる最も古い日時。 この値は Unix 時間で表されます。 |
 | `params.windowEndTime` | データが取得される日時。 この値は Unix 時間で表されます。 |
 
 **応答**
@@ -188,9 +188,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 新しく作成されたフロー実行の ID。 テーブルベースの実行仕様について詳しくは、[&#x200B; フロー仕様の取得 &#x200B;](../api/collect/database-nosql.md#specs) に関するガイドを参照してください。 |
+| `id` | 新しく作成されたフロー実行の ID。 テーブルベースの実行仕様について詳しくは、[ フロー仕様の取得 ](../api/collect/database-nosql.md#specs) に関するガイドを参照してください。 |
 | `etag` | フロー実行のリソースバージョン。 |
 
 ## フロー実行の監視
 
-フロー実行が作成されると、それを通じて取り込まれるデータを監視し、フロー実行、完了ステータスおよびエラーに関する情報を確認できます。 API を使用してフローの実行を監視するには、[API でのデータフローの監視 &#x200B;](./monitor.md) に関するチュートリアルを参照してください。 Experience Platform UI を使用してフローの実行を監視するには、[&#x200B; モニタリングダッシュボードを使用したソースデータフローのモニタリング &#x200B;](../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
+フロー実行が作成されると、それを通じて取り込まれるデータを監視し、フロー実行、完了ステータスおよびエラーに関する情報を確認できます。 API を使用してフローの実行を監視するには、[API でのデータフローの監視 ](./monitor.md) に関するチュートリアルを参照してください。 Experience Platform UI を使用してフローの実行を監視するには、[ モニタリングダッシュボードを使用したソースデータフローのモニタリング ](../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。

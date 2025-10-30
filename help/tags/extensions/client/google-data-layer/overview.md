@@ -2,9 +2,9 @@
 title: Google Data Layer Extension
 description: Adobe Experience PlatformのGoogle クライアントデータレイヤーのタグ拡張機能について説明します。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 Google データレイヤー拡張機能を使用すると、タグ実装でGoogle データレイヤーを使用できます。 この拡張機能は、個別に使用することも、Google ソリューションおよびGoogleのオープンソース [Data Layer Helper Library](https://github.com/google/data-layer-helper) と同時に使用することもできます。
 
-ヘルパーライブラリは、Adobeクライアントデータレイヤー（ACDL）と同様のイベント駆動機能を提供します。 Google データレイヤー拡張機能のデータ要素、ルール、アクションは、[ACDL 拡張機能 &#x200B;](../client-data-layer/overview.md) のものと同様の機能を提供します。
+ヘルパーライブラリは、Adobe Client Data Layer （ACDL）と同様のイベント駆動型機能を提供します。 Google データレイヤー拡張機能のデータ要素、ルール、アクションは、[ACDL 拡張機能 ](../client-data-layer/overview.md) のものと同様の機能を提供します。
 
 ## インストール
 
@@ -29,13 +29,14 @@ Google データレイヤー拡張機能を使用すると、タグ実装でGoog
 
 >[!NOTE]
 >
->GoogleとAdobeコードのどちらを最初に読み込んでデータレイヤーを作成するかは関係ありません。 どちらのシステムも同じように動作します。データレイヤーが存在しない場合は作成し、既存のデータレイヤーを使用します。
+>GoogleとAdobeのどちらをコードの最初に読み込んでデータレイヤーを作成するかは関係ありません。 どちらのシステムも同じように動作します。データレイヤーが存在しない場合は作成し、既存のデータレイヤーを使用します。
 
 ## イベント
 
 >[!NOTE]
 >
 >イベント駆動型のデータレイヤーをAdobe Experience Platform タグで使用すると、_event_ という単語がオーバーロードされる。 _イベント_ は次になることができます。
+>
 > - Adobe Experience Platform タグイベント（ライブラリの読み込みなど）。
 > - JavaScript イベント。
 > - _event_ キーワードを使用してデータレイヤーにプッシュされたデータ。
@@ -44,18 +45,18 @@ Google データレイヤー拡張機能を使用すると、タグ実装でGoog
 
 >[!NOTE]
 >
->Adobeのクライアントデータレイヤーと同様に、データがGoogle データレイヤーにプッシュされる際の _event_ キーワードの使用を理解することが重要です。 _event_ キーワードは、Google データレイヤーの動作を変更するので、この拡張機能も変更されます。\
+>Adobe Client Data Layer と同様に、データがGoogle データレイヤーにプッシュされる際の _event_ キーワードの使用を理解することが重要です。 _event_ キーワードは、Google データレイヤーの動作を変更するので、この拡張機能も変更されます。\
 > 詳しくは、Googleのドキュメントを参照するか、不明な場合は調査を行ってください。
 
 ### Google イベントタイプ
 
-Googleでは、イベントをプッシュする手段として、`push()` メソッドを使用するGoogle Tag Manager と、`gtag()` メソッドを使用するGoogle Analytics 4 の 2 つをサポートしています。
+Googleでイベントをプッシュするには、`push()` メソッドを使用するGoogle Tag Manager と、`gtag()` メソッドを使用するGoogle Analytics 4 の 2 つの方法があります。
 
 1.2.1 より前のバージョンのGoogle データレイヤー拡張機能では、このページのコード例に示すように、`push()` で作成されたイベントのみをサポートしていました。
 
 バージョン 1.2.1 以降では、`gtag()` を使用して作成されたイベントがサポートされています。  これはオプションであり、拡張機能の設定ダイアログで有効にすることができます。
 
-`push()` イベントと `gtag()` イベントについて詳しくは、[Google ドキュメント &#x200B;](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) を参照してください。  この情報は、拡張機能の設定ダイアログとルールダイアログでも提供されます。
+`push()` イベントと `gtag()` イベントについて詳しくは、[Google ドキュメント ](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) を参照してください。  この情報は、拡張機能の設定ダイアログとルールダイアログでも提供されます。
 
 ### データレイヤーへのすべてのプッシュをリッスン
 

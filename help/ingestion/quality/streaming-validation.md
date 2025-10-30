@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；ストリー
 solution: Experience Platform
 title: ストリーミング取り込みの検証
 type: Tutorial
-description: ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+description: ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取得 API は、同期と非同期の 2 つの検証モードをサポートしています。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 82%
@@ -14,7 +14,7 @@ ht-degree: 82%
 
 # ストリーミング取得検証
 
-ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取得 API は、同期と非同期の 2 つの検証モードをサポートしています。
 
 ## はじめに
 
@@ -35,7 +35,7 @@ ht-degree: 82%
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] に属するリソースを含む [!DNL Schema Registry] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -50,6 +50,7 @@ ht-degree: 82%
 ### 検証の範囲
 
 [!DNL Streaming Validation Service] では、次の領域で検証について説明します。
+
 - 範囲
 - 配置
 - 列挙
@@ -148,7 +149,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 ## 非同期検証
 
-非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、データの損失を防ぐた [!DNL Data Lake] に、失敗したバッチにデータが送信されます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
+非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、データの損失を防ぐた [!DNL Data Lake] に、失敗したバッチにデータが送信されます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取得は非同期検証モードで動作します。
 
 **API 形式**
 

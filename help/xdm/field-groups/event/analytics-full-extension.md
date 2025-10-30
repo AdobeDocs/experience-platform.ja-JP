@@ -2,22 +2,22 @@
 title: Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループ
 description: Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループについて説明します。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 93%
+source-wordcount: '793'
+ht-degree: 87%
 
 ---
 
-# [!UICONTROL Adobe Analytics ExperienceEvent 完全拡張]スキーマフィールドグループ
+# [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] スキーマフィールドグループ
 
-[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張]は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md)の標準スキーマフィールドグループで、Adobe Analytics が収集する共通のメトリクスをキャプチャするものです。
+[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、Adobe Analyticsが収集する共通のメトリクスをキャプチャするものです。
 
 このドキュメントでは、Analytics 拡張機能フィールドグループの構造と使用例について説明します。
 
 >[!NOTE]
 >
->このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには [Experience Platform UI で検索するか &#x200B;](../../ui/explore.md) [&#x200B; パブリック XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) でスキーマ全体を表示します。
+>このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには [Experience Platform UI で検索するか ](../../ui/explore.md)[ パブリック XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) でスキーマ全体を表示します。
 
 ## フィールドグループ構造
 
@@ -46,7 +46,7 @@ ht-degree: 93%
 | `eVars` | オブジェクト | 最大 250 個のコンバージョン変数（[eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=ja)）をキャプチャするオブジェクトです。このオブジェクトのプロパティには `eVar1` から `eVar250` までのキーがあり、データタイプには文字列のみを使用できます。 |
 | `hierarchies` | オブジェクト | 最大 5 つのカスタム階層変数（[hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=ja)）をキャプチャするオブジェクトです。このオブジェクトのプロパティは `hier1` から `hier5` までがキーとなっており、それ自身が以下のサブプロパティを持つオブジェクトです。<ul><li>`delimiter`：`values` で提供されるリストの生成に使用する、元の区切り文字。</li><li>`values`：階層レベル名の区切りリストを文字列で表したもの。</li></ul> |
 | `listProps` | オブジェクト | 最大 75 個の [list props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=ja#リスト-prop) をキャプチャするオブジェクトです。このオブジェクトのプロパティは `prop1` から `prop75` までがキーとなっており、それ自身は以下のサブプロパティを持つオブジェクトです。<ul><li>`delimiter`：`values` で提供されるリストの生成に使用する、元の区切り文字。</li><li>`values`：prop 値の区切りリストを文字列で表したもの。</li></ul> |
-| `lists` | オブジェクト | 最大 3 つの[リスト](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=ja)までキャプチャするオブジェクト。このオブジェクトのプロパティは `list1` から `list3` までのキーが設定されています。各プロパティには、[[!UICONTROL キーと値のペア]](../../data-types/key-value-pair.md)データタイプの `list` 配列が一つ含まれます。 |
+| `lists` | オブジェクト | 最大 3 つの[リスト](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=ja)までキャプチャするオブジェクト。このオブジェクトのプロパティは `list1` から `list3` までのキーが設定されています。各プロパティには、`list` のデータタイプの [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) 配列が 1 つ含まれます。 |
 | `props` | オブジェクト | 最大 75 個の [prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=ja) をキャプチャするオブジェクトです。このオブジェクトのプロパティは `prop1` から `prop75` までのキーがあり、データタイプには文字列のみを使用できます。 |
 | `postalCode` | 文字列 | クライアントが指定した zip コードまたは郵便番号。 |
 | `stateProvince` | 文字列 | クライアントが提供する都道府県の場所。 |
@@ -61,7 +61,7 @@ ht-degree: 93%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `firstWeb` | [[!UICONTROL Web 情報]](../../data-types/web-information.md) | このエンドユーザーの最初の ExperienceEvent からの web ページ、リンクおよびリファラーに関する情報。 |
+| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | このエンドユーザーの最初のエクスペリエンスイベントからの web ページ、リンクおよびリファラーに関する情報。 |
 | `firstTimestamp` | 整数 | このエンドユーザーの最初の ExperienceEvent の Unix タイムスタンプ。 |
 
 ## `environment` {#environment}
@@ -81,7 +81,7 @@ Analytics 拡張機能フィールドグループには、最大 100 個の[カ�
 
 各最上位イベントオブジェクトには、それぞれの範囲に対応する個々のイベントオブジェクトが含まれます。 例えば、`event101to200` には `event101` から `event200` までのキーが設定されたイベントが含まれます。
 
-各偶数オブジェクトは、[[!UICONTROL 測定]](../../data-types/measure.md)データタイプを使用し、一意の識別子と定量的な値を提供します。
+各偶数オブジェクトは、[[!UICONTROL Measure]](../../data-types/measure.md) データタイプを使用し、一意の識別子と定量的な値を提供します。
 
 ![カスタムイベントフィールド](../../images/field-groups/analytics-full-extension/event-vars.png)
 
@@ -93,8 +93,8 @@ Analytics 拡張機能フィールドグループには、最大 100 個の[カ�
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `search` | [[!UICONTROL 検索]](../../data-types/search.md) | セッションエントリの web 検索またはモバイル検索に関する情報をキャプチャします。 |
-| `web` | [[!UICONTROL Web 情報]](../../data-types/web-information.md) | セッションエントリのリンククリック数、web ページの詳細、リファラー情報およびブラウザーの詳細に関する情報をキャプチャします。 |
+| `search` | [[!UICONTROL Search]](../../data-types/search.md) | セッションエントリの web 検索またはモバイル検索に関する情報をキャプチャします。 |
+| `web` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | セッションエントリのリンククリック数、web ページの詳細、リファラー情報およびブラウザーの詳細に関する情報をキャプチャします。 |
 | `depth` | 整数 | エンドユーザーの現在のセッションの深さ（ページ番号など）。 |
 | `num` | 整数 | エンドユーザーの現在のセッション番号。 |
 | `timestamp` | 整数 | セッションエントリの Unix タイムスタンプ。 |

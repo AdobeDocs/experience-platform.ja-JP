@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 38%
@@ -33,7 +33,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 | ------- | ----------- |
 | [!DNL JupyterLab] での VM の改善 | 長時間実行される [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
 
-[!DNL JupyterLab] の詳細については、[[!DNL JupyterLab]  ユーザーガイド &#x200B;](../../data-science-workspace/jupyterlab/overview.md) を参照してください。
+[!DNL JupyterLab] の詳細については、[[!DNL JupyterLab]  ユーザーガイド ](../../data-science-workspace/jupyterlab/overview.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -45,14 +45,14 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 | 宛先 | 説明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google カスタマーマッチを使用すると、[!DNL Search]、[!DNL Shopping]、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。 宛先 <br><br>Real-Time CDPでの設定方法について詳しくは、宛先カタログの [!DNL Google Customer Match] [&#x200B; ページ &#x200B;](../../destinations/catalog/advertising/google-customer-match.md) を参照してください。 |
+| [!DNL Google Customer Match] | Google カスタマーマッチを使用すると、[!DNL Search]、[!DNL Shopping]、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。 宛先 <br><br>Real-Time CDPでの設定方法について詳しくは、宛先カタログの [!DNL Google Customer Match] [ ページ ](../../destinations/catalog/advertising/google-customer-match.md) を参照してください。 |
 
 **新機能**
 
 | 機能 | 説明 |
 |------- | -----------|
-| カスタムのファイル名エディター | メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローを更新し、書き出したファイルの名前を編集できるようにします。 詳しくは、アクティベーションワークフローの [&#x200B; 設定ステップ &#x200B;](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
-| 推奨される属性 | 書き出されたファイルに追加する推奨属性を表示する、メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローを更新します。 詳しくは、アクティベーションワークフローの [&#x200B; 属性を選択ステップ &#x200B;](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
+| カスタムのファイル名エディター | メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローを更新し、書き出したファイルの名前を編集できるようにします。 詳しくは、アクティベーションワークフローの [ 設定ステップ ](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
+| 推奨される属性 | 書き出されたファイルに追加する推奨属性を表示する、メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローを更新します。 詳しくは、アクティベーションワークフローの [ 属性を選択ステップ ](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
@@ -62,7 +62,7 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| IAB TCF 2.0 のサポート | [!DNL Interactive Advertising Bureau] （IAB）で概要が説明されているように、[!DNL Real-Time CDP] は [!DNL Transparency & Consent Framework] （TCF）の 2.0 バージョンの登録済みベンダーになりました。 CMP が生成した顧客同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリーム宛先に対してセグメントをアクティブ化する際に顧客の同意環境設定を適用できます。 |
+| IAB TCF 2.0 のサポート | [!DNL Real-Time CDP] （IAB）で概要が説明されているように、[!DNL Transparency & Consent Framework] は [!DNL Interactive Advertising Bureau] （TCF）の 2.0 バージョンの登録済みベンダーになりました。 CMP が生成した顧客同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリーム宛先に対してセグメントをアクティブ化する際に顧客の同意環境設定を適用できます。 |
 
 [!DNL Real-Time CDP] について詳しくは、[[!DNL Real-Time CDP] 概要](../../rtcdp/overview.md)を参照してください。
 
@@ -76,7 +76,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| フロー実行監視 | ユーザーは、すべてのフロー実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細を表示できます。 詳しくは、[&#x200B; データフローの監視 &#x200B;](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
+| フロー実行監視 | ユーザーは、すべてのフロー実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細を表示できます。 詳しくは、[ データフローの監視 ](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
 | フロー実行通知 | ユーザーはイベントを購読し、Webhook を登録して、フロー実行に関するステータス、指標およびエラーについてリアルタイム通知を受け取ることができます。 |
 | UI カタログの改善 | ソースカタログ画面が更新され、選択したオブジェクトのプライマリアクションに簡単にアクセスできるようになりました。 |
 

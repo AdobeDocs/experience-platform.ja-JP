@@ -9,10 +9,10 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 93%
 
 リクエストの形式は、使用する [!DNL Experience Platform] API によって異なります。API 呼び出しの構造を学ぶ最善の方法は、使用している特定の [!DNL Experience Platform] サービスのドキュメントに記載されている例に従うことです。
 
-API リクエストの形式について詳しくは、『Experience Platform API 入門ガイド』の API 呼び出しのサンプルの読み取り [&#x200B; の節を参照し &#x200B;](./api-guide.md#sample-api) ください。
+API リクエストの形式について詳しくは、『Experience Platform API 入門ガイド』の API 呼び出しのサンプルの読み取り [ の節を参照し ](./api-guide.md#sample-api) ください。
 
 ## 組織とは何ですか？ {#what-is-my-ims-organization}
 
@@ -66,18 +66,22 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## Postman を使用して [!DNL Experience Platform] API を呼び出すことはできますか？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) は、RESTful API への呼び出しを視覚化する便利なツールです。[Experience Platform API 入門ガイド &#x200B;](api-guide.md) には、Postman コレクションを読み込むためのビデオと手順が含まれています。 さらに、各サービスについて Postman コレクションのリストが提供されます。
+[Postman](https://www.postman.com/) は、RESTful API への呼び出しを視覚化する便利なツールです。[Experience Platform API 入門ガイド ](api-guide.md) には、Postman コレクションを読み込むためのビデオと手順が含まれています。 さらに、各サービスについて Postman コレクションのリストが提供されます。
 
 ## [!DNL Experience Platform] の必要システム構成は何ですか？ {#what-are-the-system-requirements-for-platform}
 
 UI と API のどちらを使用しているかによって、次のシステム要件が適用されます。
 
 **UI ベースの操作の場合：**
+
 - 最新の標準的な Web ブラウザー。最新バージョンの [!DNL Chrome] をお勧めしますが、[!DNL Firefox] の最新および以前のメジャーリリース、[!DNL Internet Explorer]、Safari もサポートされています。
+
    - 新しいメジャーバージョンがリリースされるたびに、[!DNL Experience Platform] は最新バージョンのサポートを開始しますが、3 番目に新しいバージョンのサポートは終了します。
+
 - すべてのブラウザーで、Cookie と JavaScript が有効になっている必要があります。
 
 **API および開発者のインタラクションの場合：**
+
 - REST、ストリーミング、Webhook 統合を開発する開発環境。
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
@@ -92,9 +96,9 @@ UI と API のどちらを使用しているかによって、次のシステム
 |--- | --- | ---|
 | 400 | Bad request | リクエストが不適切に構築され、キー情報が欠落している、または正しくない構文が含まれていました。 |
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
-| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。Experience Platform API を使用する方法 [&#x200B; 必要な属性ベースのアクセス制御権限を取得する &#x200B;](/help/landing/api-authentication.md#get-abac-permissions) をお読みください。 </p> |
+| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。Experience Platform API を使用する方法 [ 必要な属性ベースのアクセス制御権限を取得する ](/help/landing/api-authentication.md#get-abac-permissions) をお読みください。 </p> |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
-| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの [&#x200B; データのフィルタリング &#x200B;](../catalog/api/filter-data.md) に関するサブガイドを参照してください。） リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
+| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの [ データのフィルタリング ](../catalog/api/filter-data.md) に関するサブガイドを参照してください。） リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 
 ## リクエストヘッダーエラー {#request-header-errors}
 
@@ -201,8 +205,9 @@ UI と API のどちらを使用しているかによって、次のシステム
 ```
 
 このエラーメッセージは、次の 2 つの場合のいずれかで表示されます。
+
 - 間違ったまたは形式が正しくない組織 ID ヘッダー（`x-gw-ims-org-id`）が API リクエストで渡された場合。再試行する前に、組織の正しい ID が含まれていることを確認してください。
-- アカウント（指定された認証資格情報で表される）が Experience Platform の製品プロファイルに関連付けられていない場合。Experience Platform API 認証チュートリアルの [&#x200B; アクセス資格情報の生成 &#x200B;](./api-authentication.md#authentication-for-each-session) の手順に従って、Experience Platformをアカウントに追加し、それに応じて認証資格情報を更新します。
+- アカウント（指定された認証資格情報で表される）が Experience Platform の製品プロファイルに関連付けられていない場合。Experience Platform API 認証チュートリアルの [ アクセス資格情報の生成 ](./api-authentication.md#authentication-for-each-session) の手順に従って、Experience Platformをアカウントに追加し、それに応じて認証資格情報を更新します。
 
 ## サービストラブルシューティングディレクトリ {#service-troubleshooting-directory}
 
@@ -212,7 +217,7 @@ UI と API のどちらを使用しているかによって、次のシステム
 | --- | --- | --- |
 | アクセス制御 | [アクセス制御 API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform のデータ取り込み | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [バッチ取り込みのトラブルシューティングガイド](../ingestion/batch-ingestion/troubleshooting.md) |
-| Adobe Experience Platform のデータ取り込み | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [ストリーミング取り込みのトラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform のデータ取り込み | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [ストリーミング取得のトラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform データサイエンスワークスペース | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform のデータガバナンス | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform ID サービス | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] トラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |

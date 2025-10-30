@@ -2,7 +2,7 @@
 description: 「/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK で作成されたファイルベースの宛先に対するファイル形式オプションの設定方法を説明します。
 title: ファイル形式設定
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 88%
@@ -24,7 +24,7 @@ Destination SDK でファイルベースの宛先を作成する場合、書き�
 
 ファイル形式設定は、ファイルベースの宛先に対する宛先サーバー設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介してファイル形式オプションを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -188,7 +188,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `fileType.value` | オプション | 出力ファイル形式を指定します。サポートされている値：`csv`、`parquet`、`json`。 | `csv` | - | - |
 | `csvOptions.quote.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用された値をエスケープするために使用する 1 文字を設定します。区切り記号を値の一部として使用することもできます。 | `null` | デフォルト値の例：`quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | カスタムの例：`quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。すべての値を常に引用符で囲む必要があるかどうかを示します。デフォルトでは、引用符文字を含む値のみをエスケープします。 | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
-| `csvOptions.delimiter.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。各フィールドと値の区切り文字を設定します。この区切り文字には、1 つまたは複数の文字を指定できます。 | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
+| `csvOptions.delimiter.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。各フィールドと値の区切り記号を設定します。この区切り記号には、1 つまたは複数の文字を指定できます。 | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。既に引用されている値の内部で引用符をエスケープするために使用する 1 文字を設定します。 | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
 | `csvOptions.escapeQuotes.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符を含む値を、常に引用符で囲む必要があるかどうかを示します。デフォルトでは、引用符文字を含むすべての値をエスケープします。 | `true` | - | - |
 | `csvOptions.header.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。列の名前を書き出されたファイルの最初の行として記述するかどうかを示します。 | `true` | - | - |
@@ -199,8 +199,8 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | オプション | 書き出されるファイルごとの最大行数を 1,000,000～10,000,000 行の範囲で示します。 | 5,000,000 |
-| `includeFileManifest` | オプション | ファイルの書き出しと共にファイル マニフェストの書き出しのサポートを有効にします。 マニフェスト JSON ファイルには、エクスポートの場所、エクスポートサイズなどに関する情報が含まれています。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 | [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。 <ul><li>`flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。</li><li>`scheduledTime`: ファイルが書き出された時間（UTC 単位）。 </li><li>`exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。 </li><li>`exportResults.name`：書き出すファイルの名前。</li><li>`size`：書き出されたファイルのサイズ（バイト単位）。</li></ul> |
+| `maxFileRowCount` | オプション | 書き出されるファイルごとの最大行数を 1,000,000～10,000,000 行の範囲で示します。 | 5,000,000 | - | - |
+| `includeFileManifest` | オプション | ファイルの書き出しと共にファイル マニフェストの書き出しのサポートを有効にします。 マニフェスト JSON ファイルには、エクスポートの場所、エクスポートサイズなどに関する情報が含まれています。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 | [ サンプル マニフェスト ファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。 <ul><li>`flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。</li><li>`scheduledTime`: ファイルが書き出された時間（UTC 単位）。 </li><li>`exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。 </li><li>`exportResults.name`：書き出すファイルの名前。</li><li>`size`：書き出されたファイルのサイズ（バイト単位）。</li></ul> | - | - |
 
 {style="table-layout:auto"}
 

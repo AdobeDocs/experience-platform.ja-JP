@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ETL 変換の例
 description: この記事では、抽出、変換、読み込み（ETL）の開発者が経験する可能性がある変換の例を示します。
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 88%
+source-wordcount: '452'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 88%
 
 ### サンプルファイル
 
-サンプルの CSV および JSON ファイルは、Adobeが管理する公開 ETL リファレンス [!DNL GitHub] リポジトリから入手できます。
+サンプルの CSV ファイルと JSON ファイルは、Adobeが管理する公開 ETL リファレンス [!DNL GitHub] リポジトリから入手できます。
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### マッピング
 
 次の表に、CRM データのマッピング要件を示します。この中には、次の変換が含まれています。
+
 - ID 列から `identityMap` プロパティへの変換
 - 生年月日（DOB）から年、月、日への変換
 - 文字列から double または短整数への変換
@@ -284,9 +285,9 @@ Adobe Experience Platform で使用するデータフレームを作成する場
 
 | ID フィールド | identityMap フィールド | データタイプ |
 | -------------- | ----------------- | --------- |
-| identities[0].id | identityMap[Email][{"id"}] | 文字列としてコピー |
-| identities[1].id | identityMap[CRMID][{"id"}] | 文字列としてコピー |
-| identities[2].id | identityMap[LOYALTYID][{"id"}] | 文字列としてコピー |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | 文字列としてコピー |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | 文字列としてコピー |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | 文字列としてコピー |
 
 ### 出力 XDM
 

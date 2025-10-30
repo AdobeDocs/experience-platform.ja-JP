@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Audience Managerマッピング；audience manager マッピング
+keywords: Experience Platform；ホーム；人気のトピック；Audience Manager マッピング；audience manager マッピング
 solution: Experience Platform
 title: Adobe Audience Manager Source コネクタのマッピングフィールド
-description: Audience Managerソースコネクタの対応するAdobe Audience Manager データモデル（XDM）フィールドに、エクスペリエンスデータ（リアルタイムデータ、オンボードされたデータおよびプロファイルデータ）をマッピングする方法について説明します。
+description: Audience Manager ソースコネクタの対応するAdobe Audience Manager データモデル（XDM）フィールドに、エクスペリエンスデータ（リアルタイムデータ、オンボーディングされたデータおよびプロファイルデータ）をマッピングする方法について説明します。
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 70%
@@ -27,7 +27,7 @@ ht-degree: 70%
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *endUserIds に存在する名前空間と最初の値のみ。* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *endUserIds に存在する名前空間と最初の値のみ。* |
-| `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

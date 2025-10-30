@@ -2,7 +2,7 @@
 description: エンドポイントに送信される HTTP リクエストの書式設定方法を説明します。/authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK の宛先サーバーテンプレート仕様を設定します。
 title: Destination SDK で作成される宛先のテンプレート仕様
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 88%
@@ -17,7 +17,7 @@ ht-degree: 88%
 
 テンプレート仕様は、リアルタイム（ストリーミング）宛先用の宛先サーバー設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 &#x200B;](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介して宛先用のテンプレート仕様を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

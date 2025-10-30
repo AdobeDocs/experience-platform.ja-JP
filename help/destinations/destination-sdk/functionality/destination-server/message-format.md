@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 87%
@@ -94,7 +94,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | アドビ側でのパートナー XDM スキーマの属性 | 変換 | お客様側の HTTP メッセージの属性 |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -1205,11 +1205,11 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 | 関数 | 説明 | 例 |
 |---------|----------|----------|
-| `input.profile` | プロファイル（[JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) として表されます）。このページで前述したパートナー XDM スキーマに従います。 |
+| `input.profile` | プロファイル（[JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) として表されます）。このページで前述したパートナー XDM スキーマに従います。 |  |
 | `hasSegments` | この関数は、名前空間オーディエンス ID のマップをパラメーターとして受け取ります。 この関数は、（ステータスに関係なく）マップに少なくとも 1 つのオーディエンスがある場合は `true` を返し、それ以外の場合は `false` を返します。 この関数を使用して、オーディエンスのマップに対して反復処理を行うかどうかを決定できます。 | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | 特定のAdobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | 特定のAdobe Experience Platform名前空間のオーディエンス名からパートナーのシステムのオーディエンス名にマッピングします。 | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | オーディエンスが作成、更新またはアクティブ化された時間を、UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `ups` 名前空間から ID `seg-id-1` のセグメントが作成された時刻を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `ups` 名前空間から ID `seg-id-1` のオーディエンスが更新された時刻を UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: `ups` 名前空間の ID `seg-id-1` を持つオーディエンスが宛先に対してアクティブ化された時間を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時刻を UNIX タイムスタンプ形式で返します。</li></ul> |
+| `destination.namespaceSegmentTimestamps` | オーディエンスが作成、更新またはアクティブ化された時間を、UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `seg-id-1` 名前空間から ID `ups` のセグメントが作成された時刻を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `seg-id-1` 名前空間から ID `ups` のオーディエンスが更新された時刻を UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: `seg-id-1` 名前空間の ID `ups` を持つオーディエンスが宛先に対してアクティブ化された時間を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時刻を UNIX タイムスタンプ形式で返します。</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | ステータスが `realized` のオーディエンスのみを、すべての名前空間にわたって返します。 | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | ステータスが `exited` のオーディエンスのみを、すべての名前空間にわたって返します。 | `removedSegments(input.profile.segmentMembership)` |
 | `destination.segmentAliases` | **非推奨。`destination.namespaceSegmentAliases`** Adobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスへの <br><br> マッピングに置き換えられました。 | `destination.segmentAliases["seg-id-1"]` |

@@ -4,9 +4,9 @@ title: リファクタリングされたセグメント化時間制約 UI のガ
 description: セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 26%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platformの 2024 年 1 月リリースでは、Adobe Experience
 
 以前は、個々のイベントに複数の時間制約ルールを添付することができました。 この最新の更新では、ルールに時間制約を追加しようとすると、**エラー** が発生するようになりました。
 
-![&#x200B; ルールレベルの時間制約がハイライト表示されています。 その後に発生するエラーもハイライト表示されます。](../images/ui/segment-refactoring/rule-time-constraint.png)
+![ ルールレベルの時間制約がハイライト表示されています。 その後に発生するエラーもハイライト表示されます。](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 時間の制約は、キャンバスレベルまたはカードレベルでのみ適用できるようになりました。
 
@@ -36,8 +36,8 @@ Adobe Experience Platformの 2024 年 1 月リリースでは、Adobe Experience
 >
 >キャンバスに **複数** カードがある場合、キャンバスレベルに時間制約を適用すると、キャンバス上の **すべて** カードにその時間制約が適用されます。
 
-![&#x200B; キャンバスレベルの時間制約がハイライト表示されている様子 &#x200B;](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![ キャンバスレベルの時間制約がハイライト表示されている様子 ](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-カードレベルで時間制約を適用するには、時間制約を適用する特定のカードを選択します。 **[!UICONTROL イベントルール]** コンテナが表示されます。 カードに適用する時間制約を選択できるようになりました。
+カードレベルで時間制約を適用するには、時間制約を適用する特定のカードを選択します。 **[!UICONTROL Event Rules]** コンテナが表示されます。 カードに適用する時間制約を選択できるようになりました。
 
-![&#x200B; カードレベルの時間制約がハイライト表示されている様子 &#x200B;](../images/ui/segment-refactoring/card-time-constraint.png)
+![ カードレベルの時間制約がハイライト表示されている様子 ](../images/ui/segment-refactoring/card-time-constraint.png)

@@ -2,10 +2,10 @@
 title: Adobe Analytics Source コネクタのマッピングフィールド
 description: Analytics Source Connector を使用して、Adobe Analytics フィールドを XDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 27%
+source-wordcount: '3854'
+ht-degree: 24%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics データを取り込むことができます。 ADC を通じて取り込まれた一部のデータは、Analytics フィールドから Experience Data Model （XDM）フィールドに直接マッピングできますが、他のデータでは、変換と特定の関数を正常にマッピングする必要があります。
 
-![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 &#x200B;](../images/analytics-data-experience-platform.png)
+![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 ](../images/analytics-data-experience-platform.png)
 
 ## ストリーミングメディアパラメーター
 
@@ -23,10 +23,10 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | 文字列 | ビデオのわかりやすい（人間が読み取れる）名前。 |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | 文字列 | メディア作成者の名前。 |
-| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 文字列 | 音楽の録音やビデオで演奏しているアルバムアーティストやグループの名前。 |
-| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 文字列 | 音楽の録音やビデオが含まれるアルバムの名前。 |
-| `videolength` | `mediaReporting.sessionDetails.length ` | 整数 | ビデオの長さまたはランタイム。 |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 文字列 |
+| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 文字列 | 音楽の録音またはビデオを実行しているアルバムアーティストまたはグループの名前。 |
+| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 文字列 | 音楽の録音またはビデオが属するアルバムの名前。 |
+| `videolength` | `mediaReporting.sessionDetails.length` | 整数 | ビデオの長さまたはランタイム。 |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 文字列 |  |
 | `video` | `mediaReporting.sessionDetails.name` | 文字列 | ビデオの ID。 |
 | `videoshow` | `mediaReporting.sessionDetails.show` | 文字列 | プログラムまたはシリーズの名前。 番組がシリーズの一部である場合にのみ、プログラム/シリーズ名が必要です。 |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | 文字列 | ストリーミングメディアのタイプ（「ビデオ」や「オーディオ」など）。 |
@@ -34,12 +34,12 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | 文字列 | エピソードの数。 |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | string[] | ビデオのジャンル。 |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | 文字列 | 個々の再生に固有のコンテンツストリームのインスタンスの識別子。 |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | 文字列 | ビデオプレーヤーの名前。 |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | 文字列 | ビデオプレーヤーの名前。 |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | 文字列 | コンテンツ再生元となる配信チャネル。 |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | 文字列 | コンテンツに使用されるストリーム配信のタイプ。 すべてのビデオビューで、これは自動的に「ビデオ」に設定されます。 推奨値：VOD、ライブ、リニア、UGC、DVOD、ラジオ、ポッドキャスト、オーディオブック、曲 |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | 文字列 | ネットワーク名またはチャネル名。 |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | 文字列 | フィードのタイプ。これは、「East HD」や「SD」などの実際のフィード関連データか、URL などのフィードのソースのいずれかを表すことができます。 |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | 文字列 |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | 文字列 |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | ブール値 | ビデオが開始されたかどうかを示すブール値。 この問題は、ユーザーが再生ボタンを選択すると発生し、プリロール広告、バッファリング、エラーなどが発生した場合でもカウントされます。 |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | ブール値 | メディアの最初のフレームが開始したかどうかを示すブール値。 広告またはバッファー時間中にユーザーがドロップした場合、「コンテンツ開始」は選定されません。 |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | 整数 | メインコンテンツで行われたすべてのイベントの `type=PLAY` 間（秒単位）。 |
@@ -57,7 +57,7 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | 整数 | ユーザーが再生を一時停止した合計時間（秒単位）。 |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | 文字列 | MVPD認証を介して提供されるAdobe ID。 |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | 文字列 | Adobe認証によってユーザーが認証されていることを定義します。 |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | コンテンツが放送または再生された時間帯を定義します。 |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | コンテンツが放送または再生された時間帯を定義します。 |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | ブール値 | 30 分以上のバッファー、一時停止、または停止期間の後に再開された各再生をマークするブール値。 |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | ブール値 | 少なくとも 1 つのフレームが表示されたことを示すブール値。 このフレームを最初のフレームにする必要はありません。 |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | 文字列 | レコードラベルの名前。 |
@@ -133,7 +133,7 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | 数値 | 平均ビットレート（kbps、整数）。 この指標は、再生セッション中に発生した再生時間に関連するすべてのビットレート値の加重平均として計算されます。 |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | ブール値 | ビットレートの変更が発生したストリームの数を示すブール値。 この指標は、再生セッション中に少なくとも 1 つのビットレート変更イベントが発生した場合にのみ、true に設定されます。 |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 整数 |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 整数 |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | 文字列 | ビットレートの変更数。 この値は、再生セッション中に発生したすべてのビットレート変更イベントの合計として計算されます。 |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | 整数 | ビデオの読み込みからビデオの開始までの間に経過した時間（秒）。 |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | ブール値 | ドロップフレームが発生したストリームの数を示すブール値。 この指標は、再生セッション中に少なくとも 1 つのフレームがドロップされた場合にのみ true に設定されます。 |
@@ -182,7 +182,7 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 文字列 | 「郵便番号」ディメンションの生成に使用される変数。 |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | 文字列 | Accept-Language HTTP ヘッダーで指定されている受け入れ可能なすべての言語のリスト。 |
 | `homepage` | `web.webPageDetails.isHomePage` | ブール値 | 廃止。 現在の URL がブラウザーのホームページかどうかを示します。 |
-| `ipv6` | `environment.ipV6` | 文字列 |
+| `ipv6` | `environment.ipV6` | 文字列 |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | 文字列 | ブラウザーでサポートされているJavaScriptのバージョン。 |
 | `user_agent` | `environment.browserDetails.userAgent` | 文字列 | HTTP ヘッダーで送信されるユーザーエージェント文字列。 |
 | `mobileappid` | `application.name` | 文字列 | モバイルアプリ ID。次の形式で保存されます。`[AppName][BundleVersion]` |
@@ -196,21 +196,21 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | 数値 | Mobile Services ビーコンのメジャー番号。 |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 数値 | Mobile Services ビーコンのマイナー番号。 |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 文字列 | Mobile Services ビーコンの UUID。 |
-| `mobileinstalls` | `application.firstLaunches` | オブジェクト | これは、インストールまたは再インストール後の最初の実行でトリガーされます | {id (文字列), value (数値)} |
-| `mobileupgrades` | `application.upgrades` | オブジェクト | アプリのアップグレード番号を報告します。アップグレード後の最初の起動時またはバージョン番号の変更時に常にトリガーされます。 | {id (文字列), value (数値)} |
-| `mobilelaunches` | `application.launches` | オブジェクト | アプリが起動された回数。 | {id (文字列), value (数値)} |
-| `mobilecrashes` | `application.crashes` | オブジェクト |  | {id (文字列), value (数値)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | オブジェクト |  | {id (文字列), value (数値)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | オブジェクト | | {id (文字列), value (数値)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | オブジェクト | | {id (文字列), value (数値)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | オブジェクト | ビデオ画質の開始時間。 | {id (文字列), value (数値)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | オブジェクト | | {id (文字列), value (数値)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | オブジェクト | ビデオ画質バッファ数 | {id (文字列), value (数値)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | オブジェクト | ビデオ画質バッファ時間 | {id (文字列), value (数値)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | オブジェクト | ビデオ画質変更回数 | {id (文字列), value (数値)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | オブジェクト | ビデオ画質の平均ビットレート | {id (文字列), value (数値)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | オブジェクト | ビデオ画質エラー回数 | {id (文字列), value (数値)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | オブジェクト | | {id (文字列), value (数値)} |
+| `mobileinstalls` | `application.firstLaunches` | オブジェクト | これは、インストールまたは再インストール後の最初の実行 `{id (string), value (number)}` にトリガーされます |
+| `mobileupgrades` | `application.upgrades` | オブジェクト | アプリのアップグレード番号を報告します。アップグレード後の最初の起動時またはバージョン番号の変更時に常にトリガーされます。 | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | オブジェクト | アプリが起動された回数。 `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | オブジェクト | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | オブジェクト | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | オブジェクト | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | オブジェクト | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | オブジェクト | 開始するビデオ画質の時間。`{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | オブジェクト | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | オブジェクト | ビデオ品質バッファー数 `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | オブジェクト | ビデオ品質バッファー時間 `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | オブジェクト | ビデオ画質の変更数 `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | オブジェクト | ビデオ画質の平均ビットレート `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | オブジェクト | ビデオ品質エラー数 `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | オブジェクト | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -291,11 +291,11 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [&#128279;](/help/query-service/sql/adobe-defined-functions.md)0&rbrace;Adobe定義関数 &rbrace; を参照してください。
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [&#128279;](/help/query-service/sql/adobe-defined-functions.md)0&rbrace;Adobe定義関数 &rbrace; を参照してください。
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
-+++選択すると、非推奨の高度なマッピングフィールドのテーブルを表示します
++++選択すると、非推奨の詳細マッピングフィールドのテーブルを表示します
 
 | データフィード | XDM フィールド | XDM タイプ |説明 |
 | — | — | — | — ||

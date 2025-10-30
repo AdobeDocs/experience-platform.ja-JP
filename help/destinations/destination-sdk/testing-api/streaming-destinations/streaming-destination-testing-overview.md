@@ -2,7 +2,7 @@
 description: 宛先テスト API を使用して、ストリーミング宛先設定を公開する前にテストする方法を説明します。
 title: ストリーミング宛先テスト API
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -25,10 +25,12 @@ Destination SDK の一部として、アドビは、宛先の設定およびテ�
 宛先テストツールを使用して、[サーバー設定](../../authoring-api/destination-server/create-destination-server.md)で指定されたパートナーのエンドポイントにメッセージを送信することで、宛先サーバー設定をテストします。
 
 ツールを使用する前に、以下を確認します。
+
 * [宛先設定ワークフロー](../../authoring-api/destination-configuration/create-destination-configuration.md)で説明する手順に従うことで、宛先を設定する。
 * [宛先インスタンス ID の取得方法](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id)で説明されているように、宛先への接続を確立する。
 
 このツールを使用すると、宛先の設定後に、以下が可能です。
+
 * 宛先が正しく設定されているかどうかをテストする。
 * 設定された宛先へのデータフローの整合性を検証する。
 
@@ -43,6 +45,7 @@ Destination SDK の一部として、アドビは、宛先の設定およびテ�
 リクエスト時に任意のプロファイルを追加しない場合、アドビでは、ユーザーのためにこれらを内部で生成して、リクエストに追加します。プロファイルを生成してこのリクエストで使用したい場合は、[サンプルプロファイル生成 API リファレンス](../../testing-api/streaming-destinations/sample-profile-generation-api.md)を参照してください。[API リファレンス](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)に示すように、ソース XDM スキーマに基づいてプロファイルを生成する必要があります。ソーススキーマは、使用している sandbox の[結合スキーマ](../../../../profile/ui/union-schema.md)であることに注意してください。
 
 応答には、宛先リクエスト処理の結果が含まれます。リクエストには、3 つの主要セクションが含まれます。
+
 * 宛先用にアドビによって生成されるリクエスト。
 * 宛先から受け取った応答。
 * リクエストで送信されるプロファイルのリスト（プロファイルは、[ユーザーによってリクエストに追加された](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)ものか、[宛先テストリクエストの本文が空](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)の場合にアドビによって生成されたもの）。

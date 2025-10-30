@@ -3,7 +3,7 @@ title: TikTok 接続
 description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 30%
@@ -14,7 +14,7 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 詳しくは、[TikTokのビジネスヘルプセンター &#x200B;](https://ads.tiktok.com/help/article/audiences) を参照してください。
+広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 詳しくは、[TikTokのビジネスヘルプセンター ](https://ads.tiktok.com/help/article/audiences) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -30,9 +30,9 @@ TikTokの宛先を使用する方法とタイミングをより深く理解す�
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスの送信先のTikTok Ads Manager アカウントに対するアクセス権が [!DNL Admin] または [!DNL Operator] である必要があります。 詳細については、[TikTok ヘルプセンター &#x200B;](https://ads.tiktok.com/help/article/add-users-tiktok-business-center) を参照してください。
+オーディエンスの送信先のTikTok Ads Manager アカウントに対するアクセス権が [!DNL Admin] または [!DNL Operator] である必要があります。 詳細については、[TikTok ヘルプセンター ](https://ads.tiktok.com/help/article/add-users-tiktok-business-center) を参照してください。
 
-TikTok Ads Manager アカウントにデータを送信する前に、`Audience Management` の広告アカウントにアクセスするための権限をAdobe Experience Platformに付与する必要があります。 この権限を付与するには、Experience Platform UI で [Ads Manager ID を入力 &#x200B;](#authenticate) し、TikTok Ads Manager アカウントにリダイレクトされた後に権限を付与します。
+TikTok Ads Manager アカウントにデータを送信する前に、`Audience Management` の広告アカウントにアクセスするための権限をAdobe Experience Platformに付与する必要があります。 この権限を付与するには、Experience Platform UI で [Ads Manager ID を入力 ](#authenticate) し、TikTok Ads Manager アカウントにリダイレクトされた後に権限を付与します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -53,9 +53,9 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -82,13 +82,13 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 宛先への認証を行うと、[!DNL TikTok Ads Manager] アカウントへのログインにリダイレクトされ、お客様に代わってオーディエンスを管理するAdobeを認証します。
 
-![TikTok権限の選択 &#x200B;](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png " 権限を選択するためのTikTok UI の画像 ")
+![TikTok権限の選択 ](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png " 権限を選択するためのTikTok UI の画像 ")
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先接続の詳細 &#x200B;](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " 入力する宛先接続の詳細を示す、Experience Platform UI の画像 ")
+![ 宛先接続の詳細 ](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " 入力する宛先接続の詳細を示す、Experience Platform UI の画像 ")
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -106,8 +106,8 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -117,13 +117,13 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ソースフィールドを選択中：
 
-* Adobe Experience Platformおよび ` Email_LC_SHA256` でプロファイルを一意に識別するソース ID として、識別子（例：[!DNL TikTok Ads Manager]）を選択します。
+* Adobe Experience Platformおよび `Email_LC_SHA256` でプロファイルを一意に識別するソース ID として、識別子（例：[!DNL TikTok Ads Manager]）を選択します。
 
 ターゲットフィールドを選択：
 
 * メール名前空間をターゲット ID として選択します。
 
-![ID マッピング &#x200B;](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Experience Platform UI の画像、ID のマッピング ")
+![ID マッピング ](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Experience Platform UI の画像、ID のマッピング ")
 
 ## 書き出したデータ {#exported-data}
 
@@ -135,4 +135,4 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[TikTok ヘルプセンター &#x200B;](https://ads.tiktok.com/help/article/audiences) ページを参照してください。
+詳しくは、[TikTok ヘルプセンター ](https://ads.tiktok.com/help/article/audiences) ページを参照してください。

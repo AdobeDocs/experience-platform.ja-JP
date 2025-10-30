@@ -1,29 +1,29 @@
 ---
 title: 検証エディタービュー
-description: このガイドでは、Adobe Experience Platform Assurance の検証エディタービューについて詳しく説明します。
+description: このガイドでは、Adobe Experience Platform Assuranceの検証エディタービューについて詳しく説明します。
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 4%
+source-wordcount: '496'
+ht-degree: 5%
 
 ---
 
 # 検証エディタービュー
 
-検証エディターを使用すると、JavaScript機能を素早く簡単に管理して、Adobe Experience Platform Assurance セッションのイベントを検証できます。 各関数は、Assurance セッションでイベントを受け取ります。 クライアント設定、イベント条件、テストおよびユースケースを検証する関数を作成できます。
+検証エディターを使用すると、JavaScript機能を素早く簡単に管理して、Adobe Experience Platform Assurance セッション内のイベントを検証できます。 各関数は、Assurance セッションでイベントを受け取ります。 クライアント設定、イベント条件、テストおよびユースケースを検証する関数を作成できます。
 
 ## 検証エディターの概要
 
-[Assurance の設定 &#x200B;](../tutorials/implement-assurance.md) 後、「ホーム **[!UICONTROL ビューで]** 「**[!UICONTROL 検証エディター]**」を選択します。
+[Assuranceの設定 ](../tutorials/implement-assurance.md) の後、**[!UICONTROL Home]** ビューで「**[!UICONTROL Validation Editor]**」を選択します。
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
 ## 検証関数の記述
 
-この機能を使用すると、Adobe Experience Platform Assurance セッションの検証機能を作成、編集または削除できます。
+この機能を使用すると、Adobe Experience Platform Assurance セッションの検証関数を作成、編集または削除できます。
 
-1. **[!UICONTROL 新しい検証を作成]** を選択します。
+1. **[!UICONTROL Create a New Validation]** を選択します。
 2. 検証を識別する **名前** を入力し、**カテゴリ** と **説明** を入力します。
 3. エディターでコードを編集して、Assurance セッションのイベントを検証します。
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 | キー | タイプ | 説明 |
 | :--- | :--- | :--- |
 | `uuid` | 文字列 | イベントのユニバーサル固有識別子（UUID）。 |
-| `timestamp` | 数値 | イベントが Assurance に送信されたときのクライアントからのタイムスタンプ。 |
+| `timestamp` | 数値 | イベントがAssuranceに送信されたときのクライアントからのタイムスタンプ。 |
 | `eventNumber` | 数値 | イベントが送信された際の注文に使用します。 このキーは、イベントのタイムスタンプが同じ場合に役立ちます。 |
 | `vendor` | 文字列 | 逆ドメイン名形式のベンダー識別文字列（例：com.adobe.assurance）。 |
 | `type` | 文字列 | イベントのタイプを示すために使用されます。 |
@@ -57,7 +57,7 @@ ht-degree: 4%
 | :--- | :--- | :--- |
 | `message` | 文字列 | 概要結果に表示する検証メッセージ。 |
 | `events` | 配列 | 一致または一致しないとレポートされるイベント uuid の配列。 |
-| `links` | 配列 | ドキュメントおよびその他のリソースを参照する `ValidationResultLink` オブジェクトの配列 `{( type: 'doc'|'product', url: String )}` |
+| `links` | 配列 | ドキュメントおよびその他のリソースを参照する `ValidationResultLink` オブジェクトの配列 `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
 | `result` | 文字列 | これは検証結果で、「matched」、「not matched」、「unknown」などの列挙文字列のいずれかであることが想定されます |
 
 ## 検証結果の表示
@@ -76,4 +76,4 @@ ht-degree: 4%
 
 JavaScript コードエディターでエラーが発生した場合は、エラーステータスと理由が表示されます。
 
-検証について詳しくは、[Adobe Experience Platform Assurance Validations](https://github.com/adobe/griffon-validation-plugins) GitHub を参照してください。 Adobeが所有する検証の例がわかります。 検証の詳細については、[wiki](https://github.com/adobe/griffon-validation-plugins/wiki) を参照してください。
+検証について詳しくは、[Adobe Experience Platform Assuranceの検証 ](https://github.com/adobe/griffon-validation-plugins) GitHub を参照してください。 Adobeが所有する検証の例をご覧いただけます。 検証の詳細については、[wiki](https://github.com/adobe/griffon-validation-plugins/wiki) を参照してください。

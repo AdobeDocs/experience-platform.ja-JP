@@ -3,62 +3,62 @@ title: Adobe TikTok Web Events API 拡張機能の統合
 description: このAdobe Experience Platform Web Events API を使用すると、web サイトとのインタラクションをTikTokと直接共有できます。
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 4%
+source-wordcount: '1044'
+ht-degree: 5%
 
 ---
 
 # [!DNL TikTok] web イベント API 拡張機能の概要
 
-[!DNL TikTok] events API は、Web サイト上のユーザーアクションに関する情報を [!DNL TikTok] と直接共有できる、セキュアな [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) インターフェイスです。 イベント転送ルールを活用し、[!DNL TikTok] Web イベント API 拡張機能を使用して、[!DNL Adobe Experience Platform Edge Network] から [!DNL TikTok] にデータを送信できます。
+[!DNL TikTok] events API は、Web サイト上のユーザーアクションに関する情報を [ と直接共有できる、セキュアな ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API[!DNL TikTok] インターフェイスです。 イベント転送ルールを活用し、[!DNL Adobe Experience Platform Edge Network] Web イベント API 拡張機能を使用して、[!DNL TikTok] から [!DNL TikTok] にデータを送信できます。
 
 ## [!DNL TikTok] 前提条件 {#prerequisites}
 
 [!DNL TikTok] Web イベント API を設定して [!DNL TikTok] イベント API を使用するには、[!DNL TikTok] ピクセルコードとアクセストークンを生成する必要があります。
 
-パートナー設定を使用して [!DNL TikTok] ピクセルを作成するには、ビジネスアカウントの有効な [!DNL TikTok] が必要です。 アカウントをまだお持ちでない場合は、[[!DNL TikTok]  ビジネス登録ページ用 &#x200B;](https://www.tiktok.com/business/en-US/solutions/business-account) に移動し、アカウントを登録して作成してください。
+パートナー設定を使用して [!DNL TikTok] ピクセルを作成するには、ビジネスアカウントの有効な [!DNL TikTok] が必要です。 アカウントをまだお持ちでない場合は、[[!DNL TikTok]  ビジネス登録ページ用 ](https://www.tiktok.com/business/en-US/solutions/business-account) に移動し、アカウントを登録して作成してください。
 
 パートナー設定を使用して [!DNL TikTok] Pixel を設定するには、ビジネスアカウントにログインする必要があります。 これを行うには、以下の手順に従います。
 
-1. 「**[!UICONTROL Assets]**」タブに移動し、「**[!UICONTROL イベント]**」を選択します。
-2. 「Web イベント」で、「**[!UICONTROL 管理]**」を選択します。
-3. **[!UICONTROL Web イベントを設定]** を選択します。
-4. 接続方法として **[!UICONTROL パートナー設定]** を選択します。
+1. 「**[!UICONTROL Assets]**」タブに移動し、「**[!UICONTROL Event]**」を選択します。
+2. [Web イベント ] で、[**[!UICONTROL Manage]**] を選択します。
+3. **[!UICONTROL Set Up Web Events]** を選択します。
+4. 接続方法として **[!UICONTROL Partner Setup]** を選択します。
 
-[!DNL TikTok] ピクセルのセットアップ方法について詳しくは、[&#x200B; ピクセルの基本を学ぶ &#x200B;](https://ads.tiktok.com/help/article/get-started-pixel) ガイドを参照してください。
+[ ピクセルのセットアップ方法について詳しくは、](https://ads.tiktok.com/help/article/get-started-pixel) ピクセルの基本を学ぶ [!DNL TikTok] ガイドを参照してください。
 
-ピクセルが正常に作成されたら、アクセストークンを生成できます。 これを行うには、ピクセルに移動し、「**[!UICONTROL 設定]**」タブを選択します。 イベント API で、「**[!UICONTROL アクセストークンを生成]**」を選択します。
+ピクセルが正常に作成されたら、アクセストークンを生成できます。 これを行うには、ピクセルに移動し、「**[!UICONTROL Settings]**」タブを選択します。 Events API で、「**[!UICONTROL Generate Access Token]**」を選択します。
 
-ピクセルコードとアクセストークンの設定方法について詳しくは、[[!DNL TikTok]  はじめる前に &#x200B;](https://business-api.tiktok.com/portal/docs?id=1739584855420929) を参照してください。
+ピクセルコードとアクセストークンの設定方法について詳しくは、[[!DNL TikTok]  はじめる前に ](https://business-api.tiktok.com/portal/docs?id=1739584855420929) を参照してください。
 
 ## [!DNL TikTok] Web イベント API 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択します。 「**[!UICONTROL カタログ]**」タブで、「**[!UICONTROL TikTok Web Events API Extension」を選択し]** 「**[!UICONTROL インストール]**」を選択します。
+拡張機能をインストールするには、左側のナビゲーションで「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL TikTok Web Events API Extension]** を選択し、「**[!UICONTROL Install]**」を選択します。
 
-![&#x200B; インストールを強調表示した [!DNL TikTok] 拡張機能カードを示す拡張機能カタログ &#x200B;](../../../images/extensions/server/tiktok/install-extension.png)
+![ インストールを強調表示した [!DNL TikTok] 拡張機能カードを示す拡張機能カタログ ](../../../images/extensions/server/tiktok/install-extension.png)
 
 次の画面で、以前に [!DNL TikTok] Ads Manager から生成した次の設定値を入力します。
 
-* **[!UICONTROL ピクセルコード]**
-* **[!UICONTROL アクセストークン]**
+* **[!UICONTROL Pixel Code]**
+* **[!UICONTROL Access Token]**
 
-完了したら「**[!UICONTROL 保存]**」を選択します。
+終了したら「**[!UICONTROL Save]**」を選択します。
 
-[!DNL TikTok] Web ![[!DNL TikTok] API 拡張機能の設定画面 &#x200B;](../../../images/extensions/server/tiktok/configure.png)
+![[!DNL TikTok] Web [!DNL TikTok] API 拡張機能の設定画面 ](../../../images/extensions/server/tiktok/configure.png)
 
 ## イベント転送ルールの設定 {#config-rule}
 
 すべてのデータ要素を設定したら、イベントを [!DNL TikTok] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しい [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API 拡張機能]** に設定します。 Edge Network イベントを [!DNL TikTok] に送信するには、**[!UICONTROL アクションタイプ]** を **[!UICONTROL TikTok Web Events API イベントを送信 &#x200B;] に設定します。**
+イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下で、新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API Extension]** に設定します。 Edge Network イベントを [!DNL TikTok] に送信するには、**[!UICONTROL Action Type]** を **[!UICONTROL Send TikTok Web Events API Event].** に設定します
 
-![Send TikTok Web Events API Event[!UICONTROL &#x200B; アクションタイプが &#x200B;]Data Collection UI の [!DNL TikTok] ルール用に選択されている。](../../../images/extensions/server/tiktok/select-action.png)
+![ データ収集 UI で [!UICONTROL Send TikTok Web Events API Event] ルールに対して選択されている [!DNL TikTok] アクションタイプ ](../../../images/extensions/server/tiktok/select-action.png)
 
-選択後、以下に示すように、追加のコントロールでイベントをさらに設定できます。 完了したら、「**[!UICONTROL 変更を保持]**」を選択してルールを保存します。
+選択後、以下に示すように、追加のコントロールでイベントをさらに設定できます。 完了したら、「**[!UICONTROL Keep Changes]**」を選択してルールを保存します。
 
-**[!UICONTROL Web イベントおよびパラメーター]**
+**[!UICONTROL Web Events and Parameters]**
 
 Web イベントおよびパラメーターには、イベントに関する一般的な情報が含まれます。 標準イベントは [!DNL TikTok] 統合ツール全体でサポートされており、レポート、コンバージョンの最適化、オーディエンスの構築に使用できます。
 
@@ -70,9 +70,9 @@ Web イベントおよびパラメーターには、イベントに関する一�
 
 {style="table-layout:auto"}
 
-![&#x200B; フィールドへのデータ入力の例を示す [!DNL Web Events and Parameters] の節。](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
+![ フィールドへのデータ入力の例を示す [!DNL Web Events and Parameters] の節。](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
 
-**[!UICONTROL ユーザーコンテキストのパラメーター]**
+**[!UICONTROL User Context Parameters]**
 
 ユーザーコンテキストパラメーターには、web 訪問者イベントを [!DNL TikTok] ユーザーと照合するために使用される顧客情報が含まれています。 複数のタイプのマッチングデータを含めると、ターゲティングと最適化モデルの精度を高めることができます。
 
@@ -81,18 +81,18 @@ Web イベントおよびパラメーターには、イベントに関する一�
 | IP アドレス | ブラウザーのハッシュ化されていないパブリック IP アドレス。 IPv4 アドレスと IPv6 アドレスのサポートが提供されます。 IPv6 アドレスの完全な形式と圧縮された形式の両方が認識されます。 |
 | ユーザーエージェント | ユーザーのデバイスからのハッシュ化されていないユーザーエージェント。 |
 | メール | コンバージョンイベントに関連付けられた連絡先のメールアドレス。 |
-| Phone | 電話番号は、ハッシュする前に E164 形式 [+][ 国コード ][ 市外局番 ][local phone number] である必要があります。 |
+| Phone | ハッシュを行う前に、電話番号を E164 形式 `[+][country code][area code][local phone number]` にする必要があります。 |
 | Cookie ID | Pixel SDKを使用している場合、Cookie が有効であれば、`_ttp` Cookie に一意の ID が自動保存されます。 `_ttp` の値を抽出して、このフィールドに使用できます。 |
 | 外部 ID | ユーザー ID、外部 Cookie ID などの一意の ID は、SHA256 でハッシュ化する必要があります。 |
-| TikTok クリック ID | [!DNL TikTok] で広告が選択されるたびにランディングページの URL に追加される `ttclid`。 |
+| TikTok クリック ID | `ttclid` で広告が選択されるたびにランディングページの URL に追加される [!DNL TikTok]。 |
 | ページ URL | イベント発生時のページ URL。 |
 | ページリファラー URL | ページリファラーの URL。 |
 
 {style="table-layout:auto"}
 
-![&#x200B; フィールドへのデータ入力の例を示す [!DNL User Context Parameters] の節。](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
+![ フィールドへのデータ入力の例を示す [!DNL User Context Parameters] の節。](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
 
-**[!UICONTROL プロパティパラメーター]**
+**[!UICONTROL Properties Parameters]**
 
 プロパティパラメーターを使用して、サポートされる追加のプロパティを設定します。
 
@@ -112,7 +112,7 @@ Web イベントおよびパラメーターには、イベントに関する一�
 
 {style="table-layout:auto"}
 
-![&#x200B; フィールドへのデータ入力の例を示す [!DNL Properties Parameters] の節。](../../../images/extensions/server/tiktok/configure-properties-parameters.png)
+![ フィールドへのデータ入力の例を示す [!DNL Properties Parameters] の節。](../../../images/extensions/server/tiktok/configure-properties-parameters.png)
 
 ## イベントの重複排除 {#deduplication}
 
@@ -122,8 +122,8 @@ Web イベントおよびパラメーターには、イベントに関する一�
 
 共有イベントを送信する場合は、すべてのイベントにピクセル ID、イベント ID および名前が含まれていることを確認してください。 重複したイベントが 5 分以内に到着した場合は、結合されます。 データフィールドが最初のイベントにない場合は、後続のイベントと組み合わされます。 48 時間以内に受信した重複イベントは削除されます。
 
-このプロセスについて詳しくは、[&#x200B; イベントの重複排除 &#x200B;](https://ads.tiktok.com/help/article/event-deduplication) に関する [!DNL TikTok] のドキュメントを参照してください。
+このプロセスについて詳しくは、[!DNL TikTok] イベントの重複排除 [ に関する ](https://ads.tiktok.com/help/article/event-deduplication) のドキュメントを参照してください。
 
 ## 次の手順
 
-このガイドでは、[!DNL TikTok] web イベント API 拡張機能を使用してサーバーサイドイベントデータを [!DNL TikTok] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。
+このガイドでは、[!DNL TikTok] web イベント API 拡張機能を使用してサーバーサイドイベントデータを [!DNL TikTok] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
