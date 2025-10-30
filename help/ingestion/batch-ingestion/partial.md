@@ -21,7 +21,7 @@ ht-degree: 30%
 
 このチュートリアルでは、部分バッチ取得に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [ バッチ取り込み ](./overview.md):CSV や Parquet などのデータファイルからデータを取 [!DNL Experience Platform] 込んで保存する方法。
+- [&#x200B; バッチ取り込み &#x200B;](./overview.md):CSV や Parquet などのデータファイルからデータを取 [!DNL Experience Platform] 込んで保存する方法。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 以下の節では、[!DNL Experience Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
@@ -50,11 +50,11 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->この節では、API を使用してバッチを有効にして部分バッチ取り込みを行う方法について説明します。 UI の使用方法については、[UI での部分バッチ取り込みのバッチを有効にする ](#enable-ui) ステップを参照してください。
+>この節では、API を使用してバッチを有効にして部分バッチ取り込みを行う方法について説明します。 UI の使用方法については、[UI での部分バッチ取り込みのバッチを有効にする &#x200B;](#enable-ui) ステップを参照してください。
 
 部分取り込みを有効にして新しいバッチを作成できます。
 
-新しいバッチを作成するには、[ バッチ取得開発者ガイド ](./api-overview.md) の手順に従います。 **[!UICONTROL Create batch]** ステップに到達したら、リクエスト本文内で次のフィールドを追加します。
+新しいバッチを作成するには、[&#x200B; バッチ取得開発者ガイド &#x200B;](./api-overview.md) の手順に従います。 **[!UICONTROL Create batch]** ステップに到達したら、リクエスト本文内で次のフィールドを追加します。
 
 ```json
 {
@@ -79,7 +79,7 @@ ht-degree: 30%
 
 ### 新しいソース接続の作成 {#new-source}
 
-新しいソース接続を作成するには、[ ソースの概要 ](../../sources/home.md) に一覧表示されている手順に従います。 **[!UICONTROL Dataflow detail]** の手順に到達したら、**[!UICONTROL Partial ingestion]** と **[!UICONTROL Error diagnostics]** のフィールドに注意してください。
+新しいソース接続を作成するには、[&#x200B; ソースの概要 &#x200B;](../../sources/home.md) に一覧表示されている手順に従います。 **[!UICONTROL Dataflow detail]** の手順に到達したら、**[!UICONTROL Partial ingestion]** と **[!UICONTROL Error diagnostics]** のフィールドに注意してください。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
@@ -109,7 +109,7 @@ ht-degree: 30%
 
 ### 「[!UICONTROL Map CSV to XDM schema]」フローの使用 {#map-flow}
 
-「[!UICONTROL Map CSV to XDM schema]」フローを使用するには、[CSV ファイルのマッピング チュートリアル ](../tutorials/map-csv/overview.md) に示されている手順に従います。 **[!UICONTROL Add data]** の手順に到達したら、**[!UICONTROL Partial ingestion]** と **[!UICONTROL Error diagnostics]** のフィールドに注意してください。
+「[!UICONTROL Map CSV to XDM schema]」フローを使用するには、[CSV ファイルのマッピング チュートリアル &#x200B;](../tutorials/map-csv/overview.md) に示されている手順に従います。 **[!UICONTROL Add data]** の手順に到達したら、**[!UICONTROL Partial ingestion]** と **[!UICONTROL Error diagnostics]** のフィールドに注意してください。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
@@ -131,7 +131,7 @@ ht-degree: 30%
 
 ### フローの詳細を取得
 
-データフロー設定を取得するには、`/flows/{FLOW_ID}` エンドポイントに対してGET リクエストを実行し、データフローの ID を指定します。 データフローの詳細の取得について詳しくは、[API を使用したデータフローの更新  [!DNL Flow Service]  ガイドを参照し ](../../sources/tutorials/api/update-dataflows.md) ください。
+データフロー設定を取得するには、`/flows/{FLOW_ID}` エンドポイントに対してGET リクエストを実行し、データフローの ID を指定します。 データフローの詳細の取得について詳しくは、[API を使用したデータフローの更新  [!DNL Flow Service]  ガイドを参照し &#x200B;](../../sources/tutorials/api/update-dataflows.md) ください。
 
 応答で返された `etag` フィールドの値を必ず保存してください。 これは、更新リクエストでバージョンの一貫性を確保するために必要です。
 
@@ -225,4 +225,4 @@ curl -X GET \
 
 このチュートリアルでは、部分バッチ取得を有効にするデータセットの作成または変更方法について説明しました。バッチ取得について詳しくは、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
 
-部分取り込みエラーの監視については、[ バッチ取り込みエラー診断ガイド ](../quality/error-diagnostics.md) を参照してください。
+部分取り込みエラーの監視については、[&#x200B; バッチ取り込みエラー診断ガイド &#x200B;](../quality/error-diagnostics.md) を参照してください。
