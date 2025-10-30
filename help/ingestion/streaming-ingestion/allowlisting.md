@@ -31,7 +31,7 @@ IP許可リストに加える機能は次のように動作します。
 
 ## 主な考慮事項
 
-* IP アドレス許可リストに加える機能は、[ ストリーミング取得 API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) （`dcs.adobedc.net`）にのみ適用され、**または** には `server.adobedc.net` 適用されません `edge.adobedc.net` 適用されません）。
+* IP アドレス許可リストに加える機能は、[&#x200B; ストリーミング取得 API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) （`dcs.adobedc.net`）にのみ適用され、**または** には `server.adobedc.net` 適用されません `edge.adobedc.net` 適用されません）。
 * 許可リストに加えるが有効になるまで、新しいサンドボックスはデフォルトで開きます。
 * サンドボックスを許可リストから削除すると、インターネットに再度接続されます。
 * サンドボックスと IP アドレスのマッピングの完全なリストを自前で管理し、常に IP アドレスの許可リストに加えるフォームで完全なリストを送信する必要があります。 増分更新はサポートされていません。
@@ -40,7 +40,7 @@ IP許可リストに加える機能は次のように動作します。
 
 次の手順に従って、組織の IP アドレスの許可リストに加えるを有効にします。
 
-1. [IP アドレス許可リストに加えるフォーム ](../images/assets/ip_allowlisting_aep.xlsx.zip) をダウンロードして入力します。
+1. [IP アドレス許可リストに加えるフォーム &#x200B;](../images/assets/ip_allowlisting_aep.xlsx.zip) をダウンロードして入力します。
 2. サポートチケットを開き、件名を **AEP DCS とストリーミング取得 – IP許可リストに加えるリクエスト** としてファイルします。 記入済みのフォームをこのチケットに添付します。
 3. チケットを送信すると、Adobe カスタマーケアがリクエストをエンジニアリングに転送します。
 4. エンジニアは許可リストに加えるを有効にし、設定を確認します。
