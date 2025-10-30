@@ -22,13 +22,13 @@ Adobe Experience Platformでは、接続、データセット書き出し、拡�
 
 >[!BEGINSHADEBOX]
 
-![ 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
+![&#x200B; 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
 
 >[!ENDSHADEBOX]
 
 ## 接続 {#connections}
 
-Adobe Experience Platformの **[!UICONTROL Profile Export]**、**[!UICONTROL Streaming Audience Export]** および **[!DNL Edge Personalization]** の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて [ リアルタイム顧客プロファイル ](../profile/home.md) を作成し、セグメント化を適用したあと、オーディエンスと対象プロファイルを宛先に書き出します。
+Adobe Experience Platformの **[!UICONTROL Profile Export]**、**[!UICONTROL Streaming Audience Export]** および **[!DNL Edge Personalization]** の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて [&#x200B; リアルタイム顧客プロファイル &#x200B;](../profile/home.md) を作成し、セグメント化を適用したあと、オーディエンスと対象プロファイルを宛先に書き出します。
 
 ## プロファイル書き出し宛先 {#profile-export}
 
@@ -81,11 +81,11 @@ Experience Platformから様々な宛先に、次の 3 種類のオーディエ�
 * アカウントオーディエンス
 * 見込み客オーディエンス
 
-[ 様々なオーディエンスタイプ ](/help/segmentation/types/account-audiences.md#terminology) の詳細をご覧ください。
+[&#x200B; 様々なオーディエンスタイプ &#x200B;](/help/segmentation/types/account-audiences.md#terminology) の詳細をご覧ください。
 
 宛先カードの記号は、各宛先に書き出すことができるオーディエンスのタイプを示します。
 
-![ 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png " 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 "){zoomable="yes"}
+![&#x200B; 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png " 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 "){zoomable="yes"}
 
 
 ## データセット書き出し宛先 {#dataset-export-destinations}
@@ -118,4 +118,4 @@ Experience Platformでは、タグ管理の機能と柔軟性を活用してお�
 
 [宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、実現しようとしているマーケティングアクションに応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**メールマーケティング**&#x200B;など）別にグループ化されています。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
-![ カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}
+![&#x200B; カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}

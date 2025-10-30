@@ -13,7 +13,7 @@ ht-degree: 12%
 
 Google データレイヤー拡張機能を使用すると、タグ実装でGoogle データレイヤーを使用できます。 この拡張機能は、個別に使用することも、Google ソリューションおよびGoogleのオープンソース [Data Layer Helper Library](https://github.com/google/data-layer-helper) と同時に使用することもできます。
 
-ヘルパーライブラリは、Adobe Client Data Layer （ACDL）と同様のイベント駆動型機能を提供します。 Google データレイヤー拡張機能のデータ要素、ルール、アクションは、[ACDL 拡張機能 ](../client-data-layer/overview.md) のものと同様の機能を提供します。
+ヘルパーライブラリは、Adobe Client Data Layer （ACDL）と同様のイベント駆動型機能を提供します。 Google データレイヤー拡張機能のデータ要素、ルール、アクションは、[ACDL 拡張機能 &#x200B;](../client-data-layer/overview.md) のものと同様の機能を提供します。
 
 ## インストール
 
@@ -56,7 +56,7 @@ Googleでイベントをプッシュするには、`push()` メソッドを使�
 
 バージョン 1.2.1 以降では、`gtag()` を使用して作成されたイベントがサポートされています。  これはオプションであり、拡張機能の設定ダイアログで有効にすることができます。
 
-`push()` イベントと `gtag()` イベントについて詳しくは、[Google ドキュメント ](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) を参照してください。  この情報は、拡張機能の設定ダイアログとルールダイアログでも提供されます。
+`push()` イベントと `gtag()` イベントについて詳しくは、[Google ドキュメント &#x200B;](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) を参照してください。  この情報は、拡張機能の設定ダイアログとルールダイアログでも提供されます。
 
 ### データレイヤーへのすべてのプッシュをリッスン
 

@@ -34,11 +34,11 @@ ht-degree: 35%
 * 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントへの API 呼び出しと、宛先エンドポイントから受信した API 応答をAdobeと共有してください。
 * 宛先に接続してアクティベーション手順を進めるユーザーのユーザーエクスペリエンスを示す画面録画。
 * ファイルベースの宛先に関するその他の要件：
-   * テスト API を使用して [ サンプルプロファイルを使用してファイルベースの宛先をテストする ](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを共有します。
+   * テスト API を使用して [&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテストする &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを共有します。
    * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
    * 書き出したファイルをストレージの場所からシステムに正常に取り込んだことを証明するフォームを送信します。
 * [destination publishing API](../publishing-api/create-publishing-request.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* [ セルフサービスドキュメントプロセス ](../docs-framework/documentation-instructions.md) に記載されている手順に従った、ドキュメント PR （プルリクエスト）。
+* [&#x200B; セルフサービスドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md) に記載されている手順に従った、ドキュメント PR （プルリクエスト）。
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
@@ -234,11 +234,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### API 応答のテスト {#testing-api-response-file-based}
 
-テスト API を使用して [ サンプルプロファイルを使用してファイルベースの宛先をテストする ](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを含めます。
+テスト API を使用して [&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテストする &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを含めます。
 
 ### 書き出したファイルを添付 {#attach-exported-file}
 
-[ 送信メール ](#download-sample-email) に、設定した宛先によってお使いのストレージの場所に書き出された CSV ファイルを添付します。
+[&#x200B; 送信メール &#x200B;](#download-sample-email) に、設定した宛先によってお使いのストレージの場所に書き出された CSV ファイルを添付します。
 
 ### 取り込みが成功した証拠 {#proof-of-successful-ingestion}
 
@@ -252,11 +252,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 宛先を正常にテストした後、[Destination Publishing API](../publishing-api/create-publishing-request.md) を使用してアドビに送信し、レビューと公開を行う必要があります。
 
-宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[ 宛先公開リクエストの取得 ](../publishing-api/retrieve-publishing-request.md) 方法を参照してください。
+宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[&#x200B; 宛先公開リクエストの取得 &#x200B;](../publishing-api/retrieve-publishing-request.md) 方法を参照してください。
 
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト） {#documentation-pr}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、[ 製品化統合 ](../overview.md#productized-custom-integrations)、[ セルフサービスドキュメントプロセス ](../docs-framework/documentation-instructions.md) を使用して、宛先用に製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、[&#x200B; 製品化統合 &#x200B;](../overview.md#productized-custom-integrations)、[&#x200B; セルフサービスドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md) を使用して、宛先用に製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ {#logo}
 

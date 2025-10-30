@@ -15,9 +15,9 @@ ht-degree: 6%
 
 [[!DNL Twitter]](https://twitter.com/i/flow/login) は、ユーザーがツイートと呼ばれる 280 文字のメッセージを投稿してやり取りする、オンラインのソーシャルメディアおよびソーシャルネットワーキングサービスです。 ユーザーは、ブラウザー、モバイルフロントエンドソフトウェア、またはその [API](https://developer.twitter.com/en/docs/twitter-api) を介してプログラムを使用して、Twitter とやり取りできます
 
-[!DNL Twitter] Web Conversions API [ イベント転送 ](../../../ui/event-forwarding/overview.md) 拡張機能を使用すると、Adobe Experience Platform Edge Networkで取得したデータを活用して、[!DNL Twitter] に送信できます。 このドキュメントでは、拡張機能のユースケース、インストール方法および機能をイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) に統合する方法について説明します。
+[!DNL Twitter] Web Conversions API [&#x200B; イベント転送 &#x200B;](../../../ui/event-forwarding/overview.md) 拡張機能を使用すると、Adobe Experience Platform Edge Networkで取得したデータを活用して、[!DNL Twitter] に送信できます。 このドキュメントでは、拡張機能のユースケース、インストール方法および機能をイベント転送 [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) に統合する方法について説明します。
 
-[!DNL Twitter] では、[ ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) API を使用した認証に [!DNL Twitter]OAuth 1.0[!DNL Web Conversions] が必要です。
+[!DNL Twitter] では、[&#x200B; &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) API を使用した認証に [!DNL Twitter]OAuth 1.0[!DNL Web Conversions] が必要です。
 
 ## ユースケース
 
@@ -27,13 +27,13 @@ ht-degree: 6%
 
 その後、マーケティングチームと分析チームは、[!DNL Twitter's] の機能を活用して追加の分析を実行し、ターゲットとなる広告キャンペーンに対してこれらのユーザーをターゲットに設定できます。
 
-[!DNL Twitter] 固有のユースケースについて詳しくは、[[!DNL Twitter]  ユースケース ](https://developer.twitter.com/en/use-cases/build-for-businesses) ドキュメントを参照してください。
+[!DNL Twitter] 固有のユースケースについて詳しくは、[[!DNL Twitter]  ユースケース &#x200B;](https://developer.twitter.com/en/use-cases/build-for-businesses) ドキュメントを参照してください。
 
 ## [!DNL Twitter] の前提条件とガードレール {#prerequisites}
 
-この拡張機能を使用するには、有効な [!DNL Twitter] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Twitter]  登録ページ ](https://help.twitter.com/en/using-twitter/create-twitter-account) に移動し、アカウントを登録して作成してください。
+この拡張機能を使用するには、有効な [!DNL Twitter] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Twitter]  登録ページ &#x200B;](https://help.twitter.com/en/using-twitter/create-twitter-account) に移動し、アカウントを登録して作成してください。
 
-[!DNL Twitter] 開発者アカウントとしてアカウントを設定する必要があります。 開発者として新規登録する方法については、[[!DNL Twitter]  開発者アカウント ](https://developer.twitter.com/en/support/twitter-api/developer-account1) を参照してください。
+[!DNL Twitter] 開発者アカウントとしてアカウントを設定する必要があります。 開発者として新規登録する方法については、[[!DNL Twitter]  開発者アカウント &#x200B;](https://developer.twitter.com/en/support/twitter-api/developer-account1) を参照してください。
 
 ### API ガードレール {#guardrails}
 
@@ -45,25 +45,25 @@ Experience Platformを [!DNL Twitter] に接続するには、次の入力が必
 
 | キータイプ | 説明 |
 | --- | --- |
-| 消費者キー | [!DNL Twitter] API にアクセスするためのアプリの API キーを&#x200B;します。 詳しくは、[!DNL Twitter]api キーと秘密鍵 [ に関する ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ドキュメントを参照してください。 |
-| 消費者秘密鍵 | API シークレットは、アプリに [!DNL Twitter] API へのアクセスを許可します。 詳しくは、[!DNL Twitter]api キーと秘密鍵 [ に関する ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ドキュメントを参照してください。 |
-| トークンシークレット | OAuth 経由で [!DNL Twitter] API への認証に使用される、アプリの有効期限が切れていないトークンシークレット。 詳しくは、[!DNL Twitter] 使用アクセストークンの取得 [ に関する ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) のドキュメントを参照してください。 |
-| アクセストークン | OAuth 経由で [!DNL Twitter] API への認証に使用される、アプリの有効期限が切れていないアクセストークン。 詳しくは、[!DNL Twitter] 使用アクセストークンの取得 [ に関する ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) のドキュメントを参照してください。 |
-| ピクセル Id | [!DNL Twitter] Pixel は、サイトのアクションやコンバージョンを追跡するために web サイトに実装される web サイトタグです。 詳しくは、[!DNL Twitter]Web サイトのコンバージョントラッキング [ に関する ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) ドキュメントを参照してください。 |
+| 消費者キー | [!DNL Twitter] API にアクセスするためのアプリの API キーを&#x200B;します。 詳しくは、[!DNL Twitter]api キーと秘密鍵 [&#x200B; に関する &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ドキュメントを参照してください。 |
+| 消費者秘密鍵 | API シークレットは、アプリに [!DNL Twitter] API へのアクセスを許可します。 詳しくは、[!DNL Twitter]api キーと秘密鍵 [&#x200B; に関する &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ドキュメントを参照してください。 |
+| トークンシークレット | OAuth 経由で [!DNL Twitter] API への認証に使用される、アプリの有効期限が切れていないトークンシークレット。 詳しくは、[!DNL Twitter] 使用アクセストークンの取得 [&#x200B; に関する &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) のドキュメントを参照してください。 |
+| アクセストークン | OAuth 経由で [!DNL Twitter] API への認証に使用される、アプリの有効期限が切れていないアクセストークン。 詳しくは、[!DNL Twitter] 使用アクセストークンの取得 [&#x200B; に関する &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) のドキュメントを参照してください。 |
+| ピクセル Id | [!DNL Twitter] Pixel は、サイトのアクションやコンバージョンを追跡するために web サイトに実装される web サイトタグです。 詳しくは、[!DNL Twitter]Web サイトのコンバージョントラッキング [&#x200B; に関する &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) ドキュメントを参照してください。 |
 
 ## [!DNL Twitter] 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、[ イベント転送プロパティを作成 ](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[&#x200B; イベント転送プロパティを作成 &#x200B;](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
 
 左側のナビゲーションの「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL Install]** 拡張機能のカードの [!DNL Twitter] を選択します。
 
-![ インストールを強調表示した [!DNL Twitter] 拡張機能を示すカタログ ](../../../images/extensions/server/twitter/install.png)
+![&#x200B; インストールを強調表示した [!DNL Twitter] 拡張機能を示すカタログ &#x200B;](../../../images/extensions/server/twitter/install.png)
 
 >[!IMPORTANT]
 >
 >実装のニーズに応じて、拡張機能を設定する前に、スキーマ、データ要素、データセットの作成が必要になる場合があります。 ユースケースに合わせて設定する必要のあるエンティティを判断するには、開始する前にすべての設定手順を確認してください。
 
-次の画面で、以前に [ から収集した次の ](#configuration-details) 設定値 [!DNL Twitter] を入力します。
+次の画面で、以前に [&#x200B; から収集した次の &#x200B;](#configuration-details) 設定値 [!DNL Twitter] を入力します。
 
 * **[!UICONTROL Pixel Id]**
 * **[!UICONTROL Consumer Key]**
@@ -73,17 +73,17 @@ Experience Platformを [!DNL Twitter] に接続するには、次の入力が必
 
 終了したら「**[!UICONTROL Save]**」を選択します。
 
-![[!DNL Twitter] 拡張 [!DNL Twitter] 能の設定画面 ](../../../images/extensions/server/twitter/configure.png)
+![[!DNL Twitter] 拡張 [!DNL Twitter] 能の設定画面 &#x200B;](../../../images/extensions/server/twitter/configure.png)
 
 ## イベント転送ルールの設定 {#config-rule}
 
 すべてのデータ要素を設定したら、イベントを [!DNL Twitter] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下で、新しいアクションを追加し、拡張機能を **[!UICONTROL Twitter]** に設定します。 Edge Network イベントを [!DNL Twitter] に送信するには、**[!UICONTROL Action Type]** を **[!UICONTROL Send Web Conversion].** に設定します
+イベント転送プロパティに新しい [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下で、新しいアクションを追加し、拡張機能を **[!UICONTROL Twitter]** に設定します。 Edge Network イベントを [!DNL Twitter] に送信するには、**[!UICONTROL Action Type]** を **[!UICONTROL Send Web Conversion].** に設定します
 
 選択後、追加のコントロールが表示され、イベントをさらに設定できます。 [!DNL Twitter] のイベントプロパティを、以前に作成したデータ要素にマッピングする必要があります。 詳しくは、[[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions) を参照してください。
 
-![ コンバージョンイベントルールを作成する [!DNL Twitter]。](../../../images/extensions/server/twitter/action-configuration.png)
+![&#x200B; コンバージョンイベントルールを作成する [!DNL Twitter]。](../../../images/extensions/server/twitter/action-configuration.png)
 
 **[!UICONTROL User Identification]**
 
@@ -111,7 +111,7 @@ Experience Platformを [!DNL Twitter] に接続するには、次の入力が必
 
 イベントの収集と [!DNL Experience Platform] の統合が成功した場合は、[!DNL Twitter] [!UICONTROL Events manager] 内にイベントが表示されます。
 
-![[!DNL Twitter] イベントマネージャー ](../../../images/extensions/server/twitter/event-manager.png)
+![[!DNL Twitter] イベントマネージャー &#x200B;](../../../images/extensions/server/twitter/event-manager.png)
 
 ## 次の手順
 
@@ -119,5 +119,5 @@ Experience Platformを [!DNL Twitter] に接続するには、次の入力が必
 
 * [[!DNL Twitter] API](https://developer.twitter.com/en/docs/twitter-api)
 * [[!DNL Twitter] Web 変換 API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
-* [[!DNL Twitter]  ユーザアクセストークン ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
-* [ ピクセル ID とコンバージョントラッキング ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)
+* [[!DNL Twitter]  ユーザアクセストークン &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
+* [&#x200B; ピクセル ID とコンバージョントラッキング &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)

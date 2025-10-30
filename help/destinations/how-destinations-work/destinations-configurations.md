@@ -44,18 +44,18 @@ Experience Platform の宛先への書き出し動作について考える際は
 
 例えば、[ストリーミング宛先](/help/destinations/destination-types.md#streaming-destinations)の場合、宛先開発者は、宛先が受け入れる ID を設定できます。以下に示すように、[アクティベーションワークフローのマッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)でこれらの ID のみがユーザーに表示されます。
 
-![ アクティベーションワークフローのマッピング手順での、ターゲットフィールドの ID 選択の画面記録。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![&#x200B; アクティベーションワークフローのマッピング手順での、ターゲットフィールドの ID 選択の画面記録。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 同様に、[ファイルベースの宛先](/help/destinations/destination-types.md#file-based)の場合、宛先開発者は、宛先で使用可能にする[ファイル名追加オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)や、使用可能にする[ファイル形式オプション](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)を決定でき、以下に示すように、ユーザーはこれらのオプションからのみ選択できます。
 
 ![ファイルベースの宛先に接続する際の、ファイル形式オプションの画面記録。](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![ アクティベーションワークフローのスケジューリング手順のファイル名を追加オプションの画面記録。](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![&#x200B; アクティベーションワークフローのスケジューリング手順のファイル名を追加オプションの画面記録。](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 アクティベーションワークフローで使用できる様々なオプションと手順について詳しくは、以下を参照してください。
 
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [エンタープライズ宛先に対するオーディエンスデータの有効化 ](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [エンタープライズ宛先に対するオーディエンスデータの有効化 &#x200B;](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [オンデマンドでのファイルのバッチ宛先への書き出し](/help/destinations/ui/export-file-now.md)
 * [クラウドストレージの宛先へのデータセットの書き出し](/help/destinations/ui/export-datasets.md)

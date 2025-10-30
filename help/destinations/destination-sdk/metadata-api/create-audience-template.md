@@ -261,7 +261,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | 文字列 | 宛先のオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
 | `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
 | `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。例：`"application/x-www-form-urlencoded"` |
-| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。`requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。メッセージ本文に含めることができるものを学ぶには、[ サポートされるマクロのドキュメント ](../functionality/audience-metadata-management.md#macros) を参照してください。 |
+| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。`requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。メッセージ本文に含めることができるものを学ぶには、[&#x200B; サポートされるマクロのドキュメント &#x200B;](../functionality/audience-metadata-management.md#macros) を参照してください。 |
 | `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
 | `responseFields.value` | 文字列 | 呼び出し時に API が返す応答フィールドの値を指定します。 |
 | `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 ## API エラー処理
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 

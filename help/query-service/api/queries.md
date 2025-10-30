@@ -223,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->`_links.cancel` の値を使用して [ 作成したクエリをキャンセル ](#cancel-a-query) できます。
+>`_links.cancel` の値を使用して [&#x200B; 作成したクエリをキャンセル &#x200B;](#cancel-a-query) できます。
 
 ### ID によるクエリの取得
 
@@ -294,7 +294,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->`_links.cancel` の値を使用して [ 作成したクエリをキャンセル ](#cancel-a-query) できます。
+>`_links.cancel` の値を使用して [&#x200B; 作成したクエリをキャンセル &#x200B;](#cancel-a-query) できます。
 
 ### クエリのキャンセルまたはソフト削除
 

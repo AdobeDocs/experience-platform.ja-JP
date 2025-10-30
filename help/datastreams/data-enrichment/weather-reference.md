@@ -11,7 +11,7 @@ ht-degree: 99%
 
 # 気象データフィールドのマッピング
 
-アドビでは、[!DNL [The Weather Company]](https://www.ibm.com/weather) と提携して、データストリームを通じて収集されたデータに米国の気象のコンテキストを追加しました。このデータは、Experience Platform での分析、ターゲティングおよびセグメント化の作成に使用できます。
+アドビでは、[[!DNL [The Weather Company]]](https://www.ibm.com/weather) と提携して、データストリームを通じて収集されたデータに米国の気象のコンテキストを追加しました。このデータは、Experience Platform での分析、ターゲティングおよびセグメント化の作成に使用できます。
 
 このページには、オーディエンスデータの強化に使用できるすべてのフィールドが一覧表示されています。
 
@@ -110,7 +110,7 @@ ht-degree: 99%
 | [!DNL Day 1 Forecast Night Snow Range] | 1 日の天気予報夜間の気象情報。可能性のある降雪量（1～3 インチ、3～6 インチなど）。 | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | 1 日の天気予報夜間の気象情報。定義された測定単位での温度。範囲：-140～140。°（摂氏）単位の気温 | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | 1 日の天気予報夜間の気象情報。定義された測定単位での温度。範囲：-140～140。°（華氏）単位の気温 | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |
-| [!DNL  Day 1 Forecast Night Temperature Heat Index Celsius] | 1 日の天気予報夜間の気象情報。気温と湿度に基づいて人が体感する気温。°（摂氏）単位の気温 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
+| [!DNL &#x200B; Day 1 Forecast Night Temperature Heat Index Celsius] | 1 日の天気予報夜間の気象情報。気温と湿度に基づいて人が体感する気温。°（摂氏）単位の気温 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Heat Index Fahrenheit] | 1 日の天気予報夜間の気象情報。気温と湿度に基づいて人が体感する気温。°（華氏）単位の気温 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.fahrenheit` |
 | [!DNL Day 1 Forecast Night Temperature Wind Chill Celsius] | 1 日の天気予報夜間の気象情報。気温と風速に基づいて人が体感する気温。°（摂氏）単位の気温 | `weather.forecast.day01Forecast.night.temperatureWindChill.celsius` |
 | [!UICONTROL Day 1 Forecast Night Temperature Wind Chill Fahrenheit] | 1 日の天気予報夜間の気象情報。気温と風速に基づいて人が体感する気温。°（華氏）単位の気温 | `weather.forecast.day01Forecast.night.temperatureWindChill.fahrenheit` |

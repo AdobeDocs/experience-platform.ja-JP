@@ -15,7 +15,7 @@ ht-degree: 5%
 
 ## 検証エディターの概要
 
-[Assuranceの設定 ](../tutorials/implement-assurance.md) の後、**[!UICONTROL Home]** ビューで「**[!UICONTROL Validation Editor]**」を選択します。
+[Assuranceの設定 &#x200B;](../tutorials/implement-assurance.md) の後、**[!UICONTROL Home]** ビューで「**[!UICONTROL Validation Editor]**」を選択します。
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -57,7 +57,7 @@ ht-degree: 5%
 | :--- | :--- | :--- |
 | `message` | 文字列 | 概要結果に表示する検証メッセージ。 |
 | `events` | 配列 | 一致または一致しないとレポートされるイベント uuid の配列。 |
-| `links` | 配列 | ドキュメントおよびその他のリソースを参照する `ValidationResultLink` オブジェクトの配列 `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | 配列 | ドキュメントおよびその他のリソースを参照する `ValidationResultLink` オブジェクトの配列 `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | 文字列 | これは検証結果で、「matched」、「not matched」、「unknown」などの列挙文字列のいずれかであることが想定されます |
 
 ## 検証結果の表示
@@ -76,4 +76,4 @@ ht-degree: 5%
 
 JavaScript コードエディターでエラーが発生した場合は、エラーステータスと理由が表示されます。
 
-検証について詳しくは、[Adobe Experience Platform Assuranceの検証 ](https://github.com/adobe/griffon-validation-plugins) GitHub を参照してください。 Adobeが所有する検証の例をご覧いただけます。 検証の詳細については、[wiki](https://github.com/adobe/griffon-validation-plugins/wiki) を参照してください。
+検証について詳しくは、[Adobe Experience Platform Assuranceの検証 &#x200B;](https://github.com/adobe/griffon-validation-plugins) GitHub を参照してください。 Adobeが所有する検証の例をご覧いただけます。 検証の詳細については、[wiki](https://github.com/adobe/griffon-validation-plugins/wiki) を参照してください。

@@ -18,7 +18,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->* データフローを作成するには、e コマースソースを持つ有効なベース接続 ID が必要となります。 この ID を持っていない場合は、ベース接続を作成できる E コマースソースのリストについて [ ソースの概要 ](../../../home.md#ecommerce) を参照してください。
+>* データフローを作成するには、e コマースソースを持つ有効なベース接続 ID が必要となります。 この ID を持っていない場合は、ベース接続を作成できる E コマースソースのリストについて [&#x200B; ソースの概要 &#x200B;](../../../home.md#ecommerce) を参照してください。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。
 
 ## はじめに
@@ -34,7 +34,7 @@ ht-degree: 78%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 

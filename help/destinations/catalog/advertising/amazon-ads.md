@@ -47,11 +47,11 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、まずAmazon DSP広告主アカウントまたは [!DNL Amazon Marketing Cloud] インスタンスにアクセスできる必要があります。 これらのインスタンスをプロビジョニングするには、[!DNL Amazon Ads] web サイトの次のページにアクセスします。
 
 * [Amazon DSP - デマンドサイドプラットフォームで広告を始める](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [Amazon Marketing Cloudの概要 ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [Amazon Marketing Cloudの概要 &#x200B;](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## サポートされている ID {#supported-identities}
 
-*[!DNL Amazon Ads]* 接続では、以下の表で説明する ID のアクティブ化をサポートしています。 ID の詳細は[こちら](/help/identity-service//features/namespaces.md)から。[!DNL Amazon Ads] でサポートされている ID について詳しくは、[Amazon DSP サポートセンター ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE) を参照してください。
+*[!DNL Amazon Ads]* 接続では、以下の表で説明する ID のアクティブ化をサポートしています。 ID の詳細は[こちら](/help/identity-service//features/namespaces.md)から。[!DNL Amazon Ads] でサポートされている ID について詳しくは、[Amazon DSP サポートセンター &#x200B;](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE) を参照してください。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -82,7 +82,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -120,8 +120,8 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -140,7 +140,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 >
 >これらのフィールドを使用するには：
 > 
->* すべての ID 値は、取り込み前に正規化する必要があります。 [ 正規化ガイド ](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C) を参照してください。
+>* すべての ID 値は、取り込み前に正規化する必要があります。 [&#x200B; 正規化ガイド &#x200B;](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C) を参照してください。
 >* SHA256 ハッシュは、クライアント側で、またはAdobeの変換設定を有効にすることで必要になります。
 >* Adobe UI には、コネクタの設定時に ID フィールドごとに変換を適用するためのチェックボックスが用意されています。
 
@@ -164,7 +164,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloud オーディエンス作成の検証 ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Amazon Marketing Cloud オーディエンス作成の検証 &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -186,7 +186,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 |---|---|---|
 | 2025年10月 | 追加の ID フィールドへのサポートの追加 | `firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country` など、個人の識別子に対するサポートを追加しました。 これらのフィールドをマッピングすると、オーディエンスの一致率を向上させることができます。 |
 | 2025年2月 | データフローを書き出すための **[!UICONTROL Amazon Ads Consent Signal]** を追加する要件を追加し、宛先をベータ版から一般入手可能に昇格しました。 |  |
-| 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 `countryCode` マッピング手順 [ で ](#map) を使用して、Amazonでの ID 一致率を改善します。 |
+| 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 `countryCode` マッピング手順 [&#x200B; で &#x200B;](#map) を使用して、Amazonでの ID 一致率を改善します。 |
 | 2024年3月 | 機能とドキュメントの更新 | [!DNL Amazon Marketing Cloud] （AMC）で使用するオーディエンスを書き出すオプションを追加しました。 |
 | 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |

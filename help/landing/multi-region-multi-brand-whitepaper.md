@@ -19,7 +19,7 @@ Experience Platformを使用すると、構造を表現し、ビジネスデー�
 
 このホワイトペーパーは、製品の視点と一連のガイドラインを提供するリファレンスとして機能します。 主な目的は、Experience Platformの複雑な構造を効果的にナビゲートするために必要なツールとインサイトを提供することです。 具体的な要件、考慮事項、実際のユースケースを評価するための構造化されたフレームワークを提供することで、Experience Platformとプラットフォームベースのアプリケーションの可能性を最大限に引き出すために必要な知識を得ることができます。 次の節を読むと、実装プロセスを合理化し、組織の機能を強化してオーディエンスに優れたエクスペリエンスを提供すると同時に、プライバシーとコンプライアンスを維持するためのガバナンスとコントロールを提供するための貴重なインサイトと推奨事項がわかります。
 
-![CDP 統合プロファイル ](./images/whitepaper/CDPoverview.png)
+![CDP 統合プロファイル &#x200B;](./images/whitepaper/CDPoverview.png)
 
 ## マルチブランド、マルチリージョンエンタープライズについて
 
@@ -48,7 +48,7 @@ Experience Platformのアーキテクチャの主な原則の 1 つは、ガバ�
 
 マーケティングエクスペリエンスを大規模に運用するために 1 つのデータ環境が必要な場合は、最小限のデータ分離要件で、すべてのデータを 1 つのExperience Platform サンドボックスに統合することをお勧めします。 この設定では、データはサンドボックスに取り込まれ、関連するすべての ID は、偽名か既知の ID によって識別されるかに関わらず、単一の統合プロファイルとして表されます。 つまり、マーケターは、企業全体のExperience Platform内のすべてのプロファイル属性とエクスペリエンスイベントデータにアクセスできます。 マーケターがブランドや地域に関係なく、すべてのデータを使用することを制限する必要性を最小限に抑えながら、このデータをプラットフォームベースのアプリケーションと共に使用して、オーディエンスとジャーニーを作成できます。 このアプローチにより、Experience Platform アプリケーションでサポートされる宛先へのシームレスなセグメント化とオーディエンスのアクティベーションが容易になります。 この戦略は、地域やブランド固有の違いに関係なく、顧客基盤全体を活用して、統一された包括的なマーケティング活動を行うことを目指している場合に適しています。
 
-![CDP アーキテクチャの単一の実稼動サンドボックス ](./images/whitepaper/Architecture-single-prod-sandbox.png)
+![CDP アーキテクチャの単一の実稼動サンドボックス &#x200B;](./images/whitepaper/Architecture-single-prod-sandbox.png)
 
 #### この仕組み
 
@@ -70,9 +70,9 @@ Experience Platformのアーキテクチャの主な原則の 1 つは、ガバ�
 
 任意のタイプのサンドボックスを複数作成できます。このタイプのエンタープライズでは、1 つの実稼動用サンドボックスと 1 つの開発用サンドボックスを使用して、このタイプのエンタープライズを実行および操作する方法を説明します。
 
-![CDP - サンドボックスの作成 ](./images/whitepaper/Create-sandbox.png)
+![CDP - サンドボックスの作成 &#x200B;](./images/whitepaper/Create-sandbox.png)
 
-実稼動用サンドボックスでは、実稼動プロファイルとエクスペリエンスイベントデータを取り込んで、マーケティングアクティビティ用に統合されたプロファイルを作成することを想定しています。 複数の企業ソースの既知データと匿名データを組み合わせて、顧客プロファイルを作成する方法の詳細を説明します。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。詳しくは、[Adobe Real-Time Customer Data Platformのドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/rtcdp/home) を参照してください。
+実稼動用サンドボックスでは、実稼動プロファイルとエクスペリエンスイベントデータを取り込んで、マーケティングアクティビティ用に統合されたプロファイルを作成することを想定しています。 複数の企業ソースの既知データと匿名データを組み合わせて、顧客プロファイルを作成する方法の詳細を説明します。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。詳しくは、[Adobe Real-Time Customer Data Platformのドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/rtcdp/home) を参照してください。
 
 **アクセス制御**
 
@@ -80,13 +80,13 @@ Experience Platformのアーキテクチャの主な原則の 1 つは、ガバ�
 
 Experience Platformおよびプラットフォームベースのアプリケーション機能のすべてにアクセスする必要がないデータエンジニアを考えてみましょう。 通常、データ定義（スキーマ）の作成、データを取り込むためのデータソースの設定、データセットの作成を担当します。 ただし、パーソナライズされた顧客体験のためにオーディエンスを作成し、アクティブ化するペルソナとは異なる場合があります。 このペルソナの場合は、役割を作成し、適切な権限を追加して、必要な機能にのみアクセス権を付与します。 これに対し、マーケターのペルソナは、スキーマを作成してデータを取り込むのではなく、オーディエンスを作成してアクティブ化し、パーソナライズされた顧客体験を可能にすることに重点を置きます。
 
-必要に応じて、詳細なアクセス制御を追加して、属性ベースのアクセス制御/フィールドレベルのアクセス制御機能を備えた、統合顧客プロファイルの特定のフィールドへのアクセスを制限することを検討してください。 これらはExperience Platformのガバナンスメカニズムで、事前定義済みのラベルに基づいてデータ属性へのアクセスを制限できます。 フィールドレベルのアクセス制御を使用すると、個人を特定できるデータを管理でき、アクセスはすべてのExperience Platformおよびアプリケーションワークフローで制限されます。 アクセス制御機能について詳しくは、[ アクセス制御ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home) を参照してください。
+必要に応じて、詳細なアクセス制御を追加して、属性ベースのアクセス制御/フィールドレベルのアクセス制御機能を備えた、統合顧客プロファイルの特定のフィールドへのアクセスを制限することを検討してください。 これらはExperience Platformのガバナンスメカニズムで、事前定義済みのラベルに基づいてデータ属性へのアクセスを制限できます。 フィールドレベルのアクセス制御を使用すると、個人を特定できるデータを管理でき、アクセスはすべてのExperience Platformおよびアプリケーションワークフローで制限されます。 アクセス制御機能について詳しくは、[&#x200B; アクセス制御ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home) を参照してください。
 
-![CDP アクセス制御、ロール権限の設定 ](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
+![CDP アクセス制御、ロール権限の設定 &#x200B;](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **開発用サンドボックスを使用した開発ライフサイクル**
 
-開発用サンドボックスの動作は、すべての機能面で実稼動用サンドボックスと同じです。 ライセンスの制限内に保つために、いくつかの契約上のガードレールがあるという点で異なります。 非実稼動プロファイルでの開発およびテスト専用に設計され、ライセンスを取得したプロファイルのコミットメントの最大 10% をサポートします（許可されたすべての開発用サンドボックスについて累積的に測定されます）。 その他の詳細とガードレールについては、[ サンドボックスの概要ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/home) 使用権限の詳細については [ 製品説明ページ ](https://helpx.adobe.com/jp/legal/product-descriptions.html) を参照してください。
+開発用サンドボックスの動作は、すべての機能面で実稼動用サンドボックスと同じです。 ライセンスの制限内に保つために、いくつかの契約上のガードレールがあるという点で異なります。 非実稼動プロファイルでの開発およびテスト専用に設計され、ライセンスを取得したプロファイルのコミットメントの最大 10% をサポートします（許可されたすべての開発用サンドボックスについて累積的に測定されます）。 その他の詳細とガードレールについては、[&#x200B; サンドボックスの概要ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/home) 使用権限の詳細については [&#x200B; 製品説明ページ &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions.html) を参照してください。
 
 開発およびテストのライフサイクルには複数の開発サンドボックスを含めることができます（この企業の例では、1 つの実稼動サンドボックスを使用しているので、最大 4 つ）。
 
@@ -102,16 +102,16 @@ Experience Platformおよびプラットフォームベースのアプリケー�
 
 Experience Platform API を使用して、サンドボックスのデプロイメントと設定タスクを自動化することもできます。 API を使用すると、サンドボックス設定の書き出し、読み込み、変更などの繰り返しタスクをプログラムで制御でき、自動ワークフローを好む場合は柔軟に操作できます。
 
-サンドボックスツールについて詳しくは、[ サンドボックスツールのドキュメント ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling) を参照してください。
+サンドボックスツールについて詳しくは、[&#x200B; サンドボックスツールのドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling) を参照してください。
 
-| ![CDP - パッケージを作成 ](./images/whitepaper/create-package.png) | ![CDP-List パッケージ ](./images/whitepaper/list-packages.png) |
+| ![CDP - パッケージを作成 &#x200B;](./images/whitepaper/create-package.png) | ![CDP-List パッケージ &#x200B;](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
 ### 2.地域別またはブランド別のデータ分離
 
 完全な分離（例：地域またはブランドベース）が必要な場合は、厳格なデータアクセスポリシーまたは法的要件に基づいて、ブランドチームがそれぞれの地域やブランドに固有のデータにアクセスすることを制限できます。 地域やブランドに固有のデータに基づいてアクセスパターンを定義し、内部、規制、データガバナンスのプロトコルへのコンプライアンスを確保します。 このアプローチは、規制の厳しい業界（PII データの処理など）で業務を行う場合や、様々な地域やブランド ID に対して個別のセグメント化されたデータを維持する必要がある場合に重要です。
 
-![CDP アーキテクチャ複数の実稼動用サンドボックス ](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
+![CDP アーキテクチャ複数の実稼動用サンドボックス &#x200B;](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 #### この仕組み
 
@@ -215,7 +215,7 @@ Experience Platform内の複数のリージョンやブランドにわたる開�
 
 **専用のグローバルサンドボックス**
 
-![CDP 専用のグローバルレポートサンドボックス ](./images/whitepaper/dedicated-global-reporting-sandbox.png)
+![CDP 専用のグローバルレポートサンドボックス &#x200B;](./images/whitepaper/dedicated-global-reporting-sandbox.png)
 
 このサンドボックスは、個々の地域またはブランド固有のサンドボックスからのデータが統合される中央リポジトリとして機能します。 一般的なソリューションは、各サンドボックス内でクエリサービスを使用して、関連する顧客データを抽出することです。 これには、様々な地域やブランドにわたって分析する必要があるプロファイルやエクスペリエンスイベントが含まれる場合があります。 各サンドボックスからデータを準備すると、分析とオーディエンス作成のためにグローバルレポートサンドボックスに取り込まれます。
 
@@ -229,7 +229,7 @@ Customer Journey Analyticsを使用して、グローバルサンドボックス
 
 このセグメント共有サービスを使用すると、2 人以上のユーザーが、安全で管理された、プライバシーに配慮した方法でセグメントデータを交換できます。
 
-Segment Match 機能について詳しくは、[Segment Match のドキュメント ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview) を参照してください。
+Segment Match 機能について詳しくは、[Segment Match のドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview) を参照してください。
 
 ### 3. グローバルな業務、地域、ブランド固有のアプローチのブレンド
 
@@ -237,7 +237,7 @@ Segment Match 機能について詳しくは、[Segment Match のドキュメン
 
 これらの様々な要件を認識した上で、Experience Platformを構成することにより、適応性と柔軟性に優れたデータ管理ソリューションを提供することができます。これにより、マルチブランド、マルチリージョンの企業が、プラットフォーム内で効果的にビジネスを展開できるようになります。 Experience Platformは、お客様の総合的なデータを最大限に活用する、厳密にデータを分離する、またはそれらのバランスを取るといった目的を問わず、企業の多様なニーズに対応する機能を備えています。
 
-![CDP-Architecture A ブレンド・アプローチ ](./images/whitepaper/Architecture-blend-sandbox.png)
+![CDP-Architecture A ブレンド・アプローチ &#x200B;](./images/whitepaper/Architecture-blend-sandbox.png)
 
 #### この仕組み
 
@@ -317,7 +317,7 @@ XDM 個人プロファイルスキーマ：
 
 - 適切な役割にラベルを追加します。 例えば、「マーケター – ドイツ」という役割に「Germany」というラベルを追加します。
 
-![CDP-Label オーディエンス ](./images/whitepaper/label-audience.png)
+![CDP-Label オーディエンス &#x200B;](./images/whitepaper/label-audience.png)
 
 ###### ブランドや国固有のオーディエンスを作成する際に、デフォルトオーディエンスを含めます
 
@@ -329,7 +329,7 @@ XDM 個人プロファイルスキーマ：
 
 - コンポジション時に 1 つ以上のオーディエンスを自動追加するメカニズムはありません。
 
-![CDP - デフォルトオーディエンスを追加 ](./images/whitepaper/default-audience.png)
+![CDP - デフォルトオーディエンスを追加 &#x200B;](./images/whitepaper/default-audience.png)
 
 ###### アクティベーションとブランド/国レベルのプロファイルフィルタリング
 
@@ -347,7 +347,7 @@ XDM 個人プロファイルスキーマ：
 >
 > 同意ポリシーを作成するには、Privacy and Security Shield SKU が必要です。
 
-![CDP カスタム同意ポリシーとアクティブ化のフィルタリング ](./images/whitepaper/custom-consent-policy.png)
+![CDP カスタム同意ポリシーとアクティブ化のフィルタリング &#x200B;](./images/whitepaper/custom-consent-policy.png)
 
 マルチブランドアクティベーションと同意ポリシーの複雑さ：
 
@@ -371,7 +371,7 @@ XDM 個人プロファイルスキーマ：
 
 - 通常、組織 ID は 1 つの地理的リージョンにデプロイされます。
 
-![CDP-Architecture 複数の IMS 組織オプション ](./images/whitepaper/Architecture-multi-imsorg.png)
+![CDP-Architecture 複数の IMS 組織オプション &#x200B;](./images/whitepaper/Architecture-multi-imsorg.png)
 
 **複数の組織 ID：メリットと考慮事項&#x200B;**
 
@@ -381,7 +381,7 @@ XDM 個人プロファイルスキーマ：
 
 **単一組織 ID：メリットと考慮事項**
 
-![CDP アーキテクチャ複数の実稼動用サンドボックス ](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
+![CDP アーキテクチャ複数の実稼動用サンドボックス &#x200B;](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 | メリット | 注意点 |
 | -------- | -------------- |
@@ -434,7 +434,7 @@ Experience Platformは、マルチブランド、マルチリージョンのビ�
 
    - データの常駐、コンプライアンス、運用のニーズに基づいて、**複数の組織 ID または複数のサンドボックス** をデプロイするかどうかを慎重に評価する必要があります。
 
-   - **組織 ID** は完全な分離を提供するのに対して、マルチサンドボックス設定は**共有ガバナンスフレームワーク内での運用の柔軟性を提供します**。
+   - **組織 ID** は完全な分離を提供するのに対して、マルチサンドボックス設定は&#x200B;**共有ガバナンスフレームワーク内での運用の柔軟性を提供します**。
 
 ## 最終思考
 

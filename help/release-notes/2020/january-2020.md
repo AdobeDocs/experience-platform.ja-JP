@@ -40,7 +40,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし
 
-[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[!DNL Schema Editor]XDM システム [ ドキュメント ](../../xdm/home.md) を参照してください。
+[!DNL Schema Registry] API とユーザーインターフェイスを使用した XDM の操作について詳しくは、[!DNL Schema Editor]XDM システム [&#x200B; ドキュメント &#x200B;](../../xdm/home.md) を参照してください。
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -60,7 +60,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし
 
-[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 ](../../privacy-service/home.md) を読んで開始してください。
+[!DNL Privacy Service] の詳細については、[Privacy Serviceの概要 &#x200B;](../../privacy-service/home.md) を読んで開始してください。
 
 ## ソース {#sources}
 

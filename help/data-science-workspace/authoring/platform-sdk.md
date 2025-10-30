@@ -161,7 +161,7 @@ df2
 | より小さい（`<`） | `lt()` |
 | 次よりも小さいか等しい（`<=`） | `le()` |
 | および（`&`） | `And()` |
-| または（&amp;vert;） | `Or()` |
+| または（&vert;） | `Or()` |
 
 ## 選択した列によるフィルター {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[ ノートブックを使用したレシピの作成に関するチュートリアルの ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) データの準備と機能エンジニアリング [!DNL JupyterLab] の節を参照してください。
+`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[&#x200B; ノートブックを使用したレシピの作成に関するチュートリアルの &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) データの準備と機能エンジニアリング [!DNL JupyterLab] の節を参照してください。

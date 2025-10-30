@@ -26,11 +26,11 @@ Query Service スケジュール API を使用して、スケジュールされ�
 >
 >スケジュール済みクエリを管理する際の重要な考慮事項：<ul><li>スケジュールされたクエリは、クエリの作成に使用したアカウント（技術またはユーザー）がアクセス権または権限を失った場合に失敗します。</li><li>スケジュールされたクエリは、API または UI で削除する前に無効にする必要があります。</li><li>終了日を指定せずに無期限にスケジュールすることはできません。終了日は必ず指定する必要があります。</li></ul>
 
-アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
+アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[&#x200B; クエリスケジュールのドキュメント &#x200B;](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [&#x200B; エンドツーエンドのテクニカルアカウントの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
 
 ## サンプル API 呼び出し
 
-必要な認証ヘッダーを設定したら（『 [API 認証ガイド ](../../landing/api-authentication.md) を参照）、[!DNL Query Service] API への呼び出しを開始できます。 以下の節では、一般的な形式を持つ様々な API 呼び出し、必要なヘッダーを含むリクエストの例、応答のサンプルを示します。
+必要な認証ヘッダーを設定したら（『 [API 認証ガイド &#x200B;](../../landing/api-authentication.md) を参照）、[!DNL Query Service] API への呼び出しを開始できます。 以下の節では、一般的な形式を持つ様々な API 呼び出し、必要なヘッダーを含むリクエストの例、応答のサンプルを示します。
 
 ### スケジュールされたクエリのリストの取得
 
@@ -138,7 +138,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-`/schedules` エンドポイントに POST リクエストをおこなうと、新しいスケジュールされたクエリを作成できます。 API でスケジュールされたクエリを作成すると、クエリエディターでも表示できます。 UI のスケジュール済みクエリについて詳しくは、[ クエリエディターのドキュメント ](../ui/user-guide.md#scheduled-queries) を参照してください。
+`/schedules` エンドポイントに POST リクエストをおこなうと、新しいスケジュールされたクエリを作成できます。 API でスケジュールされたクエリを作成すると、クエリエディターでも表示できます。 UI のスケジュール済みクエリについて詳しくは、[&#x200B; クエリエディターのドキュメント &#x200B;](../ui/user-guide.md#scheduled-queries) を参照してください。
 
 **API 形式**
 
@@ -234,7 +234,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
+>`_links.delete` の値を使用して、[&#x200B; 作成したスケジュール済みクエリを削除 &#x200B;](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細のリクエスト
 
@@ -317,7 +317,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
+>`_links.delete` の値を使用して、[&#x200B; 作成したスケジュール済みクエリを削除 &#x200B;](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細の更新
 
