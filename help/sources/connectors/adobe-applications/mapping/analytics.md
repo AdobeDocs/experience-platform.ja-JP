@@ -2,10 +2,10 @@
 title: Adobe Analytics Source コネクタのマッピングフィールド
 description: Analytics Source Connector を使用して、Adobe Analytics フィールドを XDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
-source-wordcount: '3854'
-ht-degree: 24%
+source-wordcount: '3838'
+ht-degree: 23%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 24%
 
 Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics データを取り込むことができます。 ADC を通じて取り込まれた一部のデータは、Analytics フィールドから Experience Data Model （XDM）フィールドに直接マッピングできますが、他のデータでは、変換と特定の関数を正常にマッピングする必要があります。
 
-![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 &#x200B;](../images/analytics-data-experience-platform.png)
+![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 ](../images/analytics-data-experience-platform.png)
 
 ## ストリーミングメディアパラメーター
 
@@ -197,7 +197,7 @@ Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 数値 | Mobile Services ビーコンのマイナー番号。 |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 文字列 | Mobile Services ビーコンの UUID。 |
 | `mobileinstalls` | `application.firstLaunches` | オブジェクト | これは、インストールまたは再インストール後の最初の実行 `{id (string), value (number)}` にトリガーされます |
-| `mobileupgrades` | `application.upgrades` | オブジェクト | アプリのアップグレード番号を報告します。アップグレード後の最初の起動時またはバージョン番号の変更時に常にトリガーされます。 | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | オブジェクト | アプリのアップグレード番号を報告します。アップグレード後の最初の実行時、またはバージョン番号が変更されるたびにトリガーが発生します。`{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | オブジェクト | アプリが起動された回数。 `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | オブジェクト | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | オブジェクト | `{id (string), value (number)}` |
@@ -224,13 +224,13 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 | データフィード | XDM フィールド | XDM タイプ | 説明 |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | オブジェクト | カスタム Analytics prop （リスト prop として設定）。 値の区切りリストが含まれます。 | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | オブジェクト | 階層変数で使用されます。値の区切りリストが含まれます。 | {values (配列), delimiter (文字列)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 配列 | カスタム Analytics リスト変数。 値の区切りリストを含みます。 | {value (文字列), key (文字列)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | オブジェクト | カスタム Analytics prop （リスト prop として設定）。 値の区切りリストが含まれます。`{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | オブジェクト | 階層変数で使用されます。値の区切りリストが含まれます。`{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 配列 | カスタム Analytics リスト変数。 値の区切りリストを含みます。 `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | 整数 | 色深度 ID。c_color 列の値に基づきます。 |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | ブール値 | Cookie サポートディメンションで使用される変数。 |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | オブジェクト | 標準コマースイベントがヒット時にトリガーされました。 | {id (文字列), value (数値)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | オブジェクト | ヒットに対してトリガーされた標準コマースイベント。`{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | オブジェクト | ヒットに対してトリガーされるカスタムイベント。`{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | 文字列 | ヒットが発生した国の略称（IP アドレスに基づく）。 |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | 数値 | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | 数値 | |
@@ -291,9 +291,9 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
 +++選択すると、非推奨の詳細マッピングフィールドのテーブルを表示します
 

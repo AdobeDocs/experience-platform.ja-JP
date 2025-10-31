@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketo Engage ソースのマッピングフィールド
 description: Marketo データセットのフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 41%
@@ -23,11 +23,11 @@ ht-degree: 41%
 
 [!DNL Marketo] ソースでは、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、[スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md)を使用してスキーマを更新する必要があります。スキーマを更新せずに新しい `activities` データフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートが機能しなくなるからです。スキーマの更新を選択しない場合でも、新しいデータフローを作成しエラーを解除できます。 ただし、新規フィールドや更新されたフィールドは、Experience Platformには取り込まれません。
 
-XDM クラスと XDM フィールドについて詳しくは [XDM エクスペリエンスイベントクラス &#x200B;](../../../../xdm/classes/experienceevent.md) に関するドキュメントを参照してください。
+XDM クラスと XDM フィールドについて詳しくは [XDM エクスペリエンスイベントクラス ](../../../../xdm/classes/experienceevent.md) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience Platform UI の「**[!UICONTROL Add calculated field]**」オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[&#x200B; 計算フィールドの追加 &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience Platform UI の「**[!UICONTROL Add calculated field]**」オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[ 計算フィールドの追加 ](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
 
 | Marketo ソースフィールド | アクティビティタイプ ID | ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -66,7 +66,7 @@ XDM クラスと XDM フィールドについて詳しくは [XDM エクスペ�
 | （7、8、9、10、11、27）の activityTypeId の場合の primaryAttributeValueId | 7、8、9、10、11、27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → メッセージがブロックされました</li><li>Sourceで 1003 → スパムがブロックされました</li><li>1004 → メッセージでブロックされたスパム</li><li>2003 年→電子メールアドレスが無効です</li><li>2001 年→電子メール アドレス エラー</li><li>バウンス *` &rarr;`不明な理由</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → メッセージが受け付けられませんでした</li><li>3001 → メールボックス容量超過</li><li>3004 → タイムアウトが発生しました</li><li>4003 → DNS エラー</li><li>4002 → メッセージが大きすぎます</li><li>4006 → ポリシー違反</li><li>4999 →一時的なエラー</li><li>9999 →無効な応答を受信しました</li><li>*ソフトバウンスの不明な理由が→まれています</li></ul></li></ul> | 8、27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → メッセージがブロックされました</li><li>Sourceで 1003 → スパムがブロックされました</li><li>1004 → メッセージでブロックされたスパム</li><li>2003 年→電子メールアドレスが無効です</li><li>2001 年→電子メール アドレス エラー</li><li> バウンス `&rarr;` 不明な理由</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → メッセージが受け付けられませんでした</li><li>3001 → メールボックス容量超過</li><li>3004 → タイムアウトが発生しました</li><li>4003 → DNS エラー</li><li>4002 → メッセージが大きすぎます</li><li>4006 → ポリシー違反</li><li>4999 →一時的なエラー</li><li>9999 →無効な応答を受信しました</li><li> → ソフトバウンスの不明な理由</li></ul></li></ul> | 8、27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
@@ -418,4 +418,4 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Marketo] データセットとそれに対応する XDM フィールドとのマッピング関係について説明しました。[!DNL Marketo] データフローを完成させるには、[&#x200B; [!DNL Marketo] ソース接続の作成](../../../tutorials/ui/create/adobe-applications/marketo.md)に関するチュートリアルを参照してください。
+このドキュメントでは、[!DNL Marketo] データセットとそれに対応する XDM フィールドとのマッピング関係について説明しました。[!DNL Marketo] データフローを完成させるには、[ [!DNL Marketo] ソース接続の作成](../../../tutorials/ui/create/adobe-applications/marketo.md)に関するチュートリアルを参照してください。
