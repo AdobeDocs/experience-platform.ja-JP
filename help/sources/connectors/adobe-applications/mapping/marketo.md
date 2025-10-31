@@ -23,11 +23,11 @@ ht-degree: 41%
 
 [!DNL Marketo] ソースでは、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、[スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md)を使用してスキーマを更新する必要があります。スキーマを更新せずに新しい `activities` データフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートが機能しなくなるからです。スキーマの更新を選択しない場合でも、新しいデータフローを作成しエラーを解除できます。 ただし、新規フィールドや更新されたフィールドは、Experience Platformには取り込まれません。
 
-XDM クラスと XDM フィールドについて詳しくは [XDM エクスペリエンスイベントクラス ](../../../../xdm/classes/experienceevent.md) に関するドキュメントを参照してください。
+XDM クラスと XDM フィールドについて詳しくは [XDM エクスペリエンスイベントクラス &#x200B;](../../../../xdm/classes/experienceevent.md) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience Platform UI の「**[!UICONTROL Add calculated field]**」オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[ 計算フィールドの追加 ](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience Platform UI の「**[!UICONTROL Add calculated field]**」オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[&#x200B; 計算フィールドの追加 &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
 
 | Marketo ソースフィールド | アクティビティタイプ ID | ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -418,4 +418,4 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Marketo] データセットとそれに対応する XDM フィールドとのマッピング関係について説明しました。[!DNL Marketo] データフローを完成させるには、[ [!DNL Marketo] ソース接続の作成](../../../tutorials/ui/create/adobe-applications/marketo.md)に関するチュートリアルを参照してください。
+このドキュメントでは、[!DNL Marketo] データセットとそれに対応する XDM フィールドとのマッピング関係について説明しました。[!DNL Marketo] データフローを完成させるには、[&#x200B; [!DNL Marketo] ソース接続の作成](../../../tutorials/ui/create/adobe-applications/marketo.md)に関するチュートリアルを参照してください。
