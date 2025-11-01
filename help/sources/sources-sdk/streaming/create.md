@@ -1,12 +1,12 @@
 ---
-title: Flow Service API を使用した Streaming SDK の新しい接続仕様の作成
+title: Flow Service API を使用したストリーミングSDKの新しい接続仕様の作成
 description: 次のドキュメントでは、Flow Service API を使用して接続仕様を作成し、セルフサービスソースを通じて新しいソースを統合する手順を説明します。
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: ベータ版
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 36%
+source-wordcount: '744'
+ht-degree: 37%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->セルフサービスソース Streaming SDK はベータ版です。 ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>セルフサービスソースのストリーミング SDKはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 
@@ -26,7 +26,7 @@ ht-degree: 36%
 
 ## アーティファクトを収集
 
-セルフサービスソースを使用して新しいストリーミングソースを作成するには、まずAdobeと調整し、プライベート Git リポジトリーをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細Adobeと整合する必要があります。
+セルフサービスソースを使用して新しいストリーミングソースを作成するには、まずAdobeと調整し、プライベート Git リポジトリーをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細をAdobeと調整する必要があります。
 
 指定したら、以下のようにプライベート Git リポジトリを構築する必要があります。
 
@@ -42,10 +42,10 @@ ht-degree: 36%
 | アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
 | {your_source} | ソースの名前。 このフォルダーには、プライベート Git リポジトリー内の、ソースに関連するすべてのアーティファクトを格納する必要があります。 | `medallia` |
-| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとして書式設定されます。 **注意**：ソースが上記のカテゴリに適合しないと思われる場合は、Adobe担当者に問い合わせて話し合ってください。 | `medallia-category.txt` ファイル内で、ソースのカテゴリを次のように指定してください：`streaming`。 |
-| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Medallia] は、マーケティングデータをExperience Platformに取り込むために使用できる [!DNL Medallia] ーケティング自動化ソースです。 |
-| {your_source}-icon.svg | Experience Platformソースカタログ内のソースを表すために使用される画像。 このアイコンは、SVGファイルである必要があります。 |
-| {your_source}-label.txt | Experience Platformソースカタログに表示されるソースの名前。 | Medallia |
+| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとして書式設定されます。 **メモ**：ソースが上記のカテゴリに当てはまらないと思われる場合は、Adobeの担当者にお問い合わせください。 | `medallia-category.txt` ファイル内で、ソースのカテゴリを次のように指定してください：`streaming`。 |
+| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Medallia] は、マーケティングオートメーションソースで、データをExperience Platformに取り込む [!DNL Medallia] めに使用できます。 |
+| {your_source}-icon.svg | Experience Platform ソースカタログ内のソースを表すために使用される画像。 このアイコンは、SVG ファイルである必要があります。 |  |
+| {your_source}-label.txt | Experience Platform ソースカタログに表示されるソースの名前。 | Medallia |
 | {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このファイルは最初は必要ありません。このガイドの完了時に、接続仕様にデータが入力されるからです。 | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -54,9 +54,9 @@ ht-degree: 36%
 >
 >接続仕様のテスト期間中に、キー値の代わりに接続仕様の `text` を使用できます。
 
-必要なファイルをプライベート Git リポジトリに追加したら、Adobeがレビューできるようにプルリクエスト（PR）を作成する必要があります。 PR が承認されて統合されると、ソースのラベル、説明、アイコンを参照するために接続仕様に使用できる ID が提供されます。
+必要なファイルをプライベート Git リポジトリに追加したら、Adobeがレビューするためのプルリクエスト（PR）を作成する必要があります。 PR が承認されて統合されると、ソースのラベル、説明、アイコンを参照するために接続仕様に使用できる ID が提供されます。
 
-次に、以下に説明する手順に従って、接続仕様を設定します。 高度なスケジュール、カスタムスキーマ、様々なページネーションタイプなど、ソースに追加できる様々な機能に関する追加のガイダンスについては、[&#x200B; ソース仕様の設定 &#x200B;](../config/sourcespec.md) に関するガイドを参照してください。
+次に、以下に説明する手順に従って、接続仕様を設定します。 高度なスケジュール、カスタムスキーマ、様々なページネーションタイプなど、ソースに追加できる様々な機能に関する追加のガイダンスについては、[ ソース仕様の設定 ](../config/sourcespec.md) に関するガイドを参照してください。
 
 ## 接続仕様テンプレートをコピー
 
@@ -72,7 +72,7 @@ ht-degree: 36%
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ curl -X POST \
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false

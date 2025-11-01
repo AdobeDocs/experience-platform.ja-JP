@@ -2,7 +2,7 @@
 title: Microsoft Dynamics マッピングフィールド
 description: 次の表には、Microsoft Dynamics ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 40%
@@ -171,8 +171,8 @@ ht-degree: 40%
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |  |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `connectionrole1.name` | `personRole` |  |
-| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[&#x200B; ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 &#x200B;](#picklist-type-fields) の手順を確認してください。 | `record1objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options) を参照してください。 |
-| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[&#x200B; ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 &#x200B;](#picklist-type-fields) の手順を確認してください。 | `record2objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options) を参照してください。 |
+| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[ ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 ](#picklist-type-fields) の手順を確認してください。 | `record1objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options) を参照してください。 |
+| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[ ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 ](#picklist-type-fields) の手順を確認してください。 | `record2objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -222,7 +222,7 @@ ht-degree: 40%
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `listmemberid` | `marketingListMemberKey.sourceID` |  |
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |  |
@@ -236,7 +236,7 @@ ht-degree: 40%
 
 ### 選択リストタイプフィールド {#picklist-type-fields}
 
-[&#x200B; 計算フィールド &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) を使用して、[!DNL Microsoft Dynamics] からターゲット XDM フィールドにピックリストタイプのソースフィールドをマッピングできます。
+[ 計算フィールド ](../../../../data-prep/ui/mapping.md#calculated-fields) を使用して、[!DNL Microsoft Dynamics] からターゲット XDM フィールドにピックリストタイプのソースフィールドをマッピングできます。
 
 例えば、「`genderCode`」フィールドには、次の 2 つのオプションが含まれています。
 
@@ -265,4 +265,4 @@ ht-degree: 40%
 >
 >上記の操作のネストされたイテレーションは、次のようになります。`iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`
 
-詳しくは、[&#x200B; の論理演算子に関するドキュメント  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) を参照してください。
+詳しくは、[ の論理演算子に関するドキュメント  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) を参照してください。

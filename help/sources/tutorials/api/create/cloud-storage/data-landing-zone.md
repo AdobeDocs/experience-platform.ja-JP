@@ -2,9 +2,9 @@
 title: Flow Service API を使用したAdobe Experience Platformへのデータランディングゾーンの接続
 description: Flow Service API を使用してAdobe Experience Platformを Data Landing Zone に接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 13%
 
 ---
@@ -13,30 +13,30 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能です。 データは、7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Data Landing Zone] ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] ールの取得方法、資格情報の表示と更新方法に関する手順も説明します。
+このチュートリアルでは、[!DNL Data Landing Zone]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] ールの取得方法、資格情報の表示と更新方法に関する手順も説明します。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-また、このチュートリアルでは [Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を読んで、Experience Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法についても確認する必要があります。
+また、このチュートリアルでは [Experience Platform API の概要 ](../../../../../landing/api-guide.md) を読んで、Experience Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法についても確認する必要があります。
 
-次の節では、[!DNL Flow Service] API を使用して [!DNL Data Landing Zone] ソース接続を正常に作成するために必要な追加情報を示しています。
+次の節では、[!DNL Data Landing Zone] API を使用して [!DNL Flow Service] ソース接続を正常に作成するために必要な追加情報を示しています。
 
 ## 使用可能なランディングゾーンの取得
 
 >[!IMPORTANT]
 >
->[!DNL Data Landing Zone] API を使用して `type=user_drop_zone` ータを取得するには、**[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
+>**[!UICONTROL Manage Sources]** API を使用して [!DNL Data Landing Zone] を取得するには、`type=user_drop_zone` のアクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
 
-API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、[!DNL Connectors] API の `/landingzone` エンドポイントに対してGET リクエストを実行し、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
+API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、`/landingzone` API の [!DNL Connectors] エンドポイントに対してGET リクエストを実行し、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
 
 **API 形式**
 
@@ -104,7 +104,7 @@ curl -X GET \
 
 ## 資格情報 [!DNL Data Landing Zone] 取得
 
-[!DNL Data Landing Zone] の資格情報を取得するには、[!DNL Connectors] API の `/credentials` エンドポイントに対してGET リクエストを実行します。
+[!DNL Data Landing Zone] の資格情報を取得するには、`/credentials` API の [!DNL Connectors] エンドポイントに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -287,7 +287,7 @@ public class Main {
 
 ## 資格情報 [!DNL Data Landing Zone] 更新
 
-[!DNL Connectors] API の `/credentials` エンドポイントに対して POST リクエストを実行することで、`SASToken` を更新できます。
+`SASToken` API の `/credentials` エンドポイントに対して POST リクエストを実行することで、[!DNL Connectors] を更新できます。
 
 **API 形式**
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 ## ランディングゾーンのファイル構造と内容の探索
 
-[!DNL Flow Service] API の `connectionSpecs` エンドポイントに対してGET リクエストを実行することで、ランディングゾーンのファイル構造と内容を調べることができます。
+`connectionSpecs` API の [!DNL Flow Service] エンドポイントに対してGET リクエストを実行することで、ランディングゾーンのファイル構造と内容を調べることができます。
 
 **API 形式**
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
+| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |  |
 | `{OBJECT_TYPE}` | アクセスするオブジェクトのタイプ。 | `file` |
 | `{OBJECT}` | アクセスするオブジェクトのパスと名前。 | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | ファイルのタイプ。 | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -515,9 +515,9 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、クエリされたファイルの構造（ファイル名とデータタイプを含む）と、`fileType`、`compressionType`、`columnDelimiter` に関する情報を含む `properties` キーが返されます。
+応答が成功すると、クエリされたファイルの構造（ファイル名とデータタイプを含む）と、`properties`、`fileType`、`compressionType` に関する情報を含む `columnDelimiter` キーが返されます。
 
-+++ここをクリック
++++自分をクリック
 
 ```json
 {
@@ -673,4 +673,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Experience Platformに取り込むファイルを見つけ、Experience Platformへのデータの取り込みを開始するソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータをExperience Platformに取り込むためのデータフローを作成 &#x200B;](../../collect/cloud-storage.md) する方法を説明し  [!DNL Flow Service]  す。
+このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Experience Platformに取り込むファイルを見つけ、Experience Platformへのデータの取り込みを開始するソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータをExperience Platformに取り込むためのデータフローを作成  [!DNL Flow Service]  する方法を説明し ](../../collect/cloud-storage.md) す。

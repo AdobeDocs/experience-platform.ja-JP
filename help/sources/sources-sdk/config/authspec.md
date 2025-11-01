@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソースの認証仕様の設定（Batch SDK）
 description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用するために準備が必要な設定の概要を説明します。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 4%
@@ -116,20 +116,20 @@ OAuth 2 のリフレッシュコードは、一時的なアクセストークン
 | --- | --- | --- |
 | `authSpec.name` | サポートされている認証タイプの名前を表示します。 | `oAuth2-refresh-code` |
 | `authSpec.type` | ソースでサポートされている認証のタイプを定義します。 | `oAuth2-refresh-code` |
-| `authSpec.spec` | 認証のスキーマ、データタイプおよびプロパティに関する情報が含まれます。 |
+| `authSpec.spec` | 認証のスキーマ、データタイプおよびプロパティに関する情報が含まれます。 |  |
 | `authSpec.spec.$schema` | 認証に使用するスキーマを定義します。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | スキーマのデータタイプを定義します。 | `object` |
-| `authSpec.spec.properties` | 認証に使用される資格情報に関する情報が含まれます。 |
-| `authSpec.spec.properties.description` | 認証情報の簡単な説明を表示します。 |
+| `authSpec.spec.properties` | 認証に使用される資格情報に関する情報が含まれます。 |  |
+| `authSpec.spec.properties.description` | 認証情報の簡単な説明を表示します。 |  |
 | `authSpec.spec.properties.type` | 認証情報のデータタイプを定義します。 | `string` |
-| `authSpec.spec.properties.clientId` | アプリケーションに関連付けられたクライアント ID。 クライアント ID は、アクセストークンを取得するためにクライアントの秘密鍵と組み合わせて使用されます。 |
-| `authSpec.spec.properties.clientSecret` | アプリケーションに関連付けられたクライアント秘密鍵。 クライアントシークレットは、アクセストークンを取得するためにクライアント ID と組み合わせて使用されます。 |
-| `authSpec.spec.properties.accessToken` | アクセストークンは、アプリケーションへの安全なアクセスを許可します。 |
-| `authSpec.spec.properties.refreshToken` | アクセストークンの有効期限が切れると、更新トークンを使用して新しいアクセストークンが生成されます。 |
-| `authSpec.spec.properties.expirationDate` | アクセストークンの有効期限を定義します。 |
-| `authSpec.spec.properties.refreshTokenUrl` | 更新トークンを取得するために使用される URL。 |
-| `authSpec.spec.properties.accessTokenUrl` | 更新トークンを取得するために使用される URL。 |
-| `authSpec.spec.properties.requestParameterOverride` | 認証時に上書きする資格情報パラメーターを指定できます。 |
+| `authSpec.spec.properties.clientId` | アプリケーションに関連付けられたクライアント ID。 クライアント ID は、アクセストークンを取得するためにクライアントの秘密鍵と組み合わせて使用されます。 |  |
+| `authSpec.spec.properties.clientSecret` | アプリケーションに関連付けられたクライアント秘密鍵。 クライアントシークレットは、アクセストークンを取得するためにクライアント ID と組み合わせて使用されます。 |  |
+| `authSpec.spec.properties.accessToken` | アクセストークンは、アプリケーションへの安全なアクセスを許可します。 |  |
+| `authSpec.spec.properties.refreshToken` | アクセストークンの有効期限が切れると、更新トークンを使用して新しいアクセストークンが生成されます。 |  |
+| `authSpec.spec.properties.expirationDate` | アクセストークンの有効期限を定義します。 |  |
+| `authSpec.spec.properties.refreshTokenUrl` | 更新トークンを取得するために使用される URL。 |  |
+| `authSpec.spec.properties.accessTokenUrl` | 更新トークンを取得するために使用される URL。 |  |
+| `authSpec.spec.properties.requestParameterOverride` | 認証時に上書きする資格情報パラメーターを指定できます。 |  |
 | `authSpec.spec.required` | 認証に必要な資格情報を表示します。 | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ OAuth 2 のリフレッシュコードは、一時的なアクセストークン
 | --- | --- | --- |
 | `authSpec.name` | サポートされている認証タイプの名前を表示します。 | `Basic Authentication` |
 | `authSpec.type` | ソースでサポートされている認証のタイプを定義します。 | `BasicAuthentication` |
-| `authSpec.spec` | 認証のスキーマ、データタイプおよびプロパティに関する情報が含まれます。 |
+| `authSpec.spec` | 認証のスキーマ、データタイプおよびプロパティに関する情報が含まれます。 |  |
 | `authSpec.spec.$schema` | 認証に使用するスキーマを定義します。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | スキーマのデータタイプを定義します。 | `object` |
-| `authSpec.spec.description` | 認証タイプに固有の詳細情報を表示します。 |
-| `authSpec.spec.properties` | 認証に使用される資格情報に関する情報が含まれます。 |
-| `authSpec.spec.properties.username` | アプリケーションに関連付けられたアカウントのユーザー名。 |
-| `authSpec.spec.properties.password` | アプリケーションに関連付けられたアカウントのパスワード。 |
+| `authSpec.spec.description` | 認証タイプに固有の詳細情報を表示します。 |  |
+| `authSpec.spec.properties` | 認証に使用される資格情報に関する情報が含まれます。 |  |
+| `authSpec.spec.properties.username` | アプリケーションに関連付けられたアカウントのユーザー名。 |  |
+| `authSpec.spec.properties.password` | アプリケーションに関連付けられたアカウントのパスワード。 |  |
 | `authSpec.spec.required` | Experience Platformで必須の値として入力する必要があるフィールドを指定します。 | `username` |
 
 {style="table-layout:auto"}
@@ -269,8 +269,8 @@ API キー認証を使用する場合、通常、次のパラメーターが必�
 
 `authKey1` に `"headerParamName": "X-Auth-Key1"` がある場合。 つまり、リクエストヘッダーに `X-Auth-Key:{YOUR_AUTH_KEY1}` が含まれている必要があります。 また、キー名と `headerParamName` は必ずしも同じである必要はありません。 例：
 
-* `authKey1` は `headerParamName: X-Custom-Auth-Key` を持つことができます。 つまり、リクエストヘッダーでは `authKey1` ではなく `X-Custom-Auth-Key` が使用されます。
-* 逆に、`headerParamName: authKey1` を持 `authKey1` こともできます。 つまり、リクエストヘッダー名は変更されません。
+* `authKey1` は `headerParamName: X-Custom-Auth-Key` を持つことができます。 つまり、リクエストヘッダーでは `X-Custom-Auth-Key` ではなく `authKey1` が使用されます。
+* 逆に、`authKey1` を持 `headerParamName: authKey1` こともできます。 つまり、リクエストヘッダー名は変更されません。
 
 **API 形式の例**
 
@@ -282,7 +282,7 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 次に、[[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) ソースを使用して完了した認証仕様の例を示します。
 
-+++認証仕様の例を表示
++++認証仕様の例の表示
 
 ```json
   "authSpec": [
@@ -340,4 +340,4 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 ## 次の手順
 
-認証仕様を入力したので、次はExperience Platformに統合するソースのソース仕様を設定することができます。 詳しくは、[&#x200B; ソース仕様の設定 &#x200B;](./sourcespec.md) に関するドキュメントを参照してください。
+認証仕様を入力したので、次はExperience Platformに統合するソースのソース仕様を設定することができます。 詳しくは、[ ソース仕様の設定 ](./sourcespec.md) に関するドキュメントを参照してください。

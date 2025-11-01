@@ -2,9 +2,9 @@
 title: Adobe Analytics Source コネクタのマッピングフィールド
 description: Analytics Source Connector を使用して、Adobe Analytics フィールドを XDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 23%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 23%
 
 Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics データを取り込むことができます。 ADC を通じて取り込まれた一部のデータは、Analytics フィールドから Experience Data Model （XDM）フィールドに直接マッピングできますが、他のデータでは、変換と特定の関数を正常にマッピングする必要があります。
 
-![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 &#x200B;](../images/analytics-data-experience-platform.png)
+![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 ](../images/analytics-data-experience-platform.png)
 
 ## ストリーミングメディアパラメーター
 
@@ -242,7 +242,7 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 | `m_page_type` | `web.webPageDetails.isErrorPage` | ブール値 | 「ページが見つかりません」ディメンションの入力に使用される変数。この変数は、空にするか、「ErrorPage」を含む必要があります。 |
 | `m_pagename_no_url` | `web.webPageDetails.name` | 数値 | ページの名前（設定されている場合）。ページを指定しない場合、この値は空のままになります。 |
 | `m_paid_search` | `search.isPaid` | ブール値 | ヒットが有料検索の検出に一致した場合に設定されるフラグ。 |
-| `m_product_list` | `productListItems[].items` | 配列 | 製品リスト。products 変数を通じて渡されます。 | {SKU (文字列), quantity (整数), priceTotal (数値)} |
+| `m_product_list` | `productListItems[].items` | 配列 | products 変数を通じて渡される製品リスト。`{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | 文字列 | ヒットのリファラルのタイプを表す数値 ID。<br/>`1`：サイト内 <br/>`2`：その他の Web サイト <br/>`3`：検索エンジン <br/>`4`：検索エンジン <br/>`5`:USENET<br/>`6`：型指定/ブックマーク（リファラーなし） <br/>`7`：電子メール <br/>`8`:JavaScriptなし <br/>`9`：ソーシャルネットワーク |
 | `m_search_engine` | `search.searchEngine` | 文字列 | サイトに訪問者を誘導した検索エンジンを表す数値 ID。 |
 | `post_currency` | `commerce.order.currencyCode` | 文字列 | トランザクションで使用された通貨のコード。 |
@@ -291,9 +291,9 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
 +++選択すると、非推奨の詳細マッピングフィールドのテーブルを表示します
 
