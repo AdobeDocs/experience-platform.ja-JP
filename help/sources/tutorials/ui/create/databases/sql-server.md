@@ -32,7 +32,7 @@ ht-degree: 39%
 | ---------- | ----------- |
 | 接続文字列 | [!DNL Microsoft SQL Server] アカウントに関連付けられた接続文字列。 接続文字列のパターンは、データソースにサーバー名とインスタンス名のどちらを使用しているかによって異なります。<ul><li>サーバー名 `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` を使用した接続文字列</li><li>インスタンス名を使用した接続文字列：`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` <br> `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` </li></ul> |
 
-基本について詳しくは、[ このドキュメント  [!DNL SQL Server]  を参照してください ](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server)。
+基本について詳しくは、[&#x200B; このドキュメント  [!DNL SQL Server]  を参照してください &#x200B;](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server)。
 
 ## [!DNL SQL Server] アカウントを接続
 
@@ -44,7 +44,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 >
 >特定のソースがまだ認証済みのアカウントを持っていない場合、ソースカタログ内のソースに「**[!UICONTROL Set up]**」オプションが表示されます。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL Add data]** に変わります。
 
-![ ソースカタログとMicrosoft SQL Server ソースが選択されています。](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
+![&#x200B; ソースカタログとMicrosoft SQL Server ソースが選択されています。](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 **[!UICONTROL Connect to Microsoft SQL Server]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -56,7 +56,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 終了したら「**[!UICONTROL Connect to source]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ ソース接続の詳細が入力され、ハイライト表示された新しいアカウントインターフェイス ](../../../../images/tutorials/create/microsoft-sql-server/new.png)
+![&#x200B; ソース接続の詳細が入力され、ハイライト表示された新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 >[!TAB  既存のアカウントを使用 ]
 
@@ -64,10 +64,10 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 「**[!UICONTROL Next]**」を選択して次に進みます。
 
-![ 既存のアカウントのリストを表示する既存のアカウントインターフェイス。](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+![&#x200B; 既存のアカウントのリストを表示する既存のアカウントインターフェイス。](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

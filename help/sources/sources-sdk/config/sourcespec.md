@@ -242,7 +242,7 @@ ht-degree: 38%
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | データの取得をリクエストする際にソース URL に追加できる、サポートされているクエリパラメーターを定義します。**メモ**：ユーザーが指定するパラメーター値は、プレースホルダーの形式にする必要があります。例：`${USER_PARAMETER}`。 | `"queryParams" : {"key" : "value", "key1" : "value1"}` はソース URL に `/?key=value&key1=value1` として追加されます。 |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | データの取得中にソース URL に対する HTTP リクエストで指定する必要があるヘッダーを定義します。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POST リクエストを通じて HTTP 本文を送信するように設定できます。 |  |
-| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[ 追加のリソース ](#content-path) の節を参照してください。 |
+| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[&#x200B; 追加のリソース &#x200B;](#content-path) の節を参照してください。 |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platformに取り込まれるコレクションレコードを指すパス。 | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | このプロパティを使用すると、コンテンツパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
@@ -263,7 +263,7 @@ ht-degree: 38%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 終了時間のパラメーター名を定義します | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [ ーザーが入力したパラメーターの例については、](#user-input) 追加のリソース `spec.properties` を参照してください。 |
+| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [&#x200B; ーザーが入力したパラメーターの例については、](#user-input) 追加のリソース `spec.properties` を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -659,4 +659,4 @@ ht-degree: 38%
 
 ## 次の手順
 
-ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[ 探索仕様の設定 ](./explorespec.md) に関するドキュメントを参照してください。
+ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[&#x200B; 探索仕様の設定 &#x200B;](./explorespec.md) に関するドキュメントを参照してください。

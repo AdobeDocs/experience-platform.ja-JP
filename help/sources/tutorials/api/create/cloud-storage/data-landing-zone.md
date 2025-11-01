@@ -13,20 +13,20 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能です。 データは、7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
-このチュートリアルでは、[!DNL Data Landing Zone]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] ールの取得方法、資格情報の表示と更新方法に関する手順も説明します。
+このチュートリアルでは、[!DNL Data Landing Zone]API[[!DNL Flow Service]  を使用して &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] ールの取得方法、資格情報の表示と更新方法に関する手順も説明します。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-また、このチュートリアルでは [Experience Platform API の概要 ](../../../../../landing/api-guide.md) を読んで、Experience Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法についても確認する必要があります。
+また、このチュートリアルでは [Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を読んで、Experience Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法についても確認する必要があります。
 
 次の節では、[!DNL Data Landing Zone] API を使用して [!DNL Flow Service] ソース接続を正常に作成するために必要な追加情報を示しています。
 
@@ -34,7 +34,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->**[!UICONTROL Manage Sources]** API を使用して [!DNL Data Landing Zone] を取得するには、`type=user_drop_zone` のアクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
+>**[!UICONTROL Manage Sources]** API を使用して [!DNL Data Landing Zone] を取得するには、`type=user_drop_zone` のアクセス制御権限が必要です。 詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
 
 API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、`/landingzone` API の [!DNL Connectors] エンドポイントに対してGET リクエストを実行し、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
 
@@ -673,4 +673,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Experience Platformに取り込むファイルを見つけ、Experience Platformへのデータの取り込みを開始するソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータをExperience Platformに取り込むためのデータフローを作成  [!DNL Flow Service]  する方法を説明し ](../../collect/cloud-storage.md) す。
+このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Experience Platformに取り込むファイルを見つけ、Experience Platformへのデータの取り込みを開始するソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータをExperience Platformに取り込むためのデータフローを作成  [!DNL Flow Service]  する方法を説明し &#x200B;](../../collect/cloud-storage.md) す。

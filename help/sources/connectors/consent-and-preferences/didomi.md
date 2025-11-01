@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->[!DNL Didomi] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Didomi] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Didomi] は、組織が web サイト、アプリ、内部ツールをまたいで個人データに関するユーザーの選択を収集、管理、適用するのに役立つ、同意および環境設定管理プラットフォームです。
 
@@ -23,7 +23,7 @@ Adobe Experience Platformは、ソースコネクタのシステムを介して�
 
 [!DNL Didomi] ソースを使用すると、ユーザーの同意および環境設定に関するリアルタイムのデータを [!DNL Didomi] の同意および環境設定管理プラットフォームからExperience Platformにストリーミングできます。 [!DNL Didomi] ソースを通じて、Experience Platformで同意データを一元化して処理できるので、顧客プロファイルとダウンストリームワークフローを準拠させ、最新の状態に保つことができます。
 
-![ 「Didomi」データ処理アーキテクチャ ](../../images/tutorials/create/didomi/flux.jpeg)
+![&#x200B; 「Didomi」データ処理アーキテクチャ &#x200B;](../../images/tutorials/create/didomi/flux.jpeg)
 
 ## 前提条件
 
@@ -35,13 +35,13 @@ Adobe Experience Platformは、ソースコネクタのシステムを介して�
 
 ### Experience Platformに対する権限の設定
 
-**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL Manage Sources]** と [!DNL Didomi] の両方の権限が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL Manage Sources]** と [!DNL Didomi] の両方の権限が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/ui/overview.md) を参照してください。
 
 ### Adobe API 資格情報の収集
 
 [!DNL Didomi] をExperience Platformに安全に接続するには、Adobe API 資格情報を使用して認証する必要があります。 これらの資格情報は、Webhook の設定とデータ取り込みの設定に不可欠です。
 
-Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 ](../../../landing/api-authentication.md) に関するガイドを参照してください。
+Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 &#x200B;](../../../landing/api-authentication.md) に関するガイドを参照してください。
 
 ### Experience Platform スキーマの作成
 
@@ -57,7 +57,7 @@ Experience Platform API を正常に呼び出す方法については、[Experie
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
-詳しくは、[UI でのスキーマの作成 ](../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
+詳しくは、[UI でのスキーマの作成 &#x200B;](../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
 
 ### データセットの作成
 
@@ -69,7 +69,7 @@ Experience Platformの **データセット** は、定義したスキーマに�
 
 データセットを作成するには、Experience Platform UI の左側のナビゲーションで「[!UICONTROL Datasets]」を選択してから、「**[!UICONTROL Create dataset]**」を選択します。 次に、「**[!UICONTROL Create dataset from schema]**」を選択し、新しいデータセットに関連付けるスキーマを選択します。
 
-![ データセットを作成 ](../../images/tutorials/create/didomi/create-dataset.png)
+![&#x200B; データセットを作成 &#x200B;](../../images/tutorials/create/didomi/create-dataset.png)
 
 ## [!DNL Didomi] コンソールで HTTP Webhook を設定します
 
@@ -95,7 +95,7 @@ Experience Platformとの互換性を確保するには、Webhook が次の要�
 
 | フィールド | 説明 | 値 |
 | ---| --- | --- | 
-| リクエストヘッダー | [!DNL webhook] のカスタムヘッダー。 必ず `x-adobe-flow-id` を含めてください。 この値は、[ データフローが作成 ](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url) された後に取得できます。 | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
+| リクエストヘッダー | [!DNL webhook] のカスタムヘッダー。 必ず `x-adobe-flow-id` を含めてください。 この値は、[&#x200B; データフローが作成 &#x200B;](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url) された後に取得できます。 | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten | [!DNL webhook] データがフラットなオブジェクトとして送信されるので、このプロパティをオンにする必要があります。 | 有効 |
 | イベントタイプ | [!DNL Didomi] をトリガーする `event.*` イベントのグループ （`user.*` または [!DNL webhook]）を選択します。 `event.*` を使用して同意または環境設定の変更を追跡し、`user.*` を使用してユーザープロファイルの更新を追跡します。 この選択項目は、互換性のあるイベントのみをAdobeに送信するために必要です。 Adobeはデータフローごとに 1 つのスキーマのみをサポートするので、両方のイベントタイプを選択すると、取り込みエラーが発生する可能性があります。 | サポートされているイベントタイプのリストを以下に示します。 <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
 
@@ -110,4 +110,4 @@ Experience Platformとの互換性を確保するには、Webhook が次の要�
 
 ## [!DNL Didomi] アカウントのExperience Platformへの接続
 
-ソース接続を作成し、[ からExperience Platformに同意データと環境設定データを取り込む方法については、 [!DNL Didomi] ](../../tutorials/ui/create/consent-and-preferences/didomi.md) Experience Platformへの接続 [!DNL Didomi] に関するガイドを参照してください。
+ソース接続を作成し、[&#x200B; からExperience Platformに同意データと環境設定データを取り込む方法については、 [!DNL Didomi] &#x200B;](../../tutorials/ui/create/consent-and-preferences/didomi.md) Experience Platformへの接続 [!DNL Didomi] に関するガイドを参照してください。

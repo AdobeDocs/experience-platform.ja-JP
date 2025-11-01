@@ -13,7 +13,7 @@ ht-degree: 23%
 
 Adobe Experience Platformでは、Analytics ソースを通じてAdobe Analytics データを取り込むことができます。 ADC を通じて取り込まれた一部のデータは、Analytics フィールドから Experience Data Model （XDM）フィールドに直接マッピングできますが、他のデータでは、変換と特定の関数を正常にマッピングする必要があります。
 
-![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 ](../images/analytics-data-experience-platform.png)
+![Analytics からExperience PlatformへのAdobe Analytics データジャーニーの図 &#x200B;](../images/analytics-data-experience-platform.png)
 
 ## ストリーミングメディアパラメーター
 
@@ -291,9 +291,9 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0}Adobe定義関数 } を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [0&rbrace;Adobe定義関数 &rbrace; を参照してください。](/help/query-service/sql/adobe-defined-functions.md)
 
 +++選択すると、非推奨の詳細マッピングフィールドのテーブルを表示します
 

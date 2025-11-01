@@ -340,4 +340,4 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 ## 次の手順
 
-認証仕様を入力したので、次はExperience Platformに統合するソースのソース仕様を設定することができます。 詳しくは、[ ソース仕様の設定 ](./sourcespec.md) に関するドキュメントを参照してください。
+認証仕様を入力したので、次はExperience Platformに統合するソースのソース仕様を設定することができます。 詳しくは、[&#x200B; ソース仕様の設定 &#x200B;](./sourcespec.md) に関するドキュメントを参照してください。
