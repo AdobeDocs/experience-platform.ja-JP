@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platformのセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上のExperience Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
+source-git-commit: aa56c6bec3544c922521cc611036fd2989feb8b3
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 88%
+source-wordcount: '1999'
+ht-degree: 67%
 
 ---
 
 # [!DNL Segment Match] の概要
+
+>[!IMPORTANT]
+>
+>Adobeは、お客様がオーディエンスの共同作業や交換をおこなうために、2021 年に [!DNL Segment Match] を導入しました。 2025 年初めに、Adobeは、このユースケースを満たすための長期的なアプローチである [0}Real-Time CDP Collaboration} を導入しました。](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
+>
+>* 米国、カナダ、オーストラリア、ニュージーランドのお客様の場合：Adobeでは、Real-Time CDP PrimeおよびUltimateのお客様に、データの共同作業ユースケースを [!DNL Segment Match] からReal-Time CDP Collaborationに移行することをお勧めします。 Real-Time CDP Collaborationの [ ドキュメント ](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) および [ クイックスタートガイド ](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) を表示し、Adobe アカウントチームに連絡して詳細を問い合わせてください。
+>* その他のすべての地域のお客様の場合：2026 年にこれらの地域でReal-Time CDP Collaborationがリリースされるまでは、[!DNL Segment Match] をお勧めします。
 
 Adobe Experience Platform Segment Match は、安全で管理された、プライバシーに配慮した方法で 2 人以上のExperience Platform ユーザーがセグメントデータを交換できるようにするセグメント共有サービスです。 [!DNL Segment Match] では、Experience Platformのプライバシー基準と個人識別子（ハッシュ化されたメールアドレス、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。
 
@@ -44,7 +51,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 | 名前空間 | 説明 |
 | --------- | ----------- |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Experience Platformには、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) と [data prep](../../../data-prep/functions.md#hashing) の 2 つが用意されています。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Experience Platformには、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) と [data prep](../../../data-prep/functions.md#hashing) の 2 つが用意されています。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
 | ECID | Experience Cloud ID（ECID）値を表す名前空間。この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID の概要](../../../identity-service/features/ecid.md)を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
@@ -58,7 +65,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 [!DNL Segment Match] のデフォルトの同意設定は `opt-out` に指定されています。データのオプトインモデルを適用するには、アドビアカウントチームにメールでリクエストを送信してください。
 
-データ共有の同意値を設定するために使用される `share` 属性について詳しくは、[&#x200B; プライバシーと同意フィールドグループ &#x200B;](../../../xdm/field-groups/profile/consents.md) に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
+データ共有の同意値を設定するために使用される `share` 属性について詳しくは、[ プライバシーと同意フィールドグループ ](../../../xdm/field-groups/profile/consents.md) に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 
 ### データ使用ラベルの設定
 
@@ -66,7 +73,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データがExperience Platformに取得されるとすぐに、またはデータがExperience Platformで使用できるようになるとすぐに、データのラベル付けが推奨されます。
 
-[!DNL Segment Match] では C11 ラベル（[!DNL Segment Match] に固有の契約ラベルで、任意のデータセットや属性に手動で追加して、それらが [!DNL Segment Match] パートナー共有プロセスから確実に除外されるようにできるラベル）です。 C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。[!DNL Segment Match] から除外するデータセットやフィールドを決定し、それに応じて C11 ラベルを追加したら、そのラベルが [!DNL Segment Match] ワークフローによって自動的に適用されます。[!DNL Segment Match] では、[!UICONTROL データ共有を制限]コアポリシーを自動的に有効にします。 データ使用ラベルをデータセットに適用する方法について詳しくは、[UI でのデータ使用ラベルの管理](../../../data-governance/labels/user-guide.md)に関するチュートリアルを参照してください。
+[!DNL Segment Match] では C11 ラベル（[!DNL Segment Match] に固有の契約ラベルで、任意のデータセットや属性に手動で追加して、それらが [!DNL Segment Match] パートナー共有プロセスから確実に除外されるようにできるラベル）です。 C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。[!DNL Segment Match] から除外するデータセットやフィールドを決定し、それに応じて C11 ラベルを追加したら、そのラベルが [!DNL Segment Match] ワークフローによって自動的に適用されます。[!DNL Segment Match] は、[!UICONTROL Restrict data sharing] コアポリシーを自動的に有効にします。 データ使用ラベルをデータセットに適用する方法について詳しくは、[UI でのデータ使用ラベルの管理](../../../data-governance/labels/user-guide.md)に関するチュートリアルを参照してください。
 
 データ使用ラベルとその定義の一覧については、[データ使用ラベルの用語集](../../../data-governance/labels/reference.md)を参照してください。データ使用ポリシーについて詳しくは、 [データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
@@ -77,7 +84,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 | 権限 | 説明 |
 | --- | --- |
 | オーディエンス共有接続の管理 | この権限を使用すると、2 つの組織を接続して [!DNL Segment Match] フローを有効にするパートナーハンドシェイクプロセスを完了できます。 |
-| オーディエンス共有の管理 | この権限を使用すると、アクティブなパートナー（**[!UICONTROL オーディエンス共有接続]**&#x200B;にアクセスできる管理者ユーザーによって接続されたパートナー）と協力してフィード（[!DNL Segment Match] に使用されるデータのパッケージ）を作成、編集および公開できます。 |
+| オーディエンス共有の管理 | この権限を使用すると、アクティブなパートナー（[!DNL Segment Match] アクセス権を持つ管理者ユーザーによって接続されたパートナー）と協力してフィード（**[!UICONTROL Audience Share Connections]** に使用されるデータのパッケージ）を作成、編集および公開できます。 |
 
 アクセス制御と権限について詳しくは、[アクセス制御の概要](../../../access-control/home.md)を参照してください。
 
@@ -87,11 +94,11 @@ ID データと名前空間、同意設定およびデータ使用ラベルを�
 
 ### パートナーの管理
 
-Experience Platform UI で、左側のナビゲーションから **[!UICONTROL セグメント]** を選択したあと、上部のヘッダーから **[!UICONTROL フィード]** を選択します。
+Experience Platform UI で、左側のナビゲーションから「**[!UICONTROL Segments]**」を選択したあと、上部のヘッダーから「**[!UICONTROL Feeds]**」を選択します。
 
 ![segments-feed.png](./images/segments-feed.png)
 
-この[!UICONTROL フィード]ページには、パートナーから受け取ったフィードのリストのほか、共有したフィードが含まれています。 既存のパートナーの一覧を表示するか、新しいパートナーとの接続を確立するには、「**[!UICONTROL パートナーを管理]**」を選択します。
+この [!UICONTROL Feeds] ページには、パートナーから受け取ったフィードのリストのほか、共有したフィードが含まれています。 既存のパートナーの一覧を表示するか、新しいパートナーとの接続を確立するには、[**[!UICONTROL Manage partners]**] を選択します。
 
 ![manage-partners.png](./images/manage-partners.png)
 
@@ -101,15 +108,15 @@ Experience Platform UI で、左側のナビゲーションから **[!UICONTROL 
 >
 >ユーザーとユーザーのパートナーとの「双方向ハンドシェイク」は、厳密には接続です。 このプロセス中にデータが交換されることはありません。
 
-既存のパートナーとの接続のリストは、[!UICONTROL パートナーを管理]画面のメインインターフェイスに表示されます。右側にある[!UICONTROL 共有設定]パネルには、新しい[!UICONTROL 接続 ID] を生成するためのオプションと、パートナーの[!UICONTROL 接続 ID]を入力できる入力ボックスが用意されています。
+既存のパートナーとの接続のリストは、[!UICONTROL Manage partners] の画面のメインインターフェイスに表示されます。 右側にある [!UICONTROL Share setting] パネルには、新しい [!UICONTROL connect ID] を生成するためのオプションと、パートナーの [!UICONTROL connect ID] を入力できる入力ボックスが用意されています。
 
 ![establish-connection.png](./images/establish-connection.png)
 
-新しい[!UICONTROL 接続 ID] を作成するには、「[!UICONTROL 共有設定]」の「**[!UICONTROL 再生成]**」を選択したあと、新しく生成された ID の横にあるコピーアイコンを選択します。
+新しい [!UICONTROL connect ID] を作成するには、「**[!UICONTROL Regenerate]**」の下の「[!UICONTROL Share setting]」を選択し、新しく生成された ID の横にあるコピーアイコンを選択します。
 
 ![share-setting.png](./images/share-setting.png)
 
-パートナーの[!UICONTROL 接続 ID] を使用してパートナーに接続するには、「[!UICONTROL パートナーを接続]」の入力ボックスに一意の ID 値を入力してから、「**[!UICONTROL リクエスト]**」を選択します。
+パートナーの [!UICONTROL connect ID] を使用してパートナーに接続するには、[!UICONTROL Connect partner] の下の入力ボックスに一意の ID 値を入力してから、**[!UICONTROL Request]** を選択します。
 
 ![connect-partner.png](./images/connect-partner.png)
 
@@ -123,34 +130,34 @@ Experience Platform UI で、左側のナビゲーションから **[!UICONTROL 
 
 **フィード**&#x200B;は、データ（セグメント）、そのデータの公開方法や使用方法についてのルール、およびユーザーのデータとパートナーのデータの照合方法を決定する設定をグループ化したものです。フィードは、個別に管理でき、[!DNL Segment Match] を通じて他のExperience Platform ユーザーと交換できます。
 
-新しいフィードを作成するには、[!UICONTROL フィード]ダッシュボードから「**[!UICONTROL フィードを作成]**」を選択します。
+新しいフィードを作成するには、**[!UICONTROL Create feed]** のダッシュボードから [!UICONTROL Feeds] を選択します。
 
 ![create-feed.png](./images/create-feed.png)
 
 フィードの基本設定には、名前、説明、マーケティングユースケースや ID 設定に関する設定が含まれます。 フィードの名前と説明を入力したあと、データを除外するマーケティングユースケースを適用します。 以下を含むリストから複数のユースケースを選択できます。
 
 * [!UICONTROL Analytics]
-* [!UICONTROL PII と組み合わせる]
-* [!UICONTROL クロスサイトターゲティング]
-* [!UICONTROL データサイエンス]
-* [!UICONTROL 電子メールのターゲティング]
-* [!UICONTROL サードパーティに書き出し]
-* [!UICONTROL オンサイト広告]
-* [!UICONTROL オンサイトのパーソナライズ機能]
+* [!UICONTROL Combine with PII]
+* [!UICONTROL Cross-site targeting]
+* [!UICONTROL Data Science]
+* [!UICONTROL Email targeting]
+* [!UICONTROL Export to third party]
+* [!UICONTROL Onsite advertising]
+* [!UICONTROL Onsite personalization]
 * [!UICONTROL Segment Match]
-* [!UICONTROL 単一 ID のパーソナライゼーション]
+* [!UICONTROL Single identity personalization]
 
-最後に、フィードに適した ID 名前空間を選択します。[!DNL Segment Match] でサポートされている具体的な名前空間について詳しくは、[ID データと名前空間の表](#namespaces)を参照してください。完了したら、「**[!UICONTROL 次へ]**」を選択します。
+最後に、フィードに適した ID 名前空間を選択します。[!DNL Segment Match] でサポートされている具体的な名前空間について詳しくは、[ID データと名前空間の表](#namespaces)を参照してください。完了したら、「**[!UICONTROL Next]**」を選択します。
 
 ![audience-sharing.png](./images/audience-sharing.png)
 
-フィードの設定を確立したら、共有するセグメントをファーストパーティセグメントのリストから選択します。リストから複数のセグメントを選択できます。また、右側のパネルを使用して、選択したセグメントのリストを管理できます。完了したら、「**[!UICONTROL 次へ]**」を選択します。
+フィードの設定を確立したら、共有するセグメントをファーストパーティセグメントのリストから選択します。リストから複数のセグメントを選択できます。また、右側のパネルを使用して、選択したセグメントのリストを管理できます。完了したら、「**[!UICONTROL Next]**」を選択します。
 
 ![select-segments.png](./images/select-segments.png)
 
-[!UICONTROL 共有]ページが表示され、フィードを共有するパートナーを選択するためのインターフェイスが表示されます。この手順の間に、共有前の重複予測レポートを確認したり、自社とパートナーの間で重複している ID の数を名前空間ごとに確認したり、データの共有に同意していて重複している ID の数を確認したりできます。
+[!UICONTROL Share] ページが表示され、フィードを共有するパートナーを選択するためのインターフェイスが表示されます。 この手順の間に、共有前の重複予測レポートを確認したり、自社とパートナーの間で重複している ID の数を名前空間ごとに確認したり、データの共有に同意していて重複している ID の数を確認したりできます。
 
-**[!UICONTROL セグメント別に分析]**&#x200B;を選択して、予測レポートを表示します。
+**[!UICONTROL Analyze by segment]** を選択して、予測レポートを表示します。
 
 ![analyze.png](./images/analyze.png)
 
@@ -161,27 +168,27 @@ Experience Platform UI で、左側のナビゲーションから **[!UICONTROL 
 | 同意を得た ID の予測 | 組織に設定された同意要件を満たす重複した ID の合計数です。 |
 | 重複 ID の予測 | 選択したセグメントに適合し、さらに選択したパートナーとの一致が見つかる ID の数です。これらの ID は名前空間別に表示され、個々のプロファイル ID を表すものではありません。重複の予測は、プロファイルのスケッチに基づいています。 |
 
-完了したら、「**[!UICONTROL 閉じる]**」を選択します。
+完了したら、「**[!UICONTROL Close]**」を選択します。
 
 ![overlap-report.png](./images/overlap-report.png)
 
-パートナーを選択し、重複予測レポートを確認したら、「**[!UICONTROL 次へ]**」を選択して続行します。
+パートナーを選択し、重複予測レポートを確認したら、「**[!UICONTROL Next]**」を選択して続行します。
 
 ![share.png](./images/share.png)
 
-[!UICONTROL レビュー]手順が表示され、新しいフィードを共有および公開する前に確認できます。この手順には、適用した ID 設定の詳細や、選択したマーケティングのユースケース、セグメント、パートナーに関する情報が含まれます。
+[!UICONTROL Review] の手順が表示され、新しいフィードを共有および公開する前に確認できます。 この手順には、適用した ID 設定の詳細や、選択したマーケティングのユースケース、セグメント、パートナーに関する情報が含まれます。
 
-「**[!UICONTROL 終了]**」を選択して次に進みます。
+「**[!UICONTROL Finish]**」を選択して次に進みます。
 
 ![review.png](./images/review.png)
 
 ### フィードを更新
 
-セグメントを追加または削除するには、[!UICONTROL フィード]ページで「**[!UICONTROL フィードを作成]**」を選択し、次に「**[!UICONTROL 既存のフィード]**」を選択します。表示される既存のフィードのリストで、更新するフィードを選択したら、「**[!UICONTROL 次へ]**」を選択します。
+セグメントを追加または削除するには、**[!UICONTROL Create feed]** のページから「[!UICONTROL Feeds]」を選択し、「**[!UICONTROL Existing feed]**」を選択します。 表示される既存のフィードのリストで、更新するフィードを選択し、「**[!UICONTROL Next]**」を選択します。
 
 ![feed-list](./images/feed-list.png)
 
-セグメントのリストが表示されます。 ここから、新しいセグメントをフィードに追加できます。また、右側のパネルを使用して、不要になったセグメントを削除できます。フィードのセグメントの管理が完了したら、「**[!UICONTROL 次へ]**」を選択し、それから上記の手順に従って、更新されたフィードを完成させます。
+セグメントのリストが表示されます。 ここから、新しいセグメントをフィードに追加できます。また、右側のパネルを使用して、不要になったセグメントを削除できます。フィードのセグメントの管理が完了したら、「**[!UICONTROL Next]**」を選択し、それから上記の手順に従って、更新されたフィードを完成させます。
 
 ![更新](./images/update.png)
 
@@ -191,7 +198,7 @@ Experience Platform UI で、左側のナビゲーションから **[!UICONTROL 
 
 ### 受信フィードを受け入れる
 
-受信フィードを表示するには、[!UICONTROL フィード]ページで「**[!UICONTROL 受信済み]**」を選択し、リストから表示するフィードを選択します。 フィードを受け入れるには、「**[!UICONTROL プロファイルに対して有効にする]**」を選択し、ステータスが「[!UICONTROL 保留中]」から「[!UICONTROL 有効]」に更新されるまで少し待ちます。
+受信フィードを表示するには、**[!UICONTROL Received]** ページのヘッダーから「[!UICONTROL Feeds]」を選択し、リストから表示するフィードを選択します。 フィードを受け入れるには、「**[!UICONTROL Enable for profile]**」を選択し、ステータスが「[!UICONTROL Pending]」から「[!UICONTROL Enabled]」に更新されるまで少し待ちます。
 
 ![received.png](./images/received.png)
 
