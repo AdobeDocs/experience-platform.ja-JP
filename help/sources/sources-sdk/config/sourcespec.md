@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソースのソース仕様の設定（Batch SDK）
 description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用するために準備が必要な設定の概要を説明します。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2107'
 ht-degree: 38%
 
 ---
@@ -231,6 +231,7 @@ ht-degree: 38%
 | --- | --- | --- |
 | `sourceSpec.attributes` | UI または API に固有のソースに関する情報が含まれます。 |  |
 | `sourceSpec.attributes.uiAttributes` | UI に固有のソースに関する情報を表示します。 |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | ソースが（実稼動/一般提供ではなく）プレビューとして表示されるかどうかを示すブール値の属性。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 機能に追加するために、顧客からのより多くのフィードバックがソースで必要かどうかを示すブール値の属性です。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | ソースのカテゴリを定義します。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI でソースのレンダリングに使用するアイコンを定義します。 | `mailchimp-icon.svg` |
@@ -242,7 +243,7 @@ ht-degree: 38%
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | データの取得をリクエストする際にソース URL に追加できる、サポートされているクエリパラメーターを定義します。**メモ**：ユーザーが指定するパラメーター値は、プレースホルダーの形式にする必要があります。例：`${USER_PARAMETER}`。 | `"queryParams" : {"key" : "value", "key1" : "value1"}` はソース URL に `/?key=value&key1=value1` として追加されます。 |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | データの取得中にソース URL に対する HTTP リクエストで指定する必要があるヘッダーを定義します。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POST リクエストを通じて HTTP 本文を送信するように設定できます。 |  |
-| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[&#x200B; 追加のリソース &#x200B;](#content-path) の節を参照してください。 |
+| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[ 追加のリソース ](#content-path) の節を参照してください。 |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platformに取り込まれるコレクションレコードを指すパス。 | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | このプロパティを使用すると、コンテンツパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
@@ -263,7 +264,7 @@ ht-degree: 38%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 終了時間のパラメーター名を定義します | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [&#x200B; ーザーが入力したパラメーターの例については、](#user-input) 追加のリソース `spec.properties` を参照してください。 |
+| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [ ーザーが入力したパラメーターの例については、](#user-input) 追加のリソース `spec.properties` を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -659,4 +660,4 @@ ht-degree: 38%
 
 ## 次の手順
 
-ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[&#x200B; 探索仕様の設定 &#x200B;](./explorespec.md) に関するドキュメントを参照してください。
+ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[ 探索仕様の設定 ](./explorespec.md) に関するドキュメントを参照してください。
