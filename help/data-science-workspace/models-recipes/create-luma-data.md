@@ -5,9 +5,9 @@ title: Luma web スキーマとデータセットの作成
 type: Tutorial
 description: このチュートリアルでは、Luma デモ傾向モデルに必要な前提条件とアセットを提供します。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## アセットのダウンロード {#assets}
 
-次のチュートリアルでは、カスタム Luma の購入傾向モデルを使用します。 先に進む前に、[&#x200B; 必要なアセットをダウンロード &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip)zip フォルダーを作成します。 このフォルダーには次が含まれます。
+次のチュートリアルでは、カスタム Luma の購入傾向モデルを使用します。 先に進む前に、[ 必要なアセットをダウンロード ](../assets/DSW-course-sample-assets.7z)zip フォルダーを作成します。 このフォルダーには次が含まれます。
 
 - 購入傾向モデルノートブック
 - データをトレーニングおよびスコアリングデータセット（Luma web データのサブセット）に取り込むために使用されるノートブック
@@ -49,18 +49,18 @@ ht-degree: 0%
 
 ### Luma web データスキーマの作成とデータの取り込み
 
-モデルを作成するには、モデルのトレーニングとスコアリングに使用するデータセットをExperience Platformに用意する必要があります。 [Data Science Workspace コース &#x200B;](https://experienceleague.adobe.com/?lang=ja&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=ja) の次のビデオチュートリアルでは、Luma スキーマを作成し、購入の傾向モデルで使用されるデータを取り込む方法を説明します。
+モデルを作成するには、モデルのトレーニングとスコアリングに使用するデータセットをExperience Platformに用意する必要があります。 [Data Science Workspace コース ](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=ja) の次のビデオチュートリアルでは、Luma スキーマを作成し、購入の傾向モデルで使用されるデータを取り込む方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447155?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### トレーニング、スコアリングおよびスコアリング結果のデータセットを作成
 
 レシピビルダーノートブックを実行したり、API を使用してモデルのトレーニングとスコアリングを行ったりするには、トレーニング/スコアリングに使用するデータセットとスキーマを指定する必要があります。 次のビデオチュートリアルでは、トレーニング、スコアリング、スコアリング結果の各データセットのほか、Luma の購入傾向モデルで使用されるスコアリング結果スキーマの設定について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447422?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## 次の手順
 
-このチュートリアルでは、Luma 傾向モデルに必要なスキーマとデータセットを正常に作成しました。 次のチュートリアルに進み、「[&#x200B; レシピビルダーノートブック &#x200B;](../jupyterlab/create-a-model.md) チュートリアルを使用してモデルを作成する準備が整いました。
+このチュートリアルでは、Luma 傾向モデルに必要なスキーマとデータセットを正常に作成しました。 次のチュートリアルに進み、「[ レシピビルダーノートブック ](../jupyterlab/create-a-model.md) チュートリアルを使用してモデルを作成する準備が整いました。
 
-さらに、提供された探索的データ分析（EDA）ノートブックを使用してデータを調べることができます。 このノートブックを使用すると、Luma データのパターンを理解し、データのサニティを確認し、予測傾向モデルの関連データの概要を確認できます。 探索的データ分析について詳しくは、[EDA ドキュメント &#x200B;](../jupyterlab/eda-notebook.md) を参照してください。
+さらに、提供された探索的データ分析（EDA）ノートブックを使用してデータを調べることができます。 このノートブックを使用すると、Luma データのパターンを理解し、データのサニティを確認し、予測傾向モデルの関連データの概要を確認できます。 探索的データ分析について詳しくは、[EDA ドキュメント ](../jupyterlab/eda-notebook.md) を参照してください。
