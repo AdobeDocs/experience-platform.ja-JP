@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## GitHub オーサリング環境の設定 {#set-up-environment}
 
-1. ブラウザーで `https://github.com/AdobeDocs/experience-platform.en` に移動します。
+1. ブラウザーで `https://github.com/AdobeDocs/experience-platform.ja-JP` に移動します。
 1. リポジトリを [&#x200B; 分岐 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository) するには、次に示すように、「**分岐**」をクリックします。 これにより、Experience Platform リポジトリのコピーが独自の GitHub アカウントに作成されます。
 
    ![Adobeの分岐ドキュメントリポジトリ &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ ht-degree: 3%
 
 1. この時点で、Adobe投稿者使用許諾契約（CLA）への署名を求める通知が表示されます。 これは必須の手順です。 CLA に署名したら、PR ページを更新し、プルリクエストを送信します。
 
-1. **の「** プルリクエスト `https://github.com/AdobeDocs/experience-platform.en`」タブを調べると、プルリクエストが送信されたことを確認できます。
+1. **の「** プルリクエスト `https://github.com/AdobeDocs/experience-platform.ja-JP`」タブを調べると、プルリクエストが送信されたことを確認できます。
 
    ![PR 成功 &#x200B;](../assets/docs-framework/ssd-pr-successful.png)
 

@@ -25,7 +25,7 @@ ht-degree: 5%
 
 ## GitHub に接続し、ローカルオーサリング環境を設定します
 
-ローカルオーサリング環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
+ローカルオーサリング環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.ja-JP) に移動することです。
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Adobeでは、[Visual Studio Code](https://code.visualstudio.com/) を使用し�
 
 ![create-pr](../assets/create-pr.png)
 
-https://github.com/AdobeDocs/experience-platform.enの「プルリクエスト」タブを調べると、プルリクエストが送信されたことを確認できます。
+https://github.com/AdobeDocs/experience-platform.ja-JPの「プルリクエスト」タブを調べると、プルリクエストが送信されたことを確認できます。
 
 ![confirm-pr](../assets/confirm-pr.png)

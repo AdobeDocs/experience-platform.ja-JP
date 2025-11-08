@@ -96,7 +96,7 @@ CEE スキーマは、すべての XDM ExperienceEvent スキーマと同様に�
 
 すべての XDM スキーマと同様に、CEE スキーマフィールドグループは拡張可能です。 つまり、CEE フィールドグループにフィールドを追加したり、必要に応じて様々なバリエーションを複数のスキーマに含めたりできます。
 
-フィールドグループの完全な例は、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md) にあります。 さらに、CEE スキーマに準拠したデータの構造を示す例として、次の [JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を表示してコピーできます。 独自のデータをスキーマにマッピングする方法を決定するには、これらの両方の例を参照し、以下のセクションで概要を説明するキーフィールドについて確認します。
+フィールドグループの完全な例は、[&#x200B; 公開 XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md) にあります。 さらに、CEE スキーマに準拠したデータの構造を示す例として、次の [JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.ja-JP/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を表示してコピーできます。 独自のデータをスキーマにマッピングする方法を決定するには、これらの両方の例を参照し、以下のセクションで概要を説明するキーフィールドについて確認します。
 
 ## キーフィールド
 
@@ -355,7 +355,7 @@ CEE フィールドグループをスキーマに追加した後、データ内�
 
 #### データのマッピングと取り込み {#ingest}
 
-CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータをExperience Platformに取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする &#x200B;](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [&#x200B; サンプル JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
+CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータをExperience Platformに取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする &#x200B;](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [&#x200B; サンプル JSON ファイル &#x200B;](https://github.com/AdobeDocs/experience-platform.ja-JP/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
 
 データセットにデータを入力したら、同じデータセットを使用して追加のデータファイルを取り込むことができます。
 
