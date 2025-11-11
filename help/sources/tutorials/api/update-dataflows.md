@@ -2,10 +2,10 @@
 title: Flow Service API を使用したデータフローの更新
 description: Flow Service API を使用して、名前、説明、スケジュールなど、データフローを作成する方法を説明します。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 292fb89d457a86ee9f63cebd461abf1f2ecb9662
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 75%
+source-wordcount: '684'
+ht-degree: 73%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 75%
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
 
 ## データフローの詳細の検索
 
@@ -177,7 +177,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新する接続の一意のバージョンです。ETag の値は、データフローが正常に更新されるたびに更新されます。
+>* `If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新する接続の一意のバージョンです。ETag の値は、データフローが正常に更新されるたびに更新されます。
+>
+>* 最初にスケジュールされた `startTime` が既に発生している場合、データフローの `startTime` を更新することはできません。 この制限は、有効なデータフローと無効なデータフローの両方に適用されます。
 
 **API 形式**
 
@@ -191,29 +193,29 @@ PATCH /flows/{FLOW_ID}
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "Database Dataflow Feb2021"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Database dataflow for testing update API"
-            }
-        ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+  -d '[
+          {
+              "op": "replace",
+              "path": "/scheduleParams/frequency",
+              "value": "day"
+          },
+          {
+              "op": "replace",
+              "path": "/name",
+              "value": "Database Dataflow Feb2021"
+          },
+          {
+              "op": "replace",
+              "path": "/description",
+              "value": "Database dataflow for testing update API"
+          }
+      ]'
 ```
 
 | プロパティ | 説明 |
@@ -249,25 +251,25 @@ PATCH /flows/{FLOW_ID}
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
-        }
-    ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+  -d '[
+      {
+          "op": "replace",
+          "path": "/transformations/0",
+          "value": {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                  "mappingVersion": 2
+              }
+          }
+      }
+  ]'
 ```
 
 | プロパティ | 説明 |
