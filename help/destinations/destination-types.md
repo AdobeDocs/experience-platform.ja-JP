@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 52%
+source-wordcount: '831'
+ht-degree: 51%
 
 ---
 
@@ -22,13 +22,13 @@ Adobe Experience Platformでは、接続、データセット書き出し、拡�
 
 >[!BEGINSHADEBOX]
 
-![&#x200B; 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
+![ 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
 
 >[!ENDSHADEBOX]
 
 ## 接続 {#connections}
 
-Adobe Experience Platformの **[!UICONTROL Profile Export]**、**[!UICONTROL Streaming Audience Export]** および **[!DNL Edge Personalization]** の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて [&#x200B; リアルタイム顧客プロファイル &#x200B;](../profile/home.md) を作成し、セグメント化を適用したあと、オーディエンスと対象プロファイルを宛先に書き出します。
+Adobe Experience Platformの **[!UICONTROL Profile Export]**、**[!UICONTROL Streaming Audience Export]** および **[!DNL Edge Personalization]** の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて [ リアルタイム顧客プロファイル ](../profile/home.md) を作成し、セグメント化を適用したあと、オーディエンスと対象プロファイルを宛先に書き出します。
 
 ## プロファイル書き出し宛先 {#profile-export}
 
@@ -52,6 +52,12 @@ Adobe Experience Platformの **[!UICONTROL Profile Export]**、**[!UICONTROL Str
 * [HTTP API 宛先](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake ストリーミング](catalog/warehouses/snowflake.md)
+* [Snowflakeバッチ](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Snowflakeの宛先は、現在、米国のお客様のみが利用できます。 米国以外でのアクセスが必要な場合は、Adobe アカウントチームにお問い合わせください。
 
 ### バッチ（ファイルベース）宛先 {#file-based}
 
@@ -71,7 +77,7 @@ Experience Platform のエッジパーソナライゼーション宛先には、
 
 次のビデオでは、次の 2 種類の宛先の詳細について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34116?captions=jpn&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## 書き出すオーディエンスのタイプ {#exported-audiences-types}
 
@@ -81,11 +87,11 @@ Experience Platformから様々な宛先に、次の 3 種類のオーディエ�
 * アカウントオーディエンス
 * 見込み客オーディエンス
 
-[&#x200B; 様々なオーディエンスタイプ &#x200B;](/help/segmentation/types/account-audiences.md#terminology) の詳細をご覧ください。
+[ 様々なオーディエンスタイプ ](/help/segmentation/types/account-audiences.md#terminology) の詳細をご覧ください。
 
 宛先カードの記号は、各宛先に書き出すことができるオーディエンスのタイプを示します。
 
-![&#x200B; 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png " 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 "){zoomable="yes"}
+![ 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png " 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 "){zoomable="yes"}
 
 
 ## データセット書き出し宛先 {#dataset-export-destinations}
@@ -118,4 +124,4 @@ Experience Platformでは、タグ管理の機能と柔軟性を活用してお�
 
 [宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、実現しようとしているマーケティングアクションに応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**メールマーケティング**&#x200B;など）別にグループ化されています。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
-![&#x200B; カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}
+![ カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}
