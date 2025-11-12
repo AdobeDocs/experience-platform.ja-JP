@@ -79,7 +79,7 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 *データフロー作成の残りの手順のワークフローはモジュール化されます。 ソースに関して特定のコールアウトを行う必要がある場合は、以下のその他のリソースの節を参照してください。*
 
-このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
+このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=ja) を行いましょう。
 
 ## その他のリソース
 
