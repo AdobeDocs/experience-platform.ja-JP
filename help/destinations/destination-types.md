@@ -77,7 +77,7 @@ Experience Platform のエッジパーソナライゼーション宛先には、
 
 次のビデオでは、次の 2 種類の宛先の詳細について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34116?captions=jpn&quality=12)
 
 ## 書き出すオーディエンスのタイプ {#exported-audiences-types}
 
