@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Apache HDFS Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Apache HDFS をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 66%
+source-wordcount: '373'
+ht-degree: 55%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供し、これらのシステムからデータを取り込むことができます。 取り込んだデータは、JSON、Parquet 形式または区切り形式で書式設定できます。 クラウドストレージプロバイダーのサポートには、[!DNL Apache] HDFS が含まれます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## ファイルとディレクトリの命名制約
 

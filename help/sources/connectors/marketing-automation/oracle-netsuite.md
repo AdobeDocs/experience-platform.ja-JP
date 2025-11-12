@@ -3,10 +3,10 @@ title: Oracle NetSuite Sourceの概要
 description: API またはユーザーインターフェイスを使用して、Oracle NetSuite をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 14%
+source-wordcount: '722'
+ht-degree: 10%
 
 ---
 
@@ -31,9 +31,9 @@ Experience Platformでは、データのサードパーティのマーケティ�
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | 顧客 | 顧客名、住所、キー識別子などの詳細を含む、特定の顧客データを取得します。 |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | 連絡先 | 連絡先名、メール、電話番号、顧客に関連付けられたカスタム連絡先関連フィールドを取得します。 |
 
-## IP アドレス許可リスト {#ip-allow-list}
+## IP アドレスの許可リスト {#ip-allow-list}
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要がある場合があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -43,13 +43,13 @@ Experience Platformでは、データのサードパーティのマーケティ�
    * 有効なアカウントをお持ちでない場合は、[[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) にお問い合わせください。
 * **の製品の** アクティブな購読 [!DNL Oracle NetSuite]。
 * **アカウント ID**。
-   * [!DNL Oracle NetSuite] ソースは、OAuth 2.0 を使用して [!DNL Oracle NetSuite] API と通信します。 アカウント ID がない場合は、[!DNL Oracle] アカウント ID の取得方法 [&#x200B; に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID) ドキュメントを参照してください。
+   * [!DNL Oracle NetSuite] ソースは、OAuth 2.0 を使用して [!DNL Oracle NetSuite] API と通信します。 アカウント ID がない場合は、[!DNL Oracle] アカウント ID の取得方法 [ に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID) ドキュメントを参照してください。
 * **クライアント ID** と **クライアントシークレット** の組み合わせ。
    * [!DNL Oracle NetSuite] API にアクセスするには、クライアント ID とクライアントシークレットが必要です。 この手順では、管理者が以下を保有していることも確認する必要があります。
       * OAuth 2.0 機能を有効にし、適切な OAuth 2.0 役割を設定しました。
       * ユーザーを OAuth 2.0 の役割に割り当て、必要な統合レコードを作成しました。
 * **アクセストークン** および **更新トークン**。
-   * アクセストークンと更新トークンの生成方法については、[!DNL Oracle]OAuth 2.0 認証コード付与フロー [&#x200B; に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) ガイドを参照してください。
+   * アクセストークンと更新トークンの生成方法については、[!DNL Oracle]OAuth 2.0 認証コード付与フロー [ に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) ガイドを参照してください。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
@@ -57,11 +57,11 @@ Experience Platformでは、データのサードパーティのマーケティ�
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| クライアント ID | [!DNL Oracle NetSuite] で統合レコードを作成する際に生成されるクライアント ID 値。 詳しくは、[!DNL Oracle] 統合レコードの作成 [&#x200B; 方法に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) ガイドを参照してください。 | `7fce.....b42f`<br> 値は 64 文字の文字列です。 |
-| クライアントシークレット | 統合レコードの作成時に生成されるクライアントシークレット値。 詳しくは、[!DNL Oracle] 統合レコードの作成 [&#x200B; 方法に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) ガイドを参照してください。 | `5c98.....1b46`<br> 値は 64 文字の文字列です。 |
+| クライアント ID | [!DNL Oracle NetSuite] で統合レコードを作成する際に生成されるクライアント ID 値。 詳しくは、[!DNL Oracle] 統合レコードの作成 [ 方法に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) ガイドを参照してください。 | `7fce.....b42f`<br> 値は 64 文字の文字列です。 |
+| クライアントシークレット | 統合レコードの作成時に生成されるクライアントシークレット値。 詳しくは、[!DNL Oracle] 統合レコードの作成 [ 方法に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) ガイドを参照してください。 | `5c98.....1b46`<br> 値は 64 文字の文字列です。 |
 | 認証テスト URL | （任意） [!DNL NetSuite] 認証テスト URL。 | `https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}` |
-| アクセストークン | アクセストークンは JSON web トークン（JWT）形式で、60 分間のみ有効です。 アクセストークンの取得方法について詳しくは、[!DNL Oracle]NetSuite の OAuth 2.0 認証 [&#x200B; に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) ガイドを参照してください。 | `eyJr......f4V0`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
-| 更新トークン | アクセストークンの有効期限が切れた後は、更新を使用して新しいアクセストークンを生成します。 更新トークンは 7 日間有効です。 アクセストークンの取得方法について詳しくは、[!DNL Oracle]NetSuite の OAuth 2.0 認証 [&#x200B; に関する &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) ガイドを参照してください。 | `eyJr......dmxM`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
+| アクセストークン | アクセストークンは JSON web トークン（JWT）形式で、60 分間のみ有効です。 アクセストークンの取得方法について詳しくは、[!DNL Oracle]NetSuite の OAuth 2.0 認証 [ に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) ガイドを参照してください。 | `eyJr......f4V0`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
+| 更新トークン | アクセストークンの有効期限が切れた後は、更新を使用して新しいアクセストークンを生成します。 更新トークンは 7 日間有効です。 アクセストークンの取得方法について詳しくは、[!DNL Oracle]NetSuite の OAuth 2.0 認証 [ に関する ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) ガイドを参照してください。 | `eyJr......dmxM`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
 | アクセストークン URL | アプリケーションが POST リクエストを送信するトークンエンドポイント。 | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
 
 >[!IMPORTANT]
@@ -72,14 +72,14 @@ Experience Platformでは、データのサードパーティのマーケティ�
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Activities] をExperience Platformに接続する方法について説明しています。
 
-* [&#x200B; ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Activities]  ータを取り込みます &#x200B;](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
-* [UI を使用してアカウ  [!DNL Oracle NetSuite Activities]  トをExperience Platformに接続します &#x200B;](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)。
-* [UI を使用したソース接続のデータフローの作成 &#x200B;](../../tutorials/ui/dataflow/marketing-automation.md)。
+* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Activities]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
+* [UI を使用してアカウ  [!DNL Oracle NetSuite Activities]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)。
+* [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。
 
 ## [!DNL Oracle NetSuite Entities] をExperience Platformに接続 {#oracle-netsuite-entities}
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Entities] をExperience Platformに接続する方法について説明しています。
 
-* [&#x200B; ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Entities]  ータを取り込みます &#x200B;](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
-* [UI を使用してアカウ  [!DNL Oracle NetSuite Entities]  トをExperience Platformに接続します &#x200B;](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)。
-* [UI を使用したソース接続のデータフローの作成 &#x200B;](../../tutorials/ui/dataflow/marketing-automation.md)。
+* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Entities]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
+* [UI を使用してアカウ  [!DNL Oracle NetSuite Entities]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)。
+* [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。

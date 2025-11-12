@@ -4,10 +4,10 @@ solution: Experience Platform
 title: GreenPlum Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して GreenPlum をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 36%
+source-wordcount: '178'
+ht-degree: 11%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure] などの
 
 リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのサード・パーティ・データベースがサポートされています。 データベースプロバイダーのサポートには、[!DNL GreenPlum] が含まれます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL GreenPlum] を [!DNL Experience Platform] に接続する方法について説明しています。
 

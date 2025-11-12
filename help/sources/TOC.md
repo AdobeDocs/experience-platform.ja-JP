@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 90%
 
 ---
@@ -398,7 +398,7 @@ ht-degree: 90%
    - [ソースのエラーメッセージ](./errors/sources-errors.md)
    - [フローサービスのエラーメッセージ](./errors/flow-service-errors.md)
 - [フロー実行通知](notifications.md)
-- [IP アドレス許可リスト](ip-address-allow-list.md)
+- [IP アドレスの許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

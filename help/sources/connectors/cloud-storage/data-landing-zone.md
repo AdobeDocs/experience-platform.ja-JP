@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を学ぶ
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1361'
 ht-degree: 18%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
 [!DNL Data Landing Zone] はAdobe Experience Platformによってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスであり、ファイルをExperience Platformに取り込むための安全なクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Experience Platform製品およびサービスライセンスで提供される合計データ量に制限されます。 Experience Platformのすべてのユーザーは、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークの許可リストや地域間設定は必要ありません。 Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルおよびフォルダーに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルとフォルダーは、7 日後に削除されます。
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。[!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワーク用に許可リストや地域間設定を行う必要はありません。 Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルおよびフォルダーに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルとフォルダーは、7 日後に削除されます。
 
 ## Azure 上のExperience Platformの [!DNL Data Landing Zone] ソースを設定する {#azure}
 
@@ -25,7 +25,7 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 >[!NOTE]
 >
->[!DNL Azure Data Factory] から [!DNL Data Landing Zone] にアクセスする場合は、Experience Platformから提供される [SAS 資格情報 &#x200B;](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) を使用して、[!DNL Data Landing Zone] 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
+>[!DNL Data Landing Zone] から [!DNL Azure Data Factory] にアクセスする場合は、Experience Platformから提供される [!DNL Data Landing Zone]SAS 資格情報 [ を使用して、](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
 
 ### ファイルとディレクトリの命名制約
 
@@ -42,15 +42,15 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
-[!DNL Azure Storage Explorer] UI で、左側のナビゲーションにある「接続」アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。[!DNL Data Landing Zone] に接続する **[!DNL Blob container]** を選択してください。
+[!DNL Azure Storage Explorer] UI で、左側のナビゲーションにある「接続」アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** に接続する [!DNL Data Landing Zone] を選択してください。
 
 ![Azure エクスプローラーのリソース ワークスペースの選択。](../../images/tutorials/create/dlz/select-resource.png)
 
 次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
-![&#x200B; 共有アクセス署名が選択された Azure エクスプローラーの接続方法を選択 &#x200B;](../../images/tutorials/create/dlz/select-connection-method.png)
+![ 共有アクセス署名が選択された Azure エクスプローラーの接続方法を選択 ](../../images/tutorials/create/dlz/select-connection-method.png)
 
-接続方法を選択した後、次に、[!DNL Data Landing Zone] コンテナに対応する **表示名** および **[!DNL Blob]コンテナ SAS URL** を指定する必要があります。
+接続方法を選択した後、次に、**コンテナに対応する** 表示名 **[!DNL Blob]および** コンテナ SAS URL[!DNL Data Landing Zone] を指定する必要があります。
 
 >[!TIP]
 >
@@ -58,11 +58,11 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 [!DNL Data Landing Zone] SAS URL を入力し、「次へ **を選択します**
 
-![&#x200B; 表示名と SAS URL が入力されている Azure エクスプローラーの接続情報を入力ワークスペース。](../../images/tutorials/create/dlz/enter-connection-info.png)
+![ 表示名と SAS URL が入力されている Azure エクスプローラーの接続情報を入力ワークスペース。](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 **概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
-![&#x200B; リソース接続の設定を再度取り込む Azure エクスプローラーの概要ワークスペース。](../../images/tutorials/create/dlz/summary.png)
+![ リソース接続の設定を再度取り込む Azure エクスプローラーの概要ワークスペース。](../../images/tutorials/create/dlz/summary.png)
 
 接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
@@ -87,7 +87,7 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 ### Bash を使用したファイルのアップロード
 
-次の例では、Bash と cURL を使用して、[!DNL Azure Blob Storage] REST API でファイルを [!DNL Data Landing Zone] にアップロードします。
+次の例では、Bash と cURL を使用して、[!DNL Data Landing Zone] REST API でファイルを [!DNL Azure Blob Storage] にアップロードします。
 
 ```shell
 # Set Azure Blob-related settings
@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->次の例では、完全な SAS URI を使用して [!DNL Azure Blob] コンテナに接続しますが、他の方法や操作を使用して認証することもできます。 詳しくは、こちらの [[!DNL Microsoft] Python v12 SDKのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
+>次の例では、完全な SAS URI を使用して [!DNL Azure Blob] コンテナに接続しますが、他の方法や操作を使用して認証することもできます。 詳しくは、こちらの [[!DNL Microsoft] Python v12 SDKのドキュメント ](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
 
 ```py
 import os
@@ -142,11 +142,11 @@ except Exception as ex:
 
 ### [!DNL AzCopy] を使用したファイルのアップロード
 
-次の例では、[!DNL AzCopy] ユーティリティ [!DNL Microsoft's] 使用してファイルを [!DNL Data Landing Zone] にアップロードします。
+次の例では、[!DNL Microsoft's] ユーティリティ [!DNL AzCopy] 使用してファイルを [!DNL Data Landing Zone] にアップロードします。
 
 >[!TIP]
 >
->以下の例では `copy` コマンドを使用していますが、他のコマンドおよびオプションを使用して、[!DNL AzCopy] を使用して [!DNL Data Landing Zone] にファイルをアップロードできます。 詳しくは、この [[!DNL Microsoft AzCopy]  ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
+>以下の例では `copy` コマンドを使用していますが、他のコマンドおよびオプションを使用して、[!DNL Data Landing Zone] を使用して [!DNL AzCopy] にファイルをアップロードできます。 詳しくは、この [[!DNL Microsoft AzCopy]  ドキュメント ](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
 Amazon Web Services（AWS）上のExperience Platform用に [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
 
@@ -169,7 +169,7 @@ Amazon Web Services（AWS）上のExperience Platform用に [!DNL Data Landing Z
 
 ### AWS CLI の設定と操作の実行
 
-- [AWS CLI の最新バージョンへのインストールまたはアップデート &#x200B;](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) に関するガイドを参照。
+- [AWS CLI の最新バージョンへのインストールまたはアップデート ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) に関するガイドを参照。
 
 ### 一時的な資格情報を使用してAWS CLI を設定
 
@@ -305,9 +305,9 @@ print(f"Sign-in URL: {signin_url}")
 
 >[!IMPORTANT]
 >
->- ソースに接続するには、**[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
+>- ソースに接続するには、**[!UICONTROL View Sources]** および **[!UICONTROL Manage Sources]** アクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
 >
->- [!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[&#x200B; こちら &#x200B;](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
+>- [!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[ こちら ](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
 
 以下のドキュメントでは、API またはユーザーインターフェイスを使用して、[!DNL Data Landing Zone] コンテナからAdobe Experience Platformにデータを取り込む方法に関する情報を提供します。
 

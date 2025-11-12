@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Oracle オブジェクトストレージ Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してOracle オブジェクトストレージをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 54%
+source-wordcount: '411'
+ht-degree: 46%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform] などのク�
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、データをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。 Experience Platformでは、[!DNL Oracle Object Storage] からバッチでデータを取り込むことができます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ドキュメントを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## ファイルとディレクトリの命名制約
 

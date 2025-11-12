@@ -2,16 +2,16 @@
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 42%
+source-wordcount: '1205'
+ht-degree: 44%
 
 ---
 
 # SFTP コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [!DNL SFTP] アカウントをExperience Platformに正常に接続するために必要な前提条件の手順については、このドキュメントを参照してください。
 
@@ -25,7 +25,7 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 ### IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス &#x200B;](../../ip-address-allow-list.md) ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ### ファイルとディレクトリの命名制約
 

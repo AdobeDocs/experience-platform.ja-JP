@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 汎用 REST API Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して汎用 REST API をAdobe Experience Platformに接続する方法について説明します。
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 49%
+source-wordcount: '218'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->[!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -23,9 +23,9 @@ Experience Platformは、[!DNL Generic REST API] などのプロトコルアプ�
 
 [!DNL Generic REST API] ソースを使用すると、REST ベースのアプリケーションからExperience Platformにデータを取り込むことができます。 [!DNL Generic REST API] は、基本認証と OAuth 2 更新コードベースの認証の両方をサポートしています。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API を使用して [!DNL Generic REST API] ソースをExperience Platformに接続する方法に関する情報を提供します。
 

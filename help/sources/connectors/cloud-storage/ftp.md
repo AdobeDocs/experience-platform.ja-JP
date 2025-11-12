@@ -4,10 +4,10 @@ solution: Experience Platform
 title: FTP Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して FTP サーバーをAdobe Experience Platformに接続する方法について説明します。
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 73%
+source-wordcount: '439'
+ht-degree: 64%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->FTP コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>FTP コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
@@ -25,9 +25,9 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 >
 >FTP ソースコネクタを使用してデータフローを作成する場合、FTP サーバー内で増分更新に関する問題が長引くため、1 回限りの取り込みスケジュールを設定することを強くお勧めします。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## ファイルとディレクトリの命名制約
 

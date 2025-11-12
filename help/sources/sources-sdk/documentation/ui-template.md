@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: UI 用のセルフサービスドキュメントテンプレート
 description: Adobe Experience Platform UI を使用して YOURSOURCE ソース接続を作成する方法を説明します。
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 14%
+source-wordcount: '710'
+ht-degree: 10%
 
 ---
 
@@ -49,29 +49,29 @@ ht-degree: 14%
 
 ## *YOURSOURCE* アカウントを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションバーから **[!UICONTROL Sources]** を選択して、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL Catalog] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-*YOURSOURCE のカテゴリ* カテゴリで、「*YOURSOURCE*」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+*YOURSOURCE のカテゴリ* カテゴリで *YOURSOURCE* を選択し、**[!UICONTROL Add data]** を選択します。
 
 >[!TIP]
 >
->以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[&#x200B; レビュー用ドキュメントの送信 &#x200B;](./github.md) に関するガイドを参照してください。
+>以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[ レビュー用ドキュメントの送信 ](./github.md) に関するガイドを参照してください。
 
 ![カタログ](../assets/ui/catalog.png)
 
-**[!UICONTROL ソースアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Connect YOURSOURCE account]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
-既存のアカウントを使用するには、新しいデータフローの作成に使用する *YOURSOURCE* アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+既存のアカウントを使用するには、新しいデータフローの作成に使用する *YOURSOURCE* アカウントを選択してから、「**[!UICONTROL Next]**」を選択して続行します。
 
 ![既存](../assets/ui/existing.png)
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL New account]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL Connect to source]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../assets/ui/new.png)
 
@@ -79,7 +79,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 *データフロー作成の残りの手順のワークフローはモジュール化されます。 ソースに関して特定のコールアウトを行う必要がある場合は、以下のその他のリソースの節を参照してください。*
 
-このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=ja) を行いましょう。
+このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
 
 ## その他のリソース
 

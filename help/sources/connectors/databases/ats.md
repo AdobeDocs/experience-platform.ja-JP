@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Azure Table Storage Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Table Storage をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 36%
+source-wordcount: '238'
+ht-degree: 29%
 
 ---
 
 # [!DNL Azure Table Storage] コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Experience Platformは、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、[!DNL Azure Table Storage] が含まれます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Azure Table Storage] をExperience Platformに接続する方法について説明しています。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Google Cloud Storage Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してGoogle クラウドストレージをAdobe Experience Platformに接続する方法について説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 62%
+source-wordcount: '589'
+ht-degree: 44%
 
 ---
 
@@ -21,27 +21,27 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、Experience Data Model （XDM）に準拠した JSON や Parquet として書式設定することも、区切り形式として書式設定することもできます。 プロセスのすべての手順がソースワークフローに統合されます。 Experience Platformでは、[!DNL Google Cloud Storage] からバッチでデータを取り込むことができます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定
 
-Experience Platformに接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
+Experience Platformに接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL Settings]**」オプションから「**[!UICONTROL Cloud Storage]**」を選択します。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-**[!UICONTROL 設定]**&#x200B;ページが表示されます。ここから、[!DNL Google] プロジェクト ID に関する情報と [!DNL Google Cloud Storage] アカウントの詳細を確認できます。相互運用性設定にアクセスするには、上部のヘッダーから「**[!UICONTROL 相互運用性]**」を選択します。
+**[!UICONTROL Settings]** ページが表示されます。 ここから、[!DNL Google] プロジェクト ID に関する情報と [!DNL Google Cloud Storage] アカウントの詳細を確認できます。相互運用性設定にアクセスするには、上部のヘッダーから「**[!UICONTROL Interoperability]**」を選択します。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-**[!UICONTROL 相互運用性]**&#x200B;ページには、認証、アクセスキーおよびサービスアカウントに関連付けられたデフォルトプロジェクトに関する情報が含まれています。サービスアカウントの新しいアクセスキー ID と秘密アクセスキーを生成するには、「**[!UICONTROL サービスアカウントのキーを作成]**」を選択します。
+**[!UICONTROL Interoperability]** ページには、認証、アクセスキーおよびサービスアカウントに関連付けられたデフォルトプロジェクトに関する情報が含まれています。 サービスアカウントの新しいアクセスキー ID と秘密アクセスキーを生成するには、「**[!UICONTROL Create a Key for a Service Account]**」を選択します。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントをExperience Platformに接続できます。
 
-詳しくは、[!DNL Google Cloud] ドキュメントの [&#x200B; サービスアカウントキーの作成と管理 &#x200B;](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) に関するガイドを参照してください。
+詳しくは、[ ドキュメントの ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) サービスアカウントキーの作成と管理 [!DNL Google Cloud] に関するガイドを参照してください。
 
 ## ファイルとディレクトリの命名制約
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 汎用 OData Sourceの概要
 description: API またはユーザーインターフェイスを使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 51%
+source-wordcount: '207'
+ht-degree: 31%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 [!DNL Experience Platform] は、サードパーティのプロトコルアプリケーションからデータを取り込む機能を備えています。 プロトコルプロバイダーのサポートには、[!DNL Generic OData] が含まれます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Generic OData] を [!DNL Experience Platform] に接続する方法について説明しています。
 

@@ -3,14 +3,14 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: ドキュメントのセルフサービステンプレート
 description: Flow Service API を使用してAdobe Experience Platformをソースに接続する方法を説明します。
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2082'
 ht-degree: 51%
 
 ---
 
-# [!DNL Flow Service] API を使用した *YOURSOURCE* 接続の作成
+# *API を使用した* YOURSOURCE[!DNL Flow Service] 接続の作成
 
 *このテンプレートを使用する場合は、（この段落から始めて）斜体のすべての段落を置き換えるか削除します。*
 
@@ -45,9 +45,9 @@ ht-degree: 51%
 
 これらの資格情報について詳しくは、*YOURSOURCE* 認証ドキュメントを参照してください。 *プラットフォームの認証ドキュメントへのリンクをここに追加してください*。
 
-## [!DNL Flow Service] API を使用したExperience Platformへの *YOURSOURCE* の接続
+## *API を使用したExperience Platformへの* YOURSOURCE[!DNL Flow Service] の接続
 
-以下のチュートリアルでは、*YOURSOURCE* ソース接続を作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して *YOURSOURCE* データをExperience Platformに取り込むデータフローを作成する手順を詳しく説明します。
+以下のチュートリアルでは、*YOURSOURCE* ソース接続を作成し、*API* を使用して [[!DNL Flow Service] YOURSOURCE](https://www.adobe.io/experience-platform-apis/references/flow-service/) データをExperience Platformに取り込むデータフローを作成する手順を詳しく説明します。
 
 ### ベース接続の作成 {#base-connection}
 
@@ -299,13 +299,13 @@ curl -X POST \
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=ja#create)に関するチュートリアルを参照してください。
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
 [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=ja)に関するチュートリアルを参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)に関するチュートリアルを参照してください。
 
 ### ターゲット接続の作成 {#target-connection}
 
@@ -534,20 +534,20 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html?lang=ja) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html) に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html?lang=ja) に関するガイドを参照してください
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) に関するガイドを参照してください
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html?lang=ja) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html?lang=ja) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html?lang=ja) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html) に関するガイドを参照してください。

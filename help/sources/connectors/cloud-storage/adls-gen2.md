@@ -2,10 +2,10 @@
 title: Azure Data Lake Storage Gen2 Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Data Lake Storage Gen2 をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 66%
+source-wordcount: '451'
+ht-degree: 57%
 
 ---
 
@@ -15,13 +15,13 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。Experience Platformでは、[!DNL Azure Data Lake Storage Gen2] （ADLS Gen2）からデータをバッチで取り込むことができます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 >[!IMPORTANT]
 >
->[!DNL Azure Data Lake Storage Gen2] ソースは、Experience Platformへの同じリージョンの接続をサポートしていません。 [!DNL Azure] インスタンスがExperience Platformと同じネットワーク領域を使用している場合、Experience Platformソースへの接続を確立できません。 現在、クロス地域接続のみがサポートされています。
+>[!DNL Azure Data Lake Storage Gen2] ソースは、Experience Platformへの同じリージョンの接続をサポートしていません。 [!DNL Azure] インスタンスがExperience Platformと同じネットワーク地域を使用している場合、Experience Platform ソースへの接続を確立できません。 現在、クロス地域接続のみがサポートされています。
 
 ## ファイルとディレクトリの命名制約
 
@@ -38,7 +38,7 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 >[!NOTE]
 >
->[!DNL Azure Data Lake Storage Gen2] アカウントの作成に使用されるサービス プリンシパルには、少なくとも **ストレージ BLOB データReader** の役割がアクセス制御（IAM）から割り当てられている必要があります
+>[!DNL Azure Data Lake Storage Gen2] アカウントの作成に使用されるサービスプリンシパルには、少なくとも **Storage Blob Data Reader** の役割がアクセス制御（IAM）から割り当てられている必要があります
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Azure Data Lake Storage Gen2] をExperience Platformに接続する方法について説明しています。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: IBM DB2 Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してIBM DB2 をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 26%
+source-wordcount: '215'
+ht-degree: 5%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure] などのデータベースプロバイダーとのネイティブ接続を提供します。 これらのシステムから [!DNL Experience Platform] にデータを取り込むことができます。
 
 リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのサード・パーティ・データベースがサポートされています。 データベースプロバイダーのサポートには、IBM DB2 が含まれます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用してIBM DB2 と [!DNL Experience Platform] を接続する方法について説明します。
 

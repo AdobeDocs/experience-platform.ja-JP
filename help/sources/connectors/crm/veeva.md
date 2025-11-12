@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Veeva CRM Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Veeva CRM をAdobe Experience Platformに接続する方法を説明します。
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 68%
+source-wordcount: '211'
+ht-degree: 49%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Veeva CRM] を含みます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Veeva CRM] をExperience Platformに接続する方法について説明しています。
 
