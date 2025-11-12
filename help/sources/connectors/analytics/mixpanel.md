@@ -18,7 +18,7 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) は、ユーザーによるデジタル製品とのやり取りに関するデータを取得できる製品分析ツールです。 Mixpanel では、数回クリックするだけでデータをクエリし視覚化できるシンプルでインタラクティブなレポートを使用して、この製品データを分析できます。
 
-ソースは [Mixpanel イベント書き出し API/ダウンロード ](https://developer.mixpanel.com/reference/raw-event-export) を活用して、[!DNL Mixpanel] 内で受信および保存されたイベントデータと、すべてのイベントプロパティ（`distinct_id` を含む）およびイベントがExperience Platformに送信された正確なタイムスタンプをダウンロードします。 Mixpanel は、Mixpanel Event Export API と通信するための認証メカニズムとして Bearer トークンを使用します。
+ソースは [Mixpanel イベント書き出し API/ダウンロード &#x200B;](https://developer.mixpanel.com/reference/raw-event-export) を活用して、[!DNL Mixpanel] 内で受信および保存されたイベントデータと、すべてのイベントプロパティ（`distinct_id` を含む）およびイベントがExperience Platformに送信された正確なタイムスタンプをダウンロードします。 Mixpanel は、Mixpanel Event Export API と通信するための認証メカニズムとして Bearer トークンを使用します。
 
 ## IP アドレスの許可リスト
 
@@ -28,7 +28,7 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 この節では、アカウントを認証し、[!DNL Mixpanel] データをExperience Platformに取り込むために必要な前提条件の手順について説明します。
 
-[!DNL Mixpanel] ソース接続とデータフローを作成するには、まず有効な [!DNL Mixpanel] アカウントが必要です。 有効な [!DNL Mixpanel] アカウントがない場合は、[Mixpanel 登録 ](https://mixpanel.com/register/) ページを参照してアカウントを作成します。
+[!DNL Mixpanel] ソース接続とデータフローを作成するには、まず有効な [!DNL Mixpanel] アカウントが必要です。 有効な [!DNL Mixpanel] アカウントがない場合は、[Mixpanel 登録 &#x200B;](https://mixpanel.com/register/) ページを参照してアカウントを作成します。
 
 [!DNL Mixpanel] アカウントを正常に作成したら、[!DNL Project Details] UI の [!DNL Project Seettings] ページの「[!DNL Mixpanel]」タブに移動して、プロジェクト ID を取得し、タイムゾーンを設定します。
 
@@ -38,13 +38,13 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 >[!TIP]
 >
->ベストプラクティスとして、「有効期限なし [ のサービスアカウントを選択し ](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration) す。
+>ベストプラクティスとして、「有効期限なし [&#x200B; のサービスアカウントを選択し &#x200B;](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration) す。
 
-![Mixpanel サービスアカウント ](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
+![Mixpanel サービスアカウント &#x200B;](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-最後に、[ に必要なExperience Platform](../../../xdm/schema/composition.md) スキーマ [!DNL Mixpanel Event Export API] を作成します。 スキーマに必要なマッピングについて詳しくは、[UI でのソース接続の作成  [!DNL Mixpanel]  に関するガイドを参照し ](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources) ください。
+最後に、[&#x200B; に必要なExperience Platform](../../../xdm/schema/composition.md) スキーマ [!DNL Mixpanel Event Export API] を作成します。 スキーマに必要なマッピングについて詳しくは、[UI でのソース接続の作成  [!DNL Mixpanel]  に関するガイドを参照し &#x200B;](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources) ください。
 
-![ スキーマを作成 ](../../images/tutorials/create/mixpanel-export-events/schema.png)
+![&#x200B; スキーマを作成 &#x200B;](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
 ## API を使用した [!DNL Mixpanel] のExperience Platformへの接続
 

@@ -61,9 +61,9 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 >[!TIP]
 >
->以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[ レビュー用ドキュメントの送信 ](../documentation/github.md) に関するガイドを参照してください。
+>以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[&#x200B; レビュー用ドキュメントの送信 &#x200B;](../documentation/github.md) に関するガイドを参照してください。
 
-![Experience Platform ソースカタログ ](../assets/streaming/catalog.png)
+![Experience Platform ソースカタログ &#x200B;](../assets/streaming/catalog.png)
 
 ## データの選択
 
@@ -74,13 +74,13 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 「**[!UICONTROL Upload files]**」を選択して、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルを [!UICONTROL Drag and drop files] パネルにドラッグ&amp;ドロップすることもできます。
 
-![ ソースワークフローのデータを追加ステップ ](../assets/streaming/add-data.png)
+![&#x200B; ソースワークフローのデータを追加ステップ &#x200B;](../assets/streaming/add-data.png)
 
 ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、[!UICONTROL Search field] ユーティリティを使用して、スキーマ内から特定の項目にアクセスすることもできます。
 
 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![ ソースワークフローのプレビュー手順 ](../assets/streaming/preview.png)
+![&#x200B; ソースワークフローのプレビュー手順 &#x200B;](../assets/streaming/preview.png)
 
 ## データフローの詳細
 
@@ -88,17 +88,17 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![ ソースワークフローのデータフローの詳細手順。](../assets/streaming/dataflow-detail.png)
+![&#x200B; ソースワークフローのデータフローの詳細手順。](../assets/streaming/dataflow-detail.png)
 
 ## マッピング
 
 [!UICONTROL Mapping] の手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[&#x200B; データ準備 UI ガイド &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL Next]**」を選択します。
 
-![ ソースワークフローのマッピングステップ ](../assets/streaming/mapping.png)
+![&#x200B; ソースワークフローのマッピングステップ &#x200B;](../assets/streaming/mapping.png)
 
 ## レビュー
 
@@ -109,7 +109,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 データフローをレビューしたら、「**[!UICONTROL Finish]**」をクリックし、データフローが作成されるまでしばらく待ちます。
 
-![ ソースワークフローのレビュー手順。](../assets/streaming/review.png)
+![&#x200B; ソースワークフローのレビュー手順。](../assets/streaming/review.png)
 
 ## ストリーミングエンドポイント URL の取得
 
@@ -117,13 +117,13 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ストリーミングエンドポイントを取得するには、作成したデータフローの [!UICONTROL Dataflow activity] ページに移動し、[!UICONTROL Properties] パネルの下部からエンドポイントをコピーします。
 
-![ データフローアクティビティのストリーミングエンドポイント。](../assets/testing/endpoint-test.png)
+![&#x200B; データフローアクティビティのストリーミングエンドポイント。](../assets/testing/endpoint-test.png)
 
 ## 次の手順
 
 *データフロー作成の残りの手順のワークフローはモジュール化されます。 ソースに関して特定のコールアウトを行う必要がある場合は、以下のその他のリソースの節を参照してください。*
 
-このチュートリアルに従うと、*YOURSOURCE* アカウントとの接続を確立できます。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
+このチュートリアルに従うと、*YOURSOURCE* アカウントとの接続を確立できます。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
 
 ## その他のリソース
 

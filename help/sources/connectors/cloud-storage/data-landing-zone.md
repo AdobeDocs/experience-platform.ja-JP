@@ -13,7 +13,7 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
 [!DNL Data Landing Zone] はAdobe Experience Platformによってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスであり、ファイルをExperience Platformに取り込むための安全なクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Experience Platform製品およびサービスライセンスで提供される合計データ量に制限されます。 Experience Platformのすべてのユーザーは、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
@@ -25,7 +25,7 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 >[!NOTE]
 >
->[!DNL Data Landing Zone] から [!DNL Azure Data Factory] にアクセスする場合は、Experience Platformから提供される [!DNL Data Landing Zone]SAS 資格情報 [ を使用して、](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
+>[!DNL Data Landing Zone] から [!DNL Azure Data Factory] にアクセスする場合は、Experience Platformから提供される [!DNL Data Landing Zone]SAS 資格情報 [&#x200B; を使用して、](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
 
 ### ファイルとディレクトリの命名制約
 
@@ -48,7 +48,7 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
-![ 共有アクセス署名が選択された Azure エクスプローラーの接続方法を選択 ](../../images/tutorials/create/dlz/select-connection-method.png)
+![&#x200B; 共有アクセス署名が選択された Azure エクスプローラーの接続方法を選択 &#x200B;](../../images/tutorials/create/dlz/select-connection-method.png)
 
 接続方法を選択した後、次に、**コンテナに対応する** 表示名 **[!DNL Blob]および** コンテナ SAS URL[!DNL Data Landing Zone] を指定する必要があります。
 
@@ -58,11 +58,11 @@ Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを�
 
 [!DNL Data Landing Zone] SAS URL を入力し、「次へ **を選択します**
 
-![ 表示名と SAS URL が入力されている Azure エクスプローラーの接続情報を入力ワークスペース。](../../images/tutorials/create/dlz/enter-connection-info.png)
+![&#x200B; 表示名と SAS URL が入力されている Azure エクスプローラーの接続情報を入力ワークスペース。](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 **概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
-![ リソース接続の設定を再度取り込む Azure エクスプローラーの概要ワークスペース。](../../images/tutorials/create/dlz/summary.png)
+![&#x200B; リソース接続の設定を再度取り込む Azure エクスプローラーの概要ワークスペース。](../../images/tutorials/create/dlz/summary.png)
 
 接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->次の例では、完全な SAS URI を使用して [!DNL Azure Blob] コンテナに接続しますが、他の方法や操作を使用して認証することもできます。 詳しくは、こちらの [[!DNL Microsoft] Python v12 SDKのドキュメント ](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
+>次の例では、完全な SAS URI を使用して [!DNL Azure Blob] コンテナに接続しますが、他の方法や操作を使用して認証することもできます。 詳しくは、こちらの [[!DNL Microsoft] Python v12 SDKのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
 
 ```py
 import os
@@ -146,7 +146,7 @@ except Exception as ex:
 
 >[!TIP]
 >
->以下の例では `copy` コマンドを使用していますが、他のコマンドおよびオプションを使用して、[!DNL Data Landing Zone] を使用して [!DNL AzCopy] にファイルをアップロードできます。 詳しくは、この [[!DNL Microsoft AzCopy]  ドキュメント ](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
+>以下の例では `copy` コマンドを使用していますが、他のコマンドおよびオプションを使用して、[!DNL Data Landing Zone] を使用して [!DNL AzCopy] にファイルをアップロードできます。 詳しくは、この [[!DNL Microsoft AzCopy]  ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
@@ -169,7 +169,7 @@ Amazon Web Services（AWS）上のExperience Platform用に [!DNL Data Landing Z
 
 ### AWS CLI の設定と操作の実行
 
-- [AWS CLI の最新バージョンへのインストールまたはアップデート ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) に関するガイドを参照。
+- [AWS CLI の最新バージョンへのインストールまたはアップデート &#x200B;](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) に関するガイドを参照。
 
 ### 一時的な資格情報を使用してAWS CLI を設定
 
@@ -305,9 +305,9 @@ print(f"Sign-in URL: {signin_url}")
 
 >[!IMPORTANT]
 >
->- ソースに接続するには、**[!UICONTROL View Sources]** および **[!UICONTROL Manage Sources]** アクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
+>- ソースに接続するには、**[!UICONTROL View Sources]** および **[!UICONTROL Manage Sources]** アクセス制御権限が必要です。 詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
 >
->- [!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[ こちら ](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
+>- [!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[&#x200B; こちら &#x200B;](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
 
 以下のドキュメントでは、API またはユーザーインターフェイスを使用して、[!DNL Data Landing Zone] コンテナからAdobe Experience Platformにデータを取り込む方法に関する情報を提供します。
 

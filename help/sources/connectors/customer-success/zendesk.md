@@ -16,7 +16,7 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。カスタマーサクセスプロバイダーのサポートには、[!DNL Zendesk] が含まれます。
 
-このAdobe Experience Platform[ ソース ](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は、[Zendesk Search API/検索結果を書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を利用して、ユーザー情報を Zendesk からExperience Platformに返し、さらに処理できるようにします。
+このAdobe Experience Platform[&#x200B; ソース &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は、[Zendesk Search API/検索結果を書き出し &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を利用して、ユーザー情報を Zendesk からExperience Platformに返し、さらに処理できるようにします。
 
 ## IP アドレスの許可リスト
 
@@ -28,14 +28,14 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 この節では、[!DNL Zendesk] アカウントを認証するために完了すべき前提条件の手順について説明します。
 
-* [!DNL Zendesk] アカウントを認証する最初の手順は、サポートアカウントを確実に持つこ [!DNL Zendesk] です。 [[!DNL Zendesk]  登録ページ ](https://www.zendesk.co.jp/register/) が表示されていない場合は、Zendesk アカウントを登録して作成します。
-* 正常に登録したら、[[!DNL Zendesk] web サイト ](https://www.zendesk.com/login/) に移動し、**サブドメイン** を指定します。
+* [!DNL Zendesk] アカウントを認証する最初の手順は、サポートアカウントを確実に持つこ [!DNL Zendesk] です。 [[!DNL Zendesk]  登録ページ &#x200B;](https://www.zendesk.co.jp/register/) が表示されていない場合は、Zendesk アカウントを登録して作成します。
+* 正常に登録したら、[[!DNL Zendesk] web サイト &#x200B;](https://www.zendesk.com/login/) に移動し、**サブドメイン** を指定します。
 * 次に、**[!DNL Settings]**/**[!DNL Apps and Integrations]**/**[!DNL Zendesk API]** を選択します。
 * 最後に、**[!DNL API token]** セクションから API トークンを取得します。
 
-![Zendesk API トークン ](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![Zendesk API トークン &#x200B;](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-サブドメインの取得方法については、[[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) を参照してください。 API トークンの生成について詳しくは、[[!DNL Zendesk]  新しい API トークンの生成に関するガイド ](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>) を参照してください。
+サブドメインの取得方法については、[[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) を参照してください。 API トークンの生成について詳しくは、[[!DNL Zendesk]  新しい API トークンの生成に関するガイド &#x200B;](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>) を参照してください。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zendesk] をExperience Platformに接続する方法について説明しています。
 
@@ -45,5 +45,5 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 ## UI を使用した [!DNL Zendesk] のExperience Platformへの接続
 
-* [UI での  [!DNL Zendesk ] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
+* [UI での  [!DNL Zendesk &#x200B;] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
 * [UI でのカスタマーサクセスソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

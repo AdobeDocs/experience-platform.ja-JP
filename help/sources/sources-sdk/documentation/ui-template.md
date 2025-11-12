@@ -57,7 +57,7 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 >[!TIP]
 >
->以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[ レビュー用ドキュメントの送信 ](./github.md) に関するガイドを参照してください。
+>以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[&#x200B; レビュー用ドキュメントの送信 &#x200B;](./github.md) に関するガイドを参照してください。
 
 ![カタログ](../assets/ui/catalog.png)
 
@@ -79,7 +79,7 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 *データフロー作成の残りの手順のワークフローはモジュール化されます。 ソースに関して特定のコールアウトを行う必要がある場合は、以下のその他のリソースの節を参照してください。*
 
-このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
+このチュートリアルでは、*YOURSOURCE* アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
 
 ## その他のリソース
 

@@ -25,10 +25,10 @@ Experience Platform は、サードパーティのマーケティングオート
 
 ## [!DNL Mailchimp Campaigns] をExperience Platformに接続
 
-* [API を使用してデータをExperience Platformに取り込む  [!DNL Mailchimp Campaigns]  めのソース接続を作成します ](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md)。
-* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL Mailchimp Campaigns]  ス接続を作成します ](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL Mailchimp Campaigns]  めのソース接続を作成します &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md)。
+* [&#x200B; ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL Mailchimp Campaigns]  ス接続を作成します &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)。
 
 ## [!DNL Mailchimp Members] をExperience Platformに接続
 
-* [API を使用してデータをExperience Platformに取り込む  [!DNL Mailchimp Members]  めのソース接続を作成します ](../../tutorials/api/create/marketing-automation/mailchimp-members.md)。
-* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL Mailchimp Members]  ス接続を作成します ](../../tutorials/ui/create/marketing-automation/mailchimp-members.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL Mailchimp Members]  めのソース接続を作成します &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-members.md)。
+* [&#x200B; ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL Mailchimp Members]  ス接続を作成します &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-members.md)。
