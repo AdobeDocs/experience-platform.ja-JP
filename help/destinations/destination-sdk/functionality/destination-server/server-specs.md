@@ -13,7 +13,7 @@ ht-degree: 88%
 
 宛先サーバー仕様は、Experience Platformからデータを受信する宛先プラットフォームのタイプと、Adobe Experience Platformと宛先の間の通信パラメーターを定義します。 以下に例を示します。
 
-* [ ストリーミング ](#streaming-example) 宛先サーバー仕様は、Experience Platformから HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
+* [&#x200B; ストリーミング &#x200B;](#streaming-example) 宛先サーバー仕様は、Experience Platformから HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
 * [Amazon S3](#s3-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す [!DNL S3] バケット名およびパスを定義します。
 * [SFTP](#sftp-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す SFTP サーバーのホスト名、ルートディレクトリ、通信ポートおよび暗号化タイプを定義します。
 
@@ -63,7 +63,7 @@ Destination SDK を通じて宛先サーバーを作成する場合、それら�
 
 **ユーザー入力を伴わない宛先への接続**
 
-ユーザーがExperience Platform UI で [ 宛先に接続する ](../../../ui/connect-destination.md) 場合、ユーザー入力なしで宛先接続プロセスを処理してください。
+ユーザーがExperience Platform UI で [&#x200B; 宛先に接続する &#x200B;](../../../ui/connect-destination.md) 場合、ユーザー入力なしで宛先接続プロセスを処理してください。
 
 これを行うには、宛先プラットフォーム接続パラメーターをサーバー仕様にハードコーディングします。宛先サーバー設定にハードコーディングされたパラメーター値を使用する場合、Adobe Experience Platform と宛先プラットフォームの間の接続は、ユーザーからの入力なしで処理されます。
 
