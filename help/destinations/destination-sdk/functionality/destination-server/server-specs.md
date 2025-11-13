@@ -2,10 +2,10 @@
 description: 「/authoring/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK の宛先サーバー仕様を設定する方法を説明します。
 title: Destination SDK で作成される宛先のサーバー仕様
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 89%
+source-wordcount: '2775'
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 89%
 
 宛先サーバー仕様は、Experience Platformからデータを受信する宛先プラットフォームのタイプと、Adobe Experience Platformと宛先の間の通信パラメーターを定義します。 以下に例を示します。
 
-* [&#x200B; ストリーミング &#x200B;](#streaming-example) 宛先サーバー仕様は、Experience Platformから HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
+* [ ストリーミング ](#streaming-example) 宛先サーバー仕様は、Experience Platformから HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
 * [Amazon S3](#s3-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す [!DNL S3] バケット名およびパスを定義します。
 * [SFTP](#sftp-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す SFTP サーバーのホスト名、ルートディレクトリ、通信ポートおよび暗号化タイプを定義します。
 
@@ -63,7 +63,7 @@ Destination SDK を通じて宛先サーバーを作成する場合、それら�
 
 **ユーザー入力を伴わない宛先への接続**
 
-ユーザーがExperience Platform UI で [&#x200B; 宛先に接続する &#x200B;](../../../ui/connect-destination.md) 場合、ユーザー入力なしで宛先接続プロセスを処理してください。
+ユーザーがExperience Platform UI で [ 宛先に接続する ](../../../ui/connect-destination.md) 場合、ユーザー入力なしで宛先接続プロセスを処理してください。
 
 これを行うには、宛先プラットフォーム接続パラメーターをサーバー仕様にハードコーディングします。宛先サーバー設定にハードコーディングされたパラメーター値を使用する場合、Adobe Experience Platform と宛先プラットフォームの間の接続は、ユーザーからの入力なしで処理されます。
 
@@ -78,7 +78,7 @@ Destination SDK を通じて宛先サーバーを作成する場合、それら�
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -307,7 +307,7 @@ Experience Platformと宛先の間の接続が、Experience Platform UI での�
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -318,6 +318,7 @@ Experience Platformと宛先の間の接続が、Experience Platform UI での�
 | `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Data Landing Zone] の宛先の場合、これを `FILE_BASED_DLZ` に設定します。 |
 | `fileBasedDlzDestination.path.templatingStrategy` | 文字列 | *必須*。`path.value` フィールドで使用された値のタイプに応じて、この値を設定します。<ul><li>Experience Platform UI でユーザーに独自の [!DNL Data Landing Zone] アカウントを入力させたい場合は、この値を `PEBBLE_V1` に設定します。この場合は、`path.value` フィールドをテンプレート化して、ユーザーによって入力された[顧客データフィールド](../destination-configuration/customer-data-fields.md)から値を読み取る必要があります。このユースケースについては、上記の例を参照してください。</li><li>統合にハードコーディングされたパス（`"path.value": "https://myaccount.blob.core.windows.net/"` など）を使用している場合は、この値を `NONE` に設定します。 |
 | `fileBasedDlzDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
+| `fileBasedDlzDestination.useCase` | 文字列 | *必須*。これを `"dlz_destination"` に設定します。 このプロパティは、宛先を [!DNL Data Landing Zone] の宛先として識別します。 このプロパティは、[!DNL Data Landing Zone] の宛先を作成する場合にのみ使用されます。 |
 
 {style="table-layout:auto"}
 
