@@ -26,7 +26,7 @@ ht-degree: 14%
 このドキュメントで使用される以下の主な用語を理解することが重要です。
 
 * **標準属性**：標準属性は、アドビで事前定義された任意の属性です。 これらはすべての顧客に対して同じ意味を持ち、Analytics ソースデータと Analytics スキーマフィールドグループで利用可能です。
-* **カスタム属性**：カスタム属性とは、Analytics のカスタム変数階層にある任意の属性のことです。 カスタム属性は、Adobe Analyticsの実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVar について詳しくは、以下の [&#x200B; コンバージョン変数に関する Analytics ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) を参照してください。
+* **カスタム属性**：カスタム属性とは、Analytics のカスタム変数階層にある任意の属性のことです。 カスタム属性は、Adobe Analyticsの実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVar について詳しくは、以下の [&#x200B; コンバージョン変数に関する Analytics ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja) を参照してください。
 * **カスタムフィールドグループ内の任意の属性**：顧客が作成したフィールドグループから派生する属性はすべてユーザー定義であり、標準属性でもカスタム属性でもないとみなされます。
 
 ## ソースカタログのナビゲート
