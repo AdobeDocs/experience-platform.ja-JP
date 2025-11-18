@@ -6,10 +6,10 @@ breadcrumb-title: データストリームガイド
 user-guide-description: Adobe Experience Platform でデータストリームを設定する方法を説明します。
 feature: Datastreams
 role: Developer
-source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
+source-git-commit: 5e2445e2f1ec71aeeb2b6abbd032dad607a7427b
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 83%
+source-wordcount: '42'
+ht-degree: 78%
 
 ---
 
@@ -22,6 +22,3 @@ ht-degree: 83%
 * [データストリームのボット検出の設定](bot-detection.md)
 * [データストリームの設定の上書き](overrides.md)
 * [データ収集のためのデータ準備](data-prep.md)
-* データエンリッチメント {#data-enrichment}
-   * [The Weather Channel 提供の気象データ](data-enrichment/weather.md)
-   * [気象データフィールドのマッピング](data-enrichment/weather-reference.md)
