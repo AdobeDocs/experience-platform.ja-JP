@@ -55,7 +55,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="ID グラフのリンクルールの概要" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="ID グラフのリンクルールの概要"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448273/?captions=jpn&format=jpeg&nocache=1747851655227" alt="ID グラフのリンクルールの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID グラフリンクルール – グラフシミュレーション" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID グラフリンクルール – グラフシミュレーション"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444044/?captions=jpn&format=jpeg&nocache=1747851655237" alt="ID グラフリンクルール – グラフシミュレーション"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +101,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID グラフリンクルール - ID 設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID グラフリンクルール - ID 設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458488/?captions=jpn&format=jpeg&nocache=1747851655218" alt="ID グラフリンクルール - ID 設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

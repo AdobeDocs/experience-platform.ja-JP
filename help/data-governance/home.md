@@ -132,8 +132,8 @@ Adobe Experience Platform Data Governance を使用して、お客様のデー�
 
 次のビデオは、データガバナンスフレームワークについて理解を深めるためのものです。
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34106?captions=jpn&quality=12&enable10seconds=on&speedcontrol=on)
 
 次のビデオでは、スキーマまたはExperience Platformのデータセット全体にデータ使用ラベルを適用する方法に関するガイダンスを示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422791/?captions=jpn&learn=on)

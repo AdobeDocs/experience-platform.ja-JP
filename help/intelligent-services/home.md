@@ -22,7 +22,7 @@ ht-degree: 96%
 
 次のビデオを視聴すると、インテリジェントサービスに関する理解を深めることができます。このビデオでは、ビジネスユースケースの例を使用して、大まかなワークフローと、Attribution AI および顧客 AI の機能の概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36582?captions=jpn&learn=on&quality=12)
 
 ## インテリジェントサービスのメリット
 

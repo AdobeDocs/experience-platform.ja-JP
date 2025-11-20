@@ -57,7 +57,7 @@ ht-degree: 31%
 
 次のビデオは、新しい役割の作成とその役割のユーザーの管理に関する理解を深めることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475974/?captions=jpn&learn=on)
 
 ## 役割の複製
 
