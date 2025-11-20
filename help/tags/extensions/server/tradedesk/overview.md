@@ -39,7 +39,7 @@ ht-degree: 3%
 
 次の画面で、[!UICONTROL Advertiser ID] を入力し、オプションで [!UICONTROL Merchant ID] を入力します。 ID をこれらの入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。 これらは、Real-Time Conversions API に対してイベント呼び出しを行う際に使用されるデフォルト値 [!DNL The Trade Desk] して機能します。 終了したら「**[!UICONTROL Save]**」を選択します。
 
-データ要素を作成し、タグプロパティの拡張機能で使用できるようにする方法については、[&#x200B; データ要素の作成 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
+データ要素を作成し、タグプロパティの拡張機能で使用できるようにする方法については、[&#x200B; データ要素の作成 &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
 
 ![[!DNL The Trade Desk] と [!UICONTROL Advertiser ID] のフィールドがハイライト表示された [!UICONTROL Merchant ID] 拡張機能の設定ページ &#x200B;](../../../images/extensions/server/tradedesk/configure-extension.png)
 
