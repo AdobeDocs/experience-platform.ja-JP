@@ -46,7 +46,7 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 >
 >![Admin Console設定タブ、プライバシーとセキュリティ、Authentication設定、および最大セッション寿命が強調表示されています。](../images/ui/credentials/max-session-life.png)
 >
->管理コンソールが提供する [詳細設定の詳細については](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) Adobe Systemsヘルプのドキュメントをご覧ください。
+>管理コンソールが提供する [詳細設定の詳細については](https://helpx.adobe.com/jp/enterprise/using/authentication-settings.html#advanced-settings) Adobe Systemsヘルプのドキュメントをご覧ください。
 
 ### クエリセッション内でCustomer Journey Analyticsデータに接続する {#connect-to-customer-journey-analytics}
 
@@ -68,7 +68,7 @@ Power BI または Tableau でCustomer Journey Analyticsデータにアクセス
 
 また、クエリエディターまたは Postgres CLI からCustomer Journey Analytics データに直接アクセスすることもできます。 これを行うには、クエリを記述するときに `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [&#x200B; クエリオーサリングガイド &#x200B;](./user-guide.md#query-authoring) を参照してください。
 
-SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
+SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
 
 ## 資格情報の期限切れなし {#non-expiring-credentials}
 
