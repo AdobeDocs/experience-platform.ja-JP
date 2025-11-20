@@ -25,11 +25,11 @@ ht-degree: 65%
 
 UI で最初に **[!UICONTROL Data Lifecycle]** ワークスペースにアクセスすると、既存の作業指示のリストが、基本的な情報と共に表示されます。
 
-![Experience Platform UI の [!UICONTROL Data Lifecycle] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
+![Experience Platform UI の [!UICONTROL Data Lifecycle] ワークスペースを示す画像 &#x200B;](../images/ui/browse/work-order-list.png)
 
 リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。「**[!UICONTROL Consumer]**」を選択してレコード削除タスクのリストを表示し、「**[!UICONTROL Dataset]**」を選択して、スケジュールされたデータセット有効期限のリストを表示します。
 
-![ 「[!UICONTROL Dataset]」タブを示す画像 ](../images/ui/browse/dataset-tab.png)
+![&#x200B; 「[!UICONTROL Dataset]」タブを示す画像 &#x200B;](../images/ui/browse/dataset-tab.png)
 
 ファネルアイコン（![ファネルアイコンの画像](/help/images/icons/filter.png)）を選択すると、表示された作業指示のフィルターのリストが表示されます。
 
@@ -87,7 +87,7 @@ UI で最初に **[!UICONTROL Data Lifecycle]** ワークスペースにアク�
 
 レコード削除リクエストの詳細には、現在のステータスとリクエストが行われてからの経過時間が含まれます。 各リクエストには、削除に関連する各ダウンストリームサービスの個々のステータスの詳細を提供する **[!UICONTROL Status by service]** セクションも含まれています。 右側のパネルでは、コントロールを使用して、作業指示の名前と説明を更新できます。
 
-![ レコード削除作業指示の詳細ページを示す画像 ](../images/ui/browse/record-delete-details.png)
+![&#x200B; レコード削除作業指示の詳細ページを示す画像 &#x200B;](../images/ui/browse/record-delete-details.png)
 
 ### データセット有効期限の詳細 {#dataset-expiration}
 

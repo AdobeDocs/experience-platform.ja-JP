@@ -35,7 +35,7 @@ ht-degree: 10%
 >
 >[!UICONTROL User Group] は必須フィールドではありません。 各レポートで選択できるユーザーグループは 1 つだけです。
 
-![ 「ユーザーグループ」ドロップダウンがハイライト表示されている様子 ](../../images/permission-manager/user-group-select.png)
+![&#x200B; 「ユーザーグループ」ドロップダウンがハイライト表示されている様子 &#x200B;](../../images/permission-manager/user-group-select.png)
 
 レポートをよりきめ細かく制御するには、特定のサンドボックス内のアクションを使用してリソースを指定します。 ドロップダウンを使用して **[!UICONTROL Resource]**、**[!UICONTROL Actions]**、**[!UICONTROL Sandboxes]** を選択し、「**[!UICONTROL Show Results]**」を選択します。
 
@@ -57,7 +57,7 @@ ht-degree: 10%
 >
 >[!UICONTROL Labels] は必須フィールドではありません。 複数のラベルを選択できます。選択すると、このドロップダウンの下にラベルが表示されます。 ラベルを追加したら、アクションの横にある「**」を選択** て削除できます。
 
-![ 属性ドロップダウンで役割がハイライト表示されます。](../../images/permission-manager/roles-select.png)
+![&#x200B; 属性ドロップダウンで役割がハイライト表示されます。](../../images/permission-manager/roles-select.png)
 
 次へ、ドロップダウンを使用するために検索する **[!UICONTROL Labels]** を選択します。
 
@@ -84,8 +84,8 @@ ht-degree: 10%
 | 作成日時 | 役割が作成された日時とタイムスタンプ。 |
 | 作成者 | 役割作成者の詳細。 |
 
-![ 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 ](../../images/permission-manager/roles-report.png)
+![&#x200B; 選択した属性に基づいて生成されたレポートがハイライト表示されている様子 &#x200B;](../../images/permission-manager/roles-report.png)
 
 ## 次の手順
 
-これで、ユーザーと役割に関するレポートの生成方法を学習しました。 属性ベースのアクセス制御の詳細については、[ 属性ベースのアクセス制御の概要 ](../overview.md) を参照してください。
+これで、ユーザーと役割に関するレポートの生成方法を学習しました。 属性ベースのアクセス制御の詳細については、[&#x200B; 属性ベースのアクセス制御の概要 &#x200B;](../overview.md) を参照してください。

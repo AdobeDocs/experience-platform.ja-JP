@@ -31,8 +31,8 @@ ht-degree: 9%
 
 データ変換に計算フィールドを使用するには：
 
-1. 目的のクラウドストレージの宛先に [ 接続 ](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]** [ オプションをオフ ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle) に切り替えます。
-2. クラウドストレージ宛先の [ アクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) を実行し、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順に進みます。
+1. 目的のクラウドストレージの宛先に [&#x200B; 接続 &#x200B;](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]** [&#x200B; オプションをオフ &#x200B;](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle) に切り替えます。
+2. クラウドストレージ宛先の [&#x200B; アクティベーション手順 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を実行し、[&#x200B; マッピング &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順に進みます。
 
 ## 計算フィールドの操作方法 {#how-to-export-calculated-fields}
 
@@ -56,19 +56,19 @@ ht-degree: 9%
 >
 >**[!UICONTROL Add calculated field]** コントロールは、**[!UICONTROL Export arrays, maps, and objects]** コントロールがオフに切り替えられた宛先接続では無効になっています。 [詳細情報](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)
 
-![ バッチアクティベーションワークフローのマッピング手順でハイライト表示された計算フィールドを追加。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![&#x200B; バッチアクティベーションワークフローのマッピング手順でハイライト表示された計算フィールドを追加。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 これにより、Experience Platformから属性を書き出す関数とフィールドを選択できるモーダルウィンドウが開きます。
 
-![ 関数がまだ選択されていない計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![&#x200B; 関数がまだ選択されていない計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-例えば、以下に示すように、「`array_to_string`」フィールドで `organizations` 関数を使用して、組織の配列を CSV ファイルの文字列として書き出します。 [ この例およびその他の例の詳細は以下 ](#array-to-string-function-export-arrays) をご覧ください。
+例えば、以下に示すように、「`array_to_string`」フィールドで `organizations` 関数を使用して、組織の配列を CSV ファイルの文字列として書き出します。 [&#x200B; この例およびその他の例の詳細は以下 &#x200B;](#array-to-string-function-export-arrays) をご覧ください。
 
-![ 文字列配列関数が選択された計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![&#x200B; 文字列配列関数が選択された計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 「**[!UICONTROL Save]**」を選択して計算フィールドを保持し、マッピングステップに戻ります。
 
-![ 文字列配列関数が選択され、「保存」コントロールがハイライト表示された計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![&#x200B; 文字列配列関数が選択され、「保存」コントロールがハイライト表示された計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 戻るワークフローのマッピングステップで、エクスポートされたファイルのこのフィールドに必要な列ヘッダーの値を **[!UICONTROL Target field]** に入力します。
 
@@ -78,11 +78,11 @@ ht-degree: 9%
 
 準備ができたら、[ **[!UICONTROL Next]** ] を選択してアクティベーションワークフローの次の手順に進みます。
 
-![ ターゲットフィールドがハイライト表示され、ターゲット値が入力されたマッピングステップ ](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![&#x200B; ターゲットフィールドがハイライト表示され、ターゲット値が入力されたマッピングステップ &#x200B;](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## データ変換を実行するためにサポートされている関数のサンプル {#supported-functions}
 
-ファイルベースの宛先に対してデータをアクティブ化する場合、ドキュメントに記載されているすべての [ データ準備関数 ](/help/data-prep/functions.md) がサポートされます。
+ファイルベースの宛先に対してデータをアクティブ化する場合、ドキュメントに記載されているすべての [&#x200B; データ準備関数 &#x200B;](/help/data-prep/functions.md) がサポートされます。
 
 以下の関数は、配列の書き出しの処理やフィールドへのハッシュ化の適用に固有の関数で、例とともに説明しています。
 
@@ -101,7 +101,7 @@ ht-degree: 9%
 
 ## データ変換の実行に使用する関数の例 {#examples}
 
-上記の関数の一部については、以下の節の例と詳細情報を参照してください。 リストに表示されたその他の関数については、[ データ準備セクションの汎用関数のドキュメント ](/help/data-prep/functions.md) を参照してください。
+上記の関数の一部については、以下の節の例と詳細情報を参照してください。 リストに表示されたその他の関数については、[&#x200B; データ準備セクションの汎用関数のドキュメント &#x200B;](/help/data-prep/functions.md) を参照してください。
 
 ### 配列を書き出す `array_to_string` 関数 {#array-to-string-function-export-arrays}
 
@@ -129,7 +129,7 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 上記の `organizations` 配列オブジェクトを続けて、`array_to_string('_', filterArray(organizations, org -> org.founded > 2021))` のような関数を記述すると、2021 年以降の `founded` の値を持つ組織が返されます。
 
-![filterArray 関数の例 ](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+![filterArray 関数の例 &#x200B;](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
 この場合、出力ファイルは次のようになります。 条件を満たす配列の 2 つの要素が、`_` 文字を使用して単一の文字列に連結される方法に注意してください。
 
@@ -198,7 +198,7 @@ John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 * `person.name.lastName` 文字列
 * `personalEmail.address` 文字列
 
-![coalesce 関数を含むマッピングの例 ](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![coalesce 関数を含むマッピングの例 &#x200B;](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 この場合、出力ファイルは次のようになります。 配列の最初の null 以外の `true` 値がファイルに書き出されます。
 
@@ -233,7 +233,7 @@ johndoe@acme.org,"5"
 
 配列のインデックスにアクセスして、配列から 1 つの項目を書き出すことができます。 例えば、`size_of` 関数の前述の例と同様に、顧客が特定の製品を初めて購入したときにのみアクセスして書き出しを行う場合は、`purchaseTime[0]` を使用してタイムスタンプの最初の要素を書き出 `purchaseTime[1]`、タイムスタンプの 2 番目の要素を書き出 `purchaseTime[2]`、タイムスタンプの 3 番目の要素を書き出すことができます。
 
-![ 配列の要素にアクセスする方法を示すマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![&#x200B; 配列の要素にアクセスする方法を示すマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
 この場合、出力ファイルは次のようになります。顧客が初めて購入したときに書き出されます。
 

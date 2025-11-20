@@ -31,9 +31,9 @@ Adobe Experience Platformには、一般的なエクスペリエンス管理の�
 
 ## 前提条件 {#prerequisites}
 
-このガイドには、XDM システムについて十分に理解している必要があります。 Experience Platform エコシステムでの XDM の役割の概要については [XDM の概要 ](../../home.md) を、データタイプが XDM スキーマにどのように寄与するかについては [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
+このガイドには、XDM システムについて十分に理解している必要があります。 Experience Platform エコシステムでの XDM の役割の概要については [XDM の概要 &#x200B;](../../home.md) を、データタイプが XDM スキーマにどのように寄与するかについては [&#x200B; スキーマ構成の基本 &#x200B;](../../schema/composition.md) を参照してください。
 
-このガイドには必要ありませんが、[UI でのスキーマの作成 ](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、[!DNL Schema Editor] の様々な機能を理解することをお勧めします。
+このガイドには必要ありませんが、[UI でのスキーマの作成 &#x200B;](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、[!DNL Schema Editor] の様々な機能を理解することをお勧めします。
 
 ## データタイプの [!DNL Schema Editor] を開く {#data-type}
 
@@ -51,7 +51,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 「**[!UICONTROL Data types]**」タブから「**[!UICONTROL Create data type]**」を選択します。
 
-![[!UICONTROL Schemas] がハイライト表示された「[!UICONTROL Data types] Workspace [!UICONTROL Create data type]」タブ ](../../images/ui/resources/data-types/create.png)
+![[!UICONTROL Schemas] がハイライト表示された「[!UICONTROL Data types] Workspace [!UICONTROL Create data type]」タブ &#x200B;](../../images/ui/resources/data-types/create.png)
 
 [!DNL Schema Editor] が表示され、キャンバスに新しいデータタイプの現在の構造が表示されます。 エディターの右側で、データタイプの表示名と説明（オプション）を入力できます。 スキーマに追加する際にデータタイプを識別する方法と同様に、データタイプに一意で簡潔な名前を指定します。
 
@@ -59,7 +59,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-ここから、[ 次のセクション ](#add-fields) に進んで、新しいデータタイプへのフィールドの追加を開始できます。
+ここから、[&#x200B; 次のセクション &#x200B;](#add-fields) に進んで、新しいデータタイプへのフィールドの追加を開始できます。
 
 ### フィルターデータタイプ {#filter}
 
@@ -71,7 +71,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 >[!NOTE]
 >
->リアルタイム顧客プロファイルで使用できるように設定されているスキーマで既存のデータタイプを使用すると、以降はそのデータタイプに非破壊的な変更のみを加えることができます。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution) を参照してください。
+>リアルタイム顧客プロファイルで使用できるように設定されているスキーマで既存のデータタイプを使用すると、以降はそのデータタイプに非破壊的な変更のみを加えることができます。 詳しくは、[&#x200B; スキーマ進化のルール &#x200B;](../../schema/composition.md#evolution) を参照してください。
 
 組織で定義されたカスタム データ タイプのみを編集できます。 [ **[!UICONTROL Custom]** ] を選択すると、組織が所有するカスタム データ タイプのみが表示されます。
 
@@ -79,7 +79,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 右側のパネルでデータ型の名前を選択して、 [!DNL Schema Editor]でその構造を開きます。
 
-![ データタイプ [!UICONTROL Data types]、データタイプ [!UICONTROL Schemas] がハイライト表示された [!UICONTROL Custom] ワークスペースの「[!UICONTROL Name]」タブ ](../../images/ui/resources/data-types/edit.png)
+![&#x200B; データタイプ [!UICONTROL Data types]、データタイプ [!UICONTROL Schemas] がハイライト表示された [!UICONTROL Custom] ワークスペースの「[!UICONTROL Name]」タブ &#x200B;](../../images/ui/resources/data-types/edit.png)
 
 ## データタイプへのフィールドの追加 {#add-fields}
 
@@ -87,7 +87,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
-右側のパネルのコントロールを使用して、新しいフィールドの詳細を設定します。 フィールドを設定してデータタイプに追加する方法に関する具体的な手順については、[UI でのフィールドの定義 ](../fields/overview.md#define) に関するガイドを参照してください。
+右側のパネルのコントロールを使用して、新しいフィールドの詳細を設定します。 フィールドを設定してデータタイプに追加する方法に関する具体的な手順については、[UI でのフィールドの定義 &#x200B;](../fields/overview.md#define) に関するガイドを参照してください。
 
 レストラン データタイプには、レストランの名前を表す文字列フィールドが必要です。 そのため、[!UICONTROL Field name] は「name」、[!UICONTROL Type] は「[!UICONTROL String]」に設定されます。 **[!UICONTROL Apply]**&#x200B;を選択して、フィールドに変更を適用します。
 
@@ -109,7 +109,7 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 データタイプを作成したら、スキーマでそのデータタイプの使用を開始できます。 XDM スキーマはクラスと 0 個以上のフィールドグループで構成されるので、データタイプによって提供されるフィールドをスキーマに直接追加することはできません。 代わりに、クラスまたはフィールドグループに含める必要があります。
 
-開始 [クラスへのフィールドの追加](./classes.md#add-fields) または [フィールドへのフィールドの追加 グループ](./field-groups.md#add-fields) に関連する手順に従います。 または、[ スキーマに直接フィールドを追加 ](./schemas.md#add-individual-fields) を開始し、そこから親クラスまたはフィールドグループを選択することもできます。 新しいフィールドの **[!UICONTROL Type]** を選択する場合は、ドロップダウンメニューからデータタイプの名前を選択します。
+開始 [クラスへのフィールドの追加](./classes.md#add-fields) または [フィールドへのフィールドの追加 グループ](./field-groups.md#add-fields) に関連する手順に従います。 または、[&#x200B; スキーマに直接フィールドを追加 &#x200B;](./schemas.md#add-individual-fields) を開始し、そこから親クラスまたはフィールドグループを選択することもできます。 新しいフィールドの **[!UICONTROL Type]** を選択する場合は、ドロップダウンメニューからデータタイプの名前を選択します。
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#convert}
 
@@ -125,6 +125,6 @@ Experience Platform UI で、左側のナビゲーションで **[!UICONTROL Sch
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Experience Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL Schemas] workspace の機能について詳しくは、[[!UICONTROL Schemas] workspace の概要を参照してください ](../overview.md)
+このガイドでは、Experience Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL Schemas] workspace の機能について詳しくは、[[!UICONTROL Schemas] workspace の概要を参照してください &#x200B;](../overview.md)
 
-[!DNL Schema Registry] API を使用してデータタイプを管理する方法については、[ データタイプエンドポイントガイド ](../../api/data-types.md) を参照してください。
+[!DNL Schema Registry] API を使用してデータタイプを管理する方法については、[&#x200B; データタイプエンドポイントガイド &#x200B;](../../api/data-types.md) を参照してください。

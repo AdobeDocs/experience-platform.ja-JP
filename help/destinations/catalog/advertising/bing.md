@@ -17,7 +17,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->2025 年 8 月から宛先サービスに内部アップグレードした後、データフローの **アクティブ化されたプロファイルの数の減少**[!DNL Microsoft Bing]エクスペリエンス可能性があります。
+>2025 年 8 月から宛先サービスに内部アップグレードした後、データフローの **アクティブ化されたプロファイルの数の減少**&#x200B;[!DNL Microsoft Bing]エクスペリエンス可能性があります。
 >
 > このドロップは、この宛先プラットフォームへのすべてのアクティベーションに **ECID マッピング要件** が導入されたために発生します。 詳しくは、このページの「 [必須マッピング](#mandatory-mappings) の節を参照してください。
 >
@@ -58,7 +58,7 @@ ht-degree: 32%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Bing] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL Microsoft Bing] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
+>[!DNL Microsoft Bing] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL Microsoft Bing] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
 
 宛先を設定する際には、次の情報を指定する必要があります。
 
@@ -121,9 +121,9 @@ ht-degree: 32%
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling) の手順では、「[!UICONTROL Mapping ID]」フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスメタデータが [!DNL Bing] に正しく渡されます。
+[&#x200B; オーディエンススケジュール &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling) の手順では、「[!UICONTROL Mapping ID]」フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスメタデータが [!DNL Bing] に正しく渡されます。
 
-![ オーディエンス名を Bing マッピング ID にマッピングする方法の例を示すオーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
+![&#x200B; オーディエンス名を Bing マッピング ID にマッピングする方法の例を示すオーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ### 必須のマッピング {#mandatory-mappings}
 

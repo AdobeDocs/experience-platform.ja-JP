@@ -26,7 +26,7 @@ Adobe Experience Platform Data Governance を使用して、お客様のデー�
 
 >[!NOTE]
 >
->Experience Platform では、データガバナンスは、アクションを実行するユーザーに関係なく、データの使用またはアクティブ化の方法にのみ関係します。組織内の特定のExperience Platform ユーザーに対する特定のデータフィールドへのアクセスを制御する方法については、代わりに [ 属性ベースのアクセス制御 ](../access-control/abac/overview.md) に関するドキュメントを参照してください。
+>Experience Platform では、データガバナンスは、アクションを実行するユーザーに関係なく、データの使用またはアクティブ化の方法にのみ関係します。組織内の特定のExperience Platform ユーザーに対する特定のデータフィールドへのアクセスを制御する方法については、代わりに [&#x200B; 属性ベースのアクセス制御 &#x200B;](../access-control/abac/overview.md) に関するドキュメントを参照してください。
 
 ## データガバナンスの役割 {#data-governance-roles}
 
@@ -67,7 +67,7 @@ Adobe Experience Platform Data Governance を使用して、お客様のデー�
 
  データガバナンスフレームワークには、次の 3 つの方法でデータを分類するために使用できる、事前定義されたデータ使用ラベルが含まれています。
 
-![3 つのデータ使用ラベルカテゴリ ](./images/overview/label-categories.png)
+![3 つのデータ使用ラベルカテゴリ &#x200B;](./images/overview/label-categories.png)
 
 * **契約データの「C」ラベル：**&#x200B;契約上の義務を負うデータや、顧客データガバナンスポリシーに関連するデータにラベルを付け、分類します。
 * **ID の「I」データラベル：**&#x200B;個人を特定できるデータまたは個人に連絡できるデータの分類に使用されます。
@@ -75,11 +75,11 @@ Adobe Experience Platform Data Governance を使用して、お客様のデー�
 
 >[!NOTE]
 >
->使用可能なラベルの完全なリストと各ラベルタイプの定義については、[ サポートされるデータ使用ラベル ](labels/reference.md) に関するガイドを参照してください。
+>使用可能なラベルの完全なリストと各ラベルタイプの定義については、[&#x200B; サポートされるデータ使用ラベル &#x200B;](labels/reference.md) に関するガイドを参照してください。
 
 ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスとして、Experience Platformにデータを取り込むときに、または [!DNL Experience Platform] でデータを使用できるようになったらすぐにデータにラベルを付けることを推奨します。
 
-データ使用ラベルを使用してデータガバナンスのコンプライアンスを実施する方法について詳しくは、[ データ使用ラベル ](./labels/overview.md) の概要を参照してください。
+データ使用ラベルを使用してデータガバナンスのコンプライアンスを実施する方法について詳しくは、[&#x200B; データ使用ラベル &#x200B;](./labels/overview.md) の概要を参照してください。
 
 ## データ使用ポリシー {#data-usage-policies}
 
@@ -91,7 +91,7 @@ Adobe Experience Platform Data Governance を使用して、お客様のデー�
 次の 2 種類のポリシーを使用できます。
 
 * **[!UICONTROL Data governance policy]**：実行中のマーケティングアクションと、該当するデータに含まれるデータ使用ラベルに基づいて、データのアクティベーションを制限します。
-* **[!UICONTROL Consent policy]**：顧客の同意または好みに基づいて、[ 宛先 ](../destinations/home.md) に対してアクティブ化可能なプロファイルをフィルタリングします。
+* **[!UICONTROL Consent policy]**：顧客の同意または好みに基づいて、[&#x200B; 宛先 &#x200B;](../destinations/home.md) に対してアクティブ化可能なプロファイルをフィルタリングします。
 
 データ使用ラベルが適用されると、データスチュワードは Policy Service API またはExperience Platform ユーザーインターフェイスを使用してポリシーを作成することができます。 データ使用ポリシーとマーケティングアクションについて詳しくは、[ポリシーの概要](./policies/overview.md)を参照してください。
 

@@ -55,9 +55,9 @@ ht-degree: 46%
 
 ![](../images/policies/create-policy-button.png)
 
-[!UICONTROL Choose type of policy] ダイアログが表示されます。 [ 同意ポリシー ](#consent-policy) または [ データガバナンスポリシー ](#create-governance-policy) のいずれかを選択します。
+[!UICONTROL Choose type of policy] ダイアログが表示されます。 [&#x200B; 同意ポリシー &#x200B;](#consent-policy) または [&#x200B; データガバナンスポリシー &#x200B;](#create-governance-policy) のいずれかを選択します。
 
-![ ポリシーダイアログのタイプを選択します。](../images/policies/choose-policy-type.png)
+![&#x200B; ポリシーダイアログのタイプを選択します。](../images/policies/choose-policy-type.png)
 
 ### データガバナンスポリシーと同意ポリシーの併用 {#combine-policies}
 
@@ -121,7 +121,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->同意ポリシーは、様々なフィールドタイプや演算子を使用した高度なルールの作成をサポートします。 サポートされるフィールドタイプ、演算子、ルール作成例について詳しくは、[ 同意ポリシールールのリファレンス ](./consent-policy-rule-building-reference.md) を参照してください。
+>同意ポリシーは、様々なフィールドタイプや演算子を使用した高度なルールの作成をサポートします。 サポートされるフィールドタイプ、演算子、ルール作成例について詳しくは、[&#x200B; 同意ポリシールールのリファレンス &#x200B;](./consent-policy-rule-building-reference.md) を参照してください。
 
 #### 条件の設定 {#consent-conditions}
 
@@ -157,13 +157,13 @@ ht-degree: 46%
 
 **[!UICONTROL View all]**&#x200B;を選択すると、**[!UICONTROL Select consent attribute]**&#x200B;ダイアログが表示されます。このポリシーで確認する同意属性を選択します。 または、このダイアログで「**[!UICONTROL Advanced Schema search]**」を選択して、ポリシーの一部として評価する、ネストされたプリミティブフィールドを選択することもできます。 「**[!UICONTROL Done]**」を選択して、設定を確定します。
 
-![ 属性と「完了」がハイライト表示された同意属性を選択ダイアログ ](../images/policies/select-consent-attribute.png)
+![&#x200B; 属性と「完了」がハイライト表示された同意属性を選択ダイアログ &#x200B;](../images/policies/select-consent-attribute.png)
 
 ### 高度なスキーマ検索 {#advanced-schema-search}
 
 **[!UICONTROL Select consent attribute]** ダイアログで、「**[!UICONTROL Advanced Schema search]**」を選択して **[!UICONTROL Select union schema field]** ダイアログを開きます。 このビューから、文字列、数値、ブール値、日付などのプリミティブフィールドタイプのルートレベルまたはネストされた属性と、オブジェクト、マップ、配列などのコンテナタイプを選択します。
 
-![ クリックパスを使用して、詳細スキーマ検索内を移動 ](../images/policies/consent-advanced-schema-search.gif)
+![&#x200B; クリックパスを使用して、詳細スキーマ検索内を移動 &#x200B;](../images/policies/consent-advanced-schema-search.gif)
 
 #### ポリシー条件の固定値フィールド {#fixed-value-fields}
 
@@ -177,13 +177,13 @@ ht-degree: 46%
 
 条件を定義するには、ポリシーで評価する値のチェックボックスをオンにします。
 
-![ スキーマ図フィールドと使用可能な固定値チェックボックスがハイライト表示された「和集合スキーマフィールドを選択」ダイアログ。](../images/policies/select-schema-field.png)
+![&#x200B; スキーマ図フィールドと使用可能な固定値チェックボックスがハイライト表示された「和集合スキーマフィールドを選択」ダイアログ。](../images/policies/select-schema-field.png)
 
 #### ポリシー条件のデータタイプフィールドのマッピング {#map-data-type-fields}
 
 Map データタイプに含まれるプリミティブフィールドを選択すると、追加の設定オプションが **[!UICONTROL Selected attributes]** パネルに表示されます。 これらのオプションを使用すると、各キーに個別のポリシーを必要とせずに、複数のキーに対して同意チェックを設定できます。 この設定方法を使用すると、作成する必要のあるポリシーの数を減らすことで、ポリシー管理を簡素化できます。
 
-![ 属性パネルでハイライト表示された同意ポリシーマップセクション。](../images/policies/consent-policies-map.png)
+![&#x200B; 属性パネルでハイライト表示された同意ポリシーマップセクション。](../images/policies/consent-policies-map.png)
 
 ##### マップデータタイプ属性の設定 {#configure-map-attributes}
 
@@ -212,13 +212,13 @@ Map データタイプに含まれるプリミティブフィールドを選択�
 
 同意属性を追加するには、**[!UICONTROL Add result]** を選択します。 これにより、これらの属性に基づいてプロファイルを含めるための別のルールが作成されます。
 
-![ 「結果を追加」がハイライト表示された同意ポリシービルダー UI](../images/policies/add-result.png)
+![&#x200B; 「結果を追加」がハイライト表示された同意ポリシービルダー UI](../images/policies/add-result.png)
 
 >[!NOTE]
 >
->既存の属性を編集するには、属性名を選択してから、鉛筆アイコン（![ 鉛筆アイコン。](/help/images/icons/edit.png)）に設定します。 変更を加えるための **[!UICONTROL Select union schema field]** ダイアログが開きます。
+>既存の属性を編集するには、属性名を選択してから、鉛筆アイコン（![&#x200B; 鉛筆アイコン。](/help/images/icons/edit.png)）に設定します。 変更を加えるための **[!UICONTROL Select union schema field]** ダイアログが開きます。
 >
->![ 同意属性と編集アイコンがハイライト表示された同意ポリシービルダー UI。](../images/policies/edit-then-attributes.png)
+>![&#x200B; 同意属性と編集アイコンがハイライト表示された同意ポリシービルダー UI。](../images/policies/edit-then-attributes.png)
 
 ポリシーが要件を満たすまで、条件と同意属性の追加または調整を続行します。 完了したら、名前と（オプションで）説明を入力し、「**[!UICONTROL Save]**」を選択してポリシーを作成します。
 

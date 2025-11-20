@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->[HTTP API ソース ](../../sources/connectors/streaming/http.md) などのストリーミングソースは、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
+>[HTTP API ソース &#x200B;](../../sources/connectors/streaming/http.md) などのストリーミングソースは、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
 
 Adobe Experience Platform ユーザー インターフェイスの監視ダッシュボードを使用して、Data Lake のデータ取得およびデータ保持プロセスに関するメトリックを取得できます。 インターフェイスのグラフを使用して、時間の経過に伴う取得と保持の傾向監視、すべてのソースデータフローのパフォーマンスを要約します。
 
@@ -25,10 +25,10 @@ Adobe Experience Platform ユーザー インターフェイスの監視ダッ�
 
 * [データフロー](../home.md): データフローは、Experience Platform間でデータを移動するデータ ジョブの表現です。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    * [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
-* [ ソース ](../../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; ソース &#x200B;](../../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## データレイク取り込み用の監視ダッシュボードの使用
 
@@ -48,7 +48,7 @@ Adobe Experience Platform ユーザー インターフェイスの監視ダッ�
 
 ![ソースが選択された監視ダッシュボードカード。](../assets/ui/monitor-sources/data-lake.png)
 
-[!UICONTROL Ingestion rate] グラフには、設定した時間枠に基づくデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込みレートが表示されます。 時間枠の設定手順については、[ 時間枠の監視の設定 ](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
+[!UICONTROL Ingestion rate] グラフには、設定した時間枠に基づくデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込みレートが表示されます。 時間枠の設定手順については、[&#x200B; 時間枠の監視の設定 &#x200B;](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
 
 このグラフは、デフォルトで表示できるようになっています。 グラフを非表示にするには、「**[!UICONTROL Metrics and graphs]**」を選択して切り替えを無効にし、グラフを非表示にします。
 
@@ -82,9 +82,9 @@ Adobe Experience Platform ユーザー インターフェイスの監視ダッ�
 
 {style="table-layout:auto"}
 
-列表示をカスタマイズするには、列設定アイコン ![ 列アイコン ](/help/images/icons/column-settings.png) を選択します。
+列表示をカスタマイズするには、列設定アイコン ![&#x200B; 列アイコン &#x200B;](/help/images/icons/column-settings.png) を選択します。
 
-![ 列設定アイコンが選択された監視ダッシュボード。](../assets/ui/monitor-sources/edit-columns.png)
+![&#x200B; 列設定アイコンが選択された監視ダッシュボード。](../assets/ui/monitor-sources/edit-columns.png)
 
 次に、*[!UICONTROL Customize table]* ウィンドウを使用して、ダッシュボードに表示する列を選択します。 終了したら「**[!UICONTROL Apply]**」を選択します。
 
@@ -100,21 +100,21 @@ Adobe Experience Platform ユーザー インターフェイスの監視ダッ�
 
 メトリック テーブルが更新され、選択したソースに対応するアクティブなデータフローのテーブルが表示されます。 この手順では、対応するデータセットやデータタイプなどのデータフローに関する追加情報と、最後にアクティブだった日時を示すタイムスタンプを表示できます。
 
-データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
-![ 監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
+![&#x200B; 監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
 
 次に、選択したデータフローのすべてのデータフロー実行イテレーションをリストするインターフェイスに移動します。
 
 データフロー実行は、データフロー実行のインスタンスを表します。 例えば、データフローが 1 時間ごとに午前 9:00、午前 10:00、午前 11:00 に実行されるようにスケジュールされている場合、フロー実行の 3 つのインスタンスが存在します。 フロー実行は、特定の組織に固有です。
 
-特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
-![ データフロー実行指標ページ ](../assets/ui/monitor-sources/dataflow-page.png)
+![&#x200B; データフロー実行指標ページ &#x200B;](../assets/ui/monitor-sources/dataflow-page.png)
 
 データフロー実行の詳細ページを使用して、選択した実行イテレーションの指標と情報を表示します。
 
-![ データフロー実行の詳細ページ ](../assets/ui/monitor-sources/dataflow-run-details.png)
+![&#x200B; データフロー実行の詳細ページ &#x200B;](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | データフロー実行の詳細 | 説明 |
 | --- | --- |
@@ -147,5 +147,5 @@ Adobe Experience Platform ユーザー インターフェイスの監視ダッ�
 
 このチュートリアルに従うと、**[!UICONTROL Monitoring]** ダッシュボードを使用してデータレイクの取り込み率を監視する方法を学ぶことができます。 また、取り込み中にデータフローエラーを引き起こすエラーを特定する方法についても説明しました。 詳しくは、次のドキュメントを参照してください。
 
-* [ID データの監視 ](./monitor-identities.md)。
+* [ID データの監視 &#x200B;](./monitor-identities.md)。
 * [プロファイルデータの監視](./monitor-profiles.md)。

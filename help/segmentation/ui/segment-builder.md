@@ -216,7 +216,7 @@ ht-degree: 55%
 
 コードビューには、API 呼び出しで使用するセグメント定義の値をコピーできるボタンがあります。セグメント定義の最新バージョンを取得するには、最新の変更をセグメント定義に保存してあることを確認してください。
 
-![ 「コードをコピー」ボタンがハイライト表示されている様子 ](../images/ui/segment-builder/copy-code.png)
+![&#x200B; 「コードをコピー」ボタンがハイライト表示されている様子 &#x200B;](../images/ui/segment-builder/copy-code.png)
 
 ### 集計関数
 
@@ -274,21 +274,21 @@ ht-degree: 55%
 
 | 時間制限 | 説明 | 年を無視できます | 例 |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | 比較対象の属性またはイベントは、今日発生する必要があります&#x200B;****。 | ○ | ![使用されている「今日」の時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | 比較対象の属性またはイベントは、今日発生する必要があります&#x200B;**&#x200B;**。 | ○ | ![使用されている「今日」の時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨日 | 比較される属性またはイベントは昨日発生した **必須** です。 | ○ | ![使用されている「昨日」の時間制限の例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| 今月 | 比較対象の属性またはイベントは **発生する必要があります** 。 | ○ | ![ 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| 今月 | 比較対象の属性またはイベントは **発生する必要があります** 。 | ○ | ![&#x200B; 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 比較対象の属性またはイベントは、今年 **発生する必要があります**。 | × | ![「今年」の時間制限が使用されている例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| カスタム日付 | 比較する属性またはイベントは、指定された日付に出現する必要があります&#x200B;****。 | ○ | ![使用される「特例文字日付」時間制約の例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| 過去 | 比較対象の属性またはイベントは、選択した最後の期間内に出現する必要があります&#x200B;****。この期間は、評価時間まで **包括的** です。 | × | ![「In last」時間制限の使用例。](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![ 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![ 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| （+/ –）内 | 比較対象の属性またはイベントは、選択した日付から数日、数週間、か月、または年以内に出現する必要があります&#x200B;****。この期間は、両方の日付の **を含む** です。 選択した日付は、今日、昨日、または選択した別のカスタム日付にすることができます。 | ○ | ![使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| 以前は | 比較対象の属性またはイベントは、選択した日付より前に出現する必要があります&#x200B;****。選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| カスタム日付 | 比較する属性またはイベントは、指定された日付に出現する必要があります&#x200B;**&#x200B;**。 | ○ | ![使用される「特例文字日付」時間制約の例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| 過去 | 比較対象の属性またはイベントは、選択した最後の期間内に出現する必要があります&#x200B;**&#x200B;**。この期間は、評価時間まで **包括的** です。 | × | ![「In last」時間制限の使用例。](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![&#x200B; 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![&#x200B; 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| （+/ –）内 | 比較対象の属性またはイベントは、選択した日付から数日、数週間、か月、または年以内に出現する必要があります&#x200B;**&#x200B;**。この期間は、両方の日付の **を含む** です。 選択した日付は、今日、昨日、または選択した別のカスタム日付にすることができます。 | ○ | ![使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| 以前は | 比較対象の属性またはイベントは、選択した日付より前に出現する必要があります&#x200B;**&#x200B;**。選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
 | 周期の範囲 | 比較する属性またはイベントは、2 つの相対日付の間で発生する必要があります。 日付は、秒、分、時間、日、週、月、または年で表すことができます。 | × | ![使用されている「周期の範囲」時間制約の例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
 | 次以内： | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択された期間には、分、時間、日、週、月、および年があります。 | × | ![使用される「In next」時間制約の例。](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| exists | 属性が存在している。 | × | ![ 使用されている「存在する」時間制約の例 ](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| が存在しない | 属性が存在しません。 | × | ![ 使用されている「存在しない」時間制約の例 ](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| exists | 属性が存在している。 | × | ![&#x200B; 使用されている「存在する」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| が存在しない | 属性が存在しません。 | × | ![&#x200B; 使用されている「存在しない」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
@@ -306,7 +306,7 @@ ht-degree: 55%
 
 カードレベルの制約を適用するには、時間制約を適用するカードを選択し、その後に省略記号アイコンを選択して、**[!UICONTROL Apply time rule]** をクリックします。 これにより、**[!UICONTROL Event Rules]** コンテナ内で時間制約を選択できます。
 
-![ カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
+![&#x200B; カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
 
 カードレベルで時間制約を適用すると、オーディエンスの **指定** イベントに時間制約が適用されます。
 
@@ -316,7 +316,7 @@ ht-degree: 55%
 
 ![[イベント間の時間制限] セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/between-event.png)
 
-イベント間に時間制約を適用すると、イベント間の時間&#x200B;****&#x200B;に時間制約が適用されます。
+イベント間に時間制約を適用すると、イベント間の時間&#x200B;**&#x200B;**&#x200B;に時間制約が適用されます。
 
 この操作に使用できる時間制約のリストは、時間制約の主なリストとは異なり、次のとおりです。
 
@@ -404,7 +404,7 @@ ht-degree: 55%
 
 認定プロファイルのタイムスタンプは、最新の **バッチ** セグメント評価ジョブを示し、ストリーミングまたはエッジセグメント化を使用して評価されたセグメント定義に対しては **表示されません** 。 セグメント定義を編集した場合、次のセグメント評価ジョブが実行されるまで、認定プロファイルの数は変わりません。
 
-**[!UICONTROL Estimated Profiles]****サンプルジョブ**&#x200B;に基づく、プロファイルの&#x200B;**おおよその範囲**&#x200B;を示します。つまり、より大きなプロファイルセットにサンプルデータが投影されるので、実際の適合プロファイルの数とは異なる推定数が生じる場合があります。推定プロファイルサンプルには、95% の信頼区間があります。
+**[!UICONTROL Estimated Profiles]**&#x200B;**サンプルジョブ**&#x200B;に基づく、プロファイルの&#x200B;**おおよその範囲**&#x200B;を示します。つまり、より大きなプロファイルセットにサンプルデータが投影されるので、実際の適合プロファイルの数とは異なる推定数が生じる場合があります。推定プロファイルサンプルには、95% の信頼区間があります。
 
 オーディエンスのルールを変更する場合は、「**[!UICONTROL Refresh estimate]**」ボタンを選択して、更新された推定プロファイル数を確認できます。 ただし、この数は以前のサンプルジョブに基づいています。 顧客データが 3% を超えて変化した場合、または最後のサンプルジョブが 3 日を超えた場合、サンプルジョブは更新されます。
 
@@ -450,4 +450,4 @@ ht-degree: 55%
 - スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 - ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド ](./overview.md) を参照してください。
+[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド &#x200B;](./overview.md) を参照してください。

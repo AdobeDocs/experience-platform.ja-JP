@@ -37,7 +37,7 @@ ht-degree: 3%
 >
 >* レイヤー化されたグラフとは、複数レベルのリンクを持つ ID グラフを指します。 3 つのレイヤーを持つグラフの例については、以下の画像を参照してください。
 
-![ グラフレイヤーの図 ](../images/namespace-priority/graph-layers.png " グラフレイヤーの図 "){zoomable="yes"}
+![&#x200B; グラフレイヤーの図 &#x200B;](../images/namespace-priority/graph-layers.png " グラフレイヤーの図 "){zoomable="yes"}
 
 ### 名前空間の意味論的意味
 
@@ -82,7 +82,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
    * XDM エクスペリエンスイベントクラススキーマでプライマリ ID としてマークされているすべてのフィールド。
    * Adobe Analytics ソースコネクタのプライマリ ID 設定デフォルト(ECID または AAID)。
 * 一方、 **名前空間 優先度によってプロファイルレコードのプライマリ ID は決定されません**。
-   * プロファイルレコードの場合、プライマリ ID を含め、スキーマの ID フィールドを引き続き定義する必要があります。 詳しくは、UIでの ID フィールドの定義[](../../xdm/ui/fields/identity.md)ガイドを参照してください。
+   * プロファイルレコードの場合、プライマリ ID を含め、スキーマの ID フィールドを引き続き定義する必要があります。 詳しくは、UIでの ID フィールドの定義[&#128279;](../../xdm/ui/fields/identity.md)ガイドを参照してください。
 
 >[!TIP]
 >
@@ -120,7 +120,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## セグメント化サービス：セグメントメンバーシップのメタデータストレージ
 
-![ セグメントメンバーシップストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメントメンバーシップストレージの図。"){zoomable="yes"}
+![&#x200B; セグメントメンバーシップストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメントメンバーシップストレージの図。"){zoomable="yes"}
 
 特定の結合プロファイルについて、セグメントメンバーシップは、名前空間の優先度が最も高い ID に対して保存されます。
 
@@ -152,7 +152,7 @@ John と Jane がデバイスを共有している場合、ECID (Web ブラウ�
 
 ### 計算属性
 
-ID 設定が有効になっている場合、計算属性は名前空間優先順位を使用して計算属性値をストアします。 特定のイベントについて、名前空間優先度が最も高い ID には、計算された属性の値が書き込まれます。 詳しくは、[ 計算属性 UI ガイド ](../../profile/computed-attributes/ui.md) を参照してください。
+ID 設定が有効になっている場合、計算属性は名前空間優先順位を使用して計算属性値をストアします。 特定のイベントについて、名前空間優先度が最も高い ID には、計算された属性の値が書き込まれます。 詳しくは、[&#x200B; 計算属性 UI ガイド &#x200B;](../../profile/computed-attributes/ui.md) を参照してください。
 
 ### データレイク
 
@@ -175,7 +175,7 @@ XDM スキーマについて詳しくは、 [スキーマの概要](../../xdm/ho
 
 この設定の結果、スコアは認証済みイベントを使用してのみ計算されます。
 
-詳しくは、[ アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) および [ 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
+詳しくは、[&#x200B; アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) および [&#x200B; 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
 
 ### パートナーが作成した宛先
 
@@ -184,16 +184,16 @@ XDM スキーマについて詳しくは、 [スキーマの概要](../../xdm/ho
 * オーディエンスの選定は、匿名アクティビティにのみ基づきます。
 * 複数のプロファイルをまたいだログインは短期間で発生します。
 
-パートナーが作成した宛先について詳しくは、[ 宛先の概要 ](../../destinations/home.md#adobe-built-and-partner-built-destinations) を参照してください。
+パートナーが作成した宛先について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../../destinations/home.md#adobe-built-and-partner-built-destinations) を参照してください。
 
 ### Privacy Service
 
-[Privacy Service削除リクエスト ](../privacy.md) は、特定の id に対して次のように機能します。
+[Privacy Service削除リクエスト &#x200B;](../privacy.md) は、特定の id に対して次のように機能します。
 
 * リアルタイム顧客プロファイル：指定された ID 値をプライマリ ID として持つ、プロファイルフラグメントを削除します。 **プロファイルのプライマリ ID は、名前空間の優先度に基づいて決定されるようになりました。**
 * データ lake: プライマリまたはセカンダリ ID として指定された ID を持つレコードを削除します。
 
-詳しくは、[Privacy Service の概要 ](../../privacy-service/home.md) を参照してください。
+詳しくは、[Privacy Service の概要 &#x200B;](../../privacy-service/home.md) を参照してください。
 
 ### Edgeのセグメント化とEdge Network アプリケーション
 
@@ -206,9 +206,9 @@ XDM スキーマについて詳しくは、 [スキーマの概要](../../xdm/ho
 
 特定のイベントで、人物エンティティを表すすべての名前空間が `identityMap` に含まれていることを確認してください。これは、[XDM フィールドとして送信された ID](../../xdm/ui/fields/identity.md) は無視され、セグメントメンバーシップのメタデータストレージには使用されないからです。
 
-* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [0}Experience Platform ハブ } から取り込まれたイベントは、この制限の対象になりません。](../../landing/edge-and-hub-comparison.md)
-* **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
-* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
+* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [0&rbrace;Experience Platform ハブ &rbrace; から取り込まれたイベントは、この制限の対象になりません。](../../landing/edge-and-hub-comparison.md)
+* **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[&#x200B; エッジセグメント化ガイド &#x200B;](../../segmentation/methods/edge-segmentation.md) を参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 &#x200B;](../../landing/edge-and-hub-comparison.md) のページを参照してください。
 
 #### Edge Network アプリケーション
 

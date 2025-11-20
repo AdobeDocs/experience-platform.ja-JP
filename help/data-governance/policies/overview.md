@@ -23,11 +23,11 @@ ht-degree: 92%
 次の 2 種類のポリシーを使用できます。
 
 * **[!UICONTROL Data governance policy]**：実行中のマーケティングアクションと、該当するデータに含まれるデータ使用ラベルに基づいて、データのアクティベーションを制限します。
-* **[!UICONTROL Consent policy]**：顧客の同意または好みに基づいて、[ 宛先 ](../../destinations/home.md) に対してアクティブ化可能なプロファイルをフィルタリングします
+* **[!UICONTROL Consent policy]**：顧客の同意または好みに基づいて、[&#x200B; 宛先 &#x200B;](../../destinations/home.md) に対してアクティブ化可能なプロファイルをフィルタリングします
 
 >[!NOTE]
 >
->データ使用ポリシーを [ アクセス制御ポリシー ](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL Permissions]」タブを使用して設定します。
+>データ使用ポリシーを [&#x200B; アクセス制御ポリシー &#x200B;](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL Permissions]」タブを使用して設定します。
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 

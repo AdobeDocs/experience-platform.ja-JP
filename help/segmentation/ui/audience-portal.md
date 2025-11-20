@@ -65,12 +65,12 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 | [!UICONTROL Share with partners] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスを他のExperience Platform ユーザーと共有します。 この機能について詳しくは、[Segment Match の概要](./segment-match/overview.md)を参照してください。 |
 | [!UICONTROL Manage tags] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するユーザー定義タグを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
 | [!UICONTROL Move to folder] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスが属するフォルダーを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
-| [!UICONTROL Copy] | セグメント化サービス | 選択したオーディエンスを複製します。 この関数について詳しくは、[ セグメント化に関する FAQ](../faq.md#copy) を参照してください。 |
+| [!UICONTROL Copy] | セグメント化サービス | 選択したオーディエンスを複製します。 この関数について詳しくは、[&#x200B; セグメント化に関する FAQ](../faq.md#copy) を参照してください。 |
 | [!UICONTROL Apply access labels] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
 | [!UICONTROL Publish] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスを公開します。 ライフサイクルステータス管理の詳細については、セグメント化 FAQ[の](../faq.md#lifecycle-states)ライフサイクルステータスのセクションを参照してください。 |
-| [!UICONTROL Deactivate] | 特例文字アップロード、セグメント化サービス | 選択したオーディエンスをアクティベート解除します。 オーディエンスをディアクティベートするには、**任意** の宛先（Experience Platform以外の宛先を含む **でアクティブ化することも** 任意の **他のオーディエンスの一部とすることも** できません。 ライフサイクルステータス管理について詳しくは、[ セグメント化に関する FAQ のライフサイクルステータスの節 ](../faq.md#lifecycle-states) を参照してください。 |
-| [!UICONTROL Delete] | オーディエンス構成、カスタムアップロード、セグメント化サービス | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[ セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
-| [!UICONTROL Add to package] | オーディエンス構成、カスタムアップロード、セグメント化サービス | サンドボックス間でオーディエンスを移動します。 この機能について詳しくは、[ サンドボックスツールガイド ](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
+| [!UICONTROL Deactivate] | 特例文字アップロード、セグメント化サービス | 選択したオーディエンスをアクティベート解除します。 オーディエンスをディアクティベートするには、**任意** の宛先（Experience Platform以外の宛先を含む **でアクティブ化することも** 任意の **他のオーディエンスの一部とすることも** できません。 ライフサイクルステータス管理について詳しくは、[&#x200B; セグメント化に関する FAQ のライフサイクルステータスの節 &#x200B;](../faq.md#lifecycle-states) を参照してください。 |
+| [!UICONTROL Delete] | オーディエンス構成、カスタムアップロード、セグメント化サービス | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[&#x200B; セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
+| [!UICONTROL Add to package] | オーディエンス構成、カスタムアップロード、セグメント化サービス | サンドボックス間でオーディエンスを移動します。 この機能について詳しくは、[&#x200B; サンドボックスツールガイド &#x200B;](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 **[!UICONTROL Schedule all audiences]** を切り替えると、スケジュールされたセグメント化が有効になります。 スケジュールされたセグメント化について詳しくは、[このユーザーガイドの「スケジュールされたセグメント化」の節](#scheduled-segmentation)を参照してください。
 
-「**[!UICONTROL Import audience]**」を選択すると、外部で生成されたオーディエンスを読み込むことができます。 オーディエンスのインポートについて詳しくは、[ ユーザーガイドのオーディエンスのインポート ](#import-audience) の節を参照してください。
+「**[!UICONTROL Import audience]**」を選択すると、外部で生成されたオーディエンスを読み込むことができます。 オーディエンスのインポートについて詳しくは、[&#x200B; ユーザーガイドのオーディエンスのインポート &#x200B;](#import-audience) の節を参照してください。
 
 **[!UICONTROL Create audience]** を選択すると、オーディエンスを作成できます。 オーディエンスの作成について詳しくは、[このユーザーガイドの「オーディエンスの作成」の節](#create-audience)を参照してください。
 
@@ -88,15 +88,15 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 **[!UICONTROL Evaluation summary]** を選択すると、オーディエンスの評価の概要を示す円グラフを表示できます。
 
-![ 「評価の概要」ボタンがハイライト表示されている様子 ](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
+![&#x200B; 「評価の概要」ボタンがハイライト表示されている様子 &#x200B;](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
 円グラフが表示され、オーディエンス評価別にオーディエンスの分類が表示されます。 グラフには、途中のオーディエンスの合計数と、毎日のバッチ評価時間が UTC 単位で下部に表示されます。 オーディエンスの異なる部分にポインタを合わせると、各更新頻度タイプに属するオーディエンスの数が表示されます。
 
-![ オーディエンス評価の円グラフがハイライト表示され、バッチセグメント化評価時間も表示される。](../images/ui/audience-portal/evaluation-summary.png)
+![&#x200B; オーディエンス評価の円グラフがハイライト表示され、バッチセグメント化評価時間も表示される。](../images/ui/audience-portal/evaluation-summary.png)
 
 ### カスタマイズ {#customize}
 
-![ フィルター属性アイコン ](/help/images/icons/column-settings.png) を選択することで、オーディエンスポータルにフィールドを追加できます。 追加のフィールドには、ライフサイクルステータス、更新頻度、最終更新者、説明、作成者、アクセスラベルなどがあります。
+![&#x200B; フィルター属性アイコン &#x200B;](/help/images/icons/column-settings.png) を選択することで、オーディエンスポータルにフィールドを追加できます。 追加のフィールドには、ライフサイクルステータス、更新頻度、最終更新者、説明、作成者、アクセスラベルなどがあります。
 
 | フィールド | 説明 |
 | ----- | ----------- |
@@ -120,11 +120,11 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 | ------ | ----------- |
 | [!UICONTROL Realized] | 前回のバッチセグメントジョブが実行されてから過去 24 時間以内に、そのオーディエンスについて **認定** プロファイルの数。 |
 | [!UICONTROL Existing] | 前回のバッチセグメントジョブが実行されてから過去 24 時間にオーディエンスに **残っている** プロファイルの数。 この項目は **計算** され、 [`segmentMembership` オブジェクトには表示されません](../../xdm/field-groups/profile/segmentation.md)。 |
-| [!UICONTROL Exiting] | 前回のバッチセグメントジョブが実行されてから過去 24 時間以内にオーディエンスを終了&#x200B;****&#x200B;プロファイルの数。 |
+| [!UICONTROL Exiting] | 前回のバッチセグメントジョブが実行されてから過去 24 時間以内にオーディエンスを終了&#x200B;**&#x200B;**&#x200B;プロファイルの数。 |
 
-表示するフィールドを選択した後で、表示される列の幅を変更することもできます。 サイズを変更するには、列間の領域をドラッグするか、サイズを変更する列の ![ 矢印アイコン ](/help/images/icons/chevron-down.png) を選択してから **[!UICONTROL Resize column]** を選択します。
+表示するフィールドを選択した後で、表示される列の幅を変更することもできます。 サイズを変更するには、列間の領域をドラッグするか、サイズを変更する列の ![&#x200B; 矢印アイコン &#x200B;](/help/images/icons/chevron-down.png) を選択してから **[!UICONTROL Resize column]** を選択します。
 
-![ 「列をサイズ変更」ボタンがハイライト表示されている様子 ](../images/ui/audience-portal/browse-audience-resize-column.png)
+![&#x200B; 「列をサイズ変更」ボタンがハイライト表示されている様子 &#x200B;](../images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### フィルタリング、フォルダー、タグ付け {#manage-audiences}
 
@@ -146,7 +146,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 タグを追加するには、タグ付 **[!UICONTROL Manage tags]** するオーディエンスのタグを選択します。
 
-![ 指定したオーディエンスに対して「[!UICONTROL Manage tags]」ボタンが選択されている様子 ](../images/ui/audience-portal/browse-manage-tags.png)
+![&#x200B; 指定したオーディエンスに対して「[!UICONTROL Manage tags]」ボタンが選択されている様子 &#x200B;](../images/ui/audience-portal/browse-manage-tags.png)
 
 **[!UICONTROL Manage tags]** ポップオーバーが表示されます。 このポップオーバーで、分類済みまたは未分類のタグを選択できます。
 
@@ -169,7 +169,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 オーディエンスを格納するフォルダーを作成するには、「**[!UICONTROL Create folder]**」を選択します。
 
-![ 「フォルダーを作成」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder.png)
+![&#x200B; 「フォルダーを作成」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder.png)
 
 >[!NOTE]
 >
@@ -177,11 +177,11 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 ポップオーバーが表示され、新しく作成したフォルダーに名前を付けることができます。 フォルダーに名前を付けた後で「**[!UICONTROL Save]**」を選択して、フォルダーの作成を完了します。 親フォルダーに対して一意の名前 **必須** であることに注意してください。
 
-![ フォルダーを作成ダイアログの「保存」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder-dialog.png)
+![&#x200B; フォルダーを作成ダイアログの「保存」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder-dialog.png)
 
 オーディエンスをフォルダーに移動するには、移動するオーディエンスの **[!UICONTROL Move to folder]** を選択します。
 
-![ 特定のオーディエンスに対して「[!UICONTROL Move to folder]」ボタンが選択されている様子 ](../images/ui/audience-portal/browse-move-to-folder.png)
+![&#x200B; 特定のオーディエンスに対して「[!UICONTROL Move to folder]」ボタンが選択されている様子 &#x200B;](../images/ui/audience-portal/browse-move-to-folder.png)
 
 「**オーディエンスをフォルダーに移動**」ポップオーバーが表示されます。オーディエンスの移動先のフォルダーを選択し、[ **[!UICONTROL Save]**] を選択します。
 
@@ -203,7 +203,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 | フィルター | 説明 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | オーディエンスの接触チャネルに基づいてフィルタリングできます。使用可能な値は [ セグメント化サービス ](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成 ](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[ 類似オーディエンス ](../types/lookalike-audiences.md)、[ フェデレーション オーディエンス構成 ](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) [、{ データDistiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) です。 |
+| [!UICONTROL Origin] | オーディエンスの接触チャネルに基づいてフィルタリングできます。使用可能な値は [&#x200B; セグメント化サービス &#x200B;](#segment-builder)、[&#x200B; カスタムアップロード &#x200B;](#import-audience)、[&#x200B; オーディエンス構成 &#x200B;](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[&#x200B; 類似オーディエンス &#x200B;](../types/lookalike-audiences.md)、[&#x200B; フェデレーション オーディエンス構成 &#x200B;](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) [、&lbrace; データDistiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) です。 |
 | [!UICONTROL Has any tag] | タグでフィルタリングできます。[ **[!UICONTROL Has any tag]** ] と [ **[!UICONTROL Has all tags]**] のどちらかを選択できます。 **[!UICONTROL Has any tag]**&#x200B;を選択すると、フィルターされたオーディエンスには追加したタグの&#x200B;**いずれか**&#x200B;が含まれます。**[!UICONTROL Has all tags]** を選択した場合、フィルタリングされたオーディエンスに、追加したタグの **すべて** が含まれている必要があります。 |
 | [!UICONTROL Lifecycle status] | オーディエンスのライフサイクルステータスに基づいてフィルタリングできます。使用可能なオプションには、[!UICONTROL Deleted]、[!UICONTROL Draft]、[!UICONTROL Inactive]、[!UICONTROL Published] などがあります。 |
 | [!UICONTROL Update frequency] | オーディエンスの更新頻度（評価方法）に基づいてフィルタリングできます。 使用可能なオプションには、[!UICONTROL Batch]、[!UICONTROL Streaming]、[!UICONTROL Edge] があります |
@@ -215,9 +215,9 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 ### 一括アクション {#bulk-actions}
 
-さらに、最大 25 種類のオーディエンスを選択し、これらのオーディエンスに対して様々なアクションを実行できます。 これらのアクションには、[ フォルダーへの移動 ](#folders)、[ タグの編集または適用 ](#tags)、[ オーディエンスの評価 ](#flexible-audience-evaluation)、[ アクセスラベルの適用 ](../../access-control/abac/ui/labels.md)、[ 削除 ](#browse) が含まれます。
+さらに、最大 25 種類のオーディエンスを選択し、これらのオーディエンスに対して様々なアクションを実行できます。 これらのアクションには、[&#x200B; フォルダーへの移動 &#x200B;](#folders)、[&#x200B; タグの編集または適用 &#x200B;](#tags)、[&#x200B; オーディエンスの評価 &#x200B;](#flexible-audience-evaluation)、[&#x200B; アクセスラベルの適用 &#x200B;](../../access-control/abac/ui/labels.md)、[&#x200B; 削除 &#x200B;](#browse) が含まれます。
 
-![ 一括アクションに使用可能なオプションが表示されます。](../images/ui/audience-portal/bulk-actions.png)
+![&#x200B; 一括アクションに使用可能なオプションが表示されます。](../images/ui/audience-portal/bulk-actions.png)
 
 オーディエンスに一括アクションを適用する場合は、次の条件が適用されます。
 
@@ -267,7 +267,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 >[!TAB セグメント化サービス]
 
-![ 「[!UICONTROL Edit audience]」ボタンがハイライト表示されたオーディエンスの詳細ページが表示されます。](../images/ui/audience-portal/audience-details-edit-audience.png)
+![&#x200B; 「[!UICONTROL Edit audience]」ボタンがハイライト表示されたオーディエンスの詳細ページが表示されます。](../images/ui/audience-portal/audience-details-edit-audience.png)
 
 **[!UICONTROL Edit audience]** を選択すると、セグメントビルダーでオーディエンスを編集できます。 [!DNL Segment Builder] ワークスペースの使用について詳しくは、[[!DNL Segment Builder] ユーザーガイド](./segment-builder.md)を参照してください。
 
@@ -275,7 +275,7 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 
 「**[!UICONTROL Edit properties]**」を選択すると、名前、説明、タグなど、オーディエンスの基本的な詳細を編集できます。
 
-![ オーディエンスの詳細ページ内で「プロパティを編集」ボタンがハイライト表示されます。](../images/ui/audience-portal/audience-details-edit-properties.png)
+![&#x200B; オーディエンスの詳細ページ内で「プロパティを編集」ボタンがハイライト表示されます。](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### オーディエンス合計 {#audience-total}
 
@@ -301,9 +301,9 @@ Audience Portal を開くには、「セグメント化」セクションの「*
 | -------- | ----------- |
 | プロファイル数 | オーディエンスに適合するプロファイルの合計数。 |
 | データセット名 | オーディエンスが取り込まれたデータセットの名前。 データセット名を選択すると、データセットの詳細が表示されます。 データセットの詳細については、 [データセット UI ガイド](../../catalog/datasets/user-guide.md) を参照してください。 |
-| データセットバッチ | オーディエンスが取り込まれたデータセットの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
-| プロファイルバッチ | Experience Platformでプロファイルを作成したバッチの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
-| スキーマ | オーディエンスが属するスキーマの名前。 スキーマの名前を選択して、スキーマの構造に関する情報表示、データ使用ラベルを適用できます。 詳しくは、スキーマ ガイド[ の](../../xdm/tutorials/labels.md)管理データ使用状況ラベルを参照してください。 |
+| データセットバッチ | オーディエンスが取り込まれたデータセットの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[&#x200B; データ取り込みの監視ガイド &#x200B;](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
+| プロファイルバッチ | Experience Platformでプロファイルを作成したバッチの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[&#x200B; データ取り込みの監視ガイド &#x200B;](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
+| スキーマ | オーディエンスが属するスキーマの名前。 スキーマの名前を選択して、スキーマの構造に関する情報表示、データ使用ラベルを適用できます。 詳しくは、スキーマ ガイド[&#x200B; の](../../xdm/tutorials/labels.md)管理データ使用状況ラベルを参照してください。 |
 | 取り込まれたレコード | データセットに取り込まれたレコードの数。 |
 | 失敗したレコード | データセットに取り込むことができなかったレコードの数。 |
 | 新しいプロファイルフラグメント | 作成された新しいプロファイルの数。 |
@@ -394,13 +394,13 @@ Adobe Federated Audience Composition を使用すると、基になるデータ�
 
 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
-![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
+![&#x200B; 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
 ### Data Distiller {#data-distiller}
 
 SQL 拡張機能を使用した Data Distillerを使用して、データレイクからオーディエンスを作成できます。 このデータには、顧客属性や製品情報などの既存のディメンションエンティティが含まれます。
 
-Data Distillerについて詳しくは、[SQL を使用したオーディエンスの構築ガイド ](../../query-service/data-distiller-audiences/overview.md) を参照してください。
+Data Distillerについて詳しくは、[SQL を使用したオーディエンスの構築ガイド &#x200B;](../../query-service/data-distiller-audiences/overview.md) を参照してください。
 
 ## オーディエンスの読み込み {#import-audience}
 
@@ -411,7 +411,7 @@ Data Distillerについて詳しくは、[SQL を使用したオーディエン�
 
 >[!IMPORTANT]
 >
->外部で生成されたオーディエンス読み込むには、**、**、[!UICONTROL View segments]の権限[!UICONTROL Manage segments][!UICONTROL Import audience]必要があります。これらの権限について詳しくは、 [アクセス制御の概要](../../access-control/home.md#permissions)を参照してください。
+>外部で生成されたオーディエンス読み込むには、**、**、[!UICONTROL View segments]の権限[!UICONTROL Manage segments]&#x200B;[!UICONTROL Import audience]必要があります。これらの権限について詳しくは、 [アクセス制御の概要](../../access-control/home.md#permissions)を参照してください。
 
 **[!UICONTROL Import audience]**&#x200B;を選択すると、外部で生成されたオーディエンスを読み込むことができます。
 
@@ -470,7 +470,7 @@ Data Distillerについて詳しくは、[SQL を使用したオーディエン�
 >
 >デフォルトでは、外部で生成されたオーディエンスのデータ有効期限は 30 日です。 オーディエンスが何らかの方法で更新または変更されると、データ 有効期限はリセットされます。
 >
->さらに、外部で生成されたオーディエンスに機密情報や医療関連の情報が含まれている場合は、宛先でアクティブ化する前に、必要なデータ使用ラベルを適用&#x200B;****&#x200B;する必要があります。外部で生成されたオーディエンスからの変数は、リアルタイム顧客プロフィール内ではなくデータレイクに保存されるため、CSVファイル内に同意データを含め&#x200B;****&#x200B;しないでください。
+>さらに、外部で生成されたオーディエンスに機密情報や医療関連の情報が含まれている場合は、宛先でアクティブ化する前に、必要なデータ使用ラベルを適用&#x200B;**&#x200B;**&#x200B;する必要があります。外部で生成されたオーディエンスからの変数は、リアルタイム顧客プロフィール内ではなくデータレイクに保存されるため、CSVファイル内に同意データを含め&#x200B;**&#x200B;**&#x200B;しないでください。
 >
 >データ使用ラベルの適用の詳細については、 [ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントをお読みください。 Experience Platformの一般的なデータ使用ラベルについては、 [データ使用ラベルの概要](../../data-governance/labels/overview.md)をご覧ください。 外部で作成されたオーディエンスでの同意の仕組みについて詳しくは、 [オーディエンスに関するよくある質問](../faq.md#consent)を参照してください。
 
@@ -480,4 +480,4 @@ Data Distillerについて詳しくは、[SQL を使用したオーディエン�
 
 セグメント化サービス UI の使用方法の詳細については、[セグメント化サービス UI の概要](./overview.md)を参照してください。
 
-Audience Portal に関するよくある質問については、[ よくある質問 ](../faq.md) を参照してください。
+Audience Portal に関するよくある質問については、[&#x200B; よくある質問 &#x200B;](../faq.md) を参照してください。

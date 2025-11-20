@@ -34,9 +34,9 @@ ht-degree: 71%
 >
 >フィールドにラベルを付ける前にデータ使用ポリシーを作成した場合、新しいスキーマにラベルを適用する際にガバナンスポリシー違反ダイアログが発生する場合があります。 このダイアログは、このラベルを適用すると既存の使用ポリシーに違反することを示しています。 データ系列図を使用して、スキーマフィールドにラベルを追加する前に行う必要がある、他の設定変更を理解します。
 >
->![ 違反の概要とデータ系列の図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
+>![&#x200B; 違反の概要とデータ系列の図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
 >
->ポリシー違反について詳しくは、[ データ使用ポリシー違反のドキュメント ](../enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+>ポリシー違反について詳しくは、[&#x200B; データ使用ポリシー違反のドキュメント &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
 スキーマレベルでデータ使用ラベルを管理するには、既存のスキーマを選択するか、新しいスキーマを作成する必要があります。Adobe Experience Platformにログインした後、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択して **[!UICONTROL Schemas]** Workspace を開きます。 このページには、組織に属するすべての作成済みスキーマと、各スキーマに関する有用な詳細情報がリストされます。
 
@@ -69,11 +69,11 @@ ht-degree: 71%
 
 ラベルは、**[!UICONTROL Data Governance]** ワークスペースの「**[!UICONTROL Datasets]**」タブからデータセット全体に適用できます。 ワークスペースでは、データセットレベルでデータ使用ラベルを管理できます。
 
-![ データガバナンスがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ ](../images/labels/dataset-governance.png)
+![&#x200B; データガバナンスがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ &#x200B;](../images/labels/dataset-governance.png)
 
 データセットレベルでデータ使用ラベルを編集するには、最初にデータセット名の行にある鉛筆アイコン（![鉛筆アイコン。](/help/images/icons/edit.png)）を選択します。
 
-![ 編集鉛筆アイコンがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ。](../images/labels/dataset-level-edit.png)
+![&#x200B; 編集鉛筆アイコンがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ。](../images/labels/dataset-level-edit.png)
 
 **[!UICONTROL Edit Governance Labels]** ダイアログが開きます。 ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、**[!UICONTROL Applied Labels]** のヘッダーが更新され、選択したラベルが表示されます。 目的のラベルを選択したら、「**[!UICONTROL Save Changes]**」を選択します。
 
@@ -81,7 +81,7 @@ ht-degree: 71%
 
 **[!UICONTROL Data Governance]** ワークスペースが再び表示され、テーブルの最初の行にデータセットレベルで適用したラベルが表示されます。 また、データセット内の各フィールドに継承される、個々のカードで示されるラベルを確認することもできます。
 
-![ 適用したデータセットレベルのラベルと継承されたデータセットフィールドのラベルがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ ](../images/labels/applied-dataset-labels.png)
+![&#x200B; 適用したデータセットレベルのラベルと継承されたデータセットフィールドのラベルがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ &#x200B;](../images/labels/applied-dataset-labels.png)
 
 ### データセットからラベルを削除する {#remove-labels-from-a-dataset}
 

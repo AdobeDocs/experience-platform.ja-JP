@@ -47,7 +47,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 >
 >**Manage プロフィール 設定** 権限ではデータの有効期限を設定でき、**表示プロファイル**&#x200B;権限ではデータの有効期限を表示でき、**表示IDサービス名前空間**&#x200B;権限では使用可能な ID 名前空間表示できます。
 >
->Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](../access-control/home.md#permissions) を参照してください。
+>Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../access-control/home.md#permissions) を参照してください。
 
 偽名プロファイルデータの有効期限を組織に追加するには、プロファイルダッシュボードに移動し、「**[!UICONTROL Settings]**」を選択します。
 
@@ -131,7 +131,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 
 +++ 回答
 
-- ID サービス [ 「先入れ先出し」削除システムは ](../identity-service/guardrails.md)ID グラフから ECID を削除する可能性があります。このグラフは ID サービスに保存されます。
+- ID サービス [&#x200B; 「先入れ先出し」削除システムは &#x200B;](../identity-service/guardrails.md)ID グラフから ECID を削除する可能性があります。このグラフは ID サービスに保存されます。
 - この削除動作によって ECID のみのプロファイルが Real-時間 Customer プロフィール (プロフィール ストア) に格納されている場合、仮名プロファイルデータ有効期限はこのプロファイルプロフィールストアから削除されます。
 
 +++

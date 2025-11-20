@@ -41,9 +41,9 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## Experience Platform UI でテンプレートを使用する {#use-templates-in-the-platform-ui}
 
@@ -70,7 +70,7 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 >
 >テンプレートでは、変更データキャプチャワークフローが必要なソースを操作する際や、複数のデータモデルをサポートする際に、リレーショナルスキーマを自動生成できます。 これらのスキーマにより、Data Mirrorの機能でリアルタイムのデータ同期が可能になります。\
 >リレーショナルスキーマでテンプレートを使用する場合、自動生成されるアセットには、必須のプライマリキー、バージョン ID およびタイムスタンプ ID フィールドが含まれます。\
->詳しくは、[Data Mirrorの概要および ](../../../xdm/data-mirror/overview.md) リレーショナルスキーマ [ テクニカルリファレンス ](../../../xdm/schema/relational.md) を参照してください。
+>詳しくは、[Data Mirrorの概要および &#x200B;](../../../xdm/data-mirror/overview.md) リレーショナルスキーマ [&#x200B; テクニカルリファレンス &#x200B;](../../../xdm/schema/relational.md) を参照してください。
 
 自動生成されたアセットを使用するには、「**[!UICONTROL Browse templates]**」を選択してから「**[!UICONTROL Select]**」を選択します。
 
@@ -180,7 +180,7 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 +++
 
-選択したビジネスタイプに応じて、テンプレートのリストが表示されます。 テンプレート名の横にあるプレビューアイコン ![ プレビューアイコン ](/help/images/icons/preview.png) を選択して、テンプレートからサンプルデータをプレビューします。
+選択したビジネスタイプに応じて、テンプレートのリストが表示されます。 テンプレート名の横にあるプレビューアイコン ![&#x200B; プレビューアイコン &#x200B;](/help/images/icons/preview.png) を選択して、テンプレートからサンプルデータをプレビューします。
 
 ![プレビューアイコンがハイライトされたテンプレートのリスト。](../../images/tutorials/templates/templates.png)
 
@@ -204,7 +204,7 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 スケジュールインターフェイスを使用して、データフローの取り込みスケジュールを設定します。 取り込み頻度を **1 回** に設定して、1 回限りの取り込みを作成します。
 
-![Dynamics およびSalesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/schedule.png)
+![Dynamics およびSalesforce テンプレートのスケジュールインターフェイス &#x200B;](../../images/tutorials/templates/schedule.png)
 
 または、取り込み頻度を **分**、**時間**、**日**、**週** に設定できます。 データフローを複数の取り込みに対してスケジュールする場合は、取り込みごとに時間枠を確立する間隔を設定する必要があります。 例えば、取り込み頻度を **時間** に設定し、間隔を **15** に設定すると、データフローは **15 時間** ごとにデータを取り込むようにスケジュールされます。
 
@@ -212,7 +212,7 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 取り込みスケジュールの設定が完了したら、「**[!UICONTROL Finish]**」を選択します。
 
-![ バックフィルが有効になっている Dynamics およびSalesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/backfill.png)
+![&#x200B; バックフィルが有効になっている Dynamics およびSalesforce テンプレートのスケジュールインターフェイス &#x200B;](../../images/tutorials/templates/backfill.png)
 
 ### アセットのレビュー {#review-assets}
 
@@ -241,29 +241,29 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 >
 >ドラフトデータフローには、ソースワークスペースの [!UICONTROL Dataflows] カタログページからアクセスできます。 上部ヘッダーから「**[!UICONTROL Dataflows]**」を選択し、更新するデータフローをリストから選択します。
 >
->![ ソースワークスペースのデータフローカタログにある既存のデータフローのリスト。](../../images/tutorials/templates/dataflows.png)
+>![&#x200B; ソースワークスペースのデータフローカタログにある既存のデータフローのリスト。](../../images/tutorials/templates/dataflows.png)
 
 ### データフローの公開
 
 公開プロセスを開始するには、ソース ワークフローを使用します。 [!UICONTROL Update dataflow] を選択すると、ワークフローの *[!UICONTROL Add data]* の手順に進みます。 「**[!UICONTROL Next]**」を選択して次に進みます。
 
-![ ドラフトデータフローのデータを追加ステップ ](../../images/tutorials/templates/continue-draft.png)
+![&#x200B; ドラフトデータフローのデータを追加ステップ &#x200B;](../../images/tutorials/templates/continue-draft.png)
 
 次に、データフローの詳細を確認し、エラー診断、部分取り込み、アラート通知の設定を指定します。 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![ ドラフトデータフローのデータフローの詳細手順。](../../images/tutorials/templates/dataflow-detail.png)
+![&#x200B; ドラフトデータフローのデータフローの詳細手順。](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
 >**[!UICONTROL Save as draft]** を選択すると、いつでも停止して、データフローに加えた変更を保存できます。
 
-マッピング手順が表示されます。 この手順では、データフローのマッピング設定を再設定できます。 マッピングに使用するデータ準備機能の包括的なガイドについては、[ データ準備 UI ガイド ](../../../data-prep/ui/mapping.md) を参照してください。
+マッピング手順が表示されます。 この手順では、データフローのマッピング設定を再設定できます。 マッピングに使用するデータ準備機能の包括的なガイドについては、[&#x200B; データ準備 UI ガイド &#x200B;](../../../data-prep/ui/mapping.md) を参照してください。
 
-![ ドラフトデータフローのマッピングステップ ](../../images/tutorials/templates/mapping.png)
+![&#x200B; ドラフトデータフローのマッピングステップ &#x200B;](../../images/tutorials/templates/mapping.png)
 
 最後に、データフローの詳細を確認し、「**[!UICONTROL Save & ingest]**」を選択してドラフトを公開します。
 
-![ ドラフトデータフローのレビュー手順。](../../images/tutorials/templates/review.png)
+![&#x200B; ドラフトデータフローのレビュー手順。](../../images/tutorials/templates/review.png)
 
 ## 次の手順
 
@@ -277,4 +277,4 @@ Experience Platform UI の上部ヘッダーにある通知アイコンを選択
 
 ![Experience Platform UI の通知パネルには、失敗したデータフローを警告する通知がハイライト表示されます。](../../images/tutorials/templates/notifications.png)
 
-テンプレートのアラート設定を更新すると、データフローのステータスに関するメールとExperience Platform内の通知の両方を受け取ることができます。 アラートの設定について詳しくは、[ ソースデータフローのアラートを購読する方法 ](../ui/alerts.md) に関するガイドを参照してください。
+テンプレートのアラート設定を更新すると、データフローのステータスに関するメールとExperience Platform内の通知の両方を受け取ることができます。 アラートの設定について詳しくは、[&#x200B; ソースデータフローのアラートを購読する方法 &#x200B;](../ui/alerts.md) に関するガイドを参照してください。

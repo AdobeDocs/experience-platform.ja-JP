@@ -11,7 +11,7 @@ ht-degree: 11%
 
 # スキーマのデータ使用ラベルの管理
 
-Adobe Experience Platformに取り込まれるすべてのデータは、エクスペリエンスデータモデル（XDM）スキーマによって制約されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これに対処するために、Experience Platformでは、[ データ使用ラベル ](../../data-governance/labels/overview.md) を使用して、特定のデータセットやフィールドの使用を制限できます。
+Adobe Experience Platformに取り込まれるすべてのデータは、エクスペリエンスデータモデル（XDM）スキーマによって制約されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これに対処するために、Experience Platformでは、[&#x200B; データ使用ラベル &#x200B;](../../data-governance/labels/overview.md) を使用して、特定のデータセットやフィールドの使用を制限できます。
 
 スキーマフィールドに適用されるラベルは、その特定のフィールドに含まれるデータに適用される使用ポリシーを示します。
 
@@ -26,7 +26,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、エク�
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-   * [ スキーマエディター ](../ui/overview.md):Experience Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
+   * [&#x200B; スキーマエディター &#x200B;](../ui/overview.md):Experience Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):Experience Platformの操作にデータ使用に関する制限を適用するためのインフラストラクチャを提供します。ラベル付きのデータに対して実行できる（または実行できない）マーケティングアクションを定義するポリシーを使用します。
 
 ## ラベルの追加先となるスキーマまたはフィールドを選択 {#select-schema-field}
@@ -36,7 +36,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、エク�
 >title="ガバナンスラベルの編集"
 >abstract="スキーマフィールドにラベルを適用して、その特定のフィールドに含まれるデータに適用する使用ポリシーを指定します。"
 
-ラベルの追加を開始するには、まず [ 編集する既存のスキーマを選択 ](../ui/resources/schemas.md#edit) または [ 新しいスキーマを作成 ](../ui/resources/schemas.md#create) して、スキーマエディターで構造を表示する必要があります。
+ラベルの追加を開始するには、まず [&#x200B; 編集する既存のスキーマを選択 &#x200B;](../ui/resources/schemas.md#edit) または [&#x200B; 新しいスキーマを作成 &#x200B;](../ui/resources/schemas.md#create) して、スキーマエディターで構造を表示する必要があります。
 
 個々のフィールドのラベルを編集するには、キャンバスでフィールドを選択し、右側のパネルで「**[!UICONTROL Manage access]**」を選択します。
 
@@ -44,27 +44,27 @@ Adobe Experience Platformに取り込まれるすべてのデータは、エク�
 >
 >任意のスキーマに適用できるラベルは最大 300 個です。
 
-![ スキーマエディターキャンバスからフィールドを選択します ](../images/tutorials/labels/manage-access.png)
+![&#x200B; スキーマエディターキャンバスからフィールドを選択します &#x200B;](../images/tutorials/labels/manage-access.png)
 
 また、「**[!UICONTROL Labels]**」タブを選択し、リストから目的のフィールドを選択して、右側のパネルで「**[!UICONTROL Apply Access and Data Governance Labels]**」を選択することもできます。
 
-![ 「[!UICONTROL Labels]」タブからフィールドを選択します ](../images/tutorials/labels/select-field-on-labels-tab.png)
+![&#x200B; 「[!UICONTROL Labels]」タブからフィールドを選択します &#x200B;](../images/tutorials/labels/select-field-on-labels-tab.png)
 
 スキーマ全体のラベルを編集するには、「**[!UICONTROL Labels]**」タブで、フィルターアイコンの下にあるチェックボックスを選択します。 これにより、スキーマ内の使用可能なすべてのフィールドが選択されます。 次に、右側のパネルで「**[!UICONTROL Apply Access and Data Governance Labels]**」を選択します。
 
-![ 「[!UICONTROL Labels]」タブからスキーマ名を選択します ](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![&#x200B; 「[!UICONTROL Labels]」タブからスキーマ名を選択します &#x200B;](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
 >スキーマまたはフィールドのラベルを最初に編集しようとすると、免責事項メッセージが表示され、ラベルの使用が組織のポリシーに応じてダウンストリーム操作に与える影響が説明されます。 「**[!UICONTROL Proceed]**」を選択して編集を続行します。
 >
->![ ラベル使用の免責事項 ](../images/tutorials/labels/disclaimer.png)
+>![&#x200B; ラベル使用の免責事項 &#x200B;](../images/tutorials/labels/disclaimer.png)
 
 ## スキーマまたはフィールドのラベルを編集 {#edit-labels}
 
 選択したフィールドのラベルを編集できるダイアログが表示されます。 個々のオブジェクトタイプフィールドを選択した場合、右側のパネルに、適用されたラベルが伝播されるサブフィールドがリストされます。
 
-![ 選択したフィールドがハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/edit-labels.png)
+![&#x200B; 選択したフィールドがハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,20 +72,20 @@ Adobe Experience Platformに取り込まれるすべてのデータは、エク�
 
 表示されたリストを使用して、スキーマまたはフィールドに追加するラベルを選択します。 ラベルが選択されると、**[!UICONTROL Applied labels]** のセクションが更新され、これまでに選択されたラベルが表示されます。
 
-![ 適用されたラベルがハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/applied-labels.png)
+![&#x200B; 適用されたラベルがハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/applied-labels.png)
 
 表示されたラベルをタイプでフィルタリングするには、左側のパネルで目的のカテゴリを選択します。 新しいカスタムラベルを作成するには、「**[!UICONTROL Create label]**」を選択します。
 
-![ ラベルタイプフィルターが適用され、ラベルを作成がハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/filter-and-create-custom.png)
+![&#x200B; ラベルタイプフィルターが適用され、ラベルを作成がハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/tutorials/labels/filter-and-create-custom.png)
 
 選択したラベルに満足したら、「**[!UICONTROL Save]**」を選択して、フィールドまたはスキーマに適用します。
 
-![ 「保存」がハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ ](../images/tutorials/labels/save-labels.png)
+![&#x200B; 「保存」がハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ &#x200B;](../images/tutorials/labels/save-labels.png)
 
 「**[!UICONTROL Labels]**」タブが再表示され、スキーマに適用されたラベルが表示されます。
 
-![ 適用されたフィールドラベルがハイライト表示されたスキーマワークスペースの「ラベル」タブ。](../images/tutorials/labels/field-labels-added.png)
+![&#x200B; 適用されたフィールドラベルがハイライト表示されたスキーマワークスペースの「ラベル」タブ。](../images/tutorials/labels/field-labels-added.png)
 
 ## 次の手順
 
-このガイドでは、スキーマとフィールドのデータ使用ラベルの管理方法について説明しました。 スキーマレベルではなく特定のデータセットにデータ使用ラベルを追加する方法など、データ使用ラベルの管理について詳しくは、[ データ使用ラベル UI ガイド ](../../data-governance/labels/user-guide.md) を参照してください。
+このガイドでは、スキーマとフィールドのデータ使用ラベルの管理方法について説明しました。 スキーマレベルではなく特定のデータセットにデータ使用ラベルを追加する方法など、データ使用ラベルの管理について詳しくは、[&#x200B; データ使用ラベル UI ガイド &#x200B;](../../data-governance/labels/user-guide.md) を参照してください。

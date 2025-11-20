@@ -26,8 +26,8 @@ ht-degree: 50%
 
 ## API または UI を介して [!UICONTROL Azure Blob] ストレージに接続する {#connect-api-or-ui}
 
-* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL Azure Blob] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
-* [!UICONTROL Azure Blob] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 ](../../api/activate-segments-file-based-destinations.md) を参照してください。
+* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL Azure Blob] ストレージの場所に接続するには、以下の [&#x200B; 宛先への接続 &#x200B;](#connect) および [&#x200B; この宛先に対するオーディエンスのアクティブ化 &#x200B;](#activate) の節を参照してください。
+* [!UICONTROL Azure Blob] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 &#x200B;](../../api/activate-segments-file-based-destinations.md) を参照してください。
 
 ## はじめに
 
@@ -38,7 +38,7 @@ ht-degree: 50%
    * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-有効な[!DNL Blob]の宛先がすでにある場合は、このドキュメントの残りをスキップして、「宛先へのオーディエンスの有効化[](../../ui/activate-batch-profile-destinations.md)に関するチュートリアルに進んでください。
+有効な[!DNL Blob]の宛先がすでにある場合は、このドキュメントの残りをスキップして、「宛先へのオーディエンスの有効化[&#128279;](../../ui/activate-batch-profile-destinations.md)に関するチュートリアルに進んでください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -71,9 +71,9 @@ ht-degree: 50%
 
 ## 書き出されたデータのファイル形式 {#file-format}
 
-*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [ 書き出しでサポートされるファイル形式 ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [&#x200B; 書き出しでサポートされるファイル形式 &#x200B;](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
 
-*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [ データセットの書き出しが成功したことを確認する ](../../ui/export-datasets.md#verify) の節を参照してください。
+*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [&#x200B; データセットの書き出しが成功したことを確認する &#x200B;](../../ui/export-datasets.md#verify) の節を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -109,7 +109,7 @@ ht-degree: 50%
 * **[!UICONTROL File type]**:Experience Platform書き出すファイルに使用する形式を選択します。 [!UICONTROL CSV]オプションを選択すると、[ファイル形式オプションを設定](../../ui/batch-destinations-file-formatting-options.md)こともできます。
 * **[!UICONTROL Compression format]**:Experience Platformエクスポートするファイルに使用する圧縮タイプを選択します。
 * **[!UICONTROL Include manifest file]**: エクスポートの場所、エクスポート サイズなどに関する情報を含むマニフェスト JSON ファイルをエクスポートに含める場合は、このオプションをオンに切り替えます。 マニフェストには 形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して名前が付けられます。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)表示。マニフェストファイルには、次のフィールドが含まれています。
-   * `flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+   * `flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
    * `scheduledTime`: ファイルが書き出された時間（UTC 単位）。
    * `exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。
    * `exportResults.name`:エクスポートするファイルの名前。
@@ -125,8 +125,8 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先へのオーディエンスをアクティブ化する手順については、 [オーディエンスデータをアクティブ化して宛先をバッチプロファイルエクスポートする](../../ui/activate-batch-profile-destinations.md) を参照してください。
 

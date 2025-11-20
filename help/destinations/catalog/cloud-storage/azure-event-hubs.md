@@ -41,7 +41,7 @@ ht-degree: 49%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -73,7 +73,7 @@ ht-degree: 49%
 
 #### 標準認証 {#standard-authentication}
 
-![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
 **[!UICONTROL Standard authentication]** タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]** を選択します。
 
@@ -83,14 +83,14 @@ ht-degree: 49%
 
 #### 共有アクセス署名 (SAS) 認証 {#sas-authentication}
 
-![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 **[!UICONTROL Standard authentication]** タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]** を選択します。
 
 * **[!UICONTROL SAS Key Name]**：認証ルールの名前（SAS キー名とも呼ばれます）。
-* **[!UICONTROL SAS Key]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+* **[!UICONTROL SAS Key]**: Event Hubs 名前空間のプライマリキー。 Event Hubs リストを入力するには、`sasPolicy` が対応する `sasKey` に **管理** 権限が設定されている必要があります。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 * **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs] 名前空間塗り。 名前空間 [!DNL Azure Event Hubs] については、 [Microsoft のドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)を参照してください。
-* **[!UICONTROL Event Hub Name]**:[!DNL Azure Event Hub] 名を入力します。 [!DNL Azure Event Hubs] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
+* **[!UICONTROL Event Hub Name]**:[!DNL Azure Event Hub] 名を入力します。 [!DNL Azure Event Hubs] の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -106,7 +106,7 @@ ht-degree: 49%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![Azure Event Hubs 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+![Azure Event Hubs 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 &#x200B;](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
 * **[!UICONTROL Name]**:[!DNL Azure Event Hubs] への接続の名前を入力します。
 * **[!UICONTROL Description]**:接続の説明を入力します。  例: &quot;プレミアム ティアのお客様&quot;、&quot;カイトサーフィンに関心のあるお客様&quot;。
@@ -124,10 +124,10 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* [ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、Azure Event Hubs 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* [&#x200B; 同意ポリシーの評価 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、Azure Event Hubs 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)
 
-この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 
@@ -155,7 +155,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 例えば、[!DNL Azure Event Hubs] の宛先に対するこのデータフローについて考えてみましょう。ここでは、3 つのオーディエンスがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
-![Amazon Kinesis 宛先のデータフロー ](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis 宛先のデータフロー &#x200B;](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データエクスポートでは、 `segmentMembership` オブジェクト(以下の [エクスポートされたデータ](#exported-data) セクションを参照)に、その特定のプロファイルメンバーであり、エクスポートをトリガーしたオーディエンスと同じマージポリシーを共有している場合は、他のマッピングされたオーディエンスが表示される場合があります。 プロファイルが **DeLorean Cars の顧客** セグメントの対象であり、**基本 Site アクティブ および 市区町村 - Dallas** セグメントのメンバーでもある場合、これらがデータフローでマップされるため、これらが `segmentMembership`DeLorean Cars の顧客&#x200B;**セグメントと同じマージ ポリシーを共有している場合、これら他の 2 つの対象ユーザーもデータ エクスポートの** オブジェクトに存在します。
 
@@ -273,6 +273,6 @@ HTTP API 宛先へのリクエストが失敗した場合、Experience Platform 
 
 >[!MORELIKETHIS]
 >
->* [Azure Event Hubs に接続し、Flow Service API を使用してデータをアクティブ化する ](../../api/streaming-destinations.md)
->* [AWS Kinesis の宛先 ](./amazon-kinesis.md)
+>* [Azure Event Hubs に接続し、Flow Service API を使用してデータをアクティブ化する &#x200B;](../../api/streaming-destinations.md)
+>* [AWS Kinesis の宛先 &#x200B;](./amazon-kinesis.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)

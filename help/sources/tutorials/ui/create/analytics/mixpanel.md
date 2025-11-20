@@ -28,12 +28,12 @@ ht-degree: 30%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| ユーザー名 | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントのドキュメント ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
+| ユーザー名 | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントのドキュメント &#x200B;](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
 | パスワード | [!DNL Mixpanel] アカウントに対応するサービス アカウントのパスワード。 | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| プロジェクト ID | [!DNL Mixpanel] プロジェクト ID。 この ID は、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) および [[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド ](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) を参照してください。 | `2384945` |
-| タイムゾーン | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) を参照してください。 | `Pacific Standard Time` |
+| プロジェクト ID | [!DNL Mixpanel] プロジェクト ID。 この ID は、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) および [[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) を参照してください。 | `2384945` |
+| タイムゾーン | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) を参照してください。 | `Pacific Standard Time` |
 
-[!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要 ](../../../../connectors/analytics/mixpanel.md) を参照してください。
+[!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要 &#x200B;](../../../../connectors/analytics/mixpanel.md) を参照してください。
 
 ## [!DNL Mixpanel] アカウントを接続
 
@@ -69,15 +69,15 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 ソースが認証されたら、プロジェクト ID とタイムゾーンを指定し、**[!UICONTROL Select]** を選択します。
 
-[!DNL Mixpanel] データをExperience Platformに取り込む前に指定するタイムゾーンは、[!DNL Mixpanel] プロファイルタイムゾーン設定と同じである必要があります。 データのタイムゾーンの変更は新しいイベントにのみ適用され、古いイベントは以前に指定したタイムゾーンに残ります。 [!DNL Mixpanel] は夏時間を調整し、取り込みタイムスタンプを適切に調整します。 タイムゾーンがデータに与える影響について詳しくは、[!DNL Mixpanel] プロジェクトのタイムゾーンの管理 [ に関する ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) ガイドを参照してください。
+[!DNL Mixpanel] データをExperience Platformに取り込む前に指定するタイムゾーンは、[!DNL Mixpanel] プロファイルタイムゾーン設定と同じである必要があります。 データのタイムゾーンの変更は新しいイベントにのみ適用され、古いイベントは以前に指定したタイムゾーンに残ります。 [!DNL Mixpanel] は夏時間を調整し、取り込みタイムスタンプを適切に調整します。 タイムゾーンがデータに与える影響について詳しくは、[!DNL Mixpanel] プロジェクトのタイムゾーンの管理 [&#x200B; に関する &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) ガイドを参照してください。
 
 しばらくすると、右側のインターフェイスがプレビューパネルに更新され、データフローを作成する前にスキーマを調べることができます。 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![ 設定 ](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
+![&#x200B; 設定 &#x200B;](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Mixpanel] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 分析データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/analytics.md) を行いましょう。
+このチュートリアルでは、[!DNL Mixpanel] アカウントとの接続を確立しました。次のチュートリアルに進み、[&#x200B; 分析データをExperience Platformに取り込むためのデータフローの設定 &#x200B;](../../dataflow/analytics.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -93,13 +93,13 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 次に、表示するデータフローのデータフロー実行 ID を選択して、そのデータフロー実行に関する特定の詳細を確認します。
 
-![ データフローの監視 ](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
+![&#x200B; データフローの監視 &#x200B;](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
 最後に、「**[!UICONTROL Preview dataset]**」を選択して、取り込まれたデータを表示します。
 
-![ データセットをプレビュー ](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
+![&#x200B; データセットをプレビュー &#x200B;](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 
-このデータを [!DNL Mixpanel] > [!DNL Events] ページのデータと照合して検証できます。 詳しくは、[[!DNL Mixpanel]  イベントに関するドキュメント ](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) を参照してください。
+このデータを [!DNL Mixpanel] > [!DNL Events] ページのデータと照合して検証できます。 詳しくは、[[!DNL Mixpanel]  イベントに関するドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) を参照してください。
 
 ![mixpanel-events](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
 
@@ -109,7 +109,7 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 >[!TIP]
 >
->API について詳しくは、[ イベント書き出し API/ダウンロード ](https://developer.mixpanel.com/reference/raw-event-export) を参照してください。
+>API について詳しくは、[&#x200B; イベント書き出し API/ダウンロード &#x200B;](https://developer.mixpanel.com/reference/raw-event-export) を参照してください。
 
 
 | ソース | タイプ |
@@ -128,4 +128,4 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 ### 制限 {#limits}
 
-* [Export API のレート制限 ](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints) に示すように、同時クエリは最大 100 個、1 時間あたり 60 個です。
+* [Export API のレート制限 &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints) に示すように、同時クエリは最大 100 個、1 時間あたり 60 個です。

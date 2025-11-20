@@ -19,9 +19,9 @@ ht-degree: 9%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ データフロー ](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
-* [ セグメント化サービス ](../../segmentation/home.md):
-* [ 処理能力 ](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
+* [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
+* [&#x200B; セグメント化サービス &#x200B;](../../segmentation/home.md):
+* [&#x200B; 処理能力 &#x200B;](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
 
 ## ストリーミングオーディエンスの指標の監視 {#streaming-audience-metrics}
 

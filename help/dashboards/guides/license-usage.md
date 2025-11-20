@@ -156,7 +156,7 @@ Experience Platform UI内のライセンス版使用状況ダッシュボード�
 
 >[!NOTE]
 >
->ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 ダッシュボードを表示するには、「ライセンス使用状況ダッシュボードを表示」権限をユーザーに付与する必要があります。 アクセス権限の付与手順については、[ ダッシュボード権限ガイド ](../permissions.md) を参照してください。
+>ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 ダッシュボードを表示するには、「ライセンス使用状況ダッシュボードを表示」権限をユーザーに付与する必要があります。 アクセス権限の付与手順については、[&#x200B; ダッシュボード権限ガイド &#x200B;](../permissions.md) を参照してください。
 
 ## 「[!UICONTROL Metrics]」タブ {#metrics-tab}
 
@@ -202,7 +202,7 @@ Experience Platform UI内のライセンス版使用状況ダッシュボード�
 
 各グラフには、データをフィルタリングするためのドロップダウンメニューが含まれています。 日付範囲ドロップダウンを使用して、ルックバック期間（デフォルト：過去 30 日間）を調整するか、サンドボックスドロップダウンを使用して、特定の実稼動用または開発用サンドボックスの使用状況を表示します。
 
-![ 履歴使用状況グラフ、サンドボックステーブル、エクスポートボタンを含んだアドレス可能なオーディエンス指標の詳細ビュー ](../images/license-usage/metric-details-view.png)
+![&#x200B; 履歴使用状況グラフ、サンドボックステーブル、エクスポートボタンを含んだアドレス可能なオーディエンス指標の詳細ビュー &#x200B;](../images/license-usage/metric-details-view.png)
 
 また、 **[!UICONTROL Custom date]** を選択して、表示する期間を選択することもできます。
 
@@ -327,7 +327,7 @@ Experience Platform UI内のライセンス版使用状況ダッシュボード�
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリケーション サービス、およびインテリジェント サービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT カスタマーデータプラットフォーム:OD</li><li>RT カスタマーデータプラットフォーム:OD PRFL から 10M</li><li>RT カスタマーデータプラットフォーム:OD PRFL から 50M</li></ul> | [Adobe Systems Real-時間 Customer データ Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP :OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL TO 50M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス &#x200B;](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER:OD</li><li>JOURNEY OPTIMIZERPRIME:OD</li><li>JOURNEY OPTIMIZERULTIMATE:OD</li><li>UNP AJO プライムスターター:OD</li><li>UNP AJO ULTIMATE スターター :OD</li><li>UNP Real-Time CDP:OD プロファイルオーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -338,4 +338,4 @@ Experience Platform UI内のライセンス版使用状況ダッシュボード�
 
 このドキュメントを読むと、ライセンス使用状況ダッシュボードを見つけ、購入した各製品、すべての実稼動または開発用サンドボックス、特定のサンドボックスの使用状況指標を表示できるようになります。 組織が購入したライセンスに基づいて、組織で使用可能な指標に関する詳細を確認できます。
 
-Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
+Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド &#x200B;](../../landing/ui-guide.md) を参照してください。

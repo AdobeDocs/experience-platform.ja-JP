@@ -66,9 +66,9 @@ Power BI または Tableau でCustomer Journey Analyticsデータにアクセス
 >
 >Power BI または Tableau を Customer Journey Analytics に接続すると、「同時セッション」エンタイトルメントサービスクエリが使用されます。 追加のセッションとクエリが必要な場合は、追加の広告ホッククエリユーザーパックアドオンを購入して、5つの追加の同時セッションと1つの追加の同時クエリを取得できます。
 
-また、クエリエディターまたは Postgres CLI からCustomer Journey Analytics データに直接アクセスすることもできます。 これを行うには、クエリを記述するときに `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [ クエリオーサリングガイド ](./user-guide.md#query-authoring) を参照してください。
+また、クエリエディターまたは Postgres CLI からCustomer Journey Analytics データに直接アクセスすることもできます。 これを行うには、クエリを記述するときに `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [&#x200B; クエリオーサリングガイド &#x200B;](./user-guide.md#query-authoring) を参照してください。
 
-SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
+SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
 
 ## 資格情報の期限切れなし {#non-expiring-credentials}
 
@@ -100,17 +100,17 @@ SQL を使用してCustomer Journey Analyticsのデータビューにアクセ�
 3. [製品プロファイルに対して&#x200B;**サンドボックス**&#x200B;権限と&#x200B;**クエリサービス統合の管理**](../../access-control/ui/permissions.md)権限の両方を設定します。
 4. [製品プロファイルに新しいユーザー追加](../../access-control/ui/users.md) 設定済みの権限が付与されます。
 5. [ユーザーを製品プロファイル管理者として追加](https://helpx.adobe.com/jp/enterprise/using/manage-product-profiles.html) アクティブな製品プロファイルのアカウントの作成を許可します。
-6. 統合を作成するには、[ ユーザーを製品プロファイル開発者として追加 ](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) します。
+6. 統合を作成するには、[&#x200B; ユーザーを製品プロファイル開発者として追加 &#x200B;](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) します。
 
-これらの手順を実行すると、OAuth サーバー間資格情報を生成し、有効期限のある資格情報機能または有効期限のない資格情報機能を使用するために必要な権限が [0}Adobe Developer Console} で設定されます。](https://developer.adobe.com/console/)
+これらの手順を実行すると、OAuth サーバー間資格情報を生成し、有効期限のある資格情報機能または有効期限のない資格情報機能を使用するために必要な権限が [0&rbrace;Adobe Developer Console&rbrace; で設定されます。](https://developer.adobe.com/console/)
 
-権限の割り当てについて詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/home.md) を参照してください。
+権限の割り当てについて詳しくは、[&#x200B; アクセス制御に関するドキュメント &#x200B;](../../access-control/home.md) を参照してください。
 
 ### 資格情報を生成 {#generate-credentials}
 
 有効期限のない一連の資格情報を作成するには、Experience Platform UI に戻り、左側のナビゲーションから「**[!UICONTROL Queries]**」を選択して、[!UICONTROL Queries] Workspace にアクセスします。 次に、「**[!UICONTROL Credentials]**」タブを選択し、続いて「**[!UICONTROL Generate credentials]**」を選択します。
 
-![ 「資格情報」タブと「資格情報を生成」がハイライト表示されたクエリダッシュボード ](../images/ui/credentials/generate-credentials.png)
+![&#x200B; 「資格情報」タブと「資格情報を生成」がハイライト表示されたクエリダッシュボード &#x200B;](../images/ui/credentials/generate-credentials.png)
 
 資格情報を生成するためのダイアログが表示されます。 有効期限のない認証情報を作成するには、次の詳細を指定する必要があります。
 
@@ -125,7 +125,7 @@ SQL を使用してCustomer Journey Analyticsのデータビューにアクセ�
 
 >[!IMPORTANT]
 >
->**[!UICONTROL Generate credentials]**&#x200B;を選択すると、設定 JSON ファイルがローカルマシンにダウンロードされます。Adobe Systems は生成された資格情報を記録しない&#x200B;****&#x200B;ため、ダウンロードしたファイルを安全にストアし、資格情報の記録を保持する必要があります。
+>**[!UICONTROL Generate credentials]**&#x200B;を選択すると、設定 JSON ファイルがローカルマシンにダウンロードされます。Adobe Systems は生成された資格情報を記録しない&#x200B;**&#x200B;**&#x200B;ため、ダウンロードしたファイルを安全にストアし、資格情報の記録を保持する必要があります。
 >
 >さらに、資格情報が 90 日間使用されない場合、資格情報は消去されます。
 
@@ -190,4 +190,4 @@ SQL を使用してCustomer Journey Analyticsのデータビューにアクセ�
 
 ## 次の手順
 
-これで、有効期限のある資格情報と有効期限のない資格情報の両方の仕組みがわかったので、これらの資格情報を使用して外部クライアントに接続できます。 外部クライアントの詳細については、[ クエリサービスへのクライアント接続ガイド ](../clients/overview.md) を参照してください。
+これで、有効期限のある資格情報と有効期限のない資格情報の両方の仕組みがわかったので、これらの資格情報を使用して外部クライアントに接続できます。 外部クライアントの詳細については、[&#x200B; クエリサービスへのクライアント接続ガイド &#x200B;](../clients/overview.md) を参照してください。

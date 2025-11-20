@@ -37,7 +37,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![ダッシュボード作成ダイアログ。](./images/standard-dashboards/create-dashboard-dialog.png)
 
-データ Distiller SKUを購入したユーザーは、カスタム SQL クエリを使用して分析情報を作成するオプションがあります。 このワークフローに関する手順については[](./sql-insights-query-pro-mode/overview.md)クエリプロモードの概要を参照してください。
+データ Distiller SKUを購入したユーザーは、カスタム SQL クエリを使用して分析情報を作成するオプションがあります。 このワークフローに関する手順については[&#128279;](./sql-insights-query-pro-mode/overview.md)クエリプロモードの概要を参照してください。
 
 新しく作成された空のダッシュボードが表示され、選択した名前が表示の左上隅に表示されます。
 
@@ -54,7 +54,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 >
 >各ダッシュボードは、10 個までのウィジェットをサポートします。 ダッシュボードに 10 個のウィジェットを追加すると、[ [!UICONTROL Add new widget] ] オプションは無効になり、グレーで表示されます。
 
-![ 「新しいウィジェットを追加」がハイライト表示された新しい空のダッシュボード。](./images/standard-dashboards/add-new-widget.png)
+![&#x200B; 「新しいウィジェットを追加」がハイライト表示された新しい空のダッシュボード。](./images/standard-dashboards/add-new-widget.png)
 
 ### ウィジェットコンポーザー
 
@@ -68,9 +68,9 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 >[!TIP]
 >
->情報アイコン（![ 情報アイコン](/help/images/icons/info.png)）を選択し、データパネルに表示するには長すぎる場合に、完全なデータモデル名を表示します。
+>情報アイコン（![&#x200B; 情報アイコン](/help/images/icons/info.png)）を選択し、データパネルに表示するには長すぎる場合に、完全なデータモデル名を表示します。
 
-![ データを選択ダイアログ ](./images/standard-dashboards/select-data-model-dialog.png)
+![&#x200B; データを選択ダイアログ &#x200B;](./images/standard-dashboards/select-data-model-dialog.png)
 
 プレビューリストには、データモデルに含まれるテーブルに関する詳細が表示されます。 次の表に、列フィールドとその潜在的な値の説明を示します。
 
@@ -142,11 +142,11 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ウィジェットコンポーザーに保存すると、ウィジェットがダッシュボードにローカルに保存されます。 作業内容を保存して後で再開する場合は、[ **[!UICONTROL Save]**] を選択します。 ウィジェット名の下のチェックマークアイコンは、ウィジェットが保存されたことを示します。 または、ウィジェットに問題がなければ、[ **[!UICONTROL Save and close]** ] を選択して、ダッシュボードにアクセスできる他のすべてのユーザーがウィジェットを使用できるようにします。 **[!UICONTROL Cancel]**&#x200B;を選択して作業を中断し、カスタムダッシュボードに戻ります。
 
-![ 新しいウィジェットの保存の確認 ](./images/standard-dashboards/save-confirmation.png)
+![&#x200B; 新しいウィジェットの保存の確認 &#x200B;](./images/standard-dashboards/save-confirmation.png)
 
 >[!TIP]
 >
->「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択すると、ダッシュボードの作成に関する詳細が表示されます。 表示されるダイアログでダッシュボードの名前を変更できます。
+>「プロパティ」アイコン（![&#x200B; 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択すると、ダッシュボードの作成に関する詳細が表示されます。 表示されるダイアログでダッシュボードの名前を変更できます。
 
 ウィジェットは、このワークスペース中に再配置およびサイズ変更できます。 **[!UICONTROL Save]**&#x200B;を選択すると、ダッシュボード名と設定済みレイアウトが保持されます。
 
@@ -162,7 +162,7 @@ Adobe Real-Time Customer Data Platform インサイトダッシュボードの�
 >
 >既存のカスタムダッシュボードを切り替えるには、左側のナビゲーションバーのダッシュボードを選択し、インベントリリストからダッシュボード名を選択します。
 
-鉛筆アイコン（![ 鉛筆アイコンを選択します。](/help/images/icons/edit.png))をクリックして、編集モードに入ります。
+鉛筆アイコン（![&#x200B; 鉛筆アイコンを選択します。](/help/images/icons/edit.png))をクリックして、編集モードに入ります。
 
 ![鉛筆アイコンがハイライトされたカスタムダッシュボード。](./images/standard-dashboards/edit-mode.png)
 
@@ -178,7 +178,7 @@ Adobe Real-Time Customer Data Platform インサイトダッシュボードの�
 
 このドキュメントでは、カスタムダッシュボードの作成方法と、そのダッシュボードのカスタムウィジェットを作成、編集、更新する方法について、より深く理解しました。
 
-[ プロファイル ](./guides/profiles.md#standard-widgets)、[ セグメント ](./guides/audiences.md#standard-widgets)、[ 宛先 ](./guides/destinations.md#standard-widgets) ダッシュボードで使用可能な事前設定済みの指標とビジュアライゼーションについては、それぞれのドキュメントの標準ウィジェットのリストを参照してください。
+[&#x200B; プロファイル &#x200B;](./guides/profiles.md#standard-widgets)、[&#x200B; セグメント &#x200B;](./guides/audiences.md#standard-widgets)、[&#x200B; 宛先 &#x200B;](./guides/destinations.md#standard-widgets) ダッシュボードで使用可能な事前設定済みの指標とビジュアライゼーションについては、それぞれのドキュメントの標準ウィジェットのリストを参照してください。
 
 Experience Platform のダッシュボードについての理解を深めるには、次のビデオを視聴してください。
 

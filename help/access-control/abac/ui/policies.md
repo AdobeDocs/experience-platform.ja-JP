@@ -16,7 +16,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->アクセスポリシーをデータ使用ポリシーと混同しないでください。データ使用ポリシーは、組織内のどのユーザーがアクセス権を持つかではなく、Adobe Experience Platformでのデータの使用方法を制御します。 詳しくは、[ データ使用ポリシー ](../../../data-governance/policies/create.md) の作成に関するガイドを参照してください。
+>アクセスポリシーをデータ使用ポリシーと混同しないでください。データ使用ポリシーは、組織内のどのユーザーがアクセス権を持つかではなく、Adobe Experience Platformでのデータの使用方法を制御します。 詳しくは、[&#x200B; データ使用ポリシー &#x200B;](../../../data-governance/policies/create.md) の作成に関するガイドを参照してください。
 
 <!-- ## Create a new policy
 
@@ -128,21 +128,21 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ポリシーに関連付けられたサンドボックスを表示するには、「**[!UICONTROL Policies]**」タブからポリシーを選択します。
 
-![ 使用可能な既存のポリシーのリストを表示するポリシーページ ](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 次に、ポリシーを選択し、タブ **[!UICONTROL Sandboxes]** 選択します。 ポリシーに関連付けられているサンドボックスのリストが表示されます。
 
-![ 使用可能な既存のポリシーのリストを表示するポリシーページ ](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### すべてのサンドボックスにポリシーを追加
 
 「**[!UICONTROL Auto-include]**」タブの **[!UICONTROL Sandboxes]** 切り替えスイッチを使用して、すべてのサンドボックスのポリシーを有効にします。
 
-![ 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![&#x200B; 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
 
 選択を確認するように求める **[!UICONTROL Enable Auto-include]** ダイアログが表示されます。 「**[!UICONTROL Enable]**」を選択して、設定を完了します。
 
-![[!UICONTROL Enable Auto-include] をハイライト表示した [!UICONTROL Enable] ダイアログ ](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![[!UICONTROL Enable Auto-include] をハイライト表示した [!UICONTROL Enable] ダイアログ &#x200B;](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -156,15 +156,15 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 「**[!UICONTROL Auto-include]**」タブの **[!UICONTROL Sandboxes]** 切り替えスイッチを使用して、すべてのサンドボックスのポリシーを無効にします。
 
-![ 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![&#x200B; 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
 
 「**[!UICONTROL Sandboxes]**」タブから「**[!UICONTROL Add Sandboxes]**」を選択し、このポリシーを適用するサンドボックスを選択します。
 
-![ ポリシーに追加されたサンドボックスのリストを表示する「[!UICONTROL Sandboxes]」タブ ](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![&#x200B; ポリシーに追加されたサンドボックスのリストを表示する「[!UICONTROL Sandboxes]」タブ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 サンドボックスのリストが表示されます。 追加するサンドボックスをリストから選択します。 または、検索バーを使用してサンドボックスを検索します。 **[!UICONTROL Save]** を選択します。
 
-![ ポリシーへの追加に使用できる既存のサンドボックスのリストを示す [!UICONTROL Add Sandboxes] ページ ](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![&#x200B; ポリシーへの追加に使用できる既存のサンドボックスのリストを示す [!UICONTROL Add Sandboxes] ページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 サンドボックスを削除するには、サンドボックス名の横にある **X** アイコンを選択します。
 
-![ 削除するサンドボックスがハイライト表示されたサン [!UICONTROL Sandboxes] ボックスのリストを表示する「[!UICONTROL X]」タブ ](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![&#x200B; 削除するサンドボックスがハイライト表示されたサン [!UICONTROL Sandboxes] ボックスのリストを表示する「[!UICONTROL X]」タブ &#x200B;](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
 選択を確認するように求める **[!UICONTROL Remove]** ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して削除を完了します。
 
-![[!UICONTROL Remove] をハイライト表示した [!UICONTROL Confirm] ダイアログ ](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![[!UICONTROL Remove] をハイライト表示した [!UICONTROL Confirm] ダイアログ &#x200B;](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -211,4 +211,4 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ## 次の手順
 
-ポリシーをアクティブにすると、次の手順 [ 役割の権限の管理 ](permissions.md) に進むことができます。
+ポリシーをアクティブにすると、次の手順 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) に進むことができます。

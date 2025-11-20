@@ -66,7 +66,7 @@ Experience Platform UI 内で宛先ダッシュボードに移動するには、
 >[!NOTE]
 >
 >2023 年 7 月 26 日（PT）の時点で、[!UICONTROL Profiles]、[!UICONTROL Audiences] および [!UICONTROL Destinations] の概要ダッシュボードは、過去 6 か月間にビューを変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みにリセットされました。
->デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[ プロファイル ](./profiles.md#default-widgets) および [ オーディエンス ](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 以前と同様にダッシュボードウィジェットをカスタマイズし続けることができます。
+>デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[&#x200B; プロファイル &#x200B;](./profiles.md#default-widgets) および [&#x200B; オーディエンス &#x200B;](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 以前と同様にダッシュボードウィジェットをカスタマイズし続けることができます。
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -147,9 +147,9 @@ Adobe Systems には、宛先に関連するさまざまなメトリックを視
 
 ウィジェットに表示されるリストからオーディエンスの名前を選択すると、オーディエンスの詳細が表示されます。 **[!UICONTROL View All]**&#x200B;を選択して[!UICONTROL Audiences] [!UICONTROL Browse]タブに移動し、オーディエンスの名前を選択して詳細表示こともできます。
 
-Experience Platformでのオーディエンスの操作について詳しくは、[ セグメント化サービスの概要 ](../../segmentation/home.md) を参照してください。
+Experience Platformでのオーディエンスの操作について詳しくは、[&#x200B; セグメント化サービスの概要 &#x200B;](../../segmentation/home.md) を参照してください。
 
-![ 最近アクティブ化されたオーディエンスウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-audiences.png)
+![&#x200B; 最近アクティブ化されたオーディエンスウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-audiences.png)
 
 ### [!UICONTROL Recently activated audiences by destination] {#recently-activated-audiences-by-destination}
 
@@ -164,9 +164,9 @@ Experience Platformでのオーディエンスの操作について詳しくは�
 
 表示されたリストからオーディエンスの名前を選択して、オーディエンスの詳細表示ことができます。
 
-![ 最近アクティブ化されたオーディエンス（宛先別）ウィジェット ](../images/destinations/recently-activated-audiences-by-destination.png)
+![&#x200B; 最近アクティブ化されたオーディエンス（宛先別）ウィジェット &#x200B;](../images/destinations/recently-activated-audiences-by-destination.png)
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -294,7 +294,7 @@ Experience Platformでのオーディエンスの操作について詳しくは�
 
 ![「すべての宛先のアクティブ化されたオーディエンス」ウィジェット](../images/destinations/activated-audiences-across-all-destinations.png)
 
-「**[!UICONTROL Audiences]**」を選択すると、「宛先 [!UICONTROL Browse]」タブに移動します。 このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。「[[!UICONTROL Browse]」タブについて詳しくは、ドキュメントを参照してください ](../../destinations/ui/destinations-workspace.md#browse)
+「**[!UICONTROL Audiences]**」を選択すると、「宛先 [!UICONTROL Browse]」タブに移動します。 このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。「[[!UICONTROL Browse]」タブについて詳しくは、ドキュメントを参照してください &#x200B;](../../destinations/ui/destinations-workspace.md#browse)
 
 この説明の [使用される用語の定義](#prerequisites) については、前提条件のセクションを参照してください。
 
@@ -310,7 +310,7 @@ Experience Platformでのオーディエンスの操作について詳しくは�
 
 このウィジェットを使用すると、アクティブ化されたオーディエンスの数に基づいて宛先の価値を一目で把握できます。 また、より詳細な情報に容易にアクセスできるので、さらに分析を進めることもできます。
 
-この説明の [ 使用される用語の定義 ](#prerequisites) については、前提条件の節を参照してください。
+この説明の [&#x200B; 使用される用語の定義 &#x200B;](#prerequisites) については、前提条件の節を参照してください。
 
 ## 次の手順
 

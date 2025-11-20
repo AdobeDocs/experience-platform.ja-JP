@@ -58,7 +58,7 @@ ID サービスのリンクロジックの仕組みを視覚的に表現する�
 * EMAIL:julien<span>@acme.com
 * CRMID:60013ABC
 
-![ 既存のグラフ ](../images/identity-settings/existing-graph.png)
+![&#x200B; 既存のグラフ &#x200B;](../images/identity-settings/existing-graph.png)
 
 >[!TAB  受信データ ]
 
@@ -67,13 +67,13 @@ ID のペアがグラフに取り込まれ、このペアには次が含まれ�
 * CRMID:60013ABC
 * ECID:100066526
 
-![ 受信データ ](../images/identity-settings/incoming-data.png)
+![&#x200B; 受信データ &#x200B;](../images/identity-settings/incoming-data.png)
 
 >[!TAB  更新されたグラフ ]
 
 ID サービスは、CRMID:60013ABC がグラフ内に既に存在することを認識するので、新しい ECID のみをリンクします
 
-![ 更新されたグラフ ](../images/identity-settings/updated-graph.png)
+![&#x200B; 更新されたグラフ &#x200B;](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
@@ -102,7 +102,7 @@ ID サービスは、CRMID:60013ABC がグラフ内に既に存在すること�
 | `t=3` | ECID:44675 | ホームページを表示 |
 | `t=4` | ECID:44675、CRMID: 31260XYZ | 購入履歴の表示 |
 
-各イベントのプライマリ ID は、[ データ要素タイプの設定方法 ](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
+各イベントのプライマリ ID は、[&#x200B; データ要素タイプの設定方法 &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md) に基づいて決定されます。
 
 >[!NOTE]
 >

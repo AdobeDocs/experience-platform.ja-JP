@@ -127,7 +127,7 @@ OAuth 2 シークレットを作成するには、**[!UICONTROL OAuth 2]**&#x200
 
 OAuth 2 JWT 秘密鍵を作成するには、**[!UICONTROL OAuth 2 JWT]** ドロップダウンから「**[!UICONTROL Type]**」を選択します。
 
-![[!UICONTROL Create Secret] ドロップダウンで OAuth 2 JWT 秘密鍵がハイライト表示された「[!UICONTROL Type]」タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![[!UICONTROL Create Secret] ドロップダウンで OAuth 2 JWT 秘密鍵がハイライト表示された「[!UICONTROL Type]」タブ &#x200B;](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ OAuth 2 JWT 秘密鍵を作成するには、**[!UICONTROL OAuth 2 JWT]** ドロ
 
 最後に、シークレットの **[!UICONTROL Refresh Offset]** 値を設定できます。 これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
 
-![ 「[!UICONTROL Create Secret]」フィールドをハイライト表示した「[!UICONTROL Refresh Offset]」タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![&#x200B; 「[!UICONTROL Create Secret]」フィールドをハイライト表示した「[!UICONTROL Refresh Offset]」タブ &#x200B;](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 例えば、更新オフセットがデフォルト値の `1800` （30 分）に設定されていて、アクセストークンの `expires_in` 値が `3600` （1 時間）の場合、システムは 1 時間で自動的に秘密鍵を更新します。
 
@@ -155,7 +155,7 @@ OAuth 2 JWT 秘密鍵を作成するには、**[!UICONTROL OAuth 2 JWT]** ドロ
 
 終了したら、「**[!UICONTROL Create Secret]**」を選択して秘密鍵を保存します。
 
-![ 「[!UICONTROL Create Secret]」タブのハイライト表示 [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![&#x200B; 「[!UICONTROL Create Secret]」タブのハイライト表示 [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
@@ -184,11 +184,11 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 [!DNL LinkedIn] OAuth2 シークレットを作成するには、**[!UICONTROL [!DNL LinkedIn] OAuth 2]** ドロップダウンから「**[!UICONTROL Type]**」を選択します。 次に、「**[!UICONTROL Create Secret]**」を選択します。
 
-![[!UICONTROL Create Secret] のフィールドがハイライト表示された「[!UICONTROL Type]」タブ ](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![[!UICONTROL Create Secret] のフィールドがハイライト表示された「[!UICONTROL Type]」タブ &#x200B;](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
 秘密鍵を [!DNL LinkedIn] で手動で認証する必要があることを示すポップオーバーが表示されます。 **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]**&#x200B;を選択して続行します。
 
-![ 「LinkedIn で秘密鍵を作成して認証」ボタンをハイライト表示した LinkedIn 認証ポップオーバー。](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![&#x200B; 「LinkedIn で秘密鍵を作成して認証」ボタンをハイライト表示した LinkedIn 認証ポップオーバー。](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 [!DNL LinkedIn] 資格情報を入力するように求めるダイアログが表示されます。 画面の指示に従い、イベント転送にデータへのアクセスを許可します。
 
@@ -208,7 +208,7 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 [!UICONTROL Secrets]タブにリダイレクトされます。このページに一覧表示されているシークレットは、再承認が必要なシークレットのみを表示するようにフィルター処理されます。 再認証する必要があるシークレットの **[!UICONTROL Auth Needed]** を選択します。
 
-![[!UICONTROL Secret]タブ[!UICONTROL Auth Needed][!DNL LinkedIn]シークレットについて。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![[!UICONTROL Secret]タブ[!UICONTROL Auth Needed]&#x200B;[!DNL LinkedIn]シークレットについて。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 [!DNL LinkedIn] 資格情報の入力を求めるダイアログが表示されます。プロンプトに従って、シークレットを再認証します。
 
@@ -216,17 +216,17 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 [!DNL Amazon] OAuth2 シークレットを作成するには、**[!UICONTROL [!DNL Amazon] OAuth 2]** ドロップダウンから「**[!UICONTROL Type]**」を選択します。 次に、「**[!UICONTROL Create Secret]**」を選択します。
 
-![[!UICONTROL Create Secret] のフィールドがハイライト表示された「[!UICONTROL Type]」タブ ](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+![[!UICONTROL Create Secret] のフィールドがハイライト表示された「[!UICONTROL Type]」タブ &#x200B;](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
 
 秘密鍵を [!DNL Amazon] で手動で認証する必要があることを示すポップオーバーが表示されます。 「**[!UICONTROL Create & Authorize secret with [!DNL Amazon]]**」を選択して続行します。
 
-![ 「Amazonで秘密鍵を作成して認証」ボタンをハイライト表示したAmazon認証ポップオーバー。](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+![&#x200B; 「Amazonで秘密鍵を作成して認証」ボタンをハイライト表示したAmazon認証ポップオーバー。](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
 
 [!DNL Amazon] 資格情報を入力するように求めるダイアログが表示されます。 画面の指示に従ってイベント転送データへのアクセスを許可します。
 
 認証プロセスが完了すると、「**[!UICONTROL Secrets]**」タブに戻り、新しく作成した秘密鍵を確認できます。 ここでは、秘密鍵のステータスと有効期限の日付を確認できます。
 
-![ 新しく作成した秘密鍵がハイライト表示された「[!UICONTROL Secret]」タブ ](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
+![&#x200B; 新しく作成した秘密鍵がハイライト表示された「[!UICONTROL Secret]」タブ &#x200B;](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## 秘密鍵の編集
 

@@ -62,9 +62,9 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL Graphs updated]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL Total failed dataflows]** | 失敗したデータフロー実行の数。 |
 
-ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](/help/images/icons/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
+ソース名の横にあるフィルターアイコン ![&#x200B; フィルターアイコン &#x200B;](/help/images/icons/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
 
-![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-identities/sources-filter.png)
+![&#x200B; フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-identities/sources-filter.png)
 
 または、切り替えスイッチで **[!UICONTROL Dataflows]** を選択して、過去 24 時間の組織のデータフローの ID 処理の詳細を表示できます。
 
@@ -87,9 +87,9 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL Graphs updated]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL Total failed dataflows]** | 失敗したデータフロー実行の数。 |
 
-データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
+データフロー実行開始時間の横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
 
-![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
+![&#x200B; フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
 
 [!UICONTROL Dataflow run details]ページには、組織 ID やデータフロー実行 ID など、[!DNL Identity]データフローの実行に関する詳細情報が表示されます。このページは、取得プロセスでエラーが発生した場合に、 [!DNL Identity Service]が提供する対応するエラーコードとエラーメッセージも表示します。
 

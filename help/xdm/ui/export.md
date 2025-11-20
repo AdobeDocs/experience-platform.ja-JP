@@ -24,7 +24,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->また、Schema Registry API を使用して、クラス、スキーマフィールドグループ、データタイプなどのスキーマに加えて、他のリソースを書き出すこともできます。 詳しくは、[ 書き出しエンドポイントガイド ](../api/export.md) を参照してください。
+>また、Schema Registry API を使用して、クラス、スキーマフィールドグループ、データタイプなどのスキーマに加えて、他のリソースを書き出すこともできます。 詳しくは、[&#x200B; 書き出しエンドポイントガイド &#x200B;](../api/export.md) を参照してください。
 
 ## 前提条件
 
@@ -38,11 +38,11 @@ Experience Platform UIではXDMリソースをエクスポートできますが�
 
 >[!TIP]
 >
->探している XDM リソースを見つける方法について詳しくは、[XDM リソースの調査 ](./explore.md) に関するガイドを参照してください。
+>探している XDM リソースを見つける方法について詳しくは、[XDM リソースの調査 &#x200B;](./explore.md) に関するガイドを参照してください。
 
-次に、使用可能なオプションから **[!UICONTROL Copy JSON]** アイコン（![ コピーアイコン ](/help/images/icons/copy.png)）を選択します。
+次に、使用可能なオプションから **[!UICONTROL Copy JSON]** アイコン（![&#x200B; コピーアイコン &#x200B;](/help/images/icons/copy.png)）を選択します。
 
-![ スキーマ行と [!UICONTROL Copy to JSON] がハイライト表示されたスキーマワークスペース。](../images/ui/export/copy-json.png)
+![&#x200B; スキーマ行と [!UICONTROL Copy to JSON] がハイライト表示されたスキーマワークスペース。](../images/ui/export/copy-json.png)
 
 これにより、スキーマ構造に基づいて生成された JSON ペイロードがクリップボードにコピーされます。 上記の「[!DNL Loyalty Members]」スキーマの場合、次の JSON が生成されます。
 
@@ -226,8 +226,8 @@ Experience Platform UIではXDMリソースをエクスポートできますが�
 
 ## API を使用したリソースの読み込み {#import-resource-with-api}
 
-スキーマの書き出し JSON をコピーしたら、Schema Registry API の `/rpc/import` エンドポイントに対する POST リクエストのペイロードとして使用できます。 スキーマを目的の組織およびサンドボックスに送信するための呼び出しを設定する方法について詳しくは、[ インポートエンドポイントガイド ](../api/import.md) を参照してください。
+スキーマの書き出し JSON をコピーしたら、Schema Registry API の `/rpc/import` エンドポイントに対する POST リクエストのペイロードとして使用できます。 スキーマを目的の組織およびサンドボックスに送信するための呼び出しを設定する方法について詳しくは、[&#x200B; インポートエンドポイントガイド &#x200B;](../api/import.md) を参照してください。
 
 ## 次の手順
 
-このガイドに従うと、XDM スキーマを別の組織またはサンドボックスに正常に書き出すことができます。 [!UICONTROL Schemas] UI の機能について詳しくは、[[!UICONTROL Schemas] UI の概要を参照してください ](./overview.md)
+このガイドに従うと、XDM スキーマを別の組織またはサンドボックスに正常に書き出すことができます。 [!UICONTROL Schemas] UI の機能について詳しくは、[[!UICONTROL Schemas] UI の概要を参照してください &#x200B;](./overview.md)

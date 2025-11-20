@@ -17,7 +17,7 @@ ht-degree: 27%
 >title="無償体験版で試してみるテンプレート"
 >abstract="csv テンプレートをダウンロードして、オフラインでマッピングを実行します。"
 
-このガイドでは、Adobe Experience Platform ユーザーインターフェイスの [ データ準備 ](../home.md) マッピング機能を使用して、CSV ファイルを [ エクスペリエンスデータモデル（XDM）スキーマ ](../../xdm/home.md) にマッピングする方法について説明します。
+このガイドでは、Adobe Experience Platform ユーザーインターフェイスの [&#x200B; データ準備 &#x200B;](../home.md) マッピング機能を使用して、CSV ファイルを [&#x200B; エクスペリエンスデータモデル（XDM）スキーマ &#x200B;](../../xdm/home.md) にマッピングする方法について説明します。
 
 ## 基本を学ぶ
 
@@ -41,7 +41,7 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 
 マッピングインターフェイスと、それが提供する包括的なツールセットを使用して、ソーススキーマのデータフィールドを、ターゲットスキーマ内の適切なターゲット XDM フィールドに正常にマッピングします。
 
-![Experience Platform UI のマッピングインターフェイス ](../images/ui/mapping/base_mapping.png)
+![Experience Platform UI のマッピングインターフェイス &#x200B;](../images/ui/mapping/base_mapping.png)
 
 ### マッピングインターフェイスについて {#mapping-interface}
 
@@ -62,7 +62,7 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 | --- | --- |
 | [!UICONTROL Search source fields] | 検索バーを使用して、特定のソースフィールドに移動します。 |
 | [!UICONTROL All fields] | [ **[!UICONTROL All fields]** ] を選択して、マッピングをフィルター処理するオプションのドロップダウンメニュー表示します。 使用可能なフィルタリングオプションは次のとおりです。<ul><li>**[!UICONTROL Required fields]**:ワークフローを完了するために必要なフィールドのみを表示するようにインターフェイスフィルターします。</li><li> **[!UICONTROL Identity fields]**:ID としてマークされたフィールドのみを表示するようにインターフェイスフィルターします。</li><li>**[!UICONTROL Mapped fields]**:既にマッピングされているフィールドのみを表示するようにインターフェイスフィルターします。</li><li>**[!UICONTROL Unmapped fields]**:インターフェイスフィルター、まだマッピングされていないフィールドのみを表示します。</li><li>**[!UICONTROL Fields with errors]**:エラーのあるフィールドのみを表示するようにインターフェイスフィルターします。</li></ul> |
-| [!UICONTROL New field type] | **[!UICONTROL New field type]**&#x200B;を選択して、新しいフィールドまたは計算フィールドを追加します。詳しくは、[ 新しいフィールドタイプの追加 ](#add-a-new-field-type) の節を参照してください。 |
+| [!UICONTROL New field type] | **[!UICONTROL New field type]**&#x200B;を選択して、新しいフィールドまたは計算フィールドを追加します。詳しくは、[&#x200B; 新しいフィールドタイプの追加 &#x200B;](#add-a-new-field-type) の節を参照してください。 |
 | [!UICONTROL Import mappings] | [ **[!UICONTROL Import mappings]** ] を選択して、既存のファイルまたはデータフローからマッピングをインポートします。 詳細については、 [マッピングのインポート](#import-mapping)のセクションを参照してください。 |
 | [!UICONTROL Validate] | マッピングのエラーをチェックする **[!UICONTROL Validate]** を選択します。 |
 | [!UICONTROL Download template] | エクスポートする **[!UICONTROL Download template]** を選択し、マッピングの CSV ファイルをダウンロードするします。 |
@@ -91,15 +91,15 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 
 インタラクティブなターゲットスキーマツリーが表示され、ターゲットスキーマを手動でトラバースして、ソースフィールドに適したターゲット XDM フィールドを見つけることができます。
 
-![ 新しいターゲットフィールドが選択されたインタラクティブターゲットスキームツリー ](../images/ui/mapping/add_target_field.png)
+![&#x200B; 新しいターゲットフィールドが選択されたインタラクティブターゲットスキームツリー &#x200B;](../images/ui/mapping/add_target_field.png)
 
 #### 計算フィールド {#calculated-fields}
 
 計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。計算フィールドの最大長は 4096 文字です。
 
-計算フィールドを作成するには、[ **[!UICONTROL New field type]** ] を選択し、[ **[!UICONTROL Add calculated field]**
+計算フィールドを作成するには、[ **[!UICONTROL New field type]** ] を選択し、&lbrack; **[!UICONTROL Add calculated field]**
 
-![ 「計算フィールドを追加」ボタンを選択したマッピングインターフェイス ](../images/ui/mapping/new_calculated_field.png)
+![&#x200B; 「計算フィールドを追加」ボタンを選択したマッピングインターフェイス &#x200B;](../images/ui/mapping/new_calculated_field.png)
 
 **[!UICONTROL Create calculated field]** ウィンドウが表示されます。 インターフェイスを使用して計算フィールドを入力し、サポートされるフィールド、関数、演算子については、左側のダイアログボックスを参照してください。
 
@@ -125,7 +125,7 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 
 既存のデータフローからマッピングをインポートするには、 [ **[!UICONTROL Import mappings]** ] を選択し、 [ **[!UICONTROL Import mapping from flow]**] を選択します。
 
-![ 「マッピングを読み込み」および「フローからマッピングを読み込み」が選択されているマッピングインターフェイス ](../images/ui/mapping/import_from_flow.png)
+![&#x200B; 「マッピングを読み込み」および「フローからマッピングを読み込み」が選択されているマッピングインターフェイス &#x200B;](../images/ui/mapping/import_from_flow.png)
 
 次に、ポップアップウィンドウを使用して、マッピングを読み込むデータフローを見つけます。 この手順では、検索機能を使用して特定のデータフローを分離し、そのマッピングを取得することもできます。 終了したら「**[!UICONTROL Select]**」を選択します。
 
@@ -137,11 +137,11 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 
 書き出されたファイルからマッピングを読み込むには、「**[!UICONTROL Import mappings]**」を選択してから「**[!UICONTROL Import mapping from file]**」を選択します。
 
-![ 「マッピングを読み込み」および「ファイルからマッピングを読み込み」が選択されているマッピングインターフェイス ](../images/ui/mapping/import_from_file.png)
+![&#x200B; 「マッピングを読み込み」および「ファイルからマッピングを読み込み」が選択されているマッピングインターフェイス &#x200B;](../images/ui/mapping/import_from_file.png)
 
 次に、[!UICONTROL Upload template] のウィンドウを使用して、マッピングの CSV コピーをダウンロードします。 その後、CSV ファイルタイプの編集をサポートするソフトウェアを使用して、デバイス上でローカルにマッピングを設定できます。 この手順では、ソースファイルとターゲットスキーマで提供されるフィールドのみを使用していることを確認する必要があります。
 
-![ 書き出したマッピングの csv ファイルをダウンロードおよびアップロードするためのオプションを表示するアップロードテンプレートウィンドウ。](../images/ui/mapping/upload_template.png)
+![&#x200B; 書き出したマッピングの csv ファイルをダウンロードおよびアップロードするためのオプションを表示するアップロードテンプレートウィンドウ。](../images/ui/mapping/upload_template.png)
 
 +++エクスポートされたマッピング ファイルの例表示場合に選択します
 
@@ -161,7 +161,7 @@ UI内のマッピング インターフェイスには、2 つの異なる経路
 >
 >マッピングの作成終了後、最大 10 分待ってからデータ取得を開始します。 この待機期間により、新しいマッピングが完全に保存され、システムで使用できるようになります。
 
-![ 完全なマッピングセットを使用したマッピングインターフェイス ](../images/ui/mapping/completed_mappings.png)
+![&#x200B; 完全なマッピングセットを使用したマッピングインターフェイス &#x200B;](../images/ui/mapping/completed_mappings.png)
 
 ## 次の手順
 
