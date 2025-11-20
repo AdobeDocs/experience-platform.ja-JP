@@ -6,7 +6,7 @@ description: Experience Platform ユーザーインターフェイスで文字�
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1222'
 ht-degree: 8%
 
 ---
@@ -20,43 +20,43 @@ ht-degree: 8%
 
 エクスペリエンスデータモデル（XDM）では、文字列フィールドに受け入れられる値や提案される値の定義済みセットを指定して、そのフィールドに取り込む値やセグメント化での動作を、より詳細に制御できます。
 
-**[!UICONTROL 列挙]** 文字列フィールドに取り込むことができる値を、事前定義済みのセットに制限します。 列挙フィールドにデータを取り込もうとすると、その値が設定で定義されている値と一致しない場合、取り込みは拒否されます。
+文字列フィールド **[!UICONTROL Enums]** 取り込むことができる値を、事前定義済みのセットに制限します。 列挙フィールドにデータを取り込もうとすると、その値が設定で定義されている値と一致しない場合、取り込みは拒否されます。
 
-列挙とは異なり、「**[!UICONTROL 推奨値]**」オプションを使用すると、取り込む値を制限しない文字列フィールドの推奨値セットを示すことができます。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[&#x200B; セグメント化 UI](../../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
+列挙とは異なり、**[!UICONTROL Suggested values]** オプションでは、文字列フィールドに推奨値のセットを指定でき、取り込む値を制限しません。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[ セグメント化 UI](../../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
 
-Adobe Experience Platform ユーザーインターフェイスで [&#x200B; 新しいフィールドを定義 &#x200B;](./overview.md#define) し、タイプを [!UICONTROL &#x200B; 文字列 &#x200B;] に設定すると、そのフィールドの [enum](#enum) または [&#x200B; 推奨値 &#x200B;](#suggested-values) を定義するオプションが提供されます。
+Adobe Experience Platform ユーザーインターフェイスで [ 新しいフィールドを定義 ](./overview.md#define) し、タイプを [!UICONTROL String] に設定すると、そのフィールドに [enum](#enum) または [ 推奨値 ](#suggested-values) を定義するオプションが提供されます。
 
-![UI の文字列フィールドに対して「列挙と推奨値」オプションが有効になっている様子を示す画像 &#x200B;](../../images/ui/fields/enum/enum-options-selected.png)
+![UI の文字列フィールドに対して「列挙と推奨値」オプションが有効になっている様子を示す画像 ](../../images/ui/fields/enum/enum-options-selected.png)
 
-このドキュメントでは、[!UICONTROL &#x200B; スキーマ &#x200B;] UI ワークスペースで列挙と推奨値を定義する方法を説明します。 UI での設定方法やダウンストリーム効果など、列挙と推奨値の概要については、次のビデオをご覧ください。
+このドキュメントでは、[!UICONTROL Schemas] UI ワークスペースで列挙と推奨値を定義する方法を説明します。 UI での設定方法やダウンストリーム効果など、列挙と推奨値の概要については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3413679/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## 列挙の定義 {#enum}
 
-**[!UICONTROL 列挙と推奨値]** を選択してから、「**[!UICONTROL 列挙]** を選択します。 追加のコントロールが表示され、列挙の値の制約を指定できます。 制約を追加するには、「**[!UICONTROL 行を追加]**」を選択します。
+「**[!UICONTROL Enums and Suggested Values]**」を選択し、「**[!UICONTROL Enums]**」を選択します。 追加のコントロールが表示され、列挙の値の制約を指定できます。 制約を追加するには、「**[!UICONTROL Add row]**」を選択します。
 
-![UI で「列挙」オプションが選択されていることを示す画像 &#x200B;](../../images/ui/fields/enum/enum-add-row.png)
+![UI で「列挙」オプションが選択されていることを示す画像 ](../../images/ui/fields/enum/enum-add-row.png)
 
-「**[!UICONTROL 値]**」列で、フィールドの制約対象となる正確な値を指定する必要があります。 オプションで、制約にも人間にとってわかりやすい **[!UICONTROL 表示名]** を指定できます。これは、セグメント化での値の表現方法に影響します。
+「**[!UICONTROL Value]**」列で、フィールドの制約対象となる正確な値を指定する必要があります。 オプションで、制約に対して人間にわかりやすい **[!UICONTROL Display Name]** を指定することもできます。これにより、セグメント化での値の表現方法が変わります。
 
-引き続き **[!UICONTROL 行を追加]** を使用して、必要な制約とオプションラベルを列挙に追加するか、以前に追加した行の横にある削除アイコン（![&#x200B; 削除アイコンの画像 &#x200B;](/help/images/icons/remove-circle.png)）を選択して削除します。 終了したら、「**[!UICONTROL 適用]** を選択して、変更をスキーマに適用します。
+引き続き **[!UICONTROL Add row]** を使用して、必要な制約とオプションラベルを列挙に追加するか、以前に追加した行の横にある削除アイコン（![ 削除アイコンの画像 ](/help/images/icons/remove-circle.png)）を選択して削除します。 終了したら、「**[!UICONTROL Apply]**」を選択して、変更をスキーマに適用します。
 
-![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 &#x200B;](../../images/ui/fields/enum/enum-confirm.png)
+![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/enum-confirm.png)
 
 キャンバスが更新され、変更が反映されます。 今後、このスキーマを参照する際は、右側のパネル内の列挙フィールドの制約を表示して編集できます。
 
 ## 推奨値を定義 {#suggested-values}
 
-**[!UICONTROL 列挙と推奨値]** を選択してから、**[!UICONTROL 推奨値]** を選択して、追加のコントロールを表示します。 ここから **[!UICONTROL 行を追加]** を選択して、推奨値の追加を開始します。
+「**[!UICONTROL Enums and Suggested Values]**」を選択してから「**[!UICONTROL Suggested Values]**」を選択し、追加のコントロールを表示します。 ここから「**[!UICONTROL Add row]**」を選択して、推奨値の追加を開始します。
 
-![UI で「推奨値」オプションが選択されていることを示す画像 &#x200B;](../../images/ui/fields/enum/suggested-add-row.png)
+![UI で「推奨値」オプションが選択されていることを示す画像 ](../../images/ui/fields/enum/suggested-add-row.png)
 
-**[!UICONTROL 表示名]** 列の下で、セグメント化 UI に表示する値にわかりやすい名前を付けます。 推奨値をさらに追加するには、「**[!UICONTROL 行を追加]**」を再度選択し、必要に応じてプロセスを繰り返します。 以前に追加した行を削除するには、該当する行の横にある ![&#x200B; 削除アイコン &#x200B;](/help/images/icons/remove-circle.png) を選択します。
+**[!UICONTROL Display Name]** 列で、セグメント化 UI に表示する値にわかりやすい名前を付けます。 推奨値をさらに追加するには、**[!UICONTROL Add row]** を再度選択し、必要に応じてこの手順を繰り返します。 以前に追加した行を削除するには、該当する行の横にある ![ 削除アイコン ](/help/images/icons/remove-circle.png) を選択します。
 
-終了したら、「**[!UICONTROL 適用]** を選択して、変更をスキーマに適用します。
+終了したら、「**[!UICONTROL Apply]**」を選択して、変更をスキーマに適用します。
 
-![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 &#x200B;](../../images/ui/fields/enum/suggested-confirm.png)
+![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
@@ -64,13 +64,13 @@ Adobe Experience Platform ユーザーインターフェイスで [&#x200B; 新�
 
 ### 標準フィールドの推奨値の管理
 
-標準 XDM コンポーネントの一部のフィールドには、[[!UICONTROL XDM ExperienceEvent] クラス &#x200B;](../../classes/experienceevent.md) の `eventType` など、独自の推奨値が含まれています。 標準フィールドに推奨値を追加作成することはできますが、組織で定義されていない推奨値を変更または削除することはできません。 UI で標準フィールドを表示すると、推奨値は表示されますが、読み取り専用です。
+標準 XDM コンポーネントの一部のフィールドには、独自の推奨値（`eventType` クラス [[!UICONTROL XDM ExperienceEvent] の ](../../classes/experienceevent.md) など）が含まれています。 標準フィールドに推奨値を追加作成することはできますが、組織で定義されていない推奨値を変更または削除することはできません。 UI で標準フィールドを表示すると、推奨値は表示されますが、読み取り専用です。
 
-![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 &#x200B;](../../images/ui/fields/enum/suggested-standard.png)
+![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/suggested-standard.png)
 
-標準フィールドに新しい推奨値を追加するには、「**[!UICONTROL 行を追加]**」を選択します。 組織が以前に追加した推奨値を削除するには、該当する行の横にある ![&#x200B; 削除アイコン &#x200B;](/help/images/icons/remove-circle.png) を選択します。
+標準フィールドに新しい推奨値を追加するには、「**[!UICONTROL Add row]**」を選択します。 組織が以前に追加した推奨値を削除するには、該当する行の横にある ![ 削除アイコン ](/help/images/icons/remove-circle.png) を選択します。
 
-![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 &#x200B;](../../images/ui/fields/enum/suggested-standard-add.png)
+![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/suggested-standard-add.png)
 
 <!-- ### Removing suggested values for standard fields
 
@@ -117,11 +117,11 @@ See the [section below](#evolution) for more information on the rules for updati
 
 現在のシステム制限により、取り込み中にシステムによって列挙が検証されない場合が 2 つあります。
 
-1. 列挙は、[&#x200B; 配列フィールド &#x200B;](./array.md) で定義されます。
+1. 列挙は、[ 配列フィールド ](./array.md) で定義されます。
 1. 列挙がスキーマ階層の複数のレベルで定義されています。
 
 ## 次の手順
 
-このガイドでは、UI で文字列フィールドの列挙と推奨値を定義する方法について説明しました。 スキーマレジストリ API を使用して列挙と推奨値を管理する方法について詳しくは、次の [&#x200B; チュートリアル &#x200B;](../../tutorials/suggested-values.md) を参照してください。
+このガイドでは、UI で文字列フィールドの列挙と推奨値を定義する方法について説明しました。 スキーマレジストリ API を使用して列挙と推奨値を管理する方法について詳しくは、次の [ チュートリアル ](../../tutorials/suggested-values.md) を参照してください。
 
-[!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 &#x200B;](./overview.md#special) の概要を参照してください。
+[!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 ](./overview.md#special) の概要を参照してください。

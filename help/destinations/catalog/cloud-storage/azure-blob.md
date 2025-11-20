@@ -13,7 +13,7 @@ ht-degree: 50%
 
 ## 宛先の変更ログ {#changelog}
 
-2023 年 7 月のExperience Platform リリースでは、以下に示すように、[!DNL Azure Blob] の宛先が新しい機能を提供します。
+2023 年 7 月の Experience Platform リリースでは、 [!DNL Azure Blob] 宛先に次のような新機能が提供されます。
 
 * [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
@@ -24,10 +24,10 @@ ht-degree: 50%
 
 [!DNL Azure Blob]（以下「[!DNL Blob]」）は、Microsoft のクラウド用オブジェクトストレージソリューションです。このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Blob] 宛先を作成する手順を説明します。
 
-## API または UI を使用した [!UICONTROL Azure Blob] ストレージへの接続 {#connect-api-or-ui}
+## API または UI を介して [!UICONTROL Azure Blob] ストレージに接続する {#connect-api-or-ui}
 
-* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL Azure Blob] ストレージの場所に接続するには、以下の [&#x200B; 宛先への接続 &#x200B;](#connect) および [&#x200B; この宛先に対するオーディエンスのアクティブ化 &#x200B;](#activate) の節を参照してください。
-* [!UICONTROL Azure Blob] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 &#x200B;](../../api/activate-segments-file-based-destinations.md) を参照してください。
+* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL Azure Blob] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
+* [!UICONTROL Azure Blob] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 ](../../api/activate-segments-file-based-destinations.md) を参照してください。
 
 ## はじめに
 
@@ -38,15 +38,15 @@ ht-degree: 50%
    * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-有効な [!DNL Blob] 宛先が既にある場合は、このドキュメントの残りの部分をスキップし、[&#x200B; 宛先に対するオーディエンスのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) のチュートリアルに進んで構いません。
+有効な[!DNL Blob]の宛先がすでにある場合は、このドキュメントの残りをスキップして、「宛先へのオーディエンスの有効化[](../../ui/activate-batch-profile-destinations.md)に関するチュートリアルに進んでください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
+このセクションでは、この宛先にエクスポートできるオーディエンスのタイプについて説明します。
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Audiences Experience Platform [セグメント化 サービス](../../../segmentation/home.md) によって生成されます。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -64,22 +64,22 @@ ht-degree: 50%
 
 ## データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、次のチュートリアルを参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、チュートリアルを参照してください。
 
-* [Experience Platform ユーザーインターフェイスを使用したデータセットの書き出し &#x200B;](/help/destinations/ui/export-datasets.md) 方法。
-* [Flow Service API を使用してプログラムでデータセットを書き出す &#x200B;](/help/destinations/api/export-datasets.md) 方法。
+* Experience Platform ユーザー インターフェイスを使用してデータセットを [エクスポートする方法](/help/destinations/ui/export-datasets.md)。
+* 流量 サービス API を使用してプログラムでデータセットを [エクスポートする方法](/help/destinations/api/export-datasets.md)。
 
 ## 書き出されたデータのファイル形式 {#file-format}
 
-*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [&#x200B; 書き出しでサポートされるファイル形式 &#x200B;](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [ 書き出しでサポートされるファイル形式 ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
 
-*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [&#x200B; データセットの書き出しが成功したことを確認する &#x200B;](../../ui/export-datasets.md#verify) の節を参照してください。
+*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [ データセットの書き出しが成功したことを確認する ](../../ui/export-datasets.md#verify) の節を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL View Destinations]** と **[!UICONTROL Manage Destinations]** [アクセス制御 権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -90,11 +90,11 @@ ht-degree: 50%
 >title="RSA 公開鍵"
 >abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式のキーの例については、以下のドキュメントリンクを参照してください。"
 
-宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
+宛先に対して認証を行うには、必須フィールドに入力して [ **[!UICONTROL Connect to destination]**] を選択します。
 
-* **[!UICONTROL Connection string]**:BLOB ストレージのデータにアクセスするには、接続文字列が必要です。 [!DNL Blob] 接続文字列のパターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` で始まります。
+* **[!UICONTROL Connection string]**: 接続文字列は、BLOB ストレージ内のデータにアクセスするために必要です。 [!DNL Blob] 接続文字列のパターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` で始まります。
    * [!DNL Blob] 接続文字列の設定について詳しくは、Microsoftドキュメントの [Azure Storage アカウントの接続文字列を構成する](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)を参照してください。
-* **[!UICONTROL Encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
+* **[!UICONTROL Encryption key]**:オプションで、RSA 形式の公開キーを添付して、エクスポートされたファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -103,32 +103,32 @@ ht-degree: 50%
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL Name]**：この宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL Description]**：この宛先の説明を入力します。
-* **[!UICONTROL Folder path]**：書き出したファイルをホストする保存先フォルダーのパス。
-* **[!UICONTROL Container]**：この宛先で使用する [!DNL Azure Blob Storage] コンテナの名前を入力します。
-* **[!UICONTROL File type]**：書き出したファイルにExperience Platformで使用する形式を選択します。 「[!UICONTROL CSV]」オプションを選択すると、[&#x200B; ファイル形式オプションを設定 &#x200B;](../../ui/batch-destinations-file-formatting-options.md) することもできます。
-* **[!UICONTROL Compression format]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。
-* **[!UICONTROL Include manifest file]**：書き出しの場所、書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。
-   * `flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+* **[!UICONTROL Description]**:この宛先の説明を入力します。
+* **[!UICONTROL Folder path]**:エクスポートされたファイルホスト宛先フォルダーへのパスを入力します。
+* **[!UICONTROL Container]**:この宛先で使用する [!DNL Azure Blob Storage] コンテナの名前を入力します。
+* **[!UICONTROL File type]**:Experience Platform書き出すファイルに使用する形式を選択します。 [!UICONTROL CSV]オプションを選択すると、[ファイル形式オプションを設定](../../ui/batch-destinations-file-formatting-options.md)こともできます。
+* **[!UICONTROL Compression format]**:Experience Platformエクスポートするファイルに使用する圧縮タイプを選択します。
+* **[!UICONTROL Include manifest file]**: エクスポートの場所、エクスポート サイズなどに関する情報を含むマニフェスト JSON ファイルをエクスポートに含める場合は、このオプションをオンに切り替えます。 マニフェストには 形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して名前が付けられます。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)表示。マニフェストファイルには、次のフィールドが含まれています。
+   * `flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
    * `scheduledTime`: ファイルが書き出された時間（UTC 単位）。
    * `exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。
-   * `exportResults.name`：書き出すファイルの名前。
-   * `size`：書き出されたファイルのサイズ（バイト単位）。
+   * `exportResults.name`:エクスポートするファイルの名前。
+   * `size`:エクスポートするファイルのサイズ(バイト単位)。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の指定が完了したら、 [ **[!UICONTROL Next]**] を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先へのオーディエンスをアクティブ化する手順については、 [オーディエンスデータをアクティブ化して宛先をバッチプロファイルエクスポートする](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ## データの正常な書き出しの検証 {#exported-data}
 

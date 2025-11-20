@@ -4,7 +4,7 @@ description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1848'
 ht-degree: 26%
 
 ---
@@ -35,15 +35,15 @@ ID 名前空間を使用するには、様々なAdobe Experience Platform サー
 >abstract="ID 値は、一意の個人、組織またはアセットを表す識別子です。値が表す ID のコンテキストまたはタイプは、対応する ID 名前空間によって定義されます。プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。"
 >text="Learn more in documentation"
 
-完全修飾 ID には、**ID 値** と **ID 名前空間** の 2 つのコンポーネントが含まれています。 例えば、ID の値が `scott@acme.com` の場合、名前空間はメールアドレスとして識別することで、この値にコンテキストを提供します。 同様に、名前空間では `555-123-456` を電話番号、`3126ABC` を CRMID として区別できます。 基本的に、**名前空間は特定の ID にコンテキストを提供します**。 プロファイルフラグメント間でレコードデータを照合する場合、[!DNL Real-Time Customer Profile] がプロファイルデータを結合する場合と同様に、ID 値と名前空間の両方が一致する必要があります。
+完全修飾 ID には、**ID 値** と **ID 名前空間** の 2 つのコンポーネントが含まれています。 たとえば、ID の値が `scott@acme.com` の場合、名前空間は、電子メール アドレスとして区別することで、この値にコンテキストを提供します。 同様に、名前空間は `555-123-456` を電話番号として区別し、 `3126ABC` を CRMID として区別できます。 基本的に、 **名前空間は特定の ID にコンテキストを提供します**。 プロファイルフラグメント間でレコードデータを照合する場合、 [!DNL Real-Time Customer Profile] プロファイルデータをマージする場合と同様に、ID 値と名前空間の両方が一致する必要があります。
 
-例えば、2 つのプロファイルフラグメントには、異なるプライマリ ID が含まれていても、「電子メール」名前空間の値が同じなので、Experience Platformは、これらのフラグメントが実際には同じ人物であることを確認し、そのデータを個人の ID グラフにまとめることができます。
+たとえば、2 つの プロファイル フラグメントに異なるプライマリ ID が含まれている場合がありますが、&quot;Email&quot; 名前空間の値は同じであるため、Experience Platformこれらのフラグメントが実際には同じ個人であり、個人の ID グラフでデータをまとめることができます。
 
 >[!BEGINSHADEBOX]
 
-**ID 名前空間について**
+**IDサービス名前空間の説明**
 
-名前空間の概念をより深く理解するもう 1 つの方法は、都市や対応する状態などの実際の例を検討することです。 例えば、アメリカではポートランド、メインとポートランド、オレゴンの 2 つの州があります。 都市は同じ名前を共有しますが、州は名前空間として動作し、2 つの都市を区別するために必要なコンテキストを提供します。
+名前空間の概念をよりよく理解する別の方法は、都市やそれに対応する州などの現実世界の例を検討することです。 たとえば、メイン州ポートランドとオレゴン州ポートランドは、米国では2つの異なる場所です。 都市は同じ名前を共有していますが、州は名前空間として機能し、2つの都市を互いに区別するために必要なコンテキストを提供します。
 
 同じロジックを ID サービスに適用する：
 
@@ -74,7 +74,7 @@ ID 名前空間の 1 つの要素は **ID タイプ** です。 ID タイプは�
 * ID グラフが生成されるかどうか：
    * ID グラフは、個人以外の ID とパートナー ID の ID タイプに対しては生成されません。
    * ID グラフは、その他のすべての ID タイプ用に生成されます。
-* システムの制限に達したときに ID グラフから削除される ID。 詳しくは、[ID データのガードレール &#x200B;](../guardrails.md) を参照してください。
+* システムの制限に達したときに ID グラフから削除される ID。 詳しくは、[ID データのガードレール ](../guardrails.md) を参照してください。
 
 次の ID タイプをExperience Platform内で使用できます。
 
@@ -98,18 +98,18 @@ Experience Platformには、すべての組織で使用できる複数の ID 名
 
 | 表示名 | 説明 |
 | ------------ | ----------- |
-| AdCloud | Adobe AdCloud を表す名前空間。 |
-| Adobe Analytics (従来の ID) | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間に関する次のドキュメントを参照し &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=ja#namespaces) ください。 |
+| AdCloud | AdCloud Adobe Systemsを表す名前空間です。 |
+| Adobe Analytics (従来の ID) | Adobe Analyticsを表す名前空間。 詳細については[](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)Adobe Analytics名前空間に関する次のドキュメントを参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
-| Apple プッシュ通知サービス | Apple プッシュ通知サービスを使用して収集された ID を表す名前空間。 詳しくは、[Apple プッシュ通知サービス &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) に関するドキュメントを参照してください。 |
+| Apple プッシュ通知サービス | Apple プッシュ通知サービスを使用して収集された ID を表す名前空間。 詳しくは、 [Apple プッシュ通知サービス](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) の以下のドキュメントを参照してください。 |
 | ECID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](./ecid.md) に関する次のドキュメントを参照してください。 |
 | メール | メールアドレスを表す名前空間。 このタイプの名前空間は多くの場合、1 人の人物に関連付けられているので、様々なチャネルでその人物を識別するために使用できます。 |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳しくは、[SHA256 ハッシュサポート &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) に関する次のドキュメントを参照してください。 |
-| Firebase Cloud Messages | プッシュ通知用にGoogle Firebase Cloud Messaging を使用して収集された ID を表す名前空間。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) に関する次のドキュメントを参照してください。 |
-| Google広告 ID （GAID） | Google 広告 ID を表す名前空間。詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=ja) に関する次のドキュメントを参照してください。 |
-| Phone | 電話番号を表す名前空間。 このタイプの名前空間は多くの場合、1 人の人物に関連付けられているので、様々なチャネルでその人物を識別するために使用できます。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳細については、 [SHA256 ハッシュのサポートに関する次のドキュメント](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) を参照してください。 |
+| Firebase Cloud Messages | プッシュ通知に Google Firebase Cloud Messaging を使用して収集された ID を表す名前空間。 詳しくは、 [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) で次のドキュメントを参照してください。 |
+| Google Ad ID(GAID) | Google 広告 ID を表す名前空間。詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=ja) に関する次のドキュメントを参照してください。 |
+| Phone | 電話番号を表す名前空間。 このタイプの名前空間は、多くの場合、1人の人物に関連付けられているため、さまざまなチャネルでその人物を識別するために使用できます。 |
 | 電話（E.164） | E.164 形式でハッシュする必要がある生の電話番号を表す名前空間。 E.164 形式には、プラス記号（`+`）、国際通話コード、市外局番、および電話番号が含まれます。 例：`(+)(country code)(area code)(phone number)`。 |
-| 電話（SHA256） | SHA256 を使用してハッシュする必要がある電話番号を表す名前空間。 記号、文字、先頭のゼロは削除する必要があります。 また、国の通話コードをプレフィックスとして追加する必要があります。 |
+| 電話 (SHA256) | SHA256 を使用してハッシュする必要がある電話番号を表す名前空間。 記号、文字、先頭のゼロは削除する必要があります。 また、国の通話コードをプレフィックスとして追加する必要があります。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
 | TNTID | Adobe Targetを表す名前空間。 詳しくは、[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) に関する次のドキュメントを参照してください。 |
 | Windows AID | Windows Advertising ID を表す名前空間。 詳しくは、[Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) に関する次のドキュメントを参照してください。 |
@@ -121,44 +121,44 @@ Experience Platformには、すべての組織で使用できる複数の ID 名
 >title="統合 ID の表示"
 >abstract="統合 ID は、他のシステムと連携するために使用される名前空間で、ID の解決や ID のつなぎ合わせには使用されません。<br> これらの ID は、デフォルトでは非表示です。統合された名前空間を表示するには、切替スイッチを使用します。"
 
-UI で ID 名前空間を表示するには、左側のナビゲーションで **[!UICONTROL ID]** を選択してから、「**[!UICONTROL 参照]** を選択します。
+UI で ID 名前空間を表示するには、左側のナビゲーションで **[!UICONTROL Identities]** を選択してから、**[!UICONTROL Browse]** を選択します。
 
 組織内の名前空間のディレクトリが表示され、名前、ID 記号、最終更新日、対応する ID タイプ、説明に関する情報が表示されます。
 
-![&#x200B; 組織内のカスタム ID 名前空間のディレクトリ。](../images/namespace/browse.png)
+![ 組織内のカスタム ID 名前空間のディレクトリ。](../images/namespace/browse.png)
 
 ## カスタム名前空間の作成 {#create-namespaces}
 
 組織のデータとユースケースによっては、カスタム名前空間が必要になる場合があります。 カスタム名前空間は、[[!DNL Identity Service]](../api/create-custom-namespace.md) API または UI を使用して作成できます。
 
-カスタム名前空間を作成するには、「**[!UICONTROL ID 名前空間を作成]**」を選択します。
+カスタム名前空間を作成するには、「**[!UICONTROL Create identity namespace]**」を選択します。
 
 >[!TIP]
 >
->統合 ID は、他のシステムとの接続に使用される名前空間です。 これらは、ID の解決には使用されず、ID のつなぎ合わせにも使用されません。 「**[!UICONTROL 統合 ID を表示]**」を選択してリストを更新し、統合 ID を含めます。 ただし、統合 ID は表示専用で、設定する必要がないので、デフォルトでは非表示になっています。
+>統合 ID は、他のシステムとの接続に使用される名前空間です。 これらは、ID の解決には使用されず、ID のつなぎ合わせにも使用されません。 **[!UICONTROL View integration identities]** を選択してリストを更新し、統合 ID を含めます。 ただし、統合 ID は表示専用で、設定する必要がないので、デフォルトでは非表示になっています。
 
-![ID ワークスペースの「ID 名前空間を作成」ボタン &#x200B;](../images/namespace/create-identity-namespace.png)
+![ID ワークスペースの「ID 名前空間を作成」ボタン ](../images/namespace/create-identity-namespace.png)
 
-[!UICONTROL ID 名前空間を作成 &#x200B;] ウィンドウが表示されます。 まず、作成するカスタム名前空間の表示名と ID 記号を指定する必要があります。 また、オプションで、説明を指定して、作成しているカスタム名前空間にコンテキストを追加することもできます。
+[!UICONTROL Create identity namespace] ウィンドウが表示されます。 まず、作成するカスタム名前空間の表示名と ID 記号を指定する必要があります。 また、オプションで、説明を指定して、作成しているカスタム名前空間にコンテキストを追加することもできます。
 
-![&#x200B; カスタム ID 名前空間に関する情報を入力できるポップアップウィンドウ。](../images/namespace/name-and-symbol.png)
+![ カスタム ID 名前空間に関する情報を入力できるポップアップウィンドウ。](../images/namespace/name-and-symbol.png)
 
-次に、カスタム名前空間に割り当てる ID タイプを選択します。 完了したら、「**[!UICONTROL 作成]**」をクリックします。
+次に、カスタム名前空間に割り当てる ID タイプを選択します。 終了したら「**[!UICONTROL Create]**」を選択します。
 
-![&#x200B; カスタム ID 名前空間から選択して割り当てることができる ID タイプの選択。](../images/namespace/select-identity-type.png)
+![ カスタム ID 名前空間から選択して割り当てることができる ID タイプの選択。](../images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->* 定義した名前空間は組織に非公開であり、正常に作成するには一意の ID 記号が必要です。
+>* 定義する名前空間は組織にとってプライベートであり、正常に作成するには一意の ID シンボルが必要です。
 >
->* 作成した名前空間は、削除できず、ID 記号およびタイプも変更できません。
+>* 名前空間が作成されると、そのを削除したり、その ID シンボルとタイプを変更したりすることはできません。
 >
->* 重複した名前空間はサポートされていません。 新しい名前空間を作成する際に、既存の表示名と ID 記号を使用することはできません。
+>* 複製名前空間はサポートされていません。 新しい名前空間を作成するときに、既存の表示名と ID シンボルを使用することはできません。
 
 ## ID データの名前空間
 
-ID の名前空間をどのように指定するかは、ID データの提供方法によって異なります。データ ID データの提供について詳しくは、[[!DNL Identity Service]  実装ガイド &#x200B;](../implementation.md) を参照してください。
+ID の名前空間をどのように指定するかは、ID データの提供方法によって異なります。データ ID データの提供について詳しくは、[[!DNL Identity Service]  実装ガイド ](../implementation.md) を参照してください。
 
 ## 次の手順
 
-これで、ID 名前空間の主要な概念を理解できたので、[ID グラフビューア &#x200B;](../features/identity-graph-viewer.md) を使用して ID グラフを操作する方法を学習します。
+これで、ID 名前空間の主要な概念を理解できたので、[ID グラフビューア ](../features/identity-graph-viewer.md) を使用して ID グラフを操作する方法を学習します。

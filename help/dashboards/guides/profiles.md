@@ -6,16 +6,16 @@ type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5005'
-ht-degree: 43%
+source-wordcount: '4677'
+ht-degree: 36%
 
 ---
 
-# [!UICONTROL プロファイル]ダッシュボード
+# [!UICONTROL Profiles] ダッシュボード
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-Time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でプロファイルダッシュボードにアクセスし操作する方法の概要と、ダッシュボードに表示される指標に関する情報を説明します。
 
-Experience Platform ユーザーインターフェイス内のプロファイル機能の概要については、[&#x200B; リアルタイム顧客プロファイル UI ガイド &#x200B;](../../profile/ui/user-guide.md) を参照してください。
+Experience Platform ユーザーインターフェイス内のプロファイル機能の概要については、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。
 
 ## プロファイルダッシュボードのデータ
 
@@ -29,23 +29,23 @@ Experience Platform ユーザーインターフェイス内のプロファイル
 
 ## プロファイルダッシュボードを探索 {#explore-dashboard}
 
-Experience Platform UI 内でプロファイルダッシュボードに移動するには、左側のレールで **[!UICONTROL プロファイル]** を選択してから「**[!UICONTROL 概要]** タブを選択して、ダッシュボードを表示します。
+Experience Platform UI 内でプロファイルダッシュボードに移動するには、左側のレールで「**[!UICONTROL Profiles]**」を選択してから「**[!UICONTROL Overview]**」タブを選択して、ダッシュボードを表示します。
 
 >[!NOTE]
 >
->Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。 代わりに、「[!UICONTROL &#x200B; 概要 &#x200B;]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。 代わりに、「[!UICONTROL Overview]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
 
-![&#x200B; 「プロファイル」と「概要」がハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
+![ 「プロファイル」と「概要」がハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
 
 ### プロファイルダッシュボードの変更 {#modify-dashboard}
 
-プロファイルダッシュボードの外観は、「**[!UICONTROL ダッシュボードを変更]**」を選択することによって変更できます。ダッシュボードからウィジェットの移動、追加、サイズ変更、削除を行うことができます。また、**[!UICONTROL ウィジェットライブラリ]** にアクセスして使用可能なウィジェットを探し、組織に必要なカスタムウィジェットを作成することができます。
+プロファイルダッシュボードの外観は、**[!UICONTROL Modify dashboard]** を選択して変更できます。 ダッシュボードからウィジェットの移動、追加、サイズ変更、削除を行えます。また、**[!UICONTROL Widget library]** ージにアクセスして使用可能なウィジェットを確認したり、組織に合ったカスタムウィジェットを作成したりできます。
 
-詳しくは、[&#x200B; ダッシュボードの変更 &#x200B;](../customize/modify.md) および [&#x200B; ウィジェットライブラリの概要 &#x200B;](../customize/widget-library.md) ドキュメントを参照してください。
+詳しくは、[ ダッシュボードの変更 ](../customize/modify.md) および [ ウィジェットライブラリの概要 ](../customize/widget-library.md) ドキュメントを参照してください。
 
 ### ウィジェットを追加 {#add-widget}
 
-「**[!UICONTROL ウィジェットを追加]**」を選択してウィジェットライブラリに移動し、ダッシュボードに追加できるウィジェットのリストを確認します。
+「**[!UICONTROL Add widget]**」を選択してウィジェットライブラリに移動し、ダッシュボードに追加できるウィジェットのリストを確認します。
 
 ![ウィジェットを追加がハイライト表示されたプロファイルダッシュボードの概要。](../images/profiles/profiles-overview-add-widget.png)
 
@@ -53,7 +53,7 @@ Experience Platform UI 内でプロファイルダッシュボードに移動す
 
 ### SQL を表示 {#view-sql}
 
-[!UICONTROL &#x200B; 概要 &#x200B;] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド &#x200B;](../view-sql.md) を参照してください。
+[!UICONTROL Overview] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -71,17 +71,17 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## プロファイルの参照 {#browse-profiles}
 
-「[!UICONTROL 参照]」タブを使用すると、組織に取り込まれた読み取り専用プロファイルを検索および表示できます。ここから、プロファイルの環境設定、過去のイベント、インタラクションおよびオーディエンスに関する、そのプロファイルに属する重要な情報を確認できます。
+「[!UICONTROL Browse]」タブを使用すると、組織に取り込まれた読み取り専用プロファイルを検索および表示できます。 ここから、プロファイルの環境設定、過去のイベント、インタラクションおよびオーディエンスに関する、そのプロファイルに属する重要な情報を確認できます。
 
 ## プロファイルの詳細 {#profile-details}
 
-[!UICONTROL &#x200B; プロファイル &#x200B;] [!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースを開くには、リストから [!UICONTROL &#x200B; プロファイル ID] を選択します。
+[!UICONTROL Profiles] [!UICONTROL Detail] ワークスペースを開くには、リストから [!UICONTROL Profile ID] を選択します。
 
-![&#x200B; プロファイル ID がハイライト表示された「プロファイルの参照」タブ。](../images/profiles/profile-id.png)
+![ プロファイル ID がハイライト表示された「プロファイルの参照」タブ。](../images/profiles/profile-id.png)
 
-[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースには、そのプロファイルに固有の情報を伝える事前設定済みのウィジェットがいくつか表示されます。 この情報により、プロファイルの主要な属性を一目で把握できます。 独自のウィジェットを作成して、[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースをカスタマイズすることもできます。 詳しくは、[&#x200B; ウィジェットの追加方法 &#x200B;](#add-widgets) の節を参照してください。
+[!UICONTROL Profiles] [!UICONTROL Detail] ワークスペースには、そのプロファイルに固有の情報を伝える事前設定済みのウィジェットがいくつか表示されます。 この情報により、プロファイルの主要な属性を一目で把握できます。 独自のウィジェットを作成して、[!UICONTROL Profiles] [!UICONTROL Detail] ワークスペースをカスタマイズすることもできます。 詳しくは、[ ウィジェットの追加方法 ](#add-widgets) の節を参照してください。
 
-![&#x200B; 「[!UICONTROL &#x200B; 詳細 &#x200B;] タブがハイライト表示された [!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペース。](../images/profiles/profile-details-workspace.png)
+![ 「[!UICONTROL Profiles]」タブがハイライト表示された [!UICONTROL Detail] [!UICONTROL Detail] ワークスペース ](../images/profiles/profile-details-workspace.png)
 
 ### プロファイルの詳細ウィジェット {#widgets}
 
@@ -89,65 +89,65 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 #### 顧客プロファイル {#customer-profile}
 
-[!UICONTROL &#x200B; 顧客プロファイル &#x200B;] ウィジェットには、プロファイルに関連付けられたユーザーの姓と名および [!UICONTROL &#x200B; プロファイル ID] が表示されます。 プロファイル ID は、ID タイプに関連付けられた自動生成された識別子で、プロファイルを表します。 ID と ID 名前空間について詳しくは、「[ID の概要](../../rtcdp/profile/identities-overview.md)」を参照してください。
+[!UICONTROL Customer profile] ウィジェットには、プロファイルに関連付けられたユーザーの姓と名 [!UICONTROL Profile ID] が表示されます。 プロファイル ID は、ID タイプに関連付けられた自動生成された識別子で、プロファイルを表します。 ID と ID 名前空間について詳しくは、「[ID の概要](../../rtcdp/profile/identities-overview.md)」を参照してください。
 
-![&#x200B; 顧客プロファイルウィジェット &#x200B;](../images/profiles/customer-profile.png)
+![ 顧客プロファイルウィジェット ](../images/profiles/customer-profile.png)
 
 #### 基本属性 {#basic-attributes}
 
-[!UICONTROL &#x200B; 基本属性 &#x200B;] ウィジェットには、個々のプロファイルの定義に使用される、最も一般的な属性が表示されます。
+[!UICONTROL Basic attributes] ウィジェットには、個々のプロファイルの定義に使用される、最も一般的な属性が表示されます。
 
-![&#x200B; 基本属性ウィジェット &#x200B;](../images/profiles/basic-attributes.png)
+![ 基本属性ウィジェット ](../images/profiles/basic-attributes.png)
 
 #### リンクされた ID {#linked-identities}
 
-[!UICONTROL &#x200B; リンクされた ID] ウィジェットには、プロファイルに関連付けられた他の ID が表示されます。
+[!UICONTROL Linked identities] ウィジェットには、プロファイルに関連付けられた他の ID が表示されます。
 
-プロファイルの ID の詳細をより詳しく表示し、[!UICONTROL ID] ワークスペースに移動するには、「**[!UICONTROL ID グラフを表示]**」を選択します。
+プロファイルの ID の詳細を表示し、[!UICONTROL Identities] ワークスペースに移動するには、「**[!UICONTROL View identity graph]**」を選択します。
 
-![&#x200B; リンクされた ID ウィジェット &#x200B;](../images/profiles/linked-identities.png)
+![ リンクされた ID ウィジェット ](../images/profiles/linked-identities.png)
 
 #### チャネル環境設定 {#channel-preferences}
 
-[!UICONTROL &#x200B; チャネル環境設定 &#x200B;] ウィジェットには、ユーザーが通信の受信を同意した通信のチャネルが表示されます。 チェックマークは、ユーザーが通信の受信に同意した各チャネルを示します。
+[!UICONTROL Channel preferences] ウィジェットには、ユーザーが通信の受信に同意した通信のチャネルが表示されます。 チェックマークは、ユーザーが通信の受信に同意した各チャネルを示します。
 
 <!-- image needs a blue tick added below -->
 
-![&#x200B; チャネル環境設定ウィジェット &#x200B;](../images/profiles/channel-preferences.png)
+![ チャネル環境設定ウィジェット ](../images/profiles/channel-preferences.png)
 
-顧客の同意および連絡先の環境設定は複雑なトピックです。 Experience Platformで同意およびコンテキスト環境設定を収集、処理、フィルタリングする方法については、次のドキュメントを参照することをお勧めします。
+顧客の同意と連絡先の環境設定は複雑なトピックです。Experience Platformで同意およびコンテキスト環境設定を収集、処理、フィルタリングする方法については、次のドキュメントを参照することをお勧めします。
 
-* [Adobe標準に従って同意データを収集 &#x200B;](../../landing/governance-privacy-security/consent/adobe/overview.md) するために必要なスキーマフィールドグループについては、これらのプロファイル対応スキーマフィールドグループに関するドキュメントを参照してください。
-   * [[!UICONTROL &#x200B; 同意と環境設定の詳細 &#x200B;]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （Experience Platform Web または Mobile SDKを使用して同意信号を送信する場合に必要）
-* Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 &#x200B;](../../landing/governance-privacy-security/consent/adobe/overview.md) に関する概要を参照してください。
-* データガバナンスと同意ポリシーを組み合わせて、プロファイルの同意環境設定と確立された組織ルールに基づいて、プロファイルをフィルタリングしてセグメント化できます。 これらの結合ポリシーを作成して使用する方法については、[&#x200B; データ使用ポリシーの管理 &#x200B;](../../data-governance/policies/user-guide.md#combine-policies) に関するユーザーガイドを参照してください。
+* [Adobe標準に従って同意データを収集 ](../../landing/governance-privacy-security/consent/adobe/overview.md) するために必要なスキーマフィールドグループについては、これらのプロファイル対応スキーマフィールドグループに関するドキュメントを参照してください。
+   * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （Experience Platform Web または Mobile SDKを使用して同意信号を送信する場合は必須）
+* Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 ](../../landing/governance-privacy-security/consent/adobe/overview.md) に関する概要を参照してください。
+* データガバナンスと同意ポリシーを組み合わせて、プロファイルの同意環境設定と確立された組織ルールに基づいて、プロファイルをフィルタリングしてセグメント化できます。 これらの結合ポリシーを作成して使用する方法については、[ データ使用ポリシーの管理 ](../../data-governance/policies/user-guide.md#combine-policies) に関するユーザーガイドを参照してください。
 
 ### ウィジェットを追加 {#add-widgets}
 
-カスタマイズしたウィジェットを [!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに追加するには、「**[!UICONTROL プロファイルの詳細をカスタマイズ]**」を選択します。
+カスタマイズしたウィジェットを [!UICONTROL Profiles] [!UICONTROL Detail] ワークスペースに追加するには、「**[!UICONTROL Customize profile details]**」を選択します。
 
-![&#x200B; 「プロファイルの詳細をカスタマイズ [!UICONTROL &#x200B; がハイライト表示されたプロファイルの詳細ワークスペース &#x200B;]](../images/profiles/customize-profile-details.png)
+![[!UICONTROL Customize profile details] がハイライト表示されたプロファイルの詳細ワークスペース。](../images/profiles/customize-profile-details.png)
 
-ウィジェットのサイズを変更したり位置を変更したりして、ワークスペースを編集できるようになりました。 「**[!UICONTROL ウィジェットを追加]**」を選択して、カスタム属性を持つウィジェットを作成します。
+ウィジェットのサイズを変更したり位置を変更したりして、ワークスペースを編集できるようになりました。 「**[!UICONTROL Add widget]**」を選択すると、カスタム属性を持つウィジェットが作成されます。
 
-![&#x200B; 「ウィジェットを追加  がハイライト表示されたプロファイル [!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペース。](../images/profiles/add-widget.png)
+![[!UICONTROL Detail] がハイライト表示されたプロファイル [!UICONTROL Add widget] ワークスペース。](../images/profiles/add-widget.png)
 
-ウィジェットの作成者が表示されます。 「[!UICONTROL &#x200B; カードタイトル &#x200B;]」テキストフィールドにウィジェットのわかりやすい名前を入力し、「**[!UICONTROL 属性を追加]**」を選択します。
+ウィジェットの作成者が表示されます。 [!UICONTROL Card title] テキストフィールドにウィジェットのわかりやすい名前を入力し、「**[!UICONTROL Add attributes]**」を選択します。
 
-![&#x200B; 「[!UICONTROL &#x200B; カードタイトル &#x200B;] フィールドと [!UICONTROL &#x200B; 属性を追加 &#x200B;] がハイライト表示されたウィジェット作成キャンバス &#x200B;](../images/profiles/widget-creator.png)
+![ 「[!UICONTROL Card title]」フィールドと [!UICONTROL Add attributes] がハイライト表示されたウィジェット作成キャンバス ](../images/profiles/widget-creator.png)
 
-プロファイルの結合スキーマのビジュアライゼーションを含むダイアログが表示されます。 検索フィールドを使用するか、スクロールしてウィジェットでレポートする属性を見つけます。 含める属性のチェックボックスを選択します。 **[!UICONTROL 選択]** を選択して、作成ワークフローを続行します。
+プロファイルの結合スキーマのビジュアライゼーションを含むダイアログが表示されます。 検索フィールドを使用するか、スクロールしてウィジェットでレポートする属性を見つけます。 含める属性のチェックボックスを選択します。 「**[!UICONTROL Select]**」を選択して、作成ワークフローを続行します。
 
 >[!TIP]
 >
 >最上位チェックボックスの選択には、すべての子要素が含まれます。
 
-![&#x200B; ロイヤルティ属性のチェックボックスと [!UICONTROL &#x200B; 選択 &#x200B;] がハイライト表示された結合スキーマ図 &#x200B;](../images/profiles/union-schema-attributes.png)
+![ ロイヤルティ属性のチェックボックスと [!UICONTROL Select] がハイライト表示された和集合スキーマ図。](../images/profiles/union-schema-attributes.png)
 
-完了したウィジェットのプレビューがキャンバスに表示されます。 選択した属性に問題がなければ、「**[!UICONTROL 保存]**」を選択して選択内容を確定し、[!UICONTROL &#x200B; プロファイル &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ワークスペースに戻ります。 新しく作成されたウィジェットがワークスペースに表示されます。
+完了したウィジェットのプレビューがキャンバスに表示されます。 選択した属性に満足したら、「**[!UICONTROL Save]**」を選択して選択を確定し、[!UICONTROL Profiles] [!UICONTROL Detail] ワークスペースに戻ります。 新しく作成されたウィジェットがワークスペースに表示されます。
 
-![&#x200B; 「保存」がハイライト表示され、ウィジェットのプレビューが表示されたウィジェット作成キャンバス &#x200B;](../images/profiles/widget-preview.png)
+![ 「保存」がハイライト表示され、ウィジェットのプレビューが表示されたウィジェット作成キャンバス ](../images/profiles/widget-preview.png)
 
 ## 結合ポリシー {#merge-policies}
 
@@ -165,17 +165,17 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## 結合スキーマ
 
-[!UICONTROL 結合スキーマ]ダッシュボードには、特定の XDM クラスの結合スキーマが表示されます。**[!UICONTROL クラス]**&#x200B;ドロップダウンを選択することで、様々な XDM クラスの結合スキーマを表示できます。
+[!UICONTROL Union Schema] ダッシュボードには、特定の XDM クラスの結合スキーマが表示されます。 **[!UICONTROL Class]** ドロップダウンを選択することで、様々な XDM クラスの結合スキーマを表示できます。
 
 結合スキーマは、同じクラスを共有し、プロファイルが有効になっている複数のスキーマで構成されています。これにより、同じクラスを共有する各スキーマ内に含まれているすべてのフィールドを 1 つのビューに統合して表示できます。
 
-[Experience Platform UI 内で結合スキーマを表示する &#x200B;](../../profile/ui/union-schema.md#view-union-schemas) について詳しくは、結合スキーマ UI ガイドを参照してください。
+[Experience Platform UI 内で結合スキーマを表示する ](../../profile/ui/union-schema.md#view-union-schemas) について詳しくは、結合スキーマ UI ガイドを参照してください。
 
 ## ウィジェットと指標
 
 ダッシュボードは複数のウィジェットで構成されています。ウィジェットは読み取り専用の指標であり、プロファイルデータに関する重要な情報を提供します。
 
-最新のスナップショットの日時が、「[!UICONTROL 概要]」タブの上部にある結合ポリシードロップダウンの横に表示されます。すべてのウィジェットデータは、その日時の時点で正確です。 スナップショットのタイムスタンプは UTC で指定されます。個々のユーザーや組織のタイムゾーンではありません。
+最新のスナップショットの日時が、「[!UICONTROL Overview]」タブの上部にある結合ポリシードロップダウンの横に表示されます。 すべてのウィジェットデータは、その日時の時点で正確です。 スナップショットのタイムスタンプは UTC で指定されます。個々のユーザーや組織のタイムゾーンではありません。
 
 ![最新のスナップショットのタイムスタンプがハイライト表示されプロファイルダッシュボードの「概要」タブ。](../images/profiles/snapshot-timestamp.png)
 
@@ -183,53 +183,53 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 Adobe Experience Platformのすべての新しいインスタンスに対して、データから利用可能な最新のインサイトをハイライト表示するデフォルトのウィジェットの読み込みが提供されます。 次のウィジェットは、セグメントビューで最初から事前設定されています。 ウィジェットの目的と機能の詳細については、以下を参照してください。
 
-* [[!UICONTROL プロファイル数]](#profile-count)
-* [[!UICONTROL プロファイル数の変更]](#profile-count-change)
-* [[!UICONTROL プロファイル数の変化のトレンド]](#profiles-count-change-trend)
-* [[!UICONTROL ID 別のプロファイル]](#profiles-by-identity)
-* [[!UICONTROL ID の重複]](#identity-overlap)
+* [[!UICONTROL Profile count]](#profile-count)
+* [[!UICONTROL Profile count change]](#profile-count-change)
+* [[!UICONTROL Profiles count change trend]](#profiles-count-change-trend)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
 
 >[!NOTE]
 >
->2023 年 7 月 26 日（PT）をもって、[!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;] および [!UICONTROL &#x200B; 宛先 &#x200B;] 概要ダッシュボードは、過去 6 か月間にビューを変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みダッシュボードにリセットされました。 デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[&#x200B; 宛先 &#x200B;](./destinations.md#default-widgets) および [&#x200B; オーディエンス &#x200B;](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
+>2023 年 7 月 26 日（PT）の時点で、[!UICONTROL Profiles]、[!UICONTROL Audiences]、[!UICONTROL Destinations] の概要ダッシュボードは、過去 6 か月間にビューを変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みにリセットされました。 デフォルトのウィジェットのロードアウトの一部として含まれるウィジェットについて詳しくは、[ 宛先 ](./destinations.md#default-widgets) および [ オーディエンス ](./audiences.md#default-widgets) デフォルトウィジェットの節のドキュメントを参照してください。 引き続き、以前と同様にダッシュボードウィジェットをカスタマイズできます。
 
 ## 顧客 AI ウィジェット {#customer-ai-profiles-widgets}
 
-顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI では、既存の消費者エクスペリエンスイベントデータを分析して **チャーンまたはコンバージョンの傾向スコア** を予測します。 これらの高精度な顧客傾向モデルにより、より正確なセグメント化とターゲティングが可能になります。 [&#x200B; スコアの分布 &#x200B;](#customer-ai-distribution-of-scores) および [&#x200B; スコアの概要 &#x200B;](#customer-ai-scoring-summary) インサイトは、オーディエンスの除算を示します。 傾向が高/低/中のプロファイルと、それらのプロファイルがプロファイル数間でどのように分配されるかをハイライトします。
+顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI では、既存の消費者エクスペリエンスイベントデータを分析して **チャーンまたはコンバージョンの傾向スコア** を予測します。 これらの高精度な顧客傾向モデルにより、より正確なセグメント化とターゲティングが可能になります。 [ スコアの分布 ](#customer-ai-distribution-of-scores) および [ スコアの概要 ](#customer-ai-scoring-summary) インサイトは、オーディエンスの除算を示します。 傾向が高/低/中のプロファイルと、それらのプロファイルがプロファイル数間でどのように分配されるかをハイライトします。
 
-* [[!UICONTROL 顧客 AI スコア付けの概要]](#customer-ai-scoring-summary)
-* [[!UICONTROL スコアの顧客 AI 分布]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL スコアの顧客 AI 分布] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
 >title="スコアの配分"
 >abstract="このウィジェットは、プロファイルの合計数の配分を傾向スコア別に 5％単位で視覚化します。プロファイル数の配分は、AI モデルと選択した結合ポリシーで決まります。AI モデルは、ウィジェットタイトルの下にあるドロップダウンメニューから変更できます。"
 
-[!UICONTROL &#x200B; スコアの顧客 AI 配分 &#x200B;] ウィジェットは、プロファイルの合計数を、傾向スコア別に分類します。 プロファイル数の分布は、AI モデルと選択した結合ポリシーによって決定され、その傾向を示す 5% の増分で視覚化されます。 プロファイルの数は Y 軸に沿って提供され、傾向スコアは X 軸に沿って提供されます。
+[!UICONTROL Customer AI distribution of scores] ウィジェットは、プロファイルの合計数を、傾向スコアで分類します。 プロファイル数の分布は、AI モデルと選択した結合ポリシーによって決定され、その傾向を示す 5% の増分で視覚化されます。 プロファイルの数は Y 軸に沿って提供され、傾向スコアは X 軸に沿って提供されます。
 
 >[!NOTE]
 >
 >ビジュアライゼーションがコンバージョンの傾向スコアの場合、高スコアは緑色で表示され、低スコアは赤色で表示されます。 チャーンの傾向を予測する場合は、これが逆となり、高いスコアは赤、低いスコアは緑で表示されます。選択した傾向タイプに関係なく、メディアバケットは黄色のままです。
 
-傾向スコアを決定する AI モデルは、ウィジェットタイトルの下のドロップダウンセレクターから選択します。 ドロップダウンには、設定済みのすべての顧客 AI モデルのリストが含まれています。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 詳しくは、[&#x200B; 顧客 AI インスタンスの設定方法 &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md) のドキュメントを参照してください。
+傾向スコアを決定する AI モデルは、ウィジェットタイトルの下のドロップダウンセレクターから選択します。 ドロップダウンには、設定済みのすべての顧客 AI モデルのリストが含まれています。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 詳しくは、[ 顧客 AI インスタンスの設定方法 ](../../intelligent-services/customer-ai/user-guide/configure.md) のドキュメントを参照してください。
 
 >[!NOTE]
 >
->「概要」タブのすぐ下のドロップダウンを選択して、分析に含めるプロファイルを決定する結合ポリシーを変更します。 簡単な説明については [&#x200B; 結合ポリシー &#x200B;](#merge-policies) の節、詳細については [&#x200B; 結合ポリシーの概要 &#x200B;](../../profile/merge-policies/overview.md) を参照してください。
+>「概要」タブのすぐ下のドロップダウンを選択して、分析に含めるプロファイルを決定する結合ポリシーを変更します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
 
-選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。
+選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL View model details]**」を選択します。
 
-![&#x200B; 「[!UICONTROL &#x200B; スコアの顧客 AI 分布 &#x200B;] ウィジェットと [!UICONTROL &#x200B; モデルの詳細を表示 &#x200B;] がハイライト表示されたExperience Platform オーディエンスダッシュボード &#x200B;](../images/segments/customer-ai-distribution-of-scores.png)
+![[!UICONTROL Customer AI distribution of scores] ウィジェットと [!UICONTROL View model details] がハイライト表示されたExperience Platform オーディエンスダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細なモデルインサイト ページが表示されます。
 
-![&#x200B; 顧客 AI 用のインサイトページ &#x200B;](../images/profiles/customer-ai-insights-page.png)
+![ 顧客 AI 用のインサイトページ ](../images/profiles/customer-ai-insights-page.png)
 
-顧客 AI について詳しくは、[&#x200B; インサイトの獲得 UI ガイド &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
+顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
-### [!UICONTROL 顧客 AI スコア付けの概要] {#customer-ai-scoring-summary}
+### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
@@ -242,92 +242,92 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >ビジュアライゼーションがコンバージョンの傾向スコアの場合、高スコアは緑色で表示され、低スコアは赤色で表示されます。 チャーンの傾向を予測する場合は、これが逆となり、高いスコアは赤、低いスコアは緑で表示されます。選択した傾向タイプに関係なく、メディアバケットは黄色のままです。
 
-ウィジェットタイトルの下にあるドロップダウンメニューには、設定済みのすべての顧客 AI モデルのリストが表示されます。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 手順について詳しくは、[&#x200B; 顧客 AI インスタンスの設定方法 &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md) に関するドキュメントを参照してください。
+ウィジェットタイトルの下にあるドロップダウンメニューには、設定済みのすべての顧客 AI モデルのリストが表示されます。 使用可能なモデルのリストから、分析に適した AI モデルを選択します。 使用できる顧客 AI モデルがない場合は、ウィジェット内に、1 つ以上の顧客 AI モデルを設定するように指示するメッセージが表示され、顧客 AI モデル設定ページへのハイパーリンクが提供されます。 手順について詳しくは、[ 顧客 AI インスタンスの設定方法 ](../../intelligent-services/customer-ai/user-guide/configure.md) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [&#x200B; 結合ポリシー &#x200B;](#merge-policies) の節、詳細については [&#x200B; 結合ポリシーの概要 &#x200B;](../../profile/merge-policies/overview.md) を参照してください。
+>計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
 
-![&#x200B; 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
+![ 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
 
-選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。 顧客 AI について詳しくは、[&#x200B; インサイトの獲得 UI ガイド &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
+選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL View model details]**」を選択します。 顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
 ## 標準ウィジェット {#standard-widgets}
 
-アドビは、プロファイルデータに関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットを提供します。 [!UICONTROL ウィジェットライブラリ]を使用して、組織で共有するカスタムウィジェットを作成することもできます。カスタムウィジェットの作成について詳しくは、まず [&#x200B; ウィジェットライブラリの概要 &#x200B;](../customize/widget-library.md) を参照してください。
+アドビは、プロファイルデータに関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットを提供します。 [!UICONTROL Widget library] を使用して組織で共有するカスタムウィジェットを作成することもできます。 カスタムウィジェットの作成について詳しくは、まず [ ウィジェットライブラリの概要 ](../customize/widget-library.md) を参照してください。
 
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
-* [[!UICONTROL プロファイル数]](#profile-count)
-* [[!UICONTROL プロファイル数のトレンド]](#profile-count-trend)
-* [[!UICONTROL プロファイル数の変更]](#profile-count-change)
-* [[!UICONTROL プロファイル数の変化のトレンド]](#profiles-count-change-trend)
-* [[!UICONTROL プロファイル数の変化のトレンド（ID 別）]](#profiles-count-change-trend-by-identity)
-* [[!UICONTROL ID 別のプロファイル]](#profiles-by-identity)
-* [[!UICONTROL ID の重複]](#identity-overlap)
-* [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
-* [[!UICONTROL 単一の ID プロファイル（ID 別）]](#single-identity-profiles-by-identity)
-* [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
-* [[!UICONTROL セグメント化されていないプロファイル変更トレンド]](#unsegmented-profiles-change-trend)
-* [[!UICONTROL 非セグメント化プロファイル（ID 別）]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL オーディエンス]](#audiences)
-* [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
-* [[!UICONTROL オーディエンスサイズ]](#audiences-size)
-* [[!UICONTROL オーディエンスの重複（結合ポリシー別）]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL オーディエンスの重複レポート]](#audience-overlap-report)
+* [[!UICONTROL Profile count]](#profile-count)
+* [[!UICONTROL Profile count trend]](#profile-count-trend)
+* [[!UICONTROL Profile count change]](#profile-count-change)
+* [[!UICONTROL Profiles count change trend]](#profiles-count-change-trend)
+* [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Single identity profiles]](#single-identity-profiles)
+* [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented profiles change trend]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences]](#audiences)
+* [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
+* [[!UICONTROL Audiences size]](#audiences-size)
+* [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 
-### [!UICONTROL プロファイル数] {#profile-count}
+### [!UICONTROL Profile count] {#profile-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="プロファイル数"
 >abstract="このウィジェットには、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数が表示されます。この数は、選択した結合ポリシーがプロファイルデータに適用されているかどうかによって異なります。"
 
-**[!UICONTROL プロファイル数]** ウィジェットは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を表示します。 この数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
+**[!UICONTROL Profile count]** ウィジェットは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を表示します。 この数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
 
 詳しくは、[このドキュメント前半の結合ポリシーの節](#merge-policies)を参照してください。
 
 >[!NOTE]
 >
->[!UICONTROL プロファイル数]ウィジェットは、複数の理由により、UI の「[!UICONTROL プロファイル]」セクションの「[!UICONTROL 参照]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。この違いの最も一般的な理由は、「[!UICONTROL &#x200B; 参照 &#x200B;] タブが組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照し、[!UICONTROL &#x200B; プロファイル数 &#x200B;] ウィジェットがダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照することです。
+>[!UICONTROL Profile count] ウィジェットは、複数の理由により、UI の「[!UICONTROL Browse]」セクションの「[!UICONTROL Profiles]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。 この違いが生じる最も一般的な理由は、「[!UICONTROL Browse]」タブが組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照し、[!UICONTROL Profile count] ウィジェットがダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照するためです。
 >
->もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。「[!UICONTROL &#x200B; 参照 &#x200B;]」タブでサンプルジョブがトリガーされる方法について詳しくは、『リアルタイム顧客プロファイル UI ガイド』の [&#x200B; プロファイル数に関する節 &#x200B;](../../profile/ui/user-guide.md#profile-count) を参照してください。
+>もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL Browse]」タブでサンプルジョブを実行する時間の違いによるものです。 [!UICONTROL Profile count] ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。 「[!UICONTROL Browse]」タブでサンプルジョブがトリガーされる方法について詳しくは、[ リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節 ](../../profile/ui/user-guide.md#profile-count) を参照してください。
 
-![&#x200B; プロファイル数ウィジェットがハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/profile-count.png)
+![ プロファイル数ウィジェットがハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/profile-count.png)
 
-### [!UICONTROL プロファイル数のトレンド] {#profile-count-trend}
+### [!UICONTROL Profile count trend] {#profile-count-trend}
 
-[!UICONTROL プロファイル数のトレンド]ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。この合計数には、前回の日別スナップショット以降にシステムに読み込まれたプロファイルが含まれます。 30 日、90 日および 12 か月の期間のデータを可視化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
+[!UICONTROL Profile count trend] ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。 この合計数には、前回の日別スナップショット以降にシステムに読み込まれたプロファイルが含まれます。 30 日、90 日および 12 か月の期間のデータを可視化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
 
 ![プロファイル数のトレンドウィジェット。](../images/profiles/profile-count-trend.png)
 
-### [!UICONTROL プロファイル数の変更] {#profile-count-change}
+### [!UICONTROL Profile count change] {#profile-count-change}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="プロファイル数の変更"
 >abstract="このウィジェットは、最新スナップショットの時点でプロファイルストアに&#x200B;**追加された**&#x200B;結合プロファイルの合計数を表示します。この数は、選択した結合ポリシーがプロファイルデータに適用されているかどうかによって異なります。"
 
-**[!UICONTROL プロファイル数の変更]** ウィジェットには、前回のスナップショット以降にプロファイルストアに追加された結合プロファイルの数が表示されます。 この数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。ドロップダウンセレクターを使用すると、過去 30 日間、90 日間、12 か月間に追加されたプロファイルの数を表示できます。
+**[!UICONTROL Profile count change]** ウィジェットには、前回のスナップショット以降にプロファイルストアに追加された結合プロファイルの数が表示されます。 この数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。ドロップダウンセレクターを使用すると、過去 30 日間、90 日間、12 か月間に追加されたプロファイルの数を表示できます。
 
 >[!NOTE]
 >
->[!UICONTROL &#x200B; プロファイル数の変更 &#x200B;] ウィジェットは、最初のプロファイルの取り込みとプロファイルストア設定の **後** に追加されたプロファイル数を反映します。 つまり、組織がプロファイルストアを設定し、1 日目に 4,000,000 個を取り込んだ場合、24 時間以内にダッシュボードは使用可能になりますが、[!UICONTROL &#x200B; プロファイル数の変更 &#x200B;] ウィジェットは 0 に設定されます。 このカウント方法は、プロファイルのシステムへの最初の取り込みに関連するスパイクを回避するために行われます。 次の 30 日間で、組織はさらに 1,000,000 個のプロファイルをプロファイルストアに取り込みます。 次のスナップショットが作成されると、[!UICONTROL プロファイル数の変更]ウィジェットには合計 1,000,000 個のプロファイルが追加表示され、[!UICONTROL プロファイル数]ウィジェットには合計 5,000,000 個のプロファイルが表示されます。
+>[!UICONTROL Profile count change] ウィジェットは、最初のプロファイルの取り込みとプロファイルストア設定の後 **追加されたプロファイル数を反映します** つまり、組織がプロファイルストアを設定し、1 日目に 4,000,000 個を取り込んだ場合、24 時間以内にダッシュボードは使用可能になりますが、[!UICONTROL Profile count change] ウィジェットは 0 に設定されます。 このカウント方法は、プロファイルのシステムへの最初の取り込みに関連するスパイクを回避するために行われます。 次の 30 日間で、組織はさらに 1,000,000 個のプロファイルをプロファイルストアに取り込みます。 次のスナップショットが作成されると、[!UICONTROL Profile count change] ウィジェットには合計 1,000,000 個のプロファイルが追加表示され、[!UICONTROL Profile count] ウィジェットには合計 5,000,000 個のプロファイルが表示されます。
 
-![&#x200B; プロファイル数の変化ウィジェットがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/profile-count-change.png)
+![ プロファイル数の変化ウィジェットがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL プロファイル数の変化のトレンド] {#profiles-count-change-trend}
+### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="プロファイル数の変化のトレンド"
 >abstract="このウィジェットは、過去 30 日、90 日、12 か月にわたって毎日プロファイルストアに追加された結合プロファイルの数を表示します。また、この数は、選択した結合ポリシーがプロファイルデータに適用されるかどうかによって異なります。"
 
-**[!UICONTROL プロファイル数の変化のトレンド]** ウィジェットには、過去 30 日、90 日、12 か月間にわたって毎日プロファイルストアに追加された、結合プロファイルの合計数が表示されます。 この数はスナップショットが作成されるたびに更新されるので、プロファイルをExperience Platformに取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されたプロファイルの数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
+**[!UICONTROL Profiles count change trend]** ウィジェットには、過去 30 日、90 日、12 か月にわたって毎日プロファイルストアに追加された結合プロファイルの合計数が表示されます。 この数はスナップショットが作成されるたびに更新されるので、プロファイルをExperience Platformに取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されたプロファイルの数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
 
-詳しくは、[&#x200B; このドキュメントの前の結合ポリシーに関する節 &#x200B;](#merge-policies) を参照してください。
+詳しくは、[ このドキュメントの前の結合ポリシーに関する節 ](#merge-policies) を参照してください。
 
-**[!UICONTROL プロファイル数の変化のトレンド]**&#x200B;ウィジェットは、ウィジェットの右上に「キャプション」ボタンを表示します。自動キャプションダイアログを開くには、「**[!UICONTROL キャプション]**」を選択します。
+**[!UICONTROL Profiles count change trend]** ウィジェットは、ウィジェットの右上に「キャプション」ボタンを表示します。 自動キャプションダイアログを開くには、「**[!UICONTROL Captions]**」を選択します。
 
 ![キャプションボタンがハイライト表示されたプロファイル数の変化のトレンドウィジェットを表示する「プロファイルの概要」タブ。](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -335,7 +335,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 
 ![プロフィール数の変化のトレンドウィジェットの自動キャプションダイアログ。](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
-### [!UICONTROL ID 別プロファイル数の変化のトレンド] {#profiles-count-change-trend-by-identity}
+### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
@@ -345,56 +345,56 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 
 ![ID ウィジェット別プロファイル数の変化のトレンド。](../images/profiles/profiles-count-change-trend-by-identity.png)
 
-### [!UICONTROL ID 別プロファイル] {#profiles-by-identity}
+### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="ID 別プロファイル"
 >abstract="このウィジェットは、プロファイルストアにあるすべての結合済みプロファイルの分類を ID 別に表示します。"
 
-**[!UICONTROL ID 別プロファイル]** ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
+**[!UICONTROL Profiles by identity]** ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
 
-詳しくは、[&#x200B; このドキュメントの前の結合ポリシーに関する節 &#x200B;](#merge-policies) を参照してください。
+詳しくは、[ このドキュメントの前の結合ポリシーに関する節 ](#merge-policies) を参照してください。
 
 ![ID 別プロファイルウィジェットがハイライトされたプロファイルの概要ダッシュボード。](../images/profiles/profiles-by-identity.png)
 
-自動キャプションダイアログを開くには、「**[!UICONTROL キャプション]**」を選択します。
+自動キャプションダイアログを開くには、「**[!UICONTROL Captions]**」を選択します。
 
 ![ID キャプションダイアログ別プロファイル。](../images/profiles/profiles-by-identity-captions.png)
 
 機械学習モデルは、データの全体的な分布と主要なディメンションを分析することにより、データインサイトを自動的に生成します。
 
-ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント &#x200B;](../../identity-service/home.md) を参照してください。
+ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント ](../../identity-service/home.md) を参照してください。
 
-### [!UICONTROL ID の重複] {#identity-overlap}
+### [!UICONTROL Identity overlap] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="ID の重複"
 >abstract="このウィジェットは、ベン図を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。"
 
-**[!UICONTROL ID の重複]** ウィジェットは、ベン図（セット図）を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。
+**[!UICONTROL Identity overlap]** ウィジェットは、ベン図（セット図）を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。
 
 ウィジェットのドロップダウンメニューを使用して、比較する ID を選択します。円には、各 ID を含むプロファイルの相対合計数が表示されます。両方の ID を含むプロファイルの数は、円の重なり部分の大きさで表されます。顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその個々の顧客に関連付けられます。 このような場合、組織には、複数の ID からのフラグメントを含む複数のプロファイルがある可能性があります。
 
-プロファイルフラグメントについて詳しくは、リアルタイム顧客プロファイルの概要の [&#x200B; プロファイルフラグメントと結合プロファイル &#x200B;](../../profile/home.md#profile-fragments-vs-merged-profiles) の節を参照してください。
+プロファイルフラグメントについて詳しくは、リアルタイム顧客プロファイルの概要の [ プロファイルフラグメントと結合プロファイル ](../../profile/home.md#profile-fragments-vs-merged-profiles) の節を参照してください。
 
-ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント &#x200B;](../../identity-service/home.md) を参照してください。
+ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント ](../../identity-service/home.md) を参照してください。
 
-![ID の重複ウィジェットがハイライト表示されたプロファイルダッシュボードの「概要」タブ &#x200B;](../images/profiles/identity-overlap.png)
+![ID の重複ウィジェットがハイライト表示されたプロファイルダッシュボードの「概要」タブ ](../images/profiles/identity-overlap.png)
 
-### [!UICONTROL 単一の ID プロファイル] {#single-identity-profiles}
+### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="単一の ID プロファイル"
 >abstract="このウィジェットは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。この ID タイプは、メールまたは ECID のどちらかです。"
 
-[!UICONTROL 単一の ID プロファイル]ウィジェットは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。この ID タイプは、メールまたは ECID のどちらかです。プロファイル数は、最新のスナップショットに含まれるデータから生成されます。
+[!UICONTROL Single Identity Profiles] ウィジェットは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。 この ID タイプは、メールまたは ECID のどちらかです。プロファイル数は、最新のスナップショットに含まれるデータから生成されます。
 
 ![単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles.png)
 
-### [!UICONTROL 単一の ID プロファイル（ID 別）] {#single-identity-profiles-by-identity}
+### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
 
 このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。
 
@@ -402,29 +402,29 @@ ID に関するプロファイルの合計数の詳細を示すダイアログ�
 
 ![ID ウィジェット別の単一の ID プロファイル。](../images/profiles/single-identity-profiles-by-identity.png)
 
-### [!UICONTROL セグメント化されていないプロファイル] {#unsegmented-profiles}
+### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="セグメント化されていないプロファイル"
 >abstract="このウィジェットは、どのオーディエンスにも属していないすべてのプロファイルの合計数を表示します。これは、組織全体でのプロファイルのアクティブ化の機会を示します。"
 
-[!UICONTROL &#x200B; セグメント化されていないプロファイル &#x200B;] ウィジェットは、オーディエンスに添付されていないすべてのプロファイルの合計数が表示されます。 生成される数は、最後のスナップショット時点のもので、組織全体のプロファイルアクティブ化の機会を表しています。また、十分な ROI を提供しないプロファイルを削除する機会も示します。
+[!UICONTROL Unsegmented Profiles] ウィジェットには、オーディエンスに関連付けられていないプロファイルの合計数が表示されます。 生成される数は、最後のスナップショット時点のもので、組織全体のプロファイルアクティブ化の機会を表しています。また、十分な ROI を提供しないプロファイルを削除する機会も示します。
 
 ![セグメント化されていないプロファイルのウィジェット。](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL セグメント化されていないプロファイル変更トレンド] {#unsegmented-profiles-change-trend}
+### [!UICONTROL Unsegmented profiles change trend] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="セグメント化されていないプロファイルのトレンド"
 >abstract="このウィジェットは、一定期間内にどのオーディエンスにも属していないプロファイルの数を折れ線グラフで表示します。オーディエンスに属していないプロファイルのトレンドを、30 日、90 日、12 か月の期間で視覚化できます。"
 
-[!UICONTROL &#x200B; セグメント化されていないプロファイルの変化のトレンド &#x200B;] ウィジェットは、折れ線グラフを使用して、オーディエンスに関連付けられていない前回の日別スナップショット以降に追加されたプロファイルの数を示します。 どのオーディエンスにも属していないプロファイルの変化のトレンドを、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。プロファイル数は y 軸、時間は x 軸に反映されます。
+[!UICONTROL Unsegmented profiles change trend] ウィジェットは、折れ線グラフを使用して、オーディエンスに関連付けられていない前回の日別スナップショット以降に追加されたプロファイルの数を示します。 どのオーディエンスにも属していないプロファイルの変化のトレンドを、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。プロファイル数は y 軸、時間は x 軸に反映されます。
 
-![&#x200B; セグメント化されていないプロファイルの変化のトレンドウィジェット。](../images/profiles/unsegmented-profiles-change-trend.png)
+![ セグメント化されていないプロファイルの変化のトレンドウィジェット。](../images/profiles/unsegmented-profiles-change-trend.png)
 
-### [!UICONTROL 非セグメント化プロファイル（ID 別）] {#unsegmented-profiles-by-identity}
+### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
 >[!NOTE]
 >
@@ -441,11 +441,11 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL オーディエンス] {#audiences}
+### [!UICONTROL Audiences] {#audiences}
 
 このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備が整ったオーディエンスの合計数を提供します。
 
-**[!UICONTROL オーディエンス]** を選択し、[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボード [!UICONTROL &#x200B; 参照 &#x200B;] タブに移動します。 ここから、組織のすべてのセグメント定義のリストが表示されます。
+「**[!UICONTROL Audiences]**」を選択すると、[!UICONTROL Audiences] ダッシュボードの「[!UICONTROL Browse]」タブに移動します。 ここから、組織のすべてのセグメント定義のリストが表示されます。
 
 ![オーディエンスウィジェット。](../images/profiles/audiences.png)
 
@@ -460,61 +460,61 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-### [!UICONTROL オーディエンスの重複レポート] {#audience-overlap-report}
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-このウィジェットは、結合ポリシーでフィルタリングされたすべての使用可能なオーディエンスからのデータの重複を表にします。 画面上部のドロップダウンメニューで選択した結合ポリシーに対して、重複率の高い順にランク付けされた 5 つのオーディエンスのリストが表示されます。分析された 2 つのオーディエンスが、[!UICONTROL &#x200B; オーディエンス A の名前 &#x200B;] および [!UICONTROL &#x200B; オーディエンス B の名前 &#x200B;] 列で一覧表示されます。 重複率は、3 番目の列の小数点以下 12 桁までの精度で表示されます。
+このウィジェットは、結合ポリシーでフィルタリングされたすべての使用可能なオーディエンスからのデータの重複を表にします。 画面上部のドロップダウンメニューで選択した結合ポリシーに対して、重複率の高い順にランク付けされた 5 つのオーディエンスのリストが表示されます。分析された 2 つのオーディエンスが、[!UICONTROL AUDIENCE A NAME] 列および [!UICONTROL AUDIENCE B NAME] 列で一覧表示されます。 重複率は、3 番目の列の小数点以下 12 桁までの精度で表示されます。
 
 オーディエンスの重複レポートは、新しい高パフォーマンスのオーディエンスを作成するのに役立ちます。 重複率が高いものを観察することで、オーディエンスを抑制し、同じオーディエンスが異なる宛先に送信されるのを防ぐことができます。また、セグメント化の改善に役立つ隠れたインサイトを特定するのにも役立ちます。重複率の低さは、追跡する固有のプロファイルを見つけるのに役立ちます。
 
-**[!UICONTROL さらに表示]**&#x200B;を選択すると、フルスクリーンダイアログが開き、さらに多くのオーディエンスの重複データが表示されます。
+「**[!UICONTROL View more]**」を選択すると、フルスクリーンダイアログが開き、さらに多くのオーディエンスの重複データが表示されます。
 
-![「さらに表示」がハイライト表示されたオーディエンスの重複レポートウィジェット。](../images/profiles/profiles-audience-overlap-report.png)
+![「さらに表示」が強調表示されたオーディエンスの重複レポートウィジェット](../images/profiles/profiles-audience-overlap-report.png)
 
-[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。テーブルから列を削除または追加するには、設定アイコン（![&#x200B; 設定アイコン。](/help/images/icons/settings.png)）を選択します。
+[!UICONTROL Audience overlap report] ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。テーブルから列を削除または追加するには、設定アイコン（![ 設定アイコン。](/help/images/icons/settings.png)）を選択します。
 
 ![オーディエンスの重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->結果のランキングを高い順または低い順に変更するには、「**[!UICONTROL 重複]**」列ヘッダーを選択します。
+>結果のランキングを高い順または低い順に変更するには、**[!UICONTROL Overlapping]** の列ヘッダーを選択します。
 
-レポート全体を PDF 形式でダウンロードするには、オプションメニュー（**`...`**）に続いて「**[!UICONTROL ダウンロード]**」を選択します。
+レポート全体をPDF形式でダウンロードするには、オプションメニュー（**`...`**）に続いて「**[!UICONTROL Download]**」を選択します。
 
 ![省略記号と「ダウンロード」オプションがハイライト表示されたオーディエンス重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
 重複分析のベン図を開くには、レポートから行を選択します。 ダイアログでプロファイル数を表示するには、ベン図のセクションにポインタを合わせます。
 
-![ベン図と行がハイライト表示されたオーディエンスの重複レポートダイアログ。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+![ベン図と行がハイライト表示されたオーディエンスの重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
-「**[!UICONTROL 閉じる]**」を選択し、[!UICONTROL プロファイル]ダッシュボードに戻ります。
+「**[!UICONTROL Close]**」を選択すると、[!UICONTROL Profiles] ダッシュボードに戻ります。
 
-### [!UICONTROL 宛先ステータスにマッピングされたオーディエンス] {#audiences-mapped-to-destination-status}
+### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
-[!UICONTROL &#x200B; 宛先ステータスにマッピングされたオーディエンス &#x200B;] ウィジェットは、マッピングされたオーディエンスとマッピングされていないオーディエンスの両方の合計数を単一の指標で表示し、ドーナツグラフを使用してそれぞれの合計の割合の違いを示します。 計算される数値は、選択した結合ポリシーによって異なります。
+[!UICONTROL Audiences mapped to destination status] ウィジェットは、マッピングされたオーディエンスとマッピングされていないオーディエンスの両方の合計数を単一の指標で表示し、ドーナツグラフを使用してそれぞれの合計の割合の違いを示します。 計算される数値は、選択した結合ポリシーによって異なります。
 
 マッピングされたオーディエンスまたはマッピングされていないオーディエンスの個々の数は、ドーナツグラフの各セクションにカーソルを合わせると、ダイアログに表示されます。
 
 ![宛先ステータスにマッピングされたオーディエンスウィジェット。](../images/profiles/audiences-mapped-to-destination-status.png)
 
-### [!UICONTROL オーディエンスサイズ] {#audiences-size}
+### [!UICONTROL Audiences size] {#audiences-size}
 
-[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットは、最大 20 個のオーディエンスの名前と各オーディエンスに含まれるプロファイルの合計数をリストする 2 列の表を提供します。 リストは、オーディエンス内に含まれるプロファイルの合計数に応じて、多い順に並べられます。 合計オーディエンスサイズのカウントは、適用される結合ポリシーによって異なります。
+[!UICONTROL Audiences size] ウィジェットは、最大 20 個のオーディエンスの名前と各オーディエンスに含まれるプロファイルの合計数をリストする 2 列の表を提供します。 リストは、オーディエンス内に含まれるプロファイルの合計数に応じて、多い順に並べられます。 合計オーディエンスサイズのカウントは、適用される結合ポリシーによって異なります。
 
 ![オーディエンスサイズウィジェット。](../images/profiles/audiences-size.png)
 
-オーディエンスに関する包括的な情報を確認するには、表示されたリストからオーディエンス名を選択して、[!UICONTROL &#x200B; オーディエンス &#x200B;]&#x200B;[!UICONTROL &#x200B; 詳細 &#x200B;] ページに移動します。 また、ウィジェットの最後から **[!UICONTROL すべてのオーディエンスを表示]** を選択し、[!UICONTROL &#x200B; オーディエンス &#x200B;] [!UICONTROL &#x200B; 参照 &#x200B;] タブに移動して既存のオーディエンスを検索できます。
+オーディエンスに関する包括的な情報を確認するには、表示されたリストからオーディエンス名を選択して、[!UICONTROL Audiences] [!UICONTROL Detail] ページに移動します。 また、ウィジェットの最後から **[!UICONTROL View all audiences]** を選択すると、「[!UICONTROL Audiences] [!UICONTROL Browse]」タブに移動して、既存のオーディエンスを検索できます。
 
-![&#x200B; オーディエンス名と「すべてのオーディエンスを表示」テキストがハイライト表示されたオーディエンスサイズウィジェット &#x200B;](../images/profiles/audiences-size-view-all-audiences.png)
+![ オーディエンス名と「すべてのオーディエンスを表示」テキストがハイライト表示されたオーディエンスサイズウィジェット ](../images/profiles/audiences-size-view-all-audiences.png)
 
-オーディエンスの詳細については、[&#x200B; オーディエンスポータルドキュメント &#x200B;](../../segmentation/ui/audience-portal.md) を参照してください。
+オーディエンスの詳細については、[ オーディエンスポータルドキュメント ](../../segmentation/ui/audience-portal.md) を参照してください。
 
-### [!UICONTROL オーディエンスの重複（結合ポリシー別）] {#audience-overlap-by-merge-policy}
+### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
 このウィジェットは、ベン図を使用して、選択した 2 つのオーディエンスの重複を表示します。 結合ポリシーはページ上部の概要ドロップダウンから選択され、分析対象のオーディエンスはウィジェット内の 2 つのドロップダウンメニューから選択されます。 関連するセグメント定義内に含まれるプロファイルの合計数は、円または積集合の上にマウスポインターを置くと確認できます。
 
 このウィジェットはセグメント定義のクロスオーバーを視覚的に表示するため、セグメント定義間の類似性を調査することで、セグメント化戦略を最適化できます。
 
-![&#x200B; 結合ポリシードロップダウンとウィジェットオーディエンスドロップダウンがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
+![ 結合ポリシードロップダウンとウィジェットオーディエンスドロップダウンがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## 次の手順
 
-このドキュメントを通して、プロファイルダッシュボードを見つけ、使用可能なウィジェットに表示される指標を理解できるようになりました。 Experience Platform UI で [!DNL Profile] データの使用に関する詳細を学ぶには、[&#x200B; リアルタイム顧客プロファイル UI ガイド &#x200B;](../../profile/ui/user-guide.md) を参照してください。
+このドキュメントを通して、プロファイルダッシュボードを見つけ、使用可能なウィジェットに表示される指標を理解できるようになりました。 Experience Platform UI で [!DNL Profile] データの使用に関する詳細を学ぶには、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。

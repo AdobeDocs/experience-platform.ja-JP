@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->柔軟なオーディエンス評価は、[!DNL Microsoft Azure] で実行されているExperience Platformのインスタンスで **のみ** 利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../landing/multi-cloud.md) を参照してください。
+>柔軟なオーディエンス評価は、**で実行されているExperience Platformのインスタンスで** のみ [!DNL Microsoft Azure] 利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../landing/multi-cloud.md) を参照してください。
 >
 >さらに、柔軟なオーディエンス評価は、Real-Time CDP B2C Editionで使用できる **のみ** です。
 
@@ -45,9 +45,9 @@ ht-degree: 6%
 
 柔軟なオーディエンス評価を使用するには、次の権限が必要です。
 
-- **[!UICONTROL オーディエンスに対するセグメントの評価]** は、「**[!DNL Profile Management]**」セクションで行います。
+- 「**[!UICONTROL Evaluate Segment to an Audience]**」セクションの **[!DNL Profile Management]** を参照してください。
 
-役割ベースのアクセス制御の詳細については、[&#x200B; アクセス制御の概要 &#x200B;](../../access-control/home.md) を参照してください。
+役割ベースのアクセス制御の詳細については、[ アクセス制御の概要 ](../../access-control/home.md) を参照してください。
 
 ## 柔軟なオーディエンス評価の実行
 
@@ -300,25 +300,25 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 >[!TAB Experience Platform UI]
 
-Experience Platform UI 内で柔軟なオーディエンス評価を実行するには、「**[!UICONTROL 顧客]** セクションの **[!UICONTROL オーディエンス]** を選択します。
+Experience Platform UI 内で柔軟なオーディエンス評価を実行するには、**[!UICONTROL Audiences]** のセクションで「**[!UICONTROL Customers]**」を選択します。
 
-![&#x200B; 「顧客」セクション内の「オーディエンス」ボタンがハイライト表示されます。 顧客プロファイルのオーディエンスポータルが表示されます。](../images/methods/fae/audience-portal.png)
+![ 「顧客」セクション内の「オーディエンス」ボタンがハイライト表示されます。 顧客プロファイルのオーディエンスポータルが表示されます。](../images/methods/fae/audience-portal.png)
 
-オーディエンスポータルが表示され、組織のすべての人物オーディエンスのリストが表示されます。 Audience Portal では、評価するオーディエンスを選択し、「**[!UICONTROL オーディエンスを評価]**」を選択できます。
+オーディエンスポータルが表示され、組織のすべての人物オーディエンスのリストが表示されます。 Audience Portal では、評価するオーディエンスを選択し、**[!UICONTROL Evaluate audience]** れを選択できます。
 
-![&#x200B; 柔軟なオーディエンス評価を使用するオーディエンスが選択されます。](../images/methods/fae/evaluate-audiences.png)
+![ 柔軟なオーディエンス評価を使用するオーディエンスが選択されます。](../images/methods/fae/evaluate-audiences.png)
 
-**[!UICONTROL オーディエンスをオンデマンドで評価]** ポップオーバーが表示され、オンデマンドセグメントジョブで評価されるオーディエンスのリストが表示されます。 オーディエンスがオンデマンドで評価される資格がない場合、評価ジョブから自動的に削除されます。 リストされたオーディエンスが、評価の対象となるオーディエンスであることを確認します。
+**[!UICONTROL Evaluate audiences on demand]** ポップオーバーが表示され、オンデマンドセグメントジョブで評価されるオーディエンスのリストが表示されます。 オーディエンスがオンデマンドで評価される資格がない場合、評価ジョブから自動的に削除されます。 リストされたオーディエンスが、評価の対象となるオーディエンスであることを確認します。
 
-![&#x200B; 柔軟なオーディエンス評価を使用して評価できるオーディエンスが表示されます。](../images/methods/fae/evaluate-audiences-modal.png)
+![ 柔軟なオーディエンス評価を使用して評価できるオーディエンスが表示されます。](../images/methods/fae/evaluate-audiences-modal.png)
 
-正しいオーディエンスがリストに表示されていることを確認したら、リクエストを続行できます。柔軟なオーディエンス評価が開始されます。 このオーディエンス評価のステータスは、[&#x200B; 評価ジョブ監視ビュー &#x200B;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) で確認できます。
+正しいオーディエンスがリストに表示されていることを確認したら、リクエストを続行できます。柔軟なオーディエンス評価が開始されます。 このオーディエンス評価のステータスは、[ 評価ジョブ監視ビュー ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) で確認できます。
 
 >[!NOTE]
 >
 >セグメントジョブのステータスは、監視ダッシュボード内の「待機中」状態として報告される場合があります。 リクエストパスでセグメントジョブの ID を指定して `/segment/jobs` エンドポイントに対してGET リクエストを実行することで、セグメントジョブの最新ステータスを表示できます。 このエンドポイントの使用について詳しくは、「API」タブを参照してください。
 >
->柔軟なオーディエンス評価を実行し、評価で宛先に対してオーディエンスをアクティブ化する場合は、頻度が **[!UICONTROL セグメント評価後]** に設定されていることを確認する必要があります。 既にアクティブ化するように設定されているオーディエンス [&#x200B; セグメント評価後 &#x200B;](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) に対して柔軟なオーディエンス評価を実行すると、以前の日別アクティベーションジョブの有無に関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにオーディエンスがアクティブ化されます。
+>柔軟なオーディエンス評価を実行し、評価で宛先へのオーディエンスをアクティブ化する場合は、頻度が **[!UICONTROL After segment evaluation]** に設定されていることを確認する必要があります。 既にアクティブ化するように設定されているオーディエンス [ セグメント評価後 ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) に対して柔軟なオーディエンス評価を実行すると、以前の日別アクティベーションジョブの有無に関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにオーディエンスがアクティブ化されます。
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Experience Platform UI 内で柔軟なオーディエンス評価を実行する
 
 次のビデオでは、Experience Platformで柔軟なオーディエンス評価にアクセスして使用する方法を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453641?&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## よくある質問 {#faq}
 

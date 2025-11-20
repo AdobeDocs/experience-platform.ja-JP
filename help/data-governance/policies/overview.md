@@ -6,8 +6,8 @@ description: データ使用ポリシーは、Adobe Experience Platform 内の�
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 95%
+source-wordcount: '1207'
+ht-degree: 92%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 95%
 
 次の 2 種類のポリシーを使用できます。
 
-* **[!UICONTROL データガバナンスポリシー]**：実行中のマーケティングアクションと、該当するデータに含まれるデータ使用ラベルに基づいて、データのアクティベーションを制限します。
-* **[!UICONTROL 同意ポリシー]**：顧客の同意または好みに基づいて、[宛先](../../destinations/home.md)に対してアクティブ化可能なプロファイルをフィルタリングします
+* **[!UICONTROL Data governance policy]**：実行中のマーケティングアクションと、該当するデータに含まれるデータ使用ラベルに基づいて、データのアクティベーションを制限します。
+* **[!UICONTROL Consent policy]**：顧客の同意または好みに基づいて、[ 宛先 ](../../destinations/home.md) に対してアクティブ化可能なプロファイルをフィルタリングします
 
 >[!NOTE]
 >
->データ使用ポリシーを [&#x200B; アクセス制御ポリシー &#x200B;](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL &#x200B; 権限 &#x200B;]」タブを使用して設定します。
+>データ使用ポリシーを [ アクセス制御ポリシー ](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL Permissions]」タブを使用して設定します。
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 
@@ -57,7 +57,7 @@ ht-degree: 95%
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=ja).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## データ使用ポリシーの管理 {#manage}

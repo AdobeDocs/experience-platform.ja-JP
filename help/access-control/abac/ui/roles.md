@@ -5,8 +5,8 @@ description: このドキュメントでは、Adobe Experience Cloudの権限イ
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 30%
+source-wordcount: '594'
+ht-degree: 31%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 30%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の作成"
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="役割へのラベルの適用"
 
-新しい役割を作成するには、サイドバーの「**[!UICONTROL 役割]**」タブを選択し、「**[!UICONTROL 役割を作成]**」を選択します。
+新しい役割を作成するには、サイドバーの「**[!UICONTROL Roles]**」タブを選択し、「**[!UICONTROL Create Role]**」を選択します。
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-**[!UICONTROL 新しい役割の作成]** ダイアログが表示され、名前とオプションの説明を入力するよう求められます。
+**[!UICONTROL Create a new role]** ダイアログが表示され、名前とオプションの説明を入力するように求められます。
 
-終了したら、「**[!UICONTROL 確認]**」を選択します。
+終了したら「**[!UICONTROL Confirm]**」を選択します。
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -37,7 +37,7 @@ ht-degree: 30%
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
-さらにリソースを追加するには、左側のナビゲーションパネルから **0&rbrace;Adobe Experience Platform&rbrace; を選択して、リソースのリストを表示します。**&#x200B;または、左側のナビゲーションパネルの検索バーにリソース名を入力します。
+追加のリソースを追加するには、左側のナビゲーションパネルから「**[!UICONTROL Adobe Experience Platform]**」を選択して、リソースのリストを表示します。 または、左側のナビゲーションパネルの検索バーにリソース名を入力します。
 
 ![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
 
@@ -45,41 +45,41 @@ ht-degree: 30%
 
 ![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
 
-ドロップダウンメニューを使用して、役割に含めるリソース権限を選択します。 役割に含めるすべてのリソースに対して、この手順を繰り返します。 終了したら、「**[!UICONTROL 保存して終了]**」を選択します。
+ドロップダウンメニューを使用して、役割に含めるリソース権限を選択します。 役割に含めるすべてのリソースに対して、この手順を繰り返します。 終了したら「**[!UICONTROL Save and exit]**」を選択します。
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-新しい役割が正常に作成されると、ユーザーは **[!UICONTROL 役割]** ページにリダイレクトされ、新しく作成された役割がリストに表示されます。
+新しい役割が正常に作成されると、**[!UICONTROL Roles]** ページにリダイレクトされ、新しく作成された役割がリストに表示されます。
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-役割の権限を作成してから管理する方法について詳しくは、[&#x200B; 役割の権限の管理 &#x200B;](#manage-permissions-for-a-role) の節を参照してください。
+役割の権限を作成してから管理する方法について詳しくは、[ 役割の権限の管理 ](#manage-permissions-for-a-role) の節を参照してください。
 
 次のビデオは、新しい役割の作成とその役割のユーザーの管理に関する理解を深めることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475974/?captions=jpn&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 役割の複製
 
-既存の役割を複製するには、「**[!UICONTROL 役割]** タブから役割を選択します。 または、「フィルター」オプションを使用して結果をフィルターし、複製する役割を見つけます。
+既存の役割を複製するには、「**[!UICONTROL Roles]**」タブから役割を選択します。 または、「フィルター」オプションを使用して結果をフィルターし、複製する役割を見つけます。
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-次に、画面の右上から「**[!UICONTROL 複製]**」を選択します。
+次に、画面の右上から **[!UICONTROL Duplicate]** を選択します。
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-**[!UICONTROL 役割を複製]** ダイアログが表示され、複製操作の確認を求められます。
+**[!UICONTROL Duplicate role]** ダイアログが表示され、複製操作の確認を求められます。
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-次に、役割の詳細ページに移動して、役割の名前と権限を変更できます。 詳細、ラベル、サンドボックスが以前の役割から複製されます。 ユーザーは、「ユーザー」タブを使用して追加する必要があります。 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) ドキュメントを表示して、役割への詳細、ラベル、サンドボックス、ユーザーの追加について確認できます。
+次に、役割の詳細ページに移動して、役割の名前と権限を変更できます。 詳細、ラベル、サンドボックスが以前の役割から複製されます。 ユーザーは、「ユーザー」タブを使用して追加する必要があります。 [ 役割の権限の管理 ](permissions.md) ドキュメントを表示して、役割への詳細、ラベル、サンドボックス、ユーザーの追加について確認できます。
 
-左矢印をクリックして「**[!UICONTROL 役割]**」タブに戻ります。
+左矢印をクリックして「**[!UICONTROL Roles]**」タブに戻ります。
 
 ![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
 
-新しい役割が **[!UICONTROL 役割]** ページのリストに表示されます。
+新しい役割が **[!UICONTROL Roles]** ページのリストに表示されます。
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
@@ -89,12 +89,12 @@ ht-degree: 30%
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-**[!UICONTROL ユーザーロールを削除]** ダイアログが表示され、削除を確認するよう求められます。
+削除を確認するように求める **[!UICONTROL Delete user role]** ダイアログが表示されます。
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-「**[!UICONTROL 役割]** タブに戻されます。
+「**[!UICONTROL Roles]**」タブに戻されます。
 
 ## 次の手順
 
-新しい役割を作成したら、次の手順 [&#x200B; 役割の権限を管理 &#x200B;](permissions.md) に進むことができます。
+新しい役割を作成したら、次の手順 [ 役割の権限を管理 ](permissions.md) に進むことができます。

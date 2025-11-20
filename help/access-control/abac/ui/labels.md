@@ -5,8 +5,8 @@ description: ここでは、Adobe Experience Cloudの権限インターフェイ
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 37%
+source-wordcount: '238'
+ht-degree: 38%
 
 ---
 
@@ -33,14 +33,14 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->組織全体のラベルのリストは 1 つだけです。 カスタムラベルを作成するには、実稼動サンドボックスでの **[!UICONTROL 使用ラベルの管理]** 権限が必要になります。 ラベルの削除は現在サポートされていません。
+>組織全体のラベルのリストは 1 つだけです。 カスタムラベルを作成するには、実稼動サンドボックスでの **[!UICONTROL Manage Usage Labels]** 権限が必要になります。 ラベルの削除は現在サポートされていません。
 
-新しいラベルを作成するには、サイドバーの「**[!UICONTROL ラベル]**」タブを選択し、「**[!UICONTROL ラベルを作成]**」を選択します。
+新しいラベルを作成するには、サイドバーの「**[!UICONTROL Labels]**」タブを選択し、「**[!UICONTROL Create Label]**」を選択します。
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-**[!UICONTROL 新しいラベルを作成]** ダイアログが表示され、名前、わかりやすい名前（オプション）、説明（オプション）を入力するように求められます。
+**[!UICONTROL Create a new label]** ダイアログが表示され、名前、わかりやすい名前（オプション）、説明（オプション）を入力するように求められます。
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-終了したら、「**[!UICONTROL 確認]**」を選択します。
+終了したら「**[!UICONTROL Confirm]**」を選択します。

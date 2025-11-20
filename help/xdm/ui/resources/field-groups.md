@@ -6,8 +6,8 @@ description: Experience Platform ユーザーインターフェイスでスキ�
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -26,65 +26,65 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platform エコシステムでの XDM の役割の概要については [XDM の概要 &#x200B;](../../home.md) を、フィールドグループが XDM スキーマにどのように寄与するかについては [&#x200B; スキーマ構成の基本 &#x200B;](../../schema/composition.md) を参照してください。
+このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platform エコシステム内のXDMの役割の概要については[XDMの概要](../../home.md)およびフィールド グループがXDM スキーマにどのように貢献するかについて[スキーマ構成の](../../schema/composition.md)基本を参照してください。
 
-このガイドには必要ありませんが、[UI でのスキーマの作成 &#x200B;](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、[!DNL Schema Editor] の様々な機能を理解することをお勧めします。
+このガイドでは必須ではありませんが、 [UIでのスキーマの作成](../../tutorials/create-schema-ui.md) に関するチュートリアルもフォローするして、 [!DNL Schema Editor]のさまざまな機能を理解することをお勧めします。
 
 ## 新しいフィールドグループの作成 {#create}
 
-新しいフィールドグループを作成するには、まずフィールドグループの追加先となるスキーマを選択する必要があります。 [&#x200B; 新しいスキーマを作成する &#x200B;](./schemas.md#create) または [&#x200B; 編集する既存のスキーマを選択する &#x200B;](./schemas.md#edit) を選択できます。
+新しいフィールドグループを作成するには、まずフィールドグループの追加先となるスキーマを選択する必要があります。 [ 新しいスキーマを作成する ](./schemas.md#create) または [ 編集する既存のスキーマを選択する ](./schemas.md#edit) を選択できます。
 
-[!DNL Schema Editor] でスキーマを開いたら、左パネルの **[!UICONTROL フィールドグループ]** セクションの横にある [!UICONTROL &#x200B; 追加 &#x200B;] を選択します。
+[!DNL Schema Editor] でスキーマを開いたら、左側のパネルの **[!UICONTROL Add]** セクションの横にある「[!UICONTROL Field groups]」を選択します。
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-表示されるダイアログで、「**[!UICONTROL 新しいフィールドグループを作成]**」を選択します。 ここで、フィールドグループの **[!UICONTROL 表示名]** と **[!UICONTROL 説明]** を指定できます。 完了したら、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+表示されるダイアログで、「**[!UICONTROL Create new field group]**」を選択します。 ここでは、フィールドグループの **[!UICONTROL Display name]** と **[!UICONTROL Description]** を指定できます。 終了したら「**[!UICONTROL Add field groups]**」を選択します。
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-[!DNL Schema Editor] が再び表示され、新しいフィールドグループが左側のパネルにリストされます。 これは全く新しいフィールドグループなので、現在スキーマにフィールドを提供していません。そのため、キャンバスは変更されません。 これで、[&#x200B; フィールドグループへのフィールドの追加 &#x200B;](#add-fields) を開始できます。
+[!DNL Schema Editor] が再び表示され、新しいフィールドグループが左側のパネルにリストされます。 これは全く新しいフィールドグループなので、現在スキーマにフィールドを提供していません。そのため、キャンバスは変更されません。 これで、[ フィールドグループへのフィールドの追加 ](#add-fields) を開始できます。
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## フィールドグループのフィルタリング {#filter}
 
-使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションと「[!UICONTROL &#x200B; カスタム &#x200B;] オプションの中から選択します。 「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL &#x200B; カスタム &#x200B;]」オプションには組織内で作成されたエンティティが表示されます。
+使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL Standard]」オプションと「[!UICONTROL Custom]」オプションのいずれかを選択します。 「[!UICONTROL Standard]」オプションを選択すると、Adobeで作成されたエンティティが表示され、「[!UICONTROL Custom]」オプションを選択すると、組織内で作成されたエンティティが表示されます。
 
-![[!UICONTROL &#x200B; 標準 &#x200B;] と [!UICONTROL &#x200B; カスタム &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; フィールドグループ &#x200B;] タブ &#x200B;](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![[!UICONTROL Field groups] と [!UICONTROL Schemas] がハイライト表示された [!UICONTROL Standard] ワークスペースの「[!UICONTROL Custom]」タブ。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 既存のフィールドグループの編集 {#edit}
 
 >[!NOTE]
 >
->完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、個々のスキーマのコンテキスト内で編集できるのは、そのフィールドの表示名のみです。 これらのフィールドは、スキーマエディターで南京錠アイコン（![&#x200B; 南京錠アイコン](/help/images/icons/lock-closed.png)）に設定します。 詳しくは、[&#x200B; スキーマフィールドの表示名の編集 &#x200B;](./schemas.md#display-names) の節を参照してください。
+>完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、個々のスキーマのコンテキスト内で編集できるのは、そのフィールドの表示名のみです。 これらのフィールドは、スキーマエディターで南京錠アイコン（![ 南京錠アイコン](/help/images/icons/lock-closed.png)）に設定します。 詳しくは、[ スキーマフィールドの表示名の編集 ](./schemas.md#display-names) の節を参照してください。
 >
->カスタムフィールドグループを保存し、データ取り込みのスキーマで使用すると、それ以降はフィールドグループに追加の変更を加えることのみ可能です。 詳しくは、[&#x200B; スキーマ進化のルール &#x200B;](../../schema/composition.md#evolution) を参照してください。
+>カスタムフィールドグループを保存し、データ取り込みのスキーマで使用すると、それ以降はフィールドグループに追加の変更を加えることのみ可能です。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution) を参照してください。
 
-既存のフィールドグループを編集するには、まず [!DNL Schema Editor] 内のフィールドグループを採用するスキーマを開く必要があります。 [&#x200B; 編集する既存のスキーマを選択 &#x200B;](./schemas.md#edit) するか、[&#x200B; 新しいスキーマを作成 &#x200B;](./schemas.md#create) して、該当するフィールドグループを追加できます。
+既存のフィールド グループを編集するには、まず、 [!DNL Schema Editor]内のフィールド グループを使用するスキーマを開く必要があります。 既存のスキーマを [選択して編集するか](./schemas.md#edit)新しいスキーマを [作成](./schemas.md#create) して目的のフィールドグループを追加することができます。
 
-エディターでスキーマを開いたら、[&#x200B; フィールドグループへのフィールドの追加 &#x200B;](#add-fields) を開始できます。
+編集者でスキーマを開いたら、フィールドへのフィールドの追加 [グループ](#add-fields)開始できます。
 
 ## フィールドグループへのフィールドの追加 {#add-fields}
 
 >[!NOTE]
 >
->この節では、カスタムフィールドグループへのフィールドの追加に焦点を当てます。 標準フィールドグループにカスタムフィールドを追加する方法については、[&#x200B; スキーマ UI ガイド &#x200B;](./schemas.md#custom-fields-for-standard-groups) を参照してください。
+>この節では、カスタムフィールドグループへのフィールドの追加に焦点を当てます。 標準フィールドグループにカスタムフィールドを追加する方法については、[ スキーマ UI ガイド ](./schemas.md#custom-fields-for-standard-groups) を参照してください。
 
 カスタムフィールドグループにフィールドを追加するには、まず、キャンバスでスキーマ名の横にある **プラス（+）** アイコンを選択します。
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-**[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示されます。また、右側のパネルが更新されて、フィールドのプロパティを設定するためのコントロールが表示されます。 様々なフィールドタイプの設定方法に関する具体的な手順については、[UI でのフィールドの定義 &#x200B;](../fields/overview.md#define) に関するガイドを参照してください。
+キャンバスに **[!UICONTROL Untitled Field]** プレースホルダーが表示されます。また、右側のパネルが更新されて、フィールドのプロパティを設定するためのコントロールが表示されます。 様々なフィールドタイプの設定方法に関する具体的な手順については、[UI でのフィールドの定義 ](../fields/overview.md#define) に関するガイドを参照してください。
 
-**[!UICONTROL 割り当て先]** で「**[!UICONTROL フィールドグループ]**」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 フィールドグループの名前を入力して、結果を絞り込むことができます。
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-**[!UICONTROL 割り当て先]** で「**[!UICONTROL フィールドグループ]**」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 フィールドグループの名前を入力して、結果を絞り込むことができます。
+「**[!UICONTROL Assign to]**」で「**[!UICONTROL Field Group]**」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 フィールドグループの名前を入力して、結果を絞り込むことができます。
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-フィールドをスキーマに追加すると、選択したフィールドグループに割り当てられます。 引き続き、フィールドグループに必要な数のフィールドを追加します。 終了したら、「**[!UICONTROL 保存]** を選択して、スキーマとフィールドグループの両方を保存します。
+「**[!UICONTROL Assign to]**」で「**[!UICONTROL Field Group]**」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 フィールドグループの名前を入力して、結果を絞り込むことができます。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+フィールドをスキーマに追加すると、選択したフィールドグループに割り当てられます。 引き続き、フィールドグループに必要な数のフィールドを追加します。 終了したら、「**[!UICONTROL Save]**」を選択して、スキーマとフィールドグループの両方を保存します。
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Experience Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの機能について詳しくは、[[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの概要 &#x200B;](../overview.md) を参照してください。
+このガイドでは、Experience Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL Schemas] workspace の機能について詳しくは、[[!UICONTROL Schemas] workspace の概要を参照してください ](../overview.md)
 
-[!DNL Schema Registry] API を使用してフィールドグループを管理する方法については、[&#x200B; フィールドグループエンドポイントガイド &#x200B;](../../api/field-groups.md) を参照してください。
+[!DNL Schema Registry] API を使用してフィールドグループを管理する方法については、[ フィールドグループエンドポイントガイド ](../../api/field-groups.md) を参照してください。

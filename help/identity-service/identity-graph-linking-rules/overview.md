@@ -40,12 +40,12 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="ID グラフのリンクルールの概要" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448273/?format=jpeg&nocache=1747851655227&captions=jpn" alt="ID グラフのリンクルールの概要"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="ID グラフのリンクルールの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -68,7 +68,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
                     <p class="is-size-6">ID グラフのリンクルールを使用して、データアーキテクトが正確な顧客プロファイルを維持し、グラフの折りたたみを防ぐのに役立てる方法の概要について説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
                 </a>
             </div>
         </div>
@@ -78,7 +78,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID グラフリンクルール – グラフシミュレーション" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444044/?format=jpeg&nocache=1747851655237&captions=jpn" alt="ID グラフリンクルール – グラフシミュレーション"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID グラフリンクルール – グラフシミュレーション"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -91,7 +91,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
                     <p class="is-size-6">グラフシミュレータを使用して、ID グラフのリンクルールをテストする方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
                 </a>
             </div>
         </div>
@@ -101,7 +101,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID グラフリンクルール - ID 設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458488/?captions=jpn&format=jpeg&nocache=1747851655218" alt="ID グラフリンクルール - ID 設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID グラフリンクルール - ID 設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,12 +109,12 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID グラフリンクルール - ID 設定">ID グラフリンクルール - ID 設定 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID グラフリンクルール - ID 設定">ID グラフのリンクルール - ID 設定</a>
                     </p>
                     <p class="is-size-6">正確な顧客プロファイルを構築するための ID グラフリンクルールを有効にして設定する方法を説明します</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
                 </a>
             </div>
         </div>
@@ -142,7 +142,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 | 公開キオスク | 空港で搭乗者がロイヤルティ ID を使用してログインし、手荷物をチェックインして搭乗券を印刷した。 |
 | コールセンター | カスタマーサポートに連絡して問題を解決するお客様の代わりに、コールセンターの担当者が 1 台のデバイスでログインします。 |
 
-![&#x200B; 一般的な共有デバイスの図](../images/identity-settings/shared-devices.png " 一般的な共有デバイスの図。"){zoomable="yes"}
+![ 一般的な共有デバイスの図](../images/identity-settings/shared-devices.png " 一般的な共有デバイスの図。"){zoomable="yes"}
 
 このような場合、グラフの観点から見ると、制限なしが有効になっている状態で、1 つの ECID が複数の CRMID にリンクされます。
 
@@ -155,7 +155,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 
 登録時に電話番号やメールアドレスに偽りの値を提供するケースもあります。 この場合、制限が有効になっていないと、電話やメールに関連する ID が複数の異なる CRMID にリンクされます。
 
-![&#x200B; 無効なメールまたは電話のシナリオを表す図。](../images/identity-settings/invalid-email-phone.png " 無効なメールまたは電話のシナリオを表す図。"){zoomable="yes"}
+![ 無効なメールまたは電話のシナリオを表す図。](../images/identity-settings/invalid-email-phone.png " 無効なメールまたは電話のシナリオを表す図。"){zoomable="yes"}
 
 [!DNL Identity Graph Linking Rules] では、以下のことが可能です。
 
@@ -229,10 +229,10 @@ ID 最適化アルゴリズムに通知する一意の名前空間を設定し�
 * **名前空間の優先度は数値です** 名前空間の相対的な重要度を示す名前空間に割り当てられます。 これは、名前空間のプロパティです。
 * **プライマリ ID は、** に対してプロファイルフラグメントが保存される ID です。 プロファイルフラグメントは、特定のユーザーに関する情報を格納するデータのレコードです。属性（通常は CRM レコードを介して取り込まれる）またはイベント （通常はエクスペリエンスイベントまたはオンラインデータから取り込まれる）です。
 * 名前空間の優先度は、エクスペリエンスイベントフラグメントのプライマリ ID を決定します。
-   * プロファイルレコードの場合、Experience Platform UI のスキーマ ワークスペースを使用して、プライマリ ID などの ID フィールドを定義できます。 詳しくは、[UI での ID フィールドの定義 &#x200B;](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
+   * プロファイルレコードの場合、Experience Platform UI のスキーマ ワークスペースを使用して、プライマリ ID などの ID フィールドを定義できます。 詳しくは、[UI での ID フィールドの定義 ](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
 * エクスペリエンスイベントに、identityMap で最も名前空間の優先順位が高い 2 つ以上の ID がある場合、そのイベントは「無効なデータ」と見なされるので、取り込みから拒否されます。 例えば、identityMap に `{ECID: 111, CRMID: John, CRMID: Jane}` が含まれている場合、イベントが `CRMID: John` と `CRMID: Jane` の両方に同時に関連付けられていることを意味するので、イベント全体が不正なデータとして拒否されます。
 
-詳しくは、[&#x200B; 名前空間の優先度 &#x200B;](./namespace-priority.md) に関するガイドを参照してください。
+詳しくは、[ 名前空間の優先度 ](./namespace-priority.md) に関するガイドを参照してください。
 
 ## 次の手順
 

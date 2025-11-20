@@ -38,7 +38,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -58,32 +58,32 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL View Destinations]** と **[!UICONTROL Manage Destinations]** [アクセス制御 権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
+宛先に対して認証を行うには、必須フィールドに入力して [ **[!UICONTROL Connect to destination]**] を選択します。
 
-**パスワードを使用した SFTP 認証** {#sftp-password}
+**パスワード を使用した SFTP 認証** {#sftp-password}
 
 ![パスワードによる SFTP を使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Port]**:[!DNL LiveRamp - Onboarding] ストレージの場所に使用されるポート。  次に示すように、地理的な場所に対応するポートを使用します。
+* **[!UICONTROL Port]**:ロケーションストレージ [!DNL LiveRamp - Onboarding] に使用されるポート。  以下の説明に従って、地理的な場所に対応するポートを使用します。
    * **[!UICONTROL NA]**: ポート `22` を使用します
-   * **[!UICONTROL AU]**: ポート `2222` を使用します
+   * **[!UICONTROL AU]**:ポートを使用します `2222`
 * **[!UICONTROL Username]**:[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL Password]**:[!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* **[!UICONTROL Subkey ID]**:If暗号化キーを指定し、暗号化&#x200B;**[!UICONTROL Subkey ID]**も指定する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 **SSH キー認証を使用した SFTP** {#sftp-ssh}
 
 ![SSH キーを使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Port]**:[!DNL LiveRamp - Onboarding] ストレージの場所に使用されるポート。  次に示すように、地理的な場所に対応するポートを使用します。
+* **[!UICONTROL Port]**:ロケーションストレージ [!DNL LiveRamp - Onboarding] に使用されるポート。  以下の説明に従って、地理的な場所に対応するポートを使用します。
    * **[!UICONTROL EU]**: ポート `4222` を使用します
 * **[!UICONTROL Username]**:[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL SSH Key]**: [!DNL SSH] ストレージの場所へのログインに使用する秘密 [!DNL LiveRamp - Onboarding] 鍵。 この秘密鍵は、[!DNL Base64] でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
@@ -92,7 +92,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* 暗号化キーを入力する **[!UICONTROL Subkey ID]**:If、暗号化&#x200B;**[!UICONTROL Subkey ID]**も入力する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -104,12 +104,12 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Experience Platform UIスクリーンショット目的地の詳細を入力する方法を示します](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Region]**:LiveRamp SFTP ストレージのインスタンスの地理的地域。
-* **[!UICONTROL Folder path]**：書き出したファイルをホストする [!DNL LiveRamp] `uploads` サブフォルダーへのパス。 `uploads` 接頭辞がフォルダーパスに自動的に追加されます。[!DNL LiveRamp] では、他の既存のフィードとは別にファイルを保存し、すべての自動処理がスムーズに実行されるように、Adobe Real-Time CDP からの配信専用のサブフォルダーを作成することをお勧めします。
+* **[!UICONTROL Name]**:将来この宛先を認識するための名前。
+* **[!UICONTROL Description]**:今後この宛先を特定するのに役立つ説明。
+* **[!UICONTROL Region]**:LiveRamp SFTP ストレージインスタンスの地理的地域。
+* **[!UICONTROL Folder path]**:エクスポートされたファイルホスト [!DNL LiveRamp] `uploads` サブフォルダーへのパス。 `uploads` 接頭辞がフォルダーパスに自動的に追加されます。[!DNL LiveRamp] では、他の既存のフィードとは別にファイルを保存し、すべての自動処理がスムーズに実行されるように、Adobe Real-Time CDP からの配信専用のサブフォルダーを作成することをお勧めします。
    * 例えば、ファイルを `uploads/my_export_folder` に書き出す場合は、「`my_export_folder`」フィールドに **[!UICONTROL Folder path]** と入力します。
 * **[!UICONTROL Compression format]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。 使用可能なオプションは、**[!UICONTROL GZIP]** または **[!UICONTROL None]** です。
 
@@ -123,25 +123,25 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### スケジュール設定 {#scheduling}
 
-[!UICONTROL Scheduling] の手順では、以下に示す設定で各オーディエンスの書き出しスケジュールを作成します。
+[!UICONTROL Scheduling]手順で、以下に示す設定で、オーディエンスごとにエクスポートスケジュールを作成します。
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]。 [増分ファイル書き出し](../../ui/activate-batch-profile-destinations.md#export-incremental-files)は現在、[!DNL LiveRamp] 宛先ではサポートされていません。
 * **[!UICONTROL Frequency]**：[!UICONTROL Daily]
 * **[!UICONTROL Date]**：希望する書き出し開始時刻および終了時刻を選択します。
 
-![&#x200B; オーディエンスのスケジュール設定ステップを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![ オーディエンスのスケジュール設定ステップを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 書き出すファイルの名前は現在、ユーザーが設定することはできません。[!DNL LiveRamp - Onboarding] 宛先に書き出すすべてのファイルは、次のテンプレートに基づいて自動的に名前が付けられます。
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![&#x200B; 書き出すファイルの名前テンプレートを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![ 書き出すファイルの名前テンプレートを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 例えば、[!DNL Luma] という名前の組織の場合、書き出すファイルの名前は次のようになります。
 
@@ -151,7 +151,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 ### 属性と ID のマッピング {#map}
 
-**[!UICONTROL Mapping]** の手順では、書き出すプロファイル属性および ID を選択できます。
+**[!UICONTROL Mapping]**&#x200B;ステップでは、プロファイル用にエクスポートする属性と ID を選択できます。
 
 >[!IMPORTANT]
 >
@@ -167,7 +167,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
    ![マッピング画面を示す Experience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
-2. **[!UICONTROL Select source field]** ウィンドウで、**[!UICONTROL Select attributes]** カテゴリを選択し、マッピングする XDM 属性を選択するか、**[!UICONTROL Select identity namespace]** カテゴリを選択して、宛先にマッピングする ID を選択します。
+2. **[!UICONTROL Select source field]**&#x200B;ウィンドウで、**[!UICONTROL Select attributes]**&#x200B;カテゴリを選択してマッピングするXDM属性を選択するか、**[!UICONTROL Select identity namespace]**&#x200B;カテゴリを選択して宛先にマッピングする ID を選択します。
 
    ![ソースマッピング画面を示す Experience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
@@ -175,11 +175,11 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
    ![ターゲットマッピング画面を示す Experience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
-   また、**[!UICONTROL Target field]** に直接入力して属性名を入力することもできます。
+   属性名を **[!UICONTROL Target field]**&#x200B;に直接入力して入力することもできます。
 
    ![ターゲットマッピング画面を示す Experience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
-必要なマッピングをすべて追加したら、「**[!UICONTROL Next]**」を選択してアクティブ化ワークフローを終了します。
+必要なマッピングをすべて追加したら、[ **[!UICONTROL Next]** ] を選択し、アクティベーション ワークフロー終了します。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -187,7 +187,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、[!DNL LiveRamp] 担当者に連絡して、バッチ取り込みを設定するように依頼してください。
 
-ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [&#x200B; 結合ポリシー ID](../../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。
+ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [ 結合ポリシー ID](../../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。
 
 例えば、次のオーディエンスについて考えてみます。
 
@@ -223,11 +223,11 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` と `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節でセグメント化サービスから生じるオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` に [&#x200B; カスタムアップロード &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) としてExperience Platformに読み込まれたオーディエンスを表しています。
+上記の例では、 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` セクションと `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` セクションではセグメント化サービスから発生したオーディエンスについて説明し、 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` では [カスタムアップロード](../../../segmentation/ui/audience-portal.md#import-audience)として Experience Platform にインポートされたオーディエンスについて説明します。
 
-Experience Platformでは [&#x200B; 結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
+Experience Platform は [マージ ポリシー ID](../../../profile/merge-policies/overview.md)ごとに 1 つのCSVファイルを生成するため、マージ ポリシー ID ごとに個別のデータフロー実行も生成します。
 
-つまり、**[!UICONTROL Identities activated]** データフロー実行 **[!UICONTROL Profiles received]** ページの [&#x200B; と &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) の指標が、オーディエンスごとに表示されるのではなく、同じ結合ポリシーを使用するオーディエンスのグループごとに集計されます。
+つまり、**[!UICONTROL Identities activated]**&#x200B;データフロー実行&#x200B;**[!UICONTROL Profiles received]**&#x200B;ページの[指標と](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)指標は、オーディエンスごとに表示されるのではなく、同じマージポリシーを使用するオーディエンスのグループごとに集計されます。
 
 同じ結合ポリシーを使用するオーディエンスのグループに対してデータフロー実行が生成されるので、オーディエンス名は[モニタリングダッシュボード](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に表示されません。
 
@@ -255,7 +255,7 @@ Experience Platformでは [&#x200B; 結合ポリシー ID](../../../profile/merg
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年3月 | 機能とドキュメントの更新 | <ul><li>[!DNL LiveRamp] インスタンスを [!DNL SFTP] 用したヨーロッパおよびオーストラリアへの配信がサポートされるようになりました。</li><li>新しくサポートされる地域に特有の設定について説明するようにドキュメントを更新しました。</li><li>最大ファイルサイズが 1,000 万行に増加しました（以前は 500 万行でした）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
+| 2024年3月 | 機能とドキュメントの更新 | <ul><li>ヨーロッパおよびオーストラリアの [!DNL LiveRamp] [!DNL SFTP] インスタンスへの配信のサポートを追加しました。</li><li>新しくサポートされるリージョンの特定の設定について説明するようにドキュメントを更新しました。</li><li>最大ファイルサイズが 1,000 万行に増加しました（以前は 500 万行でした）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
 | 2023年7月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
 
 {style="table-layout:auto"}

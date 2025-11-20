@@ -6,8 +6,8 @@ description: このユーザーガイドでは、Adobe Experience Platform ユ�
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 37%
+source-wordcount: '641'
+ht-degree: 34%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 37%
 >
 >特定の日付の合計イベント数を計算するには、式 `total events / day = ingestion rate * 60 * 60 * 24` を使用します。
 
-[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションメニューの **[!UICONTROL モニタリング]** を選択し、続いて **[!UICONTROL エンドツーエンドのストリーミング]** を選択します。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションメニューの「**[!UICONTROL Monitoring]**」を選択し、次に「**[!UICONTROL Streaming end-to-end]**」を選択します。
 
-「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、[!DNL Experience Platform] が受信したストリーミングイベントの割合を表示するグラフ、[[!DNL Real-Time Customer Profile]](../../profile/home.md) が正常に処理したストリーミングイベントの割合を表示するグラフおよび受信データの詳細なリストが表示されます。
+**[!UICONTROL Streaming end-to-end]** の監視ページが表示されます。 このワークスペースには、[!DNL Experience Platform] が受信したストリーミングイベントの割合を表示するグラフ、[[!DNL Real-Time Customer Profile]](../../profile/home.md) が正常に処理したストリーミングイベントの割合を表示するグラフおよび受信データの詳細なリストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -44,7 +44,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->このグラフにデータを表示するには、データを [!DNL Profile] で **明示的に** 有効にする必要があります。 [!DNL Profile] のストリーミングデータを有効にする方法については、[&#x200B; データセットユーザーガイド &#x200B;](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile) を参照してください。
+>このグラフにデータを表示するには、データを **で** 明示的に [!DNL Profile] 有効にする必要があります。 [!DNL Profile] のストリーミングデータを有効にする方法については、[ データセットユーザーガイド ](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile) を参照してください。
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -72,9 +72,9 @@ ht-degree: 37%
 
 ## バッチエンドツーエンドデータの取得の監視
 
-[[!DNL Experience Platform UI]](https://platform.adobe.com) で、左側のナビゲーションメニューの **[!UICONTROL モニタリング]** を選択します。
+[[!DNL Experience Platform UI]](https://platform.adobe.com) で、左側のナビゲーションメニューの「**[!UICONTROL Monitoring]**」を選択します。
 
-「**[!UICONTROL バッチエンドツーエンド]**」の監視ページが開き、以前に取得したバッチのリストが表示されます。そのレコードに関する詳細情報については、任意のバッチを選択できます。
+**[!UICONTROL Batch end-to-end]** の監視ページが表示され、以前に取り込んだバッチのリストが表示されます。 そのレコードに関する詳細情報については、任意のバッチを選択できます。
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 

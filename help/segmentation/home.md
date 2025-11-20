@@ -96,9 +96,9 @@ Experience Platform は、現在、ストリーミングセグメント化、バ
 >abstract="エッジセグメント化は、Experience Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=ja" text="エッジセグメント化ガイド"
 
-Edgeのセグメント化は、Experience Platform内のセグメントを [Edge Network上で &#x200B;](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
+Edgeのセグメント化は、Experience Platform内のセグメントを [Edge Network上で ](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 
-エッジセグメント化について詳しくは、[&#x200B; エッジセグメント化の概要 &#x200B;](./methods/edge-segmentation.md) を参照してください。
+エッジセグメント化について詳しくは、[ エッジセグメント化の概要 ](./methods/edge-segmentation.md) を参照してください。
 
 ## セグメント化の結果へのアクセス
 
