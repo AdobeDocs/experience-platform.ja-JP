@@ -17,15 +17,15 @@ ht-degree: 45%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月の時点で、**[!UICONTROL Custom personalization]** 接続は [ 属性ベースのパーソナライゼーション ](../../ui/activate-edge-personalization-destinations.md#map-attributes) をサポートしており、すべてのお客様が一般に利用できます。 |
+| 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月の時点で、**[!UICONTROL Custom personalization]** 接続は [&#x200B; 属性ベースのパーソナライゼーション &#x200B;](../../ui/activate-edge-personalization-destinations.md#map-attributes) をサポートしており、すべてのお客様が一般に利用できます。 |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [ の宛先を設定する際に ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API} を使用する必要があります。 **[!UICONTROL Custom Personalization]**&#x200B;すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [&#x200B; の宛先を設定する際に &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API&rbrace; を使用する必要があります。 **[!UICONTROL Custom Personalization]**&#x200B;すべてのEdge Network API 呼び出しは、[&#x200B; 認証済みコンテキスト &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
 >
-><br>1}Edge Network API を使用してプロファイル属性を取得できます [ サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。](https://developer.adobe.com/data-collection-apis/docs/)
+><br>1&rbrace;Edge Network API を使用してプロファイル属性を取得できます [&#x200B; サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。](https://developer.adobe.com/data-collection-apis/docs/)
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -37,19 +37,19 @@ ht-degree: 45%
 
 この宛先では、実装に応じて、次のいずれかのデータ収集方法を使用する必要があります。
 
-* Web サイトからデータを収集する場合は [](/help/web-sdk/home.md)Adobe Experience Platform Web SDK} を使用します。
-* モバイルアプリケーションからデータを収集する場合は [](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK} を使用します。
-* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [0}Edge Network API} を使用します。](https://developer.adobe.com/client-sdks/documentation/)
+* Web サイトからデータを収集する場合は [&#128279;](/help/web-sdk/home.md)Adobe Experience Platform Web SDK&rbrace; を使用します。
+* モバイルアプリケーションからデータを収集する場合は [&#128279;](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK&rbrace; を使用します。
+* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [0&rbrace;Edge Network API&rbrace; を使用します。](https://developer.adobe.com/client-sdks/documentation/)
 
 >[!IMPORTANT]
 >
->**属性ベースのパーソナライゼーション要件：** （オーディエンスメンバーシップだけでなく）プロファイル属性に基づいてパーソナライズする場合は、データ収集に Web SDKと Mobile SDKのどちらを使用しているかに関係なく、認証済みのサーバーサイド統合で **** 4}Edge Network API[ を使用する必要があります。](https://developer.adobe.com/data-collection-apis/docs/)
+>**属性ベースのパーソナライゼーション要件：** （オーディエンスメンバーシップだけでなく）プロファイル属性に基づいてパーソナライズする場合は、データ収集に Web SDKと Mobile SDKのどちらを使用しているかに関係なく、認証済みのサーバーサイド統合で **&#x200B;**&#x200B;4&rbrace;Edge Network API[&#x200B; を使用する必要があります。](https://developer.adobe.com/data-collection-apis/docs/)
 >
 >Web SDKとモバイル SDKだけでは、オーディエンスメンバーシップに基づくパーソナライゼーションのみがサポートされます。 パーソナライゼーションのプロファイル属性を安全に取得するには、Edge Network API が必要です **必須**。
 
 >[!IMPORTANT]
 >
->カスタムパーソナライゼーション接続を作成する前に、[ エッジパーソナライゼーションの宛先に対してオーディエンスデータをアクティブ化する ](../../ui/activate-edge-personalization-destinations.md) 方法についてのガイドをお読みください。 このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
+>カスタムパーソナライゼーション接続を作成する前に、[&#x200B; エッジパーソナライゼーションの宛先に対してオーディエンスデータをアクティブ化する &#x200B;](../../ui/activate-edge-personalization-destinations.md) 方法についてのガイドをお読みください。 このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -57,7 +57,7 @@ ht-degree: 45%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -79,7 +79,7 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -102,9 +102,9 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先にオーディエンスをアクティブ化する手順については、[ プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) をお読みください。
+この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化 &#x200B;](../../ui/activate-edge-personalization-destinations.md) をお読みください。
 
 ## 書き出したデータ {#exported-data}
 
@@ -130,7 +130,7 @@ ht-degree: 45%
 ]
 ```
 
-[Tags](/help/tags/home.md) を使用せずにExperience Platform web SDKをデプロイする場合は、[ コマンド応答 ](/help/web-sdk/commands/command-responses.md) を使用して、書き出したデータを確認します。
+[Tags](/help/tags/home.md) を使用せずにExperience Platform web SDKをデプロイする場合は、[&#x200B; コマンド応答 &#x200B;](/help/web-sdk/commands/command-responses.md) を使用して、書き出したデータを確認します。
 
 Adobe Experience Platform からの JSON 応答は、Adobe Experience Platform と統合しているアプリケーションの対応する統合エイリアスを見つけるために解析できます。オーディエンス ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有なサンプルを示します。
 
