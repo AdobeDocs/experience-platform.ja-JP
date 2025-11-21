@@ -33,7 +33,7 @@ Edge Networkへのリクエストが任意のボット検出ルールに一致�
 >
 >ボット検出は、ボットリクエストをドロップしません。 ボットスコアリングを使用した XDM スキーマのみを更新し、設定した [datastream サービス &#x200B;](configure.md) イベントを転送します。
 >
->Adobe ソリューションは、様々な方法でボットスコアリングを処理できます。 例えば、Adobe Analyticsは独自の [&#x200B; ボットフィルタリングサービス &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) を使用し、Edge Networkによって設定されたスコアを使用しません。 2 つのサービスは同じ [IAB ボットリスト &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用しているので、ボットスコアリングは同じです。
+>Adobe ソリューションは、様々な方法でボットスコアリングを処理できます。 例えば、Adobe Analyticsは独自の [&#x200B; ボットフィルタリングサービス &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=ja) を使用し、Edge Networkによって設定されたスコアを使用しません。 2 つのサービスは同じ [IAB ボットリスト &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用しているので、ボットスコアリングは同じです。
 
 ## 技術上の考慮事項 {#technical-considerations}
 
