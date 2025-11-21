@@ -5,20 +5,20 @@ title: Flow Service API を使用した宛先データフローの更新
 type: Tutorial
 description: このチュートリアルでは、宛先データフローの更新手順を説明します。 Flow Service API を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 31%
+source-wordcount: '2471'
+ht-degree: 30%
 
 ---
 
 # Flow Service API を使用した宛先データフローの更新
 
-このチュートリアルでは、宛先データフローの更新手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。 Experience Platform UI を使用した宛先データフローの編集について詳しくは、[&#x200B; アクティベーションフローの編集 &#x200B;](/help/destinations/ui/edit-activation.md) を参照してください。
+このチュートリアルでは、宛先データフローの更新手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。 Experience Platform UI を使用した宛先データフローの編集について詳しくは、[ アクティベーションフローの編集 ](/help/destinations/ui/edit-activation.md) を参照してください。
 
 ## はじめに {#get-started}
 
-このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフロー ID がない場合は、このチュートリアルの内容を試す前に、[&#x200B; 宛先カタログ &#x200B;](../catalog/overview.md) から宛先を選択し、[&#x200B; 宛先に接続 &#x200B;](../ui/connect-destination.md) および [&#x200B; データをアクティブ化 &#x200B;](../ui/activation-overview.md) の手順に従ってください。
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフロー ID がない場合は、このチュートリアルの内容を試す前に、[ 宛先カタログ ](../catalog/overview.md) から宛先を選択し、[ 宛先に接続 ](../ui/connect-destination.md) および [ データをアクティブ化 ](../ui/activation-overview.md) の手順に従ってください。
 
 >[!NOTE]
 >
@@ -26,8 +26,8 @@ ht-degree: 31%
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [&#x200B; 宛先 &#x200B;](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ 宛先 ](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してデータフローを正常に更新するために必要な追加情報を示しています。
 
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-ペイロードのプロパティについては、[&#x200B; データフローへのオーディエンスの追加 &#x200B;](#add-segment) の節を参照してください。
+ペイロードのプロパティについては、[ データフローへのオーディエンスの追加 ](#add-segment) の節を参照してください。
 
 
 **応答**
@@ -750,6 +750,14 @@ curl -X PATCH \
 
 宛先データフローにプロファイル属性を追加するには、[!DNL Flow Service] API にPATCH リクエストを行い、追加するフロー ID、バージョンおよびプロファイル属性を指定します。
 
+>[!IMPORTANT]
+>
+>**宛先固有のマッピング要件**
+>
+>この節で説明する `profileSelectors` の方法は、ほとんどのストリーミング宛先で機能します。 ただし、**Adobe Target** など、一部のストリーミング宛先では、代わりに Data Prep マッピングセットワークフローが必要です。
+>
+>**API 応答が成功（202）した後、Experience Platform UI にプロファイル属性が表示されない場合は**[ バッチ宛先に対するオーディエンスのアクティブ化 ](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping) に記載されているマッピングセット方式を使用する必要があります。
+
 **API 形式**
 
 ```http
@@ -855,8 +863,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うと、API を使用してオーディエンスやプロファイル属性を追加または削除するなど、宛先データフローの様々なコンポーネントを更新する方法 [!DNL Flow Service] 学ぶことができます。 宛先について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../home.md) を参照してください。
+このチュートリアルに従うと、API を使用してオーディエンスやプロファイル属性を追加または削除するなど、宛先データフローの様々なコンポーネントを更新する方法 [!DNL Flow Service] 学ぶことができます。 宛先について詳しくは、[ 宛先の概要 ](../home.md) を参照してください。
