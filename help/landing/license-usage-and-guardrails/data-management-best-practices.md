@@ -25,16 +25,16 @@ Experience Platformは、作成できるプロファイルの数や取り込め�
 
 | 機能 | 説明 |
 | --- | --- |
-| [&#x200B; データセット UI - エクスペリエンスイベントデータ保持 &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) | データレイクおよびプロファイルストアのデータに対して、固定保持期間を設定します。 設定された保持期間が終了すると、レコードが削除されます。 |
-| [&#x200B; リアルタイム顧客プロファイル用のデータセットを有効/無効にする &#x200B;](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
-| [&#x200B; プロファイルストアのエクスペリエンスイベントの有効期限 &#x200B;](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobe アカウントチームまたはカスタマーケアにお問い合わせください。 |
+| [ データセット UI - エクスペリエンスイベントデータ保持 ](../../catalog/datasets/user-guide.md#data-retention-policy) | データレイクおよびプロファイルストアのデータに対して、固定保持期間を設定します。 設定された保持期間が終了すると、レコードが削除されます。 |
+| [ リアルタイム顧客プロファイル用のデータセットを有効/無効にする ](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
+| [ プロファイルストアのエクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobe アカウントチームまたはカスタマーケアにお問い合わせください。 |
 | [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
 | [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取得から除外します |
 | [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバーサイド [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します詳しくは、[タグルール](../../tags/ui/managing-resources/rules.md)に関するドキュメントを参照してください。 |
 | [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | ライセンスされた使用権限に対するExperience Platform製品の組織での使用状況を監視します。 毎日の使用状況スナップショット、予測トレンド、詳細なサンドボックスレベルのデータにアクセスして、プロアクティブなライセンス管理をサポートします。 |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します。 |
 | [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | アドレス可能なオーディエンスに最も貢献する ID 名前空間を出力します。 |
-| [&#x200B; 偽名プロファイルデータの有効期限 &#x200B;](../../profile/pseudonymous-profiles.md) | 偽名プロファイルのデータの有効期限を設定し、プロファイルストアからデータを自動的に削除します。 |
+| [ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) | 偽名プロファイルのデータの有効期限を設定し、プロファイルストアからデータを自動的に削除します。 |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Experience Platform のライセンスを取得すると、SKU によって異�
 
 Adobe Experience Platform UI には、Experience Platformに関する組織のライセンス関連データのスナップショットを表示できるダッシュボードが用意されています。 ダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じ内容を表示します。スナップショットは、データの近似値でもサンプルでもなく、ダッシュボードは、リアルタイムに更新されていません。
 
-詳しくは、[Experience Platform UI でのライセンス使用状況ダッシュボードの使用 &#x200B;](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) に関するガイドを参照してください。
+詳しくは、[Experience Platform UI でのライセンス使用状況ダッシュボードの使用 ](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) に関するガイドを参照してください。
 
 ## データ管理のベストプラクティス
 
@@ -114,7 +114,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 アドレス可能なオーディエンスは顧客プロファイルの合計数を参照するので、ID グラフはアドレス可能なオーディエンスの使用権限の合計にはカウントされません。
 
-ただし、ID グラフの制限は、ID の分割が原因で、アドレス可能なオーディエンスに影響を与える可能性があります。 例えば、最も古い ECID がグラフから削除された場合、ECID は、偽名プロファイルとしてリアルタイム顧客プロファイルに引き続き存在します。 この動作を回避するには、[&#x200B; 偽名プロファイルデータの有効期限 &#x200B;](../../profile/pseudonymous-profiles.md) を設定します。 詳しくは、[ID サービスデータのガードレール &#x200B;](../../identity-service/guardrails.md) を参照してください。
+ただし、ID グラフの制限は、ID の分割が原因で、アドレス可能なオーディエンスに影響を与える可能性があります。 例えば、最も古い ECID がグラフから削除された場合、ECID は、偽名プロファイルとしてリアルタイム顧客プロファイルに引き続き存在します。 この動作を回避するには、[ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) を設定します。 詳しくは、[ID サービスデータのガードレール ](../../identity-service/guardrails.md) を参照してください。
 
 ### 取り込みフィルター {#ingestion-filters}
 
@@ -127,7 +127,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | プロファイル用データセットの有効化／無効化のサポート | リアルタイム顧客プロファイルにデータを取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Total Data Volume] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
 | Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。 |
 | サーバーサイド転送のデータ除外 | サーバーサイド転送を使用してExperience Platformにデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。 詳しくは、[イベントおよび条件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)に関するドキュメントを参照してください。 |
-| ソースレベルでのデータのフィルタリング | 接続を作成してExperience Platformにデータを取り込む前に、論理演算子と比較演算子を使用してソースから行レベルのデータをフィルタリングできます。 詳しくは、[API を使用したソースの行レベルのデータのフィルタリング  [!DNL Flow Service]  に関するガイドを参照し &#x200B;](../../sources/tutorials/api/filter.md) ください。 |
+| ソースレベルでのデータのフィルタリング | 接続を作成してExperience Platformにデータを取り込む前に、論理演算子と比較演算子を使用してソースから行レベルのデータをフィルタリングできます。 詳しくは、[API を使用したソースの行レベルのデータのフィルタリング  [!DNL Flow Service]  に関するガイドを参照し ](../../sources/tutorials/api/filter.md) ください。 |
 
 {style="table-layout:auto"}
 
@@ -155,15 +155,15 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 ### 偽名プロファイルデータの有効期限 {#pseudonymous-profile-expirations}
 
-偽名プロファイルデータの有効期限機能を使用して、有効でなくなったデータや、ユースケースで役に立たなくなったデータをプロファイルストアから自動的に削除します。 偽名プロファイルデータの有効期限は、イベントとプロファイルレコードの両方を削除します。 その結果、この設定はアドレス可能なオーディエンス量を減らします。 この機能について詳しくは、[&#x200B; 偽名プロファイルデータの有効期限の概要 &#x200B;](../../profile/pseudonymous-profiles.md) を参照してください。
+偽名プロファイルデータの有効期限機能を使用して、有効でなくなったデータや、ユースケースで役に立たなくなったデータをプロファイルストアから自動的に削除します。 偽名プロファイルデータの有効期限は、イベントとプロファイルレコードの両方を削除します。 その結果、この設定はアドレス可能なオーディエンス量を減らします。 この機能について詳しくは、[ 偽名プロファイルデータの有効期限の概要 ](../../profile/pseudonymous-profiles.md) を参照してください。
 
 ### データセット UI - エクスペリエンスイベントデータセットの保持 {#data-retention}
 
-データセットの有効期限と保持設定を設定して、データレイクおよびプロファイルストアのデータに固定保持期間を適用します。 保存期間が終了すると、データは削除されます。 エクスペリエンスイベントデータの有効期限は、イベントのみを削除し、プロファイルクラスデータは削除しないので、ライセンス使用指標の [&#x200B; 合計データ量 &#x200B;](total-data-volume.md) が減少します。 詳しくは、[&#x200B; データ保持ポリシーの設定 &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) に関するガイドを参照してください。
+データセットの有効期限と保持設定を設定して、データレイクおよびプロファイルストアのデータに固定保持期間を適用します。 保存期間が終了すると、データは削除されます。 エクスペリエンスイベントデータの有効期限は、イベントのみを削除し、プロファイルクラスデータは削除しないので、ライセンス使用指標の [ 合計データ量 ](total-data-volume.md) が減少します。 詳しくは、[ データ保持ポリシーの設定 ](../../catalog/datasets/user-guide.md#data-retention-policy) に関するガイドを参照してください。
 
 ### プロファイルエクスペリエンスイベントの有効期限 {#event-expirations}
 
-使用期限を設定して、ユースケースにとって価値がなくなった行動データをプロファイル対応データセットから自動的に削除します。 詳しくは、[&#x200B; エクスペリエンスイベントの有効期限 &#x200B;](../../profile/event-expirations.md) の概要を参照してください。
+使用期限を設定して、ユースケースにとって価値がなくなった行動データをプロファイル対応データセットから自動的に削除します。 詳しくは、[ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) の概要を参照してください。
 
 ## ライセンス使用状況のコンプライアンスに関するベストプラクティスのまとめ {#best-practices}
 
@@ -172,9 +172,9 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * [ライセンス使用状況ダッシュボード](../../dashboards/guides/license-usage.md)を使用して、顧客の使用状況のトレンドを追跡および監視する。これにより、発生する可能性のある超過分に事前に対処できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要なイベントを特定して、[取り込みフィルター](#ingestion-filters)を設定する。これにより、ユースケースに必要な重要なイベントのみを送信できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要な[プロファイルのデータセットのみを有効](#ingestion-filters)にしていることを確認する。
-* Web データのような高頻度のデータには、[&#x200B; エクスペリエンスイベントの有効期限 &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) および [&#x200B; 偽名プロファイルデータの有効期限 &#x200B;](../../profile/pseudonymous-profiles.md) を設定します。
-* データレイクでエクスペリエンスイベントデータセットの [Time-to-Live （TTL）保持ポリシー &#x200B;](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) を設定し、古いレコードを自動的に削除し、ライセンス使用権限に従ってストレージ使用を最適化します。
-* [&#x200B; プロファイル構成レポート &#x200B;](#profile-store-composition-reports) を定期的に確認し、プロファイルストアの構成を把握する。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
+* Web データのような高頻度のデータには、[ エクスペリエンスイベントの有効期限 ](../../catalog/datasets/user-guide.md#data-retention-policy) および [ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) を設定します。
+* データレイクでエクスペリエンスイベントデータセットの [Time-to-Live （TTL）保持ポリシー ](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) を設定し、古いレコードを自動的に削除し、ライセンス使用権限に従ってストレージ使用を最適化します。
+* [ プロファイル構成レポート ](#profile-store-composition-reports) を定期的に確認し、プロファイルストアの構成を把握する。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
 
 ## ユースケース：ライセンス使用状況のコンプライアンス
 
@@ -216,17 +216,17 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 [!UICONTROL Metrics] インターフェイスを使用して、ライセンス使用状況の指標を表示します。 インターフェイスには、実稼動用サンドボックスの情報がデフォルトで表示されます。
 
-![&#x200B; 実稼動サンドボックスのライセンス使用状況指標を表示するライセンス使用状況ダッシュボード UI。](../images/data-management/prod-sandbox.png)
+![ 実稼動サンドボックスのライセンス使用状況指標を表示するライセンス使用状況ダッシュボード UI。](../images/data-management/prod-sandbox.png)
 
 >[!TAB  開発用サンドボックス ]
 
 「[!UICONTROL Development]」を選択すると、開発用サンドボックスに関連するライセンス使用状況指標が表示されます。
 
-![&#x200B; 開発用サンドボックスのライセンス使用状況指標を表示するライセンス使用状況ダッシュボード UI。](../images/data-management/dev-sandbox.png)
+![ 開発用サンドボックスのライセンス使用状況指標を表示するライセンス使用状況ダッシュボード UI。](../images/data-management/dev-sandbox.png)
 
 >[!ENDTABS]
 
-詳しくは、[&#x200B; ライセンス使用状況ダッシュボードの使用 &#x200B;](../../dashboards/guides/license-usage.md) に関するドキュメントを参照してください。
+詳しくは、[ ライセンス使用状況ダッシュボードの使用 ](../../dashboards/guides/license-usage.md) に関するドキュメントを参照してください。
 
 **データセットレベルのストレージ使用状況の分析**
 
@@ -238,13 +238,13 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 データレイクのデータセットは、ストレージサイズで並べ替えられます。 この機能を使用して、データレイクのストレージの最大コンシューマーを特定します。
 
-![&#x200B; データレイクのデータセットを最大から最小の順に並べ替えます。](../images/data-management/data-lake-storage.png)
+![ データレイクのデータセットを最大から最小の順に並べ替えます。](../images/data-management/data-lake-storage.png)
 
 >[!TAB  プロファイルストレージ ]
 
 プロファイルのデータセットは、ストレージサイズで並べ替えられます。 この機能を使用して、プロファイル内のストレージの最大のコンシューマーを特定します。
 
-![&#x200B; プロファイル内のデータセットを最大から最小の順に並べ替えます。](../images/data-management/profile-storage.png)
+![ プロファイル内のデータセットを最大から最小の順に並べ替えます。](../images/data-management/profile-storage.png)
 
 >[!ENDTABS]
 
@@ -252,22 +252,22 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 次に、Analytics とセグメント化のライセンス制限とビジネス要件に基づいて、データセットに適切な保持ポリシーがあるかどうかを判断します。 データセットの保持ポリシーを表示するには、データセットの横にある省略記号（`...`）を選択し、「**[!UICONTROL Set data retention policy]**」を選択します。
 
-![&#x200B; 「データ保持ポリシーの設定」などのデータセットオプションを含むポップアップパネル &#x200B;](../images/data-management/set-retention-policy.png)
+![ 「データ保持ポリシーの設定」などのデータセットオプションを含むポップアップパネル ](../images/data-management/set-retention-policy.png)
 
 *[!UICONTROL Set dataset retention]* インターフェイスが表示されます。 このインターフェイスを使用すると、データセットの保持ポリシーを設定できます。 また、これを使用して、データレイクまたはプロファイルのいずれかでデータセットが消費しているストレージ容量を表示することもできます。
 
-![&#x200B; 「データセット保持の設定」インターフェイス &#x200B;](../images/data-management/dataset-retention.png)
+![ 「データセット保持の設定」インターフェイス ](../images/data-management/dataset-retention.png)
 
 影響の予測ツールを使用して、データセットの保持の影響をさらに分析できます。 [**[!UICONTROL View ExperienceEvent data distribution]**] を選択すると、リテンション・ウィンドウと、期限切れに設定されているストレージの合計パーセンテージが表示されるグラフが表示されます。
 
 終了したら「**[!UICONTROL Save]**」を選択します
 
-![&#x200B; データセット保持インターフェイス内からの影響の予測。](../images/data-management/impact-forecaster.png)
+![ データセット保持インターフェイス内からの影響の予測。](../images/data-management/impact-forecaster.png)
 
 **保存期間変更の検証**
 
 保存ポリシーを適用したら、次のツールを使用して変更を検証できます。
 
-* データセット参照ビューの [&#x200B; データセット使用状況の指標 &#x200B;](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics)。
-* [&#x200B; 監視ダッシュボード &#x200B;](../../dataflows/ui/monitor.md) 保存管理の影響を表示および分析します。
-* [&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../../dashboards/guides/license-usage.md)：日別スナップショット、予測トレンドおよびサンドボックスレベルのインサイトを表示します。
+* データセット参照ビューの [ データセット使用状況の指標 ](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics)。
+* [ 監視ダッシュボード ](../../dataflows/ui/monitor.md) 保存管理の影響を表示および分析します。
+* [ ライセンス使用状況ダッシュボード ](../../dashboards/guides/license-usage.md)：日別スナップショット、予測トレンドおよびサンドボックスレベルのインサイトを表示します。

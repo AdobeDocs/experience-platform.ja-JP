@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data pla
 title: Real-Time Customer Data Platform B2B editionの使用例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -26,7 +26,7 @@ Real-Time Customer Data Platform B2B editionでは、既存のReal-Time CDPお�
 
 ただし、Bodea には 2 つの異なるビジネスがあります。Bodea の最初のビジネス部門である「Line 1」は、自動車業界向けのソフトウェアを作成しています。2 番目のビジネス部門である「Line 2」は、自動車部品を製造する 3D プリンターを販売しています。Bodea の 2 つのビジネス部門の結果として、Bodea の顧客アカウントから生成された収益データは単一のビューに統合されていません。
 
-各ビジネス部門には、「CRM 1」と「CRM 2」という独自の販売システムがあります。これらの CRM 販売システムは両方とも、独自のマーケティング自動処理プラットフォーム「Marketo 1」および「Marketo 2」に接続されています。CRM 1 からのデータは Marketo 1 にのみ同期され、CRM 2 からのデータは Marketo 2 にのみ同期されます。最終的に、それらのデータは様々な企業情報サイロに保持されます。
+各ビジネス部門には、「CRM 1」と「CRM 2」という独自の販売システムがあります。これらの CRM 販売システムは両方とも、独自のマーケティングオートメーションプラットフォーム「Marketo 1」および「Marketo 2」に接続されています。CRM 1 からのデータは Marketo 1 にのみ同期され、CRM 2 からのデータは Marketo 2 にのみ同期されます。最終的に、それらのデータは様々な企業情報サイロに保持されます。
 
 ## 現在のデータ状況
 

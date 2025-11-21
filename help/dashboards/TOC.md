@@ -30,7 +30,7 @@ ht-degree: 64%
       * [オーディエンス ID の重複](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * フィルター {#filters}
       * [日付フィルター](sql-insights-query-pro-mode/filters/date-filter.md)
-      * [&#x200B; グローバルフィルター &#x200B;](sql-insights-query-pro-mode/filters/global-filter.md)
+      * [ グローバルフィルター ](sql-insights-query-pro-mode/filters/global-filter.md)
    * [ドリルスルー](sql-insights-query-pro-mode/drill-through.md)
    * [さらに表示](sql-insights-query-pro-mode/view-more.md)
    * [SQL を表示](sql-insights-query-pro-mode/view-sql.md)

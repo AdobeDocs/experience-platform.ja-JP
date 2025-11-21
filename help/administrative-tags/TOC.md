@@ -6,7 +6,7 @@ user-guide-description: 統合タグを使用すると、メタデータ分類�
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 82%
+ht-degree: 75%
 
 ---
 

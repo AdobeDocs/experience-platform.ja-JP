@@ -9,7 +9,7 @@ role: User, Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 96%
+ht-degree: 89%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 96%
    * [探索的データ分析（EDA）](jupyterlab/eda-notebook.md)
    * [レシピビルダーを使用したモデルの作成](jupyterlab/create-a-model.md)
    * [Git を使用した JupyterLab での共同作業](jupyterlab/using-git-for-collaboration.md)
-* Senesi Machine Learning API {#api}
+* Sensei機械学習 API {#api}
    * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
    * [MLInstances（レシピ）](api/mlinstances.md)

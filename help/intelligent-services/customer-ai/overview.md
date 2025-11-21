@@ -44,7 +44,7 @@ ht-degree: 66%
 
 次のビデオを視聴すると、顧客 AI に関する理解を深めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/36509?learn=on&quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## 仕組み
 
@@ -52,4 +52,4 @@ ht-degree: 66%
 
 ## 次の手順
 
-『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、顧客 AI に必要なすべての前提条件を設定する手順について説明します。 すべての資格情報とデータが既に準備されている場合は、[&#x200B; 顧客 AI インスタンスの設定 &#x200B;](./user-guide/configure.md) を参照してください。 顧客 AI を使用する手順について説明します。
+『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、顧客 AI に必要なすべての前提条件を設定する手順について説明します。 すべての資格情報とデータが既に準備されている場合は、[ 顧客 AI インスタンスの設定 ](./user-guide/configure.md) を参照してください。 顧客 AI を使用する手順について説明します。

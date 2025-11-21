@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイ
 title: Real-Time CDP B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -65,7 +65,7 @@ Experience Platformを使用すると、データを外部ソースから取得�
 >
 >[!DNL Marketo] ソースは Real-Time CDP B2B Edition を使用するために必要&#x200B;**ではありません**。
 
-Real-Time CDPと B2B データをB2B editionに取り込む方法について詳しくは、[Marketo Experience Platformのソース &#x200B;](./sources/b2b.md) のドキュメントを参照してください。
+Real-Time CDPと B2B データをB2B editionに取り込む方法について詳しくは、[Marketo Experience Platformのソース ](./sources/b2b.md) のドキュメントを参照してください。
 
 ## B2B 宛先
 

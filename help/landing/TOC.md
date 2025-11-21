@@ -49,7 +49,7 @@ ht-degree: 51%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=ja)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Experience PlatformとExperience Cloudの統合（ビデオ）](video/experience-cloud-integrations.md)
 * ガバナンス、プライバシー、セキュリティ {#governance-privacy-security}
    * [概要](./governance-privacy-security/overview.md)
@@ -60,7 +60,7 @@ ht-degree: 51%
       * IAB TCF 2.0 {#iab}
          * [概要](./governance-privacy-security/consent/iab/overview.md)
          * [同意データと基本設定データを取り込むためのデータセットの設定](./governance-privacy-security/consent/iab/dataset.md)
-      * [Experience Platform Web SDKを統合して、同意データと環境設定データを処理する &#x200B;](./governance-privacy-security/consent/sdk.md)
+      * [Experience Platform Web SDKを統合して、同意データと環境設定データを処理する ](./governance-privacy-security/consent/sdk.md)
    * 監査ログ {#audit-logs}
       * [概要](./governance-privacy-security/audit-logs/overview.md)
       * 監査クエリ API {#audit-api}
@@ -83,11 +83,11 @@ ht-degree: 51%
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [&#x200B; ライセンスの使用状況と容量 &#x200B;](./license-usage-and-guardrails/capacity.md)
+   * [ ライセンスの使用状況と容量 ](./license-usage-and-guardrails/capacity.md)
    * [合計データ量](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizerガードレール &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=ja)
-   * [Customer Journey Analyticsガードレール &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=ja)
-   * [Real-Time CDPガードレール &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=ja)
+   * [Adobe Journey Optimizerガードレール ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analyticsガードレール ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDPガードレール ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [Gen2 Data Lake の移行](adls2-gen2-migration.md)
 * [用語集](glossary.md)

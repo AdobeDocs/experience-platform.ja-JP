@@ -4,7 +4,7 @@ description: Reactor API を使用すると、開発者は Adobe Experience Plat
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 97%
 
 ---
@@ -19,7 +19,7 @@ Reactor API には、Adobe Experience Platform のタグのすべてのリソー
 
 ## 会社
 
-会社は、タグユーザーの組織（通常はビジネス）を表します。これらの会社は、組織 ID と 1 対 1 で一致します。 API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。
+会社は、タグユーザーの組織（通常はビジネス）を表します。これらの会社は、組織 ID で 1:1 と一致します。 API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。
 
 API で利用可能な会社を表示する方法については、[会社エンドポイントガイド](./endpoints/companies.md)を参照してください。
 
@@ -121,4 +121,4 @@ API でこの情報を表示する方法については、[プロファイルエ
 
 ## 次の手順
 
- API を使用して呼び出しを開始するには、[はじめに](./getting-started.md)を参照し、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を確認します。
+API を使用して呼び出しを開始するには、[はじめに](./getting-started.md)を参照し、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を確認します。

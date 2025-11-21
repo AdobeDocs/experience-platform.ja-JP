@@ -5,8 +5,8 @@ feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 85%
+source-wordcount: '2027'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ Real-Time CDP でサードパーティデータのサポートを使用して、
 
 ## このユースケースを検討する理由 {#why-this-use-case}
 
-ブランドは、サードパーティ cookie への依存、限られた予算、透明性と広告費用対効果への高い需要に依存することなく、ファネルの最上部の顧客獲得のユースケースを責任を持って実行するという困難な課題に同時に直面しています。
+ブランドは、サードパーティ cookie への依存、限られた予算、透明性と広告費用対効果に対する需要の高まりに依存せずに、funnelで提供される顧客獲得の上位のユースケースを責任を持って実行するという困難な課題に同時に直面しています。
 
 Adobe Real-Time Customer Data Platformを使用すると、企業は、Data Management Platform （DMP）でサポートされているユースケースを cookie のない代替手段に安全に移行し、セルフサービスのセグメント化、オーディエンスキュレーション、アクティベーションの完全な高度化と機能を 1 つのシステムに導入できます。 特許取得済みのデータガバナンスと同意のフレームワークを通じて、Adobeの責任あるデータ使用に揺るぎない焦点を当てることに妥協することなく、これらすべてを実現します。
 
@@ -55,7 +55,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 見込み客オーディエンスにリーチしてエンゲージする方法のウォークスルーについては、以下のビデオチュートリアルをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452858/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## ユースケースの達成方法：手順 {#step-by-step-instructions}
 
@@ -84,29 +84,29 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 使用する ID、データ管理、ガバナンスの各コンポーネントは次のとおりです。
 
-* パートナー提供のプロファイル用の新しい&#x200B;**[!UICONTROL パートナー ID]** の ID タイプ
-* 新しい **[!UICONTROL XDM 個人見込み客プロファイル]**&#x200B;の XDM クラス
+* パートナーが提供するプロファイルの新しい **[!UICONTROL Partner ID]** ID タイプ
+* 新しい **[!UICONTROL XDM Individual Prospect Profile]** XDM クラス
 * **（ドキュメントは近日公開予定）**&#x200B;パートナーデータサポートに合わせてカスタマイズされたフィールドグループ
 * **（ドキュメントは近日公開予定）**&#x200B;パートナーから取得した属性に追加するサードパーティラベル
 
 #### パートナー ID の ID 名前空間の作成 {#create-partner-id-namespace}
 
-まず、パートナーから受け取るプロファイルの新しい ID タイプを作成します。これを実行するには、「ID」セクションで、**[!UICONTROL パートナー ID]** タイプの新しい ID 名前空間を作成する必要があります。
+まず、パートナーから受け取るプロファイルの新しい ID タイプを作成します。これを行うには、「ID」セクションで、タイプ **[!UICONTROL Partner ID]** の新しい ID 名前空間を作成する必要があります。
 
 ![新しいパートナー ID の ID 名前空間を作成します。](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * パートナー ID 名前空間について詳しくは、[ID タイプの節](/help/identity-service/features/namespaces.md)を参照してください。
 * 詳しくは、Experience Platform ユーザーインターフェイスの [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md)を参照してください。
 
-#### **[!UICONTROL XDM 個人見込み客プロファイル]**&#x200B;クラスを使用して新しいスキーマを作成します
+#### **[!UICONTROL XDM Individual Prospect Profile]** クラスを使用して新しいスキーマを作成します
 
-次に、**[!UICONTROL データ管理]**／**[!UICONTROL スキーマ]**&#x200B;で新しいスキーマを作成し、**[!UICONTROL XDM 個人見込み客プロファイル]**&#x200B;クラスを割り当てます。
+次に、**[!UICONTROL Data Management]**/**[!UICONTROL Schemas]** で、新しいスキーマを作成し、**[!UICONTROL XDM Individual Prospect Profile]** クラスに割り当てます。
 
 ![XDM スキーマビルダーで XDM 個人見込み客プロファイルクラスを検索します。](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
 XDM 個人見込み客プロファイルクラスの完全な情報については、[UI でのスキーマの作成と編集](/help/xdm/ui/resources/schemas.md)を参照してください（リンクは後日公開します）。
 
-**[!UICONTROL XDM 個人見込み客プロファイル]**&#x200B;クラスには、以下に示すフィールドが事前設定されています。パートナー提供の見込み客プロファイルの属性でスキーマを強化するには、必要な属性を含む新しいフィールドグループを作成してスキーマに追加するか、アドビが提供する事前設定済みのフィールドグループの 1 つを使用します。
+**[!UICONTROL XDM Individual Prospect Profile]** クラスは、以下に示すフィールドで事前設定されています。 パートナー提供の見込み客プロファイルの属性でスキーマを強化するには、必要な属性を含む新しいフィールドグループを作成してスキーマに追加するか、アドビが提供する事前設定済みのフィールドグループの 1 つを使用します。
 
 ![XDM 個人見込み客プロファイルクラスの事前設定済みフィールド。](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
@@ -124,14 +124,14 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 #### スキーマのすべてのフィールドに対するサードパーティデータガバナンスラベルの追加
 
-スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。[&#x200B; サードパーティのデータガバナンスラベル &#x200B;](../../data-governance/labels/reference.md#partner-ecosystem-labels) についての詳細情報
+スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。[ サードパーティのデータガバナンスラベル ](../../data-governance/labels/reference.md#partner-ecosystem-labels) についての詳細情報
 
 これを行うには、以下の手順に従います。
 
-1. 作成したスキーマに移動し、「**[!UICONTROL ラベル]**」タブを選択します。
+1. 作成したスキーマに移動して、「**[!UICONTROL Labels]**」タブを選択します。
 2. 上部のチェックボックスボタンを使用してこのスキーマ内のすべてのフィールドを選択し、右側の鉛筆アイコンをクリックして、このスキーマにデータガバナンスラベルを適用します。
-3. 左側のカテゴリから「**[!UICONTROL パートナーエコシステム]**」ラベルを選択します。
-4. 「**[!UICONTROL サードパーティ]**」というラベルを選択し、「**[!UICONTROL 保存]**」を選択します。
+3. 左側のカテゴリから **[!UICONTROL Partner Ecosystem]** ラベルを選択します。
+4. **[!UICONTROL Third Party]** というラベルを選択し、「**[!UICONTROL Save]**」を選択します。
 5. スキーマのすべてのフィールドに、前の手順で選択したラベルが含まれるようになります。
 
 >[!SUCCESS]
@@ -152,11 +152,11 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 サンプルデータを読み込み、見込み客プロファイルに入力するには、データセットを作成し、データパートナーから受け取ったファイルをアップロードします。以下の手順を完了します。
 
-1. **[!UICONTROL データ管理]**／**[!UICONTROL データセット]**&#x200B;に移動し、「**[!UICONTROL データセットを作成]**」を選択します。
+1. **[!UICONTROL Data Management]**/**[!UICONTROL Datasets]** に移動し、「**[!UICONTROL Create dataset]**」を選択します。
 2. 「スキーマからデータセットを作成」の選択
 3. 前の手順で作成したスキーマを選択します。
 4. データセットに名前を付け、必要に応じて説明を追加します。
-5. 「**[!UICONTROL 完了]**」を選択します。
+5. **[!UICONTROL Finish]** を選択します。
 
 ![見込み客プロファイルのデータセットを作成する手順の録画。](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
@@ -164,7 +164,7 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 ![プロファイルのデータセットを有効にします。](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
-パートナーから受け取ったファイルをデータセットに読み込むには、データセットを選択し、右側のパネルで下にスクロールして、「**[!UICONTROL データを追加]**」を選択します。ファイルをドラッグ＆ドロップするか、「**[!UICONTROL ファイルを選択]**」を選択してファイルの場所に移動し、ファイルを選択します。
+パートナーから受け取ったファイルをデータセットに読み込むには、データセットを選択して、右側のパネルを下にスクロールして、「**[!UICONTROL Add data]**」を選択します。 ファイルをドラッグ&amp;ドロップするか、**[!UICONTROL Choose files]** を選択して、ファイルの場所に移動し、ファイルを選択します。
 
 ![データセットにファイルを追加します。](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
@@ -183,13 +183,13 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 #### 読み込まれた見込み客プロファイルを検査 {#inspect-profiles}
 
-見込み客プロファイルのリストを確認するには、左側のパネルで&#x200B;**[!UICONTROL 見込み客]**／**[!UICONTROL プロファイル]**&#x200B;に移動します。
+見込み客プロファイルのリストを表示するには、左側のパネルで **[!UICONTROL Prospects]**/**[!UICONTROL Profiles]** に移動します。
 
-Real-Time CDP に読み込んだ見込み客のプロファイルが見込み客のプロファイル画面の&#x200B;**[!UICONTROL 参照]**&#x200B;ビューに表示されるまでに、最大 2 時間かかる場合があります。ページに「現在表示できる見込み客プロファイルがありません」というメッセージが表示された場合は、しばらくしてからもう一度試してください。しばらく待つと、見込み客プロファイルが&#x200B;**[!UICONTROL 参照]**&#x200B;ビューに表示されるようになります。
+Real-Time CDPに読み込んだばかりの見込み客プロファイルが見込み客プロファイル画面の **[!UICONTROL Browse]** ビューに表示されるまで、最大 2 時間かかる場合があります。 ページに「現在表示できる見込み客プロファイルがありません」というメッセージが表示された場合は、しばらくしてからもう一度試してください。少し待つと、見込み客プロファイルが **[!UICONTROL Browse]** ビューに表示され始めます。
 
 >[!TIP]
 >
->**[!UICONTROL ID 名前空間]**&#x200B;列があることに注意してください。複数のデータベンダーと連携している場合は、この列を使用して見込み客プロファイルの出所を推測します。
+>**[!UICONTROL Identity Namespace]** 列が存在することに注意してください。 複数のデータベンダーと連携している場合は、この列を使用して見込み客プロファイルの出所を推測します。
 
 ![Real-Time CDP に読み込まれた見込み客プロファイルのビュー。](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -197,13 +197,13 @@ Real-Time CDP に読み込んだ見込み客のプロファイルが見込み客
 
 ![見込み客プロファイルの検査方法のビュー。](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-詳しくは、[&#x200B; 見込み客プロファイル &#x200B;](/help/profile/ui/prospect-profile.md) を参照してください。
+詳しくは、[ 見込み客プロファイル ](/help/profile/ui/prospect-profile.md) を参照してください。
 
 ### 見込み客オーディエンスを作成 {#create-prospect-audiences}
 
 Real-Time CDP のセグメント化機能を使用して、見込み客プロファイルからオーディエンスを作成します。必要なセグメント化ルールを使用して、カスタマイズされたオーディエンスを作成します。
 
-見込み客のプロフィールで構成されるオーディエンスを作成して開始するには、**[!UICONTROL 見込み客]**／**[!UICONTROL オーディエンス]**&#x200B;に移動します。
+開始し、見込み客プロファイルで構成されるオーディエンスを作成するには、**[!UICONTROL Prospects]**/**[!UICONTROL Audiences]** に移動します。
 
 ![見込み客のオーディエンスの表示。](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 
@@ -213,20 +213,20 @@ Real-Time CDP のセグメント化機能を使用して、見込み客プロフ
 * バッチプロファイル評価のみ。
 * 時系列イベントに基づくオーディエンスの作成をサポートしていません。
 
-詳しくは、[&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) を参照してください。
+詳しくは、[ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) を参照してください。
 
 ### 宛先への見込み客のプロファイルをアクティブ化 {#activate-to-destinations}
 
 見込み客のオーディエンスを宛先に書き出して利用します。現在、特定のクラウドストレージの宛先のみが、見込み客プロファイルのアクティブ化をサポートしています。
 
-![&#x200B; 見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![ 見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-クラウドストレージの宛先に対する見込み客のアクティブ化については、[&#x200B; 詳細情報 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) を参照してください。
+クラウドストレージの宛先に対する見込み客のアクティブ化については、[ 詳細情報 ](/help/destinations/ui/activate-prospect-audiences.md) を参照してください。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [&#x200B; パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
-* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [ パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ ](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
+* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

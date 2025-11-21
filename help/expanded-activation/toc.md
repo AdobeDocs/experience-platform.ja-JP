@@ -17,5 +17,5 @@ ht-degree: 66%
 
 * [概要](./overview.md)
 * [アカウント管理](./administration.md)
-* [オーディエンスをアクティブ化](./activate-audiences.md)
+* [オーディエンスをアクティベート](./activate-audiences.md)
 * [よくある質問](./faq.md)

@@ -8,16 +8,16 @@ role: Developer
 source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 59%
+ht-degree: 64%
 
 ---
 
 
 # Adobe Experience Platform Assurance {#assurance}
 
-- [Assurance の概要](./home.md)
+- [Assuranceの概要](./home.md)
 - [ユーザーアクセス](./user-access.md)
-- 表示 {#view}
+- 件数 {#view}
    - [イベントトランザクション](./views/event-transactions.md)
    - [拡張機能のバージョン](./views/extension-versions.md)
    - [Edge Delivery](./views/edge-delivery.md)
@@ -29,6 +29,6 @@ ht-degree: 59%
    - [Adobe Analytics](./views/adobe-analytics.md)
    - [Adobe Analytics ストリーミングメディア](./views/adobe-analytics-streaming-media.md)
 - チュートリアル {#tutorials}
-   - [Assurance の実装](./tutorials/implement-assurance.md)
-   - [Assurance を使用](./tutorials/using-assurance.md)
+   - [Assuranceの実装](./tutorials/implement-assurance.md)
+   - [Assuranceの使用](./tutorials/using-assurance.md)
 - [トラブルシューティング](./troubleshooting.md)

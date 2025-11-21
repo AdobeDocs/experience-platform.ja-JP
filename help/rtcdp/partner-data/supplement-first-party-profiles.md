@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを取得したお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimateのライセンスを持つ顧客が使用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。
 
@@ -24,9 +24,9 @@ ht-degree: 77%
 
 ほとんどのブランドは、ファーストパーティデータが豊富なブランドであっても、データを整理し、顧客、顧客の行動、パターン、好みをより細かく理解することでメリットを得ることができます。
 
-Adobe Real-time Customer Data Platformは、1 つ以上の信頼できるパートナーからの貴重なインサイト、識別子、属性を使用して、ブランドが責任を持ってファーストパーティデータを補完するのに役立ちます。
+Adobe Real-time Customer Data Platform は、1 つ以上の信頼できるパートナーからの貴重なインサイト、識別子、属性を使用して、ブランドが責任を持ってファーストパーティデータを補完するのに役立ちます。
 
-Adobeでは、万能のアプローチはないことを理解し、データおよび ID パートナーとのシームレスな相互運用性を可能にして、カスタマーライフサイクルのすべての段階において、個人に合わせた思慮深いエンゲージメントを促進します。 これらの機能は、信頼できるデータガバナンスフレームワークに支えられており、パートナーデータをどこで、どのように使用するかを詳細に制御できます。 例えば、パーソナライゼーションではなく、パートナーが提供するインサイトをセグメント化に使用できます。
+Adobeには、万能のアプローチがないことを理解し、データおよび ID パートナーとのシームレスな相互運用性を可能にして、カスタマーライフサイクルのすべての段階において、個人に合わせた思慮深いエンゲージメントを促進します。 これらの機能は、信頼できるデータガバナンスフレームワークに支えられており、パートナーデータをどこで、どのように使用するかを詳細に制御できます。 例えば、パーソナライゼーションではなく、パートナーが提供するインサイトをセグメント化に使用できます。
 
 例えば、デモグラフィックとインテントのシグナルで顧客レコードを強化する必要がある場合は、このユースケースで説明する手順に従います。
 
@@ -41,13 +41,13 @@ Adobeでは、万能のアプローチはないことを理解し、データお
 
 >[!WARNING]
 >
->Real-Time CDPに取り込まれる追加のパートナー提供の属性は、*合計データボリューム* に影響を与えます。 合計データ量について詳しくは、[Real-time Customer Data Platformの製品説明 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) を参照してください。
+>Real-Time CDPに取り込まれる追加のパートナー提供の属性は、*合計データボリューム* に影響を与えます。 合計データ量について詳しくは、[Real-Time Customer Data Platformの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) を参照してください。
 
 ## ビデオチュートリアル {#video-walkthrough}
 
 パートナー提供の属性を使用してファーストパーティオーディエンスを補完する方法について詳しくは、以下のビデオチュートリアルを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452449/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Adobeでは、万能のアプローチはないことを理解し、データお
 
 この時点で、Real-Time CDP のデータ管理フレームワークを拡張して、パートナー提供の属性に対応します。
 
-**[!UICONTROL XDM 個人プロファイル]**&#x200B;クラスの新しいスキーマを作成するか、同じタイプの既存スキーマを拡張して、パートナー提供の属性を含めるようにするかを選択できます。アドビでは、データベンダーからの追加属性を最もよく表す、フィールドグループの新しいセットを使用して新しいスキーマを作成することを強くお勧めします。これにより、データスキーマが明確になり、相互に独立して発展できるようになります。
+**[!UICONTROL XDM Individual Profile]** クラスの新しいスキーマを作成するか、同じタイプの既存のスキーマを拡張して、パートナー提供の属性を含めるオプションがあります。 アドビでは、データベンダーからの追加属性を最もよく表す、フィールドグループの新しいセットを使用して新しいスキーマを作成することを強くお勧めします。これにより、データスキーマが明確になり、相互に独立して発展できるようになります。
 
 パートナー提供の属性をスキーマに含めるには、必要な属性を含む新しいフィールドグループを作成するか、アドビが提供する事前設定済みのフィールドグループの 1 つを使用します。
 
 詳しくは、次のドキュメントページを参照してください。
 
 * [スキーマ構成の基本](/help/xdm/schema/composition.md)
-* [[!UICONTROL XDM 個人プロファイル]クラスの概要](/help/xdm/classes/individual-profile.md)
+* [[!UICONTROL XDM Individual Profile] クラスの概要](/help/xdm/classes/individual-profile.md)
 * [UI でのスキーマの作成と編集](/help/xdm/ui/resources/schemas.md)
 * [UI でのスキーマフィールドグループの作成と編集](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ Commenting out links for now
 
 >[!TIP]
 >
->データベンダーからの個人ベースの識別子で顧客プロファイルを補完することを選択した場合は、**[[!UICONTROL パートナー ID]](/help/identity-service/features/namespaces.md)** タイプの新しい ID タイプを作成できます。
+>顧客プロファイルにデータベンダーのユーザーベースの識別子を追加することを選択した場合は、タイプ **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)** の新しい ID タイプを作成できます。
 >
 >パートナー ID について詳しくは、[ID タイプの節](/help/identity-service/features/namespaces.md)を参照してください。
 >詳しくは、Experience Platform ユーザーインターフェイスの [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md)を参照してください。
@@ -137,5 +137,5 @@ Commenting out links for now
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [&#x200B; パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
-* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [ パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ ](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中に行えます。
+* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

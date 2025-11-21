@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Adobe Audience Manager タグ拡張�
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '440'
 ht-degree: 100%
 
 ---
@@ -25,9 +25,9 @@ Audience Manager タグ拡張機能を使用すれば、Audience Manager が使�
 
 ## Adobe Audience Manager 拡張機能を設定する
 
-Adobe Audience Manager 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL エクステンション／カタログ]**&#x200B;を選択し、Adobe Audience Manager 拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+Adobe Audience Manager 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL Extensions > Catalog]**&#x200B;を選択し、Adobe Audience Manager 拡張機能にカーソルを置いて「**[!UICONTROL Install]**」を選択します。
 
-拡張機能を設定するには、「[!UICONTROL エクステンション]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「[!UICONTROL Extensions]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ### DIL 設定
 
@@ -45,7 +45,7 @@ Data Integration Library（DIL）のバージョンを表示します。
 
 除外されたパスのいずれかと URL 一致する場合、拡張機能は読み込まれません。
 
-「 **[!UICONTROL パスを追加]**」を選択して、除外された URL を指定します。
+「**[!UICONTROL Add Path]**」を選択して、除外された URL を指定します。
 
 URL が正規表現の場合は、正規表現を有効にします。
 
@@ -65,11 +65,11 @@ URL が正規表現の場合は、正規表現を有効にします。
 
 [DIL.create](https://experiencecloud.adobe.com/resources/help/ja_JP/aam/r_dil_create.html) が使用している初期化プロパティと、[visitorService object](https://experiencecloud.adobe.com/resources/help/ja_JP/aam/r_dil_visitor_service.html) の名前空間サブプロパティを追加します。コードエディターでは、コードコメントに 2 つの使用例が含まれています。
 
-「**[!UICONTROL 項目を選択]**」を選択して、プロパティを追加します。
+「**[!UICONTROL Choose an Item]**」を選択して、プロパティを追加します。
 
 「i」アイコンの上にマウスポインターを置くと、各プロパティの動作がわかります。プロパティの詳細については、[Audience Manager DIL ドキュメント](https://experiencecloud.adobe.com/resources/help/ja_JP/aam/r_dil_create.html)を参照してください。
 
-拡張機能の設定が完了したら、「**[!UICONTROL 保存]**」を選択します。
+拡張機能の設定が完了したら、「**[!UICONTROL Save]**」を選択します。
 
 ## Adobe Audience Manager 拡張機能のアクションタイプ
 

@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 94%
+ht-degree: 89%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 94%
 * [拡張機能のインストール](./install-debugger.md)
 * [拡張機能の設定](./configure-debugger.md)
 * [「概要」タブ](./summary.md)
-* 「ソリューション」タブ{#solutions}
+* 「ソリューション」タブ {#solutions}
    * [概要](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
 * [「ログ」タブ](./logs.md)
 * [「ネットワーク」タブ](./network.md)
 * [「イベント」タブ](./events.md)
-* 「Auditor」タブ{#auditor}
+* 「Auditor」タブ {#auditor}
    * [概要](./auditor/overview.md)
    * [タグの一貫性に関するテスト](./auditor/tag-consistency.md)
    * [タグの有無に関するテスト](./auditor/tag-presence.md)

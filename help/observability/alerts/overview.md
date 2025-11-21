@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 69%
+source-wordcount: '799'
+ht-degree: 59%
 
 ---
 
@@ -71,19 +71,19 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 | 権限 | 説明 |
 | --- | --- |
 | アラートの表示 | 受信したアラートメッセージを表示できます。 |
-| アラート履歴の表示* | 「[!UICONTROL アラート]」タブを使用して、受信したアラートの履歴を表示できます。 |
-| アラートの管理* | 「[!UICONTROL アラート]」タブを使用して、アラートルールを有効／無効にできます。 |
-| アラートの解決* | トリガーされたアラートを「[!UICONTROL アラート]」タブで解決できます。 |
+| アラート履歴の表示* | 「[!UICONTROL Alerts]」タブを使用して、受信したアラートの履歴を表示できます。 |
+| アラートの管理* | 「[!UICONTROL Alerts]」タブを使用して、アラートルールを有効/無効にできます。 |
+| アラートの解決* | トリガーされたアラートを「[!UICONTROL Alerts]」タブで解決できます。 |
 
 {style="table-layout:auto"}
 
-**「[!UICONTROL アラート]」タブにアクセスするには、他のいずれかの権限と組み合わせて「アラートの表示」権限も付与されている必要があります。*
+**「[!UICONTROL Alerts]」タブにアクセスするには、他のいずれかの権限と組み合わせて「アラートの表示」権限も付与されている必要があります。*
 
 >[!NOTE]
 >
->Experience Platformで権限を管理する方法について詳しくは、[&#x200B; アクセス制御に関するドキュメント &#x200B;](../../access-control/ui/overview.md) を参照してください。
+>Experience Platformで権限を管理する方法について詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/ui/overview.md) を参照してください。
 
-「アラートの表示」権限を使用すると、右上隅のベルアイコン（![&#x200B; ベルアイコン &#x200B;](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
+「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
 ![](../images/alerts/overview/ui.png)
 
@@ -91,7 +91,7 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 >
 > アラートがトリガーされた理由の詳細を表示するには、アラートを選択して関連ダッシュボードに移動します。
 
-さらに、UI の「[!UICONTROL アラート]」タブを使用すると、個々のユーザーは特定のアラートタイプを登録、管理者はアラートルールをまとめて有効または無効にできます。アラートの管理について詳しくは、[UI ガイド](./ui.md)を参照してください。
+さらに、UI の「[!UICONTROL Alerts]」タブを使用すると、個々のユーザーは特定のアラートタイプを登録、管理者はアラートルールをまとめて有効または無効にできます。 アラートの管理について詳しくは、[UI ガイド](./ui.md)を参照してください。
 
 ## 次の手順
 
