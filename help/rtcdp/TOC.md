@@ -47,12 +47,12 @@ ht-degree: 60%
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
 * ガードレール {#guardrails}
    * [Real-Time CDP ガードレールの概要](guardrails/overview.md)
-   * [&#x200B; データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [&#x200B; データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=ja){target="_blank"}
    * [&#x200B; のガードレール  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [&#x200B; データとセグメ  [!DNL Real-Time Customer Profile]  ト化のガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
-   * [&#x200B; データのガ  [!DNL Identity Service]  ドレール](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [&#x200B; のガードレール  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [&#x200B; 宛先を介したデータのアクティベーションのためのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [&#x200B; データのガ  [!DNL Identity Service]  ドレール](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=ja){target="_blank"}
+   * [&#x200B; のガードレール  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=ja){target="_blank"}
+   * [&#x200B; 宛先を介したデータのアクティベーションのためのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=ja){target="_blank"}
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * 結合ポリシー {#merge-policies}
