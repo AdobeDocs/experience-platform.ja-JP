@@ -3,9 +3,9 @@ keywords: 広告；トレードデスク；advertising トレードデスク
 title: Trade Desk 接続
 description: Trade Desk は、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソース全体でリターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実行するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 940128bf73f856d8459bee23905213651b44916e
+source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1084'
 ht-degree: 24%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
-> 2025 年 7 月からの宛先サービスへの [&#x200B; 内部アップグレード &#x200B;](../../../release-notes/2025/july-2025.md#destinations) に続いて、**へのデータフローに** アクティブ化されたプロファイルの数が減少 [!DNL The Trade Desk] することがあります。
-> この低下は、監視の可視性の向上によって発生します。 ECID を持たないプロファイルは、アクティブ化指標でドロップされたと正しくカウントされるようになりました。 詳しくは、このページの [&#x200B; 必須マッピング &#x200B;](#mandatory-mappings) の節を参照してください。
+> 2025 年 7 月からの宛先サービスへの [ 内部アップグレード ](../../../release-notes/2025/july-2025.md#destinations) に続いて、**へのデータフローに** アクティブ化されたプロファイルの数が減少 [!DNL The Trade Desk] することがあります。
+> この低下は、監視の可視性の向上によって発生します。 ECID を持たないプロファイルは、アクティブ化指標でドロップされたと正しくカウントされるようになりました。 詳しくは、このページの [ 必須マッピング ](#mandatory-mappings) の節を参照してください。
 >
 >**変更点：**
 >
@@ -50,10 +50,10 @@ ht-degree: 24%
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| ECID | Experience Cloud ID | この ID は、統合が正しく機能するために必須ですが、オーディエンスのアクティベーションには使用されません。 |
-| Trade Desk ID | [!DNL The Trade Desk] プラットフォームの広告主 ID | Trade Desk 独自の ID に基づいてオーディエンスをアクティブ化する場合は、この ID を使用します。 |
+| [!DNL GAID] | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
+| [!DNL IDFA] | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
+| [!DNL ECID] | Experience Cloud ID | この ID は、統合が正しく機能するために必須ですが、オーディエンスのアクティベーションには使用されません。 |
+| [!DNL Tradedesk] | [!DNL TDID] プラットフォームでの [!DNL The Trade Desk] | Trade Desk 独自の ID に基づいてオーディエンスをアクティブ化する場合は、この ID を使用します。 |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ ht-degree: 24%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -83,13 +83,13 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
+>[!DNL The Trade Desk] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -119,25 +119,25 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[&#x200B; オーディエンススケジュール &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、オーディエンスを、宛先プラットフォームの対応する ID またはわかりやすい名前に手動でマッピングする必要があります。
+[ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、オーディエンスを、宛先プラットフォームの対応する ID またはわかりやすい名前に手動でマッピングする必要があります。
 
 オーディエンスをマッピングする場合、Adobeでは、使いやすくするために、Experience Platform オーディエンス名またはより短い形式を使用することをお勧めします。 ただし、宛先のオーディエンス ID または名前がExperience Platform アカウントのオーディエンス ID または名前と一致する必要はありません。 マッピングフィールドに挿入する値は、すべて宛先に反映されます。
 
 ### 必須のマッピング {#mandatory-mappings}
 
-[&#x200B; サポートされている ID](#supported-identities) の節で説明されているすべてのターゲット ID は、オーディエンスアクティベーションワークフローのマッピング手順でマッピングする必要があります。 これには以下が含まれます。
+[ サポートされている ID](#supported-identities) の節で説明されているすべてのターゲット ID は、オーディエンスアクティベーションワークフローのマッピング手順でマッピングする必要があります。 これには以下が含まれます。
 
 * [!DNL GAID] （Google Advertising ID）
 * [!DNL IDFA] （広告主のApple ID）
 * [!DNL ECID] （Experience Cloud ID）
 * [!DNL The Trade Desk ID]
 
-![&#x200B; 必須マッピングを示すスクリーンショット &#x200B;](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+![ 必須マッピングを示すスクリーンショット ](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
 すべてのターゲット ID をマッピングすることで、アクティブ化で、存在する任意の ID を使用してプロファイルを正しく分割および配信できるようにします。 つまり、すべての ID が各プロファイルに存在する必要があるわけではありません。
 
@@ -156,7 +156,7 @@ Trade Desk への書き出しを正常に行うには、プロファイルに次
 
 >[!NOTE]
 > 
->[2025 年 7 月のアップグレード &#x200B;](/help/release-notes/2025/july-2025.md#destinations) に続き、宛先サービスで [!DNL ECID] が欠落しているプロファイルが、アクティベーション指標でドロップとして正しくレポートされるようになりました。 これは常に統合の動作です（プロファイルに到達していない場合 [!DNL ECID] プロファイル）。ただし、ドロップはデータフロー監視で正しく表示されるよ [!DNL The Trade Desk] になりました。 アクティブ化数が少ないのは、宛先機能の変更ではなく、正確なレポートを反映しています。
+>[2025 年 7 月のアップグレード ](/help/release-notes/2025/july-2025.md#destinations) に続き、宛先サービスで [!DNL ECID] が欠落しているプロファイルが、アクティベーション指標でドロップとして正しくレポートされるようになりました。 これは常に統合の動作です（プロファイルに到達していない場合 [!DNL ECID] プロファイル）。ただし、ドロップはデータフロー監視で正しく表示されるよ [!DNL The Trade Desk] になりました。 アクティブ化数が少ないのは、宛先機能の変更ではなく、正確なレポートを反映しています。
 
 ## 書き出したデータ {#exported-data}
 
