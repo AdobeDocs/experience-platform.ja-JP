@@ -185,7 +185,7 @@ ht-degree: 85%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)

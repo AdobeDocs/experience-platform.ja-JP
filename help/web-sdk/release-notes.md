@@ -49,14 +49,14 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **修正点および改善点**
 
-- [Media Analytics トラッカー ](commands/getmediaanalyticstracker.md) で、メディアオブジェクトの `length` プロパティが無効なデータタイプを誤って受け入れたエラーを修正しました。
-- ID 検索が失敗した場合にプロミス却下を適切に処理する [ID 管理 ](identity/overview.md) エラー処理を改善しました。
-- HTML コンテンツ項目を含む [ パーソナライゼーションコンテンツ ](personalization/rendering-personalization-content.md) が、見つからないコンテン `renderStatusHandler` に関するエラーでレンダリングに失敗する問題を修正しました。
-- 非 HTTP URL を適切に処理するための Activity Map[URL コレクション ](commands/configure/clickcollectionenabled.md) を修正しました。
+- [Media Analytics トラッカー &#x200B;](commands/getmediaanalyticstracker.md) で、メディアオブジェクトの `length` プロパティが無効なデータタイプを誤って受け入れたエラーを修正しました。
+- ID 検索が失敗した場合にプロミス却下を適切に処理する [ID 管理 &#x200B;](identity/overview.md) エラー処理を改善しました。
+- HTML コンテンツ項目を含む [&#x200B; パーソナライゼーションコンテンツ &#x200B;](personalization/rendering-personalization-content.md) が、見つからないコンテン `renderStatusHandler` に関するエラーでレンダリングに失敗する問題を修正しました。
+- 非 HTTP URL を適切に処理するための Activity Map[URL コレクション &#x200B;](commands/configure/clickcollectionenabled.md) を修正しました。
 
 **既知の問題**
 
-- [ を使用する ](/help/web-sdk/install/create-custom-build.md) カスタムビルド `npx @adobe/alloy` プロセスは、現在、バージョン 2.28.0 で期待どおりに機能していません。選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDN で使用可能な標準のJavaScript ファイルには影響しません。 修正中です。
+- [&#x200B; を使用する &#x200B;](/help/web-sdk/install/create-custom-build.md) カスタムビルド `npx @adobe/alloy` プロセスは、現在、バージョン 2.28.0 で期待どおりに機能していません。選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDN で使用可能な標準のJavaScript ファイルには影響しません。 修正中です。
 
 ## バージョン 2.27.0 - 2025年5月20日（PT）
 
@@ -71,7 +71,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズが縮小され、読み込み時間が最適化されます。 [NPM パッケージを使用してカスタム web SDK ビルドを作成する ](install/create-custom-build.md) 方法については、ドキュメントを参照してください。
+- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズが縮小され、読み込み時間が最適化されます。 [NPM パッケージを使用してカスタム web SDK ビルドを作成する &#x200B;](install/create-custom-build.md) 方法については、ドキュメントを参照してください。
 - [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID cookie から直接 ECID を自動的に読み取るようになりました。 `getIdentity` 名前空間を使用して `ECID` を呼び出すと、ID Cookie が既に存在する場合、web SDKは、ID を取得するためにEdge Networkに対してリクエストを実行しなくなりました。 これで、cookie から ID を読み取るようになりました。
 
 **修正点および改善点**
@@ -95,13 +95,13 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **修正点および改善点**
 
-- 一部のお客様の統合でエラーが発生していた、[Adobe Experience Platform ルールエンジン ](https://github.com/adobe/aepsdk-rulesengine-typescript/) に関連する依存関係の問題を解決しました。 Web SDKには、[Adobe Experience Platform ルールエンジン ](https://github.com/adobe/aepsdk-rulesengine-typescript/) バージョン 2.0.3 以降が必要です。
+- 一部のお客様の統合でエラーが発生していた、[Adobe Experience Platform ルールエンジン &#x200B;](https://github.com/adobe/aepsdk-rulesengine-typescript/) に関連する依存関係の問題を解決しました。 Web SDKには、[Adobe Experience Platform ルールエンジン &#x200B;](https://github.com/adobe/aepsdk-rulesengine-typescript/) バージョン 2.0.3 以降が必要です。
 
 ## バージョン 2.24.0 - 2024年10月31日（PT）
 
 **新機能**
 
-- [ データストリームの上書き ](../datastreams/overrides.md) がメディアセッションの開始時にサポートされるようになりました。
+- [&#x200B; データストリームの上書き &#x200B;](../datastreams/overrides.md) がメディアセッションの開始時にサポートされるようになりました。
 
 - [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring フックでAdobe Target応答トークンがサポートされるようになりました。
 
@@ -159,7 +159,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [ ストリーミングメディアコレクション ](../web-sdk/commands/configure/streamingmedia.md) のサポートを追加。
+- [&#x200B; ストリーミングメディアコレクション &#x200B;](../web-sdk/commands/configure/streamingmedia.md) のサポートを追加。
 
 **修正点および改善点**
 
@@ -184,7 +184,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **新機能**
 
 - Adobe Journey Optimizerからのアプリ内メッセージのレンダリングがサポートされるようになりました。
-- [ ページイベントの上部と下部 ](use-cases/top-bottom-page-events.md) のサポートを追加しました。
+- [&#x200B; ページイベントの上部と下部 &#x200B;](use-cases/top-bottom-page-events.md) のサポートを追加しました。
 - [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) コマンドに `sendEvent` ページ全体の範囲とデフォルトサーフェスの要求を制御するオプションを追加しました。
 
 **修正点および改善点**
@@ -197,7 +197,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- ](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
+- [&#128279;](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
 
 **修正点および改善点**
 
@@ -338,7 +338,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-- これで、SDKを [NPM パッケージ ](/help/web-sdk/install/npm.md) としてインストールできます。
+- これで、SDKを [NPM パッケージ &#x200B;](/help/web-sdk/install/npm.md) としてインストールできます。
 - [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
 - [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにすることができるようになりました。
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
@@ -371,5 +371,5 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - IAB 2.0 同意標準をサポートします。
 - `setConsent` コマンドで追加の ID を渡すことをサポートします。
 - `sendEvent` コマンドでの `datasetId` の上書きをサポートします。
-- モニタリングフックのサポート（[ 詳細を表示 ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+- モニタリングフックのサポート（[&#x200B; 詳細を表示 &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 - 実装の詳細コンテキストデータで `environment: browser` を渡します。

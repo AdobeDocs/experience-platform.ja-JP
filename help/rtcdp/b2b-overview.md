@@ -65,7 +65,7 @@ Experience Platformを使用すると、データを外部ソースから取得�
 >
 >[!DNL Marketo] ソースは Real-Time CDP B2B Edition を使用するために必要&#x200B;**ではありません**。
 
-Real-Time CDPと B2B データをB2B editionに取り込む方法について詳しくは、[Marketo Experience Platformのソース ](./sources/b2b.md) のドキュメントを参照してください。
+Real-Time CDPと B2B データをB2B editionに取り込む方法について詳しくは、[Marketo Experience Platformのソース &#x200B;](./sources/b2b.md) のドキュメントを参照してください。
 
 ## B2B 宛先
 
