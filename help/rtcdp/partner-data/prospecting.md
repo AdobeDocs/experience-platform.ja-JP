@@ -55,7 +55,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 見込み客オーディエンスにリーチしてエンゲージする方法のウォークスルーについては、以下のビデオチュートリアルをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452858/?captions=jpn&learn=on)
 
 ## ユースケースの達成方法：手順 {#step-by-step-instructions}
 

@@ -64,7 +64,7 @@ ht-degree: 72%
 
 不明な訪問者に対するオンサイトエクスペリエンスのパーソナライズ方法を説明する以下のビデオチュートリアルをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449253/?captions=jpn&learn=on)
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
