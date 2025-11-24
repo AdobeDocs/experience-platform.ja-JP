@@ -15,7 +15,7 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->[ アカウントオーディエンスをアクティブ化 ](../../ui/activate-account-audiences.md) する必要がある B2B のユースケースについては、代わりに [Demandbase](demandbase.md) 宛先コネクタを使用します。
+>[&#x200B; アカウントオーディエンスをアクティブ化 &#x200B;](../../ui/activate-account-audiences.md) する必要がある B2B のユースケースについては、代わりに [Demandbase](demandbase.md) 宛先コネクタを使用します。
 
 ## ユースケース {#use-case}
 
@@ -41,7 +41,7 @@ ht-degree: 24%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -62,13 +62,13 @@ ht-degree: 24%
 オーディエンスを Demandbase に書き出すには、次が必要です。
 
 1. Demandbase アカウント。
-2. Demandbase API トークン。 Demandbase でユーザーと API トークンを生成できます。 トークンを生成するには、Demandbase アカウントにログインした後、[ マイプロファイル/API トークン ](https://web.demandbase.com/o/ad/at) に移動します。
+2. Demandbase API トークン。 Demandbase でユーザーと API トークンを生成できます。 トークンを生成するには、Demandbase アカウントにログインした後、[&#x200B; マイプロファイル/API トークン &#x200B;](https://web.demandbase.com/o/ad/at) に移動します。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -76,15 +76,15 @@ ht-degree: 24%
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![ ベアラートークンの追加 ](../../assets/catalog/advertising/demandbase-people/bearer-token.png)
+![&#x200B; ベアラートークンの追加 &#x200B;](../../assets/catalog/advertising/demandbase-people/bearer-token.png)
 
-* **[!UICONTROL Bearer token]**：宛先を認証するためのベアラートークンを入力します。 トークンの取得方法については、[ 前提条件 ](#prerequisites) を参照してください。
+* **[!UICONTROL Bearer token]**：宛先を認証するためのベアラートークンを入力します。 トークンの取得方法については、[&#x200B; 前提条件 &#x200B;](#prerequisites) を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先接続に関する情報の追加 ](../../assets/catalog/advertising/demandbase-people/name-and-description.png)
+![&#x200B; 宛先接続に関する情報の追加 &#x200B;](../../assets/catalog/advertising/demandbase-people/name-and-description.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -95,8 +95,8 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -110,7 +110,7 @@ ht-degree: 24%
 
 ### 推奨されるマッピング {#recommended-mappings}
 
-最適なマッチング精度を得るには、上記の [ 必須マッピング ](#mandatory-mappings) に加えて、アクティベーションフローに次のオプションマッピングを含めます。
+最適なマッチング精度を得るには、上記の [&#x200B; 必須マッピング &#x200B;](#mandatory-mappings) に加えて、アクティベーションフローに次のオプションマッピングを含めます。
 
 | ソースフィールド | ターゲットフィールド | 説明 |
 |--------------|--------------|-------------|
@@ -126,7 +126,7 @@ ht-degree: 24%
 * **フォールバックマッチング**:`externalPersonId` が利用できない場合、Demandbase は識別に `email` フィールドを使用します。
 * Adobe **必須と推奨**:Demandbase で必要なのは `email` だけですが、マッチングの精度とキャンペーンのパフォーマンスを向上させるために、上記の推奨マッピング表から使用可能なすべてのフィールドをマッピングすることをお勧めします。
 
-![Demandbase 人物マッピング ](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+![Demandbase 人物マッピング &#x200B;](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
 これらのマッピングは、宛先が正しく機能するために必要であり、アクティベーションワークフローを続行する前に設定する必要があります。
 
