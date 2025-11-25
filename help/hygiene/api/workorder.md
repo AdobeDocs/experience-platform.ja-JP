@@ -3,9 +3,9 @@ title: 削除作業指示のレコード
 description: Data Hygiene API の/workorder エンドポイントを使用して、Adobe Experience Platformでレコード削除作業指示を管理する方法を説明します。 このガイドでは、割り当て量、処理タイムライン、API の使用状況について説明します。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 ## はじめに
 
-開始する前に、[&#x200B; 概要 &#x200B;](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
+開始する前に、[ 概要 ](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
 
 ## 割り当て量と処理タイムライン {#quotas}
 
@@ -67,7 +67,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 >[!TIP]
 >
->現在のクォータの使用状況または使用権限層を確認するには、[&#x200B; クォータのリファレンス ガイド &#x200B;](../api/quota.md) を参照してください。
+>現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
 
 ## レコード削除作業指示のリスト {#list}
 
@@ -247,7 +247,7 @@ curl -X POST \
 | `description` | レコード削除作業指示の説明。 |
 | `action` | レコード削除作業指示に対してリクエストされたアクション。 特定の ID に関連付けられているレコードを削除するには、`delete_identity` を使用します。 |
 | `datasetId` | データセットの一意の ID。 特定のデータセットのデータセット ID を使用するか、`ALL` を使用してすべてのデータセットをターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br> データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つだけであることに注意してください。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。 |
-| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント &#x200B;](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
+| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント ](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
 
 **応答**
 
@@ -300,6 +300,110 @@ curl -X POST \
 >[!NOTE]
 >
 >レコード削除作業指示のアクションプロパティは、現在、API 応答で `identity-delete` 定されています。 API が別の値（`delete_identity` など）を使用するように変更された場合、それに応じてこのドキュメントが更新されます。
+
+## レコード削除リクエスト用に ID リストを JSON に変換
+
+識別子を含む CSV、TSV、TXT ファイルからレコード削除作業指示を作成するには、変換スクリプトを使用して、`/workorder` エンドポイントに必要な JSON ペイロードを生成します。 この方法は、既存のデータファイルを使用する場合に特に便利です。 すぐに使用できるスクリプトと包括的な手順については、[csv-to-data-hygiene GitHub リポジトリ ](https://github.com/perlmonger42/csv-to-data-hygiene) を参照してください。
+
+### JSON ペイロードの生成
+
+次の bash スクリプトの例は、Python または Ruby で変換スクリプトを実行する方法を示しています。
+
+>[!BEGINTABS]
+
+>[!TAB Python スクリプトの実行例 ]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Ruby スクリプトの実行例 ]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+次の表に bash スクリプトのパラメーターを示します。
+
+| パラメーター | 説明 |
+| ---           | ---     |
+| `verbose` | 詳細出力を有効にします。 |
+| `column` | 削除する ID 値を含む列のインデックス（1 から始まる）またはヘッダー名。 指定しない場合は、デフォルトで最初の列に設定されます。 |
+| `namespace` | ID 名前空間を指定する `code` プロパティを持つオブジェクト（例えば「email」）。 |
+| `dataset-id` | 作業指示に関連付けられたデータセットの一意の ID。 リクエストがすべてのデータセットに適用される場合、このフィールドは `ALL` に設定されます。 |
+| `description` | レコード削除作業指示の説明。 |
+| `output-dir` | 出力 JSON ペイロードを書き込むディレクトリ。 |
+
+{style="table-layout:auto"}
+
+以下の例に、CSV、TSV、TXT ファイルから変換された成功した JSON ペイロードを示します。 指定した名前空間に関連付けられたレコードが含まれており、メールアドレスで識別されたレコードを削除するために使用されます。
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+次の表に、JSON ペイロードのプロパティを示します。
+
+| プロパティ | 説明 |
+| ---          | ---     |
+| `action` | レコード削除作業指示に対してリクエストされたアクション。 変換スクリプトによって自動的に `delete_identity` に設定されます。 |
+| `datasetId` | データセットの一意の ID。 |
+| `displayName` | このレコード削除作業指示の人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の説明。 |
+| `identities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`: ID 名前空間を指定する `code` プロパティを持つオブジェクト（例えば「email」）。</li><li> `id`：この名前空間で削除する ID 値。</li></ul> |
+
+{style="table-layout:auto"}
+
+### 生成された JSON データを `/workorder` エンドポイントに送信します。
+
+リクエストを送信するには、「レコードの削除作業指示の作成 [ の節の手順に従 ](#create) ます。 `-d` POST リクエストを `curl` API エンドポイントに送信する場合は、変換された JSON ペイロードをリクエスト本文（`/workorder`）として使用します。
 
 ## 特定のレコード削除作業指示の詳細の取得 {#lookup}
 
