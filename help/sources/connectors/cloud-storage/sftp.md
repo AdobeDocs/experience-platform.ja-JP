@@ -2,7 +2,7 @@
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: 06db0d3023ebf26aa604880fb6b614e331b1b2ea
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 44%
@@ -93,7 +93,7 @@ The key's randomart image is:
 次に、秘密鍵のファイルパスを指定して次のコマンドを実行し、秘密鍵を [!DNL Base64] でエンコードします。
 
 ```shell
-C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa" -AsByteStream)) > "C:\Users\lucy\.ssh\id_rsa_base64"
 ```
 
 上記のコマンドにより、[!DNL Base64] でエンコードされた秘密鍵が指定したファイルパスに保存されます。これで、その秘密鍵を使用して [!DNL SFTP] への認証を行い、Experience Platformに接続できます。
