@@ -14,9 +14,9 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->[!DNL Acxiom Real ID Audience Connection] の宛先はベータ版です。 この宛先コネクタとドキュメントページは、[!DNL Acxiom] チームが作成および管理します。 お問い合わせや更新のリクエストについては、Acxiom に直接お問い合わせください [ こちら ](mailto:acxiom-adobe-help@acxiom.com)。
+>[!DNL Acxiom Real ID Audience Connection] の宛先はベータ版です。 この宛先コネクタとドキュメントページは、[!DNL Acxiom] チームが作成および管理します。 お問い合わせや更新のリクエストについては、Acxiom に直接お問い合わせください [&#x200B; こちら &#x200B;](mailto:acxiom-adobe-help@acxiom.com)。
 
-[!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。
+[!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[&#x200B; テクノロジー &#x200B;](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。
 
 このチュートリアルでは、[!DNL Acxiom Real ID Audience Connection] ユーザーインターフェイスを使用して [!DNL Adobe Experience Platform] 宛先コネクタを作成する手順を説明します。 このコネクタは、オーディエンスを作成し、選択した宛先に配信するために使用されます。
 
@@ -34,7 +34,7 @@ ht-degree: 13%
 ## 前提条件 {#prerequisites}
 
 * **利用条件を確認する：** 新しい [!DNL Acxiom Real ID Audience Connection] の宛先を設定する前に、利用条件を読み、署名す [!DNL Acxiom's] 必要があります。 実行した受注が完了すると、基本契約へのリンクが表示されます。 契約書に署名するまで、Experience Platformの宛先カタログに [!DNL Acxiom Real ID Audience Connection] の宛先カードは表示されません。 契約書に同意して署名すると、オンボーディングプロセス [!DNL Adobe] 完了し、[!DNL Acxiom Real ID Audience Connection] の宛先カードが表示されます。
-* **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 ](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
+* **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
 * **製品のライセンス [!DNL Acxiom's Real ID] 取得：** ライセンスを取得したら、Real-Time CDP内で Acxiom の Real ID を使用できるようにします。 詳細については、「[Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)」を参照してください。
 
 
@@ -53,7 +53,7 @@ ht-degree: 13%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------------|----------------|----------------|
-| セグメント化サービス | ✓ | Experience Platform [ セグメント化サービス ](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| セグメント化サービス | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/ui/audience-portal#import-audience)オーディエンス。 |
 
 
@@ -83,15 +83,15 @@ ht-degree: 13%
 
 * **セグメントカテゴリ**：セグメントの対象となるターゲットカテゴリまたは垂直方向です。 例：金融サービス、自動車、医療など
 
-![LG 広告の宛先の詳細 ](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png)
+![LG 広告の宛先の詳細 &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png)
 
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 
 
@@ -114,11 +114,11 @@ ht-degree: 13%
 
 
 
-**[!UICONTROL Source Field]** 列で、対応するターゲットフィールドにマッピングするソース属性の名前を入力するか、矢印アイコンを選択して **[!UICONTROL  Select source field]** 画面を開きます。 次に、「**[!UICONTROL Next]**」を選択します。
-![ マッピング画面 ](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
+**[!UICONTROL Source Field]** 列で、対応するターゲットフィールドにマッピングするソース属性の名前を入力するか、矢印アイコンを選択して **[!UICONTROL &#x200B; Select source field]** 画面を開きます。 次に、「**[!UICONTROL Next]**」を選択します。
+![&#x200B; マッピング画面 &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
-標準スキーマを使用していない場合 [!DNL Adobe's]、クエリサービスを使用して [ 標準スキーマにフィールド名を入力する方法について詳しくは ](../../../query-service/ui/overview.md) クエリサービス UI ガイド [!DNL Adobe] ドキュメントを参照してください。
+標準スキーマを使用していない場合 [!DNL Adobe's]、クエリサービスを使用して [&#x200B; 標準スキーマにフィールド名を入力する方法について詳しくは &#x200B;](../../../query-service/ui/overview.md) クエリサービス UI ガイド [!DNL Adobe] ドキュメントを参照してください。
 
 
 ### レビュー {#review}
@@ -127,7 +127,7 @@ ht-degree: 13%
 
 結果に満足している場合は、「**[!UICONTROL Finish]**」を選択して、宛先をアクティベートします。
 
-![ オーディエンスをレビュー ](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png)
+![&#x200B; オーディエンスをレビュー &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png)
 
 
 ## データの使用とガバナンス {#data-usage-governance}
