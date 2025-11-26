@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先設定の削除
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 94%
+source-wordcount: '279'
+ht-degree: 85%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 94%
 
 ## 宛先設定の削除 {#delete}
 
-削除したい宛先設定の `{INSTANCE_ID}` で `/authoring/destinations` エンドポイントに `DELETE` リクエストを行うことで、[既存の](create-destination-configuration.md)宛先サーバー設定を削除できます。
+削除したい宛先設定の [ で ](create-destination-configuration.md) エンドポイントに `DELETE` リクエストを行うことで、`/authoring/destinations` 既存 `{INSTANCE_ID}` の宛先設定を削除できます。
 
 >[!TIP]
 >
@@ -58,7 +58,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 
