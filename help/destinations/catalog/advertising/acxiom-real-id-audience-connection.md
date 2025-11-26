@@ -35,7 +35,7 @@ ht-degree: 13%
 
 * **利用条件を確認する：** 新しい [!DNL Acxiom Real ID Audience Connection] の宛先を設定する前に、利用条件を読み、署名す [!DNL Acxiom's] 必要があります。 実行した受注が完了すると、基本契約へのリンクが表示されます。 契約書に署名するまで、Experience Platformの宛先カタログに [!DNL Acxiom Real ID Audience Connection] の宛先カードは表示されません。 契約書に同意して署名すると、オンボーディングプロセス [!DNL Adobe] 完了し、[!DNL Acxiom Real ID Audience Connection] の宛先カードが表示されます。
 * **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
-* **製品のライセンス [!DNL Acxiom's Real ID] 取得：** ライセンスを取得したら、Real-Time CDP内で Acxiom の Real ID を使用できるようにします。 詳細については、「[Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)」を参照してください。
+* **製品のライセンス [!DNL Acxiom's Real ID] 取得：** ライセンスを取得したら、Real-Time CDP内で Acxiom の Real ID を使用できるようにします。 詳細については、「[Acxiom Data Enhancement](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)」を参照してください。
 
 
 ## サポートされている ID {#supported-identities}
@@ -95,7 +95,7 @@ ht-degree: 13%
 
 
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ ht-degree: 13%
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/data-governance/home)を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
