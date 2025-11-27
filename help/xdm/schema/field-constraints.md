@@ -17,9 +17,9 @@ ht-degree: 6%
 
 ## はじめに
 
-このガイドを使用する前に、[ スキーマ構成の基本 ](./composition.md) を参照して、XDM スキーマ、クラス、スキーマフィールドグループの概要を確認してください。
+このガイドを使用する前に、[&#x200B; スキーマ構成の基本 &#x200B;](./composition.md) を参照して、XDM スキーマ、クラス、スキーマフィールドグループの概要を確認してください。
 
-API で独自のフィールドタイプを定義する予定がある場合は、[ スキーマレジストリ開発者ガイド ](../api/getting-started.md) を参照して、フィールドグループとデータタイプを作成し、カスタムフィールドを含める方法を確認することを強くお勧めします。 Experience Platform UI を使用してスキーマを作成する場合は、[UI でのフィールドの定義 ](../ui/fields/overview.md) に関するガイドを参照して、カスタムフィールドグループおよびデータタイプ内で定義するフィールドに対する制約の実装方法を確認してください。
+API で独自のフィールドタイプを定義する予定がある場合は、[&#x200B; スキーマレジストリ開発者ガイド &#x200B;](../api/getting-started.md) を参照して、フィールドグループとデータタイプを作成し、カスタムフィールドを含める方法を確認することを強くお勧めします。 Experience Platform UI を使用してスキーマを作成する場合は、[UI でのフィールドの定義 &#x200B;](../ui/fields/overview.md) に関するガイドを参照して、カスタムフィールドグループおよびデータタイプ内で定義するフィールドに対する制約の実装方法を確認してください。
 
 ## 基本構造と例 {#basic-types}
 
@@ -27,7 +27,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 
 >[!NOTE]
 >
->JSON スキーマおよびExperience Platform API のその他の基盤となるテクノロジーについて詳しくは、[API の基本ガイド ](../../landing/api-fundamentals.md#json-schema) を参照してください。
+>JSON スキーマおよびExperience Platform API のその他の基盤となるテクノロジーについて詳しくは、[API の基本ガイド &#x200B;](../../landing/api-fundamentals.md#json-schema) を参照してください。
 
 次の表に、各 XDM タイプが JSON スキーマでどのように表現されるかを、タイプに準拠する値の例とともに示します。
 
@@ -60,11 +60,11 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:9007199254740991、
   "minimum": -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:2147483648、
   "minimum": -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:32767、
   "minimum": -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:128,
   "minimum":-128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date-time"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -151,7 +151,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 >
 >次の表に示す標準の XDM タイプの中に、[!UICONTROL Map] タイプも含まれています。 マップは、データが特定の値にマッピングされるキーとして表される場合、またはキーが静的スキーマに合理的に含まれず、データ値として扱われる必要がある場合に、標準スキーマで使用されます。
 >
->多くの標準 XDM コンポーネントはマップタイプを使用し、必要に応じて [ カスタムマップフィールドを定義 ](../tutorials/custom-fields-api.md#custom-maps) することもできます。 次の表に含まれるマップタイプは、既存のデータが以下に示すいずれかの形式に現在保存されている場合、そのデータを XDM にマッピングする方法を決定する際に役立ちます。
+>多くの標準 XDM コンポーネントはマップタイプを使用し、必要に応じて [&#x200B; カスタムマップフィールドを定義 &#x200B;](../tutorials/custom-fields-api.md#custom-maps) することもできます。 次の表に含まれるマップタイプは、既存のデータが以下に示すいずれかの形式に現在保存されている場合、そのデータを XDM にマッピングする方法を決定する際に役立ちます。
 
 ### Parquet、Spark SQL および Java {#parquet}
 
@@ -206,4 +206,4 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 
-Schema Registry API では、形式とオプションの制約を使用して、カスタムフィールドを定義できます。 詳しくは、[ スキーマレジストリ API でのカスタムフィールドの定義 ](../tutorials/custom-fields-api.md) に関するガイドを参照してください。
+Schema Registry API では、形式とオプションの制約を使用して、カスタムフィールドを定義できます。 詳しくは、[&#x200B; スキーマレジストリ API でのカスタムフィールドの定義 &#x200B;](../tutorials/custom-fields-api.md) に関するガイドを参照してください。

@@ -16,11 +16,11 @@ ht-degree: 31%
 
 [!DNL Schema Registry] は、Adobe Experience Platform内で [!DNL Schema Library] にアクセスするために使用されます。 この [!DNL Schema Library] には、お客様が使用するアプリケーションを持つAdobe、[!DNL Experience Platform] パートナー、ベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
-このチュートリアルでは、[!DNL Schema Registry] API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。 [!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[ スキーマエディターのチュートリアル ](create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
+このチュートリアルでは、[!DNL Schema Registry] API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。 [!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[&#x200B; スキーマエディターのチュートリアル &#x200B;](create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
 
 >[!NOTE]
 >
->CSV データをExperience Platformに取り込む場合は、[ そのデータを、AI 生成のレコメンデーションで作成された XDM スキーマにマッピング ](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）できます。その際、スキーマを手動で作成する必要はありません。
+>CSV データをExperience Platformに取り込む場合は、[&#x200B; そのデータを、AI 生成のレコメンデーションで作成された XDM スキーマにマッピング &#x200B;](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）できます。その際、スキーマを手動で作成する必要はありません。
 
 ## はじめに
 
@@ -31,7 +31,7 @@ ht-degree: 31%
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ `Accept` ヘッダーとその取り得る値には特に注意を払います）。
+このチュートリアルを開始する前に、[&#x200B; 開発者ガイド &#x200B;](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ `Accept` ヘッダーとその取り得る値には特に注意を払います）。
 
 このチュートリアルでは、小売ロイヤルティプログラムのメンバーに関連するデータを記述する「ロイヤルティメンバー」スキーマを作成する手順について説明します。開始する前に、付録にある[完全なロイヤルティメンバースキーマ](#complete-schema)をプレビューできます。
 
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-このリクエストは、ロイヤルティメンバースキーマを更新して、[[!UICONTROL Demographic Details] フィールドグループ内のフィールドを含め ](../field-groups/profile/demographic-details.md) す（`profile-person-details`）。
+このリクエストは、ロイヤルティメンバースキーマを更新して、[[!UICONTROL Demographic Details] フィールドグループ内のフィールドを含め &#x200B;](../field-groups/profile/demographic-details.md) す（`profile-person-details`）。
 
 `profile-person-details` フィールドグループを追加することで、ロイヤルティメンバースキーマは、名前（名）、名前（姓）、誕生日など、ロイヤルティプログラムメンバーの人口統計情報をキャプチャするようになりました。
 
@@ -588,7 +588,7 @@ curl -X POST\
 
 ### カスタムフィールドグループのスキーマへの追加
 
-[ 標準フィールドグループの追加 ](#add-a-field-group) と同じ手順に従って、新しく作成したフィールドグループをスキーマに追加できるようになりました。
+[&#x200B; 標準フィールドグループの追加 &#x200B;](#add-a-field-group) と同じ手順に従って、新しく作成したフィールドグループをスキーマに追加できるようになりました。
 
 **API 形式**
 
@@ -1128,7 +1128,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストでは、ロイヤルティメンバースキーマの `personalEmail.address` フィールドに ID 記述子を定義します。 これにより、ロイヤルティ [!DNL Experience Platform] メンバーのメールアドレスを識別子として使用して、個人に関する情報をつなぎ合わせるのに役立ちます。 また、この呼び出しは、`xdm:isPrimary` を `true` に設定することで、このフィールドをスキーマのプライマリ ID として設定します。これは、[ リアルタイム顧客プロファイルで使用するためのスキーマの有効化 ](#profile) の要件です。
+次のリクエストでは、ロイヤルティメンバースキーマの `personalEmail.address` フィールドに ID 記述子を定義します。 これにより、ロイヤルティ [!DNL Experience Platform] メンバーのメールアドレスを識別子として使用して、個人に関する情報をつなぎ合わせるのに役立ちます。 また、この呼び出しは、`xdm:isPrimary` を `true` に設定することで、このフィールドをスキーマのプライマリ ID として設定します。これは、[&#x200B; リアルタイム顧客プロファイルで使用するためのスキーマの有効化 &#x200B;](#profile) の要件です。
 
 ```SHELL
 curl -X POST \
@@ -1181,7 +1181,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->和集合表示の操作について詳しくは、[ 開発者ガイドの ](../api/unions.md) 和集合 [!DNL Schema Registry] の節を参照してください。
+>和集合表示の操作について詳しくは、[&#x200B; 開発者ガイドの &#x200B;](../api/unions.md) 和集合 [!DNL Schema Registry] の節を参照してください。
 
 ### `union` タグを追加
 
@@ -1376,7 +1376,7 @@ Experience Platform UI を使用して、[!DNL Schema Registry] API を通じて
 
 開始するには、**[!UICONTROL Schemas]**/**[!UICONTROL Browse]** に移動します。 テキスト入力フィールドを使用して、スキーマ名（例：`Campaign Member`）を検索し、テーブルからスキーマ名を選択します。
 
-![ スキーマを検索して選択するためにテキスト入力フィールドがハイライト表示されたスキーマ参照ビュー。](../images/tutorials/create-schema/schemas-browse.png)
+![&#x200B; スキーマを検索して選択するためにテキスト入力フィールドがハイライト表示されたスキーマ参照ビュー。](../images/tutorials/create-schema/schemas-browse.png)
 
 ### スキーマ構造の確認
 
@@ -1385,7 +1385,7 @@ Experience Platform UI を使用して、[!DNL Schema Registry] API を通じて
 * 追加したすべての標準フィールドグループがキャンバスに表示されます。
 * カスタムフィールドグループが構造内に表示され、フィールドを表示するように展開されます。
 
-![ 標準フィールドグループとカスタムフィールドグループが展開された、完全なスキーマ構造を表示するスキーマキャンバス。](../images/tutorials/create-schema/schema-canvas.png)
+![&#x200B; 標準フィールドグループとカスタムフィールドグループが展開された、完全なスキーマ構造を表示するスキーマキャンバス。](../images/tutorials/create-schema/schema-canvas.png)
 
 ### スキーマプロパティの確認
 
@@ -1401,7 +1401,7 @@ Experience Platform UI を使用して、[!DNL Schema Registry] API を通じて
 >
 >割り当てられたクラス（この例では **[!UICONTROL XDM Business Campaign Members]**）が左側の **[!UICONTROL Composition]** パネルに表示されます。
 
-![ スキーマルートが選択されたスキーマエディタービューが開き、スキーマプロパティパネルが開いて主要なメタデータを確認できます。](../images/tutorials/create-schema/review-schema-properties.png)
+![&#x200B; スキーマルートが選択されたスキーマエディタービューが開き、スキーマプロパティパネルが開いて主要なメタデータを確認できます。](../images/tutorials/create-schema/review-schema-properties.png)
 
 ### ID フィールドを検証
 
