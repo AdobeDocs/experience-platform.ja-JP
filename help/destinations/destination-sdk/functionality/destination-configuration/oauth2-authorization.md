@@ -2,17 +2,17 @@
 description: ここでは、Destination SDKでサポートされている様々な OAuth 2 認証フローについて説明し、宛先用の OAuth 2 認証の設定手順を示します。
 title: OAuth 2 認証
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 78%
+source-wordcount: '2182'
+ht-degree: 77%
 
 ---
 
 
 # OAuth 2 認証
 
-Destination SDKは、宛先に対して複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク &#x200B;](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
+Destination SDKは、宛先に対して複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク ](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
 
 ここでは、Destination SDKでサポートされている様々な OAuth 2 認証フローについて説明し、宛先用の OAuth 2 認証の設定手順を示します。
 
@@ -56,7 +56,7 @@ Destination SDKは、宛先に対して複数の認証方式をサポートし�
 
 ### Destination SDK で行う必要があること {#to-do-in-destination-sdk}
 
-Experience Platformで宛先用に OAuth 2 認証を設定するには、[&#x200B; パラメーターの &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) 宛先設定 `customerAuthenticationConfigurations` に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
+Experience Platformで宛先用に OAuth 2 認証を設定するには、[ パラメーターの ](../../authoring-api/destination-configuration/create-destination-configuration.md) 宛先設定 `customerAuthenticationConfigurations` に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
 
 ## サポートされる OAuth 2 付与タイプ {#oauth2-grant-types}
 
@@ -82,7 +82,7 @@ Experience Platform は、以下の表にある 3 つの OAuth 2 付与タイプ
 OAuth 2 認証用にAdobeが設計したシステムは、次のとおりです。
 
 * 3 つの OAuth 2 付与をすべてサポートすると同時に、それらのバリエーション（追加のデータフィールド、非標準的な API 呼び出しなど）を考慮します。
-* 90 日、30 分または指定したその他のライフタイム値など、様々なライフタイム値を持つアクセストークンをサポートします。
+* 様々なライフタイム値を持つアクセストークンをサポートします。 Adobeでは、トークンの有効期間の値を少なくとも 24 時間に設定することをお勧めします。
 * 更新トークンを含む／含まない OAuth 2 認証フローをサポートします。
 
 ## 認証コードを使用した OAuth 2 {#authorization-code}
@@ -95,7 +95,7 @@ OAuth 2 認証用にAdobeが設計したシステムは、次のとおりです�
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -144,7 +144,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 >
 > 以下の設定の `username` および `password` に対して、任意のパラメーターを追加する必要はありません。宛先設定で `"grant": "OAUTH2_PASSWORD"` を追加すると、システムは、宛先を認証する際に、ユーザーに Experience Platform UI でユーザー名およびパスワードを指定することをリクエストします。
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -182,7 +182,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
