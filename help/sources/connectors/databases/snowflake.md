@@ -3,10 +3,10 @@ title: Snowflake Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してSnowflakeをAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 6%
+source-wordcount: '1570'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 6%
 >* デフォルトでは、[!DNL Snowflake] ソースは `null` を空の文字列として解釈します。 `null` 値がAdobe Experience Platformで `null` 定されたとおりに正しく記述されていることを確認するには、Adobe担当者にお問い合わせください。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 [!DNL Snowflake] ソースに対してサポートされているタイムスタンプは、UTC 時間を使用した TIMESTAMP_NTZ のみです。
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+[!DNL Snowflake] は、組織が大量のデータを効率的に保存、処理、分析できるように設計されたクラウドベースのデータウェアハウスプラットフォームです。 クラウドのスケーラビリティと柔軟性を活用するように構築されたの [!DNL Snowflake]、データ統合、高度な分析、チーム間のシームレスな共有をサポートします。 完全マネージドサービスとして、[!DNL Snowflake] は従来のデータベースに共通するメンテナンスの複雑さを排除し、データからインサイトと価値を引き出すことに集中できます。
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Experience Platformは、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、[!DNL Snowflake] が含まれます。
+[!DNL Snowflake] ソースを使用して接続し、[!DNL Snowflake] からAdobe Experience Platformにデータを取り込むことができます。 [!DNL Snowflake] ソースを設定してExperience Platformに接続する方法については、以下のドキュメントをお読みください。
 
 ## 前提条件 {#prerequisites}
 
@@ -42,7 +42,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[&#x200B; アカウント識別子の取得  [!DNL Snowflake]  の節を参照し &#x200B;](#retrieve-your-account-identifier) ください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`myorg-myaccount.snowflakecomputing.com`。 詳しくは、[ アカウント識別子の取得  [!DNL Snowflake]  の節を参照し ](#retrieve-your-account-identifier) ください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
 | `database` | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
@@ -56,15 +56,15 @@ Experience Platform は、サードパーティのデータベースからデー
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[&#x200B; アカウント識別子の取得  [!DNL Snowflake]  の節を参照し &#x200B;](#retrieve-your-account-identifier) ください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`myorg-myaccount.snowflakecomputing.com`。 詳しくは、[ アカウント識別子の取得  [!DNL Snowflake]  の節を参照し ](#retrieve-your-account-identifier) ください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
-| `privateKey` | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[&#x200B; 秘密鍵の取得 &#x200B;](#retrieve-your-private-key) の節を参照してください。 |
+| `privateKey` | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得 ](#retrieve-your-private-key) の節を参照してください。 |
 | `privateKeyPassphrase` | 秘密鍵のパスフレーズは、暗号化された秘密鍵を使用して認証を行う場合に使用する必要がある、追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
 | `port` | インターネット経由でサーバーに接続するときに [!DNL Snowflake] が使用するポート番号です。 |
 | `database` | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
 
-これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
+これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
 
 >[!TAB  基本認証（AWS） ]
 
@@ -72,7 +72,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 >[!WARNING]
 >
->[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -90,98 +90,101 @@ Experience Platform は、サードパーティのデータベースからデー
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[&#x200B; アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 &#x200B;](#etrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`http://myorg-myaccount.snowflakecomputing.com/`。 詳しくは、[ アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 ](#etrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
-| `privateKey` | [!DNL Snowflake] ユーザーの秘密鍵。base64 でエンコードされ、ヘッダーや改行のない 1 行として使用されます。 準備するには、PEM ファイルの内容をコピーし、`BEGIN`/`END` 行とすべての改行を削除してから、結果を base64 エンコードします。 詳しくは、[&#x200B; 秘密鍵の取得 &#x200B;](#retrieve-your-private-key) の節を参照してください。 **メモ：** 暗号化された秘密鍵は、現在、AWS接続ではサポートされていません。 |
+| `privateKey` | [!DNL Snowflake] ユーザーの秘密鍵。base64 でエンコードされ、ヘッダーや改行のない 1 行として使用されます。 準備するには、PEM ファイルの内容をコピーし、`BEGIN`/`END` 行とすべての改行を削除してから、結果を base64 エンコードします。 詳しくは、[ 秘密鍵の取得 ](#retrieve-your-private-key) の節を参照してください。 **メモ：** 暗号化された秘密鍵は、現在、AWS接続ではサポートされていません。 |
 | `port` | インターネット経由でサーバーに接続するときに [!DNL Snowflake] が使用するポート番号です。 |
 | `database` | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
 
-これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
+これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
 
 >[!ENDTABS]
 
 ### アカウント識別子の取得 {#retrieve-your-account-identifier}
 
-アカウント ID を使用してExperience Platformで [!DNL Snowflake] インスタンスを認証するため、[!DNL Snowflake] UI ダッシュボードからアカウント ID を取得する必要があります。
+Experience Platformで [!DNL Snowflake] インスタンスの認証に使用するので、[!DNL Snowflake] UI ダッシュボードからアカウント ID を取得する必要があります。
 
 アカウント識別子を取得するには：
 
-* [[!DNL Snowflake]  アプリケーション UI ダッシュボード &#x200B;](https://app.snowflake.com/) でアカウントに移動します。
-* 左側のナビゲーションで「**[!DNL Accounts]**」を選択し、続いてヘッダーから「**[!DNL Active Accounts]**」を選択します。
+* [[!DNL Snowflake]  アプリケーション UI ダッシュボード ](https://app.snowflake.com/) を使用して、アカウントにアクセスします。
+* 左側のナビゲーションで「**[!DNL Accounts]**」を選択し、ヘッダーから「**[!DNL Active Accounts]**」を選択します。
 * 次に、情報アイコンを選択し、現在の URL のドメイン名を選択してコピーします。
 
-![&#x200B; ドメイン名が選択されたSnowflake UI ダッシュボード。](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+![ ドメイン名が選択されたSnowflake UI ダッシュボード。](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
-### 秘密鍵の取得 {#retrieve-your-private-key}
+### RSA キーペアの生成
 
-[!DNL Snowflake] 接続でキーペア認証を使用している場合は、Experience Platformに接続する前に秘密鍵も生成する必要があります。
+コマンドラインインターフェイスで OpenSSL を使用して、2048 ビットの RSA キーペアを PKCS#8 形式で生成します。 セキュリティを確保するために暗号化された秘密鍵を作成することをお勧めします。その場合、パスフレーズが必要になります。
 
 >[!BEGINTABS]
 
->[!TAB  暗号化された秘密鍵の作成 ]
+>[!TAB  暗号化された秘密鍵の生成 ]
 
 暗号化された [!DNL Snowflake] 秘密鍵を生成するには、ターミナルで次のコマンドを実行します。
 
-```shell
-openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```bash
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
 ```
 
-成功した場合は、PEM 形式の秘密鍵が届きます。
-
-```shell
-|-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIE6T...
-|-----END ENCRYPTED PRIVATE KEY-----
-```
-
->[!TAB  暗号化されていない秘密鍵の作成 ]
+>[!TAB  暗号化されていない秘密鍵の生成 ]
 
 暗号化されていない [!DNL Snowflake] 秘密鍵を生成するには、ターミナルで次のコマンドを実行します。
 
-```shell
+```bash
 openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
-```
-
-成功した場合は、PEM 形式の秘密鍵が届きます。
-
-```shell
-|-----BEGIN PRIVATE KEY-----
-MIIE6T...
-|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]
 
-次に、秘密鍵を取得し、[!DNL Base64] でエンコードします。 [!DNL Snowflake] 秘密鍵に対して変換や形式変換を行わないようにしてください。 さらに、秘密鍵を [!DNL Base64] でエンコードする前に、秘密鍵の末尾に末尾の改行文字がないことを確認する必要があります。
+### 秘密鍵からの公開鍵の生成
+
+次に、コマンドラインインターフェイスで次のコマンドを実行して、秘密鍵に基づいて公開鍵を作成します。
+
+```bash
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
+```
+
+### 公開鍵を [!DNL Snowflake] ユーザーに割り当てます
+
+生成された公開鍵をExperience Platformが使用する [!DNL Snowflake] サービスユーザーに関連付けるには、**管理者の役割（** SECURITYADMIN[!DNL Snowflake] など）を使用する必要があります。 公開鍵の内容を取得するには、`rsa_key.pub` ファイルを開き、`-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` 行を除く内容全体をコピーします。 次に、[!DNL Snowflake] で次の SQL を実行します。
+
+```sql
+ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
+```
+
+### 秘密鍵を [!DNL Base64] でエンコードします
+
+Experience Platformでは、秘密鍵を [!DNL Base64] エンコードし、接続設定時に文字列として指定する必要があります。 適切なツールまたはスクリプトを使用して、`rsa_key.p8` ファイルのコンテンツを 1 つの [!DNL Base64] 文字列にエンコードします。
+
+>[!TIP]
+>
+>エンコーディングプロセスの前後に、ヘッダー/フッター行 `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)` を含め、余分なスペースや改行がないことを確認してください。これにより、認証エラーが発生する可能性があります。
 
 ### 設定の検証
 
-[!DNL Snowflake] データのソース接続を作成する前に、次の設定も満たしていることを確認する必要があります。
+Experience Platformで [!DNL Snowflake] ソース接続を作成する前に、ユーザーの **[!DNL Default Role]** と **[!DNL Default Warehouse]** がExperience Platformで指定した値と一致していることを確認する必要があります。 これらの設定は、[!DNL Snowflake] UI で `DESCRIBE USER {USERNAME}` SQL コマンドを使用して確認できます。
 
-* 特定のユーザーに割り当てられるデフォルトのウェアハウスは、Experience Platformへの認証時に入力するウェアハウスと同じである必要があります。
-* 特定のユーザーに割り当てられたデフォルトのロールは、Experience Platformへの認証時に入力したのと同じデータベースにアクセスできる必要があります。
-
-ロールとウェアハウスを検証するには：
+または、以下の手順に従って設定を確認することもできます。
 
 * 左側のナビゲーションで「**[!DNL Admin]**」を選択し、「**[!DNL Users & Roles]**」を選択します。
 * 適切なユーザーを選択し、右上隅にある省略記号（`...`）を選択します。
 * 表示される [!DNL Edit user] ウィンドウで、[!DNL Default Role] に移動し、特定のユーザーに関連付けられている役割を表示します。
 * 同じウィンドウで、[!DNL Default Warehouse] に移動し、特定のユーザーに関連付けられているウェアハウスを表示します。
 
-![&#x200B; ロールとウェアハウスを確認できるSnowflake UI。](../../images/tutorials/create/snowflake/snowflake-configs.png)
+![ ロールとウェアハウスを確認できるSnowflake UI。](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-正常にエンコードされると、[!DNL Base64] でエンコードされた秘密鍵をExperience Platformで使用して [!DNL Snowflake] アカウントを認証できます。
+## 次の手順
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Snowflake] をExperience Platformに接続する方法について説明しています。
+設定が完了したら、[!DNL Snowflake] アカウントをExperience Platformに接続する手順に進むことができます。 詳しくは、次のドキュメントを参照してください。
 
-## API を使用した [!DNL Snowflake] のExperience Platformへの接続
+### API を使用した [!DNL Snowflake] のExperience Platformへの接続
 
-* [Flow Service API を使用したSnowflake ベース接続の作成](../../tutorials/api/create/databases/snowflake.md)
+* [API [!DNL Snowflake]  使用したExperience Platformへの接続](../../tutorials/api/create/databases/snowflake.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
-## UI を使用した [!DNL Snowflake] のExperience Platformへの接続
+### UI を使用した [!DNL Snowflake] のExperience Platformへの接続
 
-* [UI でのSnowflake ソースコネクタの作成](../../tutorials/ui/create/databases/snowflake.md)
+* [UI [!DNL Snowflake]  使用したExperience Platformへの接続](../../tutorials/ui/create/databases/snowflake.md)
 * [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
