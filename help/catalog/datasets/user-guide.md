@@ -58,13 +58,13 @@ ht-degree: 11%
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="調整されたキャンペーン"
 >abstract="この切替スイッチを有効にすると、選択したデータセットをAdobe Journey Optimizer オーケストレートキャンペーンで使用できるようになります。 データセットは 1 つのリレーショナルスキーマを使用する必要があり、スキーマごとにデータセットを 1 つだけ作成できます。"
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="オーケストレーションキャンペーンのデータセットを有効にする"
+>additional-url="https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="オーケストレーションキャンペーンのデータセットを有効にする"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="参照のために有効にする"
 >abstract="このデータセットをルックアップに有効にして、Journey Optimizerでそのデータをパーソナライゼーション、意思決定、ジャーニーオーケストレーションに使用できるようにします。"
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey OptimizerでのAdobe Experience Platform データの使用"
+>additional-url="https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey OptimizerでのAdobe Experience Platform データの使用"
 
 [!DNL Experience Platform] UI で、左側のナビゲーションで **[!UICONTROL Datasets]** を選択して、**[!UICONTROL Datasets]** ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが準拠するスキーマ、最新の取得実行のステータスなど）が表示されます。
 
