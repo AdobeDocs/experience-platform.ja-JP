@@ -26,7 +26,7 @@ Experience Platform UI で豊富なユースケースプレイブックのギャ
 
 このビデオでは、サンドボックスの作成、権限の設定、Journey Optimizerでのメール、プッシュおよび SMS 通知用のチャネルサーフェスの設定に必要な手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449827?captions=jpn&learn=on)
 
 ## 開発サンドボックスを作成 {#create-development-sandbox}
 
