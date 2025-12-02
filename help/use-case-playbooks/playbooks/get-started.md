@@ -89,13 +89,13 @@ Experience Platform UI で豊富なユースケースプレイブックのギャ
 
 ## Journey Optimizerでのサンドボックスおよびチャネルサーフェスの設定 {#configure-channel-surfaces}
 
-組織が [Adobe Journey Optimizerのライセンスを取得していて &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home)Journey Optimizer用に設計されたプレイブックを使用する場合は、サンドボックスでチャネルサーフェスを設定します。 チャネルサーフェスは、メールのタイプ、送信者のメールと名前、モバイルアプリ、SMS 設定など、メッセージに必要なすべての技術パラメーターを定義します。 [詳しくは、Adobe Journey Optimizer でのチャネルサーフェスの設定方法を参照してください](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces)。
+組織が [Adobe Journey Optimizerのライセンスを取得していて &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home)Journey Optimizer用に設計されたプレイブックを使用する場合は、サンドボックスでチャネルサーフェスを設定します。 チャネルサーフェスは、メールのタイプ、送信者のメールと名前、モバイルアプリ、SMS 設定など、メッセージに必要なすべての技術パラメーターを定義します。 [詳しくは、Adobe Journey Optimizer でのチャネルサーフェスの設定方法を参照してください](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/configuration/channel-surfaces)。
 
 Journey Optimizerでプレイブックのインスタンスを作成するには、メール、プッシュ、SMS 通知用のチャネルサーフェスを設定する必要があります。
 
 ### メールチャネルサーフェス
 
-Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[&#x200B; メールチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html) のドキュメントを参照してください。
+Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[&#x200B; メールチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ja) のドキュメントを参照してください。
 
 ### SMS チャネルサーフェス
 
@@ -111,7 +111,7 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 次に、チャネル設定で確認したチャネル、プラットフォームおよびアプリを選択します。 **送信** を選択して、プッシュチャネルサーフェスを作成します。
 
-[&#x200B; プッシュチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html) に関するドキュメントを参照してください。
+[&#x200B; プッシュチャネルサーフェスの設定方法 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=ja) に関するドキュメントを参照してください。
 
 ## 次の手順 {#next-steps}
 
