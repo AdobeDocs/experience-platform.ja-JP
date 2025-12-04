@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先サーバーを作成するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の作成
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 86%
@@ -248,7 +248,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -579,7 +583,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -850,7 +854,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 動的ドロップダウン宛先サーバーの作成 {#dynamic-dropdown-servers}
 
-[&#x200B; 動的ドロップダウン &#x200B;](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、独自の API に基づいて、ドロップダウン顧客データフィールドを動的に取得および設定します。 例えば、宛先接続に使用したい既存のユーザーアカウントのリストを取得できます。
+[ 動的ドロップダウン ](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、独自の API に基づいて、ドロップダウン顧客データフィールドを動的に取得および設定します。 例えば、宛先接続に使用したい既存のユーザーアカウントのリストを取得できます。
 
 動的ドロップダウン顧客データフィールドを設定する前に、動的ドロップダウンの宛先サーバーを設定する必要があります。
 
@@ -946,7 +950,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
