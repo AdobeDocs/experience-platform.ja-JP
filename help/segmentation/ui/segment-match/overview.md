@@ -15,9 +15,9 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->Adobeは、お客様がオーディエンスの共同作業や交換をおこなうために、2021 年に [!DNL Segment Match] を導入しました。 2025 年初めに、Adobeは、このユースケースを満たすための長期的なアプローチである [0&rbrace;Real-Time CDP Collaboration&rbrace; を導入しました。](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
+>Adobeは、お客様がオーディエンスの共同作業や交換をおこなうために、2021 年に [!DNL Segment Match] を導入しました。 2025 年初めに、Adobeは、このユースケースを満たすための長期的なアプローチである [0&rbrace;Real-Time CDP Collaboration&rbrace; を導入しました。](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/home)
 >
->* 米国、カナダ、オーストラリア、ニュージーランド、EMEA のお客様の場合：Adobeでは、Real-Time CDP PrimeおよびUltimateのお客様に、データの共同作業ユースケースを [!DNL Segment Match] からReal-Time CDP Collaborationに移行することをお勧めします。 Real-Time CDP Collaborationの [&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) および [&#x200B; クイックスタートガイド &#x200B;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) を表示し、Adobe アカウントチームに連絡して詳細を問い合わせてください。
+>* 米国、カナダ、オーストラリア、ニュージーランド、EMEA のお客様の場合：Adobeでは、Real-Time CDP PrimeおよびUltimateのお客様に、データの共同作業ユースケースを [!DNL Segment Match] からReal-Time CDP Collaborationに移行することをお勧めします。 Real-Time CDP Collaborationの [&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/home) および [&#x200B; クイックスタートガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/quick-start-guide) を表示し、Adobe アカウントチームに連絡して詳細を問い合わせてください。
 >* その他のすべての地域のお客様の場合：2026 年にこれらの地域でReal-Time CDP Collaborationがリリースされるまでは、[!DNL Segment Match] をお勧めします。
 
 Adobe Experience Platform Segment Match は、安全で管理された、プライバシーに配慮した方法で 2 人以上のExperience Platform ユーザーがセグメントデータを交換できるようにするセグメント共有サービスです。 [!DNL Segment Match] では、Experience Platformのプライバシー基準と個人識別子（ハッシュ化されたメールアドレス、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。
@@ -51,7 +51,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 | 名前空間 | 説明 |
 | --------- | ----------- |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Experience Platformには、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) と [data prep](../../../data-prep/functions.md#hashing) の 2 つが用意されています。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Experience Platformには、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) と [data prep](../../../data-prep/functions.md#hashing) の 2 つが用意されています。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
 | ECID | Experience Cloud ID（ECID）値を表す名前空間。この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID の概要](../../../identity-service/features/ecid.md)を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
