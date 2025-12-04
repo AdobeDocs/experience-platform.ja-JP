@@ -17,4 +17,4 @@ Adobe Experience Platform Web SDK タグ拡張機能は、web プロパティか
 
 以下のビデオを視聴すると、1 回の呼び出しで [!DNL Web SDK]、[!DNL Edge Network]、[!DNL Experience Platform] および [!DNL Analytics] にデータを送信する、Adobe Experience Platform [!DNL Audience Manager] および [!DNL Target] の動作を確認できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413667?captions=jpn)
