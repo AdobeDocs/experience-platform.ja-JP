@@ -33,7 +33,7 @@ alloy("applyResponse",{
 
 ## 応答オブジェクト
 
-このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
+このコマンドを使用して [&#x200B; 応答を処理 &#x200B;](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
 
 * **`propositions`**:Edge Networkから返される提案の配列。 自動的にレンダリングされる提案には、`renderAttempted` に設定され `true` フラグが含まれます。
 * **`inferences`**：このユーザーに関する機械学習情報を含む、推論オブジェクトの配列。

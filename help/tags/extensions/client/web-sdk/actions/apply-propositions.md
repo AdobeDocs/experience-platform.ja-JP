@@ -19,14 +19,14 @@ ht-degree: 1%
 1. 「[!UICONTROL Actions]」で、既存のアクションを選択するか、アクションを作成します。
 1. [!UICONTROL Extension] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL Action type] を **[!UICONTROL Apply propositions]** に設定します。
 
-![ 「提案を適用」アクションタイプを示すExperience Platform タグ UI。](../assets/apply-propositions.png)
+![&#x200B; 「提案を適用」アクションタイプを示すExperience Platform タグ UI。](../assets/apply-propositions.png)
 
 ## ユースケース
 
 このアクションタイプは、次のような様々なユースケースに使用できます。
 
 1. **mbox HTML オファーをレンダリング**。 **[!UICONTROL Send event]** アクションから範囲またはサーフェスを介して明示的にリクエストされた提案は、自動的にはレンダリングされません。 **[!UICONTROL Apply propositions]** アクションタイプを使用すると、提案メタデータを指定してレンダリングする場所を Web SDKに指示できます。
-2. **単一ページアプリケーションでビューのオファーをレンダリング** ビュー変更イベントのレンダリング時に、分析データの準備がまだ整っていない場合は、**[!UICONTROL Apply propositions]** アクションを使用して、ページ上部にビューの提案をレンダリングできます。 詳しくは [ ページイベントの上部と下部（2 番目のページビュー – オプション 2） ](/help/collection/use-cases/personalization/top-bottom-page-events.md) を参照してください。 これを使用するには、フォームに **[!UICONTROL View name]** を入力します。
+2. **単一ページアプリケーションでビューのオファーをレンダリング** ビュー変更イベントのレンダリング時に、分析データの準備がまだ整っていない場合は、**[!UICONTROL Apply propositions]** アクションを使用して、ページ上部にビューの提案をレンダリングできます。 詳しくは [&#x200B; ページイベントの上部と下部（2 番目のページビュー – オプション 2） &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md) を参照してください。 これを使用するには、フォームに **[!UICONTROL View name]** を入力します。
 3. **提案を再レンダリング**。 サイトで React などのフレームワークを使用してコンテンツを再レンダリングする場合、パーソナライゼーションの再適用が必要になる場合があります。 そのような場合は、**[!UICONTROL Apply propositions]** のアクションタイプを使用してこれを行うことができます。
 
 このアクションタイプでは、レンダリングされた提案の表示イベントは送信されません。 レンダリングされた提案を追跡し、後続の **[!UICONTROL Send event]** 呼び出しに含められるようにします。

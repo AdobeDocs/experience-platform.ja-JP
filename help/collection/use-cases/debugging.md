@@ -52,6 +52,6 @@ alloy("setDebug", {"enabled": true});
 
 Adobe Experience Platform Debuggerは Web ページを調べる強力なツールで、Experience Cloud製品の実装のデバッグに役立ちます。 デバッグは、「AEP Web SDK」セクションの「設定」タブで有効にすることができます。
 
-![ デバッガーの有効化 ](../js/assets/enable-debugging.png)
+![&#x200B; デバッガーの有効化 &#x200B;](../js/assets/enable-debugging.png)
 
 詳しくは、[Adobe Experience Platform Debugger](/help/debugger/home.md) 概要を参照してください。

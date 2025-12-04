@@ -10,13 +10,13 @@ ht-degree: 0%
 
 # `setDebug()`
 
-`_satellite.setDebug()` メソッドを使用すると、サイトで [ デバッグ ](../use-cases/debugging.md) を有効または無効にできます。 このメソッドは、ブラウザーコンソールでローカルに実行することを目的としています。Adobeでは、タグルール内でこのメソッドを呼び出さないよう推奨しています。
+`_satellite.setDebug()` メソッドを使用すると、サイトで [&#x200B; デバッグ &#x200B;](../use-cases/debugging.md) を有効または無効にできます。 このメソッドは、ブラウザーコンソールでローカルに実行することを目的としています。Adobeでは、タグルール内でこのメソッドを呼び出さないよう推奨しています。
 
 ```ts
 _satellite.setDebug(enabled: boolean): void
 ```
 
-* **`_satellite.setDebug(true);`**: [ デバッグ ](../use-cases/debugging.md) を有効にします。 タグライブラリで生成されたメッセージ（[`_satellite.logger`](logger.md) を含む）は、ブラウザーコンソールに表示されます。
+* **`_satellite.setDebug(true);`**: [&#x200B; デバッグ &#x200B;](../use-cases/debugging.md) を有効にします。 タグライブラリで生成されたメッセージ（[`_satellite.logger`](logger.md) を含む）は、ブラウザーコンソールに表示されます。
 * **`_satellite.setDebug(false);`**: デバッグを無効にします。 タグライブラリで生成されたコンソールメッセージが表示されない。
 
 ```js
@@ -48,4 +48,4 @@ _satellite.logger.warn('Incorrect rule trigger detected');
 * **接触チャネルスコープ**：デバッグモードは、同じサイト（ドメイン + ポート + プロトコル）に対してのみ保持されます。
 * **ブラウザープロファイルごと**：デバッグモードはクロスプロファイルではありません。
 
-他の形式の [ デバッグ ](../use-cases/debugging.md) は、ブラウザーコンソールメソッドを使用するデバッグモードに影響を与え、上書きする場合があります。
+他の形式の [&#x200B; デバッグ &#x200B;](../use-cases/debugging.md) は、ブラウザーコンソールメソッドを使用するデバッグモードに影響を与え、上書きする場合があります。

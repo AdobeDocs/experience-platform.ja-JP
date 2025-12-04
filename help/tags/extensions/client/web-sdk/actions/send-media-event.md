@@ -12,7 +12,7 @@ ht-degree: 0%
 
 **[!UICONTROL Send media event]** アクションは、メディアイベントをデータストリームに送信します。このデータストリームは、Adobe Experience PlatformやAdobe Analyticsなどのアプリやサービスで使用できます。 このアクションは、プロパティでストリーミングメディアコンテンツをトラックする場合に役立ちます。
 
-![ メディアイベント送信画面を示すExperience Platform UI 画像。](../assets/send-media-event.png)
+![&#x200B; メディアイベント送信画面を示すExperience Platform UI 画像。](../assets/send-media-event.png)
 
 使用できるオプションは、選択した **[!UICONTROL Media event type]** によって異なります。 すべてのメディアイベントタイプには **[!UICONTROL Player ID]** が必要です。これはコンテンツプレーヤーの名前です。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Bitrate change]
 
-* **[!UICONTROL Quality of experience data]**：ビットレート、ドロップフレーム数、1 秒あたりのフレーム数および開始時間を指定する [ エクスペリエンス品質 ](/help/xdm/data-types/qoe-data-details-collection.md) オブジェクト。
+* **[!UICONTROL Quality of experience data]**：ビットレート、ドロップフレーム数、1 秒あたりのフレーム数および開始時間を指定する [&#x200B; エクスペリエンス品質 &#x200B;](/help/xdm/data-types/qoe-data-details-collection.md) オブジェクト。
 
 ## [!UICONTROL Chapter start]
 
@@ -115,7 +115,7 @@ ht-degree: 0%
 * **[!UICONTROL Stream format]**:HD や SD など、ストリームの形式。
 * **[!UICONTROL Station]**: ラジオ局の名前または ID。
 
-また、このイベントタイプでは、カスタムメタデータをメディアイベントペイロードの一部として提供する機能もサポートしています。 また、データストリーム設定の上書きが可能になり、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[ データストリーム設定の上書き ](../configure/configuration-overrides.md) を参照してください。
+また、このイベントタイプでは、カスタムメタデータをメディアイベントペイロードの一部として提供する機能もサポートしています。 また、データストリーム設定の上書きが可能になり、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[&#x200B; データストリーム設定の上書き &#x200B;](../configure/configuration-overrides.md) を参照してください。
 
 ## [!UICONTROL States update]
 

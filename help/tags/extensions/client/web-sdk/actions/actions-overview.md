@@ -31,4 +31,4 @@ Web SDK タグ拡張機能には、次のアクションがあります。
 * [**[!UICONTROL Send event]**](send-event.md)：イベントデータをEdge Networkに送信します。
 * [**[!UICONTROL Send media event]**](send-media-event.md)：メディアデータをEdge Networkに送信します。
 * [**[!UICONTROL Set consent]**](set-consent.md)：訪問者に必要な同意を設定します。
-* [**[!UICONTROL Update variable]**](update-variable.md): [ 変数 ](../data-element-types.md#variable) データ要素を変更します。
+* [**[!UICONTROL Update variable]**](update-variable.md): [&#x200B; 変数 &#x200B;](../data-element-types.md#variable) データ要素を変更します。

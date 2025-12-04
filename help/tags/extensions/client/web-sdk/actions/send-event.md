@@ -21,10 +21,10 @@ ht-degree: 0%
 
 ## 一般フィールド
 
-![ 「イベントを送信」アクションタイプのインスタンス設定を示すExperience Platform タグ UI 画像。](../assets/instance-settings.png)
+![&#x200B; 「イベントを送信」アクションタイプのインスタンス設定を示すExperience Platform タグ UI 画像。](../assets/instance-settings.png)
 
 * **[!UICONTROL Instance]**：アクションが適用されるSDK インスタンス。 実装で 1 つのSDK インスタンスを使用している場合、このドロップダウンメニューは無効になります。
-* **[!UICONTROL Use guided events]**：特定のユースケースを有効にするために、特定のフィールドを自動的に入力または非表示にするには、このオプションを有効にします。 この設定は、それぞれの目的に合わせてアクションを設定する際に、使用可能なオプションのノイズを軽減するのに役立ち、Adobeの [ 上位/下位のページイベント ](/help/collection/use-cases/personalization/top-bottom-page-events.md) に関するベストプラクティスに従います。 このチェックボックスをオンにすると、次のラジオボタンの表示がトリガーされます。
+* **[!UICONTROL Use guided events]**：特定のユースケースを有効にするために、特定のフィールドを自動的に入力または非表示にするには、このオプションを有効にします。 この設定は、それぞれの目的に合わせてアクションを設定する際に、使用可能なオプションのノイズを軽減するのに役立ち、Adobeの [&#x200B; 上位/下位のページイベント &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md) に関するベストプラクティスに従います。 このチェックボックスをオンにすると、次のラジオボタンの表示がトリガーされます。
    * **[!UICONTROL Request personalization]**:Adobe Analytics イベントを記録せずに、パーソナライゼーションに関する最新の決定を取得します。 最も一般的には、ページの上部で呼び出されます。 このラジオボタンを選択すると、次のフィールドが設定されます。
       * [!UICONTROL Type] は [!UICONTROL Decisioning Proposition Fetch] にロックされています
       * [!UICONTROL Render visual personalization decisions] は有効にロックされています
@@ -34,22 +34,22 @@ ht-degree: 0%
 
 ## データフィールド
 
-![ 「イベントを送信」アクションタイプのデータ要素設定を示すExperience Platform タグ UI 画像。](../assets/data.png)
+![&#x200B; 「イベントを送信」アクションタイプのデータ要素設定を示すExperience Platform タグ UI 画像。](../assets/data.png)
 
-* **[!UICONTROL Type]**：イベントタイプ。 事前に定義された値のセットから選択するか、独自の値を定義できます。 詳しくは、[ 使用可能な値 `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) を参照してください。 このフィールドと同等のJavaScript ライブラリは [`eventType`](/help/collection/js/commands/sendevent/eventtype.md) です。
-* **[!UICONTROL XDM]**:Adobeに送信する XDM ペイロード。 このフィールドでは、[XDM オブジェクト ](../data-element-types.md#xdm-object) または [ 変数 ](../data-element-types.md#variable) を使用できます。 複数の XDM オブジェクトにデータを入力するルールがある場合は、[ 結合オブジェクト ](../../core/overview.md#merged-objects) を使用してそれらを組み合わせることができます。
-* **[!UICONTROL Data]**:Adobeに送信するデータペイロード。 一部のアプリやサービスは、Adobe AnalyticsやAdobe Targetなどの XDM スキーマに準拠する必要がありません。 このフィールドには [ 変数 ](../data-element-types.md#variable) データ要素タイプを使用します。
+* **[!UICONTROL Type]**：イベントタイプ。 事前に定義された値のセットから選択するか、独自の値を定義できます。 詳しくは、[&#x200B; 使用可能な値 `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) を参照してください。 このフィールドと同等のJavaScript ライブラリは [`eventType`](/help/collection/js/commands/sendevent/eventtype.md) です。
+* **[!UICONTROL XDM]**:Adobeに送信する XDM ペイロード。 このフィールドでは、[XDM オブジェクト &#x200B;](../data-element-types.md#xdm-object) または [&#x200B; 変数 &#x200B;](../data-element-types.md#variable) を使用できます。 複数の XDM オブジェクトにデータを入力するルールがある場合は、[&#x200B; 結合オブジェクト &#x200B;](../../core/overview.md#merged-objects) を使用してそれらを組み合わせることができます。
+* **[!UICONTROL Data]**:Adobeに送信するデータペイロード。 一部のアプリやサービスは、Adobe AnalyticsやAdobe Targetなどの XDM スキーマに準拠する必要がありません。 このフィールドには [&#x200B; 変数 &#x200B;](../data-element-types.md#variable) データ要素タイプを使用します。
 * **[!UICONTROL Include rendered propositions]**：このチェックボックスを有効にすると、このイベントを表示イベントとして使用できるようになります。これには、「表示イベントを自動的に送信」がオフの場合にレンダリングされる提案も含まれます。 `_experience.decisioning` XDM フィールドには、レンダリングされたパーソナライゼーションに関する情報が入力されます。
 * **[!UICONTROL Document will unload]**：ユーザーがページから移動した場合でも、イベントがサーバーに到達するようにするには、このチェックボックスを有効にします。 この設定を使用すると、イベントがサーバーに到達できるようになりますが、Edge Networkからの応答は無視されます。
 * **[!UICONTROL Merge ID]** _（非推奨）_:`eventMergeId` XDM フィールドに入力します。
 
 ## パーソナライゼーションフィールド
 
-![ 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](../assets/personalization-settings.png)
+![&#x200B; 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**：パーソナライゼーションから明示的にリクエストする範囲の配列。 範囲を手動で入力することも、データ要素を指定することもできます。 範囲を手動で入力すると、各フィールドは 1 つの範囲を表します。 アクションに範囲を追加するには、「**[!UICONTROL Add scope]**」を選択します。
-* **[!UICONTROL Surfaces]**: イベントでクエリするサーフェスの配列。 詳しくは、Adobe Journey Optimizer ドキュメントの [Web エクスペリエンスの作成 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を参照してください。 サーフェスを手動で入力すると、各フィールドは 1 つのサーフェスを表します。 **[!UICONTROL Add surface]** を選択して、アクションにさらにサーフェスを追加します。
-* **ビジュアルパーソナライゼーションの決定をレンダリング：** 有効にすると、ページ上のパーソナライズされたコンテンツをレンダリングできるチェックボックス。 詳しくは、[ パーソナライズされたコンテンツのレンダリング ](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
+* **[!UICONTROL Surfaces]**: イベントでクエリするサーフェスの配列。 詳しくは、Adobe Journey Optimizer ドキュメントの [Web エクスペリエンスの作成 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を参照してください。 サーフェスを手動で入力すると、各フィールドは 1 つのサーフェスを表します。 **[!UICONTROL Add surface]** を選択して、アクションにさらにサーフェスを追加します。
+* **ビジュアルパーソナライゼーションの決定をレンダリング：** 有効にすると、ページ上のパーソナライズされたコンテンツをレンダリングできるチェックボックス。 詳しくは、[&#x200B; パーソナライズされたコンテンツのレンダリング &#x200B;](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
 * **[!UICONTROL Request default personalization]**: ページ全体の範囲とデフォルトサーフェスをリクエストするかどうかを制御します。 デフォルトでは、ページ読み込みの最初の `sendEvent` 呼び出し時に自動的に要求されます。 これらのラジオボタンに相当するJavaScript ライブラリは [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md) です。 次のオプションから選択できます。
    * **[!UICONTROL Automatic]**：デフォルトの動作です。 まだリクエストされていない場合にのみ、デフォルトのパーソナライゼーションをリクエストします。
    * **[!UICONTROL Enabled]**：ページ範囲とデフォルトサーフェスを明示的にリクエストします。 これにより、SPA ビューのキャッシュが更新されます。
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ## Advertising フィールド
 
-![ イベントを送信アクションの広告の設定を示すExperience Platform タグ UI](../assets/send-event-advertising.png)
+![&#x200B; イベントを送信アクションの広告の設定を示すExperience Platform タグ UI](../assets/send-event-advertising.png)
 
 * **[!UICONTROL Request default advertising data]**: ライブラリが広告情報を XDM ペイロードに追加するタイミング（または追加する場合）を決定します。 次のオプションから選択できます。
    * **[!UICONTROL Automatic]**：イベントの発生時に使用可能なすべての広告データがイベントペイロードに追加されます。
@@ -67,4 +67,4 @@ ht-degree: 0%
 
 ## データストリーム設定の上書き
 
-このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリとサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[ データストリーム設定の上書き ](../configure/configuration-overrides.md) を参照してください。
+このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリとサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[&#x200B; データストリーム設定の上書き &#x200B;](../configure/configuration-overrides.md) を参照してください。

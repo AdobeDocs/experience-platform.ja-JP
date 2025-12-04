@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDKは、Adobe Experience Platformに直接デー�
 * Experience Platformまたは Real-time CDP へのアクセス権を持 *ていない* お客様が [!DNL Web SDK] を使用するには、データ収集 UI またはExperience Platform UI でスキーマとデータストリームを作成するための適切な権限を設定する必要があります。
 * Experience Platformまたは Real-time CDP へのアクセス権を持ち、[!DNL Web SDK] を使用する場合は、データ収集 UI またはExperience Platform UI でスキーマ、データセット、ID 名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、[ データ収集の権限管理 ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) に関するドキュメントを参照してください。
+これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) に関するドキュメントを参照してください。
 
 ## Web SDKを使用するのは誰ですか？
 
@@ -98,11 +98,11 @@ Web SDKは現在、一般公開されており、Adobe Experience Cloud製品へ
 
 SDKはAdobeが無償でホストしています。 必要に応じて、無料でダウンロードして独自のサーバーにホストできます。
 
-Web SDKサーバーがSDKからの受信データを適切に処理するために、Web Adobeは [ データストリーム設定 ](/help/datastreams/overview.md) およびExperience Platform [XDM スキーマビルダー ](/help/xdm/tutorials/create-schema-ui.md) にアクセスする必要があります。 アクセス権を希望する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
+Web SDKサーバーがSDKからの受信データを適切に処理するために、Web Adobeは [&#x200B; データストリーム設定 &#x200B;](/help/datastreams/overview.md) およびExperience Platform [XDM スキーマビルダー &#x200B;](/help/xdm/tutorials/create-schema-ui.md) にアクセスする必要があります。 アクセス権を希望する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
 
 ## Web SDKで現在サポートされているユースケースは何ですか？
 
-Web SDKは急速に進化しています。 現在取り組んでいるユースケースは増えています。 [ 現在サポートされているユースケースのリストは、こちらで確認できます ](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)。
+Web SDKは急速に進化しています。 現在取り組んでいるユースケースは増えています。 [&#x200B; 現在サポートされているユースケースのリストは、こちらで確認できます &#x200B;](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)。
 
 ## 現在の顧客は、サイトを再タグ付けする必要がありますか？
 
@@ -116,7 +116,7 @@ Web SDKは急速に進化しています。 現在取り組んでいるユース
 
 ## Web SDKを使い始める際に ECID を移行して、web サイトの訪問者が新しい訪問者として表示されないようにできますか？
 
-はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Experience Platform Web SDK ID ドキュメント ](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) の ID 移行の手順に従います。
+はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Experience Platform Web SDK ID ドキュメント &#x200B;](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) の ID 移行の手順に従います。
 
 ## Web SDKとタグの違いは何ですか？
 
@@ -144,7 +144,7 @@ SDK を使用して XDM をEdge Networkに送信すると、これらの新機�
 
 ## CNAME またはファーストパーティドメインとは何ですか？また、それが重要な理由は何ですか？
 
-CNAME について詳しくは、[Adobe ドキュメントを参照してください ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ja)
+CNAME について詳しくは、[Adobe ドキュメントを参照してください &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ja)
 
 ## Adobe Experience Platform Web SDKでは Cookie を使用しますか？ その場合、どのような cookie を使用しますか？
 

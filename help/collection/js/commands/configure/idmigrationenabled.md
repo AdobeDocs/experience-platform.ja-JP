@@ -27,4 +27,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用して訪問者 ID の移行を有効にする
 
-これらの設定は、web SDK タグ拡張機能で [ID 設定 ](/help/tags/extensions/client/web-sdk/configure/identity.md) を使用して指定できます。
+これらの設定は、web SDK タグ拡張機能で [ID 設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md) を使用して指定できます。

@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # データ要素タイプ
 
-タグ拡張機能で [ アクションタイプ ](actions/actions-overview.md) を設定したら、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素タイプについて説明します。
+タグ拡張機能で [&#x200B; アクションタイプ &#x200B;](actions/actions-overview.md) を設定したら、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素タイプについて説明します。
 
 ## ID マップ {#identity-map}
 
@@ -23,7 +23,7 @@ ID マップを使用すると、web ページの訪問者の ID を確立でき
 * **[!UICONTROL Authenticated state]**：訪問者が認証されているかどうかを示す選択。
 * **[!UICONTROL Primary]**：識別子を個人のプライマリ識別子として使用する必要があるかどうかを示す選択。 プライマリとしてマークされている識別子がない場合、ECID がプライマリ識別子として使用されます。
 
-![ データ要素の編集画面を示す UI 画像。](assets/identity-map-data-element.png)
+![&#x200B; データ要素の編集画面を示す UI 画像。](assets/identity-map-data-element.png)
 
 >[!TIP]
 >
@@ -35,7 +35,7 @@ ID マップを作成する際は、[!DNL ECID] を指定しないでくださ�
 
 ID マップデータ要素は、多くの場合、[[!UICONTROL Variable]](#variable) データ要素および [[!UICONTROL Set consent]](actions/set-consent.md) アクションと共に使用されます。
 
-詳しくは、[Adobe Experience Platform ID サービス ](/help/identity-service/home.md) を参照してください。
+詳しくは、[Adobe Experience Platform ID サービス &#x200B;](/help/identity-service/home.md) を参照してください。
 
 ## XDM オブジェクト {#xdm-object}
 
@@ -56,16 +56,16 @@ XDM オブジェクトデータ要素を使用すると、データを XDM に�
 * [!UICONTROL XDM] を選択した場合は、目的の [!UICONTROL Sandbox] と [!UICONTROL Schema] を選択します。
 * [!UICONTROL Data] を選択した場合は、目的のソリューションを選択します。 使用可能なソリューションには、[!UICONTROL Adobe Analytics] と [!UICONTROL Adobe Target] があります。
 
-![ データ要素オプションを示すタグ UI の画像。](assets/variable-data-element.png)
+![&#x200B; データ要素オプションを示すタグ UI の画像。](assets/variable-data-element.png)
 
-このデータ要素を作成したら、[ 変数を更新 ](actions/update-variable.md) アクションを使用して変更できます。 準備が整ったら、このデータ要素を [ イベントを送信 ](actions/send-event.md) アクションに含めて、データをデータストリームに送信できます。
+このデータ要素を作成したら、[&#x200B; 変数を更新 &#x200B;](actions/update-variable.md) アクションを使用して変更できます。 準備が整ったら、このデータ要素を [&#x200B; イベントを送信 &#x200B;](actions/send-event.md) アクションに含めて、データをデータストリームに送信できます。
 
 ## メディア：エクスペリエンスの品質 {#quality-experience}
 
 **[!UICONTROL Quality of Experience]** データ要素は、ストリーミングメディアイベントをAdobe Experience Platformに送信する際に役立ちます。 この要素は、メディアセッションの作成時に追加できます。追加したメディアイベントには、更新されたエクスペリエンス品質データが含まれます。
 
-![ エクスペリエンスデータ要素の品質の作成画面を示す UI 画像。](assets/qoe-data-element.png)
+![&#x200B; エクスペリエンスデータ要素の品質の作成画面を示す UI 画像。](assets/qoe-data-element.png)
 
 ## 次の手順 {#next-steps}
 
-[ECID へのアクセス ](accessing-the-ecid.md) など、特定のユースケースについて説明します。
+[ECID へのアクセス &#x200B;](accessing-the-ecid.md) など、特定のユースケースについて説明します。

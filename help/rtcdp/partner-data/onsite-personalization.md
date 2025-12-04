@@ -111,7 +111,7 @@ ht-degree: 72%
 
 [データセットの作成方法](/help/catalog/datasets/user-guide.md#create)に関するチュートリアルを読み、スキーマからデータセットを作成するオプションを忘れずに選択してください。前の手順で作成したスキーマに基づいてデータセットを作成します。
 
-スキーマを作成する際の手順と同様に、データセットを [!UICONTROL Real-Time Customer Profile] に含めることができる必要があります。 [!UICONTROL Real-Time Customer Profile] で使用するデータセットを有効にする方法について詳しくは、[ スキーマを作成に関するチュートリアル ](/help/xdm/tutorials/create-schema-ui.md#profile) を参照してください。
+スキーマを作成する際の手順と同様に、データセットを [!UICONTROL Real-Time Customer Profile] に含めることができる必要があります。 [!UICONTROL Real-Time Customer Profile] で使用するデータセットを有効にする方法について詳しくは、[&#x200B; スキーマを作成に関するチュートリアル &#x200B;](/help/xdm/tutorials/create-schema-ui.md#profile) を参照してください。
 
 ### Web プロパティでのイベントデータ収集の実装 {#implement-data-collection}
 
@@ -141,7 +141,7 @@ UI の **[!UICONTROL Data Collection]** セクションは、以下の画像に�
 
 ![新しいデータストリームを設定する際に強調表示されたイベントスキーマセレクター。](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
 
-[ 前に作成したイベントデータセットをドロップダウンから選択 ](/help/datastreams/configure.md#aep) し、「**[!UICONTROL Edge Segmentation]**」と「**[!UICONTROL Personalization Destinations]**」の横にあるチェックボックスをオンにして、「**[!UICONTROL Save]**」を選択します。
+[&#x200B; 前に作成したイベントデータセットをドロップダウンから選択 &#x200B;](/help/datastreams/configure.md#aep) し、「**[!UICONTROL Edge Segmentation]**」と「**[!UICONTROL Personalization Destinations]**」の横にあるチェックボックスをオンにして、「**[!UICONTROL Save]**」を選択します。
 
 イベントベースの時系列データを取り込むので、このシナリオではプロファイルデータセットを選択する必要はありません。
 
@@ -261,9 +261,9 @@ XDM データの横にあるデータベースアイコンを選択し、`pageVi
 
 Experience Platform UI で、**[!UICONTROL Customer]** / **[!UICONTROL Audiences]** に移動し、web サイトの訪問者を取り込むオーディエンスを作成します。
 
-![ オーディエンスに移動する方法の表示 ](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![&#x200B; オーディエンスに移動する方法の表示 &#x200B;](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[ エッジセグメント化 ](/help/segmentation/methods/edge-segmentation.md) でオーディエンスを設定する必要があります。
+訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[&#x200B; エッジセグメント化 &#x200B;](/help/segmentation/methods/edge-segmentation.md) でオーディエンスを設定する必要があります。
 
 エッジオーディエンスに対しては、必ず [active-on-edge 結合ポリシー](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)も設定してください。
 
@@ -287,4 +287,4 @@ Real-Time CDP のパートナーデータサポートを通じて達成される
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。
+* [&#x200B; 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

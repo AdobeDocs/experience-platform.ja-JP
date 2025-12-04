@@ -20,7 +20,7 @@ ht-degree: 8%
 Web SDKの `streamingMedia` コンポーネントを使用するには、次の前提条件を満たす必要があります。
 
 * Adobe Experience PlatformまたはAdobe Analyticsへのアクセス権があることを確認します。
-* Web SDK バージョン 2.20.0 以降を使用する必要があります。 最新バージョンのインストール方法については、[Web SDKのインストールの概要 ](../../install/overview.md) を参照してください。
+* Web SDK バージョン 2.20.0 以降を使用する必要があります。 最新バージョンのインストール方法については、[Web SDKのインストールの概要 &#x200B;](../../install/overview.md) を参照してください。
 * 使用しているデータストリームの「**[[!UICONTROL Media Analytics]](/help/datastreams/configure.md#advanced-options)**」オプションを有効にします。
 * データストリームで使用するスキーマに、メディアコレクションのスキーマフィールドが含まれていることを確認してください。
 * このページに示すように、Web SDKでストリーミングメディア機能を設定します。
@@ -44,9 +44,9 @@ alloy("configure", {
 | **`channel`** | 文字列 | ○ | ストリーミングメディアコレクションが発生するチャネルの名前。 例：`Video channel`。 |
 | **`playerName`** | 文字列 | ○ | メディアプレーヤーの名前。 |
 | **`appVersion`** | 文字列 | × | メディアプレーヤーアプリケーションのバージョン。 |
-| **`mainPingInterval`** | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
-| **`adPingInterval`** | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
+| **`mainPingInterval`** | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
+| **`adPingInterval`** | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
 
 ## Web SDK タグ拡張機能を使用したストリーミングメディア設定
 
-これらの設定は、web SDK タグ拡張機能で [ ストリーミングメディア設定 ](/help/tags/extensions/client/web-sdk/configure/streaming-media.md) を使用して指定できます。
+これらの設定は、web SDK タグ拡張機能で [&#x200B; ストリーミングメディア設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/streaming-media.md) を使用して指定できます。

@@ -10,11 +10,11 @@ ht-degree: 0%
 
 # `edgeConfigOverrides` （`configure` コマンド）
 
-`edgeConfigOverrides` オブジェクトを使用すると、現在のページで実行されるコマンドの設定を上書きできます。 このオブジェクトは、国ごとに異なる web サイトやサブドメインがある場合や、異なる事業部門固有のデータを保存する複数のExperience Platform サンドボックスがある場合に役立ちます。 ページ上の 1 つのコマンドのみの設定を上書きする場合は、[`edgeConfigOverrides` コマンドで `sendEvent` オブジェクトを使用することを検討してください ](../sendevent/edgeconfigoverrides.md)
+`edgeConfigOverrides` オブジェクトを使用すると、現在のページで実行されるコマンドの設定を上書きできます。 このオブジェクトは、国ごとに異なる web サイトやサブドメインがある場合や、異なる事業部門固有のデータを保存する複数のExperience Platform サンドボックスがある場合に役立ちます。 ページ上の 1 つのコマンドのみの設定を上書きする場合は、[`edgeConfigOverrides` コマンドで `sendEvent` オブジェクトを使用することを検討してください &#x200B;](../sendevent/edgeconfigoverrides.md)
 
 データストリーム設定の上書きプロセスは、次の 2 つの主な手順で構成されます。
 
-1. まず、データストリーム UI で [ データストリームの設定 ](/help/datastreams/configure.md) を行う際に、データストリーム設定の上書きを定義する必要があります。 上書きの設定方法の手順については、データストリームに関するドキュメントの [ データストリーム設定の上書き ](/help/datastreams/overrides.md) を参照してください。
+1. まず、データストリーム UI で [&#x200B; データストリームの設定 &#x200B;](/help/datastreams/configure.md) を行う際に、データストリーム設定の上書きを定義する必要があります。 上書きの設定方法の手順については、データストリームに関するドキュメントの [&#x200B; データストリーム設定の上書き &#x200B;](/help/datastreams/overrides.md) を参照してください。
 1. データストリーム UI でデータストリームの上書きを設定したら、`edgeConfigOverrides` オブジェクトを設定できます。
 
 `edgeConfigOverrides` コマンドで `configure` オブジェクトを設定すると、Adobeに送信されるすべてのデータに適用されます。 次のコマンドは _また_`edgeConfigOverrides` オブジェクトをサポートします。
@@ -97,4 +97,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用した設定のオーバーライド
 
-このフィールドと同等の Web SDK タグ拡張機能は、タグ拡張機能を設定する際に [ 設定の上書き ](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) の下にあります。
+このフィールドと同等の Web SDK タグ拡張機能は、タグ拡張機能を設定する際に [&#x200B; 設定の上書き &#x200B;](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) の下にあります。

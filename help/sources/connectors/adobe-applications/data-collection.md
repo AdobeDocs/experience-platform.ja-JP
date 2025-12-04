@@ -30,10 +30,10 @@ Experience Platformの UI で、左側のナビゲーションバーから **[!U
 
 データストリームとは、データの送信先を Edge ネットワークに伝える設定のことです。具体的には、データストリームは、データの送信先のExperience Cloud 製品と、各製品でデータを処理および保存する方法を指定します。
 
-![ データストリーム ](./images/data-collection/datastreams.png)
+![&#x200B; データストリーム &#x200B;](./images/data-collection/datastreams.png)
 
-UI でデータ収集を設定する方法の包括的な手順については、[Web SDK タグ拡張機能の使用の手引き ](/help/tags/extensions/client/web-sdk/getting-started.md) を参照してください。
+UI でデータ収集を設定する方法の包括的な手順については、[Web SDK タグ拡張機能の使用の手引き &#x200B;](/help/tags/extensions/client/web-sdk/getting-started.md) を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、ソース ワークスペースを使用してデータ収集 UI にアクセスする方法について説明しました。 データ収集について詳しくは、[ データ収集の概要 ](/help/collection/home.md) を参照してください。
+このドキュメントでは、ソース ワークスペースを使用してデータ収集 UI にアクセスする方法について説明しました。 データ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](/help/collection/home.md) を参照してください。

@@ -25,4 +25,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用したEdgeのベースパス
 
-このフィールドと同等の Web SDK タグ拡張機能は、タグ拡張機能を設定する際に [ 詳細設定 ](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) の下にあります。
+このフィールドと同等の Web SDK タグ拡張機能は、タグ拡張機能を設定する際に [&#x200B; 詳細設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) の下にあります。

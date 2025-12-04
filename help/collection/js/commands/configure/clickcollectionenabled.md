@@ -45,7 +45,7 @@ alloy(configure, {
 
 Web SDKは、**開いたシャドウ DOM** 要素内のリンクの自動クリックトラッキングをサポートしています。
 
-最新の多くの Web サイトでは、[Web コンポーネント ](https://developer.mozilla.org/en-US/docs/Web/Web_Components) を使用して、再利用可能でカプセル化されたユーザーインターフェイス要素を構築しています。 これらのコンポーネントでは、多くの場合、[**シャドウ DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) と呼ばれるテクノロジーを使用して、内部構造とスタイルをページの他の部分から分離します。
+最新の多くの Web サイトでは、[Web コンポーネント &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) を使用して、再利用可能でカプセル化されたユーザーインターフェイス要素を構築しています。 これらのコンポーネントでは、多くの場合、[**シャドウ DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) と呼ばれるテクノロジーを使用して、内部構造とスタイルをページの他の部分から分離します。
 
 シャドウ DOM には次の 2 種類があります。
 
@@ -56,4 +56,4 @@ Web SDKは、メインドキュメント内のリンクの場合と同様に、`
 
 ## Web SDK タグ拡張機能のクリックコレクションを有効または無効にします
 
-タグを使用してこれらのアクションを実行する方法については、Web SDK拡張機能のドキュメントの [ データ収集設定 ](/help/tags/extensions/client/web-sdk/configure/data-collection.md) を参照してください。
+タグを使用してこれらのアクションを実行する方法については、Web SDK拡張機能のドキュメントの [&#x200B; データ収集設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md) を参照してください。

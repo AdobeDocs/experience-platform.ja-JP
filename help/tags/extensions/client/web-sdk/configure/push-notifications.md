@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->この機能は、まず [ カスタムビルドコンポーネント ](custom-build-components.md) を使用して有効にする必要があります。デフォルトでは無効になっています。
+>この機能は、まず [&#x200B; カスタムビルドコンポーネント &#x200B;](custom-build-components.md) を使用して有効にする必要があります。デフォルトでは無効になっています。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
@@ -28,7 +28,7 @@ ht-degree: 5%
 1. [!UICONTROL SDK instances] の下で、下にスクロールして [!UICONTROL Push Notifications] セクションを探します。
 1. VAPID 公開鍵を「**[!UICONTROL VAPID Public Key]**」フィールドに入力します。
 
-![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像 ](../assets/push-notifications.png)
+![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像 &#x200B;](../assets/push-notifications.png)
 
 次のフィールドを使用できます。
 

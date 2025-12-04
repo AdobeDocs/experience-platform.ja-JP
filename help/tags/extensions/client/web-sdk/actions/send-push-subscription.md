@@ -25,12 +25,12 @@ ht-degree: 7%
 
 アクションの設定は、SDK インスタンスを選択するまでです。
 
-このコマンドを使用する前に、拡張機能を設定する際には、有効な [VAPID 公開鍵 ](../configure/push-notifications.md) を設定していることを確認してください。
+このコマンドを使用する前に、拡張機能を設定する際には、有効な [VAPID 公開鍵 &#x200B;](../configure/push-notifications.md) を設定していることを確認してください。
 
 このアクションは、[`sendPushSubscription`](/help/collection/js/commands/sendpushsubscription.md) コマンドと同等のタグ拡張機能です。 前提条件、推奨される実行頻度、コマンドの動作方法およびエラー処理について詳しくは、リンクされたページを参照してください。
 
 >[!MORELIKETHIS]
 >
 >* [プッシュ通知の設定](../configure/push-notifications.md)
->* [Web プッシュ API の仕様 ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [ サービスワーカー API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+>* [Web プッシュ API の仕様 &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+>* [&#x200B; サービスワーカー API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

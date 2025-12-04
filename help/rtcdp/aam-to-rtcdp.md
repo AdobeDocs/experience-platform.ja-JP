@@ -23,7 +23,7 @@ Audience Manager から Real-Time CDP への進化を検討する場合、今が
 
 アドビでは、セグメントを次のように分類することをお勧めします。
 
-* データの依存関係がなく、宛先やアクティブ化の課題もないので、[[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md) 経由でExperience Platformに送信できるセグメントで、後でReal-Time CDP [ セグメントビルダー ](/help/segmentation/ui/segment-builder.md) を通じてセグメント化ルールを作成できます。
+* データの依存関係がなく、宛先やアクティブ化の課題もないので、[[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md) 経由でExperience Platformに送信できるセグメントで、後でReal-Time CDP [&#x200B; セグメントビルダー &#x200B;](/help/segmentation/ui/segment-builder.md) を通じてセグメント化ルールを作成できます。
 * サポートできるルールがあるセグメント：Real-Time CDP で使用できないデータが含まれている場合があります。
 * Real-Time CDPで作成できず、機能が欠落しているセグメント。
 
@@ -41,11 +41,11 @@ Real-Time CDP でサポートできるルールはあるが、Audience Manager �
 
 ## &#x200B;4. Real-Time CDP への移行を開始できる、現在 Audience Manager に設定されている宛先
 
-Adobeでは、Audience Managerで [ 人物ベースの宛先 ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja) にアクティブ化されたセグメントを、[!UICONTROL Audience Manager Source Connector] 経由でReal-Time CDPにプッシュし、Real-Time CDPを通じてアクティブ化することを強くお勧めします。
+Adobeでは、Audience Managerで [&#x200B; 人物ベースの宛先 &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja) にアクティブ化されたセグメントを、[!UICONTROL Audience Manager Source Connector] 経由でReal-Time CDPにプッシュし、Real-Time CDPを通じてアクティブ化することを強くお勧めします。
 
 Audience Managerで使用できるすべての人物ベースの宛先（[Facebook](/help/destinations/catalog/social/facebook.md)、[[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md)、[LinkedIn](/help/destinations/catalog/social/linkedin.md) もReal-Time CDPで使用できます。
 
-[Pinterest](/help/destinations/catalog/advertising/pinterest.md)、{Snapchat[、](/help/destinations/catalog/advertising/snap-inc.md)TikTok[、](/help/destinations/catalog/social/tiktok.md)Amazon広告 [、](/help/destinations/catalog/advertising/amazon-ads.md) などの追加のファーストパーティデータおよびメディア戦略パートナー [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) 利用できます。
+[Pinterest](/help/destinations/catalog/advertising/pinterest.md)、&lbrace;Snapchat[、](/help/destinations/catalog/advertising/snap-inc.md)TikTok[、](/help/destinations/catalog/social/tiktok.md)Amazon広告 [、](/help/destinations/catalog/advertising/amazon-ads.md) などの追加のファーストパーティデータおよびメディア戦略パートナー [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) 利用できます。
 
 Real-Time CDP は現在、[カタログ](/help/destinations/catalog/overview.md)内で 60 を超える宛先をネイティブにサポートしており、そのうち 20 を超える宛先は、ファーストパーティオーディエンスマッチングをサポートする広告宛先またはソーシャル宛先です。
 

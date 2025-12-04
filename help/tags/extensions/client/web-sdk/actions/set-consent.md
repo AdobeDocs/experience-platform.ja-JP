@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # 同意を設定
 
-**[!UICONTROL Set consent]** のアクションは、タグ拡張機能がデータを送信する（オプトイン）、データを破棄する（オプトアウト）、または使用する [ デフォルトの同意 ](../configure/consent.md) （同意が不明）かどうかを決定します。 ユーザーがサイトで同意を許可または拒否する場合、このアクションを使用して、ユーザーの環境設定をタグ拡張機能と同期できます。 このアクションと同等のJavaScript ライブラリが [`setConsent`](/help/collection/js/commands/setconsent.md) コマンドです。
+**[!UICONTROL Set consent]** のアクションは、タグ拡張機能がデータを送信する（オプトイン）、データを破棄する（オプトアウト）、または使用する [&#x200B; デフォルトの同意 &#x200B;](../configure/consent.md) （同意が不明）かどうかを決定します。 ユーザーがサイトで同意を許可または拒否する場合、このアクションを使用して、ユーザーの環境設定をタグ拡張機能と同期できます。 このアクションと同等のJavaScript ライブラリが [`setConsent`](/help/collection/js/commands/setconsent.md) コマンドです。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 * **[Adobe標準](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: 1.0 と 2.0 の両方の標準がサポートされています。
 * **[IAB の透明性および同意フレームワーク](/help/landing/governance-privacy-security/consent/iab/overview.md)**：この標準を使用すると、実装が正しく設定されている場合、訪問者のリアルタイム顧客プロファイルが同意情報で更新されます。
-   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/profile/iab.md) が含まれます。
-   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/event/iab.md) が含まれています。
+   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/profile/iab.md) が含まれます。
+   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md) が含まれています。
 
 Adobeでは、同意ダイアログの環境設定をデータ要素など、個別に保存することをお勧めします。 タグ拡張機能には、同意を取得する方法はありません。 ユーザーの環境設定とタグ拡張機能の同期が維持されるように、ページが読み込まれるたびにそのアクションを実行できます。
 
@@ -37,7 +37,7 @@ Adobeでは、同意ダイアログの環境設定をデータ要素など、個
 * **[!UICONTROL Consent information]**：フォームに入力するか、同意情報を含むデータ要素を指定するかを決定します。
 * **[!UICONTROL Standard]**：使用する同意標準。 利用可能なオプションには&#39;[!UICONTROL Adobe]&#39;と&#39;[!UICONTROL IAB TCF]&#39;があります。
 * **[!UICONTROL Version]**：使用する同意標準のバージョン。
-* **[!UICONTROL Datastream configuration overrides]**：このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[ データストリーム設定の上書き ](../configure/configuration-overrides.md) を参照してください。
+* **[!UICONTROL Datastream configuration overrides]**：このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[&#x200B; データストリーム設定の上書き &#x200B;](../configure/configuration-overrides.md) を参照してください。
 
 ## 同意情報を更新するルールの作成
 
@@ -89,7 +89,7 @@ addEventListener();
    * **[!UICONTROL Value]**：`%IAB TCF Consent String%`
    * **[!UICONTROL Does GDPR apply to this consent value]**: [!UICONTROL Provide a data element] （値は `%IAB TCF Consent GDPR%`）
 
-![IAB 同意アクションの設定 ](../assets/iab-action.png)
+![IAB 同意アクションの設定 &#x200B;](../assets/iab-action.png)
 
 >[!NOTE]
 >

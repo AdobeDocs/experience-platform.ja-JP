@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # `edgeDomain`
 
-`edgeDomain` プロパティを使用すると、Web SDKがデータを送信するドメインを変更できます。 このプロパティは、[ ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を使用している組織でよく使用されます。 データは組織自身のドメインに送信され、CNAME レコードがそのデータをAdobeに転送します。
+`edgeDomain` プロパティを使用すると、Web SDKがデータを送信するドメインを変更できます。 このプロパティは、[&#x200B; ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を使用している組織でよく使用されます。 データは組織自身のドメインに送信され、CNAME レコードがそのデータをAdobeに転送します。
 
-`edgeDomain` に使用する値は、[Adobeが管理する証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) への参加によって異なります。
+`edgeDomain` に使用する値は、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) への参加によって異なります。
 
 **組織がAdobe管理の証明書プログラムに参加している場合**、証明書の設定時に選択したファーストパーティドメインに値を設定します。 通常、この値は組織が所有するサブドメインです。 たとえば、`data.example.com` のように設定します。組織内の CNAME レコードは、そのデータをAdobeにリダイレクトします。
 
@@ -37,4 +37,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用したEdge ドメイン
 
-このプロパティと同等のタグ拡張機能は、拡張機能を設定する際の **[!UICONTROL Edge domain]** SDK インスタンス設定 [ の ](/help/tags/extensions/client/web-sdk/configure/general.md) フィールドです。
+このプロパティと同等のタグ拡張機能は、拡張機能を設定する際の **[!UICONTROL Edge domain]** SDK インスタンス設定 [&#x200B; の &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) フィールドです。

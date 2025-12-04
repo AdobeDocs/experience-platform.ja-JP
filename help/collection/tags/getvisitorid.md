@@ -10,7 +10,7 @@ ht-degree: 1%
 
 # `getVisitorId()`
 
-`_satellite.getVisitorId()` メソッドは、ID サービス拡張機能がインストールされ公開されている場合は [ タグプロパティ内の ](https://experienceleague.adobe.com/ja/docs/id-service/using/home)1}Adobe Experience Cloud ID サービス **のインスタンスを返します。**&#x200B;この方法は、訪問者 ID インスタンスに直接アクセスしてカスタムコードブロックで使用する場合、詳細なデータ要素の設定を行う場合、訪問者 ID の問題のトラブルシューティングを行う場合に役立ちます。
+`_satellite.getVisitorId()` メソッドは、ID サービス拡張機能がインストールされ公開されている場合は [&#x200B; タグプロパティ内の &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/home)1&rbrace;Adobe Experience Cloud ID サービス **のインスタンスを返します。**&#x200B;この方法は、訪問者 ID インスタンスに直接アクセスしてカスタムコードブロックで使用する場合、詳細なデータ要素の設定を行う場合、訪問者 ID の問題のトラブルシューティングを行う場合に役立ちます。
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## 使用可能なフィールドとメソッド
 
-使用可能なフィールドとメソッドについては、Experience Cloud訪問者 ID サービスのドキュメントのExperience Cloud ID サービス [ メソッド ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) を参照してください。
+使用可能なフィールドとメソッドについては、Experience Cloud訪問者 ID サービスのドキュメントのExperience Cloud ID サービス [&#x200B; メソッド &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) を参照してください。
 
 ```js
 // Retrieve a visitor's ECID

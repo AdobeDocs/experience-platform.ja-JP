@@ -11,13 +11,13 @@ ht-degree: 3%
 
 # Adobe Experience Platform Assuranceの使用
 
-このチュートリアルでは、Adobe Experience Platform Assuranceの使用方法を説明します。 Assurance拡張機能のインストールおよび実装方法については、[Adobe Experience Platform Assurance拡張機能の実装 ](./implement-assurance.md) に関するチュートリアルを参照してください。
+このチュートリアルでは、Adobe Experience Platform Assuranceの使用方法を説明します。 Assurance拡張機能のインストールおよび実装方法については、[Adobe Experience Platform Assurance拡張機能の実装 &#x200B;](./implement-assurance.md) に関するチュートリアルを参照してください。
 
 ## セッションを作成
 
 [Assurance UI](https://experience.adobe.com/assurance) にログインしたら、「**[!UICONTROL Create Session]**」を選択してセッションの作成を開始できます。
 
-![ 「セッションを作成」ボタンがハイライト表示され、セッションを作成できる場所が示されている様子。](./images/using-assurance/create-session.png)
+![&#x200B; 「セッションを作成」ボタンがハイライト表示され、セッションを作成できる場所が示されている様子。](./images/using-assurance/create-session.png)
 
 **[!UICONTROL Create New Session]** ダイアログが開き、セッションを作成するための 2 つのオプションが表示されます。
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 「**[!UICONTROL Deep link connect]**」を選択し、「**[!UICONTROL Start]**」を選択して続行します。
 
-![ 「ディープリンク接続」オプションが選択されていることを示す「新しいセッションを作成」ダイアログ ](./images/using-assurance/create-new-session-deep-link.png)
+![&#x200B; 「ディープリンク接続」オプションが選択されていることを示す「新しいセッションを作成」ダイアログ &#x200B;](./images/using-assurance/create-new-session-deep-link.png)
 
 セッションを識別する名前を入力し、**[!UICONTROL Base URL]** （アプリのディープリンク URL）を入力できるようになりました。 これらの詳細を入力したら、「**[!UICONTROL Next]**」を選択します。
 
@@ -35,7 +35,7 @@ ht-degree: 3%
 >
 >ベース URL は、URL からアプリを起動するために使用されるルート定義です。 セッション URL が生成されます。この URL により、Assurance セッションを開始できます。 値の例は次のようになります。`myapp://default` 「**[!UICONTROL Base URL]**」フィールドに、アプリのベースのディープリンク定義を入力します。
 
-![ セッション名およびベース URL 入力フィールドが表示されます。](./images/using-assurance/create-session-form-deep-link.png)
+![&#x200B; セッション名およびベース URL 入力フィールドが表示されます。](./images/using-assurance/create-session-form-deep-link.png)
 
 ### クイック接続
 
@@ -59,11 +59,11 @@ Quick Connect を使用する前に、アプリに必要なSDKのバージョン
 
 **実装：**
 
-Assurance接続をトリガーするには [`startSession` アプリに ](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) API を実装する必要があります。 この API 呼び出しは、通常、アプリ内のアクションセットに含まれているか、トリガーされます。
+Assurance接続をトリガーするには [`startSession` アプリに &#x200B;](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) API を実装する必要があります。 この API 呼び出しは、通常、アプリ内のアクションセットに含まれているか、トリガーされます。
 
 #### クイック接続セッションの作成
 
-![ 「クイック接続」オプションが選択されていることを示す「新規セッションを作成」ダイアログ ](./images/using-assurance/create-new-session-quick-connect.png)
+![&#x200B; 「クイック接続」オプションが選択されていることを示す「新規セッションを作成」ダイアログ &#x200B;](./images/using-assurance/create-new-session-quick-connect.png)
 
 **[!UICONTROL Quick connect]** を選択し、**[!UICONTROL Start]** を選択して続行すると、デバイスピッカーインターフェイスが表示されます。
 
@@ -71,7 +71,7 @@ Assurance接続をトリガーするには [`startSession` アプリに ](https:
 
 2. **デバイスを選択して接続** – 使用可能なデバイスのリストにデバイスが表示されたら、そのデバイスを選択して「**[!UICONTROL Connect]**」をクリックします。
 
-![ 使用可能なデバイスを表示するクイック接続デバイスピッカーインターフェイス ](./images/using-assurance/quick-connect-device-picker.png)
+![&#x200B; 使用可能なデバイスを表示するクイック接続デバイスピッカーインターフェイス &#x200B;](./images/using-assurance/quick-connect-device-picker.png)
 
 ## セッションへの接続
 
@@ -96,7 +96,7 @@ Assurance接続をトリガーするには [`startSession` アプリに ](https:
 3. デバイスを検出可能にするには、アプリ内のアクションセットをトリガーします
 4. リストからデバイスを選択し、「**[!UICONTROL Connect]**」をクリックします
 
-![ 接続できるデバイスを表示するデバイスピッカーインターフェイス ](./images/using-assurance/quick-connect-device-picker.png)
+![&#x200B; 接続できるデバイスを表示するデバイスピッカーインターフェイス &#x200B;](./images/using-assurance/quick-connect-device-picker.png)
 
 ### 接続の確認
 
@@ -106,6 +106,6 @@ Adobe Experience Platform アイコン（赤いAdobe「A」）がアプリに表
 
 Assurance セッションを書き出すには、アプリのセッションの詳細ページで、セッションの「**[!UICONTROL Export to JSON]**」を選択します。
 
-![ セッションのエクスポート ](./images/using-assurance/export-session.png)
+![&#x200B; セッションのエクスポート &#x200B;](./images/using-assurance/export-session.png)
 
 書き出しオプションは、検索フィルターの結果に従い、イベント表示に表示されるイベントのみを書き出します。 例えば、「track」イベントを検索してを選択した場合、「track」イベントの結果のみ **[!UICONTROL Export to JSON]** 書き出されます。

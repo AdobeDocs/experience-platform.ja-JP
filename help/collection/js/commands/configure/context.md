@@ -81,7 +81,7 @@ ht-degree: 14%
 
 `"highEntropyUserAgentHints"` キーワードは、ユーザーのデバイスに関する詳細情報を収集します。 このデータは、Adobeに送信されるリクエストの HTTP ヘッダーに含まれます。 データがEdge ネットワークに到達すると、XDM オブジェクトは、それぞれの XDM パスを入力します。 `sendEvent` 呼び出しでそれぞれの XDM パスを設定すると、HTTP ヘッダー値よりも優先されます。
 
-[ データストリームの設定 ](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
+[&#x200B; データストリームの設定 &#x200B;](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
 
 | プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 |
 | --- | --- | --- | --- | --- |
@@ -111,4 +111,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用してコンテキスト情報を収集
 
-Web SDK タグ拡張機能ドキュメントのデータ収集設定の [ コンテキスト設定 ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) を参照してください。
+Web SDK タグ拡張機能ドキュメントのデータ収集設定の [&#x200B; コンテキスト設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) を参照してください。

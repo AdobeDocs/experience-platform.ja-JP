@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # `getMediaAnalyticsTracker`
 
-この Web SDK コマンドは、Media Analytics トラッカーを取得します。 このコマンドを使用してオブジェクトインスタンスを作成し、[Media JS ライブラリ ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) で提供される API と同じ API を使用してメディアイベントを追跡できます。
+この Web SDK コマンドは、Media Analytics トラッカーを取得します。 このコマンドを使用してオブジェクトインスタンスを作成し、[Media JS ライブラリ &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) で提供される API と同じ API を使用してメディアイベントを追跡できます。
 
 `getMediaAnalyticsTracker` コマンドは、従来の Media Analytics API を返します。
 

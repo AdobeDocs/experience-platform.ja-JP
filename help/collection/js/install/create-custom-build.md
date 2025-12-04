@@ -27,7 +27,7 @@ Web サイトにメディアコンテンツがない場合は、[!DNL Media Anal
 
 ## 前提条件 {#prerequisites}
 
-カスタム Web SDK ビルドを作成するには、Web SDK NPM パッケージが必要です。 [Node.js](https://nodejs.org/en/download/package-manager/all) がマシンにインストールされていることを確認します。 詳しくは、[NPM パッケージを使用して web SDKをインストールする ](npm.md) 方法に関するドキュメントを参照してください。
+カスタム Web SDK ビルドを作成するには、Web SDK NPM パッケージが必要です。 [Node.js](https://nodejs.org/en/download/package-manager/all) がマシンにインストールされていることを確認します。 詳しくは、[NPM パッケージを使用して web SDKをインストールする &#x200B;](npm.md) 方法に関するドキュメントを参照してください。
 
 ## コンポーネントと依存関係 {#components-dependencies}
 
@@ -51,7 +51,7 @@ Web サイトにメディアコンテンツがない場合は、[!DNL Media Anal
 
 1. ターミナルを開き、`npx @adobe/alloy` を実行します。 カスタムビルドに含める web SDK コンポーネントを選択するように求められます。
 
-   ![ カスタムビルドモジュールの選択を示すターミナルの画像 ](../assets/custom-build/npx.png)
+   ![&#x200B; カスタムビルドモジュールの選択を示すターミナルの画像 &#x200B;](../assets/custom-build/npx.png)
 
    矢印キーを使用して、モジュールリスト内を上下に移動します。
 
@@ -62,12 +62,12 @@ Web サイトにメディアコンテンツがない場合は、[!DNL Media Anal
 
 1. カスタムビルドに含めるモジュールを選択したら、カスタム Web SDK ライブラリビルドの縮小バージョンまたは縮小されていないバージョンを保存するかどうかを選択できます。 目的のオプションを選択し、`Enter` キーを押します。
 
-   ![ カスタムビルドの縮小選択を表示しているターミナルの画像 ](../assets/custom-build/minify.png)
+   ![&#x200B; カスタムビルドの縮小選択を表示しているターミナルの画像 &#x200B;](../assets/custom-build/minify.png)
 
 1. 次に、ローカルマシン上のどこにビルドを保存するかを尋ねられます。 `Enter` キーを押して、事前に選択された場所を確認するか、新しい場所を入力します。
 
-   ![ カスタムビルドの保存オプションを表示しているターミナルの画像 ](../assets/custom-build/save.png)
+   ![&#x200B; カスタムビルドの保存オプションを表示しているターミナルの画像 &#x200B;](../assets/custom-build/save.png)
 
 1. 場所を確認すると、カスタムビルドが生成されて保存されます。
 
-   ![ カスタムビルドが保存された場所を示すターミナルの画像 ](../assets/custom-build/saved.png)
+   ![&#x200B; カスタムビルドが保存された場所を示すターミナルの画像 &#x200B;](../assets/custom-build/saved.png)

@@ -31,8 +31,8 @@ Experience Platformは、プロファイルデータをAdobe Experience Platform
 
 [!DNL Customer Attributes] データを他の [!DNL Profile] データセットに結び付けるには、そのデータと ID をExperience Cloud ID と一致させる必要があります。
 
-`CORE` 名前空間を設定するには、[Web Experience Cloud](/help/collection/use-cases/identity/id-overview.md)、{Mobile SDK[ または ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)5}Experience Cloud ID サービス API[ を使用して、訪問者のSDK ID を設定します。](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)
+`CORE` 名前空間を設定するには、[Web Experience Cloud](/help/collection/use-cases/identity/id-overview.md)、{Mobile SDK[&#x200B; または &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)5}Experience Cloud ID サービス API[&#x200B; を使用して、訪問者のSDK ID を設定します。](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)
 
 [!DNL Customer Attributes] ファイルは、他の ID 関係をこれ以上入力しません。 例えば、[!DNL Customer Attributes] ソースデータセットに **メール** と **ロイヤルティ ID** フィールドが含まれる場合、[!DNL Identity Service] で処理するには、これらのフィールドにスキーマの ID フィールドというラベルを付ける必要があります。
 
-詳しくは、[UI での  [!DNL Customer Attributes]  ソース接続の作成 ](../../tutorials/ui/create/adobe-applications/customer-attributes.md) に関するチュートリアルを参照してください。
+詳しくは、[UI での  [!DNL Customer Attributes]  ソース接続の作成 &#x200B;](../../tutorials/ui/create/adobe-applications/customer-attributes.md) に関するチュートリアルを参照してください。

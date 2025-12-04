@@ -15,7 +15,7 @@ ht-degree: 0%
 
 `thirdPartyCookiesEnabled` プロパティは、[`CORE ID`](/help/collection/use-cases/identity/id-overview.md#tracking-coreid-web-sdk) 呼び出しで [`getIdentity`](../getidentity.md) を要求できるかどうかを制御します。
 
-このオプションを有効にすると、web SDKがAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、Audience Managerの呼び出しは無効になります。 詳しくは、Audience Manager ユーザーガイドの [Demdex ドメインの呼び出しについて ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
+このオプションを有効にすると、web SDKがAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、Audience Managerの呼び出しは無効になります。 詳しくは、Audience Manager ユーザーガイドの [Demdex ドメインの呼び出しについて &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
 
 `thirdPartyCookiesEnabled` コマンドを実行するときは、`configure` のブール値を設定します。 Web SDKの設定時にこのプロパティを省略した場合、デフォルトは `true` になります。 Web SDKで訪問者の特定にAudience Managerを使用しない場合は、この値を `false` に設定します。
 
@@ -29,4 +29,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用してサードパーティ Cookie を有効にする
 
-この設定は、Web SDK タグ拡張機能で [ID 設定 ](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies) を使用して設定できます。
+この設定は、Web SDK タグ拡張機能で [ID 設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies) を使用して設定できます。

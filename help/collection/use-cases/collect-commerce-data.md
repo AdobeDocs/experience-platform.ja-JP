@@ -30,7 +30,7 @@ ht-degree: 37%
 
 >[!TIP]
 >
->測定には、2 つのフィールド（`id` と `value`）があります。ほとんどの場合、使用するのは `value` フィールド（例：`'value':1`）のみです。 「`id`」フィールドを使用すると、測定が送信された際にトラッキングする一意の ID を設定できます。 詳しくは、[ 測定 ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) の XDM ドキュメントを参照してください。
+>測定には、2 つのフィールド（`id` と `value`）があります。ほとんどの場合、使用するのは `value` フィールド（例：`'value':1`）のみです。 「`id`」フィールドを使用すると、測定が送信された際にトラッキングする一意の ID を設定できます。 詳しくは、[&#x200B; 測定 &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) の XDM ドキュメントを参照してください。
 
 | 測定 | レコメンデーション | 説明 |
 |---|---|---|

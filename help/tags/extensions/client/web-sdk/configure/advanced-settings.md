@@ -18,7 +18,7 @@ ht-degree: 2%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Advanced Settings]** セクションまで下にスクロールします。
 
-![Web SDK タグ拡張機能ページを使用した詳細設定を示す画像 ](../assets/advanced-settings.png)
+![Web SDK タグ拡張機能ページを使用した詳細設定を示す画像 &#x200B;](../assets/advanced-settings.png)
 
 現在、利用可能なオプションが 1 つあります。
 

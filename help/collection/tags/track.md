@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # `track()`
 
-`_satellite.track()` メソッドを使用すると、[ 直接呼び出しルール ](/help/tags/extensions/client/core/overview.md#direct-call-event) をトリガーに設定できます。
+`_satellite.track()` メソッドを使用すると、[&#x200B; 直接呼び出しルール &#x200B;](/help/tags/extensions/client/core/overview.md#direct-call-event) をトリガーに設定できます。
 
 >[!IMPORTANT]
 >

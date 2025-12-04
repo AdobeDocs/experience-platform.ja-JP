@@ -14,13 +14,13 @@ ht-degree: 3%
 
 [!DNL Experience Cloud Identity (ECID)] は、ユーザーが web サイトを訪問したときにユーザーに割り当てられる永続的な識別子です。 状況によっては、（例えば、サードパーティに送信するために） [!DNL ECID] ールにアクセスする方が良い場合があります。 別の使用例としては、ID マップに含めるだけでなく、カスタム XDM フィールドに [!DNL ECID] を設定する場合があります。
 
-[ データ収集のためのデータ準備 ](/help/datastreams/data-prep.md) （推奨）またはタグを使用して、ECID にアクセスできます。
+[&#x200B; データ収集のためのデータ準備 &#x200B;](/help/datastreams/data-prep.md) （推奨）またはタグを使用して、ECID にアクセスできます。
 
 ## データ準備を使用した ECID へのアクセス（推奨される方法） {#accessing-ecid-data-prep}
 
-このメソッドは、[ データ収集のためのデータ準備 ](/help/datastreams/data-prep.md) を使用して、`ECID` ータのカスタムマッピングを設定します。
+このメソッドは、[&#x200B; データ収集のためのデータ準備 &#x200B;](/help/datastreams/data-prep.md) を使用して、`ECID` ータのカスタムマッピングを設定します。
 
-この機能の使用方法については、[ データ収集のためのデータ準備 ](/help/datastreams/data-prep.md) のドキュメントを参照してください。
+この機能の使用方法については、[&#x200B; データ収集のためのデータ準備 &#x200B;](/help/datastreams/data-prep.md) のドキュメントを参照してください。
 
 ECID をカスタム XDM フィールドに設定する場合、ID マップに含める以外に、`source` を次のパスに設定することでこれを実行できます。
 
@@ -36,7 +36,7 @@ xdm.identityMap.ECID[0].id
 
 クライアントサイドで [!DNL ECID] にアクセスする必要がある場合は、以下に説明するようにタグアプローチを使用します。
 
-1. [ ルールコンポーネントの優先順位 ](/help/tags/ui/managing-resources/rules.md#sequencing) が有効になっているプロパティが設定されていることを確認します。
+1. [&#x200B; ルールコンポーネントの優先順位 &#x200B;](/help/tags/ui/managing-resources/rules.md#sequencing) が有効になっているプロパティが設定されていることを確認します。
 1. 新しいルールを作成します。 このルールは、他の重要なアクションを実行せずに [!DNL ECID] をキャプチャする場合にのみ使用してください。
 1. ルールに [!UICONTROL Library Loaded] イベントを追加します。
 1. 次のコードを使用して、ルールに [!UICONTROL Custom Code] アクションを追加します（SDK インスタンスに設定した名前が `alloy` で、同じ名前のデータ要素がまだない場合）。

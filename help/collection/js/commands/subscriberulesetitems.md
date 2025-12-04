@@ -42,7 +42,7 @@ alloy("subscribeRulesetItems", {
 | --- | --- | --- |
 | `surfaces` | 文字列配列 | サーフェスのリスト 提案は、ここで提供されるサーフェスのいずれかに一致する場合にのみ、コールバック関数によって受け取られます。 |
 | `schemas` | 文字列配列 | スキーマのリスト。 提案は、ここで提供されるスキーマのいずれかと一致する場合にのみ、コールバック関数によって受け取られます。 |
-| `callback` | 関数 | 提案がルールセットの満たされた結果である場合に呼び出されるコールバック関数。 コールバック関数は、呼び出されたときに 2 つのパラメーター（`result` と `collectEvent`）を受け取ります。 詳しくは、[ コールバックパラメーター ](#callback-parameters) を参照してください。 |
+| `callback` | 関数 | 提案がルールセットの満たされた結果である場合に呼び出されるコールバック関数。 コールバック関数は、呼び出されたときに 2 つのパラメーター（`result` と `collectEvent`）を受け取ります。 詳しくは、[&#x200B; コールバックパラメーター &#x200B;](#callback-parameters) を参照してください。 |
 
 ### コールバックパラメーター {#callback-parameters}
 
@@ -50,7 +50,7 @@ alloy("subscribeRulesetItems", {
 
 | パラメーター | タイプ | 説明 |
 | --- | --- | --- |
-| `result` | オブジェクト | このオブジェクトには `propositions` 配列が含まれています。  これらの提案は、ルールセットが満たされている場合の直接的な結果です。 `result` オブジェクトは、[ 句を使用して ](command-responses.md) が返す `sendEvent`result オブジェクト `then` と同じ構造になっています。 |
+| `result` | オブジェクト | このオブジェクトには `propositions` 配列が含まれています。  これらの提案は、ルールセットが満たされている場合の直接的な結果です。 `result` オブジェクトは、[&#x200B; 句を使用して &#x200B;](command-responses.md) が返す `sendEvent`result オブジェクト `then` と同じ構造になっています。 |
 | `collectEvent` | 関数 | Edge Network イベントを送信して、インタラクション、ディスプレイ、その他のイベントをトラッキングするのに使用できる便利な関数。 |
 
 ### `collectEvent` 関数 {#collectevent-function}

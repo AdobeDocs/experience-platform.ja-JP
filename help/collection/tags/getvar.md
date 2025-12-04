@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # `getVar()`
 
-`_satellite.getVar()` メソッドは、[Data 要素 ](/help/tags/ui/managing-resources/data-elements.md) の現在の値、または [`_satellite.setVar()`](setvar.md) を使用して設定された値を返します。 データ要素と `setVar()` 値が同じ名前を共有する場合、データ要素が優先されます。 まだ存在しない文字列識別子を呼び出すと、メソッドは `undefined` を返します。 評価は同期されます。
+`_satellite.getVar()` メソッドは、[Data 要素 &#x200B;](/help/tags/ui/managing-resources/data-elements.md) の現在の値、または [`_satellite.setVar()`](setvar.md) を使用して設定された値を返します。 データ要素と `setVar()` 値が同じ名前を共有する場合、データ要素が優先されます。 まだ存在しない文字列識別子を呼び出すと、メソッドは `undefined` を返します。 評価は同期されます。
 
 ```js
 _satellite.getVar(name: string, event?: unknown) => unknown
@@ -46,4 +46,4 @@ const rule = _satellite.getVar('Return event rule', event);
 | 名前 | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | **`name`** | `string` | ○ | 取得するデータ要素名。 データ要素名では大文字と小文字が区別されます。 |
-| **`event`** | `object` | × | トリガールールからのイベントコンテキスト。 [ カスタムコード ](/help/tags/ui/managing-resources/data-elements.md#custom-code) またはカスタム拡張機能を使用したデータ要素による高度なユースケースでのみ使用されます。 イベント（クリック、フォーム送信、カスタム JavaScript ディスパッチなど）によってルールがトリガーされると、関連するイベントオブジェクトがここに含まれます。 データ要素では、この情報を使用して、クリックされた要素の詳細やカスタムイベントからのプロパティなど、コンテキスト値を返すことができます。 |
+| **`event`** | `object` | × | トリガールールからのイベントコンテキスト。 [&#x200B; カスタムコード &#x200B;](/help/tags/ui/managing-resources/data-elements.md#custom-code) またはカスタム拡張機能を使用したデータ要素による高度なユースケースでのみ使用されます。 イベント（クリック、フォーム送信、カスタム JavaScript ディスパッチなど）によってルールがトリガーされると、関連するイベントオブジェクトがここに含まれます。 データ要素では、この情報を使用して、クリックされた要素の詳細やカスタムイベントからのプロパティなど、コンテキスト値を返すことができます。 |

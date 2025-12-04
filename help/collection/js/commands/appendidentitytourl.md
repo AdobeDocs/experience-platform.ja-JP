@@ -51,8 +51,8 @@ document.addEventListener("click", event => {
 
 ## 応答オブジェクト
 
-このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトには、ID 情報がクエリ文字列パラメーターとして追加された **`url`** という新しい URL が含まれます。
+このコマンドを使用して [&#x200B; 応答を処理 &#x200B;](command-responses.md) する場合、応答オブジェクトには、ID 情報がクエリ文字列パラメーターとして追加された **`url`** という新しい URL が含まれます。
 
 ## Web SDK タグ拡張機能を使用した URL への ID の追加
 
-このコマンドと同等の web SDK タグ拡張機能は、「ID を使用してリダイレクト [ アクション ](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) です。
+このコマンドと同等の web SDK タグ拡張機能は、「ID を使用してリダイレクト [&#x200B; アクション &#x200B;](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) です。

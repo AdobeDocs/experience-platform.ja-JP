@@ -51,7 +51,7 @@ Experience Platform で、組織で機密性が高いと見なすデータを含
 
 >[!NOTE]
 >
->Experience Platform UI またはデータ収集 UI の「[!UICONTROL Schemas]」タブでデータ使用ラベルを適用する方法について詳しくは、[ スキーマのラベル付けに関するチュートリアル ](../xdm/tutorials/labels.md) を参照してください。
+>Experience Platform UI またはデータ収集 UI の「[!UICONTROL Schemas]」タブでデータ使用ラベルを適用する方法について詳しくは、[&#x200B; スキーマのラベル付けに関するチュートリアル &#x200B;](../xdm/tutorials/labels.md) を参照してください。
 
 データストリームを作成する際に、選択したスキーマに機密のデータ使用ラベルが含まれている場合、データストリームを設定してそのデータを HIPAA 対応の宛先に送信することのみ可能です。 現在、データストリームでサポートされる HIPAA 対応の宛先は Adobe Experience Platform のみです。Adobe Target、Adobe Analytics、Adobe Audience Manager、イベント転送、エッジ宛先などの他の宛先サービスは、機密データ使用ラベルを含むデータストリームでは無効になります。
 

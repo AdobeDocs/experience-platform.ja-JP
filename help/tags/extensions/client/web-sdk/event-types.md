@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # イベントタイプ
 
-ここでは、Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platform イベントタイプについて説明します。 これらは [ ルールの作成 ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ja) に使用されるので、`eventType` オブジェクトの [`xdm` フィールドと混同しないでください ](/help/collection/js/commands/sendevent/xdm.md)。
+ここでは、Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platform イベントタイプについて説明します。 これらは [&#x200B; ルールの作成 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ja) に使用されるので、`eventType` オブジェクトの [`xdm` フィールドと混同しないでください &#x200B;](/help/collection/js/commands/sendevent/xdm.md)。
 
 ## モニタリングフックのトリガー {#monitoring-hook-triggered}
 
 Adobe Experience Platform Web SDKには、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、web SDKのログを取得したりするのに役立ちます。
 
-各モニタリングフックイベントに含まれるパラメーターについて詳しくは、[Web SDKのモニタリングフックのドキュメント ](/help/collection/js/monitoring-hooks.md) を参照してください。
+各モニタリングフックイベントに含まれるパラメーターについて詳しくは、[Web SDKのモニタリングフックのドキュメント &#x200B;](/help/collection/js/monitoring-hooks.md) を参照してください。
 
-![ 監視フックイベントタイプを示すタグユーザーインターフェイス画像 ](assets/monitoring-hook-triggered.png)
+![&#x200B; 監視フックイベントタイプを示すタグユーザーインターフェイス画像 &#x200B;](assets/monitoring-hook-triggered.png)
 
 Web SDK タグ拡張機能は、次のモニタリングフックをサポートしています。
 
@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Adobe Target応答トークンへのアクセス
 
-Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
 応答データを処理するルールにあるカスタムコードアクションでは、サーバーから返されたパーソナライゼーションの提案にアクセスできます。 それには、次のカスタムコードを入力します。
 
@@ -253,7 +253,7 @@ Adobe Targetから返されるPersonalization コンテンツには、アクテ�
 var propositions = event.propositions;
 ```
 
-`event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 コンテン [ のコンテンツについて詳しくは、](#manually-render-personalized-content) パーソナライズされたコンテンツの手動レンダリング `result.propositions` を参照してください。
+`event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 コンテン [&#x200B; のコンテンツについて詳しくは、](#manually-render-personalized-content) パーソナライズされたコンテンツの手動レンダリング `result.propositions` を参照してください。
 
 Web SDKによって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、1 つの配列にプッシュするとします。 その後、単一のアレイをサードパーティに送信できます。 この場合、[!UICONTROL Custom code] のアクション内に次のようなカスタムコードを記述します。
 
@@ -293,7 +293,7 @@ if (propositions) {
 
 **[!UICONTROL Subscribe ruleset items]** イベントタイプを使用すると、サーフェスのAdobe Journey Optimizer コンテンツカードをサブスクライブできます。 ルールセットが評価されるたびに、このコマンドに提供されるコールバックは、コンテンツカードデータを保持する提案を含む結果オブジェクトを受け取ります。
 
-![ 購読ルールセット項目イベントタイプを示すExperience Platform タグのユーザーインターフェイスの画像。](assets/subscribe-ruleset-items.png)
+![&#x200B; 購読ルールセット項目イベントタイプを示すExperience Platform タグのユーザーインターフェイスの画像。](assets/subscribe-ruleset-items.png)
 
 このイベントタイプは、次の設定可能なプロパティをサポートしています。
 

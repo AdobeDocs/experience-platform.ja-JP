@@ -21,16 +21,16 @@ ht-degree: 8%
 
 スケジュールされたクエリが確実に実行されるように、Adobeでは、管理者がスケジュールされたクエリを作成するためのテクニカルアカウント（OAuth サーバー間資格情報を使用）をプロビジョニングすることをお勧めします。 スケジュールされたクエリは個人用ユーザーアカウントでも作成できますが、この方法で作成されたクエリは、そのユーザーのアクセス権が削除または無効になると実行を停止します。
 
-テクニカルアカウントの設定と必要な権限の割り当てについて詳しくは、[ 資格情報ガイドの前提条件 ](./credentials.md#prerequisites) および [API 認証 ](../../landing/api-authentication.md) を参照してください。
+テクニカルアカウントの設定と必要な権限の割り当てについて詳しくは、[&#x200B; 資格情報ガイドの前提条件 &#x200B;](./credentials.md#prerequisites) および [API 認証 &#x200B;](../../landing/api-authentication.md) を参照してください。
 
 テクニカルアカウントの作成と設定に関するその他のガイダンスについては、次を参照してください。
 
-- [Developer Consoleの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Consoleを設定し、OAuth 資格情報を取得するための詳細手順。
-- [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup):Adobe Experience Platformでテクニカルアカウントを作成および設定するための包括的なチュートリアル。
+- [Developer Consoleの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Consoleを設定し、OAuth 資格情報を取得するための詳細手順。
+- [&#x200B; エンドツーエンドのテクニカルアカウントの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup):Adobe Experience Platformでテクニカルアカウントを作成および設定するための包括的なチュートリアル。
 
-クエリサービス UI のみを使用する場合は、必要な権限を持っていることを確認するか、テクニカルアカウントを管理する管理者と調整します。 スケジュールされたクエリはすべて「[!UICONTROL Scheduled queries]」タブのリストに追加され、スケジュールされたすべてのクエリジョブのステータス、スケジュールの詳細、エラーメッセージを監視したり、アラートを購読したりできます。 クエリの監視と管理について詳しくは、[ スケジュールされたクエリの監視ドキュメント ](./monitor-queries.md) を参照してください。
+クエリサービス UI のみを使用する場合は、必要な権限を持っていることを確認するか、テクニカルアカウントを管理する管理者と調整します。 スケジュールされたクエリはすべて「[!UICONTROL Scheduled queries]」タブのリストに追加され、スケジュールされたすべてのクエリジョブのステータス、スケジュールの詳細、エラーメッセージを監視したり、アラートを購読したりできます。 クエリの監視と管理について詳しくは、[&#x200B; スケジュールされたクエリの監視ドキュメント &#x200B;](./monitor-queries.md) を参照してください。
 
-このワークフローでは、クエリサービス UI のスケジュールプロセスについて説明します。 API を使用してスケジュールを追加する方法について詳しくは、[ スケジュールされたクエリのエンドポイントガイド ](../api/scheduled-queries.md) を参照してください。
+このワークフローでは、クエリサービス UI のスケジュールプロセスについて説明します。 API を使用してスケジュールを追加する方法について詳しくは、[&#x200B; スケジュールされたクエリのエンドポイントガイド &#x200B;](../api/scheduled-queries.md) を参照してください。
 
 >[!NOTE]
 >
@@ -46,9 +46,9 @@ ht-degree: 8%
 >
 >「**[!UICONTROL View schedule]**」を選択すると、スケジュールワークスペースに移動し、スケジュールされたクエリの実行を一目で確認できます。
 
-![[!UICONTROL View schedule] と [!UICONTROL Add schedule] がハイライト表示されたクエリエディター ](../images/ui/query-schedules/view-add-schedule.png)
+![[!UICONTROL View schedule] と [!UICONTROL Add schedule] がハイライト表示されたクエリエディター &#x200B;](../images/ui/query-schedules/view-add-schedule.png)
 
-「**[!UICONTROL Add schedule]**」を選択して、[ スケジュールの詳細ページ ](#schedule-details) に移動します。
+「**[!UICONTROL Add schedule]**」を選択して、[&#x200B; スケジュールの詳細ページ &#x200B;](#schedule-details) に移動します。
 
 または、クエリ名の下にある「**[!UICONTROL Schedules]**」タブを選択します。
 
@@ -60,7 +60,7 @@ ht-degree: 8%
 
 ### スケジュールの詳細を追加 {#schedule-details}
 
-スケジュールの詳細ページが表示されます。このページでは、スケジュールされたクエリの様々な詳細を編集できます。 詳細には [ スケジュールされたクエリの頻度と平日 ](#scheduled-query-frequency) 実行、開始日と終了日、結果の書き出し先のデータセット、[ クエリステータスアラート ](#alerts-for-query-status) が含まれます。
+スケジュールの詳細ページが表示されます。このページでは、スケジュールされたクエリの様々な詳細を編集できます。 詳細には [&#x200B; スケジュールされたクエリの頻度と平日 &#x200B;](#scheduled-query-frequency) 実行、開始日と終了日、結果の書き出し先のデータセット、[&#x200B; クエリステータスアラート &#x200B;](#alerts-for-query-status) が含まれます。
 
 >[!IMPORTANT]
 >
@@ -88,33 +88,33 @@ ht-degree: 8%
 >
 > 既存のデータセットを使用または新しいデータセットを作成する際は、データセットは既に設定されているため、`INSERT INTO` または `CREATE TABLE AS SELECT` をクエリの一部として含める必要は&#x200B;**ありません**。`INSERT INTO` または `CREATE TABLE AS SELECT` をスケジュールされたクエリの一部として含めた場合、エラーが発生します。
 
-![ データセットの詳細と [!UICONTROL Create and append into new dataset] のオプションがハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-schedules/dataset-details-create-and-append.png)
+![&#x200B; データセットの詳細と [!UICONTROL Create and append into new dataset] のオプションがハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-または、**[!UICONTROL Append into existing dataset]** を選択し、続いてデータセットアイコン（「データセット」アイコン ![ を選択します ](/help/images/icons/database.png)。
+または、**[!UICONTROL Append into existing dataset]** を選択し、続いてデータセットアイコン（「データセット」アイコン ![&#x200B; を選択します &#x200B;](/help/images/icons/database.png)。
 
-![ データセットの詳細と「既存のデータセットに追加」がハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-schedules/dataset-details-existing.png)
+![&#x200B; データセットの詳細と「既存のデータセットに追加」がハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-schedules/dataset-details-existing.png)
 
 **[!UICONTROL Select output dataset]** ダイアログが表示されます。
 
 次に、既存のデータセットを参照するか、検索フィールドを使用してオプションをフィルタリングします。 使用するデータセットの行を選択します。 データセットの詳細は、右側のパネルに表示されます。 「**[!UICONTROL Done]**」を選択して、選択内容を確定します。
 
-![ 検索フィールド、データセット行、完了がハイライト表示された出力データセットを選択ダイアログ ](../images/ui/query-schedules/select-output-dataset-dialog.png)
+![&#x200B; 検索フィールド、データセット行、完了がハイライト表示された出力データセットを選択ダイアログ &#x200B;](../images/ui/query-schedules/select-output-dataset-dialog.png)
 
 ### クエリが継続的に失敗する場合に強制隔離 {#quarantine}
 
 スケジュールを作成する際は、クエリを強制隔離機能に登録して、システムリソースを保護し、潜在的な中断を防ぐことができます。 強制隔離機能により、繰り返し失敗するクエリを自動的に識別して分離し、[!UICONTROL Quarantined] の状態にします。 10 回連続して失敗した後にクエリを強制隔離すると、問題を介入、確認および修正してから追加の実行を許可できます。 これにより、運用効率とデータの整合性を維持できます。
 
-![ 「[!UICONTROL Query Quarantine]」がハイライト表示され、「はい」が選択されているクエリスケジュールワークスペース ](../images/ui/query-schedules/quarantine-enroll.png)
+![&#x200B; 「[!UICONTROL Query Quarantine]」がハイライト表示され、「はい」が選択されているクエリスケジュールワークスペース &#x200B;](../images/ui/query-schedules/quarantine-enroll.png)
 
-クエリが強制隔離機能に登録されると、このクエリのステータス変更に関するアラートを登録できます。 スケジュールされたクエリが強制隔離で登録されていない場合、[ アラートダイアログ ](./monitor-queries.md#alert-subscription) にオプションとして表示されません。
+クエリが強制隔離機能に登録されると、このクエリのステータス変更に関するアラートを登録できます。 スケジュールされたクエリが強制隔離で登録されていない場合、[&#x200B; アラートダイアログ &#x200B;](./monitor-queries.md#alert-subscription) にオプションとして表示されません。
 
-また、「[!UICONTROL Scheduled Queries]」タブのインラインアクションから強制隔離機能にスケジュール済みクエリを登録することもできます。 詳しくは、[ クエリドキュメントの監視 ](./monitor-queries.md#alert-subscription) を参照してください。
+また、「[!UICONTROL Scheduled Queries]」タブのインラインアクションから強制隔離機能にスケジュール済みクエリを登録することもできます。 詳しくは、[&#x200B; クエリドキュメントの監視 &#x200B;](./monitor-queries.md#alert-subscription) を参照してください。
 
 ### スケジュールされたクエリステータスに対するアラートの設定 {#alerts-for-query-status}
 
 また、スケジュールされたクエリ設定の一部として、クエリアラートを購読することもできます。 様々な状況で通知を受け取るように設定できます。 アラートは、強制隔離状態、クエリ処理の遅延、クエリのステータスの変更に対して設定できます。 使用可能なクエリ状態アラートオプションには、開始、成功、失敗があります。 アラートは、ポップアップ通知またはメールとして受け取ることができます。 スケジュールされたクエリのそのステータスに関するアラートを登録するには、チェックボックスを選択します。
 
-![ アラートオプションがハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-editor/alerts.png)
+![&#x200B; アラートオプションがハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-editor/alerts.png)
 
 次の表に、サポートされるクエリのアラートタイプを示します。
 
@@ -123,20 +123,20 @@ ht-degree: 8%
 | `start` | このアラートは、スケジュールされたクエリの実行が開始されたとき、または処理を開始したときに通知します。 |
 | `success` | このアラートは、スケジュールされたクエリの実行が正常に完了したときに、クエリがエラーなく実行されたことを示します。 |
 | `failed` | このアラートは、スケジュールされたクエリの実行でエラーが発生した場合、または正常に実行できなかった場合にトリガーします。 これにより、問題を迅速に特定して対処できます。 |
-| `quarantine` | このアラートは、スケジュールされたクエリの実行が強制隔離状態になった場合にアクティブになります。 クエリが [ 強制隔離機能に登録 ](#quarantine) されると、10 回連続して実行されなかったスケジュール済みクエリは、自動的に [!UICONTROL Quarantined] しい状態になります。 次に、強制隔離されたクエリでは、それ以上実行する前に介入が必要です。 注意：強制隔離アラートを購読するには、クエリを強制隔離機能に登録する必要があります。 |
-| `delay` | このアラートは、指定したしきい値を超える [ スケジュールされたクエリの実行結果の遅延 ](./monitor-queries.md#query-run-delay) がある場合に通知します。 クエリが完了または失敗せずに該当する期間に実行された場合にアラートをトリガーにするカスタム時間を設定できます。 デフォルトの動作では、クエリの処理が開始してから 150 分間アラートが設定されます。 |
+| `quarantine` | このアラートは、スケジュールされたクエリの実行が強制隔離状態になった場合にアクティブになります。 クエリが [&#x200B; 強制隔離機能に登録 &#x200B;](#quarantine) されると、10 回連続して実行されなかったスケジュール済みクエリは、自動的に [!UICONTROL Quarantined] しい状態になります。 次に、強制隔離されたクエリでは、それ以上実行する前に介入が必要です。 注意：強制隔離アラートを購読するには、クエリを強制隔離機能に登録する必要があります。 |
+| `delay` | このアラートは、指定したしきい値を超える [&#x200B; スケジュールされたクエリの実行結果の遅延 &#x200B;](./monitor-queries.md#query-run-delay) がある場合に通知します。 クエリが完了または失敗せずに該当する期間に実行された場合にアラートをトリガーにするカスタム時間を設定できます。 デフォルトの動作では、クエリの処理が開始してから 150 分間アラートが設定されます。 |
 
 >[!NOTE]
 >
 >[!UICONTROL Query Run Delay] アラートを設定する場合は、Experience Platform UI で目的の遅延時間を分単位で設定する必要があります。 期間を分単位で入力します。 遅延の最大値は 24 時間（1440 分）です。
 
-アラートルールの定義方法など、Adobe Experience Platformのアラートの概要については、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。 Adobe Experience Platform UI 内のアラートとアラートルールの管理に関するガイダンスについては、[ アラート UI ガイド ](../../observability/alerts/ui.md) を参照してください。
+アラートルールの定義方法など、Adobe Experience Platformのアラートの概要については、[&#x200B; アラートの概要 &#x200B;](../../observability/alerts/overview.md) を参照してください。 Adobe Experience Platform UI 内のアラートとアラートルールの管理に関するガイダンスについては、[&#x200B; アラート UI ガイド &#x200B;](../../observability/alerts/ui.md) を参照してください。
 
 ### スケジュールされたパラメーター化クエリのパラメーターの設定 {#set-parameters}
 
 パラメーター化クエリ用のスケジュールされたクエリを作成している場合は、これらのクエリの実行にパラメーター値を設定する必要があります。
 
-![ クエリパラメーターセクションがハイライト表示されたスケジュール作成ワークフローの「スケジュールの詳細」セクション。](../images/ui/query-schedules/scheduled-query-parameter.png)
+![&#x200B; クエリパラメーターセクションがハイライト表示されたスケジュール作成ワークフローの「スケジュールの詳細」セクション。](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 スケジュールの詳細を確認したら、「**[!UICONTROL Save]**」を選択して、スケジュールを作成します。 テンプレートの「スケジュール」タブに戻ります。 このワークスペースには、スケジュール ID、スケジュール自体、スケジュールの出力データセットなど、新しく作成されたスケジュールの詳細が表示されます。
 
@@ -148,7 +148,7 @@ ht-degree: 8%
 
 または、クエリテンプレートのスケジュールされた実行のリストを表示するには、「**[!UICONTROL Scheduled queries]**」タブに移動し、使用可能なリストからテンプレート名を選択します。
 
-![ 名前付きテンプレートがハイライト表示された「スケジュール済みクエリ」タブ ](../images/ui/query-schedules/view-scheduled-runs.png)
+![&#x200B; 名前付きテンプレートがハイライト表示された「スケジュール済みクエリ」タブ &#x200B;](../images/ui/query-schedules/view-scheduled-runs.png)
 
 スケジュールされたクエリのクエリ実行のリストが表示されます。
 
@@ -160,7 +160,7 @@ CTAS/ITAS バッチクエリのクエリ実行レベルで消費される計算�
 >
 >時間計算機能は、[Data Distiller SKU](../data-distiller/overview.md) を購入したユーザー専用です。 詳しくは、アドビ担当者にお問い合わせください。
 
-![ スケジュール済みクエリのクエリ実行のリストがハイライト表示されたスケジュール済みクエリワークスペースの詳細セクション。](../images/ui/query-schedules/list-of-scheduled-runs.png)
+![&#x200B; スケジュール済みクエリのクエリ実行のリストがハイライト表示されたスケジュール済みクエリワークスペースの詳細セクション。](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
 次の表に、スケジュール済の問合せ実行をリストする「詳細」セクションで使用可能な各列の説明を示します。
 
@@ -179,11 +179,11 @@ CTAS/ITAS バッチクエリのクエリ実行レベルで消費される計算�
 >
 >時間の計算データは、2024 年 8 月 15 日（PT）から使用できます。 この日付より前のデータは、「利用できません」と表示されます。
 
-UI を使用してすべてのクエリジョブのステータスを監視する方法について詳しくは、[ スケジュール済みクエリの監視ガイド ](./monitor-queries.md#inline-actions) を参照してください。
+UI を使用してすべてのクエリジョブのステータスを監視する方法について詳しくは、[&#x200B; スケジュール済みクエリの監視ガイド &#x200B;](./monitor-queries.md#inline-actions) を参照してください。
 
-リストから **[!UICONTROL Query run ID]** を選択して、クエリ実行の概要に移動します。 [ クエリ実行の概要 ](./monitor-queries.md#query-run-overview) で利用できる情報の完全な分類については、スケジュールされたクエリの監視に関するドキュメントを参照してください。
+リストから **[!UICONTROL Query run ID]** を選択して、クエリ実行の概要に移動します。 [&#x200B; クエリ実行の概要 &#x200B;](./monitor-queries.md#query-run-overview) で利用できる情報の完全な分類については、スケジュールされたクエリの監視に関するドキュメントを参照してください。
 
-Query Service API を使用してスケジュールされたクエリを監視するには、[ スケジュールされたクエリ実行エンドポイントガイド ](../api/runs-scheduled-queries.md) を参照してください。
+Query Service API を使用してスケジュールされたクエリを監視するには、[&#x200B; スケジュールされたクエリ実行エンドポイントガイド &#x200B;](../api/runs-scheduled-queries.md) を参照してください。
 
 ## スケジュールの有効化、無効化または削除 {#delete-schedule}
 
@@ -199,14 +199,14 @@ Query Service API を使用してスケジュールされたクエリを監視�
 >
 >スケジュールを無効にしてから、クエリのスケジュールを削除する必要があります。
 
-![ 詳細パネルがハイライト表示されたテンプレートのスケジュールのリスト。](../images/ui/query-schedules/schedule-details-panel.png)
+![&#x200B; 詳細パネルがハイライト表示されたテンプレートのスケジュールのリスト。](../images/ui/query-schedules/schedule-details-panel.png)
 
 確認ダイアログが表示されます。 「**[!UICONTROL Disable]**」を選択して、アクションを確定します。
 
-![ スケジュールを無効にする確認ダイアログ。](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
+![&#x200B; スケジュールを無効にする確認ダイアログ。](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
 
 無効なスケジュールを削除するには、「**[!UICONTROL Delete a schedule]**」を選択します。
 
-![ 「スケジュールを削除」がハイライト表示されたスケジュールワークスペース。](../images/ui/query-schedules/delete-schedule.png)
+![&#x200B; 「スケジュールを削除」がハイライト表示されたスケジュールワークスペース。](../images/ui/query-schedules/delete-schedule.png)
 
-または、「[!UICONTROL Scheduled Queries]」タブには、スケジュールされた各クエリに対するインラインアクションのコレクションが用意されています。 使用可能なインラインアクションには、[!UICONTROL Disable schedule] または [!UICONTROL Enable schedule]、[!UICONTROL Delete schedule]、スケジュールされたクエリのアラートへの [!UICONTROL Subscribe] などがあります。 「スケジュール済みクエリ」タブを使用してスケジュール済みクエリを削除または無効にする方法について詳しくは、[ スケジュール済みクエリの監視ガイド ](./monitor-queries.md#inline-actions) を参照してください。
+または、「[!UICONTROL Scheduled Queries]」タブには、スケジュールされた各クエリに対するインラインアクションのコレクションが用意されています。 使用可能なインラインアクションには、[!UICONTROL Disable schedule] または [!UICONTROL Enable schedule]、[!UICONTROL Delete schedule]、スケジュールされたクエリのアラートへの [!UICONTROL Subscribe] などがあります。 「スケジュール済みクエリ」タブを使用してスケジュール済みクエリを削除または無効にする方法について詳しくは、[&#x200B; スケジュール済みクエリの監視ガイド &#x200B;](./monitor-queries.md#inline-actions) を参照してください。

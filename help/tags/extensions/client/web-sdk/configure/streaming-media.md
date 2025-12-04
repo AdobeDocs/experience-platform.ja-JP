@@ -18,7 +18,7 @@ ht-degree: 4%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Streaming media]** セクションまで下にスクロールします。
 
-![ タグ UI の web SDK タグ拡張機能の Media Collection 設定を示す画像 ](../assets/media-collection.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能の Media Collection 設定を示す画像 &#x200B;](../assets/media-collection.png)
 
 ## 前提条件
 
@@ -43,8 +43,8 @@ Web SDKのストリーミングメディアコンポーネントを使用する�
 
 ## [!UICONTROL Main ping interval]
 
-メインコンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](/help/collection/js/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。
+メインコンテンツに対する ping の頻度（秒単位）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。 値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](/help/collection/js/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。
 
 ## [!UICONTROL Ad ping interval]
 
-広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](/help/collection/js/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。
+広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[&#x200B; 自動的にトラッキングされるセッション &#x200B;](/help/collection/js/commands/createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。

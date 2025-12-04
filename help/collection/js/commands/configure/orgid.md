@@ -17,7 +17,7 @@ ht-degree: 0%
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. Adobe Experience Cloud内の任意の場所で、**`[Ctrl]`** + **`[I]`** キーを押します。 [!UICONTROL User Data Debugger] ウィンドウが開きます。
-1. **[!UICONTROL Copy]** ージの横にある「![ ージ ](../../assets/copy.png) コピー [!UICONTROL Current Org ID]」をクリックするか、「**[!UICONTROL Assigned Orgs]**」タブをクリックして、アクセス可能な他の組織 ID を表示します。
+1. **[!UICONTROL Copy]** ージの横にある「![&#x200B; ージ &#x200B;](../../assets/copy.png) コピー [!UICONTROL Current Org ID]」をクリックするか、「**[!UICONTROL Assigned Orgs]**」タブをクリックして、アクセス可能な他の組織 ID を表示します。
 1. 目的の情報の検索が終了したら、「**[!UICONTROL Close]**」をクリックします。
 
 組織 ID は常に 24 文字の英数字から成る文字列で、末尾は常に `@AdobeOrg` になります。
@@ -33,4 +33,4 @@ alloy("configure", {
 
 ## Web SDK タグ拡張機能を使用して組織 ID を設定します
 
-この設定は、[SDK インスタンス設定 ](/help/tags/extensions/client/web-sdk/configure/general.md) を使用して、web SDK タグ拡張機能で設定できます。 フィールドは、タグプロパティが作成された組織に基づいて自動的に入力されます。
+この設定は、[SDK インスタンス設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) を使用して、web SDK タグ拡張機能で設定できます。 フィールドは、タグプロパティが作成された組織に基づいて自動的に入力されます。

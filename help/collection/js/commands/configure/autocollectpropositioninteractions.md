@@ -50,7 +50,7 @@ alloy("configure", {
 | 名前 | データ属性 | 説明 |
 | --- | --- | --- |
 | **[!UICONTROL Label]** | `data-aep-click-label` | クリックされた要素に label data 属性が存在する場合、Edge Networkに送信されるインタラクションの詳細と共に含まれます。 Web SDKは、要素をクリックして DOM ツリーを上に移動し、ラベルデータ属性を探します。 Web SDKは、最初に見つかったラベルを使用します。 |
-| **[!UICONTROL Token]** | `data-aep-click-token` | このトークンは、[Adobe Journey Optimizer コードベースのキャンペーン ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) で決定ポリシーを活用する際に使用します。 トークンを使用すると、クリックされた決定ポリシー項目を区別できます。 クリックされた要素に token data 属性が存在する場合、Edge Networkに送信されるインタラクションの詳細と共に含まれます。 Web SDKは、要素をクリックして DOM ツリーを上に移動しながら、トークン data 属性を探します。 Web SDKは、最初に見つけたトークンを使用します。 |
+| **[!UICONTROL Token]** | `data-aep-click-token` | このトークンは、[Adobe Journey Optimizer コードベースのキャンペーン &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) で決定ポリシーを活用する際に使用します。 トークンを使用すると、クリックされた決定ポリシー項目を区別できます。 クリックされた要素に token data 属性が存在する場合、Edge Networkに送信されるインタラクションの詳細と共に含まれます。 Web SDKは、要素をクリックして DOM ツリーを上に移動しながら、トークン data 属性を探します。 Web SDKは、最初に見つけたトークンを使用します。 |
 | **[!UICONTROL Interact ID]** | `data-aep-interact-id` | 提案をレンダリングする際に、Web SDKがコンテナ要素にこの一意の ID を自動的に追加します。 Web SDKは、この ID を使用して DOM 要素を提案に関連付けます。 これは web SDKで必要な ID なので、一切変更しないでください。 無視しても問題ありません。 |
 
 ## 例

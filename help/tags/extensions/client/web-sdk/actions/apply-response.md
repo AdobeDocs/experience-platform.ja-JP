@@ -19,11 +19,11 @@ ht-degree: 1%
 1. 「[!UICONTROL Actions]」で、既存のアクションを選択するか、アクションを作成します。
 1. [!UICONTROL Extension] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL Action type] を **[!UICONTROL Apply response]** に設定します。
 
-![ 「応答を適用」アクションタイプを示すExperience Platform ユーザーインターフェイスの画像 ](../assets/apply-response.png)
+![&#x200B; 「応答を適用」アクションタイプを示すExperience Platform ユーザーインターフェイスの画像 &#x200B;](../assets/apply-response.png)
 
 ## ユースケース
 
-* **データ収集とパーソナライゼーションの手動分割**: レンダリング決定を [ に設定した ](send-event.md) イベントを送信 `false`トリガーを実行し、「イベントを完了」ルールでプロミスをキャッチすることができます。 このルール内の最初のアクションは、「応答を適用」です。 このワークフローを使用すると、組織自身のコードが他の作業を完了するまで DOM 操作を遅延できます。
+* **データ収集とパーソナライゼーションの手動分割**: レンダリング決定を [&#x200B; に設定した &#x200B;](send-event.md) イベントを送信 `false`トリガーを実行し、「イベントを完了」ルールでプロミスをキャッチすることができます。 このルール内の最初のアクションは、「応答を適用」です。 このワークフローを使用すると、組織自身のコードが他の作業を完了するまで DOM 操作を遅延できます。
 * **Web SDKの外部から受信したEdgeの応答**：別のライブラリを使用してEdge Networkと通信する場合、このアクションを使用して、Web SDKがEdge Networkからの応答を引き続き処理できるようにします。
 
 ## 使用可能なフィールド

@@ -18,7 +18,7 @@ ht-degree: 2%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Identity]** セクションまで下にスクロールします。
 
-![ タグ UI の Web SDK タグ拡張機能の ID 設定を示す画像 ](../assets/web-sdk-ext-identity.png)
+![&#x200B; タグ UI の Web SDK タグ拡張機能の ID 設定を示す画像 &#x200B;](../assets/web-sdk-ext-identity.png)
 
 次のオプションがあります。
 
@@ -32,4 +32,4 @@ Web SDKが `AMCV` および `s_ecid` Cookie を読み取り、`AMCV` が使用�
 
 >[!IMPORTANT]
 >
->サードパーティ cookie は、Web SDKの [ ファーストパーティデバイス ID](/help/collection/use-cases/identity/first-party-device-ids.md) 機能と互換性がありません。 ファーストパーティデバイス ID を使用するか、サードパーティ Cookie を使用することができます。両方の機能を同時に使用することはできません。
+>サードパーティ cookie は、Web SDKの [&#x200B; ファーストパーティデバイス ID](/help/collection/use-cases/identity/first-party-device-ids.md) 機能と互換性がありません。 ファーストパーティデバイス ID を使用するか、サードパーティ Cookie を使用することができます。両方の機能を同時に使用することはできません。

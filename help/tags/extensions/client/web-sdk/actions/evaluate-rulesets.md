@@ -19,7 +19,7 @@ ht-degree: 2%
 1. 「[!UICONTROL Actions]」で、既存のアクションを選択するか、アクションを作成します。
 1. [!UICONTROL Extension] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL Action type] を **[!UICONTROL Evaluate rulesets]** に設定します。
 
-![ 「ルールセットを評価」応答アクションタイプを示すExperience Platform ユーザーインターフェイスの画像。](../assets/evaluate-rulesets.png)
+![&#x200B; 「ルールセットを評価」応答アクションタイプを示すExperience Platform ユーザーインターフェイスの画像。](../assets/evaluate-rulesets.png)
 
 ## 使用可能なフィールド
 

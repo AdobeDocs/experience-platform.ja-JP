@@ -29,14 +29,14 @@ Adobe Experience Platform データ収集のタグ UI には、Web SDKおよび 
 
 ## データ収集プロセス
 
-Adobe製品ごとに個別のライブラリをインストールして実装する代わりに、上記の SDK またはタグ拡張機能の 1 つを実装して、必要なすべてのデータを 1 つのペイロードに集計できます。 そのペイロードはAdobe Experience Platform Edge Networkの [ データストリーム ](/help/datastreams/overview.md) に送信されます。
+Adobe製品ごとに個別のライブラリをインストールして実装する代わりに、上記の SDK またはタグ拡張機能の 1 つを実装して、必要なすべてのデータを 1 つのペイロードに集計できます。 そのペイロードはAdobe Experience Platform Edge Networkの [&#x200B; データストリーム &#x200B;](/help/datastreams/overview.md) に送信されます。
 
-![ データ収集図 ](assets/tags-sdks.png)
+![&#x200B; データ収集図 &#x200B;](assets/tags-sdks.png)
 
 Adobe Experience Platform Edge Networkは、世界中に分散した信頼性の高い高速サーバーネットワークで、データを極めて大規模に受信および処理できます。 データストリームは、データを受信すると、設定した各ソリューションにそのデータを配信します。 データは、個々の製品が認識できる形式で渡されます。
 
-![Adobe ソリューションの図 ](assets/adobe-solutions.png)
+![Adobe ソリューションの図 &#x200B;](assets/adobe-solutions.png)
 
-また、[ イベント転送 ](/help/tags/ui/event-forwarding/overview.md) を使用して、クライアントサイドの実装コードを使用せずに、待ち時間の短い、Adobe以外の任意の宛先にデータを変換、エンリッチメントおよび送信することもできます。
+また、[&#x200B; イベント転送 &#x200B;](/help/tags/ui/event-forwarding/overview.md) を使用して、クライアントサイドの実装コードを使用せずに、待ち時間の短い、Adobe以外の任意の宛先にデータを変換、エンリッチメントおよび送信することもできます。
 
-![ イベント転送図 ](assets/event-forwarding.png)
+![&#x200B; イベント転送図 &#x200B;](assets/event-forwarding.png)

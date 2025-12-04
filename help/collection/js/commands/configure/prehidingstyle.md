@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-`prehidingStyle` プロパティを使用すると、CSS セレクターを定義して、パーソナライズされたコンテンツを読み込むまで非表示にすることができます。 このプロパティは、ちらつきを避けるために、同期 web SDK実装で役立ちます。 Adobeでは、非同期 web SDK実装に [ 事前非表示スニペット ](/help/collection/use-cases/personalization/manage-flicker.md) を使用することをお勧めします。
+`prehidingStyle` プロパティを使用すると、CSS セレクターを定義して、パーソナライズされたコンテンツを読み込むまで非表示にすることができます。 このプロパティは、ちらつきを避けるために、同期 web SDK実装で役立ちます。 Adobeでは、非同期 web SDK実装に [&#x200B; 事前非表示スニペット &#x200B;](/help/collection/use-cases/personalization/manage-flicker.md) を使用することをお勧めします。
 
 ページ上で最初の [`sendEvent`](../sendevent/overview.md) コマンドを実行すると、このプロパティで定義する CSS セレクターによってコンテンツの非表示が開始されます。 Adobeからの応答を受信すると、コンテンツが再表示されます。これには、通常、パーソナライズされたコンテンツが含まれます。 `sendEvent` コマンドが失敗またはタイムアウトした場合も、コンテンツは再表示されます。
 

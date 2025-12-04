@@ -13,42 +13,43 @@ ht-degree: 5%
 
 Adobe Experience Platform **tags** （旧称 Launch）を使用すると、web サイトからEdge NetworkおよびダウンストリームのAdobe ソリューションにイベントデータを送信できます。
 
-これらの手順を実行する前に、次の [ プロパティ権限 ](/help/tags/ui/administration/user-permissions.md) にアクセスできることを確認してください。
+これらの手順を実行する前に、次の [&#x200B; プロパティ権限 &#x200B;](/help/tags/ui/administration/user-permissions.md) にアクセスできることを確認してください。
 
 * [!UICONTROL Develop]
 * [!UICONTROL Manage extensions]
 
-さらに、次のカテゴリにすべての [ 権限 ](/help/access-control/home.md#permissions) があることを確認します。
+さらに、次のカテゴリにすべての [&#x200B; 権限 &#x200B;](/help/access-control/home.md#permissions) があることを確認します。
 
 * データモデリング
 * ID
 
 ## XDM スキーマの作成 {#schema}
 
-[ エクスペリエンスデータモデル（XDM） ](/help/xdm/home.md) は、スキーマの形式でデータの共通の構造と定義を提供するオープンソース仕様です。 データをEdge Networkに送信する場合は、スキーマを設定することを強くお勧めします。
+[&#x200B; エクスペリエンスデータモデル（XDM） &#x200B;](/help/xdm/home.md) は、スキーマの形式でデータの共通の構造と定義を提供するオープンソース仕様です。 データをEdge Networkに送信する場合は、スキーマを設定することを強くお勧めします。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Schemas]**&#x200B;に移動します。
 1. **[!UICONTROL Create schema]** を選択します。
 1. 「**[!UICONTROL Experience Event]**」を選択し、「**[!UICONTROL Next]**」を選択します。
 1. スキーマに必要な名前を付けて、「**[!UICONTROL Finish]**」を選択します。
-1. （オプション）収集する追加データについて、さらにフィールドまたは [ フィールドグループ ](/help/xdm/ui/resources/field-groups.md) を追加できます。
+1. （オプション）収集する追加データについて、さらにフィールドまたは [&#x200B; フィールドグループ &#x200B;](/help/xdm/ui/resources/field-groups.md) を追加できます。
 
-![ スキーマキャンバス ](assets/getting-started/schema-structure.png)
+![&#x200B; スキーマキャンバス &#x200B;](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
->保存したスキーマでは、変更 *追加* のみが許可されます。 詳しくは、[ スキーマの進化 ](/help/xdm/schema/composition.md#evolution) を参照してください。
+>[!NOTE]
+>\
+>保存したスキーマでは、変更 *追加* のみが許可されます。 詳しくは、[&#x200B; スキーマの進化 &#x200B;](/help/xdm/schema/composition.md#evolution) を参照してください。
 
 ## データストリームの作成 {#datastream}
 
-[ データストリーム ](/help/datastreams/overview.md) とは、送信するデータの処理方法をEdge Networkに指示する設定です。 特定の製品にデータを送信するようにデータストリームを設定すると、データストリームは、関連するデータを、特定の製品が理解できる方法で、各製品に自動的に渡します。
+[&#x200B; データストリーム &#x200B;](/help/datastreams/overview.md) とは、送信するデータの処理方法をEdge Networkに指示する設定です。 特定の製品にデータを送信するようにデータストリームを設定すると、データストリームは、関連するデータを、特定の製品が理解できる方法で、各製品に自動的に渡します。
 
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Datastreams]**&#x200B;に移動します。
 1. **[!UICONTROL New datastream]** を選択します。
 1. データストリームに必要な名前を付け、**[!UICONTROL Mapping schema]** の下で最近作成したスキーマを選択します。
 1. **[!UICONTROL Save]** を選択します。
 
-![ データストリームリスト ](assets/getting-started/datastreams.png)
+![&#x200B; データストリームリスト &#x200B;](assets/getting-started/datastreams.png)
 
 ## タグプロパティの作成
 
@@ -67,19 +68,19 @@ Web SDK タグ拡張機能は、指定されたタグプロパティにインス
 1. 検索を使用して **[!UICONTROL Adobe Experience Platform Web SDK]** 拡張機能を見つけます。
 1. 拡張機能カードを選択し、右側の「**[!UICONTROL Install]**」を選択します。
 
-![SDKのインストール ](assets/getting-started/install-sdk.png)
+![SDKのインストール &#x200B;](assets/getting-started/install-sdk.png)
 
 ## タグ拡張機能の設定
 
 Web SDK タグ拡張機能をインストールすると、自動的に [Configuration](configure/config-overview.md) ページが表示されます。
 
-1. [ データストリーム セクション ](configure/datastreams.md) で、各環境に目的のデータストリームを選択します。
+1. [&#x200B; データストリーム セクション &#x200B;](configure/datastreams.md) で、各環境に目的のデータストリームを選択します。
 
 その他の設定は、すべて自己入力かオプションで指定します。 必要な設定を行い、「**[!UICONTROL Save]**」を選択します。
 
 ## 可変データ要素の作成
 
-Adobeでは、[ 変数 ](data-element-types.md#variable) データ要素を使用して、Adobeに送信するペイロードを保存することをお勧めします。 XDM オブジェクトも使用可能なデータ要素ですが、より古く、該当するユースケースに限られています。
+Adobeでは、[&#x200B; 変数 &#x200B;](data-element-types.md#variable) データ要素を使用して、Adobeに送信するペイロードを保存することをお勧めします。 XDM オブジェクトも使用可能なデータ要素ですが、より古く、該当するユースケースに限られています。
 
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
 1. 目的のタグプロパティを選択します。

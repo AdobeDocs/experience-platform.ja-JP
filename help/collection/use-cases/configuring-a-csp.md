@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # CSP の設定
 
-[ コンテンツセキュリティポリシー ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) （CSP）は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトリソースとスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDKには CSP は必要ありませんが、CSP を追加すると攻撃サーフェスが減少して、悪意のある攻撃に対する防御が強化されます。
+[&#x200B; コンテンツセキュリティポリシー &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) （CSP）は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトリソースとスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDKには CSP は必要ありませんが、CSP を追加すると攻撃サーフェスが減少して、悪意のある攻撃に対する防御が強化されます。
 
 CSP は、[!DNL Experience Platform Web SDK] のデプロイ方法と設定方法を反映する必要があります。 次の CSP は、SDKが正しく機能するために必要な可能性のある変更を示しています。 具体的な環境によっては、追加の CSP 設定が必要になる場合があります。
 
@@ -39,7 +39,7 @@ connect-src 'self' EDGE-DOMAIN
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-さらに、CSP nonce を、[!DNL Experience Platform Web SDK] [ ベースコード ](../js/install/library.md) スクリプトタグの属性として追加する必要があります。 [!DNL Experience Platform Web SDK] の後、ページにインラインスクリプトタグまたはスタイルタグを追加する際に、nonce が使用されます。
+さらに、CSP nonce を、[!DNL Experience Platform Web SDK] [&#x200B; ベースコード &#x200B;](../js/install/library.md) スクリプトタグの属性として追加する必要があります。 [!DNL Experience Platform Web SDK] の後、ページにインラインスクリプトタグまたはスタイルタグを追加する際に、nonce が使用されます。
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

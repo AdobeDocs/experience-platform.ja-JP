@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `data`
 
-`data` オブジェクトを使用すると、XDM スキーマに一致しないAdobeにペイロードを送信できます。 Adobe Analytics、Adobe Target、Adobe Audience Managerに直接データを送信するなど、XDM 以外のシナリオで役立ちます。 データがデータストリームに到達したら、[ データ準備のマッピング ](/help/data-prep/ui/mapping.md) を使用して、XDM フィールドを `data` オブジェクトの各フィールドに割り当てることができます。 商品が `data` オブジェクト内のフィールドを検出するようにAdobeによって既に設定されている場合は、そのデータをそのままデータストリームに送信できます。
+`data` オブジェクトを使用すると、XDM スキーマに一致しないAdobeにペイロードを送信できます。 Adobe Analytics、Adobe Target、Adobe Audience Managerに直接データを送信するなど、XDM 以外のシナリオで役立ちます。 データがデータストリームに到達したら、[&#x200B; データ準備のマッピング &#x200B;](/help/data-prep/ui/mapping.md) を使用して、XDM フィールドを `data` オブジェクトの各フィールドに割り当てることができます。 商品が `data` オブジェクト内のフィールドを検出するようにAdobeによって既に設定されている場合は、そのデータをそのままデータストリームに送信できます。
 
 >[!IMPORTANT]
 >
@@ -32,8 +32,8 @@ alloy("sendEvent", {
 
 ## Adobe Analyticsで `data` オブジェクトを使用します {#analytics}
 
-Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、AppMeasurement変数と同じ構文を使用するように設定されているので、web SDKへのアップグレードプロセスが簡単になります。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。
+Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、AppMeasurement変数と同じ構文を使用するように設定されているので、web SDKへのアップグレードプロセスが簡単になります。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。
 
 ## Web SDK タグ拡張機能を使用して `data` オブジェクトを使用します
 
-`data` オブジェクトは、Web SDK タグ拡張機能を使用する際に [ 変数データ要素 ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) として使用できます。
+`data` オブジェクトは、Web SDK タグ拡張機能を使用する際に [&#x200B; 変数データ要素 &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) として使用できます。

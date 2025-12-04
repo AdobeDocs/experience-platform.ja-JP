@@ -61,7 +61,7 @@ Web SDKには、2 つの補完的な同意オプションがあります。
 | `out` | `out` | × | ○ |
 | `out` | 設定なし | × | × |
 
-ライブラリによって設定される Cookie のリストについては [](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Adobe Experience Platform Web SDKの Cookie} を参照してください。
+ライブラリによって設定される Cookie のリストについては [&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Adobe Experience Platform Web SDKの Cookie&rbrace; を参照してください。
 
 >[!NOTE]
 >
@@ -85,4 +85,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## Web SDK タグ拡張機能を使用したデフォルトの同意
 
-タグを使用してこれらのアクションを実行する方法については、Web SDK タグ拡張機能のドキュメントの [ 同意設定 ](/help/tags/extensions/client/web-sdk/configure/consent.md) を参照してください。
+タグを使用してこれらのアクションを実行する方法については、Web SDK タグ拡張機能のドキュメントの [&#x200B; 同意設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/consent.md) を参照してください。

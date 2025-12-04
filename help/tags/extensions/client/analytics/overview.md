@@ -300,7 +300,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 この表示では、`eVars`、`Props`、`Events` など、様々な変数を指定できます。
 
-![ 追加の属性が一覧表示されているAdobe Analytics フォームビューページ ](../../../images/adobe_analytics_extension_form_view.png)
+![&#x200B; 追加の属性が一覧表示されているAdobe Analytics フォームビューページ &#x200B;](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 

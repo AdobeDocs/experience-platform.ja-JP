@@ -40,7 +40,7 @@ Edge Network モバイル実装の場合、この機能は、バージョン 1.1
 
 ## モバイルから web への ID の共有 {#mobile-to-web}
 
-`getUrlVariables`Edge Networkの ID[ 拡張機能から ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) API を使用して、識別子をクエリパラメーターとして取得し、[!DNL webViews] を開く際に URL に添付します。
+`getUrlVariables`Edge Networkの ID[&#x200B; 拡張機能から &#x200B;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) API を使用して、識別子をクエリパラメーターとして取得し、[!DNL webViews] を開く際に URL に添付します。
 
 Web SDKがクエリ文字列内の `ECID` 値を受け入れるために、追加の設定は必要ありません。
 
@@ -53,11 +53,11 @@ Web SDKがクエリ文字列内の `ECID` 値を受け入れるために、追�
 
 モバイルから web への ID 共有では、`adobe_mc` パラメーターを使用します。 `adobe_mc` パラメーターが存在し、有効な場合、Edge Networkに対して行われた最初のリクエストで、クエリ文字列からの `ECID` が ID マップに自動的に追加されます。 それ以降のEdge Network インタラクションでは、すべてその `ECID` が使用されます。
 
-モバイルアプリから WebView に訪問者 ID を渡す方法について詳しくは、[WebView の処理 ](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation) に関するドキュメントを参照してください。
+モバイルアプリから WebView に訪問者 ID を渡す方法について詳しくは、[WebView の処理 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation) に関するドキュメントを参照してください。
 
 ## クロスドメイン ID 共有の実装 {#cross-domain-sharing}
 
 Web SDKの設定方法に応じて、次のリンクを参照してください。
 
 * **JavaScript ライブラリ**: [`appendIdentityToUrl`](../../js/commands/appendidentitytourl.md) コマンド
-* **タグ拡張機能**:[ID でリダイレクト ](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) アクション
+* **タグ拡張機能**:[ID でリダイレクト &#x200B;](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) アクション

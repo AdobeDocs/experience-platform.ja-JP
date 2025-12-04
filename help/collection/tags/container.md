@@ -168,7 +168,7 @@ readonly _satellite._container.property: {
 
 | 設定名 | タイプ | 説明 |
 |---|---|---|
-| **`domains`** | `string[]` | [ タグプロパティの設定 ](/help/tags/ui/administration/companies-and-properties.md) 時に設定される、プロパティに設定されたドメイン。 |
+| **`domains`** | `string[]` | [&#x200B; タグプロパティの設定 &#x200B;](/help/tags/ui/administration/companies-and-properties.md) 時に設定される、プロパティに設定されたドメイン。 |
 | **`ruleComponentSequencingEnabled`** | `boolean` | タグプロパティを設定する際に、チェックボックス **[!UICONTROL Run rule components in sequence]** を有効にするかどうかを決定します。 |
 | **`undefinedVarsReturnEmpty`** | `boolean` | タグプロパティを設定する際に、チェックボックス **[!UICONTROL Return an empty string for undefined data elements]** を有効にするかどうかを決定します。 |
 

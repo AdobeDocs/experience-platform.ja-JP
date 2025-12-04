@@ -27,7 +27,7 @@ ht-degree: 1%
 ## 使用可能なフィールド
 
 * **[!UICONTROL Instance]**：アクションが適用されるSDK インスタンス。 実装で 1 つのSDK インスタンスを使用している場合、このドロップダウンメニューは無効になります。
-* **[!UICONTROL Datastream configuration overrides]**：このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[ データストリーム設定の上書き ](../configure/configuration-overrides.md) を参照してください。
+* **[!UICONTROL Datastream configuration overrides]**：このコマンドは、データストリーム設定の上書きをサポートし、このデータを受信するアプリやサービスを制御できます。 個々のコマンドとタグ拡張機能設定内の両方でデータストリーム設定の上書きを設定した場合、個々のコマンドが優先されます。 詳しくは、[&#x200B; データストリーム設定の上書き &#x200B;](../configure/configuration-overrides.md) を参照してください。
 
 ## ルールの例
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 * **[!UICONTROL When the user clicks on]**：特定の要素
 * **[!UICONTROL Elements matching the CSS selector]**：`a[href]`
 
-![ ルールイベント ](../assets/id-sharing-event-configuration.png)
+![&#x200B; ルールイベント &#x200B;](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 * **[!UICONTROL Operator]**：正規表現に一致
 * **[!UICONTROL Right Operand]**：目的のドメインに一致する正規表現。 例：`adobe.com$|behance.com$`
 
-![ ルールの条件 ](../assets/id-sharing-condition-configuration.png)
+![&#x200B; ルールの条件 &#x200B;](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,6 +68,6 @@ URL に ID を追加します。
 * **[!UICONTROL Extension]**:Adobe Experience Platform Web SDK
 * **[!UICONTROL Action Type]**: ID を使用したリダイレクト
 
-![ ルールアクション ](../assets/id-sharing-action-configuration.png)
+![&#x200B; ルールアクション &#x200B;](../assets/id-sharing-action-configuration.png)
 
 +++

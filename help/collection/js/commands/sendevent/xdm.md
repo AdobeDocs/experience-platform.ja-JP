@@ -23,7 +23,7 @@ alloy("sendEvent", {
 });
 ```
 
-次の例では、[Commerceの詳細スキーマフィールドグループ ](/help/xdm/field-groups/event/commerce-details.md) を使用しています。
+次の例では、[Commerceの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/event/commerce-details.md) を使用しています。
 
 ```javascript
 alloy("sendEvent",{
@@ -49,4 +49,4 @@ alloy("sendEvent",{
 
 ## Web SDK タグ拡張機能を使用して `xdm` オブジェクトを使用します
 
-Web SDK タグ拡張機能を使用する場合、`xdm` オブジェクトは [ 変数データ要素 ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) または [XDM オブジェクトデータ要素 ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) として使用できます。 Adobeでは、ほとんどの場合、可変データ要素を使用することをお勧めします。
+Web SDK タグ拡張機能を使用する場合、`xdm` オブジェクトは [&#x200B; 変数データ要素 &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) または [XDM オブジェクトデータ要素 &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) として使用できます。 Adobeでは、ほとんどの場合、可変データ要素を使用することをお勧めします。

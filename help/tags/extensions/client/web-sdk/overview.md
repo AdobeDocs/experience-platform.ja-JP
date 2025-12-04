@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK タグ拡張機能は、web プロパティからAdobe Experience Cloud Edge Networkを通じてAdobe Experience Platformにデータを送信します。 Experience Platform web SDK拡張機能を使用すると、データを Platform にストリーミングし、ID を同期し、オプトインして、コンテキストデータを自動収集できます。
 
-このタグ拡張機能を設定およびデプロイしてデータの収集を開始する方法については、[ はじめに ](getting-started.md) を参照してください。
+このタグ拡張機能を設定およびデプロイしてデータの収集を開始する方法については、[&#x200B; はじめに &#x200B;](getting-started.md) を参照してください。
 
 以下のビデオを視聴すると、1 回の呼び出しで [!DNL Web SDK]、[!DNL Edge Network]、[!DNL Experience Platform] および [!DNL Analytics] にデータを送信する、Adobe Experience Platform [!DNL Audience Manager] および [!DNL Target] の動作を確認できます。
 

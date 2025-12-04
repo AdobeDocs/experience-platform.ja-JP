@@ -18,7 +18,7 @@ ht-degree: 1%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Data collection]** セクションまで下にスクロールします。
 
-![ タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
+![&#x200B; タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
 
 次のオプションがあります。
 
