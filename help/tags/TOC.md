@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
+source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 85%
+source-wordcount: '834'
+ht-degree: 80%
 
 ---
 
@@ -50,7 +50,6 @@ ht-degree: 85%
 * クライアントサイドの情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
-   * [Satellite オブジェクトのリファレンス](./ui/client-side/satellite-object.md)
    * [顧客の同意を管理する JavaScript タグのデプロイ](./ui/client-side/consent.md)
    * [コンテンツセキュリティポリシー（CSP）のサポート](./ui/client-side/content-security-policy.md)
    * [サブリソースの整合性（SRI）のサポート](./ui/client-side/sri.md)
@@ -99,21 +98,46 @@ ht-degree: 85%
       * Adobe Experience Cloud ID サービス {#id-service}
          * [概要](./extensions/client/id-service/overview.md)
          * [リリースノート](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Platform デモ {#platform-demo}
-         * [概要](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#web-sdk}
-         * [概要](./extensions/client/web-sdk/overview.md)
-         * [Web SDK 拡張機能の設定](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
-         * [イベントタイプ](./extensions/client/web-sdk/event-types.md)
-         * [アクションタイプ](./extensions/client/web-sdk/action-types.md)
-         * [データ要素タイプ](./extensions/client/web-sdk/data-element-types.md)
-         * [ECID へのアクセス](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Web SDK プラグイン](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Web SDK 拡張機能リリースノート](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Web SDK プラグインリリースノート](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager アセットインサイト {#asset-insights}
          * [概要](./extensions/client/asset-insights/overview.md)
          * [リリースノート](./extensions/client/asset-insights/release-notes.md)
+      * Adobe Experience Platform デモ {#platform-demo}
+         * [概要](./extensions/client/platform-demo/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [概要](extensions/client/web-sdk/overview.md)
+         * [はじめに](extensions/client/web-sdk/getting-started.md)
+         * 設定 {#configure}
+            * [概要](extensions/client/web-sdk/configure/config-overview.md)
+            * [カスタムビルドコンポーネント](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [SDK インスタンス](extensions/client/web-sdk/configure/general.md)
+            * [データストリーム](extensions/client/web-sdk/configure/datastreams.md)
+            * [同意](extensions/client/web-sdk/configure/consent.md)
+            * [ID](extensions/client/web-sdk/configure/identity.md)
+            * [パーソナライズ機能](extensions/client/web-sdk/configure/personalization.md)
+            * [データ収集](extensions/client/web-sdk/configure/data-collection.md)
+            * [ストリーミングメディア](extensions/client/web-sdk/configure/streaming-media.md)
+            * [プッシュ通知](extensions/client/web-sdk/configure/push-notifications.md)
+            * [広告](extensions/client/web-sdk/configure/advertising.md)
+            * [設定の上書き](extensions/client/web-sdk/configure/configuration-overrides.md)
+            * [詳細設定](extensions/client/web-sdk/configure/advanced-settings.md)
+         * [イベントタイプ](extensions/client/web-sdk/event-types.md)
+         * アクションタイプ {#actions}
+            * [概要](extensions/client/web-sdk/actions/actions-overview.md)
+            * [提案の適用](extensions/client/web-sdk/actions/apply-propositions.md)
+            * [応答を適用](extensions/client/web-sdk/actions/apply-response.md)
+            * [ルールセットの評価](extensions/client/web-sdk/actions/evaluate-rulesets.md)
+            * [Media Analytics トラッカーを取得](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+            * [ID でリダイレクト](extensions/client/web-sdk/actions/redirect-with-identity.md)
+            * [イベント結合 ID をリセット](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+            * [イベントを送信](extensions/client/web-sdk/actions/send-event.md)
+            * [メディアイベントを送信](extensions/client/web-sdk/actions/send-media-event.md)
+            * [プッシュ購読を送信](extensions/client/web-sdk/actions/send-push-subscription.md)
+            * [同意を設定](extensions/client/web-sdk/actions/set-consent.md)
+            * [変数を更新](extensions/client/web-sdk/actions/update-variable.md)
+         * [データ要素タイプ](extensions/client/web-sdk/data-element-types.md)
+         * [ECID へのアクセス](extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK 拡張機能リリースノート](extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Adobe Experience Platform Web SDK プラグイン](extensions/client/web-sdk-plugins/web-sdk-plugins.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [概要](./extensions/client/media-analytics/overview.md)
@@ -185,7 +209,7 @@ ht-degree: 85%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)

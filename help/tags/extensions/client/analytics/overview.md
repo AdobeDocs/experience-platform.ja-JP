@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 88%
+source-wordcount: '2308'
+ht-degree: 87%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 88%
 
 この節では、Adobe Analytics 拡張機能を設定する際に使用できるオプションについて説明します。
 
-Adobe Analytics 拡張機能がまだインストールされていない場合は、プロパティを開いて&#x200B;**[!UICONTROL エクステンション／カタログ]**&#x200B;を選択し、Adobe Analytics 拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+Adobe Analytics 拡張機能がまだインストールされていない場合は、プロパティを開いてから&#x200B;**[!UICONTROL Extensions > Catalog]**&#x200B;をクリックし、Adobe Analytics 拡張機能にカーソルを置いて「 **[!UICONTROL Install]**」をクリックします。
 
-拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -111,7 +111,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 
 EU プライバシー Cookie に基づいたトラッキングを有効または無効にします。
 
-EU コンプライアンスのチェックボックスをオンにすると、「[!UICONTROL Cookie 名をトラッキング]」フィールドが表示されます。トラッキング cookie により、デフォルトのトラッキング cookie 名が上書きされます。タグが、別の cookie の受信に対するオプトアウトステータスを追跡するために使用する名前をカスタマイズできます。
+「EU コンプライアンス」チェックボックスを有効にすると、「[!UICONTROL Tracking Cookie Name]」フィールドが表示されます。 トラッキング cookie により、デフォルトのトラッキング cookie 名が上書きされます。タグが、別の cookie の受信に対するオプトアウトステータスを追跡するために使用する名前をカスタマイズできます。
 
 ページが読み込まれる際に、システムは、sat\_track という名前（またはプロパティ編集ページで変更したカスタム名）の Cookie が設定されているかどうかを確認します。次の情報を考慮してください。
 
@@ -300,7 +300,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 この表示では、`eVars`、`Props`、`Events` など、様々な変数を指定できます。
 
-![&#x200B; 追加の属性が一覧表示されているAdobe Analytics フォームビューページ &#x200B;](../../../images/adobe_analytics_extension_form_view.png)
+![ 追加の属性が一覧表示されているAdobe Analytics フォームビューページ ](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 
@@ -310,7 +310,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 1. eVar を値として設定（Set As）するか、別の eVar をコピー（Duplicate From）するかを指定します。
 1. 「Set As」に値を指定するか、複製する eVar を選択します。
 1. （オプション）「Add eVar」を選択して、さらに eVar を設定します。
-1. 「**[!UICONTROL 変更を保持]**」を選択します。
+1. **[!UICONTROL Keep Changes]** を選択します。
 
 #### prop
 
@@ -319,8 +319,8 @@ Analytics 拡張機能は、次のアクションを提供します。
 1. ドロップダウンから prop を選択します。
 1. prop を値（設定形式）として設定するか、別の eVar をコピー（複製）するかを指定します。
 1. 「Set As」値を指定するか、prop を複製する eVar を選択します。
-1. （オプション）「**[!UICONTROL プロパティを追加]**」を選択してさらにプロパティを設定します。
-1. 「**[!UICONTROL 変更を保持]**」を選択します。
+1. （オプション）「**[!UICONTROL Add prop]**」を選択して、さらに prop を設定します。
+1. **[!UICONTROL Keep Changes]** を選択します。
 
 #### イベント
 
@@ -328,8 +328,8 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 1. ドロップダウンからイベントを選択します。
 1. （オプション）[イベントのシリアル化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=ja)に使用するデータ要素を選択または指定します。
-1. （オプション）「**[!UICONTROL イベントを追加]**」を選択してさらにイベントを設定します。
-1. 「**[!UICONTROL 変更を保持]**」を選択します。
+1. （オプション）「**[!UICONTROL Add event]**」を選択して、さらにイベントを設定します。
+1. **[!UICONTROL Keep Changes]** を選択します。
 
 >[!TAB JSON ビュー ]
 
@@ -397,9 +397,9 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 **設定**
 
-1. 「**[!UICONTROL エディターを開く]**」を選択します。
+1. **[!UICONTROL Open Editor]** を選択します。
 1. カスタムコードを入力します。
-1. 「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Save]** を選択します。
 
 ### ビーコンを送信 {#send-beacon}
 
@@ -425,7 +425,7 @@ Analytics 拡張機能は、次のアクションを提供します。
    * カスタムリンク：リンク名を指定します。
    * ダウンロードリンク：ファイル名を指定します。
    * 離脱リンク：宛先 URL を指定します。
-1. 「**[!UICONTROL 変更を保持]**」を選択します。
+1. **[!UICONTROL Keep Changes]** を選択します。
 
 ### 変数をクリア {#clear-variables}
 

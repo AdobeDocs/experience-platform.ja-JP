@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；ソース；
 title: Adobe Data Collection
 description: このドキュメントでは、Adobe Data Collection ソースの概要を説明します。
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 48%
+source-wordcount: '291'
+ht-degree: 45%
 
 ---
 
@@ -18,22 +18,22 @@ Adobe Experience Platform Data Collection のソース統合により、ソー�
 
 ## ソースワークスペースを使用したデータ収集へのアクセス
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションバーから **[!UICONTROL Sources]** を選択して、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL Catalog] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL Adobe アプリケーション &#x200B;] カテゴリで、「**[!UICONTROL Adobe Data Collection]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
+[!UICONTROL Adobe applications] カテゴリの下の [**[!UICONTROL Adobe Data Collection]**] を選択し、[**[!UICONTROL Set up]**] を選択します。
 
 ![data-collection](./images/data-collection/catalog.png)
 
-データ収集 UI が **[!UICONTROL データストリーム]** タブに表示されます。
+データ収集 UI が「**[!UICONTROL Datastreams]**」タブに表示されます。
 
 データストリームとは、データの送信先を Edge ネットワークに伝える設定のことです。具体的には、データストリームは、データの送信先のExperience Cloud 製品と、各製品でデータを処理および保存する方法を指定します。
 
-![&#x200B; データストリーム &#x200B;](./images/data-collection/datastreams.png)
+![ データストリーム ](./images/data-collection/datastreams.png)
 
-UI でデータ収集を設定する方法の包括的な手順については、[&#x200B; エンドツーエンドのデータ収集の概要 &#x200B;](../../../collection/e2e.md) を参照してください。
+UI でデータ収集を設定する方法の包括的な手順については、[Web SDK タグ拡張機能の使用の手引き ](/help/tags/extensions/client/web-sdk/getting-started.md) を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、ソース ワークスペースを使用してデータ収集 UI にアクセスする方法について説明しました。 データ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../../collection/e2e.md) を参照してください。
+このドキュメントでは、ソース ワークスペースを使用してデータ収集 UI にアクセスする方法について説明しました。 データ収集について詳しくは、[ データ収集の概要 ](/help/collection/home.md) を参照してください。

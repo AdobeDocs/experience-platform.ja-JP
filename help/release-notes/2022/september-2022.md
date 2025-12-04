@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '2774'
-ht-degree: 89%
+source-wordcount: '2723'
+ht-degree: 85%
 
 ---
 
@@ -84,7 +84,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 {style="table-layout:auto"}
 
-Experience Platformの監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[&#x200B; 監査ログの概要 &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
+Experience Platformの監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -95,7 +95,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | 使用中のラベル | 使用中のラベルをウィジェットライブラリで表示すると、ダッシュボード内の既存のウィジェットの存在を簡単に識別できます。これにより、重複を避けることができますが、必要に応じて同じウィジェットを複数回追加することはできます。 |
 | ユーザー定義ダッシュボード | ユーザー定義ダッシュボードでは、カスタムダッシュボードの作成と管理を可能にして、インサイトを効率化し、ビジュアライゼーションをカスタマイズするのに役立ちます。ユーザー定義のダッシュボードを使用すると、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。詳しくは、[機能ガイド](../../dashboards/standard-dashboards.md)を参照してください。 |
 | 顧客データプラットフォームインサイトデータモデル | 顧客データプラットフォーム（CDP）インサイトデータモデル機能は、データモデルと SQL を公開し、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化します。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標の使用例に関する CDP レポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、[CDP インサイトデータモデル機能ガイド](../../dashboards/data-models/cdp-insights-data-model-b2c.md)を参照してください。 |
-| オーディエンス重複レポートのウィジェット | このウィジェットは、[!UICONTROL プロファイル]および[!UICONTROL セグメント]ダッシュボードの両方で使用できます。 レポートには、選択したセグメントの重複率の高い順または低い順にランク付けされたオーディエンスのリストが表示されます。[!UICONTROL プロファイル]ダッシュボードから、使用可能なすべてのセグメントの結合ポリシーでオーディエンスの重複をフィルタリングして表示できます。 この[!UICONTROL セグメント]ダッシュボードでは、特定のセグメントでオーディエンスの重複をフィルタリングできます。<br>この分析を使用して、新しい高パフォーマンスのセグメントを作成し、同じオーディエンスを別の宛先に送信しないようにします。また、このレポートは、隠れたインサイトを特定して、セグメント化を改善したり、追跡する固有のプロファイルを見つけたりするのに役立ちます。 詳しくは、[プロファイル](../../dashboards/guides/profiles.md#audience-overlap-report)と[セグメント](../../dashboards/guides/audiences.md#audience-overlap-report)のウィジェットガイドを参照してください。 |
+| オーディエンス重複レポートのウィジェット | このウィジェットは、[!UICONTROL Profiles] ダッシュボードと [!UICONTROL Segments] ダッシュボードの両方で使用できます。 レポートには、選択したセグメントの重複率の高い順または低い順にランク付けされたオーディエンスのリストが表示されます。[!UICONTROL Profiles] ダッシュボードから、使用可能なすべてのセグメントの結合ポリシーでオーディエンスの重複をフィルタリングして表示できます。 [!UICONTROL Segments] のダッシュボードでは、特定のセグメントでオーディエンスの重複をフィルタリングできます。<br>この分析を使用して、新しい高パフォーマンスのセグメントを作成し、同じオーディエンスを別の宛先に送信しないようにします。また、このレポートは、隠れたインサイトを特定して、セグメント化を改善したり、追跡する固有のプロファイルを見つけたりするのに役立ちます。 詳しくは、[プロファイル](../../dashboards/guides/profiles.md#audience-overlap-report)と[セグメント](../../dashboards/guides/audiences.md#audience-overlap-report)のウィジェットガイドを参照してください。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -107,16 +107,16 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI での左側のナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ&#x200B;**[!UICONTROL データ収集]**&#x200B;下の Experience Platform の左ナビゲーションからも利用できるようになりました。これにより、Experience Platformでデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
-| タグとイベント転送におけるユーザー属性 | タグとイベント転送で使用可能な[!UICONTROL プロパティ]を一覧表示すると、一覧表示された各プロパティが最終更新日時と、更新を行ったユーザーが表示されるようになりました。 |
+| Experience Platform UI での左側のナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ **[!UICONTROL Data Collection]** 下のExperience Platformの左ナビゲーションからも利用できるようになりました。 これにより、Experience Platformでデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
+| タグとイベント転送におけるユーザー属性 | タグとイベント転送で使用可能な [!UICONTROL Properties] を一覧表示すると、一覧表示された各プロパティが最終更新日時と、更新を行ったユーザーが表示されるようになりました。 |
 | イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
-| [Web SDKの User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md) | Web SDKで [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
-| [Web SDK のページごとの移行](../../web-sdk/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
+| [Web SDKの User-Agent Client Hints](/help/collection/use-cases/client-hints.md) | Web SDKで [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
+| Web SDKのページごとの移行 | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 | [[!DNL Adobe Journey Optimizer] によるデータストリームのサポート](../../datastreams/overview.md#aep) | Adobe Experience Platform のデータストリーム用サービスでは、[!DNL Adobe Journey Optimizer] がサポートされるようになりました。このオプションでは、[!DNL Adobe Journey Optimizer] で web およびアプリベースのインバウンドチャネルを使用できます。 |
 
 {style="table-layout:auto"}
 
-Experience Platformのデータ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
+Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -134,7 +134,7 @@ Experience Platformのデータ収集について詳しくは、[&#x200B; デー
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1)で機能することに注意してください。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)で機能することに注意してください。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリード両方の更新をサポートするようになりました。また、迅速な更新を実現するようパフォーマンスを向上しました。 |
 
 {style="table-layout:auto"}
@@ -155,16 +155,16 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 列挙と推奨値の UI のサポート | Experience Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに対して [&#x200B; 推奨値を追加または削除 &#x200B;](../../xdm/ui/fields/enum.md) ができるようになりました。 |
+| 列挙と推奨値の UI のサポート | Experience Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに対して [ 推奨値を追加または削除 ](../../xdm/ui/fields/enum.md) ができるようになりました。 |
 
 **新しい XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 提案イベントがトリガーされる原因となった、操作された特定の要素のプロパティ。 |
-| フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | メディアとのインタラクションを時系列で追跡します。 |
-| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報を追跡します。 |
-| フィールドグループ | [[!UICONTROL Adobe CJM ExperienceEvent - サーフェス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer でのエクスペリエンスイベントのサーフェスについて説明します。 |
+| フィールドグループ | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 提案イベントがトリガーされる原因となった、操作された特定の要素のプロパティ。 |
+| フィールドグループ | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | メディアとのインタラクションを時系列で追跡します。 |
+| フィールドグループ | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報を追跡します。 |
+| フィールドグループ | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer でのエクスペリエンスイベントのサーフェスについて説明します。 |
 
 {style="table-layout:auto"}
 
@@ -172,25 +172,25 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>`eventType` の値を追加しました。<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>`eventType` の値を削除しました。<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| 動作 | [[!UICONTROL Time series]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>`eventType` の値を追加しました。<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>`eventType` の値を削除しました。<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
 | フィールドグループ | （複数） | Journey Orchestration コンポーネント全体で[いくつかのフィールドの説明を更新しました。](https://github.com/adobe/xdm/pull/1628/files) |
 | フィールドグループ | （複数） | 一貫性を保つため、[いくつかの Adobe Workfront コンポーネントのタイトルを](https://github.com/adobe/xdm/pull/1634/files)更新しました。 |
-| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 複数のフィールドの名前空間を `xdm` に更新しました。 |
-| フィールドグループ | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新しいフィールド `isReadSegmentTriggerStartEvent` を追加しました。 |
-| フィールドグループ | [[!UICONTROL 予測された天気]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | `xdm:uvIndex` フィールドを整数タイプに変更し、欠落していたいくつかのフィールドに `xdm` 名前空間を追加しました。 |
-| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` および `xdm:implementationDetails` がフィールドグループから削除されました。 |
+| フィールドグループ | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 複数のフィールドの名前空間を `xdm` に更新しました。 |
+| フィールドグループ | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新しいフィールド `isReadSegmentTriggerStartEvent` を追加しました。 |
+| フィールドグループ | [[!UICONTROL Forecasted Weathers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | `xdm:uvIndex` フィールドを整数タイプに変更し、欠落していたいくつかのフィールドに `xdm` 名前空間を追加しました。 |
+| フィールドグループ | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` および `xdm:implementationDetails` がフィールドグループから削除されました。 |
 | データタイプ | （複数） | 一貫性を保つため、複数のデータタイプをまたいで[複数のメディアプロパティ名を更新しました。](https://github.com/adobe/xdm/pull/1626/files) |
-| データタイプ | [[!UICONTROL 実装の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | フラッターの既知の名前を追加しました。 |
-| データタイプ | [[!UICONTROL POI の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | データタイプで、POI に関連付けられたメタデータのキーと値のペアのリストを受け取れるようになりました。 |
-| データタイプ | [[!UICONTROL 提案アクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] の名前は、[!UICONTROL 提案アクション]に変更されました。 |
-| データタイプ | [[!UICONTROL 提案イベントタイプ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] の名前は、[!UICONTROL 提案アクション]に変更されました。 |
+| データタイプ | [[!UICONTROL Implementation details]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | フラッターの既知の名前を追加しました。 |
+| データタイプ | [[!UICONTROL Point of interest details]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | データタイプで、POI に関連付けられたメタデータのキーと値のペアのリストを受け取れるようになりました。 |
+| データタイプ | [[!UICONTROL Proposition Action]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] の名前は [!UICONTROL Proposition Action] に変更されました。 |
+| データタイプ | [[!UICONTROL Proposition Event Type]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] の名前は [!UICONTROL Proposition Action] に変更されました。 |
 | （複数） | （複数） | 実験的なプロパティは、[B2B の全コンポーネントにおいて安定化されました](https://github.com/adobe/xdm/pull/1617/files)。 |
 | （複数） | （複数） | Adobe Journey Optimizer エンティティは、[安定化](https://github.com/adobe/xdm/pull/1625/files)されました。 |
 | （複数） | （複数） | いくつかの実験的コンポーネントをまたいだ特定のフィールドの名前空間は、[一貫性を保つために更新されました](https://github.com/adobe/xdm/pull/1626/files)。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity-service}
 

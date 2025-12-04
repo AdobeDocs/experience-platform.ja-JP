@@ -1,20 +1,20 @@
 ---
-title: Web SDK 拡張機能の概要
-description: Adobe Experience Platform の Web SDK タグ拡張機能について説明します。
+title: Web SDK タグ拡張機能の概要
+description: Adobe Experience Platform Data Collection の web SDK タグ拡張機能について説明します。
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 70%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Web SDK 拡張機能の概要
+# Adobe Experience Platform Web SDK タグ拡張機能の概要
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+Adobe Experience Platform Web SDK タグ拡張機能は、web プロパティからAdobe Experience Cloud Edge Networkを通じてAdobe Experience Platformにデータを送信します。 Experience Platform web SDK拡張機能を使用すると、データを Platform にストリーミングし、ID を同期し、オプトインして、コンテキストデータを自動収集できます。
 
-Adobe Experience Platform Web SDK 拡張機能は、Adobe Experience Platform Edge Network を通じて、Web プロパティから Adobe Experience Cloud にデータを送信します。Experience Platform web SDK拡張機能を使用すると、データを Platform にストリーミングし、ID を同期し、オプトインして、コンテキストデータを自動収集できます。
+このタグ拡張機能を設定およびデプロイしてデータの収集を開始する方法については、[ はじめに ](getting-started.md) を参照してください。
 
-Experience Platform Web SDK拡張機能の設定について詳しくは、[Web SDK タグ拡張機能の設定 &#x200B;](web-sdk-extension-configuration.md) を参照してください。
+以下のビデオを視聴すると、1 回の呼び出しで [!DNL Web SDK]、[!DNL Edge Network]、[!DNL Experience Platform] および [!DNL Analytics] にデータを送信する、Adobe Experience Platform [!DNL Audience Manager] および [!DNL Target] の動作を確認できます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148)

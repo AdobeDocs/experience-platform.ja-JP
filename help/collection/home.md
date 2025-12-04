@@ -1,71 +1,42 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;データ収集;launch;web sdk
 solution: Experience Platform
 title: データ収集の概要
-description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
+description: Adobe Experience Platformにデータを送信する方法を説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 3d51f01d314587510d900d335dc92fedb8ac31e8
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 69%
+source-wordcount: '287'
+ht-degree: 2%
 
 ---
 
 # データ収集の概要
 
-Adobe Experience Platform は、クライアントサイドのソースから顧客体験データを収集して Adobe Experience Platform Edge Network に送信し、そのデータを強化および変換して、アドビやアドビ以外の宛先に数秒で配信できるようにするテクノロジースイートを提供します。
+Adobe Experience Platformは、様々なソースからカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Networkに送信するための一連のテクノロジーを提供します。 その後、そのデータをエンリッチメントしたり、変換したり、AdobeまたはAdobe以外の宛先に配信したりできます。
 
-データ収集は、以下のクライアントサイドソースに対応しています。
+Adobeは、データ収集用の専用ライブラリで次のコード言語をサポートしています。
 
-* Web ベースのアプリケーション
-* ネイティブモバイルアプリケーション
-* オーバーザトップ（OTT）アプリケーション
+* **JavaScript**: Web サイトおよび Web ベース アプリケーション用
+* **Kotlin**:Androidデバイス用
+* **Swift**:iOS デバイスの場合
+* **Brightscript**:Roku デバイスの場合
+* **Flutter**:Flutter を使用したAndroid + iOS適用用
+* **React Native**: React Nativeを使用したAndroid + iOS アプリケーションの場合
 
-データ収集では、取り込んだデータセットの検出性とアクセス性に重点を置いており、以下を含んでいます。
+Adobe Experience Platform データ収集のタグ UI には、Web SDKおよび Mobile SDK拡張機能が含まれます。
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=ja)
-* [タグ](../tags/home.md)
-* [データストリーム](../datastreams/overview.md)
-* [イベント転送](../tags/ui/event-forwarding/overview.md)
-* [Adobe Experience Platform Web SDK](../web-sdk/home.md)
-* [Adobe Experience Platform モバイル SDK](https://developer.adobe.com/client-sdks/documentation/)
-* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)
-* [Adobe Experience Platform デバッガー](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=ja)
-* [Experience Platform Assurance](../assurance/home.md)
+上記の SDK でプロジェクトのニーズに対応できない場合は、[Adobe Experience Platform Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) を使用して、データをAdobeに直接送信できます。
 
+## データ収集プロセス
 
-このガイドでは、データ収集の概要と、この機能がExperience Platform Edge Networkを通じてAdobe Experience Cloud製品やAdobe以外のアプリケーションにデータを送信する仕組みについて説明します。
+Adobe製品ごとに個別のライブラリをインストールして実装する代わりに、上記の SDK またはタグ拡張機能の 1 つを実装して、必要なすべてのデータを 1 つのペイロードに集計できます。 そのペイロードはAdobe Experience Platform Edge Networkの [ データストリーム ](/help/datastreams/overview.md) に送信されます。
 
-## タグ、Web SDK および Mobile SDK
+![ データ収集図 ](assets/tags-sdks.png)
 
-Experience Platform Web SDKおよびExperience Platform モバイル SDKは、すべてのAdobe製品ライブラリを、それぞれ web およびモバイルプラットフォーム向けの 1 つの開発キットに折りたたんで圧縮します。 これらは、ローコードを使用するか、データ収集 UI または Adobe Experience Platform UI から[タグ](../tags/home.md)を使用して実装できます。
+Adobe Experience Platform Edge Networkは、世界中に分散した信頼性の高い高速サーバーネットワークで、データを極めて大規模に受信および処理できます。 データストリームは、データを受信すると、設定した各ソリューションにそのデータを配信します。 データは、個々の製品が認識できる形式で渡されます。
 
-これらのライブラリを圧縮すると、データ収集が高速化され、クライアントサイドデバイスからExperience Platform Edge Networkに至るまで、処理が単一のストリームに統合されます。
+![Adobe ソリューションの図 ](assets/adobe-solutions.png)
 
-![タグ、Web SDK、Mobile SDK](./images/home/tags-sdks.png)
+また、[ イベント転送 ](/help/tags/ui/event-forwarding/overview.md) を使用して、クライアントサイドの実装コードを使用せずに、待ち時間の短い、Adobe以外の任意の宛先にデータを変換、エンリッチメントおよび送信することもできます。
 
-## Experience Platform Edge Networkとデータストリーム {#edge}
-
-Experience Platform Edge Networkは、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーネットワークです。 タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../datastreams/overview.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
-
-また、データストリームは、組織のポリシーや法規制を考慮して、送信する機密データが適切に処理されるようにするのに役立つ、複数のExperience Platform機能と統合されています。 詳しくは、データストリームに関するドキュメントの[機密データの処理](../datastreams/overview.md#sensitive)に関するセクションを参照してください。
-
-![データストリームおよびアドビのソリューション](./images/home/adobe-solutions.png)
-
-## イベント転送
-
-[イベント転送](../tags/ui/event-forwarding/overview.md)では、任意の Experience Platform データストリームを利用できます。そのため、データの変換、エンリッチメントおよびアドビ以外の宛先への送信が可能で、しかも待ち時間は極めて短く、サードパーティのコードをクライアントデバイスに追加する必要もありません。
-
-![イベント転送](./images/home/event-forwarding.png)
-
->[!NOTE]
->
->イベント転送は、Adobe Real-time Customer Data Platform Connections、Prime または Ultimate の一部として提供される有料機能です。
-
-## 次の手順
-
-このドキュメントでは、収集したカスタマーエクスペリエンスのデータをアドビ製品やサードパーティ製品に送信するプロセスを自動化する、データ収集のしくみについて概要を説明しました。
-
-![データ収集フレームワーク](./images/home/collection.png)
-
-Edge Network を介したイベントデータの送信に関する一般的なワークフローについて詳しくは、[エンドツーエンドの概要](./e2e.md)を参照してください。
+![ イベント転送図 ](assets/event-forwarding.png)

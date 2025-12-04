@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先でサポートされるターゲット ID の設定方法を説明します。
 title: ID 名前空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 60%
+source-wordcount: '918'
+ht-degree: 56%
 
 ---
 
@@ -15,7 +15,7 @@ Experience Platform は、ID 名前空間を使用して、特定の ID のタ�
 
 作成する宛先のタイプ（ストリーミングまたはファイルベース）に応じて、次の ID 名前空間要件に注意してください。
 
-* Destination SDKでリアルタイム（ストリーミング）宛先を作成する場合、ユーザーがプロファイル属性や ID をマッピングできる [&#x200B; パートナースキーマの設定 &#x200B;](schema-configuration.md) に加えて、宛先プラットフォームでサポートされている *少なくとも 1 つ* ID 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化されたメールと [!DNL IDFA] を受け入れる場合、これら 2 つの ID をとして定義する必要があります [&#x200B; 詳しくは、このドキュメントの後半で説明します &#x200B;](#supported-parameters)。
+* Destination SDKでリアルタイム（ストリーミング）宛先を作成する場合、ユーザーがプロファイル属性や ID をマッピングできる [ パートナースキーマの設定 ](schema-configuration.md) に加えて、宛先プラットフォームでサポートされている *少なくとも 1 つ* ID 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化されたメールと [!DNL IDFA] を受け入れる場合、これら 2 つの ID をとして定義する必要があります [ 詳しくは、このドキュメントの後半で説明します ](#supported-parameters)。
 
   >[!IMPORTANT]
   >
@@ -31,7 +31,7 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 * ユーザーは、[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
 * ユーザーは、[カスタム ID 名前空間](../../../../identity-service/features/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して、サポートされる ID 名前空間を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -61,9 +61,9 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 |---------|----------|---|------|
 | `acceptsAttributes` | ブール値 | オプション | 顧客が標準的なプロファイル属性を設定中の ID にマッピングできるかどうかを示します。 |
 | `acceptsCustomNamespaces` | ブール値 | オプション | 顧客がカスタム ID 名前空間を設定中の ID 名前空間にマッピングできるかどうかを示します。 |
-| `acceptedGlobalNamespaces` | - | オプション | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)（例えば、[!UICONTROL IDFA]）を示します。 |
-| `transformation` | 文字列 | オプション | ソースフィールドが XDM 属性かカスタム ID 名前空間のどちらかの場合に、Experience Platform UI に「[[!UICONTROL &#x200B; 変換を適用 &#x200B;]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスを表示します。 このオプションを使用して、書き出し時にソース属性をハッシュ化する機能をユーザーに提供します。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
-| `requiredTransformation` | 文字列 | オプション | 顧客がこのソース ID 名前空間を選択すると、「[[!UICONTROL 変換を適用]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスが自動的にマッピングに適用され、顧客は無効にすることができなくなります。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
+| `acceptedGlobalNamespaces` | - | オプション | 設定中の ID に顧客がマッピングできる [ 標準的な ID 名前空間 ](../../../../identity-service/features/namespaces.md#standard) （例えば、[!UICONTROL IDFA]）を示します。 |
+| `transformation` | 文字列 | オプション | ソースフィールドが XDM 属性かカスタム ID 名前空間のどちらかの場合に、Experience Platform UI に「[[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスを表示します。 このオプションを使用して、書き出し時にソース属性をハッシュ化する機能をユーザーに提供します。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
+| `requiredTransformation` | 文字列 | オプション | 顧客がこのソース ID 名前空間を選択すると、「[[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスが自動的にマッピングに適用され、顧客は無効にすることができなくなります。 このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ ID について詳しくは、[ID 名前空間の概要](../../../../identity-se
 
 Experience Platformのお客様は、ハッシュ化された形式またはプレーンテキストでExperience Platformにデータを取り込むことを選択できます。 宛先プラットフォームがハッシュ化されたデータとハッシュ化されていないデータの両方を受け入れる場合、宛先に書き出される際に、Experience Platformがソースフィールド値をハッシュ化する必要があるかどうかを顧客が選択できるようにすることができます。
 
-以下の設定は、Experience Platform UI のマッピング手順でオプションの [&#x200B; 変換を適用 &#x200B;](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) オプションを有効にします。
+以下の設定は、Experience Platform UI のマッピング手順でオプションの [ 変換を適用 ](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) オプションを有効にします。
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{

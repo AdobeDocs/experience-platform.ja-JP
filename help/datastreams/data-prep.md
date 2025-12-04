@@ -2,16 +2,16 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 53%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
 # データ収集のためのデータ準備
 
-データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Experience Platform対応の [&#x200B; データストリーム &#x200B;](./overview.md) を設定する場合、データ準備機能を使用して、Experience Platform Edge Networkに送信する際にソースデータを XDM にマッピングできます。
+データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Experience Platform対応の [ データストリーム ](./overview.md) を設定する場合、データ準備機能を使用して、Experience Platform Edge Networkに送信する際にソースデータを XDM にマッピングできます。
 
 Web ページから送信されるすべてのデータは、XDM としてExperience Platformに届く必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れる XDM にデータを変換する方法は 3 つあります。
 
@@ -30,9 +30,9 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 ## WebSDK を使用したEdge Networkへの既存のデータレイヤーの送信 {#send-datalayer-via-websdk}
 
-既存のデータレイヤーは、`sendEvent` コマンド内の [`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを使用して送信する必要があります。
+既存のデータレイヤーは、[`data`](/help/collection/js/commands/sendevent/data.md) コマンド内の `sendEvent` オブジェクトを使用して送信する必要があります。
 
-タグを使用する場合は、**[[!UICONTROL Web SDK タグ拡張機能のドキュメント &#x200B;]](/help/tags/extensions/client/web-sdk/action-types.md) に記載されているように、**&#x200B;[!UICONTROL &#x200B; イベントを送信 &#x200B;]&#x200B;**アクションタイプの [ データ]** フィールドを使用する必要があります。
+タグを使用する場合は、**[!UICONTROL Data]** アクションタイプの [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) フィールドを使用する必要があります。
 
 このガイドの残りの部分では、WebSDK によって送信されたデータレイヤーを XDM 標準にマッピングする方法について重点的に説明します。
 
@@ -48,15 +48,15 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 データ収集のためのデータ準備プロセスの簡単なデモについては、次のビデオを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/345566?quality=12&enable10seconds=on&speedcontrol=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL データの選択] {#select-data}
+## [!UICONTROL Select data] {#select-data}
 
-データストリームの基本設定が完了してから「**[!UICONTROL 保存してマッピングを追加]**」を選択すると、**[!UICONTROL データを選択]**&#x200B;手順が表示されます。ここから、Experience Platformに送信する予定のデータの構造を表す、サンプル JSON オブジェクトを指定する必要があります。
+データストリームの基本設定が完了してから「**[!UICONTROL Save and Add Mapping]**」を選択すると、**[!UICONTROL Select data]** の手順が表示されます。 ここから、Experience Platformに送信する予定のデータの構造を表す、サンプル JSON オブジェクトを指定する必要があります。
 
 データレイヤーから直接プロパティを取得するには、JSON オブジェクが単一のルートプロパティ `data` を持つ必要があります。`data` オブジェクトのサブプロパティは、取得したいデータレイヤープロパティにマッピングするように構築する必要があります。 次のセクションを選択すると、`data` ルートを持つ適切にフォーマットされた JSON オブジェクトの例が表示されます。
 
-+++ `data` ルートを持つサンプル JSON ファイル
++++`data` ルートを持つサンプル JSON ファイル
 
 ```json
 {
@@ -121,7 +121,7 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 XDM オブジェクトデータ要素からプロパティを取得するには、同じルールを JSON オブジェクトに適用しますが、ルートプロパティは、変わりに `xdm` としてキーにする必要があります。次のセクションを選択すると、`xdm` ルートを持つ適切にフォーマットされた JSON オブジェクトの例が表示されます。
 
-+++ `xdm` ルートを持つサンプル JSON ファイル
++++`xdm` ルートを持つサンプル JSON ファイル
 
 ```json
 {
@@ -152,19 +152,19 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 +++
 
-オブジェクトをファイルとしてアップロードするオプションを選択するか、提供されたテキストボックスに生のオブジェクトを代わりに貼り付けることができます。JSON が有効な場合、右側のパネルにプレビュースキーマが表示されます。「**[!UICONTROL 次へ]**」をクリックして続行します。
+オブジェクトをファイルとしてアップロードするオプションを選択するか、提供されたテキストボックスに生のオブジェクトを代わりに貼り付けることができます。JSON が有効な場合、右側のパネルにプレビュースキーマが表示されます。「**[!UICONTROL Next]**」を選択して続行します。
 
-![&#x200B; 期待される受信データの JSON サンプル。](assets/data-prep/select-data.png)
+![ 期待される受信データの JSON サンプル。](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
 > 任意のページで使用できるすべてのデータレイヤー要素を表すサンプル JSON オブジェクトを使用します。 例えば、すべてのページが買い物かごデータレイヤー要素を使用しているわけではありません。 ただし、買い物かごのデータレイヤー要素は、このサンプル JSON オブジェクトに含める必要があります。
 
-## [!UICONTROL マッピング]
+## [!UICONTROL Mapping]
 
-**[!UICONTROL マッピング]** 手順が表示され、ソースデータフィールドをExperience Platformのターゲットイベントスキーマのフィールドにマッピングできます。 ここから、2 つの方法でマッピングを設定できます。
+**[!UICONTROL Mapping]** の手順が表示され、ソースデータフィールドをExperience Platformのターゲットイベントスキーマのフィールドにマッピングできます。 ここから、2 つの方法でマッピングを設定できます。
 
-* 手動のプロセスでこのデータストリームに対して [&#x200B; マッピングルールを作成 &#x200B;](#create-mapping) します。
+* 手動のプロセスでこのデータストリームに対して [ マッピングルールを作成 ](#create-mapping) します。
 * 既存のデータストリームから[マッピングルールを読み込みます](#import-mapping)。
 
 >[!IMPORTANT]
@@ -173,27 +173,27 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ### マッピングルールの作成 {#create-mapping}
 
-マッピングルールを作成するには、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
+マッピングルールを作成するには、「**[!UICONTROL Add new mapping]**」を選択します。
 
-![&#x200B; 新しいマッピングの追加 &#x200B;](assets/data-prep/add-new-mapping.png)
+![ 新しいマッピングの追加 ](assets/data-prep/add-new-mapping.png)
 
-ソースアイコン（![ソースアイコン](/help/images/icons/source.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL 選択]**」ボタンを使用して続行します。
+ソースアイコン（![ソースアイコン](/help/images/icons/source.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL Select]**」ボタンを使用して続行します。
 
-![&#x200B; ソーススキーマのマッピングされるフィールドを選択。](assets/data-prep/source-mapping.png)
+![ ソーススキーマのマッピングされるフィールドを選択。](assets/data-prep/source-mapping.png)
 
-次に、スキーマアイコン（![スキーマアイコン](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、「**[!UICONTROL 選択]**」で確定します。
+次に、スキーマアイコン（![スキーマアイコン](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、**[!UICONTROL Select]** で確認します。
 
-![&#x200B; ターゲットスキーマのマッピングされるフィールドを選択 &#x200B;](assets/data-prep/target-mapping.png)
+![ ターゲットスキーマのマッピングされるフィールドを選択 ](assets/data-prep/target-mapping.png)
 
-マッピングページが再表示され、完成したフィールドマッピングが表示されます。「**[!UICONTROL マッピングの進行状況]**」セクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
+マッピングページが再表示され、完成したフィールドマッピングが表示されます。**[!UICONTROL Mapping progress]** のセクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
 
-![&#x200B; フィールドが正常にマッピングされ、進行状況が反映されました。](assets/data-prep/field-mapped.png)
+![ フィールドが正常にマッピングされ、進行状況が反映されました。](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >オブジェクトの配列（ソースフィールド）を異なるオブジェクトの配列（ターゲットフィールド）にマッピングする場合は、次に示すように、ソースフィールドとターゲットフィールドのパスの配列名の後に `[*]` を追加します。
 >
->![&#x200B; 配列オブジェクトのマッピング。](assets/data-prep/array-object-mapping.png)
+>![ 配列オブジェクトのマッピング。](assets/data-prep/array-object-mapping.png)
 
 ### 既存のマッピングルールを読み込む {#import-mapping}
 
@@ -203,21 +203,21 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 >
 >別のデータストリームからマッピングルールを読み込むと、読み込む前に追加したフィールドマッピングが上書きされます。
 
-開始するには、「**[!UICONTROL マッピングをインポート]**」を選択します。
+開始するには、「**[!UICONTROL Import Mapping]**」を選択します。
 
-![&#x200B; 「マッピングをインポート」ボタンを選択している &#x200B;](assets/data-prep/import-mapping-button.png)
+![ 「マッピングをインポート」ボタンを選択している ](assets/data-prep/import-mapping-button.png)
 
-表示されるダイアログで、マッピングルールを読み込むデータストリームを選択します。データストリームを選択したら、「**[!UICONTROL プレビュー]**」を選択します。
+表示されるダイアログで、マッピングルールを読み込むデータストリームを選択します。データストリームを選択したら、「**[!UICONTROL Preview]**」を選択します。
 
-![&#x200B; 既存のデータストリームの選択 &#x200B;](assets/data-prep/select-mapping-rules.png)
+![ 既存のデータストリームの選択 ](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
 >データストリームは、同じ[サンドボックス](../sandboxes/home.md)内でのみ読み込むことができます。つまり、あるサンドボックスから別のサンドボックスにデータストリームを読み込むことはできません。
 
-次の画面に、選択したデータストリームの保存されたマッピングルールのプレビューを示します。表示されたマッピングが期待どおりのものであることを確認してから、「**[!UICONTROL インポート]**」を選択して確定すると、新しいデータストリームにマッピングが追加されます。
+次の画面に、選択したデータストリームの保存されたマッピングルールのプレビューを示します。表示されたマッピングが期待どおりのものであることを確認してから、「**[!UICONTROL Import]**」を選択して確定すると、新しいデータストリームにマッピングが追加されます。
 
-![&#x200B; 読み込まれるマッピングルール。](assets/data-prep/import-mapping-rules.png)
+![ 読み込まれるマッピングルール。](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -225,9 +225,9 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ### マッピングの完了
 
-前述の手順を続行して、残りのフィールドをターゲットスキーマにマッピングします。使用可能なすべてのソースフィールドをマッピングする必要はありませんが、ターゲットスキーマで必須として設定されているフィールドは、この手順を完了するためにマッピングする必要があります。 **[!UICONTROL 必須フィールド]**&#x200B;カウンターは、現在の設定でまだマッピングされていない必須フィールドの数を示します。
+前述の手順を続行して、残りのフィールドをターゲットスキーマにマッピングします。使用可能なすべてのソースフィールドをマッピングする必要はありませんが、ターゲットスキーマで必須として設定されているフィールドは、この手順を完了するためにマッピングする必要があります。 **[!UICONTROL Required fields]** カウンターは、現在の設定でまだマッピングされていない必須フィールドの数を示します。
 
-必須フィールドのカウントがゼロになって、マッピングに満足したら、「**[!UICONTROL 保存]**」を選択して変更を確定します。
+必須フィールドのカウントがゼロになって、マッピングに満足したら、「**[!UICONTROL Save]**」を選択して変更を確定します。
 
 ![マッピング完了](assets/data-prep/mapping-complete.png)
 

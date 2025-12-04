@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 96%
+source-wordcount: '1983'
+ht-degree: 94%
 
 ---
 
@@ -66,8 +66,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリームの IP アドレスの不明化 | [データストリーム設定 UI](../../datastreams/configure.md) で、部分的または完全なデータストリームレベルの IP の不明化オプションを定義できるようになりました。<br><br>データストリームレベルの IP の不明化の設定は、Adobe Target および Audience Manager で設定した IP の不明化よりも優先されます。<br><br>Adobe Analytics に送信されるデータは、データストリームレベルの [!UICONTROL IP の不明化]の設定の影響を受けません。Adobe Analytics では現在、不明化されていない IP アドレスを受信します。Analytics で不明化された IP アドレスを受信できるようにするには、Adobe Analytics で IP の不明化を個別に設定する必要があります。この動作は、今後のリリースで更新される予定です。<br><br> IP の不明化とその設定方法について詳しくは、[データストリーム設定ドキュメント](../../datastreams/configure.md#advanced-options)を参照してください。 |
-| [データストリーム設定の上書き](../../datastreams/overrides.md) | イベントデータセット、Target プロパティトークン、ID 同期コンテナ、Analytics レポートスイートなどの特定の設定を上書きするために使用できる、データストリームの追加の設定オプションを定義できるようになりました。<br><br>データストリーム設定の上書きは、次の 2 つの手順で行います。 <ol><li>最初に、[データストリーム設定ページ](../../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。</li><li>次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。</li></ol> |
+| データストリームの IP アドレスの不明化 | [データストリーム設定 UI](../../datastreams/configure.md) で、部分的または完全なデータストリームレベルの IP の不明化オプションを定義できるようになりました。<br><br>データストリームレベルの IP の不明化の設定は、Adobe Target および Audience Manager で設定した IP の不明化よりも優先されます。<br><br>Adobe Analyticsに送信されるデータは、データストリームレベルの [!UICONTROL IP Obfuscation] 設定の影響を受けません。 Adobe Analytics では現在、不明化されていない IP アドレスを受信します。Analytics で不明化された IP アドレスを受信できるようにするには、Adobe Analytics で IP の不明化を個別に設定する必要があります。この動作は、今後のリリースで更新される予定です。<br><br> IP の不明化とその設定方法について詳しくは、[データストリーム設定ドキュメント](../../datastreams/configure.md#advanced-options)を参照してください。 |
+| [データストリーム設定の上書き](../../datastreams/overrides.md) | イベントデータセット、Target プロパティトークン、ID 同期コンテナ、Analytics レポートスイートなどの特定の設定を上書きするために使用できる、データストリームの追加の設定オプションを定義できるようになりました。<br><br>データストリーム設定の上書きは、次の 2 つの手順で行います。 <ol><li>最初に、[データストリーム設定ページ](../../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。</li><li>次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md)を使用して、上書きを Edge Network に送信する必要があります。</li></ol> |
 | OAuth JWT 秘密鍵 | [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ja)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。 |
 | [!DNL Pinterest Conversions API] 拡張機能 | [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Pinterest Conversions API] を使用してサーバーサイドイベントの形式で [!DNL Pinterest] に送信したりできます。 |
 
@@ -90,7 +90,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 機能 | 説明 |
 | ----------- | ----------- |
 | [!DNL Custom Personalization] と [!DNL Adobe Commerce] の宛先のデータフロー監視 | <p> [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md)、[カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)、[属性を含むカスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)接続のアクティベーション指標を確認できるようになりました。 </p> <p>![Adobe Commerce の画像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce の指標"){width="100" zoomable="yes"}</p>  詳しくは、[宛先ワークスペースでのデータフローの監視](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)を参照してください。 |
-| [!DNL Google Ad Manager] と [!DNL Google Ad Manager 360] の宛先の新しい「**[!UICONTROL セグメント名にセグメント ID を追加]**」フィールド | <p>[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) のセグメント名と、[[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) に Experience Platform のセグメント ID を `Segment Name (Segment ID)` のように含めることができるようになりました。</p><p>![セグメント ID を追加の画像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新しい「セグメント名にセグメント ID を追加」フィールド "){width="100" zoomable="yes"}</p> |
+| **[!UICONTROL Append segment ID to segment name]** と [!DNL Google Ad Manager] の宛先の新しい [!DNL Google Ad Manager 360] フィールド | <p>[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) のセグメント名と、[[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) に Experience Platform のセグメント ID を `Segment Name (Segment ID)` のように含めることができるようになりました。</p><p>![セグメント ID を追加の画像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新しい「セグメント名にセグメント ID を追加」フィールド "){width="100" zoomable="yes"}</p> |
 | スケジュールされたオーディエンスのバックフィル | <p>[[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) の宛先では、セグメントが最初に宛先接続にマッピングされてから 24～48 時間後に、宛先へのオーディエンスバックフィルのアクティベーションが行われるようにスケジュールされています。この更新は、データの取り込みまで 24 時間待機するというGoogleのポリシーに対応するものであり、Real-Time CDPと [!DNL Google Display & Video 360] の間の一致率が向上します。</p> <p>これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。</p> |
 
 {style="table-layout:auto"}
@@ -123,7 +123,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| スキーマ | [[!UICONTROL Adobe Target 分類フィールド]](https://github.com/adobe/xdm/pull/1719/files) | Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドを含む、Target 分類データセット用の新しい XDM スキーマ。 |
+| スキーマ | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドを含む、Target 分類データセット用の新しい XDM スキーマ。 |
 
 {style="table-layout:auto"}
 
@@ -131,15 +131,15 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [[!UICONTROL Adobe 統合プロファイルサービスアカウント和集合拡張機能]](https://github.com/adobe/xdm/pull/1696/files) | ユーザーがアカウント和集合にセグメントメンバーシップを追加できるようにするリアルタイム顧客プロファイルのアカウント拡張フィールドグループを追加しました。 |
-| スキーマ | [[!UICONTROL 計算属性システムスキーマ]](https://github.com/adobe/xdm/pull/1696/files) | リアルタイム顧客プロファイルで使用される計算属性フィールドグループは、システムの読み取り専用グローバルスキーマに更新されました。 |
-| フィールドグループ | 複数 | [[!UICONTROL 時系列スキーマ]](https://github.com/adobe/xdm/pull/1718/files)のフィールドとして複数のイベントを追加しました。 |
+| フィールドグループ | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | ユーザーがアカウント和集合にセグメントメンバーシップを追加できるようにするリアルタイム顧客プロファイルのアカウント拡張フィールドグループを追加しました。 |
+| スキーマ | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | リアルタイム顧客プロファイルで使用される計算属性フィールドグループは、システムの読み取り専用グローバルスキーマに更新されました。 |
+| フィールドグループ | 複数 | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files) のフィールドとして複数のイベントを追加しました。 |
 | フィールドグループ | プロファイルのロイヤルティの詳細 | 「プログラム名」から「アップグレード日」に `xdm:upgradeDate` の[タイトルを修正しました](https://github.com/adobe/xdm/pull/1717/files)。 |
-| フィールドグループ | 複数 | [[!UICONTROL 決定項目]](https://github.com/adobe/xdm/pull/1714/files)の複数のフィールドが更新され、重複のネストされた階層が削除されました。 |
+| フィールドグループ | 複数 | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) の複数のフィールドが更新され、重複のネストされた階層が削除されました。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、[XDM システムの概要 &#x200B;](../../xdm/home.md) を参照してください。
+Experience Platformの XDM について詳しくは、[XDM システムの概要 ](../../xdm/home.md) を参照してください。
 
 ## Real-Time Customer Data Platform
 

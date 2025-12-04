@@ -2,9 +2,9 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 95%
 
 ---
@@ -178,8 +178,8 @@ onLoad がブラウザーによって呼び出され、ページの読み込み�
 
 #### Specific Elements \| Any Element
 
-* 「**[!UICONTROL 特定の要素]**」を選択すると、要素とプロパティの値を選択するオプションが表示されます。
-* 「**[!UICONTROL 任意の要素]**」を選択した場合、要素を絞り込むための追加オプションは不要です。
+* **[!UICONTROL Specific Elements]** を選択すると、要素とプロパティの値を選択するオプションが表示されます。
+* **[!UICONTROL Any Element]** を選択した場合、要素を絞り込むための追加オプションはありません。
 
 #### Elements matching the CSS selector
 
@@ -229,11 +229,11 @@ onLoad がブラウザーによって呼び出され、ページの読み込み�
 >
 >ES6+ JavaScript がカスタムコードでサポートされるようになりました。一部の古いブラウザーは ES6 以降をサポートしていません。 ES6+ 関数を使用した場合の影響を理解するには、サポート対象の web ブラウザーに対してテストしてください。
 
-組み込みコードエディターを使用してカスタムコードを入力します。
+ビルトインのコードエディターを使用してカスタムコードを入力します。
 
-1. 「**[!UICONTROL エディターを開く]**」を選択します。
+1. **[!UICONTROL Open Editor]** を選択します。
 1. カスタムコードを入力します。
-1. 「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Save]** を選択します。
 
 カスタムコード内から参照できる `event` という名前の変数が自動的に使用可能になります。この `event` オブジェクトには、ルールをトリガーしたイベントに関する便利な情報が含まれます。どのイベントを使用できるかを判断する最も簡単な方法として、カスタムコード内からコンソールに `event` を記録します。
 
@@ -321,7 +321,7 @@ return new Promise(function(resolve, reject) {
 1. イベントの条件に必要な変数値を指定します。
 1. （オプション）正規表現の場合は、正規表現を有効にします。
 
-### Engagement
+### エンゲージメント
 
 #### Landing Page
 
@@ -519,7 +519,7 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 
 日付範囲を指定します。イベントが発生する前または後の日時、タイムゾーンを選択します。
 
-#### Max Frequency
+#### 最大頻度
 
 条件が true を返す最大回数を指定します。選択できる項目は次のとおりです。
 
@@ -557,8 +557,8 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
    * JavaScript
    * HTML
 1. アクションコードをグローバルに実行するかどうかを選択します。
-1. 「**[!UICONTROL エディターを開く]**」を選択します。
-1. コードを編集して、「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Open Editor]** を選択します。
+1. コードを編集して、「**[!UICONTROL Save]**」を選択します。
 
 言語として「JavaScript」を選択すると、カスタムコード内から参照できる `event` という名前の変数が自動的に使用可能になります。この `event` オブジェクトには、ルールをトリガーしたイベントに関する便利な情報が含まれます。どのイベントを使用できるかを判断する最も簡単な方法として、カスタムコード内からコンソールに `event` を記録します。
 
@@ -636,7 +636,7 @@ setTimeout(function() {
 
 ![データ収集 UI でのトリガー直接呼び出しアクションのスクリーンショット](../../../images/extensions/client/core/direct-call-action.png)
 
-アクションは、クライアントサイドのコードからアクセスできる `satellite` オブジェクトの [`track` メソッド](../../../ui/client-side/satellite-object.md#track)に直接マッピングされます。
+このアクションは [`_satellite.track()`](/help/collection/tags/track.md) に直接マッピングされます。
 
 ## Core 拡張機能データ要素のタイプ
 
@@ -865,7 +865,7 @@ CSS セレクターチェーン：
 
 次のいずれかの変数を選択できます。
 
-* 環境ステージ - 開発環境／ステージング環境／実稼動環境を区別するために `_satellite.environment.stage` を返します。
+* 環境ステージ - 開発環境／ステージング環境／本番環境を区別するために `_satellite.environment.stage` を返します。
 * ライブラリのビルド日 - `_satellite.buildInfo.buildDate` と同じ値を含む `turbine.buildInfo.buildDate` を返します。
 * プロパティ名 - Launch プロパティの名前を取得するために `_satellite.property.name` を返します。
 * プロパティ ID - Launch プロパティの ID を取得するために `_satellite.property.id` を返します。

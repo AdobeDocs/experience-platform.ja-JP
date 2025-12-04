@@ -1,10 +1,10 @@
 ---
-title: クライアントサイドの情報
+title: 'クライアントサイドの情報 '
 description: Web アプリケーションまたはモバイルアプリケーションのクライアントサイドでタグ操作を管理する方法を説明します。
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '176'
 ht-degree: 100%
 
 ---
@@ -16,10 +16,6 @@ ht-degree: 100%
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 この節では、Adobe Experience Platform でクライアントサイドのタグ操作を管理する際に役立つ情報について説明します。
-
-* [**タグ「_satellite」オブジェクト参照**](satellite-object.md)
-
-  このリファレンスでは、`_satellite` オブジェクトと、このオブジェクトを使用して実行できる操作について説明します。
 
 * [**Experience Cloud JavaScript の非同期デプロイメント**](asynchronous-deployment.md)
 

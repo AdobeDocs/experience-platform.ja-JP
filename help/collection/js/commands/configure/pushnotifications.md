@@ -1,0 +1,91 @@
+---
+title: pushNotification
+description: Web SDKのプッシュ通知を設定して、ブラウザーベースのプッシュメッセージを有効にします。
+source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 5%
+
+---
+
+# `pushNotifications` {#push-notifications}
+
+>[!AVAILABILITY]
+>
+>Web SDKのプッシュ通知は現在 **ベータ版** です。 機能とドキュメントは変更される場合があります。
+
+`pushNotifications` プロパティを使用すると、web アプリケーションのプッシュ通知を設定できます。 この機能を使用すると、web サイトが現在ブラウザーに読み込まれていない場合でも、web アプリはサーバーからプッシュされたメッセージを受信できます。
+
+## 前提条件 {#prerequisites}
+
+プッシュ通知を設定する前に、次のことを確認します。
+
+1. **ユーザー権限**：ユーザーは、通知の権限を明示的に付与する必要があります
+2. **サービスワーカー**：プッシュ通知が機能するには、登録済みのサービスワーカーが必要です
+3. **VAPID キー**：安全な通信のための VAPID （任意申請サーバー ID）キーを生成します
+4. **アプリケーション ID**:VAPID キーをAdobe Journey Optimizer内に保存する際に使用するアプリ ID。チャネル/プッシュ設定/プッシュ資格情報
+5. **トラッキングデータセット ID**:「AJO プッシュトラッキングエクスペリエンスイベントデータセット」という名前のシステムデータセットの ID。 これをAdobe Journey Optimizer/データセットから取得
+
+## VAPID キーの生成 {#generate-vapid-keys}
+
+VAPID キーを生成するには、`web-push` の NPM パッケージをインストールして実行します。
+
+```bash
+npm install web-push -g
+web-push generate-vapid-keys
+```
+
+このアクションにより、公開鍵と秘密鍵のペアが生成されます。 Web SDK設定で公開鍵を使用し、その秘密鍵をAdobe Journey Optimizer プッシュ通知チャネル内に保存します。
+
+## サービスワーカーのインストール
+
+サービスワーカーコードは、web サイトと同じドメインから提供する必要があります。 Adobe CDN からサービスワーカーコードをダウンロードし、独自のサーバーからJavaScript ファイルをホストします。 Web SDK サービスワーカーコードは、次の URL 構造を使用して使用できます。
+
+- **縮小**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
+- **フル**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
+
+サービスワーカーのインストール方法の例を次に示します。
+
+```html
+<script>
+  navigator.serviceWorker.register("/alloyServiceWorker.js", { scope: "/" });
+</script>
+```
+
+## 実装
+
+`pushNotifications` コマンドの実行時に `configure` オブジェクトを設定します。
+
+```js
+alloy("configure", {
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  pushNotifications: {
+    vapidPublicKey: "BEl62iUYgU[...]KGP4jAQlJz",
+    applicationId: "my-app-id",
+    trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
+  },
+});
+```
+
+## プロパティ {#properties}
+
+| プロパティ | タイプ | 必須 | 説明 |
+|---|---|---|---|
+| **`vapidPublicKey`** | 文字列 | ○ | プッシュ購読に使用される VAPID 公開鍵。 Base64 でエンコードされた文字列である必要があります。 |
+| **`applicationId`** | 文字列 | ○ | VAPID 公開鍵に関連付けられたアプリケーション ID。 |
+| **`trackingDatasetId`** | 文字列 | ○ | プッシュ通知トラッキングに使用されるシステムデータセット ID。 |
+
+## 重要な考慮事項 {#important-considerations}
+
+- **セキュリティ**：プッシュ購読は、購読中に使用される特定の VAPID 公開鍵に関連付けられます。 VAPID キーを変更すると、既存の購読が自動的に購読解除され、新しいキーで再作成されます。
+- **キャッシュ**:Web SDKは、現在の ECID と購読の詳細をキャッシュされた値と比較することで、購読の更新を自動的に管理します。 購読データは、変更が検出された場合にのみ送信されます。
+- **サービスワーカー要件**：プッシュ通知には、登録済みのサービスワーカーが必要です。 プッシュイベントを処理するようにサービスワーカーが正しく設定されていることを確認します。
+
+## Web SDK タグ拡張機能を使用してプッシュ通知を設定します {#configure-push-notifications-tag-extension}
+
+このプロパティと同等の web SDK タグ拡張機能は、拡張機能を設定する際の [[!UICONTROL Push notifications]](/help/tags/extensions/client/web-sdk/configure/push-notifications.md) の節です。
+
+## 次の手順 {#next-steps}
+
+プッシュ通知を設定したら、[sendPushSubscription](../sendpushsubscription.md) コマンドを使用して、プッシュ購読をAdobe Experience Platformに登録します。

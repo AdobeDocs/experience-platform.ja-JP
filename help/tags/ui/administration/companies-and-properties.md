@@ -2,10 +2,10 @@
 title: プロパティ
 description: Adobe Experience Platform で拡張機能、環境、ライブラリを組織に合わせて編成およびグループ化する方法について説明します。
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -97,7 +97,7 @@ Properties リストで表示される情報は次のとおりです。
 
 開始する前に、「[プロパティの計画に関するベストプラクティス](companies-and-properties.md#best-practices-for-planning-properties)」でプロパティを確認してください。
 
-自社のページに移動して、「**[!UICONTROL プロパティを追加]**」を選択するか、リストから既存のプロパティを選択して、「**[!UICONTROL 設定]**」を選択します。
+会社ページに移動して、「**[!UICONTROL Add Property]**」を選択するか、リストから既存のプロパティを選択して、「**[!UICONTROL Configure]**」をクリックします。
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Properties リストで表示される情報は次のとおりです。
 
    **Domains：**&#x200B;このプロパティをデプロイする予定のサイトのベース URL。
 
-1. （詳細） **[!UICONTROL ルール コンポーネントを順番に実行]**：前の条件およびアクションが完了するまで条件およびアクションの実行を待機する場合は、このチェックボックスを選択します
-1. （詳細） **[!UICONTROL 欠落しているデータ要素に空の文字列を返す：]**&#x200B;ライブラリ内に存在しないデータ要素を参照した場合、通常は `undefined` が返されます。その状況で代わりに空の文字列を返す場合は、このチェックボックスをオンにします。
-1. （詳細） **[!UICONTROL 拡張機能開発のための設定：]**&#x200B;会社が積極的に開発している開発拡張機能をインストールする予定がある場合は、このチェックボックスを選択します
-1. 「**[!UICONTROL 保存]**」を選択します。
+1. （詳細）**[!UICONTROL Run rule components in sequence]**：前の条件およびアクションが完了するまで条件およびアクションの実行を待機する場合は、このチェックボックスを選択します。
+1. （詳細） **[!UICONTROL Return an empty string for missing data elements:]** ライブラリ内に存在しないデータ要素を参照した場合、通常は `undefined` が返されます。 そのシナリオで代わりに空の文字列を返す場合は、このチェックボックスを有効にします。
+1. （詳細） **[!UICONTROL Configure for extension development:]** 会社が積極的に開発している開発拡張機能をインストールする予定がある場合は、このチェックボックスを有効にします
+1. **[!UICONTROL Save]** を選択します。
 
 ### モバイルの場合
 
@@ -131,7 +131,7 @@ Properties リストで表示される情報は次のとおりです。
 
    * **Use HTTPS：**&#x200B;すべてのデータ通信を HTTP または HTTPS 経由でおこなう場合に選択します。
 
-1. 「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Save]** を選択します。
 
 プロパティを作成すると、Experience Platformによって、デフォルトのホスト、環境のセット（開発、ステージング、実稼動）とデフォルトの拡張機能が自動的に追加されます。
 
@@ -147,4 +147,4 @@ Properties リストで表示される情報は次のとおりです。
 
    複数のプロパティを選択して削除できます。
 
-1. 「**[!UICONTROL 削除]**」を選択して、プロパティの削除を確認します。
+1. 「**[!UICONTROL Delete]**」を選択して、プロパティの削除を確認します。
