@@ -61,7 +61,7 @@ Web SDKには、2 つの補完的な同意オプションがあります。
 | `out` | `out` | × | ○ |
 | `out` | 設定なし | × | × |
 
-ライブラリによって設定される Cookie のリストについては [&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Adobe Experience Platform Web SDKの Cookie&rbrace; を参照してください。
+ライブラリによって設定される Cookie のリストについては [&#128279;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk)Adobe Experience Platform Web SDKの Cookie&rbrace; を参照してください。
 
 >[!NOTE]
 >

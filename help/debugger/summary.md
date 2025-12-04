@@ -150,47 +150,47 @@ Experience Platform Debugger には、各ソリューションについて以下
  <tbody> 
   <tr> 
    <td colname="col1"> <p>クライアントコード </p> </td> 
-   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html" format="html" scope="external"> クライアントコード</a>。 </p> </td> 
+   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ja" format="html" scope="external"> クライアントコード</a>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>バージョン </p> </td> 
-   <td colname="col2"> <p>現在の <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html" format="html" scope="external"> at.js</a> または mbox.js バージョン。 </p> </td> 
+   <td colname="col2"> <p>現在の <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html?lang=ja" format="html" scope="external"> at.js</a> または mbox.js バージョン。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>グローバルリクエスト名 </p> </td> 
-   <td colname="col2"> <p>Target 実装の各 Web ページの最上部でおこなわれる単一のサーバー呼び出しを参照する <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external">global mbox</a>。 </p> </td> 
+   <td colname="col2"> <p>Target 実装の各 Web ページの最上部でおこなわれる単一のサーバー呼び出しを参照する <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=ja" format="html" scope="external">global mbox</a>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ページ読み込みイベント </p> </td> 
-   <td colname="col2"> <p>ページの読み込み時に実行される<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">イベント</a>のタイプ。 </p> </td> 
+   <td colname="col2"> <p>ページの読み込み時に実行される<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=ja" format="html" scope="external">イベント</a>のタイプ。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>リクエスト名 </p> </td> 
-   <td colname="col2"> <p>ページ上の <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external"> 場所</a>の周囲にある mbox の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>ページ上の <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=ja" format="html" scope="external"> 場所</a>の周囲にある mbox の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>アクティビティ名 </p> </td> 
-   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html" format="html" scope="external"> キャンペーンまたはアクティビティ</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html?lang=ja" format="html" scope="external"> キャンペーンまたはアクティビティ</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>アクティビティ ID </p> </td> 
-   <td colname="col2"> <p>Target アクティビティの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target アクティビティの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>エクスペリエンス名 </p> </td> 
-   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html" format="html" scope="external"> エクスペリエンス</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html?lang=ja" format="html" scope="external"> エクスペリエンス</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>エクスペリエンス ID </p> </td> 
-   <td colname="col2"> <p>Target エクスペリエンスの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target エクスペリエンスの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>オファー名</p> </td> 
-   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> オファー</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja" format="html" scope="external"> オファー</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>オファー ID </p> </td> 
-   <td colname="col2"> <p>Target オファーの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target オファーの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

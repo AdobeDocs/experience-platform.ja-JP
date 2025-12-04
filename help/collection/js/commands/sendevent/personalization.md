@@ -51,7 +51,7 @@ Adobe Targetでは、各決定範囲は mbox またはアクティビティに�
 
 ## `personalization.surfaces`
 
-`surfaces` プロパティは、パーソナライゼーションがリクエストされるチャネル、デバイスまたはコンテキストを手動で定義する [&#x200B; サーフェス URI](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) 文字列の配列です。 クロスチャネルエコシステム内のドメイン、アプリ、デバイスプラットフォームなど、異なるデジタルエクスペリエンスを区別できます。 デフォルトでは、ライブラリは現在のページからデフォルトサーフェスを推測します。 このプロパティを使用して、現在のページで自動的に推測されるサーフェスを上書きできます。
+`surfaces` プロパティは、パーソナライゼーションがリクエストされるチャネル、デバイスまたはコンテキストを手動で定義する [&#x200B; サーフェス URI](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) 文字列の配列です。 クロスチャネルエコシステム内のドメイン、アプリ、デバイスプラットフォームなど、異なるデジタルエクスペリエンスを区別できます。 デフォルトでは、ライブラリは現在のページからデフォルトサーフェスを推測します。 このプロパティを使用して、現在のページで自動的に推測されるサーフェスを上書きできます。
 
 このプロパティは、クロスチャネルパーソナライゼーションを使用する際に役立ち、異なるチャネル間でパーソナライゼーションの仕組みを区別する必要があります。 これにより、同じAdobe Experience Platform組織の下で異なるサイトに対して異なるオファーを作成できます。
 

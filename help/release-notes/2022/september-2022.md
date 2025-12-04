@@ -134,7 +134,7 @@ Experience Platformのデータ収集について詳しくは、[&#x200B; デー
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)で機能することに注意してください。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1)で機能することに注意してください。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリード両方の更新をサポートするようになりました。また、迅速な更新を実現するようパフォーマンスを向上しました。 |
 
 {style="table-layout:auto"}

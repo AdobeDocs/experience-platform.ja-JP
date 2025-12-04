@@ -17,7 +17,7 @@ ht-degree: 67%
 
 ## &#x200B;1. Audience Manager 内のデータアーキテクチャの検討
 
-Audience Manager から Real-Time CDP への進化を検討する場合、今が [Audience Manager のセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html)を分析し、これらのセグメントを構成する[シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html)、[ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section)が何であるかを判断する重要な時期です。
+Audience Manager から Real-Time CDP への進化を検討する場合、今が [Audience Manager のセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=ja)を分析し、これらのセグメントを構成する[シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=ja)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=ja)、[ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=ja#segment-builder-section)が何であるかを判断する重要な時期です。
 
 さらに、Audience Manager で現在使用しているデータソースについても考慮します。
 

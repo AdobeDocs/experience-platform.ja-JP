@@ -257,7 +257,7 @@ ht-degree: 1%
 
 [!UICONTROL Consents and Preferences] データタイプを使用して顧客から同意データを取り込むには、そのデータタイプを含むスキーマに基づいてデータセットを作成する必要があります。
 
-フィールドにデータタイプを割り当てる手順については、[UI でのスキーマの作成 &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) に関するチュートリアルを参照してください。 [!UICONTROL Consents and Preferences] データタイプのフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [&#x200B; データセットの作成 &#x200B;](../../catalog/datasets/user-guide.md#create) の節を参照してください。
+フィールドにデータタイプを割り当てる手順については、[UI でのスキーマの作成 &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_jp) に関するチュートリアルを参照してください。 [!UICONTROL Consents and Preferences] データタイプのフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [&#x200B; データセットの作成 &#x200B;](../../catalog/datasets/user-guide.md#create) の節を参照してください。
 
 >[!IMPORTANT]
 >

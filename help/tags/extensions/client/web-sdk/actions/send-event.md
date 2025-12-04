@@ -48,7 +48,7 @@ ht-degree: 0%
 ![&#x200B; 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**：パーソナライゼーションから明示的にリクエストする範囲の配列。 範囲を手動で入力することも、データ要素を指定することもできます。 範囲を手動で入力すると、各フィールドは 1 つの範囲を表します。 アクションに範囲を追加するには、「**[!UICONTROL Add scope]**」を選択します。
-* **[!UICONTROL Surfaces]**: イベントでクエリするサーフェスの配列。 詳しくは、Adobe Journey Optimizer ドキュメントの [Web エクスペリエンスの作成 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を参照してください。 サーフェスを手動で入力すると、各フィールドは 1 つのサーフェスを表します。 **[!UICONTROL Add surface]** を選択して、アクションにさらにサーフェスを追加します。
+* **[!UICONTROL Surfaces]**: イベントでクエリするサーフェスの配列。 詳しくは、Adobe Journey Optimizer ドキュメントの [Web エクスペリエンスの作成 &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) を参照してください。 サーフェスを手動で入力すると、各フィールドは 1 つのサーフェスを表します。 **[!UICONTROL Add surface]** を選択して、アクションにさらにサーフェスを追加します。
 * **ビジュアルパーソナライゼーションの決定をレンダリング：** 有効にすると、ページ上のパーソナライズされたコンテンツをレンダリングできるチェックボックス。 詳しくは、[&#x200B; パーソナライズされたコンテンツのレンダリング &#x200B;](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
 * **[!UICONTROL Request default personalization]**: ページ全体の範囲とデフォルトサーフェスをリクエストするかどうかを制御します。 デフォルトでは、ページ読み込みの最初の `sendEvent` 呼び出し時に自動的に要求されます。 これらのラジオボタンに相当するJavaScript ライブラリは [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md) です。 次のオプションから選択できます。
    * **[!UICONTROL Automatic]**：デフォルトの動作です。 まだリクエストされていない場合にのみ、デフォルトのパーソナライゼーションをリクエストします。

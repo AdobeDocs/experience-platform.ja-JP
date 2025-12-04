@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >この方法は、スタンドアロンのExperience Cloud ID サービスタグ拡張機能を含むプロパティにのみ適用されます。 Web SDK タグ拡張機能で使用できる暗黙の ID サービス機能には適用されません。 Web SDKの暗黙的 ID サービス機能を使用して訪問者 ID を取得する必要がある場合は、[`getIdentity`](/help/collection/js/commands/getidentity.md) コマンドを参照してください。
 
-ID サービス拡張機能をインストールして公開した状態でこのメソッドを呼び出すと、[`Visitor.getInstance()`](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/getinstance) メソッドを呼び出した後に取得したオブジェクトと同様に、オブジェクトが返されます。 ID サービス拡張機能がインストールされていないか、公開されていないときにこのメソッドを呼び出すと、メソッドは `null` を返します。
+ID サービス拡張機能をインストールして公開した状態でこのメソッドを呼び出すと、[`Visitor.getInstance()`](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/getinstance) メソッドを呼び出した後に取得したオブジェクトと同様に、オブジェクトが返されます。 ID サービス拡張機能がインストールされていないか、公開されていないときにこのメソッドを呼び出すと、メソッドは `null` を返します。
 
 ```ts
 _satellite.getVisitorId(): Visitor | null
@@ -24,7 +24,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## 使用可能なフィールドとメソッド
 
-使用可能なフィールドとメソッドについては、Experience Cloud訪問者 ID サービスのドキュメントのExperience Cloud ID サービス [&#x200B; メソッド &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) を参照してください。
+使用可能なフィールドとメソッドについては、Experience Cloud訪問者 ID サービスのドキュメントのExperience Cloud ID サービス [&#x200B; メソッド &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/get-set) を参照してください。
 
 ```js
 // Retrieve a visitor's ECID

@@ -32,7 +32,7 @@ alloy("sendEvent", {
 
 ## Adobe Analyticsで `data` オブジェクトを使用します {#analytics}
 
-Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、AppMeasurement変数と同じ構文を使用するように設定されているので、web SDKへのアップグレードプロセスが簡単になります。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。
+Adobe Analyticsで `data` オブジェクトを使用すると、XDM スキーマを使用せずにレポートスイートにデータを送信できます。 変数は、AppMeasurement変数と同じ構文を使用するように設定されているので、web SDKへのアップグレードプロセスが簡単になります。 詳しくは、Adobe Analytics導入ガイドの [Adobe Analyticsへのデータオブジェクト変数のマッピング &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/data-var-mapping) を参照してください。
 
 ## Web SDK タグ拡張機能を使用して `data` オブジェクトを使用します
 

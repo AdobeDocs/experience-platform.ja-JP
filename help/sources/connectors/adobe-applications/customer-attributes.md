@@ -15,7 +15,7 @@ ht-degree: 19%
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Cloudの [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) を使用すると、顧客関係管理（CRM）データベースから取り込んだ大規模法人データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
+Experience Cloudの [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=ja) を使用すると、顧客関係管理（CRM）データベースから取り込んだ大規模法人データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
 
 Experience Platformは、プロファイルデータをAdobe Experience Platformに取り込む [!DNL Customer Attributes] めのサポートを提供します。
 

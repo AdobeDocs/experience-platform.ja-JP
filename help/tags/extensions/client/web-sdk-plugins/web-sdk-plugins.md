@@ -50,7 +50,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は、Cookie を設定することと、ユーザーが生成した値を Cookie に保存することを可能にします。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getAndPersistValue` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html) をセットアップおよび設定できます。 `getAndPersistValue` データ要素は、値を cookie に保存し、後で訪問中に取得することができます。
+[`getAndPersistValue` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=ja) をセットアップおよび設定できます。 `getAndPersistValue` データ要素は、値を cookie に保存し、後で訪問中に取得することができます。
 
 `getAndPersistValue` データ要素は、次の引数を提供します。
 
@@ -66,7 +66,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このプラグインは、クライアント上で場所へのアクセスを必要としますが、アクセスできない場合は例外をスローしません。
 
-[`getGeoCoordinates` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html) をセットアップおよび設定できます。 `getGeoCoordinates` データ要素は、訪問者のデバイスの緯度と経度をキャプチャします。
+[`getGeoCoordinates` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=ja) をセットアップおよび設定できます。 `getGeoCoordinates` データ要素は、訪問者のデバイスの緯度と経度をキャプチャします。
 
 `getGeoCoordinates` データ要素では引数を使用しません。 次のいずれかの値を返します。
 
@@ -80,7 +80,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は cookie を設定します。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getNewRepeat` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html) をセットアップおよび設定できます。 `getNewRepeat` データ要素は、サイトへの訪問者が新規訪問者か、希望日数以内のリピート訪問者かを特定します。
+[`getNewRepeat` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=ja) をセットアップおよび設定できます。 `getNewRepeat` データ要素は、サイトへの訪問者が新規訪問者か、希望日数以内のリピート訪問者かを特定します。
 
 `getNewRepeat` データ要素では、次の引数を使用します。
 
@@ -90,7 +90,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 
 ### `getPageName`
 
-[`getPageName` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html) をセットアップおよび設定できます。 `getPageName` データ要素は、現在の URL の読みやすい、わかりやすい形式のバージョンを作成します。
+[`getPageName` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=ja) をセットアップおよび設定できます。 `getPageName` データ要素は、現在の URL の読みやすい、わかりやすい形式のバージョンを作成します。
 
 `getPageName` データ要素では、次の引数を使用します。
 
@@ -107,7 +107,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は、Cookie を設定することと、ユーザーが生成した値を Cookie に保存することを可能にします。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getPreviousValue` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html) をセットアップおよび設定できます。 `getPreviousValue` データ要素は、以前のヒットで設定された値に変数を設定します。
+[`getPreviousValue` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=ja) をセットアップおよび設定できます。 `getPreviousValue` データ要素は、以前のヒットで設定された値に変数を設定します。
 
 `getPreviousValue` データ要素では、次の引数を使用します。
 
@@ -118,7 +118,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 
 ### `getQueryParam`
 
-[`getQueryParam` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html) をセットアップおよび設定できます。 `getQueryParam` データ要素は、URL に含まれる任意のクエリ文字列パラメーターの値を抽出します。 これは、ランディングページの URL から内部および外部の両方のキャンペーンコードを抽出する場合に役立ちます。 また、検索語句やその他のクエリ文字列パラメーターを抽出する場合にも役立ちます。 このデータ要素は、ハッシュや複数のクエリ文字列パラメーターを含んだ URL など、複雑な URL を解析する堅牢な機能を提供します。
+[`getQueryParam` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=ja) をセットアップおよび設定できます。 `getQueryParam` データ要素は、URL に含まれる任意のクエリ文字列パラメーターの値を抽出します。 これは、ランディングページの URL から内部および外部の両方のキャンペーンコードを抽出する場合に役立ちます。 また、検索語句やその他のクエリ文字列パラメーターを抽出する場合にも役立ちます。 このデータ要素は、ハッシュや複数のクエリ文字列パラメーターを含んだ URL など、複雑な URL を解析する堅牢な機能を提供します。
 
 `getQueryParam` データ要素では、次の引数を使用します。
 
@@ -135,7 +135,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 
 ### `getTimeParting`
 
-[`getTimeParting` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html) をセットアップおよび設定できます。 `getTimeParting` データ要素は、サイトで測定可能なアクティビティが発生した時間の詳細を取得します。 このデータ要素は、特定の日付範囲の繰り返し可能な時間分割で指標を分類する場合に役立ちます。 例えば、すべての日曜日とすべての木曜日など、2 つの異なる曜日のコンバージョン率を比較できます。 また、すべての朝とすべての夜など、1 日の期間を比較することもできます。
+[`getTimeParting` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=ja) をセットアップおよび設定できます。 `getTimeParting` データ要素は、サイトで測定可能なアクティビティが発生した時間の詳細を取得します。 このデータ要素は、特定の日付範囲の繰り返し可能な時間分割で指標を分類する場合に役立ちます。 例えば、すべての日曜日とすべての木曜日など、2 つの異なる曜日のコンバージョン率を比較できます。 また、すべての朝とすべての夜など、1 日の期間を比較することもできます。
 
 `getTimeParting` データ要素では、次の引数を使用します。
 
@@ -162,7 +162,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は cookie を設定します。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getTimeSinceLastVisit` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html) をセットアップおよび設定できます。 `getTimeSinceLastVisit` データ要素は、訪問者が最後の訪問からサイトに戻るまでの時間を追跡します。
+[`getTimeSinceLastVisit` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=ja) をセットアップおよび設定できます。 `getTimeSinceLastVisit` データ要素は、訪問者が最後の訪問からサイトに戻るまでの時間を追跡します。
 
 `getTimeSinceLastVisit` データ要素では引数を使用しません。 訪問者が最後にサイトに訪問してからの経過時間を次の形式でバケット化して返します。
 
@@ -177,7 +177,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は、Cookie を設定することと、ユーザーが生成した値を Cookie に保存することを可能にします。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getValOnce` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html) をセットアップおよび設定できます。 `getValOnce` データ要素は、変数が同じ値に複数回設定されるのを防ぎます。
+[`getValOnce` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=ja) をセットアップおよび設定できます。 `getValOnce` データ要素は、変数が同じ値に複数回設定されるのを防ぎます。
 
 `getValOnce` データ要素では、次の引数を使用します。
 
@@ -194,7 +194,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は cookie を設定します。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getVisitDuration` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html) をセットアップおよび設定できます。 `getVisitDuration` のデータ要素は、訪問者がその時点までサイトを訪問した時間を分単位で追跡します。
+[`getVisitDuration` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=ja) をセットアップおよび設定できます。 `getVisitDuration` のデータ要素は、訪問者がその時点までサイトを訪問した時間を分単位で追跡します。
 
 `getVisitDuration` データ要素では引数を使用しません。 次のいずれかの値を返します。
 
@@ -209,7 +209,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 >
 >このデータ要素は cookie を設定します。 詳しくは、プラグイン固有のドキュメントを参照してください。
 
-[`getVisitNum` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html) をセットアップおよび設定できます。 `getVisitNum` データ要素は、目的の日数内にサイトを訪問したすべての訪問者の訪問回数を返します。
+[`getVisitNum` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=ja) をセットアップおよび設定できます。 `getVisitNum` データ要素は、目的の日数内にサイトを訪問したすべての訪問者の訪問回数を返します。
 
 `getVisitNum` データ要素では、次の引数を使用します。
 
@@ -223,7 +223,7 @@ Common Web SDK Plugins 拡張機能で提供される次のネイティブデー
 
 ### `p_fo` （ページ先頭のみ）
 
-[`p_fo` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html) をセットアップおよび設定できます。 `p_fo` データ要素は、特定のJavaScript オブジェクトが存在するかどうかを確認するユーティリティです。 オブジェクトが存在しない場合、プラグインはオブジェクトを作成して `true` を返します。 JavaScript オブジェクトがページ上に既に存在する場合は、`false` を返します。 このデータ要素は、ページ上で 1 回だけコードを実行する場合に役立ちます。
+[`p_fo` Analytics プラグイン &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=ja) をセットアップおよび設定できます。 `p_fo` データ要素は、特定のJavaScript オブジェクトが存在するかどうかを確認するユーティリティです。 オブジェクトが存在しない場合、プラグインはオブジェクトを作成して `true` を返します。 JavaScript オブジェクトがページ上に既に存在する場合は、`false` を返します。 このデータ要素は、ページ上で 1 回だけコードを実行する場合に役立ちます。
 
 `p_fo` データ要素では、次の引数を使用します。
 

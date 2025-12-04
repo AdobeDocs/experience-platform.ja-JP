@@ -199,7 +199,7 @@ ECID:35577 を削除した結果、削除された ECID を持つ CRMID:60013 �
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [&#x200B; エンドツーエンドの待ち時間の図 &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* 様々なExperience Platform サービス用の [&#x200B; エンドツーエンドの待ち時間の図 &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
 * [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

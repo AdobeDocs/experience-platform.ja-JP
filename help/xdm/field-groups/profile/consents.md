@@ -175,7 +175,7 @@ ht-degree: 0%
 
 [!UICONTROL Consents and Preferences] フィールドグループを使用して顧客から同意データを取り込むには、そのフィールドグループを含むスキーマに基づいてデータセットを作成する必要があります。
 
-フィールドにフィールドグループを割り当てる手順については、[UI でのスキーマの作成 &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) に関するチュートリアルを参照してください。 [!UICONTROL Consents and Preferences] フィールドグループを持つフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [&#x200B; データセットの作成 &#x200B;](/help/catalog/datasets/user-guide.md#create) の節を参照してください。
+フィールドにフィールドグループを割り当てる手順については、[UI でのスキーマの作成 &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_jp) に関するチュートリアルを参照してください。 [!UICONTROL Consents and Preferences] フィールドグループを持つフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [&#x200B; データセットの作成 &#x200B;](/help/catalog/datasets/user-guide.md#create) の節を参照してください。
 
 >[!IMPORTANT]
 >
