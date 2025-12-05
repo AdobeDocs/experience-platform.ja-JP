@@ -2,14 +2,16 @@
 title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 13%
+source-wordcount: '208'
+ht-degree: 10%
 
 ---
 
 # `_satellite` オブジェクト参照
+
+_以下のページでは、`_satellite` オブジェクトの使用方法の概要を説明します。このオブジェクトを使用すると、JavaScriptを使用してタグロジックを管理およびカスタマイズできます。 データ収集 UI で実装を設定する方法について詳しくは [](/help/tags/extensions/client/web-sdk/overview.md)Adobe Experience Platform Web SDK タグ拡張機能 } を参照してください。_
 
 `_satellite` オブジェクトは、サイトに公開されたタグライブラリとの対話に役立つ、サポートされるいくつかのエントリポイントを公開します。 ローダータグが正しく実装されている場合、すべてのタグデプロイメントで `_satellite` が表示されます。 このオブジェクトの主なユースケースは次の通りです。
 
@@ -26,16 +28,18 @@ ht-degree: 13%
 ## 一般的な使用例
 
 ```js
-// Read and write a temporary data element value
-const region = _satellite.getVar('user_region');
-_satellite.setVar('promo_code', code);
+// Read and write a temporary data element value (guarded)
+if(window._satellite?.getVar && window._satellite?.setVar) {
+  const region = _satellite.getVar('user_region');
+  _satellite.setVar('promo_code', code);
+}
 
-// Local debugging
-_satellite.setDebug(true);
-_satellite.logger.log('Rule evaluated');
-
-// Manually trigger a rule configured in your tag property
+// Manually trigger a rule configured in your tag property (guarded)
 if (window._satellite?.track) {
   _satellite.track('cart_add', { sku: '123', qty: 2 });
 }
+
+// Local console debugging (guarding not needed)
+_satellite.setDebug(true);
+_satellite.logger.log('Rule evaluated');
 ```
