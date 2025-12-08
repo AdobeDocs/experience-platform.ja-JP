@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # Tags クライアントサイドJavaScriptの概要（`_satellite`）
 
-_以下のページでは、`_satellite` オブジェクトの使用方法の概要を説明します。このオブジェクトを使用すると、JavaScriptを使用してタグロジックを管理およびカスタマイズできます。 データ収集 UI で実装を設定する方法について詳しくは [](/help/tags/extensions/client/web-sdk/overview.md)Adobe Experience Platform Web SDK タグ拡張機能 } を参照してください。_
+_以下のページでは、`_satellite` オブジェクトの使用方法の概要を説明します。このオブジェクトを使用すると、JavaScriptを使用してタグロジックを管理およびカスタマイズできます。 データ収集 UI で実装を設定する方法について詳しくは [&#128279;](/help/tags/extensions/client/web-sdk/overview.md)Adobe Experience Platform Web SDK タグ拡張機能 &rbrace; を参照してください。_
 
 `_satellite` オブジェクトは、サイトに公開されたタグライブラリとの対話に役立つ、サポートされるいくつかのエントリポイントを公開します。 ローダータグが正しく実装されている場合、すべてのタグデプロイメントで `_satellite` が表示されます。 このオブジェクトの主なユースケースは次の通りです。
 

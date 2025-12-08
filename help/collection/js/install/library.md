@@ -11,14 +11,14 @@ ht-degree: 0%
 
 # Web SDK JavaScript ライブラリのインストール
 
-[ タグ拡張機能を使用 ](/help/tags/extensions/client/web-sdk/overview.md) せずに Web SDKをインストールする代わりに、CDN でホストされている Web SDK JavaScript ライブラリを参照することもできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
+[&#x200B; タグ拡張機能を使用 &#x200B;](/help/tags/extensions/client/web-sdk/overview.md) せずに Web SDKをインストールする代わりに、CDN でホストされている Web SDK JavaScript ライブラリを参照することもできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
 
 Web SDK ライブラリは、次の URL 構造を使用して利用できます。
 
 * **縮小**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **フル**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
 
-URL に含める最新バージョンについては、[ リリースノート ](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
+URL に含める最新バージョンについては、[&#x200B; リリースノート &#x200B;](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
 
 ## コードの追加
 

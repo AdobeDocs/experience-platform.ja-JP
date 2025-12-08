@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Web SDK JavaScript ライブラリの概要
 
-**Adobe Experience Platform Web SDK** は、Adobe Experience Platform Edge Networkにデータを送信できるクライアントサイド JavaScript ライブラリです。 このガイドには、中心概念、インストール、設定、コマンドなど、web SDK JavaScript ライブラリ（`alloy.js`）の実装パスが記載されています。 データ収集 UI の web SDK タグ拡張機能については、[web SDK タグ拡張機能 ](/help/tags/extensions/client/web-sdk/overview.md) を参照してください。
+**Adobe Experience Platform Web SDK** は、Adobe Experience Platform Edge Networkにデータを送信できるクライアントサイド JavaScript ライブラリです。 このガイドには、中心概念、インストール、設定、コマンドなど、web SDK JavaScript ライブラリ（`alloy.js`）の実装パスが記載されています。 データ収集 UI の web SDK タグ拡張機能については、[web SDK タグ拡張機能 &#x200B;](/help/tags/extensions/client/web-sdk/overview.md) を参照してください。
 
 Web SDKは、ソリューションに依存しない方法（XDM）でExperience Platform Edge Networkにデータを送信し、その後、データをソリューション固有の形式と宛先にマッピングし、リアルタイムで送信します。
 
