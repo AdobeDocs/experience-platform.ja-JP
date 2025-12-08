@@ -1,26 +1,19 @@
 ---
-title: JavaScriptの概要
+title: Web SDK JavaScript ライブラリの概要
 description: JavaScriptを使用してAdobe Experience Platform Edge Networkにデータを送信します。
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 3%
 
 ---
 
-# JavaScriptの概要
+# Web SDK JavaScript ライブラリの概要
 
-**Adobe Experience Platform Web SDK** は、Adobe Experience Platform Edge Networkにデータを送信できるクライアントサイド JavaScript ライブラリです。
+**Adobe Experience Platform Web SDK** は、Adobe Experience Platform Edge Networkにデータを送信できるクライアントサイド JavaScript ライブラリです。 このガイドには、中心概念、インストール、設定、コマンドなど、web SDK JavaScript ライブラリ（`alloy.js`）の実装パスが記載されています。 データ収集 UI の web SDK タグ拡張機能については、[web SDK タグ拡張機能 ](/help/tags/extensions/client/web-sdk/overview.md) を参照してください。
 
 Web SDKは、ソリューションに依存しない方法（XDM）でExperience Platform Edge Networkにデータを送信し、その後、データをソリューション固有の形式と宛先にマッピングし、リアルタイムで送信します。
-
-Web SDKは次の 2 つの方法で実装できます。
-
-* [JavaScript ライブラリ &#x200B;](install/library.md) を使用した手動実装（このドキュメント）
-* [Web SDK タグ拡張機能 &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
-
-このガイドには、Web SDK JavaScript ライブラリを使用してExperience Cloud ソリューションを操作する手順が含まれています。
 
 ## Experience PlatformEdge Network {#edge-network}
 
@@ -37,7 +30,7 @@ Adobe Experience Platform Edge Networkは、すべてのアドレス可能なチ
 
 統合されたエッジシステムにより、あらゆるチャネルをまたいで、広告、マーケティングおよびパーソナライゼーションキャンペーンを管理できます。 総所有コストを削減し、様々なデータタイプをサポートするので、複数のExperience Cloud製品で使用するデータモデルをマッピングできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/37263?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Web SDK に置き換わるライブラリ {#sdks}
 

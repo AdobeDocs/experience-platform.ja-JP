@@ -1,24 +1,24 @@
 ---
-title: JavaScript ライブラリを使用して web SDKをインストールします
+title: Web SDK JavaScript ライブラリのインストール
 description: スタンドアロン CDN ファイルを使用して web SDK ライブラリを参照します。
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# JavaScript ライブラリを使用して web SDKをインストールします
+# Web SDK JavaScript ライブラリのインストール
 
-[&#x200B; タグ拡張機能を使用 &#x200B;](/help/tags/extensions/client/web-sdk/overview.md) せずに web SDKをインストールする代わりに、CDN でホストされているJavaScript ライブラリを参照することもできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
+[ タグ拡張機能を使用 ](/help/tags/extensions/client/web-sdk/overview.md) せずに Web SDKをインストールする代わりに、CDN でホストされている Web SDK JavaScript ライブラリを参照することもできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
 
 Web SDK ライブラリは、次の URL 構造を使用して利用できます。
 
 * **縮小**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **フル**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
 
-URL に含める最新バージョンについては、[&#x200B; リリースノート &#x200B;](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
+URL に含める最新バージョンについては、[ リリースノート ](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
 
 ## コードの追加
 

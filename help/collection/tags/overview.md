@@ -1,17 +1,17 @@
 ---
-title: サテライトオブジェクトのリファレンス
+title: タグのクライアントサイドJavaScriptの概要（_satellite）
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 10%
+source-wordcount: '212'
+ht-degree: 8%
 
 ---
 
-# `_satellite` オブジェクト参照
+# Tags クライアントサイドJavaScriptの概要（`_satellite`）
 
-_以下のページでは、`_satellite` オブジェクトの使用方法の概要を説明します。このオブジェクトを使用すると、JavaScriptを使用してタグロジックを管理およびカスタマイズできます。 データ収集 UI で実装を設定する方法について詳しくは [&#128279;](/help/tags/extensions/client/web-sdk/overview.md)Adobe Experience Platform Web SDK タグ拡張機能 &rbrace; を参照してください。_
+_以下のページでは、`_satellite` オブジェクトの使用方法の概要を説明します。このオブジェクトを使用すると、JavaScriptを使用してタグロジックを管理およびカスタマイズできます。 データ収集 UI で実装を設定する方法について詳しくは [](/help/tags/extensions/client/web-sdk/overview.md)Adobe Experience Platform Web SDK タグ拡張機能 } を参照してください。_
 
 `_satellite` オブジェクトは、サイトに公開されたタグライブラリとの対話に役立つ、サポートされるいくつかのエントリポイントを公開します。 ローダータグが正しく実装されている場合、すべてのタグデプロイメントで `_satellite` が表示されます。 このオブジェクトの主なユースケースは次の通りです。
 

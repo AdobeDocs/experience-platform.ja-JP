@@ -6,9 +6,9 @@ breadcrumb-title: データ収集
 user-guide-description: Adobe Experience Platformにデータを送信する方法を説明します。
 feature: Data Collection
 role: Developer
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '139'
 ht-degree: 38%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 38%
 + BrightScript {#brightscript}
    + [BrightScript の概要](brightscript/brs-overview.md)
 + JavaScript {#js}
-   + [JavaScriptの概要](js/js-overview.md)
+   + [Web SDK JavaScriptの概要](js/js-overview.md)
    + [リリースノート](js/release-notes.md)
    + インストール {#install}
       + [インストールの概要](js/install/overview.md)
@@ -75,7 +75,7 @@ ht-degree: 38%
       + [コマンドの応答](js/commands/command-responses.md)
    + [フックの監視](js/monitoring-hooks.md)
    + [よくある質問](js/faq.md)
-+ タグ {#tags}
++ タグ クライアントサイドJavaScript {#tags}
    + [概要](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [会社](tags/company.md)
