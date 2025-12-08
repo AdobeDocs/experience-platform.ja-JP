@@ -30,7 +30,7 @@ Adobe Experience Platform Edge Networkは、すべてのアドレス可能なチ
 
 統合されたエッジシステムにより、あらゆるチャネルをまたいで、広告、マーケティングおよびパーソナライゼーションキャンペーンを管理できます。 総所有コストを削減し、様々なデータタイプをサポートするので、複数のExperience Cloud製品で使用するデータモデルをマッピングできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37263?captions=jpn&quality=12&learn=on)
 
 ## Web SDK に置き換わるライブラリ {#sdks}
 
