@@ -2,13 +2,13 @@
 title: Demandbase の目的
 description: Experience Platformの Demandbase Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 12%
+source-wordcount: '1504'
+ht-degree: 11%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 12%
 
 ### IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス &#x200B;](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス ](../../ip-address-allow-list.md) ページを参照してください。
 
 ### Experience Platformに対する権限の設定
 
-**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Demandbase] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御 UI ガイド &#x200B;](../../../access-control/abac/ui/permissions.md) を参照してください。
+**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL Manage Sources]** と [!DNL Demandbase] の両方の権限が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -54,9 +54,13 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 | バケット名 | データの取り出し元の [!DNL Demandbase] バケット。 |
 | フォルダーパス | アクセス権を付与するフォルダーへのパス。 |
 
-これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) を参照してください。 独自のアクセスキーを生成する手順については、[&#x200B; ソースの概要の前提条件ガイド  [!DNL Google Cloud Storage]  を参照してください &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)。
+これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) を参照してください。 独自のアクセスキーを生成する手順については、[ ソースの概要の前提条件ガイド  [!DNL Google Cloud Storage]  を参照してください ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)。
 
 ## [!DNL Demandbase] スキーマ
+
+>[!IMPORTANT]
+>
+>Experience Platform UI で B2B Demandbase アカウントインテントスキーマを作成する場合は、そのスキーマのプロファイル取得を必ず有効にします。 詳しくは、[UI でのスキーマの作成と編集 ](../../../xdm/ui/resources/schemas.md) に関するガイドを参照してください。
 
 [!DNL Demandbase] スキーマとデータ構造については、この節を参照してください。
 
@@ -96,7 +100,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 ## UI で [!DNL Demandbase] アカウントをExperience Platformに接続する
 
-前提条件の設定が完了したら、[&#x200B; アカウントのExperience Platformへの接続  [!DNL Demandbase]  に関するチュートリアルを読み &#x200B;](../../tutorials/ui/create/data-partners/demandbase.md) 統合を開始します。
+前提条件の設定が完了したら、[ アカウントのExperience Platformへの接続  [!DNL Demandbase]  に関するチュートリアルを読み ](../../tutorials/ui/create/data-partners/demandbase.md) 統合を開始します。
 
 ## よくある質問 {#faq}
 
@@ -114,7 +118,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 +++回答
 
-現在、取り込みとアクティベーションに使用できるのは、標準の [!DNL Demandbase] フィールドのみです。 サポートされるフィールドのリストを表示するには、[[!DNL Demandbase]  スキーマガイド &#x200B;](#schema) で使用可能なフィールドの詳細を参照してください。
+現在、取り込みとアクティベーションに使用できるのは、標準の [!DNL Demandbase] フィールドのみです。 サポートされるフィールドのリストを表示するには、[[!DNL Demandbase]  スキーマガイド ](#schema) で使用可能なフィールドの詳細を参照してください。
 
 +++
 
@@ -130,7 +134,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 +++回答
 
-インテントデータを検証し、どのインテントシグナルが特定のアカウントにリンクされているかを判断するには、アカウント ID で [Adobe Experience Platform クエリサービス &#x200B;](../../../query-service/home.md) を使用します。
+インテントデータを検証し、どのインテントシグナルが特定のアカウントにリンクされているかを判断するには、アカウント ID で [Adobe Experience Platform クエリサービス ](../../../query-service/home.md) を使用します。
 
 +++
 
@@ -138,7 +142,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 +++回答
 
-[&#x200B; クエリサービス &#x200B;](../../../query-service/home.md) で SQL クエリを実行し、会社名またはアカウント ID を使用してインテントデータを検索します。 特定の会社のすべてのインテント データを表示するには、会社名またはアカウント ID を使用してクエリサービスで SQL クエリを実行し、関連するすべてのインテント シグナルを取得します。
+[ クエリサービス ](../../../query-service/home.md) で SQL クエリを実行し、会社名またはアカウント ID を使用してインテントデータを検索します。 特定の会社のすべてのインテント データを表示するには、会社名またはアカウント ID を使用してクエリサービスで SQL クエリを実行し、関連するすべてのインテント シグナルを取得します。
 
 +++
 
@@ -158,7 +162,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 +++回答
 
-Experience Platformでインテントデータを削除するには、データセットを [&#x200B; 削除 &#x200B;](../../../catalog/datasets/user-guide.md#delete-a-dataset) する必要があります。
+Experience Platformでインテントデータを削除するには、データセットを [ 削除 ](../../../catalog/datasets/user-guide.md#delete-a-dataset) する必要があります。
 
 +++
 
@@ -194,6 +198,6 @@ Experience Platformでのドメインの一致は、スクラブされたドメ�
 
 +++回答
 
-インテントデータを [&#x200B; アカウントオーディエンス &#x200B;](../../../segmentation/types/account-audiences.md) で利用して、ターゲティング、セグメント化およびパーソナライゼーションを強化できます。 インテントシグナルを活用することで、企業は特定のトピックに高い関心を示すアカウントを特定して関与し、マーケティングとセールスアウトリーチを最適化できます
+インテントデータを [ アカウントオーディエンス ](../../../segmentation/types/account-audiences.md) で利用して、ターゲティング、セグメント化およびパーソナライゼーションを強化できます。 インテントシグナルを活用することで、企業は特定のトピックに高い関心を示すアカウントを特定して関与し、マーケティングとセールスアウトリーチを最適化できます
 
 +++
