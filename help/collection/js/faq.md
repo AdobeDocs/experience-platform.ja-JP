@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDKは、Adobe Experience Platformに直接デー�
 * Experience Platformまたは Real-time CDP へのアクセス権を持 *ていない* お客様が [!DNL Web SDK] を使用するには、データ収集 UI またはExperience Platform UI でスキーマとデータストリームを作成するための適切な権限を設定する必要があります。
 * Experience Platformまたは Real-time CDP へのアクセス権を持ち、[!DNL Web SDK] を使用する場合は、データ収集 UI またはExperience Platform UI でスキーマ、データセット、ID 名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) に関するドキュメントを参照してください。
+これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ja) に関するドキュメントを参照してください。
 
 ## Web SDKを使用するのは誰ですか？
 
