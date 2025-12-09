@@ -17,7 +17,7 @@ API エンドポイントにデータを書き出す際に最大の効率を確�
 
 Destination SDK を使用してリアルタイム（ストリーミング）宛先を作成する際に、書き出されたプロファイルを結果の書き出しにどのように組み合わせるかを設定できます。この動作は、集計ポリシー設定によって決まります。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 &#x200B;](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して集計ポリシー設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
