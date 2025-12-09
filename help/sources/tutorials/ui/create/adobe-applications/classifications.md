@@ -43,7 +43,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 最大 30 個の異なる分類データセットを選択して、Experience Platformに取り込むことができます。 選択したデータセットは、右側のパネルに表示されます。 完了したら、「[!UICONTROL Next]」を選択して続行します。
 
-![ 複数の分類データセットが選択された分類ページ ](../../../../images/tutorials/create/classifications/select.png)
+![&#x200B; 複数の分類データセットが選択された分類ページ &#x200B;](../../../../images/tutorials/create/classifications/select.png)
 
 ## 分類をレビュー
 
@@ -55,7 +55,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 データフローをレビューしたら、「**[!UICONTROL Finish]**」をクリックし、データフローが作成されるまでしばらく待ちます。
 
-![Adobe Analytics分類データのレビューページ ](../../../../images/tutorials/create/classifications/review.png)
+![Adobe Analytics分類データのレビューページ &#x200B;](../../../../images/tutorials/create/classifications/review.png)
 
 ## 次の手順
 
@@ -63,4 +63,4 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 * [Adobe Analytics ソースコネクタの概要](../../../../connectors/adobe-applications/analytics.md)
 * [UI でのレポートスイートデータの Analytics ソース接続の作成](./analytics.md)
-* [ 分類について ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [&#x200B; 分類について &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
