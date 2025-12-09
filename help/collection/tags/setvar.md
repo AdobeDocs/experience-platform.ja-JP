@@ -1,9 +1,9 @@
 ---
 title: setVar （）
 description: getVar （）を使用して後で取得できる値を設定します。
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>このメソッドを使用して変数名を設定する場合は、ピリオド（`.`）を使用しないでください。 `getVar()` メソッドでは、`setVar()` を使用して設定されたピリオドを含む変数は認識されません。 ただし、タグ UI`getVar()` 定義する際にピリオドを使用するデータ要素は _認識_ されません。
