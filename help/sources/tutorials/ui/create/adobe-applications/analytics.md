@@ -117,7 +117,7 @@ Analytics データをターゲット XDM スキーマをマッピングする�
 >id="platform_analytics_import_mapping"
 >title="テンプレートをダウンロード"
 >abstract="csv テンプレートをダウンロードして、オフラインでマッピングを実行します。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="マッピングを読み込む"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="マッピングを読み込む"
 
 データ準備関数を使用して、カスタム属性の新しいカスタムマッピングまたは計算フィールドを追加できます。 カスタムマッピングを追加するには、「**[!UICONTROL Custom]**」を選択します。
 
