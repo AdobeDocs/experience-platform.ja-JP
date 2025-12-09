@@ -40,10 +40,10 @@ Data Mirrorでリレーショナルスキーマを実装する際の、削除お
 
 始める前に、Experience Platformの以下のコンポーネントを理解し、お使いの環境が技術的および構造的要件を満たしていることを確認する必要があります。
 
-* [Experience Platform UI または ](../ui/resources/schemas.md)API でのスキーマ [ 作成 ](../api/schemas.md)
+* [Experience Platform UI または &#x200B;](../ui/resources/schemas.md)API でのスキーマ [&#x200B; 作成 &#x200B;](../api/schemas.md)
 * [クラウドソース接続の設定](../../sources/home.md#cloud-storage)
-* [ 変更データ・キャプチャの概念の適用 ](../../sources/tutorials/api/change-data-capture.md) （アップサート、削除）
-* [ 標準 ](../schema/composition.md) スキーマと [ リレーショナルスキーマ ](../schema/relational.md) を区別する
+* [&#x200B; 変更データ・キャプチャの概念の適用 &#x200B;](../../sources/tutorials/api/change-data-capture.md) （アップサート、削除）
+* [&#x200B; 標準 &#x200B;](../schema/composition.md) スキーマと [&#x200B; リレーショナルスキーマ &#x200B;](../schema/relational.md) を区別する
 * [記述子を使用した構造関係の定義](../api/descriptors.md)
 
 ### 実装の必要システム構成
@@ -62,17 +62,17 @@ Data Mirrorが正しく機能するには、Platform インスタンスとソー
 
 ### スキーマ構造の定義
 
-必要な記述子 [ スキーマの動作と制約を定義するメタデータ）を使用して、](../schema/relational.md) リレーショナルスキーマ」を作成します。 UI から、または直接 API から、チームのワークフローに合った方法を選択します。
+必要な記述子 [&#x200B; スキーマの動作と制約を定義するメタデータ）を使用して、](../schema/relational.md) リレーショナルスキーマ」を作成します。 UI から、または直接 API から、チームのワークフローに合った方法を選択します。
 
-* **UI アプローチ**:[ スキーマエディターでリレーショナルスキーマを作成 ](../ui/resources/schemas.md#create-relational-schema)
-* **API アプローチ**:[ スキーマレジストリ API を使用したスキーマの作成 ](../api/schemas.md#create-relational-schema)
+* **UI アプローチ**:[&#x200B; スキーマエディターでリレーショナルスキーマを作成 &#x200B;](../ui/resources/schemas.md#create-relational-schema)
+* **API アプローチ**:[&#x200B; スキーマレジストリ API を使用したスキーマの作成 &#x200B;](../api/schemas.md#create-relational-schema)
 
 ### 関係のマッピングとデータ管理の定義
 
 関係記述子を使用してデータセット間の接続を定義します。 データセット間の関係を管理し、データ品質を維持します。 これらのタスクは、一貫性のある結合を保証し、データハイジーン要件への準拠をサポートします。
 
-* **スキーマの関係**:[ 記述子を使用してデータセット間の関係を定義します ](../api/descriptors.md)
-* **レコードハイジーン**:[ リレーショナルスキーマに基づいて、データセットの精度レコード削除を管理 ](../../hygiene/ui/record-delete.md#relational-record-delete)
+* **スキーマの関係**:[&#x200B; 記述子を使用してデータセット間の関係を定義します &#x200B;](../api/descriptors.md)
+* **レコードハイジーン**:[&#x200B; リレーショナルスキーマに基づいて、データセットの精度レコード削除を管理 &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### ソース接続の設定
 
@@ -86,7 +86,7 @@ Data Mirrorが正しく機能するには、Platform インスタンスとソー
 
 サポートされているクラウドデータウェアハウスを使用して、change data capture 接続を設定します。 一意性を維持し、正しい順序で更新を適用しながら、行レベルの変更を取り込みます。
 
-* **Change Data Capture**: [ ソース接続で Change Data Capture を有効にします ](../../sources/tutorials/api/change-data-capture.md)
+* **Change Data Capture**: [&#x200B; ソース接続で Change Data Capture を有効にします &#x200B;](../../sources/tutorials/api/change-data-capture.md)
 
 ## よくあるユースケース {#use-cases}
 
@@ -94,7 +94,7 @@ Data Mirrorが正確なデータ同期と関係維持をサポートしている
 
 ### リレーショナルデータモデリング
 
-Data Mirrorで [ リレーショナルスキーマ ](../schema/relational.md) を使用して、行レベルでエンティティ、プロセスの挿入、更新、削除を表し、データソースに存在するプライマリキーと外部キーの関係を維持します。 このアプローチにより、リレーショナルデータモデリングの原則がExperience Platformに取り込まれ、データセット間の構造の一貫性が確保されます。
+Data Mirrorで [&#x200B; リレーショナルスキーマ &#x200B;](../schema/relational.md) を使用して、行レベルでエンティティ、プロセスの挿入、更新、削除を表し、データソースに存在するプライマリキーと外部キーの関係を維持します。 このアプローチにより、リレーショナルデータモデリングの原則がExperience Platformに取り込まれ、データセット間の構造の一貫性が確保されます。
 
 ### ウェアハウスからレイクへの同期
 
@@ -122,7 +122,7 @@ Data Mirrorで [ リレーショナルスキーマ ](../schema/relational.md) �
 
 ### データの削除とハイジーンの要件
 
-リレーショナルスキーマとData Mirrorを使用するすべてのアプリケーションが、データ削除の影響を理解する必要があります。 リレーショナルスキーマを使用すると、接続されたデータセット間の関連データに影響を与える可能性のある、正確なレコードレベルの削除が可能になります。 これらの削除機能は、特定の使用例に関係なく、データの整合性、コンプライアンス、ダウンストリームのアプリケーション動作に影響を与えます。 実装する前に、[ リレーショナルスキーマに基づくデータセットのデータハイジーン要件 ](../../hygiene/ui/record-delete.md#relational-record-delete) を確認し、削除シナリオの計画を立てます。
+リレーショナルスキーマとData Mirrorを使用するすべてのアプリケーションが、データ削除の影響を理解する必要があります。 リレーショナルスキーマを使用すると、接続されたデータセット間の関連データに影響を与える可能性のある、正確なレコードレベルの削除が可能になります。 これらの削除機能は、特定の使用例に関係なく、データの整合性、コンプライアンス、ダウンストリームのアプリケーション動作に影響を与えます。 実装する前に、[&#x200B; リレーショナルスキーマに基づくデータセットのデータハイジーン要件 &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete) を確認し、削除シナリオの計画を立てます。
 
 ### スキーマの動作の選択
 
@@ -151,4 +151,4 @@ Data Mirrorでは、記述子を使用した **1 対 1** および **多対 1** 
 3. **スキーマデザイナー** は、必要な記述子、フィールドの関係、データガバナンスのニーズを特定するために、スキーマ構造を計画する必要があります。
 4. **実装チーム** は、ソースシステム、リアルタイム要件、運用ワークフローに基づいて、取り込み方法を選択する必要があります。
 
-実装について詳しくは、[ リレーショナルスキーマのドキュメント ](../schema/relational.md) を参照してください。
+実装について詳しくは、[&#x200B; リレーショナルスキーマのドキュメント &#x200B;](../schema/relational.md) を参照してください。
