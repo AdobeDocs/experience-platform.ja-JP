@@ -2,10 +2,10 @@
 title: setConsent
 description: 各ページでユーザーの同意環境設定を追跡するために使用されます。
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '1117'
+ht-degree: 2%
 
 ---
 
@@ -18,11 +18,11 @@ Web SDKは、次の標準をサポートしています。
 
 * **[Adobe標準](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: 1.0 と 2.0 の両方の標準がサポートされています。
 * **[IAB の透明性および同意フレームワーク](/help/landing/governance-privacy-security/consent/iab/overview.md)**：この標準を使用すると、実装が正しく設定されている場合、訪問者のリアルタイム顧客プロファイルが同意情報で更新されます。
-   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/profile/iab.md) が含まれます。
-   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md) が含まれています。
-   1. IAB 同意情報をイベント [XDM オブジェクト &#x200B;](sendevent/xdm.md) に含めます。 Web SDKは、イベントデータを送信する際に、同意情報を自動的に含めません。
+   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/profile/iab.md) が含まれます。
+   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/event/iab.md) が含まれています。
+   1. IAB 同意情報をイベント [XDM オブジェクト ](sendevent/xdm.md) に含めます。 Web SDKは、イベントデータを送信する際に、同意情報を自動的に含めません。
 
-このコマンドを使用すると、Web SDKはユーザーの環境設定を Cookie に書き込みます。 ユーザーが次回ブラウザーで web サイトを読み込むときに、SDKはこれらの永続的な環境設定を取得し、イベントをAdobeに送信できるかどうかを決定します。
+このコマンドを使用すると、Web SDKはユーザーの環境設定を [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie に書き込みます。 この cookie は訪問者の同意設定を保存するため、その訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーで web サイトを読み込むときに、SDKはこれらの永続的な環境設定を取得し、イベントをAdobeに送信できるかどうかを決定します。
 
 Adobeでは、同意ダイアログの環境設定を Web SDKの同意とは別に保存することをお勧めします。 Web SDKでは、同意を取得する方法は提供していません。 ユーザーの環境設定とSDKの同期が保たれるように、ページが読み込まれるたびに `setConsent` コマンドを呼び出すことができます。 Web SDKは、同意が変更された場合にのみサーバーコールを行います。
 
@@ -34,15 +34,13 @@ Adobeでは、同意ダイアログの環境設定を Web SDKの同意とは別�
 
 Web SDKには、2 つの補完的な同意設定コマンドがあります。
 
-* [`defaultConsent`](configure/defaultconsent.md)：このコマンドは、Web SDKを使用してAdobeのお客様の同意環境設定を取り込むためのものです。
-* [`setConsent`](setconsent.md)：このコマンドは、サイト訪問者の同意環境設定を取り込むためのものです。
+* [`defaultConsent`](configure/defaultconsent.md)：このコマンドは、`setConsent` を呼び出す前に、訪問者のデフォルトの同意環境設定を自動的に設定します。
+* `setConsent` （現在のページ）：このコマンドは、訪問者の同意環境設定を明示的に設定します。
 
-これらの設定を一緒に使用すると、設定された値に応じて、異なるデータ収集および cookie 設定結果になる可能性があります。
-
-同意設定に基づいてデータ収集が発生するタイミングと cookie が設定されるタイミングについて理解するには、次の表を参照してください。
+これらの設定を一緒に使用すると、設定された値に応じて、異なるデータ収集および cookie 設定の結果になる可能性があります。
 
 | `defaultConsent` | `setConsent` | データ収集が発生 | Web SDKはブラウザー cookie を設定します |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | ○ | ○ |
 | `in` | `out` | × | ○ |
 | `in` | 設定なし | ○ | ○ |
@@ -53,22 +51,15 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 | `out` | `out` | × | ○ |
 | `out` | 設定なし | × | × |
 
-同意設定で許可されている場合、次の Cookie が設定されます。
+設定可能な Cookie の完全なリストについては、コアサービスガイドの [Adobe Experience Platform Web SDKの Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) を参照してください。
 
-| 名前 | 最大経過年数 | 説明 |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000 （395 日） | [`idMigrationEnabled`](configure/idmigrationenabled.md) が有効な場合に表示されます。 これは、サイトの一部がまだ `visitor.js` を使用している間に web SDKに移行する場合に役立ちます。 |
-| **`Demdex cookie`** | 15552000 （180 日間） | ID 同期が有効な場合に存在します。 Audience Managerは、この cookie を設定してサイト訪問者に一意の ID を割り当てます。 demdex cookie は、Audience Manager が訪問者識別、ID 同期、セグメント化、モデリング、レポートなどの基本的な機能を実行するのに役立ちます。 |
-| **`kndctr_orgid_cluster`** | 1800 （30 分） | 現在のユーザーのリクエストに対応するEdge Network リージョンを格納します。 Edge Networkでリクエストを正しいリージョンにルーティングできるように、リージョンは URL パスで使用されます。 ユーザーが別の IP アドレスで接続する場合や、別のセッションで接続する場合は、リクエストは再び最も近いリージョンにルーティングされます。 |
-| **`kndct_orgid_identity`** | 34128000 （395 日） | ECID と、ECID に関連するその他の情報を保存します。 |
-| **`kndctr_orgid_consent`** | 15552000 （180 日間） | Web サイトのユーザー同意設定を格納します。 |
-| **`s_ecid`** | 63115200 （2 年） | Experience Cloud ID （[!DNL ECID]）または MID のコピーが含まれます。 MID は、`s_ecid=MCMID\|<ECID>` という構文に従うキーと値のペアとして保存されます。 |
+## `setConsent` コマンドの使用
 
 設定済みの Web SDK インスタンスを呼び出す際に、`setConsent` コマンドを実行します。 このコマンドには、次のオブジェクトを含めることができます。
 
 * **`consent[]`**: `consent` オブジェクトの配列。 同意オブジェクトの形式は、選択した標準とバージョンに応じて異なります。 同意標準に応じた、各同意オブジェクトの例については、以下のタブを参照してください。
 * **`identityMap`**:ECID の生成方法と、同意情報が関連付けられている ID を制御するオブジェクト。 Adobeでは、`setConsent` などの他のコマンドの前に [`sendEvent`](sendevent/overview.md) を実行する場合、このオブジェクトを含めることをお勧めします。
-* **`edgeConfigOverrides`**: [&#x200B; データストリーム設定の上書き &#x200B;](configure/edgeconfigoverrides.md) を含むオブジェクト。
+* **`edgeConfigOverrides`**: [ データストリーム設定の上書き ](configure/edgeconfigoverrides.md) を含むオブジェクト。
 
 >[!BEGINTABS]
 
@@ -76,7 +67,7 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 
 ### Adobe 2.0 標準 `consent` オブジェクト
 
-Adobe Experience Platformにデータを送信する場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ &#x200B;](/help/landing/governance-privacy-security/overview.md) を参照してください。 `consents` プロファイルフィールドグループの [!UICONTROL Consents and Preferences] フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
+Adobe Experience Platformにデータを送信する場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ ](/help/landing/governance-privacy-security/overview.md) を参照してください。 `consents` プロファイルフィールドグループの [!UICONTROL Consents and Preferences] フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
 
 * **`standard`**：選択する同意標準。 このプロパティをAdobe 2.0 標準の `"Adobe"` に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 このプロパティをAdobe 2.0 標準の `"2.0"` に設定します。
@@ -108,9 +99,9 @@ alloy("setConsent", {
 
 Interactive Advertising Bureau Europe （IAB）の Transparency and Consent Framework （TCF）標準で提供されるユーザー同意環境設定を記録するには、以下に示すように同意文字列を設定します。
 
-この方法で同意が設定されると、リアルタイム顧客プロファイルが同意情報で更新されます。 これを機能させるには、プロファイル XDM スキーマに [&#x200B; プロファイルプライバシースキーマフィールドグループ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) を含める必要があります。 イベントを送信する場合、IAB 同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKは、イベントに同意情報を自動的に含めません。
+この方法で同意が設定されると、リアルタイム顧客プロファイルが同意情報で更新されます。 これを機能させるには、プロファイル XDM スキーマに [ プロファイルプライバシースキーマフィールドグループ ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) を含める必要があります。 イベントを送信する場合、IAB 同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKは、イベントに同意情報を自動的に含めません。
 
-イベントで同意情報を送信するには、[!DNL Profile] 対応の [!DNL XDM ExperienceEvent] スキーマに Experience Event Privacy フィールドグループを追加する必要があります。 これを設定する手順については、データセット準備ガイドの [ExperienceEvent スキーマの更新 &#x200B;](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) に関する節を参照してください。
+イベントで同意情報を送信するには、[!DNL Profile] 対応の [!DNL XDM ExperienceEvent] スキーマに Experience Event Privacy フィールドグループを追加する必要があります。 これを設定する手順については、データセット準備ガイドの [ExperienceEvent スキーマの更新 ](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) に関する節を参照してください。
 
 * **`standard`**：選択する同意標準。 IAB TCF 2.0 標準の場合、このプロパティを `"IAB TCF"` に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 IAB TCF 2.0 標準の場合、このプロパティを `"2.0"` に設定します。

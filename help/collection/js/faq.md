@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDKに関する FAQ
 description: Adobe Experience Platform web SDKに関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 2%
+source-wordcount: '1665'
+ht-degree: 1%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDKは、Adobe Experience Platformに直接デー�
 * Experience Platformまたは Real-time CDP へのアクセス権を持 *ていない* お客様が [!DNL Web SDK] を使用するには、データ収集 UI またはExperience Platform UI でスキーマとデータストリームを作成するための適切な権限を設定する必要があります。
 * Experience Platformまたは Real-time CDP へのアクセス権を持ち、[!DNL Web SDK] を使用する場合は、データ収集 UI またはExperience Platform UI でスキーマ、データセット、ID 名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ja) に関するドキュメントを参照してください。
+これらの権限の設定について詳しくは、[ データ収集の権限管理 ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) に関するドキュメントを参照してください。
 
 ## Web SDKを使用するのは誰ですか？
 
@@ -98,11 +98,11 @@ Web SDKは現在、一般公開されており、Adobe Experience Cloud製品へ
 
 SDKはAdobeが無償でホストしています。 必要に応じて、無料でダウンロードして独自のサーバーにホストできます。
 
-Web SDKサーバーがSDKからの受信データを適切に処理するために、Web Adobeは [&#x200B; データストリーム設定 &#x200B;](/help/datastreams/overview.md) およびExperience Platform [XDM スキーマビルダー &#x200B;](/help/xdm/tutorials/create-schema-ui.md) にアクセスする必要があります。 アクセス権を希望する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
+Web SDKサーバーがSDKからの受信データを適切に処理するために、Web Adobeは [ データストリーム設定 ](/help/datastreams/overview.md) およびExperience Platform [XDM スキーマビルダー ](/help/xdm/tutorials/create-schema-ui.md) にアクセスする必要があります。 アクセス権を希望する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
 
 ## Web SDKで現在サポートされているユースケースは何ですか？
 
-Web SDKは急速に進化しています。 現在取り組んでいるユースケースは増えています。 [&#x200B; 現在サポートされているユースケースのリストは、こちらで確認できます &#x200B;](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)。
+Web SDKは急速に進化しています。 現在取り組んでいるユースケースは増えています。 [ 現在サポートされているユースケースのリストは、こちらで確認できます ](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)。
 
 ## 現在の顧客は、サイトを再タグ付けする必要がありますか？
 
@@ -116,7 +116,7 @@ Web SDKは急速に進化しています。 現在取り組んでいるユース
 
 ## Web SDKを使い始める際に ECID を移行して、web サイトの訪問者が新しい訪問者として表示されないようにできますか？
 
-はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Experience Platform Web SDK ID ドキュメント &#x200B;](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) の ID 移行の手順に従います。
+はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Experience Platform Web SDK ID ドキュメント ](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) の ID 移行の手順に従います。
 
 ## Web SDKとタグの違いは何ですか？
 
@@ -144,25 +144,11 @@ SDK を使用して XDM をEdge Networkに送信すると、これらの新機�
 
 ## CNAME またはファーストパーティドメインとは何ですか？また、それが重要な理由は何ですか？
 
-CNAME について詳しくは、[Adobe ドキュメントを参照してください &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ja)
+コアサービスガイドの [Adobe管理の証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) を参照してください。
 
 ## Adobe Experience Platform Web SDKでは Cookie を使用しますか？ その場合、どのような cookie を使用しますか？
 
-はい。現在、web SDKでは、実装に応じて 1～7 個の Cookie を使用します。 Web SDKで表示される可能性のある Cookie とその使用方法のリストを以下に示します。
-
-| **名前** | **maxAge** | **友好時代** | **説明** |
-|---|---|---|---|
-| **kndct_orgid_identity** | 34128000 | 395 日 | ID cookie は、ECID と、ECID に関連するその他の情報を保存します。 |
-| **kndctr_orgid_consent_check** | 7200 | 2 時間 | このセッションベースの Cookie は、同意設定サーバー側を検索するようにサーバーにシグナルで通知します。 |
-| **kndctr_orgid_consent** | 15552000 | 180 日 | この cookie は、web サイトに対するユーザーの同意設定を保存します。 |
-| **kndctr_orgid_cluster** | 1800 | 30 分 | この cookie は、現在のユーザーのリクエストを処理するEdge Network リージョンを格納します。 Edge Networkでリクエストを正しいリージョンにルーティングできるように、リージョンは URL パスで使用されます。 この cookie の有効期間は 30 分です。これにより、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
-| **mbox** | 63072000 | 2 年。 | この cookie は、Target 移行設定が true に設定されている場合に表示されます。 これにより、Web SDKで Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を設定できるようになります。 |
-| **mboxEdgeCluster** | 1800 | 30 分 | この cookie は、Target 移行設定が true に設定されている場合に表示されます。 この cookie を使用すると、Web SDKは正しいエッジクラスターを at.js に通信できるので、ユーザーがサイト全体を移動しても、Target プロファイルの同期が維持されます。 |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この Cookie は、Adobe Experience Platform Web SDKで ID 移行が有効な場合にのみ表示されます。 この cookie は、サイトの一部がまだ visitor.js を使用している場合に web SDKに移行するのに役立ちます。 詳細は、[`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) を参照してください。 |
-
-Web SDKを使用する場合、Edge Networkは上記の 1 つ以上の cookie を設定します。 Edge Networkは、`secure` 属性と `sameSite="none"` 属性を持つすべての cookie を設定します。
-
-現在、web サイトにセキュリティで保護されたセクションと保護されていないセクションの両方がある場合は、ユーザーの識別が妨げられることがあります。 ユーザーがサイトの保護されたセクションから保護されていないセクションに移動すると、Edge Networkはリクエストで新しい `ECID` を生成します。
+コアサービスガイドの [Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) を参照してください。
 
 ## Adobe Experience Platform Web SDKはどのブラウザーをサポートしていますか？
 
