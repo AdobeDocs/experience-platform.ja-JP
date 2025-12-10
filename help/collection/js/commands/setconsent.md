@@ -18,9 +18,9 @@ Web SDKは、次の標準をサポートしています。
 
 * **[Adobe標準](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: 1.0 と 2.0 の両方の標準がサポートされています。
 * **[IAB の透明性および同意フレームワーク](/help/landing/governance-privacy-security/consent/iab/overview.md)**：この標準を使用すると、実装が正しく設定されている場合、訪問者のリアルタイム顧客プロファイルが同意情報で更新されます。
-   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/profile/iab.md) が含まれます。
-   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ ](/help/xdm/field-groups/event/iab.md) が含まれています。
-   1. IAB 同意情報をイベント [XDM オブジェクト ](sendevent/xdm.md) に含めます。 Web SDKは、イベントデータを送信する際に、同意情報を自動的に含めません。
+   1. XDM 個人プロファイルスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/profile/iab.md) が含まれます。
+   1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md) が含まれています。
+   1. IAB 同意情報をイベント [XDM オブジェクト &#x200B;](sendevent/xdm.md) に含めます。 Web SDKは、イベントデータを送信する際に、同意情報を自動的に含めません。
 
 このコマンドを使用すると、Web SDKはユーザーの環境設定を [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie に書き込みます。 この cookie は訪問者の同意設定を保存するため、その訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーで web サイトを読み込むときに、SDKはこれらの永続的な環境設定を取得し、イベントをAdobeに送信できるかどうかを決定します。
 
@@ -59,7 +59,7 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 
 * **`consent[]`**: `consent` オブジェクトの配列。 同意オブジェクトの形式は、選択した標準とバージョンに応じて異なります。 同意標準に応じた、各同意オブジェクトの例については、以下のタブを参照してください。
 * **`identityMap`**:ECID の生成方法と、同意情報が関連付けられている ID を制御するオブジェクト。 Adobeでは、`setConsent` などの他のコマンドの前に [`sendEvent`](sendevent/overview.md) を実行する場合、このオブジェクトを含めることをお勧めします。
-* **`edgeConfigOverrides`**: [ データストリーム設定の上書き ](configure/edgeconfigoverrides.md) を含むオブジェクト。
+* **`edgeConfigOverrides`**: [&#x200B; データストリーム設定の上書き &#x200B;](configure/edgeconfigoverrides.md) を含むオブジェクト。
 
 >[!BEGINTABS]
 
@@ -67,7 +67,7 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 
 ### Adobe 2.0 標準 `consent` オブジェクト
 
-Adobe Experience Platformにデータを送信する場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ ](/help/landing/governance-privacy-security/overview.md) を参照してください。 `consents` プロファイルフィールドグループの [!UICONTROL Consents and Preferences] フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
+Adobe Experience Platformにデータを送信する場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ &#x200B;](/help/landing/governance-privacy-security/overview.md) を参照してください。 `consents` プロファイルフィールドグループの [!UICONTROL Consents and Preferences] フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
 
 * **`standard`**：選択する同意標準。 このプロパティをAdobe 2.0 標準の `"Adobe"` に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 このプロパティをAdobe 2.0 標準の `"2.0"` に設定します。
@@ -99,9 +99,9 @@ alloy("setConsent", {
 
 Interactive Advertising Bureau Europe （IAB）の Transparency and Consent Framework （TCF）標準で提供されるユーザー同意環境設定を記録するには、以下に示すように同意文字列を設定します。
 
-この方法で同意が設定されると、リアルタイム顧客プロファイルが同意情報で更新されます。 これを機能させるには、プロファイル XDM スキーマに [ プロファイルプライバシースキーマフィールドグループ ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) を含める必要があります。 イベントを送信する場合、IAB 同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKは、イベントに同意情報を自動的に含めません。
+この方法で同意が設定されると、リアルタイム顧客プロファイルが同意情報で更新されます。 これを機能させるには、プロファイル XDM スキーマに [&#x200B; プロファイルプライバシースキーマフィールドグループ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) を含める必要があります。 イベントを送信する場合、IAB 同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKは、イベントに同意情報を自動的に含めません。
 
-イベントで同意情報を送信するには、[!DNL Profile] 対応の [!DNL XDM ExperienceEvent] スキーマに Experience Event Privacy フィールドグループを追加する必要があります。 これを設定する手順については、データセット準備ガイドの [ExperienceEvent スキーマの更新 ](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) に関する節を参照してください。
+イベントで同意情報を送信するには、[!DNL Profile] 対応の [!DNL XDM ExperienceEvent] スキーマに Experience Event Privacy フィールドグループを追加する必要があります。 これを設定する手順については、データセット準備ガイドの [ExperienceEvent スキーマの更新 &#x200B;](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) に関する節を参照してください。
 
 * **`standard`**：選択する同意標準。 IAB TCF 2.0 標準の場合、このプロパティを `"IAB TCF"` に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 IAB TCF 2.0 標準の場合、このプロパティを `"2.0"` に設定します。
