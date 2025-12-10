@@ -22,7 +22,7 @@ Web SDKは、次の標準をサポートしています。
    1. エクスペリエンスイベントスキーマには、[IAB TCF 2.0 同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md) が含まれています。
    1. IAB 同意情報をイベント [XDM オブジェクト &#x200B;](sendevent/xdm.md) に含めます。 Web SDKは、イベントデータを送信する際に、同意情報を自動的に含めません。
 
-このコマンドを使用すると、Web SDKはユーザーの環境設定を [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie に書き込みます。 この cookie は訪問者の同意設定を保存するため、その訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーで web サイトを読み込むときに、SDKはこれらの永続的な環境設定を取得し、イベントをAdobeに送信できるかどうかを決定します。
+このコマンドを使用すると、Web SDKはユーザーの環境設定を [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie に書き込みます。 この cookie は訪問者の同意設定を保存するため、その訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーで web サイトを読み込むときに、SDKはこれらの永続的な環境設定を取得し、イベントをAdobeに送信できるかどうかを決定します。
 
 Adobeでは、同意ダイアログの環境設定を Web SDKの同意とは別に保存することをお勧めします。 Web SDKでは、同意を取得する方法は提供していません。 ユーザーの環境設定とSDKの同期が保たれるように、ページが読み込まれるたびに `setConsent` コマンドを呼び出すことができます。 Web SDKは、同意が変更された場合にのみサーバーコールを行います。
 
@@ -51,7 +51,7 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 | `out` | `out` | × | ○ |
 | `out` | 設定なし | × | × |
 
-設定可能な Cookie の完全なリストについては、コアサービスガイドの [Adobe Experience Platform Web SDKの Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) を参照してください。
+設定可能な Cookie の完全なリストについては、コアサービスガイドの [Adobe Experience Platform Web SDKの Cookie](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk) を参照してください。
 
 ## `setConsent` コマンドの使用
 
