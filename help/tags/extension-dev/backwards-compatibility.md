@@ -2,18 +2,14 @@
 title: 下位互換性規格
 description: タグ拡張機能の更新バージョンが以前のバージョンと互換性があることを保証する Adobe Experience Platform の下位互換性標準について説明します。
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '788'
 ht-degree: 100%
 
 ---
 
 # 下位互換性規格
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ拡張機能のアップデートには、以前のバージョンの拡張機能との下位互換性が必要です。つまり、
 

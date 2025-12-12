@@ -2,18 +2,14 @@
 title: Web 拡張機能のイベントタイプ
 description: Adobe Experience Platform の Web 拡張機能のイベントタイプライブラリモジュールを定義する方法について説明します。
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1007'
 ht-degree: 97%
 
 ---
 
 # Web 拡張機能のイベントタイプ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグのルールにおいて、イベントとは、ルールを起動するために発生する必要があるアクティビティです。 たとえば、マウスまたはタッチの特定のジェスチャーが発生するのを監視する「ジェスチャー」イベントタイプを web 拡張機能で提供する場合があります。このジェスチャーが発生すると、イベントロジックによってルールが実行されます。
 
@@ -27,7 +23,7 @@ ht-degree: 97%
 
 イベントタイプは拡張機能で定義され、通常は次の要素で構成されます。
 
-1. Experience Platform UI とデータ収集 UI に表示される [&#x200B; ビュー &#x200B;](./views.md)。イベントの設定を変更できます。
+1. Experience Platform UI とデータ収集 UI に表示される [ ビュー ](./views.md)。イベントの設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、特定のアクティビティが発生するのを監視します。
 
 `module.exports` は、`settings` と `trigger` の両方のパラメーターを受け入れます。これにより、イベントタイプをカスタマイズできます。

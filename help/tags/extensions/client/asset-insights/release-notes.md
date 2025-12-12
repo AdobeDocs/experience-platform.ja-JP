@@ -2,18 +2,14 @@
 title: AEM Assets Insights 拡張機能のリリースノート
 description: Adobe Experience Platform の AEM Assets Insights タグ拡張機能に関する最新のリリースノートです。
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 77%
+source-wordcount: '91'
+ht-degree: 67%
 
 ---
 
 # AEM Asset Insights のリリースノート
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 9 月 9 日（PT）
 

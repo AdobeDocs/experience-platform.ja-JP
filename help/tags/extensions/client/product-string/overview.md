@@ -2,24 +2,20 @@
 title: Adobe Analytics Product String 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics Product String タグ拡張機能について説明します。
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '470'
 ht-degree: 100%
 
 ---
 
 # Adobe Analytics Product String 拡張機能の概要
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
-
 `products` 変数は、サイトでユーザーが製品に対してどのような操作をするかを追跡します。例えば、`products` 変数を使用して、製品の表示、買い物かごへの追加、チェックアウトおよび購入の各回数を追跡できます。サイトでのマーチャンダイジングカテゴリの相対的効果を追跡することもできます。
 
 `products` 変数は、必ず成功イベントと組み合わせて設定する必要があります。
 
-[!DNL Adobe Analytics Product String Builder] 拡張機能は、データ `products` レイヤーをループさせ、必要な製品関連のデータをすべて取得し、次に示す適切な構文で形式設定することで、変数が自動的に設定されます。これらの複雑なアクションを実行するために、カスタム JavaScript を作成して維持する必要はなくなりました。
+[!DNL Adobe Analytics Product String Builder] 拡張機能は、データレイヤーをループさせ、必要な製品関連のデータをすべて取得し、次に示す適切な構文で形式設定することで、`products` 変数が自動的に設定されます。これらの複雑なアクションを実行するために、カスタム JavaScript を作成して維持する必要はなくなりました。
 
 ## 製品変数の構文
 
@@ -81,7 +77,7 @@ digitalData.transaction.item.productInfo.productName
 
 実装でカスタムイベントまたはマーチャンダイジング eVar を使用する場合は、次の手順に従います。
 
-1. 関連付けられている「**[!UICONTROL 追加]**」ボタンを選択します。
+1. 関連する「**[!UICONTROL Add]**」ボタンを選択します。
 1. 設定する必要があるイベントまたは eVar をドロップダウンから選択します。
 1. 上記と同じ構文を使用して、適切なデータレイヤー変数へのパスを入力します。
 

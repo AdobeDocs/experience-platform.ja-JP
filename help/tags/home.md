@@ -2,20 +2,16 @@
 title: タグの概要
 description: Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ管理機能です。タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 95%
+source-wordcount: '550'
+ht-degree: 91%
 
 ---
 
 # タグの概要
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](./term-updates.md)を参照してください。
-
-Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ管理機能です。タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
+Adobe Experience Platform（旧称Adobe Experience Platform Launch）のタグは、Adobeの次世代タグ管理機能です。 タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
 
 タグを使用すると、誰でも&#x200B;*拡張機能*&#x200B;と呼ばれる独自の統合を作成して使用できます。[!DNL Adobe Experience Cloud] のお客様は、アプリストアと同じようにこれらの拡張機能を利用して、タグをすばやくインストール、設定およびデプロイすることができます。
 
@@ -31,7 +27,7 @@ Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ
 
 右側のパネルの製品ヘルプのを使用して、タグの詳細を確認し、その他の使用可能なリソースを表示します。
 
-![&#x200B; データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
+![ データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
 
 ### 拡張機能 {#extensions}
 
@@ -74,7 +70,7 @@ Web ベースのマーケティングおよび広告テクノロジーにわた�
 
 * タグは Reactor API とやり取りする。
 * デプロイメントは API で自動化できる
-* API を独自の社内システムと統合する
+*  API を独自の社内システムと統合する
 * 必要に応じて、独自のユーザーインターフェイスを作成できる。
 
 ### 軽量なモジュール式コンテナタグ {#modular-tag}

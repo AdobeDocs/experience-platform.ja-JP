@@ -2,18 +2,14 @@
 title: Adobe Analytics Product String 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics Product String タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: ht
-source-wordcount: '135'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '90'
 ht-degree: 100%
 
 ---
 
 # Adobe Analytics Product String 拡張リリースノート
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 1 月 31 日（PT）
 

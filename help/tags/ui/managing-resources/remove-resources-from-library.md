@@ -2,18 +2,14 @@
 title: ライブラリからのリソースの削除
 description: タグライブラリからリソースを削除する方法を説明します。
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '268'
 ht-degree: 100%
 
 ---
 
 # ライブラリからのリソースの削除
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ビルド内でリソースの効果が必要がなくなった場合は、そのリソースを含むライブラリからそのリソースを削除し、新しいビルドを作成する必要があります。
 
@@ -47,7 +43,7 @@ ht-degree: 100%
 
 1. リソースを無効にします。
    1. リスト表示からリソースを選択します。
-   1. 「**[!UICONTROL 無効化]**」を選択します。
+   1. **[!UICONTROL Disable]** を選択します。
 1. 新しい開発ライブラリを作成します。
 1. 無効になっているリソースの `latest` バージョンを追加します。
 1. 保存してビルドします。

@@ -2,18 +2,14 @@
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2263'
 ht-degree: 87%
 
 ---
 
 # Adobe Analytics 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Adobe Analytics 拡張機能の設定に関する情報、およびこの拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -300,7 +296,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 この表示では、`eVars`、`Props`、`Events` など、様々な変数を指定できます。
 
-![&#x200B; 追加の属性が一覧表示されているAdobe Analytics フォームビューページ &#x200B;](../../../images/adobe_analytics_extension_form_view.png)
+![ 追加の属性が一覧表示されているAdobe Analytics フォームビューページ ](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 

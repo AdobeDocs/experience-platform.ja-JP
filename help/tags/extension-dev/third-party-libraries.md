@@ -2,18 +2,14 @@
 title: サードパーティ製ライブラリの実装
 description: Adobe Experience Platform タグ拡張機能内でサードパーティ製ライブラリをホストする様々な方法について説明します。
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1270'
 ht-degree: 100%
 
 ---
 
 # サードパーティ製ライブラリの実装
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ拡張機能の主な目的の 1 つに、既存のマーケティング技術（ライブラリ）を容易に Web サイトに実装できるようにするという点があります。拡張機能を使用すると、web サイトの HTML を手動で編集することなく、サードパーティのコンテンツ配信ネットワーク（CDN）が提供するライブラリを実装できます。
 
@@ -98,7 +94,7 @@ firstScriptElement.parentNode.insertBefore(
    - [ベースコードの読み込みプロセス](#base-code-loading-process)
       - [ベースコードの例](#base-code-example)
    - [タグ実装オプション](#tags-implementation-options)
-      - [ベンダーホストから実行時に読み込む {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [ベンダーホストから実行時に読み込む](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [タグライブラリホストから実行時に読み込む](#load-at-runtime-from-the-tag-library-host)
       - [ライブラリを直接埋め込む](#embed-the-library-directly)
    - [次の手順](#next-steps)

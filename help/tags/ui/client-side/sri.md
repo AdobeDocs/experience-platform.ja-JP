@@ -2,18 +2,14 @@
 title: サブリソースの整合性（SRI）のサポート
 description: Adobe Experience Platform においてサブリソースの整合性（SRI）がどのようにサポートされているかについて説明します。
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '549'
 ht-degree: 100%
 
 ---
 
 # サブリソースの整合性（SRI）のサポート
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントでは、Adobe Experience Platform でサブリソースの整合性（SRI）がどのようにサポートされているかについて説明します。
 

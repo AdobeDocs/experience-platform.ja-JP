@@ -2,18 +2,14 @@
 title: AEM Asset Insights 拡張機能の概要
 description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能について説明します。
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
 
 # AEM Asset Insights 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 この拡張機能は、[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) と共に使用することを意図しています。具体的には、「pageTracker」プロセスと埋め込みコードが置き換えられます。設定すると、この拡張機能によって Asset の&#x200B;*インプレッション*&#x200B;と&#x200B;*クリック*&#x200B;指標が Adobe Analytics に送信され、その後、AEM Asset Insights レポートに読み込まれます。その後、AEM Asset Insights または Adobe Analytics プロジェクトの Workspace を使用して、アセット指標をレポートできます。
 

@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '824'
 ht-degree: 80%
 
 ---
@@ -209,7 +209,7 @@ ht-degree: 80%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -365,8 +365,6 @@ ht-degree: 80%
       * [関係](./api/guides/relationships.md)
       * [リソースの検索](./api/guides/search.md)
       * [秘密鍵](./api/guides/secrets.md)
-* [FAQ](./faq.md)
-* [用語の更新](./term-updates.md)
-* [Internet Explorer 10 および 11 のサポートの廃止](./ie-deprecation.md)
+* [よくある質問](./faq.md)
 * [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
 

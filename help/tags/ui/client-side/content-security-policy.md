@@ -2,18 +2,14 @@
 title: コンテンツセキュリティポリシー（CSP）のサポート
 description: Web サイトを Adobe Experience Platform のタグと統合する際の、コンテンツセキュリティポリシー（CSP）制限の取り扱いについて説明します。
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 97%
+source-wordcount: '1031'
+ht-degree: 96%
 
 ---
 
 # コンテンツセキュリティポリシー（CSP）のサポート
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 コンテンツセキュリティポリシー（CSP）は、クロスサイトスクリプティング攻撃（XSS）を防ぐセキュリティ機能です。これは、ブラウザーが騙されて、信頼できるソースから発信されているように見せかけて実際には別の場所から発信している、悪意のあるコンテンツを実行する場合に発生します。CSP を使用すれば、ブラウザーは（ユーザーの代理として）、スクリプトが実際に信頼できるソースから送られたものであることを検証できます。
 
@@ -82,7 +78,7 @@ CSP はデフフォルトでインラインスクリプトを許可しないた�
 
 >[!NOTE]
 >
->CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Experience Platformでのハッシュの使用制限について詳しくは、[Subresource Integrity （SRI）ガイド &#x200B;](./sri.md) を参照してください。
+>CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Experience Platformでのハッシュの使用制限について詳しくは、[Subresource Integrity （SRI）ガイド ](./sri.md) を参照してください。
 
 ### nonce で許可 {#nonce}
 
@@ -158,4 +154,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 このドキュメントを読むと、タグライブラリファイルとインラインスクリプトを受け入れるように CSP ヘッダーを設定する方法を理解できます。
 
-追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、[Experience Platformにおける SRI の互換性 &#x200B;](./sri.md) に関するガイドを参照してください。
+追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、[Experience Platformにおける SRI の互換性 ](./sri.md) に関するガイドを参照してください。

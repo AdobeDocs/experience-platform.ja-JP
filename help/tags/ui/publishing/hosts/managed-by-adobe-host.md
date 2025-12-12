@@ -2,18 +2,14 @@
 title: アドビが管理するホストの概要
 description: Adobe Experience Platform にタグライブラリビルドをデプロイするためのデフォルトのホスティングオプションについて説明します。
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # アドビが管理するホストの概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 アドビが管理するホストは、Adobe Experience Platform にタグライブラリビルドをデプロイするためのデフォルトのホスト設定です。データ収集ユーザーインターフェイスを使用して新しいプロパティを作成すると、アドビが管理するデフォルトのホストが作成されます。
 
@@ -96,8 +92,8 @@ Experience Platform UI またはデータ収集 UI でプロパティを初め�
 >
 >すべての環境からデフォルトのアドビが管理するホストの割り当てが解除されている場合は、そのホストを削除できます。この後、アドビが管理するホストに戻すには、次の手順で新しいホストを作成できます。
 >
->1. プロパティの「**[!UICONTROL ホスト]**」タブを選択し、「**[!UICONTROL ホストを追加]**」を選択します。
->1. ホストの名前を指定し、ホストのタイプとして「**[!UICONTROL アドビによる管理]**」を選択してから、「 **[!UICONTROL 保存]**」を選択します。
+>1. プロパティの「**[!UICONTROL Hosts]**」タブ／**[!UICONTROL Add Host]**&#x200B;を選択します。
+>1. ホストの名前を指定し、ホストのタイプとして **[!UICONTROL Managed by Adobe]** を選択してから、**[!UICONTROL Save]** を選択します。
 >
 >その後、必要に応じて、アドビが管理するホストに環境を再割り当てできます。
 

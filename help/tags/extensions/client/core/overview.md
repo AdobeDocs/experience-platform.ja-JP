@@ -2,18 +2,14 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5380'
 ht-degree: 95%
 
 ---
 
 # コア拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Core タグ拡張機能は、Adobe Experience Platform でリリースされたデフォルトの拡張機能です。
 

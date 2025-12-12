@@ -2,18 +2,14 @@
 title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 78%
+source-wordcount: '852'
+ht-degree: 77%
 
 ---
 
 # YouTube ビデオトラッキング拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 **前提条件**
 
@@ -23,7 +19,7 @@ ht-degree: 78%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントから [&#x200B; 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 &#x200B;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
+ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントから [ 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
@@ -98,9 +94,9 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->ビデオ要素ごとに複数の eVar または prop を使用できない実装の場合は、Experience Platform内でデータ要素の値を連結し、[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して分類レポートに解析したあと、Analysis Workspaceでセグメントとして適用することができます。
+>ビデオ要素ごとに複数の eVar または prop を使用できない実装の場合は、Experience Platform内でデータ要素の値を連結し、[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して分類レポートに解析したあと、Analysis Workspaceでセグメントとして適用することができます。
 
-ビデオ情報の値を連結するには、「ビデオメタデータ」という新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、組み立てるようにプログラミングします。 例：
+ビデオ情報の値を連結するには、「ビデオ Meta Data」という新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、組み立てるようにプログラミングします。 例：
 
 ```javascript
 var r = [];
@@ -114,4 +110,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Experience Platform内でデータ要素を効果的に作成および活用する方法について詳しくは、[&#x200B; データ要素 &#x200B;](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。
+Experience Platform内でデータ要素を効果的に作成および活用する方法について詳しくは、[ データ要素 ](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。

@@ -2,18 +2,14 @@
 title: リソースの管理
 description: 拡張機能、データ要素、ルールなど、Adobe Experience Platform の様々なリソースの管理方法について説明します。
 exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '138'
 ht-degree: 100%
 
 ---
 
 # リソースの管理
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Experience Platform のタグのコンテキストにおいて、「リソース」という単語は次のいずれかを表します。
 

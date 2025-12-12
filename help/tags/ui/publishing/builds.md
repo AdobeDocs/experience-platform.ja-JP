@@ -2,18 +2,14 @@
 title: ビルド
 description: ビルドの概念と、Adobe Experience Platform 内でそれらがどう機能するかについて説明します。
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '746'
 ht-degree: 86%
 
 ---
 
 # ビルド
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ビルドは、クライアントデバイス上で実行されるすべてのコードを含むファイルのセットです。
 

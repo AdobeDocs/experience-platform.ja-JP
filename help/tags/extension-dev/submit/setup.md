@@ -2,18 +2,14 @@
 title: Experience Cloud 組織の設定
 description: Adobe Experience Platform の拡張機能の開発を開始するために Adobe Experience Cloud 組織を登録する方法について説明します。
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 89%
 
 ---
 
 # Experience Cloud 組織の設定
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でタグ拡張機能を開発するには、Adobe Experience Cloud 組織を登録する必要があります。
 
@@ -41,9 +37,9 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 >
 >現在、会社の電子メールは一度に 1 つのパートナープログラムでのみ使用できるので、各プログラムの登録連絡先には、それぞれ別の電子メールを使用する必要があります。
 
-Exchange パートナープログラムに参加している会社は、[Exchange パートナーサイト &#x200B;](https://partners.adobe.com/exchangeprogram/experiencecloud) にサインインして次の手順に従うことで、Adobeソリューションへのアクセスをリクエストできます。
+会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト ](https://partners.adobe.com/exchangeprogram/experiencecloud) にログインし、次の手順に従って、Adobe ソリューションへのアクセスをリクエストできます。
 
-Experience Cloudアカウントでデータ収集 UI およびExperience PlatformUI へのアクセスが必要な場合は、[&#x200B; データ収集権限ガイド &#x200B;](../../../collection/permissions.md) を参照してください。
+Experience Cloud アカウントでデータ収集 UI およびExperience Platform UI へのアクセスが必要な場合は、[ データ収集権限ガイド ](../../../collection/permissions.md) を参照してください。
 
 ## 個人の開発者
 

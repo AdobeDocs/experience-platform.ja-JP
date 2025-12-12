@@ -2,18 +2,14 @@
 title: Common Analytics 拡張機能の概要
 description: Adobe Experience Platform の Common Analytics タグ拡張機能について説明します。
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 86%
+source-wordcount: '354'
+ht-degree: 85%
 
 ---
 
 # Common Analytics Plugins 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Common Analytics Plugins 拡張機能の設定に関する情報、およびこの拡張機能を使用して[!DNL Adobe Analytics] 拡張機能を強化するときに使用できるオプションに関する情報です。
 
@@ -71,4 +67,4 @@ Common Analytics Plugins 拡張機能では、タグ機能を利用して Analyt
 
 >[!NOTE]
 >
->上記のプラグインについて詳しくは、[Analytics ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja) を参照してください。
+>上記のプラグインについて詳しくは、[Analytics ドキュメント ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja) を参照してください。

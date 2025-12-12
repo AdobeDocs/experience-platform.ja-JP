@@ -2,18 +2,14 @@
 title: Web 拡張機能のフロー
 description: Adobe Experience Platform で実行時に Web 拡張機能コンポーネントが相互にやり取りする方法を説明します。
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 89%
+source-wordcount: '227'
+ht-degree: 77%
 
 ---
 
 # web 拡張機能のフロー
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 web 拡張機能のイベント、条件、アクション、およびデータ要素の各タイプには、ユーザーが設定を変更できるビューと、これらのユーザー定義の設定に基づいて動作するライブラリモジュールの両方が用意されています。
 
@@ -31,4 +27,4 @@ web 拡張機能のイベント、条件、アクション、およびデータ�
 1. イベントライブラリモジュールがイベントの発生を判断すると、イベントライブラリモジュールは `trigger` を呼び出します。
 1. タグは、ルールの条件ライブラリモジュールに `settings` を渡し、このモジュールで条件が評価されます。
 1. 各条件ライブラリモジュールは、条件が true と評価されるかどうかを返します。
-1. すべての条件が満たされると、ルールのアクションが実行されます。
+1. すべての条件に合格した場合、ルールのアクションが実行されます。

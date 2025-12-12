@@ -2,18 +2,14 @@
 title: Adobe Target 拡張機能の概要
 description: Adobe Experience Platform の Adobe Target のタグ拡張機能について説明します。
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 95%
+source-wordcount: '1126'
+ht-degree: 93%
 
 ---
 
 # Adobe Target 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、この拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -23,9 +19,9 @@ ht-degree: 95%
 >
 >  Adobe Target 拡張機能には at.js が必要です。mbox.js はサポートしていません。
 
-Adobe Target 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL 拡張機能／カタログ]**&#x200B;を選択し、Target 拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+Adobe Target 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL Extensions > Catalog]**&#x200B;を選択し、Target 拡張機能にカーソルを置いて「**[!UICONTROL Install]**」を選択します。
 
-拡張機能を設定するには、「[!UICONTROL エクステンション]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「[!UICONTROL Extensions]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ![](../../../images/ext-target-config.png)
 
@@ -72,7 +68,7 @@ Target がブラウザー内で Cookie を設定する場所を決定します�
 
 #### Target ユーザーインターフェイスで利用可能なその他の at.js 設定
 
-Target UI の [!UICONTROL at.js 設定の編集]ページで利用できる設定には、Target 拡張機能には含まれていないものがあります。次の回避策が推奨されます。
+Target UI の [!UICONTROL Edit at.js settings] ページで利用できる設定には、Target 拡張機能には含まれていないものがあります。 次の回避策が推奨されます。
 
 * グローバル mbox の自動作成：この設定は、Target 拡張機能の「Fire Global Mbox」アクションに置き換えられます。
 * ライブラリヘッダー：この設定は、Target 拡張機能には含まれていません。Load Target アクションを使用する前に、Core Extension／Custom Code アクションで at.js を読み込む必要があるコードを配置します。

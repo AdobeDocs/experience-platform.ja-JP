@@ -2,26 +2,22 @@
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能に関する最新のリリースノートです。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 79%
+source-wordcount: '643'
+ht-degree: 77%
 
 ---
 
 # Adobe Experience Cloud ID サービス拡張機能のリリースノート
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
-
-このドキュメントでは、Adobe Experience Cloud ID サービスタグ拡張機能のリリースノートについて説明します。 Experience Cloud ID サービス自体のリリースノートについては、[ID サービスのドキュメント &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
+このドキュメントでは、Adobe Experience Cloud ID サービスタグ拡張機能のリリースノートについて説明します。 Experience Cloud ID サービス自体のリリースノートについては、[ID サービスのドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
 ## 2022 年 10 月 17 日（PT）
 
 ### Experience Cloud ID Extension 5.5.0
 
-* この拡張機能で、[&#x200B; 訪問者 JS クライアント &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service) のバージョン 5.5.0 がサポートされるようになりました。 詳しくは、[&#x200B; 訪問者のリリースノート &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
+* この拡張機能で、[ 訪問者 JS クライアント ](https://github.com/Adobe-Marketing-Cloud/id-service) のバージョン 5.5.0 がサポートされるようになりました。 詳しくは、[ 訪問者のリリースノート ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
 
 ## 2022 年 3 月 9 日（Pt）
 
@@ -85,7 +81,7 @@ ht-degree: 79%
 
 * デフォルトで `loadSSL` フラグをオンにしました。ID サービスへのすべての呼び出しは、デフォルトにより、`https` でオンになります。非 SSL ページから http で ID サービスを呼び出す場合は、false に設定できます。
 * ESLint によって報告される問題を修正するため、Internet-Explorer（IE）のバージョン検出に使用する関数を更新しました。
-* ECID が optIn で事前に承認され、後で承認された場合、Internet Explorer（IE）11 でパフォーマンスの問題が発生するバグを修正しました。
+* ECID が optIn で事前に承認され、後で更新された場合、Internet Explorer（IE）11 でパフォーマンスの問題が発生するバグを修正しました。
 
 ## 2020 年 1 月 22 日（PT）
 
@@ -148,7 +144,7 @@ ht-degree: 79%
 ### Experience Cloud ID Extension 4.0.0
 
 * visitor.js を 4.0 に更新しました
-* 新しい組み込みオプトインオブジェクトの設定オプションを追加しました。オプトイン設定を使用して、GDPR などのサポート規則を改善するために、アドビソリューションの cookie やビーコン呼び出しを抑制することができます
+* 新しいビルトインのオプトインオブジェクトの設定オプションを追加しました。オプトイン設定を使用して、GDPR などのサポート規則を改善するために、アドビソリューションの cookie やビーコン呼び出しを抑制することができます
 
   ![](../../../images/ext-mcid-opt-in.png)
 

@@ -2,18 +2,14 @@
 title: ホストの概要
 description: Adobe Experience Platform で利用可能な各種ホスティングオプションについて説明します。
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
-source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 86%
+source-wordcount: '121'
+ht-degree: 81%
 
 ---
 
 # ホストの概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 拡張機能、ルールおよびデータ要素は、構築ブロックです。アプリケーションで何らかの処理を実行する場合、これらの構築ブロックはライブラリに追加され、ライブラリはビルドへと「構築」されます。これらのビルドはホスト場所に配信されます。
 
@@ -26,4 +22,4 @@ ht-degree: 86%
 
 同じホストをプロパティ内の複数の環境で使用できます。
 
-セルフホスティングか、Adobeによるホスティングの管理かを決める際の詳細については、[&#x200B; セルフホスティングガイド &#x200B;](./self-hosting-libraries.md) を参照してください。
+セルフホスティングか、Adobeでホスティングを管理するかを決める際に役立つ詳細については、[ セルフホスティングガイド ](./self-hosting-libraries.md) を参照してください。

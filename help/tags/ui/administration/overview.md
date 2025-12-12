@@ -2,18 +2,14 @@
 title: 管理の概要
 description: Adobe Experience Platform Launch の管理者に関する重要な情報を提供します。
 exl-id: 56ae72fb-5599-4794-a7e3-71ea9a40f9e4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '64'
 ht-degree: 100%
 
 ---
 
 # 管理の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 次のドキュメントには、Adobe Experience Platform のタグ管理者に役立つ情報が含まれています。
 

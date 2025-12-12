@@ -2,18 +2,14 @@
 title: Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能の概要
 description: Adobe Experience Platform の Adobe Media Analytics (3.x SDK) for Audio and Video タグ拡張機能について説明します。
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '648'
 ht-degree: 95%
 
 ---
 
 # Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 
@@ -33,9 +29,9 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.
 
 ## MA 拡張機能のインストールと設定
 
-* **インストール：** MA 拡張機能をインストールするには、拡張機能プロパティを開き、**[!UICONTROL エクステンション／カタログ]**&#x200B;を選択し、 **[!UICONTROL オーディオおよびビデオ向け Adobe Media Analytics（3.x SDK）]**&#x200B;拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+* **インストール：** MA 拡張機能をインストールするには、拡張機能プロパティを開いて「**[!UICONTROL Extensions > Catalog]**」を選択し、「**[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]**」拡張機能にカーソルを置いて「**[!UICONTROL Install]**」を選択します。
 
-* **設定：** MA 拡張機能を設定するには、「[!UICONTROL 拡張機能]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」をクリックします。
+* **設定：** MA 拡張機能を設定するには、「[!UICONTROL Extensions]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」をクリックします。
 
 ![MA 拡張機能の設定](../../../images/ext-ma-config.png)
 
@@ -52,13 +48,13 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.
 | Export APIs to Window Object | グローバルスコープへの Media Analytics API の書き出しを有効または無効にします |
 | Variable Name | `window` オブジェクトの下の Media Analytics API を書き出すために使用する変数 |
 
-**リマインダー：** MA 拡張機能には、[&#x200B; Analytics](../analytics/overview.md) および [Experience Cloud ID](../id-service/overview.md) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
+**リマインダー：** MA 拡張機能には、[ Analytics](../analytics/overview.md) および [Experience Cloud ID](../id-service/overview.md) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
 
 ## MA 拡張機能の使用
 
 ### webpage/JS-app からの使用
 
-MA 拡張機能は、[!UICONTROL 設定]ページ内の「Window オブジェクトに API を書き出し」設定を有効にして、メディア API をグローバルウィンドウオブジェクトに書き出します。設定された変数名の下に API をエクスポートします。例えば、変数名を `ADB` に設定している場合、`window.ADB.Media` によって Media API にアクセスできます。
+MA 拡張機能は、[!UICONTROL Configuration] ページ内の「Export APIs to Window Object」設定を有効にして、Media API をグローバルウィンドウオブジェクトにエクスポートします。設定された変数名の下に API をエクスポートします。例えば、変数名を `ADB` に設定している場合、`window.ADB.Media` によって Media API にアクセスできます。
 
 >[!IMPORTANT]
 >

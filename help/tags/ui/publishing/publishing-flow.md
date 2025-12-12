@@ -2,9 +2,9 @@
 title: 公開フロー
 description: Adobe Experience Platform でライブラリを作成、ビルドをテストし、実稼動環境用に承認するプロセスについて説明します。
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1362'
 ht-degree: 84%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 84%
 >id="platform_tags_publishing_flow"
 >title="公開フロー"
 >abstract="開発、承認、公開の権限など、公開フローに必要なユーザー権限のレベルについて説明します。"
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ公開フローは、ライブラリを作成し、ビルドをテストして、実稼動用に承認するプロセスを指します。
 
@@ -66,9 +62,9 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 | [!UICONTROL Edit] | ライブラリの「[!UICONTROL Edit Library]」画面を使用して、ライブラリのコンポーネントを追加または削除します。 |
 | [!UICONTROL Build to Development] | ライブラリのビルドを作成します。ビルドがコンパイルされ、ライブラリを割り当てた環境にデプロイされます。ライブラリが環境に割り当てられていない場合、またはアップストリームで定義された変更がライブラリに含まれている場合、この手順は失敗します。 |
 | [!UICONTROL Submit for Approval] | 開発環境からライブラリの割り当てを解除し、承認権限を持つユーザーが作業できるように、ライブラリを「[!UICONTROL Submitted]」列に移動します。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
-| [!UICONTROL Submit & Build to Staging] | この操作は、開発権限と承認権限の両方を持つユーザーのみが実行できます。 この操作により、開発環境からライブラリの割り当てが解除され、ライブラリが [!UICONTROL Submitted] 状態に移行し、ステージング 環境にライブラリがビルドされます。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
-| [!UICONTROL Approve for Publishing] | この操作は、開発権限と承認権限の両方を持つユーザーのみが実行できます。 このアクションにより、開発環境からライブラリの割り当てが解除され、ステージング環境と[!UICONTROL Approved]状態が完全にスキップされ、[!UICONTROL Submitted]状態に移動します。このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
-| [!UICONTROL Approve & Publish to Production] | この操作は、開発、承認および公開の権限を持つユーザーのみが実行できます。このアクションにより、開発環境からライブラリの割り当てが解除され、 [!UICONTROL Approved] 状態に移行して、運用環境に発行されます。 生産ビルドが完了すると、ライブラリは [!UICONTROL Published] 状態に移行します。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
+| [!UICONTROL Submit & Build to Staging] | この操作は、開発権限と承認権限の両方を持つユーザーのみが実行できます。 このアクションにより、開発環境からライブラリの割り当てが解除され、ライブラリが [!UICONTROL Submitted] の状態に移動し、ライブラリがステージング環境にビルドされます。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
+| [!UICONTROL Approve for Publishing] | この操作は、開発権限と承認権限の両方を持つユーザーのみが実行できます。 このアクションにより、開発環境からライブラリの割り当てが解除され、[!UICONTROL Approved] の状態に移動します。ステージング環境と [!UICONTROL Submitted] の状態は完全にスキップされます。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
+| [!UICONTROL Approve & Publish to Production] | この操作は、開発、承認および公開の権限を持つユーザーのみが実行できます。このアクションにより、開発環境からライブラリの割り当てが解除され、[!UICONTROL Approved] の状態に移動し、実稼動環境に公開されます。 実稼動用のビルドが完了すると、ライブラリは [!UICONTROL Published] の状態に移行します。 このオプションを有効にするには、ライブラリの最新ビルドが成功している必要があります。 |
 | [!UICONTROL Delete] | システムからライブラリを削除します。環境からビルドが削除されるわけではありません。 |
 
 ### [!UICONTROL Submitted] {#submitted}
@@ -82,7 +78,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 | [!UICONTROL Open] | ライブラリのコンテンツを表示します。「[!UICONTROL Development]」列以外のライブラリに対する変更は許可されません。 変更が必要な場合は、ライブラリを却下すると、「[!UICONTROL Development]」で変更できるようになります。 |
 | [!UICONTROL Build for Staging] | デプロイメント用にステージング環境でライブラリを構築します。 |
 | [!UICONTROL Approve for Publishing] | 公開権限を持つユーザーが作業できるように、ライブラリを「[!UICONTROL Approved]」列に移動します。 |
-| [!UICONTROL Approve & Publish to Production] | この操作は、承認権限と公開権限の両方を持つユーザーのみが実行できます。 このアクションにより、ステージング 環境からライブラリの割り当てが解除され、 [!UICONTROL Approved] 状態に移行して、運用環境に発行されます。 生産ビルドが完了すると、ライブラリは [!UICONTROL Published] 状態に移行します。 このアクションは、ステージング環境でビルドが正常に完了しているかどうかに関わらず実行できます。 |
+| [!UICONTROL Approve & Publish to Production] | この操作は、承認権限と公開権限の両方を持つユーザーのみが実行できます。 このアクションにより、ステージング環境からライブラリの割り当てが解除され、[!UICONTROL Approved] の状態に遷移し、実稼動環境に公開されます。 実稼動用のビルドが完了すると、ライブラリは [!UICONTROL Published] の状態に移行します。 このアクションは、ステージング環境でビルドが正常に完了しているかどうかに関わらず実行できます。 |
 | [!UICONTROL Reject] | ステージング環境からライブラリの割り当てを解除し、さらに変更を加えるためにライブラリを「[!UICONTROL Development]」列に戻します。 |
 
 ### [!UICONTROL Approved] {#approved}
@@ -99,13 +95,13 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 ### [!UICONTROL Published] {#published}
 
-[!UICONTROL Published]列には、公開されたライブラリとその公開する日付が表示されます。現在公開中のライブラリの横には緑の点が表示されます。以前のライブラリを再公開しなければ、このライブラリが常に列の先頭になります。
+[!UICONTROL Published] の列には、公開されているライブラリと公開日が表示されます。 現在公開中のライブラリの横には緑の点が表示されます。以前のライブラリを再公開しなければ、このライブラリが常に列の先頭になります。
 
 | アクション | 説明 |
 | --- | --- |
 | [!UICONTROL Open] | ライブラリのコンテンツを表示します。「[!UICONTROL Development]」列以外のライブラリに対する変更は許可されません。 本番環境の内容を変更する場合は、新しいライブラリを作成し、すべての公開プロセスを進める必要があります。 |
-| [!UICONTROL Republish] | このアクションは、最近公開された 5 つのライブラリでのみ使用でき、実稼働環境が (A) アーカイブオプションをオフに設定し、(b) ビルド時に [!UICONTROL Managed by Adobe] ホストを使用している場合に限ります。 |
-| [!UICONTROL Download] | このアクションは、最近公開された 5 つのライブラリでのみ使用でき、実稼働環境が (A) アーカイブオプションをオンに設定され、(b) ビルド時に [!UICONTROL Managed by Adobe] ホストを使用している場合のみです。 |
+| [!UICONTROL Republish] | このアクションは、最近公開された 5 つのライブラリでのみ使用でき、実稼働環境が（A） アーカイブオプションをオフにして構成され、（B） ビルドの際に [!UICONTROL Managed by Adobe] ホストを使用している場合にのみ使用できます。 |
+| [!UICONTROL Download] | このアクションは、最近公開された 5 つのライブラリでのみ使用でき、実稼働環境が（A） アーカイブオプションをオンにして構成され、（B） ビルドの際に [!UICONTROL Managed by Adobe] ホストを使用している場合にのみ使用できます。 |
 
 ## アップストリーム {#upstream}
 
@@ -117,7 +113,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 ![](./images/approval-workflow/upstream.png)
 
-UIでライブラリを編集すると、アップストリームから継承されたすべてのリソースが **[!UICONTROL Resources Upstream]** セクションに表示されます。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
+UI でライブラリを編集する際、アップストリームから継承されたすべてのリソースが「**[!UICONTROL Resources Upstream]**」セクションに表示されます。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

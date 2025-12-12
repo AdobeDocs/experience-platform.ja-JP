@@ -2,18 +2,14 @@
 title: 拡張機能開発の概要
 description: Adobe Experience Platform における独自タグ拡張機能の開発の基本を学びます。
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 80%
+source-wordcount: '465'
+ht-degree: 73%
 
 ---
 
 # 拡張機能開発の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 拡張機能を起動して構築するには、Adobe のエンジニアが提供するオープンソース基礎モードツールを使用して、拡張機能パッケージに必要なファイルやファイル構造を作成します。このため、実際にコードを記述するという重要な作業のみを実行するだけで済みます。
 
@@ -53,12 +49,12 @@ npx @adobe/reactor-scaffold
 * [拡張機能の設定ビュー](./configuration.md)：ビュー、HTML ファイル。拡張機能では、これらを通してユーザーからグローバル設定が収集されます。
 * [イベントタイプ](./web/event-types.md)：監視のアクティビティを定義します。例えば、ユーザーが高速スクロールするタイミングや、ユーザーがページ要素に対して何らかの操作をおこなった日時を把握できます。その後、イベントをルールで使用してアクションを実行できます。
 * [条件タイプ](./web/condition-types.md)：条件タイプは、true であるか false であるかを評価します。
-例えば、ユーザーのブラウザーが Chrome であるか、iPad を使用しているか、またはユーザーが特定のドメインを使用しているかどうかを返すことができます。
+例えば、ユーザーのブラウザーがChromeの場合、iPadを使用している場合、ユーザーが特定のドメインを使用している場合などに、これが返されます。
 * [アクションのタイプ](./web/action-types.md)：イベントの発生時に実行するアクション。例えば、分析ビーコンの送信、オファーの表示、cookie の保存、サポートチャットの開始などを実行できます。
 * [データ要素のタイプ](./web/data-element-types.md)：データ要素のタイプにより、データが取得されます。このデータは、ローカルストレージ、Cookie、DOM 要素、またはカスタムの場所に存在する場合があります。
-* [&#x200B; 共有モジュール &#x200B;](./web/shared.md) （web のみ）：共有モジュールは、拡張機能が他の拡張機能と通信できるメカニズムです。
+* [ 共有モジュール ](./web/shared.md) （web のみ）：共有モジュールは、拡張機能が他の拡張機能と通信できるメカニズムです。
 * [表示](./web/views.md)：イベント、条件、アクション、またはデータ要素の各タイプには、ユーザーが設定を指定できるビューが用意されている場合があります。
-* Exchange URL （web およびエッジのみ）:Adobeの公開カタログに拡張機能が公開されたら、ここにリスト URL を指定します。
+* Exchange URL （web およびエッジのみ）：拡張機能がAdobeの公開カタログに公開される際に、ここにリスト URL を指定します。
 * アイコンのパス：拡張機能用のアイコンファイルへのパス。
 
 >[!NOTE]
@@ -69,4 +65,4 @@ npx @adobe/reactor-scaffold
 
 ## 次の手順
 
-* [&#x200B; 送信プロセスの概要 &#x200B;](./submit/overview.md) に従い、タグエコシステム内でテストするための拡張機能を [&#x200B; 検証 &#x200B;](./submit/upload-and-test.md#validate) および [&#x200B; アップロード &#x200B;](./submit/upload-and-test.md#integration) する準備をします。
+* [ 送信プロセスの概要 ](./submit/overview.md) に従い、タグエコシステム内でテストするための拡張機能を [ 検証 ](./submit/upload-and-test.md#validate) および [ アップロード ](./submit/upload-and-test.md#integration) する準備をします。

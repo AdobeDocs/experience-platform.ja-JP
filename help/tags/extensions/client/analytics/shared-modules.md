@@ -2,18 +2,14 @@
 title: Adobe Analytics 拡張機能の共有モジュール
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能で提供される共有ライブラリモジュールについて説明します。
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '380'
 ht-degree: 100%
 
 ---
 
 # Adobe Analytics 拡張機能の共有モジュール
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 [Adobe Analytics 拡張機能](./overview.md)では、エクスペリエンスアプリケーションに統合できる 2 つの異なる[共有モジュール](../../../extension-dev/web/shared.md)が提供されます。これらのモジュールについては、以下の節で説明します。
 

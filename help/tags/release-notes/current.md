@@ -2,10 +2,10 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 88%
+source-wordcount: '770'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->今後、このページではタグとイベント転送のリリースノートは提供されなくなります。タグとイベント転送の更新について詳しくは、最新の [Adobe Experience Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja#data-collection)を参照してください。
+>今後、このページではタグとイベント転送のリリースノートは提供されなくなります。タグとイベント転送の更新について詳しくは、最新の [Adobe Experience Platform リリースノート](/help/release-notes/latest/latest.md)を参照してください。
 
 ## 2023年4月26日（PT）
 
@@ -68,7 +68,7 @@ ht-degree: 88%
 ## 2022年7月27日（PT）
 
 * タグとイベント転送機能へのアクセスは、Adobe Admin Console の Adobe Experience Platform データ収集カードで管理されるようになりました。詳しくは、[データ収集の権限](../../collection/permissions.md)に関するガイドを参照してください。
-* Internet Explorer 10 および 11 のサポートは[非推奨（廃止予定）](../ie-deprecation.md)になりました。
+* Internet Explorer 10 および 11 のサポートは非推奨（廃止予定）になりました。
 
 ## 2022年6月22日（PT）
 

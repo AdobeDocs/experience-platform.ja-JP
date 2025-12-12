@@ -3,18 +3,14 @@ title: コアイベント転送拡張機能の概要
 description: Adobe Experience Platform のコアイベント拡張機能について説明します。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 99%
+source-wordcount: '1662'
+ht-degree: 97%
 
 ---
 
 # コアイベント転送拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 コアイベント転送拡張機能は、Adobe Experience Platform でのイベント転送のデフォルトのイベント、条件、データタイプを提供します。
 
@@ -26,11 +22,11 @@ ht-degree: 99%
 
 ### カスタムコード
 
-イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。Adobe Experience Platformのイベント転送では、ES13 がサポートされています。
+イベントの条件として使用する必要があるカスタムコードを指定します。ビルトインのコードエディターを使用してカスタムコードを入力します。Adobe Experience Platformのイベント転送では、ES13 がサポートされています。
 
-1. 「**[!UICONTROL エディターを開く]**」を選択します。
+1. **[!UICONTROL Open Editor]** を選択します。
 1. カスタムコードを入力します。
-1. 「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Save]** を選択します。
 
 カスタムコード内のデータ要素の値にアクセスするには、`getDataElementValue` メソッドを使用します。例えば、`productName` という名前のデータ要素の値を取得するには、次のように記述します。
 
@@ -158,8 +154,8 @@ module.exports = (context) => {
 イベントのトリガー後に実行して条件を評価するコードを提供します。Adobe Experience Platformのイベント転送では、ES13 がサポートされています。
 
 1. アクションコードに名前を付けます。
-1. 「**[!UICONTROL エディターを開く]**」を選択します。
-1. コードを編集して、「**[!UICONTROL 保存]**」を選択します。
+1. **[!UICONTROL Open Editor]** を選択します。
+1. コードを編集して、「**[!UICONTROL Save]**」を選択します。
 
 カスタムコード内のデータ要素の値にアクセスするには、`getDataElementValue` メソッドを使用します。例えば、`productName` という名前のデータ要素の値を取得するには、次のように記述します。
 
@@ -183,9 +179,9 @@ arc.ruleStash.core.productCategory
 
 ### カスタムコード
 
-カスタム JavaScript を UI に入力するには、「**[!UICONTROL エディターを開く]**」を選択してエディターウィンドウにコードを挿入します。
+カスタム JavaScript を UI に入力するには、「**[!UICONTROL Open Editor]**」を選択してエディターウィンドウにコードを挿入します。
 
-データ要素の値として使用する値を示すために、エディターウィンドウで return ステートメントを記述する必要があります。return ステートメントを含めない場合、または値 `null` または `undefined` が返される場合、データ要素のデフォルト値には `null` または `undefined` が反映されます。
+データ要素の値として使用する値を示すために、エディターウィンドウで return ステートメントを記述する必要があります。return ステートメントが含まれていない場合、または値 `null` または `undefined` が返された場合、データ要素のデフォルト値は `null` または `undefined` を反映します。
 
 カスタムコード内のデータ要素の値にアクセスするには、`getDataElementValue` メソッドを使用します。例えば、`productName` という名前のデータ要素の値を取得するには、次のように記述します。
 

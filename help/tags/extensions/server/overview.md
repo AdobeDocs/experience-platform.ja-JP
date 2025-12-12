@@ -2,18 +2,14 @@
 title: イベント転送拡張機能リファレンス
 description: Adobe Experience Platformのイベント転送拡張機能に関するドキュメントを見つけます。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 32%
+source-wordcount: '119'
+ht-degree: 7%
 
 ---
 
 # イベント転送拡張機能リファレンス
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -22,16 +18,16 @@ ht-degree: 32%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-サーバーサイドイベント転送拡張機能のドキュメントのリストを以下に示します。 使用可能なクライアントサイド拡張機能のリストについては、代わりに [&#x200B; タグ拡張機能リファレンス &#x200B;](../client/overview.md) を参照してください。
+サーバーサイドイベント転送拡張機能のドキュメントのリストを以下に示します。 使用可能なクライアントサイド拡張機能のリストについては、代わりに [ タグ拡張機能リファレンス ](../client/overview.md) を参照してください。
 
 >[!NOTE]
 >
->Adobe Exchange名の後にアスタリスク（*）が付いている場合は、拡張機能のインストールおよび使用方法の説明が記載された拡張機能のリストにリンクします。 その他のリンクはすべて、Adobe Experience Leagueの拡張機能のドキュメントを指しています。
+>拡張機能名の後にアスタリスク（*）が続く場合は、Adobe Exchangeの拡張機能のリストにリンクします。このリストには、インストールと使用の手順が記載されています。 その他のリンクはすべて、Adobe Experience League の拡張機能のドキュメントを指しています。
 
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [Google Analytics用 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)*
+* [Google Analytics用の Cloud Connector](https://exchange.adobe.com/apps/ec/106542)*
 <!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [コア](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*

@@ -2,18 +2,14 @@
 title: Adobe Target v2 拡張機能の概要
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能について説明します。
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Adobe Target v2 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、この拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -23,9 +19,9 @@ ht-degree: 88%
 >
 > Adobe Target 拡張機能には At.js 2.x が必要です。
 
-Adobe Target 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL 拡張機能／カタログ]**&#x200B;を選択し、Target 拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+Adobe Target 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL Extensions > Catalog]**&#x200B;を選択し、Target 拡張機能にカーソルを置いて「**[!UICONTROL Install]**」を選択します。
 
-拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ![](../../../images/targetv2config.png)
 
@@ -98,7 +94,7 @@ Target 拡張機能は、ルールの「Then」部分に次のアクションを
 ちらつきを防ぐために本分の非表示を有効にするかどうか、および本文要素を非表示にするときに使用するスタイルを指定する必要があります。次のオプションがあります。
 
 * **Body Hiding：**&#x200B;この設定を有効または無効にすることができます。デフォルト値は false です。この場合、HTML BODY は非表示にはなります。
-* **Body Hidden Style：**&#x200B;デフォルトの値は「body{opacity:0}」です。この値は body{display:none} など他の値に変更することもできます。
+* **Body Hidden Style:** デフォルト値は body です {opacity:0}。 この値は、body{display:none} などの別の値に変更できます。
 
 詳しくは、 [Target のオンラインヘルプドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ja) を参照してください。
 

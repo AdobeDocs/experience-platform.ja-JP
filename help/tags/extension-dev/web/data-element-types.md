@@ -2,18 +2,14 @@
 title: Web 拡張機能のデータ要素タイプ
 description: Web プロパティのタグ拡張用にデータ要素タイプライブラリモジュールを定義する方法について説明します。
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '555'
 ht-degree: 96%
 
 ---
 
 # Web 拡張機能のデータ要素タイプ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 データ収集タグにおいて、データ要素は基本的にページ上のデータに対するエイリアスです。 このデータは、クエリ文字列パラメーター、Cookie、DOM 要素、その他の場所にあります。 データ要素は、ルールから参照でき、これらのデータにアクセスするための抽象型として機能します。 
 
@@ -29,7 +25,7 @@ ht-degree: 96%
 
 通常、データ要素タイプは次の要素で構成されます。
 
-1. Experience PlatformUI とデータ収集 UI に表示される [&#x200B; ビュー &#x200B;](./views.md)。データ要素の設定を変更できます。
+1. Experience Platform UI とデータ収集 UI に表示される [ ビュー ](./views.md)。データ要素の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、データを取得します。
 
 ユーザーが `productName` という名前のローカルストレージ項目からデータを取得できるようにするとします。モジュールは次のようになります。

@@ -2,18 +2,14 @@
 title: エッジ拡張機能のライブラリモジュール
 description: エッジプロパティのタグ拡張機能のライブラリモジュールの形式設定です。
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '256'
 ht-degree: 100%
 
 ---
 
 # エッジ拡張機能のライブラリモジュール
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: Web 拡張機能のビュー
 description: Adobe Experience Platform Web 拡張機能のライブラリモジュールのビューを定義する方法について説明します。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2103'
 ht-degree: 92%
 
 ---
 
 # Web 拡張機能のビュー
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 イベント、条件、アクション、データ要素の各タイプには、ユーザーが設定を指定できる表示が用意されています。 また、この拡張機能には最上位の[拡張機能設定表示](../configuration.md)が含まれていて、拡張機能全体に対してグローバル設定を指定できます。表示の構築プロセスは、すべてのタイプの表示で同じです。
 
@@ -76,7 +72,7 @@ window.extensionBridge.register({
 | `company` | `orgId` （24 文字のAdobe Experience Cloud ID）、`id` （Reactor API 内での会社の一意の ID）、`tenantId` （Adobe Identity Management System 内での組織の一意の ID）を含むオブジェクト。 |
 | `schema` | [JSON スキーマ](https://json-schema.org/)形式のオブジェクトです。このオブジェクトは[拡張機能マニフェスト](../manifest.md)から取得され、フォームの検証に役立つ場合があります。 |
 | `apiEndpoints` | Reactor API の web アドレスへの参照を含む `reactor` を含むオブジェクト。 |
-| `userConsentPermissions` | Adobeの同意フラグを含むオブジェクト [&#x200B; 製品の使用状況データ &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/features/account-preferences#product-usage-data)。 `globalDataCollectionAndUsage` フラグに格納されているを使用して、拡張機能で *any* 顧客データの収集が許可されているかどうかを把握します。 |
+| `userConsentPermissions` | Adobeの同意フラグを含むオブジェクト [ 製品の使用状況データ ](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)。 `globalDataCollectionAndUsage` フラグに格納されているを使用して、拡張機能で *any* 顧客データの収集が許可されているかどうかを把握します。 |
 | `preferredLanguages` | 言語文字列の配列。 |
 
 表示は、この情報を使用してフォームのレンダリングと管理をおこなう必要があります。 `info.settings` を扱うだけで済むこともありますが、場合によってはその他の情報も指定する必要があります。

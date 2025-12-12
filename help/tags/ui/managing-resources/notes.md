@@ -2,18 +2,14 @@
 title: 備考
 description: Adobe Experience Platform の特定のタグリソースに、テキスト注釈を付加する方法について説明します。
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '262'
 ht-degree: 100%
 
 ---
 
 # 備考
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 メモは、Adobe Experience Platform の特定のタグリソースに追加できるテキスト注釈です。 メモは、次のリソースに添付できます。
 
@@ -39,7 +35,7 @@ ht-degree: 100%
 
 注意が必要なリソースは、画面の右側に狭いレールを表示します。 パネルには、メモ用のアイコンが表示されます。 このアイコンは、リソースに添付されたメモの現在の数を表示します。
 
-「**[!UICONTROL メモ]**」を選択して右側のパネルを展開し、メモを表示します。一番上には最新のメモが表示されます。新しいメモを追加するには、上部のボックスにテキストを入力し、「**[!UICONTROL メモの追加]**」を選択します。
+「**[!UICONTROL Notes]**」を選択して右側のパネルを展開し、メモを表示します。一番上には最新のメモが表示されます。新しいメモを追加するには、上部のボックスにメモのテキストを入力し、「**[!UICONTROL Add Note]**」を選択します。
 
 ## その他
 

@@ -2,18 +2,14 @@
 title: 'クライアントサイドの情報 '
 description: Web アプリケーションまたはモバイルアプリケーションのクライアントサイドでタグ操作を管理する方法を説明します。
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
 # クライアントサイドの情報
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 この節では、Adobe Experience Platform でクライアントサイドのタグ操作を管理する際に役立つ情報について説明します。
 

@@ -2,20 +2,16 @@
 title: リソースの削除
 description: Adobe Experience Platform でタグリソースを削除する方法について説明します。
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '512'
 ht-degree: 93%
 
 ---
 
 # リソースの削除
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
-
-リソースを削除すると、そのリソースは Adobe Experience Platform から完全に削除されます。特定のタグライブラリからリソースを削除しても、そのリソースを他のライブラリで使用できるようにする場合は、[&#x200B; ライブラリからのリソースの削除 &#x200B;](remove-resources-from-library.md) に関するガイドを参照してください。
+リソースを削除すると、そのリソースは Adobe Experience Platform から完全に削除されます。特定のタグライブラリからリソースを削除しても、そのリソースを他のライブラリで使用できるようにする場合は、[ ライブラリからのリソースの削除 ](remove-resources-from-library.md) に関するガイドを参照してください。
 
 データ要素、ルール、拡張機能、ホスト、環境およびプロパティを削除できます。削除したリソースは復元できません。
 
@@ -78,4 +74,4 @@ ht-degree: 93%
 
 ## リソースの削除
 
-適切なリスト表示から、削除するリソースを選択し、「**[!UICONTROL 削除]**」を選択します。
+適切なリスト表示から、削除するリソースを選択し、「**[!UICONTROL Delete]**」を選択します。

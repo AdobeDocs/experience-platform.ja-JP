@@ -2,18 +2,14 @@
 title: エッジ拡張機能モジュールのコンテキスト
 description: context オブジェクトと、エッジプロパティのタグ拡張機能でライブラリモジュールとのやり取りでオブジェクトが果たす役割について説明します。
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '681'
 ht-degree: 100%
 
 ---
 
 # エッジ拡張機能モジュールのコンテキスト
-
->[!NOTE]
->
-> Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 エッジ拡張機能内のすべてのライブラリモジュールには、実行時に `context` オブジェクトが提供されます。 このドキュメントでは、`context` オブジェクトによって提供されるプロパティと、それらがライブラリモジュールで果たす役割について説明します。
 
@@ -42,7 +38,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` オブジェクトには、`body` と `head` の 2 つの最上位プロパティがあります。`body` プロパティには Experience Data Model（XDM）情報が含まれており、「**[!UICONTROL Launch]**」に移動して「**[!UICONTROL エッジトレース]**」タブを選択すると、Adobe Experience Platform Debugger で調べることができます。
+`request` オブジェクトには、`body` と `head` の 2 つの最上位プロパティがあります。`body` プロパティには Experience Data Model（XDM）情報が含まれており、「**[!UICONTROL Launch]**」に移動して「**[!UICONTROL Edge Trace]**」タブを選択すると、Adobe Experience Platform Debugger で調べることができます。
 
 ### [!DNL ruleStash] {#rulestash}
 

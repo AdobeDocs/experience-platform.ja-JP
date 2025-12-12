@@ -2,18 +2,14 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2299'
 ht-degree: 84%
 
 ---
 
 # エンドツーエンドテストのアップロードと実装
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でタグ拡張機能をテストするには、タグ API やコマンドラインツールを使用して拡張機能パッケージをアップロードします。次に、Experience Platform UI またはデータ収集 UI を使用して、拡張機能パッケージをプロパティにインストールし、タグライブラリ内でその機能を実行してビルドします。
 
@@ -39,7 +35,7 @@ Adobe Experience Platform でタグ拡張機能をテストするには、タグ
 
 API またはコマンドラインツールを使用するには、Adobe I/O に関するテクニカルアカウントが必要です。I/O コンソールでテクニカルアカウントを作成し、アップローダツールを使用して拡張機能パッケージをアップロードする必要があります。
 
-Adobe Experience Platformでタグに使用するテクニカルアカウントの作成については、[Reactor API の概要 &#x200B;](../../api/getting-started.md) ガイドを参照してください。
+Adobe Experience Platformでタグに使用するテクニカルアカウントの作成については、[Reactor API の概要 ](../../api/getting-started.md) ガイドを参照してください。
 
 >[!IMPORTANT]
 >
@@ -63,8 +59,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > デフォルトでは、アップローダは、サーバー間 Oauth フローについてAdobe I/Oの資格情報を必要とします。 従来の `jwt-auth` 資格情報
-> &#x200B;> 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
-> &#x200B;> `jwt-auth` のバージョンを実行するには、[&#x200B; こちら &#x200B;](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
+> 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
+> `jwt-auth` のバージョンを実行するには、[ こちら ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
 
 アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/O コンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL View]**」を選択します。
 
@@ -82,7 +78,7 @@ npx @adobe/reactor-uploader
 >
 >アップローダを頻繁に実行する予定がある場合、毎回これらの情報を入力するのが負担になる場合があります。これらは、コマンドラインから引数として渡すこともできます。詳細については、NPM ドキュメントの[コマンドラインの引数に関する節](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)を参照してください。
 
-API を使用して拡張機能のアップロードを直接管理する場合は、拡張機能パッケージの [&#x200B; 作成 &#x200B;](../../api/endpoints/extension-packages.md#create) または [&#x200B; 更新 &#x200B;](../../api/endpoints/extension-packages.md#update) 呼び出し例の詳細を API ドキュメントで参照してください。
+API を使用して拡張機能のアップロードを直接管理する場合は、拡張機能パッケージの [ 作成 ](../../api/endpoints/extension-packages.md#create) または [ 更新 ](../../api/endpoints/extension-packages.md#update) 呼び出し例の詳細を API ドキュメントで参照してください。
 
 ## 開発プロパティの作成 {#property}
 

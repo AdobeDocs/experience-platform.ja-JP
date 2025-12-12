@@ -1,18 +1,14 @@
 ---
 title: Meta Pixel 拡張機能のリリースノート
-description: Adobe Experience Platformの Meta Pixel 拡張機能に関する最新のリリースノート。
-source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
+description: Adobe Experience PlatformのMeta Pixel 拡張機能に関する最新のリリースノート。
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 37%
+source-wordcount: '76'
+ht-degree: 0%
 
 ---
 
 # Meta Pixel 拡張機能のリリースノート
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2023 年 2 月 13 日（Pt）
 

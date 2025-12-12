@@ -2,18 +2,14 @@
 title: 顧客の同意を管理する JavaScript タグのデプロイ
 description: Adobe Experience Platform の様々なアドビソリューション用に顧客のオプトインおよびオプトアウトのシグナルを管理する方法について説明します。
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 94%
 
 ---
 
 # 顧客の同意を管理する JavaScript タグのデプロイ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 EU 一般データ保護規則（GDPR）などの法的なプライバシー規制では、企業はユーザーの同意を管理できる必要があります。 アドビのお客様は、任意の訪問者に対してアドビソリューションを実行する前に、その訪問者にオプトインを求めることができます。訪問者は、オプトインとオプトアウトのステータスを管理できます。
 
@@ -25,7 +21,7 @@ Adobe Experience Platform 拡張機能開発者は、拡張機能とルールビ
 
 ## Advertising Cloud
 
-Adobe Experience Platform は、[!DNL Advertising Cloud] を自動的に実行しません。 [!DNL Advertising Cloud] は、ルールアクションで具体的に指定する場合にのみ発生します。いつ実行するかを決定するには、ルール条件を使用します。例えば、cookie を使用してオプトインステータスを決定するには、データ要素を設定してそ のcookie を読み取り、ルールの条件として使用して、「Track Conversion」アクションを実行するタイミングを決定します。
+Adobe Experience Platform は、[!DNL Advertising Cloud] を自動的に実行しません。 [!DNL Advertising Cloud] は、ルールアクションで具体的に指定する場合にのみ発生します。いつ実行するかを決定するには、ルール条件を使用します。例えば、cookie を使用してオプトインステータスを決定するには、データ要素を設定してそ のcookie を読み取り、ルールの条件として使用して、「コンバージョンをトラック」アクションを実行するタイミングを決定します。
 
 同意マネージャ（OneTrust など）との統合により、顧客の同意 cookie を設定および追跡した後、ルールビルダーで使用できます。
 

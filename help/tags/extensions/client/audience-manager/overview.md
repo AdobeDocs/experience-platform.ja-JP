@@ -2,18 +2,14 @@
 title: Adobe Audience Manager 拡張機能の概要
 description: Adobe Experience Platform の Adobe Audience Manager タグ拡張機能について説明します。
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '395'
 ht-degree: 100%
 
 ---
 
 # Adobe Audience Manager 拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Audience Manager タグ拡張機能を使用すれば、Audience Manager が使用する DIL コードを Adobe Experience Platform のプロパティと統合できます。
 

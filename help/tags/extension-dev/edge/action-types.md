@@ -2,18 +2,14 @@
 title: エッジ拡張機能のアクションタイプ
 description: エッジプロパティでタグ拡張機能用にアクションタイプのライブラリモジュールを定義する方法について説明します。
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 94%
+source-wordcount: '332'
+ht-degree: 93%
 
 ---
 
 # エッジ拡張機能のアクションタイプ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグのルールでは、アクションとは、ルールの条件が評価を渡した後に実行される操作です。アクションタイプは拡張機能によって提供され、その効果は拡張機能の作成者が定義します。
 
@@ -29,7 +25,7 @@ ht-degree: 94%
 
 通常、アクションタイプは次の要素で構成されます。
 
-1. Experience PlatformUI およびデータ収集 UI に表示されるビュー。アクションの設定を変更できます。
+1. Experience Platform UI およびデータ収集 UI に表示されるビュー。アクションの設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、アクションを実行します。
 
 例えば、一部のデータをサードパーティのエンドポイントに転送するモジュールは、次のようになります。

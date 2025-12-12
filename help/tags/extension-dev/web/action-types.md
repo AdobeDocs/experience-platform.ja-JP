@@ -2,18 +2,14 @@
 title: Web 拡張機能のアクションの種類
 description: Web プロパティでタグ拡張機能のアクションタイプライブラリモジュールを定義する方法について説明します。
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '367'
 ht-degree: 94%
 
 ---
 
 # Web 拡張機能のアクションの種類
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 データ収集タグのコンテキストでは、アクションとは、ルールイベントが発生し、すべての条件が評価を渡した後に実行される操作です。
 
@@ -29,7 +25,7 @@ ht-degree: 94%
 
 通常、アクションタイプは次の要素で構成されます。
 
-1. Experience PlatformUI とデータ収集 UI に表示される [&#x200B; ビュー &#x200B;](./views.md)。アクションの設定を変更できます。
+1. Experience Platform UI とデータ収集 UI に表示される [ ビュー ](./views.md)。アクションの設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、アクションを実行します。
 
 ```js

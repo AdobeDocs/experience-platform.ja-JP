@@ -2,18 +2,14 @@
 title: Web 拡張機能のライブラリモジュール
 description: Adobe Experience Platform で Web 拡張機能のライブラリモジュールを書式設定する方法について説明します。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '327'
 ht-degree: 100%
 
 ---
 
 # Web 拡張機能のライブラリモジュール
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 >[!IMPORTANT]
 >

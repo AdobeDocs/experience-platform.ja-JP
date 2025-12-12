@@ -2,18 +2,14 @@
 title: Adobe Experience Cloud ID サービス拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能について説明します。
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '739'
 ht-degree: 95%
 
 ---
 
 # Adobe Experience Cloud ID サービス拡張機能の概要
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスでは、Experience Cloud ID 拡張機能の設定と、この拡張機能を使用してルールを作成するときに使用できるオプションについて説明します。
 
@@ -23,9 +19,9 @@ Experience Cloud ID サービスとプロパティを統合するには、この
 
 この節では、Experience Cloud ID 拡張機能を設定する際に使用できるオプションについて説明します。
 
-Experience Cloud ID 拡張機能がまだインストールされていない場合は、プロパティを開き、**[!UICONTROL エクステンション／カタログ]**&#x200B;の順にクリックして、Experience Cloud ID 拡張機能にカーソルを置き、「**[!UICONTROL インストール]**」をクリックします。
+Experience Cloud ID 拡張機能がまだインストールされていない場合は、プロパティを開き、「**[!UICONTROL Extensions > Catalog]**」を選択して、Experience Cloud ID 拡張機能にカーソルを置いて「**[!UICONTROL Install]**」をクリックします。
 
-拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「拡張」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +39,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 （オプション）正規表現の場合は、正規表現を有効にします。
 
-別のパスを除外するには、「**[!UICONTROL 追加]**」をクリックします。
+別のパスを除外するには、「**[!UICONTROL Add]**」をクリックします。
 
 ### オプトイン
 
@@ -73,7 +69,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 ストレージが有効になっている場合にオプトイン cookie の有効期限を秒単位で指定します。
 
-数値を入力し、ドロップダウンリストから時間単位を選択します。例えば、「2」と入力して「**[!UICONTROL 週間]**」を選択します。デフォルトは 13 か月です。
+数値を入力し、ドロップダウンリストから時間単位を選択します。例えば、「2」と入力して、「**[!UICONTROL Weeks]**」を選択します。デフォルトは 13 か月です。
 
 **Permissions?**
 
@@ -117,5 +113,5 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
    * Authenticated
    * Logged out
 
-1. （オプション）「**[!UICONTROL 追加]**」を選択して、さらに顧客 ID を設定します。
-1. 「**[!UICONTROL 変更を保持]**」を選択します。
+1. （オプション）「**[!UICONTROL Add]**」を選択して、さらに顧客 ID を設定します。
+1. **[!UICONTROL Keep Changes]** を選択します。

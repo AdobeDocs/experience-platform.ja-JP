@@ -2,18 +2,14 @@
 title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '561'
 ht-degree: 97%
 
 ---
 
 # turbine 自由変数
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 `turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。Adobe Experience Platform タグのランタイムに固有の情報とユーティリティを提供し、`require()` を使用しなくてもライブラリモジュールでいつでも利用できます。
 

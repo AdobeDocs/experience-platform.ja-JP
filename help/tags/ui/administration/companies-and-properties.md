@@ -2,18 +2,14 @@
 title: プロパティ
 description: Adobe Experience Platform で拡張機能、環境、ライブラリを組織に合わせて編成およびグループ化する方法について説明します。
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1108'
 ht-degree: 90%
 
 ---
 
 # プロパティ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ## Web プロパティ
 

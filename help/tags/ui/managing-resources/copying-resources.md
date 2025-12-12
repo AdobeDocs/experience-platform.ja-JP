@@ -2,18 +2,14 @@
 title: リソースのコピー
 description: Adobe Experience Platform で既存のタグリソースの設定を使用して新しいリソースを作成する方法について説明します。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '785'
 ht-degree: 87%
 
 ---
 
 # リソースのコピー
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 既存のリソースの設定を使用して新しいリソースを作成すると便利な場合があります。この場合、コピーを作成できます。
 
@@ -23,11 +19,11 @@ ht-degree: 87%
 
 ## コピーの開始
 
-インストールした拡張機能を表示して、「 **[!UICONTROL 設定]**」ボタンのドロップダウン矢印を選択し、「**[!UICONTROL コピー]**」を選択すると、拡張機能のコピーを開始できます。
+インストールした拡張機能を表示して、「 **[!UICONTROL Configure]**」ボタンのドロップダウン矢印を選択し、「**[!UICONTROL Copy]**」を選択すると、拡張機能のコピーを開始できます。
 
 ![Analytics 拡張機能のコピー](../../images/copy-initiate-extension.png)
 
-プロパティ、ルール、およびデータ要素の場合は、コピーするリソースを選択し、アクションメニューの「**[!UICONTROL コピー]**」ボタンを選択します。
+プロパティ、ルール、およびデータ要素の場合は、コピーするリソースを選択し、アクションメニューの「**[!UICONTROL Copy]**」ボタンを選択します。
 
 ![Analytics ルールのコピー](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ ht-degree: 87%
 >
 >あるプロパティが拡張機能の開発用に設定され、他のプロパティがそのように設定されていない場合は、リソースを別のプロパティにコピーすることはできません。
 
-目的の動作を設定したら、「**[!UICONTROL コピー]**」を選択します。
+目的の動作を設定したら、「**[!UICONTROL Copy]**」を選択します。
 
 ## プロパティのコピー
 

@@ -2,18 +2,14 @@
 title: Adobe Experience Platform デモ拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Platform デモ拡張機能について説明します。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Adobe Experience Platform デモ拡張機能
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ ht-degree: 99%
 
 この節では、Adobe Experience Platform 拡張機能を設定する際に使用できるオプションについて説明します。
 
-Adobe Experience Platform 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL 拡張機能／カタログ]**&#x200B;を選択し、Adobe Experience Platform 拡張機能にカーソルを置いて「**[!UICONTROL インストール]**」を選択します。
+Adobe Experience Platform 拡張機能がまだインストールされていない場合は、プロパティを開いて、**[!UICONTROL Extensions > Catalog]**&#x200B;を選択し、Adobe Experience Platform 拡張機能にカーソルを置いて「**[!UICONTROL Install]**」を選択します。
 
-拡張機能を設定するには、「[!UICONTROL エクステンション]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL 設定]**」を選択します。
+拡張機能を設定するには、「[!UICONTROL Extensions]」タブを開き、拡張機能にカーソルを置いて「**[!UICONTROL Configure]**」を選択します。
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### ストリーミング接続
 
-Adobe Experience Platform へのデータのストリーミングを開始する際、最初の手順は、ストリーミング接続を選択することです。ストリーミング接続のコンボボックスからいずれかを選択できます。ストリーミング接続は必須フィールドです。ストリーミング接続が作成されていない場合は、「**[!UICONTROL ストリーミング接続を作成]**」ボタンを選択して作成できます。
+Adobe Experience Platform へのデータのストリーミングを開始する際、最初の手順は、ストリーミング接続を選択することです。ストリーミング接続のコンボボックスからいずれかを選択できます。ストリーミング接続は必須フィールドです。ストリーミング接続が作成されていない場合は、「**[!UICONTROL Create a streaming connection]**」ボタンを選択して作成できます。
 
-「**[!UICONTROL ストリーミング接続を作成]**」を選択すると、モーダルウィンドウが表示されます。
+「**[!UICONTROL Create a streaming connection]**」を選択すると、モーダルウィンドウが表示されます。
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-モーダルには、値が事前入力されたフィールドが含まれています。この値は必要に応じて変更できます。複数のストリーミング接続を作成する場合は、**[!UICONTROL データソース]**&#x200B;フィールドを一意にする必要があります。別の接続で既に使用されている&#x200B;**[!UICONTROL データソース]**&#x200B;を使用して別のストリーミング接続を作成しようとすると、失敗します。
+モーダルには、値が事前入力されたフィールドが含まれています。この値は必要に応じて変更できます。複数のストリーミング接続を作成する場合は、**[!UICONTROL Data Source]** フィールドを一意にする必要があります。 別の接続で既に使用されている **[!UICONTROL Data Source]** を使用して別のストリーミング接続を作成しようとすると、失敗します。
 
 ストリーミングエンドポイントを選択すると、ストリーミングエンドポイントの URL とソースが表示されます。
 
@@ -81,7 +77,7 @@ Adobe Experience Platform にデータを送信するために使用するアク
 
 ソース値フィールドには、値またはデータ要素を使用できます。データ要素を追加するには、ソース値フィールドの横にあるデータ要素ボタンを選択します。
 
-ターゲットスキーマフィールドには、データセットスキーマで定義された XDM フィールドのパスが含まれます。スキーマ階層で詳細に定義されたフィールドの場合、パス部分の区切り文字としてドットを使用できます（例： timeSeriesEvents.eventType）。
+ターゲットスキーマフィールドには、データセットスキーマで定義された XDM フィールドのパスが含まれます。スキーマ階層で詳細に定義されたフィールドの場合、パス部分の区切り記号としてドットを使用できます（例： timeSeriesEvents.eventType）。
 
 ### スキーマフィールドセレクター
 

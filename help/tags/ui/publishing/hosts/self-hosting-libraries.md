@@ -2,18 +2,14 @@
 title: 自己ホスト型ライブラリ
 description: Adobe Experience Platform でタグライブラリビルドのセルフホスティングを実装する方法について説明します。
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 90%
+source-wordcount: '446'
+ht-degree: 89%
 
 ---
 
 # 自己ホスト型ライブラリ
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグを使用すると、 [ビルド](../builds.md) と呼ばれる一連のファイルを作成できます。このファイルセットは、実行時のアプリケーションの動作を制御します。
 
