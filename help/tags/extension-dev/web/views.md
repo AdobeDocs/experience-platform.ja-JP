@@ -72,7 +72,7 @@ window.extensionBridge.register({
 | `company` | `orgId` （24 文字のAdobe Experience Cloud ID）、`id` （Reactor API 内での会社の一意の ID）、`tenantId` （Adobe Identity Management System 内での組織の一意の ID）を含むオブジェクト。 |
 | `schema` | [JSON スキーマ](https://json-schema.org/)形式のオブジェクトです。このオブジェクトは[拡張機能マニフェスト](../manifest.md)から取得され、フォームの検証に役立つ場合があります。 |
 | `apiEndpoints` | Reactor API の web アドレスへの参照を含む `reactor` を含むオブジェクト。 |
-| `userConsentPermissions` | Adobeの同意フラグを含むオブジェクト [&#x200B; 製品の使用状況データ &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)。 `globalDataCollectionAndUsage` フラグに格納されているを使用して、拡張機能で *any* 顧客データの収集が許可されているかどうかを把握します。 |
+| `userConsentPermissions` | Adobeの同意フラグを含むオブジェクト [&#x200B; 製品の使用状況データ &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/features/account-preferences#product-usage-data)。 `globalDataCollectionAndUsage` フラグに格納されているを使用して、拡張機能で *any* 顧客データの収集が許可されているかどうかを把握します。 |
 | `preferredLanguages` | 言語文字列の配列。 |
 
 表示は、この情報を使用してフォームのレンダリングと管理をおこなう必要があります。 `info.settings` を扱うだけで済むこともありますが、場合によってはその他の情報も指定する必要があります。
