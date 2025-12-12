@@ -3,10 +3,10 @@ keywords: Experience Platform;クエリサービス;クエリサービス;ネス
 title: BI ツールで使用するネストされたデータ構造の統合
 description: このドキュメントでは、サードパーティの BI ツールをクエリサービスで使用する際に、セッション中にすべてのテーブルとビューの XDM スキーマを統合する方法について説明します。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 97%
+source-wordcount: '854'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform クエリサービスは、サードパーティの BI
 
    * [アドホックスキーマの作成](../../xdm/tutorials/ad-hoc.md)：単一のデータセットでのみ使用するために名前空間が設定されているフィールドを持つ XDM スキーマは、アドホックスキーマと呼ばれます。アドホックスキーマは、Experience Platform の様々なデータ取り込みワークフローで使用され、特定の種類のソース接続を作成します。
 
-* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 * [ネストされたデータ構造](./nested-data-structures.md)：このドキュメントでは、ネストされたデータ構造を含む複雑なデータタイプを含むデータセットを作成、処理または変換する方法の例について説明します。
 
@@ -42,19 +42,19 @@ Adobe Experience Platform クエリサービスは、サードパーティの BI
 
 入力は次の形式にする必要があります。
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 接続文字列の例を以下に示します。
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## 例 {#example}
 
-このガイドで使用されるスキーマの例では、`commerce` オブジェクト構造と `productListItems` 配列を使用する標準フィールドグループの[!UICONTROL コマースの詳細]を採用しています。[[!UICONTROL コマースの詳細]フィールドグループ](../../xdm/field-groups/event/commerce-details.md)について詳しくは、XDM のドキュメントを参照してください。スキーマ構造の表現については、次の画像を参照してください。
+このガイドで使用されるスキーマの例では、[!UICONTROL Commerce Details] オブジェクト構造と `commerce` 配列を使用する標準フィールドグループ `productListItems` を採用しています。 [[!UICONTROL Commerce Details] フィールドグループについて詳しくは ](../../xdm/field-groups/event/commerce-details.md)、XDM のドキュメントを参照してください。 スキーマ構造の表現については、次の画像を参照してください。
 
 ![`commerce` および `productListItems` 構造を含むコマースの詳細フィールドグループのスキーマ図。](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ BI ツールがネストされたデータ構造をサポートしていない�
 
 次の値は、不適切な形式のネストされたフィールドの `commerce.order.priceTotal`（3018.0）、`commerce.order.purchaseID`（c9b5aff9-25de-450b-98f4-4484a2170180）および `commerce.purchases.value`（1.0）を表します。
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 `FLATTEN` 設定を使用すると、ドット表記と元のパス名を使用して、スキーマ内の個別のフィールドまたはネストされたデータ構造のセクション全体にアクセスできます。`commerce` フィールドグループを使用したこの形式の例を以下に示します。
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
