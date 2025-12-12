@@ -1,9 +1,9 @@
 ---
 title: Personalization設定
 description: Web SDK タグ拡張機能でパーソナライゼーションを設定します。
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -18,13 +18,15 @@ ht-degree: 1%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Personalization]** セクションまで下にスクロールします。
 
-![&#x200B; タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 &#x200B;](../assets/web-sdk-ext-personalization.png)
+![ タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 ](../assets/web-sdk-ext-personalization.png)
 
 次のオプションがあります。
 
 ## [!UICONTROL Migrate Target from at.js to the Web SDK]**
 
 このオプションを使用すると、`mbox` 1.x または 2.x ライブラリで使用される従来の `mboxEdgeCluster` および `at.js` Cookie の読み取りと書き込みを Web SDKで許可できます。 この設定は、同じ web サイト上で Web SDKまたは `at.js` を使用してページ間を移動する際に、訪問者のプロファイルをそのままの状態に保つのに役立ちます。 サイトのどこにも `at.js` を実装していない場合は、このチェックボックスを有効にする必要はありません。 このチェックボックスに相当するJavaScript ライブラリは [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md) です。
+
+このオプションを有効にする場合は、[`overrideMboxEdgeServer` でも ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()` を有効にしてください。
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 
