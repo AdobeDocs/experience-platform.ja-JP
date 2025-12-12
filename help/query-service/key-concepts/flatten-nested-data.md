@@ -26,7 +26,7 @@ Adobe Experience Platform クエリサービスは、サードパーティの BI
 
    * [アドホックスキーマの作成](../../xdm/tutorials/ad-hoc.md)：単一のデータセットでのみ使用するために名前空間が設定されているフィールドを持つ XDM スキーマは、アドホックスキーマと呼ばれます。アドホックスキーマは、Experience Platform の様々なデータ取り込みワークフローで使用され、特定の種類のソース接続を作成します。
 
-* [ サンドボックス ](../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 * [ネストされたデータ構造](./nested-data-structures.md)：このドキュメントでは、ネストされたデータ構造を含む複雑なデータタイプを含むデータセットを作成、処理または変換する方法の例について説明します。
 
@@ -54,7 +54,7 @@ prod:all?FLATTEN
 
 ## 例 {#example}
 
-このガイドで使用されるスキーマの例では、[!UICONTROL Commerce Details] オブジェクト構造と `commerce` 配列を使用する標準フィールドグループ `productListItems` を採用しています。 [[!UICONTROL Commerce Details] フィールドグループについて詳しくは ](../../xdm/field-groups/event/commerce-details.md)、XDM のドキュメントを参照してください。 スキーマ構造の表現については、次の画像を参照してください。
+このガイドで使用されるスキーマの例では、[!UICONTROL Commerce Details] オブジェクト構造と `commerce` 配列を使用する標準フィールドグループ `productListItems` を採用しています。 [[!UICONTROL Commerce Details] フィールドグループについて詳しくは &#x200B;](../../xdm/field-groups/event/commerce-details.md)、XDM のドキュメントを参照してください。 スキーマ構造の表現については、次の画像を参照してください。
 
 ![`commerce` および `productListItems` 構造を含むコマースの詳細フィールドグループのスキーマ図。](../images/key-concepts/commerce-details.png)
 
