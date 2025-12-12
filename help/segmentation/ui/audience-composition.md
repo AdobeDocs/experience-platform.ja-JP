@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ドキュメントの [ オーディエンスコンポジションの基本を学ぶ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) を参照して、オーディエンスコンポジションの操作について詳しく説明してください。
+Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ドキュメントの [&#x200B; オーディエンスコンポジションの基本を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) を参照して、オーディエンスコンポジションの操作について詳しく説明してください。
 
 >[!ENDSHADEBOX]
 
@@ -26,7 +26,7 @@ Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ド�
 >- プロファイルの管理
 >- 結合ポリシーの管理
 >
->Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](../../access-control/home.md#permissions) を参照してください。
+>Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](../../access-control/home.md#permissions) を参照してください。
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ド�
 
 オーディエンス別に除外する場合は、除外するオーディエンスを選択 **[!UICONTROL Add Audience]** きます。
 
-![ 「[!UICONTROL Add audience]」ボタンが選択されています。ここから、除外するオーディエンスを選択できます。](../images/ui/audience-composition/add-excluded-audience.png)
+![&#x200B; 「[!UICONTROL Add audience]」ボタンが選択されています。ここから、除外するオーディエンスを選択できます。](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
@@ -160,7 +160,7 @@ Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ド�
 >title="属性別に除外"
 >abstract="属性別に除外すると、選択した属性に基づいて、特定のプロファイルが構成に表示されないように除外できます。"
 
-属性別に除外する場合は、「除外」セクションにある ![ フィルター ](/help/images/icons/project-edit.png) アイコンを選択することで、**[!UICONTROL Exclusion rule]** 除する属性を選択できます。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
+属性別に除外する場合は、「除外」セクションにある ![&#x200B; フィルター &#x200B;](/help/images/icons/project-edit.png) アイコンを選択することで、**[!UICONTROL Exclusion rule]** 除する属性を選択できます。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
 
 ![属性セクションがハイライト表示され、除外する属性を選ぶために選択すべき場所が示されている様子。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -202,13 +202,13 @@ Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ド�
 
 **[!UICONTROL Enrich]** ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL Enrich]**」の順に選択します。
 
-![ 「[!UICONTROL Enrich]」オプションが選択されている様子 ](../images/ui/audience-composition/add-enrich-block.png)
+![&#x200B; 「[!UICONTROL Enrich]」オプションが選択されている様子 &#x200B;](../images/ui/audience-composition/add-enrich-block.png)
 
 **[!UICONTROL Enrich]** ブロックが追加されます。 このブロックを選択すると、エンリッチメントに関する詳細が右側のパネルに表示されます。これには、ブロックのラベルとエンリッチメントデータセットが含まれます。
 
 オーディエンスの強化に使用するデータセットを選択するには、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
-![フィルターボタンがハイライト表示されます。これを選択すると、「[!UICONTROL Select dataset]」ポップオーバーが表示されます ](../images/ui/audience-composition/enrich-select-dataset.png)。
+![フィルターボタンがハイライト表示されます。これを選択すると、「[!UICONTROL Select dataset]」ポップオーバーが表示されます &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)。
 
 **[!UICONTROL Select dataset]** ポップオーバーが表示されます。 エンリッチメント用に追加するデータセットを選択し、次に **[!UICONTROL Select]** をクリックしてエンリッチメント用のデータセットを追加します。
 
@@ -224,15 +224,15 @@ Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ド�
 
 **[!UICONTROL Enrichment criteria]** セクションが右側のパネルに表示されます。 この節では、**[!UICONTROL Source join key]** と **[!UICONTROL Enrichment dataset join key]** を選択して、エンリッチメントデータセットを、作成しようとしているオーディエンスにリンクできます。
 
-![[!UICONTROL Enrichment criteria] 領域がハイライト表示されている様子 ](../images/ui/audience-composition/enrichment-criteria.png)
+![[!UICONTROL Enrichment criteria] 領域がハイライト表示されている様子 &#x200B;](../images/ui/audience-composition/enrichment-criteria.png)
 
-**[!UICONTROL Source join key]** を選択するには、「![ フィルター ](/help/images/icons/project-edit.png)」アイコンを選択します。
+**[!UICONTROL Source join key]** を選択するには、「![&#x200B; フィルター &#x200B;](/help/images/icons/project-edit.png)」アイコンを選択します。
 
 **[!UICONTROL Select a profile attribute]** ポップオーバーが表示されます。 ソース結合キーとして使用するプロファイル属性を選択し、**[!UICONTROL Select]** の後に、その属性をソース結合キーとして選択します。
 
 ![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/select-source-join-key.png)
 
-**[!UICONTROL Enrichment dataset join key]** を選択するには、「![ フィルター ](/help/images/icons/project-edit.png)」アイコンを選択します。
+**[!UICONTROL Enrichment dataset join key]** を選択するには、「![&#x200B; フィルター &#x200B;](/help/images/icons/project-edit.png)」アイコンを選択します。
 
 **[!UICONTROL Enrichment attributes]** ポップオーバーが表示されます。 エンリッチメントデータセット結合キーとして使用する属性を選択し、次にエンリッチメントデータセット結合キーとして **[!UICONTROL Select]** の属性を選択します。
 
@@ -298,7 +298,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 さらに、「**[!UICONTROL Add profile limit]**」切替スイッチを有効にすることで、返されるプロファイルの数を制限できます。 この切替スイッチが有効になっている場合は、返されるプロファイルの最大数を「**[!UICONTROL Included profiles]**」フィールド内で設定できます。
 
-![ 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
+![&#x200B; 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Split] {#split-block}
 
@@ -343,15 +343,15 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 割合で分割する場合、オーディエンスは、指定されたパスの数と割合に基づいてランダムに分割されます。
 
-![ 分割された割合がハイライト表示されている様子 ](../images/ui/audience-composition/split-by-percentage.png)
+![&#x200B; 分割された割合がハイライト表示されている様子 &#x200B;](../images/ui/audience-composition/split-by-percentage.png)
 
 または、ID を指定することもできます。これにより、パーセンテージベースの分割が永続的になります。 使用可能な ID タイプには、組織で使用可能なすべての ID 名前空間が含まれます。
 
-![ 「ID で分割」チェックボックスがハイライト表示されている様子。 さらに、分割する ID を選択できるドロップダウンがハイライト表示されます。](../images/ui/audience-composition/split-by-identity.png)
+![&#x200B; 「ID で分割」チェックボックスがハイライト表示されている様子。 さらに、分割する ID を選択できるドロップダウンがハイライト表示されます。](../images/ui/audience-composition/split-by-identity.png)
 
 ### 属性で分割 {#split-attribute}
 
-属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割の基準にする属性を選択するには、**[!UICONTROL Split]** ブロック、「![ フィルター ](/help/images/icons/project-edit.png) アイコンの順に選択します。
+属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割の基準にする属性を選択するには、**[!UICONTROL Split]** ブロック、「![&#x200B; フィルター &#x200B;](/help/images/icons/project-edit.png) アイコンの順に選択します。
 
 ![フィルターボタンが選択され、属性別にフィルターする方法が示されています。](../images/ui/audience-composition/split-by-attribute.png)
 
@@ -380,11 +380,11 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 コンポジションを作成したら、**[!UICONTROL Publish]** を選択して保存および公開できます。
 
-![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
+![&#x200B; 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
 
 オーディエンスの作成でエラーが発生した場合は、アラートが表示され、問題の解決方法を知らせます。
 
-![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
+![&#x200B; 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
 
 ## 次の手順
 
