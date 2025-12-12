@@ -26,7 +26,7 @@ ht-degree: 1%
 
 このオプションを使用すると、`mbox` 1.x または 2.x ライブラリで使用される従来の `mboxEdgeCluster` および `at.js` Cookie の読み取りと書き込みを Web SDKで許可できます。 この設定は、同じ web サイト上で Web SDKまたは `at.js` を使用してページ間を移動する際に、訪問者のプロファイルをそのままの状態に保つのに役立ちます。 サイトのどこにも `at.js` を実装していない場合は、このチェックボックスを有効にする必要はありません。 このチェックボックスに相当するJavaScript ライブラリは [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md) です。
 
-このオプションを有効にする場合は、[`overrideMboxEdgeServer` でも &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()` を有効にしてください。
+このオプションを有効にする場合は、[`overrideMboxEdgeServer` でも &#x200B;](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()` を有効にしてください。
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-`targetMigrationEnabled` プロパティは、Adobe Target 1.x および 2.x ライブラリが使用する [`mbox` および `mboxEdgeCluster` Cookie の読み取りと書き込みを &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Web SDKで許可するブール値です。 このオプションを使用すると、以前のAdobe Target実装を使用したページと、web SDKを使用したページとの間で訪問者プロファイルを保持できます。
+`targetMigrationEnabled` プロパティは、Adobe Target 1.x および 2.x ライブラリが使用する [`mbox` および `mboxEdgeCluster` Cookie の読み取りと書き込みを &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk)Web SDKで許可するブール値です。 このオプションを使用すると、以前のAdobe Target実装を使用したページと、web SDKを使用したページとの間で訪問者プロファイルを保持できます。
 
 `targetMigrationEnabled` コマンドを実行するときは、`configure` のブール値を設定します。 Web SDKの設定時にこのプロパティを省略した場合、デフォルトは `false` になります。 一部のページでAdobe Target 1.x または 2.x ライブラリが使用されている場合は、この値を `true` に設定します。
 
-このプロパティを使用する場合は、Adobe Targetの実装内で [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) を `targetGlobalSettings()` で有効にしてください。
+このプロパティを使用する場合は、Adobe Targetの実装内で [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) を `targetGlobalSettings()` で有効にしてください。
 
 ```js
 alloy("configure", {
