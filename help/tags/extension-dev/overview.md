@@ -33,7 +33,7 @@ Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエ
 
 ### 件数
 
-ビューは、HTML UI や Data Collection UI を通じて [`iframe` タグアプリケーションの ](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) 要素に読み込むことができるExperience Platform ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
+ビューは、HTML UI や Data Collection UI を通じて [`iframe` タグアプリケーションの &#x200B;](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) 要素に読み込むことができるExperience Platform ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
 
 拡張機能で最も重要なビューファイルは、設定です。 詳しくは、 [拡張機能の設定](#configuration) の節を参照してください。
 
@@ -49,7 +49,7 @@ Web 拡張機能とエッジ拡張機能のどちらを開発しているかに�
 
 ### Web 拡張機能のコンポーネント {#web}
 
-web 拡張機能では、ルールはイベントを介してトリガーされます。その後、特定の条件が満たされた場合に、特定のアクションを実行できます。詳しくは、 ](./web/flow.md)web 拡張機能のモジュールフロー[ の概要を参照してください。
+web 拡張機能では、ルールはイベントを介してトリガーされます。その後、特定の条件が満たされた場合に、特定のアクションを実行できます。詳しくは、 [&#128279;](./web/flow.md)web 拡張機能のモジュールフロー の概要を参照してください。
 
 アドビが提供する [コアモジュール](./web/core.md) に加えて、Web 拡張機能では次のライブラリモジュールタイプを定義できます。
 

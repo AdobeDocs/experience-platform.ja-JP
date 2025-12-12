@@ -27,7 +27,7 @@ Adobe Experience Platform（旧称Adobe Experience Platform Launch）のタグ�
 
 右側のパネルの製品ヘルプのを使用して、タグの詳細を確認し、その他の使用可能なリソースを表示します。
 
-![ データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
+![&#x200B; データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
 
 ### 拡張機能 {#extensions}
 
@@ -70,7 +70,7 @@ Web ベースのマーケティングおよび広告テクノロジーにわた�
 
 * タグは Reactor API とやり取りする。
 * デプロイメントは API で自動化できる
-*  API を独自の社内システムと統合する
+* API を独自の社内システムと統合する
 * 必要に応じて、独自のユーザーインターフェイスを作成できる。
 
 ### 軽量なモジュール式コンテナタグ {#modular-tag}

@@ -21,7 +21,7 @@ ht-degree: 91%
 
 * 左側のナビゲーションの [はじめる前に](../getting-started.md) と **拡張機能の開発** の下にあるその他のドキュメントは、拡張機能を理解するための参考資料です。 これには、拡張機能ができること、拡張機能と Adobe Experience Platform 間でのユーザー情報の保存および受け渡し方法、コードのライブラリへのバンドル方法、拡張機能コードが実行時にブラウザーで解釈および使用される方法に関する詳細が含まれます。
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
-* [JSON リント/バリデーター ](https://jsonlint.com/)。
+* [JSON リント/バリデーター &#x200B;](https://jsonlint.com/)。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 拡張機能を使用して、JSON および JSONP をハイライト表示および印刷してください。
 * オブジェクトから JSON スキーマを作成するのに役立つ [jsonschema.net](https://jsonschema.net/#/editor) エディター。
 * [JSON スキーマバリデータ](https://www.jsonschemavalidator.net) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
@@ -38,7 +38,7 @@ ht-degree: 91%
 
 ## 拡張機能の例
 
-スタータープロジェクトとして、GitHub のサンプル拡張機能（[Hello World サンプル拡張機能 ](https://github.com/adobe/reactor-helloworld-extension) を確認したり、使用したりできます。
+スタータープロジェクトとして、GitHub のサンプル拡張機能（[Hello World サンプル拡張機能 &#x200B;](https://github.com/adobe/reactor-helloworld-extension) を確認したり、使用したりできます。
 
 ## Slack ワークスペース
 

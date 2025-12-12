@@ -19,7 +19,7 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 また、このチュートリアルでは、Experience Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Experience Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して拡張機能をインストールします。
 
-* [Chrome用Experience Platform デバッガー ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Chrome用Experience Platform デバッガー &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ## Web サイトでExperience Platform Debugger を開きます。
 
@@ -53,4 +53,4 @@ Experience Platform Debugger がサイトに接続したら、左側のナビゲ
 
 ## 次の手順
 
-このチュートリアルでは、Experience Platform Debugger を使用してテスト目的で埋め込みコードをローカルに切り替える方法について説明しました。 様々な機能について詳しくは、[Experience Platform Debugger のドキュメント ](../../../debugger/home.md) を参照してください。
+このチュートリアルでは、Experience Platform Debugger を使用してテスト目的で埋め込みコードをローカルに切り替える方法について説明しました。 様々な機能について詳しくは、[Experience Platform Debugger のドキュメント &#x200B;](../../../debugger/home.md) を参照してください。

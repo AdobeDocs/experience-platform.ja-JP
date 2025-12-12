@@ -49,17 +49,17 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 
 >[!TIP]
 >
->右側のパネルから ![ 説明 ](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
+>右側のパネルから ![&#x200B; 説明 &#x200B;](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
 
 1. 「[!UICONTROL Rules]」タブを開き、「**[!UICONTROL Create New Rule]**」を選択します。
 
-   ![ 名前フィールドがハイライト表示された「ルール」タブ ](../../images/launch-rule-builder.png)
+   ![&#x200B; 名前フィールドがハイライト表示された「ルール」タブ &#x200B;](../../images/launch-rule-builder.png)
 
 1. ルール名を設定します。
 1. イベント **[!UICONTROL Add]** アイコンを選択します。
 1. 拡張機能と、その拡張機能で使用可能ないずれかのイベントタイプを選択してから、イベントの設定を指定します。
 
-   ![ ルールイベント設定ページ ](../../images/rule-event-config.png)
+   ![&#x200B; ルールイベント設定ページ &#x200B;](../../images/rule-event-config.png)
 
    使用できるイベントタイプは、選択した拡張機能によって異なります。イベント設定は、イベントタイプに基づいて異なります。設定を指定する必要がないイベントもあります。
 
@@ -89,7 +89,7 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 
 1. 条件 **[!UICONTROL Add]** アイコンを選択して、論理タイプ、拡張機能、および条件タイプを選択し、条件の設定を指定します。 次に、「**[!UICONTROL Keep Changes]**」を選択します。
 
-   ![ ルール条件の設定ページ ](../../images/condition-settings.png)
+   ![&#x200B; ルール条件の設定ページ &#x200B;](../../images/condition-settings.png)
 
    使用できる条件タイプは、選択した拡張機能によって異なります。条件設定は、条件タイプに基づいて異なります。
 
@@ -104,7 +104,7 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 
 1. 「アクション **[!UICONTROL Add]**」アイコンを選択して、拡張機能と、その拡張機能で使用可能ないずれかのアクションタイプを選択し、アクションの設定を指定してから「**[!UICONTROL Keep Changes]**」を選択します。
 
-   ![ ルールアクション設定ページ ](../../images/action-settings.png)
+   ![&#x200B; ルールアクション設定ページ &#x200B;](../../images/action-settings.png)
 
    使用できるアクションタイプは、選択した拡張機能によって異なります。アクション設定は、アクションタイプに基づいて異なります。
 

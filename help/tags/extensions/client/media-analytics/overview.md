@@ -49,7 +49,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.
 | Export APIs to Window Object | グローバルスコープへの Media Analytics API の書き出しを有効または無効にします |
 | Variable Name | `window` オブジェクトの下の Media Analytics API を書き出すために使用する変数 |
 
-**リマインダー：** MA 拡張機能には、[ Analytics](../analytics/overview.md) および [Experience Cloud ID](../id-service/overview.md) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
+**リマインダー：** MA 拡張機能には、[&#x200B; Analytics](../analytics/overview.md) および [Experience Cloud ID](../id-service/overview.md) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
 
 ## MA 拡張機能の使用
 

@@ -19,7 +19,7 @@ ht-degree: 77%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントから [ 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
+ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントから [&#x200B; 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 &#x200B;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
@@ -110,4 +110,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Experience Platform内でデータ要素を効果的に作成および活用する方法について詳しくは、[ データ要素 ](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。
+Experience Platform内でデータ要素を効果的に作成および活用する方法について詳しくは、[&#x200B; データ要素 &#x200B;](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。

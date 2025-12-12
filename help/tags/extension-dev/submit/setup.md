@@ -37,9 +37,9 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 >
 >現在、会社の電子メールは一度に 1 つのパートナープログラムでのみ使用できるので、各プログラムの登録連絡先には、それぞれ別の電子メールを使用する必要があります。
 
-会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト ](https://partners.adobe.com/exchangeprogram/experiencecloud) にログインし、次の手順に従って、Adobe ソリューションへのアクセスをリクエストできます。
+会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト &#x200B;](https://partners.adobe.com/exchangeprogram/experiencecloud) にログインし、次の手順に従って、Adobe ソリューションへのアクセスをリクエストできます。
 
-Experience Cloud アカウントでデータ収集 UI およびExperience Platform UI へのアクセスが必要な場合は、[ データ収集権限ガイド ](../../../collection/permissions.md) を参照してください。
+Experience Cloud アカウントでデータ収集 UI およびExperience Platform UI へのアクセスが必要な場合は、[&#x200B; データ収集権限ガイド &#x200B;](../../../collection/permissions.md) を参照してください。
 
 ## 個人の開発者
 

@@ -67,4 +67,4 @@ Common Analytics Plugins 拡張機能では、タグ機能を利用して Analyt
 
 >[!NOTE]
 >
->上記のプラグインについて詳しくは、[Analytics ドキュメント ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja) を参照してください。
+>上記のプラグインについて詳しくは、[Analytics ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja) を参照してください。

@@ -18,9 +18,9 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-拡張機能をインストールする前に、拡張機能へのアクセス権を持つ [!DNL Algolia] アカウントがあることを確認してくだ [!DNL Insights API] い。 アカウントがない場合は、[ 新規登録 ](https://dashboard.algolia.com/users/sign_up) し、API へのアクセスを有効にします。
+拡張機能をインストールする前に、拡張機能へのアクセス権を持つ [!DNL Algolia] アカウントがあることを確認してくだ [!DNL Insights API] い。 アカウントがない場合は、[&#x200B; 新規登録 &#x200B;](https://dashboard.algolia.com/users/sign_up) し、API へのアクセスを有効にします。
 
-また、[!DNL Algolia] [!DNL Insights API] の使用方法を理解していることを確認します。 イベントの送信方法の概要については、[Insights API を使用したイベントの送信 ](https://www.algolia.com/doc/guides/sending-events/getting-started/) を参照してください。
+また、[!DNL Algolia] [!DNL Insights API] の使用方法を理解していることを確認します。 イベントの送信方法の概要については、[Insights API を使用したイベントの送信 &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/) を参照してください。
 
 [!DNL Algolia] アカウントダッシュボードから次の値を収集します。
 - **[!UICONTROL Application ID]**
@@ -35,18 +35,18 @@ ht-degree: 1%
 
 **[!UICONTROL Catalog]** を開き、**[!UICONTROL Algolia Event Forwarding]** 拡張機能を探して、「**[!UICONTROL Install]**」を選択します。
 
-![Adobe Experience Platformのアルゴリアイベント転送拡張機能のインストールプロセス ](../../../images/extensions/server/algolia/install-extension.png)
+![Adobe Experience Platformのアルゴリアイベント転送拡張機能のインストールプロセス &#x200B;](../../../images/extensions/server/algolia/install-extension.png)
 
 ### 拡張機能の設定 {#configure-extension}
 
 [!DNL Algolia] イベント転送拡張機能を設定するには、「**[!UICONTROL Extensions]**」タブに移動し、「**[!UICONTROL Algolia]**」拡張機能を選択してから「**[!UICONTROL Configure]**」を選択します。
 
-![Adobe Experience Platformの Algolia イベント転送拡張機能の設定画面 ](../../../images/extensions/server/algolia/configure.png)
+![Adobe Experience Platformの Algolia イベント転送拡張機能の設定画面 &#x200B;](../../../images/extensions/server/algolia/configure.png)
 
 | プロパティ | 説明 |
 |----------|-------------|
-| **[!UICONTROL Application ID]** | 「[!UICONTROL Application ID]API キー [」セクションの下の Algolia ダッシュボードにある ](https://www.algolia.com/account/api-keys/all) を入力します。 |
-| **[!UICONTROL Search API Key]** | 「[!UICONTROL Search API Key]API キー [」セクションの下の Algolia ダッシュボードにある ](https://www.algolia.com/account/api-keys/all) を入力します。 |
+| **[!UICONTROL Application ID]** | 「[!UICONTROL Application ID]API キー [」セクションの下の Algolia ダッシュボードにある &#x200B;](https://www.algolia.com/account/api-keys/all) を入力します。 |
+| **[!UICONTROL Search API Key]** | 「[!UICONTROL Search API Key]API キー [」セクションの下の Algolia ダッシュボードにある &#x200B;](https://www.algolia.com/account/api-keys/all) を入力します。 |
 | **[!UICONTROL Index Name]** | 製品またはコンテンツを含む [!UICONTROL Index Name] を入力します。 このインデックスはデフォルト値として使用されます。 |
 
 {style="table-layout:auto"}
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 [!DNL Algolia] イベント転送拡張機能を使用する前に、[!DNL Algolia] イベントフィールドグループをスキーマに追加する必要があります。 これは、Experience Platformを通じて提供される標準フィールドグループの 1 つです。
 
-![ アルゴリアイベントフィールドグループの設定 ](../../../images/extensions/server/algolia/algolia-field-groups.png)
+![&#x200B; アルゴリアイベントフィールドグループの設定 &#x200B;](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
 ### [!DNL Algolia] イベントフィールドグループをスキーマに追加します {#add-algolia-field-group}
 
@@ -79,7 +79,7 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 
 「**[!DNL Algolia]Event Details**」フィールドグループ/**[!UICONTROL Add field group]** ボタン/**[!UICONTROL Save]** を選択します。
 
-![Experience Platformでの Algolia プロファイルフィールドグループの設定 ](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
+![Experience Platformでの Algolia プロファイルフィールドグループの設定 &#x200B;](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
 ### [!UICONTROL Data Collection] タグを使用したデータのマッピングと送信
 
@@ -91,7 +91,7 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 2. [!DNL Adobe Experience Platform Web SDK] 拡張機能をインストールします。
 3. この拡張機能を使用して、HTMLから **[!DNL Algolia]Event** フィールドグループにデータをマッピングします。
 
-![HTML データセットがアルゴリアイベントフィールドグループにマッピングされている例 ](../../../images/extensions/server/algolia/html-dataset.png)
+![HTML データセットがアルゴリアイベントフィールドグループにマッピングされている例 &#x200B;](../../../images/extensions/server/algolia/html-dataset.png)
 
 #### 手順 2：マッピング用のデータ要素 [!DNL XDM] 作成
 
@@ -109,14 +109,14 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 4. アクションタイプとして「**[!UICONTROL Send event]**」を選択します。
 5. [!DNL XDM] データ要素を使用するようにアクションを設定します。
 
-![Algolia イベント転送拡張機能でのルールアクションの設定例 ](../../../images/extensions/server/algolia/rule-action.png)
+![Algolia イベント転送拡張機能でのルールアクションの設定例 &#x200B;](../../../images/extensions/server/algolia/rule-action.png)
 
 #### 手順 4：公開とテスト
 
 1. ルールと拡張機能の変更をターゲット環境に公開します。
 2. [!DNL Adobe Experience Platform Debugger] を使用して、データがAdobe Experience Platformに送信され、[!DNL Algolia] に転送されることを確認します。
 
-![ アルゴリア拡張機能を使用してイベントを送信するルールを設定する ](../../../images/extensions/server/algolia/adobe-debugger.png)
+![&#x200B; アルゴリア拡張機能を使用してイベントを送信するルールを設定する &#x200B;](../../../images/extensions/server/algolia/adobe-debugger.png)
 
 ### [!DNL Algolia] でのイベントの検証
 
@@ -126,7 +126,7 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 
 [!DNL Algolia] のイベント転送拡張機能から送信されたイベントと一致するイベントを選択し、期待されるデータがイベントに存在することを確認します。
 
-![Algolia デバッガーでのイベントの検証 ](../../../images/extensions/server/algolia/algolia-debugger.png)
+![Algolia デバッガーでのイベントの検証 &#x200B;](../../../images/extensions/server/algolia/algolia-debugger.png)
 
 ## 一般的な実装シナリオ
 
@@ -159,13 +159,13 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 
 ## 次の手順
 
-このガイドでは、[!DNL Algolia] を使用して [!DNL Algolia Event Forwarding Extension] にデータを送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
+このガイドでは、[!DNL Algolia] を使用して [!DNL Algolia Event Forwarding Extension] にデータを送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。
 
-Experience Platform Debugger とイベント転送の監視ツールを使用した実装のデバッグ方法について詳しくは、[Adobe Experience Platform Debuggerの概要 ](../../../../debugger/home.md) および [ イベント転送でのアクティビティの監視 ](../../../ui/event-forwarding/monitoring.md) を参照してください。
+Experience Platform Debugger とイベント転送の監視ツールを使用した実装のデバッグ方法について詳しくは、[Adobe Experience Platform Debuggerの概要 &#x200B;](../../../../debugger/home.md) および [&#x200B; イベント転送でのアクティビティの監視 &#x200B;](../../../ui/event-forwarding/monitoring.md) を参照してください。
 
 ## その他のリソース
 
-- [[!DNL Algolia] Insights API ドキュメント ](https://www.algolia.com/doc/rest-api/insights/)
-- [[!DNL Algolia]  イベントドキュメント ](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform]  イベント転送ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja)
-- [[!DNL Algolia] AI 機能の概要 ](https://www.algolia.com/products/ai-search/)
+- [[!DNL Algolia] Insights API ドキュメント &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+- [[!DNL Algolia]  イベントドキュメント &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/)
+- [[!DNL Adobe Experience Platform]  イベント転送ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja)
+- [[!DNL Algolia] AI 機能の概要 &#x200B;](https://www.algolia.com/products/ai-search/)
