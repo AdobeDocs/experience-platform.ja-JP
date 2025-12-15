@@ -13,7 +13,7 @@ ht-degree: 77%
 
 # XDM システムトラブルシューティングガイド
 
-このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
 
 **[!DNL Experience Data Model]（XDM）**&#x200B;は、カスタマーエクスペリエンス（顧客体験）管理のための標準化されたスキーマを定義するオープンソース仕様です。**XDM システム**&#x200B;は [!DNL Experience Platform] の基礎となる方法論で、[!DNL Experience Data Model] スキーマを [!DNL Experience Platform] サービスで操作できるようにするものです。**[!DNL Schema Registry]** は、[!DNL Experience Platform] 内の **[!DNL Schema Library]** にアクセスするためのユーザーインターフェイスと RESTful API を提供します。詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
@@ -71,7 +71,7 @@ XDM は、このデータタイプの使用に次の制限を設けます。
 - カスタム XDM オブジェクトで定義されるマップは、単一レベルに制限されます。 ネストされたマップは作成できません。 この制限は、標準 XDM オブジェクトで定義されたマップには適用されません。
 - マップの配列はサポートされていません。
 
-詳しくは、[ マップオブジェクトの使用制限 ](./ui/fields/map.md#restrictions) を参照してください。
+詳しくは、[&#x200B; マップオブジェクトの使用制限 &#x200B;](./ui/fields/map.md#restrictions) を参照してください。
 
 >[!NOTE]
 >
@@ -134,11 +134,11 @@ API を使用して、スキーマを [!DNL Real-Time Customer Profile] で使�
 
 [!DNL Experience Platform] で、左側のナビゲーションにある「**[!UICONTROL Schemas]**」を選択し、有効にするスキーマの名前をスキーマのリストから選択します。 次に、エディターの右側の「**[!UICONTROL Schema Properties]**」で、「**[!UICONTROL Profile]**」を選択してオンに切り替えます。
 
-詳しくは、[ チュートリアルの ](./tutorials/create-schema-ui.md#profile) リアルタイム顧客プロファイルでの使用 [!UICONTROL Schema Editor] に関する節を参照してください。
+詳しくは、[&#x200B; チュートリアルの &#x200B;](./tutorials/create-schema-ui.md#profile) リアルタイム顧客プロファイルでの使用 [!UICONTROL Schema Editor] に関する節を参照してください。
 
 ### Adobe Analytics データをソースとしてインポートした場合、自動作成されたスキーマはプロファイルに対して有効になっていますか？
 
-リアルタイム顧客プロファイルに対してスキーマは自動的には有効になりません。 プロファイルに対して有効になっているスキーマに基づいて、プロファイルのデータセットを明示的に有効にする必要があります。 [ リアルタイム顧客プロファイルで使用するデータセットを有効にするために必要な手順と要件 ](../catalog/datasets/user-guide.md#enable-profile) については、ドキュメントを参照してください。
+リアルタイム顧客プロファイルに対してスキーマは自動的には有効になりません。 プロファイルに対して有効になっているスキーマに基づいて、プロファイルのデータセットを明示的に有効にする必要があります。 [&#x200B; リアルタイム顧客プロファイルで使用するデータセットを有効にするために必要な手順と要件 &#x200B;](../catalog/datasets/user-guide.md#enable-profile) については、ドキュメントを参照してください。
 
 ### プロファイルが有効なスキーマを削除できますか？ {#delete-profile-enabled}
 
