@@ -4,16 +4,16 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
-ht-degree: 81%
+source-wordcount: '2368'
+ht-degree: 77%
 
 ---
 
 # XDM システムトラブルシューティングガイド
 
-このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
 
 **[!DNL Experience Data Model]（XDM）**&#x200B;は、カスタマーエクスペリエンス（顧客体験）管理のための標準化されたスキーマを定義するオープンソース仕様です。**XDM システム**&#x200B;は [!DNL Experience Platform] の基礎となる方法論で、[!DNL Experience Data Model] スキーマを [!DNL Experience Platform] サービスで操作できるようにするものです。**[!DNL Schema Registry]** は、[!DNL Experience Platform] 内の **[!DNL Schema Library]** にアクセスするためのユーザーインターフェイスと RESTful API を提供します。詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
@@ -71,7 +71,7 @@ XDM は、このデータタイプの使用に次の制限を設けます。
 - カスタム XDM オブジェクトで定義されるマップは、単一レベルに制限されます。 ネストされたマップは作成できません。 この制限は、標準 XDM オブジェクトで定義されたマップには適用されません。
 - マップの配列はサポートされていません。
 
-詳しくは、[&#x200B; マップオブジェクトの使用制限 &#x200B;](./ui/fields/map.md#restrictions) を参照してください。
+詳しくは、[ マップオブジェクトの使用制限 ](./ui/fields/map.md#restrictions) を参照してください。
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ API での ID 記述子の作成について詳しくは、[!DNL Schema Registry
 
 ### UI での ID の定義
 
-スキーマエディターにスキーマを開いた状態で、ID としてマークするフィールドをエディターの「**[!UICONTROL 構造]**」セクションで選択します。右側の「**[!UICONTROL フィールドプロパティ]**」で、「**[!UICONTROL ID]**」チェックボックスをオンにします。
+スキーマエディターにスキーマを開いた状態で、ID としてマークするフィールドをエディターの「**[!UICONTROL Structure]**」セクションで選択します。 右側の「**[!UICONTROL Field Properties]**」の下にある「**[!UICONTROL Identity]**」チェックボックスをオンにします。
 
 UI で ID を管理する方法について詳しくは、スキーマエディターのチュートリアルの [ID フィールドの定義](./tutorials/create-schema-ui.md#identity-field)に関する節を参照してください。
 
@@ -132,17 +132,17 @@ API を使用して、スキーマを [!DNL Real-Time Customer Profile] で使�
 
 ### UI を使用して既存のスキーマを [!DNL Profile] に有効にする方法
 
-[!DNL Experience Platform] で、左側のナビゲーションにある「**[!UICONTROL スキーマ]**」を選択し、有効にするスキーマの名前をスキーマのリストから選択します。次に、エディターの右側の「**[!UICONTROL スキーマプロパティ]**」で、「**[!UICONTROL プロファイル]**」を選択してオンに切り替えます。
+[!DNL Experience Platform] で、左側のナビゲーションにある「**[!UICONTROL Schemas]**」を選択し、有効にするスキーマの名前をスキーマのリストから選択します。 次に、エディターの右側の「**[!UICONTROL Schema Properties]**」で、「**[!UICONTROL Profile]**」を選択してオンに切り替えます。
 
-詳しくは、[!UICONTROL スキーマエディター]のチュートリアルの[リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile)に関する節を参照してください。
+詳しくは、[ チュートリアルの ](./tutorials/create-schema-ui.md#profile) リアルタイム顧客プロファイルでの使用 [!UICONTROL Schema Editor] に関する節を参照してください。
 
 ### Adobe Analytics データをソースとしてインポートした場合、自動作成されたスキーマはプロファイルに対して有効になっていますか？
 
-リアルタイム顧客プロファイルに対してスキーマは自動的には有効になりません。 プロファイルに対して有効になっているスキーマに基づいて、プロファイルのデータセットを明示的に有効にする必要があります。 [&#x200B; リアルタイム顧客プロファイルで使用するデータセットを有効にするために必要な手順と要件 &#x200B;](../catalog/datasets/user-guide.md#enable-profile) については、ドキュメントを参照してください。
+リアルタイム顧客プロファイルに対してスキーマは自動的には有効になりません。 プロファイルに対して有効になっているスキーマに基づいて、プロファイルのデータセットを明示的に有効にする必要があります。 [ リアルタイム顧客プロファイルで使用するデータセットを有効にするために必要な手順と要件 ](../catalog/datasets/user-guide.md#enable-profile) については、ドキュメントを参照してください。
 
-### プロファイルが有効なスキーマを削除できますか？
+### プロファイルが有効なスキーマを削除できますか？ {#delete-profile-enabled}
 
-リアルタイム顧客プロファイルに対して有効にした後は、スキーマを削除できません。 プロファイルに対してスキーマを有効にすると、そのスキーマを無効にしたり削除したりすることはできず、スキーマからフィールドを削除することもできません。 したがって、プロファイルに対して有効にする前に、スキーマ設定を慎重に計画および検証することが重要です。 ただし、プロファイルが有効になっているデータセットは削除できます。 情報については、次を参照してください：<https://experienceleague.adobe.com/ja/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+リアルタイム顧客プロファイルに対して有効にした後は、スキーマを削除できません。 プロファイルに対してスキーマを有効にすると、そのスキーマを無効にしたり削除したりすることはできず、スキーマからフィールドを削除することもできません。 したがって、プロファイルに対して有効にする前に、スキーマ設定を慎重に計画および検証することが重要です。 ただし、プロファイルが有効になっているデータセットは削除できます。 情報については、次を参照してください：<https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 プロファイルが有効なスキーマを使用しない場合は、スキーマの名前を **使用しない** または **非アクティブ** に変更することをお勧めします。
 
