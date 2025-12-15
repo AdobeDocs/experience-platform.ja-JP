@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platform の属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 71%
+source-wordcount: '1929'
+ht-degree: 69%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 >
->属性ベースのアクセス制御をExperience Platformのデータガバナンス機能と混同しないでください。つまり、組織内のどのユーザーがアクセス権を持っているかではなく、ラベルとポリシーを使用してExperience Platformでのデータの使用方法を制御できます。 詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](../../data-governance/home.md) を参照してください。
+>属性ベースのアクセス制御をExperience Platformのデータガバナンス機能と混同しないでください。つまり、組織内のどのユーザーがアクセス権を持っているかではなく、ラベルとポリシーを使用してExperience Platformでのデータの使用方法を制御できます。 詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
 
 属性ベースのアクセス制御により、組織の管理者は、すべてのExperience Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、カスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 次のビデオは、属性ベースのアクセス制御についての理解を深めるために、また、役割、リソース、ポリシーを設定する方法の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451828?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## 属性ベースのアクセス制御用語
 
@@ -93,7 +93,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 >
 >要約すると、宛先と属性ベースのアクセス制御を使用する際には、次の点に注意してください。
 >
->* アクティブ化できるのは、アクティベーションワークフローの [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) および [&#x200B; セグメント手順を選択 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) でアクセスおよび表示する権限を持つオーディエンスのみです。
+>* アクティブ化できるのは、アクティベーションワークフローの [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) および [ セグメント手順を選択 ](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) でアクセスおよび表示する権限を持つオーディエンスのみです。
 >* [アクティベーションワークフローのマッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)では、アクセス権限のあるフィールドのみを表示して選択してアクティブ化できます。
 >* 書き出し用にマッピングされるすべてのフィールドへのアクセス権を持たない既存の宛先に対して、追加のセグメントをアクティブ化しようとすると、アクティベーションワークフローがブロックされます。
 
@@ -141,3 +141,9 @@ Experience Platformを使用すると、いつでもどこでもブランドと�
 * ユーザーに割り当てられた役割に適用される権限セットに応じて、特定の XDM スキーマフィールドへのユーザーアクセスを設定できます。
 
 XDM について詳しくは、[XDM の概要](../../xdm/home.md)を参照してください。
+
+### Customer Journey Analytics（CJA）
+
+Customer Journey Analytics（CJA）のアクセス権限は、CJAのアプリケーションレベルで管理されます。 CJAは、独自の属性ベースのアクセス制御を使用し、Adobe Experience Platformで定義された属性ベースのアクセス制御を継承または適用しません。
+
+CJAのアクセス制御について詳しくは、[CJAのアクセス制御 ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/technotes/access-control) ドキュメントを参照してください。
