@@ -2,10 +2,10 @@
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 83%
 
 ---
 
@@ -17,7 +17,7 @@ API エンドポイントにデータを書き出す際に最大の効率を確�
 
 Destination SDK を使用してリアルタイム（ストリーミング）宛先を作成する際に、書き出されたプロファイルを結果の書き出しにどのように組み合わせるかを設定できます。この動作は、集計ポリシー設定によって決まります。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 &#x200B;](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して集計ポリシー設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -52,7 +52,26 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | `aggregationType` | 文字列 | 宛先が使用する必要がある、集計ポリシーのタイプを示します。サポートされる集計タイプ： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | 整数 | Adobe Experience Platform は、1 回の HTTP 呼び出しで書き出された複数のプロファイルを集計できます。<br><br>この値は、1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を示します。これはベストエフォートの集計であることに注意してください。例えば、値 100 を指定した場合、Experience Platformが 1 回の呼び出しで送信するプロファイルの数は、100 未満の任意の数になります。 <br><br>サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を `1` に設定します。 |
 | `bestEffortAggregation.splitUserById` | ブール値 | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが 1 回の呼び出しで 1 つの ID しか受け入れない場合、特定の ID 名前空間に対して、このフラグを `true` に設定します。 |
+| `bestEffortAggregation.aggregationKey` | オブジェクト | *オプション*。以下に説明するパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。 集計が不要な場合、このパラメーターは省略または `null` に設定できます。 指定した場合、設定可能な集計の集計キーと同じように機能します。 |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID とオーディエンスステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | ブール値 | 宛先に書き出されたプロファイルを ID 名前空間でグループ化する場合は、このパラメーターを `true` に設定します。 |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | ブール値 | 書き出されたプロファイルを単一の ID （GAID、IDFA、電話番号、メールなど）に基づいてグループに集計する場合は、`true` にこのパラメーターを設定します。 `false` パラメーターを使用してカスタム ID 名前空間のグループ化を定義する場合は、`groups` に設定します。 |
+| `bestEffortAggregation.aggregationKey.groups` | 配列 | `oneIdentityPerGroup` が `false` に設定されている場合は、このパラメーターを使用します。 宛先に書き出されたプロファイルを ID 名前空間のグループでグループ化する場合は、ID グループのリストを作成します。例えば、上記の例に示した設定を使用して、IDFA および GAID モバイル識別子を含むプロファイルを宛先に対する 1 つの呼び出しに、メールを別の呼び出しに、それぞれ組み合わせることができます。 |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | `configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID とオーディエンスステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | ブール値 | 宛先に書き出されたプロファイルを ID 名前空間でグループ化する場合は、このパラメーターを `true` に設定します。 |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | ブール値 | 書き出されたプロファイルを単一の ID（GAID、IDFA、電話番号、メールなど）に基づいてグループに集計する場合は、このパラメーターを `true` に設定します。 |
-| `configurableAggregation.aggregationKey.groups` | 配列 | 宛先に書き出されたプロファイルを ID 名前空間のグループでグループ化する場合は、ID グループのリストを作成します。例えば、上記の例に示した設定を使用して、IDFA および GAID モバイル識別子を含むプロファイルを宛先に対する 1 つの呼び出しに、メールを別の呼び出しに、それぞれ組み合わせることができます。 |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | ブール値 | 書き出されたプロファイルを単一の ID （GAID、IDFA、電話番号、メールなど）に基づいてグループに集計する場合は、`true` にこのパラメーターを設定します。 `false` パラメーターを使用してカスタム ID 名前空間のグループ化を定義する場合は、`groups` に設定します。 |
+| `configurableAggregation.aggregationKey.groups` | 配列 | `oneIdentityPerGroup` が `false` に設定されている場合は、このパラメーターを使用します。 宛先に書き出されたプロファイルを ID 名前空間のグループでグループ化する場合は、ID グループのリストを作成します。例えば、上記の例に示した設定を使用して、IDFA および GAID モバイル識別子を含むプロファイルを宛先に対する 1 つの呼び出しに、メールを別の呼び出しに、それぞれ組み合わせることができます。 |
 
 {style="table-layout:auto"}
 

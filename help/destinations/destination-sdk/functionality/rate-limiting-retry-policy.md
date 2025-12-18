@@ -2,10 +2,10 @@
 description: Experience Platform がストリーミング宛先によって返される様々なタイプのエラーをどのように処理し、宛先プラットフォームへのデータ送信をどのように再試行するかを説明します。
 title: Destination SDK で作成されたストリーミング宛先のレート制限および再試行ポリシー
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 81%
 
 ---
 
@@ -17,7 +17,14 @@ Destination SDK を使用して宛先を設定する場合、[ベストエフォ
 
 ## ベストエフォート集計 {#best-effort-aggregation}
 
-宛先に対する任意の HTTP 呼び出しに失敗した場合、Experience Platform は、最初の呼び出しの後、即座にもう一度、呼び出しを試します。2 回目の呼び出しでも失敗する場合、Experience Platform は、呼び出しをドロップして、3 回目の再試行は行いません。
+Experience Platformは、次の HTTP 応答コード **403、408、409、429、500、502、503、504** を返す呼び出しを再試行します。 次の間隔で 2 回の再試行が実行されます。
+
+* 最初の再試行：15 秒後
+* 2 回目の再試行：30 秒後
+
+Experience Platformは、400 *無効なリクエスト* など、その他の HTTP 応答コードを返す呼び出しを再試行しません。 両方の再試行が行われた後も呼び出しが失敗する場合、Experience Platformはアクティベートをドロップし、再試行は行いません。
+
+カスタマーサポートに問い合わせることで、特定のデータフローに対して別の再試行ポリシーをリクエストできます。
 
 ## 設定可能な集計 {#configurable-aggregation}
 
