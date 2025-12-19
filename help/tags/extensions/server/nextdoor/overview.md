@@ -18,11 +18,11 @@ ht-degree: 9%
 
 [[!DNL Nextdoor] Conversion API Extension](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) を使用して、コンバージョンイベントを Conversion API に直接送信 [!DNL Nextdoor's] ます。 この拡張機能は、サーバーサイドのコンバージョンデータを送信することで、[!DNL Nextdoor] 広告キャンペーンのパフォーマンスを追跡および測定するのに役立ちます。
 
-このガイドでは、イベント転送 [!DNL Nextdoor] ルール [ で ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) Conversion API 拡張機能をインストール、設定、使用する方法について説明します。
+このガイドでは、イベント転送 [!DNL Nextdoor] ルール [&#x200B; で &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) Conversion API 拡張機能をインストール、設定、使用する方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能を使用するには、有効な [!DNL Nextdoor] Ads Manager アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Nextdoor Ads]  登録ページ ](https://ads.nextdoor.com/v2/signup) に移動し、アカウントを登録して作成してください。
+この拡張機能を使用するには、有効な [!DNL Nextdoor] Ads Manager アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Nextdoor Ads]  登録ページ &#x200B;](https://ads.nextdoor.com/v2/signup) に移動し、アカウントを登録して作成してください。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
@@ -37,7 +37,7 @@ Experience Platformを [!DNL Nextdoor] に接続するには、以下が必要�
 
 拡張機能をインストールするには、左側のナビゲーションで「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL Nextdoor Conversion API Extension]** を選択し、「**[!UICONTROL Install]**」を選択します。
 
-![ インストールを強調表示した [!DNL Nextdoor] 拡張機能カードを示す拡張機能カタログ ](../../../images/extensions/server/nextdoor/install-extension.png)
+![&#x200B; インストールを強調表示した [!DNL Nextdoor] 拡張機能カードを示す拡張機能カタログ &#x200B;](../../../images/extensions/server/nextdoor/install-extension.png)
 
 次の画面で、[!DNL Nextdoor Ads Manager] ークフローから生成した設定値を入力します。
 
@@ -46,15 +46,15 @@ Experience Platformを [!DNL Nextdoor] に接続するには、以下が必要�
 
 終了したら「**[!UICONTROL Save]**」を選択します。
 
-![[!DNL Nextdoor][!DNL Nextdoor] 変換 API 拡張機能の設定画面 ](../../../images/extensions/server/nextdoor/configure.png)
+![[!DNL Nextdoor]&#x200B;[!DNL Nextdoor] 変換 API 拡張機能の設定画面 &#x200B;](../../../images/extensions/server/nextdoor/configure.png)
 
 ## イベント転送ルールの設定 {#config-rule}
 
 すべてのデータ要素を設定したら、イベントを [!DNL Nextdoor] に送信するタイミングと方法を決定するイベント転送ルールを作成できます。
 
-イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下で、新しいアクションを追加し、拡張機能を **[!UICONTROL Nextdoor Conversion API Extension]** に設定します。 Edge Network イベントを [!DNL Nextdoor] に送信するには、**[!UICONTROL Action Type]** を **[!UICONTROL Report Web Conversions]** に設定します。
+イベント転送プロパティに新しい [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下で、新しいアクションを追加し、拡張機能を **[!UICONTROL Nextdoor Conversion API Extension]** に設定します。 Edge Network イベントを [!DNL Nextdoor] に送信するには、**[!UICONTROL Action Type]** を **[!UICONTROL Report Web Conversions]** に設定します。
 
-![ データ収集 UI で [!UICONTROL Report Web Conversions] ルールに対して選択されている [!DNL Nextdoor] アクションタイプ ](../../../images/extensions/server/nextdoor/select-action.png)
+![&#x200B; データ収集 UI で [!UICONTROL Report Web Conversions] ルールに対して選択されている [!DNL Nextdoor] アクションタイプ &#x200B;](../../../images/extensions/server/nextdoor/select-action.png)
 
 この選択を行うと、以下に示すように、イベントをさらに設定できる追加のコントロールが表示されます。 完了したら、「**[!UICONTROL Keep Changes]**」を選択してルールを保存します。
 
@@ -148,7 +148,7 @@ Experience Platformを [!DNL Nextdoor] に接続するには、以下が必要�
 
 ## データ要素の統合 {#data-element}
 
-すべてのフィールドで、Adobe イベント転送データ要素をサポートしています。 任意のフィールドの横にあるデータ要素アイコン ![ データ要素 ](../../../images/extensions/server/nextdoor/data-element-icon.png) を選択すると、次の操作を実行できます。
+すべてのフィールドで、Adobe イベント転送データ要素をサポートしています。 任意のフィールドの横にあるデータ要素アイコン ![&#x200B; データ要素 &#x200B;](../../../images/extensions/server/nextdoor/data-element-icon.png) を選択すると、次の操作を実行できます。
 
 * **既存のデータ要素を選択**：既に作成されているデータ要素から選択します。
 * **新しいデータ要素の追加**：必要に応じて、新しいデータ要素を作成して定義します。
@@ -188,8 +188,8 @@ Experience Platformを [!DNL Nextdoor] に接続するには、以下が必要�
    * ユーザーのオプトアウト環境設定とデータ削除リクエストに従います。
    * オプトアウトしたユーザーには、制限付きのデータ使用パラメーターを使用します。
    * **リソース**:
-      * [GDPR コンプライアンスガイド ](https://gdpr.eu/compliance/)
-      * [CCPA プライバシー要件 ](https://oag.ca.gov/privacy/ccpa)
+      * [GDPR コンプライアンスガイド &#x200B;](https://gdpr.eu/compliance/)
+      * [CCPA プライバシー要件 &#x200B;](https://oag.ca.gov/privacy/ccpa)
 
 * **データの最小化**：コンバージョントラッキングに必要なデータのみを送信します。
 
@@ -221,4 +221,4 @@ Experience Platformを [!DNL Nextdoor] に接続するには、以下が必要�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、[!DNL Nextdoor] Conversion API 拡張機能を使用してサーバーサイドのイベントデータを [!DNL Nextdoor] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
+このガイドでは、[!DNL Nextdoor] Conversion API 拡張機能を使用してサーバーサイドのイベントデータを [!DNL Nextdoor] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。
