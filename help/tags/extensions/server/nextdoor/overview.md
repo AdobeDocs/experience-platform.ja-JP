@@ -18,7 +18,7 @@ ht-degree: 9%
 
 [[!DNL Nextdoor] Conversion API Extension](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) を使用して、コンバージョンイベントを Conversion API に直接送信 [!DNL Nextdoor's] ます。 この拡張機能は、サーバーサイドのコンバージョンデータを送信することで、[!DNL Nextdoor] 広告キャンペーンのパフォーマンスを追跡および測定するのに役立ちます。
 
-このガイドでは、イベント転送 [!DNL Nextdoor] ルール [&#x200B; で &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) Conversion API 拡張機能をインストール、設定、使用する方法について説明します。
+このガイドでは、イベント転送 [!DNL Nextdoor] ルール [&#x200B; で &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/ui/rules) Conversion API 拡張機能をインストール、設定、使用する方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
