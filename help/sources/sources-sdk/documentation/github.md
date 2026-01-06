@@ -17,11 +17,11 @@ ht-degree: 2%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[&#x200B; ドキュメントを参照するために Git リポジトリをローカルに設定する &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[&#x200B; 大幅な変更点に対する GitHub 投稿ワークフロー &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[&#x200B; ドキュメントを参照するために Git リポジトリをローカルに設定する &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[&#x200B; 大幅な変更点に対する GitHub 投稿ワークフロー &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
 
 ## GitHub 環境の設定
 
-GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
+GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/experience-platform.ja-JP) に移動することです。
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 ![create-branch](../assets/create-branch.png)
 
-フォークしたリポジトリーの GitHub フォルダー構造で、[`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) に移動し、リストからソースに適したカテゴリを選択します。 例えば、新しい CRM ソースのドキュメントを作成する場合は、「**crm**」を選択します。
+フォークしたリポジトリーの GitHub フォルダー構造で、[`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.ja-JP/tree/main/help/sources/tutorials/api/create) に移動し、リストからソースに適したカテゴリを選択します。 例えば、新しい CRM ソースのドキュメントを作成する場合は、「**crm**」を選択します。
 
 >[!TIP]
 >
->UI 用のドキュメントを作成する場合は、[`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) に移動して、ソースに適したカテゴリを選択します。 画像を追加するには、に移動 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)、スクリーンショットを `sdk` フォルダーに追加します。
+>UI 用のドキュメントを作成する場合は、[`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.ja-JP/tree/main/help/sources/tutorials/ui/create) に移動して、ソースに適したカテゴリを選択します。 画像を追加するには、に移動 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.ja-JP/tree/main/help/sources/images/tutorials/create)、スクリーンショットを `sdk` フォルダーに追加します。
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 この時点で、Adobe投稿者使用許諾契約（CLA）への署名を求める通知が表示されます。 これは必須の手順です。 CLA に署名したら、PR ページを更新し、プルリクエストを送信します。
 
-https://github.com/AdobeDocs/experience-platform.enの「プルリクエスト」タブを調べると、プルリクエストが送信されたことを確認できます。
+https://github.com/AdobeDocs/experience-platform.ja-JPの「プルリクエスト」タブを調べると、プルリクエストが送信されたことを確認できます。
 
 ![confirm-pr](../assets/confirm-pr.png)
