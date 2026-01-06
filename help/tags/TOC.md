@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 80%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 80%
    * [概要](./extensions/overview.md)
    * タグ拡張機能（クライアントサイド） {#client}
       * [概要](./extensions/client/overview.md)
-      * [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)
+      * [アクセシブルなサイト速度指標](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
       * [アクションページ更新](https://exchange.adobe.com/apps/ec/102848)
       * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
@@ -113,7 +113,7 @@ ht-degree: 80%
             * [データストリーム](extensions/client/web-sdk/configure/datastreams.md)
             * [同意](extensions/client/web-sdk/configure/consent.md)
             * [ID](extensions/client/web-sdk/configure/identity.md)
-            * [パーソナライズ機能](extensions/client/web-sdk/configure/personalization.md)
+            * [パーソナライゼーション](extensions/client/web-sdk/configure/personalization.md)
             * [データ収集](extensions/client/web-sdk/configure/data-collection.md)
             * [ストリーミングメディア](extensions/client/web-sdk/configure/streaming-media.md)
             * [プッシュ通知](extensions/client/web-sdk/configure/push-notifications.md)
@@ -209,7 +209,7 @@ ht-degree: 80%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -276,6 +276,8 @@ ht-degree: 80%
          * [概要](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [概要](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [概要](./extensions/server/nextdoor/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [概要](./extensions/server/pinterest/overview.md)
