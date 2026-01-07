@@ -1,214 +1,109 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;属性ベースのアクセス制御;ABAC
 title: アクセス制御ポリシーの管理
-description: ここでは、Adobe Experience Cloudの権限インターフェイスを使用したアクセス制御ポリシーの管理について説明します。
+description: Adobe Experience Cloudの権限インターフェイスを使用してアクセス制御ポリシーを管理します。
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: 2a26c8786adc412dc643c8a0c94b966e439e034b
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 19%
+source-wordcount: '725'
+ht-degree: 10%
 
 ---
 
 # アクセス制御ポリシーの管理
 
-アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを規定するステートメントです。 アクセスポリシーは、ローカルまたはグローバルのいずれかであり、他のポリシーを上書きできます。 Adobeには、すぐにアクティブ化できる、または組織がラベルに基づいて特定のオブジェクトへのアクセスの制御を開始する準備が整った場合に常にアクティブ化できるデフォルトポリシーが用意されています。 デフォルトのポリシーでは、リソースに適用されるラベルを活用して、ユーザーが一致するラベルの役割にない限り、アクセスを拒否します。
+アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを規定するステートメントです。 Adobeには、すぐにアクティブ化できる、または組織が [ ラベル ](./labels.md){target="_blank"} に基づいて特定のオブジェクトへのアクセスの制御を開始する準備ができたときにアクティブ化できるデフォルトのポリシーが用意されています。 デフォルトのポリシー **[!UICONTROL Default-Label-Based-Access-Control-Policy]** は、リソースに適用されるラベルを活用して、ラベルが一致する役割にユーザーがない限りアクセスを拒否します。
 
 >[!IMPORTANT]
 >
->アクセスポリシーをデータ使用ポリシーと混同しないでください。データ使用ポリシーは、組織内のどのユーザーがアクセス権を持つかではなく、Adobe Experience Platformでのデータの使用方法を制御します。 詳しくは、[&#x200B; データ使用ポリシー &#x200B;](../../../data-governance/policies/create.md) の作成に関するガイドを参照してください。
+>アクセス制御ポリシーを、Adobe Experience Platformでのデータの使用方法を制御するデータ使用ポリシーと混同しないでください。 詳しくは、[ データ使用ポリシー ](../../../data-governance/policies/create.md){target="_blank"} の作成に関するガイドを参照してください。
 
-<!-- ## Create a new policy
+## ポリシー用サンドボックスの設定 {#configure-policy}
 
-To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
-
-![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
-
-The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
-
-![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
-
-Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
-
-Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
-
-![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
-
-Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
-
-Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
-
-![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
-
-Using the dropdown, select the **Resource**.
-
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
-
-Next, using the dropdown select the **Matches**.
-
-![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
-
-Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
-
-![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
-
-Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
-
-![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
-
-Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
-
-![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
-
-The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
-
-![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
-
-## Edit a policy
-
-To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
-
-![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
-
-The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
-
-![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
-
-The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
-
-## Duplicate a policy
-
-To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
-
-![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
-
-The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
-
-![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
-
-The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
-
-![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
-
-## Delete a policy
-
-To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
-
-![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
-
-The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
-
-![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
-
-You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
-
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
-
-## サンドボックスのポリシーの設定
-
->[!IMPORTANT]
->
->デフォルトでは、すべての顧客に対して [!UICONTROL Auto-include] 機能がオンになっています。つまり、すべてのサンドボックスがポリシーに追加されます。
+ポリシーはサンドボックスレベルで適用され、ラベルベースのアクセス制御を適用するサンドボックスを制御します。 デフォルトでは、**[!UICONTROL Auto-include]** 機能がオンになっています。つまり、現在と将来のすべてのサンドボックスが自動的にポリシーに追加されます。 **[!UICONTROL Auto-include]** がオフの場合、手動で追加したサンドボックスのみが、ポリシーのアクセス制御規則の対象となります。
 
 >[!NOTE]
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** ポリシーは現在、設定に使用できる唯一のポリシーです。
 
-ポリシーに関連付けられたサンドボックスを表示するには、「**[!UICONTROL Policies]**」タブからポリシーを選択します。
+ポリシーのサンドボックスの設定を開始するには、**[!UICONTROL Permissions]** Adobe Experience Cloud[ の ](https://experience.adobe.com/){target="_blank"} に移動します。 左側のパネルから「**[!UICONTROL Policies]**」を選択し、リストから **[!UICONTROL Default-Label-Based-Access-Control-Policy]** を選択します。
 
-![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ 既存のポリシーのリストが表示されているポリシーワークスペース。](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
-次に、ポリシーを選択し、タブ **[!UICONTROL Sandboxes]** 選択します。 ポリシーに関連付けられているサンドボックスのリストが表示されます。
+ポリシーの詳細ワークスペースが表示されます。 「**[!UICONTROL Sandboxes]**」タブを選択して、ポリシーに関連付けられたサンドボックスのリストを表示し、サンドボックス設定オプションにアクセスします。
 
-![&#x200B; 使用可能な既存のポリシーのリストを表示するポリシーページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![ 関連付けられたサンドボックスのリストを表示する、ポリシーのサンドボックスワークスペース。](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
-### すべてのサンドボックスにポリシーを追加
-
-「**[!UICONTROL Auto-include]**」タブの **[!UICONTROL Sandboxes]** 切り替えスイッチを使用して、すべてのサンドボックスのポリシーを有効にします。
-
-![&#x200B; 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
-
-選択を確認するように求める **[!UICONTROL Enable Auto-include]** ダイアログが表示されます。 「**[!UICONTROL Enable]**」を選択して、設定を完了します。
-
-![[!UICONTROL Enable Auto-include] をハイライト表示した [!UICONTROL Enable] ダイアログ &#x200B;](../../images/flac-ui/abac-policies-auto-include-enable.png)
-
->[!SUCCESS]
->
->このポリシーは、既存のすべてのサンドボックスに対して有効になっており、新しいサンドボックスが使用可能になると自動的に追加されます。
-
-### サンドボックスを選択するためのポリシーの追加
+### 自動インクルードを管理 {#manage-auto-include}
 
 >[!IMPORTANT]
 >
->[!UICONTROL Auto-include] の切り替えがオフになっている場合、今後のサンドボックスはデフォルトではポリシーに含まれません。 サンドボックスを管理し、ポリシーに手動で追加する必要があります。
+>デフォルトでは、**[!UICONTROL Auto-include]** がオンになっています。つまり、現在と将来のすべてのサンドボックスが自動的にポリシーに追加されます。
 
-「**[!UICONTROL Auto-include]**」タブの **[!UICONTROL Sandboxes]** 切り替えスイッチを使用して、すべてのサンドボックスのポリシーを無効にします。
+ポリシーに含めるサンドボックスを制御するには、**[!UICONTROL Auto-include]** 機能のオンとオフを切り替えます。 **[!UICONTROL Auto-include]** をオフにすると、以降のサンドボックスは自動的にはポリシーに追加されません。 ただし、この機能をオフに切り替えると **ポリシーに既に含まれているサンドボックスは削除されません**。
 
-![&#x200B; 「[!UICONTROL Sandboxes]」切替スイッチを表示する「[!UICONTROL Auto-include]」タブ &#x200B;](../../images/flac-ui/abac-policies-auto-include.png)
+![ 自動インクルードの切り替えがハイライト表示され、「オフ」状態のポリシーの「サンドボックス」タブ ](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
-「**[!UICONTROL Sandboxes]**」タブから「**[!UICONTROL Add Sandboxes]**」を選択し、このポリシーを適用するサンドボックスを選択します。
+**[!UICONTROL Auto-include]** を再度有効にするには、切替スイッチを使用してオンに戻します。 選択を確認するように求める **[!UICONTROL Enable Auto-include]** ダイアログが表示されます。 「**[!UICONTROL Enable]**」を選択して、設定を完了します。
 
-![&#x200B; ポリシーに追加されたサンドボックスのリストを表示する「[!UICONTROL Sandboxes]」タブ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
-
-サンドボックスのリストが表示されます。 追加するサンドボックスをリストから選択します。 または、検索バーを使用してサンドボックスを検索します。 **[!UICONTROL Save]** を選択します。
-
-![&#x200B; ポリシーへの追加に使用できる既存のサンドボックスのリストを示す [!UICONTROL Add Sandboxes] ページ &#x200B;](../../images/flac-ui/abac-policies-sandboxes-list.png)
-
->[!SUCCESS]
+>[!NOTE]
 >
->選択したサンドボックスは、正常にポリシーに追加されました。
+>**[!UICONTROL Auto-include]** を再度有効にすると、以前にポリシーから削除したサンドボックスが再度追加されます。
 
-### ポリシーからのサンドボックスの削除
+![ 「有効」オプションがハイライト表示された自動インクルードダイアログを有効にする ](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
-サンドボックスを削除するには、サンドボックス名の横にある **X** アイコンを選択します。
+### サンドボックスの手動管理 {#manually-manage-sandboxes}
 
-![&#x200B; 削除するサンドボックスがハイライト表示されたサン [!UICONTROL Sandboxes] ボックスのリストを表示する「[!UICONTROL X]」タブ &#x200B;](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+**[!UICONTROL Auto-include]**がオフになっている場合、特定のサンドボックスをポリシーに手動で追加またはポリシーから削除できます。 これにより、ポリシーのアクセス制御規則を適用するサンドボックスを正確に制御できます。
 
-選択を確認するように求める **[!UICONTROL Remove]** ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して削除を完了します。
-
-![[!UICONTROL Remove] をハイライト表示した [!UICONTROL Confirm] ダイアログ &#x200B;](../../images/flac-ui/abac-policies-remove-sandbox.png)
-
->[!SUCCESS]
+>[!NOTE]
 >
->選択したサンドボックスはポリシーから正常に削除されました。
+>サンドボックスを手動で追加または削除するには、「**[!UICONTROL Auto-include]**」切替スイッチ **必須** をオフにします。
+
+**サンドボックスを追加するには：**
+
+ポリシーのサンドボックスワークスペースから「**[!UICONTROL Add Sandboxes]**」を選択します。
+
+![ 「サンドボックスを追加」オプションがハイライト表示されたポリシーのワークスペース。](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
+
+**[!UICONTROL Add Sandboxes]** ダイアログが表示され、使用可能なサンドボックスのライブラリが表示されます。 ポリシーに追加するサンドボックスを選択して、「**[!UICONTROL Save]**」を選択します。
+
+![ サンドボックスが選択され、「保存」オプションがハイライト表示されたサンドボックスを追加ダイアログ ](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
+
+>[!NOTE]
+>
+>使用可能なすべてのサンドボックスが既にポリシーに含まれている場合は、ダイアログ内に「ライブラリに何もありません」というメッセージが表示されます。
+
+**サンドボックスを削除するには：**
+
+リストから削除するサンドボックスを見つけ、その名前の横にある **X** アイコンを選択します。
+
+![ サンドボックスを削除するために「x」がハイライト表示されたポリシーのサンドボックスリスト ](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+
+確認ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、ポリシーからのサンドボックスの削除を完了します。
+
+![ 「確認」オプションがハイライト表示されたサンドボックスの確認ダイアログ ](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
 ## ポリシーのアクティベート {#activate-policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="ポリシーとは"
->abstract="ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。どの組織にもデフォルトのポリシーがあります。このポリシーをアクティブ化して、ラベルに基づいて特定のオブジェクトへのアクセスの制御を開始する必要があります。リソースに適用されたラベルは、ラベルが一致する役割にユーザーが割り当てられていない限り、アクセスを拒否します。デフォルトのポリシーは編集または削除できませんが、有効または無効にすることはできます。"
+>abstract="ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。どの組織にもデフォルトのポリシーがあります。このポリシーをアクティブ化して、ラベルに基づいて特定のオブジェクトへのアクセスの制御を開始する必要があります。リソースに適用されたラベルは、ラベルが一致する役割にユーザーが割り当てられていない限り、アクセスを拒否します。ポリシーの編集や削除はできませんが、アクティブ化や非アクティブ化は可能です。"
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/labels" text="ラベルの管理"
 
-既存のポリシーをアクティブにするには、「アクティベート」タブからポリシーを選 **[!UICONTROL Policies]** します。
+既存のポリシーをアクティブにするには、**[!UICONTROL Policies]** の「**[!UICONTROL Permissions]**」タブからポリシーを選択します。 ポリシーのアクティベーションステータスは、「アクティベー **[!UICONTROL Status]**」セクションに表示されます。
 
-![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ ポリシーのステータスがハイライト表示されたポリシーワークスペース。](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
-次に、省略記号（`…`）をクリックします。ドロップダウンに、役割を編集、アクティブ化、削除または複製するためのコントロールが表示されます。 ドロップダウンから「アクティブ化」を選択します。
+ポリシーの詳細ワークスペースが表示されます。 **[!UICONTROL Activate]** を選択します。
 
-![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![ 「アクティブ化」オプションがハイライト表示されたポリシーの詳細ワークスペース。](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
-**[!UICONTROL Activate policy]** ダイアログが表示され、アクティベーションを確認するプロンプトが表示されます。
+**[!UICONTROL Activate Policy]** ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、ポリシーのアクティブ化を完了します。
 
-![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
-
-
-「**[!UICONTROL policies]**」タブが開き、アクティベーションを確認するポップアップが表示されます。 ポリシーのステータスはアクティブと表示されます。
-
-![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![ 「確認」オプションがハイライト表示されたポリシーをアクティブ化ダイアログ ](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
 
 ## 次の手順
 
-ポリシーをアクティブにすると、次の手順 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) に進むことができます。
+ポリシーをアクティブにすると、次の手順 [ 役割の権限の管理 ](permissions.md) に進むことができます。
