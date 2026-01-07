@@ -4,38 +4,38 @@ solution: Experience Platform
 title: Flow Service API を使用して、OneTrust 統合ソースのデータフローを作成する
 description: Flow Service API を使用してAdobe Experience Platformを OneTrust 統合に接続する方法を説明します。
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 55%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL OneTrust Integration] ソースのデータフローの作成
+# [!DNL OneTrust Integration] API を使用した [!DNL Flow Service] ソースのデータフローの作成
 
 >[!NOTE]
 >
 >[!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。
 
-以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) からAdobe Experience Platformに履歴およびスケジュールされた同意データの両方を取り込む手順について説明します。
+以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US) を使用して [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) からAdobe Experience Platformに履歴およびスケジュールされた同意データの両方を取り込む手順について説明します。
 
 ## 前提条件
 
 >[!IMPORTANT]
 >
->[!DNL OneTrust Integration] ソースコネクタとドキュメントは、[!DNL OneTrust Integration] チームによって作成されました。 お問い合わせや更新のリクエストについては、[[!DNL OneTrust]  チーム &#x200B;](https://my.onetrust.com/s/contactsupport?language=en_US) に直接お問い合わせください。
+>[!DNL OneTrust Integration] ソースコネクタとドキュメントは、[!DNL OneTrust Integration] チームによって作成されました。 お問い合わせや更新のリクエストについては、[[!DNL OneTrust]  チーム ](https://my.onetrust.com/s/contactsupport?language=en_US) に直接お問い合わせください。
 
-[!DNL OneTrust Integration] をExperience Platformに接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド &#x200B;](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
+[!DNL OneTrust Integration] をExperience Platformに接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド ](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
 
-システム間の更新トークンは [!DNL OneTrust] でサポートされていないため、有効期限が切れた後は、アクセストークンは自動的に更新されません。 そのため、有効期限が切れる前に、接続でアクセストークンが更新されていることを確認する必要があります。 アクセストークンの設定可能な最長有効期間は 1 年です。 アクセストークンの更新について詳しくは、[[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理のドキュメント &#x200B;](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials) を参照してください。
+システム間の更新トークンは [!DNL OneTrust] でサポートされていないため、有効期限が切れた後は、アクセストークンは自動的に更新されません。 そのため、有効期限が切れる前に、接続でアクセストークンが更新されていることを確認する必要があります。 アクセストークンの設定可能な最長有効期間は 1 年です。 アクセストークンの更新について詳しくは、[[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理のドキュメント ](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials) を参照してください。
 
-## [!DNL Flow Service] API を使用した [!DNL OneTrust Integration] のExperience Platformへの接続
+## [!DNL OneTrust Integration] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
 >[!NOTE]
 >
 >[!DNL OneTrust Integration] API の仕様は、データ取得用にAdobeと共有されています。
 
-以下のチュートリアルでは、[!DNL OneTrust Integration] ソース接続を作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してデータをExperience Platformに取り [!DNL OneTrust Integration] むデータフローを作成する手順について説明します。
+以下のチュートリアルでは、[!DNL OneTrust Integration] ソース接続を作成し、[!DNL OneTrust Integration]API[[!DNL Flow Service]  を使用してデータをExperience Platformに取り ](https://www.adobe.io/experience-platform-apis/references/flow-service/) むデータフローを作成する手順について説明します。
 
 ### ベース接続の作成 {#base-connection}
 
@@ -139,7 +139,7 @@ curl -X GET \
 >
 >以下の JSON 応答ペイロードは、簡潔にするために非表示になっています。 「ここをクリック」を選択して、応答ペイロードを表示します。
 
-+++ここをクリック
++++自分をクリック
 
 ```json
 {
@@ -757,8 +757,13 @@ curl -X POST \
               "sourceType": "ATTRIBUTE",
               "source": "content.Purposes",
               "destination": "_exchangesandboxbravo.Purposes"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LinkToken",
+              "destination": "_exchangesandboxbravo.LinkToken",
+              "description": "Link Token"
           }
-
       ]
   }'
 ```
@@ -874,20 +879,20 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](../../monitor.md) に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
