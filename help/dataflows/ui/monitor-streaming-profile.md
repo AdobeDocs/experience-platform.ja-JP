@@ -19,14 +19,14 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ データフロー ](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
-* [ リアルタイム顧客プロファイル ](../../profile/home.md)：リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティなど、複数のソースのデータを、各顧客のアクションにつながる単一のビューに組み合わせることで、すべてのタッチポイントにわたって一貫性のあるパーソナライズされたエクスペリエンスを実現します。
-* [ ストリーミング取得 ](../../ingestion/streaming-ingestion/overview.md):Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから、リアルタイムでExperience Platformにデータを送信する方法をユーザーに提供します。Experience Platformでは、個々の顧客に対してリアルタイム顧客プロファイルを生成することで、調整された一貫性のある関連性の高いエクスペリエンスを提供できます。.
-* [ 処理能力 ](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
+* [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
+* [&#x200B; リアルタイム顧客プロファイル &#x200B;](../../profile/home.md)：リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティなど、複数のソースのデータを、各顧客のアクションにつながる単一のビューに組み合わせることで、すべてのタッチポイントにわたって一貫性のあるパーソナライズされたエクスペリエンスを実現します。
+* [&#x200B; ストリーミング取得 &#x200B;](../../ingestion/streaming-ingestion/overview.md):Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから、リアルタイムでExperience Platformにデータを送信する方法をユーザーに提供します。Experience Platformでは、個々の顧客に対してリアルタイム顧客プロファイルを生成することで、調整された一貫性のある関連性の高いエクスペリエンスを提供できます。.
+* [&#x200B; 処理能力 &#x200B;](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
 
 >[!NOTE]
 >
->ストリーミングスループット容量では、1 秒あたり最大 1500 件のインバウンドイベントをサポートします。 1 秒&#x200B;あたり最大 13,500 件のインバウンドイベントをサポートするストリーミングセグメント化を追加購入できます。 詳しくは、[Real-Time CDP B2C Edition - PrimeおよびUltimate パッケージの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) を参照してください。
+>ストリーミングスループット容量では、1 秒あたり最大 1500 件のインバウンドイベントをサポートします。 1 秒&#x200B;あたり最大 13,500 件のインバウンドイベントをサポートするストリーミングセグメント化を追加購入できます。 詳しくは、[Real-Time CDP B2C Edition - PrimeおよびUltimate パッケージの製品説明 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) を参照してください。
 
 ## ストリーミングプロファイルの取り込みの監視指標 {#streaming-profile-metrics}
 
@@ -102,11 +102,11 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 ストリーミングプロファイル取り込み用のモニタリングダッシュボードにアクセスするには、Experience Platform UI に移動し、左側のナビゲーションから「**[!UICONTROL Monitoring]**」を選択してから「**[!UICONTROL Streaming end-to-end]**」を選択します。
 
-![ ストリーミングプロファイル取り込みの監視ダッシュボード ](../assets/ui/streaming-profiles/monitoring-dashboard.png)
+![&#x200B; ストリーミングプロファイル取り込みの監視ダッシュボード &#x200B;](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
 *[!UICONTROL Profile]* 指標カードについては、ダッシュボードの上部ヘッダーを参照してください。 この表示を使用して、取り込み、失敗、スキップされたレコードに関する情報と、リクエストスループットの現在のステータスに関する情報を表示します。
 
-![ プロファイルカード。](../assets/ui/streaming-profiles/profile-card.png)
+![&#x200B; プロファイルカード。](../assets/ui/streaming-profiles/profile-card.png)
 
 次に、インターフェイスを使用して、ストリーミングプロファイル取り込み指標に関する詳細情報を表示します。 カレンダー機能を使用して、様々な期間を切り替えます。 次の事前設定済みの時間枠から選択できます。
 
@@ -126,7 +126,7 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 「**[!UICONTROL Throughput]**」を選択すると、設定された期間にExperience Platformで処理されているデータ量に関する情報が表示されます。 システムの効率と処理能力を評価するには、この指標を参照してください。
 
-![ 表示が「スループット」に設定されたダッシュボード。](../assets/ui/streaming-profiles/throughput.png)
+![&#x200B; 表示が「スループット」に設定されたダッシュボード。](../assets/ui/streaming-profiles/throughput.png)
 
 * **[処理能力](../../landing/license-usage-and-guardrails/capacity.md)**：定義された条件下でサンドボックスが処理できるデータの最大量です。
 * **リクエストスループット**：取り込みシステムがイベントを受信する速度（1 秒あたりのイベント数）。
@@ -136,7 +136,7 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 **取り込み**:**[!UICONTROL Ingestion]** を選択すると、サンドボックスの取り込みジョブに関する情報が表示されます。 これらの取り込みジョブは、3 つの異なる指標で測定されます。
 
-![ 表示が「取り込み」に設定されたダッシュボード。](../assets/ui/streaming-profiles/ingestion.png)
+![&#x200B; 表示が「取り込み」に設定されたダッシュボード。](../assets/ui/streaming-profiles/ingestion.png)
 
 * **取り込まれたレコード**：指定された期間内に作成されたレコードの合計数です。 この指標は、サンドボックスでのデータ取り込みプロセスの成功を表します。
 * **スキップされたレコード**: エラーが原因で取り込まれなかったレコードの合計数です。
@@ -148,21 +148,21 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 データフローテーブルには、すべてのストリーミング取得アクティビティと、リアルタイム顧客プロファイルに対応する一連の指標が一覧表示されます。 各データフローは、対応するデータセットと共に表示されます。
 
-サンドボックスレベルの処理能力の上限に近づいている場合は、[!UICONTROL Max throughput] の列を参照して、消費率に貢献している既存のデータフローを特定できます。 データフロー管理のベストプラクティスについて詳しくは、[ ベストプラクティスの節 ](#best-practices) を参照してください。
+サンドボックスレベルの処理能力の上限に近づいている場合は、[!UICONTROL Max throughput] の列を参照して、消費率に貢献している既存のデータフローを特定できます。 データフロー管理のベストプラクティスについて詳しくは、[&#x200B; ベストプラクティスの節 &#x200B;](#best-practices) を参照してください。
 
-特定のデータフローに取り込まれるデータを監視するには、データフロー名の横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
+特定のデータフローに取り込まれるデータを監視するには、データフロー名の横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択します。
 
-![ 指標ページ ](../assets/ui/streaming-profiles/metrics.png)
+![&#x200B; 指標ページ &#x200B;](../assets/ui/streaming-profiles/metrics.png)
 
-次に、データフロー指標インターフェイスを使用して、検査する特定のフロー実行を選択します。 フロー実行イテレーションの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択して、選択したフロー実行に固有の指標を表示します。
+次に、データフロー指標インターフェイスを使用して、検査する特定のフロー実行を選択します。 フロー実行イテレーションの横にあるフィルターアイコン ![&#x200B; フィルター &#x200B;](/help/images/icons/filter-add.png) を選択して、選択したフロー実行に固有の指標を表示します。
 
-![ データフロー指標インターフェイス ](../assets/ui/streaming-profiles/flows.png)
+![&#x200B; データフロー指標インターフェイス &#x200B;](../assets/ui/streaming-profiles/flows.png)
 
 データフロー実行は、データフロー実行のインスタンスを表します。 例えば、データフローが 1 時間ごとに午前 9:00、午前 10:00、午前 11:00 に実行されるようにスケジュールされている場合、フロー実行の 3 つのインスタンスが存在します。 フロー実行は、特定の組織に固有です。
 
 データフロー実行の詳細ページを使用して、選択した実行イテレーションの指標と情報を表示します。
 
-![ データフロー実行アクティビティインターフェイス ](../assets/ui/streaming-profiles/flow-runs.png)
+![&#x200B; データフロー実行アクティビティインターフェイス &#x200B;](../assets/ui/streaming-profiles/flow-runs.png)
 
 ## データフロー管理のベストプラクティス {#best-practices}
 
@@ -186,8 +186,8 @@ Experience Platformでデータフローを最適に管理し、データ使用�
 
 | 寄与因子 | 概要 | ユースケースへの影響 | ベストプラクティス |
 | --- | --- | --- | --- |
-| バッチからストリーミングへの変換 | ストリーミングに変換されるバッチワークロードは、スループットを大幅に向上させる可能性があり、パフォーマンスとリソース割り当てに影響を与えます。 例えば、レート制限のないイベントの後に一括プロファイル更新を実行する場合などです。 | 低遅延処理が必要ない場合のバッチのユースケースには、ストリーミング戦略は不要です。 | ユースケースの要件を評価します。 バッチ送信マーケティングの場合は、ストリーミングではなく [ バッチ取り込み ](../../ingestion/batch-ingestion/overview.md) を使用して、データ取り込みをより効率的に管理することを検討します。 |
-| 不要なデータ取り込み | パーソナライゼーションに不要なデータの取り込みは、価値を追加することなくスループットを向上させ、リソースを無駄にします。 例えば、関連度に関係なく、すべての分析トラフィックをプロファイルに取り込みます。 | 過剰な無関係なデータはノイズを生み出し、影響を受けるデータポイントを特定するのが難しくなります。 また、オーディエンスとプロファイルを定義および管理する際に摩擦が生じる可能性があります。 | ユースケースに必要なデータのみを取り込みます。 不要なデータは必ず除外してください。<ul><li>**Adobe Analytics**: [ 行レベルのフィルタリング ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) を使用して、データ取り込みを最適化します。</li><li>**ソース**:[[!DNL Flow Service] API を使用して、](../../sources/tutorials/api/filter.md) や [!DNL Snowflake] などのサポートされているソースの行レベルのデータ [!DNL Google BigQuery] をフィルタリングします。</li></li>**Edge データストリーム**: [ 動的データストリーム ](../../datastreams/configure-dynamic-datastream.md) を設定して、WebSDK から受信するトラフィックの行レベルのフィルタリングを実行します。</li></ul> |
+| バッチからストリーミングへの変換 | ストリーミングに変換されるバッチワークロードは、スループットを大幅に向上させる可能性があり、パフォーマンスとリソース割り当てに影響を与えます。 例えば、レート制限のないイベントの後に一括プロファイル更新を実行する場合などです。 | 低遅延処理が必要ない場合のバッチのユースケースには、ストリーミング戦略は不要です。 | ユースケースの要件を評価します。 バッチ送信マーケティングの場合は、ストリーミングではなく [&#x200B; バッチ取り込み &#x200B;](../../ingestion/batch-ingestion/overview.md) を使用して、データ取り込みをより効率的に管理することを検討します。 |
+| 不要なデータ取り込み | パーソナライゼーションに不要なデータの取り込みは、価値を追加することなくスループットを向上させ、リソースを無駄にします。 例えば、関連度に関係なく、すべての分析トラフィックをプロファイルに取り込みます。 | 過剰な無関係なデータはノイズを生み出し、影響を受けるデータポイントを特定するのが難しくなります。 また、オーディエンスとプロファイルを定義および管理する際に摩擦が生じる可能性があります。 | ユースケースに必要なデータのみを取り込みます。 不要なデータは必ず除外してください。<ul><li>**Adobe Analytics**: [&#x200B; 行レベルのフィルタリング &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) を使用して、データ取り込みを最適化します。</li><li>**ソース**:[[!DNL Flow Service] API を使用して、](../../sources/tutorials/api/filter.md) や [!DNL Snowflake] などのサポートされているソースの行レベルのデータ [!DNL Google BigQuery] をフィルタリングします。</li></li>**Edge データストリーム**: [&#x200B; 動的データストリーム &#x200B;](../../datastreams/configure-dynamic-datastream.md) を設定して、WebSDK から受信するトラフィックの行レベルのフィルタリングを実行します。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -217,5 +217,5 @@ Experience Platformでデータフローを最適に管理し、データ使用�
 
 このチュートリアルに従って、組織のストリーミングプロファイル取り込みジョブを監視する方法を学びました。 リアルタイム顧客プロファイルのデータ監視に関する追加情報については、次のドキュメントを参照してください。
 
-* [ 監視ダッシュボードの使用 ](./monitor.md)。
-* [ プロファイルデータの監視 ](./monitor-profiles.md)。
+* [&#x200B; 監視ダッシュボードの使用 &#x200B;](./monitor.md)。
+* [&#x200B; プロファイルデータの監視 &#x200B;](./monitor-profiles.md)。
