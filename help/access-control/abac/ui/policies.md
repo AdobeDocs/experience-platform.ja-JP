@@ -12,11 +12,11 @@ ht-degree: 10%
 
 # アクセス制御ポリシーの管理
 
-アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを規定するステートメントです。 Adobeには、すぐにアクティブ化できる、または組織が [&#x200B; ラベル &#x200B;](./labels.md){target="_blank"} に基づいて特定のオブジェクトへのアクセスの制御を開始する準備ができたときにアクティブ化できるデフォルトのポリシーが用意されています。 デフォルトのポリシー **[!UICONTROL Default-Label-Based-Access-Control-Policy]** は、リソースに適用されるラベルを活用して、ラベルが一致する役割にユーザーがない限りアクセスを拒否します。
+アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを規定するステートメントです。 Adobeには、すぐにアクティブ化できる、または組織が [ ラベル ](./labels.md){target="_blank"} に基づいて特定のオブジェクトへのアクセスの制御を開始する準備ができたときにアクティブ化できるデフォルトのポリシーが用意されています。 デフォルトのポリシー **[!UICONTROL Default-Label-Based-Access-Control-Policy]** は、リソースに適用されるラベルを活用して、ラベルが一致する役割にユーザーがない限りアクセスを拒否します。
 
 >[!IMPORTANT]
 >
->アクセス制御ポリシーを、Adobe Experience Platformでのデータの使用方法を制御するデータ使用ポリシーと混同しないでください。 詳しくは、[&#x200B; データ使用ポリシー &#x200B;](../../../data-governance/policies/create.md){target="_blank"} の作成に関するガイドを参照してください。
+>アクセス制御ポリシーを、Adobe Experience Platformでのデータの使用方法を制御するデータ使用ポリシーと混同しないでください。 詳しくは、[ データ使用ポリシー ](../../../data-governance/policies/create.md){target="_blank"} の作成に関するガイドを参照してください。
 
 ## ポリシー用サンドボックスの設定 {#configure-policy}
 
@@ -26,13 +26,13 @@ ht-degree: 10%
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** ポリシーは現在、設定に使用できる唯一のポリシーです。
 
-ポリシーのサンドボックスの設定を開始するには、**[!UICONTROL Permissions]** Adobe Experience Cloud[&#x200B; の &#x200B;](https://experience.adobe.com/){target="_blank"} に移動します。 左側のパネルから「**[!UICONTROL Policies]**」を選択し、リストから **[!UICONTROL Default-Label-Based-Access-Control-Policy]** を選択します。
+ポリシーのサンドボックスの設定を開始するには、**[!UICONTROL Permissions]** Adobe Experience Cloud[ の ](https://experience.adobe.com/){target="_blank"} に移動します。 左側のパネルから「**[!UICONTROL Policies]**」を選択し、リストから **[!UICONTROL Default-Label-Based-Access-Control-Policy]** を選択します。
 
-![&#x200B; 既存のポリシーのリストが表示されているポリシーワークスペース。](../../images/ui/policies/policies-home.png){zoomable="yes"}
+![ 既存のポリシーのリストが表示されているポリシーワークスペース。](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
 ポリシーの詳細ワークスペースが表示されます。 「**[!UICONTROL Sandboxes]**」タブを選択して、ポリシーに関連付けられたサンドボックスのリストを表示し、サンドボックス設定オプションにアクセスします。
 
-![&#x200B; 関連付けられたサンドボックスのリストを表示する、ポリシーのサンドボックスワークスペース。](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
+![ 関連付けられたサンドボックスのリストを表示する、ポリシーのサンドボックスワークスペース。](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
 ### 自動インクルードを管理 {#manage-auto-include}
 
@@ -42,7 +42,7 @@ ht-degree: 10%
 
 ポリシーに含めるサンドボックスを制御するには、**[!UICONTROL Auto-include]** 機能のオンとオフを切り替えます。 **[!UICONTROL Auto-include]** をオフにすると、以降のサンドボックスは自動的にはポリシーに追加されません。 ただし、この機能をオフに切り替えると **ポリシーに既に含まれているサンドボックスは削除されません**。
 
-![&#x200B; 自動インクルードの切り替えがハイライト表示され、「オフ」状態のポリシーの「サンドボックス」タブ &#x200B;](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
+![ 自動インクルードの切り替えがハイライト表示され、「オフ」状態のポリシーの「サンドボックス」タブ ](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
 **[!UICONTROL Auto-include]** を再度有効にするには、切替スイッチを使用してオンに戻します。 選択を確認するように求める **[!UICONTROL Enable Auto-include]** ダイアログが表示されます。 「**[!UICONTROL Enable]**」を選択して、設定を完了します。
 
@@ -50,11 +50,11 @@ ht-degree: 10%
 >
 >**[!UICONTROL Auto-include]** を再度有効にすると、以前にポリシーから削除したサンドボックスが再度追加されます。
 
-![&#x200B; 「有効」オプションがハイライト表示された自動インクルードダイアログを有効にする &#x200B;](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
+![ 「有効」オプションがハイライト表示された自動インクルードダイアログを有効にする ](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
 ### サンドボックスの手動管理 {#manually-manage-sandboxes}
 
-**[!UICONTROL Auto-include]**&#x200B;がオフになっている場合、特定のサンドボックスをポリシーに手動で追加またはポリシーから削除できます。 これにより、ポリシーのアクセス制御規則を適用するサンドボックスを正確に制御できます。
+**[!UICONTROL Auto-include]**がオフになっている場合、特定のサンドボックスをポリシーに手動で追加またはポリシーから削除できます。 これにより、ポリシーのアクセス制御規則を適用するサンドボックスを正確に制御できます。
 
 >[!NOTE]
 >
@@ -64,11 +64,11 @@ ht-degree: 10%
 
 ポリシーのサンドボックスワークスペースから「**[!UICONTROL Add Sandboxes]**」を選択します。
 
-![&#x200B; 「サンドボックスを追加」オプションがハイライト表示されたポリシーのワークスペース。](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
+![ 「サンドボックスを追加」オプションがハイライト表示されたポリシーのワークスペース。](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
 
 **[!UICONTROL Add Sandboxes]** ダイアログが表示され、使用可能なサンドボックスのライブラリが表示されます。 ポリシーに追加するサンドボックスを選択して、「**[!UICONTROL Save]**」を選択します。
 
-![&#x200B; サンドボックスが選択され、「保存」オプションがハイライト表示されたサンドボックスを追加ダイアログ &#x200B;](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
+![ サンドボックスが選択され、「保存」オプションがハイライト表示されたサンドボックスを追加ダイアログ ](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -78,11 +78,11 @@ ht-degree: 10%
 
 リストから削除するサンドボックスを見つけ、その名前の横にある **X** アイコンを選択します。
 
-![&#x200B; サンドボックスを削除するために「x」がハイライト表示されたポリシーのサンドボックスリスト &#x200B;](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+![ サンドボックスを削除するために「x」がハイライト表示されたポリシーのサンドボックスリスト ](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
 
 確認ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、ポリシーからのサンドボックスの削除を完了します。
 
-![&#x200B; 「確認」オプションがハイライト表示されたサンドボックスの確認ダイアログ &#x200B;](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
+![ 「確認」オプションがハイライト表示されたサンドボックスの確認ダイアログ ](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
 ## ポリシーのアクティベート {#activate-policy}
 
@@ -94,16 +94,16 @@ ht-degree: 10%
 
 既存のポリシーをアクティブにするには、**[!UICONTROL Policies]** の「**[!UICONTROL Permissions]**」タブからポリシーを選択します。 ポリシーのアクティベーションステータスは、「アクティベー **[!UICONTROL Status]**」セクションに表示されます。
 
-![&#x200B; ポリシーのステータスがハイライト表示されたポリシーワークスペース。](../../images/ui/policies/policy-status.png){zoomable="yes"}
+![ ポリシーのステータスがハイライト表示されたポリシーワークスペース。](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
 ポリシーの詳細ワークスペースが表示されます。 **[!UICONTROL Activate]** を選択します。
 
-![&#x200B; 「アクティブ化」オプションがハイライト表示されたポリシーの詳細ワークスペース。](../../images/ui/policies/policy-activate.png){zoomable="yes"}
+![ 「アクティブ化」オプションがハイライト表示されたポリシーの詳細ワークスペース。](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
 **[!UICONTROL Activate Policy]** ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、ポリシーのアクティブ化を完了します。
 
-![&#x200B; 「確認」オプションがハイライト表示されたポリシーをアクティブ化ダイアログ &#x200B;](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
+![ 「確認」オプションがハイライト表示されたポリシーをアクティブ化ダイアログ ](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
 
 ## 次の手順
 
-ポリシーをアクティブにすると、次の手順 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) に進むことができます。
+ポリシーをアクティブにすると、次の手順 [ 役割の権限の管理 ](permissions.md) に進むことができます。
