@@ -21,7 +21,7 @@ Adobe Experience Platform クエリサービスを使用して、取り込んだ
 - **必要な権限**：ユーザーアカウントがExperience Platformのクエリサービスにアクセスできます。 UI でサービスを使用できない場合は、[&#x200B; 権限ドキュメント &#x200B;](../../access-control/home.md#permissions) を確認し、システム管理者に問い合わせてください。
 - **データ取り込み**：データがExperience Platformに取り込まれています。
 
-データを取り込む必要がある場合は、[&#x200B; データ取り込みチュートリアルビデオ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) で、データセットの作成、スキーママッピング、取り込み、検証の概要を確認してください。 詳しい情報やその他の学習リソースへのリンクについては、[&#x200B; 取り込みの概要ドキュメント &#x200B;](../../ingestion/home.md) を参照してください。
+データを取り込む必要がある場合は、[&#x200B; データ取り込みチュートリアルビデオ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) で、データセットの作成、スキーママッピング、取り込み、検証の概要を確認してください。 詳しい情報やその他の学習リソースへのリンクについては、[&#x200B; 取り込みの概要ドキュメント &#x200B;](../../ingestion/home.md) を参照してください。
 
 ## クイックスタートのパス
 
