@@ -3,20 +3,37 @@ keywords: Experience Platform；クエリサービス；クエリサービス；
 title: Adobe Experience Platform クエリサービスの概要
 description: Adobe Experience Platform クエリサービスを最大限に活用するために必要な手順の分類
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa22a0ca0c79d5d62fd39de3a808f84a11a80c4d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 3%
+source-wordcount: '363'
+ht-degree: 2%
 
 ---
 
 # Adobe Experience Platform [!DNL Query Service] の概要 {#getting-started}
 
-組織がAdobe Experience Platformのプロビジョニングが完了すると、管理者から [!DNL Query Service] へのアクセス権を付与できるようになります。 ただし、[!DNL Query Service] が提供するすべての機能を利用する前に、まずデータをAdobe Experience Platformに取り込む必要があります。
+Adobe Experience Platform クエリサービスを使用して、取り込んだデータセットに対して SQL クエリを実行し、複数のソースからデータを結合し、分析、機械学習ワークフローまたはリアルタイム顧客プロファイル用の派生データセットを生成します。 データを取り込んだ後、UI からクエリサービスにアクセスしてインタラクティブな分析とコラボレーションを行うか、API を使用してクエリを自動的かつプログラム的に実行します。
 
-この [&#x200B; データ取り込みのチュートリアルビデオ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) では、データセットの作成、データセットとスキーマのマッピング、データセットへのデータの追加および取り込みの確認に関する概要を説明します。 [&#x200B; 取り込みの概要ドキュメント &#x200B;](../../ingestion/home.md) にはこれを補完する機能があり、より詳細な情報や他の学習リソースへのリンクを提供しています。
+## 前提条件 {#prerequisites}
 
-データをAdobe Experience Platformに取り込んだら、[[!DNL Query Editor] Experience Platform UI の &#x200B;](../ui/user-guide.md) または [[!DNL Query Service] API](../api/getting-started.md) を使用して [!DNL Query Service] の操作を開始できます。 これらの各ツールの使用方法に関する完全なドキュメントは、それぞれのセクションに記載されています。
+データのクエリを開始する前に、次のことを確認します。
+
+- **必要な権限**：ユーザーアカウントがExperience Platformのクエリサービスにアクセスできます。 UI でサービスを使用できない場合は、[ 権限ドキュメント ](../../access-control/home.md#permissions) を確認し、システム管理者に問い合わせてください。
+- **データ取り込み**：データがExperience Platformに取り込まれています。
+
+データを取り込む必要がある場合は、[ データ取り込みチュートリアルビデオ ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) で、データセットの作成、スキーママッピング、取り込み、検証の概要を確認してください。 詳しい情報やその他の学習リソースへのリンクについては、[ 取り込みの概要ドキュメント ](../../ingestion/home.md) を参照してください。
+
+## クイックスタートのパス
+
+データをExperience Platformに取り込んだら、Experience Platformの [!DNL Query Editor] または Query Service API を使用してクエリサービスの使用を開始できます。
+
+### [!DNL Query Editor]
+
+分析、データ調査および共同クエリ開発に [!DNL Query Editor] を使用します。 UI 機能の概要については、[ クエリサービス UI ドキュメント ](../ui/overview.md) を参照してください。 UI でクエリを記述および実行する方法については、[[!DNL Query Editor user guide]](../ui/user-guide.md) を参照してください。
+
+### クエリサービス API
+
+Query Service API を使用して、ワークフローの自動化、クエリテンプレートの管理、プログラムによる統合を行います。 Query Service API の使用に関する詳細な手順については、『 [ クエリサービス開発者ガイド ](../api/getting-started.md) 』を参照してください。
 
 ## 次の手順
 
@@ -26,7 +43,7 @@ ht-degree: 3%
 - [クエリサービスの SQL 構文](../sql/syntax.md)
 - [SQL を使用した派生データセットの作成](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[&#x200B; 放棄された参照のユースケースのプレゼンテーション &#x200B;](../use-cases/abandoned-browse.md#video-example) をご覧ください。
+また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[ 放棄された参照のユースケースのプレゼンテーション ](../use-cases/abandoned-browse.md#video-example) をご覧ください。
 
 [!DNL Query Service] の理解を深めるために、次のリソースが役立ちます。
 
