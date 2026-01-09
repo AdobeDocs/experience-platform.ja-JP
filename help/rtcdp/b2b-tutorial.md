@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Real-Time Customer Data Platform B2B editionの概要
 description: Adobe Real-Time Customer Data Platform B2B editionの実装を設定する際の例として、次のサンプルシナリオを使用します。
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 52%
+source-wordcount: '1160'
+ht-degree: 43%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 52%
 
 このドキュメントでは、主要な概念を示すサンプルのユースケースを使用して、Real-Time Customer Data Platform（CDP）B2B editionの概要に関するおまかなエンドツーエンドのワークフローを提供します。
 
-テクノロジー企業である Bodea 社は、メールと LinkedIn による新製品の広告キャンペーンで効果的に顧客のターゲティングを行うために、分断された様々なたデータソースの個人データとアカウントデータを組み合わせたいと考えています。Bodea は Marketo Engage をマーケティング自動化プラットフォームとして使用しており、顧客データを含む複数の CRM から B2B 固有のオーディエンスをセグメント化する必要があります。
+テクノロジー企業である Bodea 社は、メールと LinkedIn による新製品の広告キャンペーンで効果的に顧客をターゲットにするために、分断された様々なデータソースの個人データとアカウントデータを組み合わせたいと考えています。Bodea はマーケティング自動化プラットフォームを使用しており、顧客データを含む複数の CRM から B2B 固有のオーディエンスをセグメント化する必要があります。
 
 ## はじめに
 
@@ -38,7 +38,7 @@ ht-degree: 52%
 
 Adobe Experience Platform を使用すると、B2B データソースに必要なスキーマと名前空間を自動的に生成できます。このツールは、作成されたスキーマが構造的に再利用可能な方法でデータを記述していることを保証します。セットアッププロセスの完全なリファレンスについては、[B2B 名前空間とスキーマ自動生成ユーティリティのドキュメント](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) に従ってください。
 
-Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで「**[!UICONTROL スキーマ]**」を選択してから、「**[!UICONTROL 参照]**」タブを選択します。Marketo Engage 自動生成ユーティリティを使用したため、新しい空のスキーマがリストに表示され、すべてのプレフィックスが「B2B」になります。
+Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで「**[!UICONTROL Schemas]**」を選択してから、「**[!UICONTROL Browse]**」タブを選択します。 自動生成ユーティリティを使用したため、新しい空のスキーマがリストに表示され、すべてのプレフィックスが「B2B」になります。
 
 ![スキーマワークスペースの参照タブ](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
@@ -58,27 +58,27 @@ Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで
 
 ## Experience Platform へのデータの取り込み
 
-次に、Bodea のマーケターは、[Marketo Engage コネクタを使用して &#x200B;](../sources/connectors/adobe-applications/marketo/marketo.md) ダウンストリームサービスで使用するデータをExperience Platformに取り込みます。 また、Real-Time CDP B2B edition用に承認されたソースの 1 つを使用して、データを取り込むこともできます。
+次に、Bodea のマーケターは、[ ソースコネクタ ](../sources/home.md) を使用して、ダウンストリームサービスで使用するデータをExperience Platformに取り込みます。 また、Real-Time CDP B2B edition用に承認されたソースの 1 つを使用して、データを取り込むこともできます。
 
 >[!NOTE]
 > 
 >組織で使用可能なソースコネクタを確認するには、Experience Platform UI でソースカタログを表示します。 カタログにアクセスするには、左側のナビゲーションで、「**ソース**」を選択してから、「**カタログ**」を選択します。
 
-Marketo アカウントとExperience Platform間の接続を確立するには、認証資格情報を取得する必要があります。 詳しくは、[Marketo ソースコネクタ認証資格情報の取得に関するガイド](../sources/connectors/adobe-applications/marketo/marketo-auth.md)を参照してください。
+ソースアカウントとExperience Platform間の接続を確立するには、認証資格情報を取得する必要があります。 各タイプのソースに対する認証資格情報の取得について詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
 
-認証資格情報を取得した後、Bodea マーケターはMarketo アカウントとExperience Platform Organization の間に接続を作成します。 [Experience Platform UI を使用してMarketo アカウントを接続する方法 &#x200B;](../sources/tutorials/ui/create/adobe-applications/marketo.md) の手順については、ドキュメントを参照してください。
+認証資格情報を取得した後、Bodea マーケターはソースアカウントとExperience Platform組織の間に接続を作成します。 ソース接続の設定について詳しくは、[ ソースのドキュメント ](../sources/home.md) を参照してください。
 
-Marketo Engage ソースコネクタは、すべてのデータフィールドを新しく作成されたスキーマのデータフィールドにマッピングするプロセスをはるかに簡単にする自動マッピング機能を提供します。
+ソースコネクタは、すべてのデータフィールドを新しく作成されたスキーマのデータフィールドにマッピングするプロセスをはるかに簡単にする自動マッピング機能を提供します。
 
 >[!NOTE]
 > 
 >XDM スキーマでカスタムフィールドグループを作成した場合、プロセスのこの段階で未接続のフィールドが発生することがあります。カスタムフィールドグループに入力されているすべての値を確認してください。
 
-Bodea のマーケターは、すべてのフィールドグループが適切にマッピングされていることを確認し、データフローを初期化してソース設定プロセスを続行します。Marketo データを取り込むデータフローを作成することで、受信データをダウンストリームのExperience Platform サービスで使用できます。 最初の取得プロセス中に、データはバッチとして Experience Platform に取り込まれます。この後、後続の取り込みデータは、ほぼリアルタイムで更新され、プロファイルにストリーミングされます。
+Bodea のマーケターは、すべてのフィールドグループが適切にマッピングされていることを確認し、データフローを初期化してソース設定プロセスを続行します。ソースデータを取り込むデータフローを作成することで、受信データをダウンストリームのExperience Platform サービスで使用できます。 最初の取り込みプロセス中に、データはバッチとして Experience Platform に取り込まれます。この後、後続の取り込みデータは、ほぼリアルタイムで更新され、プロファイルにストリーミングされます。
 
 ## データを評価するオーディエンスの作成
 
-次のタスクでは、ソースデータ内の関連エンティティの特定の属性に基づいて、Bodea の新しいメールマーケティングキャンペーン向けにオーディエンスを作成します。Bodea のマーケターは、Experience Platform UI の左側のナビゲーションで **[!UICONTROL セグメント]**、「セグメントを作成 **[!UICONTROL の順に選択し]** す。
+次のタスクでは、ソースデータ内の関連エンティティの特定の属性に基づいて、Bodea の新しいメールマーケティングキャンペーン向けにオーディエンスを作成します。Bodea のマーケターは、Experience Platform UI の左側のナビゲーションで「**[!UICONTROL Segments]**」、「**[!UICONTROL Create segment]**」の順に選択します。
 
 この例では、オーディエンスは、営業部門に所属し、オープンなオポチュニティが 1 つ以上あるアカウントに関連するすべての人を検索します。 このオーディエンスでは、XDM Individual Profile クラス、XDM Business Account クラス、XDM Business Opportunity クラスの間をリンクさせる必要があります。
 
@@ -86,23 +86,23 @@ Bodea のマーケターは、すべてのフィールドグループが適切�
 
 >[!NOTE]
 > 
->データを評価するオーディエンスを作成する方法については、[&#x200B; セグメントビルダー UI ガイド &#x200B;](../segmentation/ui/segment-builder.md) を参照してください。 B2B セグメント化の具体的な使用例については、[Real-Time CDP B2B editionのセグメント化の概要 &#x200B;](./segmentation/b2b.md) を参照してください。
+>データを評価するオーディエンスを作成する方法については、[ セグメントビルダー UI ガイド ](../segmentation/ui/segment-builder.md) を参照してください。 B2B セグメント化の具体的な使用例については、[Real-Time CDP B2B editionのセグメント化の概要 ](./segmentation/b2b.md) を参照してください。
 
 セグメントビルダーを使用すると、リアルタイム顧客プロファイルデータからマーケティング可能なオーディエンスを作成し、定義した属性、イベントおよび既存のオーディエンスの組み合わせに基づいて、見込みオーディエンスの見積を表示できます。
 
 ## 評価したデータを宛先に対してアクティブ化
 
-オーディエンスが正常に作成されると、概要がワークスペースの [!UICONTROL &#x200B; 詳細 &#x200B;] セクションに表示されます。 現在、セグメント定義に対してアクティブ化されている宛先がないため、Bodea のマーケターは、オーディエンスをデータセットにエクスポートし、アクセスして操作できるようにする必要があります。
+オーディエンスが正常に作成されると、概要がワークスペースの [!UICONTROL Details] セクションに表示されます。 現在、セグメント定義に対してアクティブ化されている宛先がないため、Bodea のマーケターは、オーディエンスをデータセットにエクスポートし、アクセスして操作できるようにする必要があります。
 
-Experience Platform UI の [!UICONTROL &#x200B; セグメント &#x200B;] ワークスペースから、Bodea マーケターは **[!UICONTROL 宛先に対してアクティブ化]** を選択します。
+Experience Platform UI の [!UICONTROL Segments] ワークスペース内で、Bodea のマーケターは **[!UICONTROL Activate to destination]** を選択します。
 
-![&#x200B; 宛先に対するオーディエンスのアクティブ化 &#x200B;](./assets/b2b-tutorial/activate-to-destination.png)
+![ 宛先に対するオーディエンスのアクティブ化 ](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->これを実現するための包括的な手順については、[&#x200B; 宛先へのオーディエンスのアクティブ化 &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) に関するチュートリアルを参照してください。
+>これを実現するための包括的な手順については、[ 宛先へのオーディエンスのアクティブ化 ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) に関するチュートリアルを参照してください。
 
-Bodea マーケターは、オーディエンスをMarketoの宛先に対してアクティブ化します。これにより、オーディエンスデータをExperience PlatformからMarketo Engageに静的リストの形式でプッシュできます。 詳しくは、[Marketo の宛先](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=ja)に関するガイドを参照してください。
+Bodea のマーケターは、オーディエンスを宛先に対してアクティブ化します。これにより、オーディエンスデータをExperience Platformからマーケティング自動化プラットフォームにプッシュできます。 使用可能な宛先について詳しくは、[ 宛先カタログ ](../destinations/catalog/overview.md) を参照してください。
 
 ## 次の手順
 
