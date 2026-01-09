@@ -18,10 +18,10 @@ Adobe Experience Platform クエリサービスを使用して、取り込んだ
 
 データのクエリを開始する前に、次のことを確認します。
 
-- **必要な権限**：ユーザーアカウントがExperience Platformのクエリサービスにアクセスできます。 UI でサービスを使用できない場合は、[ 権限ドキュメント ](../../access-control/home.md#permissions) を確認し、システム管理者に問い合わせてください。
+- **必要な権限**：ユーザーアカウントがExperience Platformのクエリサービスにアクセスできます。 UI でサービスを使用できない場合は、[&#x200B; 権限ドキュメント &#x200B;](../../access-control/home.md#permissions) を確認し、システム管理者に問い合わせてください。
 - **データ取り込み**：データがExperience Platformに取り込まれています。
 
-データを取り込む必要がある場合は、[ データ取り込みチュートリアルビデオ ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) で、データセットの作成、スキーママッピング、取り込み、検証の概要を確認してください。 詳しい情報やその他の学習リソースへのリンクについては、[ 取り込みの概要ドキュメント ](../../ingestion/home.md) を参照してください。
+データを取り込む必要がある場合は、[&#x200B; データ取り込みチュートリアルビデオ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) で、データセットの作成、スキーママッピング、取り込み、検証の概要を確認してください。 詳しい情報やその他の学習リソースへのリンクについては、[&#x200B; 取り込みの概要ドキュメント &#x200B;](../../ingestion/home.md) を参照してください。
 
 ## クイックスタートのパス
 
@@ -29,11 +29,11 @@ Adobe Experience Platform クエリサービスを使用して、取り込んだ
 
 ### [!DNL Query Editor]
 
-分析、データ調査および共同クエリ開発に [!DNL Query Editor] を使用します。 UI 機能の概要については、[ クエリサービス UI ドキュメント ](../ui/overview.md) を参照してください。 UI でクエリを記述および実行する方法については、[[!DNL Query Editor user guide]](../ui/user-guide.md) を参照してください。
+分析、データ調査および共同クエリ開発に [!DNL Query Editor] を使用します。 UI 機能の概要については、[&#x200B; クエリサービス UI ドキュメント &#x200B;](../ui/overview.md) を参照してください。 UI でクエリを記述および実行する方法については、[[!DNL Query Editor user guide]](../ui/user-guide.md) を参照してください。
 
 ### クエリサービス API
 
-Query Service API を使用して、ワークフローの自動化、クエリテンプレートの管理、プログラムによる統合を行います。 Query Service API の使用に関する詳細な手順については、『 [ クエリサービス開発者ガイド ](../api/getting-started.md) 』を参照してください。
+Query Service API を使用して、ワークフローの自動化、クエリテンプレートの管理、プログラムによる統合を行います。 Query Service API の使用に関する詳細な手順については、『 [&#x200B; クエリサービス開発者ガイド &#x200B;](../api/getting-started.md) 』を参照してください。
 
 ## 次の手順
 
@@ -43,7 +43,7 @@ Query Service API を使用して、ワークフローの自動化、クエリ�
 - [クエリサービスの SQL 構文](../sql/syntax.md)
 - [SQL を使用した派生データセットの作成](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[ 放棄された参照のユースケースのプレゼンテーション ](../use-cases/abandoned-browse.md#video-example) をご覧ください。
+また、Experience Platformでのクエリサービスのデータ処理におけるメリットについて詳しくは、[&#x200B; 放棄された参照のユースケースのプレゼンテーション &#x200B;](../use-cases/abandoned-browse.md#video-example) をご覧ください。
 
 [!DNL Query Service] の理解を深めるために、次のリソースが役立ちます。
 
