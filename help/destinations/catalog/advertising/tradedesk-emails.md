@@ -3,9 +3,9 @@ title: The Trade Desk - CRM 接続
 description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 15%
 
 ---
@@ -31,7 +31,7 @@ CRM データに基づくオーディエンスのターゲティングおよび�
 
 >[!TIP]
 >
->CRM 宛先 [!DNL The Trade Desk]、メールやハッシュ化されたメールアドレスなどの CRM データマッピングに使用します。 Cookie とデバイス ID のマッピングには、Adobe Experience Platform カタログの [&#x200B; その他の Trade Desk 宛先 &#x200B;](/help/destinations/catalog/advertising/tradedesk.md) を使用します。
+>CRM 宛先 [!DNL The Trade Desk]、メールやハッシュ化されたメールアドレスなどの CRM データマッピングに使用します。 Cookie とデバイス ID のマッピングには、Adobe Experience Platform カタログの [ その他の Trade Desk 宛先 ](/help/destinations/catalog/advertising/tradedesk.md) を使用します。
 
 ## 前提条件 {#prerequisites}
 
@@ -41,7 +41,7 @@ CRM データに基づくオーディエンスのターゲティングおよび�
 
 ## ID の一致要件 {#id-matching-requirements}
 
-Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 &#x200B;](/help/identity-service/features/namespaces.md) を参照してください。
+Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 ](/help/identity-service/features/namespaces.md) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
@@ -60,7 +60,7 @@ Adobe Experience Platform では、プレーンテキストと SHA256 でハッ�
 
 メールアドレスは、Adobe Experience Platformに取り込む前にハッシュ化したり、生のメールアドレスを使用したりできます。
 
-Experience Platformでのメールアドレスの取り込みについては、[&#x200B; バッチ取り込みの概要 &#x200B;](/help/ingestion/batch-ingestion/overview.md) を参照してください。
+Experience Platformでのメールアドレスの取り込みについては、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
@@ -77,7 +77,7 @@ Experience Platformでのメールアドレスの取り込みについては、[
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL Audience export]** | Trade Desk 宛先で使用される識別子（メールまたはハッシュ化されたメール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。 詳しくは、[&#x200B; バッチエクスポート &#x200B;](/help/destinations/destination-types.md#file-based) を参照してください。 |
+| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。 詳しくは、[ バッチエクスポート ](/help/destinations/destination-types.md#file-based) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -96,32 +96,37 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL Advertiser ID]**：お使いの [!DNL Trade Desk Advertiser ID]。[!DNL Trade Desk] アカウントマネージャーで共有するか、[!DNL Advertiser Preferences] UI の [!DNL Trade Desk] にあるアセットです。
 
-![&#x200B; 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![ 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/policies/overview.md) を参照してください。
+宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[ データガバナンスの概要 ](/help/data-governance/policies/overview.md) を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttdg"
+>title="事前設定済みのマッピングセット"
+>abstract="これら 4 つのマッピングセットは事前に設定されています。 Trade Desk に対してデータをアクティブ化する際、アクティブ化されたオーディエンスに対して選定されたプロファイルには、必ずしも 4 つの ID すべてがプロファイルに存在している必要はありません。これは、この宛先が、ここに示すいずれかのターゲット ID で動作するためです。"
+
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
 **[!UICONTROL Scheduling]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
-![&#x200B; オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >CRM 宛先に対してアクティブ化 [!DNL The Trade Desk] れたすべてのオーディエンスは、毎日の頻度と完全なファイル書き出しに自動的に設定されます。
 
-![&#x200B; オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 **[!UICONTROL Mapping]** ページでは、ソース列から属性または ID 名前空間を選択し、ターゲット列にマッピングする必要があります。
 
-![&#x200B; オーディエンスのアクティベーションをマッピングするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![ オーディエンスのアクティベーションをマッピングするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 以下に、オーディエンスを CRM 宛先に対してアクティブ化する際の、正しい ID マッピング [!DNL The Trade Desk] 例を示します。
 
@@ -145,7 +150,7 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 
 1. まず、「**[!UICONTROL Data]**」タブを選択し、「**[!UICONTROL First-Party]**」セクションを確認します。
 2. ページを下にスクロールすると、「**[!UICONTROL Imported Data]**」の下に **[!UICONTROL Adobe 1PD Tile]** が表示されます。
-3. **[!UICONTROL Adobe 1PD]**&#x200B;タイルをクリックすると、広告主の [!DNL Trade Desk] しい宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
+3. **[!UICONTROL Adobe 1PD]**タイルをクリックすると、広告主の [!DNL Trade Desk] しい宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
 4. Experience Platformのセグメント ID #が、[!DNL Trade Desk] UI でセグメント名として表示されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
