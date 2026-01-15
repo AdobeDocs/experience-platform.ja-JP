@@ -4,9 +4,9 @@ title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformでのアラートの概要を説明します。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 59%
 
 ---
@@ -31,7 +31,7 @@ Experience Platformのアラートは、1 回だけ送信することも、解�
 | --- | --- |
 | 必ずしも問題を示しているとは限りません。 | 潜在的に望ましくない状態を示します。 |
 | 繰り返されません。 | 異常な状態が続く場合は繰り返される場合があります。 |
-| 以下に例を示します。<ul><li>データの取り込みが正常に完了しました。</li><li>クエリの実行が終了しました。</li><li>データが削除されました。</li></ul> | 以下に例を示します。<ul><li>取り込み期間がサービスレベル契約（SLA）を超えています。</li><li>過去 24 時間に、日次日の取り込みは実行されませんでした。</li><li>ストリームプロセッサのエラー率が、設定されたしきい値を超えています。</li><li>プロファイルの合計数が資格を超えています。</li></ul> |
+| 以下に例を示します。<ul><li>データの取り込みが正常に完了しました。</li><li>クエリの実行が終了しました。</li><li>データが削除されました。</li></ul> | 以下に例を示します。<ul><li>取り込み期間がサービスレベル契約（SLA）を超えています。</li><li>過去 24 時間に、日次日の取り込みは実行されませんでした。</li><li>ストリームプロセッサのエラー率が、設定されたしきい値を超えています。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ Experience Platformのアラートは、1 回だけ送信することも、解�
 
 | コンポーネント | 説明 |
 | --- | --- |
-| **指標** | 可観測性[指標](../api/metrics.md#available-metrics)。この指標の値は、失敗したバッチ取得イベントの数（`timeseries.ingestion.dataset.batchfailed.count`）など、アラートをトリガーします。 |
+| **指標** | 可観測性[指標](../api/metrics.md#available-metrics)。この指標の値は、失敗したバッチ取り込みイベントの数（`timeseries.ingestion.dataset.batchfailed.count`）など、アラートをトリガーします。 |
 | **条件** | 特定の数を超えるカウント指標など、アラートが true と解決された場合にトリガーする指標に関連する条件。 この条件は、事前に定義された時間枠に関連付けることができます。 |
 | **ウィンドウ** | （オプション）アラートの条件は、事前に定義された時間枠に制限される場合があります。 例えば、過去 5 分間に失敗したバッチの数に応じて、アラートがトリガーされることがあります。 |
 | **アクション** | アラートがトリガーされると、アクションが実行されます。 特に、メッセージは、事前設定済みの Webhook や Experience Platform UI などの配信チャネルを通じて、該当する受信者に送信されます。 |
@@ -81,9 +81,9 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 >[!NOTE]
 >
->Experience Platformで権限を管理する方法について詳しくは、[&#x200B; アクセス制御に関するドキュメント &#x200B;](../../access-control/ui/overview.md) を参照してください。
+>Experience Platformで権限を管理する方法について詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/ui/overview.md) を参照してください。
 
-「アラートの表示」権限を使用すると、右上隅のベルアイコン（![&#x200B; ベルアイコン &#x200B;](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
+「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
 ![](../images/alerts/overview/ui.png)
 
