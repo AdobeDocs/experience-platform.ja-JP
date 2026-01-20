@@ -48,7 +48,7 @@ Agent Orchestratorを使用すると、ワークフローを自動化し、複�
 
 {style="table-layout:auto"}
 
-詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -62,7 +62,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 
 {style="table-layout:auto"}
 
-詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#real-time-customer-profile}
 
