@@ -2,10 +2,10 @@
 title: Experience Platformのプレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
+source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 15%
+source-wordcount: '1150'
+ht-degree: 18%
 
 ---
 
@@ -21,56 +21,76 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**リリース日：2025 年 10 月**
+**リリース日：2026 年 1 月**
 
 Adobe Experience Platformの既存の機能に対する新機能とアップデート：
 
-- [アラート](#alerts)
+- [Agent Orchestrator](#agent-orchestrator)
 - [宛先](#destinations)
+- [リアルタイム顧客プロファイル](#real-time-customer-profile)
+- [スキーマ](#schemas)
 - [セグメント化サービス](#segmentation-service)
 - [ソース](#sources)
 
-## アラート {#alerts}
+## Agent Orchestrator {#agent-orchestrator}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Agent Orchestratorを使用すると、ワークフローを自動化し、複数のチャネルをまたいで顧客とやり取りできる、AI を活用したエージェントを構築およびデプロイできます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先の失敗率アラート | 宛先に対して新しいアラートが追加されました：**宛先の失敗率がしきい値を超えています**。 このアラートは、データのアクティベーション中に失敗したレコードの数が許可されているしきい値を超えた場合に通知するので、アクティベーションの問題に迅速に対応できます。 |
+| Agent Orchestratorの公判の申立て | Agent Orchestratorでは体験版を提供するようになりました。これにより、お客様は完全購入をコミットする前にサービスを参照およびテストできます。 この「購入前に試す」オプションを使用すると、スキルやオーケストレーション機能など、Agent Orchestratorの機能を組織内で評価できます。 この体験版では、AI を利用したエージェントの構築と、それらが既存のワークフローにどのように統合できるかを理解する実践的なエクスペリエンスを提供します。 |
 
 {style="table-layout:auto"}
 
-アラートについて詳しくは、[[!DNL Observability Insights]  概要 &#x200B;](../observability/home.md) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
 
 ## 宛先 {#destinations}
 
 Experience Platformから [!DNL Destinations] データの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**新規宛先または更新された宛先**
+**新機能または更新された機能**
 
-| 宛先 | 説明 |
+| 機能 | 説明 |
 | --- | --- |
-| [!DNL AdForm] | この宛先を使用して、Adobe Real-Time CDP オーディエンスを [!DNL AdForm] に送信し、Experience Cloud ID （ECID）と [!DNL AdForm] の ID Fusion に基づいてアクティブ化します。 [!DNL AdForm] の ID Fusion は、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化できる ID 解決サービスです。 |
-| [!DNL Amazon Ads] | `firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country` などの個人識別子のサポートを追加しました。 これらのフィールドをターゲット ID としてマッピングすると、オーディエンスの一致率を向上させることができます。 |
-| [!DNL Snowflake Batch] （限定提供） | ライブ [!DNL Snowflake] データ共有を作成して、毎日のオーディエンスの更新を共有テーブルとして直接アカウントに受け取ります。 この統合は、現在、VA7 地域でプロビジョニングされたお客様の組織で利用できます。 |
-| [!DNL Snowflake Streaming] （限定提供） | ライブオーディ [!DNL Snowflake] ンスデータ共有を作成して、ストリーミングオーディエンスの更新を共有テーブルとして直接アカウントに受け取ります。 この統合は、現在、VA7 地域でプロビジョニングされたお客様の組織で利用できます。 |
+| Adobe Targetの宛先のガードレール制限を更新しました | 1 つのAdobe Targetの宛先にマッピングできるオーディエンスの最大数が 50 から 250 に増えました。 これにより、Adobe Targetが他の宛先の標準のオーディエンス制限に合わせられ、オーディエンスアクティベーションワークフローの柔軟性が向上します。 複数のデータフローを作成しなくても、Adobe Targetの宛先に対して、より多くのオーディエンスをアクティブ化できるようになりました。 |
+
+{style="table-layout:auto"}
+
+詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+
+## リアルタイム顧客プロファイル {#real-time-customer-profile}
+
+リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。 プロファイルを使用すると、顧客データを統合ビューに統合して、顧客インタラクションごとにアクションにつながるタイムスタンプ付きアカウントを提供できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL AES256] 宛先での [!DNL Amazon S3] サーバーサイド暗号化のサポート | [!DNL Amazon S3] の宛先では、サーバーサイドの暗号化 [!DNL AES256] サポートするようになり、書き出したデータのセキュリティを強化します。 この暗号化方法は、[!DNL Amazon S3] 宛先接続を設定または更新する際に設定できます。この方法では、業界標準の [!DNL AES256] 暗号化アルゴリズムを使用して、保存時にデータが暗号化されます。 詳しくは、[[!DNL Amazon]  ドキュメント &#x200B;](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html) を参照してください。 |
-| [&#x200B; オーディエンスレベルの監視をサポートする新しい宛先 &#x200B;](../dataflows/ui/monitor-destinations.md#audience-level-view) | 以下の宛先で、オーディエンスレベルの監視がサポートされるようになりました。 <ul><li>[!DNL Airship Tags]</li><li>（API） [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>（V1） [!DNL Pega CDH Realtime Audience]</li><li>（V2） [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Account Engagement</li><li>[!DNL The Trade Desk]</li></ul> |
-| データセット書き出しガードレールの修正 | データセット書き出しガードレールの修正が実装されました。 以前は、XDM エクスペリエンスイベントスキーマに基づい _タイムスタンプ列を含むが_ 含まない）一部のデータセットがエクスペリエンスイベントデータセットとして誤って扱われ、書き出しが 365 日のルックバックウィンドウに制限されていました。 ドキュメント化された 365 日間のルックバックガードレールは、エクスペリエンスイベントデータセットにのみ適用されるようになりました。 XDM エクスペリエンスイベントスキーマ以外のスキーマを使用するデータセットは、100 億レコードのガードレールで管理されるようになりました。 一部のお客様では、データセットの書き出し数が増加し、365 日間のルックバックウィンドウで誤って失敗する場合があります。 これにより、ルックバックウィンドウが長い予測ワークフローのデータセットを書き出すことができます。 詳しくは、[&#x200B; データセット書き出しガードレール &#x200B;](../destinations/guardrails.md#dataset-exports) を参照してください。 |
-| エンタープライズ宛先に関するオーディエンスレベルのレポートの強化 | エンタープライズの宛先に関するオーディエンスレベルのレポートロジックの改善。 このリリース以降、選択した宛先に関連するオーディエンスのみを含んだ、より正確なオーディエンスレポート番号が表示されるようになります。 この監視の調整により、データフローでマッピングされたオーディエンスのみがレポートに含まれるようになり、実際のデータのアクティブ化に関するインサイトが明確になります。 これは、アクティブ化されるデータの量には影響しません。純粋に、レポートの精度を向上させるための監視機能の強化にすぎません。 |
+| ストリーミング容量の適用 | Experience Platformでは、リアルタイム顧客プロファイルと ID サービスのストリーミングスループット機能を適用するようになりました。 顧客が契約したストリーミング容量を超えると、データは先入れ先出しの方法でキューに入れられ、処理されます。 これにより、予測可能なシステムパフォーマンスが確保され、容量違反によってデータ取り込みの品質に影響が及ぶのを防ぐことができます。 重要なメモ：処理能力を超えると、データレイクでアップサートのストリーミングを使用できなくなります。この適用は、Adobe Journey Optimizer ライセンスを持つお客様には適用されません。処理能力が利用可能になると、キュー内のデータが順次処理されます。 |
+| Real-Time CDP Primeの API アクセスの廃止 | エクスペリエンスイベントの API アクセスは、すべてのReal-Time CDP Prime ユーザーに対して非推奨（廃止予定）になりました。 この変更は、API を介してエクスペリエンスイベントを直接クエリする機能に影響を与えます。 Real-Time CDP Ultimateのお客様は、正式な例外プロセスを通じて例外をリクエストし、必要に応じてエクスペリエンスイベント API アクセスを有効にすることができます。 この非推奨（廃止予定）は、システムのパフォーマンスを最適化し、データアクセスパターンのベストプラクティスに従うのに役立ちます。 |
+| データフロー実行の監視 | プロファイルでデータフロー実行の進行状況と準備状況を監視できるようになりました。 |
 
-詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
+{style="table-layout:auto"}
+
+詳しくは、[[!DNL Real-Time Customer Profile] 概要](../profile/home.md)を参照してください。
+
+## スキーマ {#schemas}
+
+Experience Platform では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。あらゆるシステムにわたって一貫した形式でデータを定義することで、意味を保持しやすくなり、したがってデータから価値を得やすくなります。スキーマは、基本クラスと 0 個以上のスキーマフィールドグループで構成されます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 検索、フィルター、タグ、フォルダーによるスキーマインベントリの最新化 | スキーマの参照ページが最新化され、組織および検出機能が強化されました。 新しい機能には、高度な検索およびフィルタリングオプション、スキーマを整理するためのユーザー生成タグおよびフォルダーのサポート、ワークフローを効率化するためのインラインアクションが含まれます。 主な改善点：更新済み列（名前、クラス、データセット、ID、関係、プロファイルを有効、動作、スキーマタイプ、タグ、作成日、最終変更日）、詳細フィルター（プロファイルを表示、スキーマタイプ、クラス、タグあり、作成日、変更日、プライマリ ID あり、関係、プライマリ ID 名前空間あり）、インラインアクション（編集、削除、ラベルを適用、ラベルを適用、非リレーショナルスキーマのデータセットを作成、タグを管理、フォルダーに移動、パッケージに追加、JSON 構造をコピー、サンプルファイルをダウンロード）、タグとフォルダーを使用してスキーマを整理する機能。 これらの機能強化により、スキーマリソースを包括的に表示できるようになり、サンドボックスレベルでのスキーマ管理がより効率的になります。 |
+
+詳しくは、[[!DNL Schemas] 概要](../xdm/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -81,6 +101,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 機能 | 説明 |
 | ------- | ----------- |
 | ストリーミングセグメント化の監視 | ストリーミングセグメント化のリアルタイム監視は、サンドボックス、データセット、オーディエンスレベルでの評価率、待ち時間、データ品質指標に対する透明性を提供します。 これにより、プロアクティブなアラートと実用的なインサイトがサポートされ、データエンジニアが容量違反と取り込みの問題を特定するのに役立ちます。 モニタリング指標には、評価率、P95 取得待ち時間、受信、評価、失敗およびスキップされたレコードが含まれます。 データセット別の表示およびオーディエンス別の表示機能は、最終的に選定された新しいプロファイルと選定されなかったプロファイルを包括的に可視化します。 |
+| 外部オーディエンス TTL の更新 | 外部オーディエンス（CSV アップロードなど）で、Time-to-Live （TTL）設定の強制更新機能がサポートされるようになりました。 この機能を使用すると、外部オーディエンスの TTL 有効期限を手動で更新でき、オーディエンスのライフサイクル管理をより詳細に制御できます。 これは、初期 TTL 期間を超えて保持する必要があるオーディエンスや、データを再アップロードせずに再アクティブ化する必要があるオーディエンスで特に便利です。 |
 
 詳しくは、[[!DNL Segmentation Service] 概要](../segmentation/home.md)を参照してください。
 
@@ -92,13 +113,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | ソース | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Talon.one] ロイヤルティデータのソース | [!DNL Talon.One] のソースを使用して、ロイヤルティデータのバッチ取り込みとExperience Platformへのストリーミングを行います。 コネクタは、プロファイルデータ、トランザクションデータ、ロイヤルティデータ（獲得したポイント、交換されたポイント、期限切れのポイント、階層データを含む）のストリーミングをサポートしています。 |
-
-**更新されたソース**
-
-| ソース | 説明 |
-| --- | --- |
-| [!DNL Google Ads] ソースの一般提供（API のみ） | [!DNL Google Ads] ソースの API バージョンが一般提供されるようになりました。 API に関するドキュメントを更新し、最新バージョンが `v21` 新されたことを反映しました。また、Experience Platformでは v19 以降のすべてのバージョンをサポートしています。 UI バージョンはベータ版のままで、1 回限りの取り込みをサポートします。 増分データ取り込みを使用するには、API ルートを使用します。 |
-| [!DNL Azure Event Hubs] 仮想ネットワークのサポート | Adobeは、Azure Event Hubs への仮想ネットワーク接続を明示的にサポートするようになり、パブリックネットワークではなくプライベートネットワーク経由でのデータ転送が可能になりました。 お客様は、*Experience Platform VNet を許可リストに加えるして、Azure プライベートバックボーンを通じて Event Hubs トラフィックを非公開でルーティングし、データ取得ワークフローのセキュリティとコンプライアンスを強化できます。 |
+| [!DNL Oracle Eloqua] V2 ソース | 非推奨のコネクタに代わって、新しい [!DNL Oracle Eloqua] ソースコネクタが使用できるようになりました。 この更新されたコネクタにより、[!DNL Oracle Eloqua] からExperience Platformにデータを取り込む機能が強化され、信頼性が向上しています。 既存の接続は機能しなくなるので、既存のコネクタを使用しているお客様は、新しい実装に移行する必要があります。 新しいコネクタは、に接続してマーケティング自動化データを取り込むために必要なすべてのセットアップ [!DNL Oracle Eloqua] 設定手順をサポートしています。 |
+| [!DNL Salesforce Marketing Cloud] V2 ソース | 非推奨のコネクタに代わって、新しい [!DNL Salesforce Marketing Cloud] ソースコネクタが使用できるようになりました。 この更新されたコネクタにより、パフォーマンスが向上し、[!DNL Salesforce Marketing Cloud] からExperience Platformにデータを取り込む機能が増えました。 既存のコネクタを使用しているお客様は、新しい実装に移行する必要があります。 新しいコネクタには、[!DNL Salesforce Marketing Cloud] に接続してマーケティング自動化データを取り込むための包括的な設定手順が含まれています。 |
 
 詳しくは、[ソースの概要](../sources/home.md)を参照してください。
+
