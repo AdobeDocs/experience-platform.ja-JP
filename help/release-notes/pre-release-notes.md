@@ -48,7 +48,7 @@ Agent Orchestratorを使用すると、ワークフローを自動化し、複�
 
 {style="table-layout:auto"}
 
-詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -60,7 +60,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | ケベル宛先コネクタが使用可能になりました | [[!DNL Kevel]](https://www.kevel.com/) は、革新的なコマースリーダーがリテールメディアでローンチ、拡大、成功するのを支援する、AI 対応のテクノロジーとエキスパートガイダンスを提供します。 [!DNL Kevel] の Retail Media Cloud は、オンサイト広告とオフサイト広告のために、ターゲットを絞った、帰属可能なカスタマイズ可能な広告フォーマットを強化します。 |
 | インデックス交換の宛先コネクタが使用可能になりました | [!DNL Index] は、メディア所有者が全画面にわたってコンテンツの価値を最大化するのに役立つ、グローバル広告のサプライサイドのプラットフォームです。 20 年以上にわたる業界のリーダーシップを持つ [!DNL Index] は、世界最大のブランドとプレミアムなエクスペリエンスメーカーを結び付け、高品質の消費者体験を提供します。 |
-| Braze 接続の地域エンドポイントのサポート | [ でサポートされているすべての ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 地域固有のエンドポイント [!DNL Braze] が、宛先設定フロー中に選択できるようになりました。 使用するエンドポイントインスタンスを [!DNL Braze] 担当者に問い合わせます。 |
+| Braze 接続の地域エンドポイントのサポート | [&#x200B; でサポートされているすべての &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 地域固有のエンドポイント [!DNL Braze] が、宛先設定フロー中に選択できるようになりました。 使用するエンドポイントインスタンスを [!DNL Braze] 担当者に問い合わせます。 |
 | Liveramp オンボーディングの毎週および毎月のスケジュールのサポート | Liveramp オンボーディング宛先の毎週および毎月の書き出しスケジュールを設定できるようになりました。 |
 | Amazon S3 の宛先に対する AES256 暗号化のサポート | Amazon S3 の書き出しに AES256 暗号化を設定できるようになりました。 |
 | Trade Desk とMicrosoft Bing の宛先のアクティベーションエクスペリエンスの強化 | Trade Desk とMicrosoft Bing の宛先に、最適化されたアクティベーションエクスペリエンスのための事前定義済みの必須マッピングが含まれるようになりました。 |
@@ -70,12 +70,12 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 機能 | 説明 |
 | --- | --- |
 | Adobe Targetの宛先のガードレール制限を更新しました | 1 つのAdobe Targetの宛先にマッピングできるオーディエンスの最大数が 50 から 250 に増えました。 これにより、Adobe Targetが他の宛先の標準のオーディエンス制限に合わせられ、オーディエンスアクティベーションワークフローの柔軟性が向上します。 複数のデータフローを作成しなくても、Adobe Targetの宛先に対して、より多くのオーディエンスをアクティブ化できるようになりました。 |
-| [ 宛先の編集 ](/help/destinations/ui/edit-destination.md) および [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 一般提供 | 宛先とマーケティングアクションを編集するオプションが、すべてのユーザーが使用できるようになりました。 |
+| [&#x200B; 宛先の編集 &#x200B;](/help/destinations/ui/edit-destination.md) および [&#x200B; マーケティングアクションの編集 &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 一般提供 | 宛先とマーケティングアクションを編集するオプションが、すべてのユーザーが使用できるようになりました。 |
 | マッピングステップでのフィールド表示名の切り替え | スキーマフィールドを宛先にマッピングする際に、完全な XDM フィールド名の表示と表示名のみの表示を切り替えられるようになりました。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#real-time-customer-profile}
 
