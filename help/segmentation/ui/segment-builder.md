@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
 workflow-type: tm+mt
-source-wordcount: '5161'
+source-wordcount: '5175'
 ht-degree: 55%
 
 ---
@@ -21,6 +21,31 @@ ht-degree: 55%
 ![セグメントビルダー UI の表示。](../images/ui/segment-builder/segment-builder.png)
 
 ## セグメント定義の構成要素 {#building-blocks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="ロジックの複雑さ"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="イベント シーケンス制限"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="クエリ効率アラート"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="カウント フィルターの警告"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="ネストされたデータの警告"
+>abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -64,9 +89,9 @@ ht-degree: 55%
 
 ### イベント
 
-**[!UICONTROL Events]**&#x200B;タブを使用すると、[!DNL XDM ExperienceEvent]データ要素を使用して発生したイベントまたはアクションに基づいてオーディエンスを作成できます。また、セグメント定義をより迅速に作成できるように、一般的に使用されるイベントのコレクションである **[!UICONTROL Events]** タブでイベントタイプを見つけることもできます。
+「**[!UICONTROL Events]**」タブでは、[!DNL XDM ExperienceEvent] のデータ要素を使用して実行されたイベントまたはアクションに基づいてオーディエンスを作成できます。 また、「**[!UICONTROL Events]**」タブではイベントタイプを検索できます。イベントタイプは一般的に使用されるイベントの集まりで、これを使用するとセグメント定義をより迅速に作成することができます。
 
-[!DNL ExperienceEvent] 要素を参照できるだけでなく、イベントタイプを検索することもできます。イベントタイプでは、[!DNL ExperienceEvents] と同じコーディングロジックを使用します。その際に、[!DNL XDM ExperienceEvent] クラスで正しいイベントを検索する必要はありません。たとえば、検索 バーを使用して &quot;買い物かご&quot; 検索すると、セグメント定義を作成するときに非常に一般的に使用される 2 つの 買い物かご アクションであるイベント タイプ &quot;[!UICONTROL AddCart]&quot; と &quot;[!UICONTROL RemoveCart]&quot; が返されます。
+[!DNL ExperienceEvent] 要素を参照できるだけでなく、イベントタイプを検索することもできます。イベントタイプでは、[!DNL ExperienceEvents] と同じコーディングロジックを使用します。その際に、[!DNL XDM ExperienceEvent] クラスで正しいイベントを検索する必要はありません。例えば、検索バーを使用して「cart」を検索すると、「[!UICONTROL AddCart]」と「[!UICONTROL RemoveCart]」というイベントタイプが返されます。これらは、セグメント定義を作成する際によく使用される 2 つの買い物かごアクションです。
 
 任意のタイプのコンポーネントを検索するには、[Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)を使用して、検索バーにその名前を入力します。単語を完全に入力すると、検索結果が表示され始めます。例えば、XDM フィールド `ExperienceEvent.commerce.productViews` に基づくルールを作成するには、検索フィールドに「product views」と入力します。「product」という単語の入力が終わると同時に、検索結果が表示され始めます。検索結果には、それが属するオブジェクト階層も表示されます。
 
@@ -78,7 +103,7 @@ ht-degree: 55%
 
 ![セグメントビルダー UI の「イベント」セクションがハイライト表示されている様子。](../images/ui/segment-builder/events.png)
 
-デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。これには「[!UICONTROL Event Types]」が含まれます。 「[!UICONTROL Event Types]」リストが表示されていない場合、または「[!UICONTROL Any]」として「[!UICONTROL Event Type]」しか選択できない場合は、**の横にある**&#x200B;歯車アイコン&#x200B;**[!UICONTROL Fields]**&#x200B;を選択し、[**[!UICONTROL Show full XDM schema]**]の下の&#x200B;**[!UICONTROL Available Fields]**&#x200B;を選択します。**歯車アイコン**&#x200B;をもう一度選択して&#x200B;**[!UICONTROL Fields]**&#x200B;タブに戻ると、データが含まれているかどうかに関係なく、複数の「[!UICONTROL Event Types]」フィールドとスキーマフィールド表示できるようになります。
+デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。これには「[!UICONTROL Event Types]」が含まれます。 「[!UICONTROL Event Types]」リストが表示されない場合や、「[!UICONTROL Any]」として「[!UICONTROL Event Type]」しか選択できない場合は、**の横の** 歯車アイコン **[!UICONTROL Fields]** を選択し、「**[!UICONTROL Show full XDM schema]**」の下の「**[!UICONTROL Available Fields]**」を選択します。 **歯車アイコン** をもう一度選択すると、「**[!UICONTROL Fields]**」タブに戻ります。データが含まれているかどうかに関係なく、複数の「[!UICONTROL Event Types]」とスキーマフィールドが表示されるようになりました。
 
 ![データを含んだフィールドのみ表示するか、すべての XDM フィールドを表示するかを選択できるラジオボタンがハイライト表示されている様子。](../images/ui/segment-builder/show-populated.png)
 
@@ -86,11 +111,11 @@ ht-degree: 55%
 
 セグメント化において 1 つまたは複数の Adobe Analytics レポートスイートのデータをイベントとして使用できます。
 
-1 つのAnalyticsレポートスイートのデータを使用する場合、Experience Platform は記述子とフレンドリ名を eVar に自動的に追加し、 [!DNL Segment Builder]内でこれらのフィールドを見つけやすくします。
+1 つの Analytics レポートスイートのデータを使用する場合、Experience Platformは記述子とわかりやすい名前を eVar に自動的に追加するので、[!DNL Segment Builder] 内でこれらのフィールドを見つけやすくなります。
 
 ![汎用変数（eVar）がわかりやすい名前を付けてどのようにマッピングされるかを示す画像。](../images/ui/segment-builder/single-report-suite.png)
 
-複数のAnalyticsレポートスイートからのデータを使用する場合、Experience Platform記述子またはわかりやすい名前を eVar に自動的に追加 **できません** 。 したがって、Analytics レポートスイートのデータを使用する前に、XDM フィールドにマッピングする必要があります。 Analytics 変数から XDM へのマッピングについて詳しくは、[Adobe Analytics ソース接続ガイド](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)を参照してください。
+複数の Analytics レポートスイートのデータを使用する場合、Experience Platformは、記述子やわかりやすい名前を eVar に自動的に追加 **できません**。 したがって、Analytics レポートスイートのデータを使用する前に、XDM フィールドにマッピングする必要があります。 Analytics 変数から XDM へのマッピングについて詳しくは、[Adobe Analytics ソース接続ガイド](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)を参照してください。
 
 例えば、次の変数が含まれる 2 つのレポートスイートがあるとします。
 
@@ -135,9 +160,9 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Experience Platform 内で作成されたオーディエンスについては、 **同一** 結合ポリシーを持つオーディエンスのみが表示されます。
+>Experience Platform内で作成されたオーディエンスの場合、**同じ** 結合ポリシーを持つオーディエンスのみが表示されます。
 
-**[!UICONTROL Audiences]** タブには、Adobe Audience Manager や Customer Journey Analytics などの外部ソースからインポートされたすべてのオーディエンスと、[!DNL Experience Platform] 内で作成されたオーディエンスが一覧表示されます。
+「**[!UICONTROL Audiences]**」タブには、Adobe Audience ManagerやCustomer Journey Analyticsなどの外部ソースから読み込まれたすべてのオーディエンスと、[!DNL Experience Platform] 内で作成されたオーディエンスが表示されます。
 
 「**[!UICONTROL Audiences]**」タブでは、使用可能なすべてのソースがフォルダーのグループとして表示されます。 フォルダーを選択すると、使用可能なサブフォルダーとオーディエンスが表示されます。また、フォルダー構造を表示するには、フォルダーアイコンを選択します（右端の画像を参照）。チェックマークは、現在のフォルダーを表しています。また、ツリー内のフォルダーの名前を選択することで、フォルダー間を簡単に移動できます。
 
@@ -151,13 +176,13 @@ ht-degree: 55%
 >
 >2024 年 6 月リリースの時点で、「今月」は「月初」を、「今年」は「年初」をそれぞれ表しています。 例えば、7 月 18 日に「今月が誕生日の顧客すべて」を検索するオーディエンスを作成した場合、オーディエンスには、7 月 1 日から 7 月 31 日までに誕生日が発生したすべての顧客が取得されます。 このオーディエンスは、8 月 1 日に誕生日が 8 月 1 日から 8 月 31 日までのすべての顧客を取得します。
 >
->以前は、「今月」と「今年」はそれぞれ 30 日と 365 日を表していましたが、31 日とうるう年の月はアカウントできませんでした。
+>以前は、「今月」は 30 日、「今年」は 365 日を表していましたが、31 日とうるう年の月を考慮できませんでした。
 >
 >オーディエンスのロジックを更新するには、以前に作成したオーディエンスを再保存してください。
 
 セグメント定義は、ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用される一連のルールです。これらのルールは、[!DNL Segment Builder] の中央にあるルールビルダーキャンバスを使用して作成します。
 
-セグメント定義に新しいルールを追加するには、 **[!UICONTROL Fields]** タブからタイルをドラッグして、ルールビルダーキャンバスにドロップします。 追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。使用できるデータタイプには、文字列、日付、[!DNL ExperienceEvents]、「[!UICONTROL Event Types]」、オーディエンスが含まれます。
+セグメント定義に新しいルールを追加するには、「**[!UICONTROL Fields]**」タブからタイルをドラッグし、ルールビルダーキャンバスにドロップします。 追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。使用できるデータタイプには、文字列、日付、[!DNL ExperienceEvents]、「[!UICONTROL Event Types]」、オーディエンスが含まれます。
 
 ![空のルールビルダーキャンバス。](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -173,11 +198,11 @@ ht-degree: 55%
 
 ![列挙リストに含まれていない値を挿入しようとした場合に表示される警告](../images/ui/segment-builder/enum-warning.png)
 
-複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![プラスアイコン](/help/images/icons/add-circle.png)を選択して、**[!UICONTROL Add values in bulk]**&#x200B;ポップオーバーを表示します。
+複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![ プラスアイコン ](/help/images/icons/add-circle.png) を選択して、**[!UICONTROL Add values in bulk]** ポップオーバーを表示します。
 
 ![プラスアイコンがハイライト表示され、バルクアップロードポップオーバーにアクセスするために選択できるボタンが表示されます。](../images/ui/segment-builder/add-bulk-values.png)
 
-**[!UICONTROL Add values in bulk]**&#x200B;ポップオーバーでは、CSV ファイルまたは TSV ファイルをアップロードできます。
+**[!UICONTROL Add values in bulk]** ポップオーバーで、CSV または TSV ファイルをアップロードできます。
 
 ![一括で値を追加ポップオーバーが表示されます。CSV または TSV ファイルをアップロードするために選択できるダイアログがハイライト表示されます。](../images/ui/segment-builder/bulk-values-popover.png)
 
@@ -196,7 +221,7 @@ ht-degree: 55%
 >title="更新の検索"
 >abstract="既存の検索システムは、統合検索を使用するように更新されました。統合検索を使用すると、オーディエンスのセグメントメンバーシップをより簡単かつ確実に検索できます。"
 
-**[!UICONTROL Audience]** タブからルールビルダーキャンバスにオーディエンスをドラッグアンドドロップしてオーディエンス新しいセグメント定義のメンバーシップを参照できます。これにより、オーディエンスのメンバーシップを新しいセグメント定義ルールの属性として含めたり除外したりできます。
+オーディエンスを「**[!UICONTROL Audience]**」タブからルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義のオーディエンスメンバーシップを参照できます。 これにより、オーディエンスのメンバーシップを新しいセグメント定義ルールの属性として含めたり除外したりできます。
 
 [!DNL Segment Builder] を使用して作成した [!DNL Experience Platform] オーディエンスの場合は、オーディエンスを、そのオーディエンスのセグメント定義で使用されていた一連のルールに変換することができます。このような変換では、ルールロジックのコピーが作成されます。このコピーを変更すれば、元のセグメント定義に影響を与えずに済みます。セグメント定義に対する最近の変更を、ルールロジックに変換する前に必ず保存しておいてください。
 
@@ -210,13 +235,13 @@ ht-degree: 55%
 
 ### コードビュー
 
-または、[!DNL Segment Builder] で作成されたルールのコードベースバージョンを表示できます。ルールビルダーキャンバス内にルールを作成したら、[ **[!UICONTROL Code view]** ] を選択してセグメント定義を PQL として表示できます。
+または、[!DNL Segment Builder] で作成されたルールのコードベースバージョンを表示できます。ルールビルダーキャンバス内でルールを作成したら、「**[!UICONTROL Code view]**」を選択して、セグメント定義をPQLとして表示できます。
 
 ![セグメント定義を PQL として表示するのに使用できるコードビューボタンがハイライト表示されている様子。](../images/ui/segment-builder/code-view.png)
 
 コードビューには、API 呼び出しで使用するセグメント定義の値をコピーできるボタンがあります。セグメント定義の最新バージョンを取得するには、最新の変更をセグメント定義に保存してあることを確認してください。
 
-![&#x200B; 「コードをコピー」ボタンがハイライト表示されている様子 &#x200B;](../images/ui/segment-builder/copy-code.png)
+![ 「コードをコピー」ボタンがハイライト表示されている様子 ](../images/ui/segment-builder/copy-code.png)
 
 ### 集計関数
 
@@ -256,15 +281,15 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 >
->2024 年 6 月より前に &quot;今月&quot; または &quot;今年&quot; の時間制約を使用してセグメント定義を作成した場合は、セグメント定義を再保存する必要があります。 2024 年 6 月より前は、「今月」は 30 日、「今年」は 365 日に基づいていました。
+>2024 年 6 月より前の「今月」または「今年」の時間制約を持つセグメント定義を作成した場合、セグメント定義を再保存する必要があります。 2024 年 6 月以前は、「今月」は 30 日、「今年」は 365 日に基づいていました。
 
 >[!NOTE]
 >
->[年の時間制約を無視](./ignore-year.md)と[ルールレベルの時間制約](./segment-refactoring.md)の両方が以前にリファクタリングされており、リンクされた概要でより多くの情報を利用できます。
+>[ 年の時間制約を無視 ](./ignore-year.md) と [ ルールレベルの時間制約 ](./segment-refactoring.md) は以前にリファクタリングされており、詳しくはリンクされた概要を参照してください。
 
-使用可能な時間制限のリストは次のとおりです。
+使用可能な時間制約のリストを以下に示します。
 
-+++ 利用可能な時間制限
++++ 利用可能な時間制約
 
 >[!NOTE]
 >
@@ -272,33 +297,33 @@ ht-degree: 55%
 >
 >さらに、「[!UICONTROL Ignore year]」チェックボックスが有効になっている場合、その年はセグメント定義評価の一部として比較 **されません**。
 
-| 時間制限 | 説明 | 年を無視できます | 例 |
+| 時間制限 | 説明 | 「年を無視」を有効にできる | 例 |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | 比較対象の属性またはイベントは、今日発生する必要があります&#x200B;**&#x200B;**。 | ○ | ![使用されている「今日」の時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| 昨日 | 比較される属性またはイベントは昨日発生した **必須** です。 | ○ | ![使用されている「昨日」の時間制限の例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| 今月 | 比較対象の属性またはイベントは **発生する必要があります** 。 | ○ | ![&#x200B; 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| 今年 | 比較対象の属性またはイベントは、今年 **発生する必要があります**。 | × | ![「今年」の時間制限が使用されている例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| カスタム日付 | 比較する属性またはイベントは、指定された日付に出現する必要があります&#x200B;**&#x200B;**。 | ○ | ![使用される「特例文字日付」時間制約の例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| 過去 | 比較対象の属性またはイベントは、選択した最後の期間内に出現する必要があります&#x200B;**&#x200B;**。この期間は、評価時間まで **包括的** です。 | × | ![「In last」時間制限の使用例。](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![&#x200B; 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![&#x200B; 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| （+/ –）内 | 比較対象の属性またはイベントは、選択した日付から数日、数週間、か月、または年以内に出現する必要があります&#x200B;**&#x200B;**。この期間は、両方の日付の **を含む** です。 選択した日付は、今日、昨日、または選択した別のカスタム日付にすることができます。 | ○ | ![使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| 以前は | 比較対象の属性またはイベントは、選択した日付より前に出現する必要があります&#x200B;**&#x200B;**。選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| 周期の範囲 | 比較する属性またはイベントは、2 つの相対日付の間で発生する必要があります。 日付は、秒、分、時間、日、週、月、または年で表すことができます。 | × | ![使用されている「周期の範囲」時間制約の例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| 次以内： | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択された期間には、分、時間、日、週、月、および年があります。 | × | ![使用される「In next」時間制約の例。](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| exists | 属性が存在している。 | × | ![&#x200B; 使用されている「存在する」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| が存在しない | 属性が存在しません。 | × | ![&#x200B; 使用されている「存在しない」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Today | 比較される属性またはイベントは本日 **発生する必要があります**。 | ○ | ![ 使用されている「Today」時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 昨日 | 比較される属性またはイベントは昨日発生した **必須** です。 | ○ | ![ 「Yesterday」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| 今月 | 比較対象の属性またはイベントは今月 **発生する必要があります**。 | ○ | ![ 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| 今年 | 比較対象の属性またはイベントは、今年 **発生する必要があります**。 | × | ![ 「This year」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| カスタム日付 | 比較する属性またはイベント **必須** は、指定された日付になります。 | ○ | ![ 「カスタムの日付」時間制約を使用した例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| 過去 | 比較する属性またはイベント **必須** は、選択した最後の期間内に発生します。 この期間は、評価時間まで **含む** です。 | × | ![ 「最後に」の時間制約が使用されている例 ](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![ 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![ 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| （+/ –）内 | 比較される属性またはイベント **必須** は、選択した日付から数日、数週間、数か月、または数年以内に発生します。 この期間には、両方の日付の **両方を含む** が指定されます。 選択した日付は、今日、昨日または別のカスタム日付にすることができます。 | ○ | ![ 使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| 次の前 | 比較する属性またはイベント **必須** は、選択した日付より前です。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| ローリングレンジ | 比較する属性またはイベントは、2 つの相対日付の間に存在する必要があります。 日付は、秒、分、時間、日、週、月、または年単位で表すことができます。 | × | ![ 使用されている「ローリング範囲」時間制約の例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| 次以内： | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択した期間には、分、時間、日、週、月、年が含まれます。 | × | ![ 「次回に」時間制約が使用されている例 ](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| exists | 属性が存在する。 | × | ![ 使用されている「存在する」時間制約の例 ](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| が存在しない | 属性が存在しません。 | × | ![ 使用されている「存在しない」時間制約の例 ](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
-イベントに時間制限を適用する場合は、キャンバス レベル、カード レベル、またはイベント間で適用できます。
+イベントに時間制約を適用する場合は、キャンバスレベル、カードレベルまたはイベント間で時間制約を適用できます。
 
 #### キャンバスレベルの制約
 
-キャンバス レベルの時間制約を適用するには、イベントタイムラインの上に表示される時計アイコンを選択します。
+キャンバスレベルの時間制約を適用するには、イベントのタイムラインの上に表示される時計アイコンを選択します。
 
-![キャンバスレベルの時間制限セレクターがハイライト表示されます。](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![ キャンバスレベルの時間制約セレクターがハイライト表示されている様子 ](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
 キャンバスレベルで時間制約を適用すると、オーディエンスの **すべて** のイベントに時間制約が適用されます。
 
@@ -306,25 +331,25 @@ ht-degree: 55%
 
 カードレベルの制約を適用するには、時間制約を適用するカードを選択し、その後に省略記号アイコンを選択して、**[!UICONTROL Apply time rule]** をクリックします。 これにより、**[!UICONTROL Event Rules]** コンテナ内で時間制約を選択できます。
 
-![&#x200B; カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
+![ カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
 
 カードレベルで時間制約を適用すると、オーディエンスの **指定** イベントに時間制約が適用されます。
 
-#### イベント間の制約
+#### イベント間制約
 
 イベント間に時間制約を適用するには、時間制約を適用する 2 つのイベント間の時計アイコンを選択します。
 
-![[イベント間の時間制限] セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/between-event.png)
+![ イベント間の時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/between-event.png)
 
-イベント間に時間制約を適用すると、イベント間の時間&#x200B;**&#x200B;**&#x200B;に時間制約が適用されます。
+イベント間に時間制約を適用すると、イベント間の時間に時間制約 **適用** れます。
 
-この操作に使用できる時間制約のリストは、時間制約の主なリストとは異なり、次のとおりです。
+この操作に使用できる時間制約のリストは、時間制約のメインリストとは異なり、次のようになります。
 
-+++ 利用可能な時間制限
++++ 利用可能な時間制約
 
 | 時間制限 | 説明 |
 | --------------- | ----------- |
-| 後 | 後者のイベントは **少なくとも** 前のイベントの後に行われなければなりません。 |
+| 後 | 後者のイベント **少なくとも** は、前のイベントの後に発生する必要があります。 |
 | 内 | 2 つのイベント **必須** は、時間制約内にリストされた期間に発生します。 |
 
 >[!NOTE]
@@ -346,13 +371,13 @@ ht-degree: 55%
 
 ![「コンテナを追加」ボタン（コンテナを最初のコンテナの子として追加できる）がハイライト表示されている](../images/ui/segment-builder/add-container.png)
 
-新しいコンテナが最初のコンテナの子として表示されますが、コンテナをドラッグして移動することで、階層を調整することができます。コンテナのデフォルトの動作は、属性、イベントまたはオーディエンスを「[!UICONTROL Include]」することです。 コンテナ条件に一致するプロファイルを「[!UICONTROL Exclude]」にルールを設定するには、タイルの左上隅にある **[!UICONTROL Include]** を選択して「[!UICONTROL Exclude]」を選択します。
+新しいコンテナが最初のコンテナの子として表示されますが、コンテナをドラッグして移動することで、階層を調整することができます。コンテナのデフォルト動作は、指定された属性、イベントまたはオーディエンスを「[!UICONTROL Include] スト」することです。 コンテナ条件に一致するプロファイルを「[!UICONTROL Exclude]」にルールを設定するには、タイルの左上隅にある「**[!UICONTROL Include]**」を選択し、「[!UICONTROL Exclude]」を選択します。
 
 子コンテナを展開して、親コンテナにインラインで追加することもできます。それには、子コンテナで「コンテナを展開」を選択します。このオプションにアクセスするには、子コンテナの右上隅にある省略記号（...）を選択します。
 
 ![コンテナを展開または削除できるオプションがハイライト表示されています。](../images/ui/segment-builder/include-exclude.png)
 
-**[!UICONTROL Unwrap container]**&#x200B;を選択すると、子コンテナが削除され、条件がインラインで表示されます。
+を選択す **[!UICONTROL Unwrap container]** と、子コンテナが削除され、条件がインライン表示されます。
 
 >[!NOTE]
 >
@@ -398,31 +423,31 @@ ht-degree: 55%
 >title="推定プロファイル数"
 >abstract="推定プロファイル数は、サンプルジョブに基づいて、オーディエンスのルールに適合するプロファイルの概算数を示します。"
 
-セグメント定義を作成する場合、ワークスペースの右側にある **[!UICONTROL Audience properties]** セクションには、結果のセグメント定義の推定サイズが表示され、オーディエンス自体を構築する前に、必要に応じてセグメント定義を調整できます。
+セグメント定義を作成する際には、作成されるセグメント定義の推定サイズがワークスペースの右側の「**[!UICONTROL Audience properties]**」セクションに表示されるので、オーディエンスそのものを作成する前にセグメント定義を必要に応じて調整できます。
 
-**[!UICONTROL Qualified Profiles]** セグメント定義のルールに一致するプロファイルの **実際の** 数を示します。 この数は、セグメント評価ジョブの実行後、24時間ごとに更新されます。
+**[!UICONTROL Qualified Profiles]** は、セグメント定義のルールに一致するプロファイルの **実際** 数を示します。 この数は、セグメント評価ジョブの実行後、24時間ごとに更新されます。
 
-認定プロファイルのタイムスタンプは、最新の **バッチ** セグメント評価ジョブを示し、ストリーミングまたはエッジセグメント化を使用して評価されたセグメント定義に対しては **表示されません** 。 セグメント定義を編集した場合、次のセグメント評価ジョブが実行されるまで、認定プロファイルの数は変わりません。
+認定プロファイルのタイムスタンプは、最新の **バッチ** セグメント評価ジョブを示し、ストリーミングまたはエッジセグメント化を使用して評価されたセグメント定義には表示 **されません**。 セグメント定義を編集すると、次のセグメント評価ジョブが実行されるまで、認定プロファイルの数は同じままです。
 
-**[!UICONTROL Estimated Profiles]**&#x200B;**サンプルジョブ**&#x200B;に基づく、プロファイルの&#x200B;**おおよその範囲**&#x200B;を示します。つまり、より大きなプロファイルセットにサンプルデータが投影されるので、実際の適合プロファイルの数とは異なる推定数が生じる場合があります。推定プロファイルサンプルには、95% の信頼区間があります。
+**[!UICONTROL Estimated Profiles]** は、**サンプルジョブ** に基づいて、プロファイルの **おおよその範囲** を示します。 つまり、より大きなプロファイルセットにサンプルデータが投影されるので、実際の適合プロファイルの数とは異なる推定数が生じる場合があります。推定プロファイルサンプルには、95% の信頼区間があります。
 
 オーディエンスのルールを変更する場合は、「**[!UICONTROL Refresh estimate]**」ボタンを選択して、更新された推定プロファイル数を確認できます。 ただし、この数は以前のサンプルジョブに基づいています。 顧客データが 3% を超えて変化した場合、または最後のサンプルジョブが 3 日を超えた場合、サンプルジョブは更新されます。
 
-情報バブルを選択すると、最後のサンプル ジョブが実行された日時が表示されます。
+情報バブルを選択すると、最後のサンプルジョブが実行された日時が表示されます。
 
-![「オーディエンスのプロパティ」セクション内で、適合プロファイルと推定プロファイルがハイライト表示されます。](../images/ui/segment-builder/audience-estimates.png)
+![ 認定プロファイルと推定プロファイルは、「オーディエンスプロパティ」セクションでハイライト表示されます。](../images/ui/segment-builder/audience-estimates.png)
 
-[ **[!UICONTROL Audience properties]** ] セクションでは、名前、説明、評価の種類など、オーディエンスに関する重要な情報を指定することもできます。 名前は、組織で定義された定義の中からセグメント定義を識別するために使用されるため、説明的で簡潔で一意である必要があります。
+**[!UICONTROL Audience properties]** の節では、名前、説明、評価タイプなど、オーディエンスに関する重要な情報を指定することもできます。 名前は、組織で定義されたセグメント定義の中からセグメント定義を識別するために使用します。したがって、説明的で簡潔かつ一意である必要があります。
 
-オーディエンスビルドを続けているときに、[ **[!UICONTROL View Profiles]**] を選択して、オーディエンスのページ分割されたプレビュー表示できます。
+オーディエンスの作成を続行する際に、**[!UICONTROL View Profiles]** を選択すると、オーディエンスのページ分割されたプレビューを表示できます。
 
-![[オーディエンスのプロパティ] セクションが強調表示されます。 オーディエンスプロパティには、名前、説明、および評価方法が含まれますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
+![ オーディエンスプロパティセクションがハイライト表示されています。 オーディエンスプロパティには、名前、説明、評価方法などがありますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->オーディエンスの推定値は、その日のサンプルデータから抽出したサンプルサイズを使用して生成されます。プロフィールストア内のエンティティが 100 万未満の場合は、完全なデータ セットが使用されます。1000万から2000万のエンティティの場合、100万のエンティティが使用されます。また、2,000 万を超えるエンティティでは、エンティティ全体の 5% が使用されています。
+>オーディエンスの推定値は、その日のサンプルデータから抽出したサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合、完全なデータセットが使用されます。エンティティの数が 1～2,000 万の場合は 100 万のエンティティが使用され、2,000 万を超えるエンティティの場合は合計エンティティの 5% が使用されます。
 >
->また、この推定値は、プロファイル の最後のサンプルジョブがいつ実行されたかに基づいています。 つまり、&quot;今日&quot; や &quot;今週&quot; などの相対日付関数を使用している場合、見積もりは過去 プロファイル のサンプル ジョブの実行時間に基づいて計算されます。 たとえば、今日が 1 月 24 日で、最後の プロファイル サンプル ジョブが 1 月 22 日に実行された場合、&quot;昨日&quot; 相対日付関数は 1 月 23 日ではなく 1 月 21 日に基づきます。
+>さらに、この見積もりは、最後のプロファイルサンプルジョブが実行された日時に基づきます。 つまり、「Today」や「This week」などの相対的な日付関数を使用している場合、見積もりは最後のプロファイルサンプルジョブ実行時間に基づいて計算されます。 例えば、今日が 1 月 24 日で、最後のプロファイルサンプルジョブが 1 月 22 日に実行された場合、「昨日」相対日付関数は 1 月 23 日ではなく、1 月 21 日に基づきます。
 >
 >セグメント定義の推定サイズを生成する方法について詳しくは、セグメント定義の作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
 
@@ -450,4 +475,4 @@ ht-degree: 55%
 - スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 - ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド &#x200B;](./overview.md) を参照してください。
+[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド ](./overview.md) を参照してください。
