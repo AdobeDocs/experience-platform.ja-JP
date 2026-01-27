@@ -12,7 +12,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->元の [[!DNL Salesforce Marketing Cloud]  （V1） ](salesforce-marketing-cloud.md) ソースは、2026 年 1 月をもって非推奨（廃止予定）となりました。 この非推奨ソースに利用可能な移行はありません。新しい [!DNL Salesforce Marketing Cloud] （V2）ソースを使用してデータを再実装する必要があります。
+>元の [[!DNL Salesforce Marketing Cloud]  （V1） &#x200B;](salesforce-marketing-cloud.md) ソースは、2026 年 1 月をもって非推奨（廃止予定）となりました。 この非推奨ソースに利用可能な移行はありません。新しい [!DNL Salesforce Marketing Cloud] （V2）ソースを使用してデータを再実装する必要があります。
 
 Adobe [Real-Time CDP](../../../rtcdp/overview.md) と [!DNL Salesforce Marketing Cloud] の統合は、柔軟性と制御に優れたデータ拡張機能を活用するように設計されています。 事前定義済みのフィールドに限定され、主にシステムレベルのトラッキングを提供する標準のシステムテーブル（データビューと組み込みオブジェクト）とは異なり、データ拡張機能を使用してカスタムフィールドを定義し、ビジネス固有の様々なデータを整理し、独自の要件に合わせてデータ構造を調整できます。
 
@@ -50,33 +50,33 @@ Contact Data Extension からExperience Platformにデータを取り込むこ�
 
 インストール済みパッケージを作成するには、[!DNL Salesforce Marketing Cloud] UI を使用して **[!DNL Setup]**/**[!DNL Apps]**/**[!DNL Installed Packages]** に移動し、「**[!DNL New]**」を選択します。 [!DNL New Package Details] インターフェイスを使用して、パッケージの名前と情報を指定します。 終了したら「**[!DNL Save]**」を選択します。
 
-![Salesforce Marketing Cloud UI の新しいパッケージインターフェイス ](../../images/tutorials/create/sfmc/new-package.png)
+![Salesforce Marketing Cloud UI の新しいパッケージインターフェイス &#x200B;](../../images/tutorials/create/sfmc/new-package.png)
 
 新しいパッケージを作成したら、「**[!DNL Add Component]**」を選択します。
 
-![Salesforce Marketing Cloud UI の Add コンポーネントインターフェイス ](../../images/tutorials/create/sfmc/add-component.png)
+![Salesforce Marketing Cloud UI の Add コンポーネントインターフェイス &#x200B;](../../images/tutorials/create/sfmc/add-component.png)
 
 コンポーネントタイプとして **[!DNL API Integration]** を選択します。
 
-![ 「API 統合」が選択されたコンポーネント選択ウィンドウ ](../../images/tutorials/create/sfmc/api-integration.png)
+![&#x200B; 「API 統合」が選択されたコンポーネント選択ウィンドウ &#x200B;](../../images/tutorials/create/sfmc/api-integration.png)
 
 統合タイプとして **[!DNL Server-to-Server]** を選択します。
 
-![ 統合タイプ選択ウィンドウ ](../../images/tutorials/create/sfmc/server-to-server.png)
+![&#x200B; 統合タイプ選択ウィンドウ &#x200B;](../../images/tutorials/create/sfmc/server-to-server.png)
 
 最後に、**[!DNL Scope]**/**[!DNL Data]** に移動します。 「**[!DNL Data Extensions]**」で、「**[!DNL Read]**」を選択します。
 
-![Salesforce Marketing の「Scope」の「data extensions」セクション ](../../images/tutorials/create/sfmc/data-extensions.png)
+![Salesforce Marketing の「Scope」の「data extensions」セクション &#x200B;](../../images/tutorials/create/sfmc/data-extensions.png)
 
 **[!DNL Save]** を選択し、**クライアントシークレット** をコピーして保存します。 完了したら、「**[!DNL Finish]**」を選択します。
 
-![ クライアントシークレットを生成するためのSalesforce Marketing Cloud ウィンドウ。](../../images/tutorials/create/sfmc/generate-secret.png)
+![&#x200B; クライアントシークレットを生成するためのSalesforce Marketing Cloud ウィンドウ。](../../images/tutorials/create/sfmc/generate-secret.png)
 
 [!DNL Salesforce Marketing Cloud] UI を離れる前に、**クライアント ID** と **一意のベース URI プレフィックス** をコピーします。両方の値を使用してExperience Platformへの接続を作成するからです。 認証ベース URI の場合は、`.auth.marketingcloudapis.com/` 以降のすべてを削除してください
 
-![ クライアント ID と一意のベース URI を取得できるSalesforce Marketing Cloud コンポーネントインターフェイス ](../../images/tutorials/create/sfmc/client-id-and-uri.png)
+![&#x200B; クライアント ID と一意のベース URI を取得できるSalesforce Marketing Cloud コンポーネントインターフェイス &#x200B;](../../images/tutorials/create/sfmc/client-id-and-uri.png)
 
-インストールしたパッケージを作成する手順について詳しくは、[[!DNL Salesforce]  ドキュメント ](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment) を参照してください。
+インストールしたパッケージを作成する手順について詳しくは、[[!DNL Salesforce]  ドキュメント &#x200B;](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment) を参照してください。
 
 ### 必要な資格情報の収集 {#gather-required-credentials}
 
@@ -85,11 +85,11 @@ Experience Platformに接続するには、次の資格情報の値を指定す�
 | 資格情報 | 説明 |
 | --- | --- |
 | クライアント ID | [!DNL Salesforce Marketing Cloud] がExperience Platformの認証を行う際に、アカウントを識別するために使用する、公開されている識別子。 クライアント ID は、[!DNL Salesforce Marketing Cloud] UI のコンポーネントパネルから取得できます。 |
-| クライアントシークレット | クライアントアプリケーションおよび認証サーバーにのみ認識される秘密鍵。 [ 前述のアプリケーション設定手順 ](#set-up-application-for-authentication) に従って、クライアントシークレットを生成できます。 |
+| クライアントシークレット | クライアントアプリケーションおよび認証サーバーにのみ認識される秘密鍵。 [&#x200B; 前述のアプリケーション設定手順 &#x200B;](#set-up-application-for-authentication) に従って、クライアントシークレットを生成できます。 |
 | 基本エンドポイント | [!DNL Salesforce Marketing Cloud] の認証ベース URI のプレフィックス。 |
 
 {style="table-layout:auto"}
 
 ## [!DNL Salesforce Marketing Cloud] をExperience Platformに接続
 
-次に、Experience Platform内で [!DNL Salesforce Marketing Cloud] ソース接続を設定します。 UI を使用した接続の設定手順については、[ こちらのチュートリアル ](../../tutorials/ui/create/marketing-automation/sfmc.md) を参照してください。 このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定およびデータフローの監視について説明します。
+次に、Experience Platform内で [!DNL Salesforce Marketing Cloud] ソース接続を設定します。 UI を使用した接続の設定手順については、[&#x200B; こちらのチュートリアル &#x200B;](../../tutorials/ui/create/marketing-automation/sfmc.md) を参照してください。 このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定およびデータフローの監視について説明します。

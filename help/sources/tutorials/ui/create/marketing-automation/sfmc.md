@@ -23,7 +23,7 @@ ht-degree: 10%
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Salesforce Marketing Cloud]  概要 ](../../../../connectors/marketing-automation/sfmc.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL Salesforce Marketing Cloud]  概要 &#x200B;](../../../../connectors/marketing-automation/sfmc.md#prerequisites) を参照してください。
 
 ## ソースカタログのナビゲート
 
@@ -35,19 +35,19 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 >
 >特定のソースがまだ認証済みのアカウントを持っていない場合、ソースカタログ内のソースに「**[!UICONTROL Set up]**」オプションが表示されます。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL Add data]** に変わります。
 
-![ ソースカタログとSalesforce Marketing Cloud ソースが選択されています。](../../../../images/tutorials/create/sfmc/catalog.png)
+![&#x200B; ソースカタログとSalesforce Marketing Cloud ソースが選択されています。](../../../../images/tutorials/create/sfmc/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、「**[!UICONTROL Existing account]**」を選択してから、使用する [!DNL Salesforce Marketing Cloud] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイス ](../../../../images/tutorials/create/sfmc/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/sfmc/existing.png)
 
 ## 新しいアカウントを作成 {#new}
 
-新しいアカウントを作成するには、「**[!UICONTROL New account]**」を選択し、[!UICONTROL Source connection details] の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication] で、**クライアント ID**、**クライアントシークレット**、**ベースエンドポイント** の値を指定します。 これらの資格情報について詳しくは、[ 認証ガイド ](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) を参照してください。 終了したら「**[!UICONTROL Connect to source]**」を選択し、接続が確立されるまで数秒間待ちます。
+新しいアカウントを作成するには、「**[!UICONTROL New account]**」を選択し、[!UICONTROL Source connection details] の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication] で、**クライアント ID**、**クライアントシークレット**、**ベースエンドポイント** の値を指定します。 これらの資格情報について詳しくは、[&#x200B; 認証ガイド &#x200B;](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) を参照してください。 終了したら「**[!UICONTROL Connect to source]**」を選択し、接続が確立されるまで数秒間待ちます。
 
-![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/sfmc/new.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/sfmc/new.png)
 
 ## データの選択
 
@@ -55,19 +55,19 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 [!UICONTROL Select data] インターフェイスを使用して、[!DNL Salesforce Marketing Cloud] インスタンスから取り込むデータ拡張機能を選択します。 データ拡張機能を選択したら、プレビューパネルを使用して、続行する前に、データセットに想定されたフィールドが含まれていることを確認できます。
 
-![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/sfmc/select-data.png)
+![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/sfmc/select-data.png)
 
 ## データセットとデータフローの詳細
 
 次に、データセットとデータフローに関する情報を指定する必要があります。 この手順では、既存のデータセットを使用するか、新しいデータセットを作成します。 さらに、オプションで、この手順でデータセットを有効にしてリアルタイム顧客プロファイルに取り込むこともできます。
 
-![ ソースワークフローのデータセットとデータフローの詳細手順。](../../../../images/tutorials/create/sfmc/dataset-details.png)
+![&#x200B; ソースワークフローのデータセットとデータフローの詳細手順。](../../../../images/tutorials/create/sfmc/dataset-details.png)
 
 ## マッピング
 
 ま [!DNL Salesforce Marketing Cloud]、データ拡張機能は標準オブジェクトとは見なされません。 したがって、Experience Platform スキーマへの定義済みまたは固定のマッピングフィールドはありません。 Experience Platformのデータ準備は、[!DNL Salesforce Marketing Cloud] のソースフィールドとターゲットのエクスペリエンスデータモデル（XDM）スキーマの間でベストエフォートの整合性を実行しますが、マッピングされていないフィールドやエラーのあるフィールドを解決するために、手動の確認や調整が必要な場合もあります。
 
-![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/sfmc/mapping.png)
+![&#x200B; ソースワークフローのマッピングステップ &#x200B;](../../../../images/tutorials/create/sfmc/mapping.png)
 
 ## データフローのスケジュール設定
 
@@ -79,17 +79,17 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 増分同期を有効にするには、データセットで差分（日時）フィールドを選択する必要があります。 データセットに適切なデルタフィールドが含まれていない場合、データフローを作成することはできません。
 
-![ ソースワークフローのスケジュール手順 ](../../../../images/tutorials/create/sfmc/schedule.png)
+![&#x200B; ソースワークフローのスケジュール手順 &#x200B;](../../../../images/tutorials/create/sfmc/schedule.png)
 
 ## レビュー
 
 取り込みスケジュールを設定した状態で、[!UICONTROL Review] インターフェイスを使用してデータフローの詳細を確認します。 「**[!UICONTROL Finish]**」を選択して設定を完了し、データフローが開始されるまでしばらく待ちます。
 
-![ ソースワークフローのレビュー手順。](../../../../images/tutorials/create/sfmc/review.png)
+![&#x200B; ソースワークフローのレビュー手順。](../../../../images/tutorials/create/sfmc/review.png)
 
 ## 監視
 
-データフローを選択すると、データが 1 回だけバックフィルされ、その後は指定したスケジュールで増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UI でのソースデータフローの監視 ](../../../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
+データフローを選択すると、データが 1 回だけバックフィルされ、その後は指定したスケジュールで増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UI でのソースデータフローの監視 &#x200B;](../../../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
 
 ## 次の手順
 
