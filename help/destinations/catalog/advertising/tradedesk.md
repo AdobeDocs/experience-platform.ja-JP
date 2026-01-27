@@ -83,7 +83,7 @@ ht-degree: 22%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
+>[!DNL The Trade Desk] での最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
 
 ## 宛先への接続 {#connect}
 
@@ -133,7 +133,7 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="事前設定済みのマッピングセット"
->abstract="これら 4 つのマッピングセットは事前に設定されています。 Trade Desk に対してデータをアクティブ化する場合、アクティブ化されたオーディエンスに対して選定されたプロファイルには、必ずしも 4 つの ID すべてがプロファイルに存在している必要はありません。これは、この宛先が、ここに示すいずれかのターゲット ID で動作するためです。 詳しくは、&lt;a href=&quot;https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;> 事前設定済みマッピングを参照してください </a>"
+>abstract="これら 4 つのマッピングセットは事前に設定されています。 Trade Desk に対してデータをアクティブ化する場合、アクティブ化されたオーディエンスに対して選定されたプロファイルには、必ずしも 4 つの ID すべてがプロファイルに存在している必要はありません。これは、この宛先が、ここに示すいずれかのターゲット ID で動作するためです。 詳しくは、&lt;a href=&quot;https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;> 事前設定済みマッピングを参照してください </a>"
 
 [&#x200B; サポートされている ID](#supported-identities) の節で説明されているすべてのターゲット ID は、オーディエンスアクティベーションワークフローのマッピング手順でマッピングする必要があります。 これには以下が含まれます。
 
