@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 66f117ee5818618794a20561484eae21dd420899
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1328'
 ht-degree: 73%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 73%
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
    * [ストリーミング宛先のオーディエンスライフサイクル](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API チュートリアル {#api}
-   * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でファイルベースのメールマーケティングの宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
    * [アドホックアクティベーション API を介して、バッチ宛先に対するオーディエンスをアクティブ化します。](./api/ad-hoc-activation-api.md)
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットの書き出し](/help/destinations/api/export-datasets.md)
-   * [&#x200B; 宛先の API 応答の並べ替えとフィルタリング &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -72,7 +72,7 @@ ht-degree: 73%
       * [（Beta）Marketo Engage人物同期接続](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
-      * [Federated Audience Composition 接続 &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * 広告の宛先{#advertising}
       * [（Beta） Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [（Beta） Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
@@ -99,6 +99,7 @@ ht-degree: 73%
       * [（限定提供）Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
+      * [Index Exchange 接続](./catalog/advertising/index-exchange.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
       * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp – 配信接続](./catalog/advertising/liveramp-distribution.md)
@@ -186,7 +187,7 @@ ht-degree: 73%
    * タグ拡張機能 {#launch-extensions}
       * [タグ拡張機能の概要](./catalog/launch-extensions/overview.md)
    * マーケティングオートメーション {#marketing-automation}
-      * [RainFocus 参加者プロファイル &#x200B;](/help/destinations/catalog/marketing-automation/rainfocus.md)
+      * [RainFocus 参加者プロファイル ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * モバイルエンゲージメントの宛先 {#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
       * [Airship Attributes 接続](./catalog/mobile-engagement/airship-attributes.md)
