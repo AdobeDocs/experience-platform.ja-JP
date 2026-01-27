@@ -43,7 +43,7 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 [!DNL Index] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
-[!DNL Index Exchange] の宛先では、1 つのアップロードで 1 つの ID タイプのみをサポートすることに注意してください。 宛先の詳細を設定する際に、適切な識別子タイプを指定する必要があります（以下の [ 宛先の詳細の入力」 ](#destination-details) 節を参照）。
+[!DNL Index Exchange] の宛先では、1 つのアップロードで 1 つの ID タイプのみをサポートすることに注意してください。 宛先の詳細を設定する際に、適切な識別子タイプを指定する必要があります（以下の [&#x200B; 宛先の詳細の入力」 &#x200B;](#destination-details) 節を参照）。
 
 複数の ID タイプをアップロードするには、[!DNL Index Exchange] の宛先のインスタンスを ID タイプごとに個別に作成します。
 
@@ -62,7 +62,7 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 | --------- | ---------- | ---------- |
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -90,7 +90,7 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 宛先の詳細を設定するには、以下のフィールドを入力します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細 ](../../assets/catalog/advertising/index-exchange/destination-details.png)
+![&#x200B; 宛先の詳細 &#x200B;](../../assets/catalog/advertising/index-exchange/destination-details.png)
 
 * [!UICONTROL Name]：この宛先を後で認識できるように、名前を入力します。
 * [!UICONTROL Description]：後でこの宛先を識別するのに役立つ説明を入力します。
@@ -113,15 +113,15 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、この宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストから 1 つ以上のアラートを選択して、データフローのステータス通知を登録します。 詳しくは、[UI を使用した宛先アラートの購読 ](../../ui/alerts.md) についてのガイドを参照してください。
+アラートを有効にすると、この宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストから 1 つ以上のアラートを選択して、データフローのステータス通知を登録します。 詳しくは、[UI を使用した宛先アラートの購読 &#x200B;](../../ui/alerts.md) についてのガイドを参照してください。
 宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -135,7 +135,7 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 * ターゲットフィールドの名前は無視され、重要ではありません。 宛先は、送信される識別子のタイプにのみ関係します。これは、宛先を設定する際に選択した識別子タイプによって決まります。
 
-![ 属性と ID のマッピング ](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
+![&#x200B; 属性と ID のマッピング &#x200B;](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
 ### [!DNL Index] へのセグメントの登録 {#register-segments}
 
@@ -147,4 +147,4 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Experience Platformによるデータガバナンスの実施方法について詳しくは、[ データガバナンスの概要 ](/help/data-governance/home.md) を参照してください。
+Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/home.md) を参照してください。
