@@ -61,11 +61,11 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 ### ID マッピング動作
 
-- Experience Platformの ID 名前空間は **最大 3 つ**[!DNL Kevel]ID スロットにマッピングできます。
+- Experience Platformの ID 名前空間は **最大 3 つ**&#x200B;[!DNL Kevel]ID スロットにマッピングできます。
 - アクティブ化され [!DNL Kevel] プロファイルごとに、**マッピングされた ID ごとのインスタンスごとに 1 つの UserDB レコード** を受け取ります。
 - 不要な UserDB ストレージを避けるために、実際に広告リクエストで送信した ID のみを [!DNL Kevel] にマッピングする必要があります。
 
-![ ケベル宛先のマッピング例 ](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
+![&#x200B; ケベル宛先のマッピング例 &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -87,7 +87,7 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 ## 宛先への接続 {#connect}
 
-標準のExperience Platform[ 宛先を接続 ](../../ui/connect-destination.md) ワークフローに従います。
+標準のExperience Platform[&#x200B; 宛先を接続 &#x200B;](../../ui/connect-destination.md) ワークフローに従います。
 
 >[!IMPORTANT]
 > 
@@ -99,7 +99,7 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 - **ベアラートークン** - [!DNL Kevel] API キー。
 
-![ ケベル宛先の認証オプション ](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
+![&#x200B; ケベル宛先の認証オプション &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -109,12 +109,12 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 - **説明** – この宛先インスタンスを説明するオプションのテキスト。
 - **[!DNL Kevel]Network ID** — [!DNL Kevel] のネットワーク識別子。
 
-![ ケベル宛先の宛先詳細 ](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
+![&#x200B; ケベル宛先の宛先詳細 &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 オーディエンスを [!DNL Kevel] に送信するには、のワークフローに従います\
-[ ストリーミングセグメント書き出し宛先に対するプロファイルとセグメントのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md)。
+[&#x200B; ストリーミングセグメント書き出し宛先に対するプロファイルとセグメントのアクティブ化 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md)。
 
 ### オーディエンスの無効化 {#deactivate}
 
@@ -215,5 +215,5 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
 
 ## その他のリソース {#additional-resources}
 
-- [[!DNL Kevel] UserDB リファレンス ](https://dev.kevel.com/reference/userdb)
-- [[!DNL Kevel]  ユーザーセグメントのターゲティング ](https://dev.kevel.com/docs/segment-targeting)
+- [[!DNL Kevel] UserDB リファレンス &#x200B;](https://dev.kevel.com/reference/userdb)
+- [[!DNL Kevel]  ユーザーセグメントのターゲティング &#x200B;](https://dev.kevel.com/docs/segment-targeting)
