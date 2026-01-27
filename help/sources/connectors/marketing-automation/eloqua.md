@@ -12,7 +12,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->元の [[!DNL Oracle Eloqua]  （V1） ](oracle-eloqua.md) ソースは、2026 年 1 月をもって非推奨（廃止予定）となりました。 この非推奨ソースに利用可能な移行はありません。新しい [!DNL Oracle Eloqua] （V2）ソースを使用してデータを再実装する必要があります。
+>元の [[!DNL Oracle Eloqua]  （V1） &#x200B;](oracle-eloqua.md) ソースは、2026 年 1 月をもって非推奨（廃止予定）となりました。 この非推奨ソースに利用可能な移行はありません。新しい [!DNL Oracle Eloqua] （V2）ソースを使用してデータを再実装する必要があります。
 
 [!DNL Oracle Eloqua] は、主に B2B 分野の組織が、リードの管理やバイヤージャーニーの調整という複雑なプロセスを自動化およびパーソナライズするのに役立つように設計された、強力なエンタープライズグレードのマーケティング自動化プラットフォームです。 マーケティングチームが複数のデジタルチャネルをまたいで高度なキャンペーンを定義、デプロイ、測定できる中央ハブとして機能し、見込み客が最も関与している正確なタイミングで適切なコンテンツを受け取れるようにします。 [!DNL Eloqua] を介した取り込みでサポートされているオブジェクトは **連絡先**、**アカウント**、**キャンペーン** および **アクティビティ** です。 最初の取り込みが完了すると、スケジュールされた増分プロセスを使用して、変更されたデータがインポートされます。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | 連絡先 | 連絡先データ（名前、メール、電話番号、役職など）をReal-Time CDPに取り込んで、詳細で統一された顧客プロファイルを作成し、個々の連絡先とのすべてのインタラクションやエンゲージメントを統合します。 | **キャンペーンの最適化：** [!DNL Eloqua] の連絡先データを統合することで、マーケティングチームは、メール開封数、フォーム送信、イベント登録などの最近のアクティビティに基づいて、優先度の高い見込み客を特定できます。 Real-Time CDPでは、メール、web サイト、その他のマーケティングタッチポイントをまたいだ各連絡先の行動を 360°表示できるので、マーケティングチームはキャンペーンをカスタマイズし、メッセージを最適化して、より良いエンゲージメントとコンバージョンを実現できます。 |
 | アカウント | アカウントレベルのデータ（会社名、業界、会社の規模、売上高、場所など）を取り込んで、Real-Time CDPでアカウントベースのマーケティング（ABM）戦略を構築し、チームが適切な組織をターゲットにして、関連するメッセージをエンゲージできるようにします。 | **ABM キャンペーン：** ABM からのアカウントデータの統合は、ターゲット設定され [!DNL Eloqua]ABM キャンペーンの作成に役立ちます。 例えば、ソフトウェア会社は、アカウントデータを使用して、金融分野の企業の意思決定者にカスタマイズされたメールキャンペーンをセグメント化して送信し、業界に合わせた新しいソリューションを促進できます。 |
-| キャンペーン | キャンペーンデータ（キャンペーン名、タイプ、目標、開封率や CTR などのパフォーマンス指標）をReal-Time CDPに取り込み、複数のチャネルでキャンペーンのパフォーマンスをトラッキングし最適化します。 このデータを使用して ROI を測定し、戦略を調整します。 | **クロスチャネルアトリビューション：**[!DNL Eloqua] がキャンペーンデータをReal-Time CDPに送信する場合、マーケティングチームは様々なチャネル（メール、ソーシャルメディア、広告など）にわたるキャンペーンのパフォーマンスを確認し、コンバージョンを適切なタッチポイントに関連付け、そのinsightに基づいて将来の戦略を調整できます。 |
+| キャンペーン | キャンペーンデータ（キャンペーン名、タイプ、目標、開封率や CTR などのパフォーマンス指標）をReal-Time CDPに取り込み、複数のチャネルでキャンペーンのパフォーマンスをトラッキングし最適化します。 このデータを使用して ROI を測定し、戦略を調整します。 | **クロスチャネルアトリビューション：**&#x200B;[!DNL Eloqua] がキャンペーンデータをReal-Time CDPに送信する場合、マーケティングチームは様々なチャネル（メール、ソーシャルメディア、広告など）にわたるキャンペーンのパフォーマンスを確認し、コンバージョンを適切なタッチポイントに関連付け、そのinsightに基づいて将来の戦略を調整できます。 |
 | アクティビティ | アクティビティデータ（メールの開封数、クリック数、web サイトの訪問、フォーム送信、ウェビナーの出席など）を取り込んで、様々なチャネルをまたいでリアルタイムの行動と連絡先を追跡し、リアルタイムにパーソナライズされたエンゲージメントの機会を作成します。 | **リアルタイム育成：** Real-Time CDPでは、[!DNL Eloqua] からのアクティビティデータを統合することにより、コンタクト先がコンテンツに関与した場合（ホワイトペーパーのダウンロードやメールリンクのクリックなど）に、パーソナライズされたメールや通知を営業チームにトリガーすることができ、タイムリーなフォローアップとコンバージョンの向上が可能になります。 |
 
 {style="table-layout:auto"}
@@ -41,11 +41,11 @@ ht-degree: 2%
 
 開始するには、管理者（またはユーザー、セキュリティグループ、アプリを作成するためのアクセス権を持つユーザー）として [!DNL Eloqua] インスタンスにログインします。
 
-![My Eloqua ダッシュボード ](../../images/tutorials/create/eloqua/admin.png)
+![My Eloqua ダッシュボード &#x200B;](../../images/tutorials/create/eloqua/admin.png)
 
 **設定**/**Platform 拡張機能**/**アプリクラウド開発者**/**アプリを作成** に移動します。 名前、説明、アイコン、OAuth コールバック URL など、アプリの詳細を指定します。 完了したら、「**保存**」をクリックします。
 
-![Eloqua ダッシュボードのアプリ開発者パネルと「アプリを作成」ボタン ](../../images/tutorials/create/eloqua/create-app.png)
+![Eloqua ダッシュボードのアプリ開発者パネルと「アプリを作成」ボタン &#x200B;](../../images/tutorials/create/eloqua/create-app.png)
 
 | プロパティ | 説明 |
 | --- | --- |
@@ -54,21 +54,21 @@ ht-degree: 2%
 | アイコン | アイコンの URL。 |
 | OAuth コールバック URL | アプリをインストールして [!DNL Eloqua] で認証した後にユーザーがリダイレクトする必要のある URL。 |
 
-![Eloqua のアプリ作成ウィンドウ ](../../images/tutorials/create/eloqua/new-app.png)
+![Eloqua のアプリ作成ウィンドウ &#x200B;](../../images/tutorials/create/eloqua/new-app.png)
 
 アプリが作成されたら、[!DNL Authentication to Eloqua] に移動し、新しく作成したアプリから **クライアント ID** および **クライアントシークレット** を取得します。 これらの値は、後でExperience Platformに接続するときに使用されます。
 
-![Eloqua のクライアント ID とクライアントシークレット ](../../images/tutorials/create/eloqua/credentials.png)
+![Eloqua のクライアント ID とクライアントシークレット &#x200B;](../../images/tutorials/create/eloqua/credentials.png)
 
 セキュリティグループを使用すると、管理者は、アセット、機能、インターフェイスなどに対するユーザーのアクセスレベルを制御できます。 セキュリティグループを作成するには、**設定**/**ユーザー** に移動します。 次に、左側のパネルの **グループ** タブを選択し、**新しいセキュリティグループの作成** を選択します。
 
-![Eloqua のユーザー管理ダッシュボード ](../../images/tutorials/create/eloqua/user-management.png)
+![Eloqua のユーザー管理ダッシュボード &#x200B;](../../images/tutorials/create/eloqua/user-management.png)
 
 **[!DNL Security Group Overview]** ウィンドウを使用して、セキュリティ・グループの名前と頭字語を指定します。 作成したら、[!DNL Action Permissions] に移動してリストから [!DNL Consume] API 権限を追加し、「**保存**」を選択します。
 
 ![Eloqua のセキュリティグループの概要ウィンドウ。](../../images/tutorials/create/eloqua/security-group-overview.png)
 
-![ 使用 API の選択ウィンドウ ](../../images/tutorials/create/eloqua/consume-api.png)
+![&#x200B; 使用 API の選択ウィンドウ &#x200B;](../../images/tutorials/create/eloqua/consume-api.png)
 
 >[!NOTE]
 >
@@ -76,9 +76,9 @@ ht-degree: 2%
 
 キャンペーンデータを取り込むには、**ユーザーを編集** インターフェイスに移動し、選択したセキュリティグループに [!DNL Guided Campaigns] を追加します。
 
-![ ガイド付きキャンペーンが追加されたセキュリティグループ。](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
+![&#x200B; ガイド付きキャンペーンが追加されたセキュリティグループ。](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-オプションで、追加のユーザーを作成し、そのユーザーをセキュリティグループに追加できます。 手順について詳しくは、[!DNL Eloqua] のドキュメント [ ユーザーの作成 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) および [ セキュリティグループへのユーザーの割り当て ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) を参照してください。
+オプションで、追加のユーザーを作成し、そのユーザーをセキュリティグループに追加できます。 手順について詳しくは、[!DNL Eloqua] のドキュメント [&#x200B; ユーザーの作成 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) および [&#x200B; セキュリティグループへのユーザーの割り当て &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -242,5 +242,5 @@ Experience Platformに接続するには、次の資格情報の値を指定す�
 
 ## [!DNL Eloqua] をExperience Platformに接続
 
-次に、Experience Platform内で [!DNL Eloqua] ソース接続を設定します。 UI を使用した接続の設定手順については、[ こちらのチュートリアル ](../../tutorials/ui/create/marketing-automation/eloqua.md) を参照してください。 このチュートリアルでは、[!DNL Eloqua] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定およびデータフローの監視について説明します。
+次に、Experience Platform内で [!DNL Eloqua] ソース接続を設定します。 UI を使用した接続の設定手順については、[&#x200B; こちらのチュートリアル &#x200B;](../../tutorials/ui/create/marketing-automation/eloqua.md) を参照してください。 このチュートリアルでは、[!DNL Eloqua] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定およびデータフローの監視について説明します。
 

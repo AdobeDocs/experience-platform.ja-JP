@@ -29,7 +29,7 @@ Adobeのエンタープライズ取り込みフレームワークに基づいて
 
 ### 必要な資格情報の収集 {#credentials}
 
-認証について詳しくは、[[!DNL Eloqua]  概要 ](../../../../connectors/marketing-automation/eloqua.md) を参照してください。
+認証について詳しくは、[[!DNL Eloqua]  概要 &#x200B;](../../../../connectors/marketing-automation/eloqua.md) を参照してください。
 
 ## ソースカタログのナビゲート {#catalog}
 
@@ -41,19 +41,19 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 >
 >特定のソースがまだ認証済みのアカウントを持っていない場合、ソースカタログ内のソースに「**[!UICONTROL Set up]**」オプションが表示されます。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL Add data]** に変わります。
 
-![ ソースカタログ内の Eloqua ソースカードの「設定」ボタンがハイライト表示されています。](../../../../images/tutorials/create/eloqua/catalog.png)
+![&#x200B; ソースカタログ内の Eloqua ソースカードの「設定」ボタンがハイライト表示されています。](../../../../images/tutorials/create/eloqua/catalog.png)
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、「**[!UICONTROL Existing account]**」を選択してから、使用する [!DNL Eloqua] アカウントを選択します。
 
-![ アカウント作成インターフェイスで選択された「既存のアカウント」オプション ](../../../../images/tutorials/create/eloqua/existing.png)
+![&#x200B; アカウント作成インターフェイスで選択された「既存のアカウント」オプション &#x200B;](../../../../images/tutorials/create/eloqua/existing.png)
 
 ## 新しいアカウントを作成 {#new}
 
-新しいアカウントを作成するには、「**[!UICONTROL New account]**」を選択し、[!UICONTROL Source connection details] の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication] で、**クライアント ID**、**クライアントシークレット**、**ユーザー名**、**パスワード**、**ベースエンドポイント** の値を指定します。 これらの資格情報について詳しくは、[ 認証ガイド ](../../../../connectors/marketing-automation/eloqua.md) を参照してください。 終了したら「**[!UICONTROL Connect to source]**」を選択し、接続が確立されるまで数秒間待ちます。
+新しいアカウントを作成するには、「**[!UICONTROL New account]**」を選択し、[!UICONTROL Source connection details] の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication] で、**クライアント ID**、**クライアントシークレット**、**ユーザー名**、**パスワード**、**ベースエンドポイント** の値を指定します。 これらの資格情報について詳しくは、[&#x200B; 認証ガイド &#x200B;](../../../../connectors/marketing-automation/eloqua.md) を参照してください。 終了したら「**[!UICONTROL Connect to source]**」を選択し、接続が確立されるまで数秒間待ちます。
 
-![ ソース接続の詳細と認証資格情報のフィールドを含む新しいアカウントインターフェイス。](../../../../images/tutorials/create/eloqua/new.png)
+![&#x200B; ソース接続の詳細と認証資格情報のフィールドを含む新しいアカウントインターフェイス。](../../../../images/tutorials/create/eloqua/new.png)
 
 ## データの選択
 
@@ -63,13 +63,13 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 >
 >データを選択すると、キャンペーンを除き、他のエンティティに代表的なサンプルデータが表示されます。 このアプローチでは、パブリック API が現在キャンペーン専用の実際のデータを取得す [!DNL Eloqua] ので、使用可能なフィールドと構造をプレビューできるようにします。 残りのエンティティについては、設定ワークフローをサポートするためのサンプルデータが提供されています。
 
-![ 使用可能な Eloqua データエンティティを表示するデータ選択インターフェイス ](../../../../images/tutorials/create/eloqua/select-data.png)
+![&#x200B; 使用可能な Eloqua データエンティティを表示するデータ選択インターフェイス &#x200B;](../../../../images/tutorials/create/eloqua/select-data.png)
 
 ## データセットとデータフローの詳細 {#details}
 
 次に、データセットとデータフローに関する情報を指定する必要があります。 この手順では、既存のデータセットを使用するか、新しいデータセットを作成します。 さらに、オプションで、この手順でデータセットを有効にしてリアルタイム顧客プロファイルに取り込むこともできます。
 
-![ データセットプロパティを設定するためのオプションを備えたデータセットとデータフローの詳細インターフェイス ](../../../../images/tutorials/create/eloqua/details.png)
+![&#x200B; データセットプロパティを設定するためのオプションを備えたデータセットとデータフローの詳細インターフェイス &#x200B;](../../../../images/tutorials/create/eloqua/details.png)
 
 ## マッピング {#mapping}
 
@@ -93,7 +93,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 計算フィールドエディターを使用するには、更新するソースフィールドを選択します。
 
-![ 計算フィールドを含む Eloqua ソースフィールド。](../../../../images/tutorials/create/eloqua/select-calculated-field.png)
+![&#x200B; 計算フィールドを含む Eloqua ソースフィールド。](../../../../images/tutorials/create/eloqua/select-calculated-field.png)
 
 >[!BEGINTABS]
 
@@ -101,7 +101,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 [!DNL Salesforce] ユーザーの場合は、計算フィールドエディターを使用し、適切なインスタンス ID で `{CRM_INSTANCE_ID}` を更新します。
 
-![Salesforceの計算フィールド ](../../../../images/tutorials/create/eloqua/sf-field.png)
+![Salesforceの計算フィールド &#x200B;](../../../../images/tutorials/create/eloqua/sf-field.png)
 
 >[!TAB Microsoft Dynamics]
 
@@ -113,7 +113,7 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 計算フィールドの更新が完了したら、「**[!UICONTROL Next]**」を選択して続行します。
 
-![Eloqua データエンティティのフィールドマッピングを表示するマッピングインターフェイス ](../../../../images/tutorials/create/eloqua/mapping.png)
+![Eloqua データエンティティのフィールドマッピングを表示するマッピングインターフェイス &#x200B;](../../../../images/tutorials/create/eloqua/mapping.png)
 
 ## スケジュール設定
 
@@ -131,17 +131,17 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 1 分あたりの取り込み頻度は、[!DNL Eloqua] ソースでは使用できません。 最も頻繁に選択できるスケジュールは 1 時間ごとです。 データの鮮度のニーズに合ったスケジュールを選択します。 スケジュールを頻繁に選択すると、計算コストが増加することに留意してください。
 
-![ 取り込みの頻度と間隔を設定するオプションを備えたスケジュールインターフェイス ](../../../../images/tutorials/create/eloqua/scheduling.png)
+![&#x200B; 取り込みの頻度と間隔を設定するオプションを備えたスケジュールインターフェイス &#x200B;](../../../../images/tutorials/create/eloqua/scheduling.png)
 
 ## レビュー
 
 取り込みスケジュールを設定した状態で、[!UICONTROL Review] インターフェイスを使用してデータフローの詳細を確認します。 「**[!UICONTROL Finish]**」を選択して設定を完了し、データフローが開始されるまでしばらく待ちます。
 
-![ 完了前にデータフロー設定の概要を表示するレビューインターフェイス ](../../../../images/tutorials/create/eloqua/review.png)
+![&#x200B; 完了前にデータフロー設定の概要を表示するレビューインターフェイス &#x200B;](../../../../images/tutorials/create/eloqua/review.png)
 
 ## 監視
 
-データフローを選択すると、データが 1 回だけバックフィルされ、その後は指定したスケジュールで増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UI でのソースデータフローの監視 ](../../../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
+データフローを選択すると、データが 1 回だけバックフィルされ、その後は指定したスケジュールで増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UI でのソースデータフローの監視 &#x200B;](../../../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
 
 ## 次の手順
 
