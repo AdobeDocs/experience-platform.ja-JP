@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 90%
+source-wordcount: '1080'
+ht-degree: 89%
 
 ---
 
@@ -116,6 +116,7 @@ ht-degree: 90%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [SalesforceMarketing Cloud（V2）](connectors/marketing-automation/sfmc.md)
    - 支払い {#payments}
       - [正方形コネクタ](connectors/payments/square.md)
       - [Stripe コネクタ](connectors/payments/stripe.md)
@@ -331,6 +332,7 @@ ht-degree: 90%
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [中継コネクタ](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [SalesforceMarketing Cloud（V2）](tutorials/ui/create/marketing-automation/sfmc.md)
       - 支払い {#payments}
          - [正方形](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
