@@ -185,7 +185,7 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 次のビデオでは、処理能力の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475274/?captions=jpn&learn=on&enablevpops)
 
 ## よくある質問 {#faq}
 
