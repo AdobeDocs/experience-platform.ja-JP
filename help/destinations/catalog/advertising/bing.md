@@ -118,7 +118,7 @@ ht-degree: 30%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="事前設定済みのマッピングセット"
->abstract="これら 2 つのマッピングセットは事前に設定されています。 Microsoft Bing に対してデータをアクティブ化する場合、宛先に正常に書き出すには、アクティブ化されたオーディエンスに適合されたプロファイルに、少なくともプロファイルに関連付けられた ECID が必要です。 詳しくは、&lt;a href=&quot;https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings&quot;> 事前設定済みマッピングを参照してください </a>"
+>abstract="これら 2 つのマッピングセットは事前に設定されています。 Microsoft Bing に対してデータをアクティブ化する場合、宛先に正常に書き出すには、アクティブ化されたオーディエンスに適合されたプロファイルに、少なくともプロファイルに関連付けられた ECID が必要です。 詳しくは、&lt;a href=&quot;https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings&quot;> 事前設定済みマッピングを参照してください </a>"
 
 >[!IMPORTANT]
 > 
