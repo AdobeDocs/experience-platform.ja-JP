@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
+source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
 workflow-type: tm+mt
-source-wordcount: '5175'
-ht-degree: 55%
+source-wordcount: '5355'
+ht-degree: 53%
 
 ---
 
@@ -21,31 +21,6 @@ ht-degree: 55%
 ![セグメントビルダー UI の表示。](../images/ui/segment-builder/segment-builder.png)
 
 ## セグメント定義の構成要素 {#building-blocks}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="ロジックの複雑さ"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="イベント シーケンス制限"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="クエリ効率アラート"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="カウント フィルターの警告"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="ネストされたデータの警告"
->abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -198,7 +173,7 @@ ht-degree: 55%
 
 ![列挙リストに含まれていない値を挿入しようとした場合に表示される警告](../images/ui/segment-builder/enum-warning.png)
 
-複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![&#x200B; プラスアイコン &#x200B;](/help/images/icons/add-circle.png) を選択して、**[!UICONTROL Add values in bulk]** ポップオーバーを表示します。
+複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![ プラスアイコン ](/help/images/icons/add-circle.png) を選択して、**[!UICONTROL Add values in bulk]** ポップオーバーを表示します。
 
 ![プラスアイコンがハイライト表示され、バルクアップロードポップオーバーにアクセスするために選択できるボタンが表示されます。](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -213,6 +188,45 @@ ht-degree: 55%
 最大 250 個の値が許可されます。この値を超える場合は、値を削除してから追加する必要があります。
 
 ![値の最大数に達したことを示す警告が表示されます。](../images/ui/segment-builder/maximum-values.png)
+
+### クエリの検証 {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="ロジックの複雑さ"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="イベント シーケンス制限"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="クエリ効率アラート"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="カウント フィルターの警告"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="ネストされたデータの警告"
+>abstract=""
+
+セグメントビルダーは、オーディエンスのクエリを自動的に分析および検証して、オーディエンス定義のベストプラクティスに準拠していることを確認します。 これらのベストプラクティスは、重要な検証とパフォーマンスの最適化の 2 つのカテゴリに設定できます。
+
+オーディエンス定義が重要な検証のベストプラクティスに違反した場合、サンドボックスを安定した状態に保つために **変更を保存することはできません**。 オーディエンス定義がパフォーマンス最適化のベストプラクティスに違反した場合は、変更を保存できますが、パフォーマンスの問題を回避するために、オーディエンス定義を更新することを *強くお勧めします*。
+
+| 検証チェック | タイプ | しきい値 |
+| ---------------- | ---- | --------- |
+| 論理的な複雑さ | 重要な検証 | オーディエンスの定義が複雑すぎます。 |
+| 順次イベント | 重要な検証 | オーディエンス定義内に 6 を超える順次イベントがあります。 |
+| 集計数 | パフォーマンスの最適化 | オーディエンス定義内に 3 つ以上の集計関数があります。 |
+| ネストされたデータ | パフォーマンスの最適化 | オーディエンス定義内に 2 レベルを超えるネストされたデータ（配列またはマップのデータタイプ）の深度があります。 |
+| オーディエンスサイズ | パフォーマンスの最適化 | オーディエンスの選定サイズが、サンドボックス内のプロファイルの合計数の 30% を超えています。 |
 
 ### オーディエンスの追加
 
@@ -241,7 +255,7 @@ ht-degree: 55%
 
 コードビューには、API 呼び出しで使用するセグメント定義の値をコピーできるボタンがあります。セグメント定義の最新バージョンを取得するには、最新の変更をセグメント定義に保存してあることを確認してください。
 
-![&#x200B; 「コードをコピー」ボタンがハイライト表示されている様子 &#x200B;](../images/ui/segment-builder/copy-code.png)
+![ 「コードをコピー」ボタンがハイライト表示されている様子 ](../images/ui/segment-builder/copy-code.png)
 
 ### 集計関数
 
@@ -285,7 +299,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->[&#x200B; 年の時間制約を無視 &#x200B;](./ignore-year.md) と [&#x200B; ルールレベルの時間制約 &#x200B;](./segment-refactoring.md) は以前にリファクタリングされており、詳しくはリンクされた概要を参照してください。
+>[ 年の時間制約を無視 ](./ignore-year.md) と [ ルールレベルの時間制約 ](./segment-refactoring.md) は以前にリファクタリングされており、詳しくはリンクされた概要を参照してください。
 
 使用可能な時間制約のリストを以下に示します。
 
@@ -299,21 +313,21 @@ ht-degree: 55%
 
 | 時間制限 | 説明 | 「年を無視」を有効にできる | 例 |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | 比較される属性またはイベントは本日 **発生する必要があります**。 | ○ | ![&#x200B; 使用されている「Today」時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| 昨日 | 比較される属性またはイベントは昨日発生した **必須** です。 | ○ | ![&#x200B; 「Yesterday」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| 今月 | 比較対象の属性またはイベントは今月 **発生する必要があります**。 | ○ | ![&#x200B; 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| 今年 | 比較対象の属性またはイベントは、今年 **発生する必要があります**。 | × | ![&#x200B; 「This year」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| カスタム日付 | 比較する属性またはイベント **必須** は、指定された日付になります。 | ○ | ![&#x200B; 「カスタムの日付」時間制約を使用した例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| 過去 | 比較する属性またはイベント **必須** は、選択した最後の期間内に発生します。 この期間は、評価時間まで **含む** です。 | × | ![&#x200B; 「最後に」の時間制約が使用されている例 &#x200B;](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![&#x200B; 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![&#x200B; 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| （+/ –）内 | 比較される属性またはイベント **必須** は、選択した日付から数日、数週間、数か月、または数年以内に発生します。 この期間には、両方の日付の **両方を含む** が指定されます。 選択した日付は、今日、昨日または別のカスタム日付にすることができます。 | ○ | ![&#x200B; 使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| 次の前 | 比較する属性またはイベント **必須** は、選択した日付より前です。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![&#x200B; 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| ローリングレンジ | 比較する属性またはイベントは、2 つの相対日付の間に存在する必要があります。 日付は、秒、分、時間、日、週、月、または年単位で表すことができます。 | × | ![&#x200B; 使用されている「ローリング範囲」時間制約の例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| 次以内： | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択した期間には、分、時間、日、週、月、年が含まれます。 | × | ![&#x200B; 「次回に」時間制約が使用されている例 &#x200B;](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| exists | 属性が存在する。 | × | ![&#x200B; 使用されている「存在する」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| が存在しない | 属性が存在しません。 | × | ![&#x200B; 使用されている「存在しない」時間制約の例 &#x200B;](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Today | 比較される属性またはイベントは本日 **発生する必要があります**。 | ○ | ![ 使用されている「Today」時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 昨日 | 比較される属性またはイベントは昨日発生した **必須** です。 | ○ | ![ 「Yesterday」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| 今月 | 比較対象の属性またはイベントは今月 **発生する必要があります**。 | ○ | ![ 「今月」の時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| 今年 | 比較対象の属性またはイベントは、今年 **発生する必要があります**。 | × | ![ 「This year」時間制約が使用されている例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| カスタム日付 | 比較する属性またはイベント **必須** は、指定された日付になります。 | ○ | ![ 「カスタムの日付」時間制約を使用した例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| 過去 | 比較する属性またはイベント **必須** は、選択した最後の期間内に発生します。 この期間は、評価時間まで **含む** です。 | × | ![ 「最後に」の時間制約が使用されている例 ](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![ 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL Ignore year]」チェックボックスを有効にすることもできます。 | ○ | ![ 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| （+/ –）内 | 比較される属性またはイベント **必須** は、選択した日付から数日、数週間、数か月、または数年以内に発生します。 この期間には、両方の日付の **両方を含む** が指定されます。 選択した日付は、今日、昨日または別のカスタム日付にすることができます。 | ○ | ![ 使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| 次の前 | 比較する属性またはイベント **必須** は、選択した日付より前です。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| ローリングレンジ | 比較する属性またはイベントは、2 つの相対日付の間に存在する必要があります。 日付は、秒、分、時間、日、週、月、または年単位で表すことができます。 | × | ![ 使用されている「ローリング範囲」時間制約の例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| 次以内： | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択した期間には、分、時間、日、週、月、年が含まれます。 | × | ![ 「次回に」時間制約が使用されている例 ](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| exists | 属性が存在する。 | × | ![ 使用されている「存在する」時間制約の例 ](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| が存在しない | 属性が存在しません。 | × | ![ 使用されている「存在しない」時間制約の例 ](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
@@ -323,7 +337,7 @@ ht-degree: 55%
 
 キャンバスレベルの時間制約を適用するには、イベントのタイムラインの上に表示される時計アイコンを選択します。
 
-![&#x200B; キャンバスレベルの時間制約セレクターがハイライト表示されている様子 &#x200B;](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![ キャンバスレベルの時間制約セレクターがハイライト表示されている様子 ](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
 キャンバスレベルで時間制約を適用すると、オーディエンスの **すべて** のイベントに時間制約が適用されます。
 
@@ -331,7 +345,7 @@ ht-degree: 55%
 
 カードレベルの制約を適用するには、時間制約を適用するカードを選択し、その後に省略記号アイコンを選択して、**[!UICONTROL Apply time rule]** をクリックします。 これにより、**[!UICONTROL Event Rules]** コンテナ内で時間制約を選択できます。
 
-![&#x200B; カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
+![ カードレベルの時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/card-level.png)
 
 カードレベルで時間制約を適用すると、オーディエンスの **指定** イベントに時間制約が適用されます。
 
@@ -339,7 +353,7 @@ ht-degree: 55%
 
 イベント間に時間制約を適用するには、時間制約を適用する 2 つのイベント間の時計アイコンを選択します。
 
-![&#x200B; イベント間の時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/between-event.png)
+![ イベント間の時間制約セレクターがハイライト表示されています。](../images/ui/segment-builder/time-constraints/between-event.png)
 
 イベント間に時間制約を適用すると、イベント間の時間に時間制約 **適用** れます。
 
@@ -435,13 +449,13 @@ ht-degree: 55%
 
 情報バブルを選択すると、最後のサンプルジョブが実行された日時が表示されます。
 
-![&#x200B; 認定プロファイルと推定プロファイルは、「オーディエンスプロパティ」セクションでハイライト表示されます。](../images/ui/segment-builder/audience-estimates.png)
+![ 認定プロファイルと推定プロファイルは、「オーディエンスプロパティ」セクションでハイライト表示されます。](../images/ui/segment-builder/audience-estimates.png)
 
 **[!UICONTROL Audience properties]** の節では、名前、説明、評価タイプなど、オーディエンスに関する重要な情報を指定することもできます。 名前は、組織で定義されたセグメント定義の中からセグメント定義を識別するために使用します。したがって、説明的で簡潔かつ一意である必要があります。
 
 オーディエンスの作成を続行する際に、**[!UICONTROL View Profiles]** を選択すると、オーディエンスのページ分割されたプレビューを表示できます。
 
-![&#x200B; オーディエンスプロパティセクションがハイライト表示されています。 オーディエンスプロパティには、名前、説明、評価方法などがありますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
+![ オーディエンスプロパティセクションがハイライト表示されています。 オーディエンスプロパティには、名前、説明、評価方法などがありますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -475,4 +489,4 @@ ht-degree: 55%
 - スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 - ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド &#x200B;](./overview.md) を参照してください。
+[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UI の他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド ](./overview.md) を参照してください。
