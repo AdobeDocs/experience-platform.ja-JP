@@ -2,10 +2,10 @@
 title: Experience Platformのプレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 15%
+source-wordcount: '1316'
+ht-degree: 16%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2026 年 1 月**
 
@@ -48,7 +48,7 @@ Agent Orchestratorを使用すると、ワークフローを自動化し、複�
 
 {style="table-layout:auto"}
 
-詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -60,7 +60,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | ケベル宛先コネクタが使用可能になりました | [[!DNL Kevel]](https://www.kevel.com/) は、革新的なコマースリーダーがリテールメディアでローンチ、拡大、成功するのを支援する、AI 対応のテクノロジーとエキスパートガイダンスを提供します。 [!DNL Kevel] の Retail Media Cloud は、オンサイト広告とオフサイト広告のために、ターゲットを絞った、帰属可能なカスタマイズ可能な広告フォーマットを強化します。 |
 | インデックス交換の宛先コネクタが使用可能になりました | [!DNL Index] は、メディア所有者が全画面にわたってコンテンツの価値を最大化するのに役立つ、グローバル広告のサプライサイドのプラットフォームです。 20 年以上にわたる業界のリーダーシップを持つ [!DNL Index] は、世界最大のブランドとプレミアムなエクスペリエンスメーカーを結び付け、高品質の消費者体験を提供します。 |
-| Braze 接続の地域エンドポイントのサポート | [&#x200B; でサポートされているすべての &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 地域固有のエンドポイント [!DNL Braze] が、宛先設定フロー中に選択できるようになりました。 使用するエンドポイントインスタンスを [!DNL Braze] 担当者に問い合わせます。 |
+| Braze 接続の地域エンドポイントのサポート | [ でサポートされているすべての ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 地域固有のエンドポイント [!DNL Braze] が、宛先設定フロー中に選択できるようになりました。 使用するエンドポイントインスタンスを [!DNL Braze] 担当者に問い合わせます。 |
 | Liveramp オンボーディングの毎週および毎月のスケジュールのサポート | Liveramp オンボーディング宛先の毎週および毎月の書き出しスケジュールを設定できるようになりました。 |
 | Amazon S3 の宛先に対する AES256 暗号化のサポート | Amazon S3 の書き出しに AES256 暗号化を設定できるようになりました。 |
 | Trade Desk とMicrosoft Bing の宛先のアクティベーションエクスペリエンスの強化 | Trade Desk とMicrosoft Bing の宛先に、最適化されたアクティベーションエクスペリエンスのための事前定義済みの必須マッピングが含まれるようになりました。 |
@@ -70,12 +70,12 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 機能 | 説明 |
 | --- | --- |
 | Adobe Targetの宛先のガードレール制限を更新しました | 1 つのAdobe Targetの宛先にマッピングできるオーディエンスの最大数が 50 から 250 に増えました。 これにより、Adobe Targetが他の宛先の標準のオーディエンス制限に合わせられ、オーディエンスアクティベーションワークフローの柔軟性が向上します。 複数のデータフローを作成しなくても、Adobe Targetの宛先に対して、より多くのオーディエンスをアクティブ化できるようになりました。 |
-| [&#x200B; 宛先の編集 &#x200B;](/help/destinations/ui/edit-destination.md) および [&#x200B; マーケティングアクションの編集 &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 一般提供 | 宛先とマーケティングアクションを編集するオプションが、すべてのユーザーが使用できるようになりました。 |
+| [ 宛先の編集 ](/help/destinations/ui/edit-destination.md) および [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 一般提供 | 宛先とマーケティングアクションを編集するオプションが、すべてのユーザーが使用できるようになりました。 |
 | マッピングステップでのフィールド表示名の切り替え | スキーマフィールドを宛先にマッピングする際に、完全な XDM フィールド名の表示と表示名のみの表示を切り替えられるようになりました。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
+詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#real-time-customer-profile}
 
@@ -113,7 +113,6 @@ Experience Platform では、スキーマを使用して、一貫性のある再
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| ストリーミングセグメント化の監視 | ストリーミングセグメント化のリアルタイム監視は、サンドボックス、データセット、オーディエンスレベルでの評価率、待ち時間、データ品質指標に対する透明性を提供します。 これにより、プロアクティブなアラートと実用的なインサイトがサポートされ、データエンジニアが容量違反と取り込みの問題を特定するのに役立ちます。 モニタリング指標には、評価率、P95 取得待ち時間、受信、評価、失敗およびスキップされたレコードが含まれます。 データセット別の表示およびオーディエンス別の表示機能は、最終的に選定された新しいプロファイルと選定されなかったプロファイルを包括的に可視化します。 |
 | 外部オーディエンス TTL の更新 | 外部オーディエンス（CSV アップロードなど）で、Time-to-Live （TTL）設定の強制更新機能がサポートされるようになりました。 この機能を使用すると、外部オーディエンスの TTL 有効期限を手動で更新でき、オーディエンスのライフサイクル管理をより詳細に制御できます。 これは、初期 TTL 期間を超えて保持する必要があるオーディエンスや、データを再アップロードせずに再アクティブ化する必要があるオーディエンスで特に便利です。 |
 
 詳しくは、[[!DNL Segmentation Service] 概要](../segmentation/home.md)を参照してください。
