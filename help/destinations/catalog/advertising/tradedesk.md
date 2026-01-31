@@ -71,7 +71,7 @@ ht-degree: 22%
 
 **[!DNL The Trade Desk]** に基づく cookie ベースのターゲティングの場合、ECID と [!DNL Trade Desk ID] の間のマッピングが確立されていることを確認します。 これを行うには、以下の手順を実行します。
 
-1. **ID 同期機能を有効にする**:[!DNL The Trade Desk ID] のアクティベーションを初めて設定する場合で、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。
+1. **ID 同期機能を有効にする**:[!DNL The Trade Desk ID] のアクティベーションを初めて設定する場合で、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。
    * 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定している場合、既存の ID 同期は自動的にExperience Platformに引き継がれます。
 
 2. **Web ページの実装**:Web ページにコードを実装して、[!DNL The Trade Desk ID] とAdobe ECID 間のマッピングを作成します。 これにより、Experience Platformは Trade Desk ID を顧客プロファイルに関連付けることができます。
@@ -125,7 +125,7 @@ ht-degree: 22%
 >id="platform_destinations_required_mappings_ttd"
 >title="事前設定済みのマッピングセット"
 >abstract="これら 4 つのマッピングセットは事前に設定されています。 Trade Desk に対してデータをアクティブ化する場合、アクティブ化されたオーディエンスに対して選定されたプロファイルには、必ずしも 4 つの ID すべてがプロファイルに存在している必要はありません。これは、この宛先が、ここに示すいずれかのターゲット ID で動作するためです。 <br> Trade Desk ID に基づく cookie ベースのターゲティングの場合、プロファイルに存在する ECID と、Trade Desk ID と ECID の間の ID 同期マッピングが必要です。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="詳しくは、事前設定済みのマッピングを参照してください"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="詳しくは、事前設定済みのマッピングを参照してください"
 
 オーディエンスアクティベーションワークフローでは、次の ID マッピングが **事前設定され、自動的に入力されます**。
 
