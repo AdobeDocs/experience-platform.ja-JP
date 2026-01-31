@@ -13,7 +13,7 @@ ht-degree: 78%
 
 # サンドボックストラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform のサンドボックスに関するよくある質問に対して回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform のサンドボックスに関するよくある質問に対して回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md) を参照してください。
 
 サンドボックスは、単一のExperience Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援します。 詳しくは、[サンドボックスの概要](home.md)を参照してください。
 
