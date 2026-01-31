@@ -21,7 +21,7 @@ POST `/audiences` エンドポイントは、外部オーディエンスのメ�
 >
 >このガイドのエンドポイントには、`/core/ais` ではなく、`/core/ups` がプレフィックスとして付けられています。
 
-Experience Platform API を使用するには、[ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
+Experience Platform API を使用するには、[&#x200B; 認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
