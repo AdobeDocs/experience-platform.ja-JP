@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud Sourceの概要
 description: API またはユーザーインターフェイスを使用してSalesforce Marketing CloudをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '639'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] ソースは 2026 年 1 月に非推奨（廃止予定）になります。 新しいソースは、代替手段として今年後半にリリースされる予定です。 新しいソースがリリースされたら、2026 年 1 月末までに、新しいアカウント接続とデータフローを作成して、新しいソースに移行する計画を立てる必要があります。
+>[!DNL Oracle Salesforce Marketing Cloud] ソースは非推奨となり、使用できなくなりました。 新しい [[!DNL Salesforce Marketing Cloud]  （V2） ソースを ](sfmc.md)[!DNL Salesforce Marketing Cloud] データの新しいコネクタとして使用します。
 
 [!DNL Salesforce Marketing Cloud] を使用すると、メール、モバイル、ソーシャルメディア、広告をまたいで顧客エンゲージメントを 1 つのプラットフォームから管理および自動化できます。 Email Studio、Customer Builder、Audience Builder などのツールを使用すると、オーディエンスに合わせてパーソナライズされたキャンペーンやジャーニージャーニーを作成できます。
 
@@ -27,9 +27,9 @@ ht-degree: 8%
 * `campaign_read`
 * `list_and_subscribers_read`
 
-[!DNL Salesforce Marketing Cloud] API の `v2/userinfo` リソースを呼び出すことで、スコープをリクエストできます。 範囲をリクエストして比較する方法については、[[!DNL Salesforce Marketing Cloud] API 統合権限の範囲 &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) ドキュメントを参照してください。
+`v2/userinfo` API の [!DNL Salesforce Marketing Cloud] リソースを呼び出すことで、スコープをリクエストできます。 範囲をリクエストして比較する方法については、[[!DNL Salesforce Marketing Cloud] API 統合権限の範囲 ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) ドキュメントを参照してください。
 
-関連する権限と動作のリストなど、範囲について詳しくは、この [[!DNL Salesforce Marketing Cloud] REST API ドキュメント &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>) を参照してください。
+関連する権限と動作のリストなど、範囲について詳しくは、この [[!DNL Salesforce Marketing Cloud] REST API ドキュメント ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ ht-degree: 8%
 
 ### Azure 上のExperience Platformに対する認証 {#azure}
 
-[!DNL Azure] 上のExperience Platformに接続するには、次の資格情報の値を指定 [!DNL Salesforce Marketing Cloud] る必要があります。
+[!DNL Salesforce Marketing Cloud] 上のExperience Platformに接続するには、次の資格情報の値を指定 [!DNL Azure] る必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -69,7 +69,7 @@ AWS上のExperience Platformに接続するには、次の資格情報の値 [!D
 | クライアントシークレット | クライアント ID に関連付けられた機密キーで、インストールされたパッケージでも生成されます。 |
 | 接続仕様 ID | **接続仕様** は、データソースのコネクタプロパティを提供します。 認証仕様や、**ベース** 接続と **ソース** 接続の両方を作成するための要件などの詳細が含まれます。 [!DNL Salesforce Marketing Cloud] の場合、接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 **メモ：** この資格情報は、API 経由で接続する場合にのみ必要です。 |
 
-詳しくは、[[!DNL Salesforce]  サーバー間統合用のアクセストークンに関するドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) を参照してください。
+詳しくは、[[!DNL Salesforce]  サーバー間統合用のアクセストークンに関するドキュメント ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) を参照してください。
 
 ## API を使用した [!DNL Salesforce Marketing Cloud] のExperience Platformへの接続
 
@@ -77,11 +77,11 @@ AWS上のExperience Platformに接続するには、次の資格情報の値 [!D
 
 * [Flow Service API [!DNL Salesforce Marketing Cloud]  使用したExperience Platformへの接続](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-* [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
+* [Flow Service API を使用して、マーケティングオートメーションソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## UI を使用した [!DNL Salesforce Marketing Cloud] のExperience Platformへの接続
 
 以下のドキュメントでは、ユーザーインターフェイスを使用して [!DNL Salesforce Marketing Cloud] をExperience Platformに接続する方法について説明します。
 
 * [UI [!DNL Salesforce Marketing Cloud] Experience Platformへの接続](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-* [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
+* [UI でのマーケティングオートメーションソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
