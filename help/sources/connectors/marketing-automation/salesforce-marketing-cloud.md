@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!WARNING]
 >
->[!DNL Oracle Salesforce Marketing Cloud] ソースは非推奨となり、使用できなくなりました。 新しい [[!DNL Salesforce Marketing Cloud]  （V2） ソースを ](sfmc.md)[!DNL Salesforce Marketing Cloud] データの新しいコネクタとして使用します。
+>[!DNL Oracle Salesforce Marketing Cloud] ソースは非推奨となり、使用できなくなりました。 新しい [[!DNL Salesforce Marketing Cloud]  （V2） ソースを &#x200B;](sfmc.md) [!DNL Salesforce Marketing Cloud] データの新しいコネクタとして使用します。
 
 [!DNL Salesforce Marketing Cloud] を使用すると、メール、モバイル、ソーシャルメディア、広告をまたいで顧客エンゲージメントを 1 つのプラットフォームから管理および自動化できます。 Email Studio、Customer Builder、Audience Builder などのツールを使用すると、オーディエンスに合わせてパーソナライズされたキャンペーンやジャーニージャーニーを作成できます。
 
@@ -27,9 +27,9 @@ ht-degree: 8%
 * `campaign_read`
 * `list_and_subscribers_read`
 
-`v2/userinfo` API の [!DNL Salesforce Marketing Cloud] リソースを呼び出すことで、スコープをリクエストできます。 範囲をリクエストして比較する方法については、[[!DNL Salesforce Marketing Cloud] API 統合権限の範囲 ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) ドキュメントを参照してください。
+`v2/userinfo` API の [!DNL Salesforce Marketing Cloud] リソースを呼び出すことで、スコープをリクエストできます。 範囲をリクエストして比較する方法については、[[!DNL Salesforce Marketing Cloud] API 統合権限の範囲 &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) ドキュメントを参照してください。
 
-関連する権限と動作のリストなど、範囲について詳しくは、この [[!DNL Salesforce Marketing Cloud] REST API ドキュメント ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>) を参照してください。
+関連する権限と動作のリストなど、範囲について詳しくは、この [[!DNL Salesforce Marketing Cloud] REST API ドキュメント &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ AWS上のExperience Platformに接続するには、次の資格情報の値 [!D
 | クライアントシークレット | クライアント ID に関連付けられた機密キーで、インストールされたパッケージでも生成されます。 |
 | 接続仕様 ID | **接続仕様** は、データソースのコネクタプロパティを提供します。 認証仕様や、**ベース** 接続と **ソース** 接続の両方を作成するための要件などの詳細が含まれます。 [!DNL Salesforce Marketing Cloud] の場合、接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 **メモ：** この資格情報は、API 経由で接続する場合にのみ必要です。 |
 
-詳しくは、[[!DNL Salesforce]  サーバー間統合用のアクセストークンに関するドキュメント ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) を参照してください。
+詳しくは、[[!DNL Salesforce]  サーバー間統合用のアクセストークンに関するドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) を参照してください。
 
 ## API を使用した [!DNL Salesforce Marketing Cloud] のExperience Platformへの接続
 
