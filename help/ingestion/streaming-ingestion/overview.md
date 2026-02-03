@@ -4,24 +4,24 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスからリアルタイムでExperience Platformにデータを送信する手段を提供します。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 15%
 
 ---
 
-# ストリーミング取得の概要
+# ストリーミング取り込みの概要
 
 Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから [!DNL Experience Platform] にリアルタイムでデータを送信する手段をユーザーに提供します。
 
-## ストリーミング取得の機能
+## ストリーミング取り込みの機能
 
 Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL Real-Time Customer Profile] を生成することで、調整された一貫性のある関連性の高いエクスペリエンスを提供できます。 ストリーミング取得は、可能な限り少ない待ち時間で [!DNL Profile] しいデータを [!DNL Data Lake] に配信できるようにすることで、これらのプロファイルを作成する上で重要な役割を果たします。
 
 次のビデオは、ストリーミング取得に関する理解を深めるために用意されており、上記の概念の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/31657?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### プロファイルレコードと [!DNL ExperienceEvents] のストリーミング
 
@@ -33,17 +33,17 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 データがクリーンであると確信したら、データセットで [!DNL Real-Time Customer Profile] と [!DNL Identity Service] を有効にできます。
 
-[!DNL Profile] および [!DNL Identity Service] のデータセットの有効化に関する詳細については、[&#x200B; データセットガイドの設定 &#x200B;](/help/profile/tutorials/dataset-configuration.md) を参照してください。
+[!DNL Profile] および [!DNL Identity Service] のデータセットの有効化に関する詳細については、[ データセットガイドの設定 ](/help/profile/tutorials/dataset-configuration.md) を参照してください。
 
 ## Experience Platformでのストリーミング取得に想定される待ち時間はどれくらいですか？
 
 >[!IMPORTANT]
 >
->ストリーミング取り込み用のガードレールは、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、[&#x200B; データ管理のベストプラクティスガイド &#x200B;](/help/landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。 ストリーミングスループットに制限を設定する方法については、[&#x200B; 処理能力の概要 &#x200B;](../../landing/license-usage-and-guardrails/capacity.md) を参照してください。
+>ストリーミング取り込み用のガードレールは、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、[ データ管理のベストプラクティスガイド ](/help/landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。 ストリーミングスループットに制限を設定する方法については、[ 処理能力の概要 ](../../landing/license-usage-and-guardrails/capacity.md) を参照してください。
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |
-| リアルタイム顧客プロファイル | 第 95 百分位で 15 分未満 |
+| リアルタイム顧客プロファイル | <ul><li>B2C データ取り込みの 95 パーセンタイルで 15 分未満。</li><li>B2B データ取り込みの 95 パーセンタイルで 30 分未満。</li></ul> |
 | データレイク | &lt; 60 分 |
 
 ## ストリーミング取り込みに関するリクエスト/秒（RPS）ガイダンス
