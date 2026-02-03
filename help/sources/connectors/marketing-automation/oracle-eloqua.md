@@ -14,7 +14,7 @@ ht-degree: 43%
 
 >[!WARNING]
 >
->[!DNL Oracle Eloqua] ソースは非推奨となり、使用できなくなりました。 新しい [[!DNL Oracle Eloqua]  （V2） ソースを ](eloqua.md)[!DNL Eloqua] データの新しいコネクタとして使用します。
+>[!DNL Oracle Eloqua] ソースは非推奨となり、使用できなくなりました。 新しい [[!DNL Oracle Eloqua]  （V2） ソースを &#x200B;](eloqua.md) [!DNL Eloqua] データの新しいコネクタとして使用します。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
