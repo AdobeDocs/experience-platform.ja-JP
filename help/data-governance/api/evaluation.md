@@ -5,10 +5,10 @@ title: ポリシー評価 API エンドポイント
 description: マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service API を使用して、特定のアクションによってポリシーが違反したかどうかを評価できます。返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 100%
+source-wordcount: '1560'
+ht-degree: 98%
 
 ---
 
@@ -123,6 +123,10 @@ curl -X GET \
 
 ## データセットを使用してポリシー違反を評価する   {#datasets}
 
+>[!WARNING]
+>
+>データセットベースの評価の `/constraints` エンドポイントは非推奨（廃止予定）になりました。 ポリシー違反を評価したり、複数の評価ジョブを実行したりするには、代わりに [bulk evaluation API （`/bulk-eval`） ](#evaluate-policies-in-bulk) を使用します。
+
 データ使用ラベルを収集できる 1 つ以上のデータセットのセットに基づいて、ポリシー違反を評価できます。これをおこなうには、特定のマーケティングアクションの `/constraints` エンドポイントに対して POST リクエストを実行し、リクエスト本文内にデータセット ID のリストを提供します。
 
 **API 形式**
@@ -169,7 +173,7 @@ curl -X POST \
 | `entityType` | ID が兄弟 `entityId` プロパティに示されるエンティティのタイプ。現在、許可されている値は `dataSet` のみです。 |
 | `entityId` | マーケティングアクションをテストするデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[ [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
 
-**応答** 
+**応答**
 
 成功した応答には `violatedPolicies` 配列が含まれます。この配列には、指定されたデータセットに対するマーケティングアクションを実行した結果として違反となったポリシーの詳細が含まれます。ポリシーに違反していない場合、`violatedPolicies` 配列は空になります。
 
@@ -418,7 +422,7 @@ curl -X POST \
 | `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[ [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
 | `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSON ポインター文字列の形式で提供されます。これらの文字列に許可された構文の詳細については、API 基本ガイドの [JSON ポインター](../../landing/api-fundamentals.md#json-pointer)の節を参照してください。 |
 
-**応答** 
+**応答**
 
 成功した応答には `violatedPolicies` 配列が含まれます。この配列には、指定されたデータセットフィールドに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。ポリシーに違反していない場合、`violatedPolicies` 配列は空になります。
 
@@ -586,7 +590,7 @@ curl -X POST \
 | `entityId` | マーケティングアクションをテストするデータセットの ID。 |
 | `entityMeta.fields` | （オプション）マーケティングアクションをテストするデータセット内の特定のフィールドのリスト。 |
 
-**応答** 
+**応答**
 
 応答が成功すると、リクエストで送信されたポリシー評価ジョブごとに 1 つ、評価結果の配列を返します。
 
