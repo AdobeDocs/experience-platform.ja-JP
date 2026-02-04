@@ -125,7 +125,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->データセットベースの評価の `/constraints` エンドポイントは非推奨（廃止予定）になりました。 ポリシー違反を評価したり、複数の評価ジョブを実行したりするには、代わりに [bulk evaluation API （`/bulk-eval`） ](#evaluate-policies-in-bulk) を使用します。
+>データセットベースの評価の `/constraints` エンドポイントは非推奨（廃止予定）になりました。 ポリシー違反を評価したり、複数の評価ジョブを実行したりするには、代わりに [bulk evaluation API （`/bulk-eval`） &#x200B;](#evaluate-policies-in-bulk) を使用します。
 
 データ使用ラベルを収集できる 1 つ以上のデータセットのセットに基づいて、ポリシー違反を評価できます。これをおこなうには、特定のマーケティングアクションの `/constraints` エンドポイントに対して POST リクエストを実行し、リクエスト本文内にデータセット ID のリストを提供します。
 
@@ -171,7 +171,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | ID が兄弟 `entityId` プロパティに示されるエンティティのタイプ。現在、許可されている値は `dataSet` のみです。 |
-| `entityId` | マーケティングアクションをテストするデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[ [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
+| `entityId` | マーケティングアクションをテストするデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[&#x200B; [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
 
 **応答**
 
@@ -419,7 +419,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | ID が兄弟 `entityId` プロパティに示されるエンティティのタイプ。現在、許可されている値は `dataSet` のみです。 |
-| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[ [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
+| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットの ID。データセットとそれに対応する ID のリストは、[!DNL Catalog Service] API の `/dataSets` エンドポイントに GET リクエストをおこなうことで取得できます。詳しくは、[&#x200B; [!DNL Catalog]  オブジェクトの一覧表示](../../catalog/api/list-objects.md)に関するガイドを参照してください。 |
 | `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSON ポインター文字列の形式で提供されます。これらの文字列に許可された構文の詳細については、API 基本ガイドの [JSON ポインター](../../landing/api-fundamentals.md#json-pointer)の節を参照してください。 |
 
 **応答**
