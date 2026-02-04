@@ -17,7 +17,7 @@ ht-degree: 73%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [&#x200B; セグメント化ガードレール &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [&#x200B; セグメント化ガードレール &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja#segmentation-guardrails)
 - [オーディエンスの検証](./validation.md)
 - セグメント化 API {#api}
    - [概要](api/overview.md)
