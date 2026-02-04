@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 74%
+source-wordcount: '212'
+ht-degree: 73%
 
 ---
 
@@ -17,7 +17,8 @@ ht-degree: 74%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [&#x200B; セグメント化ガードレール &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja#segmentation-guardrails)
+- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [オーディエンスの検証](./validation.md)
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
@@ -27,7 +28,7 @@ ht-degree: 74%
    - [外部オーディエンス](api/external-audiences.md)
    - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
-   - [セグメントの定義](api/segment-definitions.md)
+   - [セグメント定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
    - [セグメント検索](api/segment-search.md)
 - セグメント化 UI {#ui}
