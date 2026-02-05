@@ -5,7 +5,7 @@ title: Policy Service API を使用してデータ使用ポリシーを適用す
 type: Tutorial
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service API を使用して、データセットまたはラベルの任意のグループに対して実行されたマーケティングアクションがポリシー違反となるかどうかを評価します。その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 95%
@@ -134,7 +134,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->データセットベースの評価の `/constraints` エンドポイントは非推奨（廃止予定）になりました。 ポリシー違反を評価したり、複数の評価ジョブを実行したりするには、代わりに [bulk evaluation API （`/bulk-eval`） &#x200B;](../api/evaluation.md#evaluate-policies-in-bulk) を使用します。
+>データセットベースの評価の `/constraints` エンドポイントは非推奨（廃止予定）になりました。 ポリシー違反を評価したり、複数の評価ジョブを実行したりするには、代わりに [bulk evaluation API （`/bulk-eval`） ](../api/evaluation.md#bulk) を使用します。
 
 データ使用ポリシーを評価するには、ラベルを収集できる 1 つ以上のデータセットに対してマーケティングアクションをテストします。これは、次の例に示すように、リクエスト本文内にデータセット ID を指定して `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` に POST リクエストを実行することでおこなわれます。
 
@@ -380,4 +380,4 @@ curl -X POST \
 
 このドキュメントでは、データセットまたは一連のデータ使用ラベルに対してマーケティングアクションを実行する際に、ポリシー違反を正しく確認する方法を説明しました。API 応答で返されたデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を実施することができます。
 
-Experience Platformがポリシーをアクティブ化されたセグメントに自動的に適用する方法について詳しくは、[&#x200B; 自動適用 &#x200B;](./auto-enforcement.md) に関するガイドを参照してください。
+Experience Platformがポリシーをアクティブ化されたセグメントに自動的に適用する方法について詳しくは、[ 自動適用 ](./auto-enforcement.md) に関するガイドを参照してください。
