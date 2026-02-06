@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Real-Time Customer Data Platform Insights データモデル B2C Edition
 
-[B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) のReal-Time Customer Data Platform Insights データモデルは、様々なプロファイル、宛先、セグメント化ウィジェットに対するインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 [ クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法 ](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) については、クエリ高速化ストアレポートインサイトのドキュメントを参照してください。
+[B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) のReal-Time Customer Data Platform Insights データモデルは、様々なプロファイル、宛先、セグメント化ウィジェットに対するインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 [&#x200B; クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法 &#x200B;](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) については、クエリ高速化ストアレポートインサイトのドキュメントを参照してください。
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 前提条件
 
-このガイドでは、[ ユーザー定義ダッシュボード機能 ](../standard-dashboards.md) について実際に理解している必要があります。 このガイドに進む前に、ドキュメントを読んでください。
+このガイドでは、[&#x200B; ユーザー定義ダッシュボード機能 &#x200B;](../standard-dashboards.md) について実際に理解している必要があります。 このガイドに進む前に、ドキュメントを読んでください。
 
 ## Real-Time CDP insightのレポートとユースケース
 
@@ -40,11 +40,11 @@ Real-Time CDP レポートは、プロファイルデータと、そのオーデ
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ プロファイルモデルの ERD。](../images/cdp-insights/profile-model.png)
+![&#x200B; プロファイルモデルの ERD。](../images/cdp-insights/profile-model.png)
 
 #### プロファイル数のユースケース {#profile-count}
 
-[!UICONTROL Profile count] ウィジェットで使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Profile count] ウィジェットのドキュメ ](../guides/profiles.md#profile-count) トを参照してください。
+[!UICONTROL Profile count] ウィジェットで使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Profile count] ウィジェットのドキュメ &#x200B;](../guides/profiles.md#profile-count) トを参照してください。
 
 [!UICONTROL Profile count] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -64,7 +64,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### 単一の ID プロファイルのユースケース {#single-identity-profiles}
 
-[!UICONTROL Single identity profiles] ウィジェットに使用されるロジックは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL Single identity profiles] ウィジェットのドキュメ ](../guides/profiles.md#single-identity-profiles) トを参照してください。
+[!UICONTROL Single identity profiles] ウィジェットに使用されるロジックは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL Single identity profiles] ウィジェットのドキュメ &#x200B;](../guides/profiles.md#single-identity-profiles) トを参照してください。
 
 [!UICONTROL Single identity profiles] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -93,11 +93,11 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ 名前空間モデルの ERD。](../images/cdp-insights/namespace-model.png)
+![&#x200B; 名前空間モデルの ERD。](../images/cdp-insights/namespace-model.png)
 
 #### ID 別プロファイルのユースケース {#profiles-by-identity}
 
-[!UICONTROL Profiles by identity] ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメ ](../guides/profiles.md#profiles-by-identity) トを参照してください。
+[!UICONTROL Profiles by identity] ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメ &#x200B;](../guides/profiles.md#profiles-by-identity) トを参照してください。
 
 [!UICONTROL Profiles by identity] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -121,7 +121,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID ユースケース別の単一の ID プロファイル {#single-identity-profiles-by-identity}
 
-[!UICONTROL Single identity profiles by identity] ウィジェットに使用されるロジックは、単一の一意の ID のみで識別されるプロファイルの合計数を示しています。 詳しくは、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) ドキュメントを参照してください。
+[!UICONTROL Single identity profiles by identity] ウィジェットに使用されるロジックは、単一の一意の ID のみで識別されるプロファイルの合計数を示しています。 詳しくは、[ID ウィジェット別の単一の ID プロファイル &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) ドキュメントを参照してください。
 
 [!UICONTROL Single identity profiles by identity] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -156,11 +156,11 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ オーディエンスモデルの ERD。](../images/cdp-insights/audience-model.png)
+![&#x200B; オーディエンスモデルの ERD。](../images/cdp-insights/audience-model.png)
 
 #### オーディエンスサイズのユースケース {#audience-size}
 
-[!UICONTROL Audience size] ウィジェットで使用されるロジックは、最新のスナップショットの時点での、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Audience size] ウィジェットのドキュメ ](../guides/audiences.md#audience-size) トを参照してください。
+[!UICONTROL Audience size] ウィジェットで使用されるロジックは、最新のスナップショットの時点での、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Audience size] ウィジェットのドキュメ &#x200B;](../guides/audiences.md#audience-size) トを参照してください。
 
 [!UICONTROL Audience size] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -184,7 +184,7 @@ WHERE
 
 #### オーディエンスサイズ変更トレンドのユースケース {#audience-size-change-trend}
 
-[!UICONTROL Audience size change trend] ウィジェットで使用されるロジックは、最新の日別スナップショット間の特定のオーディエンスに対して選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL Audience size change trend] ウィジェットのドキュメ ](../guides/audiences.md#audience-size-change-trend) トを参照してください。
+[!UICONTROL Audience size change trend] ウィジェットで使用されるロジックは、最新の日別スナップショット間の特定のオーディエンスに対して選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL Audience size change trend] ウィジェットのドキュメ &#x200B;](../guides/audiences.md#audience-size-change-trend) トを参照してください。
 
 [!UICONTROL Audience size change trend] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -221,7 +221,7 @@ SELECT date_key,
 
 #### 最も使用されている宛先のユースケース {#most-used-destinations}
 
-[!UICONTROL Most used destinations] ウィジェットで使用されるロジックには、組織で最も使用されている宛先が、マッピングされたオーディエンスの数に応じてリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先のinsightも提供します。 詳しくは、[[!UICONTROL Most used destinations] ウィジェットに関するドキュメント ](../guides/destinations.md#most-used-destinations) 参照してください。
+[!UICONTROL Most used destinations] ウィジェットで使用されるロジックには、組織で最も使用されている宛先が、マッピングされたオーディエンスの数に応じてリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先のinsightも提供します。 詳しくは、[[!UICONTROL Most used destinations] ウィジェットに関するドキュメント &#x200B;](../guides/destinations.md#most-used-destinations) 参照してください。
 
 [!UICONTROL Most used destinations] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -246,7 +246,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### 最近アクティブ化されたオーディエンスのユースケース {#recently-activated-audiences}
 
-[!UICONTROL Recently activated audiences] ウィジェットのロジックは、宛先に最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL Recently activated audiences] ウィジェットのドキュメ ](../guides/destinations.md#recently-activated-audiences) トを参照してください。
+[!UICONTROL Recently activated audiences] ウィジェットのロジックは、宛先に最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL Recently activated audiences] ウィジェットのドキュメ &#x200B;](../guides/destinations.md#recently-activated-audiences) トを参照してください。
 
 [!UICONTROL Recently activated audiences] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -286,11 +286,11 @@ LIMIT
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ 名前空間 – オーディエンスモデルの ERD。](../images/cdp-insights/namespace-audience-model.png)
+![&#x200B; 名前空間 – オーディエンスモデルの ERD。](../images/cdp-insights/namespace-audience-model.png)
 
 #### オーディエンスのユースケースの ID 別プロファイル {#audience-profiles-by-identity}
 
-[!UICONTROL Profiles by identity] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を提供します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメ ](../guides/audiences.md#profiles-by-identity) トを参照してください。
+[!UICONTROL Profiles by identity] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を提供します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメ &#x200B;](../guides/audiences.md#profiles-by-identity) トを参照してください。
 
 [!UICONTROL Profiles by identity] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -322,11 +322,11 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ 重複名前空間モデルの ERD。](../images/cdp-insights/overlap-namespace-model.png)
+![&#x200B; 重複名前空間モデルの ERD。](../images/cdp-insights/overlap-namespace-model.png)
 
 #### ID 重複（プロファイル）のユースケース {#profiles-identity-overlap}
 
-[!UICONTROL Identity overlap] ウィジェットで使用されるロジックは、選択した 2 つの ID を含んだ **プロファイルストア** 内のプロファイルの重複を表示します。 詳しくは、[[!UICONTROL Identity overlap] ダッシュボードのドキュメントの [!UICONTROL Profiles] ウィジェットの節を参照してください ](../guides/profiles.md#identity-overlap)
+[!UICONTROL Identity overlap] ウィジェットで使用されるロジックは、選択した 2 つの ID を含んだ **プロファイルストア** 内のプロファイルの重複を表示します。 詳しくは、[[!UICONTROL Identity overlap] ダッシュボードのドキュメントの [!UICONTROL Profiles] ウィジェットの節を参照してください &#x200B;](../guides/profiles.md#identity-overlap)
 
 [!UICONTROL Identity overlap] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
@@ -391,11 +391,11 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 次の画像には、各データセット内の関連データフィールドが含まれています。
 
-![ オーディエンスモデルによる重複名前空間の ERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
+![&#x200B; オーディエンスモデルによる重複名前空間の ERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### ID 重複（オーディエンス）のユースケース {#audiences-identity-overlap}
 
-[!UICONTROL Audiences] ダッシュボードの [!UICONTROL Identity overlap] ウィジェットで使用されているロジックは、特定のオーディエンス用に選択された 2 つの ID を含んだプロファイルの重複を示しています。 詳しくは、[[!UICONTROL Identity overlap] ダッシュボードのドキュメントの [!UICONTROL Audiences] ウィジェットの節を参照してください ](../guides/audiences.md#identity-overlap)
+[!UICONTROL Audiences] ダッシュボードの [!UICONTROL Identity overlap] ウィジェットで使用されているロジックは、特定のオーディエンス用に選択された 2 つの ID を含んだプロファイルの重複を示しています。 詳しくは、[[!UICONTROL Identity overlap] ダッシュボードのドキュメントの [!UICONTROL Audiences] ウィジェットの節を参照してください &#x200B;](../guides/audiences.md#identity-overlap)
 
 [!UICONTROL Identity overlap] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 

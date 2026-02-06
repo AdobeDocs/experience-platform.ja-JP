@@ -15,21 +15,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに [ ソースの概要 ](./sources-overview.md) を参照してください。
+>Adobe Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに [&#x200B; ソースの概要 &#x200B;](./sources-overview.md) を参照してください。
 
 Adobe Real-Time Customer Data Platform B2B editionを使用すると、[[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) ソースコネクタ、Salesforce、Amazon S3、ADLS など、様々なソースから B2B データを取り込むことができます。 この様々なソースでは、サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。
 
-ソースがお客様の B2B ワークフローにどのように適合するかを理解するには、[ エンドツーエンドのチュートリアル ](../b2b-tutorial.md#ingest-your-data-into-experience-platform) を参照してください。
+ソースがお客様の B2B ワークフローにどのように適合するかを理解するには、[&#x200B; エンドツーエンドのチュートリアル &#x200B;](../b2b-tutorial.md#ingest-your-data-into-experience-platform) を参照してください。
 
-Adobe Experience Platformで使用できるソースのタイプについて詳しくは、[ ソースコネクタの概要 ](../../sources/home.md) を参照してください。
+Adobe Experience Platformで使用できるソースのタイプについて詳しくは、[&#x200B; ソースコネクタの概要 &#x200B;](../../sources/home.md) を参照してください。
 
 >[!IMPORTANT]
 >
->B2B スキーマを { リアルタイム顧客プロファイル [ に加えるには、{0](../../rctcdp/../rtcdp/b2b-overview.md)Real-Time Customer Data Platform B2B edition[ へのアクセス権が必要です。](../proile/../../profile/home.md)
+>B2B スキーマを &lbrace; リアルタイム顧客プロファイル [&#x200B; に加えるには、&lbrace;0](../../rctcdp/../rtcdp/b2b-overview.md)Real-Time Customer Data Platform B2B edition[&#x200B; へのアクセス権が必要です。](../proile/../../profile/home.md)
 
 [!DNL Marketo] を使用して B2B データをExperience Platformに取り込む方法の詳細については、次のドキュメントを参照してください。
 
-* [!DNL Marketo] データをExperience Platformに接続する方法について詳しくは、[UI でのMarketo ソースコネクタの作成 ](../../sources/tutorials/ui/create/adobe-applications/marketo.md) のチュートリアルを参照してください。
-* B2B 名前空間とスキーマの基盤となる設定について詳しくは、[B2B 名前空間とスキーマ ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) のドキュメントを参照してください。
-* [!DNL Marketo] Munchkin ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo]  認証ガイド ](../../sources/connectors/adobe-applications/marketo/marketo-auth.md) を参照してください。
-* [!DNL Marketo] のデータセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo]  フィールドマッピング ](../../sources/connectors/adobe-applications//mapping/marketo.md) に関するドキュメントを参照してください。
+* [!DNL Marketo] データをExperience Platformに接続する方法について詳しくは、[UI でのMarketo ソースコネクタの作成 &#x200B;](../../sources/tutorials/ui/create/adobe-applications/marketo.md) のチュートリアルを参照してください。
+* B2B 名前空間とスキーマの基盤となる設定について詳しくは、[B2B 名前空間とスキーマ &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) のドキュメントを参照してください。
+* [!DNL Marketo] Munchkin ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo]  認証ガイド &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo-auth.md) を参照してください。
+* [!DNL Marketo] のデータセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo]  フィールドマッピング &#x200B;](../../sources/connectors/adobe-applications//mapping/marketo.md) に関するドキュメントを参照してください。

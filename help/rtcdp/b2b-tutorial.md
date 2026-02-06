@@ -58,15 +58,15 @@ Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで
 
 ## Experience Platform へのデータの取り込み
 
-次に、Bodea のマーケターは、[ ソースコネクタ ](../sources/home.md) を使用して、ダウンストリームサービスで使用するデータをExperience Platformに取り込みます。 また、Real-Time CDP B2B edition用に承認されたソースの 1 つを使用して、データを取り込むこともできます。
+次に、Bodea のマーケターは、[&#x200B; ソースコネクタ &#x200B;](../sources/home.md) を使用して、ダウンストリームサービスで使用するデータをExperience Platformに取り込みます。 また、Real-Time CDP B2B edition用に承認されたソースの 1 つを使用して、データを取り込むこともできます。
 
 >[!NOTE]
 > 
 >組織で使用可能なソースコネクタを確認するには、Experience Platform UI でソースカタログを表示します。 カタログにアクセスするには、左側のナビゲーションで、「**ソース**」を選択してから、「**カタログ**」を選択します。
 
-ソースアカウントとExperience Platform間の接続を確立するには、認証資格情報を取得する必要があります。 各タイプのソースに対する認証資格情報の取得について詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
+ソースアカウントとExperience Platform間の接続を確立するには、認証資格情報を取得する必要があります。 各タイプのソースに対する認証資格情報の取得について詳しくは、[&#x200B; ソースの概要 &#x200B;](../sources/home.md) を参照してください。
 
-認証資格情報を取得した後、Bodea マーケターはソースアカウントとExperience Platform組織の間に接続を作成します。 ソース接続の設定について詳しくは、[ ソースのドキュメント ](../sources/home.md) を参照してください。
+認証資格情報を取得した後、Bodea マーケターはソースアカウントとExperience Platform組織の間に接続を作成します。 ソース接続の設定について詳しくは、[&#x200B; ソースのドキュメント &#x200B;](../sources/home.md) を参照してください。
 
 ソースコネクタは、すべてのデータフィールドを新しく作成されたスキーマのデータフィールドにマッピングするプロセスをはるかに簡単にする自動マッピング機能を提供します。
 
@@ -86,7 +86,7 @@ Bodea のマーケターは、すべてのフィールドグループが適切�
 
 >[!NOTE]
 > 
->データを評価するオーディエンスを作成する方法については、[ セグメントビルダー UI ガイド ](../segmentation/ui/segment-builder.md) を参照してください。 B2B セグメント化の具体的な使用例については、[Real-Time CDP B2B editionのセグメント化の概要 ](./segmentation/b2b.md) を参照してください。
+>データを評価するオーディエンスを作成する方法については、[&#x200B; セグメントビルダー UI ガイド &#x200B;](../segmentation/ui/segment-builder.md) を参照してください。 B2B セグメント化の具体的な使用例については、[Real-Time CDP B2B editionのセグメント化の概要 &#x200B;](./segmentation/b2b.md) を参照してください。
 
 セグメントビルダーを使用すると、リアルタイム顧客プロファイルデータからマーケティング可能なオーディエンスを作成し、定義した属性、イベントおよび既存のオーディエンスの組み合わせに基づいて、見込みオーディエンスの見積を表示できます。
 
@@ -96,13 +96,13 @@ Bodea のマーケターは、すべてのフィールドグループが適切�
 
 Experience Platform UI の [!UICONTROL Segments] ワークスペース内で、Bodea のマーケターは **[!UICONTROL Activate to destination]** を選択します。
 
-![ 宛先に対するオーディエンスのアクティブ化 ](./assets/b2b-tutorial/activate-to-destination.png)
+![&#x200B; 宛先に対するオーディエンスのアクティブ化 &#x200B;](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->これを実現するための包括的な手順については、[ 宛先へのオーディエンスのアクティブ化 ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) に関するチュートリアルを参照してください。
+>これを実現するための包括的な手順については、[&#x200B; 宛先へのオーディエンスのアクティブ化 &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) に関するチュートリアルを参照してください。
 
-Bodea のマーケターは、オーディエンスを宛先に対してアクティブ化します。これにより、オーディエンスデータをExperience Platformからマーケティング自動化プラットフォームにプッシュできます。 使用可能な宛先について詳しくは、[ 宛先カタログ ](../destinations/catalog/overview.md) を参照してください。
+Bodea のマーケターは、オーディエンスを宛先に対してアクティブ化します。これにより、オーディエンスデータをExperience Platformからマーケティング自動化プラットフォームにプッシュできます。 使用可能な宛先について詳しくは、[&#x200B; 宛先カタログ &#x200B;](../destinations/catalog/overview.md) を参照してください。
 
 ## 次の手順
 
