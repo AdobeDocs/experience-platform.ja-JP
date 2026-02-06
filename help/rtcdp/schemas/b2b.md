@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition のスキーマ
 description: Adobe Real-Time Customer Data Platform B2B editionにおけるエクスペリエンスデータモデル（XDM）スキーマの役割を概説します。
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions" newtab=true
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Real-Time Customer Data Platform B2B editionには、アカウント、オ
 
 >[!IMPORTANT]
 >
->B2B スキーマは、Experience Platform アプリケーション（[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) など）で使用できます。 <br/> ただし、（内のプロファイル） B2B スキーマを（リアルタイム顧客プロファイル [&#x200B; に加えるには、Real-Time CDP B2B editionへのアクセス権が必要 &#x200B;](../../profile/home.md) す。
+>B2B スキーマは、Experience Platform アプリケーション（[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) など）で使用できます。 <br/> ただし、（内のプロファイル） B2B スキーマを（リアルタイム顧客プロファイル [&#x200B; に加えるには、Real-Time CDP B2B editionへのアクセス権が必要 &#x200B;](../../profile/home.md) す。
 
 Real-Time CDP B2B editionには、次の標準クラスが用意されています。
 

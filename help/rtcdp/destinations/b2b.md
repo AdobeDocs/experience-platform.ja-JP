@@ -2,7 +2,7 @@
 title: Real-Time Customer Data PlatformB2B editionの宛先
 description: Adobe Real-Time Customer Data Platform B2B editionにおける宛先の役割を概説します。
 feature: Destinations
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions" newtab=true
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
@@ -27,4 +27,4 @@ Adobe Real-Time Customer Data Platform B2B editionを使用すると、Marketo E
 
 - Real-Time Customer Data Platform B2B editionで使用できる宛先について詳しくは、[&#x200B; 宛先カタログ &#x200B;](../../destinations/catalog/overview.md) を参照してください。
 - Marketo Engageに書き出し可能な ID について詳しくは、[Marketo Engageの宛先に関するドキュメント &#x200B;](../../destinations/catalog/adobe/marketo-engage.md) を参照してください。
-- Experience Platform UI でMarketo Engageの宛先に接続し、データを書き出す方法について詳しくは、[Adobe Experience Platform セグメントをMarketo静的リストにプッシュ」を参照してくだ &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) い。
+- Experience Platform UI でMarketo Engageの宛先に接続し、データを書き出す方法について詳しくは、[Adobe Experience Platform セグメントをMarketo静的リストにプッシュ」を参照してくだ &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja) い。

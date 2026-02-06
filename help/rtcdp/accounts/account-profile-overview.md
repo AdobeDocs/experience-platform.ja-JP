@@ -2,7 +2,7 @@
 keywords: rtcdp b2b;b2b;アカウント;アカウントプロファイル;アカウントプロファイル rtcdp;real-time customer data platform;
 title: Real-Time CDP B2B editionのアカウントプロファイル
 description: Real-time Customer Data Platform B2B エディションで、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合する方法を説明します。
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: a48196d369cec9e9927d9320475e06457e575691

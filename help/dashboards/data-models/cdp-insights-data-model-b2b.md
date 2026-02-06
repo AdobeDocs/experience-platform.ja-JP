@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Real-Time CDP Insights データモデル B2B edition
 
-B2B editionのReal-Time CDP Insights データモデルは、[&#x200B; アカウントプロファイル &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
+B2B editionのReal-Time CDP Insights データモデルは、[&#x200B; アカウントプロファイル &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
 
 >[!AVAILABILITY]
 >
