@@ -1,33 +1,32 @@
 ---
 title: アカウントプロファイルインサイト
 description: アカウントプロファイルのインサイトを強化する SQL を確認し、これらのクエリを使用して、顧客と消費者エクスペリエンスをさらに詳しく調べるカスタムインサイトを生成します。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # アカウントプロファイルインサイト
 
-[&#x200B; アカウントプロファイル &#x200B;](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+[ アカウントプロファイル ](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 インサイトを強化する SQL へのアクセスにより、B2B データをより深く理解し、高度にカスタマイズされた再利用可能なインサイトを生成して、顧客アカウント情報をさらに詳しく調べることができます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-次のインサイトはすべて、[&#x200B; アカウントプロファイルダッシュボード &#x200B;](../guides/account-profiles.md) または [&#x200B; カスタムダッシュボード &#x200B;](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md) で [&#x200B; 新しいウィジェットの作成と編集 &#x200B;](../customize/overview.md) を使用する方法については、[&#x200B; カスタマイズの概要 &#x200B;](../standard-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[ アカウントプロファイルダッシュボード ](../guides/account-profiles.md) または [ カスタムダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/overview.md) で [ 新しいウィジェットの作成と編集 ](../customize/custom-widgets.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
 
 ## 追加されたアカウントプロファイル {#account-profiles-added}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 特定の期間に追加されたアカウントプロファイルの数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## 業界別の新しいアカウント {#accounts-by-industry}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - アカウントプロファイルが属する上位 5 つの業界は何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## タイプ別の新しいアカウント {#accounts-by-type}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - アカウントのタイプ別のカウント数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## 追加された商談 {#opportunities-added}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 特定の期間に追加された商談の数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## 人物の役割別の新しい機会 {#opportunities-by-person-role}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - オポチュニティ内の様々な役割の相対的なサイズと数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## 収益別の新しい商談 {#opportunities-by-revenue}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 売上高（米ドル）でランク付けされた上位 20 の商談は何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## ステータスおよびステージ別の新しい商談 {#opportunities-by-status-and-stage}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- どのようなオープンなオポチュニティがあり、セールスまたはマーケティングファネルのどのステージにいますか？
-- クローズされたオポチュニティは何ですか。また、セールスまたはマーケティング・ファネルのどのステージに存在しますか。
+- どのようなオープンなオポチュニティがあり、セールスまたはマーケティングfunnelのどのステージにいますか？
+- どのようなクローズドオポチュニティがあり、セールスまたはマーケティングfunnelのどのステージにいますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## 獲得済みの新規商談 {#opportunities-won}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 正常にクローズまたは確定された商談の数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 特定の期間に正常にクローズまたは確定（受注）した商談の数は？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->[!UICONTROL &#x200B; アカウントごとの顧客 &#x200B;] グラフには、[!UICONTROL &#x200B; アカウントごとの顧客 &#x200B;]、[!UICONTROL &#x200B; アカウントごとの商談 &#x200B;]、および [!UICONTROL &#x200B; アカウントごとの商談 &#x200B;] という 3 つのドリルスルーインサイトが含まれています。 これらのドリルスルーでは、より詳細なインサイトが提供され、顧客と商談のカウントをカテゴリ（直接顧客と間接顧客など）別や範囲（顧客と商談数のバンドなど）別に分類します。 これらのグラフは、設定したグローバル日付フィルターの影響を受けません。
+>[!UICONTROL Customers per Account Overview] グラフには、[!UICONTROL Customers per Account Detail]、[!UICONTROL Opportunities per Account Overview]、[!UICONTROL Opportunities per Account Detail] の 3 つのドリルスルーインサイトが含まれています。 これらのドリルスルーでは、より詳細なインサイトが提供され、顧客と商談のカウントをカテゴリ（直接顧客と間接顧客など）別や範囲（顧客と商談数のバンドなど）別に分類します。 これらのグラフは、設定したグローバル日付フィルターの影響を受けません。
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 顧客の直接的または間接的な有無に基づくアカウントの配分
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->このインサイトは、グローバル日付フィルターの影響を受けません。
+>このinsightは、グローバル日付フィルターの影響を受けません。
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 直接顧客と間接顧客の範囲が異なるアカウントの数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->このインサイトは、グローバル日付フィルターの影響を受けません。
+>このinsightは、グローバル日付フィルターの影響を受けません。
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 関連するオポチュニティがあるかどうかに基づくアカウントの配分
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->このインサイトは、グローバル日付フィルターの影響を受けません。
+>このinsightは、グローバル日付フィルターの影響を受けません。
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 関連するオポチュニティの範囲が異なるアカウントの数
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成する SQL が表示されます
 
 ```sql
 WITH opportunity_ranges AS (
@@ -507,6 +506,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## 次の手順
 
-このドキュメントでは、アカウントプロファイルダッシュボードのインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。 SQL を使用してカスタムインサイトを生成する方法については、[Query Pro モードの概要 &#x200B;](../sql-insights-query-pro-mode/overview.md) を参照してください。
+このドキュメントでは、アカウントプロファイルダッシュボードのインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。 SQL を使用してカスタムインサイトを生成する方法については、[Query Pro モードの概要 ](../sql-insights-query-pro-mode/overview.md) を参照してください。
 
 また、[Profiles](./profiles.md)、[Audiences](./audiences.md) および [Destinations](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

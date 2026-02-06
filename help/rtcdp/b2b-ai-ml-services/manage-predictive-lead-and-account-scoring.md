@@ -1,18 +1,18 @@
 ---
 title: Real-Time CDP B2B でのリードおよびアカウント予測スコアリングの管理
 type: Documentation
-description: このドキュメントでは、Experience Platform CDP B2B でのリードおよびアカウント予測スコアリング機能の管理について説明します。
+description: このドキュメントでは、Experience Platform CDP B2B のリードおよびアカウント予測スコアリング機能の管理について説明します。
 feature: Profiles, B2B
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 4%
 
 ---
 
-# Adobe Real-time Customer Data Platform, B2B Edition でのリードおよびアカウント予測スコアリングの管理
+# B2B editionのAdobe Real-Time Customer Data Platformでのリードおよびアカウント予測スコアリングの管理
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ ht-degree: 4%
 
 ## 新しいスコアを作成
 
-新しいスコアを作成するには、サイドバーの **[!UICONTROL サービス]** を選択し、「**[!UICONTROL スコアを作成]**」を選択します。
+新しいスコアを作成するには、サイドバーの **[!UICONTROL Services]** を選択し、「**[!UICONTROL Create score]**」を選択します。
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-**[!UICONTROL 基本情報]** 画面が表示され、プロファイルタイプの選択、名前の入力、オプションの説明が求められます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
+**[!UICONTROL Basic information]** 画面が表示され、プロファイルタイプの選択、名前の入力、オプションで説明の入力が求められます。 終了したら「**[!UICONTROL Next]**」を選択します。
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-**[!UICONTROL 目標を定義]** 画面が表示されます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標タイプを選択します。
+**[!UICONTROL Define your goal]** 画面が表示されます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標タイプを選択します。
 
-![&#x200B; 目標を選択 &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
+![ 目標を選択 ](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-**[!UICONTROL 目標の詳細]** ダイアログが開きます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標フィールド名を選択します。
+**[!UICONTROL Goal specifics]** ダイアログが開きます。 ドロップダウン矢印を選択し、表示されるドロップダウンウィンドウから目標フィールド名を選択します。
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-**[!UICONTROL 目標の条件]** 選択が表示されます。 ドロップダウン矢印を選択し、表示されるドロップダウンリストから「条件」を選択します。
+**[!UICONTROL Goal conditions]** 選択が表示されます。 ドロップダウン矢印を選択し、表示されるドロップダウンリストから「条件」を選択します。
 
 ![plas-goal-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-**[!UICONTROL 目標値]** フィールドが表示されます。 次に、「目標の詳細 [!UICONTROL &#x200B; を設定し &#x200B;] す。 [!UICONTROL &#x200B; フィールド値を入力 &#x200B;] パネルを選択し、目標値を入力します。
+**[!UICONTROL Goal value]** フィールドが表示されます。 次に、[!UICONTROL Goal specifics] を設定します。 [!UICONTROL Enter Field Value] パネルを選択し、目標値を入力します。
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 ![plas-goal-specifics-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-フィールドを追加するには、「**[!UICONTROL フィールドを追加]**」を選択します。
+フィールドを追加するには、「**[!UICONTROL Add field]**」を選択します。
 
 ![plas-goal-specifics-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ ht-degree: 4%
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-選択した結合ポリシーによって、ユーザープロファイルのフィールド値の選択方法が決まります。 ドロップダウン矢印を使用して、目的の結合ポリシーを選択し、「**[!UICONTROL 完了]**」を選択します。
+選択した結合ポリシーによって、ユーザープロファイルのフィールド値の選択方法が決まります。 ドロップダウン矢印を使用して、目的の結合ポリシーを選択し、「**[!UICONTROL Finish]**」を選択します。
 
-**[!UICONTROL スコアリングの設定が完了]** ダイアログが表示され、新しいスコアが作成されたことを確認します。 **[!UICONTROL OK]** を選択します。
+新しいスコアが作成されたことを確認する **[!UICONTROL Scoring setup is complete]** ダイアログが表示されます。 **[!UICONTROL OK]** を選択します。
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -68,7 +68,7 @@ ht-degree: 4%
 >
 >各スコアリングプロセスが完了するまで最大 24 時間かかることがあります。
 
-「**[!UICONTROL サービス]**」タブに戻ると、スコアのリストで作成された新しいスコアを確認できます。
+「**[!UICONTROL Services]**」タブに戻ると、スコアのリストで作成された新しいスコアを確認できます。
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
@@ -76,15 +76,15 @@ ht-degree: 4%
 
 ![plas-score-additional-information](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
-前回の実行詳細の下に表示されるエラーコードについて詳しくは、このドキュメントの [AI パイプラインエラーコードのリード &#x200B;](#leads-ai-pipeline-error-codes) の節を参照してください。
+前回の実行詳細の下に表示されるエラーコードについて詳しくは、このドキュメントの [AI パイプラインエラーコードのリード ](#leads-ai-pipeline-error-codes) の節を参照してください。
 
 ## スコアを編集
 
-スコアを編集するには、「**[!UICONTROL サービス]**」タブでスコアを選択し、画面の右側にある追加の詳細パネルから「**[!UICONTROL 編集]**」を選択します。
+スコアを編集するには、「**[!UICONTROL Services]**」タブからスコアを選択し、画面の右側にある追加の詳細パネルから **[!UICONTROL Edit]** を選択します。
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-**[!UICONTROL インスタンスを編集]** ダイアログが表示され、スコアの説明を編集できます。 変更を加え、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL Edit instance]** ダイアログが表示され、スコアの説明を編集できます。 変更を加え、**[!UICONTROL Save]** を選択します。
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -92,33 +92,33 @@ ht-degree: 4%
 >
 >スコアの設定は変更できません。これにより、モデルの再トレーニングと再スコアリングがトリガーになるからです。 これは、スコアを削除して新しいスコアを作成することと同等です。 スコアの設定を編集するには、このスコアをクローンするか、新しいスコアを作成する必要があります。
 
-「**[!UICONTROL サービス]**」タブに戻されます。 スコアを選択して、更新された説明の詳細を画面の右側にある追加の詳細パネルに表示します。
+「**[!UICONTROL Services]**」タブに戻されます。 スコアを選択して、更新された説明の詳細を画面の右側にある追加の詳細パネルに表示します。
 
 ## スコアのクローン
 
-スコアをクローンするには、「**[!UICONTROL サービス]**」タブでスコアを選択し、画面の右側にある追加の詳細パネルから「**[!UICONTROL クローン]**」を選択します。
+スコアをクローンするには、「**[!UICONTROL Services]**」タブからスコアを選択し、画面の右側にある追加の詳細パネルから **[!UICONTROL Clone]** を選択します。
 
 ![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-**[!UICONTROL 基本情報]** 画面が表示されます。 プロファイルタイプ、名前および説明は、元のスコアから複製されます。 これらの詳細を修正し、「**[!UICONTROL 次へ]**」を選択します。
+**[!UICONTROL Basic information]** 画面が表示されます。 プロファイルタイプ、名前および説明は、元のスコアから複製されます。 これらの詳細を修正し、「**[!UICONTROL Next]**」を選択します。
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-**[!UICONTROL 目標を定義]** 画面が表示されます。 新しいスコアを作成する場合と同様に「目標」セクションを完了し、「**[!UICONTROL 完了]**」を選択します。
+**[!UICONTROL Define your goal]** 画面が表示されます。 新しいスコアを作成する場合と同様に、「目標」セクションを完了し、**[!UICONTROL Finish]** を選択します。
 
-「**[!UICONTROL サービス]**」タブに戻り、新しく複製されたスコアがリストに表示されます。
+「**[!UICONTROL Services]**」タブに戻ると、新しく複製されたスコアがリストに表示されます。
 
 >[!NOTE]
 >
->この **[!UICONTROL 目標を定義]** セクションは、元のスコアから複製されません。
+>**[!UICONTROL Define your goal]** セクションは、元のスコアからクローンされません。
 
 ## スコアの削除
 
-スコアを削除するには、「**[!UICONTROL サービス]**」タブでスコアを選択し、画面の右側にある追加の詳細パネルから「**[!UICONTROL 削除]**」を選択します。
+スコアを削除するには、「**[!UICONTROL Services]**」タブからスコアを選択し、画面の右側にある追加の詳細パネルから **[!UICONTROL Delete]** を選択します。
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-**[!UICONTROL ドキュメントを削除]** 確認ダイアログが表示されます。 「**[!UICONTROL 削除]**」を選択します。
+**[!UICONTROL Delete documentation]** の確認ダイアログが表示されます。 **[!UICONTROL Delete]** を選択します。
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
@@ -126,7 +126,7 @@ ht-degree: 4%
 >
 >スコア定義を削除すると、個人プロファイルまたはアカウントプロファイルの予測スコアもすべて削除されますが、スコア定義用に作成されたフィールドグループは削除されません。 フィールドグループは、データモデルでは「孤立」したままになります。
 
-「**[!UICONTROL サービス]**」タブに戻ると、リストのスコアは表示されなくなります。
+「**[!UICONTROL Services]**」タブに戻ると、リストにスコアが表示されなくなります。
 
 ## リード AI パイプラインエラーコード
 
