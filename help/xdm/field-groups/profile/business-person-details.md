@@ -1,7 +1,7 @@
 ---
 title: XDM ビジネス人物詳細スキーマフィールドグループ
 description: XDM ビジネスユーザー詳細スキーマフィールドグループについて説明します。
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
