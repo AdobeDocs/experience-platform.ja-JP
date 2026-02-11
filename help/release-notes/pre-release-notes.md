@@ -22,8 +22,8 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2026 年 2 月**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection は、クライアントサイドの�
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; データ収集ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home) を参照してください。
+詳しくは、[&#x200B; データ収集ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/collection/home) を参照してください。
 
 ## 宛先 {#destinations}
 
