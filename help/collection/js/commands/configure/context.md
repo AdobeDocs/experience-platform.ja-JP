@@ -1,11 +1,11 @@
 ---
-title: context
+title: コンテキスト
 description: デバイス、環境、または場所のデータを自動的に収集します。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 14%
+source-wordcount: '998'
+ht-degree: 12%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 14%
 
 `"highEntropyUserAgentHints"` キーワードは、ユーザーのデバイスに関する詳細情報を収集します。 このデータは、Adobeに送信されるリクエストの HTTP ヘッダーに含まれます。 データがEdge ネットワークに到達すると、XDM オブジェクトは、それぞれの XDM パスを入力します。 `sendEvent` 呼び出しでそれぞれの XDM パスを設定すると、HTTP ヘッダー値よりも優先されます。
 
-[&#x200B; データストリームの設定 &#x200B;](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
+[ データストリームの設定 ](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
 
 | プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 |
 | --- | --- | --- | --- | --- |
@@ -95,20 +95,31 @@ ht-degree: 14%
 
 詳しくは、[User Agent Client Hints](/help/collection/use-cases/client-hints.md) を参照してください。
 
-`context` コマンドを実行する場合は、文字列の `configure` 配列を設定します。 SDKの設定時にこのプロパティを省略すると、`"highEntropyUserAgentHints"` を除くすべてのコンテキスト情報がデフォルトで収集されます。 高エントロピーのクライアントヒントを収集する場合や、データ収集から他のコンテキスト情報を省略する場合は、このプロパティを設定します。 文字列は、任意の順序で含めることができます。
+### 1 回限りの Analytics リファラー {#one-time-analytics-referrer}
 
->[!NOTE]
+`"oneTimeAnalyticsReferrer"` キーワードは、ページの最初の非決定 `sendEvent` 呼び出しでのみ、リファラー値をAdobe Analyticsに送信します。 このコンテキストキーワードの主なユースケースは、Adobe Analyticsの [ リファラー ](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) ディメンションが、主に Analytics と Target の統合で使用されるヒットによって水増しされるのを防ぐことです。
+
+特定の `sendEvent` コマンドで決定イベントタイプ（`decisioning.propositionFetch`、`decisioning.propositionDisplay`、`decisioning.propositionInteract`）を使用する場合、ページの最初の `sendEvent` を計算する際に無視されます。 ページ上でリファラーの値が変更され、別の `sendEvent` がトリガーされた場合、新しいリファラーの値がペイロードに含まれます。 この条件により、この機能を単一ページアプリケーションで使用できます。
+
+重複するリファラーの値が検出されると、ライブラリは `data.__adobe.analytics.referrer` を空の文字列（`""`）に設定します。
+このデータオブジェクトフィールドを空の文字列に設定すると、データオブジェクトが XDM オブジェクト同等のフィールドを上書きするので、Adobe Analyticsにヒットが到達した際に値が実質的にクリアされます。 XDM オブジェクトには影響を与えず、データストリームに複数のサービスを含める場合、そのデータを引き続きExperience Platform データセットに送信できます。
+
+## 実装
+
+`context` コマンドを実行する場合は、文字列の `configure` 配列を設定します。 SDKの設定時にこのプロパティを省略すると、`"highEntropyUserAgentHints"` と `"oneTimeAnalyticsReferrer"` を除くすべてのコンテキスト情報がデフォルトで収集されます。 高エントロピーのクライアントヒントを収集する場合や、データ収集から他のコンテキスト情報を省略する場合は、このプロパティを設定します。 文字列は、任意の順序で含めることができます。
+
+>[!TIP]
 >
->高エントロピーのクライアントヒントを含むすべてのコンテキスト情報を収集する場合は、`context` 配列の文字列にすべての値を含める必要があります。 デフォルトの `context` 値は `highEntropyUserAgentHints` を省略します。`context` プロパティを設定した場合、省略された値はデータを収集しません。
+>高エントロピーのクライアントヒントを含むすべてのコンテキスト情報を収集する場合は、`context` 配列の文字列にすべての値を含める必要があります。 デフォルトの `context` 値は `"highEntropyUserAgentHints"` と `"oneTimeAnalyticsReferrer"` を省略します。`context` プロパティを設定した場合、省略された値はデータを収集しません。
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 
 ## Web SDK タグ拡張機能を使用してコンテキスト情報を収集
 
-Web SDK タグ拡張機能ドキュメントのデータ収集設定の [&#x200B; コンテキスト設定 &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) を参照してください。
+Web SDK タグ拡張機能ドキュメントのデータ収集設定の [ コンテキスト設定 ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) を参照してください。

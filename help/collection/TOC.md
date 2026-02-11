@@ -6,9 +6,9 @@ breadcrumb-title: データ収集
 user-guide-description: Adobe Experience Platformにデータを送信する方法を説明します。
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '142'
 ht-degree: 38%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 38%
    + [リリースノート](js/release-notes.md)
    + インストール {#install}
       + [インストールの概要](js/install/overview.md)
+      + [ベースコード](js/install/base-code.md)
       + [ライブラリ](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [カスタムビルド](js/install/create-custom-build.md)
@@ -37,7 +38,8 @@ ht-degree: 38%
          + [autoCollectPropositionInteractions](js/commands/configure/autocollectpropositioninteractions.md)
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
-         + [context](js/commands/configure/context.md)
+         + [コンテキスト](js/commands/configure/context.md)
+         + [会話](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,7 +90,7 @@ ht-degree: 38%
    + [_monitors](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [トラック](tags/track.md)
 + ユースケース {#use-cases}
    + [概要](use-cases/overview.md)
    + [Client hints](use-cases/client-hints.md)
@@ -102,7 +104,7 @@ ht-degree: 38%
       + [ファーストパーティデバイス ID](use-cases/identity/first-party-device-ids.md)
       + [ID 共有](use-cases/identity/id-sharing.md)
    + [複数のSDK インスタンス](use-cases/multiple-instances.md)
-   + パーソナライズ機能 {#personalization}
+   + パーソナライゼーション {#personalization}
       + [概要](use-cases/personalization/pers-overview.md)
       + [イベントを表示](use-cases/personalization/display-events.md)
       + [フリッカーの管理](use-cases/personalization/manage-flicker.md)

@@ -1,9 +1,10 @@
 ---
 title: データ収集の設定
 description: Web SDK タグ拡張機能でデータ収集を設定します。
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 1%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Data collection]** セクションまで下にスクロールします。
 
-![&#x200B; タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
+![ タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
 
 次のオプションがあります。
 
@@ -119,3 +120,4 @@ if (myBotDetector.isABot()) {
 * **[!UICONTROL Environment]**: ユーザーのブラウザーに関する情報を収集します。
 * **[!UICONTROL Place context]**: ユーザーの場所に関する情報を収集します。
 * **[!UICONTROL High entropy user-agent hints]**: ユーザーのデバイスに関する詳細情報を収集します。
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**：重複するリファラーデータがAdobe Analyticsに送信されないようにします。

@@ -1,9 +1,10 @@
 ---
 title: カスタムビルドコンポーネント
 description: 機能を無効にしてビルドサイズを小さくするカスタム web SDK ビルドを作成します。
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -31,6 +32,7 @@ Adobeでは、次の web SDK ビルドコンポーネントを無効にするこ
 | **[!UICONTROL Activity collector]** | リンクの自動収集とActivity Mapのトラッキングを可能にします。 | |
 | **[!UICONTROL Advertising]** | Adobe AdvertisingとCustomer Journey Analyticsの統合を有効にします。 | |
 | **[!UICONTROL Audiences]** | ID 同期など、Adobe Audience Managerとの統合をサポートします。 | |
+| **[!UICONTROL Brand concierge]** | Brand Concierge との統合を有効にします。 |
 | **[!UICONTROL Consent]** | 同意機能を使用する機能を許可します。 | [[!UICONTROL Set consent]](../actions/set-consent.md) アクション |
 | **[!UICONTROL Event merge]** | 非推奨。 | [[!UICONTROL Event merge ID]](../data-element-types.md) データ要素（非推奨） <br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) アクション（非推奨） |
 | **[!UICONTROL Media Analytics bridge]** | では、従来の Media Analytics との統合をサポートしています。 | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) アクション |
