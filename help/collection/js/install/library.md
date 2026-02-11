@@ -11,20 +11,20 @@ ht-degree: 0%
 
 # Web SDK JavaScript ライブラリのインストール
 
-[Web SDK タグ拡張機能 ](/help/tags/extensions/client/web-sdk/overview.md) を使用しない場合は、Adobe CDN でホストされているスタンドアロンのJavaScript ライブラリを参照して、web SDKをインストールできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
+[Web SDK タグ拡張機能 &#x200B;](/help/tags/extensions/client/web-sdk/overview.md) を使用しない場合は、Adobe CDN でホストされているスタンドアロンのJavaScript ライブラリを参照して、web SDKをインストールできます。 ライブラリを直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小された形式と完全な形式で利用できます。
 
 Web SDK ライブラリは、次の URL 構造を使用して利用できます。
 
 * **縮小**: `https://cdn1.adoberesources.net/alloy/<VERSION>/alloy.min.js`
 * **フル**: `https://cdn1.adoberesources.net/alloy/<VERSION>/alloy.js`
 
-URL に含める最新バージョンについては、[Web SDK リリースノート ](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
+URL に含める最新バージョンについては、[Web SDK リリースノート &#x200B;](../release-notes.md) を参照してください。 例えば、バージョン 2.19.1 のフルバージョンの URL は `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` です。
 
 ## ベースコードとライブラリローダーの追加
 
 追加するコードは、次の 2 つのセクションで構成されます。
 
-* **ベースコード**:Web SDKが非同期で読み込まれるときに、コマンドをキューに入れることでブートストラップを可能にします。 詳しくは、[ ベースコード ](base-code.md) を参照してください。 Adobeでは、ページ読み込み時に web SDK コマンドを呼び出す際の競合状態を避けるために、ライブラリを非同期で読み込む際にベースコードを使用することをお勧めします。
+* **ベースコード**:Web SDKが非同期で読み込まれるときに、コマンドをキューに入れることでブートストラップを可能にします。 詳しくは、[&#x200B; ベースコード &#x200B;](base-code.md) を参照してください。 Adobeでは、ページ読み込み時に web SDK コマンドを呼び出す際の競合状態を避けるために、ライブラリを非同期で読み込む際にベースコードを使用することをお勧めします。
 * **ライブラリローダー**:JavaScript ライブラリ全体を読み込みます。
 
 Web SDKを呼び出す可能性のあるスクリプトの前に、次のコードブロックをできるだけ `<head>` タグの高い位置に追加します。
