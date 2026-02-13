@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## 後続の `sendEvent` 呼び出しで表示イベントを送信
 
-後の `sendEvent` 呼び出しに表示イベントを含めると、パーソナライゼーションのリクエスト時には利用できない追加のページ読み込みデータを添付する場合に役立ちます。 一般的に、[&#x200B; 上位および下位のページイベント &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md) を実装する際に使用されます。 この方法でディスプレイイベントを正しく実装すると、Adobe Analyticsの [&#x200B; バウンス率 &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) に関する問題を回避できます。
+後の `sendEvent` 呼び出しに表示イベントを含めると、パーソナライゼーションのリクエスト時には利用できない追加のページ読み込みデータを添付する場合に役立ちます。 一般的に、[&#x200B; 上位および下位のページイベント &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md) を実装する際に使用されます。 この方法でディスプレイイベントを正しく実装すると、Adobe Analyticsの [&#x200B; バウンス率 &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics/components/metrics/bounce-rate) に関する問題を回避できます。
 
 1. 最初の `sendEvent` 呼び出し（多くの場合、ページの上部）で、コンテンツをリクエストしてレンダリングしますが、`renderDecisions` を `true` に、`personalization.sendDisplayEvent` を `false` に設定すると、自動表示イベントが抑制されます。
 
