@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`applyPropositions` コマンドは、表示イベントを自動的に送信しません。 記録が必要な場合は、`sendEvent` 表示イベントの管理 [ の説明に従って、](/help/collection/use-cases/personalization/display-events.md) のコマンドを使用します。
+>`applyPropositions` コマンドは、表示イベントを自動的に送信しません。 記録が必要な場合は、`sendEvent` 表示イベントの管理 [&#x200B; の説明に従って、](/help/collection/use-cases/personalization/display-events.md) のコマンドを使用します。
 
 設定済みの Web SDK インスタンスを呼び出す際に、`applyPropositions` コマンドを実行します。 設定オプションを含むオブジェクトは、次のフィールドをサポートしています。
 
