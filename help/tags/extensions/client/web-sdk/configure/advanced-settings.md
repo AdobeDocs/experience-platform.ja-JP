@@ -1,14 +1,20 @@
 ---
 title: 詳細設定
 description: Web SDK タグ拡張機能の詳細設定を行います。
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 3%
 
 ---
 
-# 詳細設定
+# 詳細設定 {#advanced}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advanced"
+>title="詳細設定"
+>abstract="詳細設定。 Adobeでは、ほとんどの実装で、これらのオプションをそのままにしておくことをお勧めします。"
 
 この設定セクションでは、詳細設定を変更できます。 Adobeでは、ほとんどの実装で、これらのオプションをそのままにしておくことをお勧めします。
 
@@ -18,7 +24,7 @@ ht-degree: 2%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Advanced Settings]** セクションまで下にスクロールします。
 
-![Web SDK タグ拡張機能ページを使用した詳細設定を示す画像 &#x200B;](../assets/advanced-settings.png)
+![Web SDK タグ拡張機能ページを使用した詳細設定を示す画像 ](../assets/advanced-settings.png)
 
 現在、利用可能なオプションが 1 つあります。
 

@@ -2,14 +2,19 @@
 title: データ収集の設定
 description: Web SDK タグ拡張機能でデータ収集を設定します。
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '719'
 ht-degree: 1%
 
 ---
 
-# データ収集の設定
+# データ収集の設定 {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="データ収集"
+>abstract="収集するデータと、そのデータをタグ拡張機能全体で収集する方法を決定します。"
 
 この設定セクションでは、拡張機能全体でのデータの収集方法を指定できます。
 
@@ -19,7 +24,7 @@ ht-degree: 1%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Data collection]** セクションまで下にスクロールします。
 
-![&#x200B; タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
+![ タグ UI の web SDK タグ拡張機能のデータ収集設定を示す画像。](../assets/web-sdk-ext-collection.png)
 
 次のオプションがあります。
 

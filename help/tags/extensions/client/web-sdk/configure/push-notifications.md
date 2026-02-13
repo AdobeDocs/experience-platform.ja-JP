@@ -1,14 +1,20 @@
 ---
 title: プッシュ通知設定
 description: Web SDK タグ拡張機能のプッシュ通知を設定します。
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 5%
+source-wordcount: '196'
+ht-degree: 6%
 
 ---
 
-# プッシュ通知設定
+# プッシュ通知設定 {#push-notifications}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_pushnotifications"
+>title="プッシュ通知"
+>abstract="プッシュ通知認証用の VAPID 公開鍵を設定します。"
 
 >[!AVAILABILITY]
 >
@@ -18,7 +24,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->この機能は、まず [&#x200B; カスタムビルドコンポーネント &#x200B;](custom-build-components.md) を使用して有効にする必要があります。デフォルトでは無効になっています。
+>この機能は、まず [ カスタムビルドコンポーネント ](custom-build-components.md) を使用して有効にする必要があります。デフォルトでは無効になっています。
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
@@ -28,7 +34,7 @@ ht-degree: 5%
 1. [!UICONTROL SDK instances] の下で、下にスクロールして [!UICONTROL Push Notifications] セクションを探します。
 1. VAPID 公開鍵を「**[!UICONTROL VAPID Public Key]**」フィールドに入力します。
 
-![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像 &#x200B;](../assets/push-notifications.png)
+![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像 ](../assets/push-notifications.png)
 
 次のフィールドを使用できます。
 

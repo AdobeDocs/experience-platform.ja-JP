@@ -1,18 +1,24 @@
 ---
 title: Brand Concierge設定
 description: Brand Concierge チャットのセッション永続性とストリームタイムアウトを設定します。
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '152'
 ht-degree: 11%
 
 ---
 
-# Brand Concierge設定
+# Brand Concierge設定 {#brand-concierge}
 
 >[!AVAILABILITY]
 >
 >Web SDK用のBrand Conciergeは現在 **ベータ版** です。 機能とドキュメントは変更される場合があります。
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="プロパティでBrand Conciergeを使用する場合の設定。"
 
 **[!UICONTROL Brand Concierge]** セクションでは、Web SDK タグ拡張機能でのBrand Concierge チャットセッションの動作を制御できます。
 

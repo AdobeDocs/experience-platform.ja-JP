@@ -1,14 +1,20 @@
 ---
 title: Personalization設定
 description: Web SDK タグ拡張機能でパーソナライゼーションを設定します。
-source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
+exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
-# Personalization設定
+# Personalization設定 {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="パーソナライゼーション"
+>abstract="タグ拡張機能によるパーソナライズされたコンテンツの処理方法を決定します。"
 
 この設定セクションを使用すると、パーソナライズされたコンテンツの読み込み中にページの特定の部分を非表示にする方法を決定できます。 正しく設定すると、これらの設定によって、訪問者に適切なパーソナライズされたコンテンツが表示されます。
 
@@ -18,7 +24,7 @@ ht-degree: 1%
 1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
 1. **[!UICONTROL Personalization]** セクションまで下にスクロールします。
 
-![&#x200B; タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 &#x200B;](../assets/web-sdk-ext-personalization.png)
+![ タグ UI の web SDK タグ拡張機能のパーソナライゼーション設定を示す画像 ](../assets/web-sdk-ext-personalization.png)
 
 次のオプションがあります。
 
@@ -26,7 +32,7 @@ ht-degree: 1%
 
 このオプションを使用すると、`mbox` 1.x または 2.x ライブラリで使用される従来の `mboxEdgeCluster` および `at.js` Cookie の読み取りと書き込みを Web SDKで許可できます。 この設定は、同じ web サイト上で Web SDKまたは `at.js` を使用してページ間を移動する際に、訪問者のプロファイルをそのままの状態に保つのに役立ちます。 サイトのどこにも `at.js` を実装していない場合は、このチェックボックスを有効にする必要はありません。 このチェックボックスに相当するJavaScript ライブラリは [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md) です。
 
-このオプションを有効にする場合は、[`overrideMboxEdgeServer` でも &#x200B;](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()` を有効にしてください。
+このオプションを有効にする場合は、[`overrideMboxEdgeServer` でも ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()` を有効にしてください。
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

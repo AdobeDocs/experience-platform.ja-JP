@@ -1,15 +1,20 @@
 ---
-title: カスタムビルドコンポーネント
+title: ビルドオプション
 description: 機能を無効にしてビルドサイズを小さくするカスタム web SDK ビルドを作成します。
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 1%
 
 ---
 
-# カスタムビルドコンポーネント
+# ビルドオプション {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="ビルドオプション"
+>abstract="JavaScript ライブラリからモジュールを選択的に含めたり除外したりして、ライブラリサイズを減らし、パフォーマンスを向上させます。"
 
 Web SDK ライブラリには、パーソナライゼーション、ID、リンクトラッキングなど、様々な機能のための複数のモジュールが含まれています。 ユースケースによっては、ライブラリ全体ではなく、特定の機能のみが必要になる場合があります。 ビルドコンポーネントを無効にすると、必要なモジュールのみを使用して、ライブラリのサイズを小さくし、パフォーマンスを向上させることができます。
 
