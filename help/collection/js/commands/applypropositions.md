@@ -2,9 +2,9 @@
 title: applyPropositions
 description: sendEvent で既にレンダリングされている提案を再レンダリングします。
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
    * 範囲
    * セレクター
    * アクションタイプ
+
+>[!NOTE]
+>
+>`applyPropositions` コマンドは、表示イベントを自動的に送信しません。 記録が必要な場合は、`sendEvent` 表示イベントの管理 [ の説明に従って、](/help/collection/use-cases/personalization/display-events.md) のコマンドを使用します。
 
 設定済みの Web SDK インスタンスを呼び出す際に、`applyPropositions` コマンドを実行します。 設定オプションを含むオブジェクトは、次のフィールドをサポートしています。
 

@@ -6,10 +6,10 @@ breadcrumb-title: データ収集
 user-guide-description: Adobe Experience Platformにデータを送信する方法を説明します。
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 38%
+source-wordcount: '149'
+ht-degree: 34%
 
 ---
 
@@ -106,7 +106,9 @@ ht-degree: 38%
    + [複数のSDK インスタンス](use-cases/multiple-instances.md)
    + パーソナライゼーション {#personalization}
       + [概要](use-cases/personalization/pers-overview.md)
-      + [イベントを表示](use-cases/personalization/display-events.md)
+      + [DOM アクションを自動的にレンダリング](use-cases/personalization/render-auto-pers-content.md)
+      + [HTML オファーのレンダリング](use-cases/personalization/render-html-offers.md)
+      + [提案を手動でレンダリング](use-cases/personalization/render-manual-propositions.md)
       + [フリッカーの管理](use-cases/personalization/manage-flicker.md)
-      + [パーソナライズされたコンテンツのレンダリング](use-cases/personalization/rendering-personalization-content.md)
+      + [イベントを表示](use-cases/personalization/display-events.md)
       + [上位および下位のページイベント](use-cases/personalization/top-bottom-page-events.md)
