@@ -1,8 +1,7 @@
 ---
-title: Adobe Experience Platform リリースノート（2026年1月）
-description: Adobe Experience Platform の 2026年1月のリリースノートです。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
+title: Adobe Experience Platform リリースノート（2026年2月）
+description: Adobe Experience Platform の 2026年2月のリリースノートです。
+source-git-commit: afb1e0266b4c5485ba574f95aab3a56485d176b3
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 31%
