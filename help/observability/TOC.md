@@ -4,10 +4,10 @@ user-guide-title: Observability Insights ガイド
 user-guide-description: Adobe Experience Platform Observability Insights の統計指標とイベント通知を使用して、Experience Platform アクティビティを監視する方法を確認します。
 feature: Observability
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 11f95eb16110155f8675ee5c83824b790a68f06a
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 94%
+source-wordcount: '59'
+ht-degree: 91%
 
 ---
 
@@ -24,5 +24,6 @@ ht-degree: 94%
    * [標準アラートルール](./alerts/rules.md)
    * [UI ガイド](./alerts/ui.md)
    * [I/O イベント通知のサブスクライブ](./alerts/subscribe.md)
+   * [Slackの統合](./alerts/slack-integration.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
