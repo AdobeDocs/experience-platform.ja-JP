@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ドキュメントの [&#x200B; オーディエンスコンポジションの基本を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) を参照して、オーディエンスコンポジションの操作について詳しく説明してください。
+Adobe Journey Optimizer ユーザーの場合は、Adobe Journey Optimizer ドキュメントの [&#x200B; オーディエンスコンポジションの基本を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=ja) を参照して、オーディエンスコンポジションの操作について詳しく説明してください。
 
 >[!ENDSHADEBOX]
 
