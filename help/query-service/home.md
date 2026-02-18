@@ -34,7 +34,7 @@ RESTful API も同様のエクスペリエンスを提供します。 Query Serv
 
 ## クエリサービスと Experience Platform サービス {#experience-platform-services}
 
-クエリサービスはやり取りし、複数のExperience Platform サービスで使用できます。 クエリサービスの機能を最大限に活用するには、これらのサービスと、クエリサービスとのやり取りについて理解する必要があります。 [Experience Platform ドキュメントのランディングページ ] （https://experienceleague.adobe.com/docs/experience-platform.html）には、プラットフォームの機能の概要とリンクが記載されています。
+クエリサービスはやり取りし、複数のExperience Platform サービスで使用できます。 クエリサービスの機能を最大限に活用するには、これらのサービスと、クエリサービスとのやり取りについて理解する必要があります。 [Experience Platform ドキュメントのランディングページ ] （https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja）には、プラットフォームの機能の概要とリンクが記載されています。
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
