@@ -5,10 +5,10 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 73%
+source-wordcount: '711'
+ht-degree: 72%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 73%
 * スキーマ {#schema}
    * [スキーマ構成の基本](schema/composition.md)
    * [データモデリングのベストプラクティス](schema/best-practices.md)
+   * [プロファイル有効化の計画](./schema/profile-enablement-planning.md)
    * [機密データと個人データ](./schema/sensitive-and-personal-data.md)
    * [XDM フィールドタイプ制約](schema/field-constraints.md)
    * [リレーショナルスキーマ](./schema/relational.md)
@@ -33,7 +34,7 @@ ht-degree: 73%
    * ヘルスケアデータモデル V2 {#healthcare}
       * [ヘルスケア V2](./schema/healthcare/healthcare-v2.md)
       * クラス {#classes}
-         * [ロケーション](./schema/healthcare/classes/location.md)
+         * [場所](./schema/healthcare/classes/location.md)
       * フィールドグループ {#field-groups}
          * [アカウント](./schema/healthcare/field-groups/account.md)
          * [予定](./schema/healthcare/field-groups/appointment.md)
@@ -41,7 +42,7 @@ ht-degree: 73%
          * [カバレッジ](./schema/healthcare/field-groups/coverage.md)
          * [目標](./schema/healthcare/field-groups/goal.md)
          * [免疫](./schema/healthcare/field-groups/immunization.md)
-         * [ロケーション](./schema/healthcare/field-groups/location.md)
+         * [場所](./schema/healthcare/field-groups/location.md)
          * [医薬品](./schema/healthcare/field-groups/medication.md)
          * [薬剤調剤](./schema/healthcare/field-groups/medication-dispense.md)
          * [投薬依頼](./schema/healthcare/field-groups/medication-request.md)
@@ -173,7 +174,7 @@ ht-degree: 73%
    * [チャプター詳細コレクション](./data-types/chapter-details-collection.md)
    * [チャプターの詳細レポート](./data-types/chapter-details-reporting.md)
    * [Commerceの範囲](./data-types/commerce-scope.md)
-   * [コマース](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [同意文字列](./data-types/consent-string.md)
    * [同意および環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
