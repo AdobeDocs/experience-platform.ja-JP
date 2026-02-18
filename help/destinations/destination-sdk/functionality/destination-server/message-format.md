@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2488'
 ht-degree: 87%
 
 ---
@@ -1032,7 +1032,6 @@ customerList={{input.aggregationKey.segmentAlias}}
 使用可能な値：
 
 * realized
-* existing
 * exited
 
 テンプレートに以下の行を追加して、上記の値に基づいて、プロファイルをセグメントに追加したりセグメントから削除したりします。
