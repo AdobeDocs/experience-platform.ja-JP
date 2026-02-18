@@ -1,39 +1,39 @@
 ---
 title: 顧客向けアラートのSlack統合
 description: Adobe App Builderを使用してAdobe I/O EventsをSlackに接続する方法について説明します。
-source-git-commit: 11f95eb16110155f8675ee5c83824b790a68f06a
+source-git-commit: c0fa0320b32e1bfe286d47a2e1af5ea1dcf74cb9
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
 # 顧客向けアラートのSlack統合
 
-Adobe Experience Platformでは、[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) で webhook プロキシを使用して、[&#x200B; で &#x200B;](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack] を受け取ることができます。 プロキシは、Adobeの検証ハンドシェイクを処理し、イベントペイロードを [!DNL Slack] メッセージに変換して、お客様に対するアラートをワークスペースに配信できるようにします。
+Adobe Experience Platformでは、[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) で webhook プロキシを使用して、[ で ](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack] を受け取ることができます。 プロキシは、Adobeの検証ハンドシェイクを処理し、イベントペイロードを [!DNL Slack] メッセージに変換して、お客様に対するアラートをワークスペースに配信できるようにします。
 
 ## 前提条件 {#prerequisites}
 
 開始する前に、次の点を確認してください。
 
 * **Adobe Developer Console アクセス**: App Builderが有効になっている、組織内のシステム管理者または開発者の役割です。
-* **Node.js および npm**: Node.js （LTS 推奨）。Adobe CLI およびプロジェクトの依存関係をインストールするための npm が含まれます。 詳しくは、[Node.js のダウンロード &#x200B;](https://nodejs.org/) および [npm 入門ガイド &#x200B;](https://docs.npmjs.com/getting-started) を参照してください。
+* **Node.js および npm**: Node.js （LTS 推奨）。Adobe CLI およびプロジェクトの依存関係をインストールするための npm が含まれます。 詳しくは、[Node.js のダウンロード ](https://nodejs.org/) および [npm 入門ガイド ](https://docs.npmjs.com/getting-started) を参照してください。
 * **Adobe I/O CLI**: ターミナルからAdobe I/O CLI をインストールします：`npm install -g @adobe/aio-cli`。
-* **受信 Webhook 付きSlack アプリ**: **受信 Webhook** が有効になっているワークスペース内のSlack アプリ。 [Slack アプリの作成 &#x200B;](https://api.slack.com/apps) および [Slack受信 Webhook ガイド &#x200B;](https://api.slack.com/messaging/webhooks) を参照して、アプリを作成し、Webhook URL を取得します（形式：`https://hooks.slack.com/...`）。
+* **受信 Webhook 付きSlack アプリ**: **受信 Webhook** が有効になっているワークスペース内のSlack アプリ。 [Slack アプリの作成 ](https://api.slack.com/apps) および [Slack受信 Webhook ガイド ](https://api.slack.com/messaging/webhooks) を参照して、アプリを作成し、Webhook URL を取得します（形式：`https://hooks.slack.com/...`）。
 
 ## テンプレート化されたプロジェクトの設定 {#templated-project}
 
 テンプレート化されたプロジェクトを設定するには、Adobe Developer Consoleにログインし、「**[!UICONTROL Create project from template]**」タブから「**[!UICONTROL Home]**」を選択します。
 
-![&#x200B; 「ホーム」タブがハイライト表示されたDeveloper Consoleと「テンプレートからプロジェクトを作成」 &#x200B;](../images/alerts/slack-integration/developer-console-home.png)
+![ 「ホーム」タブがハイライト表示されたDeveloper Consoleと「テンプレートからプロジェクトを作成」 ](../images/alerts/slack-integration/developer-console-home.png)
 
 **[!UICONTROL App Builder]** テンプレートを選択し、**[!UICONTROL Project Title]** を入力して「**[!UICONTROL Add workspace]**」を選択します。 最後に、「**[!UICONTROL Save]**」を選択します。
 
-![&#x200B; プロジェクトタイトル、Workspaceを追加および保存をハイライト表示したDeveloper Console](../images/alerts/slack-integration/developer-console-save.png)
+![ プロジェクトタイトル、Workspaceを追加および保存をハイライト表示したDeveloper Console](../images/alerts/slack-integration/developer-console-save.png)
 
 プロジェクトが作成され、「**[!UICONTROL Project overview]**」タブに移動されたことを示す確認が表示されます。 ここから **[!UICONTROL Project description]** を追加できます。
 
-![&#x200B; プロジェクトの詳細を表示する「プロジェクトの概要」タブ &#x200B;](../images/alerts/slack-integration/developer-console-project.png)
+![ プロジェクトの詳細を表示する「プロジェクトの概要」タブ ](../images/alerts/slack-integration/developer-console-project.png)
 
 ## プロジェクトの初期化 {#initialize-project}
 
@@ -51,17 +51,21 @@ Adobe Experience Platformでは、[Adobe App Builder](https://developer.adobe.co
    aio app init slack-webhook-proxy
    ```
 
-1. 矢印キーを使用して `Organization` を選択し、前にDeveloper Consoleで作成した `Project` を選択します。 検索するテンプレートの `Only Templates Supported By My Org` を選択します。 次に、**Enter** キーを押してテンプレートをスキップし、スタンドアロンアプリケーションをインストールします。
+1. 矢印キーを使用して `Organization` を選択し、前にDeveloper Consoleで作成した `Project` を選択します。 検索するテンプレートの `Only Templates Supported By My Org` を選択します。
 
-   ![&#x200B; 組織とプロジェクトの選択を表示するターミナルと、My Org がサポートするテンプレートのみ &#x200B;](../images/alerts/slack-integration/terminal-organization-project.png)
+   ![ 組織とプロジェクトの選択を表示するターミナルと、My Org がサポートするテンプレートのみ ](../images/alerts/slack-integration/terminal-organization-project.png)
+
+1. 次に、**Enter** キーを押してテンプレートをスキップし、スタンドアロンアプリケーションをインストールします。
+
+   ![ 組織とプロジェクトの選択を表示するターミナルと、My Org がサポートするテンプレートのみ ](../images/alerts/slack-integration/terminal-skip-templates.png)
 
 1. このプロジェクトに対して有効にするAdobe I/O アプリ機能を指定します。 矢印キーを使用してスクロールし、選択 `Actions: Deploy Runtime actions` ます。
 
-   ![&#x200B; 「アクション：ランタイムアクションをデプロイ」が選択されたアクションを含むアプリの機能を示すターミナル &#x200B;](../images/alerts/slack-integration/terminal-app-features.png)
+   ![ 「アクション：ランタイムアクションをデプロイ」が選択されたアクションを含むアプリの機能を示すターミナル ](../images/alerts/slack-integration/terminal-app-features.png)
 
 1. 矢印キーを使用してスクロールし、作成するサンプルアクションのタイプの `Adobe Experience Platform: Realtime Customer Profile` を選択します。
 
-   ![Adobe Experience Platform：リアルタイム顧客プロファイルが選択された状態のサンプルアクションタイプを示すターミナル &#x200B;](../images/alerts/slack-integration/terminal-sample-actions.png)
+   ![Adobe Experience Platform：リアルタイム顧客プロファイルが選択された状態のサンプルアクションタイプを示すターミナル ](../images/alerts/slack-integration/terminal-sample-actions.png)
 
 1. テンプレートに追加する UI の `Pure HTML/JS` をスクロールして選択します。 **Enter** キーを押してサンプルアクションをデフォルトのままにし、もう一度 **Enter** キーを押して名前をデフォルトのままにします。
 
@@ -83,11 +87,11 @@ Adobe Experience Platformでは、[Adobe App Builder](https://developer.adobe.co
 
 1. 「`Only Action Templates Supported By My Org`」を選択します。テンプレートのリストが表示されます。
 
-   ![&#x200B; アクションテンプレートのリストを表示するターミナル。](../images/alerts/slack-integration/terminal-action-templates.png)
+   ![ アクションテンプレートのリストを表示するターミナル。](../images/alerts/slack-integration/terminal-action-templates.png)
 
 1. スペースバーを押してテンプレートを選択し、`@adobe/generator-add-publish-events` 上 **下** 矢印を使用して **に移動** ます。 最後に、**スペースバー** を押してテンプレートを選択し、**Enter** を押します。
 
-   ![&#x200B; テンプレートを表示するターミナル。](../images/alerts/slack-integration/terminal-action-select-template.png)
+   ![ テンプレートを表示するターミナル。](../images/alerts/slack-integration/terminal-action-select-template.png)
 
    `npm package @adobe/generator-add-publish-events` がインストールされたことを示す確認メッセージが表示されます。
 
@@ -288,28 +292,28 @@ Developer Consoleで、App Builder プロジェクトを開き、**[!UICONTROL W
 
 Workspaceの概要ページで、「**[!UICONTROL Add service]**」と「**[!UICONTROL Event]**」を選択します。
 
-![&#x200B; 「サービスとイベントを追加」が強調表示されたWorkspaceの概要ページ &#x200B;](../images/alerts/slack-integration/workspace-service-event.png)
+![ 「サービスとイベントを追加」が強調表示されたWorkspaceの概要ページ ](../images/alerts/slack-integration/workspace-service-event.png)
 
 イベントを追加ページで、「**[!UICONTROL Experience Platform]**」と「**[!UICONTROL Platform notifications]**」を選択し、「**[!UICONTROL Next]**」を選択します。
 
-![Experience Platformと Platform の通知が選択されていることを示す、イベントを追加ページ &#x200B;](../images/alerts/slack-integration/add-events.png)
+![Experience Platformと Platform の通知が選択されていることを示す、イベントを追加ページ ](../images/alerts/slack-integration/add-events.png)
 
 通知を受け取るイベントを選択し、「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; 登録するイベントのリストを表示するイベントを追加ページ &#x200B;](../images/alerts/slack-integration/select-events.png)
+![ 登録するイベントのリストを表示するイベントを追加ページ ](../images/alerts/slack-integration/select-events.png)
 
 サーバー間認証証明書を選択し、「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; サーバー間認証資格情報の選択を示すイベントを追加ページ &#x200B;](../images/alerts/slack-integration/add-events-credentials.png)
+![ サーバー間認証資格情報の選択を示すイベントを追加ページ ](../images/alerts/slack-integration/add-events-credentials.png)
 
 登録の **[!UICONTROL Event registration name]** と明確な **[!UICONTROL Event registration description]** を入力し、「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; イベント登録名とイベント登録の説明フィールドを示すイベントを追加ページ。](../images/alerts/slack-integration/add-events-registration.png)
+![ イベント登録名とイベント登録の説明フィールドを示すイベントを追加ページ。](../images/alerts/slack-integration/add-events-registration.png)
 
 配信方法と作成した **[!UICONTROL Runtime Action]** アクションとして「`slack-webhook-proxy/runtime-proxy`」を選択し、「**[!UICONTROL Save configured events]**」を選択します。
 
-![&#x200B; ランタイムアクションの配信方法と設定済みイベントの保存を示すイベントを追加ページ &#x200B;](../images/alerts/slack-integration/add-events-runtime.png)
+![ ランタイムアクションの配信方法と設定済みイベントの保存を示すイベントを追加ページ ](../images/alerts/slack-integration/add-events-runtime.png)
 
 これで、Webhook プロキシが設定されました。 Webhook プロキシページに戻ります。 設定済みのイベントの横にある **[!UICONTROL Send sample event]** のアイコンを選択して、フローのエンドツーエンド全体をテストできます。
 
-![&#x200B; 設定済みのイベントと「サンプルイベントを送信」アイコンが表示された Webhook プロキシページ &#x200B;](../images/alerts/slack-integration/send-sample.png)
+![ 設定済みのイベントと「サンプルイベントを送信」アイコンが表示された Webhook プロキシページ ](../images/alerts/slack-integration/send-sample.png)
