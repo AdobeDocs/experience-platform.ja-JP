@@ -17,8 +17,8 @@ Adobe Experience Platform ユーザーインターフェイスのソースワー
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [&#x200B; ソース &#x200B;](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## データフローの更新 {#update-dataflows}
 
@@ -29,17 +29,17 @@ Adobe Experience Platform ユーザーインターフェイスのソースワー
 
 Experience Platform UI で、左側のナビゲーションから「**[!UICONTROL Sources]**」を選択したあと、上部のヘッダーから「**[!UICONTROL Dataflows]**」を選択します。
 
-![ データフローヘッダータブが選択されたソースカタログ ](../../images/tutorials/update-dataflows/catalog.png)
+![&#x200B; データフローヘッダータブが選択されたソースカタログ &#x200B;](../../images/tutorials/update-dataflows/catalog.png)
 
 >[!TIP]
 >
->フィルタリング機能を使用して、データフローを並べ替えたりフィルタリングしたりできます。 詳しくは、[UI でのソースオブジェクトのフィルタリング ](./filter.md) に関するガイドを参照してください。
+>フィルタリング機能を使用して、データフローを並べ替えたりフィルタリングしたりできます。 詳しくは、[UI でのソースオブジェクトのフィルタリング &#x200B;](./filter.md) に関するガイドを参照してください。
 
 [!UICONTROL Dataflows] のページには、組織内の既存のデータフローすべてのリストが表示されます。 更新するデータフローを見つけ、その横にある省略記号（`...`）を選択します。 ドロップダウンメニューが表示され、既存のデータフローに追加の設定を行うために選択できるオプションのリストが表示されます。
 
 データフローを更新するには、「**[!UICONTROL Update dataflow]**」を選択します。
 
-![ データフローを更新するオプションが一覧表示されるドロップダウンメニュー。](../../images/tutorials/update-dataflows/dropdown_update.png)
+![&#x200B; データフローを更新するオプションが一覧表示されるドロップダウンメニュー。](../../images/tutorials/update-dataflows/dropdown_update.png)
 
 ソースワークフローに移動するので、[!UICONTROL Provide dataflow details] の手順の詳細を含む、データフローの様々な側面を更新できます。
 
@@ -51,9 +51,9 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 このプロセスの間に、データフローに関連付けられたマッピングセットを更新することもできます。  マッピングインターフェイスには、データフローの新しい推奨マッピングセットではなく、既存のマッピングが表示されます。 マッピングの更新は、今後予定されるデータフロー実行にのみ適用されます。 1 回限りの取り込み用にスケジュールされたデータフローでは、マッピングセットを更新できません。
 
-マッピングインターフェイスを使用して、データフローに適用されるマッピングセットを変更します。 マッピングインターフェイスの使用方法に関する包括的な手順については、[ データ準備 UI ガイド ](../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データフローに適用されるマッピングセットを変更します。 マッピングインターフェイスの使用方法に関する包括的な手順については、[&#x200B; データ準備 UI ガイド &#x200B;](../../../data-prep/ui/mapping.md) を参照してください。
 
-![ ソースワークフローのマッピングステップ この手順を使用して、データフローに関連付けられたマッピングを更新します。](../../images/tutorials/update-dataflows/mapping.png)
+![&#x200B; ソースワークフローのマッピングステップ この手順を使用して、データフローに関連付けられたマッピングを更新します。](../../images/tutorials/update-dataflows/mapping.png)
 
 ### スケジュールを更新
 
@@ -63,11 +63,11 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 データフローページで、データフロー名の横にある省略記号（`...`）を選択し、表示されるドロップダウンメニューから「**[!UICONTROL Edit schedule]**」を選択します。
 
-![ ソースワークフローのスケジュール手順。 この手順を使用して、データフローのスケジュールを更新します。](../../images/tutorials/update-dataflows/dropdown_edit.png)
+![&#x200B; ソースワークフローのスケジュール手順。 この手順を使用して、データフローのスケジュールを更新します。](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
 **[!UICONTROL Edit schedule]** ダイアログボックスには、データフローの取り込み頻度と間隔率を更新するオプションが用意されています。 更新した頻度と間隔の値を設定したら、「**[!UICONTROL Save]**」を選択します。
 
-![ データフローの取り込みスケジュールを編集するために使用できるポップアップウィンドウ。](../../images/tutorials/update-dataflows/edit_schedule.png)
+![&#x200B; データフローの取り込みスケジュールを編集するために使用できるポップアップウィンドウ。](../../images/tutorials/update-dataflows/edit_schedule.png)
 
 週次取り込みスケジュールの仕組みについて詳しくは、次の節を参照してください。
 
@@ -82,11 +82,11 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 同じドロップダウンメニューを使用して、データフローを無効にできます。 データフローを無効にするには、「**[!UICONTROL Disable dataflow]**」を選択します。
 
-![ データフローを無効にするオプションを含むドロップダウンメニュー。](../../images/tutorials/update-dataflows/dropdown_disable.png)
+![&#x200B; データフローを無効にするオプションを含むドロップダウンメニュー。](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
 次に、表示されるポップアップウィンドウから「[!UICONTROL Disable]」を選択します。
 
-![ データフローを無効にすることを確認する必要があるポップアップウィンドウ。](../../images/tutorials/update-dataflows/disable_dataflow.png)
+![&#x200B; データフローを無効にすることを確認する必要があるポップアップウィンドウ。](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
 このデータフローを後で再度有効にした場合、Experience Platformは、データフローが無効であった期間をカバーするようにバックフィル実行を自動的にスケジュールします。 例えば、データフローが 1 時間ごとに実行されるように設定され、48 時間無効にされた場合、このデータフローを再度有効にすると、Experience Platformは 48 回のバックフィル実行を作成し、失敗した間隔を処理します。
 
@@ -94,4 +94,4 @@ Experience Platform UI で、左側のナビゲーションから「**[!UICONTRO
 
 このチュートリアルでは、[!UICONTROL Sources] ワークスペースを使用して、データフローの取り込みスケジュールとマッピングセットを正常に更新しました。
 
-[!DNL Flow Service] API を使用してこれらの操作をプログラムで実行する手順については、[Flow Service API を使用したデータフローの更新 ](../../tutorials/api/update-dataflows.md) のチュートリアルを参照してください。
+[!DNL Flow Service] API を使用してこれらの操作をプログラムで実行する手順については、[Flow Service API を使用したデータフローの更新 &#x200B;](../../tutorials/api/update-dataflows.md) のチュートリアルを参照してください。

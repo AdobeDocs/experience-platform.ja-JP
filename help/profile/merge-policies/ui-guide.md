@@ -24,7 +24,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 このガイドを利用するには、[!DNL Experience Platform] のいくつかの重要な機能に関する実用的な知識が必要です。このガイドに従う前に、次のサービスのドキュメントを確認してください。
 
 * [リアルタイム顧客プロファイル](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [Adobe Experience Platform ID サービス ](../../identity-service/home.md)：異なるデータソースの ID を [!DNL Experience Platform] に取り込むことで、リアルタイム顧客プロファイルを有効にします。
+* [Adobe Experience Platform ID サービス &#x200B;](../../identity-service/home.md)：異なるデータソースの ID を [!DNL Experience Platform] に取り込むことで、リアルタイム顧客プロファイルを有効にします。
 * [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：[!DNL Experience Platform] が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 
 ## 結合ポリシーの表示 {#view-merge-policies}
@@ -38,11 +38,11 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 このタブには、組織の既存の結合ポリシーの一覧と各結合ポリシーの詳細（ポリシー名、デフォルトの結合ポリシーであるかどうか、結合ポリシーが関連するスキーマクラスなど）が含まれています。
 
-![ 結合ポリシーの参照ページが表示されます。](../images/merge-policies/landing.png)
+![&#x200B; 結合ポリシーの参照ページが表示されます。](../images/merge-policies/landing.png)
 
-表示する詳細を選択するか、表示に列を追加するには、「列設定アイコン ![ を選択し ](../../images/icons/column-settings.png) 列名を選択して、列を表示に追加または表示から削除します。
+表示する詳細を選択するか、表示に列を追加するには、「列設定アイコン ![&#x200B; を選択し &#x200B;](../../images/icons/column-settings.png) 列名を選択して、列を表示に追加または表示から削除します。
 
-![ 結合ポリシーの参照ページをカスタマイズするために使用できるオプションが表示されます。](../images/merge-policies/adjust-view.png)
+![&#x200B; 結合ポリシーの参照ページをカスタマイズするために使用できるオプションが表示されます。](../images/merge-policies/adjust-view.png)
 
 ## 結合ポリシーの作成 {#create-a-merge-policy}
 
@@ -64,24 +64,24 @@ RESTful API またはユーザーインターフェイスを介すると、新�
    * **[!UICONTROL None]**:ID のステッチを実行しません。
    * **[!UICONTROL Private Graph]**：プライベート ID グラフに基づいて ID ステッチを実行します。
 * **[!UICONTROL Default merge policy]**：組織のデフォルトとしてこの結合ポリシーを使用するかどうかを選択するトグルボタン。 セレクターをオンに切り替えると、組織のデフォルトの結合ポリシーを変更することに対する確認を求める警告が表示されます。デフォルトの結合ポリシーについて詳しくは、[結合ポリシーの概要](overview.md)を参照してください。
-  ![ 結合ポリシーがデフォルトの結合ポリシーとして設定された場合の動作を説明するポップオーバー。](../images/merge-policies/create-make-default.png)
+  ![&#x200B; 結合ポリシーがデフォルトの結合ポリシーとして設定された場合の動作を説明するポップオーバー。](../images/merge-policies/create-make-default.png)
 * **[!UICONTROL Active-On-Edge Merge Policy]**：この結合ポリシーをエッジでアクティブにするかどうかを選択できるトグルボタン。 すべてのプロファイルコンシューマーがエッジで同じビューを使用していることを確認するために、結合ポリシーをエッジでアクティブとしてマークできます。オーディエンスをエッジでアクティブ化（エッジオーディエンスとしてマーク）するには、エッジでアクティブとマークされた結合ポリシーに結び付ける必要があります。 オーディエンスがエッジでアクティブとしてマークされている結合ポリシーに結び付けられて **ない** 場合、そのオーディエンスはエッジでアクティブとマークされず、ストリーミングオーディエンスとしてマークされます。 さらに、組織内の各サンドボックスは、エッジでアクティブな **1** 結合ポリシーのみを持つことができます。
 
 必須フィールドに入力したら、「**[!UICONTROL Next]**」を選択してワークフローを続行できます。
 
-![ 「次へ」ボタンがハイライト表示された設定画面の完了。](../images/merge-policies/create-complete.png)
+![&#x200B; 「次へ」ボタンがハイライト表示された設定画面の完了。](../images/merge-policies/create-complete.png)
 
 ## [!UICONTROL View Union Schema] {#view-union-schema}
 
 結合ポリシーを作成または編集する際に、**[!UICONTROL View Union Schema]** を選択すると、選択したスキーマクラスの結合スキーマを表示できます。
 
-![ 新しい結合ポリシーワークフローで「和集合スキーマを表示」ボタンがハイライト表示されます。](../images/merge-policies/view-union-schema.png)
+![&#x200B; 新しい結合ポリシーワークフローで「和集合スキーマを表示」ボタンがハイライト表示されます。](../images/merge-policies/view-union-schema.png)
 
 これにより、結合 [!UICONTROL View Union Schema] イアログが開き、結合スキーマに関連付けられている、要因となるすべてのスキーマ、ID および関係が表示されます。 このダイアログを使用して、和集合スキーマを調べることができます。方法は、Experience Platform UI の「[!UICONTROL Union Schema]」セクションの「[!UICONTROL Profiles]」タブにアクセスする場合と同じです。
 
-和集合スキーマの詳細（結合ポリシーワークフローに表示される「[!UICONTROL Union Schema]」タブや [!UICONTROL View Union Schema] ダイアログでの操作方法など）については、[ 和集合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
+和集合スキーマの詳細（結合ポリシーワークフローに表示される「[!UICONTROL Union Schema]」タブや [!UICONTROL View Union Schema] ダイアログでの操作方法など）については、[&#x200B; 和集合スキーマ UI ガイド &#x200B;](../ui/union-schema.md) を参照してください。
 
-![ 和集合スキーマを表示ダイアログ ](../images/merge-policies/view-union-schema-dialog.png)
+![&#x200B; 和集合スキーマを表示ダイアログ &#x200B;](../images/merge-policies/view-union-schema-dialog.png)
 
 ## [!UICONTROL Select Profile datasets] {#select-profile-datasets}
 
@@ -101,7 +101,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 >
 >**[!UICONTROL Profile datasets]** の横にある角括弧で囲まれた数（例えば、図の `(37)`）は、含まれるプロファイルデータセットの合計数を示します。
 
-![ 順序付きタイムスタンプ結合メソッドが選択されていることを示す画像 ](../images/merge-policies/timestamp-ordered.png)
+![&#x200B; 順序付きタイムスタンプ結合メソッドが選択されていることを示す画像 &#x200B;](../images/merge-policies/timestamp-ordered.png)
 
 >[!TAB  データセットの優先順位 ]
 
@@ -117,7 +117,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 データセットを選択すると、「**[!UICONTROL Union schema]**」セクションも更新され、各データセットがデータを提供する結合スキーマ内のフィールドが表示されます。 UI のビジュアライゼーションの操作方法など、和集合スキーマについて詳しくは、[和集合スキーマ UI ガイド](../ui/union-schema.md)を参照してください。
 
-![ 選択されているデータセットの優先順位を示す画像と、そのオプションが選択されている場合に選択する必要がある設定 ](../images/merge-policies/dataset-precedence.png)
+![&#x200B; 選択されているデータセットの優先順位を示す画像と、そのオプションが選択されている場合に選択する必要がある設定 &#x200B;](../images/merge-policies/dataset-precedence.png)
 
 >[!ENDTABS]
 
@@ -135,7 +135,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 >
 >**[!UICONTROL ExperienceEvent datasets]** の横にある角括弧で囲まれた数（例えば、図の `(1)`）は、結合ポリシー設定画面で選択したスキーマクラスに関連する、組織が作成した ExperienceEvent データセットの合計数を示します。
 
-![ スキーマクラスに関連付けることができる ExperienceEvent データセットの合計数が表示されます。](../images/merge-policies/timestamp-experienceevent.png)
+![&#x200B; スキーマクラスに関連付けることができる ExperienceEvent データセットの合計数が表示されます。](../images/merge-policies/timestamp-experienceevent.png)
 
 >[!TAB  データセットの優先順位 ]
 
@@ -149,9 +149,9 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 ExperienceEvent データセットは手動で並べ替えることはできません。同じプロファイルフラグメントに属する場合、ExperienceEvent データセットの属性がプロファイルデータセットに追加されます。
 
-プロファイルデータセットの選択と同様に、ExperienceEvent データセットを選択すると、「**[!UICONTROL Union schema]**」セクションも更新され、各データセットがデータを提供する結合スキーマのフィールドが表示されます。 UI のビジュアライゼーションの操作方法など、和集合スキーマについて詳しくは、[ 和集合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
+プロファイルデータセットの選択と同様に、ExperienceEvent データセットを選択すると、「**[!UICONTROL Union schema]**」セクションも更新され、各データセットがデータを提供する結合スキーマのフィールドが表示されます。 UI のビジュアライゼーションの操作方法など、和集合スキーマについて詳しくは、[&#x200B; 和集合スキーマ UI ガイド &#x200B;](../ui/union-schema.md) を参照してください。
 
-![ 選択可能な ExperienceEvent データセットが表示されます。](../images/merge-policies/dataset-precedence-experienceevent.png)
+![&#x200B; 選択可能な ExperienceEvent データセットが表示されます。](../images/merge-policies/dataset-precedence-experienceevent.png)
 
 >[!ENDTABS]
 
@@ -173,7 +173,7 @@ ExperienceEvent データセットは手動で並べ替えることはできま�
 
 「**[!UICONTROL Finish]**」を選択して、新しい結合ポリシーを作成します。
 
-![ レビューページが表示されます。 このページでは、新しく作成した結合ポリシーの詳細を確認できます。](../images/merge-policies/timestamp-review.png)
+![&#x200B; レビューページが表示されます。 このページでは、新しく作成した結合ポリシーの詳細を確認できます。](../images/merge-policies/timestamp-review.png)
 
 >[!TAB  データセットの優先順位 ]
 
@@ -183,7 +183,7 @@ ExperienceEvent データセットは手動で並べ替えることはできま�
 
 「**[!UICONTROL Finish]**」を選択して、新しい結合ポリシーを作成します。
 
-![ レビューページが表示されます。 このページでは、新しく作成した結合ポリシーの詳細を確認できます。](../images/merge-policies/dataset-precedence-review.png)
+![&#x200B; レビューページが表示されます。 このページでは、新しく作成した結合ポリシーの詳細を確認できます。](../images/merge-policies/dataset-precedence-review.png)
 
 >[!ENDTABS]
 
@@ -195,7 +195,7 @@ ExperienceEvent データセットは手動で並べ替えることはできま�
 
 「**[!UICONTROL Next]**」を選択して、結合ポリシーのワークフローを続行し、結合ポリシーに含まれる結合メソッドとデータセットを更新します。
 
-![ 結合ポリシーの編集ワークフローが表示されます。](../images/merge-policies/edit-screen.png)
+![&#x200B; 結合ポリシーの編集ワークフローが表示されます。](../images/merge-policies/edit-screen.png)
 
 必要な変更を加えたら、結合ポリシーを確認し、「**[!UICONTROL Finish]**」を選択して変更を保存し、「[!UICONTROL Merge policies]」タブに戻ります。
 
@@ -203,7 +203,7 @@ ExperienceEvent データセットは手動で並べ替えることはできま�
 >
 >結合ポリシーを変更すると、データの競合を解決する方法が変わるので、セグメント化とプロファイルの結果に影響を与える可能性があります。結合ポリシーの変更は、保存する前に慎重に確認してください。
 
-![ ポリシーの編集ワークフローのレビューページが表示されます。](../images/merge-policies/edit-review.png)
+![&#x200B; ポリシーの編集ワークフローのレビューページが表示されます。](../images/merge-policies/edit-review.png)
 
 ## データガバナンスポリシー違反
 
@@ -217,4 +217,4 @@ Adobe Experience Platform 内でのデータガバナンスの実行方法につ
 
 ## 次の手順
 
-これで、組織の結合ポリシーを作成して設定できました。これらのポリシーを使用して、Experience Platform内の顧客プロファイルの表示を調整し、プロファイルデータからオーディエンスを作成できます。 [ UI と API を使用してオーディエンスを作成および操作する方法について詳しくは、](../../segmentation/home.md) セグメントの概要 [!DNL Experience Platform] を参照してください。
+これで、組織の結合ポリシーを作成して設定できました。これらのポリシーを使用して、Experience Platform内の顧客プロファイルの表示を調整し、プロファイルデータからオーディエンスを作成できます。 [&#x200B; UI と API を使用してオーディエンスを作成および操作する方法について詳しくは、](../../segmentation/home.md) セグメントの概要 [!DNL Experience Platform] を参照してください。

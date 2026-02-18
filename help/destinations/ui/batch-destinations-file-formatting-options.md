@@ -26,13 +26,13 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 ## CSV ファイルのファイル形式設定 {#file-configuration}
 
-ファイル形式オプションを表示するには、[ 宛先に接続 ](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
+ファイル形式オプションを表示するには、[&#x200B; 宛先に接続 &#x200B;](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
 
 >[!IMPORTANT]
 >
 >接続先には、これらのオプションの一部が使用できない場合があります。 宛先でサポートするファイル形式オプションは、宛先の開発者が決定します。 宛先の開発者は、宛先に接続する際に使用できるオプションを決定できます。 必須オプションは、Experience Platform UI でアスタリスクでマークされます。
 > 
->Adobeが構築したクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md) [、{Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、SFTP[ ](/help/destinations/catalog/cloud-storage/sftp.md)）では、現在、以下にハイライト表示された 6 つの CSV オプションのみをサポートしています。
+>Adobeが構築したクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md) [、&lbrace;Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、SFTP[&#x200B; &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md)）では、現在、以下にハイライト表示された 6 つの CSV オプションのみをサポートしています。
 
 ![使用可能なファイル形式オプションの一部を示す画像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 

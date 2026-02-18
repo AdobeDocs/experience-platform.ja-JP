@@ -24,7 +24,7 @@ Adobe Experience Platformの 2024 年 1 月リリースでは、Adobe Experience
 
 以前は、個々のイベントに複数の時間制約ルールを添付することができました。 この最新の更新では、ルールに時間制約を追加しようとすると、**エラー** が発生するようになりました。
 
-![ ルールレベルの時間制約がハイライト表示されています。 その後に発生するエラーもハイライト表示されます。](../images/ui/segment-refactoring/rule-time-constraint.png)
+![&#x200B; ルールレベルの時間制約がハイライト表示されています。 その後に発生するエラーもハイライト表示されます。](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 時間の制約は、キャンバスレベルまたはカードレベルでのみ適用できるようになりました。
 
@@ -36,8 +36,8 @@ Adobe Experience Platformの 2024 年 1 月リリースでは、Adobe Experience
 >
 >キャンバスに **複数** カードがある場合、キャンバスレベルに時間制約を適用すると、キャンバス上の **すべて** カードにその時間制約が適用されます。
 
-![ キャンバスレベルの時間制約がハイライト表示されている様子 ](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![&#x200B; キャンバスレベルの時間制約がハイライト表示されている様子 &#x200B;](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
 カードレベルで時間制約を適用するには、時間制約を適用する特定のカードを選択します。 **[!UICONTROL Event Rules]** コンテナが表示されます。 カードに適用する時間制約を選択できるようになりました。
 
-![ カードレベルの時間制約がハイライト表示されている様子 ](../images/ui/segment-refactoring/card-time-constraint.png)
+![&#x200B; カードレベルの時間制約がハイライト表示されている様子 &#x200B;](../images/ui/segment-refactoring/card-time-constraint.png)
