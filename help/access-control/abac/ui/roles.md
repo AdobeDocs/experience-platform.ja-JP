@@ -61,7 +61,7 @@ ht-degree: 14%
 
 <!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3475974/?captions=jpn&learn=on) -->
 
 ## 役割の複製
 
