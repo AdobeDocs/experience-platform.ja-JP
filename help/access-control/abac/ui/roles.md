@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;属性ベースのアクセス制御;ABAC
 title: 属性ベースのアクセス制御役割の作成
-description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用した役割の管理について説明します
+description: Adobe Experience Cloudの権限インターフェイスを使用した役割の管理。
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 31%
+source-wordcount: '737'
+ht-degree: 14%
 
 ---
 
 # 役割の管理
 
-役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセス権を定義します。役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責任とニーズによってグループ化されます。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
+<!-- UPDATE ROLES WITH A MORE COMPREHENSIVE EXPLANATION -->
+
+役割の管理を開始するには、**[!UICONTROL Permissions]** Adobe Experience Cloudの [ に移動し ](https://experience.adobe.com/){target="_blank"} 左パネルで「**[!UICONTROL Roles]**」を選択します。
+
+![ 権限内の役割ワークスペース。](../../images/ui/roles/roles-overview.png)
 
 ## 新しい役割の作成 {#create-new-role}
 
@@ -23,78 +27,82 @@ ht-degree: 31%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の作成"
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="役割へのラベルの適用"
 
-新しい役割を作成するには、サイドバーの「**[!UICONTROL Roles]**」タブを選択し、「**[!UICONTROL Create Role]**」を選択します。
+新しい役割を作成するには、「**[!UICONTROL Create role]**」を選択します。
 
-![flac-new-role](../../images/flac-ui/flac-new-role.png)
+>[!TIP]
+>
+>読み取り専用の役割は、すぐに使用できます。 読み取り専用の役割は、システムの状態を変更する機能を持たないユーザーに、データ、設定および UI 機能の表示を許可する役割です。 管理者はこれらの役割を編集できませんが、ユーザーを役割に関連付けることができます。
 
-**[!UICONTROL Create a new role]** ダイアログが表示され、名前とオプションの説明を入力するように求められます。
+![ 「役割を作成」オプションがハイライト表示された役割のワークスペース。](../../images/ui/roles/roles-create-role.png)
 
-終了したら「**[!UICONTROL Confirm]**」を選択します。
+**[!UICONTROL Create new role]** ダイアログが表示されます。 役割の **[!UICONTROL Name]** を入力し、必要に応じて **[!UICONTROL Description]** を入力して、「**[!UICONTROL Confirm]**」を選択します。
 
-![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
+![ 名前と説明が入力され、「確認」オプションがハイライト表示された新しい役割を作成ダイアログ ](../../images/ui/roles/roles-create-new-role.png)
 
-次に、ドロップダウンメニューを使用して、役割に含めるリソース権限を選択します。
+**[!UICONTROL Resources]** ワークスペースが表示されます。 スクロールするか、左側のパネルの検索バーにリソースの名前を入力して、必要なリソースを見つけます。 リソースを追加するには、リソース名の横にある ![ プラスアイコン ](/help/images/icons/plus.png) を選択します。
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![ 個々のリソースの「追加」オプションがハイライト表示されたリソースワークスペース。](../../images/ui/roles/roles-resources.png)
 
-追加のリソースを追加するには、左側のナビゲーションパネルから「**[!UICONTROL Adobe Experience Platform]**」を選択して、リソースのリストを表示します。 または、左側のナビゲーションパネルの検索バーにリソース名を入力します。
+<!-- ADD IN NOTE ABOUT THE DEFAULT SANDBOX - THIS SHOULD BE MENTIONED IN THE HIGHER LEVEL DOCS, WE MAY BE ABLE TO LINK TO IT -->
 
-![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
+リソースがメインワークスペースに追加されます。 リソース名の横にあるドロップダウンを選択し、役割に追加する権限を選択します。 個別に選択したり、**[!UICONTROL Add all]** を選択したり、検索バーに権限名を入力して特定の権限を検索したりできます。
 
-関連するリソースをクリックしてメインパネルにドラッグ&amp;ドロップします。
+![ 個々のリソースのドロップダウンメニューが展開されハイライト表示されているリソース ワークスペース。](../../images/ui/roles/roles-resources-permissions.png)
 
-![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
+引き続き、役割に追加するすべてのリソースと権限を選択します。 完了したら、「**[!UICONTROL Save]**」を選択します。
 
-ドロップダウンメニューを使用して、役割に含めるリソース権限を選択します。 役割に含めるすべてのリソースに対して、この手順を繰り返します。 終了したら「**[!UICONTROL Save and exit]**」を選択します。
+![ 「保存」オプションがハイライト表示されたリソースワークスペース。](../../images/ui/roles/roles-resources-permissions-save.png)
 
-![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
+役割が正常に保存されたことを示すアラートが表示されます。 「**[!UICONTROL Close]**」を選択して **[!UICONTROL Roles]** ワークスペースに戻ります。
+
+![ 成功アラートと「閉じる」オプションがハイライト表示されたリソースワークスペース。](../../images/ui/roles/roles-resources-permissions-close.png)
 
 新しい役割が正常に作成されると、**[!UICONTROL Roles]** ページにリダイレクトされ、新しく作成された役割がリストに表示されます。
 
-![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
+<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
-役割の権限を作成してから管理する方法について詳しくは、[&#x200B; 役割の権限の管理 &#x200B;](#manage-permissions-for-a-role) の節を参照してください。
-
-次のビデオは、新しい役割の作成とその役割のユーザーの管理に関する理解を深めることを目的としています。
-
->[!VIDEO](https://video.tv.adobe.com/v/3475974/?captions=jpn&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
 
 ## 役割の複製
 
-既存の役割を複製するには、「**[!UICONTROL Roles]**」タブから役割を選択します。 または、「フィルター」オプションを使用して結果をフィルターし、複製する役割を見つけます。
+役割を複製すると、詳細、権限、ラベル、サンドボックスがコピーされます。 ユーザー、ユーザーグループおよび API 資格情報 **ではない** はコピーされ、役割に手動で追加する必要があります。
 
-![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
+既存の役割を複製するには、複製する役割を「**[!UICONTROL Roles]**」タブで探します。 役割名の横にある ![ その他 ](/help/images/icons/more.png) アイコンを選択し、ドロップダウンメニューから「**[!UICONTROL Duplicate]**」を選択します。
 
-次に、画面の右上から **[!UICONTROL Duplicate]** を選択します。
+![ 役割のドロップダウンメニューが展開され、「複製」オプションがハイライト表示された役割ワークスペース。](../../images/ui/roles/role-duplicate.png)
 
-![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
+重複確認ダイアログが表示されます。 役割の複製を完了するには、「**[!UICONTROL Confirm]**」を選択します。 新しい役割は、同じ名前で保存され、`_Copy` がサフィックスとして追加されます。
 
-**[!UICONTROL Duplicate role]** ダイアログが表示され、複製操作の確認を求められます。
+![ 「確認」オプションがハイライト表示された重複確認ダイアログ ](../../images/ui/roles/role-duplicate-confirm.png)
 
-![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
+または、個々の役割のワークスペース内から役割を複製できます。 **[!UICONTROL Roles]** ワークスペースから複製する役割を選択し、「複製」を選択し **[!UICONTROL Duplicate]** す。
 
-次に、役割の詳細ページに移動して、役割の名前と権限を変更できます。 詳細、ラベル、サンドボックスが以前の役割から複製されます。 ユーザーは、「ユーザー」タブを使用して追加する必要があります。 [&#x200B; 役割の権限の管理 &#x200B;](permissions.md) ドキュメントを表示して、役割への詳細、ラベル、サンドボックス、ユーザーの追加について確認できます。
+![ 「複製」オプションがハイライト表示された個々の役割のワークスペース。](../../images/ui/roles/role-duplicate-alt.png)
 
-左矢印をクリックして「**[!UICONTROL Roles]**」タブに戻ります。
+重複確認ダイアログが表示されます。 役割の複製を完了するには、「**[!UICONTROL Confirm]**」を選択します。 新しい役割にリダイレクトされます。
 
-![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
-
-新しい役割が **[!UICONTROL Roles]** ページのリストに表示されます。
-
-![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
+![ 「確認」オプションがハイライト表示された重複確認ダイアログ ](../../images/ui/roles/role-duplicate-alt-confirm.png)
 
 ## 役割の削除
 
-役割名の横にある省略記号（`…`）を選択すると、役割を編集、削除または複製するためのコントロールがドロップダウンに表示されます。 ドロップダウンから「プロジェクト」を選択します。
+ロールを削除するには、削除するロールを「**[!UICONTROL Roles]**」タブで探します。 役割名の横にある ![ その他 ](/help/images/icons/more.png) アイコンを選択し、ドロップダウンメニューから「**[!UICONTROL Delete]**」を選択します。
 
-![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
+![ 役割のドロップダウンメニューが展開され、「複製」オプションがハイライト表示された役割ワークスペース。](../../images/ui/roles/role-delete.png)
 
-削除を確認するように求める **[!UICONTROL Delete user role]** ダイアログが表示されます。
+削除の確認ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、役割の削除を終了します。
 
-![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
+![ 「確認」オプションがハイライト表示された重複確認ダイアログ ](../../images/ui/roles/role-duplicate-confirm.png)
 
-「**[!UICONTROL Roles]**」タブに戻されます。
+または、個々の役割のワークスペース内から役割を削除できます。 **[!UICONTROL Roles]** ワークスペースから削除する役割を選択し、「削 **[!UICONTROL Delete]**」を選択します。
+
+![ 「削除」オプションがハイライト表示された個々の役割のワークスペース。](../../images/ui/roles/role-delete-alt.png)
+
+削除の確認ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択して、役割の削除を終了します。
+
+![ 「確認」オプションがハイライト表示された削除の確認ダイアログ ](../../images/ui/roles/role-delete-alt-confirm.png)
+
+<!-- ADD PERMISSIONS TO THIS PAGE -->
 
 ## 次の手順
 
-新しい役割を作成したら、次の手順 [&#x200B; 役割の権限を管理 &#x200B;](permissions.md) に進むことができます。
+新しい役割を作成したら、次の手順 [ 役割の権限を管理 ](permissions.md) に進むことができます。
