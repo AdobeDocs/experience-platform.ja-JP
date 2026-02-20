@@ -170,5 +170,5 @@ API 資格情報から役割を削除するには、API 資格情報名の横に
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446399/?captions=jpn&learn=on)
 -->
