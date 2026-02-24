@@ -14,7 +14,7 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformの [!DNL Magnite: Real-Time] および [Magnite：バッチ ](/help/destinations/catalog/advertising/magnite-batch.md) 宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
+Adobe Experience Platformの [!DNL Magnite: Real-Time] および [Magnite：バッチ &#x200B;](/help/destinations/catalog/advertising/magnite-batch.md) 宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
 
 [!DNL Magnite Streaming] プラットフォームへのオーディエンスのアクティブ化は、Magnite:Real-Time 宛先と Magnite:Batch 宛先の両方を使用する必要がある 2 つの手順のプロセスです。
 
@@ -58,8 +58,8 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -69,10 +69,10 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View destinations]** および **[!UICONTROL Manage destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View destinations]** および **[!UICONTROL Manage destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -100,7 +100,7 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![ 宛先設定認証フィールドが未入力 ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![&#x200B; 宛先設定認証フィールドが未入力 &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
 * **[!UICONTROL Username]**: [!DNL Magnite] から提供されたユーザー名。
 * **[!UICONTROL Password]**: [!DNL Magnite] から提供されたパスワード。
@@ -115,13 +115,13 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 >[!NOTE]
 >
->会社名は、Magnite で設定し、[ 宛先への認証 ](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
+>会社名は、Magnite で設定し、[&#x200B; 宛先への認証 &#x200B;](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
 
-![ 宛先設定認証フィールドに値が入力されています ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![&#x200B; 宛先設定認証フィールドに値が入力されています &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
 完了したら、「**[!UICONTROL Create]**」ボタンを選択します。
 
-![ オプションのガバナンスポリシーと実施アクション ](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![&#x200B; オプションのガバナンスポリシーと実施アクション &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -133,8 +133,8 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View destinations]**、**[!UICONTROL Activate destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View destinations]**、**[!UICONTROL Activate destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -148,11 +148,11 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 リアルタイム宛先を使用したこの例では、Magnite device_id ターゲットフィールドにマッピングされた汎用の deviceId ソース識別子を含む行を表示しています。 マッピングを行ったら、「[!UICONTROL Next]」を選択します。
 
-![ 目的のデータフィールドを device_ID フィールドにマッピングする ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![&#x200B; 目的のデータフィールドを device_ID フィールドにマッピングする &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します。
 
-![ 必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)。
+![&#x200B; 必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)。
 
 各オーディエンスの開始日（必須）、終了日（オプション）、マッピング ID を設定する必要があります。
 
@@ -164,7 +164,7 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 「**[!UICONTROL Next]**」を選択し、アクティベーションフローを最終処理します。
 
-![ 「次へ」を選択して、アクティベーションフローを完了します ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)。
+![&#x200B; 「次へ」を選択して、アクティベーションフローを完了します &#x200B;](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -190,4 +190,4 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 ## その他のリソース {#additional-resources}
 
-その他のヘルプドキュメントについては、[Magnite ヘルプセンター ](https://help.magnite.com/help) を参照してください。
+その他のヘルプドキュメントについては、[Magnite ヘルプセンター &#x200B;](https://help.magnite.com/help) を参照してください。
