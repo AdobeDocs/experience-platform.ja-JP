@@ -35,7 +35,7 @@ Criteo は、信頼性の高い効果的な広告を強化し、オープンイ�
 
 ## サポートされている ID {#supported-identities}
 
-Criteo では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
+Criteo では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
