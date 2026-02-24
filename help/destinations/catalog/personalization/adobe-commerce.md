@@ -2,10 +2,10 @@
 title: Adobe Commerce宛先コネクタ
 description: Adobe CommerceとReal-Time CDPのマーチャントが、Real-Time CDPで作成および管理される顧客オーディエンスに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、ショッピングエクスペリエンスをパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 70556134a96260ae111c71ee288d4d646481270b
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 42%
+source-wordcount: '839'
+ht-degree: 35%
 
 ---
 
@@ -22,26 +22,51 @@ Real-Time CDP PrimeまたはUltimateとAdobe Commerceを購入したお客様の
 この宛先接続を使用するには、次へのアクセス権があることを確認します。
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 Developer Console にアクセスすると、Adobe Commerceで拡張機能の [&#x200B; 設定を完了 &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ja#configure-the-extension) するために必要なサービスアカウントと資格情報を確認できます。
-- [Adobe Commerce バージョン 2.4.4 以降 &#x200B;](https://business.adobe.com/jp/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 Developer Console にアクセスすると、Adobe Commerceで拡張機能の [ 設定を完了 ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) するために必要なサービスアカウントと資格情報を確認できます。
+- [Adobe Commerce バージョン 2.4.4 以降 ](https://business.adobe.com/products/commerce.html)
 
 Experience Platform で、以下を作成します。
 
-- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=ja)。
-- [&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#create)。 データセットは、データの集まりのためのストレージと管理の構成体です。 このデータセットは、上記で作成したスキーマから作成します。
+- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)。
+- [ データセット ](../../../catalog/datasets/user-guide.md#create)。 データセットは、データの集まりのためのストレージと管理の構成体です。 このデータセットは、上記で作成したスキーマから作成します。
 - [データストリーム](../../../datastreams/overview.md#create)。Adobe Experience Platform から他の Adobe DX 製品にデータを送信できるようにする ID。この ID は、特定の Adobe Commerce インスタンス内の特定の web サイトに関連付ける必要があります。このデータストリームを作成する場合は、上で作成した XDM スキーマを指定します。
 
 前提条件を満たしたら、[!DNL Commerce] 宛先に接続します。
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
+
+| オーディエンスオリジン | サポートあり | 説明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+オーディエンスデータタイプでサポートされるオーディエンス：
+
+| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+|--------------------|-----------|-------------|-----------|
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+
+{style="table-layout:auto"}
+
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 [!DNL Adobe Commerce] 宛先へ接続する手順は次のとおりです。
 
-1. [Experience Platform インターフェイス &#x200B;](https://experience.adobe.com/platform/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+1. [Experience Platform インターフェイス ](https://experience.adobe.com/platform/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 1. **[!UICONTROL Personalization]** を選択します。
 1. ハイライトするAdobe Commerceの宛先を選択し、「**[!UICONTROL Set up]**」を選択します。
 1. [宛先設定のチュートリアル](../../ui/connect-destination.md)に示されている手順に従います。
@@ -65,19 +90,19 @@ Experience Platform で、以下を作成します。
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-[&#x200B; しい宛先にオーディエンスをアクティブ化する手順は、](../../ui/activate-edge-personalization-destinations.md) プロファイルリクエストの宛先へのプロファイルとオーディエンスのアクティブ化 [!DNL Commerce] をお読みください。
+[ しい宛先にオーディエンスをアクティブ化する手順は、](../../ui/activate-edge-personalization-destinations.md) プロファイルリクエストの宛先へのプロファイルとオーディエンスのアクティブ化 [!DNL Commerce] をお読みください。
 
 ## [!DNL Adobe Commerce] での次の手順
 
-Experience Platform内の [!DNL Commerce] の宛先の設定が完了しました。次は [!DNL Audience Activation] に [!DNL Commerce] 拡張機能をインストールし、[!DNL Commerce Admin] を設定して、作成したReal-Time CDP オーディエンスを読み込む必要があります。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ja)を参照してください。
+Experience Platform内の [!DNL Commerce] の宛先の設定が完了しました。次は [!DNL Audience Activation] に [!DNL Commerce] 拡張機能をインストールし、[!DNL Commerce Admin] を設定して、作成したReal-Time CDP オーディエンスを読み込む必要があります。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)を参照してください。
 
 ## Commerce における Audience Activation の検証 {#exported-data}
 
 [!DNL Adobe Commerce] アカウントに対してReal-Time CDP オーディエンスをアクティブ化すると、_管理者_ サイドバーで **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]** に移動すると、それらのオーディエンスが使用可能になります。
 
-![Real-Time CDP オーディエンスダッシュボード &#x200B;](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Real-Time CDP オーディエンスダッシュボード ](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
