@@ -19,17 +19,17 @@ Adobe Experience Platformの AI アシスタントについては、このドキ
 
 Adobe Experience Platformの AI アシスタントは、Adobe アプリケーションでのワークフローの高速化に使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
 
-![ 初めてユーザーエクスペリエンスがトリガーされる AI アシスタント インターフェイス ](./images/ai-assistant-full.png)
+![&#x200B; 初めてユーザーエクスペリエンスがトリガーされる AI アシスタント インターフェイス &#x200B;](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->AI アシスタントを使用するには、[ ユーザー使用許諾契約 ](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
+>AI アシスタントを使用するには、[&#x200B; ユーザー使用許諾契約 &#x200B;](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
 
 +++選択してユーザー契約インターフェイスを表示します
 
-![ ユーザー使用許諾契約の最初のページ ](./images/user-agreement-1.png)
+![&#x200B; ユーザー使用許諾契約の最初のページ &#x200B;](./images/user-agreement-1.png)
 
-![ ユーザー契約書の最後のページ ](./images/user-agreement-2.png)
+![&#x200B; ユーザー契約書の最後のページ &#x200B;](./images/user-agreement-2.png)
 
 +++
 
@@ -96,8 +96,8 @@ AI アシスタントの操作インサイトについて詳しくは、次の�
 
 現在、AI アシスタントの範囲は次のとおりです。
 
-* [ 製品ナレッジ ](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
-* [ 運用インサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのデータオブジェクトに関する運用インサイトについて、AI アシスタントに質問できます。
+* [&#x200B; 製品ナレッジ &#x200B;](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
+* [&#x200B; 運用インサイト &#x200B;](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのデータオブジェクトに関する運用インサイトについて、AI アシスタントに質問できます。
 
 ## 次の手順
 
