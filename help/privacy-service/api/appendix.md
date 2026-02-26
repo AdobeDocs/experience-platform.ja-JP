@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Privacy ServiceAPI ガイドの付録
-description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
+title: Privacy Service API ガイドの付録
+description: このドキュメントには、Privacy Service API の操作に関する追加情報が含まれています。
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
+source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 47%
 
 ---
 
-# Privacy ServiceAPI ガイドの付録
+# Privacy Service API ガイドの付録
 
 次の節では、Adobe Experience Platform Privacy Service API の操作に関する追加情報を示します。
 
@@ -24,7 +24,7 @@ ht-degree: 57%
 
 | ID タイプ | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| 電子メール | `Email` | `6` |
+| メール | `Email` | `6` |
 | Phone | `Phone` | `7` |
 | Adobe Advertising Cloud ID | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
@@ -38,13 +38,13 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->各 ID タイプには `namespaceId` の整数値もあり、ID の `type` プロパティを「namespaceId」に設定すると、`namespace` 文字列の代わりに使用できます。 詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
+>各 ID タイプには `namespaceId` の整数値もあり、ID の `namespace` プロパティを「namespaceId」に設定すると、`type` 文字列の代わりに使用できます。 詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
-[!DNL Identity Service] API の `idnamespace/identities` エンドポイントにGETリクエストをおこなうことで、組織で使用されている ID 名前空間のリストを取得できます。 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
+`idnamespace/identities` API の [!DNL Identity Service] エンドポイントにGET リクエストをおこなうことで、組織で使用されている ID 名前空間のリストを取得できます。 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
-## 名前空間修飾子
+## 名前空間修飾子 {#namespace-qualifiers}
 
-[!DNL Privacy Service] API で `namespace` 値を指定する場合は、対応する `type` パラメーターに **名前空間修飾子** を含める必要があります。 使用できる様々な名前空間修飾子の概要を次の表に示します。
+`namespace` API で [!DNL Privacy Service] 値を指定する場合は、対応する **パラメーターに** 名前空間修飾子 `type` を含める必要があります。 使用できる様々な名前空間修飾子の概要を次の表に示します。
 
 | 修飾子 | 定義 |
 | --------- | ---------- |
@@ -58,28 +58,31 @@ ht-degree: 57%
 
 {style="table-layout:auto"}
 
-## 使用可能な製品値
+## 使用可能な製品値 {#accepted-product-values}
 
-ジョブ作成リクエストの `include` 属性でアドビ製品を指定するために使用できる値の概要を次の表に示します。
+この節では、Privacy Service ジョブ（API または UI）の作成時に `include` 属性で受け入れられる商品識別子の値を示します。 ジョブリクエストの `include` 配列にこれらの値を使用します。
+
+次の表に、サポートされる製品、UI の表示名、および対応するコード値を示します。
 
 >[!NOTE]
 >
->商品のリストの値は、大文字と小文字を区別しません。 キャメルケースはお勧めしますが、適用されません。
+>- 製品の値では、大文字と小文字が区別されません。一貫性を保つため、キャメルケースの使用をお勧めします。
+>- 上記の製品のみが UI と API でサポートされます。 製品がプロビジョニングされていない場合は、無視されたり、検証エラーが発生したりする可能性があります。使用権限を確認するには、Adobeの契約またはプロビジョニングに関するドキュメントを参照してください。
 
-| 製品 | `include` 属性で使用する値 |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform（data lake） | `aepDataLake` |
-| Adobe Experience Platform（リアルタイム顧客プロファイル） | `profileService` |
-| Adobe Pass 認証 | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| 顧客属性（CRS） | `CRS` |
-| カスタマージャーニーの管理 | `cjm` |
-| ID サービス | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| ブランド製品名 | UI 表示名 | `include` の値 |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
+| Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
+| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Experience Platform（プロファイルストア） | [!UICONTROL Profile] | `profileService` |
+| Adobe Experience Platform（data lake） | [!UICONTROL AEP Data Lake] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Target | [!UICONTROL Target] | `target` |
+| 顧客属性 | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
+| ID サービス | [!UICONTROL Identity] | `identity` |
+| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}
