@@ -45,7 +45,7 @@ ht-degree: 16%
 
 クエリエディターの右上にあるドロップダウンメニューから、クエリするデータベースを選択します。 選択したデータベースがドロップダウンに表示されます。
 
-![ データベースのドロップダウンメニューがハイライト表示されたクエリエディター。](../images/ui/query-editor/database-dropdown.png)
+![&#x200B; データベースのドロップダウンメニューがハイライト表示されたクエリエディター。](../images/ui/query-editor/database-dropdown.png)
 
 ### 設定 {#settings}
 
@@ -57,7 +57,7 @@ ht-degree: 16%
 
 暗いテーマまたは明るいテーマを有効にするには、設定アイコン（![A 設定アイコン](/help/images/icons/settings.png)）に続いて、表示されるドロップダウンメニューのオプションを選択します。
 
-![ 「設定」アイコンと「ダークテーマを有効にする」ドロップダウンメニューオプションがハイライト表示されたクエリエディター。](../images/ui/query-editor/query-editor-settings.png)
+![&#x200B; 「設定」アイコンと「ダークテーマを有効にする」ドロップダウンメニューオプションがハイライト表示されたクエリエディター。](../images/ui/query-editor/query-editor-settings.png)
 
 #### オートコンプリート {#auto-complete}
 
@@ -68,7 +68,7 @@ ht-degree: 16%
 
 ### 複数の順次クエリの実行 {#execute-multiple-sequential-queries}
 
-拡張クエリエディターを使用すると、複数のクエリを記述し、すべてのクエリを順番に実行できます。 複数のクエリを順番に実行すると、それぞれログエントリが生成されます。 ただし、クエリエディターコンソールには、最初のクエリの結果のみが表示されます。 実行されたクエリのトラブルシューティングや確認が必要な場合は、クエリログを確認します。 詳しくは、[ クエリログドキュメント ](./query-logs.md) を参照してください。
+拡張クエリエディターを使用すると、複数のクエリを記述し、すべてのクエリを順番に実行できます。 複数のクエリを順番に実行すると、それぞれログエントリが生成されます。 ただし、クエリエディターコンソールには、最初のクエリの結果のみが表示されます。 実行されたクエリのトラブルシューティングや確認が必要な場合は、クエリログを確認します。 詳しくは、[&#x200B; クエリログドキュメント &#x200B;](./query-logs.md) を参照してください。
 
 >[!NOTE]
 > 
@@ -79,17 +79,17 @@ ht-degree: 16%
 複数のクエリを記述したが、実行する必要があるクエリが 1 つだけの場合は、選択したクエリをハイライト表示し、
 [!UICONTROL Run selected query] アイコン。 このアイコンは、エディター内でクエリ構文を選択するまで、デフォルトで無効になっています。
 
-![ 「[!UICONTROL Run selected query]」アイコンがハイライト表示されたクエリエディター ](../images/ui/query-editor/run-selected-query.png)
+![&#x200B; 「[!UICONTROL Run selected query]」アイコンがハイライト表示されたクエリエディター &#x200B;](../images/ui/query-editor/run-selected-query.png)
 
 ### クエリエディターセッションをキャンセル {#cancel-query}
 
 長時間実行されるクエリをキャンセルすることで、クエリの実行を制御し、生産性を向上させます。 このアクションは、クエリの実行中にクエリエディターをクリアします。 クエリは引き続きバックグラウンドで実行されることに注意してください。 CTAS クエリの場合でも、出力データセットが生成されます。 エディターでの実行をキャンセルして SQL 文の作成を続行するには、クエリを実行した後で **[!UICONTROL Cancel query]** を選択します。
 
-![[!UICONTROL Cancel query] がハイライト表示されたクエリエディター ](../images/ui/query-editor/cancel-query-run.png)
+![[!UICONTROL Cancel query] がハイライト表示されたクエリエディター &#x200B;](../images/ui/query-editor/cancel-query-run.png)
 
 確認ダイアログが表示されます。 「**[!UICONTROL Confirm]**」を選択すると、クエリの実行がキャンセルされます。
 
-![ 「確認」がハイライト表示されたクエリ確認をキャンセルダイアログ ](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
+![&#x200B; 「確認」がハイライト表示されたクエリ確認をキャンセルダイアログ &#x200B;](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### 結果数 {#result-count}
 
@@ -99,7 +99,7 @@ ht-degree: 16%
 >
 >Experience Platform UI は最大 1000 行をサポートできるので、1000 を超える LIMIT 値の渡しは無視されます。
 
-![ 結果数のドロップダウンがハイライト表示されたクエリエディター。](../images/ui/query-editor/result-count.png)
+![&#x200B; 結果数のドロップダウンがハイライト表示されたクエリエディター。](../images/ui/query-editor/result-count.png)
 
 ## クエリの記述 {#writing-queries}
 
@@ -119,9 +119,9 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->[!UICONTROL Format text] 機能は、匿名ブロックでは機能しません。 1 つ以上の SQL 文を順番に連結する方法については、[ 匿名ブロックのドキュメント ](../key-concepts/anonymous-block.md) を参照してください。
+>[!UICONTROL Format text] 機能は、匿名ブロックでは機能しません。 1 つ以上の SQL 文を順番に連結する方法については、[&#x200B; 匿名ブロックのドキュメント &#x200B;](../key-concepts/anonymous-block.md) を参照してください。
 
-![[!UICONTROL Format text] と SQL 文がハイライト表示されたクエリエディター ](../images/ui/query-editor/format-text.png)
+![[!UICONTROL Format text] と SQL 文がハイライト表示されたクエリエディター &#x200B;](../images/ui/query-editor/format-text.png)
 
 <!-- ### Undo text {#undo-text}
 
@@ -133,7 +133,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 コピーアイコンを選択して、クエリエディターからクリップボードに SQL をコピーします。 このコピー機能は、クエリテンプレートと、クエリエディターで新しく作成されたクエリの両方で使用できます。
 
-![ コピーアイコンがハイライト表示されたサンプルクエリテンプレートを含むクエリワークスペース。](../images/ui/query-editor/copy-sql.png)
+![&#x200B; コピーアイコンがハイライト表示されたサンプルクエリテンプレートを含むクエリワークスペース。](../images/ui/query-editor/copy-sql.png)
 
 ### クエリの詳細 {#query-details}
 
@@ -141,21 +141,21 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
->「[!UICONTROL View schedule]」、「[!UICONTROL Add schedule]」および「[!UICONTROL Delete query]」オプションは、クエリがテンプレートとして保存された後でのみ使用できます。 「[!UICONTROL Add schedule]」オプションを選択すると、クエリエディターからスケジュールビルダーに直接移動します。 「[!UICONTROL View schedule]」オプションを選択すると、そのクエリのスケジュールインベントリに直接移動します。 [UI でクエリスケジュールを作成 ](./query-schedules.md#create-schedule) する方法については、クエリスケジュールのドキュメントを参照してください。
+>「[!UICONTROL View schedule]」、「[!UICONTROL Add schedule]」および「[!UICONTROL Delete query]」オプションは、クエリがテンプレートとして保存された後でのみ使用できます。 「[!UICONTROL Add schedule]」オプションを選択すると、クエリエディターからスケジュールビルダーに直接移動します。 「[!UICONTROL View schedule]」オプションを選択すると、そのクエリのスケジュールインベントリに直接移動します。 [UI でクエリスケジュールを作成 &#x200B;](./query-schedules.md#create-schedule) する方法については、クエリスケジュールのドキュメントを参照してください。
 
 ![クエリの詳細パネルがハイライト表示されたクエリエディター。](../images/ui/query-editor/query-details.png)
 
 詳細パネルでは、UI から直接出力データセットを生成したり、表示されたクエリを削除または名前付けしたり、クエリ実行スケジュールを表示したり、クエリをスケジュールに追加したりできます。
 
-出力データセットを生成するには、「**[!UICONTROL Run as CTAS]**」を選択します。 **[!UICONTROL Enter output dataset details]** ダイアログが表示されます。 名前と説明を入力し、「**[!UICONTROL Run as CTAS]**」を選択します。 新しいデータセットが、「**[!UICONTROL Datasets]** ータ参照」タブに表示されます。 組織で使用可能なデータセットについて詳しくは、[ データセットの表示に関するドキュメント ](../../catalog/datasets/user-guide.md#view-datasets) を参照してください。
+出力データセットを生成するには、「**[!UICONTROL Run as CTAS]**」を選択します。 **[!UICONTROL Enter output dataset details]** ダイアログが表示されます。 名前と説明を入力し、「**[!UICONTROL Run as CTAS]**」を選択します。 新しいデータセットが、「**[!UICONTROL Datasets]** ータ参照」タブに表示されます。 組織で使用可能なデータセットについて詳しくは、[&#x200B; データセットの表示に関するドキュメント &#x200B;](../../catalog/datasets/user-guide.md#view-datasets) を参照してください。
 
 >[!NOTE]
 >
 >[!UICONTROL Run as CTAS] オプションは、クエリがスケジュールされてい **い** 場合にのみ使用できます。
 
-![[!UICONTROL Enter output dataset details] ダイアログ ](../images/ui/query-editor/output-dataset-details.png)
+![[!UICONTROL Enter output dataset details] ダイアログ &#x200B;](../images/ui/query-editor/output-dataset-details.png)
 
-**[!UICONTROL Run as CTAS]** アクションを実行すると、確認メッセージがポップアップ表示され、アクションが成功したことが通知されます。 このポップアップメッセージには、クエリログワークスペースに移動するのに便利な方法を提供するリンクが含まれています。 クエリログについて詳しくは、[ クエリログドキュメント ](./query-logs.md) を参照してください。
+**[!UICONTROL Run as CTAS]** アクションを実行すると、確認メッセージがポップアップ表示され、アクションが成功したことが通知されます。 このポップアップメッセージには、クエリログワークスペースに移動するのに便利な方法を提供するリンクが含まれています。 クエリログについて詳しくは、[&#x200B; クエリログドキュメント &#x200B;](./query-logs.md) を参照してください。
 
 ### クエリの保存 {#saving-queries}
 
@@ -165,7 +165,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >クエリエディターを使用してで名前を付けて保存したクエリは、クエリダッシュボードの「[!UICONTROL Templates]」タブ内でテンプレートとして使用できます。 詳しくは、[テンプレートのドキュメント](./query-templates.md)を参照してください。
 
-クエリエディターでクエリを保存すると、確認メッセージがポップアップ表示され、アクションが成功したことが通知されます。 このポップアップメッセージには、クエリスケジュールワークスペースに移動する便利な方法を提供するリンクが含まれています。 カスタムケイデンスでクエリを実行する方法については、[ クエリのスケジュール設定ドキュメント ](./query-schedules.md) を参照してください。
+クエリエディターでクエリを保存すると、確認メッセージがポップアップ表示され、アクションが成功したことが通知されます。 このポップアップメッセージには、クエリスケジュールワークスペースに移動する便利な方法を提供するリンクが含まれています。 カスタムケイデンスでクエリを実行する方法については、[&#x200B; クエリのスケジュール設定ドキュメント &#x200B;](./query-schedules.md) を参照してください。
 
 ### スケジュール済みクエリ {#scheduled-queries}
 
@@ -175,11 +175,11 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
->10 回連続して実行されなかったスケジュール済みクエリは、自動的に [!UICONTROL Quarantined] ステータスになります。 このステータスのクエリを実行するには、それ以上の実行を行う前に介入が必要です。 詳しくは、[ 強制隔離されたクエリ ](./monitor-queries.md#quarantined-queries) のドキュメントを参照してください。
+>10 回連続して実行されなかったスケジュール済みクエリは、自動的に [!UICONTROL Quarantined] ステータスになります。 このステータスのクエリを実行するには、それ以上の実行を行う前に介入が必要です。 詳しくは、[&#x200B; 強制隔離されたクエリ &#x200B;](./monitor-queries.md#quarantined-queries) のドキュメントを参照してください。
 
-[UI でクエリスケジュールを作成 ](./query-schedules.md) する方法については、クエリスケジュールのドキュメントを参照してください。 また、API を使用してスケジュールを追加する方法について詳しくは、[ スケジュールされたクエリのエンドポイントガイド ](../api/scheduled-queries.md) を参照してください。
+[UI でクエリスケジュールを作成 &#x200B;](./query-schedules.md) する方法については、クエリスケジュールのドキュメントを参照してください。 また、API を使用してスケジュールを追加する方法について詳しくは、[&#x200B; スケジュールされたクエリのエンドポイントガイド &#x200B;](../api/scheduled-queries.md) を参照してください。
 
-スケジュールされたクエリは、「[!UICONTROL Scheduled queries]」タブのリストに追加されます。 そのワークスペースから、UI を使用して、スケジュールされたすべてのクエリジョブのステータスを監視できます。 「[!UICONTROL Scheduled queries]」タブでは、クエリの実行に関する重要な情報を見つけたり、アラートを購読したりできます。 使用可能な情報には、ステータス、スケジュールの詳細、実行が失敗した場合のエラーメッセージ/コードが含まれます。 詳しくは、[ スケジュール済みクエリドキュメントの監視 ](./monitor-queries.md) を参照してください。
+スケジュールされたクエリは、「[!UICONTROL Scheduled queries]」タブのリストに追加されます。 そのワークスペースから、UI を使用して、スケジュールされたすべてのクエリジョブのステータスを監視できます。 「[!UICONTROL Scheduled queries]」タブでは、クエリの実行に関する重要な情報を見つけたり、アラートを購読したりできます。 使用可能な情報には、ステータス、スケジュールの詳細、実行が失敗した場合のエラーメッセージ/コードが含まれます。 詳しくは、[&#x200B; スケジュール済みクエリドキュメントの監視 &#x200B;](./monitor-queries.md) を参照してください。
 
 
 ### 以前のクエリを検索する方法 {#previous-queries}
@@ -198,9 +198,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 オブジェクトブラウザーを使用してデータベース内を移動するには、検索フィールドにテーブル名を入力するか、「**[!UICONTROL Tables]**」を選択して使用可能なデータセットとテーブルのリストを展開します。 検索フィールドを使用すると、使用可能なテーブルのリストが、入力に基づいて動的にフィルタリングされます。
 
-[ 選択したデータベース ](#database-dropdown) に含まれているすべてのデータセットが、クエリエディターの左側のナビゲーションパネルに表示されます。
+[&#x200B; 選択したデータベース &#x200B;](#database-dropdown) に含まれているすべてのデータセットが、クエリエディターの左側のナビゲーションパネルに表示されます。
 
-![ 検索入力がハイライト表示されたクエリエディターデータセットのナビゲーションレール。](../images/ui/query-editor/search-tables.png)
+![&#x200B; 検索入力がハイライト表示されたクエリエディターデータセットのナビゲーションレール。](../images/ui/query-editor/search-tables.png)
 
 オブジェクトブラウザーに表示されるスキーマは、観察可能なスキーマです。 つまり、変更が直ちに表示されるので、これを使用して変更と更新をリアルタイムで監視できます。 観測可能なスキーマは、データの同期を確保するのに役立ち、デバッグや分析のタスクに役立ちます。
 
@@ -212,13 +212,13 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 クイック検索に加えて、テーブル名の横にある「i」アイコンを選択することで、任意のテーブルのメタデータに簡単にアクセスできるようになりました。 これにより、選択したテーブルに関する詳細情報が提供され、クエリを記述する際に十分な情報に基づいた決定を行うのに役立ちます。
 
-![ 検索入力がハイライト表示されたクエリエディターデータセットのナビゲーションレール。](../images/ui/query-editor/table-metadata.png)
+![&#x200B; 検索入力がハイライト表示されたクエリエディターデータセットのナビゲーションレール。](../images/ui/query-editor/table-metadata.png)
 
 #### 子テーブルの調査
 
 子テーブルまたはリンクされたテーブルを検索するには、リスト内のテーブル名の横にあるドロップダウン矢印を選択します。 これにより、テーブルが展開され、関連する子テーブルが表示されます。また、データ構造が明確に表示され、より複雑なクエリ構成が可能になります。 フィールド名の横にあるアイコンは、列のデータタイプを示し、複雑なクエリ中に列のデータタイプを識別するのに役立ちます。
 
-![ フィルタリングされたテーブルのリストが表示されたクエリエディター。](../images/ui/query-editor/child-table-list.png)
+![&#x200B; フィルタリングされたテーブルのリストが表示されたクエリエディター。](../images/ui/query-editor/child-table-list.png)
 
 ## クエリエディターを使用してクエリを実行する {#executing-queries}
 
@@ -236,7 +236,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ## クエリの結果 {#query-results}
 
-クエリが完了すると、結果が「**[!UICONTROL Results]**」タブ（「**[!UICONTROL Console]**」タブの横）に表示されます。 この表示には、クエリの表形式出力が表示され、選択した [ 結果数 ](#result-count) に応じて 50～1000 行の結果が表示されます。 このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。クエリエディターでクエリの結果からデータセットを生成する方法については、[データセットの生成についてのチュートリアル](./create-datasets.md)を参照してください。
+クエリが完了すると、結果が「**[!UICONTROL Results]**」タブ（「**[!UICONTROL Console]**」タブの横）に表示されます。 この表示には、クエリの表形式出力が表示され、選択した [&#x200B; 結果数 &#x200B;](#result-count) に応じて 50～1000 行の結果が表示されます。 このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。クエリエディターでクエリの結果からデータセットを生成する方法については、[データセットの生成についてのチュートリアル](./create-datasets.md)を参照してください。
 
 ![クエリ実行の結果を表示するクエリエディターコンソールの「結果」タブ](../images/ui/query-editor/query-results.png)
 
@@ -254,7 +254,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >「**[!UICONTROL Download]**」ボタンがない場合は、クエリ結果を確認します。 このボタンは、レコードが返された場合にのみ表示されます。 レコードが返されない場合、「**[!UICONTROL Result]**」タブに「結果なし」のメッセージが表示され、ダウンロードオプションが無効になります。
 
-![ 「ダウンロード」とドロップダウンメニューがハイライト表示されたクエリエディターの「結果」タブ ](../images/ui/overview/download-results.png)
+![&#x200B; 「ダウンロード」とドロップダウンメニューがハイライト表示されたクエリエディターの「結果」タブ &#x200B;](../images/ui/overview/download-results.png)
 
 >[!NOTE]
 >
@@ -270,7 +270,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >プレビューは読み取り専用で、クエリやデータセットは変更されません。
 
-![ 「結果を表示」が選択されたフルスクリーンプレビューダイアログ ](../images/ui/overview/view-results-fullscreen.png)
+![&#x200B; 「結果を表示」が選択されたフルスクリーンプレビューダイアログ &#x200B;](../images/ui/overview/view-results-fullscreen.png)
 
 ### 結果をコピー {#copy-results}
 
@@ -278,11 +278,11 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 クエリ結果は、「[!UICONTROL Result]」タブまたは結果のフルスクリーンのプレビューからコピーできます。 「**[!UICONTROL Result]**」タブで、コピーアイコン（![A コピーアイコン](../../images/icons/copy.png)）を選択して、すべてのクエリ結果をクリップボードにコピーします。 コピーアイコンを有効にするには、まず行を選択します。 個々の行を選択するか、上部のチェックボックスを使用してすべての行を一度に選択できます。
 
-![ コピーアイコンがハイライト表示されたクエリエディターの「結果」タブ ](../images/ui/overview/query-editor-copy-icon.png)
+![&#x200B; コピーアイコンがハイライト表示されたクエリエディターの「結果」タブ &#x200B;](../images/ui/overview/query-editor-copy-icon.png)
 
 または、「**[!UICONTROL View results]**」を選択して、フルスクリーンプレビューを開きます。 このダイアログから、個々の行を選択するか、左上隅のチェックボックスを使用してすべての行を選択してから、コピーアイコン（![A コピーアイコン](../../images/icons/copy.png)）を選択して、選択したデータをコピーします。
 
-![ 結果行が選択され、コピーアイコンがハイライト表示されたフルスクリーンプレビューダイアログ ](../images/ui/overview/results-copy.png)
+![&#x200B; 結果行が選択され、コピーアイコンがハイライト表示されたフルスクリーンプレビューダイアログ &#x200B;](../images/ui/overview/results-copy.png)
 
 ### 従来の結果テーブル（限定提供） {#legacy-results-table}
 
@@ -296,11 +296,11 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 コピーされたデータはタブで区切られているので、Excel などのツールに貼り付けた際に、列の位置が固定され、読み取り可能な状態になります。 列ヘッダーは、ヘッダー行全体をドラッグ&amp;選択する際にも含まれます。
 
-![ 単純なドラッグして選択した結果がハイライト表示された、従来のエディターでの結果の表示。](../images/ui/query-editor/legacy-results-table.png)
+![&#x200B; 単純なドラッグして選択した結果がハイライト表示された、従来のエディターでの結果の表示。](../images/ui/query-editor/legacy-results-table.png)
 
 ## 例 {#examples}
 
-クエリサービスは、業界やビジネスシナリオをまたいだ様々なユースケースに対するソリューションを提供します。 これらの例は、サービスが多様なニーズに対応する上での柔軟性と影響を示しています。 [ クエリサービスが特定のビジネスニーズにどのように価値をもたらすことができるかを明らかにする ](../use-cases/overview.md) には、ユースケースに関するドキュメントの包括的なコレクションを参照してください。 クエリサービスを使用して、運用効率とビジネス成功を強化するためのインサイトとソリューションを提供する方法を説明します。
+クエリサービスは、業界やビジネスシナリオをまたいだ様々なユースケースに対するソリューションを提供します。 これらの例は、サービスが多様なニーズに対応する上での柔軟性と影響を示しています。 [&#x200B; クエリサービスが特定のビジネスニーズにどのように価値をもたらすことができるかを明らかにする &#x200B;](../use-cases/overview.md) には、ユースケースに関するドキュメントの包括的なコレクションを参照してください。 クエリサービスを使用して、運用効率とビジネス成功を強化するためのインサイトとソリューションを提供する方法を説明します。
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
@@ -318,7 +318,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 セッション管理を使用して、サンドボックス間でアクティブなクエリエディターセッションを表示し、アイドル状態のセッションを特定して、共有容量を解放するように終了します。 クエリをアクティブに実行しているセッションを中断することはできません。 この機能は管理者のみを対象としており、**[!UICONTROL Manage Query Session]** 権限が必要です。
 
-セッション管理にアクセスするには、クエリサービス ワークスペースの「**[!UICONTROL Admin]**」タブを選択します。 セッションの詳細の表示、セッションステータスの解釈、アイドルセッションの終了の手順については、[ クエリサービスセッションの管理 ](session-management.md) を参照してください。
+セッション管理にアクセスするには、クエリサービス ワークスペースの「**[!UICONTROL Admin]**」タブを選択します。 セッションの詳細の表示、セッションステータスの解釈、アイドルセッションの終了の手順については、[&#x200B; クエリサービスセッションの管理 &#x200B;](session-management.md) を参照してください。
 
 ## 次の手順
 
