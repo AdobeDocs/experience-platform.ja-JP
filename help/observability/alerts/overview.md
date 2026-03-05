@@ -81,9 +81,9 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 >[!NOTE]
 >
->Experience Platformで権限を管理する方法について詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/ui/overview.md) を参照してください。
+>Experience Platformで権限を管理する方法について詳しくは、[&#x200B; アクセス制御に関するドキュメント &#x200B;](../../access-control/ui/overview.md) を参照してください。
 
-「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
+「アラートの表示」権限を使用すると、右上隅のベルアイコン（![&#x200B; ベルアイコン &#x200B;](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
 ![](../images/alerts/overview/ui.png)
 
@@ -95,11 +95,11 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 ### Slackの統合 {#slack-integration}
 
-[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) で Webhook プロキシを使用して、Experience Platformから [ ーザーに ](https://developer.adobe.com/events/docs/guides/)2}Adobe I/O Events} を受け取ることができます。 [!DNL Slack]このプロキシは、Adobeの検証ハンドシェイクを処理し、イベントペイロードを [!DNL Slack] メッセージに変換して、お客様に送信されるアラートを直接ワークスペースで受け取れるようにします。
+[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) で Webhook プロキシを使用して、Experience Platformから [&#x200B; ーザーに &#x200B;](https://developer.adobe.com/events/docs/guides/)2&rbrace;Adobe I/O Events&rbrace; を受け取ることができます。 [!DNL Slack]このプロキシは、Adobeの検証ハンドシェイクを処理し、イベントペイロードを [!DNL Slack] メッセージに変換して、お客様に送信されるアラートを直接ワークスペースで受け取れるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
-Adobe App Builder Webhook プロキシとの統合により [!DNL Slack] でExperience Platform通知を受け取る方法について詳しくは、[ でのExperience Platform イベントの監視  [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack) を参照してください。
+Adobe App Builder Webhook プロキシとの統合により [!DNL Slack] でExperience Platform通知を受け取る方法について詳しくは、[&#x200B; でのExperience Platform イベントの監視  [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack) を参照してください。
 
 ## 次の手順
 
