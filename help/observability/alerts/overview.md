@@ -99,7 +99,7 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
-Adobe App Builder Webhook プロキシとの統合により [!DNL Slack] でExperience Platform通知を受け取る方法について詳しくは、[&#x200B; でのExperience Platform イベントの監視  [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack) を参照してください。
+Adobe App Builder Webhook プロキシとの統合により [!DNL Slack] でExperience Platform通知を受け取る方法について詳しくは、[&#x200B; でのExperience Platform イベントの監視  [!DNL Slack]](https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack) を参照してください。
 
 ## 次の手順
 
