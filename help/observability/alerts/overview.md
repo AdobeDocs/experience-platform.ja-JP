@@ -97,7 +97,7 @@ Experience Platform UI でアラートを操作するには、Adobe Admin Consol
 
 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) で Webhook プロキシを使用して、Experience Platformから [&#x200B; ーザーに &#x200B;](https://developer.adobe.com/events/docs/guides/)2&rbrace;Adobe I/O Events&rbrace; を受け取ることができます。 [!DNL Slack]このプロキシは、Adobeの検証ハンドシェイクを処理し、イベントペイロードを [!DNL Slack] メッセージに変換して、お客様に送信されるアラートを直接ワークスペースで受け取れるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480196?captions=jpn&learn=on)
 
 Adobe App Builder Webhook プロキシとの統合により [!DNL Slack] でExperience Platform通知を受け取る方法について詳しくは、[&#x200B; でのExperience Platform イベントの監視  [!DNL Slack]](https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack) を参照してください。
 
