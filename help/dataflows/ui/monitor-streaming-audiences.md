@@ -3,13 +3,13 @@ title: ストリーミングオーディエンスの監視
 description: 監視ダッシュボードを使用して、ストリーミングセグメント化を使用して評価されるオーディエンスを監視する方法について説明します
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 9%
+ht-degree: 19%
 
 ---
-
 
 # ストリーミングオーディエンスの監視
 
@@ -19,22 +19,22 @@ ht-degree: 9%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
-* [&#x200B; セグメント化サービス &#x200B;](../../segmentation/home.md):
-* [&#x200B; 処理能力 &#x200B;](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
+* [ データフロー ](../home.md)：データフローは、Experience Platform間で情報を転送するデータジョブを表します。 様々なサービスにわたって設定され、ソースコネクタからターゲットデータセット、ID サービス、リアルタイム顧客プロファイル、宛先へのデータの移動を容易にします。
+* [ セグメント化サービス ](../../segmentation/home.md):
+* [ 処理能力 ](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformの処理能力を使用すると、組織がガードレールの上限を超えたかどうかを把握でき、これらの問題を修正する方法に関する情報が得られます。
 
-## ストリーミングオーディエンスの指標の監視 {#streaming-audience-metrics}
+## ストリーミングオーディエンスのモニタリング指標 {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
 >title="評価率"
->abstract="この指標は、1 秒あたりに評価されるレコードの数を表します。"
+>abstract="この指標は、1 秒間に評価されるレコード数を表します。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="P95 取り込み待ち時間"
->abstract="この指標は、オーディエンスの評価に成功するまでの、Adobe Experience Platformに到着するイベントの 95 パーセンタイルの待ち時間を測定します。"
+>abstract="この指標は、イベントが Experience Platform に到達してからオーディエンスが正常に評価されるまでの 95 パーセンタイルの待ち時間を測定します。"
 >text="Learn more in documentation"
 
 次の表は、ストリーミングオーディエンスに使用される指標に関する詳細情報を示しています。
