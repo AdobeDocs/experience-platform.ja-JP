@@ -17,14 +17,14 @@ ht-degree: 0%
 
 AI アシスタント（レガシー）の応答で表示されるデータは、毎日更新されます。 つまり、応答内のデータは、応答時にExperience Platform ユーザーインターフェイスに表示されるデータよりも最大 24 時間古くなる可能性があります。
 
-同じ原則がアクセス制御にも当てはまります。 アクセス制御および権限設定に加えられた変更が反映されるまで、AI アシスタント（レガシー）が最大 24 時間かかる場合があります。 詳しくは、[AI アシスタントのプライバシー ](./privacy.md) に関するガイドを参照してください。
+同じ原則がアクセス制御にも当てはまります。 アクセス制御および権限設定に加えられた変更が反映されるまで、AI アシスタント（レガシー）が最大 24 時間かかる場合があります。 詳しくは、[AI アシスタントのプライバシー &#x200B;](./privacy.md) に関するガイドを参照してください。
 
 ## AI アシスタントがサポートするAdobe アプリケーションは何ですか？
 
 現在、AI アシスタント（レガシー）の範囲は次のとおりです。
 
-* [ 製品ナレッジ ](./home.md#product-knowledge):AI アシスタント（従来）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
-* [ 運用に関するインサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースなどのデータオブジェクトに関する運用に関するインサイトを、AI Assistant （従来の）に質問できます。
+* [&#x200B; 製品ナレッジ &#x200B;](./home.md#product-knowledge):AI アシスタント（従来）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
+* [&#x200B; 運用に関するインサイト &#x200B;](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースなどのデータオブジェクトに関する運用に関するインサイトを、AI Assistant （従来の）に質問できます。
 
 ## AI アシスタントの機能とは？
 
