@@ -3,10 +3,10 @@ title: 削除作業指示のレコード
 description: Data Hygiene API の/workorder エンドポイントを使用して、Adobe Experience Platformでレコード削除作業指示を管理する方法を説明します。 このガイドでは、割り当て量、処理タイムライン、API の使用状況について説明します。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
-ht-degree: 2%
+source-wordcount: '3316'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 ## はじめに
 
-開始する前に、[&#x200B; 概要 &#x200B;](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
+開始する前に、[ 概要 ](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
 
 ## 割り当て量と処理タイムライン {#quotas}
 
@@ -32,27 +32,20 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 ### 製品別の月間送信使用権限 {#quota-limits}
 
-次の表に、製品および資格レベル別の識別子の送信制限を示します。 各製品の月額上限は、固定の識別子上限またはライセンス取得済みデータボリュームに関連付けられた割合ベースのしきい値の、2 つの値のいずれか小さい方です。
+次の表に、製品および資格レベル別の識別子の送信制限を示します。 各製品の月額上限は、固定の識別子上限またはライセンス取得済みデータボリュームに関連付けられた割合ベースのしきい値の、2 つの値のいずれか小さい方です。 実際には、ほとんどの組織では、実際のアドレス可能なオーディエンスまたはAdobe Customer Journey Analytics行の使用権限に基づいて、月間の上限が引き下げられます。
 
 | 製品 | 使用権限の説明 | 月間キャップ （いずれか小さい方） |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDPまたはAdobe Journey Optimizer | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | 2,000,000 個の識別子（アドレス可能なオーディエンスの 5%） |
 | Real-Time CDPまたはAdobe Journey Optimizer | Privacy and Security Shield または Healthcare Shield アドオンを使用 | 15,000,000 個の識別子（アドレス可能なオーディエンスの 10%） |
-| Customer Journey Analytics | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | CJAの権利行あたり 2,000,000 の識別子または 1,000 の識別子 |
-| Customer Journey Analytics | Privacy and Security Shield または Healthcare Shield アドオンを使用 | CJAの権利行あたり 15,000,000 個の識別子または 2,000 個の識別子 |
+| Customer Journey Analytics | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | Customer Journey Analyticsの権利行あたり 2,000,000 の識別子または 1,000 の識別子 |
+| Customer Journey Analytics | Privacy and Security Shield または Healthcare Shield アドオンを使用 | Customer Journey Analyticsの権利行あたり 15,000,000 個の識別子または 2,000 個の識別子 |
 
 >[!NOTE]
 >
->ほとんどの組織では、実際のアドレス可能なオーディエンスまたはCJA行の使用権限に基づいて、月間の上限が引き下げられます。
-
->[!NOTE]
->
->クォータは、毎月 1 日にリセットされます。 未使用の割り当ては引き継がれ **い**。
-
->[!NOTE]
->
->クォータの使用状況は、**送信された識別子** に対して組織でライセンスを取得した 1 か月の使用権限に基づきます。 クォータはシステム・ガードレールによって適用されませんが、監視および確認が可能です。\
->レコード削除作業指示能力は **共有サービス** です。 1 か月の上限には、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsおよび該当する Shield アドオン全体で最高の使用権限が反映されます。
+>- クォータは、毎月 1 日にリセットされます。 未使用の割り当ては引き継がれ **い**。
+>- クォータの使用状況は、**送信された識別子** に対して組織でライセンスを取得した 1 か月の使用権限に基づきます。 クォータはシステム・ガードレールによって適用されませんが、監視および確認が可能です。
+>- レコード削除作業指示能力は **共有サービス** です。 1 か月の上限には、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsおよび該当する Shield アドオン全体で最高の使用権限が反映されます。
 
 ### 識別子の送信のタイムラインの処理 {#sla-processing-timelines}
 
@@ -67,7 +60,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 >[!TIP]
 >
->現在のクォータの使用状況または使用権限層を確認するには、[&#x200B; クォータのリファレンス ガイド &#x200B;](../api/quota.md) を参照してください。
+>現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
 
 ## レコード削除作業指示のリスト {#list}
 
@@ -131,7 +124,8 @@ curl -X GET \
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ curl -X GET \
 | `createdAt` | 作業指示が作成されたときのタイムスタンプ。 |
 | `updatedAt` | 作業指示が最後に更新されたときのタイムスタンプ。 |
 | `operationCount` | 作業指示に含まれる操作の数。 |
-| `targetServices` | 作業指示のターゲットサービスのリスト。 |
+| `targetServices` | 削除を処理したターゲットサービスのセット。 デフォルト値は、組織の使用権限によって異なります。 Real-Time CDPまたはAdobe Journey Optimizerを使用している組織の場合、デフォルトは、サポートされているサービスの完全なセット（`["datalake", "identity", "profile", "ajo"]`）です。 Customer Journey Analyticsのみの組織の場合（リアルタイム顧客プロファイルの使用権限がない場合）、有効な値は [&quot;datalake&quot;] のみです。 |
 | `status` | 作業指示の現在のステータス。 使用可能な値：`received`、`validated`、`submitted`、`ingested`、`completed`、`failed`。 |
 | `createdBy` | 作業指示を作成したユーザーのメールアドレスおよび識別子。 |
-| `datasetId` | 作業指示に関連付けられたデータセットの一意の ID。 リクエストがすべてのデータセットに適用される場合、このフィールドは「すべて」に設定されます。 |
+| `datasetId` | 作業指示のターゲットとなるデータセット：単一のデータセット ID、データセット ID のコンマ区切りリスト（マルチデータセット）、またはリテラル `ALL`。 リクエストでプロファイルのみのモードを使用した場合、この値は `ALL` になります。 |
 | `datasetName` | 作業指示に関連付けられたデータセットの名前。 |
 | `displayName` | 作業指示の人間が読み取れるラベル。 |
 | `description` | 作業指示の目的の説明。 |
@@ -185,9 +179,9 @@ curl -X GET \
 
 ## レコード削除作業指示の作成 {#create}
 
-単一のデータセットまたはすべてのデータセットから 1 つ以上の ID に関連付けられたレコードを削除するには、`/workorder` エンドポイントに対して POST リクエストを実行します。
+単一のデータセット、複数のデータセット、またはすべてのデータセットから 1 つ以上の ID に関連付けられたレコードを削除するには、`/workorder` エンドポイントに対して POST リクエストを行います。
 
-作業指示は非同期で処理され、送信後に作業指示リストに表示されます。
+作業指示は非同期で処理され、送信後に作業指示リストに表示されます。 マルチデータセットおよびプロファイルのみ（ターゲットサービス）のオプションは、2026 年 3 月のExperience Platform リリース以降、すべてのお客様が一般に利用できるようになります。
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ curl -X GET \
 POST /workorder
 ```
 
->[!NOTE]
->
->削除できるのは、関連付けられた XDM スキーマがプライマリ ID または ID マップを定義するデータセットからのレコードのみです。
-
 >[!IMPORTANT]
 >
 >レコード削除作業指示は、「プライマリ ID **フィールドにのみ機能** ます。 次の制限が適用されます。
 >
+>- **データセットスキーマでは、プライマリ ID または ID マップを定義する必要があります。** 削除できるのは、関連付けられた XDM スキーマがプライマリ ID または ID マップを定義するデータセットからのレコードのみです。
 >- **セカンダリID はスキャンされません。** データセットに複数の ID フィールドが含まれている場合、照合にプライマリ ID のみが使用されます。 非プライマリ ID に基づいてレコードをターゲット設定または削除することはできません。
 >- **プライマリ ID が入力されていないレコードはスキップされます。** レコードにプライマリ ID メタデータが入力されていない場合、削除の対象にはなりません。
 >- **ID 設定の前に取り込まれたデータは適格ではありません。** データ取り込み後にプライマリ ID フィールドがスキーマに追加された場合、以前に取り込んだレコードは、レコード削除作業指示で削除できません。
 
 >[!NOTE]
 >
->既にアクティブな有効期限があるデータセットに対してレコード削除作業指示を作成しようとすると、リクエストから HTTP 400 （無効なリクエスト）が返されます。アクティブな有効期限は、まだ完了していないスケジュール済みの削除です。
+>既にアクティブな有効期限があるデータセットのレコード削除作業指示を作成しようとすると、リクエストで HTTP 400 （無効なリクエスト）が返されます。 アクティブな有効期限とは、スケジュールされた、まだ完了していない削除のことです。
+
+### ID ペイロード形式（`namespacesIdentities` または `identities`）
+
+リクエスト本文には、次のうち **1 つだけ** を含める必要があります。
+
+| 形式 | プロパティ | 形状 | 使用するタイミング |
+|--------|----------|-------|-------------|
+| **推奨** | `namespacesIdentities` | `namespace` （例：`{ "code": "email" }`）および `ids` （ID 文字列の配列）を持つオブジェクトの配列。 | 手動で作成したかコードで生成したかに関わらず、すべてのペイロードで使用します。 これは、多くの ID が同じ名前空間を共有する場合に、ペイロードサイズを減らすために特に効率的です。 |
+| **承諾** | `identities` | `namespace` （例：`{ "code": "email" }`）と単一の `id` （文字列）を持つオブジェクトの配列。 | 下位互換性のために受け入れられました。 これは、[csv からデータハイジーンへの変換スクリプト ](#convert-id-lists-to-json-for-record-delete-requests) で生成される形式です。 このサービスはこの形式を内部で正規化するので、結果の動作は同じになります。 |
+
+**both properties**、**neither property** を送信するか、含めるプロパティに **空の配列** を指定すると、API は **HTTP 400 （無効なリクエスト）** を返し、次のいずれかのメッセージが返されます。
+
+- **両方のプロパティが提供されています。** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **リストが指定されていないか、空ではありません：** `"Identities are Empty for Delete Identity request."`
 
 **リクエスト**
 
-次のリクエストは、指定されたメールアドレスに関連付けられているすべてのレコードを、特定のデータセットから削除します。
+次のリクエストは、指定されたメールアドレスに関連付けられているすべてのレコードを、特定のデータセットから削除します。 推奨される `namespacesIdentities` 形式を使用します。
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ curl -X POST \
 | `displayName` | このレコード削除作業指示の人間が読み取れるラベル。 |
 | `description` | レコード削除作業指示の説明。 |
 | `action` | レコード削除作業指示に対してリクエストされたアクション。 特定の ID に関連付けられているレコードを削除するには、`delete_identity` を使用します。 |
-| `datasetId` | データセットの一意の ID。 特定のデータセットのデータセット ID を使用するか、`ALL` を使用してすべてのデータセットをターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br> データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つだけであることに注意してください。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。 |
-| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント &#x200B;](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
+| `datasetId` | データセットの一意の ID。 値は、リテラル `ALL`、単一のデータセット ID、または 2 つ以上のデータセット ID のコンマ区切りリスト（例：`"id1,id2,id3"`）のいずれか 1 つにする必要があります。 `ALL` を特定の ID と組み合わせることはできません。 単一データセットリクエストは以前と同様に動作し、マルチデータセットリクエストはリストされた各データセットから ID を削除し、すべてのデータセット `ALL` ターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br>**メモ**：データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つのみです。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。<br> プロファイルのみの削除に `targetServices` を使用する場合は、`datasetId` を `ALL` す必要があります。 |
+| `targetServices` | オプション。削除を処理するサービスを指定します。 デフォルト値は、組織の使用権限によって異なります。 Real-Time CDPまたはAdobe Journey Optimizerを使用する組織は、デフォルトで、サポートされるすべてのサービス（`["datalake", "identity", "profile", "ajo"]`）を受け取ります。 Customer Journey Analyticsを使用しているが、リアルタイム顧客プロファイルの使用権限がない組織では、[datalake」 ] のみを使用できます。 削除をプロファイル関連のデータのみに制限し、データレイクはそのままにするには、これを `["identity", "profile", "ajo"]` （任意の順序）に設定します。 このプロファイル専用モードには、Real-Time CDPまたはAdobe Journey Optimizerの使用権限が必要で、`datasetId` を `ALL` す必要があります。 |
+| `identities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `id` （単一の ID 文字列）があります。 下位互換性のために受け入れられ、変換スクリプトによって生成されます。 このサービスは、この形式を内部で正規化します。動作は同じです。 上記の [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 |
+| `namespacesIdentities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `ids` （ID 文字列の配列）があります。 すべてのペイロードに推奨されます。 多くの ID が 1 つの名前空間を共有する場合、`namespacesIdentities` プロパティはよりコンパクトになります。 上記の [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 ID 名前空間：[ID 名前空間ドキュメント ](../../identity-service/features/namespaces.md)、[ID サービス API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)。 |
 
 **応答**
 
@@ -273,7 +280,8 @@ curl -X POST \
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ curl -X POST \
 | `targetServices` | レコード削除作業指示のターゲットサービスのリスト。 |
 | `status` | レコード削除作業指示の現在のステータス。 |
 | `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
-| `datasetId` | データセットの一意の ID。 すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
+| `datasetId` | データセットの一意の ID。 リクエストがすべてのデータセットに対しての場合、値は `ALL` に設定されます。 マルチデータセットリクエストの場合、値は送信されたコンマ区切りリストまたは単一 ID を反映します。 |
 | `datasetName` | このレコード削除作業指示のデータセットの名前。 |
 | `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
 | `description` | レコード削除作業指示の説明。 |
 
 {style="table-layout:auto"}
 
+response `targetServices` 値は、リクエストをエコーするか、省略した場合は完全なデフォルトセットを表示します（上記の応答の表を参照）。
+
+### マルチデータセットおよびプロファイルのみ（API） {#multi-dataset-profile-only}
+
+次のオプションは API 経由でのみ使用でき、データハイジーン UI ではサポートされていません。 どのデータセットとどのサービスが削除を処理するかを制御し、複数のデータセットの送信と、ターゲットを絞ったプロファイルのみのサービスリクエストを可能にします。
+
+次の表に、各オプションでリクエスト本文と動作がどのように変化するかをまとめます。
+
+| オプション | リクエスト本文の変更 | 動作 |
+|--------|---------------------|----------|
+| **マルチデータセット** | コンマ区切りのリストを `datasetId` で使用します（例：`"id1,id2,id3"`）。 単一の ID または `ALL` は変更されていません。 | ID は、リストに表示されたデータセット（または 1 つのデータセットから、または `ALL` を指定した場合はすべてのデータセットから）から削除されます。 |
+| **プロファイルのみ（対象サービス）** | 正確に `targetServices` の `["identity", "profile", "ajo"]` を追加します（任意の順序）。 `datasetId`: `"ALL"` が必要です。 | ID、プロファイル、Adobe Journey Optimizerのみが削除を処理し、データレイクは変更されません。 |
+
+#### マルチデータセットリクエスト
+
+`datasetId` フィールドはコンマで分割されています。単一の ID （以前と同じ動作）、ID のコンマ区切りリスト、またはリテラル `ALL` を使用します。 1 つの作業指示で複数の特定のデータセットから ID を削除するには、コンマ区切りリストを指定します。
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+その後、リストに表示された各データセットから ID が削除されます。 単一データセットのリクエストは通常どおりに機能します。`ALL` を使用して、すべてのデータセットをターゲットに設定します。 値は、`ALL`、単一のデータセット ID、またはコンマで区切られた 2 つ以上のデータセット ID のいずれかである必要があります（`ALL` を特定の ID と組み合わせることはできません）。
+
+#### プロファイルのみ（対象サービス）
+
+データレイクをそのままにして ID およびプロファイル関連データのみを削除するには、`targetServices` と、これら 3 つの値（`identity`、`profile`、`ajo`）を任意の順序で含めます。 ID、プロファイルおよびAJOは明示的に含まれ、データレイクは除外されます。 このモードでは、`datasetId` を `ALL` す必要があります（ユースケースはデータセットごとのフラグメントではなく、完全なプロファイル削除です）。
+
+次の例では、プロファイルのみのレコード削除作業指示を作成します。
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+マルチデータセットまたはプロファイルのみのリクエストに対して成功した応答は、他の作業指示の応答と同じ形に従います。 返された `datasetId` および `targetServices` はリクエスト内の値（または `targetServices` が省略された場合は完全なデフォルトリスト）を反映するので、送信された内容を確認できます。
+
 >[!NOTE]
 >
 >レコード削除作業指示のアクションプロパティは、現在、API 応答で `identity-delete` 定されています。 API が別の値（`delete_identity` など）を使用するように変更された場合、それに応じてこのドキュメントが更新されます。
 
-## レコード削除リクエスト用に ID リストを JSON に変換
+## レコード削除リクエストの ID リストを JSON に変換（#convert-id-lists-to-json-for-record-delete-requests）
 
-識別子を含む CSV、TSV、TXT ファイルからレコード削除作業指示を作成するには、変換スクリプトを使用して、`/workorder` エンドポイントに必要な JSON ペイロードを生成します。 この方法は、既存のデータファイルを使用する場合に特に便利です。 すぐに使用できるスクリプトと包括的な手順については、[csv-to-data-hygiene GitHub リポジトリ &#x200B;](https://github.com/perlmonger42/csv-to-data-hygiene) を参照してください。
+識別子が CSV、TSV、TXT ファイルである場合は、変換スクリプトを使用して、`/workorder` エンドポイントに必要な JSON ペイロードを生成します。 この方法は、既存のデータファイルを使用する場合に特に便利です。 すぐに使用できるスクリプトと手順については、[csv-to-data-hygiene GitHub リポジトリ ](https://github.com/perlmonger42/csv-to-data-hygiene) を参照してください。
+
+スクリプトは **`identities`** フォーマットを出力します。つまり、`id` を使用してオブジェクトごとに 1 つの `namespace` を出力します。 API はこの形式をそのまま受け入れます。生成された JSON を POST 本文に直接送信でき、変換は行 `/workorder` ません。 推奨される形式は **`namespacesIdentities`** です。[ レコード削除作業指示の作成 ](#create) および [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。
 
 ### JSON ペイロードの生成
 
@@ -365,8 +430,8 @@ done
 | ---           | ---     |
 | `verbose` | 詳細出力を有効にします。 |
 | `column` | 削除する ID 値を含む列のインデックス（1 から始まる）またはヘッダー名。 指定しない場合は、デフォルトで最初の列に設定されます。 |
-| `namespace` | ID 名前空間を指定する `code` プロパティを持つオブジェクト（例えば「email」）。 |
-| `dataset-id` | 作業指示に関連付けられたデータセットの一意の ID。 リクエストがすべてのデータセットに適用される場合、このフィールドは `ALL` に設定されます。 |
+| `namespace` | スクリプトに渡される ID 名前空間コード （例：`email`）。 生成された JSON は、各オブジェクトの `namespace.code` プロパティでこれを使用します。 |
+| `dataset-id` | データセットの一意の ID：単一の ID、マルチデータセットのコンマ区切り ID、すべてのデータセットの `ALL`。 |
 | `description` | レコード削除作業指示の説明。 |
 | `output-dir` | 出力 JSON ペイロードを書き込むディレクトリ。 |
 
@@ -402,7 +467,7 @@ done
 | プロパティ | 説明 |
 | ---          | ---     |
 | `action` | レコード削除作業指示に対してリクエストされたアクション。 変換スクリプトによって自動的に `delete_identity` に設定されます。 |
-| `datasetId` | データセットの一意の ID。 |
+| `datasetId` | データセットの一意の ID：単一の ID、コンマ区切りの ID または `ALL`。 |
 | `displayName` | このレコード削除作業指示の人間が読み取れるラベル。 |
 | `description` | レコード削除作業指示の説明。 |
 | `identities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`: ID 名前空間を指定する `code` プロパティを持つオブジェクト（例えば「email」）。</li><li> `id`：この名前空間で削除する ID 値。</li></ul> |
@@ -411,7 +476,7 @@ done
 
 ### 生成された JSON データを `/workorder` エンドポイントに送信します。
 
-リクエストを送信するには、「レコードの削除作業指示の作成 [&#x200B; の節の手順に従 &#x200B;](#create) ます。 `-d` POST リクエストを `curl` API エンドポイントに送信する場合は、変換された JSON ペイロードをリクエスト本文（`/workorder`）として使用します。
+スクリプト出力には、API がそのまま受け入れる `identities` 形式を使用します。 `-d` POST リクエストを `curl` エンドポイントに送信する際に、変換された JSON ペイロードをリクエスト本文（`/workorder`）として使用します。 完全なリクエストオプションと検証ルールについては、[ レコード削除作業指示の作成 ](#create) を参照してください。
 
 ## 特定のレコード削除作業指示の詳細の取得 {#lookup}
 
@@ -482,12 +547,12 @@ curl -X GET \
 | `targetServices` | このレコード削除作業指示の影響を受けるターゲットサービスのリスト。 |
 | `status` | レコード削除作業指示の現在のステータス。 |
 | `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
-| `datasetId` | 作業指示に関連付けられたデータセットの一意の ID。 |
+| `datasetId` | 作業指示に関連付けられたデータセットの一意の ID （単一の ID、コンマ区切りの ID または `ALL`）。 |
 | `datasetName` | 作業指示に関連付けられたデータセットの名前。 |
 | `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
 | `description` | レコード削除作業指示の説明。 |
 
-## レコード削除作業指示の更新
+## レコード削除作業指示の更新 {#update}
 
 `name` エンドポイントに対してPUT リクエストを実行して、レコード削除作業指示の `description` および `/workorder/{WORKORDER_ID}` を更新します。
 
@@ -590,7 +655,7 @@ curl -X PUT \
 | `targetServices` | このレコード削除作業指示の影響を受けるターゲットサービスのリスト。 |
 | `status` | レコード削除作業指示の現在のステータス。 使用可能な値：`received`、`validated`、`submitted`、`ingested`、`completed`、`failed`。 |
 | `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
-| `datasetId` | レコードの削除作業指示に関連付けられたデータセットの一意の ID。 |
+| `datasetId` | レコード削除作業指示に関連付けられたデータセットの一意の ID （単一の ID、コンマ区切りの ID または `ALL`）。 |
 | `datasetName` | レコードの削除作業指示に関連付けられたデータセットの名前。 |
 | `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
 | `description` | レコード削除作業指示の説明。 |
