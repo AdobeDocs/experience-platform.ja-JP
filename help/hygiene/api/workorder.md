@@ -20,7 +20,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 ## はじめに
 
-開始する前に、[ 概要 ](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
+開始する前に、[&#x200B; 概要 &#x200B;](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
 
 ## 割り当て量と処理タイムライン {#quotas}
 
@@ -60,7 +60,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe E
 
 >[!TIP]
 >
->現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
+>現在のクォータの使用状況または使用権限層を確認するには、[&#x200B; クォータのリファレンス ガイド &#x200B;](../api/quota.md) を参照してください。
 
 ## レコード削除作業指示のリスト {#list}
 
@@ -213,7 +213,7 @@ POST /workorder
 | 形式 | プロパティ | 形状 | 使用するタイミング |
 |--------|----------|-------|-------------|
 | **推奨** | `namespacesIdentities` | `namespace` （例：`{ "code": "email" }`）および `ids` （ID 文字列の配列）を持つオブジェクトの配列。 | 手動で作成したかコードで生成したかに関わらず、すべてのペイロードで使用します。 これは、多くの ID が同じ名前空間を共有する場合に、ペイロードサイズを減らすために特に効率的です。 |
-| **承諾** | `identities` | `namespace` （例：`{ "code": "email" }`）と単一の `id` （文字列）を持つオブジェクトの配列。 | 下位互換性のために受け入れられました。 これは、[csv からデータハイジーンへの変換スクリプト ](#convert-id-lists-to-json-for-record-delete-requests) で生成される形式です。 このサービスはこの形式を内部で正規化するので、結果の動作は同じになります。 |
+| **承諾** | `identities` | `namespace` （例：`{ "code": "email" }`）と単一の `id` （文字列）を持つオブジェクトの配列。 | 下位互換性のために受け入れられました。 これは、[csv からデータハイジーンへの変換スクリプト &#x200B;](#convert-id-lists-to-json-for-record-delete-requests) で生成される形式です。 このサービスはこの形式を内部で正規化するので、結果の動作は同じになります。 |
 
 **both properties**、**neither property** を送信するか、含めるプロパティに **空の配列** を指定すると、API は **HTTP 400 （無効なリクエスト）** を返し、次のいずれかのメッセージが返されます。
 
@@ -261,8 +261,8 @@ curl -X POST \
 | `action` | レコード削除作業指示に対してリクエストされたアクション。 特定の ID に関連付けられているレコードを削除するには、`delete_identity` を使用します。 |
 | `datasetId` | データセットの一意の ID。 値は、リテラル `ALL`、単一のデータセット ID、または 2 つ以上のデータセット ID のコンマ区切りリスト（例：`"id1,id2,id3"`）のいずれか 1 つにする必要があります。 `ALL` を特定の ID と組み合わせることはできません。 単一データセットリクエストは以前と同様に動作し、マルチデータセットリクエストはリストされた各データセットから ID を削除し、すべてのデータセット `ALL` ターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br>**メモ**：データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つのみです。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。<br> プロファイルのみの削除に `targetServices` を使用する場合は、`datasetId` を `ALL` す必要があります。 |
 | `targetServices` | オプション。削除を処理するサービスを指定します。 デフォルト値は、組織の使用権限によって異なります。 Real-Time CDPまたはAdobe Journey Optimizerを使用する組織は、デフォルトで、サポートされるすべてのサービス（`["datalake", "identity", "profile", "ajo"]`）を受け取ります。 Customer Journey Analyticsを使用しているが、リアルタイム顧客プロファイルの使用権限がない組織では、[datalake」 ] のみを使用できます。 削除をプロファイル関連のデータのみに制限し、データレイクはそのままにするには、これを `["identity", "profile", "ajo"]` （任意の順序）に設定します。 このプロファイル専用モードには、Real-Time CDPまたはAdobe Journey Optimizerの使用権限が必要で、`datasetId` を `ALL` す必要があります。 |
-| `identities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `id` （単一の ID 文字列）があります。 下位互換性のために受け入れられ、変換スクリプトによって生成されます。 このサービスは、この形式を内部で正規化します。動作は同じです。 上記の [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 |
-| `namespacesIdentities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `ids` （ID 文字列の配列）があります。 すべてのペイロードに推奨されます。 多くの ID が 1 つの名前空間を共有する場合、`namespacesIdentities` プロパティはよりコンパクトになります。 上記の [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 ID 名前空間：[ID 名前空間ドキュメント ](../../identity-service/features/namespaces.md)、[ID サービス API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)。 |
+| `identities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `id` （単一の ID 文字列）があります。 下位互換性のために受け入れられ、変換スクリプトによって生成されます。 このサービスは、この形式を内部で正規化します。動作は同じです。 上記の [ID ペイロード形式 &#x200B;](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 |
+| `namespacesIdentities` | **`identities` または `namespacesIdentities` のいずれか 1 つだけを使用してください。** オブジェクトの配列。各オブジェクトには、`namespace` （`code` を持つオブジェクト、例：`"email"`）および `ids` （ID 文字列の配列）があります。 すべてのペイロードに推奨されます。 多くの ID が 1 つの名前空間を共有する場合、`namespacesIdentities` プロパティはよりコンパクトになります。 上記の [ID ペイロード形式 &#x200B;](#identity-payload-format-identities-or-namespacesidentities) を参照してください。 ID 名前空間：[ID 名前空間ドキュメント &#x200B;](../../identity-service/features/namespaces.md)、[ID サービス API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)。 |
 
 **応答**
 
@@ -374,9 +374,9 @@ curl -X POST \
 
 ## レコード削除リクエストの ID リストを JSON に変換（#convert-id-lists-to-json-for-record-delete-requests）
 
-識別子が CSV、TSV、TXT ファイルである場合は、変換スクリプトを使用して、`/workorder` エンドポイントに必要な JSON ペイロードを生成します。 この方法は、既存のデータファイルを使用する場合に特に便利です。 すぐに使用できるスクリプトと手順については、[csv-to-data-hygiene GitHub リポジトリ ](https://github.com/perlmonger42/csv-to-data-hygiene) を参照してください。
+識別子が CSV、TSV、TXT ファイルである場合は、変換スクリプトを使用して、`/workorder` エンドポイントに必要な JSON ペイロードを生成します。 この方法は、既存のデータファイルを使用する場合に特に便利です。 すぐに使用できるスクリプトと手順については、[csv-to-data-hygiene GitHub リポジトリ &#x200B;](https://github.com/perlmonger42/csv-to-data-hygiene) を参照してください。
 
-スクリプトは **`identities`** フォーマットを出力します。つまり、`id` を使用してオブジェクトごとに 1 つの `namespace` を出力します。 API はこの形式をそのまま受け入れます。生成された JSON を POST 本文に直接送信でき、変換は行 `/workorder` ません。 推奨される形式は **`namespacesIdentities`** です。[ レコード削除作業指示の作成 ](#create) および [ID ペイロード形式 ](#identity-payload-format-identities-or-namespacesidentities) を参照してください。
+スクリプトは **`identities`** フォーマットを出力します。つまり、`id` を使用してオブジェクトごとに 1 つの `namespace` を出力します。 API はこの形式をそのまま受け入れます。生成された JSON を POST 本文に直接送信でき、変換は行 `/workorder` ません。 推奨される形式は **`namespacesIdentities`** です。[&#x200B; レコード削除作業指示の作成 &#x200B;](#create) および [ID ペイロード形式 &#x200B;](#identity-payload-format-identities-or-namespacesidentities) を参照してください。
 
 ### JSON ペイロードの生成
 
@@ -476,7 +476,7 @@ done
 
 ### 生成された JSON データを `/workorder` エンドポイントに送信します。
 
-スクリプト出力には、API がそのまま受け入れる `identities` 形式を使用します。 `-d` POST リクエストを `curl` エンドポイントに送信する際に、変換された JSON ペイロードをリクエスト本文（`/workorder`）として使用します。 完全なリクエストオプションと検証ルールについては、[ レコード削除作業指示の作成 ](#create) を参照してください。
+スクリプト出力には、API がそのまま受け入れる `identities` 形式を使用します。 `-d` POST リクエストを `curl` エンドポイントに送信する際に、変換された JSON ペイロードをリクエスト本文（`/workorder`）として使用します。 完全なリクエストオプションと検証ルールについては、[&#x200B; レコード削除作業指示の作成 &#x200B;](#create) を参照してください。
 
 ## 特定のレコード削除作業指示の詳細の取得 {#lookup}
 
