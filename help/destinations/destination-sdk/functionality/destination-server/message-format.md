@@ -178,7 +178,7 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 1. シンプルな変換例。[プロファイル属性](#attributes)、[オーディエンスメンバーシップ](#audience-membership)および [ID](#identities) フィールドに対するシンプルな変換でのテンプレートの仕組みを説明します。
 2. 上記のフィールドを組み合わせてテンプレートの複雑さが増した例：[オーディエンスおよび ID を送信するテンプレートの作成](./message-format.md#segments-and-identities)および[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](#segments-identities-attributes)。
-3. 集約キーが含まれるテンプレート。宛先設定で [ 設定可能な集計 ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、Experience Platformは、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
+3. 集約キーが含まれるテンプレート。宛先設定で [&#x200B; 設定可能な集計 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、Experience Platformは、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
@@ -860,7 +860,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 ### 様々な条件でグループ化されて書き出されたプロファイルにアクセスするために、テンプレートに集計キーを含める {#template-aggregation-key}
 
-宛先設定で [ 設定可能な集計 ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化できます。
+宛先設定で [&#x200B; 設定可能な集計 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化できます。
 
 メッセージ変換テンプレートでは、以下の節の例に示すように、前述の集計キーにアクセスできます。宛先で想定される形式およびレート制限に合致するように、集計キーを使用して、Experience Platform から書き出された HTTP メッセージを構造化します。
 
