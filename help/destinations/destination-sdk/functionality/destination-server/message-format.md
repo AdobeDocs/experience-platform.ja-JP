@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
+source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
 workflow-type: tm+mt
-source-wordcount: '2488'
-ht-degree: 87%
+source-wordcount: '2512'
+ht-degree: 81%
 
 ---
 
@@ -176,9 +176,9 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 この節では、これらの変換がどのように行われるか（入力 XDM スキーマから、テンプレートを経て、宛先で受け入れられるペイロード形式に出力するまで）について、いくつかの例を示します。後述の例は、以下のように複雑さが増していきます。
 
-1. シンプルな変換例。[プロファイル属性](#attributes)、[オーディエンスメンバーシップ](#segment-membership)および [ID](#identities) フィールドに対するシンプルな変換でのテンプレートの仕組みを説明します。
+1. シンプルな変換例。[プロファイル属性](#attributes)、[オーディエンスメンバーシップ](#audience-membership)および [ID](#identities) フィールドに対するシンプルな変換でのテンプレートの仕組みを説明します。
 2. 上記のフィールドを組み合わせてテンプレートの複雑さが増した例：[オーディエンスおよび ID を送信するテンプレートの作成](./message-format.md#segments-and-identities)および[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](#segments-identities-attributes)。
-3. 集約キーが含まれるテンプレート。宛先設定で[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用する場合、Experience Platform は、条件（オーディエンス ID、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
+3. 集約キーが含まれるテンプレート。宛先設定で [ 設定可能な集計 ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、Experience Platformは、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
@@ -794,7 +794,8 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -838,7 +839,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -859,21 +860,21 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 ### 様々な条件でグループ化されて書き出されたプロファイルにアクセスするために、テンプレートに集計キーを含める {#template-aggregation-key}
 
-宛先設定で[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用する場合、条件（オーディエンス ID、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルグループ化できます。
+宛先設定で [ 設定可能な集計 ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化できます。
 
 メッセージ変換テンプレートでは、以下の節の例に示すように、前述の集計キーにアクセスできます。宛先で想定される形式およびレート制限に合致するように、集計キーを使用して、Experience Platform から書き出された HTTP メッセージを構造化します。
 
 #### テンプレートでのオーディエンス ID 集約キーの使用 {#aggregation-key-segment-id}
 
-[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、宛先に書き出された HTTP メッセージのプロファイルは、オーディエンス ID でグループ化されます。テンプレートのオーディエンス ID にアクセスできる方法については、以下を参照してください。
+[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、宛先に書き出された HTTP メッセージのプロファイルは、オーディエンス ID でグループ化されます。テンプレートのオーディエンス ID とオーディエンス名前空間にアクセスできる方法については、以下を参照してください。
 
 **入力**
 
 以下の 4 つのプロファイルについて考えてみます。
 
-* 最初の 2 つは、オーディエンス ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` のオーディエンスの一部
-* 3 番目のプロファイルは、オーディエンス ID `8f812592-3f06-416b-bd50-e7831848a31a` のオーディエンスの一部
-* 4 番目のプロファイルは、上記の両方のオーディエンスの一部。
+* 最初の 2 つは、オーディエンス ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` のオーディエンスの一部で、`ups` 名前空間の下にあります
+* 3 番目のプロファイルは、オーディエンス ID `8f812592-3f06-416b-bd50-e7831848a31a` のオーディエンスの一部で、`CustomerAudienceUpload` 名前空間の下にあります
+* 4 番目のプロファイルは、上記の両方のオーディエンスの一部で、それぞれの名前空間の下にあります。
 
 プロファイル 1：
 
@@ -925,7 +926,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -946,12 +947,14 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -965,11 +968,12 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 >
 >使用するすべてのテンプレートについて、[宛先サーバー設定](../../authoring-api/destination-server/create-destination-server.md)に[テンプレート](../../functionality/destination-server/templating-specs.md)を挿入する前に、無効な文字（二重引用符 `""` など）をエスケープする必要があります。二重引用符のエスケープについて詳しくは、[JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)の第 9 章を参照してください。
 
-以下で、オーディエンス ID にアクセスするために、テンプレートでどのように `audienceId` が使用されているかに注意してください。この例では、宛先の分類のオーディエンスメンバーシップに `audienceId` を使用することを想定しています。独自の分類に応じて、代わりにその他のフィールド名を使用できます。
+以下で、オーディエンス ID と名前空間にアクセスするために、テンプレートでどのように `audienceId` と `audienceNamespace` が使用されているかに注意してください。 この例では、宛先の分類のオーディエンスメンバーシップに `audienceId` を使用することを想定しています。独自の分類に応じて、代わりにその他のフィールド名を使用できます。
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -982,11 +986,12 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 **結果**
 
-宛先に書き出されると、プロファイルは、そのオーディエンス ID に基づいて 2 つのグループに分割されます。
+宛先に書き出されると、プロファイルは、オーディエンス ID と名前空間に基づいて 2 つのグループに分割されます。
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1004,6 +1009,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"
