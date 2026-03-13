@@ -1,12 +1,12 @@
 ---
-keywords: 広告、microsoft ads、customer match
-title: Microsoft Ads Customer Match Connection
-description: Microsoft AdsのCustomer Matchの宛先を使用して、お客様をメールアドレスで対応付け、検索およびオーディエンス広告を含むMicrosoft広告ネットワーク全体で再連携します。
+keywords: 広告；microsoft ads; カスタマーマッチ；
+title: Microsoft Ads Customer Match 連携
+description: Microsoft Ads のカスタマーマッチの宛先を使用して、メールアドレスで顧客をマッチングし、Microsoft Advertising Network 全体（検索広告やオーディエンス広告を含む）で顧客と再び関わり合います。
 badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 19c8bc9f0b27e1c04c5038cd268bed43cf57080f
+source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 18%
@@ -17,7 +17,7 @@ ht-degree: 18%
 
 >[!AVAILABILITY]
 >
->この宛先コネクタは現在限定提供です。 アクセス権を取得するには、Adobe担当者にお問い合わせください。</br>
+>この宛先コネクタは現在限定提供です。 アクセス権を取得するには、アドビ担当者にお問い合わせください。
 
 ## 概要 {#overview}
 
@@ -37,7 +37,7 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Microsoft Ads Customer Match]は、以下の表に記載されているIDのアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Microsoft Ads Customer Match] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -51,19 +51,19 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csvファイルからオーディエンス[読み込み](../../../segmentation/ui/audience-portal.md#import-audience)をExperience Platformーにカスタムアップロードする</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
-オーディエンスのデータタイプでサポートされるオーディエンス：
+オーディエンスデータタイプでサポートされるオーディエンス：
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | 特定の組織内の個人を対象に、アカウントベースのマーケティング戦略を策定します。 | B2Bマーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [データセットのエクスポート](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lakeに保存されている構造化データのコレクションです。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -80,24 +80,24 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスデータを [!DNL Microsoft Ads] に送信するには、アクティブな [!DNL Microsoft Advertising] アカウントが必要です。 アカウントの作成について詳しくは、[Microsoft Advertising ドキュメント &#x200B;](https://help.ads.microsoft.com/#apex/ads/en/53090/0) を参照してください。
+オーディエンスデータを [!DNL Microsoft Ads] に送信するには、アクティブな [!DNL Microsoft Advertising] アカウントが必要です。 アカウントの作成について詳しくは、[Microsoft Advertising ドキュメント ](https://help.ads.microsoft.com/#apex/ads/en/53090/0) を参照してください。
 
 ### カスタマーマッチの利用条件に同意 {#accept-customer-match-terms}
 
-この宛先を通じてオーディエンスをアクティブ化する前に、まず [!DNL Microsoft Advertising] アカウントに顧客一致リストを手動で作成する必要があります。 この最初の手動作成は、カスタマーマッチの利用条件に同意するために必要です。これにより、Experience Platformから送信されるオーディエンスを自動的に作成できます。 この手順を完了しないと、オーディエンスのライセンス認証時にエラーが発生する可能性があります。
+この宛先を通じてオーディエンスをアクティブ化する前に、まず [!DNL Microsoft Advertising] アカウントに顧客一致リストを手動で作成する必要があります。 この最初の手動作成は、カスタマーマッチの利用条件に同意するために必要です。これにより、Experience Platformから送信されるオーディエンスを自動的に作成できます。 この手順を完了しないと、オーディエンスをアクティブ化する際にエラーが発生する場合があります。
 
 ### アカウント設定 {#account-configuration}
 
-宛先を設定する場合は、次の情報を指定する必要があります。
+宛先を設定する際には、次の情報を指定する必要があります。
 
-* [!UICONTROL Customer ID]：整数の形式の [!DNL Microsoft Ads] 顧客 ID （CID）。 お客様 ID を見つける手順については [&#128279;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント &rbrace; を参照してください。
-* [!UICONTROL Customer Account ID]:[!DNL Microsoft Ads] 顧客アカウント ID。 お客様のアカウント ID を見つける方法については [&#128279;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント &rbrace; を参照してください。
+* [!UICONTROL Customer ID]：整数の形式の [!DNL Microsoft Ads] 顧客 ID （CID）。 お客様 ID を見つける手順については [](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント } を参照してください。
+* [!UICONTROL Customer Account ID]:[!DNL Microsoft Ads] 顧客アカウント ID。 お客様のアカウント ID を見つける方法については [](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント } を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -107,17 +107,17 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="顧客 ID"
 >abstract="Microsoft Advertising顧客 ID （別名：管理者アカウント ID）。 これは、Microsoft Advertisingの最上位の識別子で、その下に複数の広告主アカウント（顧客アカウント ID）を持つことができます。"
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="お客様IDの確認"
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="顧客 ID を見つける"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="顧客アカウント ID"
->abstract="Microsoft Advertising Customer Account ID（広告主アカウントID）。 これにより、顧客 ID で特定の広告主アカウントが識別されます。"
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="お客様のアカウントIDの確認"
+>abstract="Microsoft Advertising顧客アカウント ID （広告主アカウント ID とも呼ばれます）。 これにより、顧客 ID で特定の広告主アカウントが識別されます。"
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="顧客アカウント ID を見つける"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="メンバーシップ期間"
+>title="メンバーシップの期間"
 >abstract="ユーザーが顧客一致リストに残る日数。 指定できる値は、1 ～ 390 日です。"
 
 >[!CONTEXTUALHELP]
@@ -130,12 +130,12 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Customer ID]**:[!DNL Microsoft Ads] 顧客 ID （CID）。 Customer IDの確認方法については、[Microsoftの広告に関するドキュメント](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)を参照してください。
-* **[!UICONTROL Customer Account ID]**:[!DNL Microsoft Ads] 顧客アカウント ID。 お客様のアカウント ID を見つける方法については [&#128279;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント &rbrace; を参照してください。
+* **[!UICONTROL Customer ID]**:[!DNL Microsoft Ads] 顧客 ID （CID）。 お客様 ID を見つける手順については [](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント } を参照してください。
+* **[!UICONTROL Customer Account ID]**:[!DNL Microsoft Ads] 顧客アカウント ID。 お客様のアカウント ID を見つける方法については [](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)Microsoft Advertisingのドキュメント } を参照してください。
 * **[!UICONTROL Membership Duration]**：ユーザーがカスタマーマッチリストに残る日数。 指定できる値は、1 ～ 390 日です。
-* **[!UICONTROL Customer Match List Availability]**：顧客一致リストの可用性を選択します。 ま [!DNL Microsoft Advertising]、1 つの顧客 ID の下に複数の顧客アカウント ID （広告主アカウント）を含めることができます。 **[!UICONTROL Customer ID (all advertising accounts)]** を選択すると、顧客 ID のすべての広告主アカウントでリストを使用できるようになります。**[!UICONTROL Customer Account ID (single advertising account)]** を選択する場合は、上記で指定した特定の顧客アカウント ID にリストを制限します。 詳しくは、[Microsoft広告に関するドキュメント](https://help.ads.microsoft.com/apex/index/3/en/56727)を参照してください。
+* **[!UICONTROL Customer Match List Availability]**：顧客一致リストの可用性を選択します。 ま [!DNL Microsoft Advertising]、1 つの顧客 ID の下に複数の顧客アカウント ID （広告主アカウント）を含めることができます。 **[!UICONTROL Customer ID (all advertising accounts)]** を選択すると、顧客 ID のすべての広告主アカウントでリストを使用できるようになります。**[!UICONTROL Customer Account ID (single advertising account)]** を選択する場合は、上記で指定した特定の顧客アカウント ID にリストを制限します。 詳しくは、[Microsoft Advertising ドキュメント ](https://help.ads.microsoft.com/apex/index/3/en/56727) を参照してください。
 
-![Microsoft Ads Customer Matchの宛先の宛先の詳細フィールドを示すプラットフォームUIの画像。](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+![Microsoft Ads のカスタマーマッチの宛先に関する宛先の詳細フィールドを示す Platform UI 画像。](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -147,8 +147,8 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [アクセス制御アクセス許可](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;を宛先に書き出すには、**[!UICONTROL View Identity Graph]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ワークフローで強調表示されているID名前空間を選択して、対象ユーザーを対象ユーザーにアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローで強調表示されているID名前空間を選択して、対象ユーザーを対象ユーザーにアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* 宛先に *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -171,4 +171,4 @@ E コマースブランドは、[!DNL Microsoft Search] や [!DNL Microsoft Audi
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[Microsoft Advertising ヘルプセンター &#x200B;](https://help.ads.microsoft.com/) を参照してください。
+詳しくは、[Microsoft Advertising ヘルプセンター ](https://help.ads.microsoft.com/) を参照してください。
