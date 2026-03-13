@@ -3,22 +3,24 @@ title: Adobe Experience Platformでのクエリサービスセッションの管
 description: 管理者がアクティブなクエリサービスセッションを表示、監視、終了して、アイドル状態の容量を解放し、信頼性の高い Data Distiller ワークフローを維持する方法について説明します。
 keywords: Experience Platform；クエリサービス；セッション；セッション管理；Data Distiller;admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="限定提供" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # クエリサービスセッションの管理
 
+>[!AVAILABILITY]
+>
+>クエリサービスの Session Management は現在、限定提供になっており、**Data Distiller** の権限を持つ組織のみが使用できます。 アクセス権をリクエストするには、Adobe アカウントチームにお問い合わせください。
+
 このガイドを使用して、Adobe Experience Platform ユーザーインターフェイスからアクティブなクエリサービスセッションを管理します。 セッション管理は、管理者がサンドボックスをまたいで同時クエリエディターセッションを監視し、ユーザーがセッションを開いたままにした場合に容量を解放するのに役立ちます。
 
 ## セッション管理に必要な権限 {#permissions}
-
->[!AVAILABILITY]
->
->Session Management は、Data Distillerの使用権限を持つ組織のみが使用できます。
 
 >[!IMPORTANT]
 >
@@ -30,7 +32,7 @@ ht-degree: 1%
 
 管理者は、組織内のサンドボックスをまたいで、アクティブなすべてのクエリサービスセッションを表示できます。 Experience Platformで、左側のナビゲーションの「**[!UICONTROL Queries]**」を選択してクエリサービス ワークスペースを開き、「**[!UICONTROL Admin]**」タブを選択してセッション管理にアクセスします。
 
-![&#x200B; 「管理」タブが選択されたクエリサービスワークスペース セッション管理テーブルが表示され、組織内の複数のサンドボックスをまたいで、アクティブおよび非アクティブなセッションが一覧表示されます。](../images/ui/session-management/session-management-admin-tab.png)
+![ 「管理」タブが選択されたクエリサービスワークスペース セッション管理テーブルが表示され、組織内の複数のサンドボックスをまたいで、アクティブおよび非アクティブなセッションが一覧表示されます。](../images/ui/session-management/session-management-admin-tab.png)
 
 セッション管理テーブルはリアルタイムで自動的に更新され、組織に割り当てられているクエリサービスの同時セッション処理能力を現在使用しているすべてのセッションが一覧表示されます。 各行は、クエリエディターで開かれた単一のセッションを表します。
 
@@ -61,11 +63,11 @@ ht-degree: 1%
 
 「セッション管理」テーブルから「**[!UICONTROL End session]**」を選択して、終了する非アクティブ・セッションを選択します。
 
-![&#x200B; 「終了セッション」がハイライト表示された非アクティブセッションを示す「セッション管理」テーブル &#x200B;](../images/ui/session-management/end-session.png)
+![ 「終了セッション」がハイライト表示された非アクティブセッションを示す「セッション管理」テーブル ](../images/ui/session-management/end-session.png)
 
 誤って終了することを防ぐ確認ダイアログが表示されます。 ダイアログで **[!UICONTROL End session]** を選択して、アクションを確定します。
 
-![&#x200B; 警告メッセージが表示され、「セッションを終了」がハイライト表示されている「セッションを終了」確認ダイアログ &#x200B;](../images/ui/session-management/end-session-confirmation-dialog.png)
+![ 警告メッセージが表示され、「セッションを終了」がハイライト表示されている「セッションを終了」確認ダイアログ ](../images/ui/session-management/end-session-confirmation-dialog.png)
 
 セッションが終了すると、セッションがテーブルから削除され、容量が直ちに利用可能になり、アクションが監査用に記録されます。
 
@@ -85,7 +87,7 @@ ht-degree: 1%
 
 監査ログを使用して、セッションの終了履歴を確認し、予期しない切断を調査します。
 
-監査ログの表示について詳しくは、[&#x200B; クエリサービス監査ログガイド &#x200B;](../data-governance/audit-log-guide.md) を参照してください。
+監査ログの表示について詳しくは、[ クエリサービス監査ログガイド ](../data-governance/audit-log-guide.md) を参照してください。
 
 ## 次の手順 {#next-steps}
 
@@ -93,4 +95,3 @@ ht-degree: 1%
 
 * [ユーザーによるクエリの作成および実行方法については、クエリエディターユーザーガイドを参照してください](user-guide.md)
 * [スケジュールされたクエリ監視ドキュメントを使用したスケジュールされたワークロードの監視](monitor-queries.md)
-
