@@ -85,7 +85,7 @@ ht-degree: 22%
 
 **[!DNL The Trade Desk]** に基づく cookie ベースのターゲティングの場合、ECID と [!DNL Trade Desk ID] の間のマッピングが確立されていることを確認します。 これを行うには、以下の手順を実行します。
 
-1. **ID 同期機能を有効にする**:[!DNL The Trade Desk ID] のアクティベーションを初めて設定する場合で、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。
+1. **ID 同期機能を有効にする**:[!DNL The Trade Desk ID] のアクティベーションを初めて設定する場合で、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。
    * 以前にAudience Managerで [!DNL The Trade Desk] 統合を設定している場合、既存の ID 同期は自動的にExperience Platformに引き継がれます。
 
 2. **Web ページの実装**:Web ページにコードを実装して、[!DNL The Trade Desk ID] とAdobe ECID 間のマッピングを作成します。 これにより、Experience Platformは Trade Desk ID を顧客プロファイルに関連付けることができます。
