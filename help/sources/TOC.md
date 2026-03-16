@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 89%
+source-wordcount: '1089'
+ht-degree: 88%
 
 ---
 
@@ -97,6 +97,8 @@ ht-degree: 89%
       - [ボンボラの意図](connectors/data-partners/bombora.md)
       - [Demandbase の目的](connectors/data-partners/demandbase.md)
       - [Merkury エンタープライズ ID 解決](connectors/data-partners/merkury.md)
+   - データ共有 {#data-sharing}
+      - [デルタシャレ](connectors/data-sharing/deltashare.md)
    - e コマース {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -227,7 +229,7 @@ ht-degree: 89%
       - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
    - [オンデマンド取り込み](tutorials/api/on-demand-ingestion.md)
    - [ソースレベルでのデータのフィルタリング](tutorials/api/filter.md)
-   - [データフローのモニタリング](tutorials/api/monitor.md)
+   - [データフローのモニター](tutorials/api/monitor.md)
    - [アカウントの更新](tutorials/api/update.md)
    - [データフローの更新](tutorials/api/update-dataflows.md)
    - [失敗したデータフロー実行の再試行](tutorials/api/retry-flows.md)
@@ -310,6 +312,8 @@ ht-degree: 89%
          - [ボンボラの意図](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase の目的](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury エンタープライズ ID 解決](tutorials/ui/create/data-partners/merkury.md)
+      - データ共有 {#data-sharing}
+         - [デルタシャレ](tutorials/ui/create/data-sharing/deltashare.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -359,8 +363,8 @@ ht-degree: 89%
    - [ソースオブジェクトのフィルタリング](tutorials/ui/filter.md)
    - [暗号化されたデータの取り込み](tutorials/ui/encryped-ingestion.md)
    - [オンデマンド取り込み](tutorials/ui/on-demand-ingestion.md)
-   - [バッチデータフローのモニタリング](tutorials/ui/monitor.md)
-   - [ストリーミングデータフローのモニタリング](tutorials/ui/monitor-streaming.md)
+   - [バッチデータフローのモニター](tutorials/ui/monitor.md)
+   - [ストリーミングデータフローのモニター](tutorials/ui/monitor-streaming.md)
    - [アカウントの更新](tutorials/ui/update.md)
    - [データフローの更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
