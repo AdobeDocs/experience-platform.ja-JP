@@ -19,14 +19,14 @@ ht-degree: 15%
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 主な用語
 
 このドキュメントで使用される以下の主な用語を理解することが重要です。
 
 * **標準属性**：標準属性は、アドビで事前定義された任意の属性です。 これらはすべての顧客に対して同じ意味を持ち、Analytics ソースデータと Analytics スキーマフィールドグループで利用可能です。
-* **カスタム属性**：カスタム属性とは、Analytics のカスタム変数階層にある任意の属性のことです。 カスタム属性は、Adobe Analyticsの実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVar について詳しくは、以下の [&#x200B; コンバージョン変数に関する Analytics ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja) を参照してください。
+* **カスタム属性**：カスタム属性とは、Analytics のカスタム変数階層にある任意の属性のことです。 カスタム属性は、Adobe Analyticsの実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVar について詳しくは、以下の [ コンバージョン変数に関する Analytics ドキュメント ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja) を参照してください。
 * **カスタムフィールドグループ内の任意の属性**：顧客が作成したフィールドグループから派生する属性はすべてユーザー定義であり、標準属性でもカスタム属性でもないとみなされます。
 
 ## ソースカタログのナビゲート
@@ -40,7 +40,7 @@ ht-degree: 15%
 
 Experience Platformの UI で、左側のナビゲーションから「**[!UICONTROL Sources]**」を選択して、「[!UICONTROL Sources]」ワークスペースにアクセスします。 *[!UICONTROL Adobe applications]* カテゴリで、Adobe Analytics カードを選択し、「**[!UICONTROL Add data]**」を選択します。
 
-![Adobe Analytics ソースカードが選択されたソースカタログ &#x200B;](../../../../images/tutorials/create/analytics/catalog.png)
+![Adobe Analytics ソースカードが選択されたソースカタログ ](../../../../images/tutorials/create/analytics/catalog.png)
 
 ## データの選択
 
@@ -53,11 +53,11 @@ Experience Platformの UI で、左側のナビゲーションから「**[!UICON
 
 ソース接続が作成されているExperience Platform サンドボックスインスタンスと同じ組織にマッピングされている限り、任意の地域（米国、英国またはシンガポール）からレポートスイートを取り込むことができます。 レポートスイートは、1 つのアクティブなデータフローのみを使用して取り込むことができます。 レポートスイートがグレーで選択できない場合は、使用しているサンドボックスまたは別のサンドボックスで、既に取り込まれています。
 
-複数のインバウンド接続を使用して、複数のレポートスイートを同じサンドボックスに取り込むことができます。 変数（eVar やイベントなど）のスキーマが異なるレポートスイートの場合は、カスタムフィールドグループの特定のフィールドにマッピングし、[&#x200B; データ準備 &#x200B;](../../../../../data-prep/ui/mapping.md) を使用してデータの競合を回避する必要があります。 レポートスイートは、1 つのサンドボックスにのみ追加できます。
+複数のインバウンド接続を使用して、複数のレポートスイートを同じサンドボックスに取り込むことができます。 変数（eVar やイベントなど）のスキーマが異なるレポートスイートの場合は、カスタムフィールドグループの特定のフィールドにマッピングし、[ データ準備 ](../../../../../data-prep/ui/mapping.md) を使用してデータの競合を回避する必要があります。 レポートスイートは、1 つのサンドボックスにのみ追加できます。
 
 「**[!UICONTROL Report suite]**」を選択したあと、*[!UICONTROL Analytics source add data]* インターフェイスを使用してリスト内を移動し、Experience Platformに取り込む Analytics レポートスイートを特定します。 または、特定のレポートスイートを検索することもできます。 「**[!UICONTROL Next]**」を選択して次に進みます。
 
-![Analytics レポートスイートが取り込み用に選択され、「次へ」ボタンがハイライト表示される &#x200B;](../../../../images/tutorials/create/analytics/add-data.png)
+![Analytics レポートスイートが取り込み用に選択され、「次へ」ボタンがハイライト表示される ](../../../../images/tutorials/create/analytics/add-data.png)
 
 &lt;!—Analytics レポートスイートは、一度に 1 つのサンドボックスに対して設定できます。 同じレポートスイートを別のサンドボックスに読み込むには、データセットフローを削除し、別のサンドボックスの設定を使用して再度インスタンス化する必要があります。—>
 
@@ -75,13 +75,13 @@ Analytics データをターゲット XDM スキーマをマッピングする�
 
 デフォルトのスキーマは、ユーザーに代わって新しいスキーマを作成します。 この新しく作成されたスキーマには、[!DNL Adobe Analytics ExperienceEvent Template] フィールドグループが含まれます。 デフォルトのスキーマを使用するには、「**[!UICONTROL Default schema]**」を選択します。
 
-![&#x200B; 「デフォルトのスキーマ」が選択されている、Analytics ソースワークフローのスキーマ選択手順 &#x200B;](../../../../images/tutorials/create/analytics/default-schema.png)
+![ 「デフォルトのスキーマ」が選択されている、Analytics ソースワークフローのスキーマ選択手順 ](../../../../images/tutorials/create/analytics/default-schema.png)
 
 >[!TAB  カスタムスキーマ ]
 
 カスタムスキーマを使用すると、Analytics データに対して、[!DNL Adobe Analytics ExperienceEvent Template] フィールドグループを持つスキーマであれば、利用可能な任意のスキーマを選択することができます。 カスタムスキーマを使用するには、「**[!UICONTROL Custom schema]**」を選択します。
 
-![&#x200B; 「カスタムスキーマ」が選択された Analytics ソースワークフローのスキーマ選択手順 &#x200B;](../../../../images/tutorials/create/analytics/custom-schema.png)
+![ 「カスタムスキーマ」が選択された Analytics ソースワークフローのスキーマ選択手順 ](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 >[!ENDTABS]
 
@@ -91,7 +91,7 @@ Analytics データをターゲット XDM スキーマをマッピングする�
 >
 >[!DNL Adobe Analytics ExperienceEvent Template] フィールドグループを持つスキーマのみがスキーマ選択メニューに表示されます。 その他のスキーマは省略されます。 レポートスイートデータに適したスキーマがない場合は、新しいスキーマを作成する必要があります。 スキーマの作成手順について詳しくは、[UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)ガイドを参照してください。
 
-![&#x200B; マッピングインターフェイスのターゲットスキーマ選択パネル &#x200B;](../../../../images/tutorials/create/analytics/select-schema.png)
+![ マッピングインターフェイスのターゲットスキーマ選択パネル ](../../../../images/tutorials/create/analytics/select-schema.png)
 
 [!UICONTROL Map standard fields] スト上の指標については、[!UICONTROL Standard mappings applied] のパネルを参照してください。 [!UICONTROL Standard mappings with descriptor name conflicts]、および [!DNL Custom mappings]。
 
@@ -105,7 +105,7 @@ Analytics データをターゲット XDM スキーマをマッピングする�
 
 名前の競合が見つかった場合は、マッピングがExperience Platformによって自動的に検出されます。 マッピングと競合しない場合は、「**[!UICONTROL Next]**」を選択して続行します。
 
-![&#x200B; 名前の競合が表示されていない標準マッピングヘッダー &#x200B;](../../../../images/tutorials/create/analytics/standard.png)
+![ 名前の競合が表示されていない標準マッピングヘッダー ](../../../../images/tutorials/create/analytics/standard.png)
 
 >[!TIP]
 >
@@ -117,16 +117,16 @@ Analytics データをターゲット XDM スキーマをマッピングする�
 >id="platform_analytics_import_mapping"
 >title="テンプレートのダウンロード"
 >abstract="オフラインでマッピングを実行するには、CSV テンプレートをダウンロードします。"
->additional-url="https://experienceleague.adobe.com/jp/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="マッピングを読み込む"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="マッピングを読み込む"
 
 データ準備関数を使用して、カスタム属性の新しいカスタムマッピングまたは計算フィールドを追加できます。 カスタムマッピングを追加するには、「**[!UICONTROL Custom]**」を選択します。
 
-![Analytics ソースワークフローの「カスタムマッピング」タブ &#x200B;](../../../../images/tutorials/create/analytics/custom.png)
+![Analytics ソースワークフローの「カスタムマッピング」タブ ](../../../../images/tutorials/create/analytics/custom.png)
 
 * **[!UICONTROL Filter fields]**:[!UICONTROL Filter fields] テキスト入力を使用して、マッピング内の特定のマッピングフィールドをフィルタリングします。
 * **[!UICONTROL Add new mapping]**：新しいソースフィールドとターゲットフィールドのマッピングを追加するには、「**[!UICONTROL Add new mapping]**」を選択します。
 * **[!UICONTROL Add calculated field]**：必要に応じて、**[!UICONTROL Add calculated field]** を選択して、マッピング用の新しい計算フィールドを作成できます。
-* **[!UICONTROL Import mapping]**: データ準備の読み込みマッピング機能を使用すると、データ取り込みプロセスの手動による設定時間を短縮し、ミスを制限できます。 既存のフローまたは書き出されたファイルからマッピングをインポートする **[!UICONTROL Import mapping]** を選択します。 詳しくは、[&#x200B; マッピングのインポートとエクスポートに関するガイド &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) を参照してください。
+* **[!UICONTROL Import mapping]**: データ準備の読み込みマッピング機能を使用すると、データ取り込みプロセスの手動による設定時間を短縮し、ミスを制限できます。 既存のフローまたは書き出されたファイルからマッピングをインポートする **[!UICONTROL Import mapping]** を選択します。 詳しくは、[ マッピングのインポートとエクスポートに関するガイド ](../../../../../data-prep/ui/mapping.md#import-mapping) を参照してください。
 * **[!UICONTROL Download template]**: マッピングの CSV コピーをダウンロードして、ローカルデバイスでマッピングを設定することもできます。 「**[!UICONTROL Download template]**」を選択して、マッピングの CSV コピーをダウンロードします。 ソースファイルとターゲットスキーマで提供されるフィールドのみを使用していることを確認する必要があります。
 
 データ準備について詳しくは、次のドキュメントを参照してください。
@@ -208,7 +208,7 @@ Analytics レポートスイートデータのマッピングが完了したら�
 
 設定する属性を特定したら、その属性を選択して、左側のパネルからフィルタリングパネルにドラッグします。
 
-![&#x200B; フィルタリング用に選択された「Manufacturer」属性。](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![ フィルタリング用に選択された「Manufacturer」属性。](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
 別の条件を設定するには、「**[!UICONTROL equals]**」を選択し、表示されるドロップダウンウィンドウから条件を選択します。
 
@@ -224,23 +224,23 @@ Analytics レポートスイートデータのマッピングが完了したら�
 * [!UICONTROL exists]
 * [!UICONTROL does not exist]
 
-![&#x200B; 条件演算子のリストを含む条件ドロップダウン。](../../../../images/tutorials/create/analytics/conditions.png)
+![ 条件演算子のリストを含む条件ドロップダウン。](../../../../images/tutorials/create/analytics/conditions.png)
 
 次に、選択した属性に基づいて、含める値を入力します。 次の例では、[!DNL Apple] と [!DNL Google] が **[!UICONTROL Manufacturer]** 属性の一部として取り込み用に選択されています。
 
-![&#x200B; 選択した属性と値が含まれるフィルタリングパネル &#x200B;](../../../../images/tutorials/create/analytics/include.png)
+![ 選択した属性と値が含まれるフィルタリングパネル ](../../../../images/tutorials/create/analytics/include.png)
 
 フィルター条件をさらに指定するには、スキーマから別の属性を追加してから、その属性に基づいて値を追加します。 次の例では、**[!UICONTROL Model]** 属性が追加され、[!DNL iPhone 16] や [!DNL Google Pixel 9] などのモデルが取り込み用にフィルタリングされます。
 
-![&#x200B; コンテナに含まれる追加の属性と値 &#x200B;](../../../../images/tutorials/create/analytics/include-model.png)
+![ コンテナに含まれる追加の属性と値 ](../../../../images/tutorials/create/analytics/include-model.png)
 
 新しいコンテナを追加するには、フィルタリングインターフェイスの右上にある省略記号（`...`）を選択し、「**[!UICONTROL Add container]**」を選択します。
 
-![&#x200B; 「コンテナを追加」ドロップダウンメニューが選択されています。](../../../../images/tutorials/create/analytics/add-container.png)
+![ 「コンテナを追加」ドロップダウンメニューが選択されています。](../../../../images/tutorials/create/analytics/add-container.png)
 
 新しいコンテナを追加したら、「**[!UICONTROL Include]**」を選択し、ドロップダウンメニューから「**[!UICONTROL Exclude]**」を選択します。 除外する属性と値を追加し、終了したら「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; 除外するためにフィルターされた属性と値 &#x200B;](../../../../images/tutorials/create/analytics/exclude.png)
+![ 除外するためにフィルターされた属性と値 ](../../../../images/tutorials/create/analytics/exclude.png)
 
 ### 列レベルのフィルタリング
 
@@ -250,7 +250,7 @@ Analytics レポートスイートデータのマッピングが完了したら�
 
 デフォルトでは、すべての Analytics はプロファイルに移動しますが、このプロセスを使用すると、XDM データのブランチをプロファイルの取り込みから除外できます。
 
-![&#x200B; スキーマツリーを使用した列フィルターインターフェイス。](../../../../images/tutorials/create/analytics/column-filter.png)
+![ スキーマツリーを使用した列フィルターインターフェイス。](../../../../images/tutorials/create/analytics/column-filter.png)
 
 ### セカンダリ ID のフィルタリング
 
@@ -258,13 +258,13 @@ Analytics レポートスイートデータのマッピングが完了したら�
 
 フィルターは、ID がセカンダリとしてマークされている場合にのみ適用されます。 ID が選択されていても、プライマリとしてマークされた ID のいずれかがイベントに届いた場合、その ID は除外されません。
 
-![&#x200B; 列フィルタリング用のスキーマツリーのセカンダリ ID。](../../../../images/tutorials/create/analytics/secondary-identities.png)
+![ 列フィルタリング用のスキーマツリーのセカンダリ ID。](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### データフローの詳細を入力
 
 **[!UICONTROL Dataflow detail]** の手順が表示され、データフローの名前と説明（オプション）を入力する必要があります。 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; データフローの詳細インターフェイス 取り込みワークフロー &#x200B;](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![ データフローの詳細インターフェイス 取り込みワークフロー ](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### レビュー
 
@@ -273,13 +273,13 @@ Analytics レポートスイートデータのマッピングが完了したら�
 * [!UICONTROL Connection]：接続のソースプラットフォームを表示します。
 * [!UICONTROL Data type]：選択したレポートスイートと、対応するレポートスイート ID が表示されます。
 
-![&#x200B; 取り込みワークフローのレビューインターフェイス &#x200B;](../../../../images/tutorials/create/analytics/review.png)
+![ 取り込みワークフローのレビューインターフェイス ](../../../../images/tutorials/create/analytics/review.png)
 
 >[!TIP]
 >
 >ライセンス使用権限を超過したり、ストレージやデータの合計量を圧倒したりしないようにするには、次のベストプラクティスに従います。
 >
->* データのライフサイクル管理とストレージ効率を最適化するために、最初にエクスペリエンスイベントデータセットの保持有効期間（TTL）を設定します。 詳しくは、[TTL を使用したデータレイクでのエクスペリエンスイベントデータセット保持の管理 &#x200B;](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) に関するガイドを参照してください。
+>* データのライフサイクル管理とストレージ効率を最適化するために、最初にエクスペリエンスイベントデータセットの保持有効期間（TTL）を設定します。 詳しくは、[TTL を使用したデータレイクでのエクスペリエンスイベントデータセット保持の管理 ](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) に関するガイドを参照してください。
 >
 >* Analytics ソースデータフローを作成する場合は、まず、データレイクにのみデータを取り込むようにコネクタを設定します。 データフローが機能していることを確認したら、データセットのプロファイル取り込みを有効にできます。 この方法は、行と列のフィルターによってデータ量が効果的に削減される場合に最適です。
 
@@ -291,9 +291,9 @@ Analytics レポートスイートデータのマッピングが完了したら�
 
 ソースは、2 つのデータセットフローをインスタンス化します。 1 つのフローはバックフィルデータ、もう 1 つはライブデータのフローを表します。 バックフィルデータは、リアルタイム顧客プロファイルへの取り込み用に設定されていませんが、分析およびデータサイエンスのユースケース用にデータレイクへと送信されます。
 
-バックフィル、ライブデータおよびそれぞれのレイテンシーの詳細については、[Analytics ソースの概要 &#x200B;](../../../../connectors/adobe-applications/analytics.md) を参照してください。
+バックフィル、ライブデータおよびそれぞれのレイテンシーの詳細については、[Analytics ソースの概要 ](../../../../connectors/adobe-applications/analytics.md) を参照してください。
 
-![Adobe Analytics データ用の特定のターゲットデータセットのデータセットアクティビティページ &#x200B;](../../../../images/tutorials/create/analytics/dataset-activity.png)
+![Adobe Analytics データ用の特定のターゲットデータセットのデータセットアクティビティページ ](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
 >[!NOTE]
 >
@@ -325,5 +325,5 @@ Analytics データフローを削除するには、ソース ワークスペー
 >
 > 次のビデオに示す [!DNL Experience Platform] UI は旧式のものです。最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3430254?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
