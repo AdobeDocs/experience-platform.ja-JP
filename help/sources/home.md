@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1678'
 ht-degree: 48%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ &#x200B;](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [&#x200B; は RainFocus チームによって作成および管理されます &#x200B;](/help/sources/connectors/analytics/rainfocus.md)。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -61,19 +61,19 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### 高度なエンタープライズソース {#advanced-enterprise-sources}
 
-次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
+次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) またはスタンドアロンの Advanced Enterprise Source Connectors SKU のライセンスを取得したお客様のみが利用できます。
 
 | ソース | カテゴリ | 取り込みタイプ | Cloud |
 | --- | --- | --- | --- |
-| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | クラウドストレージ | ストリーミング | AWS, Azure |
-| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | データベース | バッチ | AWS, Azure |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | クラウドストレージ | ストリーミング | AWSAzure |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | データベース | バッチ | AWSAzure |
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | データベース | バッチ | Azure |
-| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | クラウドストレージ | ストリーミング | AWS, Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | クラウドストレージ | ストリーミング | AWSAzure |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | データベース | バッチ | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | データベース | バッチ | AWS, Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | データベース | バッチ | AWSAzure |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | クラウドストレージ | ストリーミング | Azure |
-| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | データベース | ストリーミング | AWS, Azure |
-| [[!DNL Snowflake]](connectors/databases/snowflake.md) | データベース | バッチ | AWS, Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | データベース | ストリーミング | AWSAzure |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | データベース | バッチ | AWSAzure |
 
 {style="table-layout:auto"}
 
@@ -109,10 +109,10 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | バッチ | Azure |
 | [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | バッチ | Azure |
-| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | バッチ | AWS, Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | バッチ | AWSAzure |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | バッチ | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | バッチ | Azure |
-| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | バッチ | AWS, Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | バッチ | AWSAzure |
 | [[!DNL FTP]](connectors/cloud-storage/ftp.md) | バッチ | Azure |
 | [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | バッチ | Azure |
 | [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | バッチ | Azure |
@@ -140,7 +140,7 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 | ソース | 取り込みタイプ | Cloud |
 | --- | --- | --- |
 | [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | バッチ | Azure |
-| [[!DNL Salesforce]](connectors/crm/salesforce.md) | バッチ | AWS, Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | バッチ | AWSAzure |
 | [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | バッチ | Azure |
 | [[!DNL Veeva CRM]](connectors/crm/veeva.md) | バッチ | Azure |
 
@@ -175,9 +175,9 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | バッチ | Azure |
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | バッチ | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | バッチ | Azure |
-| [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | AWS, Azure |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | AWS, Azure |
-| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | AWS, Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | AWSAzure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | AWSAzure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | AWSAzure |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
@@ -240,11 +240,11 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | ストリーミング | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | バッチ | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | バッチ | Azure |
-| [[!DNL Oracle Eloqua]  （V2） &#x200B;](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
+| [[!DNL Oracle Eloqua]  （V2） ](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | ストリーミング | Azure |
-| [[!DNL Salesforce Marketing Cloud]  （V2） &#x200B;](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
+| [[!DNL Salesforce Marketing Cloud]  （V2） ](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
 
@@ -265,7 +265,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 | ソース | 取り込みタイプ | クラウドサポート |
 | --- | --- | --- |
-| [[!DNL HTTP API]](connectors/streaming/http.md) | ストリーミング | AWS, Azure |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | ストリーミング | AWSAzure |
 
 {style="table-layout:auto"}
 
@@ -304,7 +304,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!TIP]
 >
->属性ベースのアクセス制御は次のように動作します。**roles** を作成して、Experience Platform インスタンスとやり取りするユーザーのタイプを分類します。 **ラベル** は、**役割** に適用され、その役割のアクセスを指定します。 **ラベル** は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、それらを *クエリされたリソースに割り当てられたのと同じラベルの役割* に追加する必要があります。 詳しくは、[&#x200B; 属性ベースのアクセス制御エンドツーエンドガイド &#x200B;](../access-control/abac/end-to-end-guide.md) を参照してください。
+>属性ベースのアクセス制御は次のように動作します。**roles** を作成して、Experience Platform インスタンスとやり取りするユーザーのタイプを分類します。 **ラベル** は、**役割** に適用され、その役割のアクセスを指定します。 **ラベル** は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、それらを *クエリされたリソースに割り当てられたのと同じラベルの役割* に追加する必要があります。 詳しくは、[ 属性ベースのアクセス制御エンドツーエンドガイド ](../access-control/abac/end-to-end-guide.md) を参照してください。
 
 - スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーは、アクセス権のあるフィールドのマッピングのみを作成できるようになります。
 - 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用したデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを含む既存のデータフローを更新、削除、有効化または無効化できません。
@@ -312,7 +312,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!NOTE]
 >
->リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[&#x200B; リレーショナルスキーマの概要 &#x200B;](../xdm/schema/relational.md) を参照してください。
+>リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[ リレーショナルスキーマの概要 ](../xdm/schema/relational.md) を参照してください。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
