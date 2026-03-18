@@ -28,7 +28,7 @@ Adobe Advertising Cloud Demand-Side Platform（DSP）の宛先を使用すると
 
    * [!DNL Apple iOS] デバイスの広告主（IDFA）の識別子
 
-この接続は、ハッシュ化されたメールアドレスのみをサポートする [ 従来の Adobe Advertising Cloud DSP 接続 ](adobe-advertising-cloud-connection-legacy.md) に代わるものです。
+この接続は、ハッシュ化されたメールアドレスのみをサポートする [&#x200B; 従来の Adobe Advertising Cloud DSP 接続 &#x200B;](adobe-advertising-cloud-connection-legacy.md) に代わるものです。
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ Adobe Advertising Cloud Demand-Side Platform（DSP）の宛先を使用すると
 
    * [!DNL RampID] および [!DNL UID2.0] の場合、プロファイルには、ハッシュ化されたメール ID が含まれている必要があります。
 
-   * Cookie の場合、[!DNL Web SDK] データストリームまたは [!DNL Experience Cloud ID Service] で cookie 同期プロセスを設定します。 以下の [Cookie を共有するための ID 同期の設定 ](#cookie-sync) を参照してください。
+   * Cookie の場合、[!DNL Web SDK] データストリームまたは [!DNL Experience Cloud ID Service] で cookie 同期プロセスを設定します。 以下の [Cookie を共有するための ID 同期の設定 &#x200B;](#cookie-sync) を参照してください。
 
    * MAID を持つプロファイルの場合：
 
@@ -58,21 +58,21 @@ Adobe Advertising Cloud Demand-Side Platform（DSP）の宛先を使用すると
 
 * Experience Platform アカウントのExperience Cloud組織 ID。 お使いの ID は、Adobe Real-Time Customer Data Platform（Real-Time CDP）のユーザープロファイルページで確認できます。
 
-* Campaign アクティベーション用のオーディエンスを受け取る [DSPの ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)Real-Time CDP ソース」。 Adobe アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
+* Campaign アクティベーション用のオーディエンスを受け取る [DSPの &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)Real-Time CDP ソース」。 Adobe アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
 
 * [!DNL DSP] アカウントまたは広告主のソースキー。[Real-Time CDP ソースが  [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) で作成されたときに生成されます。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でこれを使用して、Advertising Cloud DSP の宛先への宛先接続を作成します。
 
 ### Cookie を共有するための ID 同期の設定 {#cookie-sync}
 
-ID 同期は、サードパーティ cookie を共有するための前提条件です。 [!DNL Web SDK] データストリームまたは [!DNL Experience Cloud ID Service] ークフローを使用して、cookie 同期プロセスを設定します。 サードパーティ cookie の ID 処理について詳しくは、[ サードパーティ cookie の統合に基づくAdvertisingの宛先 ](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations) を参照してください。
+ID 同期は、サードパーティ cookie を共有するための前提条件です。 [!DNL Web SDK] データストリームまたは [!DNL Experience Cloud ID Service] ークフローを使用して、cookie 同期プロセスを設定します。 サードパーティ cookie の ID 処理について詳しくは、[&#x200B; サードパーティ cookie の統合に基づくAdvertisingの宛先 &#x200B;](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations) を参照してください。
 
 **[!DNL Web SDK]** とのサードパーティ ID 同期を有効にする
 
-[!DNL Experience Platform Web SDK] を使用している場合は、詳細設定で [!UICONTROL Third Party ID Sync] オプションを設定して、データストリームでサードパーティ ID の同期を有効にします。 手順については、データストリームに関するドキュメントの [ 詳細オプションの設定 ](/help/datastreams/configure.md#advanced-options) を参照してください。
+[!DNL Experience Platform Web SDK] を使用している場合は、詳細設定で [!UICONTROL Third Party ID Sync] オプションを設定して、データストリームでサードパーティ ID の同期を有効にします。 手順については、データストリームに関するドキュメントの [&#x200B; 詳細オプションの設定 &#x200B;](/help/datastreams/configure.md#advanced-options) を参照してください。
 
 **[!DNL Experience Cloud ID Service]** とのサードパーティ ID 同期を有効にする
 
-[!DNL Experience Platform] で [!DNL Experience Cloud ID Service] タグを使用している場合は、[Experience Cloud ID サービス拡張機能 ](/help/tags/extensions/client/id-service/overview.md) を使用してサードパーティ ID 同期を設定します。 これにより、Real-Time CDPからオーディエンスをアクティベートする際に、指定された ECID に一致したAdobe Advertising Cookie を使用できるようになります。
+[!DNL Experience Platform] で [!DNL Experience Cloud ID Service] タグを使用している場合は、[Experience Cloud ID サービス拡張機能 &#x200B;](/help/tags/extensions/client/id-service/overview.md) を使用してサードパーティ ID 同期を設定します。 これにより、Real-Time CDPからオーディエンスをアクティベートする際に、指定された ECID に一致したAdobe Advertising Cookie を使用できるようになります。
 
 ## サポートされている ID {#supported-identities}
 
@@ -94,8 +94,8 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -103,10 +103,10 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 | -------------------- | --------- | ----------- | --------- |
-| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -125,17 +125,17 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 >[!IMPORTANT]
 >
->宛先に接続するには、Experience Platformの **[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、Experience Platformの **[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-宛先に接続するには、Experience Platform ユーザーインターフェイスを使用して [ 宛先接続の作成 ](/help/destinations/ui/connect-destination.md) の手順に従います。 宛先設定ワークフローで、以下のサブセクションにリストされているフィールドに入力します。
+宛先に接続するには、Experience Platform ユーザーインターフェイスを使用して [&#x200B; 宛先接続の作成 &#x200B;](/help/destinations/ui/connect-destination.md) の手順に従います。 宛先設定ワークフローで、以下のサブセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
 宛先に接続するには、「[!UICONTROL Connection type]」セクションで次のパラメーターを指定し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[Real-Time CDP ソースがDSP ユーザーインターフェイス ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) で作成されたときに生成されます。 Adobe アカウントチームがソースを作成すると、このキーが共有されます。
+* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[Real-Time CDP ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) で作成されたときに生成されます。 Adobe アカウントチームがソースを作成すると、このキーが共有されます。
 
-![ 「アカウント」または「広告主キー」フィールドを示す「接続タイプ」セクションのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![&#x200B; 「アカウント」または「広告主キー」フィールドを示す「接続タイプ」セクションのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -144,7 +144,7 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
 
-![ 名前と説明の入力を示す宛先詳細フィールドのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![&#x200B; 名前と説明の入力を示す宛先詳細フィールドのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -156,8 +156,8 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* ID を書き出すには、**[!UICONTROL View Identity Graph]** アクセス制御権限 [ が必要 ](/help/access-control/home.md#permissions) す。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* ID を書き出すには、**[!UICONTROL View Identity Graph]** アクセス制御権限 [&#x200B; が必要 &#x200B;](/help/access-control/home.md#permissions) す。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -165,7 +165,7 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 Adobe Advertising DSPに送信する ID を選択できます。 デフォルトでは、広告主の cookie 識別子が選択されます。 [!UICONTROL Hashed Email]、[!UICONTROL IDFA]、[!UICONTROL GAID] の追加も選択できます。
 
-手順については、[ 属性と ID のマッピング ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) を参照してください。
+手順については、[&#x200B; 属性と ID のマッピング &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) を参照してください。
 
 ![Cookie 識別子、ハッシュ化されたメール、IDFA および GAID の各オプションを示す、ID マッピングセクションのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
 
@@ -177,8 +177,8 @@ Adobe Advertising DSPに送信する ID を選択できます。 デフォルト
 
 * DSPでは、オーディエンスは、**[!UICONTROL Audiences]**/**[!UICONTROL All Audiences]** またはプレースメント設定の **[!UICONTROL Audience Targeting]** セクション内からオーディエンスを作成または編集する際に使用できます。 オーディエンスは、[!UICONTROL Adobe Segments] フォルダーの下の「[!UICONTROL Real-Time CDP]」タブに表示されます。
 
-![DSP オーディエンス設定のReal-Time CDP オーディエンス ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![DSP オーディエンス設定のReal-Time CDP オーディエンス &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[ データガバナンスの概要 ](/help/data-governance/home.md) を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/home.md) を参照してください。
