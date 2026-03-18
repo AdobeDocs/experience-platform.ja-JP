@@ -58,9 +58,9 @@ Adobe Advertising Cloud Demand-Side Platform（DSP）の宛先を使用すると
 
 * Experience Platform アカウントのExperience Cloud組織 ID。 お使いの ID は、Adobe Real-Time Customer Data Platform（Real-Time CDP）のユーザープロファイルページで確認できます。
 
-* Campaign アクティベーション用のオーディエンスを受け取る [DSPの &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)Real-Time CDP ソース」。 Adobe アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
+* Campaign アクティベーション用のオーディエンスを受け取る [DSPの &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja)Real-Time CDP ソース」。 Adobe アカウントチームは、Experience Cloud組織 ID を使用してソースを作成します。
 
-* [!DNL DSP] アカウントまたは広告主のソースキー。[Real-Time CDP ソースが  [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) で作成されたときに生成されます。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でこれを使用して、Advertising Cloud DSP の宛先への宛先接続を作成します。
+* [!DNL DSP] アカウントまたは広告主のソースキー。[Real-Time CDP ソースが  [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja) で作成されたときに生成されます。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でこれを使用して、Advertising Cloud DSP の宛先への宛先接続を作成します。
 
 ### Cookie を共有するための ID 同期の設定 {#cookie-sync}
 
@@ -133,7 +133,7 @@ Adobe Advertising Cloud DSP 宛先は、以下の表で説明する ID のアク
 
 宛先に接続するには、「[!UICONTROL Connection type]」セクションで次のパラメーターを指定し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[Real-Time CDP ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) で作成されたときに生成されます。 Adobe アカウントチームがソースを作成すると、このキーが共有されます。
+* **[!UICONTROL Account or Advertiser Key]**：この [!UICONTROL Source Key] は、[Real-Time CDP ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ja) で作成されたときに生成されます。 Adobe アカウントチームがソースを作成すると、このキーが共有されます。
 
 ![&#x200B; 「アカウント」または「広告主キー」フィールドを示す「接続タイプ」セクションのスクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
