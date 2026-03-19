@@ -2,10 +2,10 @@
 description: このページでは、/testing/destinationInstance API エンドポイントを使用して、テスト結果の完全な詳細を表示する方法について説明します。この API エンドポイントは、データフローを監視するためのフローサービス API を使用する際に取得するのと同じ結果を返します。
 title: 詳細なアクティベーション結果の表示
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 92%
+source-wordcount: '545'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 92%
 
 ## はじめに {#getting-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する宛先インスタンスの ID。この ID の取得方法について詳しくは、[前提条件](#prerequisites)の節を参照してください。 |
 
+{style="table-layout:auto"}
+
 | クエリ文字列パラメーター | 説明 |
 | -------- | ----------- |
 | `flowRunIds` | アクティブ化されたオーディエンスに対応するフロー実行 ID。[宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、フロー実行 ID を見つけることができます。 |
+
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -213,9 +217,9 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、ファイルベースの宛先設定をテストして、アクティベーション結果の完全な詳細を表示する方法を確認しました。
 

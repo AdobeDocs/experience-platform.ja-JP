@@ -3,7 +3,7 @@ keywords: 音声宛先；音声宛先
 title: お客様の声の宛先の概要
 description: Voice プラットフォームは、音声メッセージ、通話データ、チャットの会話など、様々なソースからデータを収集して照合します。照合された情報をフィルタリングおよび分析して、会社が要件を満たすように Web サイトを最適化できるようにします。
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 83%
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 # お客様の声の宛先の概要 {#voice-of-customer-destinations}
 
-## 概要
+## 概要 {#overview}
 
 Voice プラットフォームは、音声メッセージ、通話データ、チャットの会話など、様々なソースからデータを収集して照合します。照合された情報をフィルタリングおよび分析して、会社が要件を満たすように Web サイトを最適化できるようにします。
 

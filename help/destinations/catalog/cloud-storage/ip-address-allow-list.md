@@ -1,12 +1,12 @@
 ---
-title: ファイルベースのクラウドストレージの宛先の IP アドレスの許可リスト
+title: 許可リストに加える ファイルベースのクラウドストレージの宛先の IP アドレス。
 type: Documentation
 description: このページでは、Experience Platformからクラウドストレージの宛先に安全にデータを書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 5%
+source-wordcount: '288'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->このページに記載されている IP 範囲は、ファイルベースのクラウドストレージ宛先 *Azure Blob*、[!UICONTROL Azure Data Lake Storage Gen2]、[!UICONTROL Data Landing Zone]、Microsoft Azure でホストされている SFTP サーバーでは [!UICONTROL &#x200B; サポートされていません &#x200B;]。
+>このページで説明している IP 範囲は、Microsoft Azureでホストされているファイルベースのクラウドストレージの宛先 *、*、[!UICONTROL Azure Blob] および SFTP サーバーでは [!UICONTROL Azure Data Lake Storage Gen2] サポートされていません [!UICONTROL Data Landing Zone]。
 
 ## 概要 {#overview}
 
@@ -43,7 +43,7 @@ Adobeでは、クラウドストレージの宛先接続を使用する前に、
 
 ## AWSを使用している米国のお客様 {#aws}
 
-以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 &#x200B;](../../../landing/multi-cloud.md) を参照してください。
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
 
 >[!NOTE]
 >

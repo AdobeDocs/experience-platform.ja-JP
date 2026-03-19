@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先設定の更新
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 95%
+source-wordcount: '369'
+ht-degree: 85%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 95%
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先設定の更新 {#update}
 
@@ -59,6 +59,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | パラメーター | 説明 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 更新する宛先設定の ID。既存の宛先設定およびその関連する `{INSTANCE_ID}` を取得するには、[宛先設定の取得](retrieve-destination-configuration.md)を参照してください。 |
+
+{style="table-layout:auto"}
 
 +++リクエスト
 
@@ -207,9 +209,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、Destination SDK `/authoring/destinations` API エンドポイントを使用した、宛先設定の更新方法を確認しました。
 

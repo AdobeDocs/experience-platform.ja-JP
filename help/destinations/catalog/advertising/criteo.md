@@ -3,9 +3,9 @@ keywords: 広告；criteo;
 title: Criteo 接続
 description: Criteo は、信頼性の高い効果的な広告を強化し、オープンインターネットを通じてすべての消費者により豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI により、Criteo はショッピングジャーニー全体の各タッチポイントが適切な広告で適切なタイミングで顧客に届くようにパーソナライズされるようにします。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1168'
 ht-degree: 21%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、Criteo によって作成および管理されます。 お問い合わせや更新のリクエストについては、Criteo に直接お問い合わせください [&#x200B; こちら &#x200B;](mailto:criteoTechnicalPartnerships@criteo.com)。
+>この宛先コネクタとドキュメントページは、Criteo によって作成および管理されます。 お問い合わせや更新のリクエストについては、Criteo に直接お問い合わせください [ こちら ](mailto:criteoTechnicalPartnerships@criteo.com)。
 
 Criteo は、信頼性の高い効果的な広告を強化し、オープンインターネットを通じてすべての消費者により豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI により、Criteo はショッピングジャーニー全体の各タッチポイントが適切な広告で適切なタイミングで顧客に届くようにパーソナライズされるようにします。
 
 ## 前提条件 {#prerequisites}
 
-* [Criteo 管理センター &#x200B;](https://marketing.criteo.com) の管理者ユーザーアカウントが必要です。
+* [Criteo 管理センター ](https://marketing.criteo.com) の管理者ユーザーアカウントが必要です。
 * Criteo 広告主 ID が必要です（この ID をお持ちでない場合は、Criteo 担当者にお問い合わせください）。
 * 識別子として使用する場合は、[!DNL GUM caller ID] を指定する必要 [!DNL GUM ID] あります。
 
@@ -35,7 +35,7 @@ Criteo は、信頼性の高い効果的な広告を強化し、オープンイ�
 
 ## サポートされている ID {#supported-identities}
 
-Criteo では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+Criteo では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
@@ -48,8 +48,8 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -59,10 +59,10 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -80,37 +80,37 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 [!DNL Criteo] の宛先の使用方法をより深く理解するために、Adobe Experience Platformのお客様が [!DNL Criteo] で達成できる目標を次に示します。
 
-### ユースケース 1：トラフィックの取得
+### ユースケース 1：トラフィックの取得 {#use-case-1}
 
 関連する製品オファーと柔軟なクリエイティブでビジネスを紹介します。 インテリジェントな商品レコメンデーションを使用すると、トリガーの訪問やエンゲージメントの可能性が最も高い商品が自動的に広告に表示されます。 柔軟なターゲティングにより、Criteo のコマースデータセット、または独自の見込み客リストやAdobe CDP セグメントからオーディエンスを構築できます。
 
-### ユースケース 2 :Web サイトのコンバージョンを増やす
+### ユースケース 2 :Web サイトのコンバージョンを増やす {#use-case-2}
 
 訪問者が web サイトを離れると、リターゲティング広告で欠落しているものを思い出させ、次にどこへ行っても、特別なお得な情報や非常に関連性の高いオファーを表示してコンバージョンを高めます。 Adobe CDP オーディエンスを結び付けて、既存の顧客を再エンゲージしたり、最も常連客に近い顧客をターゲットに設定したりします。
 
 ## Criteo への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
-### Criteo への認証
+### Criteo への認証 {#authenticate}
 
 接続の手順は次のとおりです。
 
 1. Adobe Experience Platformにログインし、Criteo の宛先に接続します。
 
-   ![&#x200B; ログイン &#x200B;](../../assets/catalog/advertising/criteo/connect-destination.png)
+   ![ ログイン ](../../assets/catalog/advertising/criteo/connect-destination.png)
 
 1. 接続を認証するために、Criteo にリダイレクトされます。 最初に Criteo 資格情報を使用してログインする必要がある場合があります。
 
-   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![Criteo ログイン &#x200B;](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![Criteo ログイン ](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### 接続パラメーター {#connection-parameters}
@@ -123,7 +123,7 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 | --- | --- | --- |
 | 名前 | 今後この宛先を認識するのに役立つ名前。 ここで選択した名前は、Criteo 管理センターの [!DNL Audience] 名となり、後で変更することはできません。 | ○ |
 | 説明 | 今後この宛先を識別するのに役立つ説明。 | × |
-| 広告主 ID | 組織の Criteo 広告主 ID。 この情報を入手するには、Criteo 担当営業にお問い合わせください。 | ○ |
+| 広告主 ID | 組織の Criteo 広告主 ID。 この情報を入手するには、Criteo のアカウントマネージャーにお問い合わせください。 | ○ |
 | Criteo [!DNL GUM caller ID] | 組織の [!DNL GUM Caller ID]。 適切な [!DNL GUM Caller ID] については、Criteo アカウントチームにお問い合わせいただくか、必要に応じてこの [!DNL GUM] 同期に関する詳細情報をご確認ください。 | はい、識別子と [!DNL GUM ID] て指定された場合は常に実行されます |
 
 ### アラートの有効化 {#enable-alerts}
@@ -135,15 +135,15 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 ## この宛先に対してオーディエンスをアクティブ化 {#activate-segments}
 
 >[!IMPORTANT]
-> 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-書き出されたオーディエンスは、[Criteo 管理センター &#x200B;](https://marketing.criteo.com/audience-manager/dashboard) で確認できます。
+書き出されたオーディエンスは、[Criteo 管理センター ](https://marketing.criteo.com/audience-manager/dashboard) で確認できます。
 
 [!DNL Criteo] 接続で受け取ったユーザープロファイルを追加するリクエスト本文は、次のようになります。
 
@@ -203,9 +203,9 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 ## データの使用とガバナンス {#data-usage}
 
-Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。
+Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[ データガバナンスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja) を参照してください。
 
-## その他のリソース
+## その他のリソース {#additional-resources}
 
-* [Criteo ヘルプセンター &#x200B;](https://help.criteo.com/kb/en)
-* [Criteo デベロッパーポータル &#x200B;](https://developers.criteo.com)
+* [Criteo ヘルプセンター ](https://help.criteo.com/kb/en)
+* [Criteo デベロッパーポータル ](https://developers.criteo.com)

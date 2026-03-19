@@ -1,13 +1,13 @@
 ---
 title: Experience Platformとストリーミングの宛先におけるオーディエンスのライフサイクル
 description: Experience Platformのオーディエンス名とマッピングがストリーミング宛先プラットフォームに反映される仕組みについて説明します。
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 3%
 
 ---
-
 
 # ストリーミング宛先のオーディエンスライフサイクル
 
@@ -86,6 +86,6 @@ ht-degree: 3%
 * [Twitter カスタムオーディエンス](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### オーディエンスの削除をサポートしていない宛先
+### オーディエンスの削除をサポートしていない宛先 {#no-removal-support}
 
 上記以外の宛先については、オーディエンスのマッピングを宛先から解除すると、Experience Platformはマッピングのみを削除します。 宛先プラットフォームのオーディエンスは、パートナープラットフォームで手動で削除するまで、アクティブなままです。

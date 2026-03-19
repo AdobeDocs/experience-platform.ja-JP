@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、Pebble テンプレートを使用します。
 title: Destination SDK でサポートされる変換関数
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 100%
+source-wordcount: '551'
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 ## 前提条件 {#prerequisites}
 
-このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。変換するための [!DNL Pebble] テンプレートおよび書き出されたデータを使用する前に、Experience Platform の[プロファイルの構造](message-format.md#profile-structure)を理解する必要があります。
+このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。テンプレートを使用して書き出されたデータを変換する前に、Experience Platformの [ プロファイル ](message-format.md#profile-structure) 構造 [!DNL Pebble] を理解する必要があります。
 
 以下に説明する関数に進む前に、[ID、属性およびオーディエンスメンバーシップを変換するためのテンプレート言語の使用](message-format.md#using-templating)の節のテンプレートの例を確認してください。そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
 
@@ -55,13 +55,13 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 Destination SDK での [!DNL Pebble] 関数の使用例として、date 関数（[Pebble ドキュメントへのリンク](https://pebbletemplates.io/wiki/filter/date/)）を使用してタイムスタンプの形式を変換する方法について、以下を参照してください。
 
-### ユースケース
+### ユースケース {#date-use-case}
 
 Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) 値から宛先で優先される別の値に `lastQualificationTime` タイムスタンプを変更します。
 
-### 例
+### 例 {#date-example}
 
-#### 入力
+#### 入力 {#date-input}
 
 ```json
 {
@@ -69,13 +69,13 @@ Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wiki
 }
 ```
 
-#### 形式
+#### 形式 {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### 出力
+#### 出力 {#date-output}
 
 ```json
 {
@@ -89,13 +89,13 @@ Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wiki
 
 ### `addedSegments` および `removedSegments` 関数 {#addedsegments-removedsegments-functions}
 
-#### ユースケース
+#### ユースケース {#segments-use-case}
 
 これらの関数は、プロファイルに追加またはプロファイルから削除されたオーディエンスのリストを取得するために使用できます。
 
-#### 例
+#### 例 {#segments-example}
 
-##### 入力
+##### 入力 {#segments-input}
 
 ```json
 {
@@ -128,13 +128,13 @@ Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wiki
 }
 ```
 
-##### 形式
+##### 形式 {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### 出力
+##### 出力 {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>

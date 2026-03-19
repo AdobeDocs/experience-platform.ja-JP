@@ -2,7 +2,7 @@
 description: 宛先テスト API を使用して、宛先を公開する前にストリーミング宛先メッセージ変換テンプレートをテストする方法を説明します。
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
@@ -167,6 +167,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 書き出されたプロファイルが宛先で想定されているデータ形式に一致するまで、テンプレートを編集して、レンダリングテンプレート API エンドポイントへの呼び出しを行います。
 
-## 文字がエスケープされたテンプレートの宛先サーバー設定への追加
+## 文字がエスケープされたテンプレートの宛先サーバー設定への追加 {#add-template-to-server-config}
 
 メッセージ変換テンプレートに満足したら、[宛先サーバー設定](../../authoring-api/destination-server/create-destination-server.md)の `httpTemplate.requestBody.value` に追加します。

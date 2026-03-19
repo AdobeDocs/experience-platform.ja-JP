@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先設定の削除
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 85%
+source-wordcount: '277'
+ht-degree: 72%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 85%
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先設定の削除 {#delete}
 
-削除したい宛先設定の [&#x200B; で &#x200B;](create-destination-configuration.md) エンドポイントに `DELETE` リクエストを行うことで、`/authoring/destinations` 既存 `{INSTANCE_ID}` の宛先設定を削除できます。
+削除したい宛先設定の [ で ](create-destination-configuration.md) エンドポイントに `DELETE` リクエストを行うことで、`/authoring/destinations` 既存 `{INSTANCE_ID}` の宛先設定を削除できます。
 
 >[!TIP]
 >
@@ -40,6 +40,8 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | 削除する宛先設定の `ID`。 |
+
+{style="table-layout:auto"}
 
 +++リクエスト
 
@@ -58,9 +60,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、Destination SDK `/authoring/destinations` API エンドポイントを使用した、既存の宛先設定の削除方法を確認しました。
 

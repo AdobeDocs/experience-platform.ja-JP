@@ -2,10 +2,10 @@
 description: このページでは、/authoring/testing/template/render エンドポイントを使用して、宛先設定で定義された、テンプレート化された顧客データフィールドの外観を視覚化する方法について説明します。
 title: テンプレート化された顧客フィールドの検証
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 88%
+source-wordcount: '386'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 88%
 
 ## はじめに {#getting-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -80,6 +80,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 | `destinationId` | テストしている[宛先設定](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)の ID。 |
 | `templates` | [宛先サーバー設定](../../authoring-api/destination-server/create-destination-server.md)で定義された、テンプレート化されたフィールド名。 |
 
+{style="table-layout:auto"}
+
 **応答**
 
 応答が成功すると、`HTTP 200 OK` ステータスが返され、本文には、テンプレート化されたフィールドに対するランダムに生成された値が含まれます。
@@ -98,7 +100,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

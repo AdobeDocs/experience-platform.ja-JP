@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、メッセージ変換テンプレートに基づいて、ストリーミング宛先への出力を検証する方法を説明します。
 title: 書き出されたプロファイル構造の検証
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 98%
+source-wordcount: '792'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 98%
 
 ## レンダリングテンプレート API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## メッセージ変換テンプレートに基づいて、書き出されたプロファイルをレンダリング {#render-exported-data}
 
@@ -186,7 +186,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **リクエスト**
 
 
-以下のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのオーディエンス資格と 5 つの ID が含まれます。[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
+以下のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのオーディエンス選定と 5 つの ID が含まれます。[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -1066,7 +1066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

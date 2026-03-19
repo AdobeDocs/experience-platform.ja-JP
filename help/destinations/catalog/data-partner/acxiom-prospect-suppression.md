@@ -2,11 +2,11 @@
 title: Acxiom Prospect-Suppression
 description: ファーストパーティオーディエンスを Acxiom の宛先にエクスポートして、Acxiom が既知の顧客やコンバート済み顧客を抑制できるようにします。 次に、Acxiom ソース・コネクタを使用して、Acxiom から見込み客リストを取り込み、アクティブ化します。既知のお客様やコンバート済みのお客様は削除されます。
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: ベータ版
+badge: label="ベータ版" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1559'
 ht-degree: 23%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 23%
 
 [!DNL Acxiom Prospect-Suppression] を使用すると、可能な限り生産的な見込み客オーディエンスを提供できます。 このコネクタは、Real-Time Customer Data Platformからファーストパーティデータを安全に書き出し、賞を受賞したハイジーンおよび ID 解決を通じて実行され、抑制リストとして使用されるデータファイルを生成します。 これは [!DNL Acxiom Global] データベースと照合され、見込み客リストをインポート用にカスタマイズできます。 次に、[[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) ソース・コネクタを使用して、Acxiom からReal-Time CDPに見込み客リストを戻し、既知のお客様またはコンバート済みのお客様を削除します。
 
-![&#x200B; ファーストパーティ・データを Acxiom にエクスポートし、見込み客データをReal-Time CDPにインポートするためのマーケティング図 &#x200B;](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+![ ファーストパーティ・データを Acxiom にエクスポートし、見込み客データをReal-Time CDPにインポートするためのマーケティング図 ](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom は、業界で最もパフォーマンスの高いオーディエンスを提供し、パーソナライズされたエクスペリエンスの提供に特化した 12,000 を超えるグローバルなデータ属性から成る最大のカタログを提供します。 高品質のデータを無限に組み合わせて利用し、オーディエンスを作成および配布して、特定のキャンペーンニーズを満たします。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、[!DNL Acxiom Prospect-Suppression] しい宛先接続とデータフローを作成する手順を説明します。 このコネクタは、Amazon S3 をドロップ・ポイントとして使用して、Acxiom 見込み客サービスにデータを配信するために使用されます。 Amazon S3 ドロップ・ポイントへのファイルのエクスポートを開始したら、Acxiom アカウント担当者にお問い合わせください。
 
-![Acxiom の宛先が選択されている宛先カタログ &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
+![Acxiom の宛先が選択されている宛先カタログ ](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## ユースケース {#use-cases}
 
@@ -49,8 +49,8 @@ Acxiom のサービスは、ファイルを検索して取得し、追加の選�
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]** と **[!UICONTROL Manage Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* 宛先に接続するには、**[!UICONTROL View Destinations]** と **[!UICONTROL Manage Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -58,8 +58,8 @@ Acxiom のサービスは、ファイルを検索して取得し、追加の選�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,10 +70,10 @@ Acxiom のサービスは、ファイルを検索して取得し、追加の選�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -92,8 +92,8 @@ Acxiom のサービスは、ファイルを検索して取得し、追加の選�
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -101,7 +101,7 @@ Acxiom のサービスは、ファイルを検索して取得し、追加の選�
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-Experience Platform上のバケットにアクセスするには、次の資格情報に対して有効な値を指定する必要があります。
+Experience Platformでバケットにアクセスするには、次の資格情報に有効な値を指定する必要があります。
 
 | 資格情報 | 説明 |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -109,23 +109,23 @@ Experience Platform上のバケットにアクセスするには、次の資格�
 | S3 シークレットキー | バケットの秘密鍵 ID。 この値は [!DNL Acxiom] チームから取得できます。 |
 | バケット名 | これは、ファイルが共有されるバケットです。 この値は [!DNL Acxiom] チームから取得できます。 |
 
-### 新しいアカウント
+### 新しいアカウント {#new-account}
 
 Acxiom Managed S3 の新しい場所を定義するには、以下の手順に従ってください。
 
-![&#x200B; 新規アカウント &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+![ 新規アカウント ](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### 既存のアカウント
+### 既存のアカウント {#existing-account}
 
 [!DNL Acxiom Prospect Suppression] の宛先を使用して既に定義されているアカウントがリストポップアップに表示されます。 選択すると、右側のパネルにアカウントの詳細が表示されます。 **[!UICONTROL Destinations]**/**[!UICONTROL Accounts]** に移動すると、UI から例を表示できます。
 
-![&#x200B; 既存のアカウント &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
+![ 既存のアカウント ](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先の詳細 &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![ 宛先の詳細 ](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
 * **名前（必須）** – 宛先を保存する名前
 * **説明** – 宛先の目的の短い説明
@@ -135,9 +135,9 @@ Acxiom Managed S3 の新しい場所を定義するには、以下の手順に�
 
 >[!IMPORTANT]
 >
->CSV オプション *区切り文字*、*引用符文字*、*エスケープ文字*、*空の値*、*Null 値*、*圧縮形式*、*マニフェストファイルを含める* を選択すると、次のドキュメントでこれらの設定について詳しく説明します [&#x200B; 書式設定オプションの設定 &#x200B;](../../ui/batch-destinations-file-formatting-options.md)。
+>CSV オプション *区切り文字*、*引用符文字*、*エスケープ文字*、*空の値*、*Null 値*、*圧縮形式*、*マニフェストファイルを含める* を選択すると、次のドキュメントでこれらの設定について詳しく説明します [ 書式設定オプションの設定 ](../../ui/batch-destinations-file-formatting-options.md)。
 
-![CSV オプション &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![CSV オプション ](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -149,12 +149,12 @@ Acxiom Managed S3 の新しい場所を定義するには、以下の手順に�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
-### マッピングの提案
+### マッピングの提案 {#mapping-suggestions}
 
 処理には name 要素と address 要素が必要ですが、すべての要素が必要なわけではなく、できるだけ多くの情報を提供することが、照合の成功に役立ちます。  以下の表に、マッピングの提案を示します。この提案は、Acxiom の処理で使用され、顧客がプロファイル属性をマッピングできる宛先側の属性をリストしています。  これは、すべての要素が必要なわけではなく、ソースの値はアカウントのニーズに応じるので、提案として扱う必要があります。
 
@@ -175,7 +175,7 @@ Acxiom Managed S3 の新しい場所を定義するには、以下の手順に�
 >
 >上記以外の追加フィールドはエクスポートに含まれますが、Acxiom の処理では無視されます。
 
-## データフローのレビュー
+## データフローのレビュー {#review-dataflow}
 
 送信前にデータフローの概要を確認するためのレビューページを使用する
 
@@ -185,7 +185,7 @@ Acxiom Managed S3 の新しい場所を定義するには、以下の手順に�
 
 データが正常に書き出されたかどうかを確認するには、[!DNL Amazon S3 Storage] バケットを確認し、書き出したファイルに、期待されたプロファイルの母集団が含まれていることを確認します。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、Experience Platformから [!DNL Acxiom] managed S3 の場所にバッチデータを書き出すデータフローを正常に作成しました。 処理をセットアップできるように、アカウント名、ファイル名、バケット・パスを Acxiom 担当者に連絡する必要があります。
 

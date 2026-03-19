@@ -4,10 +4,10 @@ title: クラウドストレージ宛先の API 移行ガイド
 description: 追加機能を備えた新しいクラウドストレージの宛先カードへの移行の一環として、クラウドストレージの宛先をアクティブ化するワークフローの変更について説明します。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 2%
+source-wordcount: '1333'
+ht-degree: 3%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->* このページで説明される機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
+>* このページで説明される機能は、Real-Time CDP PrimeおよびUltimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 ## 移行コンテキスト {#migration-context}
 
-[2022 年 10 月 &#x200B;](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) 以降は、新しいファイル書き出し機能を使用して、Experience Platformからファイルを書き出す際に拡張カスタマイズ機能にアクセスできます。
+[2022 年 10 月 ](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) 以降は、新しいファイル書き出し機能を使用して、Experience Platformからファイルを書き出す際に拡張カスタマイズ機能にアクセスできます。
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
-* [&#x200B; 新しいマッピングステップ &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) を使用して、書き出すファイルにカスタムファイルヘッダーを設定する機能。
-* 書き出されたファイルの [&#x200B; ファイルタイプ &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) を選択する機能。
-* [&#x200B; 書き出された CSV データファイルの形式をカスタマイズ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) する機能。
+* [ 新しいマッピングステップ ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) を使用して、書き出すファイルにカスタムファイルヘッダーを設定する機能。
+* 書き出されたファイルの [ ファイルタイプ ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) を選択する機能。
+* [ 書き出された CSV データファイルの形式をカスタマイズ ](/help/destinations/ui/batch-destinations-file-formatting-options.md) する機能。
 
 この機能は、以下に示すベータ版のクラウドストレージカードでサポートされています。
 
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-現在、Experience PlatformUI では、3 つの宛先のうち 2 つを並べて表示できます。 次に、[!DNL Amazon S3] の従来の宛先と新しい宛先を示します。 いずれの場合も、**Beta** が付いているカードが新しい出力先カードになります。
+現在、Experience Platform UI では、3 つの宛先のうち 2 つを並べて宛先カードを表示できます。 次に、[!DNL Amazon S3] の従来の宛先と新しい宛先を示します。 いずれの場合も、**Beta** が付いているカードが新しい出力先カードになります。
 
 ![2 つの Amazon S3 の宛先カードを並べて表示した画像。](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -50,9 +50,9 @@ Commenting out the three net new cloud storage destinations
 
 ## このページの適用先 {#who-this-applies-to}
 
-既に [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してプロファイルをAmazon S3、Azure Blob または SFTP クラウドストレージの宛先に書き出している場合は、この API 移行ガイドが適用されます。
+既に [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してプロファイルをAmazon S3、Azure Blob または SFTP クラウドストレージ宛先に書き出している場合は、この API 移行ガイドが適用されます。
 
-Experience Platformから書き出したファイルの上部で、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP クラウドストレージの場所でスクリプトが実行されている場合、新しいカードの接続とフローの仕様、およびマッピングステップに関して、一部のパラメーターが変化していることに注意してください。
+Experience Platformから書き出したファイルの上に、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP クラウドストレージの場所でスクリプトが実行されている場合、新しいカードの接続とフローの仕様、およびマッピングステップに関して、一部のパラメーターが変化していることに注意してください。
 
 例えば、[!DNL Amazon S3] 宛先への宛先データフローをフィルタリングするスクリプトを使用している場合、[!DNL Amazon S3] 宛先の接続仕様に基づいて、接続仕様が変更されるので、フィルターを更新する必要があります。
 
@@ -68,13 +68,13 @@ TBD if we keep this link but will likely remove it
 
 -->
 * [オーディエンスをクラウドストレージの宛先に書き出す API チュートリアル](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [Destinations Flow Service API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [Destinations Flow Service API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## 後方互換性のない変更の概要 {#summary-backwards-incompatible-changes}
 
-新しい宛先への移行に伴い、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP の各宛先への既存のデータフローはすべて、新しいターゲット接続とベース接続に割り当てられます。 プロファイルマッピングの手順も変更されます。 後方互換性のない変更については、各宛先に関して以下の節で要約します。 以下の図の用語について詳しくは、[&#x200B; 宛先の用語集 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) も参照してください。
+新しい宛先への移行に伴い、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP の各宛先への既存のデータフローはすべて、新しいターゲット接続とベース接続に割り当てられます。 プロファイルマッピングの手順も変更されます。 後方互換性のない変更については、各宛先に関して以下の節で要約します。 以下の図の用語について詳しくは、[ 宛先の用語集 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) も参照してください。
 
-![&#x200B; 移行ガイドの概要画像 &#x200B;](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
+![ 移行ガイドの概要画像 ](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
 ### [!DNL Amazon S3] の宛先に対する後方互換性のない変更 {#changes-amazon-s3-destination}
 
@@ -93,7 +93,7 @@ TBD if we keep this link but will likely remove it
 
 >[!TAB  レガシーベース接続とターゲット接続 ]
 
-+++[!DNL Amazon S3] のレガシ [!DNL base connection] を表示
++++[!DNL base connection] のレガシ [!DNL Amazon S3] の表示
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -126,7 +126,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL Amazon S3] のレガシ [!DNL target connection] を表示
++++[!DNL target connection] のレガシ [!DNL Amazon S3] の表示
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -166,7 +166,7 @@ TBD if we keep this link but will likely remove it
 
 >[!TAB  新しいベース接続とターゲット接続 ]
 
-+++[!DNL Amazon S3] の新しい [!DNL base connection] を表示する
++++[!DNL base connection] の新しい [!DNL Amazon S3] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -199,7 +199,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL Amazon S3] の新しい [!DNL target connection] を表示する
++++[!DNL target connection] の新しい [!DNL Amazon S3] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="12, 16-27"}
 {
@@ -265,7 +265,7 @@ TBD if we keep this link but will likely remove it
 
 >[!TAB  レガシーベース接続とターゲット接続 ]
 
-+++[!DNL Azure Blob] のレガシ [!DNL base connection] を表示
++++[!DNL base connection] のレガシ [!DNL Azure Blob] の表示
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -297,7 +297,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL Azure Blob] のレガシ [!DNL target connection] を表示
++++[!DNL target connection] のレガシ [!DNL Azure Blob] の表示
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -338,7 +338,7 @@ TBD if we keep this link but will likely remove it
 
 >[!TAB  新しいベース接続とターゲット接続 ]
 
-+++[!DNL Azure Blob] の新しい [!DNL base connection] を表示する
++++[!DNL base connection] の新しい [!DNL Azure Blob] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -370,7 +370,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL Azure Blob] の新しい [!DNL target connection] を表示する
++++[!DNL target connection] の新しい [!DNL Azure Blob] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -473,7 +473,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL SFTP - SSH key] 認証のためのレガシ [!DNL base connection] ールの表示
++++[!DNL base connection] 認証用のレガシ [!DNL SFTP - SSH key] ールの表示
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -548,7 +548,7 @@ TBD if we keep this link but will likely remove it
 
 >[!TAB  新しいベース接続とターゲット接続 ]
 
-+++[!DNL SFTP - password authentication] の新しい [!DNL base connection] を表示する
++++[!DNL base connection] の新しい [!DNL SFTP - password authentication] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -583,7 +583,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++[!DNL SFTP - SSH key] 認証の新しい [!DNL base connection] を表示する
++++[!DNL base connection] 認証の新しい [!DNL SFTP - SSH key] を表示します
 
 ```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
@@ -617,7 +617,7 @@ TBD if we keep this link but will likely remove it
 
 +++
 
-+++SFTP 用の新しい [!DNL target connection] の表示
++++SFTP の新しい [!DNL target connection] を表示
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -670,17 +670,17 @@ TBD if we keep this link but will likely remove it
 
 3 つのすべての宛先のプロファイルセレクターの手順は、必要に応じて、書き出したファイルの列ヘッダーの名前を変更できるマッピング手順に置き換えられます。 古い属性セレクターの手順を左側に、新しいマッピングの手順を右側に、それぞれ以下の画像を並べて参照してください。
 
-![&#x200B; 移行ガイドの概要画像 &#x200B;](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+![ 移行ガイドの概要画像 ](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
 従来の例の `profileSelectors` オブジェクトが新しい `profileMapping` オブジェクトに置き換えられることに注意してください。
 
-`profileMapping` オブジェクトの設定に関する詳細については、[API チュートリアルを参照して、クラウドストレージの宛先にデータを書き出してください &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
+`profileMapping` オブジェクトの設定に関する詳細については、[API チュートリアルを参照して、クラウドストレージの宛先にデータを書き出してください ](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
 
 >[!BEGINTABS]
 
 >[!TAB  古い変換パラメーター ]
 
-+++古い変換パラメーターの例を示します
++++古い変換パラメーターの例を表示
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
@@ -791,9 +791,9 @@ TBD if we keep this link but will likely remove it
 [!DNL Amazon S3]、[!DNL Azure Blob]、SFTP クラウドストレージの宛先を新しいカードに移行する準備として、以下に示すように、スクリプトと自動 API 呼び出しを更新する準備を行ってください。
 
 1. 2023 年 7 月 26 日（PT）までに、既存の [!DNL Amazon S3]、[!DNL Azure Blob] または SFTP クラウドストレージの宛先のスクリプトまたは自動 API 呼び出しを更新します。 従来の接続仕様またはフロー仕様を利用する自動 API 呼び出しまたはスクリプトは、新しい接続仕様またはフロー仕様に更新する必要があります。
-2. 7 月 26 日（PT）より前にスクリプトが更新されたら、Adobeアカウント担当者にお問い合わせください。
+2. 7 月 26 日（PT）より前にスクリプトが更新されたら、Adobe アカウント担当者にお問い合わせください。
 3. 例えば、`targetConnectionSpecId` をフラグとして使用すると、データフローが新しい宛先カードに移行されたかどうかを判断できます。 `if` の条件を使用してスクリプトを更新すると、`flow.inheritedAttributes.targetConnections[0].connectionSpec.id` の従来のターゲット接続仕様と更新されたターゲット接続仕様を調べて、データフローが移行されているかどうかを判断できます。 各宛先については、このページの特定の節で、従来の接続仕様 ID と新しい接続仕様 ID を確認できます。
-4. Adobeアカウントチームから、データフローが移行されるタイミングについて詳しく連絡します。
+4. Adobe アカウントチームから、データフローがいつ移行されるかについて詳しく連絡します。
 5. 7 月 26 日（PT）以降、すべてのデータフローが移行されます。 既存のすべてのデータフローに、新しいフローエンティティ（接続仕様、フロー仕様、ベース接続、ターゲット接続）が追加されます。 レガシーフローエンティティを使用するスクリプトまたは API 呼び出しは、動作を停止します。
 
 ## 移行に関するその他の考慮事項 {#other-considerations}
@@ -802,4 +802,4 @@ TBD if we keep this link but will likely remove it
 
 ## 次の手順 {#next-steps}
 
-このページを参照すると、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかがわかります。 また、Experience Platform設定でファイルを好みのクラウドストレージの宛先に書き出す API ベースのワークフローを設定する際に、参照するドキュメントページもわかります。 次に、API チュートリアルを参照して、[&#x200B; クラウドストレージの宛先へのデータの書き出し &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md) を確認できます。
+このページを参照すると、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかがわかります。 また、Experience Platformから目的のクラウドストレージの宛先にファイルを書き出す API ベースのワークフローを設定する際に、参照するドキュメントページもわかります。 次に、API チュートリアルを参照して、[ クラウドストレージの宛先へのデータの書き出し ](/help/destinations/api/activate-segments-file-based-destinations.md) を確認できます。

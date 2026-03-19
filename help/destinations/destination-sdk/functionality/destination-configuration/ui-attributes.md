@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 title: UI 属性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 83%
+source-wordcount: '796'
+ht-degree: 79%
 
 ---
 
@@ -48,6 +48,8 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 | リアルタイム（ストリーミング）統合 | ○ |
 | ファイルベースの（バッチ）統合 | ○ |
 
+{style="table-layout:auto"}
+
 ## サポートされるパラメーター {#supported-parameters}
 
 ```json
@@ -66,7 +68,7 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` の形式を使用します（`YOURDESTINATION` は宛先の名前）。Moviestar という宛先の場合、`http://www.adobe.com/go/destinations-moviestar-en` を使用します。
 
-ユーザーは、UI の宛先カタログページからドキュメントリンクを確認および訪問できます。以下の画像に示すように、宛先カードを参照してから、**[!UICONTROL その他のアクション]**&#x200B;を選択し、**[!UICONTROL ドキュメントを表示]**&#x200B;を選択する必要があります。
+ユーザーは、UI の宛先カタログページからドキュメントリンクを確認および訪問できます。以下の画像に示すように、宛先カードを参照してから **[!UICONTROL More actions]** を選択し、**[!UICONTROL View documentation]** を選択する必要があります。
 
 ![ドキュメントリンクの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 `frequency` は、宛先でサポートされているデータ書き出しのタイプを参照する文字列パラメーターです。API ベースの統合の場合は `Streaming` に設定し、宛先にファイルを書き出す場合は `Batch` に設定する。
 
-ユーザーは、各宛先接続の&#x200B;**[!UICONTROL データフロー実行]**&#x200B;ページで頻度タイプを確認できます。
+ユーザーは、各宛先接続の **[!UICONTROL Dataflow runs]** ページで頻度タイプを確認できます。
 
 ![UI の頻度タイプの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
@@ -110,9 +112,9 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 以下の画像に示すように、宛先にロゴアイコンを追加できます。
 
-![&#x200B; アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![ アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-宛先カードにロゴを追加するには、[&#x200B; レビュー用に宛先を送信 &#x200B;](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
+宛先カードにロゴを追加するには、[ レビュー用に宛先を送信 ](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
 
 ## 次の手順 {#next-steps}
 

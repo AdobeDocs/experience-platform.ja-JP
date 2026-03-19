@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2164'
 ht-degree: 35%
 
 ---
@@ -20,11 +20,11 @@ Adobe Experience Platformとの [!DNL Amazon Ads] 統合により、Amazon DSP�
 
 Adobe Experience Platformで [!DNL Amazon Ads] の宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスをAmazon DSPで定義できます。  さらに、ユーザーは、オーディエンス、広告主が提供したディメンション、Amazon セグメントのメンバーシップ、または AMC で使用可能なその他のシグナルによるパフォーマンスを理解するために、データを [!DNL Amazon Marketing Cloud] にアップロードできます。 広告主オーディエンスを AMC にアップロードした後、[!DNL Amazon Marketing Cloud] を使用して、[!DNL Amazon Marketing Cloud] 内からAmazonのシグナルを使用して、オーディエンスメンバーに対して変更、強化または追加を行うことができます。
 
-AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーディオ、スポンサー付き広告など、Amazonが所有および運営する施設を横断する独自の信号を統合します。 ユーザーは、Adobe Experience Platformから AMC にキュレートされたセグメントを簡単に送信して、オーディエンスの市場内グループ、ライフスタイルコホート、ブランドエンゲージメントパターンなどのラーニングを強化できます。 拡張セグメントを使用すると、Amazon DSPでメディアのアクティベーションを最適化できます。
+AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーディオ、スポンサー付き広告など、Amazonが所有および運営する施設を横断する独自の信号を統合します。 ユーザーは、Adobe Experience Platformから AMC にキュレートされたセグメントを送信して、オーディエンスの市場内グループ、ライフスタイルコホート、ブランドエンゲージメントパターンなどのラーニングを強化できます。 拡張セグメントを使用すると、Amazon DSPでメディアのアクティベーションを最適化できます。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、*[!DNL Amazon Ads]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
+>この宛先コネクタとドキュメントページは、*[!DNL Amazon Ads]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`.* まで直接ご連絡ください。
 
 ## ユースケース {#use-cases}
 
@@ -38,7 +38,7 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 
 この [!DNL Amazon Marketing Cloud] （AMC）との統合により、[!DNL Amazon Ads] の広告主は CDP セグメントをAdobe Experience Platform フォームから AMC に渡すことができます。 その後、広告主は CDP の入力を [!DNL Amazon Ads] のシグナルで結合し、メディアへの影響、オーディエンスセグメント、プライバシーに準拠した形式のカスタマージャーニーなどのトピックに関してカスタム分析を実行できます。 例えば、広告主は、既存の顧客のリストをアップロードして、広告キャンペーンのパフォーマンスの集計や、オンAmazonのコンバージョンイベントの集計統計（商品の詳細ページの表示、買い物かごへの商品の追加、商品の購入など）を把握できます。
 
-### Advertisingの最適化
+### Advertisingの最適化 {#advertising-optimization}
 
 この [!DNL Amazon Marketing Cloud] （AMC）との統合により、広告主は、独自の顧客リストをアップロードし、[!DNL Amazon Marketing Cloud] SQL を使用して、オーディエンスに対して重複分析、抑制、追加または最適化を繰り返し実行してから、Amazon DSPでターゲティング用のアクティブ化に対応したオーディエンスを作成できます。
 
@@ -47,11 +47,11 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、まずAmazon DSP広告主アカウントまたは [!DNL Amazon Marketing Cloud] インスタンスにアクセスできる必要があります。 これらのインスタンスをプロビジョニングするには、[!DNL Amazon Ads] web サイトの次のページにアクセスします。
 
 * [Amazon DSP - デマンドサイドプラットフォームで広告を始める](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [Amazon Marketing Cloudの概要 &#x200B;](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [Amazon Marketing Cloudの概要 ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## サポートされている ID {#supported-identities}
 
-*[!DNL Amazon Ads]* 接続では、以下の表で説明する ID のアクティブ化をサポートしています。 ID の詳細は[こちら](/help/identity-service//features/namespaces.md)から。[!DNL Amazon Ads] でサポートされている ID について詳しくは、[Amazon DSP サポートセンター &#x200B;](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE) を参照してください。
+*[!DNL Amazon Ads]* 接続では、以下の表で説明する ID のアクティブ化をサポートしています。 ID の詳細は[こちら](/help/identity-service//features/namespaces.md)から。[!DNL Amazon Ads] でサポートされている ID について詳しくは、[Amazon DSP サポートセンター ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE) を参照してください。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -73,8 +73,8 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -82,10 +82,10 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -103,8 +103,8 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -141,9 +141,9 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
-> 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -162,7 +162,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 >
 >これらのフィールドを使用するには：
 > 
->* すべての ID 値は、取り込み前に正規化する必要があります。 [&#x200B; 正規化ガイド &#x200B;](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C) を参照してください。
+>* すべての ID 値は、取り込み前に正規化する必要があります。 [ 正規化ガイド ](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C) を参照してください。
 >* SHA256 ハッシュは、クライアント側で、またはAdobeの変換設定を有効にすることで必要になります。
 >* Adobe UI には、コネクタの設定時に ID フィールドごとに変換を適用するためのチェックボックスが用意されています。
 
@@ -186,7 +186,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloud オーディエンス作成の検証 &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Amazon Marketing Cloud オーディエンス作成の検証 ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -208,7 +208,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 |---|---|---|
 | 2025年10月 | 追加の ID フィールドへのサポートの追加 | `firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country` など、個人の識別子に対するサポートを追加しました。 これらのフィールドをマッピングすると、オーディエンスの一致率を向上させることができます。 |
 | 2025年2月 | データフローを書き出すための **[!UICONTROL Amazon Ads Consent Signal]** を追加する要件を追加し、宛先をベータ版から一般入手可能に昇格しました。 |  |
-| 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 `countryCode` マッピング手順 [&#x200B; で &#x200B;](#map) を使用して、Amazonでの ID 一致率を改善します。 |
+| 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 `countryCode` マッピング手順 [ で ](#map) を使用して、Amazonでの ID 一致率を改善します。 |
 | 2024年3月 | 機能とドキュメントの更新 | [!DNL Amazon Marketing Cloud] （AMC）で使用するオーディエンスを書き出すオプションを追加しました。 |
 | 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |

@@ -3,7 +3,7 @@ title: Marketo Measure Ultimateの宛先
 description: Marketo Measure Ultimateの宛先に接続してデータをアクティブ化する方法を説明します。
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 26%
@@ -40,8 +40,8 @@ Marketo Measureの宛先については、次の前提条件に注意してく�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -51,10 +51,10 @@ Marketo Measureの宛先については、次の前提条件に注意してく�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | × | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | ○ | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | × | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | ○ | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -65,16 +65,16 @@ Marketo Measureの宛先については、次の前提条件に注意してく�
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Dataset export]** | オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出しています。 詳しくは、[&#x200B; データセット書き出し &#x200B;](/help/destinations/destination-types.md#dataset-export-destinations) を参照してください。 |
-| 書き出し頻度 | **[!UICONTROL Batch]** | このバッチ宛先では、ファイルを 2 時間ごとにMarketo Measure プラットフォームに書き出します。 詳しくは、[&#x200B; データセット書き出しのスケジュール設定 &#x200B;](/help/destinations/ui/export-datasets.md#scheduling) を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL Dataset export]** | オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出しています。 詳しくは、[ データセット書き出し ](/help/destinations/destination-types.md#dataset-export-destinations) を参照してください。 |
+| 書き出し頻度 | **[!UICONTROL Batch]** | このバッチ宛先では、ファイルを 2 時間ごとにMarketo Measure プラットフォームに書き出します。 詳しくは、[ データセット書き出しのスケジュール設定 ](/help/destinations/ui/export-datasets.md#scheduling) を参照してください。 |
 
 {style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage and Activate Dataset Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage and Activate Dataset Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下のセクションにリストされているフィールドに入力します。
 
@@ -85,7 +85,7 @@ Marketo Measureの宛先については、次の前提条件に注意してく�
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
 
-![Marketo Measure宛先の宛先に接続ワークフロー &#x200B;](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![Marketo Measure宛先の宛先に接続ワークフロー ](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -96,14 +96,14 @@ Marketo Measureの宛先については、次の前提条件に注意してく�
 ## この宛先へのデータセットの書き出し {#export-datasets}
 
 >[!IMPORTANT]
-> 
->データをアクティブ化するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage and Activate Dataset Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>
+>データをアクティブ化するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage and Activate Dataset Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先にデータセットを書き出す詳細な手順については、[&#x200B; データセットの書き出し &#x200B;](/help/destinations/ui/export-datasets.md) チュートリアルをお読みください。
+この宛先にデータセットを書き出す詳細な手順については、[ データセットの書き出し ](/help/destinations/ui/export-datasets.md) チュートリアルをお読みください。
 
 ## データの書き出しを検証する {#exported-data}
 
-データセットの書き出しが正常に行われたことを検証するには、[Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=ja) に対するデータセットの書き出しが正常に完了していることを確認します。
+データセットの書き出しが正常に行われたことを検証するには、[Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) に対するデータセットの書き出しが正常に完了していることを確認します。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

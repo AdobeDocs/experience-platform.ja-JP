@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、ストリーミング宛先が正しく設定されているかどうかをテストし、設定された宛先に対するデータフローの整合性を検証する方法を説明します。
 title: サンプルプロファイルを使用したストリーミング宛先のテスト
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 99%
+source-wordcount: '603'
+ht-degree: 90%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 99%
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
->* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
->  &#x200B;>![宛先インスタンス ID の取得方法を示す UI 画像](../../assets/testing-api/get-destination-instance-id.png)
+>* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。 詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)を参照してください。
+>* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
+>![宛先インスタンス ID の取得方法を示す UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 宛先テスト API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 呼び出しにプロファイルを追加しないで宛先設定をテスト {#test-without-adding-profiles}
 
@@ -324,6 +324,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、宛先のテスト方法を確認しました。これで、アドビ[セルフサービスドキュメントプロセス](../../docs-framework/documentation-instructions.md)を使用して、宛先用のドキュメントページを作成できるようになりました。

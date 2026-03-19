@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先公開リクエストに関する詳細を取得するために使用される API 呼び出しの例を示します。
 title: 宛先公開リクエストの取得
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 98%
+source-wordcount: '835'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 98%
 
 ## 宛先公開 API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先の公開リクエストのリスト {#retrieve-list}
 
@@ -181,6 +181,6 @@ API 呼び出しで `DESTINATION_ID` が渡されると、応答は、HTTP ス�
 
 >[!ENDTABS]
 
-## API エラー処理
+## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../landing/troubleshooting.md#request-header-errors) を参照してください。

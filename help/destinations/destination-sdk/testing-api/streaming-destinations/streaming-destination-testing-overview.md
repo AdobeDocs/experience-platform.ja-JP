@@ -2,7 +2,7 @@
 description: 宛先テスト API を使用して、ストリーミング宛先設定を公開する前にテストする方法を説明します。
 title: ストリーミング宛先テスト API
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -233,6 +233,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 リクエストおよび応答パラメーターについて詳しくは、[宛先テスト API 操作](../../testing-api/streaming-destinations/destination-testing-api.md)を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 宛先をテストして正しく設定されていることを確認したら、[宛先公開 API](../../publishing-api/create-publishing-request.md) を使用して設定をレビュー用にアドビに送信します。

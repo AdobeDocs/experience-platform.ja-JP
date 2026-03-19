@@ -2,10 +2,10 @@
 description: 宛先に対して認証メカニズムを設定する方法を説明し、選択した認証方法に応じて UI でユーザーに表示される内容を確認します。
 title: 顧客認証設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 91%
+source-wordcount: '1094'
+ht-degree: 88%
 
 ---
 
@@ -20,13 +20,13 @@ Experience Platform は、パートナーおよびお客様が使用できる認
 * [Destination SDK を使用したストリーミング宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK を使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-お客様は、Experience Platformから宛先にデータを書き出す前に、[&#x200B; 宛先接続 &#x200B;](../../../ui/connect-destination.md) チュートリアルに記載されている手順に従うことで、Experience Platformと宛先の間で新しい接続を作成する必要があります。
+お客様は、Experience Platformから宛先にデータを書き出す前に、[ 宛先接続 ](../../../ui/connect-destination.md) チュートリアルに記載されている手順に従うことで、Experience Platformと宛先の間で新しい接続を作成する必要があります。
 
 Destination SDK で[宛先を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)する場合、`customerAuthenticationConfigurations` セクションが、[認証画面](../../../ui/connect-destination.md#authenticate)で顧客に何が表示されるかを定義します。宛先認証タイプに応じて、顧客は、様々な認証の詳細を指定する必要があります。以下に例を示します。
 
 * [基本認証](#basic)を使用する宛先の場合、ユーザーは、Experience Platform UI 認証ページで直接ユーザー名およびパスワードを指定する必要があります。
 * [ベアラー認証](#bearer)を使用する宛先の場合、ユーザーは、ベアラートークンを指定する必要があります。
-* [OAuth2 認証 &#x200B;](#oauth2) を使用する宛先の場合、ユーザーは、資格情報を使用してログインできる、宛先のログインページにリダイレクトされます。
+* [OAuth2 認証 ](#oauth2) を使用する宛先の場合、ユーザーは、資格情報を使用してログインできる、宛先のログインページにリダイレクトされます。
 * [Amazon S3](#s3) 宛先の場合、ユーザーは、[!DNL Amazon S3] アクセスキーおよび秘密鍵を指定する必要があります。
 * [Azure Blob](#blob) 宛先の場合、ユーザーは、[!DNL Azure Blob] 接続文字列を指定する必要があります。
 
@@ -39,7 +39,7 @@ Destination SDK で[宛先を作成](../../authoring-api/destination-configurati
 
 >[!IMPORTANT]
 >
->顧客認証設定では、パラメーターを設定する必要はありません。宛先設定を [&#x200B; 作成 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) または [&#x200B; 更新 &#x200B;](../../authoring-api/destination-configuration/update-destination-configuration.md) する際に、このページに表示されるスニペットを API 呼び出しにコピー&amp;ペーストできます。ユーザーには、Experience Platform UI に対応する認証画面が表示されます。
+>顧客認証設定では、パラメーターを設定する必要はありません。宛先設定を [ 作成 ](../../authoring-api/destination-configuration/create-destination-configuration.md) または [ 更新 ](../../authoring-api/destination-configuration/update-destination-configuration.md) する際に、このページに表示されるスニペットを API 呼び出しにコピー&amp;ペーストできます。ユーザーには、Experience Platform UI に対応する認証画面が表示されます。
 
 >[!IMPORTANT]
 >
@@ -53,6 +53,8 @@ Destination SDK で[宛先を作成](../../authoring-api/destination-configurati
 |---|---|
 | リアルタイム（ストリーミング）統合 | ○ |
 | ファイルベースの（バッチ）統合 | ○ |
+
+{style="table-layout:auto"}
 
 ## 認証ルール設定 {#authentication-rule}
 
@@ -105,7 +107,7 @@ Experience Platform のリアルタイム（ストリーミング）統合では
 
 ## OAuth 2 認証 {#oauth2}
 
-ユーザーが「**[!UICONTROL 宛先に接続]**」を選択すると、以下の Twitter カスタムオーディエンスの宛先の例のように、宛先への OAuth 2 認証フローがトリガーされます。宛先エンドポイントへの OAuth 2 認証の設定について詳しくは、専用の [Destination SDK OAuth 2 認証ページ](oauth2-authorization.md)をお読みください。
+次の Twitter カスタムオーディエンスの宛先の例に示すように、**[!UICONTROL Connect to destination]** を選択して、宛先に OAuth 2 認証フローをトリガーします。 宛先エンドポイントへの OAuth 2 認証の設定について詳しくは、専用の [Destination SDK OAuth 2 認証ページ](oauth2-authorization.md)をお読みください。
 
 ![OAuth 2 認証での UI レンダリング](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -173,7 +175,7 @@ Experience Platform では、ファイルベースの宛先に対して、[!DNL 
 ]
 ```
 
-## パスワード認証を使用した SFTP
+## パスワード認証を使用した SFTP {#sftp-password-auth}
 
 Experience Platform では、ファイルベースの宛先に対して、パスワードを使用した [!DNL SFTP] 認証がサポートされています。
 
@@ -191,7 +193,7 @@ Experience Platform では、ファイルベースの宛先に対して、パス
 ]
 ```
 
-## SSH キー認証を使用した SFTP
+## SSH キー認証を使用した SFTP {#sftp-ssh-key-auth}
 
 Experience Platform では、ファイルベースの宛先に対して、[!DNL SSH] キーを使用した [!DNL SFTP] 認証がサポートされています。
 
@@ -213,7 +215,7 @@ SSH キーを使用した SFTP 認証を宛先に設定するには、`/destinat
 
 Experience Platform では、ファイルベースの宛先に対して、[!DNL Google Cloud Storage] 認証がサポートされています。
 
-[!DNL Google Cloud Storage] 認証タイプを設定する際に、ユーザーは、[!DNL Google Cloud Storage] [!UICONTROL アクセスキー ID] および[!UICONTROL シークレットアクセスキー]を入力する必要があります。
+[!DNL Google Cloud Storage] 認証タイプを設定する際に、ユーザーは、[!DNL Google Cloud Storage] [!UICONTROL access key ID] および [!UICONTROL secret access key] を入力する必要があります。
 
 ![Google Cloud Storage 認証での UI レンダリング](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 

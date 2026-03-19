@@ -3,9 +3,9 @@ title: The Trade Desk - CRM 接続
 description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1812'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->[&#x200B; 宛先カタログ &#x200B;](/help/destinations/catalog/overview.md) には 2 つの The Trade Desk - CRM 宛先があります。
+>[ 宛先カタログ ](/help/destinations/catalog/overview.md) には 2 つの The Trade Desk - CRM 宛先があります。
 >
 >* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用します。
 >* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用します。
@@ -29,7 +29,7 @@ CRM データに基づくオーディエンスのターゲティングおよび�
 
 >[!TIP]
 >
->宛先 [!DNL The Trade Desk - CRM] 使用して、CRM データ（メール、電話番号など）およびその他のファーストパーティデータ識別子（Cookie やデバイス ID など）を送信します。 Cookie とデバイス ID のマッピングについては、Experience Platform カタログ内の [Trade Desk 宛先 &#x200B;](/help/destinations/catalog/advertising/tradedesk.md) を引き続き使用できます。
+>宛先 [!DNL The Trade Desk - CRM] 使用して、CRM データ（メール、電話番号など）およびその他のファーストパーティデータ識別子（Cookie やデバイス ID など）を送信します。 Cookie とデバイス ID のマッピングについては、Experience Platform カタログ内の [Trade Desk 宛先 ](/help/destinations/catalog/advertising/tradedesk.md) を引き続き使用できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -39,7 +39,7 @@ CRM データに基づくオーディエンスのターゲティングおよび�
 
 ## ID の一致要件 {#id-matching-requirements}
 
-Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 &#x200B;](/help/identity-service/features/namespaces.md) を参照してください。
+Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 ](/help/identity-service/features/namespaces.md) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
@@ -72,8 +72,8 @@ Adobe Experience Platformでは、ハッシュ化されていないメールア�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,10 +83,10 @@ Adobe Experience Platformでは、ハッシュ化されていないメールア�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Adobe Experience Platformでは、ハッシュ化されていないメールア�
 
 メールアドレスは、Adobe Experience Platformに取り込む前にハッシュ化したり、生のメールアドレスを使用したりできます。
 
-Experience Platformでのメールアドレスの取り込みについては、[&#x200B; バッチ取り込みの概要 &#x200B;](/help/ingestion/batch-ingestion/overview.md) を参照してください。
+Experience Platformでのメールアドレスの取り込みについては、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
@@ -106,7 +106,6 @@ Experience Platformでのメールアドレスの取り込みについては、[
       *期間（&#39;.&#39;） 文字（ASCII コード 46）。 例えば、「jane.doe@gmail.com」を「janedoe@gmail.com」に正規化します。
      * プラス記号（&#39;+&#39;）文字（ASCII コード 43）とそれに続くすべての文字。 例えば、「janedoe+home@gmail.com」を「janedoe@gmail.com」に正規化します。
   
-
 ## 電話番号の正規化とハッシュ化の要件 {#phone-hashing}
 
 電話番号のアップロードに関して知っておくべき情報を以下に示します。
@@ -154,7 +153,7 @@ Experience Platformでのメールアドレスの取り込みについては、[
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL Audience export]** | Trade Desk 宛先で使用される識別子（メールまたはハッシュ化されたメール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。 詳しくは、[&#x200B; バッチエクスポート &#x200B;](/help/destinations/destination-types.md#file-based) を参照してください。 |
+| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。 詳しくは、[ バッチエクスポート ](/help/destinations/destination-types.md#file-based) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -173,32 +172,32 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL Advertiser ID]**：お使いの [!DNL Trade Desk Advertiser ID]。[!DNL Trade Desk] アカウントマネージャーで共有するか、[!DNL Advertiser Preferences] UI の [!DNL Trade Desk] にあるアセットです。
 
-![&#x200B; 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![ 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/policies/overview.md) を参照してください。
+宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[ データガバナンスの概要 ](/help/data-governance/policies/overview.md) を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
-> 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
 **[!UICONTROL Scheduling]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
-![&#x200B; オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >CRM 宛先に対してアクティブ化 [!DNL The Trade Desk] れたすべてのオーディエンスは、毎日の頻度と完全なファイル書き出しに自動的に設定されます。
 
-![&#x200B; オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 **[!UICONTROL Mapping]** ページでは、ソース列から属性または ID 名前空間を選択し、ターゲット列にマッピングする必要があります。
 
-![&#x200B; オーディエンスのアクティベーションをマッピングするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![ オーディエンスのアクティベーションをマッピングするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 以下に、オーディエンスを CRM 宛先に対してアクティブ化する際の、正しい ID マッピング [!DNL The Trade Desk] 例を示します。
 
@@ -222,13 +221,14 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 | netId | net_id |
 | FirstID | first_id |
 
+{style="table-layout:auto"}
 
 ## データの書き出しを検証 {#validate}
 
 データがExperience Platformから [!DNL The Trade Desk] に正しく書き出されていることを検証するには、「広告主データと ID」ライブラリ内の「Adobe 1PD」タブでオーディエンス [!DNL The Trade Desk] 見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
 
 1. まず、「**[!UICONTROL Libraries]**」タブを選択し、「**[!UICONTROL Advertiser data and identity]**」セクションを確認します。
-2. **[!UICONTROL Adobe 1PD]** をクリックすると、アクティブ化されたすべてのオーディエンスが一覧表示さ [!DNL The Trade Desk] ます。
+2. **[!UICONTROL Adobe 1PD]** を選択すると、アクティブ化されたすべてのオーディエンスが一覧表示さ [!DNL The Trade Desk] ます。
 3. Experience Platformのセグメント名またはセグメント ID が、[!DNL Trade Desk] UI にセグメント名として表示されます。
 
 ## データの使用とガバナンス {#data-usage-governance}

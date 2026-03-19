@@ -3,9 +3,9 @@ title: ケベル接続
 description: ケベルのストリーミング宛先を使用して、オーディエンスをケベルの UserDB API およびセグメント管理 API に直接アクティブ化し、意思決定時のリアルタイムターゲティングをサポートします。
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 Adobe Experience Platformの [!DNL Kevel] ストリーミング先を使用すると、お客様は、Adobe オーディエンスを [!DNL Kevel] の UserDB API および Segment Management API に直接アクティブ化して、広告の意思決定時のリアルタイムターゲティングをサポートできます。
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Kevel] の宛先またはそのドキュメントに関するご質問や更新をリクエストする場合は、[!DNL Kevel] チーム （[support@kevel.com](mailto:support@kevel.com)）にお問い合わせください。
 
 ## ユースケース {#use-cases}
@@ -50,7 +50,7 @@ Adobe Experience Platformの [!DNL Kevel] ストリーミング先を使用す�
 
 {style="table-layout:auto"}
 
-### カスタム ID 名前空間のサポート
+### カスタム ID 名前空間のサポート {#custom-identity-namespaces}
 
 Experience Platformの実装で定義されているとおり、[!DNL Kevel] の宛先 **カスタム名前空間も受け入れます**。
 
@@ -60,20 +60,20 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 - これらの名前空間は、グローバル名前空間と同じ方法で `kevel_user_key1`、`kevel_user_key2` または `kevel_user_key3` に割り当てることができます。
 - [!DNL Kevel] は、マッピングされた各 ID のインスタンスごとに 1 つの **UserDB レコード** を生成し、システムが送信する各識別子に対して、広告決定時にリアルタイムのマッチングを可能にします。
 
-### ID マッピング動作
+### ID マッピング動作 {#identity-mapping-behavior}
 
-- Experience Platformの ID 名前空間は **最大 3 つ**&#x200B;[!DNL Kevel]ID スロットにマッピングできます。
+- Experience Platformの ID 名前空間は **最大 3 つ**[!DNL Kevel]ID スロットにマッピングできます。
 - アクティブ化され [!DNL Kevel] プロファイルごとに、**マッピングされた ID ごとのインスタンスごとに 1 つの UserDB レコード** を受け取ります。
 - 不要な UserDB ストレージを避けるために、実際に広告リクエストで送信した ID のみを [!DNL Kevel] にマッピングする必要があります。
 
-![&#x200B; ケベル宛先のマッピング例 &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
+![ ケベル宛先のマッピング例 ](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
 
 ## サポートされるオーディエンス {#supported-audiences}
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |-----------------------|-----------|---------------------------------------------------------- |
 | セグメント化サービス | ○ | セグメント化エンジンによって評価されたAdobe プロファイルオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,10 +83,10 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -102,10 +102,10 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 ## 宛先への接続 {#connect}
 
-標準のExperience Platform[&#x200B; 宛先を接続 &#x200B;](../../ui/connect-destination.md) ワークフローに従います。
+標準のExperience Platform[ 宛先を接続 ](../../ui/connect-destination.md) ワークフローに従います。
 
 >[!IMPORTANT]
-> 
+>
 >**宛先の表示** および **宛先の管理** 権限が必要です。
 
 ### 宛先に対する認証 {#authenticate}
@@ -114,7 +114,7 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 
 - **ベアラートークン** - [!DNL Kevel] API キー。
 
-![&#x200B; ケベル宛先の認証オプション &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
+![ ケベル宛先の認証オプション ](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -124,12 +124,11 @@ Experience Platformの実装で定義されているとおり、[!DNL Kevel] の
 - **説明** – この宛先インスタンスを説明するオプションのテキスト。
 - **[!DNL Kevel]Network ID** — [!DNL Kevel] のネットワーク識別子。
 
-![&#x200B; ケベル宛先の宛先詳細 &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
+![ ケベル宛先の宛先詳細 ](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
-オーディエンスを [!DNL Kevel] に送信するには、のワークフローに従います\
-[&#x200B; ストリーミングセグメント書き出し宛先に対するプロファイルとセグメントのアクティブ化 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md)。
+オーディエンスを [!DNL Kevel] に送信するには、[ ストリーミングの宛先に対するオーディエンスのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md) のワークフローに従います。
 
 ### オーディエンスの無効化 {#deactivate}
 
@@ -155,7 +154,7 @@ Experience Platformでオーディエンスが [!DNL Kevel] の宛先からデ�
 
 プロファイルがオーディエンスに適合するか、オーディエンスから離脱すると、Experience Platformはストリーミング更新を [!DNL Kevel] に送信します。
 
-### [!DNL Kevel] UserDB が受信したサンプルペイロード
+### [!DNL Kevel] UserDB が受信したサンプルペイロード {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
 }
 ```
 
-#### このプロファイル [!DNL Kevel] 解釈方法
+#### このプロファイル [!DNL Kevel] 解釈方法 {#kevel-profile-interpretation}
 
 [!DNL Kevel] の宛先設定を使用すると、マッピングされた各 ID が個別の UserDB レコードを生成し、[!DNL Kevel] が次の情報を受け取ります。
 
@@ -230,5 +229,5 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
 
 ## その他のリソース {#additional-resources}
 
-- [[!DNL Kevel] UserDB リファレンス &#x200B;](https://dev.kevel.com/reference/userdb)
-- [[!DNL Kevel]  ユーザーセグメントのターゲティング &#x200B;](https://dev.kevel.com/docs/segment-targeting)
+- [[!DNL Kevel] UserDB リファレンス ](https://dev.kevel.com/reference/userdb)
+- [[!DNL Kevel]  ユーザーセグメントのターゲティング ](https://dev.kevel.com/docs/segment-targeting)

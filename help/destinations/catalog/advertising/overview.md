@@ -3,9 +3,9 @@ keywords: 広告の宛先；宛先；Platform の宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名オーディエンスをこれらのプラットフォームに共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 8d0cd63b6262170689ca5a6eb76350c4fc024566
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '289'
 ht-degree: 43%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platformをデマンドサイドプラットフォーム（DSP�
 
 現在、Experience Platformは、以下に示す広告宛先をサポートしています。
 
-接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [&#x200B; 接続 &#x200B;](../../destination-types.md#connections) を参照してください。
+接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [ 接続 ](../../destination-types.md#connections) を参照してください。
 
-### 接続
+### 接続 {#connections}
 
 * [（Beta） Acxiom の Audience Distribution](acxiom-audience-connection.md)
 * [（Beta） Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
@@ -50,7 +50,7 @@ Adobe Experience Platformをデマンドサイドプラットフォーム（DSP�
 * [（ベータ版）The Trade Desk CRM 接続](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
-### 拡張機能
+### 拡張機能 {#extensions}
 
 * [Adobe Advertising Cloud 拡張機能](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion Tag 拡張機能](awin-conversiontag.md)

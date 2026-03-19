@@ -3,9 +3,9 @@ title: Merkury エンタープライズ Id の宛先
 description: Adobe Experience Platform UI を使用して Merkury エンタープライズ ID 宛先接続を作成する方法を説明します。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1592'
 ht-degree: 14%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 14%
 >
 >宛先コネクタとドキュメントページは、[!DNL Merkury] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[!DNL Merkury] アカウント担当者にお問い合わせください。
 
-## 概要
+## 概要 {#overview}
 
 [!DNL Merkury Enterprise Identity] の宛先を使用して、より正確で包括的なインサイトに満ちた消費者プロファイルを作成します。 プロファイルデータが改善されたことで、マーケターはより優れたインサイト、セグメントおよびモデルを強化し、より正確なターゲティングと予測モデリングを実現できます。
 
-![&#x200B; 取り込みとアクティベーションを含む、Merkury とExperience Platformの間の相互接続を示す図 &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
+![ 取り込みとアクティベーションを含む、Merkury とExperience Platformの間の相互接続を示す図 ](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
 このドキュメントページの手順に従って、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Merkury Identity] しい宛先接続を作成し、識別およびエンリッチメントのためにオーディエンスをアクティブ化します。
 
@@ -30,7 +30,7 @@ ht-degree: 14%
 
 ![Experience Platformの宛先カタログでハイライト表示された Merkury エンタープライズ ID 宛先カード。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
-## ユースケース
+## ユースケース {#use-cases}
 
 [!DNL Merkury Enterprise Identity] の宛先は、次の [!DNL Merkury] 機能のために、消費者 PII を安全に転送する機能を提供します。
 
@@ -42,12 +42,12 @@ ht-degree: 14%
 >
 >これらのユースケースは、宛先コネクタとソースコネクタの両方を組み合わせて実行されます。 顧客は、この宛先コネクタを使用して既存の顧客レコードを書き出してエンリッチメントを行うことから始めます。 [!DNL Merkury] のサービスはファイルを検索して取得し、[!DNL Merkury] のデータでエンリッチメントしてファイルを生成します。 次に、対応する [!DNL Merkury] Source コネクタのソースカードを使用して、ハイドレートされた顧客プロファイルをAdobe Real-Time CDPに取り込みます。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**宛先の表示** と **宛先の管理**、**宛先のアクティブ化**、**プロファイルの表示**、**セグメントの表示**&#x200B;[[ アクセス制御権限 ]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
->* *ID* を書き出すには、**ID グラフを表示** [[ アクセス制御権限 ]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。\![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>* 宛先に接続するには、**宛先の表示** と **宛先の管理**、**宛先のアクティブ化**、**プロファイルの表示**、**セグメントの表示**[[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+>* *ID* を書き出すには、**ID グラフを表示** [[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。\![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 ](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## サポートされている ID {#supported-identities}
 
@@ -68,8 +68,8 @@ ht-degree: 14%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -79,34 +79,34 @@ ht-degree: 14%
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
 
-## 書き出しのタイプと頻度
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | **オーディエンス** | **サポート対象** | **説明の起源** |
 |---|---|---|      
 | セグメント化サービス | ○ | Experience Platform [[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
-| カスタムアップロード | × | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポート |
+| カスタムアップロード | × | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポート |
 
 {style="table-layout:auto"}
 
-## 宛先への接続
+## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**宛先の表示** と **データセット宛先の管理とアクティブ化** [[ アクセス制御権限 ]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**宛先の表示** と **データセット宛先の管理とアクティブ化** [[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[[ 宛先設定のチュートリアル ]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/connect-destination) の手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
+この宛先に接続するには、[[ 宛先設定のチュートリアル ]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination) の手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
-### 宛先に対する認証
+### 宛先に対する認証 {#authenticate}
 
 宛先に対して認証するには、必須フィールドに入力し、「**宛先に接続**」を選択します。
 
@@ -120,13 +120,13 @@ Experience Platformでバケットにアクセスするには、次の資格情�
 
 {style="table-layout:auto"}
 
-![&#x200B; 新しい宛先作成画面 &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image4.png)
+![ 新しい宛先作成画面 ](../../assets/catalog/data-partners/merkury-identity/media/image4.png)
 
-### 宛先の詳細を入力
+### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先の詳細のスクリーンショット &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image6.png)
+![ 宛先の詳細のスクリーンショット ](../../assets/catalog/data-partners/merkury-identity/media/image6.png)
 
 
 * **名前（必須）** – 宛先を保存する名前
@@ -139,31 +139,31 @@ Experience Platformでバケットにアクセスするには、次の資格情�
 >
 >「CSV」オプションを選択すると、「区切り文字」、「引用符文字」、「エスケープ文字」、「空の値」、「Null 値」、「圧縮形式」、「マニフェストファイルを含める」の各オプションが表示されます。ご利用のアカウントに適した設定については、Merkury のチームにお問い合わせください。
 
-![csv オプションの画像 &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
+![csv オプションの画像 ](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
-### 既存のアカウント
+### 既存のアカウント {#existing-account}
 
 Merkury エンタープライズ ID 宛先を使用して既に定義されているアカウントが、リストポップアップに表示されます。 選択すると、右側のパネルにアカウントの詳細が表示されます。 **Destinations**/**Accounts** に移動すると、UI から例を表示できます。
 
-![&#x200B; 宛先アカウントページの宛先アカウントのスクリーンショット &#x200B;](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
+![ 宛先アカウントページの宛先アカウントのスクリーンショット ](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
 
 
-### アラートの有効化
+### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
 
 宛先接続への詳細の入力を終えたら「**次へ**」を選択します。
 
-## この宛先に対してオーディエンスをアクティブ化
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
 >* データをアクティブ化するには、**宛先の表示**、**宛先のアクティブ化**、**プロファイルの表示** および **セグメントの表示** のアクセス制御権限が必要です。 詳しくは、アクセス制御の概要または製品管理者に問い合わせて、必要な権限を取得してください。
 >* ID を書き出すには、**ID グラフの表示** アクセス制御権限が必要です。
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) を参照してください。
 
-## マッピングの提案
+## マッピングの提案 {#mapping-suggestions}
 
 [!DNL Merkury] 側でのファイルの正しい処理には、name 要素と address 要素が必要です。 すべての要素が必要なわけではありませんが、できるだけ多くを提供すると、マッチングを成功させるのに役立ちます。
 
@@ -184,14 +184,14 @@ Merkury エンタープライズ ID 宛先を使用して既に定義されて�
 
 {style="table-layout:auto"}
 
-## データの書き出しを検証する
+## データの書き出しを検証する {#validate-data-export}
 
 データが正常に書き出されたかどうかを確認するには、Amazon S3 ストレージバケットを確認し、書き出されたファイルに、想定どおりのプロファイル母集団が含まれていることを確認します。
 
-## データの使用とガバナンス
+## データの使用とガバナンス {#data-usage-governance}
 
-Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/data-governance/home) を参照してください。
+Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[ データガバナンスの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、Experience Platformから [!DNL Merkury] managed S3 の場所にプロファイルデータを書き出すデータフローを正常に作成しました。 次に、処理を設定できるように、アカウント名、ファイル名、バケットパスを [!DNL Merkury] 担当者に連絡する必要があります。

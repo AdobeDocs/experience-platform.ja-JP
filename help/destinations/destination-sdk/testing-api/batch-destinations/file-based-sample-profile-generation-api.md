@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK から /sample-profiles API エンドポイントを使用して、ソーススキーマに基づいてサンプルプロファイルを生成する方法について説明します。これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 93%
+source-wordcount: '652'
+ht-degree: 88%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 93%
 
 ## はじめに {#getting-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -114,9 +114,9 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、宛先[アクティベーションフロー](../../../ui/activate-batch-profile-destinations.md)で設定されたソーススキーマに基づいてサンプルプロファイルを生成する方法を確認しました。
 

@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先サーバー設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の更新
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 96%
+source-wordcount: '1101'
+ht-degree: 93%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 96%
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先サーバー設定の更新 {#update}
 
@@ -756,7 +756,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

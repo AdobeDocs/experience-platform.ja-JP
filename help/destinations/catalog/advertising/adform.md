@@ -3,9 +3,9 @@ title: Adform
 description: Adform は、プログラムによるメディア売買ソリューションの大手プロバイダーです。 Adform をAdobe Experience Platformに接続すると、Experience Cloud ID （ECID）に基づいて Adform を通じてファーストパーティオーディエンスをアクティブ化できます。
 last-substantial-update: 2025-10-23T00:00:00Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1103'
 ht-degree: 28%
 
 ---
@@ -28,16 +28,16 @@ Adform 宛先を使用する方法とタイミングをより深く理解する�
 
 この宛先を使用して、Adobe Real-Time CDP オーディエンスを Adform に送信し、Experience Cloud ID （ECID）と Adform の ID Fusion に基づいてアクティブ化します。 Adform の ID Fusion は、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化できる Adform の ID 解決サービスです。
 
-一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
+一般的なケースは、Experience Cloud ID （ECID）に基づいて、web サイトやアプリへの web サイト訪問者をリターゲティングすることです。 すぐに利用できる [ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 拡張機能を使用して、Experience Cloud ID （ECID）を Adform に送信するだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、アクティベーション用に Adform 宛先を介してオーディエンスを Adform と共有できます。
 
 ## 前提条件 {#prerequisites}
 
 * この宛先を使用するには、既存の Adform 顧客である必要があります。
 * Adobe Audience Base のデータ接続資格情報が必要です。
    * Adform Audience Base データ接続資格情報がない場合は、Adform 担当者にお問い合わせください。
-* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
+* 適切に同期させるには、エンティティから Adform サイトトラッキングへの [ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) または [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 接続が必要です。
    * エンティティから Adform サイトトラッキングへのイベントストリーミングまたはクライアントサイド接続がない場合は、Adform 担当者にお問い合わせください。
-   * Adform は、[&#x200B; イベントストリーミング &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [&#x200B; クライアントサイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
+   * Adform は、[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) と [ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) の両方に対してAdobe Experience Cloud拡張機能を提供します。
 
 
 ## サポートされている ID {#supported-identities}
@@ -56,8 +56,8 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,10 +67,10 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -89,8 +89,8 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -98,7 +98,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![&#x200B; 宛先に対する認証 &#x200B;](../../assets/catalog/advertising/adform/authenticate-destination.png)
+![ 宛先に対する認証 ](../../assets/catalog/advertising/adform/authenticate-destination.png)
 
 * **[!UICONTROL Account name]**：今後この宛先接続を識別するためのアカウント名を入力してください…
 * **[!UICONTROL S3 Access Key ID]**:Adform から提供された S3 アクセスキーを入力します。
@@ -108,7 +108,7 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先の詳細の入力 &#x200B;](../../assets/catalog/advertising/adform/configure-destination-details.png)
+![ 宛先の詳細の入力 ](../../assets/catalog/advertising/adform/configure-destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -123,9 +123,9 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
-> 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -145,4 +145,4 @@ Adform では、以下の表に示す ID のアクティブ化をサポートし
 
 ## その他のリソース {#additional-resources}
 
-Adform Audience Base について詳しくは、[Adform Audience Base ドキュメント &#x200B;](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform) を参照してください。
+Adform Audience Base について詳しくは、[Adform Audience Base ドキュメント ](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform) を参照してください。

@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存のオーディエンステンプレートを削除するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの削除
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 94%
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 94%
 
 ## オーディエンステンプレート API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## オーディエンステンプレートの削除 {#delete}
 
@@ -42,6 +42,8 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | 削除するオーディエンステンプレートの `ID`。 |
+
+{style="table-layout:auto"}
 
 +++リクエスト
 
@@ -63,7 +65,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

@@ -2,7 +2,7 @@
 description: ここでは、Destination SDKでサポートされている様々な OAuth 2 認証フローについて説明し、宛先用の OAuth 2 認証の設定手順を示します。
 title: OAuth 2 認証
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2273'
 ht-degree: 74%
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 # OAuth 2 認証
 
-Destination SDKは、宛先に対して複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク &#x200B;](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
+Destination SDKは、宛先に対して複数の認証方式をサポートしています。 その中に、[OAuth 2 認証フレームワーク ](https://tools.ietf.org/html/rfc6749) を使用して宛先を認証するオプションがあります。
 
 ここでは、Destination SDKでサポートされている様々な OAuth 2 認証フローについて説明し、宛先用の OAuth 2 認証の設定手順を示します。
 
@@ -56,7 +56,7 @@ Destination SDKは、宛先に対して複数の認証方式をサポートし�
 
 ### Destination SDK で行う必要があること {#to-do-in-destination-sdk}
 
-Experience Platformで宛先用に OAuth 2 認証を設定するには、[&#x200B; パラメーターの &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) 宛先設定 `customerAuthenticationConfigurations` に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
+Experience Platformで宛先用に OAuth 2 認証を設定するには、[ パラメーターの ](../../authoring-api/destination-configuration/create-destination-configuration.md) 宛先設定 `customerAuthenticationConfigurations` に OAuth 2 の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2 認証付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで後述します。
 
 ## サポートされる OAuth 2 付与タイプ {#oauth2-grant-types}
 
@@ -95,7 +95,7 @@ OAuth 2 認証用にAdobeが設計したシステムは、次のとおりです�
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -129,11 +129,11 @@ OAuth 2 認証用にAdobeが設計したシステムは、次のとおりです�
 | `clientId` | 文字列 | システムが Adobe Experience Platform に割り当てるクライアント ID。 |
 | `clientSecret` | 文字列 | システムが Adobe Experience Platform に割り当てるクライアントシークレット。 |
 | `scope` | 文字列のリスト | *オプション*。アクセストークンが Experience Platform に対してリソース上で実行を許可する範囲を設定します。例：&quot;read, write&quot;。 |
-| `options.useBasicAuth` | ブール値 | *オプション*。アクセストークンの認証コードを交換する際に、クライアント資格情報（クライアント ID およびクライアントシークレット）を OAuth プロバイダーのトークンエンドポイントに送信する方法を制御するブール値です。 <ul><li>`false` または undefined に設定した場合、資格情報は `client_id` および `client_secret` パラメーターとして POST リクエスト本文に送信されます（デフォルト動作）。</li><li>このパラメーターを `true` に設定すると、資格情報は基本認証形式：`Authorization` を使用して HTTP `Authorization: Basic base64(clientID:clientSecret)` ヘッダーで送信されます。</li></ul> OAuth プロバイダーがクライアント資格情報をリクエスト本文ではなく `useBasicAuth` ヘッダーで送信する必要がある場合は、`true` を `Authorization` に設定します。 |
+| `options.useBasicAuth` | ブール | *オプション*。アクセストークンの認証コードを交換する際に、クライアント資格情報（クライアント ID およびクライアントシークレット）を OAuth プロバイダーのトークンエンドポイントに送信する方法を制御するブール値です。 <ul><li>`false` または undefined に設定した場合、資格情報は `client_id` および `client_secret` パラメーターとして POST リクエスト本文に送信されます（デフォルト動作）。</li><li>このパラメーターを `true` に設定すると、資格情報は基本認証形式：`Authorization` を使用して HTTP `Authorization: Basic base64(clientID:clientSecret)` ヘッダーで送信されます。</li></ul> OAuth プロバイダーがクライアント資格情報をリクエスト本文ではなく `useBasicAuth` ヘッダーで送信する必要がある場合は、`true` を `Authorization` に設定します。 |
 
 {style="table-layout:auto"}
 
-## パスワード付与を使用した OAuth 2
+## パスワード付与を使用した OAuth 2 {#oauth2-password-grant}
 
 OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/rfc6749#section-4.3)を参照）の場合、Experience Platform には、ユーザーのユーザー名とパスワードが必要です。認証フローでは、Experience Platformはこれらの資格情報をアクセストークンおよび（オプションで）更新トークンと交換します。
 アドビでは、宛先設定をシンプル化するために、値を上書きする機能を備えた、以下の標準入力を利用します。
@@ -148,7 +148,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 >
 > 以下の設定の `username` および `password` に対して、任意のパラメーターを追加する必要はありません。宛先設定で `"grant": "OAUTH2_PASSWORD"` を追加すると、システムは、宛先を認証する際に、ユーザーに Experience Platform UI でユーザー名およびパスワードを指定することをリクエストします。
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -176,7 +176,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 
 {style="table-layout:auto"}
 
-## クライアント資格情報付与を使用した OAuth 2
+## クライアント資格情報付与を使用した OAuth 2 {#oauth2-client-credentials-grant}
 
 以下に示す標準入力および出力をサポートする、OAuth 2 クライアント資格情報（[RFC 標準仕様](https://tools.ietf.org/html/rfc6749#section-4.4)を参照）宛先を設定できます。値をカスタマイズできます。詳しくは、[OAuth 2 設定のカスタマイズ](#customize-configuration)を参照してください。
 
@@ -186,7 +186,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 
 {style="table-layout:auto"}
 
-宛先に対してこの認証方法を設定するには、（宛先設定を作成 [&#x200B; する際に、設定に以下の行を追加し &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
+宛先に対してこの認証方法を設定するには、（宛先設定を作成 [ する際に、設定に以下の行を追加し ](../../authoring-api/destination-configuration/create-destination-configuration.md) す。
 
 ```json
 {
@@ -370,7 +370,7 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 | `authenticationDataFields.title` | 文字列 | カスタムフィールドに対して指定できるタイトル。 |
 | `authenticationDataFields.description` | 文字列 | 設定するカスタムデータフィールドの説明。 |
 | `authenticationDataFields.type` | 文字列 | カスタムデータフィールドのタイプを定義します。<br> 使用できる値：`string`、`boolean`、`integer` |
-| `authenticationDataFields.isRequired` | ブール値 | 承認フローでカスタムデータフィールドが必須かどうかを指定します。 |
+| `authenticationDataFields.isRequired` | ブール | 承認フローでカスタムデータフィールドが必須かどうかを指定します。 |
 | `authenticationDataFields.format` | 文字列 | `"format":"password"` を選択すると、Adobeは、認証データフィールドの値を暗号化します。 `"fieldType": "CUSTOMER"` と共に使用された場合、これも、ユーザーがフィールドに入力する際に UI で入力を非表示にします。 |
 | `authenticationDataFields.fieldType` | 文字列 | Experience Platform で宛先を設定する際に、入力がパートナー（あなた）かユーザーのどちらによるものかを示します。 |
 | `authenticationDataFields.value` | 文字列.ブール値.整数 | カスタムデータフィールドの値 。値は、`authenticationDataFields.type` から選択したタイプに一致します。 |

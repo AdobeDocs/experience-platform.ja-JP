@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、資格情報設定を取得するために使用される API 呼び出しの例を示します。
 title: 資格情報設定の取得
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 88%
+source-wordcount: '497'
+ht-degree: 81%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 88%
 
 アドビと宛先プラットフォームとの間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合にのみ、この API エンドポイントを使用して資格情報設定を作成します。この場合、`/credentials` API エンドポイントを使用して、資格情報設定を作成する必要があります。
 
-グローバル認証システムを使用する場合、（新しい宛先設定の作成 `"authenticationRule":"PLATFORM_AUTHENTICATION"` 時に、[&#x200B; 宛先配信 &#x200B;](../functionality/destination-configuration/destination-delivery.md) 設定で [&#x200B; を設定する必要が &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md) ります。 次に、[&#x200B; 資格情報設定 &#x200B;](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [&#x200B; 設定の &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
+グローバル認証システムを使用する場合、（新しい宛先設定の作成 `"authenticationRule":"PLATFORM_AUTHENTICATION"` 時に、[ 宛先配信 ](../functionality/destination-configuration/destination-delivery.md) 設定で [ を設定する必要が ](../authoring-api/destination-configuration/create-destination-configuration.md) ります。 次に、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ ht-degree: 88%
 
 ## 資格情報 API 操作の概要 {#get-started}
 
-続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
+続行する前に、[ はじめる前に ](../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 資格情報設定の取得 {#retrieve}
 
@@ -123,6 +123,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 取得する資格情報設定の ID。 |
 
+{style="table-layout:auto"}
+
 +++
 
 +++応答
@@ -149,7 +151,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

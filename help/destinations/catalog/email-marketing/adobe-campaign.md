@@ -3,7 +3,7 @@ keywords: メール；メール；メール；メールの宛先；adobe campaig
 title: Adobe Campaign 接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 30%
@@ -14,9 +14,9 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、[Campaign Classicの基本を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) を参照してください。
+Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、[Campaign Classicの基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) を参照してください。
 
-オーディエンスデータをAdobe Campaignに送信するには、まずAdobe Experience Platformで [&#x200B; 宛先に接続 &#x200B;](#connect-destination) してから、ストレージの場所からAdobe Campaignに [&#x200B; データの読み込みを設定 &#x200B;](#import-data-into-campaign) する必要があります。
+オーディエンスデータをAdobe Campaignに送信するには、まずAdobe Experience Platformで [ 宛先に接続 ](#connect-destination) してから、ストレージの場所からAdobe Campaignに [ データの読み込みを設定 ](#import-data-into-campaign) する必要があります。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -24,8 +24,8 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -35,10 +35,10 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -58,13 +58,13 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
 
-許可リストにAdobe IP を追加する必要がある場合は [&#128279;](../cloud-storage/ip-address-allow-list.md)IP アドレス^SFTP 宛先の許可リスト^を参照してください。
+許可リストにAdobe IP を追加する必要がある場合は [](../cloud-storage/ip-address-allow-list.md)IP アドレス^SFTP 宛先の許可リスト^を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
-> 
->宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [&#x200B; が必要 &#x200B;](/help/access-control/home.md#permissions) す。 詳しくは、[&#x200B; アクセス制御の概要 &#x200B;](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください
+>
+>宛先に接続するには、**[!UICONTROL Manage Destinations]** アクセス制御権限 [ が必要 ](/help/access-control/home.md#permissions) す。 詳しくは、[ アクセス制御の概要 ](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -102,30 +102,30 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
-> 
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### 宛先属性 {#destination-attributes}
 
-この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは [&#x200B; 和集合スキーマ &#x200B;](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[&#x200B; メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス &#x200B;](overview.md#best-practices) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは [ 和集合スキーマ ](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[ メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス ](overview.md#best-practices) を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Adobe Campaign] 宛先の場合、[!DNL Experience Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 &#x200B;](../../ui/activate-batch-profile-destinations.md#verify) の節を参照してください。
+[!DNL Adobe Campaign] 宛先の場合、[!DNL Experience Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) の節を参照してください。
 
 ## Adobe Campaignへのデータの読み込みの設定 {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
 >* この統合を実行する際は、Adobe Campaignの契約に従って、[!DNL SFTP] のストレージ制限、データベースストレージ制限、アクティブなプロファイル制限に注意してください。
->* [!DNL Campaign] ワークフローを使用して、書き出されたセグメントをAdobe Campaignでスケジュール、読み込み、マッピングする必要があります。 Adobe Campaign Classic ドキュメントの [&#x200B; 繰り返し読み込みの設定 &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) およびAdobe Campaign Standard ドキュメントの [&#x200B; データ管理アクティビティについて &#x200B;](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=ja) を参照してください。
+>* [!DNL Campaign] ワークフローを使用して、書き出されたセグメントをAdobe Campaignでスケジュール、読み込み、マッピングする必要があります。 Adobe Campaign Classic ドキュメントの [ 繰り返し読み込みの設定 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) およびAdobe Campaign Standard ドキュメントの [ データ管理アクティビティについて ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) を参照してください。
 >* Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または [!DNL Azure Blob] を使用することをお勧めします。
 
 [!DNL Experience Platform] を [!DNL Amazon S3] または [!DNL Azure Blob] ストレージに接続した後、ストレージの場所からAdobe Campaignへのデータの読み込みを設定する必要があります。 これを実現する方法については、次のAdobe Campaign ドキュメントページを参照してください。
 
-* [&#x200B; データのインポートとエクスポートの概要 &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ja) および [&#x200B; データの読み込み（ファイル） &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ja) （Adobe Campaign Classic ドキュメント）。
-* [&#x200B; プロセスとデータ管理の基本を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=ja) および [&#x200B; ファイルを読み込む &#x200B;](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=ja)Adobe Campaign Standard ドキュメント。
+* [ データのインポートとエクスポートの概要 ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ja) および [ データの読み込み（ファイル） ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ja) （Adobe Campaign Classic ドキュメント）。
+* [ プロセスとデータ管理の基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) および [ ファイルを読み込む ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)Adobe Campaign Standard ドキュメント。

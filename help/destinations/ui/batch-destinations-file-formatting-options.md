@@ -2,22 +2,22 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 47%
+source-wordcount: '1189'
+ht-degree: 45%
 
 ---
 
 # ファイルベースの宛先のファイル形式オプションの設定
 
 >[!IMPORTANT]
-> 
+>
 >このドキュメントで説明するファイル形式オプションは、現在 CSV ファイルでのみ使用できます。
 
 書き出したファイルに対して様々なファイル形式オプションを設定するオプションは、ファイルベースの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) または [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect) など）に[接続](/help/destinations/ui/connect-destination.md)するときに使用できます。
 
-Experience Platform UI を使用して、書き出したファイルに対して様々なファイル形式オプションを設定できます。 Experience Platform から受け取ったファイルを最適に読み取り、解釈するために、書き出されたファイルのいくつかのプロパティを、ユーザー側のファイル受け取りシステムの要件に合わせて変更することができます。
+Experience Platform UI を使用して、書き出したファイルに対して様々なファイル形式オプションを設定できます。 書き出されたファイルのいくつかのプロパティを、ユーザー側のファイル受け取りシステムの要件に合わせて変更し、Experience Platformから受け取ったファイルを最適に読み取り、解釈することができます。
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -26,13 +26,13 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 ## CSV ファイルのファイル形式設定 {#file-configuration}
 
-ファイル形式オプションを表示するには、[&#x200B; 宛先に接続 &#x200B;](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
+ファイル形式オプションを表示するには、[ 宛先に接続 ](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
 
 >[!IMPORTANT]
 >
 >接続先には、これらのオプションの一部が使用できない場合があります。 宛先でサポートするファイル形式オプションは、宛先の開発者が決定します。 宛先の開発者は、宛先に接続する際に使用できるオプションを決定できます。 必須オプションは、Experience Platform UI でアスタリスクでマークされます。
 > 
->Adobeが構築したクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md) [、&lbrace;Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、SFTP[&#x200B; &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md)）では、現在、以下にハイライト表示された 6 つの CSV オプションのみをサポートしています。
+>Adobeが構築したクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md) [、{Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、SFTP[ ](/help/destinations/catalog/cloud-storage/sftp.md)）では、現在、以下にハイライト表示された 6 つの CSV オプションのみをサポートしています。
 
 ![使用可能なファイル形式オプションの一部を示す画像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -51,15 +51,15 @@ Experience Platform UI を使用して、書き出したファイルに対して
 * セミコロン `(;)`
 * Tab `(\t)`
 
-#### 例
+#### 例 {#delimiter-examples}
 
 書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* **[!UICONTROL Colon `(:)`]** を選択した場合の出力例：`male:John:Doe`
-* **[!UICONTROL Comma `(,)`]** を選択した場合の出力例：`male,John,Doe`
-* **[!UICONTROL Pipe `(|)`]** を選択した場合の出力例：`male|John|Doe`
-* **[!UICONTROL Semicolon `(;)`]** を選択した場合の出力例：`male;John;Doe`
-* **[!UICONTROL Tab `(\t)`]** を選択した場合の出力例：`male \t John \t Doe`
+* [!UICONTROL Colon `(:)`] を選択した場合の出力例：`male:John:Doe`
+* [!UICONTROL Comma `(,)`] を選択した場合の出力例：`male,John,Doe`
+* [!UICONTROL Pipe `(|)`] を選択した場合の出力例：`male|John|Doe`
+* [!UICONTROL Semicolon `(;)`] を選択した場合の出力例：`male;John;Doe`
+* [!UICONTROL Tab `(\t)`] を選択した場合の出力例：`male \t John \t Doe`
 
 ### 引用符文字 {#quote-character}
 
@@ -72,17 +72,17 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 使用できる選択肢は次のとおりです。
 
-* **[!UICONTROL Null Character (\0000)]**&#x200B;をインストールします。書き出された CSV ファイルから二重引用符を削除するには、このオプションを使用します。
-* **[!UICONTROL Double Quotes (")]**&#x200B;をインストールします。このオプションは、文字列値に区切り文字または二重引用符が含まれている場合に使用します。 このオプションを使用すると、書き出された CSV ファイルに区切り文字や二重引用符を保持できるので、どの値がどのフィールドに対応するかを正しく識別できます。
+* [!UICONTROL Null Character (\0000)]をインストールします。書き出された CSV ファイルから二重引用符を削除するには、このオプションを使用します。
+* [!UICONTROL Double Quotes (")]をインストールします。このオプションは、文字列値に区切り文字または二重引用符が含まれている場合に使用します。 このオプションを使用すると、書き出された CSV ファイルに区切り文字や二重引用符を保持できるので、どの値がどのフィールドに対応するかを正しく識別できます。
 
-#### 例
+#### 例 {#quote-character-examples}
 
 入力値 `Anna,"Doe,John"` について考えてみます。
 
 書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* **[!UICONTROL Null Character (\0000)]** を選択した場合の出力例：`Anna,Doe,John`
-* **[!UICONTROL Double Quotes (")]** を選択した場合の出力例：`Anna,"Doe,John"`
+* [!UICONTROL Null Character (\0000)] を選択した場合の出力例：`Anna,Doe,John`
+* [!UICONTROL Double Quotes (")] を選択した場合の出力例：`Anna,"Doe,John"`
 
 ### エスケープ文字 {#escape-character}
 
@@ -96,12 +96,12 @@ Experience Platform UI を使用して、書き出したファイルに対して
 * バックスラッシュ `(\)`
 * 一重引用符 `(')`
 
-#### 例
+#### 例 {#escape-character-examples}
 
 書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* **[!UICONTROL Back slash `(\)`]** を選択した場合の出力例：`"Test,\"John\",LastName"`
-* **[!UICONTROL Single quote `(')`]** を選択した場合の出力例：`"Test,'"John'",LastName"`
+* [!UICONTROL Back slash `(\)`] を選択した場合の出力例：`"Test,\"John\",LastName"`
+* [!UICONTROL Single quote `(')`] を選択した場合の出力例：`"Test,'"John'",LastName"`
 
 ### 空の値出力 {#empty-value-output}
 
@@ -112,17 +112,17 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 このコントロールを使用して、空の値の文字列表現を設定します。 このオプションは、書き出された CSV ファイルで空の値を表す方法を決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **二重引用符（&quot;）で囲まれた空の文字列**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### 例
+#### 例 {#empty-value-examples}
 
 書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* **[!UICONTROL null]** を選択した場合の出力例：`male,NULL,TestLastName`。 この場合、Experience Platformは空の値を null 値に変換します。
+* [!UICONTROL null] を選択した場合の出力例：`male,NULL,TestLastName`。 この場合、Experience Platformは空の値を null 値に変換します。
 * **&quot;&quot;** を選択した場合の出力例：`male,"",TestLastName`。 この場合、Experience Platformは空の値を二重引用符のペアに変換します。
-* **[!UICONTROL Empty string]** を選択した場合の出力例：`male,,TestLastName`。 この場合、Experience Platformは空の値を保持し、そのまま（二重引用符なしで）書き出します。
+* [!UICONTROL Empty string] を選択した場合の出力例：`male,,TestLastName`。 この場合、Experience Platformは空の値を保持し、そのまま（二重引用符なしで）書き出します。
 
 >[!TIP]
 >
@@ -137,17 +137,17 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 このコントロールを使用して、書き出されたファイル内の null 値の文字列表現を設定します。このオプションは、書き出された CSV ファイルで null 値を表す方法を決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **二重引用符（&quot;）で囲まれた空の文字列**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### 例
+#### 例 {#null-value-examples}
 
 書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* **[!UICONTROL null]** を選択した場合の出力例：`male,NULL,TestLastName`。 この場合、変換は行われず、CSV ファイルに null 値が含まれます。
+* [!UICONTROL null] を選択した場合の出力例：`male,NULL,TestLastName`。 この場合、変換は行われず、CSV ファイルに null 値が含まれます。
 * **&quot;&quot;** を選択した場合の出力例：`male,"",TestLastName`。 この場合、Experience Platformは null 値を空の文字列を二重引用符で囲んで置き換えます。
-* **[!UICONTROL Empty string]** を選択した場合の出力例：`male,,TestLastName`。 この場合、Experience Platformは null 値を空の文字列（二重引用符なし）に置き換えます。
+* [!UICONTROL Empty string] を選択した場合の出力例：`male,,TestLastName`。 この場合、Experience Platformは null 値を空の文字列（二重引用符なし）に置き換えます。
 
 ### 圧縮形式 {#compression-format}
 
@@ -158,33 +158,33 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 データをファイルに保存する際に使用する圧縮タイプを設定します。GZIP と NONE がサポートされています。このオプションは、圧縮ファイルを書き出すかどうかを決定します。
 
-### エンコード
+### エンコード {#encoding}
 
 *UI のスクリーンショットには表示されません*。保存した CSV ファイルのエンコーディング（文字セット）を指定します。 オプションは UTF-8 または UTF-16 です。
 
-### 引用符をエスケープする文字
+### 引用符をエスケープする文字 {#char-to-escape-quote}
 
 *UI のスクリーンショットには表示されません*。引用符を含む値を、常に引用符で囲む必要があるかどうかを示すフラグ。
 
 デフォルトでは、引用符文字を含むすべての値をエスケープします。
 
-### 行区切り記号
+### 行区切り記号 {#line-separator}
 
 *UI のスクリーンショットには表示されません*。書き込みに使用する行区切り記号を定義します。 最大長は 1 文字です。
 
-### 先頭の空白を無視
+### 先頭の空白を無視 {#ignore-leading-whitespace}
 
 *UI のスクリーンショットには表示されません*。書き出される値の先頭の空白をスキップするかどうかを示すフラグ。
 
-**[!UICONTROL True]** を選択した場合の出力例：`"male","John","TestLastName"`
-**[!UICONTROL False]** を選択した場合の出力例：`" male","John","TestLastName"`
+[!UICONTROL True] を選択した場合の出力例：`"male","John","TestLastName"`
+[!UICONTROL False] を選択した場合の出力例：`" male","John","TestLastName"`
 
-### 末尾の空白を無視
+### 末尾の空白を無視 {#ignore-trailing-whitespace}
 
 UI のスクリーンショットには表示されません。 書き出す値の末尾の空白をスキップするかどうかを示すフラグ。
 
-**[!UICONTROL True]** を選択した場合の出力例：`"male","John","TestLastName"`
-**[!UICONTROL False]** を選択した場合の出力例：`"male ","John","TestLastName"`
+[!UICONTROL True] を選択した場合の出力例：`"male","John","TestLastName"`
+[!UICONTROL False] を選択した場合の出力例：`"male ","John","TestLastName"`
 
 ### 次の手順 {#next-steps}
 
