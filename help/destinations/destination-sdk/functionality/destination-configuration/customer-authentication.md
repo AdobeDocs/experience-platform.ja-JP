@@ -20,13 +20,13 @@ Experience Platform は、パートナーおよびお客様が使用できる認
 * [Destination SDK を使用したストリーミング宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK を使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-お客様は、Experience Platformから宛先にデータを書き出す前に、[ 宛先接続 ](../../../ui/connect-destination.md) チュートリアルに記載されている手順に従うことで、Experience Platformと宛先の間で新しい接続を作成する必要があります。
+お客様は、Experience Platformから宛先にデータを書き出す前に、[&#x200B; 宛先接続 &#x200B;](../../../ui/connect-destination.md) チュートリアルに記載されている手順に従うことで、Experience Platformと宛先の間で新しい接続を作成する必要があります。
 
 Destination SDK で[宛先を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)する場合、`customerAuthenticationConfigurations` セクションが、[認証画面](../../../ui/connect-destination.md#authenticate)で顧客に何が表示されるかを定義します。宛先認証タイプに応じて、顧客は、様々な認証の詳細を指定する必要があります。以下に例を示します。
 
 * [基本認証](#basic)を使用する宛先の場合、ユーザーは、Experience Platform UI 認証ページで直接ユーザー名およびパスワードを指定する必要があります。
 * [ベアラー認証](#bearer)を使用する宛先の場合、ユーザーは、ベアラートークンを指定する必要があります。
-* [OAuth2 認証 ](#oauth2) を使用する宛先の場合、ユーザーは、資格情報を使用してログインできる、宛先のログインページにリダイレクトされます。
+* [OAuth2 認証 &#x200B;](#oauth2) を使用する宛先の場合、ユーザーは、資格情報を使用してログインできる、宛先のログインページにリダイレクトされます。
 * [Amazon S3](#s3) 宛先の場合、ユーザーは、[!DNL Amazon S3] アクセスキーおよび秘密鍵を指定する必要があります。
 * [Azure Blob](#blob) 宛先の場合、ユーザーは、[!DNL Azure Blob] 接続文字列を指定する必要があります。
 
@@ -39,7 +39,7 @@ Destination SDK で[宛先を作成](../../authoring-api/destination-configurati
 
 >[!IMPORTANT]
 >
->顧客認証設定では、パラメーターを設定する必要はありません。宛先設定を [ 作成 ](../../authoring-api/destination-configuration/create-destination-configuration.md) または [ 更新 ](../../authoring-api/destination-configuration/update-destination-configuration.md) する際に、このページに表示されるスニペットを API 呼び出しにコピー&amp;ペーストできます。ユーザーには、Experience Platform UI に対応する認証画面が表示されます。
+>顧客認証設定では、パラメーターを設定する必要はありません。宛先設定を [&#x200B; 作成 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) または [&#x200B; 更新 &#x200B;](../../authoring-api/destination-configuration/update-destination-configuration.md) する際に、このページに表示されるスニペットを API 呼び出しにコピー&amp;ペーストできます。ユーザーには、Experience Platform UI に対応する認証画面が表示されます。
 
 >[!IMPORTANT]
 >

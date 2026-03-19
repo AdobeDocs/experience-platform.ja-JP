@@ -28,7 +28,7 @@ ht-degree: 84%
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に、[ はじめる前に ](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、[&#x200B; はじめる前に &#x200B;](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先サーバー設定の作成 {#create}
 
@@ -854,7 +854,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 動的ドロップダウン宛先サーバーの作成 {#dynamic-dropdown-servers}
 
-[ 動的ドロップダウン ](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、独自の API に基づいて、ドロップダウン顧客データフィールドを動的に取得および設定します。 例えば、宛先接続に使用したい既存のユーザーアカウントのリストを取得できます。
+[&#x200B; 動的ドロップダウン &#x200B;](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、独自の API に基づいて、ドロップダウン顧客データフィールドを動的に取得および設定します。 例えば、宛先接続に使用したい既存のユーザーアカウントのリストを取得できます。
 
 動的ドロップダウン顧客データフィールドを設定する前に、動的ドロップダウンの宛先サーバーを設定する必要があります。
 
@@ -950,7 +950,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

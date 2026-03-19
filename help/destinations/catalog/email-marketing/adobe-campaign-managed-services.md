@@ -13,11 +13,11 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->この統合は、[Adobe Campaign バージョン 8.4 以降 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1) で機能します。
+>この統合は、[Adobe Campaign バージョン 8.4 以降 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1) で機能します。
 
 ## 概要 {#overview}
 
-Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の概要 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
+Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の概要 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
 
 Campaign を使用すると、次のことを行えます。
 
@@ -29,17 +29,17 @@ Campaign を使用すると、次のことを行えます。
 
 Adobe Campaign Managed Cloud Services接続を使用する際は、次のガードレールに注意してください。
 
-* この宛先に対して最大 25 個のオーディエンスを [ アクティブ化 ](#activate) できます。
+* この宛先に対して最大 25 個のオーディエンスを [&#x200B; アクティブ化 &#x200B;](#activate) できます。
 
   この制限を変更するには、Campaign エクスプローラーの **>** > **[!UICONTROL Administration]** フォルダーで **[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** オプションの値を更新します。 このガードレールでは、設定済みのすべての宛先にわたって 1 つのExperience Platform インスタンスに書き出すことができる Campaign オーディエンスの合計数が制限されます。
 
-* オーディエンスごとに、最大 20 個のフィールドをAdobe Campaignに [ マッピング ](#map) できます。
+* オーディエンスごとに、最大 20 個のフィールドをAdobe Campaignに [&#x200B; マッピング &#x200B;](#map) できます。
 
   この制限を変更するには、Campaign エクスプローラーの **>** > **[!UICONTROL Administration]** フォルダーにある **[!UICONTROL Platform]** NmsCdp_Aep_Destinations_Max_Columns **[!UICONTROL Options]** オプションの値を更新します。
 
 * Azure Blob Storage Data Landing Zone （DLZ）でのデータ保持：7 日
 * アクティブ化の頻度は最低 3 時間です。
-* この接続でサポートされるファイル名の最大長は 255 文字です。 [ 書き出すファイル名を設定 ](../../ui/activate-batch-profile-destinations.md#configure-file-names) する場合は、ファイル名が 255 文字を超えないようにしてください。 ファイル名の最大長を超えると、アクティベーションエラーが発生します。
+* この接続でサポートされるファイル名の最大長は 255 文字です。 [&#x200B; 書き出すファイル名を設定 &#x200B;](../../ui/activate-batch-profile-destinations.md#configure-file-names) する場合は、ファイル名が 255 文字を超えないようにしてください。 ファイル名の最大長を超えると、アクティベーションエラーが発生します。
 * 特殊文字（例：`&`）を含むセグメント/オーディエンスは、オーディエンスをAdobe Campaignに書き出す場合はサポートされません。
 
 ## ユースケース {#use-cases}
@@ -61,7 +61,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
   >
   >プロファイル属性同期は、Adobe Campaign データベースに既に存在するプロファイルに対して使用できます。
 
-[ 詳しくは、Adobe Experience PlatformとのAdobe Campaign統合を参照してください ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
+[&#x200B; 詳しくは、Adobe Experience PlatformとのAdobe Campaign統合を参照してください &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
 
 ## サポートされている ID {#supported-identities}
 
@@ -84,8 +84,8 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -95,10 +95,10 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Profile-based]** | [ 宛先のアクティベーションワークフロー ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択したように、目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、オーディエンスのすべてのメンバーを書き出しています。 |
+| 書き出しタイプ | **[!UICONTROL Profile-based]** | [&#x200B; 宛先のアクティベーションワークフロー &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択したように、目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、オーディエンスのすべてのメンバーを書き出しています。 |
 | 書き出し頻度 | **[!UICONTROL Batch]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -118,7 +118,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -126,7 +126,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 名前、説明、インスタンスの選択、ターゲットマッピング、同期の種類のフィールドを示すAdobe Campaign Managed Cloud Servicesの宛先の詳細フォーム。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![&#x200B; 名前、説明、インスタンスの選択、ターゲットマッピング、同期の種類のフィールドを示すAdobe Campaign Managed Cloud Servicesの宛先の詳細フォーム。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -139,7 +139,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](../../ui/alerts.md) についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 &#x200B;](../../ui/alerts.md) についてのガイドを参照してください。
 
 宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
 
@@ -153,14 +153,14 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先にオーディエンスデータを有効化する手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータの有効化 ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) を参照してください。
+この宛先にオーディエンスデータを有効化する手順については、[&#x200B; バッチプロファイル書き出し宛先に対するオーディエンスデータの有効化 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-プロファイルと共に書き出す XDM フィールドを選択し、対応するAdobe Campaign フィールドにマッピングします。[ メールマーケティングの宛先の ID および属性の選択について詳しくは、こちらを参照してください ](overview.md)
+プロファイルと共に書き出す XDM フィールドを選択し、対応するAdobe Campaign フィールドにマッピングします。[&#x200B; メールマーケティングの宛先の ID および属性の選択について詳しくは、こちらを参照してください &#x200B;](overview.md)
 
 1. ソースフィールドを選択：
 
@@ -172,12 +172,12 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
    >
    >「segmentMembershipStatus」フィールドは、segmentMembership のステータスを反映するために必須のマッピングです。 このフィールドはデフォルトで追加され、変更または削除できません。
 
-1. 各フィールドをAdobe Campaignのターゲットフィールドにマッピングします。 使用可能なターゲットフィールドは、[ 宛先の作成 ](#destination-details) 時に選択したターゲットマッピングによって決定されます。
+1. 各フィールドをAdobe Campaignのターゲットフィールドにマッピングします。 使用可能なターゲットフィールドは、[&#x200B; 宛先の作成 &#x200B;](#destination-details) 時に選択したターゲットマッピングによって決定されます。
 
 1. 必須属性と重複排除キーを特定します。 「必須」または「重複排除キー」とマークされた属性の値は、null にはできません。
 
-   * [ 必須属性 ](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 選択した属性がすべてのプロファイルレコードに含まれていることを確認します。 例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。 ID フィールドと重複排除キーとして使用するフィールドの両方を必須に設定することをお勧めします。
-   * [ 重複排除キー ](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) は、ユーザーがプロファイルの重複排除する ID を決定するプライマリキーです。
+   * [&#x200B; 必須属性 &#x200B;](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 選択した属性がすべてのプロファイルレコードに含まれていることを確認します。 例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。 ID フィールドと重複排除キーとして使用するフィールドの両方を必須に設定することをお勧めします。
+   * [&#x200B; 重複排除キー &#x200B;](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) は、ユーザーがプロファイルの重複排除する ID を決定するプライマリキーです。
 
      >[!IMPORTANT]
      >
@@ -186,7 +186,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
    ![Adobe Campaign ターゲットフィールドにマッピングされた XDM ソースフィールドを示す属性マッピング画面。必須および重複排除のキーインジケーターが含まれます。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. マッピングが実行されたら、宛先設定を確認および完了して、**[!DNL Campaign]** へのデータの送信を開始できます。
-   [ 宛先設定を確認して完了する方法を説明します ](/help/destinations/destination-types.md#review)。
+   [&#x200B; 宛先設定を確認して完了する方法を説明します &#x200B;](/help/destinations/destination-types.md#review)。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -196,13 +196,13 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 **[!UICONTROL Administration]** / **[!UICONTROL Audit]** / **[!UICONTROL Audience load jobs]** メニューに移動し、Adobe Experience Platformからアクティブ化されたすべてのエクスポートジョブを監視します。
 
-![Adobe Experience Platformからアクティブ化された書き出しジョブを示す、Adobe Campaign オーディエンス読み込みジョブ画面 ](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![Adobe Experience Platformからアクティブ化された書き出しジョブを示す、Adobe Campaign オーディエンス読み込みジョブ画面 &#x200B;](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### 書き出したデータへのアクセス {#data}
 
 **[!UICONTROL Audience sync]** えば、**[!UICONTROL Profile and target]** / **[!UICONTROL List]** / オーディエンス メニューに移動して、書き出されたオーディ **[!UICONTROL AEP audiences]** ンスを確認できます。
 
-![Experience Platformから書き出されたオーディエンスを示すAdobe Campaign AEP オーディエンスのリスト表示（「プロファイル」および「ターゲット」で使用可能） ](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![Experience Platformから書き出されたオーディエンスを示すAdobe Campaign AEP オーディエンスのリスト表示（「プロファイル」および「ターゲット」で使用可能） &#x200B;](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 **[!UICONTROL Profile sync (Update only)]** えば、宛先でアクティブ化されたオーディエンスのターゲットとなる各プロファイルの Campaign データベースにデータが自動的に更新されます。
 

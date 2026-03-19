@@ -15,14 +15,14 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 Adobe Experience Platformは、幅広い宛先をサポートします。 Audience Activation のワークフローは、サポートするオーディエンスデータのタイプと、データ書き出しの頻度に基づいて、宛先によって異なります。
 
 ## アクティブ化メソッド {#activation-methods}
 
-[ 宛先を設定 ](connect-destination.md) した後、複数の方法でオーディエンスをアクティブ化できます。
+[&#x200B; 宛先を設定 &#x200B;](connect-destination.md) した後、複数の方法でオーディエンスをアクティブ化できます。
 
 ### 宛先カタログからオーディエンスをアクティブ化 {#activate-from-catalog}
 
@@ -38,11 +38,11 @@ Adobe Experience Platformは、幅広い宛先をサポートします。 Audien
 
 1. **[!UICONTROL Connections > Destinations]** に移動して、「**[!UICONTROL Browse]**」タブを選択します。
 
-   ![ 「参照」タブ ](../assets/ui/activation-overview/browse-tab.png)
+   ![&#x200B; 「参照」タブ &#x200B;](../assets/ui/activation-overview/browse-tab.png)
 
 1. セグメントをアクティベートするために使用する宛先接続を見つけ、「[!UICONTROL Name]」列の 3 つのドットを選択して、「**[!UICONTROL Activate audiences]**」を選択します。
 
-   ![ 「オーディエンスをアクティベート」ボタン ](../assets/ui/activation-overview/activate-segments.png)
+   ![&#x200B; 「オーディエンスをアクティベート」ボタン &#x200B;](../assets/ui/activation-overview/activate-segments.png)
 
 1. 選択した宛先に応じて、以下の記事で説明する手順に従って、**[!UICONTROL Select segments]** の手順から始めてアクティベーションワークフローを完了します。
 
@@ -52,7 +52,7 @@ Adobe Experience Platformは、幅広い宛先をサポートします。 Audien
 
 ### オーディエンスの詳細ページからオーディエンスをアクティベート {#activate-audience-details}
 
-オーディエンスの詳細ページから、宛先に対するオーディエンスをアクティブ化できます。 詳しくは、[ オーディエンスの詳細 ](../../segmentation/ui/audience-portal.md#audience-details) を参照してください。
+オーディエンスの詳細ページから、宛先に対するオーディエンスをアクティブ化できます。 詳しくは、[&#x200B; オーディエンスの詳細 &#x200B;](../../segmentation/ui/audience-portal.md#audience-details) を参照してください。
 
 選択した宛先に応じて、以下の記事で説明する手順に従って、アクティベーションワークフローを完了します。
 

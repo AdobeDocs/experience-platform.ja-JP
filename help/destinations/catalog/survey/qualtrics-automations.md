@@ -21,7 +21,7 @@ Qualtrics Experience iD では、Adobe Experience Platformの複数のオペレ�
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のリクエストについては、[ カスタマーサクセスハブ ](https://support-portal.qualtrics.com/) にログインして直接お問い合わせください。
+>宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のリクエストについては、[&#x200B; カスタマーサクセスハブ &#x200B;](https://support-portal.qualtrics.com/) にログインして直接お問い合わせください。
 
 ## ユースケース {#use-cases}
 
@@ -72,8 +72,8 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,10 +83,10 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -122,7 +122,7 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL URL]**: [ ワークフローをトリガーする ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON イベント [ 内で Qualtrics で見つかった URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). 例については、以下のスクリーンショットを参照してください。
+* **[!UICONTROL URL]**: [&#x200B; ワークフローをトリガーする &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON イベント [&#x200B; 内で Qualtrics で見つかった URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). 例については、以下のスクリーンショットを参照してください。
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -136,9 +136,9 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -148,11 +148,11 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 マッピングに属性を追加するには、新しいマッピングを追加する際に **カスタム属性** を選択します。 属性には任意の名前を入力できます。 Qualtrics は、属性名に *camelCase* の命名規則を推奨しています（例については、以下のスクリーンショットを参照してください）。
 
-![ カスタム属性 ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![&#x200B; カスタム属性 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 可能な属性マッピングの例については、以下のスクリーンショットを参照してください。
 
-![ マッピングの例 ](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![&#x200B; マッピングの例 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
 #### ID のマッピング {#map-identities}
 
@@ -165,7 +165,7 @@ Qualtrics から API トークンを取得するために必要な手順は次�
 
 例については、以下のスクリーンショットを参照してください。
 
-![ID 名前空間 ](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![ID 名前空間 &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

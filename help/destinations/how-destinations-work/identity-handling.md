@@ -77,7 +77,7 @@ ht-degree: 83%
 
 >[!TIP]
 >
->ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にExperience Platformでデータを自動的にハッシュ化するように設定します。 **[!UICONTROL Apply transformation]** オプションについて詳しくは、[ ストリーミング宛先のアクティブ化に関するチュートリアル ](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation) を参照してください。
+>ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にExperience Platformでデータを自動的にハッシュ化するように設定します。 **[!UICONTROL Apply transformation]** オプションについて詳しくは、[&#x200B; ストリーミング宛先のアクティブ化に関するチュートリアル &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation) を参照してください。
 
 ![Pinterest の宛先で ID フィールドにマッピングされるメールアドレス属性の例](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
@@ -87,7 +87,7 @@ ht-degree: 83%
 
 これらの宛先では、[!UICONTROL Experience Cloud ID service] または [!UICONTROL Experience Platform Web SDK] を使用して ID 同期を行う必要があります。
 
-[!UICONTROL Experience Platform Web SDK] を使用していて、従来の [!UICONTROL Experience Cloud ID service] がページに実装されていない場合は、問題の web サイトのデータストリームでサードパーティ ID の同期が有効になっていることを確認する必要があります（概要については [ データストリームの設定に関するドキュメント ](/help/datastreams/configure.md#create) を参照）。
+[!UICONTROL Experience Platform Web SDK] を使用していて、従来の [!UICONTROL Experience Cloud ID service] がページに実装されていない場合は、問題の web サイトのデータストリームでサードパーティ ID の同期が有効になっていることを確認する必要があります（概要については [&#x200B; データストリームの設定に関するドキュメント &#x200B;](/help/datastreams/configure.md#create) を参照）。
 
 上記でリンクを示したドキュメントの説明に従ってデータストリームを設定する際は、**[!UICONTROL Third Party ID Sync]** スライダーが有効になっていることを確認する必要があります。 ほとんどのお客様は、`container_id` フィールドを空白のまま残すでしょう（デフォルトは 0）。 従来の Audience Manager 実装で特定のコンテナ ID を使用していた場合にのみ、この値を変更する必要があります（ただし、それはごく少数のお客様の場合です）。
 

@@ -16,9 +16,9 @@ ht-degree: 62%
 
 この拡張機能を使用すると、（グローバルサイトタグではなく）従来の投光形式を使用して [!DNL DoubleClick Floodlight] タグを迅速かつ簡単にデプロイできます。 注意：この拡張機能はベータ版です。
 
-[!DNL DoubleClick Floodlight] （Beta）は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[!DNL Google]DoubleClick Floodlight[ の ](https://support.google.com/dcm/answer/2823388?hl=ja) サポートドキュメントを参照してください。
+[!DNL DoubleClick Floodlight] （Beta）は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[!DNL Google]DoubleClick Floodlight[&#x200B; の &#x200B;](https://support.google.com/dcm/answer/2823388?hl=ja) サポートドキュメントを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
 ![Doubleclick Floodlight 拡張機能](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 
@@ -32,7 +32,7 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 DoubleClick Floodlight（ベータ版）拡張機能をインストールするには、次の手順に従います。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

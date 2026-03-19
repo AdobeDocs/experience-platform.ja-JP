@@ -18,7 +18,7 @@ ht-degree: 31%
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、直接 `clientcare@rainfocus.com` 問い合わせいただくか、RainFocus [ ヘルプセンター ](https://help.rainfocus.com/hc/en-us) をご覧ください。
+>宛先コネクタとドキュメントページは、[!DNL RainFocus] チームが作成および管理します。 お問い合わせや更新のリクエストについては、直接 `clientcare@rainfocus.com` 問い合わせいただくか、RainFocus [&#x200B; ヘルプセンター &#x200B;](https://help.rainfocus.com/hc/en-us) をご覧ください。
 
 ## ユースケース {#use-cases}
 
@@ -58,8 +58,8 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -69,10 +69,10 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 | オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -100,7 +100,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
 
-![RainFocus 宛先コネクタの認証の詳細を指定 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
+![RainFocus 宛先コネクタの認証の詳細を指定 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
 * **[!UICONTROL Client ID]**:RainFocus API プロファイルから提供される [!DNL Client ID] を入力します。
 * **[!UICONTROL Client secret]**:RainFocus API プロファイルから提供される [!DNL Client Secret] を入力します。
@@ -111,7 +111,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![RainFocus 宛先コネクタの接続の詳細を指定する ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
+![RainFocus 宛先コネクタの接続の詳細を指定する &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識するための名前。
 * **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
@@ -127,9 +127,9 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -137,7 +137,7 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 * **メール** は、**ターゲットフィールド/ID 名前空間を選択/メール** を使用して、ターゲットフィールドとしてマッピングする必要があります
 
-![ プロファイルと ID のフィールドをマッピングする方法 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
+![&#x200B; プロファイルと ID のフィールドをマッピングする方法 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
 
 追加のプロファイルフィールドをマッピングすることをお勧めします。マッピングすると、[!DNL RainFocus] の参加者プロファイルが完全に入力されます。 [!DNL RainFocus] では、次のターゲットフィールドを使用できます。
 
@@ -162,9 +162,9 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 一連のプロファイルが [!DNL RainFocus] に送信されたら、[!DNL RainFocus] で API プロファイルのログを使用して、プロファイルが正常に取り込まれていることを検証します。
 
-![RainFocus での API プロファイルへのログの表示 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
+![RainFocus での API プロファイルへのログの表示 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
 
-![ プロファイルが正常に取り込まれていることを検証 ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
+![&#x200B; プロファイルが正常に取り込まれていることを検証 &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -172,4 +172,4 @@ RainFocus 宛先を使用する方法とタイミングをより深く理解す�
 
 ## その他のリソース {#additional-resources}
 
-* [RainFocus ストリーミングSourceコネクタ ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus ストリーミングSourceコネクタ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

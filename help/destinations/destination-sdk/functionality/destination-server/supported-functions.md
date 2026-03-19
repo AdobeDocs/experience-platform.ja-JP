@@ -27,7 +27,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 ## 前提条件 {#prerequisites}
 
-このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。テンプレートを使用して書き出されたデータを変換する前に、Experience Platformの [ プロファイル ](message-format.md#profile-structure) 構造 [!DNL Pebble] を理解する必要があります。
+このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。テンプレートを使用して書き出されたデータを変換する前に、Experience Platformの [&#x200B; プロファイル &#x200B;](message-format.md#profile-structure) 構造 [!DNL Pebble] を理解する必要があります。
 
 以下に説明する関数に進む前に、[ID、属性およびオーディエンスメンバーシップを変換するためのテンプレート言語の使用](message-format.md#using-templating)の節のテンプレートの例を確認してください。そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
 
