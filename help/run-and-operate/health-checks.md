@@ -172,7 +172,7 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 
 ![&#x200B; 説明、影響、影響を受ける名前空間リストを表示する、非推奨（廃止予定）の ID 名前空間の詳細パネル &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
 
-詳しくは、[&#x200B; 古い名前空間に関するExperience Cloud ナレッジベースの記事を参照してください &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
+詳しくは、[&#x200B; 古い名前空間に関するExperience Cloud ナレッジベースの記事を参照してください &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
 
 ## 次の手順 {#next-steps}
 
