@@ -2,13 +2,13 @@
 title: 実行と操作の概要
 description: 実行ツールと操作ツールを使用して、Experience Platform実装を調べ、トラブルシューティングし、最適化します。 スケジュールされたバッチのアクティベーションを可視化し、設定の問題を特定して、システムの信頼性を向上させます。
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # 実行と操作の概要
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-実行ツールと操作ツールにアクセスするには、**[!UICONTROL View Job Schedules]** と **[!UICONTROL View Profile Management]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
+実行ツールと操作ツールにアクセスするには、**[!UICONTROL View Job Schedules]** と **[!UICONTROL View Profile Management]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 [!UICONTROL Job Schedules] のページには、スケジュールされたすべてのバッチ処理ジョブの概要が表示されます。
 システム管理者に問い合わせて、適切な権限があることを確認します。
 
@@ -47,9 +47,9 @@ Experience Platform UI から実行ツールおよび操作ツールにアクセ
 
    >[!NOTE]
    >
-   >現在、使用可能な機能は [&#x200B; ジョブスケジュール &#x200B;](job-schedules.md) のみです。
+   >現在、使用可能な機能は、[ ジョブスケジュール ](job-schedules.md) および [ ヘルスチェック ](health-checks.md) です。
 
-![&#x200B; 左ナビゲーションの実行と操作を示すExperience Platform UI。](assets/overview/run-and-operate.png)
+![ 左ナビゲーションの実行と操作を示すExperience Platform UI。](assets/overview/run-and-operate.png)
 
 ## 使用可能なツール {#available-tools}
 
@@ -66,9 +66,9 @@ Experience Platform UI から実行ツールおよび操作ツールにアクセ
 > * バッチ送信
 > * バッチ宛先のアクティベーション。
 
-[&#x200B; ジョブスケジュール &#x200B;](job-schedules.md) を使用すると、データレイクの取り込み、プロファイルの取り込み、セグメント化、宛先のアクティベーションなど、サンドボックスごとに、組織全体でスケジュールされたすべてのバッチ操作を検査できます。 ジョブの実行ステータス、パフォーマンス指標および実行履歴を表示して、パターンを特定し、信頼性に影響を与える設定の問題を診断します。
+[ ジョブスケジュール ](job-schedules.md) を使用すると、データレイクの取り込み、プロファイルの取り込み、セグメント化、宛先のアクティベーションなど、サンドボックスごとに、組織全体でスケジュールされたすべてのバッチ操作を検査できます。 ジョブの実行ステータス、パフォーマンス指標および実行履歴を表示して、パターンを特定し、信頼性に影響を与える設定の問題を診断します。
 
-![&#x200B; ジョブスケジュール画面を示すExperience Platform UI。](assets/overview/job-schedules-interface.png)
+![ ジョブスケジュール画面を示すExperience Platform UI。](assets/overview/job-schedules-interface.png)
 
 ジョブ・スケジュールには、次の 3 つのレベルの調査が用意されています。
 
@@ -78,12 +78,28 @@ Experience Platform UI から実行ツールおよび操作ツールにアクセ
 
 また、データ処理ステージ間の依存関係を理解し、Experience Platform ワークフロー全体で信頼性の高いデータフローを確保するのに役立ちます。
 
+### ヘルスチェック {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] は現在、限定リリースとして利用できます。
+
+[ ヘルスチェック ](health-checks.md) を使用すると、ビジネス運用に影響を与える前に、スキーマと ID の設定の問題をプロアクティブに検出できます。 現在、ヘルスチェックは、スキーマと ID 名前空間にわたって毎日の静的スキャンを実行し、ベストプラクティスの欠落、設定の誤り、ダウンストリームのエラーにつながるパターンを明らかにします。
+
+ヘルスチェックでは、現在、次の 5 つの基本的な領域を評価しています。
+
+* **[ID フィールドの検証](health-checks.md#identity-field-validation)**:ID フィールドに適切な長さとパターンの制約があることを確認します。
+* **[ID グラフリンクルール](health-checks.md#identity-graph-linking-rules)**：プロファイルが折りたたまれないようにリンクルールが設定されていることを確認します。
+* **[人物および人物以外の ID 設定](health-checks.md#people-non-people-identity)**：スキーマクラスをまたいで正しい ID タイプ使用を検証します。
+* **[カスタム ID 名前空間の説明](health-checks.md#namespace-missing-description)**：名前空間メタデータが完了していることを確認します。
+* **[非推奨の ID 名前空間](health-checks.md#deprecated-namespace)**：クリーンアップ用に古い名前空間を検出します。
+
 ## 次の手順 {#next-steps}
 
 [!UICONTROL Run and Operate] ツールの目的と機能を理解したら、次のリソースを参照して知識を深めます。
 
-* データがExperience Platformにどのように取り込まれるかを理解するための [&#x200B; バッチ取り込み &#x200B;](../ingestion/batch-ingestion/overview.md) について説明します
-* バッチの取り込みとアクティベーションのために [&#x200B; ジョブスケジュールを検査 &#x200B;](job-schedules.md) する方法を説明します
-* バッチ宛先の [&#x200B; スケジュールされたアクティベーション &#x200B;](../destinations/ui/activate-batch-profile-destinations.md) 設定方法を理解します
-* 宛先の [&#x200B; データフロー監視 &#x200B;](../dataflows/ui/monitor-destinations.md) を探索
-
+* [ ヘルスチェック ](health-checks.md) を使用して、スキーマと ID の設定の問題を検出する方法を説明します
+* バッチの取り込みとアクティベーションのために [ ジョブスケジュールを検査 ](job-schedules.md) する方法を説明します
+* データがExperience Platformにどのように取り込まれるかを理解するための [ バッチ取り込み ](../ingestion/batch-ingestion/overview.md) について説明します
+* バッチ宛先の [ スケジュールされたアクティベーション ](../destinations/ui/activate-batch-profile-destinations.md) 設定方法を理解します
+* 宛先の [ データフロー監視 ](../dataflows/ui/monitor-destinations.md) を探索
