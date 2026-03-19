@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-ヘルスチェックにアクセスするには、**[!UICONTROL View Health Checks]** アクセス制御権限 [ が必要 ](/help/access-control/home.md#permissions) す。 システム管理者に問い合わせて、適切な権限があることを確認します。
+ヘルスチェックにアクセスするには、**[!UICONTROL View Health Checks]** アクセス制御権限 [&#x200B; が必要 &#x200B;](/help/access-control/home.md#permissions) す。 システム管理者に問い合わせて、適切な権限があることを確認します。
 
 ## ヘルスチェックへのアクセス {#access-health-checks}
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ヘルスチェックダッシュボードには、最新のスキャン結果の概要が表示されます。
 
-![ 評価されたオブジェクト、スキャン結果、識別された問題を示すヘルスチェックダッシュボード ](assets/health-checks/dashboard.png)
+![&#x200B; 評価されたオブジェクト、スキャン結果、識別された問題を示すヘルスチェックダッシュボード &#x200B;](assets/health-checks/dashboard.png)
 
 ## ダッシュボードについて {#understanding-dashboard}
 
@@ -83,9 +83,9 @@ ID フィールドに、データの整合性のための最小長および最�
 * **[!UICONTROL Experience League Documentation]**：データモデリングのベストプラクティスへのリンク。
 * **[!UICONTROL Affected Schemas]**：影響を受けるスキーマのリスト。詳細を表示するエクスパンダと、スキーマを開くためのリンクが付いています。
 
-![ 説明、影響および影響を受けるスキーマを示す ID フィールド検証の詳細パネル ](assets/health-checks/identity-field-validation-detail.png)
+![&#x200B; 説明、影響および影響を受けるスキーマを示す ID フィールド検証の詳細パネル &#x200B;](assets/health-checks/identity-field-validation-detail.png)
 
-詳しくは、スキーマのベストプラクティスドキュメントの [ データ整合性に関するヒント ](/help/xdm/schema/best-practices.md#data-integrity-tips) を参照してください。
+詳しくは、スキーマのベストプラクティスドキュメントの [&#x200B; データ整合性に関するヒント &#x200B;](/help/xdm/schema/best-practices.md#data-integrity-tips) を参照してください。
 
 ### ID グラフのリンクルール {#identity-graph-linking-rules}
 
@@ -105,9 +105,9 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 * **[!UICONTROL Experience League Documentation]**：詳しくは、ID グラフリンクルールの概要へのリンクを参照してください。
 * **[!UICONTROL Configure linking rules]**：チェックが失敗すると、ボタンが表示され、パネルから直接リンクルールを設定できます。
 
-![ 「説明」、「影響」、「リンクルールを設定」ボタンが表示されている ID グラフリンクルールの詳細パネル ](assets/health-checks/identity-graph-linking-detail.png)
+![&#x200B; 「説明」、「影響」、「リンクルールを設定」ボタンが表示されている ID グラフリンクルールの詳細パネル &#x200B;](assets/health-checks/identity-graph-linking-detail.png)
 
-詳しくは、[ID グラフリンクルールの概要 ](/help/identity-service/identity-graph-linking-rules/overview.md) および [ 実装ガイド ](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) を参照してください。
+詳しくは、[ID グラフリンクルールの概要 &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) および [&#x200B; 実装ガイド &#x200B;](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) を参照してください。
 
 ### 人物および人物以外の ID 設定 {#people-non-people-identity}
 
@@ -117,7 +117,7 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 | --- | --- |
 | **問題** | 人物以外の識別子は個人プロファイルまたはエクスペリエンスイベントクラスのスキーマで使用され、人物識別子はルックアップスキーマで使用されます。 |
 | **影響** | プロファイルスキーマの人物以外の識別子は ID グラフに含まれないので、不完全な ID 解決につながります。 ルックアップスキーマの人物識別子によりプロファイル数が水増しされ、データがルックアップユースケースに不適格になります。 どちらの場合も、将来の製品の機能強化により、実装が中断される可能性があります。 |
-| **是正** | フラグが設定されたスキーマを確認し、ID タイプの割り当てを修正します。 可能な場合は、個々のプロファイルスキーマから非個人識別子を削除します。 データセットで既に使用されているスキーマについては、[ スキーマ進化ルール ](/help/xdm/schema/composition.md#evolution) を参照してください。 |
+| **是正** | フラグが設定されたスキーマを確認し、ID タイプの割り当てを修正します。 可能な場合は、個々のプロファイルスキーマから非個人識別子を削除します。 データセットで既に使用されているスキーマについては、[&#x200B; スキーマ進化ルール &#x200B;](/help/xdm/schema/composition.md#evolution) を参照してください。 |
 
 **[!UICONTROL People & Non-People Identity Config]** カードを選択すると、右側に詳細パネルが開きます。 このパネルには、次の項目が表示されます。
 
@@ -126,9 +126,9 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 * **[!UICONTROL General areas of impact]**：不完全な ID グラフ、水増しされたプロファイル数、ルックアップの誤用。
 * **[!UICONTROL Affected Schemas]**：イシューを含むスキーマのリスト。 スキーマ行を展開して、各設定ミスのパス、ID 名、スキーマタイプを確認します。 リンクアイコンを使用して、スキーマを開きます。
 
-![ 説明、影響、影響を受けるスキーマを展開可能な行で表示する、人物および人物以外の ID 設定の詳細パネル ](assets/health-checks/people-non-people-identity-detail.png)
+![&#x200B; 説明、影響、影響を受けるスキーマを展開可能な行で表示する、人物および人物以外の ID 設定の詳細パネル &#x200B;](assets/health-checks/people-non-people-identity-detail.png)
 
-詳しくは、[ID タイプのドキュメント ](/help/identity-service/features/namespaces.md#identity-type) および [ スキーマのベストプラクティス ](/help/xdm/schema/best-practices.md) を参照してください。
+詳しくは、[ID タイプのドキュメント &#x200B;](/help/identity-service/features/namespaces.md#identity-type) および [&#x200B; スキーマのベストプラクティス &#x200B;](/help/xdm/schema/best-practices.md) を参照してください。
 
 ### カスタム ID 名前空間の説明 {#namespace-missing-description}
 
@@ -148,9 +148,9 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 * **[!UICONTROL Experience League Documentation]**：詳しくは、カスタム名前空間を作成するためのリンクを参照してください。
 * **[!UICONTROL Affected namespaces]**：説明がないカスタム ID 名前空間のリスト。 各名前空間の横にあるリンクアイコンを使用すると、名前空間を表示または編集できます。
 
-![ 説明、影響、影響を受ける名前空間のリストを表示するカスタム ID 名前空間の説明の詳細パネル ](assets/health-checks/custom-namespace-description-detail.png)
+![&#x200B; 説明、影響、影響を受ける名前空間のリストを表示するカスタム ID 名前空間の説明の詳細パネル &#x200B;](assets/health-checks/custom-namespace-description-detail.png)
 
-詳しくは、[ カスタム名前空間の作成 ](/help/identity-service/features/namespaces.md#create-namespaces) のドキュメントを参照してください。
+詳しくは、[&#x200B; カスタム名前空間の作成 &#x200B;](/help/identity-service/features/namespaces.md#create-namespaces) のドキュメントを参照してください。
 
 ### 非推奨の ID 名前空間 {#deprecated-namespace}
 
@@ -170,15 +170,15 @@ ID グラフのリンクルールがサンドボックス用に設定され、�
 * **[!UICONTROL Experience League Documentation]**：詳細なドキュメントについては、古い ID 名前空間へのリンクを参照してください。
 * **[!UICONTROL Affected namespaces]**：古くなった、または未使用の ID 名前空間のリスト。 各名前空間の横にあるリンクアイコンを使用すると、名前空間を表示または管理できます。
 
-![ 説明、影響、影響を受ける名前空間リストを表示する、非推奨（廃止予定）の ID 名前空間の詳細パネル ](assets/health-checks/deprecated-namespace-detail.png)
+![&#x200B; 説明、影響、影響を受ける名前空間リストを表示する、非推奨（廃止予定）の ID 名前空間の詳細パネル &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
 
-詳しくは、[ 古い名前空間に関するExperience Cloud ナレッジベースの記事を参照してください ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
+詳しくは、[&#x200B; 古い名前空間に関するExperience Cloud ナレッジベースの記事を参照してください &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
 
 ## 次の手順 {#next-steps}
 
 ヘルスチェックの結果を確認した後、次のリソースを参照して理解を深めます。
 
-* 信頼性の高いデータモデルを設計するための [ スキーマのベストプラクティス ](/help/xdm/schema/best-practices.md) について説明します。
-* プロファイルの折りたたみを防ぐための [ID グラフリンクルール ](/help/identity-service/identity-graph-linking-rules/overview.md) について説明します。
-* 名前空間管理のベストプラクティスについては、[ID 名前空間ドキュメント ](/help/identity-service/features/namespaces.md) を確認してください。
-* バッチ操作を表示する [ ールなど ](/help/run-and-operate/overview.md) 他の [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) 実行および操作ツールを調べます。
+* 信頼性の高いデータモデルを設計するための [&#x200B; スキーマのベストプラクティス &#x200B;](/help/xdm/schema/best-practices.md) について説明します。
+* プロファイルの折りたたみを防ぐための [ID グラフリンクルール &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) について説明します。
+* 名前空間管理のベストプラクティスについては、[ID 名前空間ドキュメント &#x200B;](/help/identity-service/features/namespaces.md) を確認してください。
+* バッチ操作を表示する [&#x200B; ールなど &#x200B;](/help/run-and-operate/overview.md) 他の [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) 実行および操作ツールを調べます。

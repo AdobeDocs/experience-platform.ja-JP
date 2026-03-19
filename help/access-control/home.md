@@ -13,7 +13,7 @@ ht-degree: 30%
 
 # アクセス制御の概要
 
-Adobe Experience Platformのアクセス制御は、**[!UICONTROL Permissions]** Adobe Experience Cloud[ の ](https://experience.adobe.com/) を通じて提供されます。 この機能では、ユーザーを権限とサンドボックスにリンクする役割とポリシーを活用します。
+Adobe Experience Platformのアクセス制御は、**[!UICONTROL Permissions]** Adobe Experience Cloud[&#x200B; の &#x200B;](https://experience.adobe.com/) を通じて提供されます。 この機能では、ユーザーを権限とサンドボックスにリンクする役割とポリシーを活用します。
 
 ## アクセス制御階層とワークフロー
 
@@ -73,7 +73,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 
 [!UICONTROL Permissions] では、役割のリソースワークスペースには、その役割に対してアクティブなサンドボックスと権限が表示されます。
 
-![ 選択したカテゴリと権限のリストを含む役割のリソースワークスペース。](./images/permissions.png)
+![&#x200B; 選択したカテゴリと権限のリストを含む役割のリソースワークスペース。](./images/permissions.png)
 
 次の表に、Experience Platformと権限で管理されるアプリケーションの両方で使用可能なリソースカテゴリの概要を示します。
 
@@ -132,8 +132,8 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | モデル設定への読み取り専用アクセス |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | プラン設定を表示および変更する機能。 |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | 計画の構成への読取り専用アクセス |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [!DNL [AI assistant]](../ai-assistant/access.md) の質問をする能力。 |
-| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | へのアクセスで、[ 運用インサイト ](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [[!DNL [AI assistant]]](../ai-assistant/access.md) の質問をする能力。 |
+| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | へのアクセスで、[&#x200B; 運用インサイト &#x200B;](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | ユーザーが [!DNL AI Assistant] を使用してコンテンツを生成できるようにします。 |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | ユーザーが [!DNL AI Assistant] を使用してブランドガイドラインを作成できるようにします。 |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | アラート履歴への読み取り専用アクセス。 |
@@ -204,7 +204,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
-| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Experience Platform アクティビティを記録した [ 監査ログ ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Experience Platform アクティビティを記録した [&#x200B; 監査ログ &#x200B;](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
 | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | プライバシーコンソールへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | 「**[!UICONTROL Catalog]**」タブでの使用可能なソースおよび「**[!UICONTROL Browse]**」タブでの認証済みのソースへの読み取り専用アクセス |
@@ -229,7 +229,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Destinations] | [!UICONTROL View Destinations] | 「**[!UICONTROL Catalog]**」タブで使用可能な宛先と「**[!UICONTROL Browse]**」タブで認証済みの宛先を表示する読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | 宛先接続および宛先アカウントの読み取り、作成、削除へのアクセス。 |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能また、この権限の場合は、宛先をアクティブ化するユーザーに [!UICONTROL View Destinations] または [!UICONTROL Manage Destinations] のいずれかを付与する必要があります。 |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | [ マッピングステップ ](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL View Destinations] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | [&#x200B; マッピングステップ &#x200B;](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL View Destinations] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL View Destinations] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | スキーマ、モデル、コンポジションの作成など、すべての連合データ機能にアクセスする機能。 |
