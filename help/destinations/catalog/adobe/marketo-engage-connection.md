@@ -45,7 +45,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 ## 前提条件 {#prerequisites}
 
-* 宛先を設定するユーザーは、Marketo インスタンスおよびパーティションに [&#x200B; ユーザーを編集 &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
+* 宛先を設定するユーザーは、Marketo インスタンスおよびパーティションに [&#x200B; ユーザーを編集 &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
 * この出力先を設定する場合は、同じAdobe Real-Time CDP組織のMarketo Engage インスタンスのみを使用できます。
 * この宛先を利用できるのは、Adobe Admin Consoleでユーザーが管理されているMarketo Engage インスタンスのみです。
 
@@ -146,7 +146,7 @@ Marketoは、選択した **[!UICONTROL Marketo deduplication field]** を使用
    * **[!UICONTROL Profile only]**: Experience Platformの最新情報を使用してMarketoのリードプロファイルを最新の状態に保つ場合は、このオプションを選択します。
    * **[!UICONTROL Audience only]**: プロファイル情報を更新せずにMarketo リストにオーディエンスメンバーを追加する場合は、このオプションを選択します。
 * **[!UICONTROL Partition]**: *パーティションの選択は、**[!UICONTROL Profile only]**&#x200B;または&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同期タイプを選択する場合にのみ使用できます*。 選択したワークスペースに関連付けられているMarketo パーティション ID を選択します。 これにより、書き出されたデータを受け取るMarketoのリードパーティションを指定できます。 特定のパーティションを選択しない場合、データはMarketoの **[!UICONTROL Default]** パーティションに送信されます。
-* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用する「Marketo重複排除」フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、Marketoでそのフィールドを [&#x200B; 検索可能なフィールド &#x200B;](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) としてマークする必要があります。
+* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用する「Marketo重複排除」フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、Marketoでそのフィールドを [&#x200B; 検索可能なフィールド &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo-developer/marketo/rest/lead-database/lead-database) としてマークする必要があります。
 
   >[!NOTE]
   >

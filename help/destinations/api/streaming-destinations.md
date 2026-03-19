@@ -565,7 +565,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> [&#x200B; 新しい宛先へのデータのアクティブ化 &#x200B;](#activate-data) の手順のプロファイル属性とオーディエンスに加えて、[!DNL AWS Kinesis] および [!DNL Azure Event Hubs] の書き出されたデータには、ID マップに関する情報も含まれています。 書き出されたプロファイルの ID を表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、モバイル ID、Google ID、メールアドレスなど）。 以下の例を参照してください。
+> [&#x200B; 新しい宛先へのデータのアクティブ化 &#x200B;](#activate-data) の手順のプロファイル属性とオーディエンスに加えて、[!DNL AWS Kinesis] および [!DNL Azure Event Hubs] の書き出されたデータには、ID マップに関する情報も含まれています。 書き出されたプロファイルの ID を表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、メールアドレスなど）。 以下の例を参照してください。
 
 ```json
 {

@@ -16,7 +16,7 @@ ht-degree: 45%
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
-Adobe Livefyre は、Adobe Experience Platformのソーシャル拡張機能です。 Adobe Livefyre について詳しくは、[Livefyre 実装ガイド &#x200B;](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html) を参照してください。
+Adobe Livefyre は、Adobe Experience Platformのソーシャル拡張機能です。 Adobe Livefyre について詳しくは、[Livefyre 実装ガイド &#x200B;](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=ja) を参照してください。
 
 この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
 
