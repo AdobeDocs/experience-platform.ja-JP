@@ -22,7 +22,7 @@ Web SDKでは、Cookie を使用して [!DNL ECIDs] ーザーの割り当てと�
 Web サイトに新しいユーザーが到達すると、[Adobe Experience Cloud ID サービスは &#x200B;](/help/identity-service/home.md) そのユーザーのデバイス ID Cookie の設定を試みます。
 
 * 初回の訪問者の場合、[!DNL ECID] が生成され、Experience Platform Edge Networkからの最初の応答で返されます。
-* 再訪問者の場合、[!DNL ECID] は [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) cookie から取得され、Edge Networkによってリクエストペイロードに追加されます。
+* 再訪問者の場合、[!DNL ECID] は [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk) cookie から取得され、Edge Networkによってリクエストペイロードに追加されます。
 
 [!DNL ECID] を含む Cookie が設定されると、Web SDKによって生成される後続の各リクエストでは、[!DNL ECID] の Cookie にエンコードされた `kndctr_<orgId>_identity` が含まれます。
 
@@ -55,7 +55,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 ### Adobe Experience Cloud アプリケーションへの cookie の有効期間の影響 {#lifespans}
 
-ファーストパーティとサードパーティのどちらのデータ収集を選択した場合でも、cookie が保持される期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/en/docs/target) または [Offer Decisioning&rbrace; が使用されている場合、一貫性のないパーソナライゼーションエクスペリエンスがエンドユーザーに &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) 生する可能性があります。
+ファーストパーティとサードパーティのどちらのデータ収集を選択した場合でも、cookie が保持される期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/ja/docs/target) または [Offer Decisioning&rbrace; が使用されている場合、一貫性のないパーソナライゼーションエクスペリエンスがエンドユーザーに &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/integrate/ajo/offer-decision) 生する可能性があります。
 
 例えば、過去 7 日間にユーザーが 3 回表示した項目を、ホームページに昇格させるパーソナライゼーションエクスペリエンスを作成した場合を考えてみましょう。
 
@@ -162,7 +162,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 | `authenticatedState` | 文字列 | **（必須）** ID の認証状態。 有効な値は `ambiguous`、`authenticated`、および `loggedOut` です。 |
 | `primary` | ブール | この ID をプロファイル内のプライマリフラグメントとして使用する必要があるかどうかを決定します。 デフォルトでは、ECID がユーザーのプライマリ ID として設定されます。 省略した場合、この値はデフォルトで `false` になります。 |
 
-`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[`setCustomerIDs` から &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) [!DNL ID Service API] メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) を参照してください。
+`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[`setCustomerIDs` から &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja) [!DNL ID Service API] メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ja) を参照してください。
 
 ## 訪問者 API から ECID への移行 {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 
 ### 移行する特性の更新
 
-XDM 形式のデータがAudience Managerに送信される場合、このデータは移行時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) を使用すると容易になります。
+XDM 形式のデータがAudience Managerに送信される場合、このデータは移行時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ja#getting-started-with-bulk-management) を使用すると容易になります。
 
 ## イベント転送での使用
 
