@@ -19,7 +19,7 @@ ht-degree: 0%
 
 このユースケースでは、データを収集するためのサーバーサイド実装と、パーソナライズされたコンテンツをレンダリングするためのクライアントサイド実装の両方を使用して、ハイブリッドアプローチを好みます。 MCP ツールの呼び出しは分析を収集する最も信頼できる瞬間なので、このアプローチは理想的です。 ウィジェットはブラウザーコンテキストで実行され、（cookie 内の） ID を保存し、パーソナライゼーションの決定を適用する適切な場所です。
 
-このユースケースには、完全に動作するコードの例が付随しています。 サンプルコードと実装手順については、GitHub の [ リポジトリにある ](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app)ChatGPT アプリ + Adobe Experience Platform Edge`alloy-samples` を参照してください。
+このユースケースには、完全に動作するコードの例が付随しています。 サンプルコードと実装手順については、GitHub の [&#x200B; リポジトリにある &#x200B;](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app)ChatGPT アプリ + Adobe Experience Platform Edge`alloy-samples` を参照してください。
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ ht-degree: 0%
 "Use the Adobe Office Information Tool to show me details about which office that is the most pet-friendly."
 ```
 
-詳しくは、OpenAI Developers のドキュメントの [MCP サーバーの構築 ](https://developers.openai.com/apps-sdk/build/mcp-server/) を参照してください。
+詳しくは、OpenAI Developers のドキュメントの [MCP サーバーの構築 &#x200B;](https://developers.openai.com/apps-sdk/build/mcp-server/) を参照してください。
 
 ## 手順 2:ChatGPT がインテントを解釈し、MCP ツールを呼び出す
 
@@ -81,11 +81,11 @@ MCP サーバーのメタデータに基づいて、ChatGPT はインテント�
 }
 ```
 
-各 MCP ツールの機能を ChatGPT に伝える方法について詳しくは、OpenAI Developers のドキュメントの [ ツールの定義 ](https://developers.openai.com/apps-sdk/plan/tools/) を参照してください。
+各 MCP ツールの機能を ChatGPT に伝える方法について詳しくは、OpenAI Developers のドキュメントの [&#x200B; ツールの定義 &#x200B;](https://developers.openai.com/apps-sdk/plan/tools/) を参照してください。
 
 ## 手順 3:MCP サーバーがエクスペリエンスイベントをEdge Networkに送信する
 
-MCP サーバーはリクエストを受け取ると、Adobe Experience Platform Edge Networkへの呼び出しをトリガーして分析データを記録し、オプションで意思決定/パーソナライゼーションをリクエストします。 このリクエストはサーバー間なので、[`interact` データ収集 API](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) の一部として認証済みの [](https://developer.adobe.com/data-collection-apis/docs/) エンドポイントを使用します。 Adobeでは、[ カスタム名前空間 ](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities) を使用して、OpenAI の一意の ID を渡すことをお勧めします。 ID UI で作成した名前空間と、呼び出しで定義した ID 名前空間が一致すること（大文字と小文字を区別）を確認します。
+MCP サーバーはリクエストを受け取ると、Adobe Experience Platform Edge Networkへの呼び出しをトリガーして分析データを記録し、オプションで意思決定/パーソナライゼーションをリクエストします。 このリクエストはサーバー間なので、[`interact` データ収集 API](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) の一部として認証済みの [&#128279;](https://developer.adobe.com/data-collection-apis/docs/) エンドポイントを使用します。 Adobeでは、[&#x200B; カスタム名前空間 &#x200B;](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities) を使用して、OpenAI の一意の ID を渡すことをお勧めします。 ID UI で作成した名前空間と、呼び出しで定義した ID 名前空間が一致すること（大文字と小文字を区別）を確認します。
 
 ```sh
 curl -X POST "https://server.adobedc.net/ee/v2/interact?datastreamId={DATASTREAM_ID}"
@@ -205,7 +205,7 @@ MCP ツールの応答には、構造化されたツールの出力とEdge Netwo
 }
 ```
 
-詳しくは、『 OpenAI デベロッパーリファレンス』の [ ツールの結果 ](https://developers.openai.com/apps-sdk/reference/#tool-results) を参照してください。
+詳しくは、『 OpenAI デベロッパーリファレンス』の [&#x200B; ツールの結果 &#x200B;](https://developers.openai.com/apps-sdk/reference/#tool-results) を参照してください。
 
 ## 手順 6：ウィジェットが結果をレンダリングし、`_adobe.handles` を使用して `applyResponse` 適用する
 
