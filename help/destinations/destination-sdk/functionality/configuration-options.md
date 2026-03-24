@@ -2,16 +2,16 @@
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 92%
+source-wordcount: '821'
+ht-degree: 82%
 
 ---
 
 # Destination SDK の設定オプション
 
-Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。
+[!DNL Adobe Experience Platform]の宛先サービスは、宛先機能を構築する複数のコンポーネントに対して設定エンドポイントを使用します。
 
 これらのコンポーネントを組み合わせることで、Experience Platform は、宛先プラットフォームに接続したり、カスタムメッセージを送信したり、カスタムファイルを書き出したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできます。
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 
 宛先サーバー設定は、サーバー仕様に関する情報と宛先にペイロードを配信するためにアドビが使用するテンプレートを結びつけます。
 
-例えば、ここでは、Experience Platformが接続する必要のあるお客様側の API エンドポイントや、Experience Platformが行う API 呼び出しのヘッダーおよびフォーマットを指定します。
+例えば、これは、Experience Platformが接続する必要があるAPI エンドポイントと、Experience Platformが行うAPI呼び出しのヘッダーとフォーマットを指定する場所です。
 
 ファイルベースの宛先の場合、この設定には、宛先でサポートされるファイル形式および圧縮形式も含まれます。[宛先サーバーエンドポイント](../authoring-api/destination-server/create-destination-server.md)を介して、以下に記載されている機能を設定できます。
 
@@ -38,12 +38,12 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 
 ## 宛先設定 {#destination-configuration}
 
-この設定エンドポイントには、宛先に関する基本および詳細情報が含まれます。例えば、ここでは、宛先がサポートできる ID タイプ、書き出されたファイル（ファイルベースの宛先用）の目的の形式、Adobe Experience Platform ユーザーインターフェイスの宛先カード用の様々な UI 属性を指定します。
+この設定エンドポイントには、宛先に関する基本および詳細情報が含まれます。例えば、宛先がサポートできるID タイプ、書き出されたファイルの目的の形式（ファイルベースの宛先の場合）、宛先カードの様々なUI属性を[!DNL Adobe Experience Platform] ユーザーインターフェイスで指定する場所です。
 
 各宛先設定コンポーネントについて詳しくは、以下のドキュメントを参照してください。[宛先エンドポイント](../authoring-api/destination-configuration/create-destination-configuration.md)を介して、以下に記載されている機能を設定できます。
 
 * [顧客認証設定](destination-configuration/customer-authentication.md)：宛先に接続するために Experience Platform が使用する必要がある認証メカニズムを選択します。この設定は、Experience Platform ユーザーインターフェイスの[新しい宛先を設定](../../ui/connect-destination.md)ページを生成します。このページでは、ユーザーが持っている宛先のアカウントに Experience Platform を接続します。
-* [OAuth2 認証 &#x200B;](destination-configuration/oauth2-authorization.md):Destination SDKでサポートされているすべての [!DNL OAuth2] 認証フローについて説明し、宛先用に認証を設定する手順 [!DNL OAuth2] 示します。
+* [OAuth2認証](destination-configuration/oauth2-authorization.md): Destination SDKでサポートされているすべての[!DNL OAuth2]認証フローについて説明し、宛先に[!DNL OAuth2]認証を設定する手順を確認します。
 * [顧客データフィールド](destination-configuration/customer-data-fields.md)：Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 * [UI 属性](destination-configuration/ui-attributes.md)：Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 * [スキーマ設定](destination-configuration/schema-configuration.md)：ユーザーがプロファイル属性と ID をマッピングする、宛先のターゲットスキーマの定義方法を説明します。
@@ -56,7 +56,7 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 
 ## オーディエンスメタデータ設定 {#audience-metadata-configuration}
 
-このコンポーネントを使用すると、宛先でオーディエンスがプログラムでどのように作成、更新または削除されるかを設定できます。ファイルベースの宛先の場合、ファイルが正常に宛先に配信されるといつでも通知されるように設定できます。[オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
+このコンポーネントでは、宛先でオーディエンスをプログラムで作成、更新、または削除する方法を設定できます。 ファイルベースの宛先の場合、ファイルが宛先に正常に配信されるたびに通知を設定できます。 [オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
 
 ## 次の手順 {#next-steps}
 

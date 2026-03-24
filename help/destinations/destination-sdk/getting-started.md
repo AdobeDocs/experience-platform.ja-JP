@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 82%
+source-wordcount: '589'
+ht-degree: 77%
 
 ---
 
@@ -13,21 +13,21 @@ ht-degree: 82%
 
 ## 概要 {#overview}
 
-このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
+このページでは、[!DNL Adobe Experience Platform] Destination SDKの認証方法と利用開始方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 
 ## 用語 {#terminology}
 
-このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 &rbrace; を参照してください。 [この機能に直接関連する用語については &#x200B;](/help/destinations/destination-sdk/glossary.md)Destination SDK用語集 &rbrace; を参照してください。
+このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については、[Experience Platform用語集](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)を参照してください。 この機能に直接関連する用語については、[Destination SDK用語集](/help/destinations/destination-sdk/glossary.md)を参照してください。
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 
 Destination SDK では、認証に [Adobe I/O](https://www.adobe.io/) ゲートウェイを使用します。 Destination SDK エンドポイントへの API 呼び出しを行うには、API 呼び出しで特定のヘッダーを指定する必要があります。 Adobe Exchange チームと協力して、[Adobe デベロッパーコンソール](https://developer.adobe.com/console)への認証を設定してください。
 
-Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。[API キー、組織 ID およびクライアント秘密鍵の生成」ステップからチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret) 開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。「[API キー、組織ID、およびクライアントシークレットを生成](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)」ステップからチュートリアルを開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {ORG_ID}`（組織 ID とも呼ばれます）
-* `Authorization: Bearer {ACCESS_TOKEN}`。アクセストークンの有効期間は 24 時間（ミリ秒単位で表現）なので、更新する必要があります。 アクセストークンを更新するには、認証に関するチュートリアルで説明されている手順を繰り返します。
+* `Authorization: Bearer {ACCESS_TOKEN}`をインストールします。アクセストークンの有効期限は 24 時間（ミリ秒単位で表現）なので、更新する必要があります。アクセストークンを更新するには、認証に関するチュートリアルで説明されている手順を繰り返します。
 
 <!--
 
@@ -56,7 +56,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## 役割ベースのアクセス制御（RBAC） {#rbac}
 
-[リファレンスドキュメント](functionality/configuration-options.md)に記載されている Destination SDK API エンドポイントを使用するには、**[!UICONTROL 宛先オーサリング]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
+[ リファレンスドキュメント ](functionality/configuration-options.md)に記載されているDestination SDK API エンドポイントを使用するには、**[!UICONTROL Destination Authoring]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
 
 ![宛先オーサリング権限](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## その他の留意事項 {#additional-considerations}
 
-* 製品化された宛先や公開されている宛先の場合、宛先設定を作成したり編集したりして宛先設定に加える変更は、Adobeによるレビューと承認が必要です。 変更内容は、レビューが完了した後にのみ、宛先に反映されます。 自分だけが使用できるプライベート宛先には適用されません。
+* 製品化された/公開された宛先の場合、宛先設定を作成または編集するかどうかにかかわらず、宛先設定に加えた変更は、Adobeでレビューおよび承認する必要があります。 変更は、レビューが完了した後にのみ宛先に反映されます。 これは、自分のみが利用できるプライベート宛先には適用されません。
 * 宛先設定を編集できるのは、同じ組織に所属し、サンドボックスにアクセスできるユーザーのみです。
 
 ## 次の手順 {#next-steps}
@@ -81,4 +81,4 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
    * [Destination SDK を使用したファイルベースの宛先の設定](guides/configure-file-based-destination-instructions.md)
 
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
-* Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/31656?captions=jpn)を参照してください。
+* Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832)を参照してください。

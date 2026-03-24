@@ -3,88 +3,88 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3003'
+source-wordcount: '2968'
 ht-degree: 23%
 
 ---
 
-# クラウドストレージの宛先へのデータセットの書き出し
+# データセットをクラウドストレージの宛先にエクスポートする
 
 >[!AVAILABILITY]
 >
->この機能は、Real-Time CDP PrimeまたはUltimate パッケージ、Adobe Journey Optimizer、Customer Journey Analyticsを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
+>この機能は、[!DNL Real-Time CDP] PrimeまたはUltimate パッケージ、[!DNL Adobe Journey Optimizer]、またはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 >[!IMPORTANT]
 >
->**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 Adobeでは、*2024 年 11 月 1 日（PT）より前* に作成されたすべてのデータセット書き出しデータフローに対して、2025 年 9 月 1 日（PT）のデフォルトの終了日が導入されました。
+>**アクション項目**: Experience Platform[の2024年9月2日リリースでは、データセットの書き出しデータフローの日付を](/help/release-notes/latest/latest.md#destinations)に設定するオプションが導入されました。 `endTime`Adobeでは、2024年11月1日&#x200B;*より前に作成されたすべてのデータセット書き出しデータフローに対して、2025年9月1日のデフォルトの終了日も導入されました。*
 >
->これらのデータフローのいずれについても、終了日より前に、データフローの終了日を手動で更新する必要があります。さもないと、書き出しはその日に停止します。 Experience Platform UI を使用して、2025 年 9 月 1 日（PT）に停止に設定されるデータフローを確認します。
+>これらのデータフローのいずれかで、データフローの終了日を終了日より前に手動で更新する必要があります。そうしないと、書き出しはその日に停止します。 Experience Platform UIを使用して、2025年9月1日に停止するように設定されているデータフローを表示します。
 >
->データセット書き出しデータフローの終了日の編集方法については、[&#x200B; スケジュールの節 &#x200B;](#scheduling) を参照してください。
+>データセット書き出しデータフローの終了日を編集する方法については、[ スケジュール設定セクション ](#scheduling)を参照してください。
 
-この記事では、Adobe Experience Platform Experience Platform UI を使用して、目的のクラウドストレージの場所（[、SFTP の場所、](/help/catalog/datasets/overview.md) など）に [!DNL Amazon S3] データセット [!DNL Google Cloud Storage] を書き出すために必要なワークフローについて説明します。
+ここでは、Experience Platform UIを使用して、[ データセット ](/help/catalog/datasets/overview.md)を[!DNL Adobe Experience Platform]から[!DNL Amazon S3]、SFTPの場所、または[!DNL Google Cloud Storage]などの任意のクラウドストレージの場所に書き出すために必要なワークフローについて説明します。
 
-Experience Platform API を使用してデータセットを書き出すこともできます。 詳しくは、[&#x200B; データセット API の書き出しチュートリアル &#x200B;](/help/destinations/api/export-datasets.md) を参照してください。
+Experience Platform APIを使用して、データセットを書き出すこともできます。 詳しくは、[ データセットの書き出しAPI チュートリアル ](/help/destinations/api/export-datasets.md)を参照してください。
 
-## 書き出すことができるデータセット {#datasets-to-export}
+## 書き出しに使用できるデータセット {#datasets-to-export}
 
-書き出すことができるデータセットは、Experience Platform アプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
+書き出すことができるデータセットは、Experience Platform アプリケーション （[!DNL Real-Time CDP]、[!DNL Adobe Journey Optimizer]）、階層（PrimeまたはUltimate）、および購入したアドオン （例：Data Distiller）によって異なります。
 
-次の表を使用して、アプリケーション、製品層、購入したアドオンに応じて、書き出すことができるデータセットのタイプを理解します。
+アプリケーション、製品層、購入したアドオンに応じて、書き出すことができるデータセットの種類を次の表で確認してください。
 
 <table>
 <thead>
   <tr>
-    <th>アプリケーション / アドオン</th>
-    <th>層</th>
-    <th>書き出すことができるデータセット</th>
+    <th>アプリケーション/アドオン</th>
+    <th>階層</th>
+    <th>書き出しに使用できるデータセット</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">Real-Time CDP</td>
+    <td rowspan="2">[!DNL Real-Time CDP]</td>
     <td>Prime</td>
-    <td>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
+    <td>ソース、Web SDK、モバイルSDK、Analytics Data Connector、Audience Managerを通じてデータを取得または収集した後、Experience Platform UIで作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ja#profile-attribute-datasets"> システム生成プロファイルスナップショットデータセット </a>。</li></td>
+    <td><ul><li>ソース、Web SDK、モバイルSDK、Analytics Data Connector、Audience Managerを通じてデータを取得または収集した後、Experience Platform UIで作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> システム生成プロファイル スナップショット データセット </a>。</li></td>
   </tr>
   <tr>
-    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
     <td>すべて</td>
-    <td> ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
+    <td> ソース、Web SDK、モバイルSDK、Analytics Data Connector、Audience Managerを通じてデータを取得または収集した後、Experience Platform UIで作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
-    <td>Data Distiller（アドオン）</td>
-    <td>クエリサービスを通じて作成された派生データセット。</td>
+    <td>Data Distiller （アドオン）</td>
+    <td>クエリサービスを通じて作成された派生データセット：</td>
   </tr>
 </tbody>
 </table>
 
 ## ビデオチュートリアル {#video-tutorial}
 
-このページで説明されているワークフローのエンドツーエンドの説明、データセットの書き出し機能を使用するメリット、推奨されるユースケースについては、以下のビデオをご覧ください。
+このページで説明されているワークフローのエンドツーエンドの説明、データセットの書き出し機能を使用する利点、推奨されるユースケースについて、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448819?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## サポートされる宛先 {#supported-destinations}
 
-現在、スクリーンショットでハイライト表示され、以下に示されているクラウドストレージの宛先にデータセットを書き出すことができます。
+現在、スクリーンショットで強調表示され、以下に示すクラウドストレージの宛先にデータセットを書き出すことができます。
 
-![&#x200B; データセット書き出しをサポートする宛先を示した宛先カタログページ &#x200B;](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![宛先カタログページ。どの宛先がデータセットの書き出しをサポートしているかが表示されます。](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -93,45 +93,45 @@ Experience Platform API を使用してデータセットを書き出すこと�
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## オーディエンスをアクティブ化するか、データセットを書き出すタイミング {#when-to-activate-audiences-or-activate-datasets}
+## オーディエンスをアクティベートしたり、データセットを書き出したりするタイミング {#when-to-activate-audiences-or-activate-datasets}
 
-Experience Platform カタログ内の一部のファイルベース宛先では、オーディエンスのアクティベーションとデータセットの書き出しの両方をサポートしています。
+Experience Platform カタログの一部のファイルベースの宛先では、オーディエンスのアクティベーションとデータセットの書き出しの両方をサポートしています。
 
-* データを、オーディエンスの関心または選定別にグループ化されたプロファイルに構造化する場合は、オーディエンスのアクティブ化を検討してください。
-* また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 このデータは、レポート、データサイエンスワークフロー、その他の多くのユースケースに使用できます。 例えば、管理者、データエンジニアまたはアナリストは、Experience Platformからデータをエクスポートしてデータウェアハウスと同期したり、BI 分析ツールや外部 Cloud ML ツールで使用したり、システムに長期保存のニーズに応じて保存したりできます。
+* データを活用して、オーディエンスの興味関心や適格性ごとにグループ化したプロファイルを作成したい場合は、オーディエンスのアクティベーションを検討しましょう。
+* また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 これらのデータは、レポートやデータサイエンスのワークフローなど、さまざまなユースケースで活用できます。 たとえば、管理者、データエンジニア、アナリストであれば、Experience Platformからデータをエクスポートして、データウェアハウスと同期したり、BI分析ツールや外部のクラウド ML ツールで使用したり、システムに保存して長期的なストレージのニーズに対応したりできます。
 
-このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。クラウドストレージ宛先またはメールマーケティング宛先に対して *オーディエンス* をアクティブ化する場合は、[&#x200B; バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。*オーディエンス*&#x200B;をクラウドストレージまたはメールマーケティング宛先にアクティベートする場合は、[ オーディエンスデータをバッチプロファイル書き出し宛先にアクティベート ](/help/destinations/ui/activate-batch-profile-destinations.md)をお読みください。
 
 ## 前提条件 {#prerequisites}
 
-データセットを書き出すための次の前提条件に注意してください。
+データセットを書き出すには、次の前提条件に注意してください。
 
 * データセットをクラウドストレージ宛先に書き出すには、正常に[宛先に接続されている](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
-* リアルタイム顧客プロファイルで使用するには、プロファイルデータセットを有効にする必要があります。 このオプションを有効にする方法については、[&#x200B; 詳細情報 &#x200B;](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) を参照してください。
+* リアルタイム顧客プロファイルで使用するには、プロファイルデータセットを有効にする必要があります。 このオプションを有効にする方法について[詳細](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile)を読む。
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**、**[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットをエクスポートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
-データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL Activate]** または **[!UICONTROL Export datasets]** コントロールがある場合、適切な権限を持っています。
+データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に&#x200B;**[!UICONTROL Activate]**&#x200B;または&#x200B;**[!UICONTROL Export datasets]** コントロールがある場合は、適切な権限を持っています。
 
 ## 宛先の選択 {#select-destination}
 
 データセットを書き出すことができる宛先を選択するには、次の手順に従います。
 
-1. **[!UICONTROL Connections > Destinations]** に移動して、「**[!UICONTROL Catalog]**」タブを選択します。
+1. **[!UICONTROL Connections > Destinations]**&#x200B;に移動し、「**[!UICONTROL Catalog]**」タブを選択します。
 
    ![カタログコントロールがハイライト表示された「宛先カタログ」タブ](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. データセットを書き出す宛先に対応するカードで、「**[!UICONTROL Activate]**」または「**[!UICONTROL Export datasets]**」を選択します。
+1. データセットの書き出し先に対応するカードで&#x200B;**[!UICONTROL Activate]**&#x200B;または&#x200B;**[!UICONTROL Export datasets]**&#x200B;を選択します。
 
    ![「アクティブ化」コントロールがハイライト表示された「宛先カタログ」タブ](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. 「**[!UICONTROL Data type Datasets]**」を選択し、データセットを書き出す宛先接続を選択して、「**[!UICONTROL Next]**」を選択します。
+1. **[!UICONTROL Data type Datasets]**&#x200B;を選択し、データセットの書き出し先となる宛先接続を選択してから、**[!UICONTROL Next]**&#x200B;を選択します。
 
 >[!TIP]
 > 
->データセットを書き出す新しい宛先を設定する場合は、「**[!UICONTROL Configure new destination]**」を選択して [&#x200B; 宛先に接続 &#x200B;](/help/destinations/ui/connect-destination.md) ワークフローをトリガーします。
+>データセットを書き出す新しい宛先を設定する場合は、**[!UICONTROL Configure new destination]**&#x200B;を選択して、[宛先に接続](/help/destinations/ui/connect-destination.md) ワークフローをトリガーします。
 
 ![「データセット」コントロールがハイライト表示された宛先のアクティベーションワークフロー](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
@@ -139,13 +139,13 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 
 ## データセットの選択 {#select-datasets}
 
-データセット名の左側にあるチェックボックスを使用して、宛先に書き出すデータセットを選択し、「**[!UICONTROL Next]**」を選択します。
+データセット名の左側にあるチェックボックスを使用して、宛先に書き出すデータセットを選択し、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ![書き出すデータセットを選択できる「データセットを選択」ステップが表示されているデータセット書き出しワークフロー](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 >[!NOTE]
 >
->ここで選択したすべてのデータセットは、同じ書き出しスケジュールを共有します。 異なる書き出しスケジュールが必要な場合（例えば、一部のデータセットでは増分書き出しを、他のデータセットでは 1 回限りの完全書き出しを行う場合）、スケジュールタイプごとに別々のデータフローを作成します。
+>ここで選択したすべてのデータセットは、同じ書き出しスケジュールを共有します。 異なる書き出しスケジュールが必要な場合（一部のデータセットの増分書き出しや、他のデータセットの1回限りの完全な書き出しなど）、スケジュールタイプごとに個別のデータフローを作成します。
 
 ## データセット書き出しのスケジュール設定 {#scheduling}
 
@@ -166,46 +166,46 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 
 >[!IMPORTANT]
 >
->**スケジュールは、データフロー内のすべてのデータセットに適用されます**
+>**スケジュールは、データフロー**&#x200B;内のすべてのデータセットに適用されます
 >
->書き出しスケジュールを設定または変更すると、現在、設定中のデータフローを通じて書き出されている **すべてのデータセット** に適用されます。 同じデータフロー内の個々のデータセットに対して、異なるスケジュールを設定することはできません。
+>書き出しスケジュールを設定または変更すると、現在設定しているデータフローを通じて書き出されているすべてのデータセット **に適用されます。**&#x200B;同じデータフロー内で個々のデータセットに異なるスケジュールを設定することはできません。
 >
->異なるデータセットに対して異なる書き出しスケジュールが必要な場合、スケジュールタイプごとに個別のデータフロー（個別の宛先接続）を作成する必要があります。
+>異なるデータセットに対して異なる書き出しスケジュールが必要な場合は、スケジュールタイプごとに別々のデータフロー（別々の宛先接続）を作成する必要があります。
 >
->**例：** 増分的に書き出すデータセット A があり、1 回限りの完全書き出しスケジュールを含むデータセット B を追加した場合、データセット A も 1 回限りの完全書き出しスケジュールに更新されます。
+>**例：** データセット Aを増分的にエクスポートしており、データセット Bを1回限りの完全なエクスポート スケジュールで追加した場合、データセット Aも1回限りの完全なエクスポート スケジュールに更新されます。
 
-**[!UICONTROL Scheduling]** の手順を使用して、次の操作を行います。
+**[!UICONTROL Scheduling]** ステップを使用して、以下を行います。
 
-* 開始日と終了日、およびデータセット書き出しの書き出しケイデンスを設定します。
-* 書き出したデータセットファイルで、データセットの完全なメンバーシップを書き出すか、書き出し発生のたびにメンバーシップに対する増分変更のみを書き出すかを設定します。
-* データセットを書き出すストレージの場所のフォルダーパスをカスタマイズします。 詳しくは、書き出しフォルダーパスの編集 [&#x200B; 方法を参照してください &#x200B;](#edit-folder-path)。
+* データセットの書き出しに、開始日と終了日、および書き出し頻度を設定します。
+* 書き出されたデータセットファイルで、データセットの完全なメンバーシップを書き出す必要があるか、書き出し時に各メンバーシップに対する増分の変更のみを行うかを設定します。
+* データセットを書き出すストレージの場所のフォルダーパスをカスタマイズします。 詳しくは、[書き出しフォルダーのパスを編集する方法を参照してください](#edit-folder-path)。
 
-ページの **[!UICONTROL Edit schedule]** コントロールを使用して、書き出しの書き出しケイデンスを編集し、完全ファイルと増分ファイルのどちらを書き出すかを選択します。
+ページの&#x200B;**[!UICONTROL Edit schedule]** コントロールを使用して、書き出しの書き出し頻度を編集したり、完全ファイルと増分ファイルのどちらを書き出すかを選択したりします。
 
 >[!WARNING]
 >
->ここでスケジュールを変更すると、このデータフロー内のすべてのデータセットの書き出し動作が更新されます。 このデータフローに複数のデータセットが含まれている場合、すべてのデータセットがこの変更の影響を受けます。
+>ここでスケジュールを変更すると、このデータフロー内のすべてのデータセットの書き出し動作が更新されます。 このデータフローに複数のデータセットが含まれる場合、これらはすべて、この変更の影響を受けます。
 
-![&#x200B; スケジュール設定ステップでハイライト表示されたスケジュール管理を編集 &#x200B;](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+![ スケジュール管理の編集は、スケジュール設定ステップでハイライト表示されています。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-デフォルトでは、「**[!UICONTROL Export incremental files]**」オプションが選択されています。 これにより、データセットの完全なスナップショットを表す 1 つまたは複数のファイルの書き出しがトリガーされます。 以降のファイルは、前回の書き出し以降のデータセットへの増分追加です。 **[!UICONTROL Export full files]** を選択することもできます。 この場合、データセットの 1 回限りの完全書き出しの頻度 **[!UICONTROL Once]** を選択します。
+**[!UICONTROL Export incremental files]** オプションはデフォルトで選択されています。 これにより、データセットの完全なスナップショットを表す1つまたは複数のファイルの書き出しがトリガーされます。 後続のファイルは、前回の書き出し以降のデータセットへの増分ファイルです。 **[!UICONTROL Export full files]**&#x200B;を選択することもできます。 この場合、データセットの1回限りの完全な書き出しの頻度&#x200B;**[!UICONTROL Once]**&#x200B;を選択します。
 
 >[!IMPORTANT]
 >
->最初の増分ファイル書き出しには、データセット内の既存のデータがすべて含まれ、バックフィルとして機能します。 書き出しには、1 つまたは複数のファイルを含めることができます。
+>最初の増分ファイル書き出しには、データセット内の既存のすべてのデータが含まれ、バックフィルとして機能します。 書き出しには、1つまたは複数のファイルを含めることができます。
 
 ![「スケジュール設定」ステップが表示されているデータセット書き出しワークフロー](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. **[!UICONTROL Frequency]** セレクターを使用して、書き出しの頻度を選択します。
+1. **[!UICONTROL Frequency]** セレクターを使用して、書き出し頻度を選択します。
 
-   * **[!UICONTROL Daily]**：増分ファイルの書き出しを、毎日 1 回指定した時刻にスケジュールします。
-   * **[!UICONTROL Hourly]**：増分ファイルの書き出しを、3 時間、6 時間、8 時間または 12 時間ごとにスケジュールします。
+   * **[!UICONTROL Daily]**：指定した時刻に、1日1回、毎日1回、増分ファイル書き出しをスケジュールします。
+   * **[!UICONTROL Hourly]**: 3、6、8、または12時間ごとに増分ファイルの書き出しをスケジュールします。
 
-2. **[!UICONTROL Time]** セレクターを使用して、ファイルが書き出され [!DNL UTC] 時刻を形式を指定します。
+2. **[!UICONTROL Time]** セレクターを使用して、書き出しを行う時刻を[!DNL UTC]形式で選択します。
 
-3. **[!UICONTROL Date]** セレクターを使用して、書き出しが行われる間隔を選択します。
+3. **[!UICONTROL Date]** セレクターを使用して、書き出しを実行する間隔を選択します。
 
-4. 「**[!UICONTROL Save]**」を選択して、スケジュールを保存し、**[!UICONTROL Review]** の手順に進みます。
+4. **[!UICONTROL Save]**&#x200B;を選択してスケジュールを保存し、**[!UICONTROL Review]** ステップに進みます。
 
 >[!NOTE]
 >
@@ -223,42 +223,42 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 >title="データセットフォルダーパスのプレビュー"
 >abstract="このウィンドウで追加したマクロに基づいて、ストレージの場所に作成されるフォルダー構造のプレビューを取得します。"
 
-「**[!UICONTROL Edit folder path]**」を選択して、書き出されたデータセットが格納されるストレージの場所のフォルダー構造をカスタマイズします。
+**[!UICONTROL Edit folder path]**&#x200B;を選択して、書き出されたデータセットが格納される保存場所のフォルダー構造をカスタマイズします。
 
-![&#x200B; スケジュール設定ステップでハイライト表示された「フォルダーパスを編集」コントロール &#x200B;](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+![ スケジュール手順でハイライト表示されたフォルダーのパス制御の編集](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
-使用可能な複数のマクロを使用して、目的のフォルダー名をカスタマイズできます。 マクロをダブルクリックしてフォルダーパスに追加し、マクロ間で `/` を使用してフォルダーを区切ります。
+使用可能なマクロをいくつか使用して、目的のフォルダー名をカスタマイズできます。 マクロをダブルクリックしてフォルダーパスに追加し、マクロ間で`/`を使用してフォルダーを分離します。
 
-![&#x200B; カスタムフォルダーモーダルウィンドウでハイライト表示されたマクロの選択。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+カスタムフォルダーモーダルウィンドウで選択した![ マクロがハイライト表示されます。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-目的のマクロを選択すると、ストレージの場所に作成されるフォルダー構造のプレビューを確認できます。 フォルダー構造の最初のレベルは、データセットを書き出すために **[!UICONTROL Folder path]** 宛先に接続 [&#x200B; した際に示した &#x200B;](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) を表します。
+目的のマクロを選択すると、ストレージの場所に作成されるフォルダー構造のプレビューが表示されます。 フォルダー構造内の最初のレベルは、**[!UICONTROL Folder path]**&#x200B;宛先[に接続してデータセットを書き出したときに指定した](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)を表します。
 
-![&#x200B; カスタムフォルダーモーダルウィンドウでハイライト表示されたフォルダーパスのプレビュー。](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+![ カスタムフォルダーモーダルウィンドウでフォルダーパスのプレビューが強調表示されます。](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
-### 複数のデータセットを管理する際のベストプラクティス {#best-practices-multiple-datasets}
+### 複数のデータセットを管理するためのベストプラクティス {#best-practices-multiple-datasets}
 
 複数のデータセットを書き出す場合は、次のベストプラクティスを考慮してください。
 
 * **同じスケジュール要件**：同じ書き出しスケジュール（頻度、タイプ）を必要とするデータセットを単一のデータフローにグループ化して、管理を容易にします。
-* **様々なスケジュール要件**：異なる書き出しスケジュールまたは書き出しタイプ（増分または完全）が必要なデータセットに対して、個別のデータフローを作成します。 これにより、各データセットが、固有のニーズに応じて書き出されます。
-* **変更前に確認**：既存のデータフローでスケジュールを変更する前に、そのデータフローを通じて既に書き出されているデータセットを確認して、書き出し動作に意図しない変更が加えられないようにします。
-* **設定のドキュメント化**：特に、異なる宛先間で複数の書き出しスケジュールを管理する場合、どのデータセットにどのデータフローが含まれるかを追跡します。
+* **異なるスケジュール要件**：異なる書き出しスケジュールまたは書き出しタイプ（増分と完全）を必要とするデータセットに対して、個別のデータフローを作成します。 これにより、各データセットが特定のニーズに従って書き出されます。
+* **変更する前に確認する**：既存のデータフローのスケジュールを変更する前に、そのデータフローを通じて既に書き出されているデータセットを確認して、書き出し動作に意図しない変更を加えないようにします。
+* **設定を文書化する**：特に異なる宛先で複数の書き出しスケジュールを管理する場合は、どのデータセットがどのデータフローにあるのかを追跡します。
 
 ## レビュー {#review}
 
-**[!UICONTROL Review]** のページには、選択内容の概要が表示されます。 「**[!UICONTROL Cancel]**」を選択してフローを中断する **[!UICONTROL Back]**、設定を変更する、または「**[!UICONTROL Finish]**」を選択して選択内容を確認し、宛先へのデータセットの書き出しを開始します。
+**[!UICONTROL Review]** ページで、選択内容の概要を表示できます。 **[!UICONTROL Cancel]**&#x200B;を選択してフローを分割し、**[!UICONTROL Back]**&#x200B;を選択して設定を変更するか、**[!UICONTROL Finish]**&#x200B;を選択して選択を確定し、データセットの宛先へのエクスポートを開始します。
 
 ![レビューステップを表示するデータセット書き出しワークフロー](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## データセットの正常な書き出しの確認 {#verify}
 
-データセットを書き出す際、Experience Platformは、指定されたストレージの場所に 1 つまたは複数の `.json` ファイルまたは `.parquet` ファイルを作成します。 指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されます。
+データセットを書き出す場合、Experience Platformは、指定したストレージの場所に1つまたは複数の`.json`または`.parquet`個のファイルを作成します。 指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されることを期待します。
 
-Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 デフォルトのフォルダー書き出しパターンを以下に示しますが、[&#x200B; 好みのマクロを使用してフォルダー構造をカスタマイズする &#x200B;](#edit-folder-path) ことができます。
+Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 デフォルトのフォルダー書き出しパターンは次の通りですが、フォルダー構造を好みのマクロで[ カスタマイズできます](#edit-folder-path)。
 
 >[!TIP]
 >
->このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために **[!UICONTROL Folder path]** 宛先に接続 [&#x200B; した際に指定した &#x200B;](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) を表します。
+>このフォルダー構造の最初のレベル - `folder-name-you-provided` – は、**[!UICONTROL Folder path]**&#x200B;宛先[に接続してデータセットをエクスポートしたときに指定した](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)を表します。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -270,22 +270,22 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 #### 圧縮されたデータセットファイル {#compressed-dataset-files}
 
-[&#x200B; 宛先に接続ワークフロー &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) では、以下に示すように、圧縮する書き出されたデータセットファイルを選択できます。
+[宛先への接続ワークフロー](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)で、次に示すように、圧縮する書き出されたデータセット ファイルを選択できます。
 
-![&#x200B; データセットを書き出す宛先に接続する際のファイルタイプと圧縮の選択。](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+![ データセットを書き出す宛先に接続する際のファイルの種類と圧縮の選択。](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
 
-2 つのファイルタイプを圧縮した場合、ファイル形式に違いがあることに注意してください。
+圧縮した場合、2つのファイルタイプ間のファイル形式の違いに注意してください。
 
-* 圧縮された JSON ファイルを書き出す場合、書き出されるファイルの形式は `json.gz` です。 書き出される JSON の形式は NDJSON であり、ビッグデータエコシステムの標準の交換形式です。 Adobeでは、書き出されたファイルを読み取るために NDJSON 互換のクライアントを使用することをお勧めします。
-* 圧縮 Parquet ファイルをエクスポートする場合、エクスポートされるファイル形式は `gz.parquet` です
+* 圧縮されたJSON ファイルを書き出す場合、書き出されるファイル形式は`json.gz`です。 書き出されたJSONの形式はNDJSONで、ビッグデータエコシステムの標準的な交換形式です。 Adobeでは、書き出されたファイルを読み取るために、NDJSON互換クライアントを使用することをお勧めします。
+* 圧縮されたparquet ファイルを書き出す場合、書き出されたファイル形式は`gz.parquet`です
 
-JSON ファイルへの書き出しはサポートされています *圧縮モードのみ*。 Parquet ファイルへの書き出しは、圧縮および非圧縮モードでサポートされます。
+JSON ファイルへの書き出しは、圧縮モードでのみ&#x200B;*サポートされます*。 Parquet ファイルへの書き出しは、圧縮モードと非圧縮モードでサポートされています。
 
 ## 宛先からのデータセットの削除 {#remove-dataset}
 
 既存のデータフローからデータセットを削除するには、次の手順に従います。
 
-1. [Experience Platform UI にログインし &#x200B;](https://experience.adobe.com/platform/) 左側のナビゲーションバーから「**[!UICONTROL Destinations]**」を選択します。 上部のヘッダーから「**[!UICONTROL Browse]**」を選択して、既存の宛先データフローを表示します。
+1. [Experience Platform UI](https://experience.adobe.com/platform/)にログインし、左側のナビゲーションバーから「**[!UICONTROL Destinations]**」を選択します。 上部ヘッダーから「**[!UICONTROL Browse]**」を選択して、既存の宛先データフローを表示します。
 
    ![宛先接続が表示され残りの部分がぼかされた宛先参照ビュー](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -293,96 +293,96 @@ JSON ファイルへの書き出しはサポートされています *圧縮モ�
    >
    >左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
-2. **[!UICONTROL Activation data]** 列から、データセットコントロールを選択して、この書き出しデータフローにマッピングされているすべてのデータセットを表示します。
+2. **[!UICONTROL Activation data]**&#x200B;列から、データセット コントロールを選択して、この書き出しデータフローにマッピングされたすべてのデータセットを表示します。
 
    ![アクティベーションデータ列で強調表示されている使用可能なデータセットナビゲーションオプション](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. 宛先の **[!UICONTROL Activation data]** ページが表示されます。 データセットリストの左側にあるチェックボックスを使用して、削除するデータセットを選択し、右側のパネルで「**[!UICONTROL Remove datasets]**」を選択して、データセット削除の確認ダイアログをトリガーします。
+3. 宛先の&#x200B;**[!UICONTROL Activation data]** ページが表示されます。 データセットリストの左側にあるチェックボックスを使用して、削除するデータセットを選択し、右側のパネルで「**[!UICONTROL Remove datasets]**」を選択して、データセットの削除の確認ダイアログをトリガーします。
 
    ![右側のパネルに「データセットの削除」コントロールが表示されているデータセットを削除ダイアログ](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. 確認ダイアログで、「**[!UICONTROL Remove]**」を選択すると、宛先への書き出しからデータセットが直ちに削除されます。
+4. 確認ダイアログで「**[!UICONTROL Remove]**」を選択して、データセットを宛先への書き出しからすぐに削除します。
 
    ![データフローからのデータセットの削除を確認するオプションを表示するダイアログ](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
-## データセット書き出し権限 {#licensing-entitlement}
+## データセット書き出しの使用権限 {#licensing-entitlement}
 
-1 年にエクスポートできるExperience Platform アプリケーションのデータの量については、製品説明ドキュメントを参照してください。 例えば、Real-Time CDPの製品説明を [&#x200B; こちら &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) で確認できます。
+1年間にExperience Platform アプリケーションごとに書き出すことができるデータの量については、製品説明ドキュメントを参照してください。 例えば、[!DNL Real-Time CDP]製品説明[ここ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)を表示できます。
 
-様々なアプリケーションのデータ書き出し権限は追加的ではないことに注意してください。 例えば、Real-Time CDP UltimateとAdobe Journey Optimizer Ultimateを購入した場合、製品の説明に従って、プロファイルの書き出し権限は 2 つの権限のうち大きい方になります。 ボリューム使用権限は、ライセンス済みプロファイルの合計数を取得し、Real-Time CDP Ultimateの場合は 500 KB、Real-Time CDP Primeの場合は 700 KB を乗じて、使用資格のあるデータのボリュームを判断することで計算されます。
+異なるアプリケーションのデータ書き出し権限は追加されないことに注意してください。 例えば、[!DNL Real-Time CDP] Ultimateと[!DNL Adobe Journey Optimizer] Ultimateを購入した場合、プロファイル書き出し使用権限は、商品説明に従って、2つの使用権限のうち大きい方になります。 ボリュームエンタイトルメントは、ライセンス済みプロファイルの合計数を取得し、[!DNL Real-Time CDP] Primeの場合は500 KB、Ultimateの場合は700 KBを掛けて、使用権限のあるデータの量を判断することで計算されます。[!DNL Real-Time CDP]
 
-一方、Data Distillerなどのアドオンを購入した場合、データ書き出し制限は、製品層とアドオンの合計を表します。
+一方、Data Distillerなどのアドオンを購入した場合、権限を持つデータ書き出し制限は、製品層とアドオンの合計を表します。
 
-[&#x200B; ライセンス使用状況ダッシュボード &#x200B;](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md) で、契約上の制限に照らしてプロファイルの書き出しを表示および追跡できます。
+[ ライセンス使用状況ダッシュボード ](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md)で、プロファイルの書き出しを契約上の制限に照らし合わせて表示および追跡できます。
 
 ## 既知の制限事項 {#known-limitations}
 
-データセット書き出しの一般リリースについては、次の制限事項に注意してください。
+データセット書き出しの一般公開リリースでは、次の制限に注意してください。
 
-* Experience Platformでは、小さなデータセットでも、複数のファイルを書き出す場合があります。 データセットの書き出しは、システム間の統合を目的として設計され、パフォーマンスに最適化されているため、書き出されるファイルの数をカスタマイズすることはできません。
-* 書き出すファイルの名前は現在、カスタマイズできません。
+* Experience Platformでは、小さなデータセットでも複数のファイルを書き出すことができます。 データセットの書き出しは、システム間の統合のために設計され、パフォーマンスのために最適化されているため、書き出されるファイルの数はカスタマイズできません。
+* 書き出されたファイル名は、現在カスタマイズできません。
 * 宛先に書き出されるデータセットの削除は、現在、UI で禁止されていません。 宛先に書き出されるデータセットは削除しないでください。 データセットを削除する場合は、まず、宛先データフローから[データセットを削除](#remove-dataset)します。
 * データセット書き出しのモニタリング指標は、現在、プロファイル書き出しの数値と混在しているので、実際の書き出し数値を反映していません。
-* タイムスタンプが 365 日より古いデータは、データセットの書き出しから除外されます。 詳しくは、[&#x200B; スケジュールされたデータセット書き出しのガードレール &#x200B;](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports) を参照してください
+* タイムスタンプが365日を超えるデータは、データセットの書き出しから除外されます。 詳細については、スケジュールされたデータセットの書き出しに関する[ ガードレール ](/help/destinations/guardrails.md#scheduled-dataset-exports)を参照してください
 
 ## よくある質問 {#faq}
 
-**フォルダーパスとして `/` に保存するだけの場合、フォルダーのないファイルを生成することはできますか？ また、フォルダーパスが不要な場合、名前が重複するファイルはどのようにフォルダーまたは場所に生成されますか？**
+**フォルダーのパスとして`/`に保存するだけで、フォルダーなしでファイルを生成できますか？ また、フォルダーのパスが必要ない場合、フォルダーまたは場所に重複する名前のファイルはどのように生成されますか？**
 
 +++回答
-2024 年 9 月のリリース以降、フォルダー名をカスタマイズし、`/` を使用して同じフォルダー内のすべてのデータセットのファイルを書き出すこともできます。 異なるデータセットに属するシステム生成ファイル名が同じフォルダーに混在するので、Adobeは複数のデータセットを書き出す宛先に対してはこの方法を推奨しません。
+2024年9月リリース以降、フォルダー名をカスタマイズし、同じフォルダー内のすべてのデータセットのファイルの書き出しに`/`を使用することもできます。 Adobeでは、異なるデータセットに属するシステム生成ファイル名が同じフォルダー内に混在するため、複数のデータセットを書き出す宛先には使用しないことをお勧めします。
 +++
 
-**マニフェストファイルを 1 つのフォルダーに、データファイルを別のフォルダーにルーティングできますか？**
+**マニフェストファイルをあるフォルダーに、データファイルを別のフォルダーにルーティングできますか？**
 
 +++回答
 いいえ。マニフェストファイルを別の場所にコピーする機能はありません。
 +++
 
-**ファイル配信のシーケンスやタイミングを制御することはできますか？**
+**ファイル配信の順序やタイミングを制御できますか？**
 
 +++回答
-書き出しをスケジュールするためのオプションがあります。 ファイルのコピーを遅延または順序付けするオプションはありません。 作成されたらすぐに、ストレージの場所にコピーされます。
+書き出しのスケジュールを設定するオプションがあります。 ファイルのコピーを遅延または順序付けするオプションはありません。 それらは生成されるとすぐに、ストレージの場所にコピーされます。
 +++
 
-**マニフェストファイルにはどのような形式がありますか？**
+**マニフェスト ファイルに使用できる形式は何ですか？**
 
 +++回答
-マニフェストファイルは.json 形式です。
+マニフェストファイルは.json形式です。
 +++
 
-**マニフェストファイルに対して API は使用できますか？**
+**マニフェスト ファイルにAPIを使用できますか？**
 
 +++回答
-マニフェストファイルに使用できる API はありませんが、書き出しを構成するファイルのリストが含まれています。
+マニフェストファイルに使用できるAPIはありませんが、書き出しを構成するファイルのリストが含まれています。
 +++
 
-**マニフェストファイル（レコード数）に詳細を追加することはできますか？ その場合、方法を教えてください。**
+**マニフェスト ファイルに追加の詳細（レコード数）を追加できますか？ その場合、どうですか？**
 
 +++回答
-マニフェストファイルに情報を追加する可能性はありません。 レコード数は、`flowRun` エンティティを介して使用できます（API 経由でクエリ可能）。 詳しくは、宛先の監視を参照してください。
+マニフェストファイルに追加情報を追加する可能性はありません。 レコード数は、`flowRun` エンティティを介して使用できます（API経由でクエリ可能）。 詳しくは、宛先監視を参照してください。
 +++
 
-**データファイルはどのように分割されますか？ ファイルあたりのレコード数**
+**データファイルはどのように分割されますか？ 1つのファイルあたりのレコード数は？**
 
 +++回答
-データファイルは、Experience Platform データレイクのデフォルトのパーティションごとに分割されます。 データセットが大きいほど、パーティション数は多くなります。 デフォルトのパーティション化は、読み取り用に最適化されているので、ユーザーは設定できません。
+データファイルは、Experience Platform データレイクのデフォルトのパーティションごとに分割されます。 データセットが大きいほど、パーティションの数が多くなります。 デフォルトのパーティション設定は、読み取り用に最適化されているため、ユーザーは設定できません。
 +++
 
 **しきい値（ファイルあたりのレコード数）を設定できますか？**
 
 +++回答
-いいえ、できません。
+いいえ、不可能です。
 +++
 
-**最初の送信が無効な場合、データセットを再送信するにはどうすればよいですか？**
+**最初の送信が不正な場合、データセットを再送信するにはどうすればよいですか？**
 
 +++回答
-ほとんどのタイプのシステムエラーでは、再試行は自動的に行われます。
+再試行は、ほとんどのタイプのシステムエラーに対して自動的に実行されます。
 +++
 
-**同じデータフローの異なるデータセットに対して異なる書き出しスケジュールを設定することはできますか？**
+**同じデータフロー内の異なるデータセットに対して、異なる書き出しスケジュールを設定できますか？**
 
 +++回答
-いいえ。1 つのデータフロー内のすべてのデータセットは、同じ書き出しスケジュールを共有します。 異なるデータセットに対して異なる書き出しスケジュールが必要な場合、スケジュールタイプごとに個別のデータフロー（宛先接続）を作成する必要があります。 例えば、データセット A を毎日増分的に書き出し、データセット B を 1 回限りの完全書き出しとして書き出す場合は、2 つの個別のデータフローを作成する必要があります。
+いいえ。単一のデータフロー内のすべてのデータセットは、同じ書き出しスケジュールを共有します。 異なるデータセットに対して異なる書き出しスケジュールが必要な場合は、スケジュールタイプごとに個別のデータフロー（宛先接続）を作成する必要があります。 例えば、データセット Aを毎日増分エクスポートし、データセット Bを1回限りの完全エクスポートとしてエクスポートする場合は、2つの別々のデータフローを作成する必要があります。
 +++

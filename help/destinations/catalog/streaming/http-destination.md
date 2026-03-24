@@ -4,9 +4,9 @@ title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3020'
 ht-degree: 48%
 
 ---
@@ -25,7 +25,7 @@ HTTP API 宛先は、プロファイルデータをサードパーティの HTTP
 
 ## ユースケース {#use-cases}
 
-HTTP API 宛先を使用すると、XDM プロファイルデータとオーディエンスを汎用の HTTP エンドポイントに書き出すことができます。 そこで、Experience Platform から書き出されたプロファイル データに対して、独自の分析を実行したり、その他の必要な操作を行ったりできます。
+HTTP API宛先を使用すると、XDM プロファイルデータとオーディエンスを汎用HTTP エンドポイントに書き出すことができます。 そこで、Experience Platform から書き出されたプロファイル データに対して、独自の分析を実行したり、その他の必要な操作を行ったりできます。
 
 HTTP エンドポイントとして設定できるのは、顧客独自のシステムまたはサードパーティソリューションのいずれかです。
 
@@ -33,23 +33,23 @@ HTTP エンドポイントとして設定できるのは、顧客独自のシス
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 * REST API をサポートする HTTP エンドポイントが必要です。
 * 使用する HTTP エンドポイントが、Experience Platform プロファイルスキーマをサポートする必要があります。HTTP API 宛先では、サードパーティのペイロードスキーマへの変換はサポートされていません。Experience Platform の出力スキーマの例については、[書き出されたデータ](#exported-data)の節を参照してください。
 * HTTP エンドポイントはヘッダーをサポートする必要があります。
-* HTTP エンドポイントは、適切なデータ処理を確保し、タイムアウトエラーを回避するために、2 秒以内に応答する必要があります。
-* mTLS を使用する予定がある場合：データ受信エンドポイントでは、TLS を無効にし、mTLS のみを有効にする必要があります。 エンドポイントが OAuth 2 パスワードまたはクライアント資格情報認証を必要とする場合、mTLS はサポートされません。
+* HTTP エンドポイントは、適切なデータ処理を確保し、タイムアウトエラーを回避するために2秒以内に応答する必要があります。
+* mTLSを使用する場合：データ受信エンドポイントでTLSを無効にし、mTLSのみを有効にする必要があります。 エンドポイントでOAuth 2 パスワードまたはクライアント資格情報認証が必要な場合、mTLSはサポートされません。
 
 >[!TIP]
 >
@@ -81,29 +81,29 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 
 ## mTLS プロトコルのサポートと証明書 {#mtls-protocol-support}
 
-[!DNL Mutual Transport Layer Security] （[!DNL mTLS]）を使用して、HTTP API 宛先接続へのアウトバウンド接続のセキュリティを強化できます。
+[!DNL Mutual Transport Layer Security] （[!DNL mTLS]）を使用して、HTTP API宛先接続へのアウトバウンド接続のセキュリティを強化できます。
 
-[!DNL mTLS] は、情報を共有する両方の関係者が、データを共有する前に本来の姿を示すことを保証する相互認証プロトコルです。 [!DNL mTLS] には、標準の [!DNL TLS] と比較した追加の手順が含まれます。標準の手順では、サーバーはクライアントの証明書も要求および検証し、クライアントはサーバーの証明書を検証します。
+[!DNL mTLS]は、情報を共有する両当事者が、データを共有する前に自分が要求する人物であることを保証する相互認証プロトコルです。 [!DNL mTLS]には、標準[!DNL TLS]と比較した追加の手順が含まれます。この手順では、サーバーもクライアントの証明書を要求および検証し、クライアントはサーバーの証明書を検証します。
 
-### mTLS の考慮事項 {#mtls-considerations}
+### mTLSの考慮事項 {#mtls-considerations}
 
-HTTP API 宛先の mTLS サポートは、プロファイルの書き出しが送信される **データ受信エンドポイントにのみ** 適用されます（**[!UICONTROL HTTP Endpoint]** 宛先の詳細 [&#x200B; の &#x200B;](#destination-details) フィールド）。
+HTTP API宛先に対するmTLS サポートは、プロファイルの書き出しが送信されるデータ受信エンドポイント **にのみ**&#x200B;適用されます（**[!UICONTROL HTTP Endpoint]**&#x200B;宛先の詳細[の](#destination-details) フィールド）。
 
-エンドポイントに OAuth 2 パスワードまたはクライアント資格情報認証が必要な場合、mTLS は **サポートされていません**。
+エンドポイントでOAuth 2 パスワードまたはクライアント資格情報の認証が必要な場合、mTLSは&#x200B;**サポートされていません**。
 
-### データ書き出し用の mTLS の設定 {#configuring-mtls}
+### データ書き出し用のmTLSの設定 {#configuring-mtls}
 
-[!DNL mTLS] の宛先で [!DNL HTTP API] を使用するには、**[!UICONTROL HTTP Endpoint]** 宛先の詳細）ページで設定した [&#x200B; （データ受信エンドポイント &#x200B;](#destination-details) で、[!DNL TLS] プロトコルを無効にして、[!DNL mTLS] のみを有効にする必要があります。 エンドポイントで [!DNL TLS] 1.2 プロトコルがまだ有効になっている場合、クライアント認証の証明書は送信されません。 つまり、[!DNL mTLS] の宛先で [!DNL HTTP API] を使用するには、データ受信サーバーエンドポイントが、[!DNL mTLS] み取り専用で有効な接続エンドポイントである必要があります。
+[!DNL mTLS]を[!DNL HTTP API]宛先で使用するには、**[!UICONTROL HTTP Endpoint]**&#x200B;宛先の詳細[ ページで設定する](#destination-details) （データ受信エンドポイント）で、[!DNL TLS] プロトコルを無効にし、[!DNL mTLS]のみを有効にする必要があります。 エンドポイントで[!DNL TLS] 1.2 プロトコルが引き続き有効になっている場合、クライアント認証用の証明書は送信されません。 つまり、[!DNL mTLS]を[!DNL HTTP API]宛先で使用するには、データ受信サーバーエンドポイントが[!DNL mTLS]専用の有効な接続エンドポイントである必要があります。
 
 ### 証明書の詳細の取得と検査 {#certificate}
 
-[!DNL Common Name] （CN）や [!DNL Subject Alternative Names] （SAN）などの証明書の詳細を調べて、追加のサードパーティ検証を行う場合は、API を使用して証明書を取得し、応答からそれらのフィールドを抽出します。
+サードパーティによる追加検証のために[!DNL Common Name] （CN）や[!DNL Subject Alternative Names] （SAN）などの証明書の詳細を検査する場合は、APIを使用して証明書を取得し、応答からこれらのフィールドを抽出します。
 
-詳しくは、[&#x200B; 公開証明書エンドポイントのドキュメント &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
+詳しくは、[公開証明書エンドポイントのドキュメント ](../../../data-governance/mtls-api/public-certificate-endpoint.md)を参照してください。
 
 ## IP アドレスの許可リスト {#ip-address-allowlist}
 
-顧客のセキュリティおよびコンプライアンスの要件を満たすために、Experience Platform には HTTP API 宛先の許可リストに使用できる静的 IP のリストが用意されています。に許可リストに加える許可リストに加えるされる IP の一覧については、[&#x200B; ストリーミング先の IP アドレス &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md) を参照してください。
+顧客のセキュリティおよびコンプライアンスの要件を満たすために、Experience Platform には HTTP API 宛先の許可リストに使用できる静的 IP のリストが用意されています。許可リストに加えるするIPの完全なリストについては、[ ストリーミング宛先のIP アドレスの許可リストに加える](/help/destinations/catalog/streaming/ip-address-allow-list.md)を参照してください。
 
 ## サポートしている認証タイプ {#supported-authentication-types}
 
@@ -111,7 +111,7 @@ HTTP API 宛先は、HTTP エンドポイントに対して、以下に示す複
 
 * 認証なしの HTTP エンドポイント。
 * ベアラートークン認証。
-* 以下の例に示すように、HTTP リクエストの本文に [、](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)、[!DNL client ID] を含み、本文形式を持つ [!DNL client secret]OAuth 2.0 クライアント資格情報 [!DNL grant type] 認証。
+* [OAuth 2.0 クライアント資格情報](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)は、次の例に示すように、HTTP リクエストの本文に[!DNL client ID]、[!DNL client secret]、および[!DNL grant type]を含む本文フォームを使用した認証です。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -136,7 +136,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -149,56 +149,56 @@ curl --location --request POST 'https://some-api.com/token' \
 
 #### ベアラートークン認証 {#bearer-token-authentication}
 
-**[!UICONTROL Bearer token]** 認証タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]** を選択します。
+HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Bearer token]**&#x200B;認証タイプを選択した場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-![&#x200B; ベアラートークン認証を使用して HTTP API の宛先に接続できる UI 画面の画像 &#x200B;](../../assets/catalog/http/http-api-authentication-bearer.png)
+![ ベアラートークン認証を使用してHTTP API宛先に接続できるUI画面の画像。](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Bearer token]**：ベアラートークンを挿入して、HTTP ロケーションに対する認証を行います。
+* **[!UICONTROL Bearer token]**: HTTPの場所に対して認証するベアラートークンを挿入します。
 
 #### 認証なし {#no-authentication}
 
-**[!UICONTROL None]** 認証タイプを選択して HTTP エンドポイントに接続する場合：
+HTTP エンドポイントに接続する&#x200B;**[!UICONTROL None]**&#x200B;認証タイプを選択した場合：
 
-![&#x200B; 認証なしで HTTP API の宛先に接続できる UI 画面の画像 &#x200B;](../../assets/catalog/http/http-api-authentication-none.png)
+![認証なしでHTTP API宛先に接続できるUI画面の画像。](../../assets/catalog/http/http-api-authentication-none.png)
 
-この認証を開いた状態で選択する場合は、**[!UICONTROL Connect to destination]** を選択するだけで、エンドポイントへの接続が確立されます。
+この認証を選択して開くと、**[!UICONTROL Connect to destination]**&#x200B;を選択するだけで、エンドポイントへの接続が確立されます。
 
 #### OAuth 2 パスワード認証 {#oauth-2-password-authentication}
 
-**[!UICONTROL OAuth 2 Password]** 認証タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]** を選択します。
+HTTP エンドポイントに接続する&#x200B;**[!UICONTROL OAuth 2 Password]**&#x200B;認証タイプを選択した場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-![OAuth 2 とパスワード認証を使用して、HTTP API 宛先に接続できる UI 画面の画像 &#x200B;](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![ パスワード認証でOAuth 2を使用して、HTTP API宛先に接続できるUI画面の画像。](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 >[!NOTE]
 >
->**mTLS の制限：** mTLS は、OAuth 2 パスワード認証ではサポートされていません。 詳しくは、[mTLS に関する考慮事項 &#x200B;](#mtls-considerations) の節を参照してください。
+>**mTLS制限：** mTLSは、OAuth 2 パスワード認証ではサポートされていません。 詳しくは、[mTLSに関する考慮事項](#mtls-considerations)の節を参照してください。
 
-* **[!UICONTROL Access Token URL]**：アクセストークンと必要に応じて更新トークンを発行する、ユーザー側の URL。
-* **[!UICONTROL Client ID]**: システムがAdobe Experience Platformに割り当てる [!DNL client ID]。
-* **[!UICONTROL Client Secret]**: システムがAdobe Experience Platformに割り当てる [!DNL client secret]。
-* **[!UICONTROL Username]**:HTTP エンドポイントにアクセスするユーザー名。
-* **[!UICONTROL Password]**:HTTP エンドポイントにアクセスするためのパスワード。
+* **[!UICONTROL Access Token URL]**: アクセストークンを発行し、必要に応じてトークンを更新する側のURL。
+* **[!UICONTROL Client ID]**: システムが[!DNL client ID]に割り当てる[!DNL Adobe Experience Platform]。
+* **[!UICONTROL Client Secret]**: システムが[!DNL client secret]に割り当てる[!DNL Adobe Experience Platform]。
+* **[!UICONTROL Username]**: HTTP エンドポイントにアクセスするためのユーザー名。
+* **[!UICONTROL Password]**: HTTP エンドポイントにアクセスするためのパスワード。
 
 #### OAuth 2 クライアント資格情報認証 {#oauth-2-client-credentials-authentication}
 
-**[!UICONTROL OAuth 2 Client Credentials]** 認証タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]** を選択します。
+HTTP エンドポイントに接続する&#x200B;**[!UICONTROL OAuth 2 Client Credentials]**&#x200B;認証タイプを選択した場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-![OAuth 2 とクライアント資格情報認証を使用して、HTTP API 宛先に接続できる UI 画面の画像 &#x200B;](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![ クライアント資格情報の認証でOAuth 2を使用して、HTTP API宛先に接続できるUI画面の画像。](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 >
->[!UICONTROL OAuth 2 Client Credentials] 認証を使用する場合、[!UICONTROL Access Token URL] に指定できるクエリパラメーターは最大 1 つです。 より多くのクエリパラメーターを含む [!UICONTROL Access Token URL] を追加すると、エンドポイントに接続する際に問題が発生する可能性があります。
+>[!UICONTROL OAuth 2 Client Credentials]認証を使用する場合、[!UICONTROL Access Token URL]には最大1つのクエリパラメーターを指定できます。 クエリパラメーターが多い[!UICONTROL Access Token URL]を追加すると、エンドポイントに接続する際に問題が発生する可能性があります。
 
 >[!NOTE]
 >
->**mTLS の制限：** mTLS は、OAuth 2 クライアント資格情報認証ではサポートされていません。 詳しくは、[mTLS に関する考慮事項 &#x200B;](#mtls-considerations) の節を参照してください。
+>**mTLS制限：** mTLSは、OAuth 2 クライアント資格情報認証ではサポートされていません。 詳しくは、[mTLSに関する考慮事項](#mtls-considerations)の節を参照してください。
 
-* **[!UICONTROL Access Token URL]**：アクセストークンと必要に応じて更新トークンを発行する、ユーザー側の URL。
-* **[!UICONTROL Client ID]**: システムがAdobe Experience Platformに割り当てる [!DNL client ID]。
-* **[!UICONTROL Client Secret]**: システムがAdobe Experience Platformに割り当てる [!DNL client secret]。
-* **[!UICONTROL Client Credentials Type]**：お使いのエンドポイントでサポートされる OAuth2 クライアント資格情報付与のタイプを選択します。
-   * **[!UICONTROL Body Form Encoded]**：この場合、[!DNL client ID] と [!DNL client secret] は宛先に送信される *リクエストの本文* 含まれます。 例については、[サポートされる認証タイプ](#supported-authentication-types)の節を参照してください。
-   * **[!UICONTROL Basic Authorization]**：この場合、[!DNL client ID] と [!DNL client secret] は、base64 でエンコードして宛先に送信された後、*`Authorization` ヘッダーに* 含まれます。 例については、[サポートされる認証タイプ](#supported-authentication-types)の節を参照してください。
+* **[!UICONTROL Access Token URL]**: アクセストークンを発行し、必要に応じてトークンを更新する側のURL。
+* **[!UICONTROL Client ID]**: システムが[!DNL client ID]に割り当てる[!DNL Adobe Experience Platform]。
+* **[!UICONTROL Client Secret]**: システムが[!DNL client secret]に割り当てる[!DNL Adobe Experience Platform]。
+* **[!UICONTROL Client Credentials Type]**: エンドポイントでサポートされているOAuth2 クライアント資格情報付与の種類を選択してください：
+   * **[!UICONTROL Body Form Encoded]**：この場合、[!DNL client ID]と[!DNL client secret]は、宛先に送信されたリクエスト *の本文*&#x200B;に含まれます。 例については、[サポートされる認証タイプ](#supported-authentication-types)の節を参照してください。
+   * **[!UICONTROL Basic Authorization]**：この場合、[!DNL client ID]と[!DNL client secret]は&#x200B;*ヘッダー`Authorization`に*&#x200B;含まれ、base64でエンコードされ、宛先に送信されます。 例については、[サポートされる認証タイプ](#supported-authentication-types)の節を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -229,40 +229,40 @@ curl --location --request POST 'https://some-api.com/token' \
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![HTTP 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像。](../../assets/catalog/http/http-api-destination-details.png)
+![HTTP宛先の詳細に関する完成したフィールドを表示するUI画面の画像。](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前を入力してください。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明を入力してください。
-* **[!UICONTROL Headers]**：宛先の呼び出しに含めるカスタムヘッダーを、「`header1:value1,header2:value2,...headerN:valueN`」の形式で入力します。
-* **[!UICONTROL HTTP Endpoint]**: プロファイルデータの送信先の HTTP エンドポイントの URL。 これはデータ受信エンドポイントです。 mTLS を使用している場合、このエンドポイントでは TLS が無効になっており、mTLS のみが有効になっている必要があります。
-* **[!UICONTROL Query parameters]**: オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを `parameter1=value&parameter2=value` のように書式設定します。
-* **[!UICONTROL Include Segment Names]**：書き出すオーディエンスの名前をデータの書き出しに含めるかどうかを切り替えます。 **メモ**：セグメント名は、宛先にマッピングされたセグメントに対してのみ含まれます。 書き出しに表示されるマッピングされていないセグメントには、「`name`」フィールドは含まれません。 このオプションを選択したデータの書き出しの例については、[書き出されたデータ](#exported-data)の節を参照してください。
-* **[!UICONTROL Include Segment Timestamps]**: オーディエンスが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにオーディエンスが宛先にマッピングされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例については、[書き出されたデータ](#exported-data)の節を参照してください。
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前を入力します。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明を入力します。
+* **[!UICONTROL Headers]**：宛先呼び出しに含めるカスタムヘッダーを、次の形式で入力します：`header1:value1,header2:value2,...headerN:valueN`。
+* **[!UICONTROL HTTP Endpoint]**: プロファイルデータを送信するHTTP エンドポイントのURL。 これがデータ受信エンドポイントです。 mTLSを使用している場合、このエンドポイントではTLSを無効にし、mTLSのみを有効にする必要があります。
+* **[!UICONTROL Query parameters]**：必要に応じて、HTTP エンドポイント URLにクエリパラメーターを追加できます。 使用するクエリパラメーターを `parameter1=value&parameter2=value` のように書式設定します。
+* **[!UICONTROL Include Segment Names]**: データの書き出しに、書き出すオーディエンスの名前を含めるかどうかを切り替えます。 **注**: セグメント名は、宛先にマッピングされたセグメントにのみ含まれます。 書き出しに表示されるマッピングされていないセグメントには、`name` フィールドは含まれません。 このオプションを選択したデータの書き出しの例については、[書き出されたデータ](#exported-data)の節を参照してください。
+* **[!UICONTROL Include Segment Timestamps]**: オーディエンスを作成および更新した際のUNIX タイムスタンプと、オーディエンスをアクティブ化する宛先にマッピングした際のUNIX タイムスタンプをデータ書き出しに含める場合に、切り替えます。 このオプションを選択したデータの書き出しの例については、[書き出されたデータ](#exported-data)の節を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* [&#x200B; 同意ポリシーの評価 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、HTTP API 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* [同意ポリシー評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)は、現在、HTTP API宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
-この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+この宛先に対するオーディエンスのアクティブ化の手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md)を参照してください。
 
 ### 宛先属性 {#attributes}
 
-Adobe [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) の手順では、[&#x200B; 和集合スキーマ &#x200B;](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
+[[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) ステップでは、Adobeは[結合スキーマ ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意のIDを選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 
-Experience Platformは、オーディエンスの選定または他の重要なイベントに続いてプロファイルに関連する更新が発生した際に API エンドポイントへデータを書き出すためにのみ、HTTP API 宛先へのプロファイルの書き出し動作を最適化します。 プロファイルは、以下の状況で宛先に書き出されます。
+Experience Platformは、プロファイルの書き出し動作をHTTP API宛先に最適化し、オーディエンスの選定やその他の重要なイベントの後にプロファイルに関連する更新が発生した場合にのみ、データをAPI エンドポイントに書き出します。 プロファイルは、以下の状況で宛先に書き出されます。
 
-* 宛先にマッピングされた 1 つ以上のオーディエンスのオーディエンスメンバーシップの変更によって、プロファイルの更新が決定された場合。 例えば、プロファイルは、宛先にマッピングされたいずれかのオーディエンスに適合しているか、宛先にマッピングされたいずれかのオーディエンスから退出しています。
+* プロファイルの更新は、宛先にマッピングされたオーディエンスの少なくとも1つのオーディエンスメンバーシップの変更によって決定されました。 例えば、プロファイルは、宛先にマッピングされたいずれかのオーディエンスに適合しているか、宛先にマッピングされたいずれかのオーディエンスから退出しています。
 * プロファイルの更新が、[ID マップ](/help/xdm/field-groups/profile/identitymap.md)の変更によって決定する場合。例えば、宛先にマッピングされたオーディエンスの 1 つに対して既に適合しているプロファイルの ID マップ属性に新しい ID が追加されたとします。
 * プロファイルの更新は、宛先にマッピングされた属性のうち、少なくとも 1 つの属性が変更されたことで判断されました。例えば、マッピング手順で宛先にマッピングされた属性の 1 つがプロファイルに追加されます。
 
@@ -270,7 +270,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 >[!NOTE]
 >
->プロファイルについては、変更箇所に関係なく、マッピングされたすべての属性が書き出されます。 したがって、上の例では、属性自体が変更されていない場合でも、これら 5 つの新しいプロファイルに対してマッピングされた属性がすべて書き出されます。
+>変更の場所に関係なく、マッピングされたすべての属性がプロファイルに書き出されます。 したがって、上の例では、属性自体が変更されていない場合でも、これら 5 つの新しいプロファイルに対してマッピングされた属性がすべて書き出されます。
 
 ### データの書き出しを決定する要素と、書き出しに含まれる内容 {#what-determines-export-what-is-included}
 
@@ -278,21 +278,21 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>ID は現在 HTTP API の宛先にマッピングできないので、特定のプロファイルの ID を変更すると、宛先の書き出しも決定されます。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。なお、これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ [&#x200B; 結合ポリシー &#x200B;](/help/profile/merge-policies/overview.md) に属する場合、プロファイルが適していた他のマッピングされていないセグメントを宛先の書き出しに含めることができます。<br> **重要**:**[!UICONTROL Include Segment Names]** オプションが有効になっている場合、セグメント名は宛先にマッピングされたセグメントに対してのみ含まれます。 書き出しに表示されるマッピングされていないセグメントには、このオプションが有効になっている場合でも、`name` フィールドは含まれません。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、HTTP API の宛先で ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの`segmentMembership` ステータスが`realized`または`exiting`に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>ID は現在 HTTP API の宛先にマッピングできないので、特定のプロファイルの ID を変更すると、宛先の書き出しも決定されます。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。プロファイルが適格である他のマッピングされていないセグメントは、これらのセグメントがアクティベーションデータフローでマッピングされたセグメントと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属している場合、宛先エクスポートの一部になる可能性があることに注意してください。<br> **重要**: **[!UICONTROL Include Segment Names]** オプションが有効になっている場合、セグメント名は、宛先にマッピングされているセグメントにのみ含まれます。 このオプションが有効になっている場合でも、書き出しに表示されるマッピングされていないセグメントには、`name` フィールドは含まれません。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、HTTP API の宛先で ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
 {style="table-layout:fixed"}
 
 例えば、HTTP 宛先に対するこのデータフローについて考えてみましょう。ここでは、3 つのオーディエンスがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
-![HTTP API 宛先のデータフローの例 &#x200B;](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![HTTP API宛先データフローの例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。ただし、データの書き出しでは、`segmentMembership` オブジェクト（以下の [&#x200B; 書き出されたデータ &#x200B;](#exported-data) の節を参照）に、その特定のプロファイルがメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、マッピングされていない他のオーディエンスが表示されることがあります。 プロファイルが **デロリアンを保有する顧客** セグメントに適合すると同時に、**「Watched &quot;Back to the Future&quot;** 映画および **SF ファン** セグメントのメンバーでもある場合、他の 2 つのオーディエンスもデータ書き出しの `segmentMembership` オブジェクトに表示されます。ただし、これらのオーディエンスが **デロリアンを保有する顧客** セグメントと同じ結合ポリシーを共有すると、データフローでマッピングされません。
+宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。ただし、データの書き出しでは、`segmentMembership` オブジェクト内（下の[書き出されたデータ ](#exported-data)の節を参照）で、特定のプロファイルがそのメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされていないオーディエンスが表示される場合があります。 プロファイルが&#x200B;**Customer with DeLorean Cars** セグメントに適格ですが、**視聴した「Back to the Future」** ムービーおよび&#x200B;**Sf ファン** セグメントのメンバーでもある場合、データフローでマッピングされていない他の2つのオーディエンスも、データエクスポートの`segmentMembership` オブジェクトに存在します。これらはDeLorean Cars **セグメントを持つ**&#x200B;お客様と同じ結合ポリシーを共有している場合です。
 
 プロファイル属性の観点から、上記でマッピングした 4 つの属性に対する変更によって、書き出しの宛先が決定し、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
 
 ## 履歴データのバックフィル {#historical-data-backfill}
 
-既存の宛先に新しいオーディエンスを追加する場合、または新しい宛先を作成し、それにオーディエンスをマッピングする場合、Experience Platformは、履歴オーディエンス選定データを宛先に書き出します。 オーディエンス *以前* に適合し、オーディエンスが宛先に追加されたプロファイルは、約 1 時間以内に宛先に書き出されます。
+既存の宛先に新しいオーディエンスを追加する場合、または新しい宛先を作成してオーディエンスをマッピングする場合、Experience Platformは過去のオーディエンスの選定データを宛先に書き出します。 オーディエンスが宛先に追加された&#x200B;*前*&#x200B;のオーディエンスに適格なプロファイルは、約1時間以内に宛先に書き出されます。
 
 ## 書き出したデータ {#exported-data}
 
@@ -351,9 +351,9 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 }
 ```
 
-書き出されたデータのその他の例を以下に示します。これらは **[!UICONTROL Include Segment Names]** オプションと **[!UICONTROL Include Segment Timestamps]** オプションに対して宛先を接続フローで選択した UI 設定によって異なります。
+**[!UICONTROL Include Segment Names]**&#x200B;および&#x200B;**[!UICONTROL Include Segment Timestamps]** オプションの接続先フローで選択したUI設定に応じて、書き出されたデータの詳細な例を次に示します。
 
-+++ 以下のデータの書き出しの例では、`segmentMembership` セクションにオーディエンス名が含まれています
++++ 以下のデータ書き出しサンプルには、`segmentMembership` セクションにオーディエンス名が含まれています
 
 ```json
 "segmentMembership": {
@@ -377,11 +377,11 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 >[!NOTE]
 >
->この例では、最初のセグメント（`5b998cb9-9488-4ec3-8d95-fa8338ced490`）が宛先にマッピングされ、`name` フィールドが含まれています。 `354e086f-2e11-49a2-9e39-e5d9a76be683` オプションが有効になっている場合でも、2 番目のセグメント（`name`）は宛先にマッピングされず、**[!UICONTROL Include Segment Names]** フィールドは含まれません。
+>この例では、最初のセグメント （`5b998cb9-9488-4ec3-8d95-fa8338ced490`）が宛先にマッピングされ、`name` フィールドが含まれています。 `354e086f-2e11-49a2-9e39-e5d9a76be683` オプションが有効になっているにもかかわらず、2番目のセグメント （`name`）は宛先にマッピングされておらず、**[!UICONTROL Include Segment Names]** フィールドは含まれていません。
 
 +++
 
-+++ 以下のデータの書き出しの例では、`segmentMembership` セクションにオーディエンスのタイムスタンプが含まれています
++++ 以下のデータ書き出しサンプルには、`segmentMembership` セクションにオーディエンスのタイムスタンプが含まれています
 
 ```json
 "segmentMembership": {
@@ -408,4 +408,4 @@ HTTP API 宛先へのリクエストが失敗した場合、Experience Platform 
 
 ## トラブルシューティング {#troubleshooting}
 
-信頼性の高いデータ配信を確保し、タイムアウトの問題を回避するには、[&#x200B; 前提条件 &#x200B;](#prerequisites) セクションで指定されているように、Experience Platform リクエストに対して HTTP エンドポイントが 2 秒以内に応答することを確認します。 これよりも長い時間がかかる応答は、タイムアウトエラーとなります。
+信頼性の高いデータ配信を確保し、タイムアウトの問題を回避するには、[前提条件](#prerequisites) セクションで指定されているように、HTTP エンドポイントがExperience Platform リクエストに2秒以内に応答することを確認します。 応答に時間がかかると、タイムアウトエラーが発生します。

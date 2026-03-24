@@ -2,9 +2,9 @@
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1028'
 ht-degree: 85%
 
 ---
@@ -13,23 +13,23 @@ ht-degree: 85%
 
 Destination SDK でバッチ設定オプションを使用して、ユーザーに、書き出されたファイル名のカスタマイズと、その環境設定に応じた書き出しスケジュールの設定を許可します。
 
-Destination SDKでファイルベースの宛先を作成する場合、デフォルトのファイル名および書き出しスケジュールを設定したり、Experience Platform UI からこれらの設定を行うオプションをユーザーに与えたりできます。 例えば、以下のような動作を設定できます。
+Destination SDKを使用してファイルベースの宛先を作成する場合は、デフォルトのファイル命名と書き出しスケジュールを設定するか、Experience Platform UIからこれらの設定を設定するオプションをユーザーに付与できます。 例えば、以下のような動作を設定できます。
 
 * ファイル名に特定の情報（オーディエンス ID、宛先 ID、カスタム情報など）を含める。
-* Experience Platform UI からファイル名をカスタマイズできるようにします。
+* Experience Platform UIからファイル名をカスタマイズできます。
 * 設定した間隔でファイル書き出しが発生するように設定する。
-* Experience Platform UI でユーザーに表示されるファイル名および書き出しスケジュールのカスタマイズオプションを定義する。
+* Experience Platform UIで表示できるファイルの命名と書き出しスケジュールのカスタマイズオプションを定義します。
 
 バッチ設定は、ファイルベースの宛先に対する宛先設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成された統合にどの程度適合するかを理解するには、[configuration options](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用してファイルベースの宛先](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)を設定する方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介してファイル名および書き出しスケジュールを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
 * [宛先設定の作成](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [宛先設定の更新](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-この記事では、宛先に使用できる、サポートされるすべてのバッチ設定オプションを説明し、Experience Platform UI で顧客に何が表示されるかを示します。
+この記事では、宛先に使用できるサポートされているすべてのバッチ設定オプションについて説明し、Experience Platform UIで表示される内容を示します。
 
 >[!IMPORTANT]
 >
@@ -106,7 +106,7 @@ Destination SDKでファイルベースの宛先を作成する場合、デフ�
 
 ## ファイル名設定 {#file-name-configuration}
 
-ファイル名設定マクロを使用して、書き出されたファイル名に含まれる必要があるものを定義します。以下の表にあるマクロは、[ファイル名設定](../../../ui/activate-batch-profile-destinations.md#file-names)画面の UI で見つかる要素を記述します。
+ファイル名設定マクロを使用して、書き出されたファイル名に含まれる必要があるものを定義します。以下の表にあるマクロは、[ファイル名設定](../../../ui/activate-batch-profile-destinations.md#configure-file-names)画面の UI で見つかる要素を記述します。
 
 >[!TIP]
 >
@@ -115,11 +115,11 @@ Destination SDKでファイルベースの宛先を作成する場合、デフ�
 | マクロ | UI ラベル | 説明 | 例 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | UI の宛先名。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment ID] | 一意の、Experience Platformで生成されたオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Experience Platformで生成された一意のオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | ユーザー定義のオーディエンス名 | VIP subscriber |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | 一意の、宛先インスタンスのExperience Platformで生成された ID | 77b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | 宛先インスタンスの一意のExperience Platform生成ID | 77b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | 宛先インスタンスのユーザー定義の名前。 | My 2022 Advertising Destination |
-| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Adobe Experience Platform でのお客様の組織の名前。 | My Organization Name |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | [!DNL Adobe Experience Platform]の顧客組織の名前。 | My Organization Name |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | 顧客によって使用されるサンドボックスの名前。 | prod |
 | `DATETIME` または `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` と `TIMESTAMP` は両方とも、ファイルが生成されたタイミングを定義しますが、形式が異なります。<br><br><ul><li>`DATETIME` は、YYYYMMDD_HHMMSS の形式を使用します。</li><li>`TIMESTAMP` は、10 桁の Unix 形式を使用します。 </li></ul> `DATETIME` と `TIMESTAMP` は、相互に排他的で、同時に使用できません。 | <ul><li>`DATETIME`：20220509_210543</li><li>`TIMESTAMP`：1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | ファイル名に含まれる、ユーザー定義のカスタムテキスト。`defaultFilename` で使用することはできません。 | My_Custom_Text |
@@ -157,7 +157,7 @@ Destination SDKでファイルベースの宛先を作成する場合、デフ�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

@@ -2,10 +2,10 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 83%
+source-wordcount: '1132'
+ht-degree: 81%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 83%
 >
 > ID、ID 名前空間および ID 関連用語の定義に関する情報について詳しくは、[ID サービスの概要](/help/identity-service/home.md)を参照してください。
 
-[カタログ](/help/destinations/catalog/overview.md)内の宛先はそれぞれ微妙に異なり、すべての宛先に万能の設定はありません。ただし、以下の節で説明するように、宛先とその ID 要件の設定をガイドするパターンがいくつかあります。
+[カタログ](/help/destinations/catalog/overview.md)内の宛先はそれぞれ微妙に異なり、すべての宛先に万能の設定はありません。ただし、以下の節で説明するように、宛先の設定とそのID要件を導くパターンがいくつかあります。
 
 ## ファイルベースの宛先 {#file-based}
 
@@ -71,29 +71,29 @@ ht-degree: 83%
 
 ## API ベースのストリーミング宛先 {#streaming-destinations}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) で作成した [API ベースのストリーミングの宛先](/help/destinations/destination-types.md#streaming-destination)（[!DNL Facebook]、[!DNL Google Customer Match]、[!DNL Pinterest]、[!DNL Braze] など）は、書き出し用に特定の ID のみをサポートします。各宛先に書き出し可能な特定の ID について詳しくは、各宛先のドキュメントページの&#x200B;*サポートされている ID* 節（例えば、[!DNL Pinterest] の宛先のページの[サポートされている ID](/help/destinations/catalog/advertising/pinterest.md) に関する節）を参照してください。
+[Destination SDK](/help/destinations/destination-sdk/overview.md) で作成した [API ベースのストリーミングの宛先](/help/destinations/destination-types.md#streaming-audience-export-destinations)（[!DNL Facebook]、[!DNL Google Customer Match]、[!DNL Pinterest]、[!DNL Braze] など）は、書き出し用に特定の ID のみをサポートします。各宛先に書き出し可能な特定の ID について詳しくは、各宛先のドキュメントページの&#x200B;*サポートされている ID* 節（例えば、[!DNL Pinterest] の宛先のページの[サポートされている ID](/help/destinations/catalog/advertising/pinterest.md) に関する節）を参照してください。
 
 ただし、[プライベートグラフ](/help/profile/merge-policies/overview.md#id-stitching)または属性のどちらのデータも ID として柔軟に使用できることに注意してください。つまり、XDM 属性を、宛先で必要な ID フィールドにマッピングできます。 [!DNL Pinterest] の宛先の例を以下に示します。この例では、XDM 属性 `personalEmail.address` が必須の [!DNL Pinterest] ID `pinterest_audience` にマッピングされています。
 
 >[!TIP]
 >
->ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にExperience Platformでデータを自動的にハッシュ化するように設定します。 **[!UICONTROL Apply transformation]** オプションについて詳しくは、[&#x200B; ストリーミング宛先のアクティブ化に関するチュートリアル &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation) を参照してください。
+>ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをオンにして、Experience Platformがアクティベーション時にデータを自動的にハッシュします。 **[!UICONTROL Apply transformation]** オプションについて詳しくは、[ ストリーミング宛先のアクティベーションに関するチュートリアル ](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation)を参照してください。
 
 ![Pinterest の宛先で ID フィールドにマッピングされるメールアドレス属性の例](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### サードパーティ Cookie の統合に基づく広告宛先 {#third-party-cookie-destinations}
 
-サードパーティ Cookie に基づく広告の宛先（例えば [!DNL Google Ads]、[!DNL Google Ad Manager]、[!DNL Google DV360]、[!DNL Bing]、[!DNL The Trade Desk] など）を使用する場合は、アクティブ化ワークフローで顧客が ID を選択する必要はありません。 これらの宛先については、アクティベーションワークフローを設定する際に、Experience Platformが、[[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) で作成された ID 照合テーブルを自動的に検索し、プロファイルに使用可能で宛先でサポートされているすべての ID を書き出します。
+サードパーティ Cookie に基づく広告の宛先（例えば [!DNL Google Ads]、[!DNL Google Ad Manager]、[!DNL Google DV360]、[!DNL Bing]、[!DNL The Trade Desk] など）を使用する場合は、アクティブ化ワークフローで顧客が ID を選択する必要はありません。 これらの宛先では、アクティベーションワークフローを設定する際に、Experience Platformが[[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)によって構築されたID照合テーブルを自動的に検索し、プロファイルで使用可能であり、宛先でサポートされているすべてのIDを書き出します。
 
-これらの宛先では、[!UICONTROL Experience Cloud ID service] または [!UICONTROL Experience Platform Web SDK] を使用して ID 同期を行う必要があります。
+これらの宛先では、[!UICONTROL Experience Cloud ID service]または[!UICONTROL Experience Platform Web SDK]を通じてID同期を行う必要があります。
 
-[!UICONTROL Experience Platform Web SDK] を使用していて、従来の [!UICONTROL Experience Cloud ID service] がページに実装されていない場合は、問題の web サイトのデータストリームでサードパーティ ID の同期が有効になっていることを確認する必要があります（概要については [&#x200B; データストリームの設定に関するドキュメント &#x200B;](/help/datastreams/configure.md#create) を参照）。
+[!UICONTROL Experience Platform Web SDK]を使用しており、従来の[!UICONTROL Experience Cloud ID service]がページに実装されていない場合は、[ データストリームの設定ドキュメント ](/help/datastreams/configure.md#create)に記載されているように、問題のweb サイトのデータストリームがサードパーティ IDの同期を許可するように有効になっていることを確認する必要があります。
 
-上記でリンクを示したドキュメントの説明に従ってデータストリームを設定する際は、**[!UICONTROL Third Party ID Sync]** スライダーが有効になっていることを確認する必要があります。 ほとんどのお客様は、`container_id` フィールドを空白のまま残すでしょう（デフォルトは 0）。 従来の Audience Manager 実装で特定のコンテナ ID を使用していた場合にのみ、この値を変更する必要があります（ただし、それはごく少数のお客様の場合です）。
+上記のドキュメントで説明されているようにデータストリームを設定する場合は、**[!UICONTROL Third Party ID Sync]** スライダーが有効になっていることを確認する必要があります。 ほとんどのお客様は、`container_id` フィールドを空白のまま残すでしょう（デフォルトは 0）。 従来の Audience Manager 実装で特定のコンテナ ID を使用していた場合にのみ、この値を変更する必要があります（ただし、それはごく少数のお客様の場合です）。
 
 >[!NOTE]
 >
->これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=ja)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
+>これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
 
 ## エンタープライズの宛先 {#enterprise-destinations}
 
@@ -101,7 +101,7 @@ ht-degree: 83%
 
 ## パーソナライゼーションの宛先 {#personalization-destinations}
 
-[パーソナライゼーション（またはエッジ）の宛先](/help/destinations/destination-types.md#edge-personalization-destinations)（例えば Adobe Target や [!DNL Custom Personalization] ）では、統合がプロファイルルックアップなので、アクティブ化ワークフローでの ID 選択は必要ありません。 クライアント（[!DNL Target]、[!DNL Web SDK] など）は、[[!UICONTROL Edge]](/help/collection/home.md#edge) にクエリを発行し、オンサイトのパーソナライゼーションに必要なプロファイル情報を取り込みます。
+統合はプロファイル ルックアップであるため、[Personalization（またはエッジ）の宛先](/help/destinations/destination-types.md#edge-personalization-destinations) （例：[!DNL Adobe Target]、[!DNL Custom Personalization]）では、アクティブ化ワークフローでIDを選択する必要はありません。 クライアント （[!DNL Target]、[!DNL Web SDK]など）は[[!UICONTROL Edge]](/help/collection/home.md)に対してクエリを実行し、オンサイトのパーソナライゼーションに必要なプロファイル情報を取得します。
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

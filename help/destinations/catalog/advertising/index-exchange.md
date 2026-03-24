@@ -1,11 +1,11 @@
 ---
-title: インデックス交換
-description: インデックス交換（インデックス）に接続し、データをアクティブ化して、インデックス UI で作成された取引でオーディエンスセグメントをターゲットにできるようにします。
+title: Index Exchange
+description: Index Exchange （インデックス）に接続してデータをアクティベートし、インデックス UIで作成した案件でオーディエンスセグメントをターゲットにできるようにします。
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1202'
 ht-degree: 15%
 
 ---
@@ -14,72 +14,72 @@ ht-degree: 15%
 
 ## 概要 {#overview}
 
-[!DNL Index] は、メディア所有者が全画面にわたってコンテンツの価値を最大化するのに役立つ、グローバル広告のサプライサイドのプラットフォームです。 20 年以上にわたる業界のリーダーシップを持つ [!DNL Index] は、世界最大のブランドとプレミアムなエクスペリエンスメーカーを結び付け、高品質の消費者体験を提供します。
+[!DNL Index]は、メディア所有者があらゆるスクリーンでコンテンツの価値を最大化できるよう支援する、グローバルな広告供給側プラットフォームです。 20年以上にわたる業界リーダーシップにより、[!DNL Index]は世界有数のブランドとプレミアム顧客体験メーカーをつなぎ合わせ、高品質な消費者体験を提供しています。
 
-この宛先コネクタを使用すると、オーディエンスセグメントをAdobe Experience Platformから [!DNL Index Exchange] のプログラム広告プラットフォームに直接書き出すことができます。
+この宛先コネクタを使用して、[!DNL Adobe Experience Platform]から[!DNL Index Exchange]のプログラマティック広告プラットフォームにオーディエンスセグメントを直接書き出します。
 
-書き出すと、これらのオーディエンスセグメントを使用して、メディア所有者やマーケットプレイスのパートナーが取引をターゲットにしたり、マーケットプレイスのベンダーがパブリッシャーやキュレーターと共有したりできます。
+書き出されたオーディエンスセグメントは、メディア所有者やマーケットプレイスパートナーが対象とするか、マーケットプレイスベンダーがメディア企業やキュレーターと共有します。
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、[!DNL Index] チームが作成および管理します。 ご質問や更新のリクエストについては、[technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com) まで直接お問い合わせください。
+>宛先コネクタとドキュメント ページは、[!DNL Index] チームによって作成および管理されます。 質問または更新リクエストについては、[technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com)から直接お問い合わせください。
 
 ## ユースケース {#use-cases}
 
-[!DNL Index Exchange] の宛先を使用する方法とタイミングをより深く理解するために、Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
+[!DNL Index Exchange]宛先を使用する方法とタイミングをより深く理解するために、Experience Platformのお客様がこの宛先を使用して解決できるユースケースの例を次に示します。
 
-### モバイル、web および CTV プラットフォームでのユーザーのターゲティング {#targeting-users}
+### モバイル、web、CTV プラットフォームの利用者をターゲットにする {#targeting-users}
 
-Experience Platformから [!DNL Index] にオーディエンスを送信し、モバイル、web、CTV プラットフォームのユーザーをターゲットにするのに、様々な識別情報を使用したいと考えているメディアオーナー、マーケットプレイスのパートナー、マーケットプレイスのベンダーです。
+Experience Platformから[!DNL Index]にオーディエンスを送信し、モバイル、web、CTVのプラットフォームでオーディエンスをターゲティングするメディアオーナー、マーケットプレイスパートナー、マーケットプレイスベンダーは、さまざまな識別子を使用します。
 
-### モバイル、web および CTV プラットフォームでの特定のコンテンツのターゲティング {#targeting-content}
+### モバイル、web、CTV プラットフォームでの特定のコンテンツのターゲティング {#targeting-content}
 
-Experience Platformから [!DNL Index] にオーディエンスを送り、特定の URL、アプリバンドル、コンテンツ ID を使用して、モバイル、web、CTV プラットフォーム全体で特定のコンテンツを表示したいメディアオーナー、マーケットプレイスのパートナー、マーケットプレイスのベンダー。
+特定のURL、アプリバンドル、コンテンツ IDを使用して、モバイル、web、CTVのプラットフォームをまたいで特定のコンテンツを閲覧しているユーザーをターゲットに、Experience Platformから[!DNL Index]にオーディエンスを送信するメディアオーナー、マーケットプレイスパートナー、マーケットプレイスベンダー。
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスセグメントをアカウントに表示するには、この宛先を使用する際に追加のプロセスを使用して、[!DNL Index] に登録する必要があります。 このプロセスに関するサポートについては、[!DNL Index Exchange] アカウント担当者にお問い合わせください。
+オーディエンスセグメントは、アカウントに表示される前に、この宛先を使用する際に追加のプロセスを使用して[!DNL Index]に登録する必要があります。 このプロセスに関するサポートについては、[!DNL Index Exchange] アカウント担当者にお問い合わせください。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Index] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Index]は、次の表に示すIDのアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 >[!NOTE]
 >
->[!DNL Index Exchange] の宛先では、アップロードごとに 1 つの id タイプのみをサポートしています。 宛先の詳細を設定する際に、適切な識別子タイプを指定する必要があります（以下の [&#x200B; 宛先の詳細の入力」 &#x200B;](#destination-details) 節を参照）。
+>[!DNL Index Exchange]の宛先では、アップロードごとに1つのID タイプのみをサポートします。 宛先の詳細を設定する際に、適切な識別子の種類を指定する必要があります（以下の「[ 「宛先の詳細を入力する」 ](#destination-details)」セクションを参照）。
 
-複数の ID タイプをアップロードするには、[!DNL Index Exchange] の宛先のインスタンスを ID タイプごとに個別に作成します。
+複数のID タイプをアップロードするには、ID タイプごとに[!DNL Index Exchange]宛先の個別のインスタンスを作成します。
 
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合、ターゲット ID として GAID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| Windows AID | Windows Advertising ID | ソース ID が Windows AID 名前空間の場合は、Windows AID のターゲット ID を選択します。 |
-| extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
+| GAID | GOOGLE ADVERTISING ID | ソース IDがGAID名前空間の場合は、ターゲット IDとして「GAID」を選択します。 |
+| IDFA | Apple の広告主 ID | ソース IDがIDFA名前空間の場合は、IDFA ターゲット IDを選択します。 |
+| Windows AID | Windows Advertising ID | ソース IDがWindows AID名前空間である場合は、Windows AID ターゲット IDを選択します。 |
+| extern_id | カスタムユーザーID | ソース IDがカスタム名前空間である場合は、このターゲット IDを選択します。 |
 
 {style="table-layout:auto"}
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出すことができるオーディエンスタイプについて説明します。
+このセクションでは、この宛先に書き出すことができるオーディエンスタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 | --------- | ---------- | ---------- |
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -90,8 +90,8 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 | 項目 | タイプ | メモ |
 | --------- | ---------- | --------- | 
-| 書き出しタイプ | **[!UICONTROL Segment export]** | [!DNL Index Exchange] 宛先で使用される識別子（IDFA、GAID など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL Batch]** | 3 時間、6 時間、8 時間、12 時間、24 時間の間隔でダウンストリームプラットフォームにファイルを書き出します。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL Segment export]** | [!DNL Index Exchange]宛先で使用されている識別子（IDFA、GAIDなど）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL Batch]** | ファイルを3、6、8、12、または24時間間隔でダウンストリームプラットフォームに書き出します。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -99,69 +99,69 @@ Experience Platformから [!DNL Index] にオーディエンスを送り、特�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先の詳細の入力 {#destination-details}
 
-宛先の詳細を設定するには、以下のフィールドを入力します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
+宛先の詳細を設定するには、以下のフィールドに入力します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 宛先の詳細 &#x200B;](../../assets/catalog/advertising/index-exchange/destination-details.png)
+![宛先の詳細](../../assets/catalog/advertising/index-exchange/destination-details.png)
 
-* [!UICONTROL Name]：この宛先を後で認識できるように、名前を入力します。
-* [!UICONTROL Description]：後でこの宛先を識別するのに役立つ説明を入力します。
-* [!UICONTROL Identifier Type]: [!DNL Index] に送信する識別子に一致する、インデックス提供の識別子タイプを選択します。 以下のサポートされる識別子タイプの表を参照してください。 使用する ID タイプが不明な場合は、[!DNL Index] 担当者にお問い合わせください。 複数の識別子タイプを送信するには、この宛先のインスタンスを個別に作成します。
-* [!UICONTROL Account ID]: [!DNL Index] アカウント ID を入力します。 これは、パブリッシャー ID とは異なります。 使用する ID が不明な場合は、[!DNL Index] 担当者にお問い合わせください。
+* [!UICONTROL Name]：後でこの宛先を認識できるように、名前を入力してください。
+* [!UICONTROL Description]：後でこの宛先を特定するのに役立つ説明を入力します。
+* [!UICONTROL Identifier Type]: [!DNL Index]に送信する識別子に一致する、インデックスが提供する識別子タイプを選択します。 以下のサポートされる識別子タイプの表を参照してください。 使用する識別子の種類がわからない場合は、[!DNL Index]担当者にお問い合わせください。 複数の識別子タイプを送信するには、この宛先の個別のインスタンスを作成します。
+* [!UICONTROL Account ID]: [!DNL Index] アカウント IDを入力してください。 これはパブリッシャーIDと同じではありません。 使用するIDが不明な場合は、[!DNL Index]担当者にお問い合わせください。
 
-#### サポートされる識別子タイプ {#supported-identifier-types}
+#### サポートされている識別子タイプ {#supported-identifier-types}
 
 | 識別子タイプ | 説明 |
 |------------------ | ------------- |
 | [!DNL appbundle] | モバイルアプリバンドル |
 | [!DNL contentid] | コンテンツ ID |
-| [!DNL deviceid] | デバイス ID （例： IDFA、GAID、WAID など） |
+| [!DNL deviceid] | デバイス ID （例： IDFA、GAID、WAIDなど） |
 | [!DNL ip] | IP アドレス |
 | [!DNL postcode] | 郵便番号 |
 | [!DNL url] | サイト URL |
-| [!DNL ppid_xxx] | PPID の識別子については、[!DNL Index Exchange] アカウント担当者にお問い合わせください。 |
+| [!DNL ppid_xxx] | PPID ID IDについては、[!DNL Index Exchange] アカウント担当者にお問い合わせください。 |
 
 {style="table-layout:auto"}
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、この宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストから 1 つ以上のアラートを選択して、データフローのステータス通知を登録します。 詳しくは、[UI を使用した宛先アラートの購読 &#x200B;](../../ui/alerts.md) についてのガイドを参照してください。
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+この宛先へのデータフローのステータスに関する通知を受け取るアラートを有効にすることができます。 リストから1つ以上のアラートを選択して、データフローのステータス通知を購読します。 詳しくは、UI[を使用した宛先アラートの](../../ui/alerts.md)購読に関するガイドを参照してください。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-ソースフィールドを選択中：
+ソースフィールドの選択：
 
-* 識別子（通常は IDFA やカスタム ID 名前空間などの名前空間）を選択します。 宛先の設定時に選択した識別子タイプに対応している必要があります。 例えば、IDFA 識別子をソースフィールドとして使用する場合、宛先は、「deviceid」識別子タイプで設定されている必要があります。
+* 識別子（通常はIDFAやカスタム ID名前空間などの名前空間）を選択します。 これは、宛先の設定時に選択した識別子タイプに対応する必要があります。 例えば、IDFA識別子をソースフィールドとして使用する場合、宛先は「deviceid」識別子タイプで設定されている必要があります。
 
-ターゲットフィールドを選択：
+ターゲットフィールドの選択：
 
-* ターゲットフィールドの名前は無視され、重要ではありません。 宛先は、送信される識別子のタイプにのみ関係します。これは、宛先を設定する際に選択した識別子タイプによって決まります。
+* ターゲットフィールドの名前は無視され、重要ではありません。 宛先は、送信される識別子のタイプのみを重視します。これは、宛先の設定時に選択した識別子タイプによって決定されます。
 
-![&#x200B; 属性と ID のマッピング &#x200B;](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
+![属性とIDのマッピング ](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
-### [!DNL Index] へのセグメントの登録 {#register-segments}
+### [!DNL Index]でセグメントを登録 {#register-segments}
 
-宛先に対してデータをアクティブ化する前または後に、[!DNL Index] 担当者に連絡して、アクティブ化するセグメントを登録してください。 名前、ID、説明、価格（該当する場合）など、追加のセグメントの詳細を登録する方法については、担当者から指示があります。
+宛先へのデータのアクティベーションの前または後に、[!DNL Index]担当者に連絡して、アクティベートするセグメントを登録してください。 名前、ID、説明、価格など、セグメントの詳細を登録する方法に関する説明を、担当者が説明します（該当する場合）。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-登録が完了すると、セグメントは [!DNL Index] アカウントでターゲティングに使用できるようになります。 データが正しく受信されていることを確認するには、受信したセグメントデータの量の詳細を提供できる [!DNL Index] 担当者にお問い合わせください。
+登録が完了すると、セグメントは[!DNL Index] アカウントでターゲティングできるようになります。 データが正しく受信されていることを確認するには、受信したセグメントデータの量の詳細を提供できる[!DNL Index]担当者にお問い合わせください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/home.md) を参照してください。
+Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Experience Platformによるデータガバナンスの適用方法について詳しくは、[ データガバナンスの概要](/help/data-governance/home.md)を参照してください。

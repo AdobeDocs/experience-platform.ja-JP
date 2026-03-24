@@ -1,40 +1,40 @@
 ---
-description: Destination SDKで作成された宛先に対するオーディエンスタイプの設定方法を説明します。
-title: オーディエンスデータタイプの設定
+description: Destination SDKで作成した配信先のオーディエンスタイプを設定する方法について説明します。
+title: オーディエンスのデータタイプの設定
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 7%
 
 ---
 
-# オーディエンスデータタイプの設定
+# オーディエンスのデータタイプの設定
 
-Destination SDKで宛先コネクタを作成する場合、宛先に書き出すオーディエンスのタイプを定義できます。 適切なオーディエンスデータタイプを設定すると、マーケティングキャンペーン、アカウントベースの戦略、データ分析のどれに関するものであっても、宛先が意図したユースケースに適したデータを確実に受け取ることができます。
+Destination SDKを使用して宛先コネクタを構築する場合は、宛先に書き出すオーディエンスのタイプを定義できます。 適切なオーディエンスデータタイプを設定することで、マーケティング施策、アカウントベースの戦略、データ分析など、宛先が意図したユースケースに適したデータを受け取れるようにします。
 
-以下のオーディエンスデータタイプを確認して、それらの違いを学び、統合に必要なタイプを特定します。 次に、様々なオーディエンスタイプを書き出すように宛先を設定する方法について、このページの後述の節を参照してください。
+以下のオーディエンスデータタイプを確認して、それらの違いを確認し、統合に必要なタイプを特定します。 次に、様々なオーディエンスタイプを書き出すように宛先を設定する方法については、ページの以下の節を参照してください。
 
-| オーディエンスデータタイプ | 説明 | ユースケース |
+| オーディエンスのデータタイプ | 説明 | ユースケース |
 |---------|----------|---------|
-| [&#x200B; 人物オーディエンス &#x200B;](../../../../segmentation/types/people-audiences.md) | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](../../../../segmentation/types/account-audiences.md) | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](../../../../segmentation/types/prospect-audiences.md) | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](../../../../catalog/datasets/overview.md) | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](../../../../segmentation/types/people-audiences.md) | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](../../../../segmentation/types/account-audiences.md) | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](../../../../segmentation/types/prospect-audiences.md) | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](../../../../catalog/datasets/overview.md) | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
-サポートされているオーディエンスデータタイプは、作成した宛先のタイプによって異なります。
-以下の表を参照して、どの宛先タイプがどのオーディエンスデータタイプをサポートしているかを理解してください。
+サポートされるオーディエンスのデータタイプは、作成する宛先のタイプによって異なります。
+次の表を参照して、どの宛先タイプがどのオーディエンスデータタイプをサポートしているかを確認してください。
 
-| 宛先のタイプ | 人物オーディエンス | アカウントオーディエンス | 見込み客オーディエンス | データセット |
+| 宛先のタイプ | ピープルオーディエンス | アカウントオーディエンス | 見込み客オーディエンス | データセット |
 |---------|----------|---------|---------|---------|
 | ストリーミング | ✓ | ✓ | X | X |
 | ファイルベース | ✓ | ✓ | ✓ | ✓ |
 
 {style="table-layout:auto"}
 
-## `sources` 配列 {#sources}
+## `sources`配列 {#sources}
 
-`sources` 配列は、宛先がサポートするオーディエンスデータのタイプを指定します。 アカウントオーディエンス、見込み客オーディエンスおよびデータセットの書き出しには必要ですが、デフォルトでサポートされているので、人物オーディエンスには必要ありません。
+`sources`配列は、宛先がサポートするオーディエンスデータのタイプを指定します。 アカウントオーディエンス、見込み顧客オーディエンス、データセットの書き出しには必要ですが、デフォルトでサポートされているため、人物オーディエンスには必要ありません。
 
 ```json
 "sources":[
@@ -42,21 +42,21 @@ Destination SDKで宛先コネクタを作成する場合、宛先に書き出�
 ]
 ```
 
-`sources` 配列は、次の値を受け入れます。
+`sources`配列は次の値を受け入れます。
 
 * `"ACCOUNTS"`：宛先がアカウントオーディエンスの書き出しをサポートしていることを指定します。
 * `"UNIFIED_PROFILE_PROSPECTS"`：宛先が見込み客オーディエンスの書き出しをサポートすることを指定します。
 * `"DATASETS"`：宛先がデータセットの書き出しをサポートしていることを指定します。
 
-宛先に書き出すオーディエンスタイプに応じて、以下の節で宛先設定の例を確認します。
+宛先に書き出すオーディエンスタイプに応じて、以下のセクションで宛先の設定例を確認します。
 
-## 人物オーディエンスのエクスポート {#people-audiences}
+## 人物オーディエンスの書き出し {#people-audiences}
 
-人物オーディエンスは、すべての宛先タイプに対してデフォルトでサポートされており、特定の `sources` 値は必要ありません。 人物オーディエンスをサポートする宛先を作成するには、`sources` 配列がデフォルトの動作なので、この配列を使用する必要はありません。
+ピープルオーディエンスは、すべての宛先タイプでデフォルトでサポートされており、特定の`sources`値は必要ありません。 人物オーディエンスをサポートする宛先を構築するには、デフォルトの動作であるため、`sources`配列をまったく使用する必要はありません。
 
-+++ 人物オーディエンスをサポートしたストリーミング宛先設定の例
++++ ピープルオーディエンスをサポートしたストリーミング宛先設定の例
 
-これは、人物オーディエンスを書き出すストリーミング宛先の例です。 設定に `sources` 配列がないことに注意してください。」
+これは、ピープルオーディエンスを書き出すストリーミング宛先の例です。 設定に`sources`配列が存在しないことに注意してください。」
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -151,9 +151,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## アカウントオーディエンスの書き出し {#account}
 
-アカウントベースのマーケティングを行う [!DNL B2B] しい宛先を設定する場合は、宛先にアカウントオーディエンスサポートを追加することを検討してください。 例えば、アカウントベースのオーディエンスを使用して、[!DNL Chief Operating Officer (COO)] または [!DNL Chief Marketing Officer (CMO)] という役職のユーザーの連絡先情報を持たないすべてのアカウントのレコードを取得できます。
+アカウントベースドマーケティング用に[!DNL B2B]宛先を設定する場合は、宛先にアカウントオーディエンスサポートを追加することを検討してください。 例えば、アカウントベースのオーディエンスを使用して、タイトルが[!DNL Chief Operating Officer (COO)]または[!DNL Chief Marketing Officer (CMO)]の人物の連絡先情報を持たないすべてのアカウントのレコードを取得できます。
 
-アカウントオーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+アカウントオーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを[宛先設定](../../authoring-api/destination-configuration/create-destination-configuration.md)に追加します。
 
 ```json
 "sources":[
@@ -257,11 +257,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
-## 見込み客オーディエンスのエクスポート {#prospect}
+## 見込み客オーディエンスの書き出し {#prospect}
 
-まだ顧客ではないが、ターゲットオーディエンスと特性を共有する個人をターゲットにする場合は、見込み客オーディエンスサポートを宛先に追加することを検討してください。 見込み客プロファイルを使用すると、信頼できるサードパーティパートナーの属性で顧客プロファイルを補完できます。 詳しくは、この [&#x200B; 見込み客のユースケース &#x200B;](../../../../rtcdp/partner-data/prospecting.md) を参照してください。
+まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにする場合は、見込み客オーディエンスのサポートを宛先に追加することを検討してください。 見込み客プロファイルを使用すれば、信頼できるサードパーティパートナーからの属性で顧客プロファイルを補完できます。 詳しくは、[見込み客のユースケース ](../../../../rtcdp/partner-data/prospecting.md)を参照してください。
 
-見込み客オーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+見込み顧客オーディエンスの書き出しをサポートする宛先を作成するには、以下の設定スニペットを[宛先設定](../../authoring-api/destination-configuration/create-destination-configuration.md)に追加します。
 
 
 ```json
@@ -270,7 +270,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ] 
 ```
 
-+++ 見込み客オーディエンスをサポートするストリーミング宛先設定の例
++++ 見込み顧客オーディエンスをサポートしたストリーミング配信先の設定例
 
 ```shell {line-numbers="true" highlight="12-14"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -391,11 +391,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
-## データセットを書き出し {#datasets}
+## データセットの書き出し {#datasets}
 
-オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出す場合は、宛先にデータセット書き出しサポートを追加することを検討してください。 このデータは、レポート、データサイエンスワークフロー、その他の多くのユースケースに使用できます。 例えば、管理者、データエンジニアまたはアナリストは、Experience Platformからデータをエクスポートして Data Warehouse と同期したり、[!DNL BI] Analysis Tools や外部の Cloud [!DNL ML] ツールで使用したり、システムに長期保存のニーズに応じて保存したりできます。
+オーディエンスの興味や資格によってグループ化または構造化されていない生データセットを書き出す場合は、データセット書き出しサポートを宛先に追加することを検討してください。 これらのデータは、レポートやデータサイエンスのワークフローなど、さまざまなユースケースで活用できます。 例えば、管理者、データエンジニア、アナリストは、Experience Platformからデータを書き出して、データウェアハウスと同期したり、[!DNL BI]分析ツール、外部クラウド [!DNL ML] ツールで使用したり、システムに保存して長期保存したりできます。
 
-データセットの書き出しをサポートする宛先を作成するには、以下の設定スニペットを [&#x200B; 宛先設定 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) に追加します。
+データセットの書き出しをサポートする宛先を作成するには、以下の設定スニペットを[宛先設定](../../authoring-api/destination-configuration/create-destination-configuration.md)に追加します。
 
 ```json
 "sources":[
@@ -403,7 +403,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ]
 ```
 
-+++ データセット書き出しのサポートを含んだファイルベースの宛先設定の例
++++ データセットの書き出しをサポートするファイルベースの宛先設定の例
 
 ```shell {line-numbers="true" highlight="12-14"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -569,12 +569,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、宛先に対するオーディエンスデータタイプの設定方法について、理解を深めることができました。
+この記事を読めば、宛先にオーディエンスデータタイプを設定する方法について理解を深めることができます。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

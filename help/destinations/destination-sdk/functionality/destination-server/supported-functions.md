@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、Pebble テンプレートを使用します。
 title: Destination SDK でサポートされる変換関数
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 96%
+source-wordcount: '548'
+ht-degree: 91%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 ## 前提条件 {#prerequisites}
 
-このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。テンプレートを使用して書き出されたデータを変換する前に、Experience Platformの [&#x200B; プロファイル &#x200B;](message-format.md#profile-structure) 構造 [!DNL Pebble] を理解する必要があります。
+このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。[ テンプレートを使用して書き出されたデータを変換する前に、Experience Platformのプロファイル ](message-format.md#profile-structure)の[!DNL Pebble]構造を理解する必要があります。
 
 以下に説明する関数に進む前に、[ID、属性およびオーディエンスメンバーシップを変換するためのテンプレート言語の使用](message-format.md#using-templating)の節のテンプレートの例を確認してください。そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
 
@@ -45,7 +45,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 >テンプレートで&#x200B;*配列*&#x200B;または&#x200B;*マップ*&#x200B;要素を反復する場合、`for` の使用方法が異なります。配列を反復する場合、要素を直接取得できます。マップを反復する場合、各マップエントリ（キーと値のペアを持つ）を取得します。
 >
 > * 配列要素の例の場合、[identityMap](message-format.md#identities) 名前空間の ID について考慮します。ここでは、`identityMap.gaid` や `identityMap.email` などの要素を反復できます。
-> * マッピング要素の例の場合、[segmentMembership](message-format.md#segment-membership) について考慮します。
+> * マッピング要素の例の場合、[segmentMembership](message-format.md#audience-membership) について考慮します。
 
 [!DNL Pebble] フィルターセクションからは、Destination SDK は、すべての関数をサポートします。後述の例では、Destination SDK 内で `date` 関数をどのように使用できるかを示します。
 
@@ -53,7 +53,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 ## `date` 関数の使用例 {#date-function}
 
-Destination SDK での [!DNL Pebble] 関数の使用例として、date 関数（[Pebble ドキュメントへのリンク](https://pebbletemplates.io/wiki/filter/date/)）を使用してタイムスタンプの形式を変換する方法について、以下を参照してください。
+Destination SDKで[!DNL Pebble]関数がどのように使用されるかを示すには、日付関数（[Pebble ドキュメント ](https://pebbletemplates.io/wiki/filter/date/)のリンク）がタイムスタンプのフォーマットをどのように変換するかを以下に示します。
 
 ### ユースケース {#date-use-case}
 

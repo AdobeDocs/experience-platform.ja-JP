@@ -1,37 +1,37 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；フローサービス；宛先アカウントの削除；削除；api
 solution: Experience Platform
-title: Flow Service API を使用した宛先アカウントの削除
+title: Flow Service APIを使用した宛先アカウントの削除
 type: Tutorial
-description: Flow Service API を使用して宛先アカウントを削除する方法を説明します。
+description: Flow Service APIを使用して宛先アカウントを削除する方法を説明します。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 36%
+source-wordcount: '749'
+ht-degree: 32%
 
 ---
 
-# Flow Service API を使用した宛先アカウントの削除
+# Flow Service APIを使用した宛先アカウントの削除
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations]は、[!DNL Adobe Experience Platform]からのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-データをアクティブ化する前に、まず宛先アカウントを設定して宛先に接続する必要があります。 このチュートリアルでは、不要になった宛先アカウントを [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して削除する手順を説明します。
+データをアクティブ化する前に、まず宛先アカウントを設定して宛先に接続する必要があります。 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、不要になった宛先アカウントを削除する手順について説明します。
 
 >[!NOTE]
 >
->宛先アカウントの削除は、現在、Flow Service API でのみサポートされています。 宛先アカウントは、Experience Platform UI を使用して削除することはできません。
+>宛先アカウントの削除は、現在Flow Service APIでのみサポートされています。 宛先アカウントは、Experience Platform UIを使用して削除できません。
 
 ## はじめに {#get-started}
 
-このチュートリアルでは、有効な接続 ID が必要です。接続 ID は、宛先へのアカウント接続を表します。 有効な接続 ID がない場合は、このチュートリアルを試す前に、[&#x200B; 宛先カタログ &#x200B;](../catalog/overview.md) から宛先を選択し、[&#x200B; 宛先に接続 &#x200B;](../ui/connect-destination.md) の説明に従ってください。
+このチュートリアルでは、有効な接続 ID が必要です。接続IDは、宛先へのアカウント接続を表します。 有効な接続IDがない場合は、このチュートリアルを試す前に、[宛先カタログ ](../catalog/overview.md)から目的の宛先を選択し、[宛先](../ui/connect-destination.md)への接続に関する手順に従ってください。
 
-このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
+このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて理解している必要もあります。
 
-* [&#x200B; 宛先 &#x200B;](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [宛先](../home.md): [!DNL Destinations]は、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティブ化できる宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 * [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用して宛先アカウントを正常に削除するために必要な追加情報を示しています。
+次の節では、[!DNL Flow Service] APIを使用して宛先アカウントを正常に削除するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -39,7 +39,7 @@ ht-degree: 36%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-[!DNL Experience Platform] API を呼び出すには、まず [&#x200B; 認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -51,26 +51,26 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->`x-sandbox-name` ヘッダーが指定されていない場合、リクエストは `prod` サンドボックスで解決されます。
+>`x-sandbox-name` ヘッダーが指定されていない場合、リクエストは`prod` サンドボックスで解決されます。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
 * `Content-Type: application/json`
 
-## 削除する宛先アカウントの接続 ID を見つけます {#find-connection-id}
+## 削除する宛先アカウントの接続IDを検索します {#find-connection-id}
 
 >[!NOTE]
->このチュートリアルでは [Airship の宛先 &#x200B;](../catalog/mobile-engagement/airship-attributes.md) を例として使用しますが、説明する手順は [&#x200B; 使用可能な宛先 &#x200B;](../catalog/overview.md) のいずれにも該当します。
+>このチュートリアルでは、[飛行船の宛先](../catalog/mobile-engagement/airship-attributes.md)を例として使用しますが、概要が記載されている手順は、[利用可能な宛先](../catalog/overview.md)のいずれかに適用されます。
 
-宛先アカウントを削除する最初の手順は、削除する宛先アカウントに対応する接続 ID を見つけることです。
+宛先アカウントを削除する最初の手順は、削除する宛先アカウントに対応する接続IDを見つけることです。
 
-Experience Platform UI で、**[!UICONTROL Destinations]**/**[!UICONTROL Accounts]** を参照し、「**[!UICONTROL Destinations]**」列の数値を選択して、削除するアカウントを選択します。
+Experience Platform UIで、**[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**&#x200B;を参照し、**[!UICONTROL Destinations]**&#x200B;列の番号を選択して、削除するアカウントを選択します。
 
-![&#x200B; 削除する宛先アカウントを選択 &#x200B;](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
+![削除する宛先アカウントを選択](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
-次に、ブラウザーの URL から宛先アカウントの接続 ID を取得できます。
+次に、ブラウザーのURLから宛先アカウントの接続IDを取得できます。
 
-![URL から接続 ID を取得 &#x200B;](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
+![URLから接続IDを取得](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
 
 <!--
 
@@ -148,13 +148,13 @@ A successful response returns the current details of your connection including i
 
 >[!IMPORTANT]
 >
->宛先アカウントを削除する前に、宛先アカウントへの既存のデータフローを削除する必要があります。
+>宛先アカウントを削除する前に、宛先アカウントに対する既存のデータフローをすべて削除する必要があります。
 >既存のデータフローを削除するには、次のページを参照してください。
 >
->* [Experience Platform UI を使用 &#x200B;](../ui/delete-destinations.md) して、既存のデータフローを削除します。
->* [Flow Service API を使用 &#x200B;](delete-destination-dataflow.md) して、既存のデータフローを削除します。
+>* [Experience Platform UI](../ui/delete-destinations.md)を使用して、既存のデータフローを削除します。
+>* [ フローサービス API](delete-destination-dataflow.md)を使用して、既存のデータフローを削除します。
 
-接続 ID を取得し、宛先アカウントへのデータフローが存在しないことを確認したら、[!DNL Flow Service] API に対してDELETE リクエストを実行します。
+接続IDを取得し、宛先アカウントにデータフローが存在しないことを確認したら、[!DNL Flow Service] APIに対してDELETE リクエストを実行します。
 
 **API 形式**
 
@@ -164,7 +164,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 削除したい接続の一意の `id` 値。 |
+| `{CONNECTION_ID}` | 削除する接続の一意の`id`値。 |
 
 **リクエスト**
 
@@ -179,12 +179,12 @@ curl -X DELETE \
 
 **応答**
 
-リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。接続先へのルックアップ（GET）リクエストを試みることで、削除を確認できます。 API は HTTP 404 （見つかりません）エラーを返し、宛先アカウントが削除されたことを示します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。接続に対してルックアップ（GET）リクエストを試みることで、削除を確定できます。 APIは、宛先アカウントが削除されたことを示すHTTP 404 （Not Found）エラーを返します。
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、既存の宛先アカウントを削除する [!DNL Flow Service] API を正常に使用しました。 宛先の使用について詳しくは、[&#x200B; 宛先の概要 &#x200B;](/help/destinations/home.md) を参照してください。
+このチュートリアルに従うことで、[!DNL Flow Service] APIを使用して既存の宛先アカウントを正常に削除できました。 宛先の使用について詳しくは、[宛先の概要](/help/destinations/home.md)を参照してください。

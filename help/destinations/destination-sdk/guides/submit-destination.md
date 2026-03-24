@@ -1,44 +1,44 @@
 ---
-description: このページでは、Destination SDKを使用して作成した場合のレビュー用に、製品化された宛先を送信するために必要なすべての情報が提供されます。
-title: 製品化した宛先をレビュー用に送信
+description: このページでは、Destination SDKを使用して作成した場合に製品レベルの宛先をレビュー用に送信するために必要なすべての情報を提供します。
+title: 製品化された宛先をレビュー用に送信
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1039'
+ht-degree: 32%
 
 ---
 
-# 製品化した宛先をレビュー用に送信
+# 製品化された宛先をレビュー用に送信
 
 ## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->* ここで説明するプロセスは、パートナーが製品化（公開）された宛先を送信する場合にのみ必要です。 自分で使用するためにプライベートな宛先を作成している場合は、これらの資料を作成してAdobeと共有する必要はありません。
+>* ここに記載されているプロセスは、製品で構成された（パブリックな）宛先を送信するパートナーにのみ必要です。 自分で使用するプライベートの宛先を作成する場合は、これらの素材を作成してAdobeと共有する必要はありません。
 >
->* 宛先の公開リクエストを確認するためのAdobeの標準的な応答時間は 5 営業日です。
+>* 宛先の公開リクエストを確認するためのAdobeの標準的な応答時間は5営業日です。
 >
->* 最初の送信後に設定を更新するようAdobe チームから求められた場合は、更新後に別の公開先リクエストを送信する必要があります。
+>* 最初の送信後に設定を更新するようにAdobe チームから求められた場合は、更新を行った後、別の宛先パブリッシュリクエストを送信する必要があります。
 >
->* 宛先がExperience Platform カタログにライブになっている後でも、設定を更新する必要がある場合は、新しい宛先公開リクエストを送信して、更新を設定に反映させる必要があります。
+>* 宛先がExperience Platform カタログに公開された後でも、設定を更新する必要がある場合は、更新を設定に反映するために、新しい宛先の公開リクエストを送信する必要があります。
 >
->* レビューのタイムラインと必要なアーティファクトは、更新している新しい宛先と既存の宛先で同じです。
+>* レビュータイムラインと必要なアーティファクトは、更新中の新しい宛先と既存の宛先で同じです。
 
 [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に宛先を公開する前に、プラットフォームにデータをアクティベートする際にアドビに宛先とテストに関する特定の情報を提供し、ユーザーが可能な限り最高のエクスペリエンスを享受できるようにする必要があります。
 
-このページには、Adobe Experience Platform Destination SDK を使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 Adobe Experience Platform で宛先を正常に送信するには、<aepdestsdk@adobe.com> にメールを送信します。これには以下が含まれます。
+このページには、[!DNL Adobe Experience Platform] Destination SDKを使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 [!DNL Adobe Experience Platform]の宛先を正常に送信するには、次の内容を含むメールを<aepdestsdk@adobe.com>に送信します。
 
 * 宛先が解決するユースケースの説明。 これは、新しい宛先設定を送信する場合にのみ必要です。
-* 宛先の送信理由の説明。 これは、既存の宛先設定を更新する場合にのみ必要です。
-* 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントへの API 呼び出しと、宛先エンドポイントから受信した API 応答をAdobeと共有してください。
-* 宛先に接続してアクティベーション手順を進めるユーザーのユーザーエクスペリエンスを示す画面録画。
+* 宛先送信理由の説明。 これは、既存の宛先設定を更新する場合にのみ必要です。
+* 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントに対して行われたAPI呼び出しと、宛先エンドポイントから受信したAPI応答をAdobeに送信してください。
+* 宛先に接続し、アクティベーション手順を進めるユーザーのエクスペリエンスを示す画面記録。
 * ファイルベースの宛先に関するその他の要件：
-   * テスト API を使用して [&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテストする &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを共有します。
-   * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
-   * 書き出したファイルをストレージの場所からシステムに正常に取り込んだことを証明するフォームを送信します。
+   * テスト APIを使用した後、リクエストと応答サンプルを共有して、[ サンプルプロファイルを使用してファイルベースの宛先をテスト ](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
+   * 宛先によって生成され、保存場所に書き出されたサンプルファイルを添付します。
+   * 書き出したファイルをストレージの場所からシステムに正常に取り込んだことを証明する何らかの形式のプルーフを送信します。
 * [destination publishing API](../publishing-api/create-publishing-request.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* [&#x200B; セルフサービスドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md) に記載されている手順に従った、ドキュメント PR （プルリクエスト）。
+* [ セルフサービスのドキュメントプロセス ](../docs-framework/documentation-instructions.md)で説明されている手順に従って、ドキュメント PR （プル要求）を実行します。
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
@@ -47,8 +47,8 @@ ht-degree: 35%
 
 Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主が、VMG のほぼリアルタイムの API を使用して新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュする際には、DataX API を使用できます。
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：お客様リスト、サイトを訪問した人物、またはPinterestでコンテンツを既に操作した人物からオーディエンスを作成します。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Verizon Media （VMG）の電子メールアドレスに基づいて特定のオーディエンスグループをターゲットにする広告主は、DataX APIを使用できます。これにより、新しいオーディエンスをすばやく作成し、VMGのほぼリアルタイム APIを使用して目的のオーディエンスグループをプッシュできます。
 
 ## 更新の理由 {#reason-for-update}
 
@@ -56,7 +56,7 @@ Experience Platform の顧客用に宛先が解決するユースケースを説
 >
 >このセクションは、既存の設定を更新する場合にのみ必要です。
 
-既存の宛先に対して送信によって解決される問題の簡単な説明を入力します。 例えば、ベータ版から一般提供に移行する際に、送信内容によって宛先の名前、説明、ロゴが更新される場合があります。 または、送信時に、宛先設定で検出されたバグが修正される場合があります。
+既存の宛先に対して、送信が解決する問題の簡単な説明を入力します。 例えば、ベータ版から一般公開に移行する際に、送信先の名前、説明、ロゴを更新します。 あるいは、送信先の設定で発見されたバグを提出で修正する場合があります。
 
 ## テスト宛先 API を使用した後のテスト結果 {#testing-api-response}
 
@@ -228,35 +228,35 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## ファイルベースの宛先に関するその他の要件 {#additional-file-based-destination-requirements}
+## ファイルベースの宛先に関する追加要件 {#additional-file-based-destination-requirements}
 
-ファイルベースの宛先の場合、宛先を正しく設定したことを示す追加のプルーフを指定する必要があります。 次の項目を必ず含めてください。
+ファイルベースの宛先の場合は、宛先を正しく設定したことを証明する追加の証明書を指定する必要があります。 次の項目が含まれていることを確認してください。
 
-### API 応答のテスト {#testing-api-response-file-based}
+### API応答のテスト {#testing-api-response-file-based}
 
-テスト API を使用して [&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテストする &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを含めます。
+テスト APIを使用した後、リクエストと応答サンプルを含めて、[ サンプルプロファイルを使用してファイルベースの宛先をテスト ](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
 
 ### 書き出したファイルを添付 {#attach-exported-file}
 
-[&#x200B; 送信メール &#x200B;](#download-sample-email) に、設定した宛先によってお使いのストレージの場所に書き出された CSV ファイルを添付します。
+[送信メール ](#download-sample-email)で、設定した宛先によってストレージの場所に書き出されたCSV ファイルを添付します。
 
-### 取り込みが成功した証拠 {#proof-of-successful-ingestion}
+### 取り込みが成功したことを示す証拠 {#proof-of-successful-ingestion}
 
-最後に、指定したストレージの場所にデータを書き出した後、データが正常にシステムに取り込まれたかどうかを示す何らかの形の証拠を提供する必要があります。 以下のいずれかの項目を指定してください。
+最後に、提供したストレージの場所にデータが書き出された後、データが正常にシステムに取り込まれたという何らかの形の証明を提供する必要があります。 以下のいずれかの項目を入力してください。
 
-* スクリーンショットまたは簡単なスクリーンキャプチャビデオ。ストレージの場所からファイルを手動で取り込み、システムに取り込みます。
-* Experience Platformで生成されたファイル名がシステムに正常に取り込まれたことをシステムの UI が確認する、スクリーンショットまたは簡単なスクリーンキャプチャビデオ。
-* Adobeがファイル名またはExperience Platformから生成されたデータと関連付けることができる、システムからのログ行。
+* スクリーンショットまたは簡単なスクリーンキャプチャビデオ。このビデオでは、ファイルをストレージの場所から手動で取り出し、システムに取り込みます。
+* Experience Platformによって生成されたファイル名がシステムに正常に取り込まれたことを確認する、システムのUIが表示されたスクリーンショットまたは簡単なスクリーンキャプチャビデオ。
+* Adobeがファイル名またはExperience Platformから生成されたデータのいずれかに関連付けることができるシステムからのログ行。
 
 ## 宛先の公開リクエストを提出したことの証明 {#destination-publishing-request-proof}
 
 宛先を正常にテストした後、[Destination Publishing API](../publishing-api/create-publishing-request.md) を使用してアドビに送信し、レビューと公開を行う必要があります。
 
-宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[&#x200B; 宛先公開リクエストの取得 &#x200B;](../publishing-api/retrieve-publishing-request.md) 方法を参照してください。
+宛先の公開リクエストの ID を指定します。 パブリッシュ要求IDの取得方法について詳しくは、「[宛先のパブリッシュ要求を取得する方法](../publishing-api/retrieve-publishing-request.md)」を参照してください。
 
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト） {#documentation-pr}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、[&#x200B; 製品化統合 &#x200B;](../overview.md#productized-custom-integrations)、[&#x200B; セルフサービスドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md) を使用して、宛先用に製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
+[製品化された統合](../overview.md#productized-custom-integrations)を作成する独立ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）の場合は、[ セルフサービスのドキュメントプロセス ](../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ {#logo}
 

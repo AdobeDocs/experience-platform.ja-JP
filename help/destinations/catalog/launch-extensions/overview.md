@@ -1,35 +1,35 @@
 ---
-keywords: タグ拡張機能；タグ拡張機能；launch の宛先；Platform タグ拡張機能；Platform タグ拡張機能；Platform Launch の宛先
+keywords: タグ拡張機能；タグ拡張機能；ローンチ先；プラットフォームタグ拡張機能；プラットフォームタグ拡張機能；プラットフォーム起動先
 title: Adobe Experience Platformのタグ拡張機能
-description: Adobe Experience Platformは、Adobeの次世代タグ管理機能を提供します。 Experience Platformを使用すると、関連するカスタマーエクスペリエンスを強化するために必要なすべての分析、マーケティングおよび広告タグを、簡単にデプロイして管理できます。
+description: Adobe Experience Platformは、Adobeの次世代のタグ管理機能を提供します。 Experience Platformなら、適切な顧客体験を実現するために必要なあらゆる分析タグ、マーケティングタグ、広告タグを容易にデプロイおよび管理できます。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '480'
 ht-degree: 22%
 
 ---
 
-# Adobe Experience Platformのタグ拡張機能
+# [!DNL Adobe Experience Platform]のタグ拡張機能
 
-Adobe Experience Platformは、Adobeの次世代タグ管理機能を提供します。 Experience Platformを使用すると、関連するカスタマーエクスペリエンスを強化するために必要なすべての分析、マーケティングおよび広告タグを、簡単にデプロイして管理できます。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。
+[!DNL Adobe Experience Platform]は、Adobeの次世代型タグ管理機能を提供します。 Experience Platformなら、適切な顧客体験を実現するために必要なあらゆる分析タグ、マーケティングタグ、広告タグを容易にデプロイおよび管理できます。 タグは、含まれている付加価値機能として[!DNL Adobe Experience Cloud]のお客様に提供されます。
 
 タグの概要については、以下のリソースを参照してください。
 
 - [タグの概要](../../../tags/home.md)
 - [クイックスタートガイド](../../../tags/quick-start/quick-start.md)
 
-## Experience Platform インターフェイスでタグ拡張機能を見つける方法 {#how-to-find-extensions-in-interface}
+## Experience Platform インターフェイスでタグ拡張機能を検索する方法 {#how-to-find-extensions-in-interface}
 
-Experience Platform インターフェイスで拡張機能を見つけるには、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]** を参照し、**[!UICONTROL タイプ]** フィルターの **[!UICONTROL 拡張機能]** を選択します。
+Experience Platform インターフェイスで拡張機能を検索するには、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;を参照し、**[!UICONTROL Extensions]** フィルターで&#x200B;**[!UICONTROL Types]**&#x200B;を選択します。
 
 ![インターフェイスの「拡張機能」フィルター](../../assets/catalog/launch-extensions/filter.png)
 
 ## タグ拡張機能の仕組み {#how-extensions-work}
 
-[&#x200B; タグ拡張機能 &#x200B;](../../../tags/home.md#extensions) は、web サイトまたはモバイルアプリの機能を強化するコードのパッケージです。 これには、[Google Analyticsなどの宛先に生のイベントデータを送信することが含まれますが &#x200B;](/help/destinations/catalog/analytics/google-universal-analytics.md) 他の機能も提供できます。
+[ タグ拡張機能](../../../tags/home.md#extensions)は、web サイトまたはモバイルアプリの機能を強化するコードパッケージです。 これには、生のイベントデータを[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)などの宛先に送信することが含まれますが、他の機能も提供できます。
 
-タグとイベント転送拡張機能を区別することが重要です。 Experience Platformの宛先のユーザーインターフェイスに表示される拡張機能は、*タグ拡張機能* です。 [&#x200B; タグとイベント転送の違い &#x200B;](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) について詳しくは、イベント転送の概要を参照してください。
+タグとイベント転送拡張機能を区別することが重要です。 Experience Platform destinations ユーザーインターフェイスで表示される拡張機能は、*タグ拡張機能*&#x200B;です。 タグとイベント転送の違い[について詳しくは、イベント転送の概要を参照してください](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)。
 
 
 
@@ -43,28 +43,28 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 -->
 
-## タグ拡張機能を使用するメリット {#extensions-benefits}
+## タグ拡張機能を使用する利点 {#extensions-benefits}
 
-Experience Platformのタグ機能は、Experience Cloudの既存のお客様に無料で提供されます。 このシステムは、インストール、設定、更新、削除が可能な使いやすい拡張機能を使用して、web サイトでのタグのデプロイメントを簡素化します。 タグを使用すると、web サイト上に小さな足跡が残り、ページの読み込みを迅速に維持できます。
+Experience Platformのタグ機能は、Experience Cloudの既存のお客様は無料で利用できます。 このシステムは、インストール、設定、更新、削除ができる使いやすい拡張機能を介して、web サイトへのタグのデプロイメントを簡素化します。 タグを利用することで、web サイトへのフットプリントを小さく抑え、ページの読み込みを維持できます。
 
-オーディエンスをアクティブ化して拡張機能をタグ付けすることはできませんが、特定の状況でイベントデータのみを転送するようにルールを設定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、[&#x200B; タグドキュメント &#x200B;](../../../tags/ui/managing-resources/rules.md) のルールについてを参照してください。
+拡張機能をタグ付けするためにオーディエンスをアクティブ化することはできませんが、特定の状況ではイベントデータのみを転送するようにルールを設定することができます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳細については、[ タグのドキュメント ](../../../tags/ui/managing-resources/rules.md)でルールについて説明しています。
 
 ## 拡張機能の使用例 {#extensions-use-cases}
 
-拡張機能を使用すると、様々な顧客のユースケースを満たすことができます。 拡張機能を使用するユースケースの例を次に示します。
+拡張機能を活用すると、さまざまな顧客ユースケースを満たすことができます。 拡張機能の使用例には、次のようなものがあります。
 
 - Facebook ピクセル拡張機能を使用して、web サイトまたはネイティブのアプリケーションデータを Facebook に送信できます。Facebook ピクセルでは、訪問者がサイトまたはアプリケーションのどの部分にアクセスしたかを把握したり、その情報を Facebook に転送したりすることができます。また、Facebook を介して、訪問者を再ターゲティングすることができます。
 - web サイトやアプリケーションのイベントデータを Google Analytics に転送してそのデータを分析し、それに基づいて決定を下すことができます。
-- 設定したルールに従って、ユーザーがページとやり取りする方法に基づいて、適切なタイミングでクライアントサイドのチャットボックスアプリをオンにできます。
+- 設定したルールに従って、ユーザーがページとどのようにインタラクションしているかに応じて、適切なタイミングでクライアントサイドのチャットボックスアプリをオンにすることができます。
 
 ## 拡張機能のカテゴリ {#extension-categories}
 
-拡張機能は、Experience Platformの次のカテゴリに分類されます。
+Experience Platformでは、拡張機能を次のカテゴリに分類できます。
 
 - [広告](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [データ管理プラットフォーム](../data-management/overview.md)
 - [メールマーケティングの宛先](../email-marketing/overview.md)
-- [パーソナライズ機能](../personalization/overview.md)
+- [パーソナライゼーション](../personalization/overview.md)
 - [調査](../survey/overview.md)
 - [お客様の声](../voice/overview.md)

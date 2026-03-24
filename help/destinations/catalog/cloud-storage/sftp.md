@@ -2,10 +2,10 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 28%
+source-wordcount: '1304'
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 28%
 
 ## 宛先の変更ログ {#changelog}
 
-2023 年 7 月のExperience Platform リリースでは、以下に示す新しい機能が SFTP 宛先で提供されます。
+2023年7月のExperience Platform リリースでは、SFTPの宛先は次のように新しい機能を提供します。
 
 * [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
@@ -22,38 +22,38 @@ ht-degree: 28%
 
 ## 概要 {#overview}
 
-SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
+SFTP サーバーへのライブアウトバウンド接続を作成して、[!DNL Adobe Experience Platform]から区切られたデータファイルを定期的にエクスポートします。
 
 >[!IMPORTANT]
 >
 > Experience Platform では SFTP サーバーへのデータの書き出しをサポートしていますが、データを書き出す際に推奨されるクラウドストレージの場所は [!DNL Amazon S3] と [!DNL Azure Blob] です。
 
-## API または UI を使用した SFTP への接続 {#connect-api-or-ui}
+## APIまたはUIを介したSFTPへの接続 {#connect-api-or-ui}
 
-* Experience Platform ユーザーインターフェイスを使用して SFTP ストレージの場所に接続するには、以下の [&#x200B; 宛先への接続 &#x200B;](#connect) および [&#x200B; この宛先に対するオーディエンスのアクティブ化 &#x200B;](#activate) の節を参照してください。
-* プログラムによって SFTP ストレージの場所に接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 &#x200B;](../../api/activate-segments-file-based-destinations.md) を参照してください。
+* Experience Platform ユーザーインターフェイスを使用してSFTP ストレージの場所に接続するには、以下の「[宛先に接続](#connect)」および「[この宛先にオーディエンスをアクティブ化](#activate)」の節を参照してください。
+* SFTP ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用してファイルベースの宛先にオーディエンスをアクティベートする](../../api/activate-segments-file-based-destinations.md)を参照してください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | ○ | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | ○ | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | ○ | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | ○ | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -69,38 +69,38 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 
 {style="table-layout:auto"}
 
-![&#x200B; 宛先カタログでハイライト表示された SFTP プロファイルベースの書き出しタイプ。](../../assets/catalog/cloud-storage/sftp/catalog.png)
+宛先カタログで![SFTP プロファイルベースの書き出しタイプがハイライト表示されています。](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、次のチュートリアルを参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、チュートリアルを参照してください。
 
-* [Experience Platform ユーザーインターフェイスを使用したデータセットの書き出し &#x200B;](/help/destinations/ui/export-datasets.md) 方法。
-* [Flow Service API を使用してプログラムでデータセットを書き出す &#x200B;](/help/destinations/api/export-datasets.md) 方法。
+* Experience Platform ユーザーインターフェイス [を使用してデータセットを](/help/destinations/ui/export-datasets.md) エクスポートする方法。
+* Flow Service APIを使用してデータセットをプログラムで[ エクスポートする方法](/help/destinations/api/export-datasets.md)。
 
 ## 書き出されたデータのファイル形式 {#file-format}
 
-*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [&#x200B; 書き出しでサポートされるファイル形式 &#x200B;](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+*オーディエンスデータ*&#x200B;を書き出すと、Experience Platformは、指定した保存場所に`.csv`、`parquet`、または`.json`個のファイルを作成します。 ファイルについて詳しくは、オーディエンスアクティベーションのチュートリアルの「[ サポートされている書き出し用ファイル形式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)」セクションを参照してください。
 
-*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [&#x200B; データセットの書き出しが成功したことを確認する &#x200B;](../../ui/export-datasets.md#verify) の節を参照してください。
+*データセット*&#x200B;を書き出すと、Experience Platformは、指定したストレージの場所に`.parquet`または`.json`個のファイルを作成します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの「[成功したデータセットの書き出しを検証する](../../ui/export-datasets.md#verify)」セクションを参照してください。
 
 ## SFTP サーバーの接続要件 {#sftp-connection-requirements}
 
-データの書き出しを正常に行うには、十分な数の同時接続を許可するようにターゲット SFTP サーバーを設定する必要があります。 SFTP サーバーで同時接続数が制限されている場合、特に複数のオーディエンスやデータセットを同時に書き出す場合に、書き出しジョブでエラーが発生することがあります。
+データの書き出しを成功させるには、十分な数の同時接続を許可するようにターゲット SFTP サーバーを設定する必要があります。 SFTP サーバーで同時に接続できる数が制限されている場合、特に複数のオーディエンスまたはデータセットを同時に書き出すと、書き出しジョブの失敗が発生する可能性があります。
 
 **推奨事項**
-最適なパフォーマンスを得るには、書き出すオーディエンスまたはデータセットごとに少なくとも 1 つの同時接続を SFTP サーバーで許可する必要があります。 少なくとも、サーバーは、書き出し用に同時にスケジュールされたオーディエンスまたはデータセットの合計数の 30% 以上をサポートする必要があります。
+最適なパフォーマンスを得るには、SFTP サーバーで、書き出すオーディエンスまたはデータセットごとに少なくとも1つの同時接続を許可する必要があります。 少なくとも、サーバーは、同時に書き出しがスケジュールされているオーディエンスまたはデータセットの合計数の30%以上をサポートする必要があります。
 
 **例**\
-100 個のオーディエンスまたはデータセットの書き出しを同時にスケジュールする場合、SFTP サーバーは少なくとも 30 個の同時接続を許可する必要があります。
+100個のオーディエンスまたはデータセットの書き出しを同時にスケジュールする場合、SFTP サーバーは少なくとも30個の同時接続を許可する必要があります。
 
-SFTP サーバーの接続の制限を適切に設定すると、書き出しの失敗を防ぎ、Adobe Experience Platformからの信頼性の高いデータ配信を確保できます。
+SFTP サーバーの接続制限を適切に設定すると、書き出しの失敗を防ぎ、[!DNL Adobe Experience Platform]からの信頼性の高いデータ配信を確保できます。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -116,62 +116,62 @@ SFTP サーバーの接続の制限を適切に設定すると、書き出しの
 >title="SSH 秘密鍵"
 >abstract="SSH 秘密鍵は、RSA 形式の Base64 でエンコードされた文字列にする必要があり、パスワードで保護しないでください。"
 
-**[!UICONTROL SFTP with password]** 認証タイプを選択して SFTP ストレージの場所に接続する場合：
+**[!UICONTROL SFTP with password]**&#x200B;認証タイプを選択してSFTPの場所に接続する場合：
 
-![&#x200B; パスワードを使用した SFTP 宛先の基本認証。](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![ パスワードを使用したSFTP宛先基本認証。](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Domain]**:SFTP ストレージの場所のアドレス
-* **[!UICONTROL Username]**:SFTP ストレージの場所にログインするためのユーザー名
-* **[!UICONTROL Port]**:SFTP ストレージの場所で使用されるポート
-* **[!UICONTROL Password]**:SFTP ストレージの場所にログインするためのパスワード
-* **[!UICONTROL Encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
+* **[!UICONTROL Domain]**: SFTP ストレージの場所のアドレス。
+* **[!UICONTROL Username]**: SFTP ストレージの場所にログインするユーザー名。
+* **[!UICONTROL Port]**: SFTP ストレージの場所で使用されるポート。
+* **[!UICONTROL Password]**: SFTP ストレージの場所にログインするためのパスワード。
+* **[!UICONTROL Encryption key]**: オプションで、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-  ![UI での正しい形式の PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UIで正しくフォーマットされたPGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
-**[!UICONTROL SFTP with SSH key]** 認証タイプを選択して SFTP ストレージの場所に接続する場合：
+**[!UICONTROL SFTP with SSH key]**&#x200B;認証タイプを選択してSFTPの場所に接続する場合：
 
-![SFTP 宛先の SSH キー認証。](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP宛先SSH キー認証。](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-* **[!UICONTROL Domain]**:SFTP アカウントの IP アドレスまたはドメイン名を入力します
-* **[!UICONTROL Port]**:SFTP ストレージの場所で使用されるポート
-* **[!UICONTROL Username]**:SFTP ストレージの場所にログインするためのユーザー名
-* **[!UICONTROL SSH Key]**:SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。 この秘密鍵は、RSA 形式の Base64 エンコード文字列である必要があり、パスワードで保護しないでください。
-* **[!UICONTROL Encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
+* **[!UICONTROL Domain]**: SFTP アカウントのIP アドレスまたはドメイン名を入力します
+* **[!UICONTROL Port]**: SFTP ストレージの場所で使用されるポート。
+* **[!UICONTROL Username]**: SFTP ストレージの場所にログインするユーザー名。
+* **[!UICONTROL SSH Key]**: SFTP ストレージの場所へのログインに使用される秘密SSH キー。 秘密鍵はRSA形式のBase64でエンコードされた文字列で、パスワードで保護してはなりません。
+* **[!UICONTROL Encryption key]**: オプションで、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-  ![UI での正しい形式の PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UIで正しくフォーマットされたPGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細 {#destination-details}
 
 SFTP ストレージの場所への認証接続を確立したら、宛先の次の情報を指定します。
 
-![SFTP 宛先の宛先詳細フィールド。](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP宛先の宛先の詳細フィールド。](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Experience Platform ユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL Description]**：この宛先の説明を入力します
-* **[!UICONTROL Folder path]**:SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
-* **[!UICONTROL File type]**：書き出したファイルにExperience Platformで使用する形式を選択します。 「[!UICONTROL CSV]」オプションを選択すると、[&#x200B; ファイル形式オプションを設定 &#x200B;](../../ui/batch-destinations-file-formatting-options.md) することもできます。
+* **[!UICONTROL Description]**：この宛先の説明を入力します。
+* **[!UICONTROL Folder path]**: ファイルが書き出されるSFTPの場所にあるフォルダーへのパスを入力します。
+* **[!UICONTROL File type]**：書き出したファイルにExperience Platformで使用する形式を選択します。 [!UICONTROL CSV] オプションを選択する際に、[ ファイル形式オプションを設定することもできます](../../ui/batch-destinations-file-formatting-options.md)。
 * **[!UICONTROL Compression format]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。
-* **[!UICONTROL Include manifest file]**：書き出しの場所、書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。
-   * `flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
-   * `scheduledTime`: ファイルが書き出された時間（UTC 単位）。
-   * `exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。
-   * `exportResults.name`：書き出すファイルの名前。
-   * `size`：書き出されたファイルのサイズ（バイト単位）。
+* **[!UICONTROL Include manifest file]**：書き出しの場所や書き出しサイズなどの情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式`manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して指定されています。 [ サンプルマニフェストファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 マニフェストファイルには、次のフィールドが含まれます。
+   * `flowRunId`: エクスポートされたファイルを生成した[ データフロー実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+   * `scheduledTime`: ファイルがエクスポートされたUTCの時間。
+   * `exportResults.sinkPath`：書き出されたファイルが格納されているストレージの場所のパス。
+   * `exportResults.name`: エクスポートされたファイルの名前。
+   * `size`：書き出されたファイルのサイズ （バイト単位）。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対するオーディエンスのアクティブ化の手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
 ## データの正常な書き出しの検証 {#exported-data}
 
-データが正常に書き出されたかどうかを確認するには、SFTP ストレージを確認し、書き出されたファイルに、想定どおりのプロファイル母集団が含まれていることを確認してください。
+データが正常に書き出されたかどうかを確認するには、SFTP ストレージを確認し、書き出されたファイルに想定されるプロファイル母集団が含まれていることを確認します。
 
 ## IP アドレスの許可リスト {#ip-address-allow-list}
 
-許可リストにAdobe許可リストに加えるの IP を登録する必要がある場合は、[IP アドレス &#x200B;](ip-address-allow-list.md) の記事を参照してください。
+Adobe IPを契約許可リストに追加する必要がある場合は、「[IP アドレス契約](ip-address-allow-list.md)」を参照してください。

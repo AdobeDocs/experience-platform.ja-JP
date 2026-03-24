@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを作成するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの作成
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 83%
@@ -25,7 +25,7 @@ Destination SDK を使用して作成した一部の宛先では、オーディ�
 
 ## オーディエンステンプレート API 操作の概要 {#get-started}
 
-続行する前に、[&#x200B; はじめる前に &#x200B;](../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../getting-started.md)を確認してください。
 
 ## オーディエンステンプレートの作成 {#create}
 
@@ -257,14 +257,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | プロパティ | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。この名前は、Experience Platform ユーザーインターフェイスのパートナー固有のエラーメッセージに表示されます。 |
-| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスやデータフローを作成、更新、削除、検証するために使用します。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
+| `url` | 文字列 | APIのURLとエンドポイント。プラットフォーム内のオーディエンスやデータフローの作成、更新、削除、検証に使用されます。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
 | `httpMethod` | 文字列 | 宛先のオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
 | `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
 | `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。例：`"application/x-www-form-urlencoded"` |
-| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。`requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。メッセージ本文に含めることができるものを学ぶには、[&#x200B; サポートされるマクロのドキュメント &#x200B;](../functionality/audience-metadata-management.md#macros) を参照してください。 |
-| `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
+| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。`requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。メッセージ本文に含めることができる内容については、[ サポートされているマクロのドキュメント ](../functionality/audience-metadata-management.md#macros)を参照してください。 |
+| `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#configuration-examples)を参照してください。 |
 | `responseFields.value` | 文字列 | 呼び出し時に API が返す応答フィールドの値を指定します。 |
-| `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
+| `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#configuration-examples)を参照してください。 |
 | `responseErrorFields.value` | 文字列 | API 呼び出しに対する宛先からの応答で返されたエラーメッセージを解析します。これらのエラーメッセージは、Adobe Experience Platform のユーザーインターフェイスでユーザーに表示されます。 |
 | `validations.field` | 文字列 | 宛先に対する API 呼び出しが実行される前に、いずれかのフィールドに対して検証を実行する必要があるかどうかを示します。例えば、ユーザーのアカウント ID の検証に `{{validations.accountId}}` を使用できます。 |
 | `validations.regex` | 文字列 | 検証に合格するために、フィールドをどのように構成するべきかを示します。 |
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

@@ -1,12 +1,12 @@
 ---
-keywords: ソーシャル；ソーシャルの宛先；Livefyre;Facebook;Facebook
+keywords: ソーシャル；ソーシャル宛先；Livefyre;facebook;Facebook
 title: ソーシャルの宛先の概要
-description: ソーシャルの宛先を使用すると、ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うキャンペーンのプロファイルをアクティブ化できます。
+description: ソーシャル配信先を使用すると、ハッシュ化されたメールにもとづいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、キャンペーンのプロファイルをアクティブ化できます。
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 23%
+source-wordcount: '103'
+ht-degree: 24%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 23%
 
 ## 概要 {#overview}
 
-ソーシャルの宛先を使用すると、ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うキャンペーンのプロファイルをアクティブ化できます。
+ソーシャル配信先を使用すると、ハッシュ化されたメールにもとづいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、キャンペーンのプロファイルをアクティブ化できます。
 
-## サポートされるソーシャルの宛先 {#supported-destinations}
+## サポートされるソーシャル宛先 {#supported-destinations}
 
-Adobe Experience Platformは現在、次のソーシャルの宛先をサポートしています。
+[!DNL Adobe Experience Platform]は現在、次のソーシャル宛先をサポートしています：
 
 * [[!DNL Facebook] 接続](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] 接続](linkedin.md)
 * [[!DNL TikTok] 接続](tiktok.md)
 * [[!DNL Twitter Custom Audiences] 接続](twitter.md)
 
-## 新しいソーシャル宛先への接続 {#connect-destination}
+## 新しいソーシャル宛先に接続 {#connect-destination}
 
-オーディエンスをキャンペーンのソーシャル宛先に送信するには、まずExperience Platformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーンのソーシャル宛先にオーディエンスを送信するには、Experience Platformが最初に宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。

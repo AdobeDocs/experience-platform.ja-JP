@@ -1,12 +1,12 @@
 ---
-keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin拡張機能；marketo munchkin 拡張機能；marketo;Marketo
+keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin拡張機能；marketo munchkin拡張機能；marketo;Marketo
 title: Marketo Munchkin 拡張機能
-description: Marketo Munchkin拡張機能は、Adobe Experience Platformのパーソナライズ機能の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Marketo Munchkin拡張機能は、Adobe Experience Platformのパーソナライズ機能の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 58%
+source-wordcount: '442'
+ht-degree: 53%
 
 ---
 
@@ -14,31 +14,31 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-リード管理からアカウントベースのマーケティングに至るまで、[!DNL Marketo Engagement Platform] は、顧客や見込み客のエクスペリエンスのあらゆる段階において、エンゲージメントの計画、調整、測定の方法を簡素化します。
+リード管理からアカウントベースドマーケティングまで、[!DNL Marketo Engagement Platform]は、エクスペリエンスのあらゆる段階において、顧客や見込み顧客とのエンゲージメントを計画、調整、測定する方法を簡素化します。
 
-[!DNL Marketo’s Munchkin] JavaScriptを使用すると、[!DNL Marketo] ランディングページや外部 web ページへのエンドユーザーページの訪問およびクリックをトラッキングできます。
+[!DNL Marketo’s Munchkin] JavaScriptを使用すると、[!DNL Marketo]のランディングページと外部web ページへのエンドユーザーページの訪問とクリックを追跡できます。
 
-[!DNL Marketo Munchkin] は、Adobe Experience Platformのメール拡張機能です。 Marketo Munchkinについて詳しくは、Marketo ドキュメントの [&#x200B; リードトラッキング &#x200B;](https://developers.marketo.com/javascript-api/lead-tracking/) を参照してください。
+[!DNL Marketo Munchkin]は[!DNL Adobe Experience Platform]のメール拡張機能です。 Marketo Munchkinについて詳しくは、Marketo ドキュメントの[ リードトラッキング ](https://developers.marketo.com/javascript-api/lead-tracking/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要 &#x200B;](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Marketo Munchkin 拡張機能](../../assets/catalog/email/marketo-munchkin/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-Experience Platformを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
+この拡張機能は、[!DNL Destinations] カタログで、Experience Platformを購入したすべてのお客様が利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
+この拡張機能を使用するには、[!DNL Adobe Experience Platform]のタグにアクセスする必要があります。 タグは、含まれている付加価値機能として[!DNL Adobe Experience Cloud]のお客様に提供されます。 タグへのアクセス権を取得するには、組織の管理者に連絡し、拡張機能をインストールできるように&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼してください。
 
 ## 拡張機能のインストール {#install-extension}
 
 [!DNL Marketo Munchkin] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
-宛先を選択してから、右側のパネルで「**[!UICONTROL Configure]**」を選択します。 **[!UICONTROL Configure]** コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。 [前提条件](#prerequisites)を確認してください。
+宛先を選択し、右側のパネルで「**[!UICONTROL Configure]**」を選択します。 **[!UICONTROL Configure]** コントロールがグレー表示されている場合、**[!UICONTROL manage_properties]**&#x200B;権限がありません。 [前提条件](#prerequisites)を確認してください。
 
 拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、タグドキュメントの [「プロパティ」ページに関する節](../../../tags/ui/administration/companies-and-properties.md#properties-page) を参照してください。
 
@@ -58,6 +58,6 @@ Experience Platformを購入したすべての顧客は、この拡張機能を 
 
 >[!TIP]
 >
->拡張機能がいずれかのプロパティに既にインストールされている場合、Experience Platform UI ではその拡張機能に引き続き **[!UICONTROL Install]** が表示されます。 [拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
+>拡張機能が既にいずれかのプロパティにインストールされている場合でも、Experience Platform UIには拡張機能の&#x200B;**[!UICONTROL Install]**&#x200B;が表示されます。 [拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
 
 拡張機能をアップグレードするには、[拡張機能のアップグレードプロセス](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) （タグドキュメント）のガイドを参照してください。

@@ -2,10 +2,10 @@
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 88%
+source-wordcount: '828'
+ht-degree: 89%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 88%
 
 Experience Platform の宛先への書き出し動作について考える際は、設定が機能する 3 つの異なるレベルを考慮する必要があります。
 
-* 第 1 レベルでは、プロファイルの書き出しの動作と設定の指定に関連する設定の一部は、宛先タイプに属するすべての宛先で共通です。これらの設定では、宛先の書き出しに含まれるトリガーと、書き出しに含まれ、宛先開発者またはReal-Time CDP ユーザーが編集できない項目を参照します。
+* 第 1 レベルでは、プロファイルの書き出しの動作と設定の指定に関連する設定の一部は、宛先タイプに属するすべての宛先で共通です。これらの設定は、書き出す宛先のトリガーと、書き出しに含まれ、宛先開発者または[!DNL Real-Time CDP] ユーザーが編集できない設定を指します。
 * 第 2 レベルでは、Destination SDK を使用して宛先を作成する際に、宛先開発者が宛先レベルで一部の設定をカスタマイズできます。
-* 第 3 レベルでは、Real-Time CDP ユーザーがアクティベーションワークフローで設定できる設定の指定があります。
+* 3つ目のレベルでは、[!DNL Real-Time CDP] ユーザーがアクティブ化ワークフローで設定できる構成設定があります。
 
 ![宛先の一般的な書き出し設定と設定可能な書き出し設定の間の相互作用を示す図](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -23,9 +23,9 @@ Experience Platform の宛先への書き出し動作について考える際は
 
 ## 宛先タイプ間の一般的な書き出し設定 {#common-settings-across-destination-types}
 
-宛先の書き出し動作は、*宛先の書き出しをトリガーする内容*&#x200B;と、*宛先の書き出しに含まれる内容*&#x200B;に関して、宛先タイプに属する宛先全体で一貫しています。宛先の書き出しは、宛先サービスが[アップストリームのリアルタイム顧客プロファイルサービス](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=ja#adobe-experience-platform-%26-applications-detailed-architecture-diagram)から受信する通知によってトリガーされます。
+宛先の書き出し動作は、*宛先の書き出しをトリガーする内容*&#x200B;と、*宛先の書き出しに含まれる内容*&#x200B;に関して、宛先タイプに属する宛先全体で一貫しています。宛先の書き出しは、宛先サービスが[アップストリームのリアルタイム顧客プロファイルサービス](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)から受信する通知によってトリガーされます。
 
-宛先の書き出しに含まれる内容は、宛先タイプによって微妙に異なります。詳しくは、[宛先タイプごとの一般的な書き出し動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md)を参照してください。これらの設定は、宛先開発者またはReal-Time CDP ユーザーが編集することはできません。
+宛先の書き出しに含まれる内容は、宛先タイプによって微妙に異なります。詳しくは、[宛先タイプごとの一般的な書き出し動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md)を参照してください。これらの設定は、宛先開発者または[!DNL Real-Time CDP] ユーザーが編集することはできません。
 
 ## 宛先開発者によるカスタマイズ可能な書き出し設定 {#customizable-settings-by-destination-developers}
 
@@ -44,21 +44,21 @@ Experience Platform の宛先への書き出し動作について考える際は
 
 例えば、[ストリーミング宛先](/help/destinations/destination-types.md#streaming-destinations)の場合、宛先開発者は、宛先が受け入れる ID を設定できます。以下に示すように、[アクティベーションワークフローのマッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)でこれらの ID のみがユーザーに表示されます。
 
-![&#x200B; アクティベーションワークフローのマッピング手順での、ターゲットフィールドの ID 選択の画面記録。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![ アクティベーション ワークフローのマッピング手順で、ターゲット フィールドのID選択を画面に記録しました。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-同様に、[ファイルベースの宛先](/help/destinations/destination-types.md#file-based)の場合、宛先開発者は、宛先で使用可能にする[ファイル名追加オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)や、使用可能にする[ファイル形式オプション](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)を決定でき、以下に示すように、ユーザーはこれらのオプションからのみ選択できます。
+同様に、[ファイルベースの宛先](/help/destinations/destination-types.md#file-based)の場合、宛先開発者は、宛先で使用可能にする[ファイル名追加オプション](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)や、使用可能にする[ファイル形式オプション](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)を決定でき、以下に示すように、ユーザーはこれらのオプションからのみ選択できます。
 
 ![ファイルベースの宛先に接続する際の、ファイル形式オプションの画面記録。](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![&#x200B; アクティベーションワークフローのスケジューリング手順のファイル名を追加オプションの画面記録。](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![ アクティベーションワークフローのスケジュール設定手順におけるファイル名追加オプションの画面録画。](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 アクティベーションワークフローで使用できる様々なオプションと手順について詳しくは、以下を参照してください。
 
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [エンタープライズ宛先に対するオーディエンスデータの有効化 &#x200B;](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [エンタープライズ宛先に対するオーディエンスデータの有効化 ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [オンデマンドでのファイルのバッチ宛先への書き出し](/help/destinations/ui/export-file-now.md)
-* [クラウドストレージの宛先へのデータセットの書き出し](/help/destinations/ui/export-datasets.md)
+* [データセットをクラウドストレージの宛先にエクスポートする](/help/destinations/ui/export-datasets.md)
 
 ## 次の手順 {#next-steps}
 

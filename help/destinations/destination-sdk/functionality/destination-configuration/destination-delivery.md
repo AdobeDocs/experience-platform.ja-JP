@@ -2,16 +2,16 @@
 description: Destination SDK で作成された宛先に対して、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示す、宛先配信設定の設定方法を説明します。
 title: 宛先配信
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 82%
+source-wordcount: '640'
+ht-degree: 79%
 
 ---
 
 # 宛先配信
 
-宛先に書き出されたデータが到達する場所をより正確に制御するために、Destination SDK では、宛先配信設定を指定できます。
+宛先に書き出されたデータの配信先をより詳細に制御するには、Destination SDKで配信先の設定を指定できます。
 
 宛先配信セクションは、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示します。
 
@@ -48,8 +48,8 @@ ht-degree: 82%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [&#x200B; に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 &#x200B;](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[credentials API](../../credentials-api/create-credential-configuration.md) 設定を使用して資格情報オブジェクトを作成し、`authenticationId` パラメーターを資格情報オブジェクト ID 値に設定する必要があります。</li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
-| `authenticationId` | 文字列 | 認証に使用する資格情報オブジェクトの構成 ID の `instanceId` です。 このパラメーターは、特定の資格情報設定を指定する必要がある場合にのみ必要です。 |
+| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`: Experience Platformのお客様が[ここ](customer-authentication.md)で説明されているいずれかの認証方法を使用してシステムにログインする場合は、このオプションを使用します。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[credentials API](../../credentials-api/create-credential-configuration.md)設定を使用して資格情報オブジェクトを作成し、`authenticationId` パラメーターを資格情報オブジェクト ID値に設定する必要があります。</li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
+| `authenticationId` | 文字列 | 認証に使用する資格情報オブジェクトの構成IDの`instanceId`。 このパラメーターは、特定の資格情報設定を指定する必要がある場合にのみ必要です。 |
 | `destinationServerId` | 文字列 | データの書き出し先にする[宛先サーバー](../../authoring-api/destination-server/create-destination-server.md)の `instanceId`。 |
 | `deliveryMatchers.type` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `SOURCE` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
 | `deliveryMatchers.value` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `batch` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
@@ -104,13 +104,13 @@ ht-degree: 82%
 
 ## プラットフォーム認証設定 {#platform-authentication}
 
-`PLATFORM_AUTHENTICATION` を使用する場合、宛先設定を資格情報設定にリンクするには、`authenticationId` パラメーターを指定する必要があります。
+`PLATFORM_AUTHENTICATION`を使用する場合は、宛先設定を資格情報設定にリンクするために`authenticationId` パラメーターを指定する必要があります。
 
-1. 宛先設定で `destinationDelivery.authenticationRule` を `"PLATFORM_AUTHENTICATION"` に設定します
-2. [&#x200B; 認証情報オブジェクトを作成します &#x200B;](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
-3. `authenticationId` パラメーターを認証情報オブジェクトの `instanceId` 値に設定します。
+1. 宛先設定で`destinationDelivery.authenticationRule`を`"PLATFORM_AUTHENTICATION"`に設定
+2. [資格情報オブジェクトを作成](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
+3. `authenticationId` パラメーターを資格情報オブジェクトの`instanceId`値に設定します。
 
-**PLATFORM_AUTHENTICATION を使用した設定例：**
+**PLATFORM_AUTHENTICATIONを使用した設定例：**
 
 >[!BEGINSHADEBOX]
 
@@ -135,7 +135,7 @@ ht-degree: 82%
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [UI 属性](ui-attributes.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [スキーマ設定](schema-configuration.md)

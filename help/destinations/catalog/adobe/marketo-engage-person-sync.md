@@ -1,73 +1,73 @@
 ---
-title: Marketo Engage人物同期
-description: Marketo Engage ユーザー同期コネクタを使用して、ユーザーオーディエンスからMarketo Engage内の対応するレコードに更新をストリーミングします。
+title: Marketo Engage Person Sync
+description: Marketo Engage Person Sync コネクタを使用して、個人オーディエンスからMarketo Engage内の対応するレコードに更新をストリーミングします。
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 10%
+source-wordcount: '1200'
+ht-degree: 11%
 
 ---
 
-# Marketo Engage Person Sync 接続 {#marketo-engage-person-sync}
+# Marketo Engage Person Syncとの連携 {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
->この宛先コネクタはベータ版で、一部のお客様のみご利用いただけます。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+>この宛先コネクタはベータ版で、一部のお客様のみが利用できます。 アクセスをリクエストするには、Adobe担当者にお問い合わせください。
 
 >[!IMPORTANT]
 >
->**[!UICONTROL Marketo Engage Person Sync]** の宛先カードは、**2025 年 10 月** に非推奨（廃止予定）になります。
+>**[!UICONTROL Marketo Engage Person Sync]**&#x200B;宛先カードは、**2025年10月**&#x200B;に非推奨（廃止予定）になります。
 >
->新しい **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** の宛先へのスムーズな移行を確実に行うには、次のポイントと必要なアクションを確認します。
+>新しい&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;宛先へのスムーズな移行を確実に行うには、次の重要なポイントと必要なアクションを確認してください。
 >
->* すべてのユーザーは、**Marketo Engage Person Sync 宛先の使用を停止** し、2025 年 10 月までに新しい **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 宛先に移行する必要があります。
->* **既存のデータフローは、自動的には移行されません。** 新しい [&#x200B; 宛先への &#x200B;](marketo-engage-connection.md#connect-to-the-destination) 新しい接続を設定 **[!UICONTROL Marketo Engage]** し、そこでオーディエンスをアクティブ化する必要があります。
+>* すべてのユーザーは、2025年10月までに&#x200B;**Marketo Engage Person Syncの宛先**&#x200B;の使用を停止し、新しい&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;の宛先に移行する必要があります。
+>* **既存のデータフローは自動的に移行されません。**&#x200B;新しい[宛先への新しい接続](marketo-engage-connection.md#connect-to-the-destination)を&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;設定し、そこにオーディエンスをアクティブ化する必要があります。
 
 
 ## 概要 {#overview}
 
-Marketo Engage ユーザー同期コネクタを使用して、ユーザーオーディエンスからMarketo Engage インスタンスの対応するレコードに更新をストリーミングします。
+Marketo Engage Person Sync コネクタを使用して、個人オーディエンスからMarketo Engage インスタンス内の対応するレコードに更新をストリーミングします。
 
 >[!IMPORTANT]
 >
->[Marketo V2 オーディエンス同期コネクタ &#x200B;](/help/destinations/catalog/adobe/marketo-engage.md) は、作成モードでプロファイル更新同期コネクタと組み合わせて使用しないでください
+>[Marketo V2 Audience Sync Connector](/help/destinations/catalog/adobe/marketo-engage.md)は、Profile Update Sync Connectorと組み合わせて作成モードで使用しないでください
 
-## サポートされる Id と属性 {#support-identities-and-attributes}
+## サポートされるIDと属性 {#support-identities-and-attributes}
 
 ### サポートされる ID {#supported-identities}
 
 | ターゲット ID | 説明 |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| メール | メールアドレスを表す名前空間。 このタイプの名前空間は多くの場合、1 人の人物に関連付けられているので、様々なチャネルでその人物を識別するために使用できます。 |
+| メール | メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、単一の人物に関連付けられているため、様々なチャネルをまたいでその人物を識別します。 |
 
 {style="table-layout:auto"}
 
 ### サポートされる属性 {#supported-attributes}
 
-Experience Platformから、組織がMarketoでアクセス権を持つ任意の属性に属性をマッピングできます。 Marketoでは、[Describe API](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) リクエストを使用して、組織がアクセスできる属性フィールドを取得できます。
+Experience Platformの属性を、Marketoで組織がアクセスできる任意の属性にマッピングできます。 Marketoでは、[Describe API](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) リクエストを使用して、組織がアクセスできる属性フィールドを取得できます。
 
-## サポートされるオーディエンス {#supported-audiences}
+## サポート対象オーディエンス {#supported-audiences}
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| セグメント化サービス | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| セグメント化サービス | ○ | Experience Platform [ セグメント化サービス ](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -81,75 +81,75 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 {style="table-layout:auto"}
 
-## 宛先を設定 {#set-up-destination}
+## 宛先の設定 {#set-up-destination}
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 
-会社が複数の組織にアクセスできる場合は、Marketoへの宛先コネクタを設定するMarketo EngageとReal-Time CDPの両方で同じ組織を使用していることを確認してください。  既に宛先を設定している場合は、新しい設定で使用する既存のMarketo アカウントを選択できます。  表示されない場合は、「コネクタを宛先に接続」プロンプトをクリックすると、目的の宛先の名前、説明、Marketo Munchkin ID を設定できます。  Marketo インスタンスのMunchkin ID は、管理者/Munchkin メニューに表示されます。
+会社が複数の組織にアクセスできる場合は、Marketoへの宛先コネクタを設定するMarketo Engageと[!DNL Real-Time CDP]の両方で同じ組織を使用してください。  宛先を既に設定している場合は、新しい設定で使用する既存のMarketo アカウントを選択できます。  そうでない場合は、「宛先へのコネクタ」プロンプトをクリックします。これにより、目的の宛先の名前、説明、Marketo Munchkin IDを設定できます。  Marketo インスタンスのMunchkin IDは、管理者/Munchkin メニューにあります。
 
 >[!IMPORTANT]
 >
->宛先を設定するユーザーには、Marketoのインスタンスとパーティションで [&#x200B; ユーザーの編集 &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
+>宛先を設定するユーザーは、Marketo インスタンスおよびパーティションで[ ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
 
-![&#x200B; 宛先への接続 &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
+![宛先に接続](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Munchkin ID]**: Munchkin ID は、特定のMarketo インスタンスの一意の ID です。
-* **[!UICONTROL Partition]**：ビジネス上の関心事ごとにリードレコードを分離するために使用される、Marketo Engageのコンセプト
-* **[!UICONTROL First searchable field]**：重複排除するフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 デフォルトはメール
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
+* **[!UICONTROL Munchkin ID]**: Munchkin IDは、特定のMarketo インスタンスの一意のIDです。
+* **[!UICONTROL Partition]**: ビジネス上の懸念事項によってリード レコードを分離するために使用されるMarketo Engageの概念
+* **[!UICONTROL First searchable field]**：重複排除するフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 デフォルトは電子メール
 * **[!UICONTROL First searchable field]**：重複排除するセカンダリフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 オプション
 
-インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [&#x200B; リードパーティション &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) は、Marketo Engageの概念で、ブランドや販売地域など、ビジネス上の関心事ごとにリードレコードを分離するために使用されます。 Marketoのサブスクリプションに Workspaces and Partitions 機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトのパーティションのみが使用できます。 1 つの設定で更新できるのは、設定済みパーティションに存在するリードレコードのみです。
+インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [ リードパーティション ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)は、Marketo Engageの概念で、企業や営業地域などのビジネス上の懸念事項によってリードレコードを分離するために使用されます。 Marketo サブスクリプションにワークスペースとパーティション機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトパーティションのみが使用できます。 単一の設定では、設定されたパーティションに存在するリードレコードのみを更新できます。
 
 >[!IMPORTANT]
 >
->オーディエンスが初めてMarketoの宛先に対してアクティブ化された後、Marketoの宛先がアクティブ化される前にオーディエンスに既に存在していたプロファイルをバックフィルすると、*最大 24 時間* かかる場合があります。 今後、プロファイルは、オーディエンスに追加されるたびに直ちにMarketoに追加されます。
+>オーディエンスが初めてMarketo宛先にアクティベートされた後、Marketo宛先アクティベーションの前に既にオーディエンスに存在していたプロファイルをバックフィルするには、*最大24時間*&#x200B;かかります。 今後、オーディエンスにプロファイルが追加されると、すぐにMarketoに追加されます。
 
-### 重複排除フィールド {#deduplication-fields}
+### 重複の除外フィールド {#deduplication-fields}
 
-Marketo engage に更新を送信すると、選択されたパーティションと、1 つまたは 2 つのユーザー選択フィールドに基づいてレコードが選択されます。 宛先に北米パーティションが設定され、メールアドレスと会社名が重複排除フィールドとして設定されている場合、既存のレコードに変更を適用するには、3 つのフィールドがすべて一致する必要があります。 例：
+Marketo engageに更新を送信する場合、選択したパーティションと1つまたは2つのユーザー選択フィールドに基づいてレコードが選択されます。 宛先が北米パーティションで設定され、重複排除フィールドとして電子メールアドレスと会社名が設定されている場合、既存のレコードに変更を適用するには、3つのフィールドがすべて一致する必要があります。 例：
 
-* 宛先は北米パーティションで設定されています
-* Experience Platformで E メール <test@example.com> と会社名を持つ人物が宛先オーディエンスと一致する場合
-* これらの値を持つレコードがMarketoの北米パーティションに既に存在しない場合、新しいリードレコードが作成されます
+* 宛先は北米パーティションで設定されます
+* 電子メール <test@example.com>を持つ人物と、Experience Platformの会社名サンプル Inc.が宛先オーディエンスと一致する
+* これらの値を持つレコードがMarketoの北米パーティションにすでに存在しない限り、新しいリードレコードが作成されます
 
-一致するリードレコードが見つからない場合は、新規レコードが作成されます。
+一致するリードレコードが見つからない場合は、新しいレコードが作成されます。
 
-![&#x200B; 宛先の詳細 &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/destination-details.png)
+![宛先の詳細](../../assets/catalog/adobe/marketo-engage-person-sync/destination-details.png)
 
-## オーディエンスをアクティベート {#activate-audiences}
+## オーディエンスを活用 {#activate-audiences}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先にオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
-オーディエンスをアクティベート手順では、表示されている任意のユーザーのオーディエンスから選択できます。
+オーディエンスをアクティブ化ステップでは、自分に表示されている任意の人物オーディエンスから選択できます。
 
-![&#x200B; オーディエンスのアクティブ化 &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
+![ オーディエンスをアクティブ化](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
 
 ## フィールドマッピング {#field-mapping}
 
-特定のユーザー属性に対する変更をMarketo Engageに送信するには、フィールドをReal-Time CDP フィールドからMarketo フィールドにマッピングする必要があります。
+特定のユーザー属性への変更をMarketo Engageに送信するには、フィールドを[!DNL Real-Time CDP] フィールドからMarketo フィールドにマッピングする必要があります。
 
-![&#x200B; フィールドマッピング &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
+![ フィールドマッピング ](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
-Experience PlatformのデータタイプとMarketoのデータタイプは、次の方法でマッピングできます。
+Experience Platform データタイプとMarketo データタイプは、次の方法でマッピングできます。
 
 | Experience Platform データタイプ | Marketo データタイプ |
 | ----------------------------- | ------------------------------------ |
-| 文字列 | 文字列，テキスト領域，Url，電話，メール |
+| 文字列 | 文字列、テキストエリア、Url、電話、メール |
 | 列挙 | 文字列 |
 | 日付 | 日付 |
 | Date-time | 日時 |
 | 整数 | 整数 |
 | Short | 整数 |
 | Long | 浮動小数点 |
-| Double | 通貨、浮動小数点、パーセント |
+| Double | 通貨、浮動小数、パーセント |
 | ブール | ブール |
 | 配列 | サポートなし |
 | オブジェクト | サポートなし |
@@ -158,12 +158,12 @@ Experience PlatformのデータタイプとMarketoのデータタイプは、次
 
 {style="table-layout:auto"}
 
-フィールドに値がない場合は、その値を設定できるようにし、既に値が存在するフィールドを統合が更新できないようにすることが望ましい場合もあります。  宛先コネクタがMarketo Engage インスタンス内の既存の値を上書きしないようにする必要がある場合は、Marketo インスタンスの管理者/フィールド管理セクションで更新をブロックするようにフィールドを設定し、Adobe Experience Platform ソースタイプを切り替えます。
+統合が既に値を持つフィールドを更新するのを防ぎながら、統合がフィールドの値を設定することを許可することが望ましい場合があります。  宛先コネクタがMarketo Engage インスタンス内の既存の値を上書きしないように設定する必要がある場合は、Marketo インスタンスの管理/フィールド管理セクションで更新をブロックし、[!DNL Adobe Experience Platform] ソースタイプを切り替えるようにフィールドを設定できます。
 
-![&#x200B; フィールドの更新をブロック &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
+![ フィールドの更新をブロック ](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
-![&#x200B; フィールドの更新をブロック &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png)
+![ フィールドの更新をブロック ](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png)
 
 ## データの使用とガバナンス {#data-usage-and-governance}
 
-Adobe Experience Platformのすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 Adobe Experience Platformによるデータガバナンスの実施方法について詳しくは、[&#x200B; データガバナンスの概要 &#x200B;](/help/data-governance/home.md) を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](/help/data-governance/home.md)を参照してください。

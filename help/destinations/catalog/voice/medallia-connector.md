@@ -2,10 +2,10 @@
 title: Medallia 接続
 description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 26%
+source-wordcount: '1256'
+ht-degree: 27%
 
 ---
 
@@ -17,40 +17,40 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、Medallia チームが作成および管理します。 お問い合わせや更新のリクエストについては、adobe-integrations@medallia.comまで直接ご連絡ください。
+>この宛先コネクタとドキュメントページは、Medallia チームによって作成および管理されます。 お問い合わせやアップデートのご依頼は、adobe-integrations@medallia.comまで直接お問い合わせください。
 
 ## ユースケース {#use-cases}
 
-Medallia 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+Medalliaの宛先を使用する方法とタイミングをより深く理解するために、この宛先を使用して[!DNL Adobe Experience Platform]のお客様が解決できるユースケースの例を次に示します。
 
-### のユースケース#1 {#use-case-1}
+### ユースケース #1 {#use-case-1}
 
-B2B ブランドは、オンボーディングプログラムを評価し効率化したいと考えています。 オンボーディングプロセスを完了したばかりのクライアントに、パーソナライズされた調査をリアルタイムで送信したいと考えています。
+B2B企業は、オンボーディングプログラムを評価し、合理化したいと考えています。 オンボーディングプロセスを終えた顧客に対して、パーソナライズされたアンケートをリアルタイムで実施したいと考えています。
 
-### のユースケース#2 {#use-case-2}
+### ユースケース #2 {#use-case-2}
 
-retailerは、注文の受け渡しに関するお客様の好みをより深く理解したいと考えています。 この 1 か月間にオンラインおよび店舗での購入を行った顧客に、短い 1 質問の SMS 調査を送信したいと考えています。
+A retailerは、注文フルフィルメントにおける顧客の嗜好をより深く理解したいと考えています。 この1か月間にオンラインや実店舗で購入した顧客に対して、1質問のSMS アンケートを短く送信したいと考えています。
 
 ## 前提条件 {#prerequisites}
 
-Medallia 接続を確立するには、次の情報が必要です。
+Medallia接続を確立するには、次の情報が必要です。
 
-* **OAuth トークンエンドポイント URL**
+* **OAuth トークン エンドポイント URL**
 * **クライアント ID**
 * **クライアント秘密鍵**
 * **API ゲートウェイ URL**
-* **読み込み API 名**
+* **API名のインポート**
 
-Medallia 配信チームと協力して、これらの詳細を取得します。
+Medalliaのデリバリーチームと協力して、これらの詳細を入手してください。
 
 ## サポートされている ID {#supported-identities}
 
-Medallia では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+Medalliaは、以下の表に記載されているIDのアクティベーションをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | 電子メールアドレス | 電子メール招待アンケートを送信する際に、電子メールターゲット ID を選択します。 プロファイルが複数のメールアドレスに関連付けられている場合、Medallia は最初のメールにのみ招待状をトリガーします。 |
-| 電話 | E.164 形式でハッシュ化された電話番号 | SMS ベースの調査を送信する場合は、電話ターゲット ID を選択します。 電話番号は E.164 形式である必要があります。これには、プラス記号（+）、国際国番号、市外局番、電話番号が含まれます。 例：（+）（国コード）（市外局番）（電話番号） プロファイルが複数の電話番号に関連付けられている場合、Medallia は最初の電話番号にのみ招待状をトリガーします。 |
+| メール | 電子メールアドレス | メール招待調査を送信する場合は、メールターゲット IDを選択します。 プロファイルが複数のメールアドレスに関連付けられている場合、Medalliaは最初のメールにのみ招待状をトリガーします。 |
+| 電話 | E.164形式でハッシュ化された電話番号 | SMS ベースのアンケートを送信する場合は、電話のターゲット IDを選択します。 電話番号はE.164形式にする必要があります。これには、プラス記号（+）、国際電話コード、市外局番、電話番号が含まれます。 例：（+）（国コード）（市外局番）（電話番号）。 プロファイルが複数の電話番号に関連付けられている場合、Medalliaは最初の電話番号にのみ招待状をトリガーします。 |
 
 {style="table-layout:auto"}
 
@@ -58,23 +58,23 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Profile-based]** | [&#x200B; 宛先のアクティベーションワークフロー &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントの新しく選定されたすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL Profile-based]** | [宛先アクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、セグメントのすべての新しく適格なメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -94,73 +94,73 @@ Medallia では、以下の表に示す ID のアクティブ化をサポート�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL Connect to destination]**」を選択します。
+宛先に対して認証を行うには、必須フィールドに入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-* **[!UICONTROL OAuth Token Endpoint URL]**：通常、https://instance.medallia.tld/oauth/tenant/tokenの形式で指定します。
-* **[!UICONTROL Client ID]**: Medallia 配信チームから入手してください。
-* **[!UICONTROL Client Secret]**: Medallia 配信チームから入手してください。
+* **[!UICONTROL OAuth Token Endpoint URL]**：通常はhttps://instance.medallia.tld/oauth/tenant/tokenの形式になります。
+* **[!UICONTROL Client ID]**: Medallia デリバリーチームから取得します。
+* **[!UICONTROL Client Secret]**: Medallia デリバリーチームから取得します。
 
-![&#x200B; この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL API Gateway URL]**: Medallia 配信チームから入手してください。 通常、https://instance-tenant.apis.medallia.comの形式で指定します。
-* **[!UICONTROL Import API Name]**: Medallia 配信チームから入手してください。 この接続で使用される Medallia Import API （Web フィードとも呼ばれます）の名前です。 異なるオーディエンスを異なる読み込み API に対してアクティブ化して、異なる調査プログラムをトリガーにすることができます。
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
+* **[!UICONTROL API Gateway URL]**: Medallia デリバリーチームから取得します。 通常はhttps://instance-tenant.apis.medallia.comの形式になります。
+* **[!UICONTROL Import API Name]**: Medallia デリバリーチームから取得します。 この接続で使用するMedallia Import API （Web Feedとも呼ばれます）の名前。 様々なオーディエンスをアクティベートして様々なインポート APIを使用し、様々な調査プログラムをトリガーできます。
 
-![&#x200B; この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-以下のターゲット ID 名前空間は、ユースケースに応じてマッピングする必要があります。
+ユースケースに応じて、次のターゲット ID名前空間をマッピングする必要があります。
 
-* メールベースの調査の場合は、**ターゲットフィールド**/**ID 名前空間を選択**/**メール** を使用して、**メール** をターゲットフィールドとしてマッピングする必要があります
-* SMS ベースの調査の場合は、**ターゲットフィールド**/**ID 名前空間を選択**/**電話** を使用して、**電話** をターゲットフィールドとしてマッピングする必要があります。 電話番号は、E.164 形式である必要があります。E.164 形式には、プラス記号（+）、国際国番号、市外局番、電話番号が含まれます
+* メールベースの調査の場合、**電子メール**&#x200B;は、**ターゲットフィールド** > **ID名前空間を選択** > **電子メール**&#x200B;を使用して、ターゲットフィールドとしてマッピングする必要があります
+* SMS ベースの調査の場合、**phone**&#x200B;は、**ターゲットフィールド** > **ID名前空間を選択** > **phone**&#x200B;を使用して、ターゲットフィールドとしてマッピングする必要があります。 電話番号はE.164形式にする必要があります。これには、プラス記号（+）、国際電話コード、市外局番、電話番号が含まれます
 
-また、追加のターゲットのカスタム属性をマッピングしてパーソナライズされた調査を作成し、顧客に関する追加情報を調査レコードに追加することを強くお勧めします。
+パーソナライズされたアンケートを作成し、顧客に関する追加情報をアンケートレコードに追加するために、追加のターゲットカスタム属性をマッピングすることも強くお勧めします。
 
-* パーソナライズされた調査は、通常、顧客を名前で対処します
+* パーソナライズされたアンケートでは、通常、顧客の名前で回答します
 
-   * 顧客の名を **ターゲットフィールド**/**カスタム属性を選択**/**属性名**/**firstname** にマッピングします
-   * 顧客の姓を **ターゲットフィールド**/**カスタム属性を選択**/**属性名**/**lastname** にマッピングします
+   * 顧客の名を&#x200B;**ターゲットフィールド** > **カスタム属性を選択** > **属性名** > **firstname**&#x200B;にマッピングします
+   * 顧客の姓を&#x200B;**ターゲットフィールド** > **カスタム属性を選択** > **属性名** > **lastname**&#x200B;にマッピングします
 
 * 必要に応じて、他のターゲットカスタム属性のマッピングを追加します
 
-![ID と属性のサンプルマッピングを示す画像 &#x200B;](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![IDと属性のサンプルマッピングを示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 >
-> **ターゲットフィールド**/**カスタム属性を選択**/**属性名** を使用してマッピングするすべてのターゲットカスタム属性について、Medallia 配信チームと正確な **属性名** を共有します。 マッピングページのスクリーンショットを撮って、直接共有することもできます。
+> **ターゲットフィールド** > **カスタム属性を選択** > **属性名**&#x200B;を使用して、マッピングしたターゲットカスタム属性ごとに正確な&#x200B;**属性名**&#x200B;をMedallia配信チームと共有します。 マッピングページのスクリーンショットを撮って、直接共有することもできます。
 
 ## 書き出したデータ {#exported-data}
 
-宛先に対してセグメントをアクティブ化したら、Medallia 配信チームに通知します。このチームは、Adobe Experience Platformから Medallia に書き出されたデータを検証できます。 調査は、データ検証が成功した後にのみ Medallia 内でアクティブ化できることに注意してください。これより前に、データは Medallia に書き出されますが、調査をお客様にトリガーすることはありません。
+宛先に対してセグメントをアクティブ化したら、Medallia配信チームに通知します。チームは、[!DNL Adobe Experience Platform]からMedalliaへの書き出されたデータを検証できます。 調査は、データ検証が成功した後にのみMedallia内でアクティブ化できます。この前に、データはMedalliaに書き出されますが、お客様に調査をトリガーすることはありません。
 
-書き出されたデータのサンプル JSON を以下に示します。ここでは、上記の **属性と ID をマッピング** セクションのスクリーンショットのマッピング例を使用しています。
+書き出されたデータのサンプル JSONを以下に示します。これは、**Map属性とID** セクションの上記のスクリーンショットのマッピング例を使用しています。
 
 ```json
 [

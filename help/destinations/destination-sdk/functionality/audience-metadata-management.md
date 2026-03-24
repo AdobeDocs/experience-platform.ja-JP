@@ -2,10 +2,10 @@
 description: オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新または削除します。アドビは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。テンプレートを定義、テスト、送信すると、アドビはこのテンプレートを使用して、宛先への API 呼び出しを構造化します。
 title: オーディエンスメタデータの管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 74%
+source-wordcount: '1297'
+ht-degree: 69%
 
 ---
 
@@ -23,7 +23,7 @@ API の設定に応じて、Experience Platform で宛先を設定する際に�
 
 ## オーディエンスメタデータ管理でサポートされるユースケース {#use-cases}
 
-Destination SDKでのオーディエンスメタデータのサポートを使用すると、Experience Platformの宛先を設定する際に、Experience Platform ユーザーがオーディエンスをマッピングして宛先に対してアクティブ化する際に、複数あるオプションの 1 つを指定できます。 宛先設定の[オーディエンスメタデータ設定](../functionality/destination-configuration/audience-metadata-configuration.md)セクションのパラメーターで、ユーザーが利用できるオプションを制御できます。
+Destination SDKのオーディエンスメタデータのサポートにより、Experience Platformの宛先を設定する際に、Experience Platform ユーザーが宛先にオーディエンスをマッピングしてアクティブ化する際に、いくつかのオプションのいずれかを提供できます。 宛先設定の[オーディエンスメタデータ設定](../functionality/destination-configuration/audience-metadata-configuration.md)セクションのパラメーターで、ユーザーが利用できるオプションを制御できます。
 
 ### ユースケース 1 - サードパーティの API を使用しており、ユーザーはマッピング ID を入力する必要がない場合 {#use-case-1}
 
@@ -54,30 +54,30 @@ Experience Platform ユーザーインターフェイス（UI）で宛先に対�
 アドビのエンジニアリングチームが協力して、カスタムフィールドを含む汎用テンプレートを拡張できます（使用例が必要な場合）。
 
 
-## サポートされるテンプレートイベント {#supported-events}
+## サポートされているテンプレートイベント {#supported-events}
 
 次の表に、オーディエンスメタデータテンプレートでサポートされるイベントを示します。
 
 | テンプレートセクション | 説明 |
 |--- |--- |
-| `create` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームのセグメントやオーディエンスをプログラムで作成し、情報を Adobe Experience Platform に同期します。 |
-| `update` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームのセグメントやオーディエンスをプログラムで更新し、情報を Adobe Experience Platform に同期します。 |
+| `create` | APIにHTTP呼び出しを行うために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームでセグメント/オーディエンスをプログラムで作成し、情報を[!DNL Adobe Experience Platform]に同期します。 |
+| `update` | APIへのHTTP呼び出しを行うために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームのセグメントまたはオーディエンスをプログラムで更新し、情報を[!DNL Adobe Experience Platform]に同期します。 |
 | `delete` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームのセグメントやオーディエンスをプログラムで削除します。 |
 | `validate` | パートナー API を呼び出す前に、テンプレート設定のすべてのフィールドの検証を実行します。例えば、ユーザーのアカウント ID が正しく入力されていることを検証できます。 |
 | `notify` | ファイルベースの宛先にのみ適用されます。API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、ファイルの書き出しが正常に行われたことを通知します。 |
-| `createDestination` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームのデータフローをプログラムで作成し、情報をAdobe Experience Platformに同期します。 |
-| `updateDestination` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームのデータフローをプログラムで更新し、情報をAdobe Experience Platformに同期します。 |
-| `deleteDestination` | API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォームからデータフローをプログラムで削除します。 |
+| `createDestination` | APIにHTTP呼び出しを行うために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームでプログラムによってデータフローを作成し、情報を[!DNL Adobe Experience Platform]に同期します。 |
+| `updateDestination` | APIへのHTTP呼び出しを行うために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームのデータフローをプログラムで更新し、情報を[!DNL Adobe Experience Platform]に同期します。 |
+| `deleteDestination` | APIへのHTTP呼び出しを行い、プラットフォームからデータフローをプログラムで削除するために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）が含まれます。 |
 
 {style="table-layout:auto"}
 
 ## 設定例 {#configuration-examples}
 
-この節では、参照用に、汎用オーディエンスメタデータ設定の例を示します。
+この節では、参照用に、一般的なオーディエンスメタデータ設定の例を示します。
 
-URL、ヘッダー、リクエスト本文は、3 つの設定例でどのように異なるかに注意してください。 これは、3 つのサンプルプラットフォームのマーケティング API の仕様が異なるためです。
+URL、ヘッダー、リクエスト本文が、3つの設定例で異なることに注意してください。 これは、3 つのサンプルプラットフォームのマーケティング API の仕様が異なるためです。
 
-一部の例では、`{{authData.accessToken}}` または `{{segment.name}}` などのマクロフィールドは URL で、その他の例ではヘッダーまたはリクエスト本文で使用されます。使用方法は、マーケティング API の仕様に応じて異なります。
+一部の例では、`{{authData.accessToken}}` または `{{segment.name}}` などのマクロフィールドは URL で、その他の例ではヘッダーまたはリクエスト本文で使用されます。使用方法は、マーケティング APIの仕様によって異なります。
 
 +++ストリーミングの例 1
 
@@ -554,12 +554,12 @@ Experience Platform と API の間でオーディエンス ID、アクセスト�
 | `{{authData.accessToken}}` | API エンドポイントにアクセストークンを渡すことができるようにします。Experience Platform が期限切れでないトークンを使用して宛先に接続する場合は、`{{authData.accessToken}}` を使用します。そうでない場合は、`{{oauth2ServiceAccessToken}}` を使用してアクセストークンを生成します。 |
 | `{{body.segments[0].segment.id}}` | 作成されたオーディエンスの一意の ID をキー `externalAudienceId` の値として返します。 |
 | `{{error.message}}` | Experience Platform UI でユーザーに表示されるエラーメッセージを返します。 |
-| `{{{segmentEnrichmentAttributes}}}` | 特定のオーディエンスのすべてのエンリッチメント属性にアクセスできます。  このマクロは、`create`、`update`、および `delete` イベントでサポートされています。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 |
+| `{{{segmentEnrichmentAttributes}}}` | 特定のオーディエンスに対するすべてのエンリッチメント属性にアクセスできます。  このマクロは、`create`、`update`、`delete` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
 | `{{destination.name}}` | 宛先の名前を返します。 |
 | `{{destination.sandboxName}}` | 宛先が設定されているExperience Platform サンドボックスの名前を返します。 |
-| `{{destination.id}}` | 宛先設定の ID を返します。 |
-| `{{destination.imsOrgId}}` | 宛先が設定されている IMS 組織 ID を返します。 |
-| `{{destination.enrichmentAttributes}}` | 宛先にマッピングされたすべてのオーディエンスのすべてのエンリッチメント属性にアクセスできるようにします。 このマクロは、`createDestination`、`updateDestination`、および `deleteDestination` イベントでサポートされています。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 宛先にマッピングされた特定の外部オーディエンスのエンリッチメント属性にアクセスできます。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 |
+| `{{destination.id}}` | 宛先設定のIDを返します。 |
+| `{{destination.imsOrgId}}` | 宛先が設定されているIMS組織IDを返します。 |
+| `{{destination.enrichmentAttributes}}` | 宛先にマッピングされたすべてのオーディエンスのすべてのエンリッチメント属性にアクセスできます。 このマクロは、`createDestination`、`updateDestination`、`deleteDestination` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 宛先にマッピングされた特定の外部オーディエンスのエンリッチメント属性にアクセスできます。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
 
 {style="table-layout:auto"}

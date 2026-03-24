@@ -2,10 +2,10 @@
 description: Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 title: 顧客データフィールド
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 71%
+source-wordcount: '1729'
+ht-degree: 64%
 
 ---
 
@@ -53,21 +53,21 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 
 | パラメーター | タイプ | 必須／オプション | 説明 |
 |---------|----------|------|---|
-| `name` | 文字列 | 必須 | 導入するカスタムフィールドの名前を指定します。この名前は、`title` フィールドが空か見つからない場合を除いて、Experience Platform UI に表示されません。 |
+| `name` | 文字列 | 必須 | 導入するカスタムフィールドの名前を指定します。この名前は、`title` フィールドが空または見つからない場合を除き、Experience Platform UIには表示されません。 |
 | `type` | 文字列 | 必須 | 導入するカスタムフィールドのタイプを示します。使用できる値： <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | 文字列 | オプション | Experience Platform UI で顧客に表示される、フィールドの名前を示します。 このフィールドが空か見つからない場合、UI は、`name` 値からフィールド名を継承します。 |
-| `description` | 文字列 | オプション | カスタムフィールドの説明を入力します。この説明は、Experience Platform UI に表示されません。 |
-| `isRequired` | ブール値 | オプション | ユーザーが宛先設定ワークフローでこのフィールドに値を指定する必要があるかどうかを示します。 |
+| `title` | 文字列 | オプション | Experience Platform UIでお客様に表示されるフィールドの名前を示します。 このフィールドが空か見つからない場合、UI は、`name` 値からフィールド名を継承します。 |
+| `description` | 文字列 | オプション | カスタムフィールドの説明を入力します。この説明は、Experience Platform UIでは表示されません。 |
+| `isRequired` | ブール | オプション | ユーザーが宛先設定ワークフローでこのフィールドに値を指定する必要があるかどうかを示します。 |
 | `pattern` | 文字列 | オプション | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドで `^[A-Za-z]+$` を入力します。 |
 | `enum` | 文字列 | オプション | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `default` | 文字列 | オプション | デフォルト値を `enum` リストから定義します。 |
-| `hidden` | ブール値 | オプション | 顧客データフィールドが UI に表示されるかどうかを示します。 |
-| `unique` | ブール値 | オプション | ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。例えば、[カスタムパーソナライゼーション](../../../catalog/personalization/custom-personalization.md)宛先の「**[!UICONTROL 統合エイリアス]**」フィールドは、一意である必要があります。つまり、この宛先への 2 つの個別のデータフローがこのフィールドに対して同じ値を持つことはできません。 |
-| `readOnly` | ブール値 | オプション | 顧客がフィールドの値を変更できるかどうかを示します。 |
+| `hidden` | ブール | オプション | 顧客データフィールドが UI に表示されるかどうかを示します。 |
+| `unique` | ブール | オプション | ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。例えば、**[!UICONTROL Integration alias]** カスタム Personalization[宛先の](../../../catalog/personalization/custom-personalization.md) フィールドは一意である必要があります。つまり、この宛先に対する2つの個別のデータフローがこのフィールドに対して同じ値を持つことはできません。 |
+| `readOnly` | ブール | オプション | 顧客がフィールドの値を変更できるかどうかを示します。 |
 
 {style="table-layout:auto"}
 
-以下の例では、`customerDataFields` セクションで、宛先に接続する際にExperience Platform UI でユーザーが入力する必要がある 2 つのフィールドを定義します。
+次の例では、`customerDataFields` セクションは、ユーザーが宛先に接続する際にExperience Platform UIに入力する必要がある2つのフィールドを定義しています。
 
 * `Account ID`：宛先プラットフォームのユーザーアカウント ID。
 * `Endpoint region`：ユーザーが接続する API の地域エンドポイント。`enum` セクションは、ユーザーが選択できる範囲内で定義された値を含むドロップダウンメニューを作成します。
@@ -103,17 +103,17 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 
 ## 宛先接続名と説明 {#names-description}
 
-新しい宛先を作成する際に、Destination SDKは、**[!UICONTROL 名前]** および **[!UICONTROL 説明]** フィールドをExperience Platform UI の宛先接続画面に自動的に追加します。 上記の例で確認できるように、**[!UICONTROL 名前]**&#x200B;および&#x200B;**[!UICONTROL 説明]**&#x200B;フィールドは、顧客データフィールド設定に含まれることなく、UI でレンダリングされます。
+新しい宛先を作成する際、Destination SDKはExperience Platform UIの宛先接続画面に&#x200B;**[!UICONTROL Name]**&#x200B;および&#x200B;**[!UICONTROL Description]** フィールドを自動的に追加します。 上記の例で示すように、**[!UICONTROL Name]**&#x200B;および&#x200B;**[!UICONTROL Description]** フィールドは、顧客データフィールド設定に含まれることなく、UIでレンダリングされます。
 
 >[!IMPORTANT]
 >
->**[!UICONTROL 名前]**&#x200B;および&#x200B;**[!UICONTROL 説明]**&#x200B;フィールドを顧客データフィールド設定に追加すると、ユーザーには、UI で重複して表示されます。
+>顧客データフィールド設定に&#x200B;**[!UICONTROL Name]**&#x200B;と&#x200B;**[!UICONTROL Description]**&#x200B;のフィールドを追加すると、UIで重複したフィールドが表示されます。
 
 ## 顧客データフィールドの順序付け {#ordering}
 
-宛先設定で顧客データフィールドを追加した順序は、Experience Platform UI に反映されます。
+宛先設定に顧客データフィールドを追加した順序は、Experience Platform UIに反映されます。
 
-例えば、以下の設定は、UI にそのまま反映され、オプションは、**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket name]**、**[!UICONTROL Folder path]**、**[!UICONTROL File Type]**、**[!UICONTROL Compression format]** の順序で表示されます。
+例えば、以下の設定はUIに適切に反映され、オプションは&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket name]**、**[!UICONTROL Folder path]**、**[!UICONTROL File Type]**、**[!UICONTROL Compression format]**&#x200B;の順序で表示されます。
 
 ```json
 "customerDataFields":[
@@ -175,7 +175,7 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 
 いくつかの顧客データフィールドを 1 つのセクション内にグループ化できます。UI で宛先への接続を設定する際に、ユーザーは、類似したフィールドを視覚的にグループ化することで、メリットが得られます。
 
-これを行うには、以下の画像に示すように、`"type": "object"` を使用してグループを作成し、`properties` オブジェクト内に目的の顧客データフィールドを収集します（**[!UICONTROL CSV オプション]**&#x200B;のグループ化がハイライト表示されています）。
+これを行うには、`"type": "object"`を使用してグループを作成し、グループ化`properties`が強調表示されている&#x200B;**[!UICONTROL CSV Options]** オブジェクト内の目的の顧客データフィールドを収集します（下図を参照）。
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -255,13 +255,13 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 
 ## 顧客データフィールド用の動的ドロップダウンセレクターの作成 {#dynamic-dropdown-selectors}
 
-API を動的に呼び出し、応答を使用してドロップダウンメニューのオプションを動的に入力する場合は、動的ドロップダウンセレクターを使用できます。
+APIを動的に呼び出し、応答を使用してドロップダウンメニューのオプションを動的に入力する場合は、動的ドロップダウンセレクターを使用できます。
 
-動的ドロップダウンセレクターは、UI の [&#x200B; 通常のドロップダウンセレクター &#x200B;](#dropdown-selectors) と同じように見えます。 唯一の違いは、値が API から動的に取得される点です。
+動的ドロップダウンセレクターは、UIの[通常のドロップダウンセレクター](#dropdown-selectors)と同じように見えます。 唯一の違いは、値がAPIから動的に取得されることです。
 
-動的ドロップダウンセレクターを作成するには、次の 2 つのコンポーネントを設定する必要があります。
+動的ドロップダウンセレクターを作成するには、次の2つのコンポーネントを設定する必要があります。
 
-**手順 1.以下に示すように、動的 API 呼び出し用の `responseFields` テンプレートを使用して [&#x200B; 宛先サーバーを作成 &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) する** 要があります。
+**手順1。** [次に示すように、動的API呼び出しの](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) テンプレートを使用して宛先サーバー`responseFields`を作成します。
 
 ```json
 {
@@ -309,7 +309,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 }
 ```
 
-**手順 2.** 次に示すように、`dynamicEnum` オブジェクトを使用します。 次の例では、`User` ドロップダウンが動的サーバーを使用して取得されます。
+**手順2.**&#x200B;次に示すように、`dynamicEnum` オブジェクトを使用します。 次の例では、動的サーバーを使用して`User` ドロップダウンが取得されています。
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -338,19 +338,19 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 ]
 ```
 
-`destinationServerId` パラメーターを、手順 1 で作成した宛先サーバーの ID に設定します。 宛先サーバー ID は、[&#x200B; 宛先サーバー設定の取得 &#x200B;](../../authoring-api/destination-server/retrieve-destination-server.md) API 呼び出しの応答で確認できます。
+`destinationServerId` パラメーターを、手順1で作成した宛先サーバーのIDに設定します。 宛先サーバー設定[ API呼び出しを](../../authoring-api/destination-server/retrieve-destination-server.md)取得する応答に、宛先サーバーIDが表示されます。
 
 ## ネストされた顧客データフィールドの作成 {#nested-fields}
 
-複雑な統合パターン用にネストされた顧客データフィールドを作成できます。 これにより、顧客に対して一連の選択を連結できます。
+複雑な統合パターンに対して、ネストされた顧客データフィールドを作成できます。 これにより、顧客の一連の選択を連鎖させることができます。
 
-例えば、ネストされた顧客データフィールドを追加して、顧客に宛先との統合タイプの選択を要求し、その直後に別の選択を要求できます。 2 つ目の選択は、統合タイプ内のネストされたフィールドです。
+例えば、ネストされた顧客データフィールドを追加して、顧客が宛先との統合タイプを選択し、その後すぐに別の選択を行うように要求できます。 2つ目の選択は、統合タイプ内のネストされたフィールドです。
 
-ネストされたフィールドを追加するには、次に示すように、`properties` パラメーターを使用します。 以下の設定例では、「Yourdestination – 統合固有の設定 **顧客データフィールド内に 3 つの異なるネストされたフィールドを確認** きます。
+ネストされたフィールドを追加するには、次に示すように`properties` パラメーターを使用します。 次の設定例では、**宛先 – 統合特定設定**&#x200B;の顧客データフィールド内に、3つのネストされたフィールドが表示されます。
 
 >[!TIP]
 >
->2024 年 4 月のリリース以降、ネストされたフィールドに `isRequired` パラメーターを設定できるようになりました。 例えば、以下の設定スニペットでは、ネストされた最初の 2 つのフィールドが必須としてマークされており（ハイライト表示された行 xxx）、ユーザーはフィールドの値を選択しない限り続行できません。 必須フィールドについて詳しくは、[&#x200B; サポートされるパラメーター &#x200B;](#supported-parameters) の節を参照してください。
+>2024年4月リリース以降、ネストされたフィールドに`isRequired` パラメーターを設定できます。 例えば、以下の設定スニペットでは、最初の2つのネストされたフィールドが必須（強調表示された行xxx）としてマークされ、お客様はフィールドの値を選択しない限り続行できません。 必須フィールドについて詳しくは、[ サポートされるパラメーター](#supported-parameters) セクションを参照してください。
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -408,7 +408,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 }
 ```
 
-より広いコンテキストでは、以下の宛先設定で、`fileType` 文字列とそれが定義されている `csvOptions` オブジェクトと共に `conditional` フィールドが使用されているのを確認できます。 条件付きフィールドは、`properties` パラメーターで定義されます。
+より広いコンテキストでは、以下の宛先設定で`conditional` フィールドが`fileType`文字列と、それが定義されている`csvOptions` オブジェクトと共に使用されています。 条件付きフィールドは、`properties` パラメーターで定義されます。
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
@@ -559,7 +559,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 
 ## テンプレート化された顧客データフィールドへのアクセス {#accessing-templatized-fields}
 
-宛先でユーザー入力が必要な場合、Experience Platform UI を通じて入力できる、顧客データフィールドの選択肢をユーザーに提供する必要があります。 次に、顧客データフィールドからユーザー入力を正しく読み取るために宛先サーバーを設定する必要があります。これは、テンプレート化されたフィールドを使用して行われます。
+宛先でユーザー入力が必要な場合は、Experience Platform UIから入力できる顧客データフィールドの一部をユーザーに提供する必要があります。 次に、顧客データフィールドからユーザー入力を正しく読み取るために宛先サーバーを設定する必要があります。これは、テンプレート化されたフィールドを使用して行われます。
 
 テンプレート化されたフィールドは、`{{customerData.fieldName}}` という形式を使用します（`fieldName` は、情報を読み取る顧客データフィールドの名前）。すべてのテンプレート化された顧客データフィールドは、先頭に `customerData.` が付き、二重中括弧 `{{ }}` で囲まれています。
 
@@ -613,12 +613,12 @@ Experience Platform が [!DNL Amazon S3] に正しく接続するために、以
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、顧客データフィールドを使用して、Experience Platform UI でユーザーが情報を入力できるようにする方法について、理解を深めることができました。また、ユースケースに対して適切な顧客データフィールドを選択する方法や、Experience Platform UI で顧客データフィールドを設定、並べ替え、グループ化する方法についても理解しました。
+この記事を読むことで、顧客データフィールドを使用して、Experience Platform UI でユーザーが情報を入力できるようにする方法について、理解を深めることができました。また、Experience Platform UIで、ユースケースに適した顧客データフィールドを選択し、顧客データフィールドを設定、並べ替え、グループ化する方法についても説明しました。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)
 * [ID 名前空間設定](identity-namespace-configuration.md)

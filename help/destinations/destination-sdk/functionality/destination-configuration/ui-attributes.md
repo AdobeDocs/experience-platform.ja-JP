@@ -2,16 +2,16 @@
 description: Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 title: UI 属性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 79%
+source-wordcount: '787'
+ht-degree: 76%
 
 ---
 
 # UI 属性
 
-UI 属性は、Adobe ユーザーインターフェイスでAdobe Experience Platformが宛先カードに表示する必要がある視覚要素（ロゴ、ドキュメントページへのリンク、宛先の説明とそのカテゴリおよびタイプなど）を定義します。
+UI属性は、ロゴ、ドキュメントページへのリンク、宛先の説明、そのカテゴリとタイプなど、[!DNL Adobe Experience Platform] ユーザーインターフェイスでAdobeが宛先カードに表示するビジュアル要素を定義します。
 
 このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、以下の宛先設定の概要ページを参照してください。
 
@@ -21,7 +21,7 @@ UI 属性は、Adobe ユーザーインターフェイスでAdobe Experience Pla
 Destination SDK を使用して[宛先を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)する場合、`uiAttributes` セクションで宛先カードの以下のビジュアルプロパティを定義します。
 
 * [宛先カタログ](../../../catalog/overview.md)の宛先ドキュメントページの URL。
-* Experience Platform UI で宛先が表示されるカテゴリ。
+* 宛先がExperience Platform UIに表示されるカテゴリ。
 * 宛先のデータ書き出し頻度。
 * 宛先接続タイプ（Amazon S3、Azure Blob など）。
 * 宛先カタログのカードに表示するアイコンをホストした URL。
@@ -64,11 +64,11 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` は、宛先用の[宛先のカタログ](../../../catalog/overview.md)にあるドキュメントページを参照する文字列パラメーターです。Adobe Experience Platform の製品化された各宛先は、対応するドキュメントページを持つ必要があります。宛先に関する[宛先ドキュメントページの作成方法を説明](../../docs-framework/documentation-instructions.md)します。プライベート／カスタムの宛先には、これは必須ではないことに注意してください。
+`documentationLink` は、宛先用の[宛先のカタログ](../../../catalog/overview.md)にあるドキュメントページを参照する文字列パラメーターです。[!DNL Adobe Experience Platform]内のすべての製品化された宛先には、対応するドキュメントページが必要です。 宛先に関する[宛先ドキュメントページの作成方法を説明](../../docs-framework/documentation-instructions.md)します。プライベート／カスタムの宛先には、これは必須ではないことに注意してください。
 
 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` の形式を使用します（`YOURDESTINATION` は宛先の名前）。Moviestar という宛先の場合、`http://www.adobe.com/go/destinations-moviestar-en` を使用します。
 
-ユーザーは、UI の宛先カタログページからドキュメントリンクを確認および訪問できます。以下の画像に示すように、宛先カードを参照してから **[!UICONTROL More actions]** を選択し、**[!UICONTROL View documentation]** を選択する必要があります。
+ユーザーは、UI の宛先カタログページからドキュメントリンクを確認および訪問できます。次の画像に示すように、宛先カードを参照し、**[!UICONTROL More actions]**&#x200B;を選択してから&#x200B;**[!UICONTROL View documentation]**&#x200B;を選択する必要があります。
 
 ![ドキュメントリンクの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -78,7 +78,7 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 ### `category` {#category}
 
-`category` は、Adobe Experience Platform で宛先に割り当てられたカテゴリを参照する文字列パラメーターです。詳しくは、[宛先のカテゴリ](../../../destination-types.md)をお読みください。以下のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。
+`category`は、[!DNL Adobe Experience Platform]で宛先に割り当てられたカテゴリを参照する文字列パラメーターです。 詳しくは、[宛先のカテゴリ](../../../destination-types.md)をお読みください。以下のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。
 
 以下の画像に示すように、ユーザーは、宛先カタログの画面の左側で、宛先カテゴリのリストを確認できます。
 
@@ -96,7 +96,7 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 `frequency` は、宛先でサポートされているデータ書き出しのタイプを参照する文字列パラメーターです。API ベースの統合の場合は `Streaming` に設定し、宛先にファイルを書き出す場合は `Batch` に設定する。
 
-ユーザーは、各宛先接続の **[!UICONTROL Dataflow runs]** ページで頻度タイプを確認できます。
+ユーザーは、各宛先接続の&#x200B;**[!UICONTROL Dataflow runs]** ページで頻度タイプを確認できます。
 
 ![UI の頻度タイプの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
@@ -110,20 +110,20 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 ### `icon` {#icon}
 
-以下の画像に示すように、宛先にロゴアイコンを追加できます。
+次の画像に示すように、ロゴアイコンを宛先に追加できます。
 
-![&#x200B; アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+アイコンの場所を示す![UI画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-宛先カードにロゴを追加するには、[&#x200B; レビュー用に宛先を送信 &#x200B;](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
+宛先カードにロゴを追加するには、[ レビュー用に宛先を送信](../../guides/submit-destination.md#logo)するときに、Adobe チームと目的の画像を共有する必要があります。
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、宛先に設定できる UI 属性と、それがExperience Platform UI で表示される場所について、理解を深めることができました。
+この記事では、宛先に設定できるUI属性と、Experience Platform UIでユーザーが表示する場所について詳しく説明します。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [スキーマ設定](schema-configuration.md)
 * [ID 名前空間設定](identity-namespace-configuration.md)

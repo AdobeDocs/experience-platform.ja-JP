@@ -1,19 +1,19 @@
 ---
-keywords: dmp の宛先；DIL;audience manager dmp 拡張機能；dmp 拡張機能；data management platform;data management platform の宛先
+keywords: dmp宛先；DIL;audience manager dmp拡張機能；dmp拡張機能；data management platform;data management platform宛先
 title: データ管理プラットフォーム（DMP）の宛先の概要
 description: DMP（データ管理プラットフォーム）を使用すると、広告主、発行者、代理店が一意のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、あらゆるデジタルチャネルでそれらを使用できます。これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
 exl-id: 1c925edc-b31e-440f-bdd9-37aa399565d5
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 60%
+source-wordcount: '136'
+ht-degree: 49%
 
 ---
 
-# [!DNL Data Management Platform] （DMP）の宛先の概要 {#dmp-destinations}
+# [!DNL Data Management Platform] （DMP）宛先の概要 {#dmp-destinations}
 
-[!DNL Data Management Platforms] （DMP）を使用すると、広告主、出版社、代理店は、独自のオーディエンスプロファイルを作成し、最も価値のあるセグメントを特定して、あらゆるデジタルチャネルにわたって使用できます。 これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
+[!DNL Data Management Platforms] （DMP）を利用すると、広告主、パブリッシャー、代理店は、独自のオーディエンスプロファイルを構築し、最も価値のあるセグメントを特定して、あらゆるデジタルチャネルで利用できます。 これにより、消費者プロファイルの全体像を構築し、有意義なオーディエンスを構築して活性化することができます。
 
-現在、Adobe Experience Platformは、以下に示す Data Management Platform （DMP）の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、[!DNL Adobe Experience Platform]は以下に示すData Management Platform （DMP）の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Audience Manager DIL 拡張機能](aam-dil-extension.md)

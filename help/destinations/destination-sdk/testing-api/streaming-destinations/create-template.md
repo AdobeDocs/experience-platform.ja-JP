@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、宛先を公開する前にストリーミング宛先メッセージ変換テンプレートをテストする方法を説明します。
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '937'
+ht-degree: 88%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Destination SDK の一部として、アドビは、宛先の設定およびテストを支援するためのデベロッパーツールを提供しています。このページでは、メッセージ変換テンプレートの作成およびテスト方法を説明します。宛先のテスト方法について詳しくは、[宛先設定のテスト](streaming-destination-testing-overview.md)を参照してください。
 
-Adobe Experience Platform のターゲットスキーマと宛先でサポートされているメッセージ形式の間で&#x200B;**メッセージ変換テンプレートを作成およびテスト**&#x200B;するには、後述する&#x200B;*テンプレートオーサリングツール*&#x200B;を使用します。ソースおよびターゲットスキーマ間のデータ変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
+**のターゲットスキーマと宛先でサポートされているメッセージ形式との間でメッセージ変換テンプレート**&#x200B;を[!DNL Adobe Experience Platform]作成してテストするには、以下に説明する&#x200B;*テンプレートオーサリングツール*&#x200B;を使用します。  ソースおよびターゲットスキーマ間のデータ変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
 
 以下の図に、メッセージ変換テンプレートの作成およびテストが Destination SDK の[宛先設定ワークフロー](../../guides/configure-destination-instructions.md)にどのように適合するかを示します。
 
@@ -24,11 +24,11 @@ Adobe Experience Platform のターゲットスキーマと宛先でサポート
 
 ## メッセージ変換テンプレートの作成とテストが必要な理由 {#why-create-message-transformation-template}
 
-Destination SDK で宛先を作成する最初の手順のひとつは、Adobe Experience Platform から宛先に書き出される際に、オーディエンスメンバーシップ、ID、プロファイル属性のデータ形式がどのように変換されるかを考慮することです。Adobe XDM スキーマと宛先スキーマとの間の変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
+Destination SDKで宛先を作成する最初の手順の1つは、[!DNL Adobe Experience Platform]から宛先に書き出したときに、オーディエンスメンバーシップ、ID、プロファイル属性のデータフォーマットがどのように変換されるかを考えることです。 Adobe XDM スキーマと宛先スキーマとの間の変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
 
 変換を成功させるためには、[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](../../functionality/destination-server/message-format.md#segments-identities-attributes)の例に類似した変換テンプレートを提供する必要があります。
 
-アドビは、Adobe XDM 形式から宛先でサポートされている形式にデータを変換するメッセージテンプレートを作成およびテストできる、テンプレートツールを提供しています。ツールには、以下に使用できる 2 つの API エンドポイントがあります。
+Adobeには、Adobe XDM形式のデータを宛先でサポートされている形式に変換するメッセージテンプレートを作成およびテストできるテンプレートツールが用意されています。 ツールには、以下に使用できる 2 つの API エンドポイントがあります。
 
 * *サンプルテンプレート API* を使用して、サンプルテンプレートを取得する。
 * *レンダリングテンプレート API* を使用して、サンプルテンプレートをレンダリングする。これにより、結果を宛先で想定されているデータ形式と比較できます。書き出されたデータを宛先で想定されるデータ形式と比較したら、テンプレートを編集できます。この方法で、生成する書き出されたデータを、宛先で想定されるデータ形式に一致させます。
@@ -158,12 +158,12 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## レンダリングテンプレート API {#render-template-api}
 
-[サンプルテンプレート API](create-template.md#sample-template-api) を使用してメッセージ変換テンプレートを作成したら、[テンプレートをレンダリング](render-template-api.md)し、それに基づいて、書き出されたデータを生成できます。これにより、Adobe Experience Platform が宛先に書き出すプロファイルが宛先の想定される形式に一致するかどうかを検証できます。
+[サンプルテンプレート API](create-template.md#sample-template-api) を使用してメッセージ変換テンプレートを作成したら、[テンプレートをレンダリング](render-template-api.md)し、それに基づいて、書き出されたデータを生成できます。これにより、[!DNL Adobe Experience Platform]が宛先に書き出すプロファイルが、宛先の想定される形式と一致するかどうかを確認できます。
 
 実行できる呼び出しの例については、API リファレンスを参照してください。
 
-* [本文でプロファイルを送信しないテンプレートをレンダリング](render-template-api.md#multiple-profiles-no-body)
-* [本文でプロファイルを送信するテンプレートをレンダリング](render-template-api.md#multiple-profiles-with-body)
+* [本文でプロファイルを送信しないテンプレートをレンダリング](render-template-api.md#best-effort)
+* [本文でプロファイルを送信するテンプレートをレンダリング](render-template-api.md#configurable-aggregation)
 
 書き出されたプロファイルが宛先で想定されているデータ形式に一致するまで、テンプレートを編集して、レンダリングテンプレート API エンドポイントへの呼び出しを行います。
 

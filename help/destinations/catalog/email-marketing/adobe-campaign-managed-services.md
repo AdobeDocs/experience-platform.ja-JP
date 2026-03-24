@@ -1,80 +1,80 @@
 ---
 title: Adobe Campaign Managed Cloud Services 接続
-description: Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理およびクロスチャネル実行のための環境を提供します。
+description: Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行を実現する環境を提供します。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1851'
-ht-degree: 24%
+source-wordcount: '1721'
+ht-degree: 18%
 
 ---
 
-# Adobe Campaign Managed Cloud Services 接続 {#adobe-campaign-managed-services}
+# [!DNL Adobe Campaign Managed Cloud Services] 接続 {#adobe-campaign-managed-services}
 
 >[!IMPORTANT]
 >
->この統合は、[Adobe Campaign バージョン 8.4 以降 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1) で機能します。
+>この統合は、[[!DNL Adobe Campaign]  バージョン 8.4以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)で機能します。
 
 ## 概要 {#overview}
 
-Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の概要 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
+[!DNL Adobe Campaign Managed Cloud Services]は、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーンのオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [ キャンペーンの概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
 
 Campaign を使用すると、次のことを行えます。
 
-* 顧客に関する情報をアクセス可能な単一のビューにまとめ、パーソナライズとエンゲージメントを推進
-* メール、モバイル、オンライン、オフラインの各チャネルをカスタマージャーニーに統合
-* 有意義でタイムリーなメッセージやオファーの配信を自動化。
+* 顧客の単一のアクセス可能なビューを通じて、パーソナライゼーションとエンゲージメントを促進し，
+* メール、モバイル、オンライン、オフラインのチャネルをカスタマージャーニーに統合し，
+* 有意義でタイムリーなメッセージやオファーを自動的に配信できます。
 
 ## ガードレール {#guardrails}
 
-Adobe Campaign Managed Cloud Services接続を使用する際は、次のガードレールに注意してください。
+[!DNL Adobe Campaign Managed Cloud Services]接続を使用する場合は、次のガードレールに注意してください。
 
-* この宛先に対して最大 25 個のオーディエンスを [&#x200B; アクティブ化 &#x200B;](#activate) できます。
+* この宛先には、最大25人のオーディエンスを[ アクティブ化](#activate)できます。
 
-  この制限を変更するには、Campaign エクスプローラーの **>** > **[!UICONTROL Administration]** フォルダーで **[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** オプションの値を更新します。 このガードレールでは、設定済みのすべての宛先にわたって 1 つのExperience Platform インスタンスに書き出すことができる Campaign オーディエンスの合計数が制限されます。
+  この制限を変更するには、Campaign エクスプローラーの&#x200B;**>** > **[!UICONTROL Administration]** フォルダーの&#x200B;**[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** オプションの値を更新します。 このガードレールは、設定されたすべての宛先で1つのCampaign インスタンスに書き出すことができるExperience Platform オーディエンスの合計数を制限します。
 
-* オーディエンスごとに、最大 20 個のフィールドをAdobe Campaignに [&#x200B; マッピング &#x200B;](#map) できます。
+* 各オーディエンスに対して、最大20個のフィールドを[map](#map)～[!DNL Adobe Campaign]に追加できます。
 
-  この制限を変更するには、Campaign エクスプローラーの **>** > **[!UICONTROL Administration]** フォルダーにある **[!UICONTROL Platform]** NmsCdp_Aep_Destinations_Max_Columns **[!UICONTROL Options]** オプションの値を更新します。
+  この制限を変更するには、Campaign エクスプローラーの&#x200B;**>** > **[!UICONTROL Administration]** フォルダーの&#x200B;**[!UICONTROL Platform]** NmsCdp_Aep_Destinations_Max_Columns **[!UICONTROL Options]** オプションの値を更新します。
 
-* Azure Blob Storage Data Landing Zone （DLZ）でのデータ保持：7 日
-* アクティブ化の頻度は最低 3 時間です。
-* この接続でサポートされるファイル名の最大長は 255 文字です。 [&#x200B; 書き出すファイル名を設定 &#x200B;](../../ui/activate-batch-profile-destinations.md#configure-file-names) する場合は、ファイル名が 255 文字を超えないようにしてください。 ファイル名の最大長を超えると、アクティベーションエラーが発生します。
-* 特殊文字（例：`&`）を含むセグメント/オーディエンスは、オーディエンスをAdobe Campaignに書き出す場合はサポートされません。
+* Azure Blob Storage Data Landing Zone （DLZ）でのデータ保持：7日
+* アクティベーションの頻度は最低3時間です。
+* この接続でサポートされるファイル名の最大長は255文字です。 書き出したファイル名[を](../../ui/activate-batch-profile-destinations.md#configure-file-names)設定する場合は、ファイル名が255文字を超えないようにしてください。 ファイル名の最大長を超えると、アクティベーションエラーが発生します。
+* オーディエンスを`&`に書き出す場合、特殊文字（例：[!DNL Adobe Campaign]）を含むセグメント/オーディエンスはサポートされません。
 
 ## ユースケース {#use-cases}
 
-Adobe Campaign Manage Service 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
+[!DNL Adobe Campaign]管理サービスの宛先を使用する方法とタイミングをより理解しやすくするために、[!DNL Adobe Experience Platform]のお客様がこの宛先を使用して解決できる使用例を次に示します。
 
-* Adobe Experience Platformは、ID グラフや analytics の行動データなどの情報を組み込み、オフラインのデータとオンラインのデータを結合する顧客プロファイルを作成します。 この統合により、Adobe Experience Platformを利用したオーディエンスでAdobe Campaign内に既に存在するセグメント化機能を強化し、Campaign でそのデータをアクティブ化できます。
+* [!DNL Adobe Experience Platform]は、ID グラフ、Analyticsからの行動データ、オフラインとオンラインのデータなどの情報を組み込んだ顧客プロファイルを作成します。 この統合を使用すると、既に[!DNL Adobe Campaign]内に存在するセグメント化機能を、それらの[!DNL Adobe Experience Platform]の強化されたオーディエンスで拡張できます。したがって、そのデータをCampaignでアクティブ化できます。
 
-  例えば、スポーツ衣料品の会社は、Adobe Experience Platformを活用したオーディエンスを活用し、Adobe Campaignを使用してアクティブ化して、Adobe Campaignがサポートする様々なチャネルをまたいで顧客ベースに連絡したいと考えています。 メッセージが送信されると、送信数、開封数、クリック数など、Adobe Campaignのエクスペリエンスデータを使用して、Adobe Experience Platform の顧客プロファイルを強化する必要があります。
+  例えば、スポーツウェア企業が、[!DNL Adobe Experience Platform]の強化されたオーディエンスを活用し、[!DNL Adobe Campaign]を使用してアクティベートし、[!DNL Adobe Campaign]がサポートする様々なチャネルをまたいで顧客層にリーチしたいと考えています。 メッセージが送信されたら、送信、開封数、クリック数など、[!DNL Adobe Experience Platform]のエクスペリエンスデータを使用して、[!DNL Adobe Campaign]の顧客プロファイルを強化します。
 
-  その結果、Adobe Experience Cloud エコシステム全体でより一貫性のあるクロスチャネルキャンペーンと、迅速に適応し学習する豊富な顧客プロファイルが実現します。
+  その結果、Adobe Experience Cloudのエコシステム全体をまたいで、より一貫性のあるクロスチャネルキャンペーンと、迅速に適応し学習を進める豊富な顧客プロファイルを実現できます。
 
 
-* Campaign の Audience Activation に加えて、Adobe Campaign Managed Servicesの宛先を利用して、Adobe Experience Platform上のプロファイルに関連付けられている追加のプロファイル属性を取り込み、Adobe Campaign データベースで更新されるように同期プロセスを導入することもできます。
+* Campaignでのオーディエンスのアクティブ化に加えて、[!DNL Adobe Campaign Managed Services]宛先を活用して、[!DNL Adobe Experience Platform]上のプロファイルに関連付けられ、[!DNL Adobe Campaign] データベースで更新されるように同期プロセスが設定されている追加のプロファイル属性を取り込むことができます。
 
-  例えば、Adobe Experience Platform でオプトインとオプトアウトの値を取り込んでいるとします。この接続を使用すると、これらの値を Adobe Campaign に取り込み、定期的に更新されるように同期プロセスを導入できます。
+  例えば、[!DNL Adobe Experience Platform]でオプトインとオプトアウトの値をキャプチャしているとします。 この接続を使用すると、これらの値を[!DNL Adobe Campaign]に取り込み、同期プロセスを設定して、定期的に更新できます。
 
   >[!NOTE]
   >
-  >プロファイル属性同期は、Adobe Campaign データベースに既に存在するプロファイルに対して使用できます。
+  >プロファイル属性の同期は、[!DNL Adobe Campaign] データベースに既に存在するプロファイルに対して使用できます。
 
-[&#x200B; 詳しくは、Adobe Experience PlatformとのAdobe Campaign統合を参照してください &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
+[ [!DNL Adobe Campaign]  [!DNL Adobe Experience Platform]との](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)統合について詳しく見る
 
 ## サポートされている ID {#supported-identities}
 
-*Adobe Campaign Managed Cloud Services* では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+*[!DNL Adobe Campaign Managed Cloud Services]*&#x200B;は、次の表に示すIDのアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| external_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 この ID を使用し、顧客を表す Campaign インスタンスの ID （loyalty_ID、account_ID、customer_ID など）にマッピングすることをお勧めします |
-| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Experience Platform] 自動的にハッシュ化するように設定します。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Experience Platform] 自動的にハッシュ化するように設定します。 |
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
+| external_id | カスタムユーザーID | ソース IDがカスタム名前空間である場合は、このターゲット IDを選択します。 このIDを使用して、顧客を表すCampaign インスタンスのID （loyalty_ID、account_ID、customer_ID...）にマッピングすることをお勧めします。 |
+| ECID | Experience Cloud ID | ECIDを表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「[!DNL Adobe Experience Cloud] ID」、「[!DNL Adobe Experience Platform] ID」というエイリアスでも参照できます。 詳しくは、[ECID](/help/identity-service/features/ecid.md)の次のドキュメントを参照してください。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | プレーンテキストとSHA256 ハッシュ化された電子メールアドレスの両方が[!DNL Adobe Experience Platform]でサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをチェックして、[!DNL Experience Platform]がアクティベーション時にデータを自動的にハッシュします。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストとSHA256 ハッシュ化された電話番号の両方が[!DNL Adobe Experience Platform]でサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをチェックして、[!DNL Experience Platform]がアクティベーション時にデータを自動的にハッシュします。 |
+| GAID | GOOGLE ADVERTISING ID | ソース IDがGAID名前空間である場合は、GAID ターゲット IDを選択します。 |
+| IDFA | Apple の広告主 ID | ソース IDがIDFA名前空間の場合は、IDFA ターゲット IDを選択します。 |
 
 {style="table-layout:auto"}
 
@@ -82,23 +82,23 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Profile-based]** | [&#x200B; 宛先のアクティベーションワークフロー &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) のプロファイル属性選択画面で選択したように、目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、オーディエンスのすべてのメンバーを書き出しています。 |
+| 書き出しタイプ | **[!UICONTROL Profile-based]** | [宛先アクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL Batch]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -118,7 +118,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -126,26 +126,26 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![&#x200B; 名前、説明、インスタンスの選択、ターゲットマッピング、同期の種類のフィールドを示すAdobe Campaign Managed Cloud Servicesの宛先の詳細フォーム。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+名前、説明、インスタンス選択、ターゲットマッピング、および同期タイプのフィールドを表示する![[!DNL Adobe Campaign Managed Cloud Services]宛先の詳細フォーム。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Select instance]**：お使いの **[!DNL Campaign]** マーケティングインスタンス。
-* **[!UICONTROL Target mapping]**：配信の送信に使用するターゲットマッピング **[!DNL Adobe Campaign]** 選択します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ja)
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
+* **[!UICONTROL Select instance]**: **[!DNL Campaign]** マーケティングインスタンス。
+* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;で配信の送信に使用しているターゲットマッピングを選択します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)
 * **[!UICONTROL Select sync type]**：
 
-   * **[!UICONTROL Audience sync]**:Adobe Experience Platform オーディエンスをAdobe Campaignに送信する場合は、このオプションを使用します。
-   * **[!UICONTROL Profile sync (Update only)]**:Adobe Experience Platform プロファイル属性をAdobe Campaignに取り込み、同期プロセスを設定して、定期的に更新できるようにする場合は、このオプションを使用します。
+   * **[!UICONTROL Audience sync]**：このオプションを使用して、[!DNL Adobe Experience Platform]人のオーディエンスを[!DNL Adobe Campaign]に送信します。
+   * **[!UICONTROL Profile sync (Update only)]**：このオプションを使用して、[!DNL Adobe Experience Platform]個のプロファイル属性を[!DNL Adobe Campaign]に取り込み、定期的に更新できるように同期プロセスを配置します。
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 &#x200B;](../../ui/alerts.md) についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UIを使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
-### ガバナンスポリシーと実施アクション {#governance}
+### ガバナンスポリシーと履行アクション {#governance}
 
-宛先に書き出すデータに適用できるマーケティングアクションを選択します。Adobe Campaignの場合は、**[!UICONTROL Email Targeting]** マーケティングアクションを選択することをお勧めします。
+宛先に書き出すデータに適用できるマーケティングアクションを選択します。[!DNL Adobe Campaign]の場合、**[!UICONTROL Email Targeting]** マーケティングアクションを選択することをお勧めします。
 
 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](/help/data-governance/policies/overview.md)ページを参照してください。
 
@@ -153,58 +153,58 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先にオーディエンスデータを有効化する手順については、[&#x200B; バッチプロファイル書き出し宛先に対するオーディエンスデータの有効化 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja) を参照してください。
+この宛先に対するオーディエンスデータのアクティブ化の手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-プロファイルと共に書き出す XDM フィールドを選択し、対応するAdobe Campaign フィールドにマッピングします。[&#x200B; メールマーケティングの宛先の ID および属性の選択について詳しくは、こちらを参照してください &#x200B;](overview.md)
+プロファイルと共に書き出すXDM フィールドを選択し、対応する[!DNL Adobe Campaign] フィールドにマッピングします。[電子メールマーケティング宛先のIDと属性の選択について詳しく見る](overview.md)
 
 1. ソースフィールドを選択：
 
-   * Adobe Experience PlatformおよびAdobe Campaignでプロファイルを一意に識別するソース ID として、「**識別子**」（例：メールフィールド）を選択します。
+   * **識別子** （例：電子メールフィールド）を、[!DNL Adobe Experience Platform]および[!DNL Adobe Campaign]のプロファイルを一意に識別するソース IDとして選択します。
 
-   * Adobe Campaignに書き出す必要がある他のすべての **XDM ソースプロファイル属性** を選択します。
+   * **に書き出す必要があるその他のすべての** XDM ソースプロファイル属性[!DNL Adobe Campaign]を選択します。
 
    >[!NOTE]
    >
-   >「segmentMembershipStatus」フィールドは、segmentMembership のステータスを反映するために必須のマッピングです。 このフィールドはデフォルトで追加され、変更または削除できません。
+   >「segmentMembershipStatus」フィールドは、segmentMembership ステータスを反映するために必須のマッピングです。 このフィールドはデフォルトで追加され、変更または削除できません。
 
-1. 各フィールドをAdobe Campaignのターゲットフィールドにマッピングします。 使用可能なターゲットフィールドは、[&#x200B; 宛先の作成 &#x200B;](#destination-details) 時に選択したターゲットマッピングによって決定されます。
+1. 各フィールドを[!DNL Adobe Campaign]のターゲット フィールドとマッピングします。 使用可能なターゲットフィールドは、[宛先の作成時に選択したターゲットマッピングによって決まります](#destination-details)。
 
-1. 必須属性と重複排除キーを特定します。 「必須」または「重複排除キー」とマークされた属性の値は、null にはできません。
+1. 必須の属性と重複排除キーを特定します。 「必須」または「重複排除キー」としてマークされた属性の値はnullにできないことに注意してください。
 
-   * [&#x200B; 必須属性 &#x200B;](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 選択した属性がすべてのプロファイルレコードに含まれていることを確認します。 例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。 ID フィールドと重複排除キーとして使用するフィールドの両方を必須に設定することをお勧めします。
-   * [&#x200B; 重複排除キー &#x200B;](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) は、ユーザーがプロファイルの重複排除する ID を決定するプライマリキーです。
+   * [必須属性](../../ui/activate-batch-profile-destinations.md#mandatory-attributes)は、すべてのプロファイルレコードに選択した属性が含まれていることを確認します。 例：書き出されたすべてのプロファイルに電子メールアドレスが含まれています。 推奨事項は、ID フィールドと重複排除キーとして使用されるフィールドの両方を必須に設定することです。
+   * [重複排除キー](../../ui/activate-batch-profile-destinations.md#mandatory-attributes)は、ユーザーがプロファイルを重複排除するIDを決定するプライマリキーです。
 
      >[!IMPORTANT]
      >
-     >重複排除キー属性の名前が、選択したターゲットマッピングの列名と一致することを確認してください。
+     >重複排除キー属性の名前が、選択したターゲットマッピングの列名と一致していることを確認します。
 
-   ![Adobe Campaign ターゲットフィールドにマッピングされた XDM ソースフィールドを示す属性マッピング画面。必須および重複排除のキーインジケーターが含まれます。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+   ![個のターゲットフィールドにマッピングされたXDM ソースフィールドを示す[!DNL Adobe Campaign]属性マッピング画面。必須および重複排除の主要指標が表示されている](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)。
 
-1. マッピングが実行されたら、宛先設定を確認および完了して、**[!DNL Campaign]** へのデータの送信を開始できます。
-   [&#x200B; 宛先設定を確認して完了する方法を説明します &#x200B;](/help/destinations/destination-types.md#review)。
+1. マッピングが実行されたら、宛先設定を確認して完了し、**[!DNL Campaign]**へのデータ送信を開始できます。
+   [宛先設定を確認して完了する方法について説明します](/help/destinations/destination-types.md#destination-types-and-categories)。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-宛先がアクティブ化されると、Campaign で対応するジョブおよび書き出されたデータにアクセスできます。
+宛先がアクティブ化されると、Campaignで対応するジョブと書き出されたデータにアクセスできます。
 
 ### データ書き出しジョブの監視 {#jobs}
 
-**[!UICONTROL Administration]** / **[!UICONTROL Audit]** / **[!UICONTROL Audience load jobs]** メニューに移動し、Adobe Experience Platformからアクティブ化されたすべてのエクスポートジョブを監視します。
+**[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** メニューに移動して、[!DNL Adobe Experience Platform]からアクティブ化されたすべての書き出しジョブを監視します。
 
-![Adobe Experience Platformからアクティブ化された書き出しジョブを示す、Adobe Campaign オーディエンス読み込みジョブ画面 &#x200B;](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![[!DNL Adobe Campaign]からアクティブ化された書き出しジョブを表示する[!DNL Adobe Experience Platform] オーディエンス読み込みジョブ画面。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
-### 書き出したデータへのアクセス {#data}
+### 書き出されたデータへのアクセス {#data}
 
-**[!UICONTROL Audience sync]** えば、**[!UICONTROL Profile and target]** / **[!UICONTROL List]** / オーディエンス メニューに移動して、書き出されたオーディ **[!UICONTROL AEP audiences]** ンスを確認できます。
+**[!UICONTROL Audience sync]**&#x200B;の場合、**[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** メニューに移動して、書き出されたオーディエンスを確認できます。
 
-![Experience Platformから書き出されたオーディエンスを示すAdobe Campaign AEP オーディエンスのリスト表示（「プロファイル」および「ターゲット」で使用可能） &#x200B;](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![[!DNL Adobe Campaign]件のAEP オーディエンスのリスト ビューで、Experience Platformから書き出されたオーディエンスがプロファイルとターゲットで利用可能であることを示しています。](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-**[!UICONTROL Profile sync (Update only)]** えば、宛先でアクティブ化されたオーディエンスのターゲットとなる各プロファイルの Campaign データベースにデータが自動的に更新されます。
+**[!UICONTROL Profile sync (Update only)]**&#x200B;の場合、データは、宛先でアクティブ化されたオーディエンスがターゲットとする各プロファイルのCampaign データベースに自動的に更新されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

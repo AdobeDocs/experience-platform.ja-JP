@@ -2,22 +2,22 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2512'
-ht-degree: 81%
+source-wordcount: '2470'
+ht-degree: 76%
 
 ---
 
 # メッセージ形式
 
-## 前提条件 - Adobe Experience Platform の概念 {#prerequisites}
+## 前提条件 – [!DNL Adobe Experience Platform]の概念 {#prerequisites}
 
 メッセージ形式、プロファイル設定、アドビ側での変換プロセスについて把握するには、以下の Experience Platform の概念についてよく理解してください。
 
 * **エクスペリエンスデータモデル（XDM）**。[XDM の概要](../../../../xdm/home.md)および [Adobe Experience Platform での XDM スキーマの作成方法](../../../../xdm/tutorials/create-schema-ui.md)。
 * **クラス**。[UI でのクラスの作成と編集](../../../../xdm/ui/resources/classes.md)。
-* **identityMap**。ID マップは、Adobe Experience Platform のすべてのエンドユーザー ID のマップを表します。[XDM フィールド辞書](../../../../xdm/schema/field-dictionary.md)の `xdm:identityMap` を参照してください。
+* **identityMap**。ID マップは、[!DNL Adobe Experience Platform]のすべてのエンドユーザーIDのマップを表します。 [XDM フィールド辞書](../../../../xdm/schema/field-dictionary.md)の `xdm:identityMap` を参照してください。
 * **segmentMembership**。[segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 属性は、プロファイルが属するオーディエンスを知らせます。`status` フィールドの 3 つの異なる値については、[オーディエンスメンバーシップの詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/segmentation.md)に関するドキュメントを参照してください。
 
 >[!IMPORTANT]
@@ -35,13 +35,13 @@ ht-degree: 81%
 
 ## 概要 {#overview}
 
-このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
+このページでは、[!DNL Adobe Experience Platform]から宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 
-Adobe Experience Platform は、様々なデータ形式で、数多くの宛先にデータを書き出します。宛先タイプの例の一部には、広告プラットフォーム（Google）、ソーシャルネットワーク（Facebook）、クラウドストレージの場所（Amazon S3、Azure Event Hubs）があります。
+[!DNL Adobe Experience Platform]は、様々なデータ形式で、かなりの数の宛先にデータを書き出します。 宛先タイプの例の一部には、広告プラットフォーム（Google）、ソーシャルネットワーク（Facebook）、クラウドストレージの場所（Amazon S3、Azure Event Hubs）があります。
 
 Experience Platform は、お客様側で想定される形式に一致するように、書き出されたプロファイルのメッセージ形式を調整できます。このカスタマイズを理解するには、以下の概念が重要です。
 
-* Adobe Experience Platform のソース（1）およびターゲット（2）XDM スキーマ
+* [!DNL Adobe Experience Platform]のソース （1）およびターゲット （2） XDM スキーマ
 * パートナー側で想定されるメッセージ形式（3）
 * XDM スキーマと想定されるメッセージ形式の間の変換レイヤー（[メッセージ変換テンプレート](#using-templating)を作成することで定義できます）。
 
@@ -67,11 +67,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## はじめに - 3 つの基本属性の変換 {#getting-started}
 
-プロファイル変換プロセスを示すために、以下の例では、Adobe Experience Platform で一般的な 3 つのプロファイル属性（**名**、**姓**&#x200B;および&#x200B;**メールアドレス**）を使用しています。
+プロファイル変換プロセスを示すために、次の例では、[!DNL Adobe Experience Platform]で3つの一般的なプロファイル属性（**名**、**姓**、**電子メールアドレス**）を使用しています。
 
 >[!NOTE]
 >
->顧客は、[宛先のアクティブ化ワークフロー](../../../ui/activate-segment-streaming-destinations.md#mapping)の&#x200B;**マッピング**&#x200B;手順で、Adobe Experience Platform UI でソース XDM スキーマからパートナー XDM スキーマに属性をマッピングします。
+>顧客は、宛先ワークフロー[!DNL Adobe Experience Platform] アクティブ化&#x200B;**の** マッピング [手順で、ソース XDM スキーマの属性を](../../../ui/activate-segment-streaming-destinations.md#mapping) UIのパートナーXDM スキーマにマッピングします。
 
 プラットフォームが以下のようなメッセージ形式を受信できるとします。
 
@@ -178,7 +178,7 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 1. シンプルな変換例。[プロファイル属性](#attributes)、[オーディエンスメンバーシップ](#audience-membership)および [ID](#identities) フィールドに対するシンプルな変換でのテンプレートの仕組みを説明します。
 2. 上記のフィールドを組み合わせてテンプレートの複雑さが増した例：[オーディエンスおよび ID を送信するテンプレートの作成](./message-format.md#segments-and-identities)および[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](#segments-identities-attributes)。
-3. 集約キーが含まれるテンプレート。宛先設定で [&#x200B; 設定可能な集計 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、Experience Platformは、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
+3. 集約キーが含まれるテンプレート。宛先設定で[設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用すると、Experience Platformは、オーディエンス ID、オーディエンス名前空間、オーディエンスのステータス、ID名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
@@ -186,7 +186,7 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform で使用できるすべてのプロファイル属性のリストについては、[XDM フィールド辞書](../../../../xdm/schema/field-dictionary.md)を参照してください。
+>[!DNL Adobe Experience Platform]で使用可能なすべてのプロファイル属性のリストについては、[XDM フィールドディクショナリ ](../../../../xdm/schema/field-dictionary.md)を参照してください。
 
 
 **入力**
@@ -609,7 +609,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 **結果**
 
-以下の `json` は、Adobe Experience Platform から書き出されたデータを表します。
+以下の`json`は、[!DNL Adobe Experience Platform]から書き出されたデータを表します。
 
 ```json
 {
@@ -802,7 +802,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 **結果**
 
-以下の `json` は、Adobe Experience Platform から書き出されたデータを表します。
+以下の`json`は、[!DNL Adobe Experience Platform]から書き出されたデータを表します。
 
 ```json
 {
@@ -860,21 +860,21 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 ### 様々な条件でグループ化されて書き出されたプロファイルにアクセスするために、テンプレートに集計キーを含める {#template-aggregation-key}
 
-宛先設定で [&#x200B; 設定可能な集計 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) を使用する場合、条件（オーディエンス ID、オーディエンス名前空間、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化できます。
+宛先設定で[設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用する場合は、オーディエンス ID、オーディエンス名前空間、オーディエンスエイリアス、オーディエンスメンバーシップ、ID名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化できます。
 
 メッセージ変換テンプレートでは、以下の節の例に示すように、前述の集計キーにアクセスできます。宛先で想定される形式およびレート制限に合致するように、集計キーを使用して、Experience Platform から書き出された HTTP メッセージを構造化します。
 
 #### テンプレートでのオーディエンス ID 集約キーの使用 {#aggregation-key-segment-id}
 
-[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、宛先に書き出された HTTP メッセージのプロファイルは、オーディエンス ID でグループ化されます。テンプレートのオーディエンス ID とオーディエンス名前空間にアクセスできる方法については、以下を参照してください。
+[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、宛先に書き出された HTTP メッセージのプロファイルは、オーディエンス ID でグループ化されます。テンプレート内のオーディエンス IDとオーディエンス名前空間にアクセスする方法を以下に示します。
 
 **入力**
 
 以下の 4 つのプロファイルについて考えてみます。
 
-* 最初の 2 つは、オーディエンス ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` のオーディエンスの一部で、`ups` 名前空間の下にあります
-* 3 番目のプロファイルは、オーディエンス ID `8f812592-3f06-416b-bd50-e7831848a31a` のオーディエンスの一部で、`CustomerAudienceUpload` 名前空間の下にあります
-* 4 番目のプロファイルは、上記の両方のオーディエンスの一部で、それぞれの名前空間の下にあります。
+* 最初の2つは、`788d8874-8007-4253-92b7-ee6b6c20c6f3`名前空間の下のオーディエンス ID `ups`を持つオーディエンスの一部です
+* 3番目のプロファイルは、`8f812592-3f06-416b-bd50-e7831848a31a`名前空間の下のオーディエンス ID `CustomerAudienceUpload`を持つオーディエンスの一部です
+* 4つ目のプロファイルは、上記の両方のオーディエンスの一部で、それぞれ名前空間の下にあります。
 
 プロファイル 1：
 
@@ -968,7 +968,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 >
 >使用するすべてのテンプレートについて、[宛先サーバー設定](../../authoring-api/destination-server/create-destination-server.md)に[テンプレート](../../functionality/destination-server/templating-specs.md)を挿入する前に、無効な文字（二重引用符 `""` など）をエスケープする必要があります。二重引用符のエスケープについて詳しくは、[JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)の第 9 章を参照してください。
 
-以下で、オーディエンス ID と名前空間にアクセスするために、テンプレートでどのように `audienceId` と `audienceNamespace` が使用されているかに注意してください。 この例では、宛先の分類のオーディエンスメンバーシップに `audienceId` を使用することを想定しています。独自の分類に応じて、代わりにその他のフィールド名を使用できます。
+テンプレートで`audienceId`と`audienceNamespace`を使用してオーディエンス IDと名前空間にアクセスする方法を以下に示します。 この例では、宛先の分類のオーディエンスメンバーシップに `audienceId` を使用することを想定しています。独自の分類に応じて、代わりにその他のフィールド名を使用できます。
 
 ```python
 {
@@ -986,7 +986,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 **結果**
 
-宛先に書き出されると、プロファイルは、オーディエンス ID と名前空間に基づいて 2 つのグループに分割されます。
+宛先に書き出すと、プロファイルはオーディエンス IDと名前空間に基づいて2つのグループに分割されます。
 
 ```json
 {
@@ -1211,15 +1211,15 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | 関数 | 説明 | 例 |
 |---------|----------|----------|
 | `input.profile` | プロファイル（[JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) として表されます）。このページで前述したパートナー XDM スキーマに従います。 |  |
-| `hasSegments` | この関数は、名前空間オーディエンス ID のマップをパラメーターとして受け取ります。 この関数は、（ステータスに関係なく）マップに少なくとも 1 つのオーディエンスがある場合は `true` を返し、それ以外の場合は `false` を返します。 この関数を使用して、オーディエンスのマップに対して反復処理を行うかどうかを決定できます。 | `hasSegments(input.profile.segmentMembership)` |
-| `destination.namespaceSegmentAliases` | 特定のAdobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
-| `destination.namespaceSegmentNames` | 特定のAdobe Experience Platform名前空間のオーディエンス名からパートナーのシステムのオーディエンス名にマッピングします。 | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | オーディエンスが作成、更新またはアクティブ化された時間を、UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `seg-id-1` 名前空間から ID `ups` のセグメントが作成された時刻を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `seg-id-1` 名前空間から ID `ups` のオーディエンスが更新された時刻を UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: `seg-id-1` 名前空間の ID `ups` を持つオーディエンスが宛先に対してアクティブ化された時間を、UNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時刻を UNIX タイムスタンプ形式で返します。</li></ul> |
-| `addedSegments(mapOfNamespacedSegmentIds)` | ステータスが `realized` のオーディエンスのみを、すべての名前空間にわたって返します。 | `addedSegments(input.profile.segmentMembership)` |
-| `removedSegments(mapOfNamespacedSegmentIds)` | ステータスが `exited` のオーディエンスのみを、すべての名前空間にわたって返します。 | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **非推奨。`destination.namespaceSegmentAliases`** Adobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスへの <br><br> マッピングに置き換えられました。 | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **非推奨。`destination.namespaceSegmentNames`** Adobe Experience Platform名前空間のオーディエンス名からパートナーのシステムのオーディエンス名に <br><br> マッピングされます。 | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **非推奨。`destination.namespaceSegmentTimestamps`** <br><br> に置き換えられました。オーディエンスが作成、更新またはアクティブ化された時刻を、UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: ID `seg-id-1` のオーディエンスが作成された時刻を UNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: ID `seg-id-1` を持つオーディエンスが更新された時間を UNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: ID `seg-id-1` のオーディエンスが宛先に対してアクティブ化された時間を、UNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時刻を UNIX タイムスタンプ形式で返します。</li></ul> |
+| `hasSegments` | この関数は、名前空間オーディエンス IDのマップをパラメーターとして受け取ります。 この関数は、（ステータスに関係なく）マップにオーディエンスが少なくとも1人いる場合は`true`を返し、それ以外の場合は`false`を返します。 この関数を使用して、オーディエンスマップを繰り返し処理するかどうかを決定できます。 | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | 特定の[!DNL Adobe Experience Platform]名前空間のオーディエンス IDから、パートナーシステムのオーディエンスエイリアスにマッピングします。 | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | 特定の[!DNL Adobe Experience Platform]名前空間のオーディエンス名から、パートナーシステムのオーディエンス名にマッピングします。 | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | オーディエンスが作成、更新、またはアクティブ化された時刻をUNIX タイムスタンプ形式で返します。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `seg-id-1`名前空間の`ups`のIDを持つセグメントが作成された時刻をUNIX タイムスタンプ形式で返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `seg-id-1`名前空間のID `ups`を持つオーディエンスがUNIX タイムスタンプ形式で更新された時間を返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: ID `seg-id-1`を持つオーディエンスが`ups`名前空間から宛先に対してUNIX タイムスタンプ形式でアクティブ化された時間を返します。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：宛先でオーディエンスアクティベーションが更新された時間をUNIX タイムスタンプ形式で返します。</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | すべての名前空間でステータス `realized`を持つオーディエンスのみを返します。 | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | すべての名前空間でステータス `exited`を持つオーディエンスのみを返します。 | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **非推奨です。`destination.namespaceSegmentAliases`** <br><br>に置き換え、[!DNL Adobe Experience Platform]名前空間のオーディエンス IDからパートナーシステムのオーディエンスエイリアスにマッピングしました。 | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **非推奨です。`destination.namespaceSegmentNames`** <br><br>に置き換え、[!DNL Adobe Experience Platform]名前空間のオーディエンス名からパートナーシステムのオーディエンス名にマッピングしました。 | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **非推奨です。`destination.namespaceSegmentTimestamps`** <br><br>に置き換えオーディエンスが作成、更新、またはアクティブ化された時刻をUNIX タイムスタンプ形式で返します。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: ID `seg-id-1`のオーディエンスが作成された時間をUNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: ID `seg-id-1`のオーディエンスが更新された時間をUNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: ID `seg-id-1`のオーディエンスが宛先に対してアクティブ化された時間をUNIX タイムスタンプ形式で返します。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：宛先でオーディエンスアクティベーションが更新された時間をUNIX タイムスタンプ形式で返します。</li></ul> |
 
 {style="table-layout:auto"}
 

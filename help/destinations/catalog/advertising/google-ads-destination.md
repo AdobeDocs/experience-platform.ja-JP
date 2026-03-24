@@ -2,9 +2,9 @@
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1054'
 ht-degree: 64%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads] での最初の宛先を作成しようとしており、これまで（Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期はExperience Platformに引き継がれます。
+>[!DNL Google Ads]を使用して最初の宛先を作成することを検討しており、過去に（Audience Managerまたはその他のアプリケーションで）Experience Cloud ID サービスの[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしていない場合は、Adobe Consultingまたはカスタマーケアに連絡してID同期を有効にしてください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定したID同期はExperience Platformに引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
@@ -46,23 +46,23 @@ ht-degree: 64%
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -84,16 +84,16 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
-> [!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次の節の許可リスト手順を実行するには、[!DNL Google Ads] との既存の統合が必要です。 そのため、[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[!DNL Google Customer Match] 統合をセットアップすることです。[!DNL Google Customer Match] 統合の作成について詳しくは、[[!DNL Google Customer Match]](./google-customer-match.md) 接続の作成に関するチュートリアルを参照してください。
+> [!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次のセクションの許可リストに加える手順を実行するには、[!DNL Google Ads]との既存の統合が必要です。 そのため、[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[!DNL Google Customer Match] 統合をセットアップすることです。[!DNL Google Customer Match]統合の作成について詳しくは、[[!DNL Google Customer Match]](./google-customer-match.md)接続の作成に関するチュートリアルを参照してください。
 
 ### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
->Experience Platformで最初の [!DNL Google Ads] ール先を設定する前に、許可リストへの登録は必須です。 宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>許可リストへの登録は、Experience Platformで最初の[!DNL Google Ads]の宛先を設定する前に必須です。 宛先を作成する前に、次に説明する許可リストへの登録プロセスが[!DNL Google]までに完了していることを確認してください。
 >このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-Experience Platformで [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] に連絡して、許可されたデータプロバイダーのリストにAdobeを追加し、お使いのアカウントを許可リストに追加してもらう必要があります。 [!DNL Google] に連絡し、次の情報を提供します。
+Experience Platformで[!DNL Google Ads]の宛先を作成する前に、Adobeを許可されたデータプロバイダーのリストに追加し、アカウントを許可リストに追加するには、[!DNL Google]に連絡する必要があります。 [!DNL Google] に連絡し、次の情報を提供します。
 
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
@@ -104,7 +104,7 @@ Experience Platformで [!DNL Google Ads] の宛先を作成する前に、[!DNL 
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -112,22 +112,22 @@ Experience Platformで [!DNL Google Ads] の宛先を作成する前に、[!DNL 
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL Name]**：この宛先に希望する名前を入力します。
+* **[!UICONTROL Name]**：この宛先の優先名を入力します。
 * **[!UICONTROL Description]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL Account Type]**：使用可能なオプションは AdWords のみです。
-* **[!UICONTROL Account ID]**:[!DNL Google Ads] をアカウント ID に入力します。 通常、ID の形式は 123-456-7890 です。
+* **[!UICONTROL Account Type]**: AdWordsは使用可能な唯一のオプションです。
+* **[!UICONTROL Account ID]**: アカウント IDを[!DNL Google Ads]で入力します。 通常、ID の形式は 123-456-7890 です。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -145,6 +145,6 @@ Experience Platformで [!DNL Google Ads] の宛先を作成する前に、[!DNL 
 
 このエラーは、顧客アカウントが[前提条件](#prerequisites)に準拠していない場合、または顧客が既存の [!DNL Google Ads] アカウントなしで宛先を設定しようとした場合に発生します。
 
-[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。[&#128279;](#allow-listing)許可リスト手順を実行するには、[!DNL Google Ads] との既存の統合が必要です。
+[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。[許可リストに加える](#allow-listing)手順を実行するには、[!DNL Google Ads]との既存の統合が必要です。
 
 [!DNL Google Ads] を使用する場合に推奨されるアプローチは、[[!DNL Google Customer Match]](google-customer-match.md) 統合をセットアップすることです。

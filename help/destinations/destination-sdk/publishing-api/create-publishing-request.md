@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK を通じて、宛先公開リクエストを送信するための API 呼び出しを書式設定する方法を説明します。
 title: 宛先公開リクエストの作成
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 88%
+source-wordcount: '444'
+ht-degree: 85%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 88%
 
 ## 宛先公開 API 操作の概要 {#get-started}
 
-続行する前に、[&#x200B; はじめる前に &#x200B;](../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../getting-started.md)を確認してください。
 
 ## 公開用の宛先設定を送信 {#create}
 
@@ -79,8 +79,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、宛先に対する公開リクエストを送信する方法を確認しました。Adobe Experience Platform チームが公開リクエストを確認し、5 営業日以内に連絡します。
+このドキュメントでは、宛先に対する公開リクエストを送信する方法を確認しました。[!DNL Adobe Experience Platform] チームは公開リクエストを確認し、5営業日以内にお客様に連絡します。

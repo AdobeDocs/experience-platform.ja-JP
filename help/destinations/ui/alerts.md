@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アラート；宛先
-description: データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
+description: データフローの作成時にアラートを購読し、フロー実行のステータス、成功、失敗に関するアラートメッセージを受け取ることができます。
 title: コンテキスト内宛先アラートを購読
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 13%
+source-wordcount: '917'
+ht-degree: 11%
 
 ---
 
 # コンテキスト内宛先アラートを購読
 
-Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../../observability/api/overview.md) をポーリングする必要が低減される、またはなくなります。
+[!DNL Adobe Experience Platform]では、[!DNL Adobe Experience Platform]件のアクティビティに関するイベントベースのアラートを購読できます。 アラートにより、[[!DNL Observability Insights] API](../../observability/api/overview.md)をポーリングして、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、エラーが発生したかどうかを確認する必要がなくなります。
 
-データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
+データフローを作成する際にアラートを購読すると、フロー実行のステータス、成功、失敗に関するアラートメッセージを受け取ることができます。
 
-このドキュメントでは、宛先データフローのアラートメッセージの受信を登録する手順を説明します。
+このドキュメントでは、宛先データフローのアラートメッセージを購読する手順を説明します。
 
 ## はじめに {#getting-started}
 
-このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このドキュメントでは、[!DNL Adobe Experience Platform]の次のコンポーネントに関する実務的な理解が必要です。
 
-* [&#x200B; 宛先 &#x200B;](../home.md):Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [&#x200B; 可観測性 &#x200B;](../../observability/home.md):[!DNL Observability Insights] を使用すると、統計指標とイベント通知を使用して、Experience Platform アクティビティを監視できます。
-   * [&#x200B; アラート &#x200B;](../../observability/alerts/overview.md):Experience Platform操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Experience Platformはその条件を登録している組織内のユーザーにアラートメッセージを配信できます。
+* [宛先](../home.md)：宛先プラットフォームとの事前定義済みの統合により、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティベートできます。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [ オブザーバビリティ ](../../observability/home.md): [!DNL Observability Insights]を使用すると、統計指標とイベント通知を使用してExperience Platform アクティビティを監視できます。
+   * [ アラート ](../../observability/alerts/overview.md): Experience Platformの操作で特定の条件に達した場合（システムのしきい値に達した場合に発生する可能性がある問題など）、Experience Platformは、それらを購読した組織内のユーザーに対してアラートメッセージを配信できます。
 
 ## UI でのアラートの登録 {#subscribe-destination-alerts}
 
@@ -36,85 +36,85 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 >[!IMPORTANT]
 >
->データフローでメールベースのアラート通知を受け取るには、Experience Platform アカウントでメールの即時通知を有効にする必要があります。
+>データフローのメールベースのアラート通知を受け取るには、Experience Platform アカウントのメールのインスタント通知を有効にする必要があります。
 
-[!UICONTROL Configure new destination] 宛先接続 [&#x200B; ワークフローの &#x200B;](connect-destination.md) の手順で、データフローのアラートを有効にできます。
+[!UICONTROL Configure new destination]宛先接続[ ワークフローの](connect-destination.md) ステップで、データフローのアラートを有効にできます。
 
-![&#x200B; 宛先アラートセクションを示す UI 画像。](../assets/ui/alerts/destination-alerts.png)
+宛先アラートセクションを示す![UI画像。](../assets/ui/alerts/destination-alerts.png)
 
-購読するアラートを選択し、「**[!UICONTROL Next]**」を選択してデータフローを確認および終了します。
+購読するアラートを選択し、**[!UICONTROL Next]**&#x200B;を選択してデータフローをレビューし、完了します。
 
-以下の表に、宛先データフローで使用できるアラートを示します。
+宛先データフローで使用できるアラートについて、次の表で説明します。
 
-* ストリーミング宛先の場合は、[!DNL Activation Skipped Rate Exceeded] アラートのみ使用できます。
+* ストリーミング宛先の場合、[!DNL Activation Skipped Rate Exceeded] アラートのみが使用できます。
 * ファイルベースの宛先の場合、すべてのアラートを使用できます。
 
 | アラート | 説明 |
 | --- | --- |
-| 宛先フロー実行遅延 | このアラートは、宛先フローの実行でオーディエンスのアクティブ化に 150 分以上かかった場合に通知します。 |
-| 宛先フロー実行の失敗 | このアラートは、宛先に対してオーディエンスをアクティブ化する際にエラーが発生した場合に通知します。 |
-| 宛先フロー実行の成功 | このアラートは、オーディエンスが宛先に対して正常にアクティブ化された場合に通知します。 |
-| 宛先フロー実行開始 | このアラートは、宛先フローの実行がオーディエンスのアクティブ化を開始すると通知します。 |
-| アクティベーションスキップ率を超過 | このアラートは、アクティベーションのスキップ率がアクティベーション全体の 1% を超えた場合に通知します。 属性が見つからない場合や同意違反がある場合、ID はアクティベーション中にスキップされます。 |
+| 宛先フロー実行遅延 | このアラートは、宛先フローの実行がオーディエンスのアクティブ化に150分以上かかる場合に通知します。 |
+| 宛先フロー実行の失敗 | このアラートは、オーディエンスを宛先に対してアクティブ化する際にエラーが発生したときに通知します。 |
+| 宛先フロー実行の成功 | このアラートは、オーディエンスが宛先に対して正常にアクティブ化されたときに通知します。 |
+| 宛先フロー実行開始 | このアラートは、宛先フロー実行がオーディエンスのアクティブ化を開始したときに通知します。 |
+| アクティベーション スキップ率が超過しました | このアラートは、アクティベーションのスキップ率がアクティベーション全体の1%を超えた場合に通知します。 IDに属性が欠落している場合や同意違反がある場合、アクティブ化中にIDがスキップされます。 |
 
 {style="table-layout:auto"}
 
 ## アラートの受信 {#receiving-alerts}
 
-宛先データフローが実行されると、UI またはメールでアラートを受け取ることができます。
+宛先データフローを実行すると、UIまたは電子メールでアラートを受け取ることができます。
 
-### UI でのアラートの受信 {#receiving-alerts-in-ui}
+### UIでのアラートの受信 {#receiving-alerts-in-ui}
 
-アラートは、Experience Platform UI の上部ヘッダーにある通知アイコンによって UI に表示されます。 通知アイコンを選択して、データフローに関する特定のアラートメッセージを表示します。
+アラートは、UIのExperience Platform UIの上部ヘッダーに通知アイコンで表示されます。 通知アイコンを選択して、データフローに関する特定のアラートメッセージを表示します。
 
-![Experience Platformの通知アイコンを示す UI 画像 &#x200B;](../assets/ui/alerts/notification.png)
+Experience Platformの通知アイコンを表示する![UI画像](../assets/ui/alerts/notification.png)
 
 通知パネルが表示され、作成したデータフローのステータス更新のリストが表示されます。
 
-![&#x200B; 通知パネルを示す UI 画像 &#x200B;](../assets/ui/alerts/alert-window.png)
+通知パネルを表示する![UI画像](../assets/ui/alerts/alert-window.png)
 
-アラートメッセージにポインタを合わせて、それらを既読としてマークしたり、時計アイコンを選択して、データフローのステータスに関する今後のリマインダーを設定したりできます。
+アラートメッセージにカーソルを合わせて読み取り済みとしてマークしたり、時計アイコンを選択して、データフローのステータスに今後のリマインダーを設定したりできます。
 
-![&#x200B; 通知リマインダーオプションを示す UI 画像 &#x200B;](../assets/ui/alerts/remind-me.png)
+通知リマインダーオプションを表示する![UI画像](../assets/ui/alerts/remind-me.png)
 
-アラートメッセージを選択して、データフローに関する特定の情報を表示します。
+データフローに関する特定の情報を表示するには、アラートメッセージを選択します。
 
-![&#x200B; 通知の選択方法を示す UI 画像 &#x200B;](../assets/ui/alerts/select-alert-message.png)
+通知の選択方法を示す![UI画像](../assets/ui/alerts/select-alert-message.png)
 
-[!UICONTROL Dataflow run details] ページが表示されます。 画面の上半分には、属性に関する情報、対応するデータフロー実行 ID、高レベルのエラー概要など、データフローの概要が表示されます。
+[!UICONTROL Dataflow run details] ページが表示されます。 画面の上半分には、データフローの属性、対応するデータフロー実行ID、高レベルのエラー概要など、データフローの概要が表示されます。
 
-![&#x200B; データフロー実行の詳細ページを示す UI 画像。](../assets/ui/alerts/dataflow-overview.png)
+データフロー実行の詳細ページを示す![UI画像。](../assets/ui/alerts/dataflow-overview.png)
 
-ページの下半分には、データフローの実行ステージ中に発生した [!UICONTROL Dataflow run errors] ラーが表示されます。 ここから、エラー診断をプレビューしたり、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、データフローに対応するエラー診断またはファイルマニフェストをダウンロードしたりできます。
+ページの下半分には、データフロー実行ステージ中に発生した[!UICONTROL Dataflow run errors]が表示されます。 ここから、エラー診断をプレビューするか、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)を使用して、エラー診断またはデータフローに対応するファイルマニフェストをダウンロードできます。
 
-![&#x200B; データフロー実行の詳細ページを示す UI 画像（「エラー」セクションをハイライト表示） &#x200B;](../assets/ui/alerts/dataflow-run-error.png)
+![ データフロー実行の詳細ページを示すUI画像。エラーセクションにハイライトが表示されている。](../assets/ui/alerts/dataflow-run-error.png)
 
-データフローエラーの処理について詳しくは、[UI での宛先データフローの監視 &#x200B;](../../dataflows/ui/monitor-destinations.md) を参照してください。
+データフローエラーの処理について詳しくは、[UIでの宛先データフローの監視](../../dataflows/ui/monitor-destinations.md)に関するガイドを参照してください。
 
-### メールによるアラートの受信 {#receiving-alerts-by-email}
+### 電子メールによるアラートの受信 {#receiving-alerts-by-email}
 
-データフローに関するアラートもメールで配信されます。 メール本文でデータフロー名を選択すると、データフローの詳細が表示されます。
+データフローのアラートも電子メールで配信されます。 メール本文でデータフロー名を選択すると、データフローに関する詳細情報が表示されます。
 
-![&#x200B; アラートメールのスクリーンショット &#x200B;](../assets/ui/alerts/email.png)
+![ アラートメールのスクリーンショット ](../assets/ui/alerts/email.png)
 
-UI アラートと同様に、[!UICONTROL Dataflow run overview] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
+UI アラートと同様に、[!UICONTROL Dataflow run overview] ページが表示され、データフローに関連するエラーを調査するためのインターフェイスが提供されます。
 
 ![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
 
-## アラートを購読および購読解除 {#subscribe-and-unsubscribe}
+## アラートの購読と登録解除 {#subscribe-and-unsubscribe}
 
-宛先 [!UICONTROL Browse] ーザーページで、追加のアラートを購読したり、既存の宛先データフローに対して設定されたアラートを登録解除したりできます。
+宛先[!UICONTROL Browse] ページの既存の宛先データフローに対して、さらにアラートを購読するか、確立されたアラートから購読を解除できます。
 
-![&#x200B; 宛先の参照ページを示す UI 画像 &#x200B;](../assets/ui/alerts/destination-list.png)
+宛先の参照ページを表示する![UI画像](../assets/ui/alerts/destination-list.png)
 
-アラートを受信する宛先接続を見つけ、省略記号（`...`）を選択してオプションのドロップダウンメニューを表示します。 次に、「**[!UICONTROL Subscribe to alerts]**」を選択して、宛先データフローのアラート設定を変更します。
+アラートを受け取る宛先接続を見つけ、省略記号（`...`）を選択して、オプションのドロップダウンメニューを表示します。 次に、**[!UICONTROL Subscribe to alerts]**&#x200B;を選択して、宛先データフローのアラート設定を変更します。
 
-![&#x200B; 宛先オプションを示す UI 画像 &#x200B;](../assets/ui/alerts/destination-alerts-subscribe.png)
+宛先オプションを示す![UI画像](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-ポップアップウィンドウが開き、宛先アラートのリストが表示されます。 登録するアラートを選択するか、登録解除するアラートの選択を解除します。 終了したら「**[!UICONTROL Save]**」を選択します。
+ポップアップウィンドウが表示され、宛先アラートのリストが表示されます。 購読するアラートを選択するか、購読解除するアラートを選択解除します。 終了したら「**[!UICONTROL Save]**」を選択します。
 
-![&#x200B; 宛先アラートの購読ページを示す UI 画像 &#x200B;](../assets/ui/alerts/destination-alerts-list.png)
+宛先アラートのサブスクリプション ページを表示する![UI画像](../assets/ui/alerts/destination-alerts-list.png)
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、宛先データフローのコンテキスト内アラートを購読する方法を順を追って説明しました。 詳しくは、[&#x200B; アラート UI ガイド &#x200B;](../../observability/alerts/ui.md) を参照してください。
+このドキュメントでは、宛先データフローのインコンテキストアラートを購読する方法に関するステップバイステップガイドを提供しました。 詳しくは、[ アラート UI ガイド ](../../observability/alerts/ui.md)を参照してください。

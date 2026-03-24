@@ -1,12 +1,12 @@
 ---
 keywords: 広告；bing;
 title: Microsoft Bing 接続
-description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブを含むMicrosoft Advertising ネットワーク全体でリターゲティングとオーディエンスターゲットのデジタルキャンペーンを実行できます。
+description: Microsoft Bingとの連携先として、Microsoft Advertisingのディスプレイ広告や検索、ネイティブなどのネットワーク全体で、リターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実施できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 28%
+source-wordcount: '1044'
+ht-degree: 31%
 
 ---
 
@@ -14,26 +14,26 @@ ht-degree: 28%
 
 ## 概要 {#overview}
 
-[!DNL Microsoft Bing] の宛先を使用して、[!DNL Microsoft Advertising Network]、[!DNL Display Advertising]、[!DNL Search] を含む [!DNL Native] 全体にプロファイルデータを送信します。
+[!DNL Microsoft Bing]宛先を使用して、[!DNL Microsoft Advertising Network]、[!DNL Display Advertising]、[!DNL Search]を含む[!DNL Native]全体にプロファイルデータを送信します。
 
-[!DNL Microsoft Bing] の宛先は、Microsoftに *[!DNL Custom Audiences]* を作成します。 これらは、[!DNL Microsoft Search Network]Microsoft Advertisingのドキュメント [!DNL Audience Network] に記載されているように、[!DNL Native] と [!DNL Display] （[!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)）の両方で使用できます。
+[!DNL Microsoft Bing]の宛先は、Microsoftに&#x200B;*[!DNL Custom Audiences]*&#x200B;を作成します。 これらは、[!DNL Microsoft Search Network]Microsoft Advertising ドキュメント [!DNL Audience Network]に記載されている[!DNL Native]および[!DNL Display] （[!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)）の両方で使用できます。
 
-プロファイルデータを [!DNL Microsoft Bing] に送信するには、まず宛先に接続する必要があります。
+プロファイルデータを[!DNL Microsoft Bing]に送信するには、まず宛先に接続する必要があります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、[!DNL Microsoft Advertising IDs] ークフローに基づいて作成されたオーディエンスを使用し、あらゆるチャネルにわたるディスプレイまたは検索広告を通じてユーザーをターゲティングで [!DNL Microsoft Advertising] るようになりたいと考えています。
+マーケターとして、[!DNL Microsoft Advertising IDs]から構築されたオーディエンスを使用して、[!DNL Microsoft Advertising] チャネルにわたるディスプレイ広告や検索広告でユーザーをターゲティングできるようにしたいと考えています。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Microsoft Bing] では、以下の表に示す ID に基づいたオーディエンスのアクティベーションをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Microsoft Bing]は、次の表に示すIDに基づいてオーディエンスをアクティブ化することをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
-以下の表に示すすべての ID は、アクティベーション時に事前設定され、自動的にマッピングされます。 これらのマッピングを手動で設定する必要はありません。
+以下の表のすべてのIDは、アクティベーション時に事前設定され、自動的にマッピングされます。 これらのマッピングを手動で設定する必要はありません。
 
 | ID | 説明 | 注意点 |
 |---|---|---|
-| MAID | MICROSOFT ADVERTISING ID | Microsoft Advertising ID がプロファイルに存在する場合にアクティブ化されます。 |
-| ECID | Experience Cloud ID | **必須。** すべてのプロファイルには、書き出すMicrosoft Advertising ID マッピングに対応する ECID が必要です。 |
+| MAID | MICROSOFT ADVERTISING ID | Microsoft Advertising IDがプロファイルに存在する場合にアクティブ化されます。 |
+| ECID | Experience Cloud ID | **必須。**&#x200B;すべてのプロファイルには、エクスポートする対応するMicrosoft Advertising ID マッピングを含むECIDが必要です。 |
 
 {style="table-layout:auto"}
 
@@ -41,58 +41,58 @@ ht-degree: 28%
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
-**[!DNL Audience Export]** - オーディエンスのすべてのメンバーを [!DNL Microsoft Bing] の宛先に書き出します。
+**[!DNL Audience Export]** - オーディエンスのすべてのメンバーを[!DNL Microsoft Bing]宛先に書き出しています。
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Audience export]** | オーディエンスのすべてのメンバーを [!DNL Microsoft Bing] の宛先に書き出します。 |
+| 書き出しタイプ | **[!UICONTROL Audience export]** | オーディエンスのすべてのメンバーを[!DNL Microsoft Bing]宛先に書き出しています。 |
 | 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 
-[!DNL Microsoft Bing] の宛先が正しく機能するには、次の設定が必要です。
+[!DNL Microsoft Bing]の宛先を正しく機能させるには、次の設定が必要です：
 
-1. **ID 同期機能を有効にする**:[!DNL Microsoft Bing] のアクティベーションを初めて設定する場合で、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。
-   * 以前にAudience Managerで [!DNL Microsoft Bing] 統合を設定していた場合、既存の ID 同期は自動的にExperience Platformに引き継がれます。
+1. **ID同期機能を有効にする**：これが初めて[!DNL Microsoft Bing]のアクティベーションを設定する場合で、過去に（Adobe Audience Managerまたはその他のアプリケーションで）Experience Cloud ID サービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしていない場合は、Adobe Consultingまたはカスタマーケアにお問い合わせください。
+   * 以前にAudience Managerで[!DNL Microsoft Bing]統合を設定した場合、既存のID同期は自動的にExperience Platformに引き継がれます。
 
-2. **プロファイルでの ECID の確認**：正常に書き出すには、すべてのプロファイルに ECID が存在する必要があります。 この宛先の ECID は **必須** です。
+2. **プロファイルでECIDを確保**：すべてのプロファイルにECIDが存在する必要があります。ECIDが存在しない場合、正常にエクスポートされます。 この宛先のECIDは&#x200B;**必須**&#x200B;です。
 
 宛先を設定する際には、次の情報を指定する必要があります。
 
-* [!UICONTROL Account ID]：これは整数フォーマットの [!DNL Bing Ads CID] です。
+* [!UICONTROL Account ID]：これは[!DNL Bing Ads CID]の整数形式です。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -100,22 +100,22 @@ ht-degree: 28%
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Account ID]**:[!DNL Bing Ads Customer ID] （CID）。 CID は整数で、[!DNL Microsoft Advertising] にログインしたときに URL 内に表示されます。
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
+* **[!UICONTROL Account ID]**：あなたの[!DNL Bing Ads Customer ID] （CID）。 CIDは整数です。[!DNL Microsoft Advertising]にログインすると、URLに表示されます。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="マッピング ID"
->abstract="選択したセグメントをマッピングする、数値の Bing オーディエンス ID を入力します。指定された [!UICONTROL Mapping ID] が Bing 宛先のオーディエンス ID に対応していない場合、Bing アカウントの期待されるオーディエンスデータは表示されません。"
+>abstract="選択したセグメントをマッピングする、数値の Bing オーディエンス ID を入力します。指定された[!UICONTROL Mapping ID]がBing宛先のオーディエンス IDに対応しない場合、Bing アカウントに期待されるオーディエンスデータは表示されません。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
@@ -125,32 +125,32 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[&#x200B; オーディエンススケジュール &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling) の手順では、「[!UICONTROL Mapping ID]」フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスメタデータが [!DNL Bing] に正しく渡されます。
+[ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling)手順では、[!UICONTROL Mapping ID] フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスのメタデータが正しく[!DNL Bing]に渡されます。
 
-![&#x200B; オーディエンス名を Bing マッピング ID にマッピングする方法の例を示すオーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
+オーディエンス名をBing マッピング IDにマッピングする例を示すオーディエンススケジュール画面を示す![UI画像。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ### 事前設定済みマッピング {#preconfigured-mappings}
 
-オーディエンスアクティベーションワークフローの実行中に、次の ID マッピングが **事前設定され、自動的に入力されます**。
+次のID マッピングは、オーディエンスのアクティブ化ワークフロー中に&#x200B;**事前設定され、自動的に入力されます**。
 
 * **MAID** （Microsoft Advertising ID）
 * **ECID** （Experience Cloud ID）
 
-これらのマッピングはグレー表示され、読み取り専用です。 この手順では、何も設定する必要はありません。 「**[!UICONTROL Next]**」を選択して続行します。
+これらのマッピングはグレー表示され、読み取り専用です。 この手順で設定する必要はありません。 続行するには、**[!UICONTROL Next]**&#x200B;を選択してください。
 
 >[!IMPORTANT]
 >
->**書き出しを成功させるには ECID が必要です。ECID のない** プロファイル、または ECID とMicrosoft Advertising ID の間の ID 同期マッピングのないプロファイルは書き出されません。
+>書き出しを成功させるには、**ECIDが必要です。ECIDを持たない、またはECIDとMicrosoft Advertising ID間のID同期マッピングを持たない** プロファイルはエクスポートされません。
 
-### アクティブ化の例 {#activation-examples}
+### アクティベーションの例 {#activation-examples}
 
-* **ECID およびMicrosoft Advertising ID マッピングを使用したプロファイル：** プロファイルは正常に書き出され、アクティブ化されました
-* **ECID のみを持つプロファイル（Microsoft Advertisingの ID マッピングなし）:** プロファイルは **書き出されない**。 ECID と MAID の ID 同期マッピングが必要です。
-* **ECID のないプロファイル：** プロファイルは **書き出されていません**。 この宛先には ECID が必須です。
+* ECIDとMicrosoft Advertising ID マッピングを持つ&#x200B;**プロファイル：** プロファイルは正常にエクスポートされ、アクティブ化されました
+* ECIDのみを持つ&#x200B;**プロファイル （Microsoft Advertising ID マッピングなし）:** プロファイルは&#x200B;**エクスポートされていません**。 ECIDとMAID間のID同期マッピングが必要です。
+* ECIDのない&#x200B;**プロファイル：** プロファイルは&#x200B;**エクスポートされていません**。 この宛先にはECIDが必須です。
 
 ## 書き出したデータ {#exported-data}
 

@@ -1,11 +1,11 @@
 ---
-title: Verizon MediaYahoo DataX 接続
+title: Verizon MediaYahoo DataX接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 32%
+source-wordcount: '934'
+ht-degree: 31%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 32%
 
 ## 概要 {#overview}
 
-[!DNL DataX] は、安全で自動化されたスケーラブルな方法で外部パートナーとデータを交換で [!DNL Verizon Media/Yahoo] る様々なコンポーネントをホストする集約 [!DNL Verizon Media/Yahoo] インフラストラクチャです。
+[!DNL DataX]は、[!DNL Verizon Media/Yahoo]が安全で自動化されたスケーラブルな方法で外部パートナーとデータを交換できるようにする、様々なコンポーネントをホストする集約[!DNL Verizon Media/Yahoo] インフラストラクチャです。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataoperations@yahooinc.comまで直接ご連絡ください &#x200B;](mailto:dataoperations@yahooinc.com)
+>この宛先コネクタとドキュメント ページは、[!DNL Verizon Media/Yahoo]の[!DNL DataX] チームによって作成および管理されています。 問い合わせや更新のリクエストについては、[dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)から直接お問い合わせください
 
 ## 前提条件 {#prerequisites}
 
 **MDM ID**
 
-これは [!DNL Yahoo DataX] の一意の ID で、この宛先へのデータ書き出しを設定するための必須フィールドです。 この ID が不明な場合は、[!DNL Yahoo DataX] アカウントマネージャーにお問い合わせください。
+これは[!DNL Yahoo DataX]の一意の識別子であり、この宛先へのデータ書き出しを設定するための必須フィールドです。 このIDがわからない場合は、[!DNL Yahoo DataX] アカウント マネージャーにお問い合わせください。
 
 **分類メタデータ**
 
-分類リソースは、ベース [!DNL DataX] メタデータ構造に対する拡張を定義します
+分類リソースは、基本[!DNL DataX] メタデータ構造上の拡張機能を定義します
 
-```
+```json
 {
 
   >>(Base DataX Metadata)<<
@@ -48,32 +48,32 @@ ht-degree: 32%
 }
 ```
 
-[&#x200B; 分類メタデータ &#x200B;](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) の詳細については、[!DNL DataX] 開発者向けドキュメントを参照してください。
+[分類メタデータ ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)の詳細については、[!DNL DataX]開発者ドキュメントをご覧ください。
 
 ## レート制限とガードレール {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->[!DNL Verizon Media/Yahoo DataX] に 100 を超えるオーディエンスをアクティブ化すると、宛先からレート制限エラーを受け取る場合があります。 この宛先に対してオーディエンスをアクティブ化する場合、1 つのアクティベーションデータフローでアクティブ化するオーディエンスが 100 個未満になるようにしてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントに新しい宛先を作成します。
+>100を超えるオーディエンスを[!DNL Verizon Media/Yahoo DataX]にアクティブ化すると、宛先からレート制限エラーが発生する場合があります。 この宛先に対してオーディエンスをアクティブ化する場合は、1つのアクティベーションデータフローで100未満のオーディエンスをアクティブ化してみてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントに新しい宛先を作成します。
 
-[!DNL DataX]DataX ドキュメント [&#x200B; に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、](https://developer.verizonmedia.com/datax/guide/rate-limits/) れはレート制限されています。
+[!DNL DataX]は、[DataX ドキュメント ](https://developer.verizonmedia.com/datax/guide/rate-limits/)に記載されている分類およびオーディエンスへの投稿のクォータ制限に従ってレート制限されています。
 
 
 | エラーコード | エラーメッセージ | 説明 |
 |---------|----------|---------|
-| 429 リクエストが多すぎます | 1 時間あたりのレート制限を超えています **（制限：100）** | プロバイダーごとに 1 時間に許可されるリクエストの数。 |
+| 429 リクエストが多すぎます | レート制限が1時間あたりの上限を超えました&#x200B;**（制限：100）** | プロバイダーごとに1時間で許可されるリクエストの数。 |
 
 {style="table-layout:auto"}
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Verizon Media] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Verizon Media]は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL Apply transformation]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Experience Platform] 自動的にハッシュ化するように設定します。 |
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | プレーンテキストとSHA256 ハッシュ化された電子メールアドレスの両方が[!DNL Adobe Experience Platform]でサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをチェックして、[!DNL Experience Platform]がアクティベーション時にデータを自動的にハッシュします。 |
+| GAID | GOOGLE ADVERTISING ID | ソース IDがGAID名前空間である場合は、GAID ターゲット IDを選択します。 |
+| IDFA | Apple の広告主 ID | ソース IDがIDFA名前空間の場合は、IDFA ターゲット IDを選択します。 |
 
 {style="table-layout:auto"}
 
@@ -81,23 +81,23 @@ ht-degree: 32%
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | × | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -108,22 +108,22 @@ ht-degree: 32%
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL Audience export]** | Verizon Media の宛先で使用される識別子（メール、GAID、IDFA）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL Audience export]** | Verizon Mediaの宛先で使用されている識別子（電子メール、GAID、IDFA）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 
-[!DNL DataX] （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主は、[!DNL Verizon Media] API を使用して、新しいオーディエンスをすばやく作成し、VMG のほぼリアルタイムの API を使用して目的のオーディエンスグループをプッシュできます。
+[!DNL DataX] APIは、[!DNL Verizon Media] （VMG）の電子メールアドレスにキーを設定した特定のオーディエンスグループをターゲットにする広告主が利用できます。新しいオーディエンスをすばやく作成し、VMGのほぼリアルタイム APIを使用して、目的のオーディエンスグループをプッシュできます。
 
 ## 宛先に接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-![Experience Platform UI の Yahoo DataX 宛先カード &#x200B;](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
+Experience Platform UI![の](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)Yahoo DataXの宛先カード
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -131,24 +131,24 @@ ht-degree: 32%
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL Name]**：今後この宛先を認識するための名前。
-* **[!UICONTROL Description]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL MDM ID]**：これは [!DNL Yahoo DataX] の一意の ID で、この宛先へのデータ書き出しを設定するための必須フィールドです。 この ID が不明な場合は、[!DNL Yahoo DataX] アカウントマネージャーにお問い合わせください。  MDM ID を使用すると、特定の排他的なユーザーのセット（広告主向けのファーストパーティデータなど）でのみデータを使用するように制限できます。
+* **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
+* **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
+* **[!UICONTROL MDM ID]**：これは[!DNL Yahoo DataX]の一意の識別子であり、この宛先へのデータ書き出しを設定するための必須フィールドです。 このIDがわからない場合は、[!DNL Yahoo DataX] アカウント マネージャーにお問い合わせください。  MDM IDでは、特定の排他的なユーザー（広告主向けのファーストパーティデータなど）に対してのみデータを使用するように制限できます。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-宛先にオーディエンスをアクティブ化する手順については、[&#x200B; 宛先へのプロファイルとオーディエンスのアクティブ化 &#x200B;](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+宛先に対するオーディエンスのアクティブ化の手順については、[宛先に対するプロファイルとオーディエンスのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -156,4 +156,4 @@ ht-degree: 32%
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[!DNL Yahoo/Verizon Media][&#x200B; のドキュメント  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/) を参照してください。
+詳しくは、[!DNL Yahoo/Verizon Media][の [!DNL DataX] ](https://developer.verizonmedia.com/datax/guide/) ドキュメントを参照してください。

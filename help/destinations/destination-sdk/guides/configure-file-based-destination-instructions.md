@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: Destination SDK を使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 54%
+source-wordcount: '742'
+ht-degree: 50%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 54%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、[&#x200B; エンドポイントを使用して &#x200B;](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定を作成 `/destinations-server` します。
+[ エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定`/destinations-server`を作成することから開始します。
 
-次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定するフィールドについて詳しくは、対応する [&#x200B; サーバーの設定 &#x200B;](../functionality/destination-server/server-specs.md) を参照してください。
+次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定する方法について詳しくは、対応する[ サーバー設定](../functionality/destination-server/server-specs.md)を参照してください。
 
 **API 形式**
 
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 手順 2：宛先の構成の作成 {#create-destination-configuration}
 
-次に、`/destinations` API エンドポイントを使用して作成された宛先の設定例を示します。
+次に、`/destinations` API エンドポイントを使用して作成された宛先設定の例を示します。
 
-手順 1 のサーバーとファイル設定をこの宛先設定に接続するには、サーバーの `instance ID` とファイル設定を `destinationServerId` のように追加します。
+手順1からこの宛先設定にサーバーとファイル設定を接続するには、サーバーとファイル設定の`instance ID`をここに`destinationServerId`として追加します。
 
 **API 形式**
 
@@ -402,7 +402,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` は、2 つの認証ルールの中でより一般的で、接続の設定やデータの書き出しを行う前に、ユーザーが宛先に何らかの形の認証を提供する必要がある場合に使用するルールです。
+>`CUSTOMER_AUTHENTICATION`は、2つの認証ルールの中で最も一般的なものであり、接続を設定してデータを書き出す前に、ユーザーが宛先に何らかの認証を提供する必要がある場合に使用するものです。
 
 * 宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択した場合、ファイルベースの宛先で Destination SDK によってサポートされる認証タイプについては、次の節を参照してください。
 
@@ -410,25 +410,25 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
    * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
-   * [SSH キーを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
-   * [パスワードを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-password)
+   * [SSH キーを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-ssh-key-auth)
+   * [パスワードを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-password-auth)
 
-* 「`"authenticationRule": "PLATFORM_AUTHENTICATION"`」を選択した場合は、[&#x200B; 資格情報設定 &#x200B;](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [&#x200B; 設定の &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
+* `"authenticationRule": "PLATFORM_AUTHENTICATION"`を選択した場合、[資格情報設定](../credentials-api/create-credential-configuration.md)を作成し、`authenticationId`宛先配信[設定の](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターに資格情報オブジェクトのIDを渡す必要があります。
 
 ## 手順 5：宛先のテスト {#test-destination}
 
-前の手順の構成エンドポイントを使用して宛先を設定した後、 [宛先テストツール](../testing-api/batch-destinations/file-based-destination-testing-overview.md)を使用して、Adobe Experience Platform と宛先の統合をテストすることができます。
+前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール ](../testing-api/batch-destinations/file-based-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
 
-宛先をテストするプロセスの一環として、Experience Platform UI を使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
+宛先をテストするプロセスの一環として、Experience Platform UIを使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、次の2つのリソースを参照してください。
 
 * [オーディエンスの作成 – ドキュメントページ](/help/segmentation/ui/audience-portal.md#create-audience)
-* [&#x200B; オーディエンスの作成 – ビデオのチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [ オーディエンスの作成 – ビデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 
 >[!NOTE]
 >
->自分で使用するためにプライベートな宛先を作成していて、他の顧客が使用できるように宛先カタログに公開する予定がない場合は、この手順は必要ありません。
+>この手順は、自分で使用するプライベート宛先を作成しており、他の顧客が使用するために宛先カタログで公開することを検討していない場合は必要ありません。
 
 宛先を設定およびテストした後、[宛先を公開する API](../publishing-api/create-publishing-request.md) を使用して設定をレビュー用にアドビに送信します。
 
@@ -436,14 +436,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 >[!NOTE]
 >
->自分で使用するためにプライベートな宛先を作成していて、他の顧客が使用できるように宛先カタログに公開する予定がない場合は、この手順は必要ありません。
+>この手順は、自分で使用するプライベート宛先を作成しており、他の顧客が使用するために宛先カタログで公開することを検討していない場合は必要ありません。
 
 独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](../overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。
 
-## 手順 8:Adobeによるレビュー用に宛先を送信する {#submit-for-review}
+## 手順8:Adobeのレビュー用に送信先を送信する {#submit-for-review}
 
 >[!NOTE]
 >
->自分で使用するためにプライベートな宛先を作成していて、他の顧客が使用できるように宛先カタログに公開する予定がない場合は、この手順は必要ありません。
+>この手順は、自分で使用するプライベート宛先を作成しており、他の顧客が使用するために宛先カタログで公開することを検討していない場合は必要ありません。
 
-最後に、宛先をExperience Platform カタログに公開して、すべてのExperience Platform ユーザーに表示する前に、Adobeのレビュー用に宛先を正式に送信する必要があります。 [Destination SDKで作成した製品化された宛先をレビュー用に送信 &#x200B;](../guides/submit-destination.md) する方法に関する詳細を確認します。
+最後に、宛先をExperience Platform カタログに公開し、すべてのExperience Platformのお客様に表示する前に、宛先をAdobeのレビュー用に正式に送信する必要があります。 Destination SDK[で作成された製品化された宛先をレビュー用に](../guides/submit-destination.md)送信する方法に関する詳細を確認します。

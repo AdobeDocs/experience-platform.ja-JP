@@ -1,60 +1,60 @@
 ---
-title: データセット書き出しデータフローの終了日を更新します（2025 年 5 月 1 日（PT）に対応が必要です）
+title: データセット書き出しデータフローの終了日を更新します（2025年5月1日までに必要なアクション）
 type: Tutorial
 hide: true
 hidefromtoc: true
-description: 現在の終了日を 2025 年 5 月 1 日（PT）として、データセット書き出しデータフローの終了日を更新する方法を説明します。
+description: データセット書き出しデータフローの終了日を、現在の終了日である2025年5月1日に更新する方法について説明します。
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
-# データセット書き出しデータフローの終了日を更新します（2025 年 5 月 1 日（PT）に対応が必要です）
+# データセット書き出しデータフローの終了日を更新します（2025年5月1日までに必要なアクション）
 
 >[!IMPORTANT]
 >
->このページのアクション項目は、2024 年 9 月リリースのExperience Platformより前に、組織でデータセット書き出しデータフローを設定した場合に適用されます。
+>このページのアクション項目は、2024年9月リリースのExperience Platformより前にデータセット書き出しデータフローを設定した場合に適用されます。
 
 ## 何が起きているのでしょうか？ {#what-is-happening}
 
-Experience Platformの [2024 年 9 月リリース &#x200B;](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 Adobeでは、（2024 年 9 月リリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日が 2025 年 5 月 1 日（PT* に導入されました。 これらのデータフローでは、現在、以下に示すものに類似したメッセージが表示されます。
+2024年9月[ リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations)では、データセットのデータフローを書き出す`endTime`日付を設定するオプションが導入されました。 Adobeでは、2024年9月リリース *より前に作成されたすべてのデータセット書き出しデータフローに対して、2025年5月1日のデフォルトの終了日も導入されました。*&#x200B;これらのデータフローは、現在、次に示すメッセージと同様のメッセージを表示します。
 
-![&#x200B; データセット書き出しデータフローの終了日を更新する必要があるという UI 通知。](/help/destinations/assets/ui/export-datasets/update-end-date.png)
+データセットの書き出しデータフローの終了日を更新する必要性に関する![UI通知。](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 
-**アクション項目**：これらのデータフローの場合、有効期限が切れる前に終了日を手動で更新する必要があります。そうしないと、書き出しが停止します。 Experience Platform UI を使用して、どのデータフローが 2025 年 5 月 1 日（PT）に停止するように設定されているかを特定します。
+**アクション項目**：これらのデータフローのいずれかで、終了日が期限切れになる前に手動で更新する必要があります。そうしないと、書き出しが停止します。 Experience Platform UIを使用して、2025年5月1日に停止するように設定されているデータフローを特定します。
 
-## なぜ私に通知されるのですか。 {#why-notified}
+## なぜ通知されるのか？ {#why-notified}
 
-組織は、終了日が 2025 年 5 月 1 日（PT）のアクティブなデータセット書き出しデータフローを持つと識別されました。
+お客様の組織は、2025年5月1日の終了日で、アクティブなデータセット書き出しデータフローを持つことが確認されました。
 
-## UI を使用して終了日を更新する {#use-ui}
+## UIを使用して終了日を更新する {#use-ui}
 
-Experience Platform UI を使用して、終了日が 2025 年 5 月 1 日（PT）のデータフローを識別し、将来の日付に更新します。
+Experience Platform UIを使用して、終了日が2025年5月1日のデータフローを特定し、将来の日付に更新します。
 
 ### 更新が必要なデータフローを見つける {#find-dataflows}
 
-**宛先/参照** に移動し、以下に示すように、**データタイプ** 列で **データセット** データタイプを探します。 目的のデータフローを選択して、検査します。
+次に示すように、**宛先/参照**&#x200B;に移動し、**データタイプ**&#x200B;列でデータタイプ **データセット**&#x200B;を探します。 目的のデータフローを選択して検査します。
 
-![&#x200B; 「参照」タブでハイライト表示されたデータセット書き出しデータフロー。](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
+![参照タブでハイライト表示されたデータセット書き出しデータフロー。](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
 ### データフローの終了日の更新 {#update-end-date}
 
 データフローの終了日を更新するには：
 
 1. 前の手順で検査用に選択したデータフローで、「**データセットを書き出し**」を選択します。
-   ![&#x200B; 「参照」タブでハイライト表示されたデータセットコントロールの書き出し。](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
-2. ワークフローで、「**スケジュール**」ステップに進み、「**スケジュールを編集**」を選択します。
-   ![&#x200B; スケジュール設定ステップでハイライト表示されたスケジュール管理を編集 &#x200B;](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
-3. 希望する終了日を 2025 年 5 月 1 日（PT）以降に選択し、「**保存**」を選択します。
-   ![&#x200B; スケジュール設定ステップでハイライト表示されている終了日制御を選択 &#x200B;](/help/destinations/assets/ui/export-datasets/select-end-date.png)
-4. ワークフローの最後に進み、更新内容を保存します。
+   ![参照タブでハイライト表示されたデータセットの書き出しコントロール。](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
+2. ワークフローで、**スケジュール** ステップに進み、**スケジュールを編集**を選択します。
+   ![ スケジュール管理の編集は、スケジュール設定ステップでハイライト表示されています。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
+3. 2025年5月1日より後に終了日を選択し、**保存**を選択します。
+   ![ スケジュール設定ステップでハイライト表示された終了日コントロールを選択します。](/help/destinations/assets/ui/export-datasets/select-end-date.png)
+4. ワークフローの最後に進み、更新を保存します。
 
-スケジュール設定ステップについて詳しくは、[&#x200B; データセット UI の書き出しチュートリアル &#x200B;](/help/destinations/api/export-datasets.md#scheduling) を参照してください。
+スケジュール設定ステップの詳細については、[ データセットの書き出しUI チュートリアル ](/help/destinations/api/export-datasets.md#export-datasets-by-using-the)を参照してください。
 
-## API を使用した終了日の更新 {#use-api}
+## APIを使用して終了日を更新する {#use-api}
 
 ### 更新が必要なデータフローを見つける {#find-dataflows-api}
 

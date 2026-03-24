@@ -1,21 +1,21 @@
 ---
-title: Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し
+title: Experience Platform UIを使用して、オンデマンドでファイルをバッチ宛先に書き出します
 type: Tutorial
-description: Experience Platform UI を使用して、オンデマンドでファイルをバッチ宛先に書き出す方法を説明します。
+description: Experience Platform UIを使用して、オンデマンドでファイルをバッチ宛先に書き出す方法を説明します。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 11%
 
 ---
 
 
-# Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し
+# Experience Platform UIを使用して、オンデマンドでファイルをバッチ宛先に書き出します
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ## [!UICONTROL Export file now] の概要 {#overview}
 
@@ -24,54 +24,54 @@ ht-degree: 11%
 >title="今すぐファイルを書き出し"
 >abstract="このコントロールを選択すると、以前の定期エクスポートに加えて完全なファイル書き出しが実行されます。ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。"
 
-この記事では、Experience Platform UI を使用して、[&#x200B; クラウドストレージ &#x200B;](/help/destinations/catalog/cloud-storage/overview.md) や [&#x200B; メールマーケティング &#x200B;](/help/destinations/catalog/email-marketing/overview.md) の宛先など、オンデマンドでファイルをバッチ宛先に書き出す方法について説明します。
+この記事では、Experience Platform UIを使用して、[ クラウドストレージ ](/help/destinations/catalog/cloud-storage/overview.md)や[ メールマーケティング ](/help/destinations/catalog/email-marketing/overview.md)などのバッチ宛先にオンデマンドでファイルを書き出す方法について説明します。
 
 **[!UICONTROL Export file now]** コントロールを使用すると、以前にスケジュールされたオーディエンスの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 この書き出しは、以前にスケジュールされた書き出しに加えて行われ、オーディエンスの書き出し頻度は変更されません。
 
-ファイルの書き出しが直ちにトリガーされ、最新のオーディエンス評価スナップショットからのデータのみが使用されます。 スナップショットの作成後に行われたプロファイルまたは ID の変更は含まれません。 これに対し、スケジュール設定された書き出しには、スナップショットデータと、スナップショットの作成と書き出し時間の間に発生する増分変更の両方が含まれます。
+ファイルの書き出しは直ちにトリガーされ、最新のオーディエンス評価スナップショットのデータのみが使用されます。 スナップショットの作成後に発生するプロファイルやIDの変更は含まれません。 一方、スケジュールされた書き出しには、スナップショットデータと、スナップショットの作成と書き出しの時間の間に発生する増分変更の両方が含まれます。
 
-この目的で、Experience Platform API を使用することもできます。 [&#x200B; アドホックアクティベーション API を使用して、オンデマンドでオーディエンスをバッチ宛先に対してアクティブ化する &#x200B;](/help/destinations/api/ad-hoc-activation-api.md) 方法を参照してください。
+この目的のためにExperience Platform APIを使用することもできます。 アドホックアクティベーション API[を使用して、バッチ宛先に対してオンデマンドでオーディエンスをアクティベートする方法を確認します。](/help/destinations/api/ad-hoc-activation-api.md)
 
-## スケジュール書き出しとオンデマンド書き出し {#scheduled-vs-ondemand}
+## 定期エクスポートとオンデマンド書き出し {#scheduled-vs-ondemand}
 
-オンデマンド書き出しとスケジュールされた書き出しでは、異なるデータソースが使用され、書き出されたデータに違いが生じる可能性があります。 各ケースで書き出される内容を理解するには、以下の表を参照してください。
+オンデマンド書き出しと定期エクスポートでは、異なるデータソースを使用するため、書き出されたデータが異なる場合があります。 各ケースで書き出される内容については、次の表を参照してください。
 
-|  | 今すぐファイルを書き出し | スケジュールされた書き出し |
+|  | 今すぐファイルを書き出し | 定期エクスポート |
 |--------|-----------------|-------------------|
 | **データソース** | スナップショットのみ | スナップショット +増分変更 |
 | **プロファイル属性** | スナップショット時の値 | エクスポート時の現在の値 |
 
 >[!NOTE]
 >
->スケジュールされた書き出しには、オーディエンスの評価後に発生するプロファイルの更新が含まれるので、オンデマンド書き出しとは異なるプロファイル数や属性値が表示される場合があります。
+>スケジュールされた書き出しでは、オーディエンスの評価後に発生するプロファイル更新が含まれるため、オンデマンド書き出しとは異なるプロファイル数または属性値が表示される場合があります。
 
-詳しくは、[&#x200B; スケジュールされた書き出しの動作について &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior) を参照してください。
+詳しくは、[ スケジュールされた書き出し動作について](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior)を参照してください。
 
 ## 前提条件 {#prerequisites}
 
-オンデマンドでファイルをバッチ宛先に書き出すには、正常に [&#x200B; 宛先に接続 &#x200B;](./connect-destination.md) されている必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+オンデマンドでファイルをバッチ宛先に書き出すには、宛先[に正常に](./connect-destination.md)接続している必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
-## オンデマンドでファイルを書き出す方法 {#how-to-export-files-on-demand}
+## オンデマンドでファイルをエクスポートする方法 {#how-to-export-files-on-demand}
 
-1. 「**[!UICONTROL Connections > Destinations]**」に移動し、「**[!UICONTROL Browse]**」タブとフィルター記号を選択して、目的のバッチ宛先への既存の接続を表示します。
+1. **[!UICONTROL Connections > Destinations]**&#x200B;に移動し、**[!UICONTROL Browse]** タブとフィルター記号を選択して、目的のバッチ宛先への既存の接続を表示します。
 
-   ![&#x200B; 「参照」タブに移動して既存のデータフローをフィルタリングする方法をハイライト表示した画像。](../assets/ui/activate-on-demand/browse-tab.png)
+   ![参照タブにアクセスし、既存のデータフローをフィルタリングする方法を示す画像。](../assets/ui/activate-on-demand/browse-tab.png)
 
-2. 目的の宛先接続を選択して、宛先への既存のデータフローを検査します。
+2. 目的の宛先接続を選択して、既存の宛先へのデータフローを検査します。
 
-   ![&#x200B; フィルターされたデータフローをハイライト表示した画像。](../assets/ui/activate-on-demand/filtered-dataflow.png)
+   フィルター処理されたデータフローを強調表示する![画像。](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. 「**[!UICONTROL Activation data]**」タブを選択し、オンデマンドでファイルを書き出すオーディエンスを選択し、**[!UICONTROL Export file now]** コントロールを選択して 1 回限りの書き出しをトリガーにします。これにより、選択した各オーディエンスのファイルがバッチ宛先に配信されます。
+3. 「**[!UICONTROL Activation data]**」タブを選択し、ファイルをオンデマンドで書き出すオーディエンスを選択し、**[!UICONTROL Export file now]** コントロールを選択して、選択した各オーディエンスのファイルをバッチ宛先に配信する1回限りの書き出しをトリガーします。
 
-   ![&#x200B; 「今すぐファイルを書き出し」ボタンをハイライト表示した画像。](../assets/ui/activate-on-demand/bulk-export-file-now.png)
+   「今すぐファイルを書き出し」ボタンを強調表示する![画像。](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
-4. 「**[!UICONTROL Yes]**」を選択して、ファイルの書き出しを確認およびトリガーします。
+4. **[!UICONTROL Yes]**&#x200B;を選択して、ファイルの書き出しを確定し、トリガーします。
 
-   ![&#x200B; 「今すぐファイルを書き出し」確認ダイアログを示す画像。](../assets/ui/activate-on-demand/confirm-activation.png)
+   ![ ファイルの書き出し確認ダイアログを表示する画像。](../assets/ui/activate-on-demand/confirm-activation.png)
 
-5. 確認メッセージが表示され、ファイルの書き出しが開始されたことが示されます。
+5. ファイルの書き出しが開始されたことを知らせる確認メッセージが表示されます。
 
-   ![&#x200B; アドホックアクティベーションが成功したことを確認する画像 &#x200B;](../assets/ui/activate-on-demand/ad-hoc-success.png)
+   ![ アドホックアクティベーションが成功したことを確認する画像。](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
 6. 「**[!UICONTROL Dataflow runs]**」タブに切り替えて、ファイルの書き出しが開始されたことを確認することもできます。
 
@@ -79,21 +79,21 @@ ht-degree: 11%
 
 **[!UICONTROL Export file now]** コントロールを使用する場合は、次の点に注意してください。
 
-* **[!UICONTROL Export file now]** は、バッチアクティベーションデータフローのスケジュールが現在の日付と重複するオーディエンスに対してのみ機能します。 これには、終了日が設定されていない（**[!UICONTROL Once]** のエクスポート頻度）、または終了日がまだ過ぎていないスケジュールのオーディエンスが含まれます。
-* オーディエンスを既存のデータフローに追加する場合は、少なくとも **1 時間** 待ってから **[!UICONTROL Export file now]** コントロールを使用します。
-* オーディエンスの結合ポリシーを変更した場合、または新しい結合ポリシーを使用するオーディエンスを作成した場合は、**[!UICONTROL Export file now]** コントロールが使用されるまで 24 時間待ちます。
-* **[!UICONTROL Export file now]** は、スケジュールされたスナップショット書き出しからのデータのみを使用します。 API トリガーのエクスポートジョブからはデータが取得されません。 API トリガーのエクスポートジョブの後に最新のデータをエクスポートするには、次にスケジュールされたエクスポートが実行されるのを待ちます。
+* **[!UICONTROL Export file now]**&#x200B;は、バッチ アクティベーション データフロー内のスケジュールが現在の日付と重複するオーディエンスでのみ機能します。 これには、終了日のないスケジュール（書き出し頻度&#x200B;**[!UICONTROL Once]**）や、終了日がまだ経過していないスケジュールを含むオーディエンスが含まれます。
+* 既存のデータフローにオーディエンスを追加する場合は、**コントロールを使用する前に** 1時間以上&#x200B;**[!UICONTROL Export file now]**&#x200B;待ってください。
+* オーディエンスの結合ポリシーを変更する場合、または新しい結合ポリシーを使用するオーディエンスを作成する場合は、**[!UICONTROL Export file now]** コントロールを使用するまで24時間待ちます。
+* **[!UICONTROL Export file now]**&#x200B;は、スケジュールされたスナップショットの書き出しからのデータのみを使用します。 API トリガーの書き出しジョブからデータを取得しません。 API トリガーの書き出しジョブの後に最新のデータを書き出すには、次にスケジュールされた書き出しが実行されるのを待ちます。
 
 ## UI エラーメッセージ {#ui-error-messages}
 
-**[!UICONTROL Export file now]** コントロールを使用している場合、以下に示すエラーメッセージが表示される場合があります。 テーブルを確認して、表示されたときに対処する方法を理解します。
+**[!UICONTROL Export file now]** コントロールを使用すると、以下に示すエラーメッセージが表示される場合があります。 表を確認して、それらの対処方法を確認します。
 
 | エラーメッセージ | 解決策 |
 |---------|----------|
-| 実行 ID `segment ID` の注文 `dataflow ID` に対して、オーディエンス `flow run ID` に対する実行は既に行われています | このエラーメッセージは、アドホックアクティベーションフローが現在オーディエンスに対して進行中であることを示しています。 ジョブが終了するのを待ってから、アクティベーションジョブを再度トリガーします。 |
-| オーディエンス `<segment name>` このデータフローの一部ではないか、スケジュール範囲外です。 | このエラーメッセージは、アクティブ化するように選択したオーディエンスがデータフローにマッピングされていないか、オーディエンスに対して設定されたアクティベーションスケジュールが期限切れか、まだ開始されていないことを示しています。 オーディエンスが実際にデータフローにマッピングされているかどうかを確認し、オーディエンスのアクティベーションスケジュールが現在の日付と重なっていることを確認します。 |
+| 実行ID `segment ID`の注文`dataflow ID`のオーディエンス `flow run ID`に対して、既に実行が行われています | このエラーメッセージは、オーディエンスに対してアドホックアクティベーションフローが現在進行中であることを示します。 ジョブが終了するのを待ってから、アクティベーションジョブを再度トリガーします。 |
+| オーディエンス `<segment name>`は、このデータフローに含まれていないか、スケジュール範囲外です。 | このエラーメッセージは、アクティブ化するために選択したオーディエンスがデータフローにマッピングされていないか、オーディエンス用に設定されたアクティベーションスケジュールが期限切れであるか、まだ開始されていないことを示します。 オーディエンスが実際にデータフローにマッピングされているかどうかを確認し、オーディエンスアクティベーションスケジュールが現在の日付と重複していることを確認します。 |
 
 ## 関連情報 {#related-information}
 
-* [Experience Platform API を使用して、オンデマンドでバッチ宛先に対してオーディエンスをアクティブ化します](/help/destinations/api/ad-hoc-activation-api.md)
+* [Experience Platform APIを使用して、オンデマンドでバッチ配信先にオーディエンスをアクティベートできます](/help/destinations/api/ad-hoc-activation-api.md)
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-batch-profile-destinations.md)

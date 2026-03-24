@@ -1,11 +1,11 @@
 ---
 title: データランディングゾーンの宛先
-description: データランディングゾーンに接続してオーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
+description: データランディングゾーンに接続してオーディエンスをアクティブ化し、データセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2099'
 ht-degree: 25%
 
 ---
@@ -14,45 +14,45 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->このドキュメントページでは、[!DNL Data Landing Zone]*宛先* について説明しています。 また、ソースカタログにも [!DNL Data Landing Zone]*source* があります。 詳しくは、[[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメントを参照してください。
+>このドキュメントページは、[!DNL Data Landing Zone] *宛先*&#x200B;を参照しています。 ソースカタログには[!DNL Data Landing Zone] *ソース*&#x200B;もあります。 詳しくは、[[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメントを参照してください。
 
 
 ## 概要 {#overview}
 
-[!DNL Data Landing Zone] は、Adobe Experience Platformによってプロビジョニングされたクラウドストレージインターフェイスです。安全なクラウドベースのファイルストレージ機能にアクセスして、ファイルをExperience Platformから書き出すことができます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Experience Platform製品およびサービスライセンスで提供される合計データ量に制限されます。 Experience Platformとそのアプリケーション（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、[!DNL Real-Time Customer Data Platform] など）のすべてのユーザーは、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。
+[!DNL Data Landing Zone]は、[!DNL Adobe Experience Platform]によってプロビジョニングされたクラウドストレージインターフェイスで、安全なクラウドベースのファイルストレージ機能へのアクセス権を付与して、Experience Platformからファイルを書き出すことができます。 サンドボックスごとに1つの[!DNL Data Landing Zone] コンテナにアクセスでき、すべてのコンテナの合計データ量は、Experience Platform製品およびサービス ライセンスで提供される合計データ量に制限されます。 [!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、[!DNL Real-Time Customer Data Platform]などのExperience Platformとそのアプリケーションのすべてのお客様は、サンドボックスごとに1つの[!DNL Data Landing Zone] コンテナでプロビジョニングされます。
 
-Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。 すべてのファイルは 7 日後に削除されます。
+Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされたすべてのファイルに対して、厳密な7日間の有効期間（TTL）が適用されます。 すべてのファイルは 7 日後に削除されます。
 
-AzureまたはAmazon web サービスのクラウドサポートを利用しているお客様は、[!DNL Data Landing Zone] の宛先コネクタを利用できます。 認証メカニズムは、宛先がプロビジョニングされるクラウドによって異なります。宛先に関するその他の要素とユースケースはすべて同じです。 2 つの異なる認証メカニズムの詳細については、[AWS Blob でプロビジョニングされたデータランディングゾーンに対する認証 &#x200B;](#authenticate-dlz-azure) および [Azureでプロビジョニングされたデータランディングゾーンに対する認証 &#x200B;](#authenticate-dlz-aws) の節を参照してください。
+[!DNL Data Landing Zone]宛先コネクタは、AzureまたはAmazon Web Serviceのクラウドサポートを使用しているお客様が利用できます。 認証メカニズムは、宛先がプロビジョニングされるクラウドに基づいて異なり、宛先とそのユースケースに関する他のすべてが同じです。 2つの異なる認証メカニズムについて詳しくは、「[Azure Blob](#authenticate-dlz-azure)でプロビジョニングされたデータランディングゾーンに対する認証」および「[AWSでプロビジョニングされたデータランディングゾーンに対する認証](#authenticate-dlz-aws)」の節を参照してください。
 
-![&#x200B; データランディングゾーン宛先の実装がクラウドのサポートに基づいてどのように異なるかを示す図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png " クラウドサポートによるデータランディングゾーンの宛先実装 "){zoomable="yes"}
+クラウド サポートに基づいて、データ ランディング ゾーンの宛先の実装がどのように異なるかを示す![図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png " クラウドサポートによるデータランディングゾーンの宛先実装"){zoomable="yes"}
 
-## API または UI を使用した [!UICONTROL Data Landing Zone] ストレージへの接続 {#connect-api-or-ui}
+## APIまたはUIを介して[!UICONTROL Data Landing Zone] ストレージに接続する {#connect-api-or-ui}
 
-* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL Data Landing Zone] ストレージの場所に接続するには、以下の [&#x200B; 宛先への接続 &#x200B;](#connect) および [&#x200B; この宛先に対するオーディエンスのアクティブ化 &#x200B;](#activate) の節を参照してください。
-* [!UICONTROL Data Landing Zone] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 &#x200B;](../../api/activate-segments-file-based-destinations.md) を参照してください。
+* Experience Platform ユーザーインターフェイスを使用して[!UICONTROL Data Landing Zone] ストレージの場所に接続するには、以下の「[宛先に接続](#connect)」と「[この宛先にオーディエンスをアクティブ化](#activate)」の節を参照してください。
+* プログラムで[!UICONTROL Data Landing Zone]のストレージの場所に接続するには、[Flow Service API チュートリアルを使用してファイルベースの宛先にオーディエンスをアクティブ化する](../../api/activate-segments-file-based-destinations.md)を参照してください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスオリジン | サポートあり | 説明 |
+| オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ○ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
 
 
-オーディエンスデータタイプでサポートされるオーディエンス：
+オーディエンスのデータタイプ別にサポートされるオーディエンス：
 
-| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+| オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; 人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
-| [&#x200B; 見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | ○ | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
-| [&#x200B; データセットの書き出し &#x200B;](/help/catalog/datasets/overview.md) | ○ | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | ○ | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | ○ | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -70,48 +70,48 @@ AzureまたはAmazon web サービスのクラウドサポートを利用して�
 
 ## データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、次のチュートリアルを参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、チュートリアルを参照してください。
 
-* [Experience Platform ユーザーインターフェイスを使用したデータセットの書き出し &#x200B;](/help/destinations/ui/export-datasets.md) 方法。
-* [Flow Service API を使用してプログラムでデータセットを書き出す &#x200B;](/help/destinations/api/export-datasets.md) 方法。
+* Experience Platform ユーザーインターフェイス [を使用してデータセットを](/help/destinations/ui/export-datasets.md) エクスポートする方法。
+* Flow Service APIを使用してデータセットをプログラムで[ エクスポートする方法](/help/destinations/api/export-datasets.md)。
 
 ## 書き出されたデータのファイル形式 {#file-format}
 
-*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [&#x200B; 書き出しでサポートされるファイル形式 &#x200B;](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+*オーディエンスデータ*&#x200B;を書き出すと、Experience Platformは、指定した保存場所に`.csv`、`parquet`、または`.json`個のファイルを作成します。 ファイルについて詳しくは、オーディエンスアクティベーションのチュートリアルの「[ サポートされている書き出し用ファイル形式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)」セクションを参照してください。
 
-*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [&#x200B; データセットの書き出しが成功したことを確認する &#x200B;](../../ui/export-datasets.md#verify) の節を参照してください。
+*データセット*&#x200B;を書き出すと、Experience Platformは、指定したストレージの場所に`.parquet`または`.json`個のファイルを作成します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの「[成功したデータセットの書き出しを検証する](../../ui/export-datasets.md#verify)」セクションを参照してください。
 
-## Azure Blob でプロビジョニングされたデータランディングゾーンに対する認証 {#authenticate-dlz-azure}
+## Azure Blobでプロビジョニングされたデータランディングゾーンへの認証 {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Microsoft Azureで動作するExperience Platformの実装に適用されます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>このセクションは、Microsoft Azureで動作するExperience Platformの実装に適用されます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
 
 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS は [&#x200B; 共有アクセス署名 &#x200B;](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers) を表します。
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SASは[共有アクセス署名](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers)を表します。
 
-パブリックインターネット接続を介してデータを保護するには、SAS ベースの認証を使用して [!DNL Data Landing Zone] コンテナに安全にアクセスします。 [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワーク用に許可リストや地域間設定を行う必要はありません。
+パブリック インターネット接続でデータを保護するには、SAS ベースの認証を使用して[!DNL Data Landing Zone] コンテナに安全にアクセスしてください。 [!DNL Data Landing Zone] コンテナにアクセスするためにネットワークの変更は必要ありません。つまり、ネットワークに対するネットワークの設定やクロス許可リストの設定を行う必要はありません。
 
-### [!DNL Data Landing Zone] コンテナの [!DNL Azure Storage Explorer] への接続 {#connect-container-to-storage-explorer}
+### [!DNL Data Landing Zone] コンテナを[!DNL Azure Storage Explorer]に接続します {#connect-container-to-storage-explorer}
 
-[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) を使用して、[!DNL Data Landing Zone] コンテナのコンテンツを管理できます。 [!DNL Data Landing Zone] の使用を開始するには、まず資格情報を取得し、それらを [!DNL Azure Storage Explorer] に入力して、[!DNL Data Landing Zone] コンテナを [!DNL Azure Storage Explorer] に接続する必要があります。
+[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/)を使用して、[!DNL Data Landing Zone] コンテナのコンテンツを管理できます。 [!DNL Data Landing Zone]の使用を開始するには、まず資格情報を取得し、[!DNL Azure Storage Explorer]に入力し、[!DNL Data Landing Zone] コンテナを[!DNL Azure Storage Explorer]に接続する必要があります。
 
 [!DNL Azure Storage Explorer] UI 内で、左側のナビゲーションバーの「接続」アイコンを選択します。**リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** を選択し、[!DNL Data Landing Zone] ストレージに接続します。
 
-![Azure UI でハイライト表示されているリソースを選択 &#x200B;](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Azure UIでハイライト表示されているリソースを選択します。](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
-![Azure UI でハイライト表示されている接続方法を選択 &#x200B;](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Azure UIでハイライト表示されている接続方式を選択します。](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 接続方法を選択した後、**表示名**&#x200B;およびお使いの [!DNL Data Landing Zone] コンテナに対応する&#x200B;**[!DNL Blob]コンテナ SAS URL** を入力します。
 
 >[!BEGINSHADEBOX]
 
-### [!DNL Data Landing Zone] ーザーの資格情報の取得 {#retrieve-dlz-credentials}
+### [!DNL Data Landing Zone]の資格情報を取得 {#retrieve-dlz-credentials}
 
-[!DNL Data Landing Zone] 資格情報を取得するには、Experience Platform API を使用する必要があります。 資格情報を取得するための API 呼び出しは、以下に説明されています。 ヘッダーに必要な値の取得について詳しくは、[Adobe Experience Platform API の概要 &#x200B;](/help/landing/api-guide.md) ガイドを参照してください。
+Experience Platform APIを使用して、[!DNL Data Landing Zone]資格情報を取得する必要があります。 資格情報を取得するためのAPI呼び出しについて以下に説明します。 ヘッダーに必要な値の取得について詳しくは、[Adobe Experience Platform APIの概要](/help/landing/api-guide.md) ガイドを参照してください。
 
 **API 形式**
 
@@ -121,13 +121,13 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination` タイプを使用すると、API は、ランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `dlz_destination` | `dlz_destination` タイプを使用すると、APIはランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエスト例では、既存のランディングゾーンの資格情報を取得します。
+次のリクエストの例では、既存のランディングゾーンの資格情報を取得します。
 
 ```shell
 curl -X GET \
@@ -141,7 +141,7 @@ curl -X GET \
 
 **応答**
 
-次の応答は、現在の `SASToken` と `SASUri`、ランディングゾーンコンテナに対応する `storageAccountName` など、ランディングゾーンの資格情報を返します。
+次の応答は、現在の`SASToken`と`SASUri`を含むランディングゾーンの資格情報と、ランディングゾーンコンテナに対応する`storageAccountName`を返します。
 
 ```json
 {
@@ -155,14 +155,14 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `containerName` | ランディングゾーンの名前。 |
-| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの認証に必要なすべての情報が含まれます。 |
-| `SASUri` | ランディングゾーンの共有アクセス署名 URI。 この文字列は、認証対象のランディングゾーンの URI とそれに対応する SAS トークンの組み合わせです。 |
+| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの承認に必要なすべての情報が含まれます。 |
+| `SASUri` | ランディングゾーンの共有アクセス署名URI。 この文字列は、認証するランディングゾーンへのURIと、それに対応するSAS トークンとの組み合わせです。 |
 
 {style="table-layout:auto"}
 
-### 資格情報 [!DNL Data Landing Zone] 更新 {#update-dlz-credentials}
+### [!DNL Data Landing Zone]資格情報を更新 {#update-dlz-credentials}
 
-必要に応じて、資格情報を更新することもできます。 `SASToken` API の `/credentials` エンドポイントに対して POST リクエストを実行することで、[!DNL Connectors] を更新できます。
+必要に応じて資格情報を更新することもできます。 `SASToken` APIの`/credentials` エンドポイントにPOST リクエストを行うことで、[!DNL Connectors]を更新できます。
 
 **API 形式**
 
@@ -172,14 +172,14 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination` タイプを使用すると、API は、ランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
-| `refresh` | `refresh` のアクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken` を自動的に生成できます。 |
+| `dlz_destination` | `dlz_destination` タイプを使用すると、APIはランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `refresh` | `refresh` アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい`SASToken`を自動的に生成できます。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストは、ランディングゾーン資格情報を更新します。
+次のリクエストは、ランディングゾーンの資格情報を更新します。
 
 ```shell
 curl -X POST \
@@ -193,7 +193,7 @@ curl -X POST \
 
 **応答**
 
-次の応答は、`SASToken` および `SASUri` の更新された値を返します。
+次の応答は、`SASToken`と`SASUri`の更新された値を返します。
 
 ```json
 {
@@ -206,33 +206,33 @@ curl -X POST \
 
 >[!ENDSHADEBOX]
 
-上記の API 呼び出しで返され `containerName` 表示名（[!DNL Data Landing Zone]）と SAS URL を入力し、「**次へ**」を選択します。
+前述のAPI呼び出しで返される表示名（`containerName`）と[!DNL Data Landing Zone] SAS URLを入力し、**次へ**&#x200B;を選択します。
 
-![Azure UI でハイライト表示されている「接続情報を入力」 &#x200B;](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Azure UIでハイライト表示されている接続情報を入力します。](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 **概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
-![Azure UI に表示される設定の概要。](/help/sources/images/tutorials/create/dlz/summary.png)
+![Azure UIに表示される設定の概要。](/help/sources/images/tutorials/create/dlz/summary.png)
 
 接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
-![Azure UI で強調表示されている DLZ ユーザーコンテナの概要 &#x200B;](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Azure UIでハイライト表示されたDLZ ユーザーコンテナの概要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、以下の節で説明されているように、Experience Platform UI で [!DNL Data Landing Zone] の宛先への接続を確立する必要があります。
+[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、以下の節で説明するように、Experience Platform UIの[!DNL Data Landing Zone]宛先への接続を確立する必要があります。
 
-## AWSがプロビジョニングしたデータランディングゾーンに対する認証 {#authenticate-dlz-aws}
+## AWSでプロビジョニングされたデータランディングゾーンへの認証 {#authenticate-dlz-aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>この節は、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
 
-以下の操作を実行して、AWSでプロビジョニングされた [!DNL Data Landing Zone] インスタンスに対する資格情報を取得します。 次に、任意のクライアントを使用して [!DNL Data Landing Zone] インスタンスに接続します。
+AWSでプロビジョニングされた[!DNL Data Landing Zone] インスタンスに資格情報を取得するには、次の操作を実行します。 次に、任意のクライアントを使用して[!DNL Data Landing Zone] インスタンスに接続します。
 
 >[!BEGINSHADEBOX]
 
-### [!DNL Data Landing Zone] ーザーの資格情報の取得 {#retrieve-dlz-credentials-aws}
+### [!DNL Data Landing Zone]の資格情報を取得 {#retrieve-dlz-credentials-aws}
 
-[!DNL Data Landing Zone] 資格情報を取得するには、Experience Platform API を使用する必要があります。 資格情報を取得するための API 呼び出しは、以下に説明されています。 ヘッダーに必要な値の取得について詳しくは、[Adobe Experience Platform API の概要 &#x200B;](/help/landing/api-guide.md) ガイドを参照してください。
+Experience Platform APIを使用して、[!DNL Data Landing Zone]資格情報を取得する必要があります。 資格情報を取得するためのAPI呼び出しについて以下に説明します。 ヘッダーに必要な値の取得について詳しくは、[Adobe Experience Platform APIの概要](/help/landing/api-guide.md) ガイドを参照してください。
 
 **API 形式**
 
@@ -242,13 +242,13 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination` クエリパラメーターを追加して、[!DNL Data Landing Zone] *宛先* タイプのコンテナ資格情報を取得することを指定します。 データランディングゾーン *source* の資格情報を接続して取得するには、[sources のドキュメント &#x200B;](/help/sources/connectors/cloud-storage/data-landing-zone.md) を参照してください。 |
+| `dlz_destination` | `dlz_destination` クエリパラメーターを追加して、[!DNL Data Landing Zone] *宛先* タイプのコンテナ資格情報を取得することを指定します。 データランディングゾーン *source*&#x200B;の資格情報を接続して取得するには、[sources ドキュメント ](/help/sources/connectors/cloud-storage/data-landing-zone.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエスト例では、既存のランディングゾーンの資格情報を取得します。
+次のリクエストの例では、既存のランディングゾーンの資格情報を取得します。
 
 ```shell
 curl --request GET \
@@ -261,7 +261,7 @@ curl --request GET \
 
 **応答**
 
-次の応答では、現在の `awsAccessKeyId`、`awsSecretAccessKey`、その他の情報を含む、ランディングゾーンの資格情報が返されます。
+次の応答は、現在の`awsAccessKeyId`、`awsSecretAccessKey`およびその他の情報を含む、ランディングゾーンの資格情報を返します。
 
 ```json
 {
@@ -281,10 +281,10 @@ curl --request GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `credentials` | このオブジェクトには、プロビジョニングされたデータランディングゾーンの場所にファイルを書き出すためにExperience Platformが使用する `awsAccessKeyId`、`awsSecretAccessKey` および `awsSessionToken` が含まれます。 |
-| `dlzPath` | このオブジェクトには、書き出されたファイルが格納される、AdobeでプロビジョニングされたAWSの場所のパスが含まれます。 |
-| `dlzProvider` | これがAmazon S3 でプロビジョニングされたデータランディングゾーンであることを示します。 |
-| `expiryTime` | `credentials` オブジェクトの資格情報の有効期限が切れるタイミングを示します。 資格情報を更新するには、もう一度リクエストを実行します。 |
+| `credentials` | このオブジェクトには、Experience Platformがプロビジョニングされたデータランディングゾーンの場所にファイルを書き出すために使用する`awsAccessKeyId`、`awsSecretAccessKey`および`awsSessionToken`が含まれます。 |
+| `dlzPath` | このオブジェクトには、書き出されたファイルがデポジットされるAdobeでプロビジョニングされたAWSの場所のパスが含まれます。 |
+| `dlzProvider` | これは、Amazon S3 プロビジョニングされたデータランディングゾーンであることを示します。 |
+| `expiryTime` | `credentials` オブジェクトの資格情報の有効期限を示します。 資格情報を更新するには、もう一度リクエストを実行します。 |
 
 {style="table-layout:auto"}
 
@@ -294,54 +294,54 @@ curl --request GET \
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]** および **[!UICONTROL Manage Destinations]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-「[!DNL Data Landing Zone] 前提条件 [!DNL Azure Storage Explorer]」セクションの説明に従って、[&#x200B; コンテナが &#x200B;](#prerequisites) に接続されていることを確認します。 [!DNL Data Landing Zone] は、Adobeでプロビジョニングされたストレージであるため、Experience Platform UI で宛先への認証のためにそれ以上手順を実行する必要はありません。
+[!DNL Data Landing Zone]前提条件[!DNL Azure Storage Explorer] セクションの説明に従って、[ コンテナを](#prerequisites)に接続していることを確認してください。 [!DNL Data Landing Zone]はAdobeでプロビジョニングされたストレージであるため、Experience Platform UIでさらに手順を実行して宛先に対する認証を行う必要はありません。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL Encryption key]**: オプションで、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
-  ![UI での正しい形式の PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
-* **[!UICONTROL Name]**：この宛先に希望する名前を入力します。
+* **[!UICONTROL Encryption key]**: オプションで、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
+  ![UIで正しくフォーマットされたPGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+* **[!UICONTROL Name]**：この宛先の優先名を入力します。
 * **[!UICONTROL Description]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL Folder path]**：書き出したファイルをホストする保存先フォルダーのパス。
-* **[!UICONTROL File type]**：書き出したファイルにExperience Platformで使用する形式を選択します。 「[!UICONTROL CSV]」オプションを選択すると、[&#x200B; ファイル形式オプションを設定 &#x200B;](../../ui/batch-destinations-file-formatting-options.md) することもできます。
+* **[!UICONTROL Folder path]**：書き出されたファイルをホストする宛先フォルダーへのパスを入力します。
+* **[!UICONTROL File type]**：書き出したファイルにExperience Platformで使用する形式を選択します。 [!UICONTROL CSV] オプションを選択する際に、[ ファイル形式オプションを設定することもできます](../../ui/batch-destinations-file-formatting-options.md)。
 * **[!UICONTROL Compression format]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。
-* **[!UICONTROL Include manifest file]**：書き出しの場所、書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 [&#x200B; サンプル マニフェスト ファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。
-   * `flowRunId`：書き出されたファイルを生成した [&#x200B; データフロー実行 &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
-   * `scheduledTime`: ファイルが書き出された時間（UTC 単位）。
-   * `exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。
-   * `exportResults.name`：書き出すファイルの名前。
-   * `size`：書き出されたファイルのサイズ（バイト単位）。
+* **[!UICONTROL Include manifest file]**：書き出しの場所や書き出しサイズなどの情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式`manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して指定されています。 [ サンプルマニフェストファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 マニフェストファイルには、次のフィールドが含まれます。
+   * `flowRunId`: エクスポートされたファイルを生成した[ データフロー実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+   * `scheduledTime`: ファイルがエクスポートされたUTCの時間。
+   * `exportResults.sinkPath`：書き出されたファイルが格納されているストレージの場所のパス。
+   * `exportResults.name`: エクスポートされたファイルの名前。
+   * `size`：書き出されたファイルのサイズ （バイト単位）。
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL Next]**」を選択します。
+宛先接続の詳細の提供が完了したら、**[!UICONTROL Next]**&#x200B;を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 &#x200B;](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対するオーディエンスのアクティブ化の手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### スケジュール設定 {#scheduling}
 
-**[!UICONTROL Scheduling]** の手順では、[&#x200B; ース先に対して &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 書き出しスケジュールを設定 [!DNL Data Landing Zone] できます。また、[&#x200B; 書き出したファイルの名前を設定 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) することもできます。
+**[!UICONTROL Scheduling]**&#x200B;手順では、[宛先に対して](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)書き出しスケジュール [!DNL Data Landing Zone]を設定でき、書き出したファイルの名前を[設定することもできます](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 
 ### 属性と ID のマッピング {#map}
 
-**[!UICONTROL Mapping]** の手順では、プロファイルに書き出す属性フィールドと ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
+**[!UICONTROL Mapping]** ステップでは、プロファイルにエクスポートする属性フィールドとID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
 ## データの正常な書き出しの検証 {#exported-data}
 

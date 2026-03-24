@@ -1,12 +1,12 @@
 ---
 keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
-description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドストレージの場所に配信できます。
+description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs、SFTP クラウドストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 38%
+source-wordcount: '457'
+ht-degree: 39%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 38%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformは、オーディエンスをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、CSV ファイル（[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage Gen2]、[!DNL Data Landing Zone]、[!DNL Google Cloud Storage] および SFTP 用）経由で、オーディエンスとそのプロファイル属性を内部システムに送信できます。[!DNL Amazon Kinesis] と [!DNL Azure Event Hubs] の宛先の場合、データは [!DNL JSON] 形式で Experience Platform からストリーミングされます。
+[!DNL Adobe Experience Platform]は、オーディエンスをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、CSV ファイル（[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage Gen2]、[!DNL Data Landing Zone]、[!DNL Google Cloud Storage] および SFTP 用）経由で、オーディエンスとそのプロファイル属性を内部システムに送信できます。[!DNL Amazon Kinesis] と [!DNL Azure Event Hubs] の宛先の場合、データは [!DNL JSON] 形式で Experience Platform からストリーミングされます。
 
 ![アドビのクラウドストレージの宛先](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## サポートされているクラウドストレージの宛先 {#supported-destinations}
 
-Adobe Experience Platformは、次のクラウドストレージの宛先へのデータの書き出しをサポートしています。
+[!DNL Adobe Experience Platform]は、次のクラウドストレージ宛先へのデータ書き出しをサポートしています：
 
 * [Amazon Kinesis 接続](amazon-kinesis.md)
 * [Amazon S3 接続](amazon-s3.md)
@@ -33,20 +33,20 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 ## 新しいクラウドストレージの宛先への接続 {#connect-destination}
 
-キャンペーン用にオーディエンスをクラウドストレージの宛先に送信するには、まずExperience Platformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーンのクラウドストレージの宛先にオーディエンスを送信するには、Experience Platformが最初に宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
 
 ## マクロを使用して、ストレージの場所にフォルダーを作成する {#use-macros}
 
 >[!NOTE]
 >
-> この節で説明する機能は、すべてのクラウドストレージの宛先で使用できます。 ただし、[Amazon S3](amazon-s3.md) の宛先では、現在、`%SEGMENT_ID%` マクロと `%SEGMENT_NAME%` マクロのみがサポートされています。
+> この節で説明する機能は、すべてのクラウドストレージ宛先で使用できます。 ただし、現在[Amazon S3](amazon-s3.md)の宛先は、`%SEGMENT_ID%`および`%SEGMENT_NAME%` マクロのみをサポートしています。
 
-ストレージの場所にあるオーディエンスファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドでマクロを使用します。 次に示すように、入力フィールドの末尾にマクロを挿入します。
+ストレージの場所にあるオーディエンスファイルごとにカスタムフォルダーを作成するには、フォルダーパス入力フィールドでマクロを使用します。 次に示すように、入力フィールドの末尾にマクロを挿入します。
 
 ![マクロを使用してストレージにフォルダーを作成する方法](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-以下の例では、ID `Luxury Audience` を持つサンプルオーディエンス `25768be6-ebd5-45cc-8913-12fb3f348615` を参照しています。
+以下の例では、ID `Luxury Audience`を持つサンプルオーディエンス `25768be6-ebd5-45cc-8913-12fb3f348615`を参照しています。
 
 **マクロ 1：`%SEGMENT_NAME%`**
 
@@ -67,16 +67,16 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 上記の例と同様に、さらにマクロを使用して、フォルダーの場所にカスタムフォルダー構造を作成できます。
 
-* ファイルの書き出し時間に基づいてカスタムフォルダー名を追加するには、`%DATETIME%` または `%TIMESTAMP%` を指定します。 最初のマクロの形式は `MMDDYYYY_HHMMSS` で、2 番目のマクロの形式は UNIX の 10 桁の形式です。
-* 宛先データフローの名前に基づいてカスタムフォルダーを追加で `%DESTINATION_NAME%` ない。
+* ファイルの書き出し時間に基づいてカスタムフォルダー名を追加する`%DATETIME%`または`%TIMESTAMP%`。 最初のマクロの形式は`MMDDYYYY_HHMMSS`で、2番目のマクロの形式はUNIX 10桁です。
+* 宛先データフローの名前に基づいてカスタムフォルダーを追加する`%DESTINATION_NAME%`。
 
 ## データの書き出しのタイプ {#export-type}
 
-クラウドストレージの宛先では、次の書き出しタイプをサポートしています。
+クラウドストレージの宛先は、次の書き出しタイプをサポートしています。
 
-* **プロファイルベースの書き出**。 これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスメンバーシップなどを含めることができます。
-* **データセットの書き出し**。 この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 機能について [&#x200B; 詳細を参照 &#x200B;](/help/destinations/ui/export-datasets.md)。
+* **プロファイルベースのエクスポート**。 これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスメンバーシップなどを含めることができます。
+* **データセットのエクスポート**。 この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 [機能について詳しくは](/help/destinations/ui/export-datasets.md)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-使用する [&#x200B; サポートされているクラウド宛先 &#x200B;](#supported-destinations) の 1 つを選択した後、[&#x200B; 宛先への接続チュートリアル &#x200B;](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [&#x200B; 書き出し &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。
+使用する[ サポートされているクラウド宛先](#supported-destinations)のいずれかを選択したら、[宛先への接続チュートリアル ](/help/destinations/ui/connect-destination.md)を読んで、宛先への接続を確立する方法を確認してください。 次に、「ファイルベースの宛先へのアクティベーション」チュートリアルを参照して、クラウドストレージの宛先に[ データの書き出しを開始する方法を確認します。](/help/destinations/ui/activate-batch-profile-destinations.md)
