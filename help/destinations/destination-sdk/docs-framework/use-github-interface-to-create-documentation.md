@@ -17,14 +17,14 @@ ht-degree: 3%
 >
 >Adobeのコントリビューターガイドのサポートドキュメントも参照してください。
 >
->* [GitおよびMarkdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [&#x200B; ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [主要な変更に対するGitHub貢献度ワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
+>* [GitおよびMarkdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)
+>* [&#x200B; ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)
+>* [主要な変更に対するGitHub貢献度ワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)。
 
 ## GitHub オーサリング環境の設定 {#set-up-environment}
 
-1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.en`に移動します。
-1. リポジトリを[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)するには、以下に示すように&#x200B;**Fork**&#x200B;をクリックします。 これにより、自分のGitHub アカウントにExperience Platform リポジトリのコピーが作成されます。
+1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.ja-JP`に移動します。
+1. リポジトリを[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository)するには、以下に示すように&#x200B;**Fork**&#x200B;をクリックします。 これにより、自分のGitHub アカウントにExperience Platform リポジトリのコピーが作成されます。
 
    ![Fork Adobe ドキュメントリポジトリ &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +47,7 @@ ht-degree: 3%
    >
    >ブラウザーのウィンドウはいつでも閉じることができ、後で再度開くことができます。 あなたの作品は自動的に保存され、ブラウザを再度開くときにあなたを待っています。
 1. マークダウンエディターからGitHubの新しいファイルにコンテンツをコピーします。
-1. 使用する予定のスクリーンショットや画像については、GitHub インターフェイスを使用してファイルを`experience-platform.en/help/destinations/assets/catalog/[...]`にアップロードします。ここで、`[...]`は目的のカテゴリーです。 例えば、Experience Platformにパーソナライズの宛先を追加する場合は、`personalization` カテゴリを選択します。 オーサリングするページから画像にリンクする必要があります。 [画像へのリンク方法の説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)を参照してください。
+1. 使用する予定のスクリーンショットや画像については、GitHub インターフェイスを使用してファイルを`experience-platform.en/help/destinations/assets/catalog/[...]`にアップロードします。ここで、`[...]`は目的のカテゴリーです。 例えば、Experience Platformにパーソナライズの宛先を追加する場合は、`personalization` カテゴリを選択します。 オーサリングするページから画像にリンクする必要があります。 [画像へのリンク方法の説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja#link-to-images)を参照してください。
 
    ![画像をGitHub](../assets/docs-framework/upload-image.gif)にアップロード
 
@@ -75,7 +75,7 @@ ht-degree: 3%
 
 1. この時点で、Adobe コントリビューターライセンス契約（CLA）への署名を求める通知が表示されます。 これは必須のステップです。 CLAに署名したら、PR ページを更新してプルリクエストを送信します。
 
-1. プルリクエストが送信されたことを確認するには、**の「** プルリクエスト `https://github.com/AdobeDocs/experience-platform.en`」タブを調べます。
+1. プルリクエストが送信されたことを確認するには、**の「** プルリクエスト `https://github.com/AdobeDocs/experience-platform.ja-JP`」タブを調べます。
 
    ![PRが成功しました](../assets/docs-framework/ssd-pr-successful.png)
 
@@ -83,4 +83,4 @@ ht-degree: 3%
 
 >[!TIP]
 >
->ドキュメントに画像やリンクを追加し、Markdownに関するその他の質問については、Adobeの共同編集ガイドの[Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)の使用を参照してください。
+>ドキュメントに画像やリンクを追加し、Markdownに関するその他の質問については、Adobeの共同編集ガイドの[Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)の使用を参照してください。

@@ -42,7 +42,7 @@ ht-degree: 31%
 
 このワークフローでは、データ収集UIに移動して、インストールを完了します。
 
-拡張機能の設定オプションについて詳しくは、[Adobe Analytics拡張機能ページ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) タグのドキュメントを参照してください。
+拡張機能の設定オプションについて詳しくは、[Adobe Analytics拡張機能ページ &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=ja) タグのドキュメントを参照してください。
 
 拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)に関するガイドを参照してください。
 

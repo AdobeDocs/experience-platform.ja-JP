@@ -32,7 +32,7 @@ Destination SDK ドキュメントでは、[!DNL Adobe Experience Platform] Dest
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">すべての設定オプションの説明</a></li>
                 <li> 宛先サーバー設定 – <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md"> サーバー仕様</a>および<a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md"> テンプレート仕様</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">顧客データフィールドとその他の宛先設定コンポーネント</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">テンプレート化とマクロ</a></li>
+                <li><a href="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">テンプレート化とマクロ</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Destination SDK ドキュメントでは、[!DNL Adobe Experience Platform] Dest
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">ストリーミング宛先エンドツーエンドガイドの設定</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Pebble テンプレートを使用したデータ変換について</a>および<a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md"> サポートされているテンプレート関数を表示</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">データ集計ポリシーについて</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">ライブ設定の例</a></li>
+                <li><a href="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">ライブ設定の例</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">ストリーミング宛先のテスト</a></li>
             </ul>
         </td>

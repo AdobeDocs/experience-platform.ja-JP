@@ -22,12 +22,12 @@ ht-degree: 34%
 この宛先接続を使用するには、次のアクセス権があることを確認します。
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 開発者コンソールにアクセスすると、[拡張機能の設定](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension)をAdobe Commerceで完了するために必要なサービスアカウントと資格情報を表示できます。
-- [Adobe Commerce バージョン 2.4.4以降](https://business.adobe.com/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 開発者コンソールにアクセスすると、[拡張機能の設定](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ja#configure-the-extension)をAdobe Commerceで完了するために必要なサービスアカウントと資格情報を表示できます。
+- [Adobe Commerce バージョン 2.4.4以降](https://business.adobe.com/jp/products/commerce.html)
 
 Experience Platform で、以下を作成します。
 
-- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)。
+- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=ja)。
 - [&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#create)。 データセットとは、データを収集するためのストレージと管理の構成要素です。 このデータセットは、上記で作成したスキーマから作成します。
 - [データストリーム](../../../datastreams/configure.md#create)。[!DNL Adobe Experience Platform]から他のAdobe DX製品へのデータの流れを許可するID。 この ID は、特定の Adobe Commerce インスタンス内の特定の web サイトに関連付ける必要があります。このデータストリームを作成する場合は、上で作成した XDM スキーマを指定します。
 
@@ -96,7 +96,7 @@ Experience Platform で、以下を作成します。
 
 ## [!DNL Adobe Commerce] での次の手順 {#next-steps-adobe-commerce}
 
-Experience Platform内の[!DNL Commerce]宛先を設定したので、[!DNL Audience Activation]に[!DNL Commerce]拡張機能をインストールし、作成した[!DNL Commerce Admin] オーディエンスを読み込むように[!DNL Real-Time CDP]を設定する必要があります。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)を参照してください。
+Experience Platform内の[!DNL Commerce]宛先を設定したので、[!DNL Audience Activation]に[!DNL Commerce]拡張機能をインストールし、作成した[!DNL Commerce Admin] オーディエンスを読み込むように[!DNL Real-Time CDP]を設定する必要があります。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ja)を参照してください。
 
 ## Commerce における Audience Activation の検証 {#exported-data}
 

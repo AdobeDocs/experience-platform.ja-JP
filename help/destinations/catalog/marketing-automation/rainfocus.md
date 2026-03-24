@@ -172,4 +172,4 @@ RainFocusの宛先を使用する方法とタイミングをより正確に把�
 
 ## その他のリソース {#additional-resources}
 
-* [RainFocus ストリーミング Source コネクタ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus ストリーミング Source コネクタ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/connectors/analytics/rainfocus)

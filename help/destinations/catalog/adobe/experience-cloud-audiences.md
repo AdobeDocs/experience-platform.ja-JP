@@ -19,15 +19,15 @@ ht-degree: 13%
 
 この宛先を使用して、[!DNL Real-Time CDP]からAudience Managerおよび[!DNL Adobe Analytics]までオーディエンスをアクティブ化します。
 
-オーディエンスを[!DNL Adobe Analytics]に送信するには、Audience Manager ライセンスが必要です。 詳しくは、[Audience Analyticsの概要](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en)を参照してください。
+オーディエンスを[!DNL Adobe Analytics]に送信するには、Audience Manager ライセンスが必要です。 詳しくは、[Audience Analyticsの概要](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=ja)を参照してください。
 
 他のAdobe ソリューションにオーディエンスを送信するには、[!DNL Real-Time CDP]から[Adobe Target](../personalization/adobe-target-connection.md)、[Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md)、[Adobe Campaign](../email-marketing/adobe-campaign.md)、[Marketo Engage](../adobe/marketo-engage.md)への直接接続を使用します。
 
 >[!IMPORTANT]
 >
->この宛先は、[から様々なExperience Cloud ソリューションへの](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)従来のオーディエンス共有の統合[!DNL Real-Time Customer Data Platform]に代わるものです。
+>この宛先は、[から様々なExperience Cloud ソリューションへの](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-in-aam)従来のオーディエンス共有の統合[!DNL Real-Time Customer Data Platform]に代わるものです。
 > 
->[!DNL Real-Time CDP]従来のaudience-sharing統合[を介して](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)からAudience Managerやその他のExperience Cloud ソリューションにオーディエンスを既に共有している場合は、この宛先を使用する前に、カスタマーケアに連絡して従来の統合を無効にする必要があります。
+>[!DNL Real-Time CDP]従来のaudience-sharing統合[を介して](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-in-aam)からAudience Managerやその他のExperience Cloud ソリューションにオーディエンスを既に共有している場合は、この宛先を使用する前に、カスタマーケアに連絡して従来の統合を無効にする必要があります。
 
 ![宛先カタログでハイライト表示されているExperience Cloud オーディエンスの宛先。](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -39,8 +39,8 @@ ht-degree: 13%
 
 Audience Managerでは、次のようなData Management Platform ユースケースに[!DNL Real-Time CDP] オーディエンスを使用できます。
 
-* セグメントに[&#x200B; サードパーティデータ &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data)を追加しています。
-* [&#x200B; アルゴリズムモデリング &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
+* セグメントに[&#x200B; サードパーティデータ &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=ja#third-party-data)を追加しています。
+* [&#x200B; アルゴリズムモデリング &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=ja);
 * [!DNL Real-Time CDP]宛先カタログでまだサポートされていないcookie ベースの宛先に対してオーディエンスをアクティブ化します。
 
 ### 書き出されたオーディエンスの詳細な制御 {#segments-control}
@@ -53,7 +53,7 @@ Audience Manager以降に書き出すオーディエンスを選択するには�
 
 Experience Cloud Audiencesの宛先に送信したオーディエンスは、[!DNL Adobe Analytics]に自動的に表示されません。
 
-オーディエンスを[!DNL Adobe Analytics]に送信する前に、[AnalyticsおよびAudience Manager用のExperience Cloud Identity Serviceを実装する必要があります](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en)。
+オーディエンスを[!DNL Adobe Analytics]に送信する前に、[AnalyticsおよびAudience Manager用のExperience Cloud Identity Serviceを実装する必要があります](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=ja)。
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Experience Cloud Audiencesの宛先に送信したオーディエンスは、[!D
 
 ### 従来のオーディエンス共有ソリューションを使用している {#legacy-audience-sharing}
 
-[!DNL Real-Time CDP]従来のオーディエンス共有の統合[を介して、](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)からAudience Managerやその他のExperience Cloud ソリューションにオーディエンスを既に共有している場合は、カスタマーケアに連絡して従来の統合を無効にする必要があります。
+[!DNL Real-Time CDP]従来のオーディエンス共有の統合[を介して、](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-in-aam)からAudience Managerやその他のExperience Cloud ソリューションにオーディエンスを既に共有している場合は、カスタマーケアに連絡して従来の統合を無効にする必要があります。
 
 プロビジョニングチケットの解決までの納期は6営業日以内です。 既存のレガシー統合を無効にした後、セルフサービス宛先カードを使用して[接続を作成](#connect)に進むことができます。
 
@@ -94,7 +94,7 @@ Experience Cloud Audiences カードの使用中は、次の既知の制限と�
 
 * 現在、Experience Cloud Audiencesの宛先は、組織ごとに1つのサンドボックスで設定できます。 別のサンドボックスで2番目の宛先接続を設定しようとすると、エラーが発生します。
 * 宛先に接続すると、[&#x200B; データフローアラートを有効にする](../../ui/alerts.md) オプションが表示されます。 UIには表示されますが、**アラートを有効にするオプションは現在サポートされていません**。
-* **オーディエンスのバックフィルのサポート**: Audience Managerまたはその他のExperience Cloud ソリューションへの最初の書き出しには、オーディエンスの履歴母集団が含まれます。 この宛先を設定している[従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)のユーザーは、バックフィルの差が約6時間あることを期待する必要があります。
+* **オーディエンスのバックフィルのサポート**: Audience Managerまたはその他のExperience Cloud ソリューションへの最初の書き出しには、オーディエンスの履歴母集団が含まれます。 この宛先を設定している[従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-in-aam)のユーザーは、バックフィルの差が約6時間あることを期待する必要があります。
 * [Audience Composition](../../../segmentation/ui/audience-composition.md)から送信されたオーディエンスは、直接サポートされていません。 この宛先に複合オーディエンスをアクティブ化するには、複合オーディエンスに基づいて[&#x200B; セグメントビルダー](../../../segmentation/ui/segment-builder.md)を介してオーディエンス定義を作成し、新しく作成したオーディエンスをアクティブ化する必要があります。
 
 ### オーディエンスをアクティブ化する際の遅延 {#audience-activation-latency}
@@ -191,7 +191,7 @@ Experience Cloud Audiencesの宛先に対する宛先への接続オプション
 
 ### Audience Managerでのデータの検証 {#validate-audience-manager}
 
-お客様の[!DNL Real-Time CDP]件のオーディエンスは、[&#x200B; シグナル &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits)、[&#x200B; セグメント &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments)としてAudience Managerに表示されます。 上記のドキュメントリンクに記載されているようにデータが表示されているかどうかを、Audience Managerで確認できます。
+お客様の[!DNL Real-Time CDP]件のオーディエンスは、[&#x200B; シグナル &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-as-aam-signals)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-as-aam-traits)、[&#x200B; セグメント &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aep-segments-as-aam-segments)としてAudience Managerに表示されます。 上記のドキュメントリンクに記載されているようにデータが表示されているかどうかを、Audience Managerで確認できます。
 
 オーディエンスが[!DNL Real-Time CDP]から送信されてから15分後に、Audience Managerでセグメント名の入力が開始されます。
 
@@ -204,14 +204,14 @@ Experience Cloud Audiencesの宛先に対する宛先への接続オプション
 [!DNL Real-Time CDP] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
 
 [!DNL Real-Time CDP]のデータガバナンスは、[&#x200B; データ使用ラベル &#x200B;](/help/data-governance/labels/reference.md)とマーケティングアクションの両方によって適用されます。
-データ使用ラベルはアプリケーションに転送されますが、マーケティングアクションは転送されません。 つまり、Audience Managerに到着すると、[!DNL Real-Time CDP]のオーディエンスを任意の利用可能な宛先に書き出すことができます。 Audience Managerでは、[&#x200B; データ書き出し制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html)を使用して、オーディエンスを特定の宛先に書き出さないようにすることができます。
+データ使用ラベルはアプリケーションに転送されますが、マーケティングアクションは転送されません。 つまり、Audience Managerに到着すると、[!DNL Real-Time CDP]のオーディエンスを任意の利用可能な宛先に書き出すことができます。 Audience Managerでは、[&#x200B; データ書き出し制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=ja)を使用して、オーディエンスを特定の宛先に書き出さないようにすることができます。
 
 [!DNL HIPAA] マーケティングアクションでマークされたオーディエンスは、[!DNL Real-Time CDP]からAudience Managerに送信されません。
 
 ### Audience Managerでの権限管理 {#audience-manager-permissions}
 
-Audience Managerのオーディエンスと特性には、[&#x200B; ロールベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) （RBAC）が適用されます。
+Audience Managerのオーディエンスと特性には、[&#x200B; ロールベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=ja) （RBAC）が適用されます。
 
 [!DNL Real-Time CDP]から書き出されたオーディエンスは、**[!UICONTROL Experience Platform Segments]**&#x200B;というAudience Managerの特定のデータソースに割り当てられます。
 
-特定のユーザーのみにオーディエンスへのアクセスを許可するには、[役割ベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html)を使用して、[!DNL Real-Time CDP]人のオーディエンスから作成されたオーディエンスと特性へのユーザーアクセスを設定します。
+特定のユーザーのみにオーディエンスへのアクセスを許可するには、[役割ベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=ja)を使用して、[!DNL Real-Time CDP]人のオーディエンスから作成されたオーディエンスと特性へのユーザーアクセスを設定します。

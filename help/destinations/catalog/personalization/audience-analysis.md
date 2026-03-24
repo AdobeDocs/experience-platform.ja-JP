@@ -14,7 +14,7 @@ ht-degree: 23%
 
 # Audience Analysisの宛先
 
-[!UICONTROL Audience Analysis]の宛先を使用すると、[!DNL Adobe Experience Platform]人のオーディエンスデータを[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)にエンリッチできます。 生成されるエンリッチメントデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) レポートのディメンションとして使用できます。
+[!UICONTROL Audience Analysis]の宛先を使用すると、[!DNL Adobe Experience Platform]人のオーディエンスデータを[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)にエンリッチできます。 生成されるエンリッチメントデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ja) レポートのディメンションとして使用できます。
 
 >[!AVAILABILITY]
 >

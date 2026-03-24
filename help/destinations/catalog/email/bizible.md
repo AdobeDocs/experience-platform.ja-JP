@@ -16,7 +16,7 @@ ht-degree: 33%
 
 [!DNL Bizible]は、業界をリードするB2B アトリビューションソリューションであり、データを比類のない方法で可視化できるので、成長を促進するスマートな意思決定を行うことができます。
 
-[!DNL Bizible]は[!DNL Adobe Experience Platform]のメール拡張機能です。 Bizibleについて詳しくは、Bizibleの概要リソースの[&#x200B; マーケティングアトリビューション &#x200B;](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html)を参照してください。
+[!DNL Bizible]は[!DNL Adobe Experience Platform]のメール拡張機能です。 Bizibleについて詳しくは、Bizibleの概要リソースの[&#x200B; マーケティングアトリビューション &#x200B;](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=ja)を参照してください。
 
 この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 

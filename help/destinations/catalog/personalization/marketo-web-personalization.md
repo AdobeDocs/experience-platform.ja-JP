@@ -16,7 +16,7 @@ ht-degree: 50%
 
 この拡張機能は、[!DNL Marketo's] Web PersonalizationおよびContentAI アプリケーション用のスクリプトをデプロイします。 [!DNL Marketo] Web Personalizationは、匿名の訪問者に対する企業特性や、既知の訪問者に対する[!DNL Marketo] エンゲージメントプラットフォーム内の幅広い行動属性など、web訪問者の特徴に合わせてコンテンツを一意に識別およびパーソナライズします。 [!DNL Marketo]件のContentAIには、B2B顧客向けの独自のwebおよび電子メールキャンペーン向けのAIを活用したレコメンデーションとパーソナライゼーション機能が含まれています。
 
-[!DNL Marketo Web Personalization]は[!DNL Adobe Experience Platform]のパーソナライゼーション拡張機能です。 Marketoでのweb パーソナライゼーションとContentAIについて詳しくは、[Web Personalizationの概要](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html)を参照してください。
+[!DNL Marketo Web Personalization]は[!DNL Adobe Experience Platform]のパーソナライゼーション拡張機能です。 Marketoでのweb パーソナライゼーションとContentAIについて詳しくは、[Web Personalizationの概要](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=ja)を参照してください。
 
 この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
