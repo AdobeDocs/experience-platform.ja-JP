@@ -58,9 +58,9 @@ Adobe Advertising Demand-Side Platform（DSP）の宛先では、認証済みオ
 
 * Experience Platform アカウントのExperience Cloud Organization ID。 Adobe Real-Time Customer Data Platform（Real-Time CDP）のユーザープロフィールページでIDを確認できます。
 
-* キャンペーンのアクティベーション用のオーディエンスを受け取るDSP[の](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)Real-Time CDP ソース。 Adobe アカウントチームは、Experience Cloud組織IDを使用してソースを作成します。
+* キャンペーンのアクティベーション用のオーディエンスを受け取るDSP[の](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage)Real-Time CDP ソース。 Adobe アカウントチームは、Experience Cloud組織IDを使用してソースを作成します。
 
-* [!DNL DSP] アカウントまたは広告主のソースキー。これは、[Real-Time CDP ソースが [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でAdvertising DSPの宛先への宛先接続を作成します。
+* [!DNL DSP] アカウントまたは広告主のソースキー。これは、[Real-Time CDP ソースが [!DNL DSP]](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でAdvertising DSPの宛先への宛先接続を作成します。
 
 ### Cookieを共有するためのID同期の設定 {#cookie-sync}
 
@@ -133,7 +133,7 @@ Adobe Advertising DSPの宛先は、次の表に示すIDのアクティベーシ
 
 宛先に接続するには、[!UICONTROL Connection type] セクションに次のパラメーターを指定し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[Real-Time CDP ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 Adobe アカウントチームは、ソースを作成した後、このキーを共有します。
+* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[Real-Time CDP ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 Adobe アカウントチームは、ソースを作成した後、このキーを共有します。
 
 アカウントまたは広告主キーのフィールドを表示する接続タイプ セクションの![&#x200B; スクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Adobe Advertising DSPの宛先は、次の表に示すIDのアクティベーシ
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="事前設定済みのマッピングセット"
 >abstract="ECIDと[!DNL adcloud] Cookieの2つのマッピングセットが事前に設定されています。 データをAdobe Advertising DSPにアクティベートする場合、アクティベートされたオーディエンスに適格なプロファイルに少なくともECID IDが関連付けられており、宛先に正常にエクスポートされる必要があります。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="詳しくは、事前設定されたマッピングを参照してください。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="詳しくは、事前設定されたマッピングを参照してください。"
 
 >[!IMPORTANT]
 >
