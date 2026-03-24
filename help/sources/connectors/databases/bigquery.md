@@ -54,7 +54,7 @@ OAuth資格情報（クライアント ID、クライアント秘密鍵、およ
 
 これらの役割により、Experience Platformで[!DNL BigQuery]件のジョブを作成および実行し、設定されたテーブルからデータを読み取り、コネクタで必要に応じて読み取りセッションを使用できるようになります。 これらの役割は、ソースで使用する予定の[!DNL BigQuery] データセットを含む同じプロジェクトで付与されていることを確認してください。
 
-[!DNL Google] APIのOAuth 2.0資格情報を生成する方法の詳細な手順については、次の[[!DNL Google] OAuth 2.0認証ガイド ](https://developers.google.com/identity/protocols/oauth2)を参照してください。
+[!DNL Google] APIのOAuth 2.0資格情報を生成する方法の詳細な手順については、次の[[!DNL Google] OAuth 2.0認証ガイド &#x200B;](https://developers.google.com/identity/protocols/oauth2)を参照してください。
 
 >[!TAB  サービス認証]
 
@@ -65,10 +65,10 @@ OAuth資格情報（クライアント ID、クライアント秘密鍵、およ
 | 資格情報 | 説明 |
 | --- | --- |
 | `projectId` | クエリの対象となる[!DNL Google BigQuery]のID。 |
-| `keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 この値は、[[!DNL Google Cloud service accounts]  ダッシュボード ](https://console.cloud.google.com)から取得できます。 キーファイルの内容はJSON形式です。 Experience Platformに認証する場合は、これを[!DNL Base64]にエンコードする必要があります。 |
+| `keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 この値は、[[!DNL Google Cloud service accounts]  ダッシュボード &#x200B;](https://console.cloud.google.com)から取得できます。 キーファイルの内容はJSON形式です。 Experience Platformに認証する場合は、これを[!DNL Base64]にエンコードする必要があります。 |
 | `largeResultsDataSetId` | （オプション）大規模な結果セットのサポートを有効にするために必要な、事前作成された[!DNL Google BigQuery] データセット ID。<ul><li>`largeResultsDataSetId`は、大規模な結果セットの一時テーブルを保存するために使用される、事前作成された[!DNL BigQuery] データセットを参照する必要があります。</li><li>値には、プロジェクトに適格な名前（`marketing_temp_results`を使用しない）ではなく、データセット ID （`my-project.marketing_temp_results`など）のみを含める必要があります。</li><li>`largeResultsDataSetId`で指定されたデータセットの場所（地域）は、クエリするテーブルの場所と一致する必要があります。</li><li>コネクタで使用されるアカウントには、このデータセットの一時的な結果を読み取り、書き込むための権限が必要です。 少なくとも、[!DNL BigQuery Data Editor]で指定されたデータセットに`largeResultsDataSetId`の役割を割り当てます。</li></ul> |
 
-[!DNL Google BigQuery]でのサービスアカウントの使用について詳しくは、[ [!DNL Google BigQuery]での](https://cloud.google.com/bigquery/docs/use-service-accounts) サービスアカウントの使用に関するガイドを参照してください。
+[!DNL Google BigQuery]でのサービスアカウントの使用について詳しくは、[&#x200B; [!DNL Google BigQuery]での](https://cloud.google.com/bigquery/docs/use-service-accounts) サービスアカウントの使用に関するガイドを参照してください。
 
 >[!ENDTABS]
 
@@ -79,7 +79,7 @@ OAuth資格情報（クライアント ID、クライアント秘密鍵、およ
 | 資格情報 | 説明 |
 | --- | --- |
 | `projectId` | クエリの対象となる[!DNL Google BigQuery]のID。 |
-| `keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 この値は、[[!DNL Google Cloud service accounts]  ダッシュボード ](https://console.cloud.google.com)から取得できます。 キーファイルの内容はJSON形式です。 Experience Platformに認証する場合は、これを[!DNL Base64]にエンコードする必要があります。 |
+| `keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 この値は、[[!DNL Google Cloud service accounts]  ダッシュボード &#x200B;](https://console.cloud.google.com)から取得できます。 キーファイルの内容はJSON形式です。 Experience Platformに認証する場合は、これを[!DNL Base64]にエンコードする必要があります。 |
 | `datasetId` | [!DNL Google BigQuery] データセット ID。 このIDは、データテーブルの場所を表します。 |
 
 ## [!DNL Google BigQuery]をExperience Platformに接続
