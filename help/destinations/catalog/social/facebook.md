@@ -171,7 +171,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 以下のビデオでは、[!DNL Facebook]宛先を設定し、オーディエンスをアクティブ化する手順も示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

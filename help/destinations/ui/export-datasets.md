@@ -78,7 +78,7 @@ Experience Platform APIを使用して、データセットを書き出すこと
 
 このページで説明されているワークフローのエンドツーエンドの説明、データセットの書き出し機能を使用する利点、推奨されるユースケースについて、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448819?captions=jpn)
 
 ## サポートされる宛先 {#supported-destinations}
 

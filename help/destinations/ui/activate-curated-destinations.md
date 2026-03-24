@@ -62,7 +62,7 @@ Adobe [!DNL Real-Time CDP]と[!DNL LiveRamp]の統合を使用して、コネク
 
 このページで説明するワークフローのエンドツーエンドの説明については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452655?captions=jpn)
 
 ### 手順1: Experience Platformから[!DNL LiveRamp - Onboarding]の宛先を介してLiveRampにオーディエンスを送信する {#onboarding}
 

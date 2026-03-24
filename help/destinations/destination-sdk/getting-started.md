@@ -81,4 +81,4 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
    * [Destination SDK を使用したファイルベースの宛先の設定](guides/configure-file-based-destination-instructions.md)
 
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
-* Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832)を参照してください。
+* Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/31656?captions=jpn)を参照してください。
