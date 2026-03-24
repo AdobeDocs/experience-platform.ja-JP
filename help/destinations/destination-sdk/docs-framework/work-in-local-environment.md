@@ -17,8 +17,8 @@ ht-degree: 4%
 >
 >Adobeのコントリビューターガイドのサポートドキュメントも参照してください。
 >
->* [GitおよびMarkdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [ ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [GitおよびMarkdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [&#x200B; ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [主要な変更に対するGitHub貢献度ワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
 
 ## GitHubに接続し、ローカルオーサリング環境を設定する {#set-up-environment}
@@ -26,9 +26,9 @@ ht-degree: 4%
 1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.en`に移動します
 2. リポジトリを[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)するには、以下に示すように&#x200B;**Fork**&#x200B;をクリックします。 これにより、自分のGitHub アカウントにExperience Platform リポジトリのコピーが作成されます。
 
-   ![Fork Adobe ドキュメントリポジトリ ](../assets/docs-framework/ssd-fork-repository.gif)
+   ![Fork Adobe ドキュメントリポジトリ &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. リポジトリをローカルマシンに複製します。 次に示すように、**コード/HTTPS/GitHub Desktop**&#x200B;で開くを選択します。 [GitHub Desktop](https://desktop.github.com/)がインストールされていることを確認してください。 詳しくは、Adobe コントリビューターガイドの「[ リポジトリのローカルクローンを作成する](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)」を参照してください。
+3. リポジトリをローカルマシンに複製します。 次に示すように、**コード/HTTPS/GitHub Desktop**&#x200B;で開くを選択します。 [GitHub Desktop](https://desktop.github.com/)がインストールされていることを確認してください。 詳しくは、Adobe コントリビューターガイドの「[&#x200B; リポジトリのローカルクローンを作成する](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)」を参照してください。
 
    ![Adobe ドキュメント リポジトリをローカル環境に複製](../assets/docs-framework/clone-local.png)
 
@@ -36,9 +36,9 @@ ht-degree: 4%
 
 ## 宛先のドキュメントページを作成する {#author-documentation}
 
-1. ドキュメント ページは、[ セルフサービスの宛先テンプレート ](../docs-framework/self-service-template.md)に基づいています。 [宛先テンプレート ](../assets/docs-framework/yourdestination-template.zip)をダウンロードします。 ファイル `yourdestination-template.md`を解凍し、上記の手順4で説明したディレクトリに展開します。  ファイル `YOURDESTINATION.md`の名前を変更します。YOURDESTINATIONは[!DNL Adobe Experience Platform]の宛先の名前です。 例えば、会社の名前がMoviestarの場合、ファイルに`moviestar.md`という名前を付けます。
-2. 新しいファイルを、選択した[ テキストエディター](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)で開きます。 Adobeでは、[Visual Studio Code](https://code.visualstudio.com/)を使用して、Adobe Markdown オーサリング拡張機能をインストールすることをお勧めします。 拡張機能をインストールするには、Visual Studio Codeを開き、画面の左側にある「**[!DNL Extensions]**」タブを選択し、`adobe markdown authoring`を検索します。 拡張機能を選択し、**[!DNL Install]**をクリックします。
-   ![Adobe Markdown オーサリング拡張機能のインストール ](../assets/docs-framework/install-adobe-markdown-extension.gif)
+1. ドキュメント ページは、[&#x200B; セルフサービスの宛先テンプレート &#x200B;](../docs-framework/self-service-template.md)に基づいています。 [宛先テンプレート &#x200B;](../assets/docs-framework/yourdestination-template.zip)をダウンロードします。 ファイル `yourdestination-template.md`を解凍し、上記の手順4で説明したディレクトリに展開します。  ファイル `YOURDESTINATION.md`の名前を変更します。YOURDESTINATIONは[!DNL Adobe Experience Platform]の宛先の名前です。 例えば、会社の名前がMoviestarの場合、ファイルに`moviestar.md`という名前を付けます。
+2. 新しいファイルを、選択した[&#x200B; テキストエディター](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)で開きます。 Adobeでは、[Visual Studio Code](https://code.visualstudio.com/)を使用して、Adobe Markdown オーサリング拡張機能をインストールすることをお勧めします。 拡張機能をインストールするには、Visual Studio Codeを開き、画面の左側にある「**[!DNL Extensions]**」タブを選択し、`adobe markdown authoring`を検索します。 拡張機能を選択し、**[!DNL Install]**&#x200B;をクリックします。
+   ![Adobe Markdown オーサリング拡張機能のインストール &#x200B;](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. 宛先の関連情報を含むテンプレートを編集します。 テンプレートの指示に従います。
 4. ドキュメントに追加する予定のスクリーンショットまたは画像については、`GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`にアクセスしてください。ここで、`[...]`は目的のカテゴリーです。 例えば、Experience Platformにパーソナライゼーションの宛先を追加する場合は、`personalization` フォルダーを選択します。 宛先の新しいフォルダーを作成し、ここに画像を保存します。 オーサリングしているページからリンクする必要があります。 [画像へのリンク方法の説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)を参照してください。
 5. 準備ができたら、作業中のファイルを保存します。
@@ -51,19 +51,19 @@ ht-degree: 4%
 
 1. GitHub デスクトップで、更新のための作業ブランチを作成し、**ブランチを公開**&#x200B;を選択して、ブランチをGitHubに公開します。
 
-![新しいブランチ ローカル ](../assets/docs-framework/new-branch-local.gif)
+![新しいブランチ ローカル &#x200B;](../assets/docs-framework/new-branch-local.gif)
 
-1. GitHub デスクトップで、次に示すように、作業を[ コミット ](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit)します。
+1. GitHub デスクトップで、次に示すように、作業を[&#x200B; コミット &#x200B;](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit)します。
 
-   ![ ローカルにコミット ](../assets/docs-framework/commit-local.png)
+   ![&#x200B; ローカルにコミット &#x200B;](../assets/docs-framework/commit-local.png)
 
-1. GitHub デスクトップで、次に示すように、[作業を](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push)remote[ ブランチに](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) プッシュします。
+1. GitHub デスクトップで、次に示すように、[作業を](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push)remote[&#x200B; ブランチに](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) プッシュします。
 
-   ![ コミットをプッシュ ](../assets/docs-framework/push-local-to-remote.png)
+   ![&#x200B; コミットをプッシュ &#x200B;](../assets/docs-framework/push-local-to-remote.png)
 
 1. GitHub web インターフェイスでプルリクエスト（PR）を開き、作業ブランチをAdobe ドキュメントリポジトリのメインブランチに結合します。 作業したブランチが選択されていることを確認し、**Contribute > Open pull request**&#x200B;を選択します。
 
-   ![ プルリクエストの作成](../assets/docs-framework/ssd-create-pull-request-1.gif)
+   ![&#x200B; プルリクエストの作成](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
 1. 基本ブランチと比較ブランチが正しいことを確認します。 PRにメモを追加し、更新を説明して、**プルリクエストを作成**&#x200B;を選択します。 これにより、フォークの作業ブランチをAdobe リポジトリのメインブランチに結合するためのPRが開きます。
 

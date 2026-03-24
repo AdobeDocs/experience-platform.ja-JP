@@ -22,11 +22,11 @@ Adobe [!DNL Real-Time CDP]のオーディエンスは、1日に1回配信する�
 
 2. ただし、より頻繁にオーディエンスを配信する必要がある場合は、[Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md)宛先を使用する必要があります。 リアルタイムの宛先を使用する場合、Magnite Streamingはリアルタイムでオーディエンスを受け取りますが、Magniteはリアルタイムのオーディエンスをプラットフォームに一時的に保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite リアルタイム宛先を使用する場合は、*また*&#x200B;がMagnite: バッチ宛先 – リアルタイム宛先に対してアクティブ化する各オーディエンスを使用する必要があります。また、バッチ宛先に対してもアクティブ化する必要があります。
 
-まとめ：1日に1回だけAdobe [!DNL Real-Time CDP]のオーディエンスを配信したい場合は、Magnite：バッチ宛先のみを使用し、オーディエンスは1日に1回配信されます。 Adobe [!DNL Real-Time CDP]のオーディエンスをリアルタイムで配信する場合は、Magnite: バッチ宛先とMagnite Real-Time宛先の両方&#x200B;*2}を使用します。*&#x200B;詳しくは、Magnite: Streamingをご覧ください。
+まとめ：1日に1回だけAdobe [!DNL Real-Time CDP]のオーディエンスを配信したい場合は、Magnite：バッチ宛先のみを使用し、オーディエンスは1日に1回配信されます。 Adobe [!DNL Real-Time CDP]のオーディエンスをリアルタイムで配信する場合は、Magnite: バッチ宛先とMagnite Real-Time宛先の両方&#x200B;*2&rbrace;を使用します。*&#x200B;詳しくは、Magnite: Streamingをご覧ください。
 
 
 Magniteについて詳しくは、以下を引き続きお読みください。バッチの宛先、バッチに接続する方法、およびAdobe [!DNL Real-Time CDP] オーディエンスをアクティブ化する方法について。
-リアルタイムの宛先について詳しくは、代わりに[このドキュメントページ ](magnite-streaming.md)を参照してください。
+リアルタイムの宛先について詳しくは、代わりに[このドキュメントページ &#x200B;](magnite-streaming.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -72,7 +72,7 @@ Magnite: バッチ宛先は、Adobe CDPから&#x200B;*any*&#x200B;個のID ソ�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ Magnite: バッチ宛先は、Adobe CDPから&#x200B;*any*&#x200B;個のID ソ�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Magnite: バッチ宛先は、Adobe CDPから&#x200B;*any*&#x200B;個のID ソ�
 | 項目 | タイプ | メモ |
 |-----------------------------|----------|----------|
 | 書き出しタイプ | オーディエンスの書き出し | オーディエンスのすべてのメンバーを、Magnite：バッチ宛先で使用されている識別子（名前、電話番号など）を使用して書き出します。 |
-| 書き出し頻度 | バッチ | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 バッチ [ ファイルベースの宛先](/help/destinations/destination-types.md)について詳しく説明します。 |
+| 書き出し頻度 | バッチ | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 バッチ [&#x200B; ファイルベースの宛先](/help/destinations/destination-types.md)について詳しく説明します。 |
 
 {style="table-layout:auto"}
 
@@ -142,7 +142,7 @@ destination connection/instanceを使用します。
 
 次の画面「ガバナンスポリシーと履行アクション（オプション）」で、関連するデータガバナンスポリシーをオプションで選択できます。 一般的に、「データ書き出し」はMagnite：バッチ宛先に対して選択されます。
 
-![ オプションのガバナンス ポリシーと適用操作](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![&#x200B; オプションのガバナンス ポリシーと適用操作](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
 選択したら、またはオプション画面をスキップする場合は、**[!UICONTROL Create]**&#x200B;を選択します
 
@@ -156,18 +156,18 @@ destination connection/instanceを使用します。
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-**[!UICONTROL Source field]**で、デバイスの任意の属性またはIDを選択できます。 この例では、「DeviceId」というカスタム IdentityMapを選択しました
-![目的のデータフィールドをdevice_id フィールドにマッピング ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+**[!UICONTROL Source field]**&#x200B;で、デバイスの任意の属性またはIDを選択できます。 この例では、「DeviceId」というカスタム IdentityMapを選択しました
+![目的のデータフィールドをdevice_id フィールドにマッピング &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-**[!UICONTROL Target field]**で：
-![適切なデバイスタイプのターゲット IDを選択](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)詳細については、[ サポートされているID](#supported-identities)を参照してください。
+**[!UICONTROL Target field]**&#x200B;で：
+![適切なデバイスタイプのターゲット IDを選択](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)詳細については、[&#x200B; サポートされているID](#supported-identities)を参照してください。
 この例では、**[!UICONTROL Target field]**: magnite_deviceId_CUSTOMを選択しました。これは、**[!UICONTROL Source field]**&#x200B;がカスタム IdentityMap: DeviceIDとして定義されているからです。
 
 >[!NOTE]

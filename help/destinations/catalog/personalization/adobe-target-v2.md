@@ -18,7 +18,7 @@ ht-degree: 38%
 
 [!DNL Adobe Target] v2は[!DNL Adobe Experience Platform]のパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Adobe Target v2 拡張機能](../../assets/catalog/personalization/adobe-target-v2/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 38%
 
 [!DNL Adobe Target] v2拡張機能をインストールするには：
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,14 +42,14 @@ ht-degree: 38%
 
 このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションについて詳しくは、タグドキュメントの[Adobe Target v2拡張機能ページ ](../../../tags/extensions/client/target-v2/overview.md)を参照してください。
+拡張機能の設定オプションについて詳しくは、タグドキュメントの[Adobe Target v2拡張機能ページ &#x200B;](../../../tags/extensions/client/target-v2/overview.md)を参照してください。
 
 拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)に関するガイドを参照してください。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-拡張機能をインストールしたら、ルールの設定を開始できます。 データ収集UIでは、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、タグのドキュメントの[ ルール ](../../../tags/ui/managing-resources/rules.md)の概要を参照してください。
+拡張機能をインストールしたら、ルールの設定を開始できます。 データ収集UIでは、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、タグのドキュメントの[&#x200B; ルール &#x200B;](../../../tags/ui/managing-resources/rules.md)の概要を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 

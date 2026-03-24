@@ -15,7 +15,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ## [!UICONTROL Export file now] の概要 {#overview}
 
@@ -24,7 +24,7 @@ ht-degree: 11%
 >title="今すぐファイルを書き出し"
 >abstract="このコントロールを選択すると、以前の定期エクスポートに加えて完全なファイル書き出しが実行されます。ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。"
 
-この記事では、Experience Platform UIを使用して、[ クラウドストレージ ](/help/destinations/catalog/cloud-storage/overview.md)や[ メールマーケティング ](/help/destinations/catalog/email-marketing/overview.md)などのバッチ宛先にオンデマンドでファイルを書き出す方法について説明します。
+この記事では、Experience Platform UIを使用して、[&#x200B; クラウドストレージ &#x200B;](/help/destinations/catalog/cloud-storage/overview.md)や[&#x200B; メールマーケティング &#x200B;](/help/destinations/catalog/email-marketing/overview.md)などのバッチ宛先にオンデマンドでファイルを書き出す方法について説明します。
 
 **[!UICONTROL Export file now]** コントロールを使用すると、以前にスケジュールされたオーディエンスの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 この書き出しは、以前にスケジュールされた書き出しに加えて行われ、オーディエンスの書き出し頻度は変更されません。
 
@@ -45,7 +45,7 @@ ht-degree: 11%
 >
 >スケジュールされた書き出しでは、オーディエンスの評価後に発生するプロファイル更新が含まれるため、オンデマンド書き出しとは異なるプロファイル数または属性値が表示される場合があります。
 
-詳しくは、[ スケジュールされた書き出し動作について](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior)を参照してください。
+詳しくは、[&#x200B; スケジュールされた書き出し動作について](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior)を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -67,11 +67,11 @@ ht-degree: 11%
 
 4. **[!UICONTROL Yes]**&#x200B;を選択して、ファイルの書き出しを確定し、トリガーします。
 
-   ![ ファイルの書き出し確認ダイアログを表示する画像。](../assets/ui/activate-on-demand/confirm-activation.png)
+   ![&#x200B; ファイルの書き出し確認ダイアログを表示する画像。](../assets/ui/activate-on-demand/confirm-activation.png)
 
 5. ファイルの書き出しが開始されたことを知らせる確認メッセージが表示されます。
 
-   ![ アドホックアクティベーションが成功したことを確認する画像。](../assets/ui/activate-on-demand/ad-hoc-success.png)
+   ![&#x200B; アドホックアクティベーションが成功したことを確認する画像。](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
 6. 「**[!UICONTROL Dataflow runs]**」タブに切り替えて、ファイルの書き出しが開始されたことを確認することもできます。
 

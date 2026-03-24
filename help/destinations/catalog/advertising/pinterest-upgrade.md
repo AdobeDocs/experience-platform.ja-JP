@@ -35,11 +35,11 @@ Adobeは、Pinterest API v5を活用した新しいPinterest destination cardを
 
 ### Pinterestへの再認証 {#reauthenticate}
 
-1. **[!UICONTROL Destinations > Accounts]**に移動し、画面のフィルターを使用して、Pinterestの宛先のみをフィルタリングします。
-   ![Pinterest アカウントのみをフィルタリング ](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. **Pinterest**&#x200B;の宛先で、3つのドット記号…を選択し、**[!UICONTROL Edit details]**を選択します。
+1. **[!UICONTROL Destinations > Accounts]**&#x200B;に移動し、画面のフィルターを使用して、Pinterestの宛先のみをフィルタリングします。
+   ![Pinterest アカウントのみをフィルタリング &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+2. **Pinterest**&#x200B;の宛先で、3つのドット記号…を選択し、**[!UICONTROL Edit details]**&#x200B;を選択します。
    ![詳細を編集を選択](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. **[!UICONTROL Reconnect OAuth]**を選択し、Pinterest アカウントにログインします。
+3. **[!UICONTROL Reconnect OAuth]**&#x200B;を選択し、Pinterest アカウントにログインします。
    ![OAuthの再接続を選択](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. 以下のセクションのアクション項目に進みます
 
@@ -47,9 +47,9 @@ Adobeは、Pinterest API v5を活用した新しいPinterest destination cardを
 
 次に、新しい&#x200B;**[!UICONTROL Pinterest]** カードへのデータフローを有効にする必要があります。
 
-1. **[!UICONTROL Destinations > Browse]**&#x200B;に移動し、画面のフィルターを使用して、**[!UICONTROL Pinterest]**宛先のみをフィルタリングします。
-   ![参照タブでのみPinterest データフローをフィルタリング ](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. ハイパーリンクされた接続名（上記のスクリーンショットの例ではロイヤルティキャンペーン）を&#x200B;**[!UICONTROL Pinterest]**&#x200B;の宛先に選択し、**[!UICONTROL Enable]** トグルを&#x200B;**の**に切り替えます。
+1. **[!UICONTROL Destinations > Browse]**&#x200B;に移動し、画面のフィルターを使用して、**[!UICONTROL Pinterest]**&#x200B;宛先のみをフィルタリングします。
+   ![参照タブでのみPinterest データフローをフィルタリング &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
+2. ハイパーリンクされた接続名（上記のスクリーンショットの例ではロイヤルティキャンペーン）を&#x200B;**[!UICONTROL Pinterest]**&#x200B;の宛先に選択し、**[!UICONTROL Enable]** トグルを&#x200B;**の**&#x200B;に切り替えます。
    ![新しい接続を有効にし、古い接続を無効にする](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
@@ -75,9 +75,9 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2023年12月15日**: <span class="preview">お客様のアクション 1</span>。 新しいカードがPinterestに接続されるように、Pinterestに再認証する必要があります。 完全な手順については、[このセクション ](#reauthenticate)を参照してください。
+**2023年12月15日**: <span class="preview">お客様のアクション 1</span>。 新しいカードがPinterestに接続されるように、Pinterestに再認証する必要があります。 完全な手順については、[このセクション &#x200B;](#reauthenticate)を参照してください。
 
-<span class="preview">顧客アクション 2</span>。次に、新しいカードでデータフローを有効にする必要があります。 完全な手順については、[このセクション ](#disable-old-enable-new-flows)を参照してください。
+<span class="preview">顧客アクション 2</span>。次に、新しいカードでデータフローを有効にする必要があります。 完全な手順については、[このセクション &#x200B;](#disable-old-enable-new-flows)を参照してください。
 
 <!--
 
@@ -87,7 +87,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2024年1月18日以降**: <span class="preview">PinterestはV4広告主APIへのアクセスをオフにしました。 新しい宛先にアップグレードしていない[!DNL Real-Time CDP]のお客様は、Pinterest宛先へのデータフローが失敗したことが確認できるようになりました。 [Pinterestに再認証](#reauthenticate)し、[ アップグレードされた宛先へのデータフロー](#disable-old-enable-new-flows)を有効にして、Pinterestへのキャンペーンを再開します。</span>
+**2024年1月18日以降**: <span class="preview">PinterestはV4広告主APIへのアクセスをオフにしました。 新しい宛先にアップグレードしていない[!DNL Real-Time CDP]のお客様は、Pinterest宛先へのデータフローが失敗したことが確認できるようになりました。 [Pinterestに再認証](#reauthenticate)し、[&#x200B; アップグレードされた宛先へのデータフロー](#disable-old-enable-new-flows)を有効にして、Pinterestへのキャンペーンを再開します。</span>
 
 <!--
 

@@ -31,8 +31,8 @@ ht-degree: 9%
 
 データ変換に計算フィールドを使用するには：
 
-1. [目的のクラウドストレージの宛先に](/help/destinations/ui/connect-destination.md)接続します。 目的のクラウド宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]** [ オプションをオフ ](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)に切り替えます。
-2. クラウドストレージの宛先[の](/help/destinations/ui/activate-batch-profile-destinations.md) アクティブ化手順を実行し、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)手順に進みます。
+1. [目的のクラウドストレージの宛先に](/help/destinations/ui/connect-destination.md)接続します。 目的のクラウド宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]** [&#x200B; オプションをオフ &#x200B;](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)に切り替えます。
+2. クラウドストレージの宛先[の](/help/destinations/ui/activate-batch-profile-destinations.md) アクティブ化手順を実行し、[&#x200B; マッピング &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)手順に進みます。
 
 ## 計算フィールドの操作方法 {#how-to-export-calculated-fields}
 
@@ -56,7 +56,7 @@ ht-degree: 9%
 >
 >**[!UICONTROL Add calculated field]** コントロールがオフに切り替えられた宛先接続では、**[!UICONTROL Export arrays, maps, and objects]** コントロールが無効になっています。 [詳細情報](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)。
 
-![ バッチアクティベーションワークフローのマッピングステップで強調表示された計算フィールドを追加します。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![&#x200B; バッチアクティベーションワークフローのマッピングステップで強調表示された計算フィールドを追加します。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 モーダルウィンドウが開き、Experience Platformから属性を書き出す関数とフィールドを選択できます。
 
@@ -72,17 +72,17 @@ ht-degree: 9%
 
 ワークフローのマッピングステップに戻り、書き出したファイルのこのフィールドに必要な列ヘッダーの値を&#x200B;**[!UICONTROL Target field]**&#x200B;に入力します。
 
-ターゲット フィールドがハイライト表示された![ マッピング ステップ。](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+ターゲット フィールドがハイライト表示された![&#x200B; マッピング ステップ。](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
-![ ターゲットフィールド 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)を選択
+![&#x200B; ターゲットフィールド 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)を選択
 
 準備ができたら、**[!UICONTROL Next]**&#x200B;を選択して、アクティベーションワークフローの次のステップに進みます。
 
-![ ターゲットフィールドがハイライト表示され、ターゲット値が入力されたマッピングステップ。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![&#x200B; ターゲットフィールドがハイライト表示され、ターゲット値が入力されたマッピングステップ。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## データ変換を実行するためのサポートされる関数の例 {#supported-functions}
 
-文書化されているすべての[ データ準備関数](/help/data-prep/functions.md)は、ファイルベースの宛先にデータをアクティブ化する際にサポートされます。
+文書化されているすべての[&#x200B; データ準備関数](/help/data-prep/functions.md)は、ファイルベースの宛先にデータをアクティブ化する際にサポートされます。
 
 以下の関数は、配列の書き出しの処理やフィールドへのハッシュの適用に特化しており、例とともに文書化されています。
 
@@ -233,7 +233,7 @@ johndoe@acme.org,"5"
 
 配列のインデックスにアクセスして、配列から1つの項目を書き出すことができます。 例えば、`size_of`関数の上記の例と同様に、顧客が特定の製品を初めて購入した場合にのみアクセスしてエクスポートする場合は、`purchaseTime[0]`を使用してタイムスタンプの最初の要素をエクスポートし、`purchaseTime[1]`を使用してタイムスタンプの2番目の要素をエクスポートし、`purchaseTime[2]`を使用してタイムスタンプの3番目の要素をエクスポートします。
 
-配列の要素へのアクセス方法を示す![ マッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+配列の要素へのアクセス方法を示す![&#x200B; マッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
 この場合、出力ファイルは次のようになり、顧客が初めて購入した際に書き出されます。
 

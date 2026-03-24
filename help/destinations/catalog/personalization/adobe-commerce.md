@@ -28,7 +28,7 @@ ht-degree: 34%
 Experience Platform で、以下を作成します。
 
 - [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)。
-- [ データセット ](../../../catalog/datasets/user-guide.md#create)。 データセットとは、データを収集するためのストレージと管理の構成要素です。 このデータセットは、上記で作成したスキーマから作成します。
+- [&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#create)。 データセットとは、データを収集するためのストレージと管理の構成要素です。 このデータセットは、上記で作成したスキーマから作成します。
 - [データストリーム](../../../datastreams/configure.md#create)。[!DNL Adobe Experience Platform]から他のAdobe DX製品へのデータの流れを許可するID。 この ID は、特定の Adobe Commerce インスタンス内の特定の web サイトに関連付ける必要があります。このデータストリームを作成する場合は、上で作成した XDM スキーマを指定します。
 
 前提条件を満たしたら、[!DNL Commerce] 宛先に接続します。
@@ -39,7 +39,7 @@ Experience Platform で、以下を作成します。
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -50,10 +50,10 @@ Experience Platform で、以下を作成します。
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -62,11 +62,11 @@ Experience Platform で、以下を作成します。
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 [!DNL Adobe Commerce] 宛先へ接続する手順は次のとおりです。
 
-1. [Experience Platform インターフェイス ](https://experience.adobe.com/platform/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+1. [Experience Platform インターフェイス &#x200B;](https://experience.adobe.com/platform/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 1. **[!UICONTROL Personalization]** を選択します。
 1. ハイライト表示するAdobe Commerceの保存先を選択し、**[!UICONTROL Set up]**&#x200B;を選択します。
 1. [宛先設定のチュートリアル](../../ui/connect-destination.md)に示されている手順に従います。
@@ -90,7 +90,7 @@ Experience Platform で、以下を作成します。
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 [宛先に対するオーディエンスのアクティブ化に関する手順については、](../../ui/activate-edge-personalization-destinations.md) プロファイルとオーディエンスをプロファイルリクエスト宛先[!DNL Commerce]に対してアクティブ化するを参照してください。
 
@@ -102,7 +102,7 @@ Experience Platform内の[!DNL Commerce]宛先を設定したので、[!DNL Audi
 
 [!DNL Real-Time CDP] オーディエンスを[!DNL Adobe Commerce] アカウントにアクティブ化すると、_管理者_ サイドバーに移動し、**[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**&#x200B;に移動すると、これらのオーディエンスが利用可能になります。
 
-![Real-Time CDP オーディエンスダッシュボード ](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Real-Time CDP オーディエンスダッシュボード &#x200B;](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

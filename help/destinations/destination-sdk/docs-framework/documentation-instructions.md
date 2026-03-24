@@ -26,7 +26,7 @@ ht-degree: 7%
 * あなたの目的地のために記入するためのテンプレート。
 * [Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)の使用に関する一般的な手順
 * [Adobe Markdown フレーバーに関する具体的な手順](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) （Adobe Markdown フレーバーは通常のMarkdownとよく似ています）。
-* Experience Platform ドキュメントの品質基準を満たす、宛先ページのドキュメントページの作成に役立つ[ ベストプラクティスページ ](./authoring-best-practices.md)です。
+* Experience Platform ドキュメントの品質基準を満たす、宛先ページのドキュメントページの作成に役立つ[&#x200B; ベストプラクティスページ &#x200B;](./authoring-best-practices.md)です。
 
 ## 前提条件 {#prerequisites}
 
@@ -38,7 +38,7 @@ ht-degree: 7%
 
 ## [!DNL Adobe Experience Platform]で宛先のドキュメントを作成するための概要レベルの手順 {#high-level-instructions}
 
-上位レベルでは、宛先のドキュメントを作成するには、[ ドキュメントリポジトリの](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)分岐[!DNL Adobe Experience Platform]を作成し、新しいブランチで[提供されたドキュメントテンプレート ](./self-service-template.md)を編集する必要があります。 Adobeから提供されるテンプレートを使用して、新しい宛先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これをおこなう手順は、さらに次のとおりです。[新しい宛先ページを作成する手順](./documentation-instructions.md#steps-to-create-docs-page)。
+上位レベルでは、宛先のドキュメントを作成するには、[&#x200B; ドキュメントリポジトリの](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)分岐[!DNL Adobe Experience Platform]を作成し、新しいブランチで[提供されたドキュメントテンプレート &#x200B;](./self-service-template.md)を編集する必要があります。 Adobeから提供されるテンプレートを使用して、新しい宛先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これをおこなう手順は、さらに次のとおりです。[新しい宛先ページを作成する手順](./documentation-instructions.md#steps-to-create-docs-page)。
 
 <!--
 
@@ -49,7 +49,7 @@ ht-degree: 7%
 
 ## ドキュメントテンプレート {#documentation-template}
 
-ドキュメントページの作成を支援するために、Adobeでは[ ドキュメントテンプレート ](./self-service-template.md)が事前入力されています。 以下では、テンプレートを編集してプルリクエストを開く方法を説明します。 Adobe ドキュメントチームは、新しい宛先のドキュメントを確認して公開します。
+ドキュメントページの作成を支援するために、Adobeでは[&#x200B; ドキュメントテンプレート &#x200B;](./self-service-template.md)が事前入力されています。 以下では、テンプレートを編集してプルリクエストを開く方法を説明します。 Adobe ドキュメントチームは、新しい宛先のドキュメントを確認して公開します。
 
 [ここでテンプレートをダウンロードし](../assets/docs-framework/yourdestination-template.zip)、ファイルを解凍して`yourdestination.md` ファイルを抽出します。
 
@@ -64,4 +64,4 @@ GitHub web インターフェイスまたはローカル環境を使用して、
 
 ## ベストプラクティス {#best-practices}
 
-宛先ドキュメント ページを作成する前と作成中に、[ オーサリングのベストプラクティス ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md)を確認します。 また、Adobe ドキュメントチームがドキュメントのオーサリング時に使用する書き込みのヒントについては、[Adobe ドキュメントの書き込みガイダンス ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)を参照してください。
+宛先ドキュメント ページを作成する前と作成中に、[&#x200B; オーサリングのベストプラクティス &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md)を確認します。 また、Adobe ドキュメントチームがドキュメントのオーサリング時に使用する書き込みのヒントについては、[Adobe ドキュメントの書き込みガイダンス &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)を参照してください。

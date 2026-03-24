@@ -49,4 +49,4 @@ ht-degree: 29%
 
 Experience Platformのオーディエンス共有機能を使用して、Experience Platformのオーディエンスを他のAdobeの配信先と共有できます。 詳しくは、以下のページを参照してください（Audience Manager ドキュメントポータルで開きます）。
 
-* [ コアサービス統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platform オーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+* [&#x200B; コアサービス統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platform オーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)

@@ -28,7 +28,7 @@ ht-degree: 31%
 
 [!DNL Zendesk] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
 
 ### [!DNL Zendesk] 前提条件 {#prerequisites-destination}
 
@@ -40,7 +40,7 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `Bearer token` | [!DNL Zendesk] アカウントで生成したアクセストークン。 <br> ドキュメントに従って、[ アクセストークンを生成 [!DNL Zendesk] します（お持ちでない場合）。](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) | `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | [!DNL Zendesk] アカウントで生成したアクセストークン。 <br> ドキュメントに従って、[&#x200B; アクセストークンを生成 [!DNL Zendesk] します（お持ちでない場合）。](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) | `a0b1c2d3e4...v20w21x22y23z` |
 
 ## ガードレール {#guardrails}
 
@@ -60,7 +60,7 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -71,10 +71,10 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -106,7 +106,7 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 * **[!UICONTROL Bearer Token]**: [!DNL Zendesk] アカウントで生成したアクセストークン。
 
-宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**を選択します。
+宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 認証方法を示す![Experience Platform UIのスクリーンショット。](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 指定された詳細が有効な場合、UIには緑色のチェックマークが付いた&#x200B;**[!UICONTROL Connected]** ステータスが表示されます。 その後、次の手順に進むことができます。
@@ -129,8 +129,8 @@ Experience Platformから[!DNL Zendesk] アカウントにデータをエクス�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -185,7 +185,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内の数に対応していることを確認します。
    セグメントを示す![Experience Platform UI スクリーンショットの例。](../../assets/catalog/crm/zendesk/segment.png)
 
-1. [!DNL Zendesk] web サイトにログインし、**[!UICONTROL Contacts]** ページに移動して、オーディエンスのプロファイルが追加されたかどうかを確認します。 このリストは、オーディエンス**[!UICONTROL Mapping ID]**およびオーディエンスステータスで作成された追加フィールドの列を表示するように設定できます。
+1. [!DNL Zendesk] web サイトにログインし、**[!UICONTROL Contacts]** ページに移動して、オーディエンスのプロファイルが追加されたかどうかを確認します。 このリストは、オーディエンス&#x200B;**[!UICONTROL Mapping ID]**&#x200B;およびオーディエンスステータスで作成された追加フィールドの列を表示するように設定できます。
    オーディエンス名で作成された追加フィールドを含む連絡先ページを示す![Zendesk UIのスクリーンショット。](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. または、個々の&#x200B;**[!UICONTROL Person]** ページにドリルダウンして、オーディエンス名とオーディエンスのステータスを表示する&#x200B;**[!UICONTROL Additional fields]** セクションを確認することもできます。
@@ -200,7 +200,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 [!DNL Zendesk] ドキュメントのその他の有用な情報は次のとおりです。
 
 * [最初の通話を行う](https://developer.zendesk.com/documentation/sales-crm/first-call/)
-* [ カスタムフィールド ](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+* [&#x200B; カスタムフィールド &#x200B;](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 
 ### 変更ログ {#changelog}
 
@@ -210,7 +210,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年4月 | ドキュメントの更新 | <ul><li>[ ユースケース ](#use-cases) セクションを更新し、顧客がこの宛先を使用することでメリットを得られるタイミングをより明確に示しました。</li> <li>[ マッピング ](#mapping-considerations-example) セクションを更新して、正しい必須マッピングを反映しました。 この宛先には、`Attribute: last_name`と`Identity: email`のターゲットマッピングが必須です。 これらのマッピングが見つからない場合、他のマッピングは無視され、[!DNL Zendesk]には送信されません。</li> <li>必須マッピングと任意マッピングの両方の明確な例を使用して、[ マッピング ](#mapping-considerations-example) セクションを更新しました。</li></ul> |
+| 2023年4月 | ドキュメントの更新 | <ul><li>[&#x200B; ユースケース &#x200B;](#use-cases) セクションを更新し、顧客がこの宛先を使用することでメリットを得られるタイミングをより明確に示しました。</li> <li>[&#x200B; マッピング &#x200B;](#mapping-considerations-example) セクションを更新して、正しい必須マッピングを反映しました。 この宛先には、`Attribute: last_name`と`Identity: email`のターゲットマッピングが必須です。 これらのマッピングが見つからない場合、他のマッピングは無視され、[!DNL Zendesk]には送信されません。</li> <li>必須マッピングと任意マッピングの両方の明確な例を使用して、[&#x200B; マッピング &#x200B;](#mapping-considerations-example) セクションを更新しました。</li></ul> |
 | 2023年3月 | 初回リリース | 最初の宛先リリースとドキュメントの公開。 |
 
 {style="table-layout:auto"}

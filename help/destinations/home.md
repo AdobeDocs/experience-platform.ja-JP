@@ -28,7 +28,7 @@ Experience Platformの主な機能のひとつは、1st パーティデータを
 
 ## 宛先の手順 {#steps}
 
-* Experience Platformで利用可能なすべての宛先の[ セルフサービスカタログ ](./catalog/overview.md)から選択します。
+* Experience Platformで利用可能なすべての宛先の[&#x200B; セルフサービスカタログ &#x200B;](./catalog/overview.md)から選択します。
 * オーディエンスやデータセットを、MA （マーケティングオートメーション）プラットフォームやデジタル広告プラットフォームなどに送信できます。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
@@ -40,7 +40,7 @@ Experience Platformの主な機能のひとつは、1st パーティデータを
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Experience Platformを宛先プラットフォームのアカウントにリンクします。
 * 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択します。
-* メールマーケティング宛先、CRM プラットフォーム、クラウドストレージの場所など、特定の宛先にオーディエンスをアクティブ化する際に書き出す[Experience Data Model （XDM）フィールド ](../xdm/home.md)を選択します。
+* メールマーケティング宛先、CRM プラットフォーム、クラウドストレージの場所など、特定の宛先にオーディエンスをアクティブ化する際に書き出す[Experience Data Model （XDM）フィールド &#x200B;](../xdm/home.md)を選択します。
 * 様々なタイプのプロファイルとオーディエンスを、個人、アカウント、見込み客などの配信先で活用できます。
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
@@ -61,12 +61,12 @@ Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個の�
 
 | 権限レベル | 説明 |
 | ---- | ---- |
-| **[!UICONTROL View Destinations]** | Experience Platform UIの「宛先」タブにアクセスするには、**[!UICONTROL View Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[ マッピング手順](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | ワークフローの[ マッピング手順](ui/activate-batch-profile-destinations.md#mapping)にアクセスせずに既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | データセットを宛先にエクスポートするには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Identity Graph]** | *ID*&#x200B;を宛先にエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Experience Platform UIの「宛先」タブにアクセスするには、**[!UICONTROL View Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[&#x200B; マッピング手順](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | ワークフローの[&#x200B; マッピング手順](ui/activate-batch-profile-destinations.md#mapping)にアクセスせずに既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | データセットを宛先にエクスポートするには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Identity Graph]** | *ID*&#x200B;を宛先にエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個の�
 * 宛先の作成ワークフローで選択できる&#x200B;*マーケティングアクション*。
 * 特定の使用ラベルを含むデータが、特定のマーケティングアクションを持つ宛先に対してアクティブ化されることを制限する&#x200B;*データ使用ポリシー*。
 
-[ マーケティングアクション ](../data-governance/policies/overview.md)および[ データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Experience Platformのデータガバナンスに関するドキュメントを参照してください。
+[&#x200B; マーケティングアクション &#x200B;](../data-governance/policies/overview.md)および[&#x200B; データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Experience Platformのデータガバナンスに関するドキュメントを参照してください。
 
 宛先を作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Experience Platformの様々な宛先タイプに関する次のページを参照してください。
 

@@ -18,7 +18,7 @@ ht-degree: 57%
 
 [!DNL DoubleClick Floodlight] （Beta）は[!DNL Adobe Experience Platform]の広告拡張機能です。 拡張機能の機能について詳しくは、[!DNL Google]DoubleClick Floodlight[の](https://support.google.com/dcm/answer/2823388?hl=ja) サポートドキュメントを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Doubleclick Floodlight 拡張機能](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 57%
 
 DoubleClick Floodlight（ベータ版）拡張機能をインストールするには、次の手順に従います。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

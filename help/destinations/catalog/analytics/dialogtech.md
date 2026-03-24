@@ -16,7 +16,7 @@ ht-degree: 63%
 
 [!DNL DialogTech]は[!DNL Adobe Experience Platform]のAnalytics拡張機能です。 拡張機能の詳細については、[Dialogtech の Web サイト](https://www.dialogtech.com/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![DialogTech 拡張機能](../../assets/catalog/analytics/dialogtech/catalog.png)
 
@@ -30,7 +30,7 @@ ht-degree: 63%
 
 [!DNL DialogTech] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

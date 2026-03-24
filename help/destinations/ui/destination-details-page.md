@@ -54,14 +54,14 @@ ht-degree: 6%
 
 | 右側のパネル項目 | 説明 |
 | --- | --- |
-| [!UICONTROL Activate audiences] | このコントロールを選択すると、宛先にマッピングされるオーディエンスの編集、書き出しスケジュールの更新、マッピングされた属性とIDの追加と削除が行われます。 詳しくは、「[ オーディエンスデータをオーディエンスストリーミング宛先に対してアクティブ化](./activate-segment-streaming-destinations.md)、[ バッチプロファイルベースの宛先に対してオーディエンスデータをアクティブ化](./activate-batch-profile-destinations.md)、[ ストリーミングプロファイルベースの宛先に対してオーディエンスデータをアクティブ化](./activate-streaming-profile-destinations.md)」のガイドを参照してください。 |
+| [!UICONTROL Activate audiences] | このコントロールを選択すると、宛先にマッピングされるオーディエンスの編集、書き出しスケジュールの更新、マッピングされた属性とIDの追加と削除が行われます。 詳しくは、「[&#x200B; オーディエンスデータをオーディエンスストリーミング宛先に対してアクティブ化](./activate-segment-streaming-destinations.md)、[&#x200B; バッチプロファイルベースの宛先に対してオーディエンスデータをアクティブ化](./activate-batch-profile-destinations.md)、[&#x200B; ストリーミングプロファイルベースの宛先に対してオーディエンスデータをアクティブ化](./activate-streaming-profile-destinations.md)」のガイドを参照してください。 |
 | [!UICONTROL Delete] | このデータフローを削除し、以前にアクティブ化されたオーディエンスが存在する場合は、そのオーディエンスをマッピング解除できます。 |
 | [!UICONTROL Destination name] | このフィールドは、宛先の名前を更新するために編集できます。 |
 | [!UICONTROL Description] | このフィールドは、宛先に対してオプションの説明を更新または追加するために編集できます。 |
-| [!UICONTROL Destination] | オーディエンスの宛先プラットフォームを表します。詳しくは、[宛先カタログ ](../catalog/overview.md)を参照してください。 |
+| [!UICONTROL Destination] | オーディエンスの宛先プラットフォームを表します。詳しくは、[宛先カタログ &#x200B;](../catalog/overview.md)を参照してください。 |
 | [!UICONTROL Status] | 宛先が有効か無効かを示します。 |
 | [!UICONTROL Marketing actions] | データガバナンス目的でこの宛先に適用されるマーケティングアクション（ユースケース）を示します。 |
-| [!UICONTROL Category] | 宛先タイプを示します。 詳しくは、[宛先カタログ ](../catalog/overview.md)を参照してください。 |
+| [!UICONTROL Category] | 宛先タイプを示します。 詳しくは、[宛先カタログ &#x200B;](../catalog/overview.md)を参照してください。 |
 | [!UICONTROL Connection type] | オーディエンスを宛先に送信するフォームを示します。 指定できる値は[!UICONTROL Cookie]と[!UICONTROL Profile-based]です。 |
 | [!UICONTROL Frequency] | オーディエンスが宛先に送信される頻度を示します。指定できる値は[!UICONTROL Streaming]と[!UICONTROL Batch]です。 |
 | [!UICONTROL Identity] | 宛先が受け入れたID名前空間（`GAID`、`IDFA`、`email`など）を表します。 許可されたID名前空間について詳しくは、[ID名前空間の概要](../../identity-service/features/namespaces.md)を参照してください。 |
@@ -74,18 +74,18 @@ ht-degree: 6%
 
 **[!UICONTROL Enabled]/[!UICONTROL Disabled]** トグルを使用して、宛先へのすべてのデータ書き出しを開始および一時停止できます。
 
-![ データフローを有効または無効にする切り替え](../assets/ui/details-page/enable-disable.png)
+![&#x200B; データフローを有効または無効にする切り替え](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs] {#dataflow-runs}
 
-「[!UICONTROL Dataflow runs]」タブには、バッチおよびストリーミング宛先へのデータフロー実行に関する指標データが表示されます。 詳細と指標の定義については、[ データフローの監視](monitor-dataflows.md)を参照してください。
+「[!UICONTROL Dataflow runs]」タブには、バッチおよびストリーミング宛先へのデータフロー実行に関する指標データが表示されます。 詳細と指標の定義については、[&#x200B; データフローの監視](monitor-dataflows.md)を参照してください。
 
 >[!NOTE]
 >
->* 宛先モニタリング機能は、現在、*Experience Platform*、[ カスタムパーソナライゼーション ](/help/destinations/catalog/personalization/adobe-target-connection.md)および[Adobe Target オーディエンス ](/help/destinations/catalog/personalization/custom-personalization.md)の宛先を除く[Experience Cloudのすべての宛先でサポートされています。](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+>* 宛先モニタリング機能は、現在、*Experience Platform*、[&#x200B; カスタムパーソナライゼーション &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md)および[Adobe Target オーディエンス &#x200B;](/help/destinations/catalog/personalization/custom-personalization.md)の宛先を除く[Experience Cloudのすべての宛先でサポートされています。](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 >* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および[HTTP API](/help/destinations/catalog/streaming/http-destination.md)の宛先について、除外されたID、失敗したID、アクティブ化されたIDに関連する指標が推定されます。 アクティベーションデータの量が多いほど、指標の精度が高くなります。
 
-![ データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)
+![&#x200B; データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)
 
 ### データフロー実行期間 {#dataflow-runs-duration}
 
@@ -95,17 +95,17 @@ ht-degree: 6%
 
 ほとんどのストリーミングデータフロー実行で示される&#x200B;**[!UICONTROL Processing duration]**&#x200B;は約4時間ですが、下の画像に示すように、すべてのデータフロー実行の実際の処理時間ははるかに短くなります。 データフロー実行ウィンドウは、Experience Platformが宛先への呼び出しを再試行する必要がある場合に長く開いたままになり、同じタイムウィンドウに到着したデータが欠落しないようにします。
 
-![ ストリーミング宛先の処理時間列がハイライト表示されたデータフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+![&#x200B; ストリーミング宛先の処理時間列がハイライト表示されたデータフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-詳しくは、監視ドキュメントの「[ データフローがストリーミング宛先に実行される](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)」を参照してください。
+詳しくは、監視ドキュメントの「[&#x200B; データフローがストリーミング宛先に実行される](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)」を参照してください。
 
 ### ファイルベースの宛先 {#file-based}
 
 データフローがファイルベースの宛先に対して実行される場合、**[!UICONTROL Processing duration]**&#x200B;は、書き出されるデータのサイズとシステムの読み込みに依存します。 また、ファイルベースの宛先に対して実行されるデータフローは、オーディエンスごとに分類されます。
 
-![ ファイルベースの宛先に対して、処理時間の列がハイライト表示されたデータフロー実行ページの画像。](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![&#x200B; ファイルベースの宛先に対して、処理時間の列がハイライト表示されたデータフロー実行ページの画像。](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-詳しくは、監視ドキュメントの「[ データフローがバッチ（ファイルベース）宛先](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に実行される」を参照してください。
+詳しくは、監視ドキュメントの「[&#x200B; データフローがバッチ（ファイルベース）宛先](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に実行される」を参照してください。
 
 ## [!UICONTROL Activation data] {#activation-data}
 
@@ -119,7 +119,7 @@ ht-degree: 6%
 
 ファイルベースの宛先の&#x200B;**[!UICONTROL Activation data]** タブ。
 
-![ アクティベーションデータビューバッチの宛先](../assets/ui/details-page/activation-data-batch.png)
+![&#x200B; アクティベーションデータビューバッチの宛先](../assets/ui/details-page/activation-data-batch.png)
 
 >[!ENDSHADEBOX]
 
@@ -128,7 +128,7 @@ ht-degree: 6%
 
 ストリーミング宛先の&#x200B;**[!UICONTROL Activation data]** タブ。
 
-![ アクティベーションデータビューストリーミング宛先](../assets/ui/details-page/activation-data-streaming.png)
+![&#x200B; アクティベーションデータビューストリーミング宛先](../assets/ui/details-page/activation-data-streaming.png)
 
 >[!ENDSHADEBOX]
 
@@ -136,32 +136,32 @@ ht-degree: 6%
 
 宛先に対してアクティブ化されたオーディエンスのリストをフィルタリングするには、検索ボックスにオーディエンス名を入力します。 オーディエンスのリストは、検索結果で自動的に更新されます。
 
-![ オーディエンスをフィルタリングするための検索ボックス。](../assets/ui/details-page/filter-audiences.png)
+![&#x200B; オーディエンスをフィルタリングするための検索ボックス。](../assets/ui/details-page/filter-audiences.png)
 
 ### アクティベーションフローから複数のオーディエンスを削除する {#bulk-remove}
 
 既存のアクティベーションフローから複数のオーディエンスを削除するには、オーディエンスを選択し、**[!UICONTROL Remove audiences]**&#x200B;を選択します。
 
-「オーディエンスを削除」オプションを強調表示する![ アクティベーションデータ画面。](../assets/ui/details-page/bulk-remove-audiences.png)
+「オーディエンスを削除」オプションを強調表示する![&#x200B; アクティベーションデータ画面。](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### 複数のファイルをオンデマンドでバッチ宛先にエクスポートします {#bulk-export}
 
-[ ページから](../ui/export-file-now.md)複数のファイルをオンデマンドで&#x200B;**[!UICONTROL Activation data]**&#x200B;書き出すことができます。 これを行うには、ファイルをオンデマンドで書き出すオーディエンスを選択し、**[!UICONTROL Export file now]** コントロールを選択して、選択した各オーディエンスのファイルをバッチ宛先に配信する1回限りの書き出しをトリガーします。
+[&#x200B; ページから](../ui/export-file-now.md)複数のファイルをオンデマンドで&#x200B;**[!UICONTROL Activation data]**&#x200B;書き出すことができます。 これを行うには、ファイルをオンデマンドで書き出すオーディエンスを選択し、**[!UICONTROL Export file now]** コントロールを選択して、選択した各オーディエンスのファイルをバッチ宛先に配信する1回限りの書き出しをトリガーします。
 
 「今すぐファイルを書き出し」ボタンを強調表示する![画像。](../assets/ui/details-page/bulk-export-file-now.png)
 
 ### バッチ宛先に書き出された複数オーディエンスのアクティベーションスケジュールを編集します {#bulk-edit-schedule}
 
-複数のオーディエンスの既存のアクティブ化スケジュールを同時に編集するには、目的のオーディエンスを選択してから&#x200B;**[!UICONTROL Edit schedule]**&#x200B;を選択します。 書き出しスケジュールを定義または編集する方法について詳しくは、「[ オーディエンスの書き出しをスケジュール ](../ui/activate-batch-profile-destinations.md#scheduling)」の節を参照してください。
+複数のオーディエンスの既存のアクティブ化スケジュールを同時に編集するには、目的のオーディエンスを選択してから&#x200B;**[!UICONTROL Edit schedule]**&#x200B;を選択します。 書き出しスケジュールを定義または編集する方法について詳しくは、「[&#x200B; オーディエンスの書き出しをスケジュール &#x200B;](../ui/activate-batch-profile-destinations.md#scheduling)」の節を参照してください。
 
 ![複数のオーディエンスのアクティベーションスケジュールを編集するオプションを強調表示するアクティベーションデータ画面。](../assets/ui/details-page/bulk-edit-schedule.png)
 
 >[!NOTE]
 >
->オーディエンスの詳細ページについて詳しくは、[ オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#audience-details)を参照してください。
+>オーディエンスの詳細ページについて詳しくは、[&#x200B; オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#audience-details)を参照してください。
 
 ### バッチ宛先に書き出された複数のオーディエンスのファイル名を編集する {#bulk-edit-file-names}
 
-複数のオーディエンスの書き出されたファイル名を同時に編集するには、目的のオーディエンスを選択してから&#x200B;**[!UICONTROL Edit file name]**&#x200B;を選択します。 ファイル名を定義または編集する方法について詳しくは、「[ ファイル名を設定する](../ui/activate-batch-profile-destinations.md#configure-file-names)」の節を参照してください。
+複数のオーディエンスの書き出されたファイル名を同時に編集するには、目的のオーディエンスを選択してから&#x200B;**[!UICONTROL Edit file name]**&#x200B;を選択します。 ファイル名を定義または編集する方法について詳しくは、「[&#x200B; ファイル名を設定する](../ui/activate-batch-profile-destinations.md#configure-file-names)」の節を参照してください。
 
 ![複数のオーディエンスのファイル名を編集するオプションを強調表示するデータのアクティベーション画面。](../assets/ui/details-page/bulk-edit-file-name.png)

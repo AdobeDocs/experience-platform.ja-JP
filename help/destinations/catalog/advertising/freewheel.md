@@ -32,7 +32,7 @@ ht-degree: 25%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL FreeWheel]は、次の表に示すIDのアクティブ化をサポートしています。 これらのIDに加えて、[!DNL FreeWheel] アカウントで使用可能な任意のIDを使用できます。 以下の表に記載されていないIDをマッピングする方法については、[属性とIDのマッピング ](#map)を参照してください。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL FreeWheel]は、次の表に示すIDのアクティブ化をサポートしています。 これらのIDに加えて、[!DNL FreeWheel] アカウントで使用可能な任意のIDを使用できます。 以下の表に記載されていないIDをマッピングする方法については、[属性とIDのマッピング &#x200B;](#map)を参照してください。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -50,7 +50,7 @@ ht-degree: 25%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li>カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li>類似オーディエンス，</li><li>連合オーディエンス，</li><li>[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス</li><li>その他。</li></ul> |
 
 {style="table-layout:auto"}
@@ -59,10 +59,10 @@ ht-degree: 25%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | CTV リターゲティング，リーチ抑制 |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | CTV リターゲティング，リーチ抑制 |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -89,7 +89,7 @@ ht-degree: 25%
 
 [!DNL FreeWheel]宛先への認証は、Adobeによって自動的に処理されます。 認証時に資格情報やAPI キーは必要ありません。 Adobeは、お客様の代わりに[!DNL FreeWheel]への安全な接続を管理します。
 
-FreeWheel宛先の認証手順の![ スクリーンショット。](../../assets/catalog/advertising/freewheel/connect-destination.png)
+FreeWheel宛先の認証手順の![&#x200B; スクリーンショット。](../../assets/catalog/advertising/freewheel/connect-destination.png)
 
 **[!UICONTROL Connect to destination]**&#x200B;を選択して、宛先の詳細ステップに進みます。
 
@@ -102,7 +102,7 @@ FreeWheel宛先の認証手順の![ スクリーンショット。](../../assets
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-FreeWheelの宛先の詳細を入力する方法を示す![ サンプルのスクリーンショット。](../../assets/catalog/advertising/freewheel/destination-details.png)
+FreeWheelの宛先の詳細を入力する方法を示す![&#x200B; サンプルのスクリーンショット。](../../assets/catalog/advertising/freewheel/destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
@@ -123,14 +123,14 @@ FreeWheelの宛先の詳細を入力する方法を示す![ サンプルのス�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### オーディエンスの書き出しをスケジュール {#schedule}
 
-FreeWheel アクティベーション ワークフローのスケジュール設定ステップの![ スクリーンショット。](../../assets/catalog/advertising/freewheel/scheduling.png)
+FreeWheel アクティベーション ワークフローのスケジュール設定ステップの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/freewheel/scheduling.png)
 
 **[!UICONTROL Scheduling]** ステップで、各オーディエンスの書き出しスケジュールを設定します。 [!DNL FreeWheel]はハイブリッド書き出しモデルを使用しています。アクティブ化された各オーディエンスの最初の書き出しは完全なスナップショットで、その後、毎日の増分更新が続きます。
 
@@ -153,9 +153,9 @@ FreeWheel アクティベーション ワークフローのスケジュール設
 >
 >[!DNL FreeWheel]でサポートされているID タイプは、ID名前空間ではなく、マッピング UIで&#x200B;**ターゲット属性**&#x200B;として表示されます。
 
-[!DNL FreeWheel] アカウントが[ サポートされているID](#supported-identities) テーブルにリストされていないID タイプをサポートしている場合は、定義済みのリストから選択するのではなく、ターゲットフィールドにID名を手動で入力して、ID タイプにマッピングできます。
+[!DNL FreeWheel] アカウントが[&#x200B; サポートされているID](#supported-identities) テーブルにリストされていないID タイプをサポートしている場合は、定義済みのリストから選択するのではなく、ターゲットフィールドにID名を手動で入力して、ID タイプにマッピングできます。
 
-マッピング手順でターゲット フィールドに直接入力されたカスタム ID名を示す![ スクリーンショット。](../../assets/catalog/advertising/freewheel/custom-identity.png)
+マッピング手順でターゲット フィールドに直接入力されたカスタム ID名を示す![&#x200B; スクリーンショット。](../../assets/catalog/advertising/freewheel/custom-identity.png)
 
 次に、マッピングの例を示します。 実際のマッピングは、プロファイルスキーマと[!DNL FreeWheel] アカウントがサポートするID タイプによって異なります。
 
@@ -202,4 +202,4 @@ segment_3,my_third_segment,30
 
 ## その他のリソース {#additional-resources}
 
-[!DNL FreeWheel]とその広告技術プラットフォームについて詳しくは、[FreeWheel web サイト ](https://www.freewheel.com){target="_blank"}を参照してください。
+[!DNL FreeWheel]とその広告技術プラットフォームについて詳しくは、[FreeWheel web サイト &#x200B;](https://www.freewheel.com){target="_blank"}を参照してください。

@@ -16,7 +16,7 @@ ht-degree: 15%
 >
 >この機能は、[!DNL Real-Time CDP] PrimeとUltimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
-この記事では、[見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md)を[!DNL Adobe Experience Platform]から好みの宛先にエクスポートするために必要なワークフローについて説明します。
+この記事では、[見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md)を[!DNL Adobe Experience Platform]から好みの宛先にエクスポートするために必要なワークフローについて説明します。
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -26,12 +26,12 @@ ht-degree: 15%
 
 ## 前提条件 {#prerequisites}
 
-* 下流の宛先にアクティブ化する前に、まず[見込み客プロファイル ](/help/profile/ui/prospect-profile.md)を取り込み、[見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md)を作成する必要があります。
-* 宛先に対して見込み顧客オーディエンスをアクティブ化するには、宛先に正常に接続している必要があります。 まだ実行していない場合は、[宛先カタログ ](../catalog/overview.md)に移動し、サポートされている宛先を参照して、使用する宛先を設定します。 詳しくは、[宛先への接続](./connect-destination.md)に関するUI チュートリアルを参照してください。
+* 下流の宛先にアクティブ化する前に、まず[見込み客プロファイル &#x200B;](/help/profile/ui/prospect-profile.md)を取り込み、[見込み客オーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md)を作成する必要があります。
+* 宛先に対して見込み顧客オーディエンスをアクティブ化するには、宛先に正常に接続している必要があります。 まだ実行していない場合は、[宛先カタログ &#x200B;](../catalog/overview.md)に移動し、サポートされている宛先を参照して、使用する宛先を設定します。 詳しくは、[宛先への接続](./connect-destination.md)に関するUI チュートリアルを参照してください。
 
 ### 必要な権限 {#permissions}
 
-見込み顧客オーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Activate Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+見込み顧客オーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Activate Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 見込み顧客オーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に&#x200B;**[!UICONTROL Activate]** コントロールがある場合は、適切な権限を持っています。
 
@@ -59,7 +59,7 @@ ht-degree: 15%
 
 ![見込客コントロールがハイライト表示された宛先アクティベーションのワークフロー。](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. 次のセクションに進み、[書き出すプロファイルオーディエンス ](#select-profile-audiences)を選択します。
+1. 次のセクションに進み、[書き出すプロファイルオーディエンス &#x200B;](#select-profile-audiences)を選択します。
 
 ## 見込み客オーディエンスの選択 {#select-prospect-audiences}
 
@@ -69,11 +69,11 @@ ht-degree: 15%
 >
 >このビューには見込み客オーディエンスのみが表示され、他のオーディエンスは表示されません。
 
-![ データセットの書き出しワークフローで、書き出す見込み顧客オーディエンスを選択できる「オーディエンスを選択」ステップが表示されます。](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
+![&#x200B; データセットの書き出しワークフローで、書き出す見込み顧客オーディエンスを選択できる「オーディエンスを選択」ステップが表示されます。](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
 ## スケジュール設定と次のステップ {#scheduling-and-next-steps}
 
-見込み顧客オーディエンスを書き出すための残りのアクティベーションワークフローについては、ファイルベースの宛先へのデータのアクティベーションに関するチュートリアルを参照してください。 [ オーディエンスの書き出しスケジュール手順](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)から続行します。
+見込み顧客オーディエンスを書き出すための残りのアクティベーションワークフローについては、ファイルベースの宛先へのデータのアクティベーションに関するチュートリアルを参照してください。 [&#x200B; オーディエンスの書き出しスケジュール手順](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)から続行します。
 
 >[!NOTE]
 >
@@ -90,5 +90,5 @@ Note that we will need to add links to other destination types here as more dest
 [!DNL Real-Time CDP]のパートナーデータのサポートを通じて有効化されたその他のユースケースを確認します。
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [!DNL Real-Time CDP]でサードパーティのデータ サポートを使用して、[ データパートナーからの見込み客プロファイルでプロファイル基盤を拡大し、新規顧客の獲得やリーチのために顧客とエンゲージします](/help/rtcdp/partner-data/prospecting.md)。
+* [!DNL Real-Time CDP]でサードパーティのデータ サポートを使用して、[&#x200B; データパートナーからの見込み客プロファイルでプロファイル基盤を拡大し、新規顧客の獲得やリーチのために顧客とエンゲージします](/help/rtcdp/partner-data/prospecting.md)。
 * [利用者が認証したり、自社との以前の履歴を持ったりすることなく、訪問中にパートナーが支援する認知度を利用して、オンサイト体験をパーソナライズします](/help/rtcdp/partner-data/onsite-personalization.md)。

@@ -13,7 +13,7 @@ ht-degree: 85%
 
 宛先サーバー仕様は、[!DNL Adobe Experience Platform]からデータを受け取る宛先プラットフォームのタイプと、Experience Platformと宛先との間の通信パラメーターを定義します。 以下に例を示します。
 
-* [ ストリーミング ](#streaming-example)宛先サーバー仕様は、Experience PlatformからHTTP メッセージを受信するHTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
+* [&#x200B; ストリーミング &#x200B;](#streaming-example)宛先サーバー仕様は、Experience PlatformからHTTP メッセージを受信するHTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
 * [Amazon S3](#s3-example)宛先サーバー仕様は、Experience Platformがファイルをエクスポートする[!DNL S3] バケット名とパスを定義します。
 * [SFTP](#sftp-example)宛先サーバー仕様は、Experience PlatformがファイルをエクスポートするSFTP サーバーのホスト名、ルートディレクトリ、通信ポート、および暗号化タイプを定義します。
 

@@ -12,13 +12,13 @@ ht-degree: 1%
 
 # LiveRampのIDにもとづいて、キュレートされた宛先にオーディエンスをアクティベートします
 
-Adobe [!DNL Real-Time CDP]と[!DNL LiveRamp]の統合を使用して、コネクテッド TVとオーディオの宛先など、[!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)をアクティベートに使用する宛先の厳選されたリストに対してオーディエンスをアクティベートします。次に示します。
+Adobe [!DNL Real-Time CDP]と[!DNL LiveRamp]の統合を使用して、コネクテッド TVとオーディオの宛先など、[[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)をアクティベートに使用する宛先の厳選されたリストに対してオーディエンスをアクティベートします。次に示します。
 
 >[!IMPORTANT]
 >
 >Experience Platform インターフェイスでLiveRamp RampIDを取り込む必要はなく、どのような方法でも使用できます。
 >
-> PII ベースのID、既知のID、カスタム IDなど、[!DNL Real-Time CDP]からIDを書き出すことができます。詳しくは、[LiveRampの公式ドキュメント ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)を参照してください。 これらのIDは、アクティベーションプロセスの下流で[!DNL LiveRamp RampIDs]と照合されます。
+> PII ベースのID、既知のID、カスタム IDなど、[!DNL Real-Time CDP]からIDを書き出すことができます。詳しくは、[LiveRampの公式ドキュメント &#x200B;](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)を参照してください。 これらのIDは、アクティベーションプロセスの下流で[!DNL LiveRamp RampIDs]と照合されます。
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -46,7 +46,7 @@ Adobe [!DNL Real-Time CDP]と[!DNL LiveRamp]の統合を使用して、コネク
 
 ## アクティベーションワークフロー {#workflow}
 
-次の画像に示すように、2段階のプロセスを経て、[LiveRamp - オンボーディング ](../catalog/advertising/liveramp-onboarding.md)および[LiveRamp - ディストリビューション ](../catalog/advertising/liveramp-distribution.md)宛先を使用して、コネクテッド TVおよびオーディオ宛先にオーディエンスをアクティブ化します。
+次の画像に示すように、2段階のプロセスを経て、[LiveRamp - オンボーディング &#x200B;](../catalog/advertising/liveramp-onboarding.md)および[LiveRamp - ディストリビューション &#x200B;](../catalog/advertising/liveramp-distribution.md)宛先を使用して、コネクテッド TVおよびオーディオ宛先にオーディエンスをアクティブ化します。
 
 ![LiveRampを通じて、Real-Time CDPからキュレートされた宛先にオーディエンスをアクティブ化するワークフローを示す図。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
@@ -70,7 +70,7 @@ LiveRamp RampIDに基づいてオーディエンスをキュレートされた�
 
 これは、**[!DNL LiveRamp - Onboarding]**&#x200B;宛先を使用して行います。
 
-LiveRamp - オンボーディングの宛先カードを示す![Experience Platform UI イメージ ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+LiveRamp - オンボーディングの宛先カードを示す![Experience Platform UI イメージ &#x200B;](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
 [!DNL LiveRamp - Onboarding]宛先を設定し、Experience Platformからオーディエンスを書き出す方法については、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)宛先ドキュメントを参照してください。
 
@@ -83,13 +83,13 @@ LiveRamp - オンボーディングの宛先カードを示す![Experience Platf
 
 >[!TIP]
 >
->[手順2](#distribution)に移行する前に、[ オーディエンスがLiveRampに正常にエクスポートされたことを検証](../catalog/advertising/liveramp-onboarding.md#exported-data)してください。 [宛先データフローの監視](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に関するドキュメントを参照し、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data)の監視の詳細についてお読みください。
+>[手順2](#distribution)に移行する前に、[&#x200B; オーディエンスがLiveRampに正常にエクスポートされたことを検証](../catalog/advertising/liveramp-onboarding.md#exported-data)してください。 [宛先データフローの監視](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に関するドキュメントを参照し、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data)の監視の詳細についてお読みください。
 
 ### 手順2: [!DNL LiveRamp - Distribution]宛先を介して、接続されたテレビおよびオーディオの宛先にオンボーディングされたオーディエンスをアクティブ化する {#distribution}
 
 オーディエンスがLiveRampに正常にエクスポートされたことを[検証](../catalog/advertising/liveramp-onboarding.md#exported-data)したら、[[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku)、[[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)など、お好みの宛先にオーディエンスをアクティベートします。
 
-オーディエンス（[ ステップ 1](#onboarding)で書き出した）をアクティブ化するには、**[!DNL LiveRamp - Distribution]**&#x200B;宛先を使用します。
+オーディエンス（[&#x200B; ステップ 1](#onboarding)で書き出した）をアクティブ化するには、**[!DNL LiveRamp - Distribution]**&#x200B;宛先を使用します。
 
 LiveRamp – 配布先カードを示す![Experience Platform UI画像](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
@@ -97,7 +97,7 @@ LiveRamp – 配布先カードを示す![Experience Platform UI画像](../asset
 
 >[!IMPORTANT]
 >
->**宛先の** オーディエンス選択&#x200B;**[!DNL LiveRamp - Distribution]** ステップで、*ステップ 1*&#x200B;で[LiveRamp - オンボーディング ](../catalog/advertising/liveramp-onboarding.md)宛先に書き出した[まったく同じオーディエンス ](#onboarding)を選択する必要があります。
+>**宛先の** オーディエンス選択&#x200B;**[!DNL LiveRamp - Distribution]** ステップで、*ステップ 1*&#x200B;で[LiveRamp - オンボーディング &#x200B;](../catalog/advertising/liveramp-onboarding.md)宛先に書き出した[まったく同じオーディエンス &#x200B;](#onboarding)を選択する必要があります。
 
 **[!DNL LiveRamp - Distribution]**&#x200B;宛先を設定する場合は、使用するダウンストリーム宛先（Roku、Disneyなど）ごとに専用の接続を作成する必要があります。
 

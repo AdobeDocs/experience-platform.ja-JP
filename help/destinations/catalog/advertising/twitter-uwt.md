@@ -16,9 +16,9 @@ ht-degree: 57%
 
 [!DNL Twitter Universal Website Tag]は、Twitter UWT タグにビーコンを送信するアクションを提供します。
 
-[!DNL Twitter Universal Website Tag]は[!DNL Adobe Experience Platform]の広告拡張機能です。 拡張機能の機能について詳しくは、Twitter ドキュメントの[ コンバージョントラッキング ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)を参照してください。
+[!DNL Twitter Universal Website Tag]は[!DNL Adobe Experience Platform]の広告拡張機能です。 拡張機能の機能について詳しくは、Twitter ドキュメントの[&#x200B; コンバージョントラッキング &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Twitter ユニバーサルウェブサイトタグ拡張](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 57%
 
 [!DNL Twitter Universal Website Tag] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

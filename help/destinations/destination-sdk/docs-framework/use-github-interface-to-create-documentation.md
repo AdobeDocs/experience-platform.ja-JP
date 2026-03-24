@@ -17,8 +17,8 @@ ht-degree: 3%
 >
 >Adobeのコントリビューターガイドのサポートドキュメントも参照してください。
 >
->* [GitおよびMarkdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [ ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [GitおよびMarkdown オーサリングツールのインストール &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [&#x200B; ドキュメント用にGit リポジトリをローカルに設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [主要な変更に対するGitHub貢献度ワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
 
 ## GitHub オーサリング環境の設定 {#set-up-environment}
@@ -26,7 +26,7 @@ ht-degree: 3%
 1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.en`に移動します。
 1. リポジトリを[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)するには、以下に示すように&#x200B;**Fork**&#x200B;をクリックします。 これにより、自分のGitHub アカウントにExperience Platform リポジトリのコピーが作成されます。
 
-   ![Fork Adobe ドキュメントリポジトリ ](../assets/docs-framework/ssd-fork-repository.gif)
+   ![Fork Adobe ドキュメントリポジトリ &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
 
 1. リポジトリのフォークで、次に示すように、プロジェクト用に新しいブランチを作成します。 この新しいブランチを作業に使用します。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 ## 宛先のドキュメントページを作成する {#author-documentation}
 
-1. [ ドキュメントのセルフサービステンプレート ](./self-service-template.md)に基づいて、宛先ページのコンテンツを作成します。 **[テンプレートをダウンロード](../assets/docs-framework/yourdestination-template.zip)**&#x200B;し、解凍して`.md` ファイルテンプレートを抽出します。
+1. [&#x200B; ドキュメントのセルフサービステンプレート &#x200B;](./self-service-template.md)に基づいて、宛先ページのコンテンツを作成します。 **[テンプレートをダウンロード](../assets/docs-framework/yourdestination-template.zip)**&#x200B;し、解凍して`.md` ファイルテンプレートを抽出します。
 1. [dillinger.io](https://dillinger.io/)などのオンラインマークダウンエディターで、テンプレートのコンテンツを、宛先の関連情報と共に貼り付けて編集します。 テンプレートの指示に従って、入力する必要がある段落と削除できる段落の詳細を確認します。
 
    >[!TIP]
@@ -53,7 +53,7 @@ ht-degree: 3%
 
 1. 準備ができたら、ファイルをブランチに保存します。
 
-   ![ ファイル作成の確認](../assets/docs-framework/ssd-confirm-file-creation.png)
+   ![&#x200B; ファイル作成の確認](../assets/docs-framework/ssd-confirm-file-creation.png)
 
 ## レビュー用にドキュメントを送信 {#submit-review}
 
@@ -63,7 +63,7 @@ ht-degree: 3%
 
 1. ファイルを保存して目的の画像をアップロードしたら、プルリクエスト（PR）を開いて、作業ブランチをAdobe ドキュメントリポジトリのメインブランチに結合できます。 作業したブランチが選択されていることを確認し、**Contribute > Open pull request**&#x200B;を選択します。
 
-   ![ プルリクエストの作成](../assets/docs-framework/ssd-create-pull-request-1.gif)
+   ![&#x200B; プルリクエストの作成](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
 1. 基本ブランチと比較ブランチが正しいことを確認します。 PRにメモを追加し、更新を説明して、**プルリクエストを作成**&#x200B;を選択します。 これにより、フォークの作業ブランチをAdobe リポジトリのメインブランチに結合するためのPRが開きます。
 

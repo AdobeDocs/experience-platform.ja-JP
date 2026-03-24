@@ -16,13 +16,13 @@ ht-degree: 6%
 >
 >宛先にアカウントオーディエンスをアクティブ化する機能は、[の](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[および](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] エディションを購入する企業で使用できます。
 
-この記事では、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md)を[!DNL Adobe Experience Platform]から好みの宛先にエクスポートするために必要なワークフローについて説明します。
+この記事では、[&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md)を[!DNL Adobe Experience Platform]から好みの宛先にエクスポートするために必要なワークフローについて説明します。
 
 ## サポートされる宛先 {#supported-destinations}
 
-**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;に移動し、「**[!UICONTROL Catalog]**」タブを選択します。 **[!UICONTROL Data types]** フィルターを使用して&#x200B;**[!UICONTROL Accounts]**&#x200B;を選択し、アカウントオーディエンスのアクティブ化をサポートする宛先を表示します。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージ宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[ データランディングゾーン ](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）および[Bombora](/help/destinations/catalog/advertising/bombora.md)、[Demandbase](/help/destinations/catalog/advertising/demandbase.md)、および[ （Companies） LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) ストリーミング宛先でのみ使用できます。
+**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;に移動し、「**[!UICONTROL Catalog]**」タブを選択します。 **[!UICONTROL Data types]** フィルターを使用して&#x200B;**[!UICONTROL Accounts]**&#x200B;を選択し、アカウントオーディエンスのアクティブ化をサポートする宛先を表示します。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージ宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[&#x200B; データランディングゾーン &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）および[Bombora](/help/destinations/catalog/advertising/bombora.md)、[Demandbase](/help/destinations/catalog/advertising/demandbase.md)、および[&#x200B; （Companies） LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) ストリーミング宛先でのみ使用できます。
 
-![ アカウントオーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+![&#x200B; アカウントオーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
 ## ビデオの概要 {#video-overview}
 
@@ -32,12 +32,12 @@ ht-degree: 6%
 
 ## 前提条件 {#prerequisites}
 
-* ダウンストリームの宛先にアクティブ化する前に、最初に[ アカウントプロファイル ](/help/rtcdp/accounts/account-profile-overview.md)を取り込み、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md)を作成する必要があります。
-* 宛先に対してアカウントオーディエンスをアクティブ化するには、宛先に正常に接続している必要があります。 まだ実行していない場合は、[宛先カタログ ](../catalog/overview.md)に移動し、サポートされている宛先を参照して、使用する宛先を設定します。 詳しくは、[宛先への接続](./connect-destination.md)に関するUI チュートリアルを参照してください。
+* ダウンストリームの宛先にアクティブ化する前に、最初に[&#x200B; アカウントプロファイル &#x200B;](/help/rtcdp/accounts/account-profile-overview.md)を取り込み、[&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md)を作成する必要があります。
+* 宛先に対してアカウントオーディエンスをアクティブ化するには、宛先に正常に接続している必要があります。 まだ実行していない場合は、[宛先カタログ &#x200B;](../catalog/overview.md)に移動し、サポートされている宛先を参照して、使用する宛先を設定します。 詳しくは、[宛先への接続](./connect-destination.md)に関するUI チュートリアルを参照してください。
 
 ### 必要な権限 {#permissions}
 
-アカウント オーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Activate Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+アカウント オーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Activate Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 アカウントオーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に&#x200B;**[!UICONTROL Activate]** コントロールがある場合は、適切な権限を持っています。
 
@@ -61,9 +61,9 @@ ht-degree: 6%
 
 >[!TIP]
 > 
->アカウント オーディエンスをアクティブ化する新しい宛先を設定する場合は、**[!UICONTROL Configure new destination]**&#x200B;を選択して[宛先への接続](/help/destinations/ui/connect-destination.md) ワークフローをトリガーにし、[ アカウントをデータ型](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports)として選択します。
+>アカウント オーディエンスをアクティブ化する新しい宛先を設定する場合は、**[!UICONTROL Configure new destination]**&#x200B;を選択して[宛先への接続](/help/destinations/ui/connect-destination.md) ワークフローをトリガーにし、[&#x200B; アカウントをデータ型](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports)として選択します。
 
-![ アカウント管理がハイライト表示された宛先アクティベーションのワークフロー。](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
+![&#x200B; アカウント管理がハイライト表示された宛先アクティベーションのワークフロー。](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
 1. 次のセクションに進み、[書き出すアカウントオーディエンスを選択](#select-profile-audiences)します。
 
@@ -75,11 +75,11 @@ ht-degree: 6%
 >
 >このビューには&#x200B;*アカウントオーディエンス*&#x200B;のみが表示され、他のオーディエンスタイプは表示されません。
 
-![ データセットの書き出しワークフローで、書き出すアカウントオーディエンスを選択できる「オーディエンスを選択」ステップが表示されます。](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
+![&#x200B; データセットの書き出しワークフローで、書き出すアカウントオーディエンスを選択できる「オーディエンスを選択」ステップが表示されます。](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
 ## スケジュール設定と次のステップ {#scheduling-and-next-steps}
 
-アカウントオーディエンスを書き出すアクティベーションワークフローの残りの部分については、ファイルベースの宛先へのデータのアクティベーションに関するチュートリアルを参照してください。 [ オーディエンスの書き出しスケジュール手順](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)から続行します。 **[!UICONTROL (Companies) LinkedIn Matched Audiences]**&#x200B;宛先に対してアカウントオーディエンスをアクティブ化する場合は、ストリーミング宛先のアクティブ化に関するチュートリアルを参照してください。 [ マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)から続行します。
+アカウントオーディエンスを書き出すアクティベーションワークフローの残りの部分については、ファイルベースの宛先へのデータのアクティベーションに関するチュートリアルを参照してください。 [&#x200B; オーディエンスの書き出しスケジュール手順](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)から続行します。 **[!UICONTROL (Companies) LinkedIn Matched Audiences]**&#x200B;宛先に対してアカウントオーディエンスをアクティブ化する場合は、ストリーミング宛先のアクティブ化に関するチュートリアルを参照してください。 [&#x200B; マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)から続行します。
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ ht-degree: 6%
 | ソースフィールド | ターゲットフィールド |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` （**[!UICONTROL Select Identity namespace]**&#x200B;を選択する際に&#x200B;**[!UICONTROL Target Field]** ビューでこのフィールドを選択します）。<br> ![ ワークフローで強調表示されているID名前空間を選択して、アカウントオーディエンスを宛先にアクティブ化します。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " ワークフローで強調表示されたID名前空間を選択して、アカウントオーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` （**[!UICONTROL Select Identity namespace]**&#x200B;を選択する際に&#x200B;**[!UICONTROL Target Field]** ビューでこのフィールドを選択します）。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、アカウントオーディエンスを宛先にアクティブ化します。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " ワークフローで強調表示されたID名前空間を選択して、アカウントオーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

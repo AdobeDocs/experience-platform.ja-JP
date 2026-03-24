@@ -28,7 +28,7 @@ ht-degree: 47%
 
 ## 接続 {#connections}
 
-**[!UICONTROL Profile Export]**&#x200B;の&#x200B;**[!UICONTROL Streaming Audience Export]**、**[!DNL Edge Personalization]**&#x200B;および[!DNL Adobe Experience Platform]の宛先は、イベントデータを取得し、他のデータソースと組み合わせて[ リアルタイム顧客プロファイル ](../profile/home.md)を形成し、セグメンテーションを適用し、オーディエンスと適格プロファイルを宛先に書き出します。
+**[!UICONTROL Profile Export]**&#x200B;の&#x200B;**[!UICONTROL Streaming Audience Export]**、**[!DNL Edge Personalization]**&#x200B;および[!DNL Adobe Experience Platform]の宛先は、イベントデータを取得し、他のデータソースと組み合わせて[&#x200B; リアルタイム顧客プロファイル &#x200B;](../profile/home.md)を形成し、セグメンテーションを適用し、オーディエンスと適格プロファイルを宛先に書き出します。
 
 ## プロファイル書き出し宛先 {#profile-export}
 
@@ -87,7 +87,7 @@ Experience Platformから3種類のオーディエンスを様々な配信先に
 * アカウントオーディエンス
 * 見込み客オーディエンス
 
-[様々なオーディエンスタイプ ](/help/segmentation/types/account-audiences.md#terminology)について詳しく説明します。
+[様々なオーディエンスタイプ &#x200B;](/help/segmentation/types/account-audiences.md#terminology)について詳しく説明します。
 
 宛先カードの記号は、各宛先に書き出すことができるオーディエンスの種類を示しています。
 
@@ -124,4 +124,4 @@ Experience Platformでは、タグ管理の機能と柔軟性を活用して、U
 
 [宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、実現しようとしているマーケティングアクションに応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**メールマーケティング**&#x200B;など）別にグループ化されています。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
-![ カタログ ページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログ ページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}
+![&#x200B; カタログ ページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログ ページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}

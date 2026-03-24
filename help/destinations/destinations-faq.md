@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 概要 {#overview}
 
-このドキュメントでは、[!DNL Adobe Experience Platform]宛先に関するよくある質問に対する回答を提供します。 すべての[!DNL Experience Platform] APIで発生したものなど、他の[!DNL Experience Platform] サービスに関連する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、[!DNL Adobe Experience Platform]宛先に関するよくある質問に対する回答を提供します。 すべての[!DNL Experience Platform] APIで発生したものなど、他の[!DNL Experience Platform] サービスに関連する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md)を参照してください。
 
 ## 一般的な宛先に関する質問 {#general}
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 オーディエンスの書き出しスケジュールがセグメント化スケジュールと異なる場合、特にストリーミングオーディエンスに関しては、UIと書き出された[!DNL CSV] ファイルのプロファイル数が異なります。
 
-詳しくは、[ セグメント化サービスのドキュメント ](../segmentation/home.md)を参照してください。
+詳しくは、[&#x200B; セグメント化サービスのドキュメント &#x200B;](../segmentation/home.md)を参照してください。
 +++
 
 ### 更新されたオーディエンスを同じ宛先に対して非アクティブ化して再アクティブ化すると、マッチ率が低くなるのはなぜですか？ {#low-match-rates-reactivation}
@@ -93,7 +93,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 オーディエンスを[!DNL Facebook]に送信する前に、次の要件を満たしていることを確認してください。
 
 * [!DNL Facebook] ユーザーアカウントでは、使用するAd アカウントに対して&#x200B;**[!DNL Manage campaigns]**&#x200B;権限を有効にする必要があります。
-* **[!DNL Adobe Experience Cloud]** ビジネス アカウントを[!DNL Facebook Ad Account]の広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの「[ ビジネスマネージャーにパートナーを追加](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
+* **[!DNL Adobe Experience Cloud]** ビジネス アカウントを[!DNL Facebook Ad Account]の広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの「[&#x200B; ビジネスマネージャーにパートナーを追加](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
 
   >[!IMPORTANT]
   >
@@ -158,7 +158,7 @@ ID照合要件について詳しくは、[ID照合要件](catalog/social/faceboo
 ### Google Customer Matchにオーディエンスを書き出す際に、Google インターフェイスのオーディエンス名の末尾に追加の数字が追加されているのはなぜですか？ {#google-customer-match-audience-name-numbers}
 
 +++回答
-Googleでは、オーディエンス名は一意である必要があります。 表示される数値は[UNIX タイムスタンプ ](https://www.unixtimestamp.com/)で、同じオーディエンスを複数のGoogleの宛先にマッピングした場合、オーディエンス名を一意に保つために追加されます。
+Googleでは、オーディエンス名は一意である必要があります。 表示される数値は[UNIX タイムスタンプ &#x200B;](https://www.unixtimestamp.com/)で、同じオーディエンスを複数のGoogleの宛先にマッピングした場合、オーディエンス名を一意に保つために追加されます。
 +++
 
 ## LinkedIn Matched Audiences {#linkedin}
@@ -201,13 +201,13 @@ ID照合要件について詳しくは、[ID照合要件](catalog/social/linkedi
 
 ただし、Web SDKの代わりに[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja)を使用する場合は、次セッションのパーソナライゼーションのみがサポートされます。
 
-[同じページと次のページのパーソナライゼーション ](ui/activate-edge-personalization-destinations.md)のユースケースでは、Web SDKまたは[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)のいずれかを使用する必要があります。 実装の詳細については、[ エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md)に関するドキュメントを参照してください。
+[同じページと次のページのパーソナライゼーション &#x200B;](ui/activate-edge-personalization-destinations.md)のユースケースでは、Web SDKまたは[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)のいずれかを使用する必要があります。 実装の詳細については、[&#x200B; エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md)に関するドキュメントを参照してください。
 +++
 
 ### Real-time Customer Data Platformから[!DNL Adobe Target]またはカスタム Personalizationの宛先に送信できる属性の数に制限はありますか？ {#target-attributes-limit}
 
 +++回答
-はい、同一ページおよび次ページのパーソナライゼーションのユースケースでは、サンドボックスごとに最大30個の属性をサポートします。これは、[!DNL Adobe Target]またはカスタム Personalizationの宛先に対してオーディエンスをアクティブ化する場合です。 アクティベーションガードレールについて詳しくは、[ ガードレールのドキュメント ](guardrails.md#edge-destinations-activation)を参照してください。
+はい、同一ページおよび次ページのパーソナライゼーションのユースケースでは、サンドボックスごとに最大30個の属性をサポートします。これは、[!DNL Adobe Target]またはカスタム Personalizationの宛先に対してオーディエンスをアクティブ化する場合です。 アクティベーションガードレールについて詳しくは、[&#x200B; ガードレールのドキュメント &#x200B;](guardrails.md#edge-destinations-activation)を参照してください。
 +++
 
 ### アクティベーションでサポートされる属性の種類（配列、マップなど） {#target-supported-attribute-types}
@@ -247,7 +247,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Edge Network APIを使用して連携できますか？ {#edge-network-api-integration}
 
 +++回答
-はい、Edge Network APIはカスタム Personalizationの宛先と連携します。 プロファイル属性には機密データが含まれる場合があるため、このデータを保護するために、カスタム Personalizationの宛先では、データ収集にEdge Network APIを使用する必要があります。 さらに、すべてのAPI呼び出しは[認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)で行う必要があります。
+はい、Edge Network APIはカスタム Personalizationの宛先と連携します。 プロファイル属性には機密データが含まれる場合があるため、このデータを保護するために、カスタム Personalizationの宛先では、データ収集にEdge Network APIを使用する必要があります。 さらに、すべてのAPI呼び出しは[認証済みコンテキスト &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)で行う必要があります。
 +++
 
 ### エッジ上でアクティブな結合ポリシーは1つだけです。 別の結合ポリシーを使用するオーディエンスを作成しても、ストリーミングオーディエンスとして[!DNL Adobe Target]に送信できますか？ {#edge-merge-policy}
@@ -259,7 +259,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### データ使用のラベル付けと施行（DULE）と同意ポリシーは適用されますか？ {#dule-consent-enforcement}
 
 +++回答
-はい。選択したマーケティングアクションに作成され、関連付けられた[ データガバナンスおよび同意ポリシー](../data-governance/home.md)が、選択した属性のアクティベーションを管理します。
+はい。選択したマーケティングアクションに作成され、関連付けられた[&#x200B; データガバナンスおよび同意ポリシー](../data-governance/home.md)が、選択した属性のアクティベーションを管理します。
 +++
 
 ### [!DNL Adobe Target]および[!DNL Custom Personalization]の宛先は[!DNL HIPAA]に準拠していますか？ {#hipaa-compliance}

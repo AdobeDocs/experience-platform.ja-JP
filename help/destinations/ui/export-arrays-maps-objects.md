@@ -19,7 +19,7 @@ ht-degree: 14%
 >さらに、[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)の宛先にmap-type フィールドを書き出すことができます。
 
 
-[!DNL Real-Time CDP]から[ クラウドストレージの宛先](/help/destinations/catalog/cloud-storage/overview.md)に配列、マップ、オブジェクトを書き出す方法について説明します。 さらに、マップタイプのフィールドを[ エンタープライズ宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)に書き出すことができ、[ エッジパーソナライゼーション宛先](/help/destinations/destination-types.md#edge-personalization-destinations)に制限があります。 このドキュメントでは、書き出しワークフロー、この機能によって有効になるユースケース、および既知の制限事項について説明します。 以下の表を参照して、宛先タイプごとに使用可能な機能を理解します。
+[!DNL Real-Time CDP]から[&#x200B; クラウドストレージの宛先](/help/destinations/catalog/cloud-storage/overview.md)に配列、マップ、オブジェクトを書き出す方法について説明します。 さらに、マップタイプのフィールドを[&#x200B; エンタープライズ宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)に書き出すことができ、[&#x200B; エッジパーソナライゼーション宛先](/help/destinations/destination-types.md#edge-personalization-destinations)に制限があります。 このドキュメントでは、書き出しワークフロー、この機能によって有効になるユースケース、および既知の制限事項について説明します。 以下の表を参照して、宛先タイプごとに使用可能な機能を理解します。
 
 | 宛先のタイプ | 配列、マップ、その他のカスタムオブジェクトを書き出す機能 |
 |---|---|
@@ -38,13 +38,13 @@ Experience Platformからの配列、マップ、その他のオブジェクト�
 
 このセクションの機能に関する最も重要な情報を取得し、詳細については、以下のドキュメントの他のセクションに進んでください。
 
-* クラウドストレージの宛先の場合、配列、マップ、オブジェクトを書き出す機能は、**配列、マップ、オブジェクトを書き出す**&#x200B;切り替えスイッチの選択によって異なります。 詳しくは、[ ページ ](#export-arrays-maps-objects-toggle)を参照してください。
+* クラウドストレージの宛先の場合、配列、マップ、オブジェクトを書き出す機能は、**配列、マップ、オブジェクトを書き出す**&#x200B;切り替えスイッチの選択によって異なります。 詳しくは、[&#x200B; ページ &#x200B;](#export-arrays-maps-objects-toggle)を参照してください。
 * 配列、マップ、オブジェクトを`JSON`および`Parquet` ファイルのクラウドストレージの宛先に書き出すことができます。 エンタープライズおよびエッジパーソナライゼーションの宛先の場合、書き出されたデータタイプは`JSON`です。 個人と見込み客のオーディエンスはサポートされていますが、アカウントオーディエンスはサポートされていません。
 * ファイルベースのクラウドストレージの宛先の場合、*は*&#x200B;配列、マップ、オブジェクトをCSV ファイルに書き出すことができますが、計算フィールド機能を使用し、`array_to_string`関数を使用して文字列に連結することによってのみ可能です。
 
 ## Experience Platformの配列やその他のオブジェクトタイプ {#arrays-strings-other-objects}
 
-Experience Platformでは、[XDM スキーマ ](/help/xdm/home.md)を使用して、様々なフィールドタイプを管理できます。 配列エクスポートのサポートが追加される前は、Experience Platformの文字列などの単純なキーと値のペア型フィールドを目的の宛先にエクスポートできました。 以前に書き出しでサポートされていたフィールドの例は`personalEmail.address`:`johndoe@acme.org`です。
+Experience Platformでは、[XDM スキーマ &#x200B;](/help/xdm/home.md)を使用して、様々なフィールドタイプを管理できます。 配列エクスポートのサポートが追加される前は、Experience Platformの文字列などの単純なキーと値のペア型フィールドを目的の宛先にエクスポートできました。 以前に書き出しでサポートされていたフィールドの例は`personalEmail.address`:`johndoe@acme.org`です。
 
 Experience Platformのその他のフィールドタイプには、配列フィールドがあります。 Experience Platform UI[での配列フィールドの管理について詳しくは、](/help/xdm/ui/fields/array.md)を参照してください。 次の例のような配列オブジェクトを書き出せるようになりました。
 
@@ -67,11 +67,11 @@ organizations = [{
 }]
 ```
 
-配列に加えて、Experience Platformから目的のクラウドストレージの宛先にマップやオブジェクトを書き出すこともできます。 Experience Platformの[maps](/help/xdm/ui/fields/map.md)と[ オブジェクト ](/help/xdm/ui/fields/object.md)の詳細をご覧ください。
+配列に加えて、Experience Platformから目的のクラウドストレージの宛先にマップやオブジェクトを書き出すこともできます。 Experience Platformの[maps](/help/xdm/ui/fields/map.md)と[&#x200B; オブジェクト &#x200B;](/help/xdm/ui/fields/object.md)の詳細をご覧ください。
 
 ## 前提条件 {#prerequisites}
 
-[Connect](/help/destinations/ui/connect-destination.md)を目的のクラウドストレージ宛先に接続し、クラウドストレージ宛先[の](/help/destinations/ui/activate-batch-profile-destinations.md) アクティベーション手順を進め、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)手順に進みます。 目的のクラウド宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]**&#x200B;切り替えをオンにする必要があります。 詳細については、以下の節を参照してください。
+[Connect](/help/destinations/ui/connect-destination.md)を目的のクラウドストレージ宛先に接続し、クラウドストレージ宛先[の](/help/destinations/ui/activate-batch-profile-destinations.md) アクティベーション手順を進め、[&#x200B; マッピング &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)手順に進みます。 目的のクラウド宛先に接続する場合は、**[!UICONTROL Export arrays, maps, objects]**&#x200B;切り替えをオンにする必要があります。 詳細については、以下の節を参照してください。
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ organizations = [{
 
 ![配列、マップ、オブジェクトの書き出しの切り替えスイッチは、オンまたはオフ設定で表示されるほか、ポップオーバーも強調表示されます。](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-この設定を&#x200B;**オン**&#x200B;に切り替えると、配列、マップ、オブジェクトを JSON または Parquet ファイルに書き出すことができます。クラウドストレージの宛先に対してオーディエンスをアクティブ化する場合、[ マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)のソースフィールドビューで、これらのオブジェクトタイプを選択できます。 ただし、この設定をオンにすると、計算済みフィールド オプションを使用してアクティベーション時にデータを変換することはできません。
+この設定を&#x200B;**オン**&#x200B;に切り替えると、配列、マップ、オブジェクトを JSON または Parquet ファイルに書き出すことができます。クラウドストレージの宛先に対してオーディエンスをアクティブ化する場合、[&#x200B; マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)のソースフィールドビューで、これらのオブジェクトタイプを選択できます。 ただし、この設定をオンにすると、計算済みフィールド オプションを使用してアクティベーション時にデータを変換することはできません。
 
 この切替スイッチを&#x200B;**オフ**&#x200B;にすると、計算フィールドオプションを使用して、オーディエンスをアクティブ化する際に様々なデータ変換関数を適用できます。ただし、配列、マップ、オブジェクトをJSONまたはParquet ファイルに書き出すことはできず、その目的のために別の宛先を設定する必要があります。
 
@@ -96,7 +96,7 @@ organizations = [{
 
 この設定をオンにすると、アクティブ化ワークフローのマッピングステップでソースフィールドセレクターを使用してオブジェクト全体（例：`person.name`）と配列を選択して書き出すことができます。
 
-![ アクティブ化ワークフローのマッピング手順で、ソースフィールドセレクターを使用してオブジェクトを選択します。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
+![&#x200B; アクティブ化ワークフローのマッピング手順で、ソースフィールドセレクターを使用してオブジェクトを選択します。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
 このオプションを選択すると、ユーザーインターフェイスは計算フィールドの使用をユーザーにブロックし、**[!UICONTROL Add calculated fields]** コントロールは次のように無効になります。 データ変換に計算フィールドを使用するには、切り替えスイッチをオフにして宛先接続を設定します。
 

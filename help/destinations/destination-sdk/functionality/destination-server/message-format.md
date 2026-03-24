@@ -186,7 +186,7 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Experience Platform]で使用可能なすべてのプロファイル属性のリストについては、[XDM フィールドディクショナリ ](../../../../xdm/schema/field-dictionary.md)を参照してください。
+>[!DNL Adobe Experience Platform]で使用可能なすべてのプロファイル属性のリストについては、[XDM フィールドディクショナリ &#x200B;](../../../../xdm/schema/field-dictionary.md)を参照してください。
 
 
 **入力**

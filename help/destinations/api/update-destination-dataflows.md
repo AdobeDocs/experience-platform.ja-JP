@@ -14,11 +14,11 @@ ht-degree: 29%
 
 # Flow Service API を使用した宛先データフローの更新
 
-このチュートリアルでは、宛先データフローを更新する手順について説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法を説明します。 Experience Platform UIを使用した宛先データフローの編集について詳しくは、[ アクティベーションフローの編集](/help/destinations/ui/edit-activation.md)を参照してください。
+このチュートリアルでは、宛先データフローを更新する手順について説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法を説明します。 Experience Platform UIを使用した宛先データフローの編集について詳しくは、[&#x200B; アクティベーションフローの編集](/help/destinations/ui/edit-activation.md)を参照してください。
 
 ## はじめに {#get-started}
 
-このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ ](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[ データのアクティベート ](../ui/activation-overview.md)に関する手順に従ってください。
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ &#x200B;](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[&#x200B; データのアクティベート &#x200B;](../ui/activation-overview.md)に関する手順に従ってください。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 29%
 このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて理解している必要もあります。
 
 * [宛先](../home.md): [!DNL Destinations]は、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティブ化できる宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [ サンドボックス ](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 以下の節では、[!DNL Flow Service] APIを使用してデータフローを正常に更新するために知っておく必要がある追加情報を示します。
 
@@ -37,7 +37,7 @@ ht-degree: 29%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Experience Platform APIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform APIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -633,7 +633,7 @@ curl -X PATCH \
 ]'
 ```
 
-ペイロードのプロパティについて詳しくは、[ データフローにオーディエンスを追加](#add-segment)の節を参照してください。
+ペイロードのプロパティについて詳しくは、[&#x200B; データフローにオーディエンスを追加](#add-segment)の節を参照してください。
 
 
 **応答**
@@ -873,7 +873,7 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

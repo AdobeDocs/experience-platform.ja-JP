@@ -32,7 +32,7 @@ Experience Platformおよび[!DNL SAP Commerce]で設定する必要がある前
 
 [!DNL SAP Commerce]宛先にデータをアクティブ化する前に、[で](/help/xdm/schema/composition.md) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) オーディエンス [!DNL Experience Platform]を作成しておく必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
 
 ### [!DNL SAP Commerce]宛先の前提条件 {#prerequisites-destination}
 
@@ -44,7 +44,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 #### サービスキーの生成 {#prerequisites-service-key}
 
-* [!DNL SAP Commerce] サービス キーを使用すると、Experience Platformから[!DNL SAP Subscription Billing] APIにアクセスできます。 「[!DNL SAP Commerce] [ クライアント IDとクライアント秘密鍵](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret)を使用したサービスキーの作成」を参照して、サービスキーを作成します。 [!DNL SAP Commerce] には、以下が必要です。
+* [!DNL SAP Commerce] サービス キーを使用すると、Experience Platformから[!DNL SAP Subscription Billing] APIにアクセスできます。 「[!DNL SAP Commerce] [&#x200B; クライアント IDとクライアント秘密鍵](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret)を使用したサービスキーの作成」を参照して、サービスキーを作成します。 [!DNL SAP Commerce] には、以下が必要です。
    * クライアント ID
    * クライアントシークレット
    * URL: URL パターンは次のとおりです：`https://subscriptionbilling.authentication.eu10.hana.ondemand.com`。 この値は、後で`Region`と`Endpoint`の値を取得するために使用されます。
@@ -81,12 +81,12 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 [!DNL SAP Subscription Billing]のExperience Platform オーディエンスのステータスを更新するには、Experience Platformで選択した各オーディエンスのカスタム参照フィールドが必要です。
 
-カスタム参照を作成するには、[!DNL SAP Subscription Billing] アカウントにログインし、**[マスターデータと設定]** > **[カスタム参照]** ページに移動します。 次に、**[!UICONTROL Create]**&#x200B;を選択して、Experience Platformで選択した各オーディエンスに新しい参照を追加します。 後続の[ オーディエンスの書き出しと例](#schedule-segment-export-example)の手順では、これらの参照フィールド名が必要になります。
+カスタム参照を作成するには、[!DNL SAP Subscription Billing] アカウントにログインし、**[マスターデータと設定]** > **[カスタム参照]** ページに移動します。 次に、**[!UICONTROL Create]**&#x200B;を選択して、Experience Platformで選択した各オーディエンスに新しい参照を追加します。 後続の[&#x200B; オーディエンスの書き出しと例](#schedule-segment-export-example)の手順では、これらの参照フィールド名が必要になります。
 
 **[!UICONTROL Reference Type]**&#x200B;内にカスタム [!DNL SAP Subscription Billing]を作成する方法の例を次に示します。
 ![SAP サブスクリプション請求でカスタム参照を作成する場所を示す画像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-追加のガイダンスについては、[!DNL SAP Subscription Billing] [ カスタム参照](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) ドキュメントを参照してください。
+追加のガイダンスについては、[!DNL SAP Subscription Billing] [&#x200B; カスタム参照](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) ドキュメントを参照してください。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
@@ -101,7 +101,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 ## ガードレール {#guardrails}
 
-[!DNL SAP Cloud Management service]へのAPI リクエストには、[ レート制限](https://help.sap.com/docs/btp/sap-business-technology-platform/account-administration-rate-limiting)が適用されます。 レート制限を超えると、`HTTP 429 Too Many Requests`応答ステータスコードが表示されます。
+[!DNL SAP Cloud Management service]へのAPI リクエストには、[&#x200B; レート制限](https://help.sap.com/docs/btp/sap-business-technology-platform/account-administration-rate-limiting)が適用されます。 レート制限を超えると、`HTTP 429 Too Many Requests`応答ステータスコードが表示されます。
 
 ## サポートされる ID {#supported-identities}
 
@@ -121,7 +121,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 | オーディエンスタイプ | サポートあり | 説明 |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -132,10 +132,10 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -155,7 +155,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -163,7 +163,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 ### 宛先に対する認証 {#authenticate}
 
-以下の必須のフィールドに入力します。ガイダンスについては、「[ サービスキーを生成](#prerequisites-service-key)」の節を参照してください。
+以下の必須のフィールドに入力します。ガイダンスについては、「[&#x200B; サービスキーを生成](#prerequisites-service-key)」の節を参照してください。
 
 | フィールド | 説明 |
 | --- | --- |
@@ -172,7 +172,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 | **[!UICONTROL Endpoint]** | サービス キーの`url`の値は、`https://subscriptionbilling.authentication.eu10.hana.ondemand.com`と似ています。 |
 | **[!UICONTROL Region]** | データセンターの場所： この領域は`url`に存在し、`eu10`または`us10`と同様の値を持ちます。 例えば、`url`が`https://eu10.revenue.cloud.sap/api`の場合、`eu10`が必要です。 |
 
-宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**を選択します。
+宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 ![宛先への認証方法を示すExperience Platform UIの画像。](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 指定された詳細が有効な場合、UIには緑色のチェックマークが付いた&#x200B;**[!UICONTROL Connected]** ステータスが表示されます。 その後、次の手順に進むことができます。
@@ -184,7 +184,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
-* **[!UICONTROL Type of Customer]**: オーディエンス内のエンティティに応じて、***個人***&#x200B;または&#x200B;***企業***&#x200B;のいずれかを選択します。 [!DNL SAP Subscription Billing] [ スキーマ ](https://api.sap.com/api/BusinessPartner_APIs/schema)は、`customerType`属性にマッピングされているこの選択に応じて、必須フィールドを切り替えます。 選択が&#x200B;***企業***&#x200B;の場合、個々の顧客に必要な`firstName`や`lastName`などの必須マッピングは無視され、`company`は必須になり、その逆も同様です。
+* **[!UICONTROL Type of Customer]**: オーディエンス内のエンティティに応じて、***個人***&#x200B;または&#x200B;***企業***&#x200B;のいずれかを選択します。 [!DNL SAP Subscription Billing] [&#x200B; スキーマ &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/schema)は、`customerType`属性にマッピングされているこの選択に応じて、必須フィールドを切り替えます。 選択が&#x200B;***企業***&#x200B;の場合、個々の顧客に必要な`firstName`や`lastName`などの必須マッピングは無視され、`company`は必須になり、その逆も同様です。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -196,8 +196,8 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -209,7 +209,7 @@ Experience Platformから[!DNL SAP Commerce] アカウントにデータをエ�
 
 `customerNumberSAP` IDは、この宛先の必須マッピングです。 マッピングするには、次の手順に従います。
 
-1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**を選択します。 新しいマッピング行が画面に表示されるようになりました。
+1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**&#x200B;を選択します。 新しいマッピング行が画面に表示されるようになりました。
    「新しいマッピングを追加」ボタンがハイライト表示された![Experience Platform UIのスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL Select source field]** ウィンドウで、**[!UICONTROL Select identity namespace]**&#x200B;を選択し、`customerNumberSAP`を選択します。
    ![Experience Platform UIのスクリーンショット。IDとしてマップするソース属性としてメールを選択しています。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
@@ -227,10 +227,10 @@ ID マッピングの例を次に示します。
 
 XDM プロファイルスキーマと[!DNL SAP Subscription Billing] アカウントの間で更新するその他の属性を追加するには、次の手順を繰り返します。
 
-1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**を選択します。 新しいマッピング行が画面に表示されるようになりました。
+1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**&#x200B;を選択します。 新しいマッピング行が画面に表示されるようになりました。
    「新しいマッピングを追加」ボタンがハイライト表示された![Experience Platform UIのスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL Select source field]** ウィンドウで、**[!UICONTROL Select attributes]** カテゴリを選択し、XDM属性を選択します。
-   ![ ソース属性として姓を選択しているExperience Platform UIのスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+   ![&#x200B; ソース属性として姓を選択しているExperience Platform UIのスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. **[!UICONTROL Select target field]** ウィンドウで、**[!UICONTROL Select custom attributes]** カテゴリを選択し、顧客[!DNL SAP Subscription Billing] スキーマ [属性のリストから](https://api.sap.com/api/BusinessPartner_APIs/schema)属性の名前を入力します。
    ![lastNameがターゲット属性として定義されているExperience Platform UI スクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
@@ -266,7 +266,7 @@ XDM プロファイルスキーマと[!DNL SAP Subscription Billing] アカウ�
 
 #### 追加属性のマッピング {#mapping-additional-attributes}
 
-次に、次に示すように、XDM プロファイルスキーマと顧客の[!DNL SAP Subscription Billing] [ スキーマ ](https://api.sap.com/api/BusinessPartner_APIs/schema)属性の間に追加のマッピングを追加できます。
+次に、次に示すように、XDM プロファイルスキーマと顧客の[!DNL SAP Subscription Billing] [&#x200B; スキーマ &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/schema)属性の間に追加のマッピングを追加できます。
 
 >[!BEGINTABS]
 
@@ -301,10 +301,10 @@ XDM プロファイルスキーマと[!DNL SAP Subscription Billing] アカウ�
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-[ オーディエンスの書き出しをスケジュール ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)する手順を実行する場合、[の](#prerequisites-attribute)属性[!DNL SAP Subscription Billing]にExperience Platform オーディエンスを手動でマッピングする必要があります。
+[&#x200B; オーディエンスの書き出しをスケジュール &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)する手順を実行する場合、[の](#prerequisites-attribute)属性[!DNL SAP Subscription Billing]にExperience Platform オーディエンスを手動でマッピングする必要があります。
 
-[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**の場所が強調表示されたオーディエンス書き出しスケジュール手順の例を次に示します。
-![ マッピング IDが入力されたスケジュール オーディエンスの書き出しを示すExperience Platformの画像。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;の場所が強調表示されたオーディエンス書き出しスケジュール手順の例を次に示します。
+![&#x200B; マッピング IDが入力されたスケジュール オーディエンスの書き出しを示すExperience Platformの画像。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 これを行うには、各セグメントを選択し、[!DNL SAP Subscription Billing] [!DNL SAP Commerce]宛先コネクタフィールドに&#x200B;**[!UICONTROL Mapping ID]**&#x200B;からのカスタム参照の名前を入力します。 カスタム参照の作成に関するガイダンスについては、[の「 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) カスタム参照の作成」セクションを参照してください。
 
@@ -318,8 +318,8 @@ XDM プロファイルスキーマと[!DNL SAP Subscription Billing] アカウ�
 **[!UICONTROL Reference Type]**&#x200B;の[!DNL SAP Subscription Billing]の例を次に示します。
 ![SAP サブスクリプション請求でカスタム参照を作成する場所を示す画像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-オーディエンスを選択し、対応する[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**を強調表示したオーディエンスの書き出しスケジュール手順の例を次に示します。
-![ マッピング IDが入力されたスケジュール オーディエンスの書き出しを示すExperience Platformの画像。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+オーディエンスを選択し、対応する[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;を強調表示したオーディエンスの書き出しスケジュール手順の例を次に示します。
+![&#x200B; マッピング IDが入力されたスケジュール オーディエンスの書き出しを示すExperience Platformの画像。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 **[!UICONTROL Mapping ID]** フィールド内の値は、[!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]**&#x200B;値と完全に一致する必要があります。
 
@@ -345,13 +345,13 @@ XDM プロファイルスキーマと[!DNL SAP Subscription Billing] アカウ�
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-考えられるエラータイプとその応答コードのリストについては、[[!DNL SAP Subscription Billing]  エラータイプ ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/1a6a0dd6129c48e8b235190a1b5409fa.html)のドキュメントページを参照してください。
+考えられるエラータイプとその応答コードのリストについては、[[!DNL SAP Subscription Billing]  エラータイプ &#x200B;](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/1a6a0dd6129c48e8b235190a1b5409fa.html)のドキュメントページを参照してください。
 
 ## その他のリソース {#additional-resources}
 
 [!DNL SAP] ドキュメントのその他の有用な情報は次のとおりです。
 
-* [ オンボード SAP サブスクリプションの請求](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
+* [&#x200B; オンボード SAP サブスクリプションの請求](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
 ### 変更ログ {#changelog}
 

@@ -14,8 +14,8 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
@@ -39,7 +39,7 @@ ht-degree: 64%
 
    ![「設定」コントロールが強調表示された宛先カタログページを示す、Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/set-up.png)
 
-   オーディエンスの有効化コントロールがハイライト表示された宛先カタログページを示すExperience Platform UIの![ スクリーンショット。](../assets/ui/connect-destinations/activate-segments.png)
+   オーディエンスの有効化コントロールがハイライト表示された宛先カタログページを示すExperience Platform UIの![&#x200B; スクリーンショット。](../assets/ui/connect-destinations/activate-segments.png)
 
 3. **[!UICONTROL Set up]**&#x200B;を選択した場合は、次の手順にスキップして、宛先に[認証](#authenticate)します。
 
@@ -99,13 +99,13 @@ ht-degree: 64%
 
 ### オーディエンスのアクティベーション、アカウントのアクティベーション、見込み顧客のアクティベーション、データセットの書き出しを行うための宛先接続を設定できます {#segment-activation-or-dataset-exports}
 
-ファイルベースの宛先の中には、データセットの書き出しだけでなく、既知の顧客、アカウント顧客、見込み顧客へのオーディエンスのアクティベーションもサポートしているものもあります。 これらの宛先に対して、[ オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)、[ アカウント ](/help/destinations/ui/activate-account-audiences.md)、[見込み客](/help/destinations/ui/activate-prospect-audiences.md)または[ データセットを書き出す](/help/destinations/ui/export-datasets.md)を可能にする接続を作成するかどうかを選択できます。
+ファイルベースの宛先の中には、データセットの書き出しだけでなく、既知の顧客、アカウント顧客、見込み顧客へのオーディエンスのアクティベーションもサポートしているものもあります。 これらの宛先に対して、[&#x200B; オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)、[&#x200B; アカウント &#x200B;](/help/destinations/ui/activate-account-audiences.md)、[見込み客](/help/destinations/ui/activate-prospect-audiences.md)または[&#x200B; データセットを書き出す](/help/destinations/ui/export-datasets.md)を可能にする接続を作成するかどうかを選択できます。
 
 >[!WARNING]
 >
 >データセットを書き出す場合、JSON ファイルへの書き出しは圧縮モードでのみサポートされることに注意してください。 [!DNL Parquet]個のファイルへの書き出しは、圧縮モードと非圧縮モードでサポートされています。
 
-![ オーディエンスのアクティブ化とデータセットの書き出しの間をユーザーが選択できるデータタイプ選択制御を示す画像。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![&#x200B; オーディエンスのアクティブ化とデータセットの書き出しの間をユーザーが選択できるデータタイプ選択制御を示す画像。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### 宛先アラートの有効化 {#enable-alerts}
 
@@ -123,10 +123,10 @@ ht-degree: 64%
 
    ![使用可能なマーケティングアクションがハイライト表示された新しい宛先を設定ダイアログ（「宛先に接続」ワークフローを完了するために使用可能なコントロールもハイライト表示）](../assets/ui/connect-destinations/governance.png)
 
-2. 宛先設定を保存するには&#x200B;**[!UICONTROL Save & Exit]**&#x200B;を選択するか、**[!UICONTROL Next]**&#x200B;を選択してオーディエンスデータ [ アクティベーションフロー](activation-overview.md)に進みます。
+2. 宛先設定を保存するには&#x200B;**[!UICONTROL Save & Exit]**&#x200B;を選択するか、**[!UICONTROL Next]**&#x200B;を選択してオーディエンスデータ [&#x200B; アクティベーションフロー](activation-overview.md)に進みます。
 
 ## 次の手順 {#next-steps}
 
 このドキュメントでは、Experience Platform UI を使用して宛先への接続を確立する方法について説明しました。使用可能な接続パラメーターと必要な接続パラメーターは、宛先によって異なります。宛先タイプごとに必要な入力と使用可能なオプションについて詳しくは、[宛先カタログ](/help/destinations/catalog/overview.md)の宛先ドキュメントページも参照してください。
 
-次に、[ オーディエンスのアクティブ化](/help/destinations/ui/activation-overview.md)または[ データセットの書き出し](/help/destinations/ui/export-datasets.md)に進みます。
+次に、[&#x200B; オーディエンスのアクティブ化](/help/destinations/ui/activation-overview.md)または[&#x200B; データセットの書き出し](/help/destinations/ui/export-datasets.md)に進みます。

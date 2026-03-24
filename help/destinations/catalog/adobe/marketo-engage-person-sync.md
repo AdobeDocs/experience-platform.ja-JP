@@ -55,7 +55,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 | オーディエンスの由来 | サポートあり | 説明 |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| セグメント化サービス | ○ | Experience Platform [ セグメント化サービス ](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home)を通じて生成されたオーディエンス。 |
+| セグメント化サービス | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -64,10 +64,10 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -85,13 +85,13 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 
 会社が複数の組織にアクセスできる場合は、Marketoへの宛先コネクタを設定するMarketo Engageと[!DNL Real-Time CDP]の両方で同じ組織を使用してください。  宛先を既に設定している場合は、新しい設定で使用する既存のMarketo アカウントを選択できます。  そうでない場合は、「宛先へのコネクタ」プロンプトをクリックします。これにより、目的の宛先の名前、説明、Marketo Munchkin IDを設定できます。  Marketo インスタンスのMunchkin IDは、管理者/Munchkin メニューにあります。
 
 >[!IMPORTANT]
 >
->宛先を設定するユーザーは、Marketo インスタンスおよびパーティションで[ ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
+>宛先を設定するユーザーは、Marketo インスタンスおよびパーティションで[&#x200B; ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
 
 ![宛先に接続](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 * **[!UICONTROL First searchable field]**：重複排除するフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 デフォルトは電子メール
 * **[!UICONTROL First searchable field]**：重複排除するセカンダリフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 オプション
 
-インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [ リードパーティション ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)は、Marketo Engageの概念で、企業や営業地域などのビジネス上の懸念事項によってリードレコードを分離するために使用されます。 Marketo サブスクリプションにワークスペースとパーティション機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトパーティションのみが使用できます。 単一の設定では、設定されたパーティションに存在するリードレコードのみを更新できます。
+インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [&#x200B; リードパーティション &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)は、Marketo Engageの概念で、企業や営業地域などのビジネス上の懸念事項によってリードレコードを分離するために使用されます。 Marketo サブスクリプションにワークスペースとパーティション機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトパーティションのみが使用できます。 単一の設定では、設定されたパーティションに存在するリードレコードのみを更新できます。
 
 >[!IMPORTANT]
 >
@@ -124,19 +124,19 @@ Marketo engageに更新を送信する場合、選択したパーティション
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 オーディエンスをアクティブ化ステップでは、自分に表示されている任意の人物オーディエンスから選択できます。
 
-![ オーディエンスをアクティブ化](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
+![&#x200B; オーディエンスをアクティブ化](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
 
 ## フィールドマッピング {#field-mapping}
 
 特定のユーザー属性への変更をMarketo Engageに送信するには、フィールドを[!DNL Real-Time CDP] フィールドからMarketo フィールドにマッピングする必要があります。
 
-![ フィールドマッピング ](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
+![&#x200B; フィールドマッピング &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
 Experience Platform データタイプとMarketo データタイプは、次の方法でマッピングできます。
 
@@ -160,10 +160,10 @@ Experience Platform データタイプとMarketo データタイプは、次の�
 
 統合が既に値を持つフィールドを更新するのを防ぎながら、統合がフィールドの値を設定することを許可することが望ましい場合があります。  宛先コネクタがMarketo Engage インスタンス内の既存の値を上書きしないように設定する必要がある場合は、Marketo インスタンスの管理/フィールド管理セクションで更新をブロックし、[!DNL Adobe Experience Platform] ソースタイプを切り替えるようにフィールドを設定できます。
 
-![ フィールドの更新をブロック ](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
+![&#x200B; フィールドの更新をブロック &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
-![ フィールドの更新をブロック ](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png)
+![&#x200B; フィールドの更新をブロック &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png)
 
 ## データの使用とガバナンス {#data-usage-and-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](/help/data-governance/home.md)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[&#x200B; データガバナンスの概要](/help/data-governance/home.md)を参照してください。

@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->[宛先カタログ ](/help/destinations/catalog/overview.md)には、The Trade Desk - CRMの宛先が2つあります。
+>[宛先カタログ &#x200B;](/help/destinations/catalog/overview.md)には、The Trade Desk - CRMの宛先が2つあります。
 >
 >* EU内でデータを取得する場合は、**[!DNL The Trade Desk - CRM (EU)]**&#x200B;宛先を使用します。
 >* APACまたはNAMER地域でデータを取得する場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]**&#x200B;の宛先を使用します。
@@ -72,7 +72,7 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 メールアドレスを[!DNL Adobe Experience Platform]に取り込む前にハッシュ化するか、生のメールアドレスを使用できます。
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)を参照してください。
 
 自分でメールアドレスをハッシュ化することを選択した場合は、次の要件に必ず準拠してください。
 
@@ -106,6 +106,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
       *ピリオド （&#39;.&#39;） 文字（ASCII コード 46）。 例えば、「jane.doe@gmail.com」を「janedoe@gmail.com」に正規化します。
      * プラス記号（&#39;+&#39;）文字（ASCII コード 43）とその後のすべての文字。 例えば、「janedoe+home@gmail.com」を「janedoe@gmail.com」に標準化します。
   
+
 ## 電話番号の正規化とハッシュ化の要件 {#phone-hashing}
 
 電話番号のアップロードについて知っておくべきことを以下に示します。
@@ -153,7 +154,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL Audience export]** | オーディエンスのすべてのメンバーを、Trade Deskの宛先で使用されている識別子（メールまたはハッシュ化されたメール）で書き出します。 |
-| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、プロファイル（ID）は1日1回下流の宛先プラットフォームに更新されます。 [ バッチ書き出し](/help/destinations/destination-types.md#file-based)の詳細をご覧ください。 |
+| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、プロファイル（ID）は1日1回下流の宛先プラットフォームに更新されます。 [&#x200B; バッチ書き出し](/help/destinations/destination-types.md#file-based)の詳細をご覧ください。 |
 
 {style="table-layout:auto"}
 
@@ -174,16 +175,16 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 宛先の詳細を入力する方法を示す![Experience Platform UIのスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform [ データガバナンスの概要](/help/data-governance/policies/overview.md)を参照してください。
+宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform [&#x200B; データガバナンスの概要](/help/data-governance/policies/overview.md)を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-宛先に対するオーディエンスのアクティブ化に関する手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
+宛先に対するオーディエンスのアクティブ化に関する手順については、[&#x200B; バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 **[!UICONTROL Scheduling]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 

@@ -13,7 +13,7 @@ ht-degree: 81%
 
 ## 概要 {#overview}
 
-このページでは、宛先ドキュメント [ ページを](./documentation-instructions.md) オーサリングする際に従う必要があるルールについて説明し、[!DNL Adobe Experience Platform] ドキュメントの品質基準を満たしていることを確認します。
+このページでは、宛先ドキュメント [&#x200B; ページを](./documentation-instructions.md) オーサリングする際に従う必要があるルールについて説明し、[!DNL Adobe Experience Platform] ドキュメントの品質基準を満たしていることを確認します。
 
 ## 一般的なガイダンス {#general-guidance}
 

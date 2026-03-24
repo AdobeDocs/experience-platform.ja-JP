@@ -23,8 +23,8 @@ ht-degree: 3%
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 * [新しいマッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を使用して、書き出したファイルにカスタムファイルヘッダーを設定できます。
-* 書き出されたファイルの[ ファイルタイプ ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)を選択できます。
-* 書き出されたCSV データファイルの形式を[ カスタマイズできます](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
+* 書き出されたファイルの[&#x200B; ファイルタイプ &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)を選択できます。
+* 書き出されたCSV データファイルの形式を[&#x200B; カスタマイズできます](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
 
 この機能は、以下に示すベータ版のクラウドストレージカードでサポートされています。
 
@@ -61,7 +61,7 @@ Experience Platformから書き出されたファイルの上にある[!DNL Amaz
 この節では、クラウドストレージの宛先にデータを書き出す強化機能に関する関連するAPI チュートリアルとリファレンスドキュメントを示します。
 
 * [クラウドストレージの宛先にオーディエンスを書き出すAPI チュートリアル](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [宛先フローサービス API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [宛先フローサービス API リファレンスドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## 後方互換性のない変更の概要 {#summary-backwards-incompatible-changes}
 
@@ -667,7 +667,7 @@ API ユーザーの後方互換性のない変更は、次の表に示すよう�
 
 従来の例の`profileSelectors` オブジェクトが新しい`profileMapping` オブジェクトに置き換えられることに注意してください。
 
-データをクラウドストレージの宛先に書き出すための`profileMapping`API チュートリアルで、[ オブジェクトの設定に関する詳細を確認してください](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
+データをクラウドストレージの宛先に書き出すための`profileMapping`API チュートリアルで、[&#x200B; オブジェクトの設定に関する詳細を確認してください](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
 
 >[!BEGINTABS]
 
@@ -795,4 +795,4 @@ API ユーザーの後方互換性のない変更は、次の表に示すよう�
 
 ## 次の手順 {#next-steps}
 
-このページを読むと、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかを確認できます。 また、Experience Platformから任意のクラウドストレージの宛先にファイルを書き出すために、API ベースのワークフローを設定する際に参照すべきドキュメントページも把握できます。 次に、API チュートリアルを表示して、[ データをクラウドストレージの宛先](/help/destinations/api/activate-segments-file-based-destinations.md)に書き出すことができます。
+このページを読むと、クラウドストレージの宛先の移行に備えて何らかのアクションを実行する必要があるかどうかを確認できます。 また、Experience Platformから任意のクラウドストレージの宛先にファイルを書き出すために、API ベースのワークフローを設定する際に参照すべきドキュメントページも把握できます。 次に、API チュートリアルを表示して、[&#x200B; データをクラウドストレージの宛先](/help/destinations/api/activate-segments-file-based-destinations.md)に書き出すことができます。

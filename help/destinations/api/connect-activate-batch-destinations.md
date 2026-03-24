@@ -16,25 +16,25 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 >
 >[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-このチュートリアルでは、Flow Service APIを使用してファイルベースの[ メールマーケティング宛先](../catalog/email-marketing/overview.md)を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを介して新しく作成した宛先にデータを書き出す方法を説明します。
+このチュートリアルでは、Flow Service APIを使用してファイルベースの[&#x200B; メールマーケティング宛先](../catalog/email-marketing/overview.md)を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを介して新しく作成した宛先にデータを書き出す方法を説明します。
 
 >[!TIP]
 >
->Flow Service APIを使用してクラウドストレージの宛先にデータをアクティベートする方法については、[専用API チュートリアル ](/help/destinations/api/activate-segments-file-based-destinations.md)を参照してください。
+>Flow Service APIを使用してクラウドストレージの宛先にデータをアクティベートする方法については、[専用API チュートリアル &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md)を参照してください。
 
 このチュートリアルでは、すべての例で[!DNL Adobe Campaign]の宛先を使用しますが、ファイルベースのメールマーケティングの宛先の手順は同じです。
 
 ![概要 – 宛先を作成し、オーディエンスをアクティブ化する手順](../assets/api/email-marketing/overview.png)
 
-Experience Platform ユーザーインターフェイスを使用して宛先に接続し、データをアクティベートする場合は、[宛先への接続](../ui/connect-destination.md)および[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティベート ](../ui/activate-batch-profile-destinations.md)のチュートリアルを参照してください。
+Experience Platform ユーザーインターフェイスを使用して宛先に接続し、データをアクティベートする場合は、[宛先への接続](../ui/connect-destination.md)および[&#x200B; バッチプロファイル書き出し宛先へのオーディエンスデータのアクティベート &#x200B;](../ui/activate-batch-profile-destinations.md)のチュートリアルを参照してください。
 
 ## はじめに {#get-started}
 
@@ -65,7 +65,7 @@ Experience Platform ユーザーインターフェイスを使用して宛先に
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Experience Platform [!DNL Profile store] へのベース接続の名前を指定します。 |
 | `description` | オプションで、ベース接続の説明を指定できます。 |
-| `connectionSpec.id` | [Experience Platform プロファイル ストア ](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`の接続仕様IDを使用します。 |
+| `connectionSpec.id` | [Experience Platform プロファイル ストア &#x200B;](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`の接続仕様IDを使用します。 |
 
 {style="table-layout:auto"}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Adobe Experience Platform [!DNL Profile store] へのソース接続の名前を指定します。 |
 | `description` | オプションで、ソース接続の説明を指定できます。 |
-| `connectionSpec.id` | [Experience Platform プロファイル ストア ](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`の接続仕様IDを使用します。 |
+| `connectionSpec.id` | [Experience Platform プロファイル ストア &#x200B;](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`の接続仕様IDを使用します。 |
 | `baseConnectionId` | 前の手順で取得したベース接続 ID を使用します。 |
 | `data.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出し形式です。 |
 
@@ -862,7 +862,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | S3 接続の場合、ファイルの書き出し先のバケットの名前を指定します。 |
 | `params.path` | S3 接続の場合、ファイルの書き出し先となるストレージの場所のファイルパスを指定します。 |
 | `params.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出しタイプです。 |
-| `params.includeFileManifest` | *オプション*。宛先のマニフェストファイル生成を有効にするには、`true`に設定します。 有効にすると、書き出されたデータファイルと一緒にマニフェストファイルが作成され、書き出されたファイルに関するメタデータが提供されます。 [ サンプルマニフェストファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 |
+| `params.includeFileManifest` | *オプション*。宛先のマニフェストファイル生成を有効にするには、`true`に設定します。 有効にすると、書き出されたデータファイルと一緒にマニフェストファイルが作成され、書き出されたファイルに関するメタデータが提供されます。 [&#x200B; サンプルマニフェストファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 |
 
 {style="table-layout:auto"}
 
@@ -1042,7 +1042,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
 | `{ETAG}` | 前の手順`{ETAG}` データフローを作成[の応答から](#create-dataflow)を取得します。 前の手順の応答形式がエスケープされた引用符です。 リクエストのヘッダーでエスケープされていない値を使用する必要があります。 次の例を参照してください：<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス IDを指定します。 アクティブ化するオーディエンスのオーディエンス IDを取得するには、Experience Platform API リファレンスの[ オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス IDを指定します。 アクティブ化するオーディエンスのオーディエンス IDを取得するには、Experience Platform API リファレンスの[&#x200B; オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、`add`操作を使用します。 |
 | `path` | 更新するフローの部分を定義します。データフローにオーディエンスを追加する場合は、例で指定したパスを使用します。 |
@@ -1061,7 +1061,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!TIP]
 >
-> 書き出されたオーディエンスのさまざまなコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法については、[ データフロー内のオーディエンスのコンポーネントの更新](/help/destinations/api/update-destination-dataflows.md#update-segment)を参照してください。
+> 書き出されたオーディエンスのさまざまなコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法については、[&#x200B; データフロー内のオーディエンスのコンポーネントの更新](/help/destinations/api/update-destination-dataflows.md#update-segment)を参照してください。
 
 **応答**
 
@@ -1253,7 +1253,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

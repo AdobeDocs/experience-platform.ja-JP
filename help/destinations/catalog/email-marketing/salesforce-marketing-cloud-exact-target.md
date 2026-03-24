@@ -53,11 +53,11 @@ Experience Platformから[!DNL Salesforce Marketing Cloud] アカウントにデ
 
 [!DNL (API) Salesforce Marketing Cloud]宛先に対してオーディエンスをアクティブ化する場合、**[!UICONTROL Mapping ID]** オーディエンススケジュール **[手順で、アクティブ化された各オーディエンスの](#schedule-segment-export-example)** フィールドに値を入力する必要があります。
 
-[!DNL Salesforce]では、この値を使用して、Experience Platformから受信したオーディエンスを正しく読み取り、解釈し、[!DNL Salesforce Marketing Cloud]以内にオーディエンスステータスを更新する必要があります。 オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
+[!DNL Salesforce]では、この値を使用して、Experience Platformから受信したオーディエンスを正しく読み取り、解釈し、[!DNL Salesforce Marketing Cloud]以内にオーディエンスステータスを更新する必要があります。 オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md)のExperience Platform ドキュメントを参照してください。
 
 Experience Platformから[!DNL Salesforce]にアクティベートする各オーディエンスについて、`Text`内の[!DNL Email Demographics] データ拡張機能にリンクされたタイプ [!DNL Salesforce Marketing Cloud]の属性が必要です。 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder]を使用して属性を作成します。 属性の作成に関するガイダンスが必要な場合は、[!DNL Salesforce Marketing Cloud]属性の作成[に関する](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) ドキュメントを参照してください。
 
-属性フィールド名は、[!DNL (API) Salesforce Marketing Cloud] ステップの&#x200B;**[!UICONTROL Mapping]** ターゲットフィールドに使用されます。 ビジネス要件に応じて、最大4000文字のフィールド文字を定義できます。 属性タイプについて詳しくは、[!DNL Salesforce Marketing Cloud] [ データ拡張機能データタイプ ](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5)のドキュメントページを参照してください。
+属性フィールド名は、[!DNL (API) Salesforce Marketing Cloud] ステップの&#x200B;**[!UICONTROL Mapping]** ターゲットフィールドに使用されます。 ビジネス要件に応じて、最大4000文字のフィールド文字を定義できます。 属性タイプについて詳しくは、[!DNL Salesforce Marketing Cloud] [&#x200B; データ拡張機能データタイプ &#x200B;](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5)のドキュメントページを参照してください。
 
 属性を追加する[!DNL Salesforce Marketing Cloud]のデータデザイナー画面の例を次に示します。
 ![Salesforce Marketing Cloud UI データデザイナー。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
@@ -104,24 +104,24 @@ Experience Platformから[!DNL Salesforce]にアクティベートする各オ�
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| サブドメイン | [[!DNL Salesforce Marketing Cloud domain prefix] インターフェイスからこの値を取得する方法については、](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html)[!DNL Salesforce Marketing Cloud]を参照してください。 | [!DNL Salesforce Marketing Cloud] ドメインが<br>の場合 *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*、<br>値として`mcq4jrssqdlyc4lph19nnqgzzs84`を指定する必要があります。 |
-| クライアント ID | この値を[!DNL Salesforce Marketing Cloud] インターフェイスから取得する方法については、[ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) ドキュメント [!DNL Salesforce Marketing Cloud]を参照してください。 | r23kxxxxxxxx0z05xxxxxx |
-| クライアント秘密鍵 | この値を[!DNL Salesforce Marketing Cloud] インターフェイスから取得する方法については、[ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) ドキュメント [!DNL Salesforce Marketing Cloud]を参照してください。 | ipxxxxxxxxxxT4xxxxxxxxxxxxxx |
+| サブドメイン | [[!DNL Salesforce Marketing Cloud domain prefix] インターフェイスからこの値を取得する方法については、](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) [!DNL Salesforce Marketing Cloud]を参照してください。 | [!DNL Salesforce Marketing Cloud] ドメインが<br>の場合 *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*、<br>値として`mcq4jrssqdlyc4lph19nnqgzzs84`を指定する必要があります。 |
+| クライアント ID | この値を[!DNL Salesforce Marketing Cloud] インターフェイスから取得する方法については、[&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) ドキュメント [!DNL Salesforce Marketing Cloud]を参照してください。 | r23kxxxxxxxx0z05xxxxxx |
+| クライアント秘密鍵 | この値を[!DNL Salesforce Marketing Cloud] インターフェイスから取得する方法については、[&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) ドキュメント [!DNL Salesforce Marketing Cloud]を参照してください。 | ipxxxxxxxxxxT4xxxxxxxxxxxxxx |
 
 {style="table-layout:auto"}
 
 ### ガードレール {#guardrails}
 
-* Salesforceでは、特定の[ レート制限](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html)が適用されます。
-   * 実行中に発生する可能性のある制限とエラーの削減については、[!DNL Salesforce Marketing Cloud] [ ドキュメント ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html)を参照してください。
+* Salesforceでは、特定の[&#x200B; レート制限](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html)が適用されます。
+   * 実行中に発生する可能性のある制限とエラーの削減については、[!DNL Salesforce Marketing Cloud] [&#x200B; ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html)を参照してください。
    * プランによって課される制限について詳しくは、[[!DNL Salesforce Marketing Cloud]  エンゲージメント価格](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) ページから&#x200B;*完全版の比較チャート*&#x200B;をPDFとしてダウンロードしてください。
    * [APIの概要](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) ページには、追加の制限が記載されています。
    * これらの詳細を照合するページについては、[こちら](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits)を参照してください。
 * オブジェクト *ごとに許可される* カスタムフィールドの数は、Salesforce エディションによって異なります。
-   * 追加のガイダンスについては、[!DNL Salesforce] [ ドキュメント ](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5)を参照してください。
+   * 追加のガイダンスについては、[!DNL Salesforce] [&#x200B; ドキュメント &#x200B;](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5)を参照してください。
    * *内のオブジェクト*&#x200B;ごとに許可される[!DNL Salesforce Marketing Cloud] カスタムフィールドに対して定義された制限に達した場合は、次のことが必要になります
       * [!DNL Salesforce Marketing Cloud]で新しい属性を追加する前に、古い属性を削除します。
-      * これらの古い属性名を&#x200B;**[!UICONTROL Mapping ID]**&#x200B;に指定された値として、[ オーディエンススケジュール ](#schedule-segment-export-example)手順で使用するExperience Platformの宛先でアクティブ化されたオーディエンスを更新または削除します。
+      * これらの古い属性名を&#x200B;**[!UICONTROL Mapping ID]**&#x200B;に指定された値として、[&#x200B; オーディエンススケジュール &#x200B;](#schedule-segment-export-example)手順で使用するExperience Platformの宛先でアクティブ化されたオーディエンスを更新または削除します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -129,7 +129,7 @@ Experience Platformから[!DNL Salesforce]にアクティベートする各オ�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| contactKey | [!DNL Salesforce Marketing Cloud]連絡先キー。 追加のガイダンスが必要な場合は、[!DNL Salesforce Marketing Cloud] [ ドキュメント ](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5)を参照してください。 | 必須 |
+| contactKey | [!DNL Salesforce Marketing Cloud]連絡先キー。 追加のガイダンスが必要な場合は、[!DNL Salesforce Marketing Cloud] [&#x200B; ドキュメント &#x200B;](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5)を参照してください。 | 必須 |
 
 {style="table-layout:auto"}
 
@@ -139,7 +139,7 @@ Experience Platformから[!DNL Salesforce]にアクティベートする各オ�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -150,10 +150,10 @@ Experience Platformから[!DNL Salesforce]にアクティベートする各オ�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -173,7 +173,7 @@ Experience Platformから[!DNL Salesforce]にアクティベートする各オ�
 
 >[!IMPORTANT]
 >
-> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -213,8 +213,8 @@ Salesforce Marketing Cloudへの認証方法を示す![Experience Platform UIの
 
 >[!IMPORTANT]
 >
-> * データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
-> * *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+> * データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+> * *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -230,7 +230,7 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
 >
 > * [!DNL Salesforce Marketing Cloud] APIとの統合では、Experience PlatformがSalesforceから取得できる属性の数のページネーション制限が適用されます。 つまり、**[!UICONTROL Mapping]** ステップ中に、ターゲットフィールドスキーマは、Salesforce アカウントから最大2,000個の属性を表示できます。
 
-1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**を選択します。 画面に新しいマッピング行が表示されます。
+1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**&#x200B;を選択します。 画面に新しいマッピング行が表示されます。
    ![新しいマッピングを追加するExperience Platform UIのスクリーンショット例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. **[!UICONTROL Select source field]** ウィンドウで、**[!UICONTROL Select attributes]** カテゴリを選択してXDM属性を選択するか、**[!UICONTROL Select identity namespace]**&#x200B;を選択してIDを選択します。
 1. **[!UICONTROL Select target field]** ウィンドウで、**[!UICONTROL Select identity namespace]**&#x200B;を選択してIDを選択するか、**[!UICONTROL Select attributes]** カテゴリを選択し、必要に応じて表示されるデータ拡張機能から属性を選択します。 [!DNL (API) Salesforce Marketing Cloud]宛先は、[!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html)を使用して、[!DNL Salesforce Marketing Cloud]内で定義されたデータ拡張機能とそのリンク属性を動的に取得します。 これらは、**[!UICONTROL Target field]** オーディエンスのアクティブ化ワークフロー[で](#mapping-considerations-example) マッピング [を設定すると、](#activate) ポップアップに表示されます。
@@ -250,7 +250,7 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-[ オーディエンスの書き出しをスケジュール ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)する手順を実行する場合、[の](#prerequisites-attribute)属性[!DNL Salesforce Marketing Cloud]にExperience Platform オーディエンスを手動でマッピングする必要があります。
+[&#x200B; オーディエンスの書き出しをスケジュール &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)する手順を実行する場合、[の](#prerequisites-attribute)属性[!DNL Salesforce Marketing Cloud]にExperience Platform オーディエンスを手動でマッピングする必要があります。
 
 これを行うには、各セグメントを選択し、[!DNL Salesforce Marketing Cloud] [!DNL (API) Salesforce Marketing Cloud] フィールドに&#x200B;**[!UICONTROL Mapping ID]**&#x200B;の属性の名前を入力します。 [での属性の作成に関するガイダンスとベストプラクティスについては、 [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field)内の[!DNL Salesforce Marketing Cloud]属性の作成の節を参照してください。
 
@@ -280,10 +280,10 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**を選択します。
+1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;を選択します。
    ![宛先を参照を示すExperience Platform UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
-1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**であることを検証します。
+1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**&#x200B;であることを検証します。
    宛先データフロー実行を示す![Experience Platform UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
@@ -293,10 +293,10 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
    セグメントを示す![Experience Platform UI スクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
 1. [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) Web サイトにログインします。 次に、**[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** ページに移動し、オーディエンスのプロファイルが追加されているかどうかを確認します。
-   ![ セグメントで使用されているプロファイルを含む連絡先ページを示すSalesforce Marketing Cloud UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
+   ![&#x200B; セグメントで使用されているプロファイルを含む連絡先ページを示すSalesforce Marketing Cloud UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. プロファイルが更新されたかどうかを確認するには、**[!UICONTROL Email]** ページに移動し、オーディエンスのプロファイルの属性値が更新されたかどうかを確認します。 成功した場合、[!DNL Salesforce Marketing Cloud] オーディエンススケジュール **[!UICONTROL Mapping ID]**&#x200B;手順で指定した[値に基づいて、](#schedule-segment-export-example)の各オーディエンスステータスが、Experience Platformの対応するオーディエンスステータスで更新されていることがわかります。
-   ![ オーディエンスのステータスが更新され、選択した連絡先のメールページを示すSalesforce Marketing Cloud UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+   ![&#x200B; オーディエンスのステータスが更新され、選択した連絡先のメールページを示すSalesforce Marketing Cloud UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -312,12 +312,12 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
    * このエラーを修正するには、アクティベーションワークフローで&#x200B;**[!UICONTROL Mapping ID]**&#x200B;宛先に指定した[!DNL (API) Salesforce Marketing Cloud]が、[!DNL Salesforce Marketing Cloud]で作成した属性の名前と完全に一致することを確認してください。 ガイダンスについては、[内の [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field)属性の作成の節を参照してください。
 
 * セグメントをアクティブ化すると、次のエラーメッセージが表示される場合があります：`The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * このエラーを修正するには、[!DNL Salesforce Marketing Cloud] アカウント管理者に連絡して、[Experience Platform IP アドレス ](/help/destinations/catalog/streaming/ip-address-allow-list.md)を[!DNL Salesforce Marketing Cloud] アカウントの信頼できるIP範囲に追加してください。 追加のガイダンスが必要な場合は、Marketing Cloud[!DNL Salesforce Marketing Cloud]のドキュメントの「[ ](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5)IP アドレスを含める」を参照してください。
+   * このエラーを修正するには、[!DNL Salesforce Marketing Cloud] アカウント管理者に連絡して、[Experience Platform IP アドレス &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md)を[!DNL Salesforce Marketing Cloud] アカウントの信頼できるIP範囲に追加してください。 追加のガイダンスが必要な場合は、Marketing Cloud[!DNL Salesforce Marketing Cloud]のドキュメントの「[&#x200B; &#x200B;](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5)IP アドレスを含める」を参照してください。
 
 ## その他のリソース {#additional-resources}
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
-* 指定された情報を使用して連絡先を更新する方法を説明する[!DNL Salesforce Marketing Cloud] [ ドキュメント ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html)。
+* 指定された情報を使用して連絡先を更新する方法を説明する[!DNL Salesforce Marketing Cloud] [&#x200B; ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html)。
 
 ### 変更ログ {#changelog}
 
@@ -327,11 +327,11 @@ XDM フィールドを[!DNL (API) Salesforce Marketing Cloud]宛先フィール�
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年10月 | ドキュメントの更新 | <ul><li>（API）Salesforce Marketing Cloud[のセクションの](#prerequisites-destination)前提条件を更新し、一般的に、ドキュメント全体の属性グループへの不要な参照を削除しました。</li> <li>オーディエンスのステータスの属性は、[!DNL Salesforce Marketing Cloud] データ拡張機能でのみ[!DNL Email Demographics]以内に作成する必要があることを示すドキュメントを更新しました。</li> <li>「[ マッピングに関する考慮事項と例](#mapping-considerations-example)」セクション内のマッピングテーブルを更新しました。`Email Address` データ拡張内の`Email Addresses`属性のマッピングは必須とマークされています。この要件は、「重要」とマークされた吹き出しに記載されていましたが、テーブルから省略されました。</li></ul> |
-| 2023年4月 | ドキュメントの更新 | <ul><li>[がこの宛先を使用するための必須サブスクリプションであることを指摘するために、「（API）Salesforce Marketing Cloud](#prerequisites-destination)の前提条件」セクションのステートメントと参照リンクを修正しました。 [!DNL Salesforce Marketing Cloud Engagement]このセクションでは、先ほど誤って、Marketing Cloud **Account** Engagementへのサブスクリプションが必要であることを指摘しました。</li> <li>この宛先が機能するために[ ユーザーに割り当てる](#prerequisites)役割と権限[について、](#prerequisites-roles-permissions)前提条件[!DNL Salesforce]の下にセクションを追加しました。 （PLATIR-26299）</li></ul> |
+| 2023年10月 | ドキュメントの更新 | <ul><li>（API）Salesforce Marketing Cloud[のセクションの](#prerequisites-destination)前提条件を更新し、一般的に、ドキュメント全体の属性グループへの不要な参照を削除しました。</li> <li>オーディエンスのステータスの属性は、[!DNL Salesforce Marketing Cloud] データ拡張機能でのみ[!DNL Email Demographics]以内に作成する必要があることを示すドキュメントを更新しました。</li> <li>「[&#x200B; マッピングに関する考慮事項と例](#mapping-considerations-example)」セクション内のマッピングテーブルを更新しました。`Email Address` データ拡張内の`Email Addresses`属性のマッピングは必須とマークされています。この要件は、「重要」とマークされた吹き出しに記載されていましたが、テーブルから省略されました。</li></ul> |
+| 2023年4月 | ドキュメントの更新 | <ul><li>[がこの宛先を使用するための必須サブスクリプションであることを指摘するために、「（API）Salesforce Marketing Cloud](#prerequisites-destination)の前提条件」セクションのステートメントと参照リンクを修正しました。 [!DNL Salesforce Marketing Cloud Engagement]このセクションでは、先ほど誤って、Marketing Cloud **Account** Engagementへのサブスクリプションが必要であることを指摘しました。</li> <li>この宛先が機能するために[&#x200B; ユーザーに割り当てる](#prerequisites)役割と権限[について、](#prerequisites-roles-permissions)前提条件[!DNL Salesforce]の下にセクションを追加しました。 （PLATIR-26299）</li></ul> |
 | 2023年2月 | ドキュメントの更新 | 「（API）Salesforce Marketing Cloud[」セクションの](#prerequisites-destination)前提条件を更新し、[!DNL Salesforce Marketing Cloud Engagement]がこの宛先を使用するための必須サブスクリプションであることを示す参照リンクを含めました。 |
 | 2023年2月 | 機能アップデート | 宛先内の誤った設定により、形式が正しくないJSONがSalesforceに送信される問題を修正しました。 そのため、一部のユーザーでは、アクティベーションで失敗したIDの数が多くなりました。 （PLATIR-26299） |
-| 2023年1月 | ドキュメントの更新 | <ul><li>[側で属性を作成する必要があることを呼び出すために、 [!DNL Salesforce]](#prerequisites-destination)の[!DNL Salesforce]前提条件セクションを更新しました。 この節には、その方法に関する詳細な手順と、[!DNL Salesforce]での属性の命名に関するベストプラクティスが含まれています。 （PLATIR-25602）</li><li>アクティブ化された各オーディエンスに対してマッピング IDを使用する方法に関する明確な手順を、[ オーディエンススケジューリングステップ ](#schedule-segment-export-example)に追加しました。 （PLATIR-25602）</li></ul> |
+| 2023年1月 | ドキュメントの更新 | <ul><li>[側で属性を作成する必要があることを呼び出すために、 [!DNL Salesforce]](#prerequisites-destination)の[!DNL Salesforce]前提条件セクションを更新しました。 この節には、その方法に関する詳細な手順と、[!DNL Salesforce]での属性の命名に関するベストプラクティスが含まれています。 （PLATIR-25602）</li><li>アクティブ化された各オーディエンスに対してマッピング IDを使用する方法に関する明確な手順を、[&#x200B; オーディエンススケジューリングステップ &#x200B;](#schedule-segment-export-example)に追加しました。 （PLATIR-25602）</li></ul> |
 | 2022年10月 | 初回リリース | 最初の宛先リリースとドキュメントの公開。 |
 
 {style="table-layout:auto"}

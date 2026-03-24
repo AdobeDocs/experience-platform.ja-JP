@@ -15,8 +15,8 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 [!DNL Adobe Experience Platform]は幅広い宛先をサポートしています。 オーディエンスのアクティベーションのワークフローは、サポートするオーディエンスデータの種類やデータの書き出しの頻度によって、配信先によって異なります。
 
@@ -38,11 +38,11 @@ ht-degree: 27%
 
 1. **[!UICONTROL Connections > Destinations]**&#x200B;に移動し、「**[!UICONTROL Browse]**」タブを選択します。
 
-   ![ タブを参照](../assets/ui/activation-overview/browse-tab.png)
+   ![&#x200B; タブを参照](../assets/ui/activation-overview/browse-tab.png)
 
 1. セグメントのアクティブ化に使用する宛先接続を見つけ、[!UICONTROL Name]列の3つのドットを選択し、**[!UICONTROL Activate audiences]**&#x200B;を選択します。
 
-   ![ オーディエンスをアクティベート ボタン ](../assets/ui/activation-overview/activate-segments.png)
+   ![&#x200B; オーディエンスをアクティベート ボタン &#x200B;](../assets/ui/activation-overview/activate-segments.png)
 
 1. 選択した宛先に応じて、**[!UICONTROL Select segments]** ステップから次の記事で説明されている手順に従って、アクティベーション ワークフローを完了します。
 
@@ -52,7 +52,7 @@ ht-degree: 27%
 
 ### オーディエンスの詳細ページからオーディエンスをアクティベートする {#activate-audience-details}
 
-オーディエンスの詳細ページから宛先に対してオーディエンスをアクティブ化できます。 詳しくは、[ オーディエンスの詳細](../../segmentation/ui/audience-portal.md#audience-details)を参照してください。
+オーディエンスの詳細ページから宛先に対してオーディエンスをアクティブ化できます。 詳しくは、[&#x200B; オーディエンスの詳細](../../segmentation/ui/audience-portal.md#audience-details)を参照してください。
 
 選択した宛先に応じて、以下の記事で説明されている手順に従って、アクティベーションのワークフローを完了します。
 

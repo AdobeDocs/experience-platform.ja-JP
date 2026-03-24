@@ -56,7 +56,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## 役割ベースのアクセス制御（RBAC） {#rbac}
 
-[ リファレンスドキュメント ](functionality/configuration-options.md)に記載されているDestination SDK API エンドポイントを使用するには、**[!UICONTROL Destination Authoring]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
+[&#x200B; リファレンスドキュメント &#x200B;](functionality/configuration-options.md)に記載されているDestination SDK API エンドポイントを使用するには、**[!UICONTROL Destination Authoring]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
 
 ![宛先オーサリング権限](./assets/destination-authoring-permission.png)
 

@@ -31,7 +31,7 @@ ht-degree: 39%
 
 [!DNL Dynamics 365]宛先にデータをアクティブ化する前に、[で](/help/xdm/schema/composition.md) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) オーディエンス [!DNL Experience Platform]を作成しておく必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md)に関するAdobeのドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md)に関するAdobeのドキュメントを参照してください。
 
 ### [!DNL Microsoft Dynamics 365] 前提条件 {#prerequisites-destination}
 
@@ -45,9 +45,9 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 フィールドのデータタイプが`Simple`のタイプ `Single Line of Text`のカスタムフィールドを作成します。このフィールドをExperience Platformで[!DNL Dynamics 365]内のオーディエンスステータスの更新に使用します。
 
-追加のガイダンスが必要な場合は、[!DNL Dynamics 365] [ フィールド（属性） ](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1)の作成または編集に関するドキュメントを参照してください。
+追加のガイダンスが必要な場合は、[!DNL Dynamics 365] [&#x200B; フィールド（属性） &#x200B;](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1)の作成または編集に関するドキュメントを参照してください。
 
-**[!UICONTROL Customization prefix]**&#x200B;で作成したカスタムフィールドの[!DNL Dynamics 365]を書き留めます。 このプレフィックスは、[宛先の詳細を入力](#destination-details)手順の間に必要になります。 詳しくは、[ ドキュメントの](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) フィールドの作成と編集[!DNL Dynamics 365] セクションを参照してください。
+**[!UICONTROL Customization prefix]**&#x200B;で作成したカスタムフィールドの[!DNL Dynamics 365]を書き留めます。 このプレフィックスは、[宛先の詳細を入力](#destination-details)手順の間に必要になります。 詳しくは、[&#x200B; ドキュメントの](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) フィールドの作成と編集[!DNL Dynamics 365] セクションを参照してください。
 カスタマイズのプレフィックスを示す![Dynamics 365 UIのスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 [!DNL Dynamics 365] 内の設定例を次に示します。
@@ -72,7 +72,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 | `Client ID` | お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] クライアント ID。詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in)を参照してください。 | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] クライアント秘密鍵。[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options)内のオプション #2 を使用することになります。 | 説明のための `abcde~abcdefghijklmnopqrstuvwxyz12345678`。 |
 | `Tenant ID` | お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] テナント ID。詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in)を参照してください。 | `1234567-aaaa-12ab-ba21-1234567890` |
-| `Region` | 環境URLに関連付けられているMicrosoft リージョン。<br> ガイダンスについては、[[!DNL Dynamics 365]  ドキュメント ](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions)を参照してください。 | ドメインが以下の場合、[destination](#authenticate)に対する認証時に、ドロップダウンセレクターのCRM フィールドに強調表示された値を指定する必要があります。<br> *org57771b33。`crm`.dynamics.com*<br>&#x200B;例：会社が北米（NAM）地域にプロビジョニングされている場合、URLは`crm.dynamics.com`になり、`crm`を選択する必要があります。 会社がカナダ （CAN） リージョンでプロビジョニングされている場合、URLは`crm3.dynamics.com`になり、`crm3`を選択する必要があります。 |
+| `Region` | 環境URLに関連付けられているMicrosoft リージョン。<br> ガイダンスについては、[[!DNL Dynamics 365]  ドキュメント &#x200B;](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions)を参照してください。 | ドメインが以下の場合、[destination](#authenticate)に対する認証時に、ドロップダウンセレクターのCRM フィールドに強調表示された値を指定する必要があります。<br> *org57771b33。`crm`.dynamics.com*<br>&#x200B;例：会社が北米（NAM）地域にプロビジョニングされている場合、URLは`crm.dynamics.com`になり、`crm`を選択する必要があります。 会社がカナダ （CAN） リージョンでプロビジョニングされている場合、URLは`crm3.dynamics.com`になり、`crm3`を選択する必要があります。 |
 | `Environment URL` | 詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1)を参照してください。 | お使いの [!DNL Dynamics 365] ドメインが以下のようになっている場合は、ハイライト表示された値が必要です。<br> *`org57771b33`.crm.dynamics.com* |
 
 {style="table-layout:auto"}
@@ -97,7 +97,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -108,10 +108,10 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -139,7 +139,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**を選択します。
+宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 認証方法を示す![Experience Platform UIのスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 以下の必須のフィールドに入力します。詳しくは、[Dynamics 365 資格情報の収集](#gather-credentials)の節を参照してください。
@@ -159,7 +159,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
-* **[!UICONTROL Customization Prefix]**: `Customization prefix`で作成したカスタムフィールドの[!DNL Dynamics 365]。 詳しくは、[ ドキュメントの](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) フィールドの作成と編集[!DNL Dynamics 365] セクションを参照してください。
+* **[!UICONTROL Customization Prefix]**: `Customization prefix`で作成したカスタムフィールドの[!DNL Dynamics 365]。 詳しくは、[&#x200B; ドキュメントの](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) フィールドの作成と編集[!DNL Dynamics 365] セクションを参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -171,8 +171,8 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -180,7 +180,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 オーディエンスデータを[!DNL Adobe Experience Platform]から[!DNL Dynamics 365]宛先に正しく送信するには、フィールドマッピング手順を実行する必要があります。 マッピングでは、Experience Platform アカウントのExperience Data Model （XDM）スキーマフィールドと、ターゲット先の対応するスキーマフィールドとの間にリンクを作成します。 XDM フィールドを [!DNL Dynamics 365] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**を選択します。 画面に新しいマッピング行が表示されます。
+1. **[!UICONTROL Mapping]** ステップで、**[!UICONTROL Add new mapping]**&#x200B;を選択します。 画面に新しいマッピング行が表示されます。
    ![新しいマッピングを追加するExperience Platform UIのスクリーンショット例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. **[!UICONTROL Select source field]** ウィンドウで、**[!UICONTROL Select identity namespace]** カテゴリを選択し、`contactid`を選択します。
@@ -202,7 +202,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
      >[!IMPORTANT]
      >
      > * ターゲットフィールド名は`lowercase`にする必要があります。
-     > * さらに、[!DNL Dynamics 365] [日付またはタイムスタンプ ](https://docs.microsoft.com/ja-jp/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) ターゲットフィールドにマッピングされた日付またはタイムスタンプソースフィールドがある場合は、マッピングされた値が空でないことを確認してください。 書き出されたフィールド値が空の場合、*`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* エラーメッセージが表示され、データは更新されません。 （これは [!DNL Dynamics 365] の制限です。）
+     > * さらに、[!DNL Dynamics 365] [日付またはタイムスタンプ &#x200B;](https://docs.microsoft.com/ja-jp/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) ターゲットフィールドにマッピングされた日付またはタイムスタンプソースフィールドがある場合は、マッピングされた値が空でないことを確認してください。 書き出されたフィールド値が空の場合、*`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* エラーメッセージが表示され、データは更新されません。 （これは [!DNL Dynamics 365] の制限です。）
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと[!DNL Dynamics 365] インスタンスの間に次のマッピングを追加します。
 
@@ -233,10 +233,10 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**を選択します。
+1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;を選択します。
    ![宛先を参照を示すExperience Platform UIのスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
-1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**であることを検証します。
+1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**&#x200B;であることを検証します。
    宛先データフロー実行を示す![Experience Platform UIのスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
@@ -277,7 +277,7 @@ Experience Platformから[!DNL Dynamics 365] アカウントにデータをエ�
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年10月 | ドキュメントの更新 | すべてのターゲット属性名を小文字にする必要があることを示すガイダンスが、[ マッピングの考慮事項と例](#mapping-considerations-example)の手順で更新されました。 |
+| 2023年10月 | ドキュメントの更新 | すべてのターゲット属性名を小文字にする必要があることを示すガイダンスが、[&#x200B; マッピングの考慮事項と例](#mapping-considerations-example)の手順で更新されました。 |
 | 2023年8月 | 機能とドキュメントの更新 | [!DNL Dynamics 365]のデフォルトソリューション内で作成されなかったカスタムフィールドの[!DNL Dynamics 365] カスタムフィールド接頭辞のサポートを追加しました。 新しい入力フィールド **[!UICONTROL Customization Prefix]**&#x200B;が、[宛先の詳細を入力](#destination-details)手順で追加されました。 （PLATIR-31602）。 |
 | 2022年11月 | 初回リリース | 最初の宛先リリースとドキュメントの公開。 |
 

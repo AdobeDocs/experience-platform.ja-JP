@@ -16,14 +16,14 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
-> * データをアクティブ化し、ワークフローの[ マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
-> * ワークフローの[ マッピング手順](#mapping)を経ずにデータをアクティベートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+> * データをアクティブ化し、ワークフローの[&#x200B; マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+> * ワークフローの[&#x200B; マッピング手順](#mapping)を経ずにデータをアクティベートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
-この記事では、[!DNL Adobe Experience Platform]のオーディエンスデータをストリーミングプロファイルベースの宛先（[ エンタープライズ宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)とも呼ばれます）にアクティベートするために必要なワークフローについて説明します。
+この記事では、[!DNL Adobe Experience Platform]のオーディエンスデータをストリーミングプロファイルベースの宛先（[&#x200B; エンタープライズ宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)とも呼ばれます）にアクティベートするために必要なワークフローについて説明します。
 
 この記事は、次の3つの宛先に適用されます。
 
@@ -49,7 +49,7 @@ ht-degree: 12%
 
    ![接続可能な2つの宛先の選択範囲を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. 次のセクションに移動して、[ オーディエンスを選択](#select-audiences)します。
+1. 次のセクションに移動して、[&#x200B; オーディエンスを選択](#select-audiences)します。
 
 ## オーディエンスの選択 {#select-audiences}
 
@@ -57,11 +57,11 @@ ht-degree: 12%
 
 配信元に応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ オーディエンスポータルのドキュメント ](../../segmentation/ui/audience-portal.md)を参照してください。
-* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
+* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[&#x200B; オーディエンスポータルのドキュメント &#x200B;](../../segmentation/ui/audience-portal.md)を参照してください。
+* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[&#x200B; オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
 * その他の種類のオーディエンスは、[!DNL Audience Manager]など、他のAdobe ソリューションから作成されています。
 
-![ アクティベーション ワークフローの「オーディエンスを選択」ステップでのチェックボックスの選択を強調表示する画像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
+![&#x200B; アクティベーション ワークフローの「オーディエンスを選択」ステップでのチェックボックスの選択を強調表示する画像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## プロファイル属性の選択 {#select-attributes}
 
@@ -77,7 +77,7 @@ ht-degree: 12%
 
 1. **[!UICONTROL Select source field]** ページで、宛先に送信するXDM属性を選択し、**[!UICONTROL Save]**&#x200B;を選択します。
 
-   ![ ソースフィールドとして選択できるXDM フィールドの選択範囲を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+   ![&#x200B; ソースフィールドとして選択できるXDM フィールドの選択範囲を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
 
    値が入力されたスキーマフィールドのみを表示するには、**[!UICONTROL Show only fields with data]** トグルを使用します。 デフォルトでは、入力されたスキーマフィールドのみが表示されます。
 
@@ -107,7 +107,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### データ使用ポリシーチェック {#data-usage-policy-checks}
 
-**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[ データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
+**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[&#x200B; データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
@@ -115,7 +115,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。
 
-![ レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
+![&#x200B; レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
 選択に満足しており、ポリシー違反が検出されていない場合は、**[!UICONTROL Finish]**&#x200B;を選択して選択を確認し、宛先へのデータ送信を開始します。
 

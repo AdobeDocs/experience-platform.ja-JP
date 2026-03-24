@@ -25,7 +25,7 @@ ht-degree: 53%
 
 ## 手順 1：サーバーとテンプレートの構成を作成する {#create-server-template-configuration}
 
-[ エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとテンプレート設定`/destinations-server`を作成することから開始します。
+[&#x200B; エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとテンプレート設定`/destinations-server`を作成することから開始します。
 
 次に構成の例を示します。 `requestBody.value` パラメーターでのメッセージ変換テンプレートは、手順 3 の[変換テンプレートの作成](#create-transformation-template)で対応します。
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 3：メッセージ変換テンプレートの作成。テンプレート言語を使用して、メッセージの出力形式を指定します {#create-transformation-template}
 
-宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 「[ID、属性、オーディエンスメンバーシップの変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating)」の節のテンプレートの例を参照し、Adobeが提供する[ テンプレートオーサリングツール ](../testing-api/streaming-destinations/create-template.md)を使用します。
+宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 「[ID、属性、オーディエンスメンバーシップの変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating)」の節のテンプレートの例を参照し、Adobeが提供する[&#x200B; テンプレートオーサリングツール &#x200B;](../testing-api/streaming-destinations/create-template.md)を使用します。
 
 自分の用途に合ったメッセージ変換テンプレートを作成したら、そのテンプレートを手順 1 で作成したサーバーおよびテンプレートの構成に追加します。
 
@@ -279,12 +279,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 6：宛先のテスト {#test-destination}
 
-前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール ](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
+前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール &#x200B;](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
 
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、次の2つのリソースを参照してください。
 
 * [オーディエンスのドキュメントページの作成](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ オーディエンス動画のチュートリアルを作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [&#x200B; オーディエンス動画のチュートリアルを作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 7：宛先を公開する {#publish-destination}
 

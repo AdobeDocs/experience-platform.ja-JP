@@ -36,7 +36,7 @@ ht-degree: 26%
 
    ![宛先を絞り込む](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 名前列の![詳細ボタン ](/help/images/icons/more.png) ボタンを選択し、![削除ボタン ](/help/images/icons/delete.png) **[!UICONTROL Delete]**を選択して、既存の宛先接続を削除します。
+3. 名前列の![詳細ボタン &#x200B;](/help/images/icons/more.png) ボタンを選択し、![削除ボタン &#x200B;](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;を選択して、既存の宛先接続を削除します。
    ![宛先を削除](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 宛先接続の削除を確認するには、**[!UICONTROL Delete]**&#x200B;を選択します。
@@ -61,7 +61,7 @@ ht-degree: 26%
 
    * 宛先に既存のデータフローがある場合は、[!UICONTROL Dataflow runs] タブに移動します。
 
-     ![ データフロー実行タブ ](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![&#x200B; データフロー実行タブ &#x200B;](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 宛先に既存のデータフローがない場合は、オーディエンスのアクティベーションを開始できる空のページに移動します。
 

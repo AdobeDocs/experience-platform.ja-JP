@@ -17,7 +17,7 @@ ht-degree: 18%
 
 ## 概要 {#overview}
 
-[!DNL Adobe Campaign Managed Cloud Services]は、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーンのオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [ キャンペーンの概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
+[!DNL Adobe Campaign Managed Cloud Services]は、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーンのオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [&#x200B; キャンペーンの概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
 
 Campaign を使用すると、次のことを行えます。
 
@@ -29,7 +29,7 @@ Campaign を使用すると、次のことを行えます。
 
 [!DNL Adobe Campaign Managed Cloud Services]接続を使用する場合は、次のガードレールに注意してください。
 
-* この宛先には、最大25人のオーディエンスを[ アクティブ化](#activate)できます。
+* この宛先には、最大25人のオーディエンスを[&#x200B; アクティブ化](#activate)できます。
 
   この制限を変更するには、Campaign エクスプローラーの&#x200B;**>** > **[!UICONTROL Administration]** フォルダーの&#x200B;**[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** オプションの値を更新します。 このガードレールは、設定されたすべての宛先で1つのCampaign インスタンスに書き出すことができるExperience Platform オーディエンスの合計数を制限します。
 
@@ -61,7 +61,7 @@ Campaign を使用すると、次のことを行えます。
   >
   >プロファイル属性の同期は、[!DNL Adobe Campaign] データベースに既に存在するプロファイルに対して使用できます。
 
-[ [!DNL Adobe Campaign]  [!DNL Adobe Experience Platform]との](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)統合について詳しく見る
+[&#x200B; [!DNL Adobe Campaign]  [!DNL Adobe Experience Platform]との](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)統合について詳しく見る
 
 ## サポートされている ID {#supported-identities}
 
@@ -84,7 +84,7 @@ Campaign を使用すると、次のことを行えます。
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -95,10 +95,10 @@ Campaign を使用すると、次のことを行えます。
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ Campaign を使用すると、次のことを行えます。
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -153,10 +153,10 @@ Campaign を使用すると、次のことを行えます。
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対するオーディエンスデータのアクティブ化の手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)を参照してください。
+この宛先に対するオーディエンスデータのアクティブ化の手順については、[&#x200B; バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -185,7 +185,7 @@ Campaign を使用すると、次のことを行えます。
 
    ![個のターゲットフィールドにマッピングされたXDM ソースフィールドを示す[!DNL Adobe Campaign]属性マッピング画面。必須および重複排除の主要指標が表示されている](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)。
 
-1. マッピングが実行されたら、宛先設定を確認して完了し、**[!DNL Campaign]**へのデータ送信を開始できます。
+1. マッピングが実行されたら、宛先設定を確認して完了し、**[!DNL Campaign]**&#x200B;へのデータ送信を開始できます。
    [宛先設定を確認して完了する方法について説明します](/help/destinations/destination-types.md#destination-types-and-categories)。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}

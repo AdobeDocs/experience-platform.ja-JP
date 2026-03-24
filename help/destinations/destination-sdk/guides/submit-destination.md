@@ -34,11 +34,11 @@ ht-degree: 32%
 * 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントに対して行われたAPI呼び出しと、宛先エンドポイントから受信したAPI応答をAdobeに送信してください。
 * 宛先に接続し、アクティベーション手順を進めるユーザーのエクスペリエンスを示す画面記録。
 * ファイルベースの宛先に関するその他の要件：
-   * テスト APIを使用した後、リクエストと応答サンプルを共有して、[ サンプルプロファイルを使用してファイルベースの宛先をテスト ](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
+   * テスト APIを使用した後、リクエストと応答サンプルを共有して、[&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテスト &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
    * 宛先によって生成され、保存場所に書き出されたサンプルファイルを添付します。
    * 書き出したファイルをストレージの場所からシステムに正常に取り込んだことを証明する何らかの形式のプルーフを送信します。
 * [destination publishing API](../publishing-api/create-publishing-request.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* [ セルフサービスのドキュメントプロセス ](../docs-framework/documentation-instructions.md)で説明されている手順に従って、ドキュメント PR （プル要求）を実行します。
+* [&#x200B; セルフサービスのドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md)で説明されている手順に従って、ドキュメント PR （プル要求）を実行します。
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
@@ -234,11 +234,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### API応答のテスト {#testing-api-response-file-based}
 
-テスト APIを使用した後、リクエストと応答サンプルを含めて、[ サンプルプロファイルを使用してファイルベースの宛先をテスト ](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
+テスト APIを使用した後、リクエストと応答サンプルを含めて、[&#x200B; サンプルプロファイルを使用してファイルベースの宛先をテスト &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md)します。
 
 ### 書き出したファイルを添付 {#attach-exported-file}
 
-[送信メール ](#download-sample-email)で、設定した宛先によってストレージの場所に書き出されたCSV ファイルを添付します。
+[送信メール &#x200B;](#download-sample-email)で、設定した宛先によってストレージの場所に書き出されたCSV ファイルを添付します。
 
 ### 取り込みが成功したことを示す証拠 {#proof-of-successful-ingestion}
 
@@ -256,7 +256,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト） {#documentation-pr}
 
-[製品化された統合](../overview.md#productized-custom-integrations)を作成する独立ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）の場合は、[ セルフサービスのドキュメントプロセス ](../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
+[製品化された統合](../overview.md#productized-custom-integrations)を作成する独立ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）の場合は、[&#x200B; セルフサービスのドキュメントプロセス &#x200B;](../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ {#logo}
 

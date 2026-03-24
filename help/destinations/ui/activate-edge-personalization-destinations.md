@@ -15,23 +15,23 @@ ht-degree: 8%
 
 ## 概要 {#overview}
 
-[!DNL Adobe Experience Platform]は、[ エッジセグメント化](../../segmentation/methods/edge-segmentation.md)と[ エッジ宛先](/help/destinations/destination-types.md#edge-personalization-destinations)を使用して、顧客がリアルタイムで大規模にオーディエンスを作成およびターゲティングできるようにします。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
+[!DNL Adobe Experience Platform]は、[&#x200B; エッジセグメント化](../../segmentation/methods/edge-segmentation.md)と[&#x200B; エッジ宛先](/help/destinations/destination-types.md#edge-personalization-destinations)を使用して、顧客がリアルタイムで大規模にオーディエンスを作成およびターゲティングできるようにします。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
 
-エッジの宛先の例は、[[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)および[ カスタムパーソナライゼーション ](../../destinations/catalog/personalization/custom-personalization.md)接続です。
+エッジの宛先の例は、[[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)および[&#x200B; カスタムパーソナライゼーション &#x200B;](../../destinations/catalog/personalization/custom-personalization.md)接続です。
 
 >[!NOTE]
 >
->データストリーム IDを使用せずに[接続 [!DNL Adobe Target]  ](../catalog/personalization/adobe-target-connection.md)を&#x200B;*設定する場合、この記事で説明するユースケースはサポートされていません。*&#x200B;データストリームがない場合は、次セッションのパーソナライゼーションのユースケースのみがサポートされます。
+>データストリーム IDを使用せずに[接続 [!DNL Adobe Target]  &#x200B;](../catalog/personalization/adobe-target-connection.md)を&#x200B;*設定する場合、この記事で説明するユースケースはサポートされていません。*&#x200B;データストリームがない場合は、次セッションのパーソナライゼーションのユースケースのみがサポートされます。
 
 >[!IMPORTANT]
 >
->* データをアクティブ化し、ワークフローの[ マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
->* ワークフローの[ マッピング手順](#mapping)を経ずにデータをアクティベートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化し、ワークフローの[&#x200B; マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* ワークフローの[&#x200B; マッピング手順](#mapping)を経ずにデータをアクティベートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この記事では、[!DNL Adobe Experience Platform] エッジ宛先に対するオーディエンスのアクティブ化に必要なワークフローについて説明します。 [ エッジセグメント化](../../segmentation/methods/edge-segmentation.md)およびオプションの[ プロファイル属性マッピング ](#mapping)と組み合わせて使用すると、これらの宛先は、webおよびモバイルプロパティで同ページと次ページのパーソナライゼーションのユースケースを有効にします。
+この記事では、[!DNL Adobe Experience Platform] エッジ宛先に対するオーディエンスのアクティブ化に必要なワークフローについて説明します。 [&#x200B; エッジセグメント化](../../segmentation/methods/edge-segmentation.md)およびオプションの[&#x200B; プロファイル属性マッピング &#x200B;](#mapping)と組み合わせて使用すると、これらの宛先は、webおよびモバイルプロパティで同ページと次ページのパーソナライゼーションのユースケースを有効にします。
 
 エッジパーソナライゼーション用に[!DNL Adobe Target]接続を設定する方法の概要については、以下のビデオをご覧ください。
 
@@ -47,15 +47,15 @@ ht-degree: 8%
 
 ## ユースケース {#use-cases}
 
-[!DNL Adobe Target]などのAdobe パーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（例：[!DNL Optimizely]、[!DNL Pega]）と独自のシステム（例：インハウス CMS）を使用して、[ カスタム Personalization](../catalog/personalization/custom-personalization.md)宛先を介してより深い顧客体験を実現します。 こうした機能の他には、Experience Platform Edge Networkのデータ収集とセグメンテーション機能も活用されています。
+[!DNL Adobe Target]などのAdobe パーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（例：[!DNL Optimizely]、[!DNL Pega]）と独自のシステム（例：インハウス CMS）を使用して、[&#x200B; カスタム Personalization](../catalog/personalization/custom-personalization.md)宛先を介してより深い顧客体験を実現します。 こうした機能の他には、Experience Platform Edge Networkのデータ収集とセグメンテーション機能も活用されています。
 
 以下で説明するユースケースには、サイトパーソナライゼーションとターゲットオンサイト広告の両方が含まれます。
 
-これらのユースケースを有効にするには、Experience Platformからオーディエンスとプロファイル属性情報の両方を迅速かつ合理的に取得し、Experience Platform UIの[[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md)または[ カスタム Personalization](../catalog/personalization/custom-personalization.md)接続に送信する方法が必要です。
+これらのユースケースを有効にするには、Experience Platformからオーディエンスとプロファイル属性情報の両方を迅速かつ合理的に取得し、Experience Platform UIの[[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md)または[&#x200B; カスタム Personalization](../catalog/personalization/custom-personalization.md)接続に送信する方法が必要です。
 
 ### 同じページのパーソナライズ機能 {#same-page}
 
-オーディエンスがweb サイトのページにアクセスし、 現在のページ訪問情報（参照URL、ブラウザー言語、埋め込み製品情報など）を使用して、次のアクションまたは決定（パーソナライゼーションなど）を選択し、Adobe以外のプラットフォームの[ カスタムパーソナライゼーション ](../catalog/personalization/custom-personalization.md)接続（例：[!DNL Pega]、[!DNL Optimizely]など）を使用できます。
+オーディエンスがweb サイトのページにアクセスし、 現在のページ訪問情報（参照URL、ブラウザー言語、埋め込み製品情報など）を使用して、次のアクションまたは決定（パーソナライゼーションなど）を選択し、Adobe以外のプラットフォームの[&#x200B; カスタムパーソナライゼーション &#x200B;](../catalog/personalization/custom-personalization.md)接続（例：[!DNL Pega]、[!DNL Optimizely]など）を使用できます。
 
 ### 次のページのパーソナライゼーション {#next-page}
 
@@ -81,15 +81,15 @@ ht-degree: 8%
 
 >[!TIP]
 >
->2024年4月リリース以降、[接続先を [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md)に設定する場合、「Edge セグメンテーション」チェックボックスをオンにする必要はありません。 この場合、[次セッションのパーソナライゼーション ](#next-session)は、利用可能なパーソナライゼーションのユースケースのみが使用できます。
+>2024年4月リリース以降、[接続先を [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md)に設定する場合、「Edge セグメンテーション」チェックボックスをオンにする必要はありません。 この場合、[次セッションのパーソナライゼーション &#x200B;](#next-session)は、利用可能なパーソナライゼーションのユースケースのみが使用できます。
 
 ![Edge セグメンテーションとPersonalization Destinationsを使用したデータストリーム設定がハイライト表示されます！](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-データストリームの設定方法について詳しくは、[Experience Platform Web SDK ドキュメント ](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
+データストリームの設定方法について詳しくは、[Experience Platform Web SDK ドキュメント &#x200B;](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
 
 ### [!DNL Active-On-Edge]結合ポリシーの作成 {#create-merge-policy}
 
-宛先接続を作成したら、[!DNL Active-On-Edge]結合ポリシーを作成する必要があります。 [!DNL Active-On-Edge]結合ポリシーにより、オーディエンスは常に[ エッジ ](../../segmentation/methods/edge-segmentation.md)で評価され、リアルタイムおよび次ページのパーソナライゼーションのユースケースで利用できるようになります。
+宛先接続を作成したら、[!DNL Active-On-Edge]結合ポリシーを作成する必要があります。 [!DNL Active-On-Edge]結合ポリシーにより、オーディエンスは常に[&#x200B; エッジ &#x200B;](../../segmentation/methods/edge-segmentation.md)で評価され、リアルタイムおよび次ページのパーソナライゼーションのユースケースで利用できるようになります。
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ ht-degree: 8%
 
 [!DNL Active-On-Edge]結合ポリシーを作成したら、Experience Platformで新しいオーディエンスを作成する必要があります。
 
-[ オーディエンスビルダー](../../segmentation/ui/segment-builder.md) ガイドに従って、新しいオーディエンスを作成し、前の手順で作成した[結合ポリシーを](../../segmentation/ui/segment-builder.md#merge-policies)割り当てます[!DNL Active-On-Edge]。
+[&#x200B; オーディエンスビルダー](../../segmentation/ui/segment-builder.md) ガイドに従って、新しいオーディエンスを作成し、前の手順で作成した[結合ポリシーを](../../segmentation/ui/segment-builder.md#merge-policies)割り当てます[!DNL Active-On-Edge]。
 
 ### 宛先接続の作成 {#connect-destination}
 
@@ -124,13 +124,13 @@ ht-degree: 8%
 
 1. オーディエンスをアクティブ化するパーソナライゼーションの宛先に対応するカードで、以下の画像に示すように&#x200B;**[!UICONTROL Activate audiences]**&#x200B;を選択します。
 
-   ![ カタログ内の宛先カードでハイライト表示されたオーディエンスコントロールをアクティブ化します。](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![&#x200B; カタログ内の宛先カードでハイライト表示されたオーディエンスコントロールをアクティブ化します。](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. オーディエンスの有効化に使用する宛先接続を選択し、**[!UICONTROL Next]**&#x200B;を選択します。
 
-   ![ アクティブ化ワークフローで宛先ステップを選択します。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![&#x200B; アクティブ化ワークフローで宛先ステップを選択します。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. 次のセクションに移動して、[ オーディエンスを選択](#select-audiences)します。
+1. 次のセクションに移動して、[&#x200B; オーディエンスを選択](#select-audiences)します。
 
 ## オーディエンスの選択 {#select-audiences}
 
@@ -140,8 +140,8 @@ ht-degree: 8%
 
 配信元に応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md)を参照してください。
-* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
+* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[&#x200B; セグメント化ドキュメント &#x200B;](../../segmentation/ui/overview.md)を参照してください。
+* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[&#x200B; オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
 * その他の種類のオーディエンスは、[!DNL Audience Manager]など、他のAdobe ソリューションから作成されています。
 
 ![複数のオーディエンスがハイライト表示されたアクティベーション ワークフローの「オーディエンスを選択」ステップ。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれる場合があります。 このデータを保護するために、**[!UICONTROL Custom Personalization]**&#x200B;宛先では、属性ベースのパーソナライゼーションの宛先を設定する際に[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)を使用する必要があります。 すべてのEdge Network API呼び出しは、[認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)で行う必要があります。
+>プロファイル属性には、機密データが含まれる場合があります。 このデータを保護するために、**[!UICONTROL Custom Personalization]**&#x200B;宛先では、属性ベースのパーソナライゼーションの宛先を設定する際に[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)を使用する必要があります。 すべてのEdge Network API呼び出しは、[認証済みコンテキスト &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)で行う必要があります。
 >
 ><br>既にWeb SDKまたはMobile SDKを統合に使用している場合は、サーバーサイド統合を追加してEdge Network API経由で属性を取得できます。
 >
@@ -174,9 +174,9 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->ターゲット属性の選択は、宛先プラットフォームでのフレンドリ名フィールドマッピングをサポートするために、[ カスタム Personalization](../catalog/personalization/custom-personalization.md)のアクティベーションワークフローにのみ適用されます。
+>ターゲット属性の選択は、宛先プラットフォームでのフレンドリ名フィールドマッピングをサポートするために、[&#x200B; カスタム Personalization](../catalog/personalization/custom-personalization.md)のアクティベーションワークフローにのみ適用されます。
 
-![ マッピング手順でXDM属性を選択する方法を示す画面録画](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
+![&#x200B; マッピング手順でXDM属性を選択する方法を示す画面録画](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 ## オーディエンスの書き出しのスケジュール {#scheduling}
 
@@ -188,7 +188,7 @@ ht-degree: 8%
 
 **[!UICONTROL Audience schedule]** ページで、各オーディエンスを選択し、**[!UICONTROL Start date]**&#x200B;および&#x200B;**[!UICONTROL End date]** セレクターを使用して、宛先にデータを送信する時間間隔を設定します。
 
-開始日と終了日がハイライト表示されたアクティベーション ワークフローの![ オーディエンス スケジュール ステップ。](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+開始日と終了日がハイライト表示されたアクティベーション ワークフローの![&#x200B; オーディエンス スケジュール ステップ。](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 **[!UICONTROL Next]**&#x200B;を選択して[!UICONTROL Review] ページに移動します。
 
@@ -204,15 +204,15 @@ ht-degree: 8%
 
 ### データ使用ポリシーチェック {#data-usage-policy-checks}
 
-**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[ データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
+**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[&#x200B; データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
 
-![ データポリシー違反の例。](../assets/common/data-policy-violation.png)
+![&#x200B; データポリシー違反の例。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスを絞り込む {#filter-audiences}
 
 この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。 表示するテーブル列を切り替えることもできます。
 
-![ レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
+![&#x200B; レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 選択に満足しており、ポリシー違反が検出されていない場合は、**[!UICONTROL Finish]**&#x200B;を選択して選択を確認し、宛先へのデータ送信を開始します。
 
