@@ -17,7 +17,7 @@ ht-degree: 21%
 
 ## 概要 {#overview}
 
-[!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] （DSP）の宛先を使用すると、認証済みのファーストパーティオーディエンスを、承認済みの広告主およびユーザーと共有して、DSPでキャンペーンをアクティベートできます。 DSPとの[!DNL Real-Time CDP]統合について詳しくは、「[ オーディエンスソースからの認証済みオーディエンスのアクティブ化について](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)」を参照してください。
+[!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] （DSP）の宛先を使用すると、認証済みのファーストパーティオーディエンスを、承認済みの広告主およびユーザーと共有して、DSPでキャンペーンをアクティベートできます。 DSPとの[!DNL Real-Time CDP]統合について詳しくは、「[&#x200B; オーディエンスソースからの認証済みオーディエンスのアクティブ化について](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)」を参照してください。
 
 >[!IMPORTANT]
 >
@@ -68,7 +68,7 @@ DSPのアカウントを持つメディア代理店が、ホスピタリティ�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、Experience Platformの&#x200B;**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、Experience Platformの&#x200B;**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先に接続するには、[Experience Platform ユーザーインターフェイスを使用して宛先接続](/help/destinations/ui/connect-destination.md)を作成する手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -76,9 +76,9 @@ DSPのアカウントを持つメディア代理店が、ホスピタリティ�
 
 宛先に接続するには、[!UICONTROL Connection type] セクションに次のパラメーターを指定し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイス ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)で作成されたときに生成されます。 DSP アカウントチームは、ソースを作成した後、このキーを共有します。
+* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)で作成されたときに生成されます。 DSP アカウントチームは、ソースを作成した後、このキーを共有します。
 
-![接続タイプ フィールド ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![接続タイプ フィールド &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -87,7 +87,7 @@ DSPのアカウントを持つメディア代理店が、ホスピタリティ�
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
 
-![宛先の詳細フィールド ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![宛先の詳細フィールド &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -99,8 +99,8 @@ DSPのアカウントを持つメディア代理店が、ホスピタリティ�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -112,8 +112,8 @@ DSPのアカウントを持つメディア代理店が、ホスピタリティ�
 
 * DSPでは、オーディエンスは、[!UICONTROL Audiences] > [!UICONTROL All Audiences]またはプレースメント設定の[!UICONTROL Audience Targeting] セクション内からオーディエンスを作成または編集する際に使用できます。 オーディエンスは、[!UICONTROL Adobe Segments] フォルダーの下の[!UICONTROL Real-Time CDP] タブに表示されます。
 
-DSP オーディエンス設定の![Real-Time CDP オーディエンス ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+DSP オーディエンス設定の![Real-Time CDP オーディエンス &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](/help/data-governance/home.md)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[&#x200B; データガバナンスの概要](/help/data-governance/home.md)を参照してください。
