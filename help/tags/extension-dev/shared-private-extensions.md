@@ -25,17 +25,17 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 
 **新しい拡張機能をアップロード** ページで、**[!UICONTROL Select Extension Folder]**&#x200B;を選択し、拡張機能を含むフォルダーに移動し、フォルダーを選択してから&#x200B;**[!UICONTROL Upload]**&#x200B;を選択します。
 
-![ ローカル フォルダーで拡張機能が選択されました。](../images/shared-extensions/selected-extension.png)
+![&#x200B; ローカル フォルダーで拡張機能が選択されました。](../images/shared-extensions/selected-extension.png)
 
 **[!UICONTROL Upload]**&#x200B;を選択して、アップロードされるファイルの数を確認します。
 
 アップロードされるファイルの数は、拡張子の名前とバージョンを含めて表示されます。 **[!UICONTROL Dry Run]**&#x200B;を実行して、zip ファイルをローカルマシンにダウンロードして検査するオプションがあります。 **[!UICONTROL Validate & Upload]** を選択します。
 
-![ アップロードする新しい拡張機能パッケージページをアップロードします。アップロードするファイルの数が表示され、検証とアップロードが強調表示されます。](../images/shared-extensions/validate-upload.png)
+![&#x200B; アップロードする新しい拡張機能パッケージページをアップロードします。アップロードするファイルの数が表示され、検証とアップロードが強調表示されます。](../images/shared-extensions/validate-upload.png)
 
 拡張機能が正常にアップロードされ、処理されたことを確認すると、**拡張機能パッケージ ID**&#x200B;と共に表示されます。 **[!UICONTROL Close]**&#x200B;を選択して、拡張機能が表示されている&#x200B;**[!UICONTROL Owned]** タブに戻ります。
 
-![ パッケージ IDとクローズを強調してアップロードされた拡張機能の確認](../images/shared-extensions/confirmation-upload.png)
+![&#x200B; パッケージ IDとクローズを強調してアップロードされた拡張機能の確認](../images/shared-extensions/confirmation-upload.png)
 
 更新された拡張機能が表示される[!UICONTROL Owned] タブに戻ります。
 
@@ -51,13 +51,13 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 * **アクション** – 拡張機能の&#x200B;**[!UICONTROL Upload New Version]**&#x200B;と&#x200B;**[!UICONTROL Release To Private]**&#x200B;を使用できます。
 * **拡張機能パッケージ ID** – 下部に表示されます。 これは、選択したバージョンによって異なります。
 
-バージョン、アクション、パッケージ IDを強調表示する![ パッケージの詳細パネル ](../images/shared-extensions/package-details.png)
+バージョン、アクション、パッケージ IDを強調表示する![&#x200B; パッケージの詳細パネル &#x200B;](../images/shared-extensions/package-details.png)
 
 「**[!UICONTROL Release To Private]**」を選択してから、もう一度「**[!UICONTROL Release To Private]**」を選択してリリースを確認します。
 
 拡張機能が正常にリリースされ、**Private**&#x200B;が利用できるようになったら、確認を受け取ります。 更新された可用性は、右側のパネルに表示されます。
 
-バージョンとプライベートの可用性を強調する![ パッケージの詳細パネル ](../images/shared-extensions/package-details-availability.png)
+バージョンとプライベートの可用性を強調する![&#x200B; パッケージの詳細パネル &#x200B;](../images/shared-extensions/package-details-availability.png)
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 
 **[!UICONTROL Release Extension Package]**&#x200B;画面には、リクエストフォームに必要な詳細が表示され、詳細をコピーするオプションも表示されます。 **[!UICONTROL Go To Request Form]** を選択します。
 
-![ フォームの完了に必要な情報を強調表示する拡張機能パッケージページをリリースします。](../images/shared-extensions/public-request-form.png)
+![&#x200B; フォームの完了に必要な情報を強調表示する拡張機能パッケージページをリリースします。](../images/shared-extensions/public-request-form.png)
 
 リクエストフォームを含む新しいブラウザータブが開きます。 **[!UICONTROL Release Extension Package]**&#x200B;画面から関連するフィールドに情報をコピーして貼り付けます。 完成したフォームをレビュー用に送信します。 拡張機能が公開されると通知されます。
 
@@ -130,7 +130,7 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 
 認証がアクティブな場合、共有拡張機能は、カタログに&#x200B;***共有*** バッジを表示し、他の組織と共有されていることを示します。
 
-![ バッジを持つ共有拡張機能を表示する[!UICONTROL Catalog] タブ ](../images/shared-extensions/sharing-badge.png)
+![&#x200B; バッジを持つ共有拡張機能を表示する[!UICONTROL Catalog] タブ &#x200B;](../images/shared-extensions/sharing-badge.png)
 
 ### 共有拡張機能の認証と管理 {#manage-shared-extension}
 
@@ -158,7 +158,7 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 
 承認が承認されると、拡張機能はカタログで利用でき、他の拡張機能と同様にインストールして使用できます。 共有された拡張機能には、***受信*** バッジが表示され、別の組織と共有されている拡張機能であることを示します。
 
-![共有された拡張機能を「受信」バッジで表示している[!UICONTROL Catalog] タブ ](../images/shared-extensions/receiving-badge.png)
+![共有された拡張機能を「受信」バッジで表示している[!UICONTROL Catalog] タブ &#x200B;](../images/shared-extensions/receiving-badge.png)
 
 ### 承認の取り消し {#revoke-authorization}
 
@@ -187,6 +187,6 @@ Adobe Experience Platformでは、**[!UICONTROL Owned]**&#x200B;個の拡張機�
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、Experience Platform内で共有拡張機能を使用する方法を示しました。 拡張機能の開発について詳しくは、[拡張機能の開発ユーザーガイド ](./getting-started.md)を参照してください。
+このドキュメントでは、Experience Platform内で共有拡張機能を使用する方法を示しました。 拡張機能の開発について詳しくは、[拡張機能の開発ユーザーガイド &#x200B;](./getting-started.md)を参照してください。
 
-Experience Platformでの拡張機能開発の概要については、[概要ドキュメント ](./overview.md)を参照してください。
+Experience Platformでの拡張機能開発の概要については、[概要ドキュメント &#x200B;](./overview.md)を参照してください。
