@@ -413,11 +413,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 次のビデオでは、[!DNL Experience Platform] UI で単純なスキーマを作成する方法を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430225?captions=jpn&quality=12&learn=on)
 
 次のビデオは、フィールドグループとクラスの操作に関する理解を深めることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413603?captions=jpn&quality=12&learn=on)
 
 ## 付録
 
