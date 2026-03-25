@@ -98,7 +98,7 @@ ht-degree: 12%
 
 ### 1回限りのAnalytics リファラー {#one-time-analytics-referrer}
 
-`"oneTimeAnalyticsReferrer"` キーワードは、ページの最初の非決定`sendEvent`呼び出しでのみ、Adobe Analyticsにリファラー値を送信します。 このコンテキストキーワードの主な使用例は、AnalyticsとTargetの統合で主に使用されるヒットによって、Adobe Analyticsの[Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) ディメンションが膨らまるのを防ぐことです。
+`"oneTimeAnalyticsReferrer"` キーワードは、ページの最初の非決定`sendEvent`呼び出しでのみ、Adobe Analyticsにリファラー値を送信します。 このコンテキストキーワードの主な使用例は、AnalyticsとTargetの統合で主に使用されるヒットによって、Adobe Analyticsの[Referrer](https://experienceleague.adobe.com/ja/docs/analytics/components/dimensions/referrer) ディメンションが膨らまるのを防ぐことです。
 
 特定の`sendEvent` コマンドで決定イベント型（`decisioning.propositionFetch`、`decisioning.propositionDisplay`、`decisioning.propositionInteract`）が使用されている場合、ページの最初の`sendEvent`を計算する際に無視されます。 リファラー値がページ上で変更され、別の`sendEvent`がトリガーされた場合、新しいリファラー値がペイロードに含まれます。 この条件を使用すると、この機能をシングルページアプリケーションで使用できます。
 
