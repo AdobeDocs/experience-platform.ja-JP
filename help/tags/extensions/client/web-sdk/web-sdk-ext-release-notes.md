@@ -2,143 +2,148 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '3165'
-ht-degree: 59%
+source-wordcount: '3230'
+ht-degree: 58%
 
 ---
 
 
-# Web SDK 拡張機能リリースノート
+# Web SDK タグ拡張機能のリリースノート
 
-このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート &#x200B;](/help/collection/js/release-notes.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Adobe Experience Platform Web SDK リリースノート ](/help/collection/js/release-notes.md)を参照してください。
+
+## バージョン 2.34.2 - 2026年3月23日（PT）
+
+- Adobe Experience Platform Web SDKの[ バージョン 2.32.0](/help/collection/js/release-notes.md)が含まれています。
+- 「変数を更新」アクションで元のプロパティからのデータ要素への参照を保持できるタグプロパティのコピーに固有の問題を修正しました。 既存のコピーされたプロパティを修復するには、影響を受ける各変数の更新アクションとそのルールを開いて再保存します。 再保存後まで、コピーしたデータ要素の名前を変更しないでください。
 
 ## バージョン 2.34.1 - 2026年2月11日（PT）
 
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.31.1](/help/collection/js/release-notes.md) が含まれます。
-- [Adobe Advertising設定 &#x200B;](configure/advertising.md) が [&#x200B; イベントを送信 &#x200B;](actions/send-event.md) アクションで編集できなかった問題を修正しました。
-- `edge.adobedc.net` が使用できない場合の [Edge ドメイン &#x200B;](configure/general.md) 設定の `tenant-id` へのフォールバックを追加しました。
+- Adobe Experience Platform Web SDKの[ バージョン 2.31.1](/help/collection/js/release-notes.md)が含まれます。
+- [ イベントを送信](configure/advertising.md) アクションで[Adobe Advertising設定](actions/send-event.md)を編集できない問題を修正しました。
+- `edge.adobedc.net`が使用できない場合に、[Edge domain](configure/general.md)構成設定の`tenant-id`へのフォールバックを追加しました。
 
 ## バージョン 2.34.0 - 2026年2月9日（PT）
 
 **新機能**
 
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.31.0](/help/collection/js/release-notes.md) が含まれます。
-- タグ拡張機能に [&#x200B; ベースコードのサポート &#x200B;](/help/collection/js/install/base-code.md) を追加しました。
-- 拡張機能設定に **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**&#x200B;[&#x200B; コンテキスト &#x200B;](configure/data-collection.md#context-settings)」を追加しました。
+- Adobe Experience Platform Web SDKの[ バージョン 2.31.0](/help/collection/js/release-notes.md)が含まれています。
+- タグ拡張機能に[基本コード サポート ](/help/collection/js/install/base-code.md)を追加しました。
+- 拡張機能の設定に&#x200B;**[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings)を追加しました。
 - Brand Concierge コンポーネントを追加しました。
-- タグで自己ホスト型の alloy インスタンスを使用できるようにするオプションを追加しました。
+- タグ付きのセルフホスト型アロイ インスタンスの使用を許可するオプションを追加しました。
 
 **修正点および改善点**
 
-- 会社 ID をサブドメインとして含めるように [&#x200B; デフォルトのエッジドメイン &#x200B;](configure/general.md#edge-domain) を更新しました。
-- **[!UICONTROL No overrides]** データストリーム設定の上書き [&#x200B; に &#x200B;](configure/configuration-overrides.md) オプションを追加しました。
-- 一部の入力フィールドの項目を再入力するための更新ボタンを追加しました。
+- 会社IDをサブドメインとして含めるように、[ デフォルトのエッジドメイン ](configure/general.md#edge-domain)を更新しました。
+- **[!UICONTROL No overrides]** オプションを[ データストリーム設定の上書き](configure/configuration-overrides.md)に追加しました。
+- 一部の入力フィールドに項目を再入力するための更新ボタンを追加しました。
 - インスタンスが作成されるたびに、一意のインスタンス名が自動的に生成されるようになりました。
-- 値が `combinedValidator` または `undefined` の場合に `null` がエラーをスローしていたエラーを修正しました。
-- インスタンスを削除した際に表示されるエラーを修正しました。
-- スキーマの取得中にエラーが発生すると、XDM オブジェクトデータ要素が使用できなくなる問題を修正しました。
-- [&#x200B; メディアイベントを送信 &#x200B;](actions/send-media-event.md) アクションの保存設定を修正しました。
+- 値が`combinedValidator`または`undefined`の場合、`null`がエラーをスローするエラーを修正しました。
+- インスタンスが削除されたときに表示されるエラーを修正しました。
+- スキーマの取得中にエラーが発生し、XDM オブジェクトデータ要素が使用できなくなる問題を修正しました。
+- [ メディアイベントを送信](actions/send-media-event.md) アクションの保存設定を修正しました。
 - 設定ビューのストリーミングメディアフィールドが正しく復元されない問題を修正しました。
-- ネストされた値に対する XDM オブジェクトエディターでの誤った自動母集団アラートを修正しました。
+- ネストされた値に対するXDM オブジェクトエディターの誤った自動生成アラートを修正しました。
 
 ## バージョン 2.33.0 - 2025年9月24日（PT）
 
 **新機能**
 
-- プッシュ通知の表示がサポートされるようになりました。
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.30.0](/help/collection/js/release-notes.md#2-30-0) が含まれます。
+- プッシュ通知の表示に対応しました。
+- Adobe Experience Platform Web SDKの[ バージョン 2.30.0](/help/collection/js/release-notes.md#2-30-0)が含まれています。
 
 ## バージョン 2.32.0 - 2025年9月4日（PT）
 
 **新機能**
 
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.29.0](/help/collection/js/release-notes.md#2-29-0) が含まれます。
-- 新しいカスタムビルドコンポーネントとして、Adobe Advertisingがサポートされるようになりました。 拡張機能の設定と送信イベント呼び出しでを設定します。
-- プロファイルにプッシュ購読の詳細を記録できるようになりました。 これは、新しいアクション「サブスクリプションの詳細をプッシュ」を通じておこなわれます
+- Adobe Experience Platform Web SDKの[ バージョン 2.29.0](/help/collection/js/release-notes.md#2-29-0)が含まれます。
+- 新しいカスタムビルドコンポーネントとしてAdobe Advertisingのサポートを追加しました。 拡張機能の設定と送信イベント呼び出しで設定します。
+- プロファイルにプッシュサブスクリプションの詳細を記録するためのサポートを追加しました。 これは、新しいアクション「購読の詳細をプッシュ」を通じて行われます
 
 **修正点および改善点**
 
-- スキーマまたはサンドボックスが使用できない場合の XDM データ要素の編集を改善しました。 参照されているスキーマが見つからない場合やサンドボックスにアクセスできない場合でも、XDM オブジェクトおよび変数データ要素を編集できるようになりました。 これにより、組織が新しいデータセンターに移行する際に一般的に発生する問題を解決できます。この場合、スキーマ ID が変更され、以前は編集インターフェイスでエラーが表示されて使用できなくなる可能性があります。
+- スキーマまたはサンドボックスが使用できない場合のXDM データ要素の編集を改善しました。 XDM オブジェクトと変数データ要素を、参照するスキーマが見つからなかったり、サンドボックスにアクセスできないときでも編集できるようになりました。 これにより、スキーマ IDが変更され、以前は編集インターフェイスでエラーが表示され、使用できなくなる可能性がある新しいデータセンターへの組織移行時に一般的に発生する問題を解決します。
 
 ## バージョン 2.31.1 - 2025年7月31日（PT）
 
-- カスタムビルドが実行されない問題を修正しました。
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.28.1](/help/collection/js/release-notes.md#2-28-1) が含まれます。
+- カスタムビルドを実行できない問題を修正しました。
+- Adobe Experience Platform Web SDKの[ バージョン 2.28.1](/help/collection/js/release-notes.md#2-28-1)が含まれます。
 
 ## バージョン 2.31.0 - 2025年7月24日（PT）
 
 **新機能**
 
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.28.0](/help/collection/js/release-notes.md#2-28-0) が含まれます。
+- Adobe Experience Platform Web SDKの[ バージョン 2.28.0](/help/collection/js/release-notes.md#2-28-0)が含まれます。
 
 **修正点および改善点**
 
 - データ要素を介してデータストリームの上書きが有効になっている場合にエラーがスローされる問題を修正しました。
-- 空の `idSyncContainerId` の上書きがエラーをスローする問題を修正しました。
+- 空の`idSyncContainerId` オーバーライドがエラーをスローする問題を修正しました。
 - メディアデータ要素を解決する際に、イベントオブジェクトが含まれるようになりました。
 
 **既知の問題**
 
-- v2.31.0 のリリース後、[&#x200B; カスタムコンポーネントビルド &#x200B;](/help/collection/js/install/create-custom-build.md) プロセスに問題が見つかりました。 カスタムビルドは引き続き動作しますが、現在はすべてのコンポーネントがビルドに含まれているため、コンポーネントの選択に関係なく、フルサイズのパッケージが作成されます。 この問題の修正は開発中です。 カスタムコンポーネントの選択を使用してビルドサイズを最小限に抑える場合は、将来のリリースを待つことをお勧めします。
+- v2.31.0のリリース後、[ カスタムコンポーネントのビルド ](/help/collection/js/install/create-custom-build.md) プロセスで問題が特定されました。 カスタムビルドは引き続き動作しますが、現在すべてのコンポーネントがビルドに含まれているため、コンポーネントの選択に関係なくフルサイズのパッケージになります。 この問題の解決方法が開発されています。 カスタムコンポーネント選択を使用してビルドサイズを最小化する場合は、将来のリリースを待つことをお勧めします。
 
 ## バージョン 2.30.1 - 2025年5月27日（PT）
 
 **修正点および改善点**
 
-- 組織にデフォルトのサンドボックスが設定されていない場合に、更新変数の表示がクラッシュする問題を修正しました。
+- 組織にデフォルトのサンドボックスが設定されていない場合に更新変数ビューがクラッシュする問題を修正しました。
 
 ## バージョン 2.30.0 - 2025年5月21日（PT）
 
 **新機能**
 
-- サードパーティ cookie を有効にする際に、データ要素を指定できるようになりました。
+- サードパーティ Cookieを有効にする際に、データ要素を指定できるようになりました。
 - コードフィールドにクリアボタンを追加しました。
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.27.0](/help/collection/js/release-notes.md) が含まれます。
+- Adobe Experience Platform Web SDKの[ バージョン 2.27.0](/help/collection/js/release-notes.md)が含まれています。
 
 **修正点および改善点**
 
-- イベントのグループ化が有効な場合に `onBeforeLinkClickSend` を設定できないようにする検証を追加しました。
+- イベントグループ化が有効になっている場合に`onBeforeLinkClickSend`を設定できないように、検証を追加しました。
 
 ## バージョン 2.29.1 - 2025年5月8日（PT）
 
 **修正点および改善点**
 
-- 編集後すぐに「保存」をクリックしても、設定が保存されない問題を修正しました。
+- 編集後すぐに「保存」をクリックしても設定が保存されない問題を修正しました。
 
 ## バージョン 2.29.0 - 2025年3月5日（PT）
 
 **新機能**
 
-- カスタム Web SDK ビルドを作成し、必要なコンポーネントをタグ拡張機能ユーザーインターフェイスから選択できるようになりました。 その結果、未使用のコンポーネントを除外することで、ビルドのサイズが小さくなる可能性があります。 [&#x200B; カスタムビルドコンポーネント &#x200B;](configure/custom-build-components.md) を参照してください。
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.26.0](/help/collection/js/release-notes.md) が含まれます。
+- カスタム Web SDK ビルドを作成し、タグ拡張機能ユーザーインターフェイスから必要なコンポーネントを選択できるようになりました。 これにより、未使用のコンポーネントを除外して、ビルドを小さくすることができます。 [ カスタムビルドコンポーネント ](configure/custom-build-components.md)を参照してください。
+- Adobe Experience Platform Web SDKの[ バージョン 2.26.0](/help/collection/js/release-notes.md)が含まれています。
 
 **修正点および改善点**
 
-- [&#x200B; 変数を更新 &#x200B;](actions/update-variable.md) アクションで欠落しているデータ要素の正常な処理を追加しました。 以前は、データ要素が欠落した「変数を更新」アクションを編集すると、エラーメッセージが表示されていました。 別のデータ要素を選択できるようになり、変数の更新アクションのすべての設定が引き続き適用されます。 データ要素は、削除された場合や、タグプロパティが重複している場合、欠落する可能性があります。
-- [ID でリダイレクト &#x200B;](actions/redirect-with-identity.md) アクションで新しいタブを開く機能のサポートを追加しました。 これで、アクションを使用する場合、ブラウザーをリダイレクトする際に、アンカータグの `target` 属性が使用されるようになりました。
-- 設定の上書きでAdobe Audience Managerを無効にできなかった問題を修正しました。
+- [変数の更新](actions/update-variable.md) アクションで欠落しているデータ要素の適切な処理を追加しました。 以前は、データ要素が見つからない変数を更新アクションを編集すると、エラーメッセージが表示されていました。 これで、別のデータ要素を選択でき、変数を更新アクションのすべての設定が引き続き適用されます。 データ要素が削除されたり、タグプロパティが重複したりすると、データ要素が見つからない可能性があります。
+- ID[を使用した](actions/redirect-with-identity.md) リダイレクト アクションで新しいタブを開くサポートを追加しました。 これで、アクションを使用する場合、ブラウザーのリダイレクト時にアンカータグの`target`属性が使用されるようになりました。
+- 設定の上書きでAdobe Audience Managerを無効にできない問題を修正しました。
 
 ## バージョン 2.28.0 - 2025年1月23日（PT）
 
 **修正点および改善点**
 
-- Audience Managerを有効にしないと ID 同期コンテナの上書きを設定できない問題を修正しました。
-- 最新バージョンにアップグレードする際に、データストリーム設定の上書きが無効になる問題を修正しました。
-- ユーザーが Target の自動クリックコレクション設定を保存できない問題を修正しました。
+- Audience Managerを有効にせずにID Sync Container オーバーライドを設定できない問題を修正しました。
+- 最新バージョンにアップグレードする際にデータストリーム設定の上書きが無効になる問題を修正しました。
+- ユーザーがTargetの自動クリック収集設定を保存できない問題を修正しました。
 
 **新機能**
 
-- XDM オブジェクト内の技術名と表示名を切り替える新機能が追加されました。
-- Adobe Experience Platform Web SDKの [&#x200B; バージョン 2.25.0](/help/collection/js/release-notes.md) が含まれます。
+- XDM オブジェクト内の技術名と表示名を切り替える新機能を追加しました。
+- Adobe Experience Platform Web SDKの[ バージョン 2.25.0](/help/collection/js/release-notes.md)が含まれています。
 
 ## バージョン 2.27.0 - 2024年10月31日（PT）
 
 **新機能**
 
-- [&#x200B; 設定の上書き &#x200B;](configure/configuration-overrides.md) に、Experience Cloud ソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
-- メディアセッションの設定の上書きを作成できるようになりました。
+- [設定の上書き](configure/configuration-overrides.md)には、Experience Cloud ソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
+- メディアセッションの設定を上書きできるようになりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます。
 
@@ -146,7 +151,7 @@ Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます�
 
 **修正点および改善点**
 
-- Web SDKをローカルで実行すると、cookie が正しく書き込まれない問題を修正しました。
+- Web SDKをローカルで実行する際にCookieが正しく書き込まれない問題を修正しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.23.0 が含まれます。
 
@@ -154,13 +159,13 @@ Adobe Experience Platform Web SDK のバージョン 2.23.0 が含まれます�
 
 **新機能**
 
-- イベントの監視フック `triggered` 追加しました。
-- [&#x200B; ガイド付きイベント &#x200B;](actions/actions-overview.md)、[&#x200B; デフォルトのパーソナライゼーションをリクエスト &#x200B;](configure/personalization.md)、[&#x200B; ルールセット項目を登録 &#x200B;](event-types.md#subscribe-ruleset-items) および [&#x200B; ルールセットを評価 &#x200B;](actions/evaluate-rulesets.md) が一般入手可能になりました。
+- 監視フック `triggered` イベントを追加しました。
+- [ ガイド付きイベント ](actions/actions-overview.md)、[ デフォルトのパーソナライゼーションをリクエスト ](configure/personalization.md)、[ ルールセット項目の購入](event-types.md#subscribe-ruleset-items)、[ ルールセットの評価](actions/evaluate-rulesets.md)が一般公開されました。
 
 **修正点および改善点**
 
-- 重複した変数データ要素が相互に上書きされる可能性がある問題を修正しました。
-- [&#x200B; デフォルトパーソナライゼーションをリクエスト &#x200B;](configure/personalization.md) ガイド付きイベントを使用する際に、ビジュアルパーソナライゼーションの決定が自動的に有効になりました。
+- 重複した変数データ要素が互いに上書きされる問題を修正しました。
+- [ デフォルトのパーソナライゼーションをリクエスト ](configure/personalization.md)のガイド付きイベントを使用する際に、視覚的なパーソナライゼーション決定が自動的に有効になりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.22.0 が含まれます。
 
@@ -168,8 +173,8 @@ Adobe Experience Platform Web SDK のバージョン 2.22.0 が含まれます�
 
 **新機能**
 
-- Adobe Journey Optimizerで自動トラッキングパーソナライゼーションがサポートされるようになりました。
-- 改善されたクリックの収集を管理するための新しい設定が導入されました。
+- Adobe Journey Optimizerでの自動追跡パーソナライゼーションのサポートを追加しました。
+- 改善されたクリック収集を管理するための新しい設定が導入されました。
 
 Adobe Experience Platform Web SDK のバージョン 2.21.1 が含まれます。
 
@@ -177,10 +182,10 @@ Adobe Experience Platform Web SDK のバージョン 2.21.1 が含まれます�
 
 **修正点および改善点**
 
-- 設定の上書きが定義されている場合に、拡張機能の設定を変更する際に発生していたエラーを修正しました。
-- メディアコレクションの ping 間隔に空の値を設定することを許可します。
-- 変数の更新アクションを変更する際に発生していたエラーを修正しました。
-- 設定の上書きで ID 同期コンテナのリセットを許可します。
+- 設定の上書きが定義されたときに拡張機能の設定を変更する際に発生するエラーを修正しました。
+- メディア収集のping間隔に空の値を設定できます。
+- 変数を更新アクションの変更時に発生したエラーを修正しました。
+- 設定の上書きでID同期コンテナのリセットを許可します。
 
 Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
 
@@ -188,23 +193,23 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 
 **新機能**
 
-- 拡張機能の設定に [`Streaming Media Collection`](configure/streaming-media.md) コンポーネントのサポートを追加しました。
-- [`Send Media Event`](actions/send-media-event.md) 機能に [!DNL Streaming Media Collection] アクションを追加しました。
-- [`Media: Quality of Experience`](data-element-types.md#quality-experience) 機能用に [!DNL Streaming Media Collection] データ要素を追加しました。
+- 拡張機能の設定で[`Streaming Media Collection`](configure/streaming-media.md) コンポーネントのサポートを追加しました。
+- [`Send Media Event`](actions/send-media-event.md)機能に[!DNL Streaming Media Collection] アクションを追加しました。
+- [`Media: Quality of Experience`](data-element-types.md#quality-experience)機能に[!DNL Streaming Media Collection] データ要素を追加しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
 
 **修正点および改善点**
 
-- [&#x200B; 変数を更新 &#x200B;](actions/update-variable.md) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- [!UICONTROL Media] アクションで使用することが推奨されるイベントタイプから `sendEvent` つのイベントタイプを削除しました。
+- [変数を更新](actions/update-variable.md) アクションでデータ要素を検索する際に発生したエラーを修正しました。
+- [!UICONTROL Media] アクションで使用することが提案されたイベントタイプから`sendEvent` イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
 **新機能**
 
-- 変数データ要素を拡張して、データオブジェクトをサポートします。
-- 「変数を更新」アクションで、パススルーAdobe Analytics、Adobe Audience Manager、Adobe Targetのデータの変更がサポートされるようになりました。
+- 変数データ要素を拡張してデータオブジェクトをサポートします。
+- 変数アクションの更新で、パススルーのAdobe Analytics、Adobe Audience Manager、およびAdobe Target データの変更がサポートされるようになりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます。
 
@@ -212,8 +217,8 @@ Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます�
 
 **修正点および改善点**
 
-- 3 つの環境をすべて設定せずに設定の上書きを保存すると、拡張機能 UI がクラッシュする問題を修正しました。
-- 変数の更新アクションを編集する際に、ルートの既存の値をクリア チェックボックスが入力されない問題を修正しました。
+- 3つの環境をすべて設定せずにConfig Overridesを保存すると、拡張機能UIがクラッシュする問題を修正しました。
+- 変数を更新アクションを編集する際に、「既存の値をクリアする」ルートチェックボックスが入力されない問題を修正しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます。
 
@@ -223,17 +228,17 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-- イベントで使用できる提案配列が常に空であ `Send event complete` 問題を修正しました。
+- `Send event complete` イベントで使用可能な提案配列が常に空になる問題を修正しました。
 
 ## バージョン 2.21.2 - 2023年11月1日（PT）
 
 **新機能**
 
-- イベントアクション `Request default personalization` 送信するオプションを追加しました。
-- イベントを送信アクションでページイベントの上部と下部をサポートするようになりました。
-- アクション `Apply propositions` 追加しました。
-- アプリ内メッセ `Evaluate rulesets` ジのアクションと `Subscribe ruleset items` イベントを追加しました。
-- イベントを送信アクションに `Decision context` を追加しました。
+- イベントアクションを送信する`Request default personalization` オプションを追加しました。
+- イベントを送信アクションのページの上部および下部のイベントのサポートを追加しました。
+- `Apply propositions` アクションを追加しました。
+- アプリ内メッセージ用に`Evaluate rulesets` アクションと`Subscribe ruleset items` イベントを追加しました。
+- イベントアクションを送信する`Decision context`を追加しました。
 
 **修正点および改善点**
 
@@ -243,7 +248,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-- ID 同期コンテナ ID 上書きフィールドにデータ要素を保存できなかった問題を修正しました。
+- ID同期コンテナ ID上書きフィールドにデータ要素を保存できない問題を修正しました。
 
 ## バージョン 2.20.1 - 2023年8月3日（PT）
 
@@ -255,16 +260,16 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
-- `edgeConfigId` を非推奨（廃止予定）にし、SDK設定の `datastreamId` を優先しました。
-- データストリーム設定の複数のユーザーエクスペリエンスを強化すると、ユーザーインターフェイスが上書きされます。
+- SDK設定の`edgeConfigId`を優先して`datastreamId`を非推奨にしました。
+- データストリーム設定に関する複数のユーザーエクスペリエンスの機能強化は、ユーザーインターフェイスを上書きします。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）
 
-- **[!UICONTROL Variable]** データ要素と **[!UICONTROL Update Variable]** アクションが一般公開されました。
+- **[!UICONTROL Variable]** データ要素と&#x200B;**[!UICONTROL Update Variable]** アクションが一般公開されました。
 
 ## バージョン 2.18.0 - 2023年5月18日（PT）
 
@@ -290,12 +295,12 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- （Beta） **[!UICONTROL Update variable]** action と **[!UICONTROL Variable]** データ要素を追加しました。
+- （Beta）は&#x200B;**[!UICONTROL Update variable]**&#x200B;個のアクションと&#x200B;**[!UICONTROL Variable]**&#x200B;個のデータ要素を追加しました。
 - [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) コールバック関数の設定を追加しました。
 
 **修正点および改善点**
 
-- **[!UICONTROL Redirect with identity]** アクションを使用した際に、アンカータグ内の要素をクリックしても機能しない問題を修正しました。
+- **[!UICONTROL Redirect with identity]** アクションが使用されたときに、アンカータグ内の要素をクリックすると機能しない問題を修正しました。
 - スキーマが 1 つしか存在しない場合に XDM オブジェクトデータ要素が機能しない問題を修正しました。
 - Adobe Experience Platform Web SDK のバージョン 2.15.0 が含まれます。
 
@@ -329,7 +334,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.12.0 が�
 ## バージョン 2.12.0 - 2022年6月13日（PT）
 
 - 拡張機能の設定で定義されたサンドボックスに基づいて名前空間オプションを入力するように、`identityMap` データ要素を更新しました。
-- クロスドメイン ID 共有を許可する **[!UICONTROL Redirect with identity]** アクションを追加しました。
+- クロスドメイン ID共有を許可する&#x200B;**[!UICONTROL Redirect with identity]** アクションを追加しました。
 - `sendEvent` アクションへのドキュメントリンクを追加しました。
 - React Spectrum UI ライブラリをアップグレードしました。
 - 複数のユーザーインターフェイスの機能強化。
@@ -367,7 +372,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-- Edge Networkからの追加情報は、`inferences` や `destinations` など、Send Event Complete イベントで利用できます。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
+- Edge Networkの追加情報は、`inferences`および`destinations`を含むSend Event Complete イベントで入手できます。 これらの機能が現在Betaの一部としてロールアウトされている場合、これらのプロパティのフォーマットが変わる可能性があります。
 
 ## バージョン 2.7.3 - 2021年9月7日（PT）
 
@@ -414,10 +419,10 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-- [&#x200B; イベントを送信 &#x200B;](actions/send-event.md) アクションに「ドキュメントのアンロード中」チェックボックスを追加しました。
+- [ イベントを送信](actions/send-event.md) アクションに「ドキュメントのアンロード」チェックボックスを追加しました。
 - [デフォルトの同意を設定](configure/consent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 - デフォルトの同意フィールドにツールヒントを追加しました。
-- [`Set consent`](actions/set-consent.md) アクションを使用する際のAdobeの同意 2.0 標準のサポートを追加しました。
+- [`Set consent`](actions/set-consent.md) アクションを使用する際のAdobeの同意管理2.0標準のサポートを追加しました。
 - ユーザーのアクセストークンが無効であるか、不適切にプロビジョニングされている場合に、XDM オブジェクトデータ要素 UI に表示されるエラーを改善しました。
 - XDM オブジェクトデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
@@ -431,7 +436,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 ## バージョン 2.2.0 - 2020年10月1日（PT）
 
-- お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Experience Platformを呼び出す API が環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
+- お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Experience Platformを呼び出すAPIは環境を認識するようになり、ユーザーは編集するアクセス権を持つスキーマのみが表示されます。
 - `identityMap` データ要素を使用する場合、名前空間はドロップダウンで事前設定されるので、手動で入力する必要がありません。
 - `xdmObject` データ要素の UI が改良されました。新しい UI では、オブジェクトに各項目を入力しなくても、入力されたフィールドを確認できます。
 
@@ -442,12 +447,12 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 ## バージョン 2.1.0 - 2020年8月5日（PT）
 
 - 重大な変更：`syncIdentity` アクションを削除し、代わりに `sendEvent` アクションにこれらの ID を渡すことをサポートします。拡張機能をアップグレードする前に、このアクションを使用する既存のルールを無効にしてください。
-- を Alloy バージョン 2.1.0 に更新しました。
+- Alloy バージョン 2.1.0に更新されました。
 - `setConsent` アクションでの IAB 2.0 Consent Standard をサポートします。
 - `sendEvent` アクションでのデータセット ID の上書きをサポートします。
 - タイプ `IdentityMap` の新しいデータ要素を追加します。これは、現在有効になっている XDM オブジェクトデータ要素と `setConsent` アクションに `identityMap` エントリを入力するために使用できます。
 - `setConsent` アクションで ID マップを渡す機能をサポートします。
-- XDM オブジェクトデータ要素でのExperience Platform サンドボックスの選択をサポートします。
+- XDM オブジェクトデータ要素でExperience Platform サンドボックスを選択することをサポートします。
 
 ## バージョン 1.0.0 - 2020年5月26日（PT）
 
@@ -460,8 +465,8 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 - `Get Decisions` に関する変更：
    - `getDecisions` コマンドを削除しました。
    - `sendEvent` コマンドに `scopes` オプションを追加しました。決定は、`sendEvent` によって解決されたプロミスで返されます。
-   - ビルトインの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（例えば、Target での VEC オファー）。
-これらの決定は、`sendEvent` が false に設定されている場合にのみ、`renderDecisions` コマンドから返されます。
+   - ビルトインの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（例えば、TargetのVEC オファー）
+これらの決定は、`sendEvent`がfalseに設定されている場合にのみ、`renderDecisions` コマンドから返されます。
    - 決定を利用可能になったときに実行する `Decisions Received` イベントを追加しました。
 - 1 回のサーバーコールで複数のパーソナライゼーション通知を組み合わせました。
 - データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。

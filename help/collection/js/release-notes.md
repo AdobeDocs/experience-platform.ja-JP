@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
+source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2751'
 ht-degree: 54%
 
 ---
@@ -16,138 +16,142 @@ ht-degree: 54%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
 
+## バージョン 2.32.0 - 2026年3月23日（PT）
+
+- 共有コアユーティリティは、拡張機能と統合で使用するためのスタンドアロンのnpm パッケージ（[@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)）として公開されるようになりました。
+- `xdm.placeContext.ianaTimezone`が`placeContext`構成変数に含まれている場合、XDM フィールド [`context`](/help/collection/js/commands/configure/context.md)にIANA タイムゾーンが含まれるようになりました。
+- Brand Concierge: [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md)が無効になっている場合のセッション IDの問題を修正しました。
+
 ## バージョン 2.31.1 - 2026年2月11日（PT）
 
-- URL に複数の広告関連の `s_kwcid` ーザーまたは `ef_id` パラメーターがある場合、web SDKがクラッシュする問題を修正しました。
-- 同意が得られる前にAdvertising データが送信され、cookie が作成される問題を修正しました。
-- Safari で、Brand Concierge ストリームが正しく解析されない問題を修正しました。
+- URLに複数の広告関連パラメーター`s_kwcid`または`ef_id`がある場合にWeb SDKがクラッシュする問題を修正しました。
+- Advertising データが送信され、同意が与えられる前にCookieが作成される問題を修正しました。
+- Safariで、Brand Concierge ストリームが正しく解析されない問題を修正しました。
 
 ## バージョン 2.31.0 - 2026年2月9日（PT）
 
 **新機能**
 
-- 文字列の `"oneTimeAnalyticsReferrer"` 配列に [`context`](commands/configure/context.md) の可用性を追加しました。
+- 文字列の`"oneTimeAnalyticsReferrer"`配列に[`context`](commands/configure/context.md)の可用性を追加しました。
 - Brand Concierge コンポーネントを追加しました。
-- イベントの作成から送信時間までの時間を記録するために、ネットワークリクエストに `meta.queueTimeMillis` を追加しました。
-- 後続の呼び出しで入力できるように ID マップを保持する機能。
+- イベントの作成から送信時間までの時間を記録するために、`meta.queueTimeMillis`をネットワークリクエストに追加しました。
+- ID マップを保持して、後続の呼び出しで入力できるようにする機能。
 
 **修正点および改善点**
 
-- `aria-label` 属性と `name` 属性が [&#x200B; 自動リンクコレクション &#x200B;](commands/configure/clickcollectionenabled.md) で考慮されるようになりました。
-- ID マップ統合での競合状態の可能性を修正しました。
-- タイムスタンプが `streamingMedia` に含まれていない問題を修正しました。
-- カスタムコードアクションが 1 回だけ実行される問題を修正しました。
+- `aria-label`および`name`属性は、[自動リンク収集](commands/configure/clickcollectionenabled.md)で考慮されるようになりました。
+- カスタムコードアクションが1回しか実行されない問題を修正しました。
 
 ## バージョン 2.30.0 - 2025年9月24日（PT）
 
 **新機能**
 
-- プッシュ通知の表示がサポートされるようになりました。
+- プッシュ通知の表示に対応しました。
 
 ## バージョン 2.29.0 - 2025年9月4日（PT）
 
 **新機能**
 
-- Adobe ジャーニー分析用のAdobe広告データの収集がサポートされるようになりました
-- ユーザーのプロファイルにプッシュ購読の詳細を記録できるようになりました。
+- Adobe ジャーニーアナリティクス用のAdobe広告データの収集のサポートが追加されました
+- ユーザーのプロファイルにプッシュサブスクリプションの詳細を記録するためのサポートを追加しました。
 
 **修正点および改善点**
 
-- 設定の上書きセクションが置き換えられずに結合される問題を修正しました。
-- リンクコレクションがドキュメントのコンテンツ全体をリンク名として送信していた場合を修正しました。
+- 設定の上書きセクションが置き換えられる代わりに結合される問題を修正しました。
+- リンク収集がドキュメント全体のコンテンツをリンク名として送信するケースを修正しました。
 - 特定の提案を再レンダリングできない問題を修正しました。
 
 ## バージョン 2.28.1 - 2025年7月31日（PT）
 
 **修正点および改善点**
 
-- カスタムビルドが実行されない問題を修正しました。
+- カスタムビルドを実行できない問題を修正しました。
 
 ## バージョン 2.28.0 - 2025年7月24日（PT）
 
 **新機能**
 
-- Adobe Journey Optimizerの欠格規則をサポートするようになりました。
+- Adobe Journey Optimizer失格ルールのサポートを追加しました。
 
 **修正点および改善点**
 
-- [Media Analytics トラッカー &#x200B;](commands/getmediaanalyticstracker.md) で、メディアオブジェクトの `length` プロパティが無効なデータタイプを誤って受け入れたエラーを修正しました。
-- ID 検索が失敗した場合にプロミス却下を適切に処理する [ID 管理 &#x200B;](../use-cases/identity/id-overview.md) エラー処理を改善しました。
-- HTML コンテンツ項目を含むパーソナライゼーションコンテンツが、見つからない `renderStatusHandler` に関するエラーでレンダリングに失敗する問題を修正しました。
-- 非 HTTP URL を適切に処理するための Activity Map[URL コレクション &#x200B;](commands/configure/clickcollectionenabled.md) を修正しました。
+- メディアオブジェクトの[ プロパティが無効なデータタイプを誤って受け入れた](commands/getmediaanalyticstracker.md)Media Analytics トラッカー`length`のエラーを修正しました。
+- IDの検索が失敗した場合にPromiseの拒否を適切に処理するために、[ID管理](../use-cases/identity/id-overview.md)のエラー処理を改善しました。
+- HTML コンテンツアイテムを含むパーソナライゼーションコンテンツのレンダリングが失敗し、見つからない`renderStatusHandler`に関連するエラーが発生する問題を解決しました。
+- 非HTTP URLを適切に処理するために、アクティビティマップ [URL コレクション ](commands/configure/clickcollectionenabled.md)を修正しました。
 
 **既知の問題**
 
-- [&#x200B; を使用する &#x200B;](/help/collection/js/install/create-custom-build.md) カスタムビルド `npx @adobe/alloy` プロセスは、現在、バージョン 2.28.0 で期待どおりに機能していません。選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDN で使用可能な標準のJavaScript ファイルには影響しません。 修正中です。
+- [を使用する](/help/collection/js/install/create-custom-build.md) カスタムビルド `npx @adobe/alloy` プロセスは、現在、バージョン 2.28.0で期待どおりに機能していません。選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDNで使用可能な標準のJavaScript ファイルには影響しません。 修正が進行中です。
 
 ## バージョン 2.27.0 - 2025年5月20日（PT）
 
 **修正点および改善点**
 
 - カスタムスタイルが正しく適用されなかったアプリ内メッセージの問題を修正しました。
-- イベント履歴の形式を変更しました。 これにより、古い履歴データが削除されると、アプリ内メッセージとコンテンツカードが再表示されます。
-- SPA のユースケースで提案が再適用される問題を修正しました。
-- シャドウ DOM 要素のクリックの追跡に関する問題を修正しました。
+- イベント履歴の形式を変更しました。 これにより、古い履歴データが削除されると、アプリ内メッセージやコンテンツカードが再表示されます。
+- SPA ユースケースで提案が再適用される問題を修正しました。
+- シャドウ DOM要素でのクリックトラッキングの問題を修正しました。
 
 ## バージョン 2.26.0 - 2025年3月5日（PT）
 
 **新機能**
 
-- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズが縮小され、読み込み時間が最適化されます。 [NPM パッケージを使用してカスタム web SDK ビルドを作成する &#x200B;](install/create-custom-build.md) 方法については、ドキュメントを参照してください。
-- [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID cookie から直接 ECID を自動的に読み取るようになりました。 `getIdentity` 名前空間を使用して `ECID` を呼び出すと、ID Cookie が既に存在する場合、web SDKは、ID を取得するためにEdge Networkに対してリクエストを実行しなくなりました。 これで、cookie から ID を読み取るようになりました。
+- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズを削減し、読み込み時間を最適化できます。 NPM パッケージ [を使用してカスタム Web SDK ビルドを](install/create-custom-build.md)作成する方法については、ドキュメントを参照してください。
+- [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID CookieからECIDを直接自動的に読み取るようになりました。 `getIdentity`を`ECID`名前空間で呼び出し、既にID Cookieが存在する場合、Web SDKはIDを取得するためのEdge Networkへのリクエストを行わなくなります。 これで、CookieからIDを読み取ります。
 
 **修正点および改善点**
 
-- `getIdentity` 呼び出しを送信した後、`collect` コマンドが ID を返さない問題を修正しました。
-- リダイレクトが発生する前に、パーソナライゼーションのリダイレクトによってコンテンツがちらつく問題を修正しました。
+- `getIdentity`呼び出しが送信された後、`collect` コマンドがIDを返さない問題を修正しました。
+- パーソナライゼーションリダイレクトによって、リダイレクトが発生する前にコンテンツのちらつきが発生する問題を修正しました。
 
 ## バージョン 2.25.0 - 2025年1月23日（PT）
 
-**修正点および改善点**
+**修正および改善**
 
-- `setDebug` コマンドにオプション検証を追加しました。
-- クリックコレクションが無効な場合に、`onBeforeLinkClickSend` 関数またはダウンロードリンク修飾子を設定する際の警告を追加しました。
-- レンダリングされた提案がディスプレイ通知に含まれていない問題を修正しました。
+- オプションの検証を`setDebug` コマンドに追加しました。
+- クリック収集が無効になっている場合に、`onBeforeLinkClickSend`関数またはダウンロードリンク修飾子を設定する際に警告を追加しました。
+- レンダリングされた提案が表示通知に含まれない問題を修正しました。
 
 **新機能**
 
-- サードパーティ cookie が有効になっていて、adobedc.demdex.netへのリクエストがブロックされている場合に、設定済みのEdge ドメインへのフォールバックを実装しました。
+- サードパーティ Cookieが有効になっていて、adobedc.demdex.netへのリクエストがブロックされている場合に、設定されたEdge ドメインへのフォールバックを実装しました。
 
 ## バージョン 2.24.1 - 2024年12月6日（PT）
 
-**修正点および改善点**
+**修正および改善**
 
-- 一部のお客様の統合でエラーが発生していた、[Adobe Experience Platform ルールエンジン &#x200B;](https://github.com/adobe/aepsdk-rulesengine-typescript/) に関連する依存関係の問題を解決しました。 Web SDKには、[Adobe Experience Platform ルールエンジン &#x200B;](https://github.com/adobe/aepsdk-rulesengine-typescript/) バージョン 2.0.3 以降が必要です。
+- [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/)に関する依存関係の問題を解決しました。一部のお客様との統合でエラーが発生していました。 Web SDKには、[Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) バージョン 2.0.3以降が必要になりました。
 
 ## バージョン 2.24.0 - 2024年10月31日（PT）
 
 **新機能**
 
-- [&#x200B; データストリームの上書き &#x200B;](/help/datastreams/overrides.md) がメディアセッションの開始時にサポートされるようになりました。
+- [ データストリームの上書き](/help/datastreams/overrides.md)が、メディアセッションの開始時にサポートされるようになりました。
 
-- [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring フックでAdobe Target応答トークンがサポートされるようになりました。
+- [`onContentRendering`](monitoring-hooks.md#onContentRendering)監視フックにAdobe Target応答トークンのサポートを追加しました。
 
 **修正点および改善点**
 
-- 複数のアプリ内メッセージが返される場合は、優先度が最も高いメッセージのみが表示されます。 その他は抑制されたとおりに記録されます。
-- 空のデータストリームの上書きはEdge Networkに送信されなくなり、サーバーサイドのルーティング設定との競合の可能性が減ります。
-- 他のAdobe SDK と整合させるために、次のログメッセージコンポーネント名を変更しました。
-   - `DecisioningEngine` の名前は `RulesEngine` に変更されました
-   - `LegacyMediaAnalytics` の名前は `MediaAnalyticsBridge` に変更されました
-   - `Privacy` の名前は `Consent` に変更されました
-- デフォルトのコンテンツ項目が [`applyPropositions`](commands/applypropositions.md) を使用してレンダリングされる際に発生していたエラーを修正しました。
-- Adobe Targetの移動およびサイズ変更アクションにおける CSS エラーを修正しました。
-- 応答から `machineLearning` キー [`sendEvent`](commands/sendevent/overview.md) 削除しました。
+- 複数のアプリ内メッセージが返された場合、優先度が最も高いメッセージのみが表示されます。 その他は抑制として記録されます。
+- 空のデータストリームの上書きはEdge Networkに送信されなくなりました。これにより、サーバーサイドのルーティング設定との潜在的な競合を減らすことができます。
+- 他のAdobe SDKと一致するように、次のログメッセージコンポーネント名の名前を変更しました。
+   - `DecisioningEngine`は`RulesEngine`に名前変更されました
+   - `LegacyMediaAnalytics`は`MediaAnalyticsBridge`に名前変更されました
+   - `Privacy`は`Consent`に名前変更されました
+- デフォルトのコンテンツ項目が[`applyPropositions`](commands/applypropositions.md)を介してレンダリングされたときに発生したエラーを修正しました。
+- Adobe Targetの移動およびサイズ変更アクションで発生するCSS エラーを修正しました。
+- `machineLearning`件の回答から[`sendEvent`](commands/sendevent/overview.md) キーを削除しました。
 
 ## バージョン 2.23.0 - 2024年9月19日（PT）
 
 **新機能**
 
-- [getIdentity](/help/collection/use-cases/identity/id-overview.md) コマンドでの [CORE ID](commands/getidentity.md) のリクエストに対するサポートを追加しました。
+- [getIdentity](/help/collection/use-cases/identity/id-overview.md) コマンドで[CORE ID](commands/getidentity.md)をリクエストするためのサポートを追加しました。
 
 **修正点および改善点**
 
-- Web SDKをローカルで実行すると、cookie が正しく書き込まれない問題を修正しました。
+- Web SDKをローカルで実行する際にCookieが正しく書き込まれない問題を修正しました。
 
 ## バージョン 2.22.0 - 2024年8月22日（PT）
 
@@ -157,11 +161,11 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **修正点および改善点**
 
-- Internet Explorer のサポートが削除され、ライブラリの gzip サイズが 9% 削減されました。
-- `onInstanceConfigured` モニターフックが呼び出されたときに Activity Map のリンクの詳細が初期化されない問題を修正しました。
-- Cookie の宛先が正しいパスに設定されない問題を修正しました。
-- への問い合わせに関するお客様の問題を修正しました。
-- `adobe_mc` パラメーターの無効な URL エンコーディングが原因で [sendEvent](commands/sendevent/overview.md) 呼び出しが失敗する問題を修正しました。
+- Internet Explorerのサポートを削除し、ライブラリ Gzip サイズを9%削減しました。
+- `onInstanceConfigured` モニターフックが呼び出されたときに、アクティビティマップリンクの詳細が初期化されない問題を修正しました。
+- Cookieの宛先が正しいパスに設定されない問題を修正しました。
+- を呼び出すに関する顧客の問題を修正しました。
+- `adobe_mc` パラメーターの無効なURL エンコーディングが[sendEvent](commands/sendevent/overview.md)呼び出しを失敗させる問題を修正しました。
 
 ## バージョン 2.21.1 - 2024年7月18日（PT）
 
@@ -175,51 +179,51 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 - 自動提案インタラクショントラッキングのサポートを追加しました。
 - `alloy.js` ファイルを提供するカスタムビルドスクリプトを追加しました。
-- ActivityMap とイベントのグループ化のサポートにより、クリックの収集が改善されました。
+- ActivityMapとイベントグループ化のサポートにより、クリック収集が改善されました。
 
 ## バージョン 2.20.0 - 2024年5月21日（PT）
 
 **新機能**
 
-- [&#x200B; ストリーミングメディアコレクション &#x200B;](commands/configure/streamingmedia.md) のサポートを追加。
+- [ ストリーミングメディアコレクション ](commands/configure/streamingmedia.md)のサポートを追加しました。
 
 **修正点および改善点**
 
-- 同意がオプトアウトされたときに、事前非表示スニペットによってデフォルトコンテンツが非表示になるバグを修正しました。
+- 同意がオプトアウトされたときに、事前非表示スニペットによってデフォルトのコンテンツが非表示になるバグを修正しました。
 
 ## バージョン 2.19.2 - 2024年1月10日（PT）
 
 **修正点および改善点**
 
-- ID エラーが他のエラーをマスクし、ID エラーを警告に変更していた問題を修正しました。
-- `renderDecisions` が `false` に設定された top of page 呼び出しがある場合に、bottom of page 呼び出しが送信されない問題を修正しました。
-- 複数の `adobe_mc` クエリ文字列パラメーターが存在する場合に、web SDKがクロスドメイン ID を読み取れない問題を修正しました。
+- ID エラーが他のエラーをマスキングし、ID エラーを警告に変更する問題を修正しました。
+- `renderDecisions`が`false`に設定されたページ上部の呼び出しがあったときに、ページ下部の呼び出しが送信されない問題を修正しました。
+- 複数の`adobe_mc` クエリ文字列パラメーターがある場合にWeb SDKがクロスドメイン IDを読み取れなかった問題を修正しました。
 
 ## バージョン 2.19.1 - 2023年11月10日（PT）
 
 **修正点および改善点**
 
-- `sendEvent` の呼び出しから返された提案配列が常に空である問題を修正しました。
+- `sendEvent`呼び出しから返されたpropositions配列が常に空になる問題を修正しました。
 
 ## バージョン 2.19.0 - 2023年11月1日（PT）
 
 **新機能**
 
-- Adobe Journey Optimizerからのアプリ内メッセージのレンダリングがサポートされるようになりました。
-- [&#x200B; ページイベントの上部と下部 &#x200B;](../use-cases/personalization/top-bottom-page-events.md) のサポートを追加しました。
-- [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) コマンドに `sendEvent` ページ全体の範囲とデフォルトサーフェスの要求を制御するオプションを追加しました。
+- Adobe Journey Optimizerからのアプリ内メッセージのレンダリングのサポートを追加しました。
+- [ ページイベントの上下](../use-cases/personalization/top-bottom-page-events.md)のサポートを追加しました。
+- ページ全体のスコープとデフォルトサーフェスのリクエストを制御するために、[`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) コマンドに`sendEvent` オプションを追加しました。
 
 **修正点および改善点**
 
-- 複数のタイプのパーソナライゼーションをレンダリングする際に、パーソナライゼーションの表示イベントを組み合わせたものです。
-- 単一ページアプリケーションビュー名で大文字と小文字が区別される問題を修正しました。
-- シャドウ DOM のパーソナライズされたオファーセレクターの問題を修正しました。
+- 複数のタイプのパーソナライゼーションをレンダリングする場合、結合されたパーソナライゼーションディスプレイイベントが一緒に表示されます。
+- シングルページアプリケーションビュー名で大文字と小文字が区別される問題を修正しました。
+- シャドウ DOM パーソナライズされたオファーセレクターに関する問題を修正しました。
 
 ## バージョン 2.18.0 - 2023年7月31日（PT）
 
 **新機能**
 
-- [&#128279;](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
@@ -270,9 +274,9 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- ページごとの完全移行のサポートを追加しました。 訪問者が at.js ページと Web SDK ページの間を移動しても、Adobe Target プロファイルが保持されるようになりました。
+- Page by Page Full Migrationのサポートを追加しました。 訪問者が at.js ページと Web SDK ページの間を移動しても、Adobe Target プロファイルが保持されるようになりました。
 - [高エントロピーの User-Agent クライアントヒント](../use-cases/client-hints.md)の設定可能なサポートを追加しました。
-- [`applyResponse`](commands/applyresponse.md) コマンドのサポートを追加。 これにより、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を介してハイブリッドパーソナライゼーションが可能になります。
+- [`applyResponse`](commands/applyresponse.md) コマンドのサポートを追加しました。 これにより、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)を介したハイブリッドパーソナライゼーションが可能になります。
 - QA モードのリンクが複数のページで機能するようになりました。
 
 **修正点および改善点**
@@ -293,7 +297,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **新機能**
 
 - モバイルアプリとモバイル web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に提供できるようになりました。詳しくは、[専用のドキュメント](../use-cases/identity/id-sharing.md)を参照してください。
-- 分析指標を増分せずに、[!DNL Adobe Target] からシングルページアプリケーションに提案の配列をレンダリングまたは実行できるようになりました。これにより、レポートのエラーが減り、分析の精度が向上します。
+- 分析指標を増分せずに、[!DNL Adobe Target] からシングルページアプリケーションに提案の配列をレンダリングまたは実行できるようになりました。これにより、レポートエラーを軽減し、分析の精度を向上させることができます。
 - 使用可能なコマンドやインスタンスの最終的な設定など、`getLibraryInfo` コマンドに追加情報を追加しました。
 
 **修正点および改善点**
@@ -317,7 +321,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - 単一ページアプリケーションのビュー変更イベントを最適化しました。パーソナライズされたエクスペリエンスがレンダリングされる際に、表示通知がビュー変更イベントに含まれるようになりました。
 - `eventType` が存在しない場合のコンソール警告を削除しました。
 - エクスペリエンスがリクエストされた際、またはキャッシュから取得された際に、`propositions` プロパティが `sendEvent` コマンドからのみ返される問題を修正しました。 `propositions` プロパティは、常に配列として定義されるようになりました。
-- Edge Networkからエラーが返された場合に、非表示のコンテナが表示されない問題を修正しました。
+- Edge Networkから返されたエラーが発生したときに、非表示のコンテナが表示されない問題を修正しました。
 - 操作イベントが Adobe Target でカウントされない問題を修正しました。この問題は、web.webPageDetails.viewName でビュー名を XDM に追加することで修正しました。
 - コンソールメッセージのドキュメントのリンク切れを修正します。
 
@@ -329,7 +333,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.7.0 - 2021年10月26日（PT）
 
-- `sendEvent` や `inferences` など、Edge Networkからの追加情報を `destinations` からの戻り値で公開します。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
+- `sendEvent`と`inferences`を含むEdge Networkの追加情報を`destinations`の戻り値で公開します。 これらの機能が現在Betaの一部としてロールアウトされている場合、これらのプロパティのフォーマットが変わる可能性があります。
 
 ## バージョン 2.6.4 - 2021年9月7日（PT）
 
@@ -349,7 +353,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.6.0 - 2021年7月27日（PT）
 
-- Adobe Target 応答トークンなど、`sendEvent` で解決された promise でより多くのパーソナライゼーションコンテンツを提供します。`sendEvent` コマンドを実行すると、promise が返されます。これは、サーバーから受信した情報を含む `result` オブジェクトで最終的に解決されます。以前は、この結果オブジェクトには `decisions` という名前のプロパティが含まれていました。この `decisions` プロパティは、非推奨（廃止予定）です。新しいプロパティ `propositions` を追加しました。この新しいプロパティにより、顧客は応答トークンなど、より多くのパーソナライゼーションコンテンツにアクセスできます。
+- Adobe Target 応答トークンなど、`sendEvent` で解決された promise でより多くのパーソナライゼーションコンテンツを提供します。`sendEvent` コマンドを実行すると、promise が返されます。これは、サーバーから受信した情報を含む `result` オブジェクトで最終的に解決されます。以前は、この結果オブジェクトには `decisions` という名前のプロパティが含まれていました。この `decisions` プロパティは、非推奨（廃止予定）です。新しいプロパティ `propositions` を追加しました。この新しいプロパティでは、応答トークンを含む、より多くのパーソナライゼーションコンテンツにアクセスできます。
 
 ## バージョン 2.5.0 - 2021年6月
 
@@ -360,14 +364,14 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-- これで、SDKを [NPM パッケージ &#x200B;](install/npm.md) としてインストールできます。
+- SDKを[NPM パッケージ ](install/npm.md)としてインストールできるようになりました。
 - [デフォルトの同意を設定](commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
-- [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにすることができるようになりました。
+- [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにできるようになりました。
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
-- [`getIdentity`](commands/getidentity.md) コマンドは、ID と共にエッジ地域 ID を返すようになりました。
+- [`getIdentity`](commands/getidentity.md) コマンドは、IDと共にエッジ領域IDを返すようになりました。
 - サーバーから受信した警告とエラーが改善され、より適切な方法で処理されます。
-- [`setConsent`](commands/setconsent.md) コマンドにAdobeの同意 2.0 標準をサポートするようになりました。
-- 同意環境設定を受信すると、CMP、Experience Platform Web SDKおよびExperience Platform Edge Network間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。 同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
+- [`setConsent`](commands/setconsent.md) コマンドに対するAdobeの同意管理2.0標準のサポートを追加しました。
+- 同意の設定を受け取ると、ハッシュ化され、ローカルストレージに保存されます。これにより、CMP、Experience Platform Web SDK、Experience Platform Edge Network間の統合が最適化されます。 同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
 - `onCommandResolved` と `onCommandRejected` の 2 つの[モニタリングフック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)を追加しました。
 - バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しいシングルページアプリビューに移動し、元のビューに戻り、コンバージョンの対象となる要素をクリックした際に、同じアクティビティに関する重複した情報が含まれていました。
 - バグ修正：SDK によって送信された最初のイベントで `documentUnloading` が `true` に設定されていた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) を使用してイベントが送信され、ID が確立されていないというエラーが発生していました。
@@ -384,8 +388,8 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.2.0 - 2020年10月
 
-- バグ修正：`idMigrationEnabled` が `true` 効な場合、オプトインオブジェクトが web SDKの呼び出しをブロックしていました。
-- バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Web SDKに認識させます。
+- バグ修正：`idMigrationEnabled`が`true`の場合、オプトインオブジェクトがWeb SDKの呼び出しをブロックしていました。
+- バグ修正：ちらつき問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストをWeb SDKで認識できるようにします。
 
 ## バージョン 2.1.0 - 2020年8月
 
@@ -393,5 +397,5 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - IAB 2.0 同意標準をサポートします。
 - `setConsent` コマンドで追加の ID を渡すことをサポートします。
 - `sendEvent` コマンドでの `datasetId` の上書きをサポートします。
-- モニタリングフックのサポート（[&#x200B; 詳細を表示 &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+- 監視フックのサポート （[詳細情報](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 - 実装の詳細コンテキストデータで `environment: browser` を渡します。
