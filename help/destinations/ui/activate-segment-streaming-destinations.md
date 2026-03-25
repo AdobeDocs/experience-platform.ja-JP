@@ -15,9 +15,9 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> * オーディエンスをアクティブ化し、ワークフローの[&#x200B; マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
-> * ワークフローの[&#x200B; マッピング手順](#mapping)を経ずにオーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
-> * *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+> * オーディエンスをアクティブ化し、ワークフローの[ マッピング手順](#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+> * ワークフローの[ マッピング手順](#mapping)を経ずにオーディエンスをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+> * *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
@@ -43,7 +43,7 @@ ht-degree: 7%
 
    ![宛先を選択ステップでハイライト表示された宛先接続。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. 次のセクションに移動して、[&#x200B; オーディエンスを選択](#select-audiences)します。
+1. 次のセクションに移動して、[ オーディエンスを選択](#select-audiences)します。
 
 ## オーディエンスの選択 {#select-audiences}
 
@@ -51,17 +51,17 @@ ht-degree: 7%
 
 配信元に応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[&#x200B; セグメント化ドキュメント &#x200B;](../../segmentation/ui/overview.md)を参照してください。
-* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[&#x200B; オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
+* **[!UICONTROL Segmentation Service]**: Segmentation ServiceによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md)を参照してください。
+* **[!UICONTROL Custom upload]**: Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み](../../segmentation/ui/audience-portal.md#import-audience)に関するドキュメントを参照してください。
 * その他の種類のオーディエンスは、[!DNL Audience Manager]など、他のAdobe ソリューションから作成されています。
 
-![&#x200B; オーディエンスの選択手順でハイライト表示された複数のオーディエンス &#x200B;](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![ オーディエンスの選択手順でハイライト表示された複数のオーディエンス ](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## 属性と ID のマッピング {#mapping}
 
 >[!IMPORTANT]
 >
->この手順は、一部のオーディエンスストリーミング宛先にのみ適用されます。 宛先に&#x200B;**[!UICONTROL Mapping]** ステップがない場合は、[&#x200B; オーディエンススケジューリング &#x200B;](#scheduling)にスキップします。
+>この手順は、一部のオーディエンスストリーミング宛先にのみ適用されます。 宛先に&#x200B;**[!UICONTROL Mapping]** ステップがない場合は、[ オーディエンススケジューリング ](#scheduling)にスキップします。
 >
 >ストリーミング宛先にオーディエンスをアクティブ化する場合は、ターゲットプロファイル属性に加えて、*少なくとも1つのターゲット ID名前空間*をマッピングする必要があります。 そうでない場合、オーディエンスは宛先プラットフォームに対してアクティブ化されません。
 > ![必須ID名前空間マッピングを示すマッピング手順の画像。](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
@@ -75,7 +75,7 @@ ht-degree: 7%
 
 1. **[!UICONTROL Source field]** エントリの右側にある矢印を選択します。
 
-   ![&#x200B; ハイライト表示されたソースフィールドコントロールを選択します。](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![ ハイライト表示されたソースフィールドコントロールを選択します。](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. **[!UICONTROL Select source field]** ページで、**[!UICONTROL Select attributes]**&#x200B;または&#x200B;**[!UICONTROL Select identity namespace]** オプションを使用して、使用可能なソースフィールドの2つのカテゴリを切り替えます。 使用可能な[!DNL XDM] プロファイル属性とID名前空間から、宛先にマッピングするプロファイル属性を選択し、**[!UICONTROL Select]**&#x200B;を選択します。
 
@@ -89,11 +89,11 @@ ht-degree: 7%
 
 1. **[!UICONTROL Target field]** エントリの右側にあるボタンを選択します。
 
-   ![&#x200B; ハイライト表示されたターゲットフィールドを選択します。](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![ ハイライト表示されたターゲットフィールドを選択します。](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. **[!UICONTROL Select target field]** ページで、ソースフィールドをマッピングするターゲット ID名前空間を選択し、**[!UICONTROL Select]**&#x200B;を選択します。
 
-   ![&#x200B; ターゲットフィールドマッピングに使用できるオプションを表示するターゲットフィールドページを選択します。](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![ ターゲットフィールドマッピングに使用できるオプションを表示するターゲットフィールドページを選択します。](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. さらにマッピングを追加するには、手順1～5を繰り返します。
 
@@ -119,23 +119,23 @@ ht-degree: 7%
 
 宛先に対してアクティブ化されているすべてのオーディエンスを表示するには、フィルターオプションを使用して、**[!UICONTROL Show new audiences only]** フィルターを無効にします。
 
-![すべてのオーディエンス &#x200B;](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
+![すべてのオーディエンス ](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
 1. **[!UICONTROL Audience schedule]** ページで、各オーディエンスを選択し、**[!UICONTROL Start date]**&#x200B;および&#x200B;**[!UICONTROL End date]** セレクターを使用して、宛先にデータを送信する時間間隔を設定します。
 
-   ![&#x200B; オーディエンススケジュールフィルターが強調表示されました。](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![ オーディエンススケジュールフィルターが強調表示されました。](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * 一部の宛先では、カレンダーセレクターの下にあるドロップダウンメニューを使用して、各オーディエンスの&#x200B;**[!UICONTROL Origin of audience]**&#x200B;を選択する必要があります。 宛先にこのセレクターが含まれていない場合は、この手順をスキップしてください。
 
-     ![&#x200B; マッピング ID ドロップダウンがハイライト表示されました。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![ マッピング ID ドロップダウンがハイライト表示されました。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 一部の宛先では、[!DNL Experience Platform]人のオーディエンスをターゲット宛先の相手に手動でマッピングする必要があります。 これを行うには、各オーディエンスを選択し、宛先プラットフォームの対応するオーディエンス IDを&#x200B;**[!UICONTROL Mapping ID]** フィールドに入力します。 宛先にこのフィールドが含まれていない場合は、この手順をスキップしてください。
 
-     ![&#x200B; オーディエンスの起源ドロップダウンが強調表示されます。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![ オーディエンスの起源ドロップダウンが強調表示されます。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 一部の宛先では、**[!UICONTROL App ID]**&#x200B;または[!DNL IDFA]個のオーディエンスをアクティブ化する際に、[!DNL GAID]を入力する必要があります。 宛先にこのフィールドが含まれていない場合は、この手順をスキップしてください。
 
-     ![&#x200B; アプリ ID ドロップダウンが強調表示されました。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![ アプリ ID ドロップダウンが強調表示されました。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. **[!UICONTROL Next]**&#x200B;を選択して[!UICONTROL Review] ページに移動します。
 
@@ -151,21 +151,21 @@ ht-degree: 7%
 
 ### データ使用ポリシーチェック {#data-usage-policy-checks}
 
-**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[&#x200B; データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
+**[!UICONTROL Review]** ステップでは、Experience Platformもデータ使用ポリシー違反をチェックします。 ポリシーに違反した場合の例を次に示します。オーディエンスのアクティベーション ワークフローを完了するには、違反を解決する必要があります。 ポリシー違反を解決する方法について詳しくは、「データガバナンスのドキュメント」セクションの[ データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
 
-![&#x200B; アクティベーションワークフローに表示されるデータポリシー違反の例。](../assets/common/data-policy-violation.png)
+![ アクティベーションワークフローに表示されるデータポリシー違反の例。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスを絞り込む {#filter-audiences}
 
 また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。 表示するテーブル列を切り替えることもできます。
 
-![&#x200B; レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
+![ レビューステップで使用可能なオーディエンスフィルターを表示する画面の録画。](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
 
 選択に満足しており、ポリシー違反が検出されていない場合は、**[!UICONTROL Finish]**&#x200B;を選択して選択を確認し、宛先へのデータ送信を開始します。
 
 ## オーディエンスのアクティブ化の検証 {#verify}
 
-宛先へのデータのフローを監視する方法の詳細については、[宛先モニタリングに関するドキュメント &#x200B;](../../dataflows/ui/monitor-destinations.md)を参照してください。
+宛先へのデータのフローを監視する方法の詳細については、[宛先モニタリングに関するドキュメント ](../../dataflows/ui/monitor-destinations.md)を参照してください。
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
