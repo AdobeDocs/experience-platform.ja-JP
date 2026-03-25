@@ -75,10 +75,10 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **修正点および改善点**
 
-- メディアオブジェクトの[ プロパティが無効なデータタイプを誤って受け入れた](commands/getmediaanalyticstracker.md)Media Analytics トラッカー`length`のエラーを修正しました。
+- メディアオブジェクトの[&#x200B; プロパティが無効なデータタイプを誤って受け入れた](commands/getmediaanalyticstracker.md)Media Analytics トラッカー`length`のエラーを修正しました。
 - IDの検索が失敗した場合にPromiseの拒否を適切に処理するために、[ID管理](../use-cases/identity/id-overview.md)のエラー処理を改善しました。
 - HTML コンテンツアイテムを含むパーソナライゼーションコンテンツのレンダリングが失敗し、見つからない`renderStatusHandler`に関連するエラーが発生する問題を解決しました。
-- 非HTTP URLを適切に処理するために、アクティビティマップ [URL コレクション ](commands/configure/clickcollectionenabled.md)を修正しました。
+- 非HTTP URLを適切に処理するために、アクティビティマップ [URL コレクション &#x200B;](commands/configure/clickcollectionenabled.md)を修正しました。
 
 **既知の問題**
 
@@ -127,7 +127,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [ データストリームの上書き](/help/datastreams/overrides.md)が、メディアセッションの開始時にサポートされるようになりました。
+- [&#x200B; データストリームの上書き](/help/datastreams/overrides.md)が、メディアセッションの開始時にサポートされるようになりました。
 
 - [`onContentRendering`](monitoring-hooks.md#onContentRendering)監視フックにAdobe Target応答トークンのサポートを追加しました。
 
@@ -185,7 +185,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [ ストリーミングメディアコレクション ](commands/configure/streamingmedia.md)のサポートを追加しました。
+- [&#x200B; ストリーミングメディアコレクション &#x200B;](commands/configure/streamingmedia.md)のサポートを追加しました。
 
 **修正点および改善点**
 
@@ -210,7 +210,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **新機能**
 
 - Adobe Journey Optimizerからのアプリ内メッセージのレンダリングのサポートを追加しました。
-- [ ページイベントの上下](../use-cases/personalization/top-bottom-page-events.md)のサポートを追加しました。
+- [&#x200B; ページイベントの上下](../use-cases/personalization/top-bottom-page-events.md)のサポートを追加しました。
 - ページ全体のスコープとデフォルトサーフェスのリクエストを制御するために、[`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) コマンドに`sendEvent` オプションを追加しました。
 
 **修正点および改善点**
@@ -223,7 +223,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- ](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
+- [&#128279;](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
 
 **修正点および改善点**
 
@@ -364,7 +364,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-- SDKを[NPM パッケージ ](install/npm.md)としてインストールできるようになりました。
+- SDKを[NPM パッケージ &#x200B;](install/npm.md)としてインストールできるようになりました。
 - [デフォルトの同意を設定](commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
 - [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにできるようになりました。
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。

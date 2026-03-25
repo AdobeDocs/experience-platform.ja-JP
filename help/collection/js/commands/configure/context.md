@@ -94,7 +94,7 @@ ht-degree: 12%
 | ブラウザー名 | 使用するブラウザー。 低エントロピーのヒント `Sec-CH-UA`もこの要素を収集します。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | ブラウザーバージョン | ブラウザーの重要なバージョン。 低エントロピーのヒント `Sec-CH-UA`もこの要素を収集します。 正確なブラウザーバージョンは自動的には収集されません。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-詳しくは、[ ユーザーエージェントクライアントヒント ](/help/collection/use-cases/client-hints.md)を参照してください。
+詳しくは、[&#x200B; ユーザーエージェントクライアントヒント &#x200B;](/help/collection/use-cases/client-hints.md)を参照してください。
 
 ### 1回限りのAnalytics リファラー {#one-time-analytics-referrer}
 
