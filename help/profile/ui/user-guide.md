@@ -34,15 +34,15 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 プロファイルダッシュボードには、組織のプロファイルデータに関連する主要指標の概要が表示されます。
 
-詳しくは、[ プロファイルダッシュボードガイド ](../../dashboards/guides/profiles.md)を参照してください。
+詳しくは、[&#x200B; プロファイルダッシュボードガイド &#x200B;](../../dashboards/guides/profiles.md)を参照してください。
 
-![ プロファイルダッシュボードが表示されます。](../../dashboards/images/profiles/dashboard-overview.png)
+![&#x200B; プロファイルダッシュボードが表示されます。](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL Browse] タブ
 
 「**[!UICONTROL Browse]**」タブでは、切り替えスイッチを選択して、**カード**&#x200B;表示または&#x200B;**テーブル**&#x200B;表示でプロファイルを表示できます。
 
-![ カードとテーブル表示の切り替えがハイライト表示されます。](../images/user-guide/change-browse-view.png)
+![&#x200B; カードとテーブル表示の切り替えがハイライト表示されます。](../images/user-guide/change-browse-view.png)
 
 さらに、結合ポリシーを使用してプロファイルを参照したり、ID名前空間と値を使用して特定のプロファイルを検索したりすることもできます。
 
@@ -60,11 +60,11 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 **[!UICONTROL Select merge policy]** ダイアログから結合ポリシーを選択するには、ポリシー名の横にあるラジオボタンを選択し、**[!UICONTROL Select]**&#x200B;を使用して[!UICONTROL Browse] タブに戻ります。 次に、**[!UICONTROL View]**&#x200B;を選択してサンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプルを表示できます。
 
-![ フィルターを適用する結合ポリシーを選択できるダイアログが表示されます。](../images/user-guide/select-merge-policy.png)
+![&#x200B; フィルターを適用する結合ポリシーを選択できるダイアログが表示されます。](../images/user-guide/select-merge-policy.png)
 
 表示されるプロファイルは、選択した結合ポリシーが適用された後、組織のプロファイルストアから最大20個のプロファイルのサンプルを表します。 選択した結合ポリシーのサンプルプロファイルは、新しいデータが組織のプロファイルストアに追加されたときに更新されます。
 
-サンプルプロファイルの1つの詳細を表示するには、**[!UICONTROL Profile ID]**&#x200B;を選択します。 詳しくは、[ プロファイルの詳細の表示](#profile-detail)に関するこのガイドの後半の節を参照してください。
+サンプルプロファイルの1つの詳細を表示するには、**[!UICONTROL Profile ID]**&#x200B;を選択します。 詳しくは、[&#x200B; プロファイルの詳細の表示](#profile-detail)に関するこのガイドの後半の節を参照してください。
 
 ![結合ポリシーに一致するサンプルプロファイルが表示されます。](../images/user-guide/profile-browse-table.png)
 
@@ -78,13 +78,13 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 
 必要に応じて、**[!UICONTROL Merge policy]** セレクターを使用して&#x200B;**[!UICONTROL Select merge policy]** ダイアログを開き、使用する結合ポリシーを選択します。
 
-![ フィルターを適用する結合ポリシーを選択できるダイアログが表示されます。](../images/user-guide/select-merge-policy.png)
+![&#x200B; フィルターを適用する結合ポリシーを選択できるダイアログが表示されます。](../images/user-guide/select-merge-policy.png)
 
 次に、**[!UICONTROL Identity namespace]** セレクターを使用して&#x200B;**[!UICONTROL Select identity namespace]** ダイアログを開き、検索する名前空間を選択します。 組織に多数の名前空間がある場合は、ダイアログの検索バーを使用して、名前空間の名前を入力できます。
 
 名前空間を選択して追加の詳細を表示したり、ラジオボタンを選択して名前空間を選択したりできます。 その後、**[!UICONTROL Select]**&#x200B;を使用して続行できます。
 
-![ フィルタリングするID名前空間を選択できるダイアログが表示されます。](../images/user-guide/select-identity-namespace.png)
+![&#x200B; フィルタリングするID名前空間を選択できるダイアログが表示されます。](../images/user-guide/select-identity-namespace.png)
 
 [!UICONTROL Identity namespace]を選択して[!UICONTROL Browse] タブに戻ったら、選択した名前空間に関連する&#x200B;**[!UICONTROL Identity value]**&#x200B;を入力できます。
 
@@ -92,7 +92,7 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 >
 >この値は個々の顧客プロファイルに固有であり、指定された名前空間の有効なエントリである必要があります。 例えば、ID名前空間「電子メール」を選択するには、有効な電子メールアドレスの形式のID値が必要になります。
 
-![ フィルタリングするID値が強調表示されます。](../images/user-guide/browse-identity.png)
+![&#x200B; フィルタリングするID値が強調表示されます。](../images/user-guide/browse-identity.png)
 
 値を入力したら、**[!UICONTROL View]**&#x200B;を選択すると、値に一致する単一のプロファイルが返されます。 プロファイルを表示するには、**[!UICONTROL Profile ID]**&#x200B;を選択します。
 
@@ -107,13 +107,13 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 
 **[!UICONTROL Profile ID]**&#x200B;を選択すると、「**[!UICONTROL Detail]**」タブが開きます。 **[!UICONTROL Detail]** タブに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々の顧客の単一のビューを形成しています。 これには、基本属性、リンクされたID、チャネルの環境設定など、顧客の詳細が含まれます。
 
-さらに、[属性](#attributes)、[ イベント ](#events)、[ オーディエンスメンバーシップ ](#audience-membership)など、プロファイルに関するその他の詳細を表示できます。
+さらに、[属性](#attributes)、[&#x200B; イベント &#x200B;](#events)、[&#x200B; オーディエンスメンバーシップ &#x200B;](#audience-membership)など、プロファイルに関するその他の詳細を表示できます。
 
 ### 「詳細」タブ {#profile-detail}
 
 「**[!UICONTROL Details]**」タブには、選択したプロファイルに関する詳細情報が表示されます。 「詳細」タブは、カード表示とグラフビューのどちらに表示されているかに応じて、様々なセクションに分かれています。 カード表示では、顧客プロファイルインサイト、AI insight ウィジェット、カスタマイズ可能なウィジェット、自動分類ウィジェットが表示され、グラフ表示では、プロファイル属性とエクスペリエンスイベントのセクションが表示されます。
 
-![ プロファイルの詳細ページが表示されます。](../images/user-guide/profile-details.png)
+![&#x200B; プロファイルの詳細ページが表示されます。](../images/user-guide/profile-details.png)
 
 さらに、AIが生成したインサイトの表示、edgeと比較したhubの詳細の表示、カードビューとグラフビューの選択を切り替えることもできます。
 
@@ -139,9 +139,9 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 
 「**[!UICONTROL Customizable widgets]**」セクションには、ビジネスニーズに合わせてカスタマイズできるウィジェットが表示されます。 属性を個別のウィジェットにグループ化したり、不要なウィジェットを削除したり、ウィジェットのレイアウトを調整したりできます。
 
-表示されるデフォルトのフィールドは、組織レベルで変更して、好みのプロファイル属性を表示することもできます。 属性の追加と削除、ダッシュボードパネルのサイズ変更など、これらのフィールドのカスタマイズについて詳しくは、[ プロファイル詳細カスタマイズガイド ](profile-customization.md)を参照してください。
+表示されるデフォルトのフィールドは、組織レベルで変更して、好みのプロファイル属性を表示することもできます。 属性の追加と削除、ダッシュボードパネルのサイズ変更など、これらのフィールドのカスタマイズについて詳しくは、[&#x200B; プロファイル詳細カスタマイズガイド &#x200B;](profile-customization.md)を参照してください。
 
-![ カスタマイズ可能なウィジェットセクションが表示されます。](../images/user-guide/customizable-widgets.png)
+![&#x200B; カスタマイズ可能なウィジェットセクションが表示されます。](../images/user-guide/customizable-widgets.png)
 
 また、属性名を表示名として表示するか、フィールドのパス名として表示するかを切り替えることもできます。 これら2つのディスプレイを切り替えるには、**[!UICONTROL Show display names]** トグルを選択します。
 
@@ -151,7 +151,7 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 
 **[!UICONTROL Auto-classified widgets]** セクションには、結合スキーマを活用して、属性が属するソースフィールドグループを決定するウィジェットが表示され、データの送信元に関する明確なコンテキストが提供されます。 検索バーを使用すると、ウィジェット内のキーワードをより簡単に検索できます。
 
-これらのウィジェットは、イベントデータ（エクスペリエンスイベントウィジェットと）と属性データの両方を組み合わせて、プロファイルの統一されたビューを実現します。 これらのウィジェットを使用すると、プロファイルのデータ構造を確認して、[ カスタマイズ可能なウィジェット ](#customizable-widgets)をより適切に構成できます。
+これらのウィジェットは、イベントデータ（エクスペリエンスイベントウィジェットと）と属性データの両方を組み合わせて、プロファイルの統一されたビューを実現します。 これらのウィジェットを使用すると、プロファイルのデータ構造を確認して、[&#x200B; カスタマイズ可能なウィジェット &#x200B;](#customizable-widgets)をより適切に構成できます。
 
 >[!NOTE]
 >
@@ -165,17 +165,17 @@ Experience Platform内での結合ポリシーとその役割について詳し�
 
 グラフビュー内では、ノードをドラッグ&amp;ドロップしてノードの順序を並べ替えたり、ノードを折りたたんで展開したりして、属性の詳細を確認したり、属性を検索してフィルタリングしたり、ズームインしたりズームアウトしたりして、属性の詳細をより詳細に表示したりできます。
 
-![ プロファイルのグラフビューが表示され、プロファイルを構成するさまざまなノードが表示されます。](/help/profile/images/user-guide/profile-attribute-graph.png)
+![&#x200B; プロファイルのグラフビューが表示され、プロファイルを構成するさまざまなノードが表示されます。](/help/profile/images/user-guide/profile-attribute-graph.png)
 
 #### エクスペリエンスイベント {#experience-events}
 
 **[!UICONTROL Experience events]** セクションには、プロファイルを含むエクスペリエンスイベントのタイムラインが表示されます。 デフォルトでは、このセクションには過去48時間以内のエクスペリエンスイベントが表示されます。 ただし、最大30日間の日付範囲を設定できます。
 
-![ エクスペリエンスイベント セクションが表示され、プロファイルを含むエクスペリエンスイベントのタイムラインが表示されます。](/help/profile/images/user-guide/experience-event-graph.png)
+![&#x200B; エクスペリエンスイベント セクションが表示され、プロファイルを含むエクスペリエンスイベントのタイムラインが表示されます。](/help/profile/images/user-guide/experience-event-graph.png)
 
 **[!UICONTROL View event]**&#x200B;を選択すると、選択したイベントにリンクされているイベント属性を確認できます。 これらの詳細には、パス、属性、表示名、値が含まれます。
 
-![ イベント属性ポップオーバーが表示され、イベントに関連する詳細が表示されます。](/help/profile/images/user-guide/event-attributes-graph.png)
+![&#x200B; イベント属性ポップオーバーが表示され、イベントに関連する詳細が表示されます。](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### 「属性」タブ {#attributes}
 
@@ -189,7 +189,7 @@ Edgeで使用可能な属性を表示するには、データの場所セレク�
 
 ![属性タブ内のデータの場所セレクターがハイライト表示されます。](../images/user-guide/attributes-select.png)
 
-エッジプロファイルについて詳しくは、[ エッジプロファイルのドキュメント ](../edge-profiles.md)を参照してください。
+エッジプロファイルについて詳しくは、[&#x200B; エッジプロファイルのドキュメント &#x200B;](../edge-profiles.md)を参照してください。
 
 ### 「イベント」タブ {#events}
 
@@ -201,19 +201,19 @@ Edgeで使用可能な属性を表示するには、データの場所セレク�
 
 イベントは、**[!UICONTROL View JSON]**&#x200B;を選択すると、JSON オブジェクトとして表示することもできます。 これは、Experience Platformでイベントがどのようにキャプチャされるかを理解するのに役立ちます。
 
-![ 「イベント」タブがハイライト表示されます。 プロファイル イベントが表示されます。](../images/user-guide/events.png)
+![&#x200B; 「イベント」タブがハイライト表示されます。 プロファイル イベントが表示されます。](../images/user-guide/events.png)
 
 ### 「Audience membership」タブ {#audience-membership}
 
 「**[!UICONTROL Audience membership]**」タブには、個々の顧客プロファイルが現在属するオーディエンスの名前と説明が表示されます。 プロファイルがオーディエンスに適格または期限切れになると、このリストは自動的に更新されます。 プロファイルが現在選定されているオーディエンスの合計数は、タブの右側に表示されます。
 
-Experience Platformでのセグメント化について詳しくは、[Adobe Experience Platform Segmentation Service ドキュメント ](../../segmentation/home.md)を参照してください。
+Experience Platformでのセグメント化について詳しくは、[Adobe Experience Platform Segmentation Service ドキュメント &#x200B;](../../segmentation/home.md)を参照してください。
 
-![ オーディエンスメンバーシップ タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/audience-membership.png)
+![&#x200B; オーディエンスメンバーシップ タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/audience-membership.png)
 
-Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データの場所セレクターで「**[!UICONTROL Edge]**」を選択します。 エッジセグメント化の詳細については、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md)を参照してください。
+Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データの場所セレクターで「**[!UICONTROL Edge]**」を選択します。 エッジセグメント化の詳細については、[&#x200B; エッジセグメント化ガイド &#x200B;](../../segmentation/methods/edge-segmentation.md)を参照してください。
 
-![ オーディエンスメンバーシップ タブ内のデータの場所セレクターがハイライト表示されます。](../images/user-guide/audience-membership-select.png)
+![&#x200B; オーディエンスメンバーシップ タブ内のデータの場所セレクターがハイライト表示されます。](../images/user-guide/audience-membership-select.png)
 
 ## 結合ポリシー
 
@@ -227,7 +227,7 @@ Edgeで使用可能なプロファイルのオーディエンスメンバーシ�
 
 メインの&#x200B;**[!UICONTROL Profiles]** メニューから「**[!UICONTROL Union Schema]**」タブを選択して、取り込んだデータの使用可能な結合スキーマを表示します。 結合スキーマは、同じクラスのすべての[!DNL Experience Data Model] （XDM） フィールドを統合したもので、そのスキーマは[!DNL Real-Time Customer Profile]で使用できるように有効になっています。
 
-結合スキーマについて詳しくは、[結合スキーマ UI ガイド ](union-schema.md)を参照してください。
+結合スキーマについて詳しくは、[結合スキーマ UI ガイド &#x200B;](union-schema.md)を参照してください。
 
 ![結合スキーマ タブがハイライト表示されます。 組織に属する結合スキーマが表示されます。](../images/user-guide/union-schema.png)
 
@@ -237,8 +237,8 @@ Edgeで使用可能なプロファイルのオーディエンスメンバーシ�
 
 ![計算属性タブがハイライト表示されます。](../images/user-guide/computed-attributes.png)
 
-計算属性について詳しくは、[計算属性の概要](../computed-attributes/overview.md)を参照してください。 Experience Platform UI内で計算属性を使用する方法について詳しくは、[計算属性UI ガイド ](../computed-attributes/ui.md)を参照してください。
+計算属性について詳しくは、[計算属性の概要](../computed-attributes/overview.md)を参照してください。 Experience Platform UI内で計算属性を使用する方法について詳しくは、[計算属性UI ガイド &#x200B;](../computed-attributes/ui.md)を参照してください。
 
 ## 次の手順
 
-このガイドでは、Experience Platform UIを使用して組織のプロファイルデータを表示および管理する方法について説明します。 Experience Platform APIを使用してプロファイルデータを操作する方法について詳しくは、[Real-Time Customer Profile API ガイド ](../api/overview.md)を参照してください。
+このガイドでは、Experience Platform UIを使用して組織のプロファイルデータを表示および管理する方法について説明します。 Experience Platform APIを使用してプロファイルデータを操作する方法について詳しくは、[Real-Time Customer Profile API ガイド &#x200B;](../api/overview.md)を参照してください。
