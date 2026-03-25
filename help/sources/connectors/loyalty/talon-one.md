@@ -2,8 +2,10 @@
 title: Talon.One Sourceの概要
 description: Adobe Experience PlatformのTalon.One ソースについて説明します
 badge: ベータ版
+hide: true
+hidefromtoc: true
 exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
-source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 2%

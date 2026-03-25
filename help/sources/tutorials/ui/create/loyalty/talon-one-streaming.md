@@ -2,8 +2,10 @@
 title: UIを使用してTalon.OneからExperience Platformにデータをストリーミングする
 description: UIを使用してTalon.OneからAdobe Experience Platformにデータをストリーミングする方法を説明します。 このガイドでは、設定、データ選択、データフロー設定について説明します。
 badge: ベータ版
+hide: true
+hidefromtoc: true
 exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
-source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 14%
@@ -47,7 +49,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 次に、*[!UICONTROL Select data]* インターフェイスを使用して、サンプル JSON ファイルをアップロードし、ソーススキーマを定義します。 この手順では、プレビューインターフェイスを使用して、ペイロードのファイル構造を表示できます。 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
+![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
 ## データフローの詳細
 
@@ -76,13 +78,13 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 データセットを設定したら、名前、オプションの説明、アラート設定など、データフローの詳細を指定する必要があります。
 
-![&#x200B; データフローの詳細インターフェイス &#x200B;](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
+![ データフローの詳細インターフェイス ](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。 デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （オプション）データフローの簡単な説明。 |
-| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[&#x200B; アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -107,17 +109,17 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 詳細が正しいことを確認したら、**[!UICONTROL Finish]**&#x200B;を選択します。
 
-![&#x200B; ソースワークフローのレビューステップ。](../../../../images/tutorials/create/talon-one-streaming/review.png)
+![ ソースワークフローのレビューステップ。](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
 ## ストリーミングエンドポイント URLの取得
 
 接続を作成すると、ソースの詳細ページが表示されます。 このページには、以前に実行したデータフロー、ID、ストリーミングエンドポイント URLなど、新しく作成した接続の詳細が表示されます。
 
-![&#x200B; ストリーミングエンドポイント URL。](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+![ ストリーミングエンドポイント URL。](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル &#x200B;](../../monitor-streaming.md)を参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル ](../../monitor-streaming.md)を参照してください。
 
 ## 既知の制限事項
 
