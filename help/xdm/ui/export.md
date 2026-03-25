@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: UI での XDM スキーマの書き出し
-description: Adobe Experience Platform ユーザーインターフェイスで既存のスキーマを別のサンドボックスまたは組織に書き出す方法について説明します。
+title: UIでのXDM スキーマの書き出し
+description: Adobe Experience Platform ユーザーインターフェイスで、既存のスキーマを別のサンドボックスまたは組織に書き出す方法について説明します。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -18,35 +18,39 @@ ht-degree: 11%
 >title="JSON 構造をコピー"
 >abstract="JSON 構造をクリップボードにコピーして、選択したスキーマの書き出しペイロードを生成します。この機能を使用して、スキーマライブラリ内の任意のスキーマの詳細を書き出します。この書き出した JSON を使用して、スキーマと関連リソースを別のサンドボックスまたは組織に読み込むことができます。これにより、異なる環境間でのスキーマの共有と再利用が簡単で効率的になります。"
 
-スキーマライブラリ内のすべてのリソースは、組織内の特定のサンドボックスに格納されます。 場合によっては、サンドボックスと組織の間で Experience Data Model （XDM）リソースを共有する必要があります。
+スキーマライブラリ内のすべてのリソースは、組織内の特定のサンドボックスに含まれています。 場合によっては、サンドボックスと組織間でExperience Data Model （XDM）リソースを共有したい場合があります。
 
-このニーズに対応するために、Adobe Experience Platform UI の [!UICONTROL Schemas] ワークスペースでは、スキーマライブラリ内の任意のスキーマの書き出しペイロードを生成できます。 その後、このペイロードを Schema Registry API の呼び出しで使用して、スキーマ（およびすべての依存リソース）をターゲットサンドボックスおよび組織に読み込むことができます。
+このニーズに対応するために、Adobe Experience Platform UIの[!UICONTROL Schemas] ワークスペースでは、スキーマライブラリ内の任意のスキーマのエクスポートペイロードを生成できます。 このペイロードは、Schema Registry APIの呼び出しで使用して、スキーマ（およびすべての依存リソース）をターゲットサンドボックスと組織にインポートできます。
 
 >[!NOTE]
 >
->また、Schema Registry API を使用して、クラス、スキーマフィールドグループ、データタイプなどのスキーマに加えて、他のリソースを書き出すこともできます。 詳しくは、[&#x200B; 書き出しエンドポイントガイド &#x200B;](../api/export.md) を参照してください。
+>また、Schema Registry APIを使用して、スキーマに加えて、クラス、スキーマフィールドグループ、データタイプなどの他のリソースを書き出すこともできます。 詳しくは、[ エクスポートエンドポイントガイド ](../api/export.md)を参照してください。
 
 ## 前提条件
 
-Experience Platform UI では XDM リソースを書き出すことができますが、ワークフローを完了するには、Schema Registry API を使用して、これらのリソースを他のサンドボックスまたは組織に読み込む必要があります。 このガイドに従う前に、[&#x200B; スキーマレジストリ API の基本を学ぶ &#x200B;](../api/getting-started.md) に関するガイドを参照して、必要な認証ヘッダーに関する重要な情報を確認してください。
+Experience Platform UIではXDM リソースを書き出すことができますが、ワークフローを完了するには、Schema Registry APIを使用してそれらのリソースを他のサンドボックスや組織に読み込む必要があります。 このガイドに従う前に、必要な認証ヘッダーに関する重要な情報については、[ スキーマレジストリ APIの使用を開始する](../api/getting-started.md)に関するガイドを参照してください。
 
-## エクスポートペイロードを生成 {#generate-export-payload}
+>[!NOTE]
+>
+>**削除**&#x200B;や&#x200B;**JSON構造をコピー**&#x200B;などのアクションが見つからない場合は、カスタム （テナント定義）リソースを使用して、テーブル行メニューまたは詳細ビュー（**[!UICONTROL More]**）からアクセスしていることを確認してください。 アクションの可用性は、権限と使用制限によっても異なります。 [ スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](./explore.md#xdm-resource-actions)を参照してください。
 
-書き出しペイロードは、Experience Platform UI の「[!UICONTROL Browse]」タブの詳細パネルから、またはスキーマエディターのスキーマのキャンバスから直接生成できます。
+## 書き出しペイロードの生成 {#generate-export-payload}
+
+書き出しペイロードは、[!UICONTROL Browse] タブの詳細パネルから、またはスキーマエディターのスキーマのキャンバスから直接、Experience Platform UIで生成できます。
 
 書き出しペイロードを生成するには、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択します。 [!UICONTROL Schemas] ワークスペース内で、書き出すスキーマの行を選択して、右側のサイドバーにスキーマの詳細を表示します。
 
 >[!TIP]
 >
->探している XDM リソースを見つける方法について詳しくは、[XDM リソースの調査 &#x200B;](./explore.md) に関するガイドを参照してください。
+>探しているXDM リソースを見つける方法の詳細については、[XDM リソースの探索](./explore.md)に関するガイドを参照してください。
 
-次に、使用可能なオプションから **[!UICONTROL Copy JSON]** アイコン（![&#x200B; コピーアイコン &#x200B;](/help/images/icons/copy.png)）を選択します。
+次に、使用可能なオプションから「**[!UICONTROL Copy JSON]**」アイコン（![ コピーアイコン ](/help/images/icons/copy.png)）を選択します。
 
-![&#x200B; スキーマ行と [!UICONTROL Copy to JSON] がハイライト表示されたスキーマワークスペース。](../images/ui/export/copy-json.png)
+![ スキーマ行と[!UICONTROL Copy to JSON]がハイライト表示されたスキーマワークスペース。](../images/ui/export/copy-json.png)
 
-これにより、スキーマ構造に基づいて生成された JSON ペイロードがクリップボードにコピーされます。 上記の「[!DNL Loyalty Members]」スキーマの場合、次の JSON が生成されます。
+これにより、スキーマ構造に基づいて生成されたJSON ペイロードがクリップボードにコピーされます。 上記の「[!DNL Loyalty Members]」スキーマの場合、次のJSONが生成されます。
 
-+++サンプルの JSON ペイロードを選択して展開します
++++サンプル JSON ペイロードを展開するには、を選択します
 
 ```json
 [
@@ -212,22 +216,22 @@ Experience Platform UI では XDM リソースを書き出すことができま�
 
 +++
 
-ペイロードは、スキーマエディターの右上にある「[!UICONTROL More]」を選択してコピーすることもできます。 ドロップダウンメニューには、「[!UICONTROL Copy JSON structure]」と「[!UICONTROL Delete schema]」の 2 つのオプションがあります。
+ペイロードは、スキーマエディターの右上にある「[!UICONTROL More]」を選択してコピーすることもできます。 ドロップダウンメニューには、[!UICONTROL Copy JSON structure]と[!UICONTROL Delete schema]の2つのオプションがあります。
 
 >[!NOTE]
 >
->プロファイルに対して有効になっている場合や、スキーマに関連付けられたデータセットがある場合は、スキーマを削除できません。
+>プロファイルに対してスキーマが有効になっている場合、または関連するデータセットがある場合は、スキーマを削除できません。
 
-![[!UICONTROL More] と [!UICONTROL Copy to JSON] がハイライト表示されたスキーマエディター &#x200B;](../images/ui/export/schema-editor-copy-json.png)
+![[!UICONTROL More]と[!UICONTROL Copy to JSON]を含むスキーマエディターがハイライト表示されています。](../images/ui/export/schema-editor-copy-json.png)
 
-ペイロードは配列の形式を取り、各配列項目は、書き出すカスタム XDM リソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムフィールドグループと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマで使用されるコアリソースは、すべてのサンドボックスと組織で使用できるので、書き出しに含まれません。
+ペイロードは配列の形式を取り、各配列項目は書き出すカスタム XDM リソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムフィールドグループと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマで使用されるコアリソースは、すべてのサンドボックスと組織で使用できるため、書き出しには含まれません。
 
-組織のテナント ID の各インスタンスは、ペイロードでは `<XDM_TENANTID_PLACEHOLDER>` として表示されます。 これらのプレースホルダーは、次の手順でスキーマを読み込む場所に応じて、適切なテナント ID 値に自動的に置き換えられます。
+組織のテナント IDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`として表示されます。 これらのプレースホルダーは、次の手順でスキーマをインポートする場所に応じて、適切なテナント ID値に自動的に置き換えられます。
 
-## API を使用したリソースの読み込み {#import-resource-with-api}
+## APIを使用したリソースのインポート {#import-resource-with-api}
 
-スキーマの書き出し JSON をコピーしたら、Schema Registry API の `/rpc/import` エンドポイントに対する POST リクエストのペイロードとして使用できます。 スキーマを目的の組織およびサンドボックスに送信するための呼び出しを設定する方法について詳しくは、[&#x200B; インポートエンドポイントガイド &#x200B;](../api/import.md) を参照してください。
+スキーマの書き出しJSONをコピーしたら、それをSchema Registry APIの`/rpc/import` エンドポイントへのPOST リクエストのペイロードとして使用できます。 目的の組織とサンドボックスにスキーマを送信するように呼び出しを設定する方法について詳しくは、[ インポートエンドポイントガイド ](../api/import.md)を参照してください。
 
 ## 次の手順
 
-このガイドに従うと、XDM スキーマを別の組織またはサンドボックスに正常に書き出すことができます。 [!UICONTROL Schemas] UI の機能について詳しくは、[[!UICONTROL Schemas] UI の概要を参照してください &#x200B;](./overview.md)
+このガイドに従うことで、XDM スキーマを別の組織またはサンドボックスに正常にエクスポートできました。 [!UICONTROL Schemas] UIの機能について詳しくは、[[!UICONTROL Schemas] UIの概要](./overview.md)を参照してください。

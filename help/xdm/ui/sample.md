@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: UI での XDM スキーマのサンプルデータの生成
-description: Adobe Experience Platform ユーザーインターフェイスで既存のスキーマに基づいてサンプル JSON データを生成する方法を説明します。
+title: UIでのXDM スキーマのサンプルデータの生成
+description: Adobe Experience Platform ユーザーインターフェイスの既存のスキーマに基づいて、サンプル JSON データを生成する方法について説明します。
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 15%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -17,20 +17,24 @@ ht-degree: 15%
 >title="サンプルファイルをダウンロード"
 >abstract="選択したスキーマの構造に準拠するサンプル JSON オブジェクトを生成します。このオブジェクトは、このスキーマを使用したデータセットへの取り込みに対してデータが正しく書式設定されていることを確認するためのテンプレートとして機能できます。サンプル JSON ファイルは、ブラウザーによってダウンロードされます。"
 
-データをAdobe Experience Platformに取り込むには、データの形式と構造が既存のエクスペリエンスデータモデル（XDM）スキーマに準拠している必要があります。 特定のデータセットのスキーマの複雑さによっては、データセットが取り込み時に予想するデータの正確な形状を決定することが困難な場合があります。
+データをAdobe Experience Platformに取り込むには、データのフォーマットと構造が、既存のExperience Data Model （XDM）スキーマに準拠している必要があります。 特定のデータセットのスキーマの複雑さによっては、取り込み時にデータセットが期待するデータの正確な形状を判断するのが難しい場合があります。
 
-Experience Platform UI で定義したスキーマについては、スキーマの構造に準拠するサンプル JSON オブジェクトを生成できます。 このオブジェクトは、対象のスキーマを使用するデータセットに取り込まれるすべてのデータのテンプレートとして機能できます。
+Experience Platform UIで定義した任意のスキーマに対して、スキーマの構造に準拠するサンプル JSON オブジェクトを生成できます。 このオブジェクトは、スキーマを使用するデータセットに取り込まれるあらゆるデータのテンプレートとして機能します。
 
-Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL Schemas]**」を選択します。 「**[!UICONTROL Browse]**」タブで、サンプルデータを生成するスキーマを探します。 リストから選択すると、右側のパネルが更新されて、スキーマの詳細が表示されます。 ここから **[!UICONTROL Download sample file]** を選択します。 
+>[!NOTE]
+>
+>**削除**&#x200B;や&#x200B;**JSON構造をコピー**&#x200B;などのアクションが見つからない場合は、カスタム （テナント定義）リソースを使用して、テーブル行メニューまたは詳細ビュー（**[!UICONTROL More]**）からアクセスしていることを確認してください。 アクションの可用性は、権限と使用制限によっても異なります。 [ スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](./explore.md#xdm-resource-actions)を参照してください。
 
-![&#x200B; 選択したスキーマと「サンプルファイルをダウンロード」がハイライト表示されたスキーマワークスペースの「参照」タブ。](../images/ui/sample/sample-data.png)
+Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択します。 「**[!UICONTROL Browse]**」タブで、サンプルデータを生成するスキーマを見つけます。 リストから選択すると、右側のパネルが更新され、スキーマに関する詳細が表示されます。 ここから **[!UICONTROL Download sample file]** を選択します。 
 
-ブラウザーでサンプルの JSON ファイルをダウンロードします。 これで、このファイルを、このスキーマを使用するデータセットに取り込む際のデータの構造化方法の参照として使用できるようになりました。
+![ スキーマを選択してサンプルファイルをダウンロードしたスキーマワークスペースの「参照」タブがハイライト表示されます。](../images/ui/sample/sample-data.png)
+
+サンプル JSON ファイルがブラウザーによってダウンロードされます。 このファイルを、このスキーマを使用するデータセットに取り込む際にデータを構造化する方法のリファレンスとして使用できるようになりました。
 
 ## 次の手順
 
-このガイドでは、Experience Platform UI で XDM スキーマからサンプル JSON ファイルを生成する方法について説明しました。 スキーマレジストリ API を使用してサンプルデータを生成する方法については、[&#x200B; サンプルデータエンドポイントガイド &#x200B;](../api/sample-data.md) を参照してください。
+このガイドでは、Experience Platform UIでXDM スキーマからサンプル JSON ファイルを生成する方法について説明しました。 Schema Registry APIを使用してサンプルデータを生成する方法については、[ サンプルデータエンドポイントガイド ](../api/sample-data.md)を参照してください。
 
-データの取り込みを開始する準備が整ったら、[CSV ファイルの XDM へのマッピング &#x200B;](../../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照して、フラットデータファイル（CSV など）を XDM スキーマにマッピングし、Experience Platformに取り込む方法を確認してください。 または、[&#x200B; ソース接続 &#x200B;](../../sources/home.md) を確立して、外部ソースからデータを取り込み、XDM にマッピングすることもできます。
+データの取り込みを開始する準備ができたら、[ フラットデータファイル（CSVなど）をXDM スキーマにマッピングしてExperience Platformに取り込む方法については、](../../ingestion/tutorials/map-csv/overview.md)のチュートリアルを参照してください。 または、[ ソース接続](../../sources/home.md)を確立して、外部ソースからデータを取り込み、XDMにマッピングすることもできます。
 
-UI の [!UICONTROL Schemas] ワークスペースの機能について詳しくは、[[!UICONTROL Schemas] ワークスペースの概要を参照してください &#x200B;](./overview.md)
+UIの[!UICONTROL Schemas] ワークスペースの機能について詳しくは、[[!UICONTROL Schemas] ワークスペースの概要](./overview.md)を参照してください。
