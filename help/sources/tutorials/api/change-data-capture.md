@@ -44,7 +44,7 @@ Data Mirrorでは、リレーショナルスキーマを使用してchange data 
 
 リレーショナルスキーマ Experience Platformを拡張して、プライマリキーの一意性を適用したり、行レベルの変更を追跡したり、スキーマレベルの関係を定義したりできます。 変更データキャプチャを使用すると、データレイクに直接挿入、更新、削除が適用され、ETL （抽出、変換、格納）や手作業による紐付けの必要性が低減されます。
 
-詳しくは、[ リレーショナルスキーマの概要](../../../xdm/schema/relational.md)を参照してください。
+詳しくは、[&#x200B; リレーショナルスキーマの概要](../../../xdm/schema/relational.md)を参照してください。
 
 ### 変更データ取得の関係スキーマ要件
 
@@ -71,7 +71,7 @@ Data Mirrorでは、リレーショナルスキーマを使用してchange data 
 2. 必要な記述子を追加します。
    * [プライマリキー記述子](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [バージョン記述子](../../../xdm/api/descriptors.md#version-descriptor)
-   * [ タイムスタンプ記述子](../../../xdm/api/descriptors.md#timestamp-descriptor) （時系列のみ）
+   * [&#x200B; タイムスタンプ記述子](../../../xdm/api/descriptors.md#timestamp-descriptor) （時系列のみ）
 3. スキーマからデータセットを作成し、変更データキャプチャを有効にします。
 4. ファイルベースの取り込みのみ：削除操作を明示的に指定する必要がある場合は、ソースファイルに`_change_request_type`列を追加します。 CDC書き出し設定では、データベースソースに対してこれを自動的に処理します。
 5. 取り込みを有効にするには、ソース接続の設定を完了します。
@@ -82,7 +82,7 @@ Data Mirrorでは、リレーショナルスキーマを使用してchange data 
 
 >[!IMPORTANT]
 >
->**データ削除計画が必要です**。 関係スキーマを使用するすべてのアプリケーションは、変更データキャプチャを実装する前に、削除の影響を理解する必要があります。 関連するデータセット、コンプライアンス要件、下流のプロセスに削除がどのように影響するかを計画します。 ガイダンスについては、[ データハイジーンに関する考慮事項](../../../hygiene/ui/record-delete.md#relational-record-delete)を参照してください。
+>**データ削除計画が必要です**。 関係スキーマを使用するすべてのアプリケーションは、変更データキャプチャを実装する前に、削除の影響を理解する必要があります。 関連するデータセット、コンプライアンス要件、下流のプロセスに削除がどのように影響するかを計画します。 ガイダンスについては、[&#x200B; データハイジーンに関する考慮事項](../../../hygiene/ui/record-delete.md#relational-record-delete)を参照してください。
 
 ## ファイルベースのソースに変更データを提供する {#file-based-sources}
 
@@ -92,7 +92,7 @@ Data Mirrorでは、リレーショナルスキーマを使用してchange data 
 
 ファイルベースのソース （[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Google Cloud Storage]、および[!DNL SFTP]）の場合は、ファイルに`_change_request_type`列を含めます。
 
-上記の`_change_request_type` コントロール列の処理[ セクションで定義されている](#control-column-handling)値を使用します。
+上記の`_change_request_type` コントロール列の処理[&#x200B; セクションで定義されている](#control-column-handling)値を使用します。
 
 >[!IMPORTANT]
 >
@@ -108,12 +108,12 @@ Data Mirrorでは、リレーショナルスキーマを使用してchange data 
 
    | ソース | ベース接続ガイド |
    |---|---|
-   | [!DNL Amazon S3] | [ ベース接続 [!DNL Amazon S3] を作成](../api/create/cloud-storage/s3.md) |
-   | [!DNL Azure Blob] | [ ベース接続 [!DNL Azure Blob] を作成](../api/create/cloud-storage/blob.md) |
-   | [!DNL Google Cloud Storage] | [ ベース接続 [!DNL Google Cloud Storage] を作成](../api/create/cloud-storage/google.md) |
-   | [!DNL SFTP] | [ ベース接続 [!DNL SFTP] を作成](../api/create/cloud-storage/sftp.md) |
+   | [!DNL Amazon S3] | [&#x200B; ベース接続 [!DNL Amazon S3] を作成](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [&#x200B; ベース接続 [!DNL Azure Blob] を作成](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [&#x200B; ベース接続 [!DNL Google Cloud Storage] を作成](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [&#x200B; ベース接続 [!DNL SFTP] を作成](../api/create/cloud-storage/sftp.md) |
 
-2. [ クラウドストレージのソース接続を作成](../api/collect/cloud-storage.md#create-a-source-connection)。
+2. [&#x200B; クラウドストレージのソース接続を作成](../api/collect/cloud-storage.md#create-a-source-connection)。
 
 すべてのクラウドストレージソースは、上記の「`_change_request_type` ファイルベースのソース [」セクションで説明した同じ](#file-based-sources)列形式を使用します。
 
@@ -149,12 +149,12 @@ ALTER TABLE myDeltaTable SET TBLPROPERTIES (delta.enableChangeDataFeed = true)
 set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 ```
 
-詳しくは、変更データフィードの有効化に関する[[!DNL Azure Databricks]  ガイド ](https://docs.databricks.com/aws/en/delta/delta-change-data-feed#enable-change-data-feed)を参照してください。
+詳しくは、変更データフィードの有効化に関する[[!DNL Azure Databricks]  ガイド &#x200B;](https://docs.databricks.com/aws/en/delta/delta-change-data-feed#enable-change-data-feed)を参照してください。
 
 [!DNL Azure Databricks] ソース接続の変更データキャプチャを有効にする手順については、次のドキュメントを参照してください。
 
-* [ ベース接続 [!DNL Azure Databricks] を作成](../api/create/databases/databricks.md)。
-* [ データベース ](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
+* [&#x200B; ベース接続 [!DNL Azure Databricks] を作成](../api/create/databases/databricks.md)。
+* [&#x200B; データベース &#x200B;](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
 
 ### [!DNL Data Landing Zone]
 
@@ -162,8 +162,8 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 [!DNL Data Landing Zone] ソース接続の変更データキャプチャを有効にする手順については、次のドキュメントを参照してください。
 
-* [ ベース接続 [!DNL Data Landing Zone] を作成](../api/create/cloud-storage/data-landing-zone.md)。
-* [ クラウドストレージのソース接続を作成](../api/collect/cloud-storage.md#create-a-source-connection)。
+* [&#x200B; ベース接続 [!DNL Data Landing Zone] を作成](../api/create/cloud-storage/data-landing-zone.md)。
+* [&#x200B; クラウドストレージのソース接続を作成](../api/collect/cloud-storage.md#create-a-source-connection)。
 
 ### [!DNL Google BigQuery]
 
@@ -171,12 +171,12 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 [!DNL Google BigQuery] ソース接続で変更履歴を有効にするには、[!DNL Google BigQuery] コンソールの[!DNL Google Cloud] ページに移動し、`enable_change_history`を`TRUE`に設定します。 このプロパティは、データテーブルの変更履歴を有効にします。
 
-詳しくは、[ [!DNL GoogleSQL]の](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list) データ定義言語ステートメントに関するガイドを参照してください。
+詳しくは、[&#x200B; [!DNL GoogleSQL]の](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list) データ定義言語ステートメントに関するガイドを参照してください。
 
 [!DNL Google BigQuery] ソース接続の変更データキャプチャを有効にする手順については、次のドキュメントを参照してください。
 
-* [ ベース接続 [!DNL Google BigQuery] を作成](../api/create/databases/bigquery.md)。
-* [ データベース ](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
+* [&#x200B; ベース接続 [!DNL Google BigQuery] を作成](../api/create/databases/bigquery.md)。
+* [&#x200B; データベース &#x200B;](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
 
 ### [!DNL Snowflake]
 
@@ -188,9 +188,9 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 ALTER TABLE mytable SET CHANGE_TRACKING = TRUE
 ```
 
-詳細については、[[!DNL Snowflake] 変更条項の使用に関するガイド ](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes)を参照してください。
+詳細については、[[!DNL Snowflake] 変更条項の使用に関するガイド &#x200B;](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes)を参照してください。
 
 [!DNL Snowflake] ソース接続の変更データキャプチャを有効にする手順については、次のドキュメントを参照してください。
 
-* [ ベース接続 [!DNL Snowflake] を作成](../api/create/databases/snowflake.md)。
-* [ データベース ](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
+* [&#x200B; ベース接続 [!DNL Snowflake] を作成](../api/create/databases/snowflake.md)。
+* [&#x200B; データベース &#x200B;](../api/collect/database-nosql.md#create-a-source-connection)のソース接続を作成します。
