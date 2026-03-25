@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2026年3月）
 description: Adobe Experience Platform の 2026年3月のリリースノート。
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: 0bbbd46f8f82dcab1da69f46e6bc4d95efbff5c2
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 20%
+source-wordcount: '1369'
+ht-degree: 19%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2026年3月24日（PT）**
 
@@ -27,6 +27,7 @@ Adobe Experience Platformの新機能と既存の機能の更新：
 
 - [詳細なデータライフサイクル管理](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [データストリーム](#datastreams)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [リアルタイム顧客プロファイル](#real-time-customer-profile)
@@ -39,7 +40,7 @@ Experience Platformには、消費者のレコードやデータセットをプ�
 
 | 機能 | 説明 |
 | --- | --- |
-| マルチデータセットおよびプロファイルのみのレコード削除（APIのみ） | 1つのデータセット ID、データセット IDのコンマ区切りリスト、または`ALL`のリテラル `datasetId`を送信して、1つ、多く、またはすべてのデータセットのIDを削除できます。 また、`targetServices`を`["identity","profile","ajo"]`に設定してプロファイル関連のサービスに削除を制限することもできます。これにより、データレイクは変更されません。この機能は、Data Hygiene API経由でのみ使用できます。 詳細については、[&#x200B; レコードの削除作業指示ガイド &#x200B;](../../hygiene/api/workorder.md)を参照してください。 |
+| マルチデータセットおよびプロファイルのみのレコード削除（APIのみ） | 1つのデータセット ID、データセット IDのコンマ区切りリスト、または`ALL`のリテラル `datasetId`を送信して、1つ、多く、またはすべてのデータセットのIDを削除できます。 また、`targetServices`を`["identity","profile","ajo"]`に設定してプロファイル関連のサービスに削除を制限することもできます。これにより、データレイクは変更されません。この機能は、Data Hygiene API経由でのみ使用できます。 詳細については、[ レコードの削除作業指示ガイド ](../../hygiene/api/workorder.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -53,11 +54,23 @@ Agent Orchestratorなら、ワークフローを自動化し、複数のチャ�
 
 | 機能 | 説明 |
 | --- | --- |
-| [&#x200B; [!DNL Microsoft 365 Copilot]の](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]用Adobe Marketing Agentは、Adobeのマーケティングインテリジェンスを、[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]およびその他[!DNL Microsoft 365] アプリなどの日常的なツールに直接取り込む組み込みエージェントです。 このエージェントを使用すると、施策の計画中にAdobe アプリケーションから信頼できるキャンペーンインサイトを取得したり、オーディエンスを確認したり、他のユーザーと協力してお客様の質問に答えたり、[!DNL Microsoft 365] ワークフローから離れることなく、データに基づいた意思決定を行ったりできます。 |
+| [ [!DNL Microsoft 365 Copilot]の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]用Adobe Marketing Agentは、Adobeのマーケティングインテリジェンスを、[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]およびその他[!DNL Microsoft 365] アプリなどの日常的なツールに直接取り込む組み込みエージェントです。 このエージェントを使用すると、施策の計画中にAdobe アプリケーションから信頼できるキャンペーンインサイトを取得したり、オーディエンスを確認したり、他のユーザーと協力してお客様の質問に答えたり、[!DNL Microsoft 365] ワークフローから離れることなく、データに基づいた意思決定を行ったりできます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)を参照してください。
+
+## データストリーム {#datastreams}
+
+データストリームは、Adobe Experience Platform WebおよびMobile SDKとAdobe Experience Platform Edge Network Server APIを実装する際のサーバーサイド設定を表します。 SDKのデータストリーム設定コマンドは、クライアントが操作するすべてのサービスを処理します。
+
+| 機能 | 説明 |
+| --- | --- |
+| 動的データストリーム設定の一般提供 | 動的データストリーム設定が一般に利用可能になりました。 動的データストリーム設定を使用すると、データストリームに対して有効になっている各サービスについて、ユーザーが設定できるルールセットを定義できます。このルールセットは、Experience Cloud ソリューションが各タイプのデータを受け取る必要があるルールセットを決定します。 詳しくは、[動的データストリーム設定ガイド ](../../datastreams/configure-dynamic-datastream.md)を参照してください。 |
+
+{style="table-layout:auto"}
+
+詳しくは、[ データストリームの概要](../../datastreams/overview.md)を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -69,9 +82,9 @@ Agent Orchestratorなら、ワークフローを自動化し、複数のチャ�
 | --- | --- |
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md)接続 | 新しいAdobe Advertising DSP接続は、従来の接続と同じ機能に加えて、追加のIDのサポートを提供します。 新しいコネクタを使用すると、Cookie ベースのIDをAdobe Advertising DSPに書き出すこともできます。 |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md)接続 | [!DNL Real-Time CDP]人のオーディエンスを毎日のバッチファイルとしてFreeWheelに送信すると、CTV、ビデオ、ディスプレイをまたいでFreeWheelのお得な情報やキャンペーンでターゲットにすることができます。 アクセスについては、Adobe アカウントチームにお問い合わせください。 |
-| [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md)および[Pinterest](../../destinations/catalog/advertising/pinterest.md)の外部オーディエンスのサポート | セグメンテーションサービスを超えたオリジンのオーディエンスを、カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリケーションで作成されたオーディエンスを含む、The Trade Desk CRM、Criteo、およびPinterestにアクティベートできるようになりました。 この更新は3月末までロールアウトされます。 詳しくは、各宛先のカタログページの「[&#x200B; サポートされているオーディエンス &#x200B;](../../destinations/catalog/advertising/criteo.md#supported-audiences)」セクションを参照してください。 |
-| カスタムアップロードオーディエンスの制限の増加 | 宛先インスタンスごとに最大20個のカスタムアップロードオーディエンスをアクティブ化できるようになりました。 以前は、この制限は10でした。 詳しくは、[宛先ガードレール &#x200B;](../../destinations/guardrails.md#batch-file-based-activation)を参照してください。 |
-| 外部オーディエンスに対する[&#x200B; ファイルの書き出し](../../destinations/ui/export-file-now.md)および[&#x200B; アドホックアクティベーション API](../../destinations/api/ad-hoc-activation-api.md)のサポート | バッチファイルベースの宛先に対してアクティブ化する際に、今すぐファイルを書き出し（UI）とアドホックアクティベーション APIを外部オーディエンス（カスタムアップロード、類似、フェデレーション、他のExperience Platform アプリからのオーディエンスなど）と共に使用できるようになりました。 この更新は3月末までロールアウトされます。 |
+| [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md)および[Pinterest](../../destinations/catalog/advertising/pinterest.md)の外部オーディエンスのサポート | セグメンテーションサービスを超えたオリジンのオーディエンスを、カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリケーションで作成されたオーディエンスを含む、The Trade Desk CRM、Criteo、およびPinterestにアクティベートできるようになりました。 この更新は3月末までロールアウトされます。 詳しくは、各宛先のカタログページの「[ サポートされているオーディエンス ](../../destinations/catalog/advertising/criteo.md#supported-audiences)」セクションを参照してください。 |
+| カスタムアップロードオーディエンスの制限の増加 | 宛先インスタンスごとに最大20個のカスタムアップロードオーディエンスをアクティブ化できるようになりました。 以前は、この制限は10でした。 詳しくは、[宛先ガードレール ](../../destinations/guardrails.md#batch-file-based-activation)を参照してください。 |
+| 外部オーディエンスに対する[ ファイルの書き出し](../../destinations/ui/export-file-now.md)および[ アドホックアクティベーション API](../../destinations/api/ad-hoc-activation-api.md)のサポート | バッチファイルベースの宛先に対してアクティブ化する際に、今すぐファイルを書き出し（UI）とアドホックアクティベーション APIを外部オーディエンス（カスタムアップロード、類似、フェデレーション、他のExperience Platform アプリからのオーディエンスなど）と共に使用できるようになりました。 この更新は3月末までロールアウトされます。 |
 
 {style="table-layout:auto"}
 
@@ -91,7 +104,7 @@ XDMは、Experience Platformに取り込まれるデータに共通の構造と�
 
 | 機能 | 説明 |
 | --- | --- |
-| XDM エンティティのアクションと削除サポート | インラインテーブルメニューと詳細ページヘッダーメニューから、スキーマ、クラス、フィールドグループ、データタイプのアクションに直接アクセスできます。 必要な権限を持っている場合は、組織のエンティティがデータセットで使用されておらず、プロファイルに対して有効になっていない場合に、そのエンティティを削除することもできます。 詳しくは、[XDM UI ガイド &#x200B;](../../xdm/ui/explore.md)を参照してください。 |
+| XDM エンティティのアクションと削除サポート | インラインテーブルメニューと詳細ページヘッダーメニューから、スキーマ、クラス、フィールドグループ、データタイプのアクションに直接アクセスできます。 必要な権限を持っている場合は、組織のエンティティがデータセットで使用されておらず、プロファイルに対して有効になっていない場合に、そのエンティティを削除することもできます。 詳しくは、[XDM UI ガイド ](../../xdm/ui/explore.md)を参照してください。 |
 
 詳しくは、[XDMの概要](../../xdm/home.md)を参照してください。
 
@@ -103,7 +116,7 @@ XDMは、Experience Platformに取り込まれるデータに共通の構造と�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| イベント | プロファイルの閲覧時にイベントのルックバック期間を設定できるようになりました。 これにより、指定した期間にプロファイルが関連付けられているイベントを表示できます。 詳しくは、[&#x200B; プロファイル UI ガイド &#x200B;](/help/profile/ui/user-guide.md#events)を参照してください。 |
+| イベント | プロファイルの閲覧時にイベントのルックバック期間を設定できるようになりました。 これにより、指定した期間にプロファイルが関連付けられているイベントを表示できます。 詳しくは、[ プロファイル UI ガイド ](/help/profile/ui/user-guide.md#events)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -133,8 +146,8 @@ For more information, read the [Run and Operate overview](../run-and-operate/ove
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 取り込みタイプ | 属性の取り込みタイプを表示できるようになりました。 これにより、データの出所を把握して、より優れたオーディエンスを構築できるようになります。 この機能について詳しくは、[&#x200B; セグメントビルダーガイド &#x200B;](/help/segmentation/ui/segment-builder.md)を参照してください。 |
-| 概要データ | アカウントおよびピープルベースのオーディエンスの属性の概要データを表示できるようになりました。 アカウントオーディエンスのこの機能について詳しくは、アカウント [&#x200B; オーディエンスビルダーガイド &#x200B;](/help/rtcdp/segmentation/audience-builder.md)を参照してください。 人物ベースのオーディエンスのこの機能について詳しくは、[&#x200B; セグメントビルダーガイド &#x200B;](/help/segmentation/ui/segment-builder.md)を参照してください。 |
+| 取り込みタイプ | 属性の取り込みタイプを表示できるようになりました。 これにより、データの出所を把握して、より優れたオーディエンスを構築できるようになります。 この機能について詳しくは、[ セグメントビルダーガイド ](/help/segmentation/ui/segment-builder.md)を参照してください。 |
+| 概要データ | アカウントおよびピープルベースのオーディエンスの属性の概要データを表示できるようになりました。 アカウントオーディエンスのこの機能について詳しくは、アカウント [ オーディエンスビルダーガイド ](/help/rtcdp/segmentation/audience-builder.md)を参照してください。 人物ベースのオーディエンスのこの機能について詳しくは、[ セグメントビルダーガイド ](/help/segmentation/ui/segment-builder.md)を参照してください。 |
 
 詳しくは、[[!DNL Segmentation Service] 概要](../../segmentation/home.md)を参照してください。
 
@@ -146,8 +159,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | ソース | 説明 |
 | --- | --- |
-| [!DNL Talon.One] | 新しい[!DNL Talon.One] [!DNL Talon.One] バッチ [および](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) ストリーミング [&#x200B; ソースを使用して、Experience Platformを](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)に接続できるようになりました。 新しいソースを使用して、ロイヤルティプロファイルデータとトランザクションおよびロイヤルティアクティビティイベントをExperience Platformに取り込みます。 |
-| 新しいIP アドレスを許可リストに加える | GBR9の新しいIP アドレス：Azure上のExperience Platformへのバッチソース接続を正常に行うために許可リストに加えるする必要があるアドレスのリストに、イギリスが追加されました。 詳しくは、[IP アドレスの許可リストに加えるガイド &#x200B;](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)を参照してください。 |
+| [!DNL Talon.One] | 新しい[!DNL Talon.One] [!DNL Talon.One] バッチ [および](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) ストリーミング [ ソースを使用して、Experience Platformを](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)に接続できるようになりました。 新しいソースを使用して、ロイヤルティプロファイルデータとトランザクションおよびロイヤルティアクティビティイベントをExperience Platformに取り込みます。 |
+| 新しいIP アドレスを許可リストに加える | GBR9の新しいIP アドレス：Azure上のExperience Platformへのバッチソース接続を正常に行うために許可リストに加えるする必要があるアドレスのリストに、イギリスが追加されました。 詳しくは、[IP アドレスの許可リストに加えるガイド ](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)を参照してください。 |
 | Change Data Captureの拡張サポート | [!DNL Marketo Engage]、[!DNL Microsoft Dynamics]、[!DNL Salesforce CRM]のソースでChange Data Captureを使用できるようになりました。 |
 | [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md)の認証ガイドが改善されました | [!DNL Google BigQuery] ソースの認証ガイドが次の情報で拡張されました： <ul><li>更新トークンに必要なスコープ。</li><li>[!DNL Google] IDに必要なIAM役割。</li><li>`largeResultsDataSetId`の使用に関する追加のガイダンス。</li></ul> |
 
