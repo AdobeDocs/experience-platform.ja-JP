@@ -26,11 +26,11 @@ Adobeには、[XDM Individual Profile](../../classes/individual-profile.md)や[X
 
 >[!NOTE]
 >
->XDM アクションは、インベントリ テーブルとリソースの詳細ビュー（**[!UICONTROL More]**）から使用できます。 完全なアクションは、カスタム（テナント定義）リソースにのみ適用されます。標準リソースのオプションは限られています。 [ スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](../explore.md#xdm-resource-actions)を参照してください。
+>XDM アクションは、インベントリ テーブルとリソースの詳細ビュー（**[!UICONTROL More]**）から使用できます。 完全なアクションは、カスタム（テナント定義）リソースにのみ適用されます。標準リソースのオプションは限られています。 [&#x200B; スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](../explore.md#xdm-resource-actions)を参照してください。
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する実用的な理解が必要です。 Experience Platform エコシステム内でのXDMの役割の概要については、[XDMの概要](../../home.md)を参照し、クラスがXDM スキーマに貢献する方法については、[ スキーマ構成の基本](../../schema/composition.md)を参照してください。
+このガイドでは、XDM システムに関する実用的な理解が必要です。 Experience Platform エコシステム内でのXDMの役割の概要については、[XDMの概要](../../home.md)を参照し、クラスがXDM スキーマに貢献する方法については、[&#x200B; スキーマ構成の基本](../../schema/composition.md)を参照してください。
 
 このガイドでは必須ではありませんが、[UIでのスキーマの作成](../../tutorials/create-schema-ui.md)に関するチュートリアルに従って、スキーマエディターのさまざまな機能を理解することをお勧めします。
 
@@ -58,7 +58,7 @@ Experience Platform UIでクラスを作成するには、**[!UICONTROL Create c
 
 **[!UICONTROL Create class]** ワークスペースの「[!UICONTROL Classes]」タブから「[!UICONTROL Schemas]」を選択します。
 
-![[!UICONTROL Classes]が強調表示された[!UICONTROL Schemas] ワークスペースの[!UICONTROL Create class] タブ ](../../images/ui/resources/classes/create-class.png)
+![[!UICONTROL Classes]が強調表示された[!UICONTROL Schemas] ワークスペースの[!UICONTROL Create class] タブ &#x200B;](../../images/ui/resources/classes/create-class.png)
 
 [!UICONTROL Create class] ダイアログが表示されます。 クラスの[!UICONTROL Display name]と[!UICONTROL Description]を入力し、ラジオボタンを使用してクラスの意図された動作を選択します。 クラスのタイプは[!UICONTROL Record]または[!UICONTROL Time-series]です。 **[!UICONTROL Create]**&#x200B;を選択して選択を確定し、[!UICONTROL Classes] タブに戻ります。
 
@@ -72,15 +72,15 @@ Experience Platform UIでクラスを作成するには、**[!UICONTROL Create c
 
 または、スキーマを手動で作成してクラスを作成することもできます。 **[!UICONTROL Create schema]** ワークスペースの「[!UICONTROL Classes]」タブから「[!UICONTROL Schemas]」を選択します。
 
-![[!UICONTROL Classes]が強調表示された[!UICONTROL Schemas] ワークスペースの[!UICONTROL Create schema] タブ ](../../images/ui/resources/classes/create-schema.png)
+![[!UICONTROL Classes]が強調表示された[!UICONTROL Schemas] ワークスペースの[!UICONTROL Create schema] タブ &#x200B;](../../images/ui/resources/classes/create-schema.png)
 
 表示される&#x200B;**[!UICONTROL Manual]** ダイアログで「[!UICONTROL Create a schema]」を選択します。
 
 >[!NOTE]
 >
->マシンラーニング支援スキーマ作成ワークフローを使用する場合は、ファイルをアップロードし、マシンラーニングアルゴリズムを使用して推奨スキーマを生成できます。 このスキーマ作成ワークフローでは、スキーマのベースクラスを指定する必要はありません。 マシンラーニングがcsv ファイルに基づいてスキーマ構造を推奨する方法については、[機械学習支援スキーマ作成ガイド ](../ml-assisted-schema-creation.md)を参照してください。
+>マシンラーニング支援スキーマ作成ワークフローを使用する場合は、ファイルをアップロードし、マシンラーニングアルゴリズムを使用して推奨スキーマを生成できます。 このスキーマ作成ワークフローでは、スキーマのベースクラスを指定する必要はありません。 マシンラーニングがcsv ファイルに基づいてスキーマ構造を推奨する方法については、[機械学習支援スキーマ作成ガイド &#x200B;](../ml-assisted-schema-creation.md)を参照してください。
 
-![ ワークフローのオプションを含むスキーマを作成ダイアログで、強調表示されたオプションを選択します。](../../images/ui/resources/classes/manually-create-a-schema.png)
+![&#x200B; ワークフローのオプションを含むスキーマを作成ダイアログで、強調表示されたオプションを選択します。](../../images/ui/resources/classes/manually-create-a-schema.png)
 
 スキーマ作成ワークフローが表示されます。 [!UICONTROL Schema details] セクションで、**[!UICONTROL Other]**&#x200B;を選択します。 使用可能なクラスのリストが表示されます。 **[!UICONTROL Create class]** を選択します。
 
@@ -112,15 +112,15 @@ Experience Platform UIでクラスを作成するには、**[!UICONTROL Create c
 
 >[!IMPORTANT]
 >
->クラスに追加するフィールドは、そのクラスを使用するすべてのスキーマで使用されることに注意してください。 したがって、どのフィールドがすべてのスキーマのユースケースで役立つかを慎重に検討する必要があります。 このクラスの一部のスキーマでのみ使用されるフィールドを追加する場合は、代わりに[ フィールドグループ ](./field-groups.md#create)を作成して、それらのスキーマに追加することを検討してください。
+>クラスに追加するフィールドは、そのクラスを使用するすべてのスキーマで使用されることに注意してください。 したがって、どのフィールドがすべてのスキーマのユースケースで役立つかを慎重に検討する必要があります。 このクラスの一部のスキーマでのみ使用されるフィールドを追加する場合は、代わりに[&#x200B; フィールドグループ &#x200B;](./field-groups.md#create)を作成して、それらのスキーマに追加することを検討してください。
 
 **[!UICONTROL Untitled Field]** プレースホルダーがキャンバスに表示され、右側のパネルが更新されて、フィールドのプロパティを設定するためのコントロールが表示されます。 **[!UICONTROL Assign to]**&#x200B;で、**[!UICONTROL Class]**&#x200B;を選択します。
 
-![ スキーマエディターのキャンバス内の名称未設定のフィールドで、「[!UICONTROL Class]に割り当て」フィールドプロパティが選択され、強調表示されている](../../images/ui/resources/classes/assign-to-class.png)。
+![&#x200B; スキーマエディターのキャンバス内の名称未設定のフィールドで、「[!UICONTROL Class]に割り当て」フィールドプロパティが選択され、強調表示されている](../../images/ui/resources/classes/assign-to-class.png)。
 
 フィールドを設定してクラスに追加する方法について詳しくは、[UIでのフィールドの定義](../fields/overview.md#define)に関するガイドを参照してください。 必要な数のフィールドをクラスに追加します。 完了したら、**[!UICONTROL Save]**&#x200B;を選択して、スキーマとクラスの両方を保存します。
 
-![ スキーマエディターのキャンバスに新しく作成されたスキーマで、[!UICONTROL Save]がハイライト表示されています。](../../images/ui/resources/classes/save.png)
+![&#x200B; スキーマエディターのキャンバスに新しく作成されたスキーマで、[!UICONTROL Save]がハイライト表示されています。](../../images/ui/resources/classes/save.png)
 
 このクラスを使用するスキーマを以前に作成した場合、新しく追加されたフィールドは、それらのスキーマに自動的に表示されます。
 
@@ -128,18 +128,18 @@ Experience Platform UIでクラスを作成するには、**[!UICONTROL Create c
 
 >[!NOTE]
 >
->組織で定義されたカスタムクラスのみが完全に編集およびカスタマイズできます。 Adobeで定義されたコアクラスの場合、個々のスキーマのコンテキスト内で編集できるのは、フィールドの表示名のみです。 詳しくは、[ スキーマフィールドの表示名の編集](./schemas.md#display-names)の節を参照してください。
+>組織で定義されたカスタムクラスのみが完全に編集およびカスタマイズできます。 Adobeで定義されたコアクラスの場合、個々のスキーマのコンテキスト内で編集できるのは、フィールドの表示名のみです。 詳しくは、[&#x200B; スキーマフィールドの表示名の編集](./schemas.md#display-names)の節を参照してください。
 >
->カスタムクラスを保存してデータ取り込みに使用すると、その後は追加の変更のみを行うことができます。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution)を参照してください。
+>カスタムクラスを保存してデータ取り込みに使用すると、その後は追加の変更のみを行うことができます。 詳しくは、[&#x200B; スキーマ進化のルール &#x200B;](../../schema/composition.md#evolution)を参照してください。
 
 クラスを拡張する既存のスキーマを編集するか、スキーマを手動で作成することで、スキーマワークフローを通じてクラスを編集できます。 クラスを直接編集することはできません。 [!UICONTROL Browse] ワークスペースの[!UICONTROL Schemas] タブ内から、既存のクラスまたは&#x200B;**[!UICONTROL Create a schema]**&#x200B;を選択します。
 
 ![既存のクラスと[!UICONTROL Create a schema]が強調表示されたスキーマエディター。](../../images/ui/resources/classes/edit-class-options.png)
 
-新しいスキーマを作成する場合は、[ スキーマの作成](#create-schema)の節を参照してください。 スキーマの作成が完了すると（または既存のスキーマを選択した後）、スキーマエディターが表示されます。 既存のクラスフィールドを更新するには、スキーマ構造からフィールドを選択します。 フィールドの情報は右側のパネルに表示されます。 [!UICONTROL Assign to]を確認
+新しいスキーマを作成する場合は、[&#x200B; スキーマの作成](#create-schema)の節を参照してください。 スキーマの作成が完了すると（または既存のスキーマを選択した後）、スキーマエディターが表示されます。 既存のクラスフィールドを更新するには、スキーマ構造からフィールドを選択します。 フィールドの情報は右側のパネルに表示されます。 [!UICONTROL Assign to]を確認
 オプション **[!UICONTROL Class]**&#x200B;が選択されているか、更新がクラスに影響しません。
 
-![ フィールドを選択して強調表示し、右側のパネルが表示され、[!UICONTROL Assign to]が強調表示されたスキーマエディター。](../../images/ui/resources/classes/edit-existing-field.png)
+![&#x200B; フィールドを選択して強調表示し、右側のパネルが表示され、[!UICONTROL Assign to]が強調表示されたスキーマエディター。](../../images/ui/resources/classes/edit-existing-field.png)
 
 フィールドに必要な変更を加え、右側のパネルで下にスクロールして&#x200B;**[!UICONTROL Apply]**&#x200B;を選択し、変更を保存します。
 
@@ -147,19 +147,19 @@ Experience Platform UIでクラスを作成するには、**[!UICONTROL Create c
 >
 > フィールドに対して行った更新は、そのクラスを使用するすべてのスキーマに適用され、スキーマ進化[の](../../schema/composition.md#evolution) ルールに従います。
 
-![ フィールドが選択され、右側のパネルが表示されているスキーマエディター、[!UICONTROL Apply]を強調表示します。](../../images/ui/resources/classes/save-changes.png)
+![&#x200B; フィールドが選択され、右側のパネルが表示されているスキーマエディター、[!UICONTROL Apply]を強調表示します。](../../images/ui/resources/classes/save-changes.png)
 
-新しいフィールドを追加するには、[ クラスにフィールドを追加する](#add-fields-to-a-class) ガイドに従います。 完了したら、**[!UICONTROL Save]**&#x200B;を選択して、スキーマとクラスの両方を保存します。
+新しいフィールドを追加するには、[&#x200B; クラスにフィールドを追加する](#add-fields-to-a-class) ガイドに従います。 完了したら、**[!UICONTROL Save]**&#x200B;を選択して、スキーマとクラスの両方を保存します。
 
 ![[!UICONTROL Save]が強調表示されたスキーマエディター。](../../images/ui/resources/classes/save-schema.png)
 
 ## スキーマクラスの変更 {#schema}
 
 スキーマのクラスは、最初の作成プロセスの任意の時点で保存する前に変更できます。 ただし、フィールドグループは特定のクラスとのみ互換性があるため、注意して行う必要があります。 クラスを変更すると、キャンバスと追加したフィールドがリセットされます。
-詳しくは、[ スキーマの作成と編集](./schemas.md#change-class)に関するガイドを参照してください。
+詳しくは、[&#x200B; スキーマの作成と編集](./schemas.md#change-class)に関するガイドを参照してください。
 
 ## 次の手順 {#next-steps}
 
 このドキュメントでは、Experience Platform UIを使用してクラスを作成および編集する方法について説明しました。 [!UICONTROL Schemas] ワークスペースの機能について詳しくは、[[!UICONTROL Schemas] ワークスペースの概要](../overview.md)を参照してください。
 
-Schema Registry APIを使用してクラスを管理する方法については、[ クラスエンドポイントガイド ](../../api/classes.md)を参照してください。
+Schema Registry APIを使用してクラスを管理する方法については、[&#x200B; クラスエンドポイントガイド &#x200B;](../../api/classes.md)を参照してください。

@@ -48,11 +48,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 [!UICONTROL Create a schema] ダイアログが表示されます。 このダイアログでは、フィールドとフィールドグループを追加してスキーマを手動で作成するか、CSV ファイルをアップロードしてML アルゴリズムを使用してスキーマを生成するかを選択できます。 ダイアログからスキーマ作成ワークフローを選択します。
 
-![ ワークフローのオプションを含むスキーマを作成ダイアログで、強調表示されたオプションを選択します。](../images/tutorials/create-schema/create-a-schema-dialog.png)
+![&#x200B; ワークフローのオプションを含むスキーマを作成ダイアログで、強調表示されたオプションを選択します。](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative}手動またはML支援のスキーマ作成 {#manual-or-assisted}
 
-マシンラーニングアルゴリズムを使用して、アップロードされたファイルに基づくスキーマ構造を推奨する方法については、[機械学習を支援するスキーマ作成ガイド ](../ui/ml-assisted-schema-creation.md)を参照してください。 このUI ガイドでは、手動作成ワークフローに焦点を当てます。
+マシンラーニングアルゴリズムを使用して、アップロードされたファイルに基づくスキーマ構造を推奨する方法については、[機械学習を支援するスキーマ作成ガイド &#x200B;](../ui/ml-assisted-schema-creation.md)を参照してください。 このUI ガイドでは、手動作成ワークフローに焦点を当てます。
 
 ### 基本クラスの選択 {#choose-a-class}
 
@@ -98,7 +98,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 フィールドグループを追加するには、**[!UICONTROL Add]** サブセクションの&#x200B;**[!UICONTROL Field groups]**&#x200B;を選択します。
 
-![ フィールドグループを追加ボタンが強調表示されたスキーマエディター。](../images/tutorials/create-schema/add-field-group-button.png)
+![&#x200B; フィールドグループを追加ボタンが強調表示されたスキーマエディター。](../images/tutorials/create-schema/add-field-group-button.png)
 
 新しいダイアログが表示され、使用可能なフィールドグループのリストが表示されます。各フィールドグループは特定のクラスでのみ使用できるものなので、ダイアログには、選択したクラス（この場合は、[!DNL XDM Individual Profile] クラス）に適合するフィールドグループのみがリストされます。標準の XDM クラスを使用している場合、フィールドグループのリストは使用頻度に基づいてインテリジェントに並べ替えられます。
 
@@ -114,15 +114,15 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 フィールドグループをプレビューする際に、右側のパネルに、フィールドグループのスキーマに関する詳細な説明が表示されます。また、提供されたキャンバスでフィールドグループのフィールド間を移動することもできます。別のフィールドを選択すると、右側のパネルが更新され、該当するフィールドの詳細が表示されます。プレビューが終了したら&#x200B;**[!UICONTROL Back]**&#x200B;を選択して、フィールドグループ選択ダイアログに戻ります。
 
-![ デモグラフィックの詳細フィールドグループを含む[!UICONTROL Preview field group] ダイアログがプレビューされました。](../images/tutorials/create-schema/preview-field-group.png)
+![&#x200B; デモグラフィックの詳細フィールドグループを含む[!UICONTROL Preview field group] ダイアログがプレビューされました。](../images/tutorials/create-schema/preview-field-group.png)
 
 このチュートリアルでは、**[!UICONTROL Demographic Details]** フィールドグループを選択し、**[!UICONTROL Add field group]**&#x200B;を選択します。
 
-![ デモグラフィックの詳細フィールドグループが選択され、[!UICONTROL Add field groups]がハイライト表示された[!UICONTROL Add field groups] ダイアログ。](../images/tutorials/create-schema/demographic-details.png)
+![&#x200B; デモグラフィックの詳細フィールドグループが選択され、[!UICONTROL Add field groups]がハイライト表示された[!UICONTROL Add field groups] ダイアログ。](../images/tutorials/create-schema/demographic-details.png)
 
 スキーマキャンバスが再び表示されます。**[!UICONTROL Field groups]** セクションに「[!UICONTROL Demographic Details]」が一覧表示され、**[!UICONTROL Structure]** セクションには、フィールドグループによって提供されたフィールドが含まれるようになりました。 **[!UICONTROL Field groups]** セクションの下でフィールドグループの名前を選択して、キャンバス内で提供される特定のフィールドを強調表示できます。
 
-![ デモグラフィックの詳細フィールドグループがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/demographic-details-structure.png)
+![&#x200B; デモグラフィックの詳細フィールドグループがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/demographic-details-structure.png)
 
 >[!NOTE]
 >
@@ -177,7 +177,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 まず、キャンバスでスキーマ名の横にある&#x200B;**プラス（＋）**&#x200B;アイコンを選択します。
 
-![ プラスアイコンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field.png)
+![&#x200B; プラスアイコンがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/add-field.png)
 
 「[!UICONTROL Untitled Field]」プレースホルダーがキャンバスに表示され、右側のパネルが更新されて、フィールドの設定オプションが表示されます。
 
@@ -189,11 +189,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 終了したら「**[!UICONTROL Apply]**」を選択します。
 
-![ ロイヤルティ層オブジェクトがスキーマ [!UICONTROL Field properties]に追加されたスキーマエディターが強調表示されます。](../images/tutorials/create-schema/loyalty-tier-object.png)
+![&#x200B; ロイヤルティ層オブジェクトがスキーマ [!UICONTROL Field properties]に追加されたスキーマエディターが強調表示されます。](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 変更内容が適用され、新しく作成された `loyaltyTier` オブジェクトが表示されます。これはカスタムフィールドなので、組織のテナント ID を名前空間とするオブジェクト内に自動的にネストされ、先頭にアンダースコアが付きます（この例では `_tenantId`）。
 
-![ スキーマ図でテナント IDとロイヤルティ層がハイライト表示されているスキーマエディター。](../images/tutorials/create-schema/tenant-id.png)
+![&#x200B; スキーマ図でテナント IDとロイヤルティ層がハイライト表示されているスキーマエディター。](../images/tutorials/create-schema/tenant-id.png)
 
 >[!NOTE]
 >
@@ -203,7 +203,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 `loyaltyTier` オブジェクトの横にある&#x200B;**プラス（＋）**&#x200B;アイコンを選択して、サブフィールドの追加を開始します。新しいフィールドプレースホルダーが表示され、**[!UICONTROL Field properties]** セクションがキャンバスの右側に表示されます。
 
-![ テナント IDと新しいサブフィールドを含むスキーマエディターが、スキーマダイアグラムのロイヤルティ層に追加されました。](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
+![&#x200B; テナント IDと新しいサブフィールドを含むスキーマエディターが、スキーマダイアグラムのロイヤルティ層に追加されました。](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 各フィールドには、次の情報が必要です。
 
@@ -214,7 +214,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 * **[!UICONTROL Type]:** フィールドのデータ型。 これには、基本的なスカラータイプと、[!DNL Schema Registry] に定義されている任意のデータタイプが含まれます。例：[!UICONTROL String]、[!UICONTROL Integer]、[!UICONTROL Boolean]、[!UICONTROL Person]、[!UICONTROL Address]、[!UICONTROL Phone number]など
 * **[!UICONTROL Description]:** フィールドの説明は、オプションで最大200文字まで含める必要があります。
 
-`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL String]」に設定すると、**[!UICONTROL Field properties]** セクションに、デフォルト値、形式、最大長など、制約を適用するためのいくつかのオプションが入力されます。 詳細については、[ データ検証フィールドのベストプラクティス ](../schema/best-practices.md#data-validation-fields)に関するドキュメントを参照してください。
+`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL String]」に設定すると、**[!UICONTROL Field properties]** セクションに、デフォルト値、形式、最大長など、制約を適用するためのいくつかのオプションが入力されます。 詳細については、[&#x200B; データ検証フィールドのベストプラクティス &#x200B;](../schema/best-practices.md#data-validation-fields)に関するドキュメントを参照してください。
 
 ![新しいID フィールドのフィールドプロパティ値が強調表示されたスキーマエディター。](../images/tutorials/create-schema/string-constraints.png)
 
@@ -234,7 +234,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 完了すると、`loyaltyTier` オブジェクトには `id`、`currentThreshold`、`nextThreshold`、および `effectiveDate` のフィールドが含まれます。
 
-![ ロイヤルティ層オブジェクトがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
+![&#x200B; ロイヤルティ層オブジェクトがハイライト表示されたスキーマエディター。](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## フィールドグループへの列挙フィールドの追加 {#enum}
 
@@ -290,7 +290,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 スキーマに、基本クラスで指定されるフィールドに加えて、複数のフィールドグループが含まれるようになりました。 より大きなスキーマを扱う場合は、左側のパネルでフィールドグループ名の横にあるチェックボックスをオンにして、表示されるフィールドを、目的のフィールドグループが指定するフィールドのみにフィルタリングできます。
 
-![ スキーマ図のサイズを縮小するために、スキーマ エディターのフィールド グループ セクションで選択した一部のチェックボックス。](../images/tutorials/create-schema/filter-by-field-group.png)
+![&#x200B; スキーマ図のサイズを縮小するために、スキーマ エディターのフィールド グループ セクションで選択した一部のチェックボックス。](../images/tutorials/create-schema/filter-by-field-group.png)
 
 スキーマ内の特定のフィールドを検索する場合は、検索バーを使用すると、表示されるフィールドを、その下に指定されるフィールドグループに関係なく、名前でフィルタリングすることもできます。
 
@@ -346,11 +346,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 エディターの右側に、表示名、説明、タイプなど、スキーマに関する情報が表示されます。この情報に加えて、**[!UICONTROL Profile]**&#x200B;切り替えボタンがあります。
 
-![ スキーマ ルートとプロファイルの有効化トグルがハイライト表示されたスキーマ エディター。](../images/tutorials/create-schema/profile-toggle.png)
+![&#x200B; スキーマ ルートとプロファイルの有効化トグルがハイライト表示されたスキーマ エディター。](../images/tutorials/create-schema/profile-toggle.png)
 
 **[!UICONTROL Profile]**&#x200B;を選択すると、ポップオーバーが表示され、[!DNL Profile]のスキーマを有効にするかどうかを確認するメッセージが表示されます。
 
-![ プロファイルの有効化の確認ダイアログ。](../images/tutorials/create-schema/enable-profile.png)
+![&#x200B; プロファイルの有効化の確認ダイアログ。](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
@@ -362,7 +362,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 >[!NOTE]
 >
->XDM リソースを操作する場合、アクションはインベントリ テーブル （行メニュー）とリソース詳細ビュー（**[!UICONTROL More]**）の両方から使用できます。 **削除**、**JSON構造のコピー**、**パッケージに追加**&#x200B;など、アクションの完全なセットにアクセスするには、カスタム（テナント定義）リソースを選択する必要があります。 標準（Adobeが提供する）リソースのアクションは限られています。 アクション、制約、権限の概要については、[ スキーマ、クラス、フィールドグループ、およびデータ型の管理：アクションと削除](../ui/explore.md#xdm-resource-actions)を参照してください。
+>XDM リソースを操作する場合、アクションはインベントリ テーブル （行メニュー）とリソース詳細ビュー（**[!UICONTROL More]**）の両方から使用できます。 **削除**、**JSON構造のコピー**、**パッケージに追加**&#x200B;など、アクションの完全なセットにアクセスするには、カスタム（テナント定義）リソースを選択する必要があります。 標準（Adobeが提供する）リソースのアクションは限られています。 アクション、制約、権限の概要については、[&#x200B; スキーマ、クラス、フィールドグループ、およびデータ型の管理：アクションと削除](../ui/explore.md#xdm-resource-actions)を参照してください。
 
 スキーマエディター内で、スキーマのJSON構造をコピーしたり、スキーマを削除したりするためのクイックアクションを実行することもできます。 ビューの上部にある「[!UICONTROL More]」を選択すると、クイックアクションを含むドロップダウンが表示されます。
 

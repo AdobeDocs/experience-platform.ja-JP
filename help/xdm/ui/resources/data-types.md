@@ -31,7 +31,7 @@ Adobe Experience Platformには、体験管理の一般的なユースケース�
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する実用的な理解が必要です。 Experience Platform エコシステム内でのXDMの役割の概要については、[XDMの概要](../../home.md)を参照し、データ型がXDM スキーマにどのように役立つかについては、[ スキーマ構成の基本](../../schema/composition.md)を参照してください。
+このガイドでは、XDM システムに関する実用的な理解が必要です。 Experience Platform エコシステム内でのXDMの役割の概要については、[XDMの概要](../../home.md)を参照し、データ型がXDM スキーマにどのように役立つかについては、[&#x200B; スキーマ構成の基本](../../schema/composition.md)を参照してください。
 
 このガイドでは必須ではありませんが、[UIでのスキーマの作成](../../tutorials/create-schema-ui.md)に関するチュートリアルに従って、[!DNL Schema Editor]の様々な機能に慣れることもお勧めします。
 
@@ -49,7 +49,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 >[!NOTE]
 >
->XDM アクションは、インベントリ テーブルとリソースの詳細ビュー（**[!UICONTROL More]**）から使用できます。 完全なアクションは、カスタム（テナント定義）リソースにのみ適用されます。標準リソースのオプションは限られています。 [ スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](../explore.md#xdm-resource-actions)を参照してください。
+>XDM アクションは、インベントリ テーブルとリソースの詳細ビュー（**[!UICONTROL More]**）から使用できます。 完全なアクションは、カスタム（テナント定義）リソースにのみ適用されます。標準リソースのオプションは限られています。 [&#x200B; スキーマ、クラス、フィールドグループ、およびデータタイプの管理：アクションと削除](../explore.md#xdm-resource-actions)を参照してください。
 
 ### 新しいデータタイプの作成 {#create}
 
@@ -63,7 +63,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-ここから、[次のセクション ](#add-fields)にスキップして、新しいデータタイプにフィールドを追加できます。
+ここから、[次のセクション &#x200B;](#add-fields)にスキップして、新しいデータタイプにフィールドを追加できます。
 
 ### フィルターデータタイプ {#filter}
 
@@ -75,7 +75,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 >[!NOTE]
 >
->リアルタイム顧客プロファイルで使用が有効になっているスキーマで既存のデータタイプを使用すると、その後、そのデータタイプに対して非破壊的な変更のみを行うことができます。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution)を参照してください。
+>リアルタイム顧客プロファイルで使用が有効になっているスキーマで既存のデータタイプを使用すると、その後、そのデータタイプに対して非破壊的な変更のみを行うことができます。 詳しくは、[&#x200B; スキーマ進化のルール &#x200B;](../../schema/composition.md#evolution)を参照してください。
 
 編集できるのは、組織で定義されたカスタムデータタイプのみです。 組織が所有するカスタムデータタイプのみを表示するには、**[!UICONTROL Custom]**&#x200B;を選択します。
 
@@ -83,7 +83,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 右側のパネルでデータタイプの名前を選択して、[!DNL Schema Editor]で構造を開きます。
 
-![ データタイプ [!UICONTROL Data types]とデータタイプ [!UICONTROL Schemas]がハイライト表示された[!UICONTROL Custom] ワークスペースの[!UICONTROL Name] タブ。](../../images/ui/resources/data-types/edit.png)
+![&#x200B; データタイプ [!UICONTROL Data types]とデータタイプ [!UICONTROL Schemas]がハイライト表示された[!UICONTROL Custom] ワークスペースの[!UICONTROL Name] タブ。](../../images/ui/resources/data-types/edit.png)
 
 ## データタイプへのフィールドの追加 {#add-fields}
 
@@ -113,7 +113,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 データタイプを作成したら、スキーマでデータタイプを使用できます。 XDM スキーマはクラスと0以上のフィールドグループで構成されているため、データタイプで提供されるフィールドをスキーマに直接追加することはできません。 代わりに、クラスまたはフィールドグループに含める必要があります。
 
-最初に、[ クラスへのフィールドの追加](./classes.md#add-fields)または[ フィールドグループへのフィールドの追加](./field-groups.md#add-fields)に関する手順を実行します。 または、[ スキーマに直接フィールドを追加](./schemas.md#add-individual-fields)し、そこから親クラスまたはフィールドグループを選択することもできます。 新しいフィールドの&#x200B;**[!UICONTROL Type]**&#x200B;を選択する場合は、ドロップダウンメニューからデータタイプの名前を選択します。
+最初に、[&#x200B; クラスへのフィールドの追加](./classes.md#add-fields)または[&#x200B; フィールドグループへのフィールドの追加](./field-groups.md#add-fields)に関する手順を実行します。 または、[&#x200B; スキーマに直接フィールドを追加](./schemas.md#add-individual-fields)し、そこから親クラスまたはフィールドグループを選択することもできます。 新しいフィールドの&#x200B;**[!UICONTROL Type]**&#x200B;を選択する場合は、ドロップダウンメニューからデータタイプの名前を選択します。
 
 ## 複数フィールドオブジェクトのデータタイプへの変換 {#convert}
 
@@ -131,4 +131,4 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sc
 
 このガイドでは、Experience Platform UIを使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL Schemas] ワークスペースの機能について詳しくは、[[!UICONTROL Schemas] ワークスペースの概要](../overview.md)を参照してください。
 
-[!DNL Schema Registry] APIを使用してデータ型を管理する方法については、[ データ型エンドポイントガイド ](../../api/data-types.md)を参照してください。
+[!DNL Schema Registry] APIを使用してデータ型を管理する方法については、[&#x200B; データ型エンドポイントガイド &#x200B;](../../api/data-types.md)を参照してください。
