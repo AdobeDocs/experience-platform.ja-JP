@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Experience Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートを検索します。
-source-git-commit: 789c79ce1a2a0309914bb2f6454190d72024e16a
+source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '185'
 ht-degree: 95%
 
 ---
@@ -14,8 +14,9 @@ ht-degree: 95%
 # Adobe Experience Platform リリースノート {#release-notes}
 
 * [最新のExperience Platform リリースノート](latest/latest.md)
-* [Experience Platformのプレリリースノート](./pre-release-notes.md)
+* [Experience Platform プレリリースノート](./pre-release-notes.md)
 * 2026 {#2026}
+   * [2026 年 3 月](2026/march-2026.md)
    * [2026年2月](2026/february-2026.md)
    * [2026年1月](2026/january-2026.md)
 * 2025 {#2025}

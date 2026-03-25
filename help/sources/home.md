@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6142801c9008c10a3d1a0a11976a2c99fb6cee86
+source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1724'
 ht-degree: 47%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 47%
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Experience Platformで一元化できます。 このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
+[!DNL Flow Service]は、Experience Platform内の様々な異なるソースから顧客データを収集および一元化するために使用されます。 このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
 
 Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業を行うことができます。
 
@@ -28,9 +28,9 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 >[!BEGINSHADEBOX]
 
-## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
+## Adobeやパートナーのソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ &#x200B;](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [&#x200B; は RainFocus チームによって作成および管理されます &#x200B;](/help/sources/connectors/analytics/rainfocus.md)。
+Experience Platform ソースカタログ内のコネクタの一部は、Adobeによって構築および管理され、その他は[Sources SDK](/help/sources/sources-sdk/overview.md)を使用してパートナー企業によって構築および管理されます。 パートナーが作成および保守するソースがある場合は、各パートナー構築コネクタのドキュメントページの上部にメモが表示されます。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md)はAdobeによって作成され、[RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md)はRainFocus チームによって作成および管理されます。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -40,7 +40,7 @@ Experience Platform ソースカタログ内のコネクタには、Adobeで構�
 
 >[!NOTE]
 >
->30 日間連続して失敗したSource取り込みデータフローは、自動的に無効になります。 [&#x200B; 監視ダッシュボード &#x200B;](/help/dataflows/ui/monitor-sources.md) を使用して、データフローを確認し、失敗の理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用して、解決後にデータフローを再度有効にします。
+>30日間連続して失敗するSource取り込みデータフローは、自動的に無効になります。 [監視ダッシュボード ](/help/dataflows/ui/monitor-sources.md)を使用して、データフローを確認し、失敗した理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用し、解決後にデータフローを再度有効にします。
 
 ソースカタログで使用可能なすべてのソースのリストについては、次の節を参照してください。
 
@@ -50,9 +50,9 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 - [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [UI での Adobe Audience Manager ソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications データ](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics Classifications Data](connectors/adobe-applications/classifications.md)
    - [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics レポートスイートデータ](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics Report Suite Data](connectors/adobe-applications/analytics.md)
    - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
@@ -61,23 +61,23 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
    - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [カスタムア  [!DNL Marketo Engage]  ティビティデータ用のソース接続とデータフローの作成](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   - [カスタムアクティビティデータ用の [!DNL Marketo Engage]  ソース接続とデータフローの作成](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### 高度なエンタープライズソース {#advanced-enterprise-sources}
 
-次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) またはスタンドアロンの Advanced Enterprise Source Connectors SKU のライセンスを取得したお客様のみが利用できます。
+次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)またはスタンドアロンのAdvanced Enterprise Source Connectors SKUのライセンスを取得しているお客様のみが利用できます。
 
-| ソース | カテゴリ | 取り込みタイプ | Cloud |
+| ソース | カテゴリ | 取り込みタイプ | クラウド |
 | --- | --- | --- | --- |
-| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | クラウドストレージ | ストリーミング | AWSAzure |
-| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | データベース | バッチ | AWSAzure |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | クラウドストレージ | ストリーミング | Azure、AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | データベース | バッチ | Azure、AWS |
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | データベース | バッチ | Azure |
-| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | クラウドストレージ | ストリーミング | AWSAzure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | クラウドストレージ | ストリーミング | Azure、AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | データベース | バッチ | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | データベース | バッチ | AWSAzure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | データベース | バッチ | Azure、AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | クラウドストレージ | ストリーミング | Azure |
-| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | データベース | ストリーミング | AWSAzure |
-| [[!DNL Snowflake]](connectors/databases/snowflake.md) | データベース | バッチ | AWSAzure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | データベース | ストリーミング | Azure、AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | データベース | バッチ | Azure、AWS |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 次のソースを使用して、広告データをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [Google 広告](connectors/advertising/ads.md) | バッチ | Azure |
 
@@ -93,9 +93,9 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### Analytics {#analytics}
 
-次のソースを使用して、分析データをExperience Platformに取り込むことができます。
+次のソースを使用して、Analytics データをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | バッチ | Azure |
 | [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | ストリーミング | Azure |
@@ -105,18 +105,18 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### クラウドストレージ {#cloud-storage}
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースは、ダウンロード、フォーマット、アップロードしなくても、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
 
 次のソースを使用して、クラウドストレージデータをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | バッチ | Azure |
 | [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | バッチ | Azure |
-| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | バッチ | AWSAzure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | バッチ | Azure、AWS |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | バッチ | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | バッチ | Azure |
-| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | バッチ | AWSAzure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | バッチ | Azure、AWS |
 | [[!DNL FTP]](connectors/cloud-storage/ftp.md) | バッチ | Azure |
 | [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | バッチ | Azure |
 | [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | バッチ | Azure |
@@ -126,9 +126,9 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### 同意および環境設定 {#consent}
 
-次のソースを使用して、同意および環境設定データをExperience Platformに取り込むことができます。
+次のソースを使用して、同意データと環境設定データをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | ストリーミング | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | バッチ | Azure |
@@ -141,10 +141,10 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 次のソースを使用して、CRM データをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | バッチ | Azure |
-| [[!DNL Salesforce]](connectors/crm/salesforce.md) | バッチ | AWSAzure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | バッチ | Azure、AWS |
 | [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | バッチ | Azure |
 | [[!DNL Veeva CRM]](connectors/crm/veeva.md) | バッチ | Azure |
 
@@ -154,7 +154,7 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 次のソースを使用して、カスタマーサクセスデータをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | バッチ | Azure |
 | [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | バッチ | Azure |
@@ -168,7 +168,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 次のソースを使用して、データベースからExperience Platformにデータを取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | バッチ | Azure |
 | [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | バッチ | Azure |
@@ -179,18 +179,18 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | バッチ | Azure |
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | バッチ | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | バッチ | Azure |
-| [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | AWSAzure |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | AWSAzure |
-| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | AWSAzure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | Azure、AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | Azure、AWS |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | Azure、AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
 
 ### データおよび ID パートナー {#data-partner}
 
-次のソースを使用して、データおよび ID パートナーデータをExperience Platformに取り込むことができます。
+次のソースを使用して、データとID パートナーデータをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | バッチ | Azure |
 | [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | バッチ | Azure |
@@ -205,7 +205,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 次のソースを使用して、e コマースデータをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | バッチ | Azure |
 | [[!DNL Shopify]](connectors/ecommerce/shopify.md) | バッチ | Azure |
@@ -217,7 +217,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 次のソースを使用して、ローカルシステムからExperience Platformにデータを取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md) | バッチ | Azure |
 
@@ -225,30 +225,31 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### ロイヤルティ {#loyalty}
 
-次のソースを使用して、Experience Platformへのデータロイヤルティを取り込むことができます。
+次のソースを使用して、Experience Platformにデータロイヤルティを取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | ストリーミング | Azure |
+| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | バッチ、ストリーミング | Azure |
 
 {style="table-layout:auto"}
 
 ### マーケティングオートメーション {#marketing-automation}
 
-次のソースを使用して、マーケティング自動化データをExperience Platformに取り込むことができます。
+次のソースを使用して、MA データをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Braze]](connectors/marketing-automation/braze.md) | ストリーミング | Azure |
 | [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | ストリーミング | Azure |
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | ストリーミング | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | バッチ | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | バッチ | Azure |
-| [[!DNL Oracle Eloqua]  （V2） &#x200B;](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
+| [[!DNL Oracle Eloqua]  （V2） ](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | ストリーミング | Azure |
-| [[!DNL Salesforce Marketing Cloud]  （V2） &#x200B;](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
+| [[!DNL Salesforce Marketing Cloud]  （V2） ](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
 
@@ -256,7 +257,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 次のソースを使用して、支払いデータをExperience Platformに取り込むことができます。
 
-| ソース | 取り込みタイプ | Cloud |
+| ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Square]](connectors/payments/square.md) | バッチ | Azure |
 | [[!DNL Stripe]](connectors/payments/stripe.md) | バッチ | Azure |
@@ -265,11 +266,11 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### ストリーミング {#streaming}
 
-次のソースを使用して、Experience Platformにデータをストリーミングできます。
+次のソースを使用して、データをExperience Platformにストリーミングできます。
 
 | ソース | 取り込みタイプ | クラウドサポート |
 | --- | --- | --- |
-| [[!DNL HTTP API]](connectors/streaming/http.md) | ストリーミング | AWSAzure |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | ストリーミング | Azure、AWS |
 
 {style="table-layout:auto"}
 
@@ -286,15 +287,15 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## データ取得におけるソースのアクセス制御
 
-データ取得元に対する権限は、Adobe Admin Console で管理できます。権限には、特定の製品プロファイルの「**[!UICONTROL Permissions]**」タブからアクセスできます。 **[!UICONTROL Edit Permissions]** のパネルから、**[!UICONTROL data ingestion]** メニューのエントリを使用して、ソースに関連する権限にアクセスできます。 「**[!UICONTROL View Sources]**」権限は、「**[!UICONTROL Catalog]**」タブで使用可能なソースと「**[!UICONTROL Browse]**」タブで認証済みのソースに対する読み取り専用アクセス権を付与し、「**[!UICONTROL Manage Sources]**」権限は、ソースに対する読み取り、作成、編集、無効化のフルアクセス権を付与します。
+データ取得元に対する権限は、Adobe Admin Console で管理できます。特定の製品プロファイルの「**[!UICONTROL Permissions]**」タブから権限にアクセスできます。 **[!UICONTROL Edit Permissions]** パネルから、**[!UICONTROL data ingestion]** メニューエントリを介してソースに関連する権限にアクセスできます。 **[!UICONTROL View Sources]**&#x200B;権限は、**[!UICONTROL Catalog]** タブの利用可能なソースと&#x200B;**[!UICONTROL Browse]** タブの認証されたソースに対する読み取り専用アクセス権を付与し、**[!UICONTROL Manage Sources]**&#x200B;権限は、ソースの読み取り、作成、編集、および無効化に対する完全なアクセス権を付与します。
 
 次の表に、これらの権限の様々な組み合わせに基づく UI の動作の概要を示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL View Sources]** On | 「Catalog」タブ、「Browse」タブ、「Accounts」タブ、「Dataflow」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
-| **[!UICONTROL Manage Sources]** On | **[!UICONTROL View Sources]** に含まれる関数に加えて、は **[!UICONTROL Connect Source]** の **[!UICONTROL Catalog]** オプションと **[!UICONTROL Select Data]** の **[!UICONTROL Browse]** オプションへのアクセス権を付与します。 **[!UICONTROL Manage Sources]** た、**[!UICONTROL DataFlows]** ールの有効/無効を切り替えたり、スケジュールを編集したりできます。 |
-| **[!UICONTROL View Sources]** Off および **[!UICONTROL Manage Sources]** Off | ソースへのすべてのアクセスを取り消します。 |
+| **[!UICONTROL View Sources]**&#x200B;日 | 「Catalog」タブ、「Browse」タブ、「Accounts」タブ、「Dataflow」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL Manage Sources]**&#x200B;日 | **[!UICONTROL View Sources]**&#x200B;に含まれる関数に加えて、**[!UICONTROL Connect Source]**&#x200B;の&#x200B;**[!UICONTROL Catalog]** オプションと&#x200B;**[!UICONTROL Select Data]**&#x200B;の&#x200B;**[!UICONTROL Browse]** オプションへのアクセス権を付与します。 **[!UICONTROL Manage Sources]**&#x200B;では、**[!UICONTROL DataFlows]**&#x200B;を有効または無効にし、スケジュールを編集することもできます。 |
+| **[!UICONTROL View Sources]** オフと&#x200B;**[!UICONTROL Manage Sources]** オフ | ソースへのすべてのアクセスを取り消します。 |
 
 Adobe Permissions を通じて付与される使用可能な権限の詳細については、[アクセス制御の概要](../access-control/home.md)を参照してください。
 
@@ -304,19 +305,19 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
 
-#### ソースの属性ベースのアクセス制御のサポート
+#### ソースでの属性ベースのアクセス制御のサポート
 
 >[!TIP]
 >
->属性ベースのアクセス制御は次のように動作します。**roles** を作成して、Experience Platform インスタンスとやり取りするユーザーのタイプを分類します。 **ラベル** は、**役割** に適用され、その役割のアクセスを指定します。 **ラベル** は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、それらを *クエリされたリソースに割り当てられたのと同じラベルの役割* に追加する必要があります。 詳しくは、[&#x200B; 属性ベースのアクセス制御エンドツーエンドガイド &#x200B;](../access-control/abac/end-to-end-guide.md) を参照してください。
+>属性ベースのアクセス制御は次のように機能します。**roles**&#x200B;は、Experience Platform インスタンスを操作するユーザーの種類を分類するために作成されます。 **ラベル**&#x200B;は、特定の役割へのアクセスを指定するために&#x200B;**役割**&#x200B;に適用されます。 **ラベル**&#x200B;は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドとセグメントにアクセスできるようにするには、クエリされたリソース *に割り当てられているのと同じラベルを持つ役割*&#x200B;に追加する必要があります。 詳しくは、[属性ベースのアクセス制御エンドツーエンド ガイド ](../access-control/abac/end-to-end-guide.md)を参照してください。
 
-- スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーは、アクセス権のあるフィールドのマッピングのみを作成できるようになります。
-- 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用したデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを含む既存のデータフローを更新、削除、有効化または無効化できません。
-- さらに、データフローは、マッピング、ターゲットデータセット、ターゲット接続でまったく同じスキーマ ID とバージョンを持つ必要があります。 これは、標準 XDM スキーマとリレーショナルスキーマの両方に適用されます。
+- スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーはアクセス権のあるフィールドのマッピングのみを作成できます。
+- 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用してデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを使用して、既存のデータフローを更新、削除、有効、無効にすることはできません。
+- さらに、データフローは、マッピング、ターゲットデータセット、ターゲット接続でまったく同じスキーマ IDとバージョンを持っている必要があります。 これは、標準XDM スキーマとリレーショナルスキーマの両方に適用されます。
 
 >[!NOTE]
 >
->リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[&#x200B; リレーショナルスキーマの概要 &#x200B;](../xdm/schema/relational.md) を参照してください。
+>リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[ リレーショナルスキーマの概要](../xdm/schema/relational.md)を参照してください。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
@@ -324,7 +325,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 「ベータ版」としてラベル付けされたソースを使用することにより、お客様は、ベータ版が&#x200B;***「現状のまま」でいかなる保証もなく***&#x200B;提供されていることを承諾します。
 
-アドビは、ベータ版を維持、訂正、更新、変更、修正、またはその他の方法でサポートする義務を負いません。 お客様は、情報を使用し、そのようなBetaおよび/または付属の資料の正しい機能やパフォーマンスに何ら依存しないことをお勧めします。 ベータ版はアドビの機密情報と見なされます。
+アドビは、ベータ版を維持、訂正、更新、変更、修正、またはその他の方法でサポートする義務を負いません。 お客様は、有益な情報を使用し、そのようなBetaおよび/または付随資料の正しい機能または性能に依存しないことをお勧めします。 ベータ版はアドビの機密情報と見なされます。
 
 お客様がアドビに提供するあらゆる「フィードバック」（ベータ版の使用中に発生した問題や欠陥、提案、改善、レコメンデーションを含むがこれに限定されないベータ版に関する情報）は、このようなフィードバックに含まれる、およびフィードバックに対するすべての権利、所有権、利益を含め、アドビに帰属します。
 
