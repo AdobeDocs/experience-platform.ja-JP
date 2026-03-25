@@ -172,7 +172,7 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 
 ![説明、影響、影響を受ける名前空間リストを表示する非推奨のID名前空間の詳細パネル &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
 
-詳しくは、古い名前空間[に関する](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}Experience Cloud ナレッジベースの記事を参照してください。
+詳しくは、古い名前空間[に関する](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}Experience Cloud ナレッジベースの記事を参照してください。
 
 ## 次の手順 {#next-steps}
 
