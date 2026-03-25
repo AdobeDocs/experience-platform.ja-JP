@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-ヘルスチェックにアクセスするには、**[!UICONTROL View Health Checks]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 適切な権限を持っていることを確認するには、システム管理者にお問い合わせください。
+ヘルスチェックにアクセスするには、**[!UICONTROL View Health Checks]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 適切な権限を持っていることを確認するには、システム管理者にお問い合わせください。
 
 ## ヘルスチェックへのアクセス {#access-health-checks}
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ヘルスチェックダッシュボードには、最新のスキャン結果の概要が表示されます。
 
-![ オブジェクトの評価、結果のスキャン、特定された問題を表示するヘルスチェックダッシュボード ](assets/health-checks/dashboard.png)
+![&#x200B; オブジェクトの評価、結果のスキャン、特定された問題を表示するヘルスチェックダッシュボード &#x200B;](assets/health-checks/dashboard.png)
 
 ## ダッシュボードについて {#understanding-dashboard}
 
@@ -83,9 +83,9 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 * **[!UICONTROL Experience League Documentation]**: データモデリングのベストプラクティスへのリンク。
 * **[!UICONTROL Affected Schemas]**：影響を受けるスキーマのリスト。各スキーマには、詳細を表示するためのエクスパンダーと、スキーマを開くためのリンクが含まれています。
 
-説明、影響、影響を受けるスキーマを示す![ID フィールド検証の詳細パネル ](assets/health-checks/identity-field-validation-detail.png)
+説明、影響、影響を受けるスキーマを示す![ID フィールド検証の詳細パネル &#x200B;](assets/health-checks/identity-field-validation-detail.png)
 
-詳しくは、スキーマのベストプラクティス ドキュメントの「[ データ整合性のヒント ](/help/xdm/schema/best-practices.md#data-integrity-tips)」を参照してください。
+詳しくは、スキーマのベストプラクティス ドキュメントの「[&#x200B; データ整合性のヒント &#x200B;](/help/xdm/schema/best-practices.md#data-integrity-tips)」を参照してください。
 
 ### ID グラフのリンクルール {#identity-graph-linking-rules}
 
@@ -105,9 +105,9 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 * **[!UICONTROL Experience League Documentation]**：詳細については、ID グラフのリンク ルールの概要へのリンクを参照してください。
 * **[!UICONTROL Configure linking rules]**：チェックが失敗すると、ボタンが表示され、パネルから直接リンクルールを設定できます。
 
-説明、影響、およびリンクルールの設定ボタンを表示する![ID グラフ リンクルールの詳細パネル ](assets/health-checks/identity-graph-linking-detail.png)
+説明、影響、およびリンクルールの設定ボタンを表示する![ID グラフ リンクルールの詳細パネル &#x200B;](assets/health-checks/identity-graph-linking-detail.png)
 
-詳細については、[ID グラフ リンク ルールの概要](/help/identity-service/identity-graph-linking-rules/overview.md)および[実装ガイド ](/help/identity-service/identity-graph-linking-rules/implementation-guide.md)を参照してください。
+詳細については、[ID グラフ リンク ルールの概要](/help/identity-service/identity-graph-linking-rules/overview.md)および[実装ガイド &#x200B;](/help/identity-service/identity-graph-linking-rules/implementation-guide.md)を参照してください。
 
 ### 人物および人以外のID設定 {#people-non-people-identity}
 
@@ -117,7 +117,7 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 | --- | --- |
 | **問題** | 個人プロファイルまたはエクスペリエンスイベントクラスのスキーマでは人物以外の識別子が使用され、ルックアップスキーマでは人物識別子が使用されます。 |
 | **影響** | プロファイルスキーマ上の人物以外のIDはID グラフに関与しないため、ID解決が不完全になります。 ルックアップスキーマの人物IDは、プロファイル数を増やし、データをルックアップユースケースの対象外にします。 どちらの場合も、将来の製品の機能強化によって実装が損なわれるリスクがあります。 |
-| **修正** | フラグ付きスキーマを確認し、ID タイプの割り当てを修正します。 可能な限り、個人プロファイルスキーマから人物以外のIDを削除します。 データセットで既に使用されているスキーマについては、[ スキーマ進化ルール ](/help/xdm/schema/composition.md#evolution)を参照してください。 |
+| **修正** | フラグ付きスキーマを確認し、ID タイプの割り当てを修正します。 可能な限り、個人プロファイルスキーマから人物以外のIDを削除します。 データセットで既に使用されているスキーマについては、[&#x200B; スキーマ進化ルール &#x200B;](/help/xdm/schema/composition.md#evolution)を参照してください。 |
 
 **[!UICONTROL People & Non-People Identity Config]** カードを選択すると、右側に詳細パネルが開きます。 パネルには次の内容が表示されます。
 
@@ -126,9 +126,9 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 * **[!UICONTROL General areas of impact]**：不完全なID グラフ、膨らんだプロファイル数、参照の誤用。
 * **[!UICONTROL Affected Schemas]**：問題のあるスキーマのリスト。 スキーマ行を展開して、設定ミスごとにパス、ID名、スキーマタイプを確認します。 リンクアイコンを使用してスキーマを開きます。
 
-![拡張可能な行を持つ説明、影響、影響を受けるスキーマを表示する人物および人物以外のID設定の詳細パネル ](assets/health-checks/people-non-people-identity-detail.png)
+![拡張可能な行を持つ説明、影響、影響を受けるスキーマを表示する人物および人物以外のID設定の詳細パネル &#x200B;](assets/health-checks/people-non-people-identity-detail.png)
 
-詳しくは、[ID タイプのドキュメント ](/help/identity-service/features/namespaces.md#identity-type)および[ スキーマのベストプラクティス ](/help/xdm/schema/best-practices.md)を参照してください。
+詳しくは、[ID タイプのドキュメント &#x200B;](/help/identity-service/features/namespaces.md#identity-type)および[&#x200B; スキーマのベストプラクティス &#x200B;](/help/xdm/schema/best-practices.md)を参照してください。
 
 ### カスタム ID名前空間の説明 {#namespace-missing-description}
 
@@ -148,9 +148,9 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 * **[!UICONTROL Experience League Documentation]**：詳細については、カスタム名前空間を作成するためのリンクを参照してください。
 * **[!UICONTROL Affected namespaces]**：説明が欠落しているカスタム ID名前空間のリスト。 各名前空間の横にあるリンクアイコンを使用して、表示または編集します。
 
-![説明、影響、影響を受ける名前空間リストを表示するカスタム ID名前空間説明パネル ](assets/health-checks/custom-namespace-description-detail.png)
+![説明、影響、影響を受ける名前空間リストを表示するカスタム ID名前空間説明パネル &#x200B;](assets/health-checks/custom-namespace-description-detail.png)
 
-詳しくは、[ カスタム名前空間の作成](/help/identity-service/features/namespaces.md#create-namespaces)に関するドキュメントを参照してください。
+詳しくは、[&#x200B; カスタム名前空間の作成](/help/identity-service/features/namespaces.md#create-namespaces)に関するドキュメントを参照してください。
 
 ### 非推奨のID名前空間 {#deprecated-namespace}
 
@@ -170,7 +170,7 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 * **[!UICONTROL Experience League Documentation]**：詳しいドキュメントについては、廃止されたID名前空間へのリンクを参照してください。
 * **[!UICONTROL Affected namespaces]**：古いID名前空間または未使用のID名前空間のリスト。 各名前空間の横にあるリンクアイコンを使用して、表示または管理します。
 
-![説明、影響、影響を受ける名前空間リストを表示する非推奨のID名前空間の詳細パネル ](assets/health-checks/deprecated-namespace-detail.png)
+![説明、影響、影響を受ける名前空間リストを表示する非推奨のID名前空間の詳細パネル &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
 
 詳しくは、古い名前空間[に関する](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}Experience Cloud ナレッジベースの記事を参照してください。
 
@@ -178,7 +178,7 @@ ID フィールドにデータ整合性の最小長と最大長の制約と正�
 
 ヘルスチェックの結果を確認したら、次のリソースを参照して理解を深めてください。
 
-* 信頼性の高いデータモデルを設計するための[ スキーマのベストプラクティス ](/help/xdm/schema/best-practices.md)について説明します。
-* プロファイルの折りたたみを防ぐため、[ID グラフ リンク ルール ](/help/identity-service/identity-graph-linking-rules/overview.md)について理解します。
-* 名前空間管理のベストプラクティスについては、[ID名前空間ドキュメント ](/help/identity-service/features/namespaces.md)を確認してください。
+* 信頼性の高いデータモデルを設計するための[&#x200B; スキーマのベストプラクティス &#x200B;](/help/xdm/schema/best-practices.md)について説明します。
+* プロファイルの折りたたみを防ぐため、[ID グラフ リンク ルール &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md)について理解します。
+* 名前空間管理のベストプラクティスについては、[ID名前空間ドキュメント &#x200B;](/help/identity-service/features/namespaces.md)を確認してください。
 * バッチ操作の可視化のために[を含む他の](/help/run-and-operate/overview.md)実行および操作ツール [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md)を探します。

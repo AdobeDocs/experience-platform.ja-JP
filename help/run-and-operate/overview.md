@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 前提条件 {#prerequisites}
 
-実行および操作ツールにアクセスするには、**[!UICONTROL View Job Schedules]**&#x200B;および&#x200B;**[!UICONTROL View Profile Management]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 適切な権限を持っていることを確認するには、システム管理者にお問い合わせください。
+実行および操作ツールにアクセスするには、**[!UICONTROL View Job Schedules]**&#x200B;および&#x200B;**[!UICONTROL View Profile Management]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 適切な権限を持っていることを確認するには、システム管理者にお問い合わせください。
 
 ## はじめに {#getting-started}
 
@@ -58,9 +58,9 @@ Experience Platform UIから実行ツールと操作ツールにアクセスす�
 > * バッチセグメント化
 > * バッチ宛先のアクティベーション
 
-[ ジョブスケジュール ](job-schedules.md)を使用すると、サンドボックスごとに、データレイクの取り込み、プロファイルの取り込み、セグメント化、宛先アクティベーションなど、組織全体でスケジュールされているすべてのバッチ操作を調べることができます。 ジョブの実行ステータス、パフォーマンス指標、実行履歴を表示して、パターンを特定し、信頼性に影響を与える設定の問題を診断します。
+[&#x200B; ジョブスケジュール &#x200B;](job-schedules.md)を使用すると、サンドボックスごとに、データレイクの取り込み、プロファイルの取り込み、セグメント化、宛先アクティベーションなど、組織全体でスケジュールされているすべてのバッチ操作を調べることができます。 ジョブの実行ステータス、パフォーマンス指標、実行履歴を表示して、パターンを特定し、信頼性に影響を与える設定の問題を診断します。
 
-![ ジョブスケジュール画面を表示するExperience Platform UI。](assets/overview/job-schedules-interface.png)
+![&#x200B; ジョブスケジュール画面を表示するExperience Platform UI。](assets/overview/job-schedules-interface.png)
 
 ジョブスケジュールには、次の3つのレベルがあります。
 
@@ -72,7 +72,7 @@ Experience Platform UIから実行ツールと操作ツールにアクセスす�
 
 ### ヘルスチェック {#health-checks}
 
-[ ヘルスチェック ](health-checks.md)を使用すると、スキーマとID設定の問題がビジネス運営に影響を与える前に、先見的に検出できます。 現在、ヘルスチェックでは、スキーマとID名前空間をまたいで毎日の静的スキャンを実行し、欠けているベストプラクティス、設定のミス、パターンを表面化して、下流での失敗につながっています。
+[&#x200B; ヘルスチェック &#x200B;](health-checks.md)を使用すると、スキーマとID設定の問題がビジネス運営に影響を与える前に、先見的に検出できます。 現在、ヘルスチェックでは、スキーマとID名前空間をまたいで毎日の静的スキャンを実行し、欠けているベストプラクティス、設定のミス、パターンを表面化して、下流での失敗につながっています。
 
 ヘルスチェックでは、現在、次の5つの基本分野を評価しています。
 
@@ -86,8 +86,8 @@ Experience Platform UIから実行ツールと操作ツールにアクセスす�
 
 [!UICONTROL Run and Operate] ツールの目的と機能について理解したところで、次のリソースを確認して、知識を深めてください。
 
-* [ ヘルスチェック ](health-checks.md)を使用して、スキーマとID設定の問題を検出する方法を説明します
+* [&#x200B; ヘルスチェック &#x200B;](health-checks.md)を使用して、スキーマとID設定の問題を検出する方法を説明します
 * バッチ取り込みとアクティベーション用にジョブスケジュール [を](job-schedules.md)検査する方法について説明します
-* [ バッチ取り込み](../ingestion/batch-ingestion/overview.md)について説明し、Experience Platformにデータを取り込む方法を理解します
-* バッチ宛先に対して[ スケジュールされたアクティベーションを設定する方法](../destinations/ui/activate-batch-profile-destinations.md)について説明します
-* 宛先の[ データフロー監視](../dataflows/ui/monitor-destinations.md)を探索
+* [&#x200B; バッチ取り込み](../ingestion/batch-ingestion/overview.md)について説明し、Experience Platformにデータを取り込む方法を理解します
+* バッチ宛先に対して[&#x200B; スケジュールされたアクティベーションを設定する方法](../destinations/ui/activate-batch-profile-destinations.md)について説明します
+* 宛先の[&#x200B; データフロー監視](../dataflows/ui/monitor-destinations.md)を探索
