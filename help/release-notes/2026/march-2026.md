@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2026年3月）
 description: Adobe Experience Platform の 2026年3月のリリースノート。
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: 4f4761024a658d284f3eacdc2230e868c6ee53fb
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 19%
+source-wordcount: '1747'
+ht-degree: 12%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 19%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2026年3月24日（PT）**
 
@@ -36,11 +36,11 @@ Adobe Experience Platformの新機能と既存の機能の更新：
 
 ## 詳細なデータライフサイクル管理 {#advanced-data-lifecycle-management}
 
-Experience Platformには、消費者のレコードやデータセットをプログラムによって削除することにより、保存されたデータを管理できるデータハイジーン機能が揃っています。 UIのデータライフサイクルワークスペースまたはData Hygiene APIへの呼び出しを使用すると、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、不正確なデータの修正が必要な場合に更新され、組織のポリシーで必要と判断された場合に削除されるようにします。
+Experience Platformには、消費者の記録やデータセットをプログラムによって削除することにより、保存されたデータを管理するためのデータハイジーン機能が揃っています。 UIのデータライフサイクルワークスペースまたはData Hygiene APIへの呼び出しを使用すると、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、不正確なデータの修正が必要な場合に更新され、組織のポリシーで必要と判断された場合に削除されるようにします。
 
 | 機能 | 説明 |
 | --- | --- |
-| マルチデータセットおよびプロファイルのみのレコード削除（APIのみ） | 1つのデータセット ID、データセット IDのコンマ区切りリスト、または`ALL`のリテラル `datasetId`を送信して、1つ、多く、またはすべてのデータセットのIDを削除できます。 また、`targetServices`を`["identity","profile","ajo"]`に設定してプロファイル関連のサービスに削除を制限することもできます。これにより、データレイクは変更されません。この機能は、Data Hygiene API経由でのみ使用できます。 詳細については、[&#x200B; レコードの削除作業指示ガイド &#x200B;](../../hygiene/api/workorder.md)を参照してください。 |
+| マルチデータセットおよびプロファイルのみのレコード削除（APIのみ） | 1つのデータセット ID、データセット IDのコンマ区切りリスト、または`ALL`のリテラル `datasetId`を送信して、1つ、多く、またはすべてのデータセットのIDを削除できます。 また、`targetServices`を`["identity","profile","ajo"]`に設定してプロファイル関連のサービスに削除を制限することもできます。これにより、データレイクは変更されません。この機能は、Data Hygiene API経由でのみ使用できます。 詳細については、[ レコードの削除作業指示ガイド ](../../hygiene/api/workorder.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -48,17 +48,17 @@ Experience Platformには、消費者のレコードやデータセットをプ�
 
 ## Agent Orchestrator {#agent-orchestrator}
 
-Agent Orchestratorなら、ワークフローを自動化し、複数のチャネルをまたいで顧客とやり取りできる、AIを活用したエージェントを構築し、展開できます。
+Agent Orchestratorを利用して、ワークフローを自動化し、複数のチャネルをまたいで顧客とやり取りする、AIを活用したエージェントを構築およびデプロイします。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [&#x200B; [!DNL Microsoft 365 Copilot]の](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]用Adobe Marketing Agentは、Adobeのマーケティングインテリジェンスを、[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]およびその他[!DNL Microsoft 365] アプリなどの日常的なツールに直接取り込む組み込みエージェントです。 このエージェントを使用すると、施策の計画中にAdobe アプリケーションから信頼できるキャンペーンインサイトを取得したり、オーディエンスを確認したり、他のユーザーと協力してお客様の質問に答えたり、[!DNL Microsoft 365] ワークフローから離れることなく、データに基づいた意思決定を行ったりできます。 |
+| [ [!DNL Microsoft 365 Copilot]の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]用Adobe Marketing Agentは、Adobeのマーケティングインテリジェンスを、[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]およびその他[!DNL Microsoft 365] アプリなどの日常的なツールに直接取り込む組み込みエージェントです。 このエージェントを使用すると、施策の計画中にAdobe アプリケーションから信頼できるキャンペーンインサイトを取得したり、オーディエンスを確認したり、他のユーザーと協力してお客様の質問に答えたり、[!DNL Microsoft 365] ワークフローから離れることなく、データに基づいた意思決定を行ったりできます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)を参照してください。
 
 ## データストリーム {#datastreams}
 
@@ -66,25 +66,28 @@ Agent Orchestratorなら、ワークフローを自動化し、複数のチャ�
 
 | 機能 | 説明 |
 | --- | --- |
-| 動的データストリーム設定の一般提供 | 動的データストリーム設定が一般に利用可能になりました。 動的データストリーム設定を使用すると、データストリームに対して有効になっている各サービスについて、ユーザーが設定できるルールセットを定義できます。このルールセットは、Experience Cloud ソリューションが各タイプのデータを受け取る必要があるルールセットを決定します。 詳しくは、[動的データストリーム設定ガイド &#x200B;](../../datastreams/configure-dynamic-datastream.md)を参照してください。 |
+| 動的データストリーム設定の一般提供 | 動的データストリーム設定が一般に利用可能になりました。 動的データストリーム設定を使用すると、データストリームに対して有効になっている各サービスに対して、ユーザーが設定できるルールセットを定義できます。このルールセットは、Experience Cloud ソリューションが各タイプのデータを受け取る必要があるルールセットを決定します。 詳しくは、[動的データストリーム設定ガイド ](../../datastreams/configure-dynamic-datastream.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; データストリームの概要](../../datastreams/overview.md)を参照してください。
+詳しくは、[ データストリームの概要](../../datastreams/overview.md)を参照してください。
 
 ## 宛先 {#destinations}
 
-[!DNL Destinations]は、Experience Platformからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations]は、宛先プラットフォームとの事前定義済みの統合です。 クロスチャネルマーケティング施策、メールキャンペーン、ターゲット広告、その他多くのユースケースで、既知および未知のデータを宛先にアクティベートできます。
 
 **新規宛先または更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
+| [Snowflake バッチ ](../../destinations/catalog/warehouses/snowflake-batch.md) リージョンセレクター | 検索とドロップダウンを1つのコントロールに統合した新しい検索可能なドロップダウンを使用して、地域をより簡単に見つけることができます。 この更新は3月末までロールアウトされます。 |
+| [Snowflake バッチ ](../../destinations/catalog/warehouses/snowflake-batch.md)宛先の新しいテーブル構造 | Snowflake アカウントに共有されたテーブルに、個別のオーディエンス名とオーディエンスオリジン列を含む新しい構造が追加されました。 新しいテーブル構造は、今後に設定されるすべての新しい宛先接続に適用されます。 設定した新しい接続では、両方のテーブル構造が作成されます。新しい構造にはV2が先頭に付けられ、古い構造は2026年6月の終わりまで保持され、その後は非推奨になります。 詳しくは、Snowflake Batch ドキュメントの[ エクスポート済みデータ ](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) セクションを参照してください。 この更新は3月末までロールアウトされます。 |
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md)接続 | 新しいAdobe Advertising DSP接続は、従来の接続と同じ機能に加えて、追加のIDのサポートを提供します。 新しいコネクタを使用すると、Cookie ベースのIDをAdobe Advertising DSPに書き出すこともできます。 |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md)接続 | [!DNL Real-Time CDP]人のオーディエンスを毎日のバッチファイルとしてFreeWheelに送信すると、CTV、ビデオ、ディスプレイをまたいでFreeWheelのお得な情報やキャンペーンでターゲットにすることができます。 アクセスについては、Adobe アカウントチームにお問い合わせください。 |
-| [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md)および[Pinterest](../../destinations/catalog/advertising/pinterest.md)の外部オーディエンスのサポート | セグメンテーションサービスを超えたオリジンのオーディエンスを、カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリケーションで作成されたオーディエンスを含む、The Trade Desk CRM、Criteo、およびPinterestにアクティベートできるようになりました。 この更新は3月末までロールアウトされます。 詳しくは、各宛先のカタログページの「[&#x200B; サポートされているオーディエンス &#x200B;](../../destinations/catalog/advertising/criteo.md#supported-audiences)」セクションを参照してください。 |
-| カスタムアップロードオーディエンスの制限の増加 | 宛先インスタンスごとに最大20個のカスタムアップロードオーディエンスをアクティブ化できるようになりました。 以前は、この制限は10でした。 詳しくは、[宛先ガードレール &#x200B;](../../destinations/guardrails.md#batch-file-based-activation)を参照してください。 |
-| 外部オーディエンスに対する[&#x200B; ファイルの書き出し](../../destinations/ui/export-file-now.md)および[&#x200B; アドホックアクティベーション API](../../destinations/api/ad-hoc-activation-api.md)のサポート | バッチファイルベースの宛先に対してアクティブ化する際に、今すぐファイルを書き出し（UI）とアドホックアクティベーション APIを外部オーディエンス（カスタムアップロード、類似、フェデレーション、他のExperience Platform アプリからのオーディエンスなど）と共に使用できるようになりました。 この更新は3月末までロールアウトされます。 |
+| [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md)および[Pinterest](../../destinations/catalog/advertising/pinterest.md)の外部オーディエンスのサポート | セグメンテーションサービスを超えたオリジンのオーディエンスを、カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリケーションで作成されたオーディエンスを含む、The Trade Desk CRM、Criteo、およびPinterestにアクティベートできるようになりました。 この更新は3月末までロールアウトされます。 詳しくは、各宛先のカタログページの「[ サポートされているオーディエンス ](../../destinations/catalog/advertising/criteo.md#supported-audiences)」セクションを参照してください。 |
+| カスタムアップロードオーディエンスの制限の増加 | 宛先インスタンスごとに最大20個のカスタムアップロードオーディエンスをアクティブ化できるようになりました。 以前は、この制限は10でした。 詳しくは、[宛先ガードレール ](../../destinations/guardrails.md#batch-file-based-activation)を参照してください。 |
+| 外部オーディエンスに対する[ ファイルの書き出し](../../destinations/ui/export-file-now.md)および[ アドホックアクティベーション API](../../destinations/api/ad-hoc-activation-api.md)のサポート | バッチファイルベースの宛先に対してアクティブ化する際に、今すぐファイルを書き出し（UI）とアドホックアクティベーション APIを外部オーディエンス（カスタムアップロード、類似、フェデレーション、他のExperience Platform アプリからのオーディエンスなど）と共に使用できるようになりました。 この更新は3月末までロールアウトされます。 |
+| OAuth 2およびmTLSを使用する[HTTP API](../../destinations/catalog/streaming/http-destination.md)の宛先 | 認証エンドポイントが相互TLS （mTLS）を必要とする場合に、OAuth 2を使用するHTTP API宛先を作成および認証できるようになりました。宛先セットアップ中のトークン取得で、mTLSがサポートされるようになりました。 この更新は3月末までロールアウトされます。 |
 
 {style="table-layout:auto"}
 
@@ -93,6 +96,7 @@ Agent Orchestratorなら、ワークフローを自動化し、複数のチャ�
 | 修正 | 説明 |
 | --- | --- |
 | [TikTok](../../destinations/catalog/social/tiktok.md) コネクタの電話番号のハッシュ化 | 宛先カードの設定ミスにより、電話番号のキーオフされたIDがTikTokにアクティベートされない問題を修正しました。 この修正の利点を得るには、新しいアクティベーションフローを設定するか、既存のフローから電話番号マッピングを削除して保存し、もう一度追加します。 |
+| [Snowflake ストリーミング ](../../destinations/catalog/warehouses/snowflake.md)および[Snowflake バッチ ](../../destinations/catalog/warehouses/snowflake-batch.md) アカウント IDの検証 | アカウント ID ステップに正規表現バリデーターが追加されました。 IDを入力すると、組織IDとアカウント IDが正しい形式（ドットで区切られた）であることを確認するために検証されるようになりました。 この更新は3月末までロールアウトされます。 |
 
 {style="table-layout:auto"}
 
@@ -104,39 +108,38 @@ XDMは、Experience Platformに取り込まれるデータに共通の構造と�
 
 | 機能 | 説明 |
 | --- | --- |
-| XDM エンティティのアクションと削除サポート | インラインテーブルメニューと詳細ページヘッダーメニューから、スキーマ、クラス、フィールドグループ、データタイプのアクションに直接アクセスできます。 必要な権限を持っている場合は、組織のエンティティがデータセットで使用されておらず、プロファイルに対して有効になっていない場合に、そのエンティティを削除することもできます。 詳しくは、[XDM UI ガイド &#x200B;](../../xdm/ui/explore.md)を参照してください。 |
+| XDM エンティティのアクションと削除サポート | インラインテーブルメニューと詳細ページヘッダーメニューから、スキーマ、クラス、フィールドグループ、データタイプのアクションに直接アクセスできます。 必要な権限を持っている場合は、組織のエンティティがデータセットで使用されておらず、プロファイルに対して有効になっていない場合に、そのエンティティを削除することもできます。 詳しくは、[XDM UI ガイド ](../../xdm/ui/explore.md)を参照してください。 |
 
 詳しくは、[XDMの概要](../../xdm/home.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#real-time-customer-profile}
 
-リアルタイムの顧客プロファイルにより、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせることで、個々の顧客の全体像を把握することができます。 プロファイルにより、顧客データを統合し、あらゆる顧客インタラクションに関する実用的でタイムスタンプ付きのアカウントを提供します。
+リアルタイムの顧客プロファイルにより、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせることで、個々の顧客の全体像を把握できます。 プロファイルを利用して顧客データを統合し、顧客とのあらゆるやり取りに関する実用的なタイムスタンプ付きのアカウントを提供します。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| イベント | プロファイルの閲覧時にイベントのルックバック期間を設定できるようになりました。 これにより、指定した期間にプロファイルが関連付けられているイベントを表示できます。 詳しくは、[&#x200B; プロファイル UI ガイド &#x200B;](/help/profile/ui/user-guide.md#events)を参照してください。 |
+| イベント | プロファイルの閲覧時にイベントのルックバック期間を設定できるようになりました。 これにより、指定した期間にプロファイルが関連付けられているイベントを表示できます。 詳しくは、[ プロファイル UI ガイド ](../../profile/ui/user-guide.md#events)を参照してください。 |
 
 {style="table-layout:auto"}
 
 詳しくは、[[!DNL Real-Time Customer Profile] 概要](../../profile/home.md)を参照してください。
 
-<!-- 
-## Run and Operate {#run-and-operate}
+## 実行と操作 {#run-and-operate}
 
-Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+実行ツールと運用ツールを使用して、Experience Platformの実装を調査、トラブルシューティング、最適化します。 スケジュールされたバッチアクティベーションを可視化し、設定の問題を特定して、システムの信頼性を向上させます。
 
-**New or updated features**
+**新機能または更新された機能**
 
-| Feature | Description |
+| 機能 | 説明 |
 | --- | --- |
-| [Job Schedules](../../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
-| [Health Checks](../../run-and-operate/health-checks.md) general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot. |
+| [ ジョブスケジュール ](../../run-and-operate/job-schedules.md)一般提供 | [!DNL Job Schedules]は、取り込みから宛先のアクティベーションまで、データパイプライン全体でスケジュールされたすべてのバッチ処理ジョブの統合ビューを提供します。 実行ステータスを検査し、スケジュールの競合を特定し、設定の問題が業務運営に影響を与える前に診断します。 |
+| [ ヘルスチェック ](../../run-and-operate/health-checks.md)一般提供 | スキーマとIDの設定が不十分な場合、プロファイルの誤った作成、セグメントの選定の失敗、不正確なアクティベーションなど、下流プロセスにおける大きな問題につながります。 <br> ヘルスチェックにより、アプローチが事後対応のトラブルシューティングからプロアクティブで予防的なメンテナンスに移行します。 ヘルスチェックは、サンドボックスで使用されるスキーマとIDを常にスキャンし、調査とトラブルシューティングに使用できる問題の概要を提供します。 |
 
 {style="table-layout:auto"}
 
-For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
+詳しくは、[実行と操作の概要](../../run-and-operate/overview.md)、[ ジョブスケジュールの調査](../../run-and-operate/job-schedules.md)、および[ プラットフォーム UI ガイド ](../../landing/ui-guide.md)を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -146,40 +149,24 @@ For more information, read the [Run and Operate overview](../run-and-operate/ove
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 取り込みタイプ | 属性の取り込みタイプを表示できるようになりました。 これにより、データの出所を把握して、より優れたオーディエンスを構築できるようになります。 この機能について詳しくは、[&#x200B; セグメントビルダーガイド &#x200B;](/help/segmentation/ui/segment-builder.md)を参照してください。 |
-| 概要データ | アカウントおよびピープルベースのオーディエンスの属性の概要データを表示できるようになりました。 アカウントオーディエンスのこの機能について詳しくは、アカウント [&#x200B; オーディエンスビルダーガイド &#x200B;](/help/rtcdp/segmentation/audience-builder.md)を参照してください。 人物ベースのオーディエンスのこの機能について詳しくは、[&#x200B; セグメントビルダーガイド &#x200B;](/help/segmentation/ui/segment-builder.md)を参照してください。 |
+| 取り込みタイプ | 属性の取り込みタイプを表示できるようになりました。 これにより、データの出所を把握して、より優れたオーディエンスを構築できるようになります。 この機能について詳しくは、[ セグメントビルダーガイド ](../../segmentation/ui/segment-builder.md)を参照してください。 |
+| 概要データ | アカウントおよびピープルベースのオーディエンスの属性の概要データを表示できるようになりました。 アカウントオーディエンスのこの機能について詳しくは、アカウント [ オーディエンスビルダーガイド ](../../rtcdp/segmentation/audience-builder.md)を参照してください。 人物ベースのオーディエンスのこの機能について詳しくは、[ セグメントビルダーガイド ](../../segmentation/ui/segment-builder.md)を参照してください。 |
 
 詳しくは、[[!DNL Segmentation Service] 概要](../../segmentation/home.md)を参照してください。
 
-## ソース
+## ソース {#sources}
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用して、外部ストレージシステムやCRM サービスを認証および接続し、取り込み実行の時間を設定し、データ取り込みのスループットを管理します。
 
 **新規または更新されたソース**
 
 | ソース | 説明 |
 | --- | --- |
-| [!DNL Talon.One] | 新しい[!DNL Talon.One] [!DNL Talon.One] バッチ [および](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) ストリーミング [&#x200B; ソースを使用して、Experience Platformを](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)に接続できるようになりました。 新しいソースを使用して、ロイヤルティプロファイルデータとトランザクションおよびロイヤルティアクティビティイベントをExperience Platformに取り込みます。 |
-| 新しいIP アドレスを許可リストに加える | GBR9の新しいIP アドレス：Azure上のExperience Platformへのバッチソース接続を正常に行うために許可リストに加えるする必要があるアドレスのリストに、イギリスが追加されました。 詳しくは、[IP アドレスの許可リストに加えるガイド &#x200B;](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)を参照してください。 |
+| [!DNL Talon.One] | 新しい[!DNL Talon.One] [!DNL Talon.One] バッチ [および](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) ストリーミング [ ソースを使用して、Experience Platformを](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)に接続できるようになりました。 新しいソースを使用して、ロイヤルティプロファイルデータとトランザクションおよびロイヤルティアクティビティイベントをExperience Platformに取り込みます。 |
+| 新しいIP アドレスを許可リストに加える | GBR9の新しいIP アドレス：Azure上のExperience Platformへのバッチソース接続を正常に行うために許可リストに加えるする必要があるアドレスのリストに、イギリスが追加されました。 詳しくは、[IP アドレスの許可リストに加えるガイド ](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)を参照してください。 |
 | Change Data Captureの拡張サポート | [!DNL Marketo Engage]、[!DNL Microsoft Dynamics]、[!DNL Salesforce CRM]のソースでChange Data Captureを使用できるようになりました。 |
 | [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md)の認証ガイドが改善されました | [!DNL Google BigQuery] ソースの認証ガイドが次の情報で拡張されました： <ul><li>更新トークンに必要なスコープ。</li><li>[!DNL Google] IDに必要なIAM役割。</li><li>`largeResultsDataSetId`の使用に関する追加のガイダンス。</li></ul> |
 
 {style="table-layout:auto"}
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
-
-<!--
-
-NOTE FOR VLAD, CRITEO WAS REMOVED FROM EXTERNAL AUDIENCE SUPPORT
-
-| Destination | Description |
-| --- | --- |
-| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
-| New table structure for [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) destinations | Tables shared into your Snowflake account now have a new structure which includes separate audience name and audience origin columns. The new table structure applies to all new destination connections set up moving forward. For any new connections that you set up, an old format and new format table are created. The old table structure will be kept for another three months before being deprecated. Read more in the [Exported data](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) section of the Snowflake Batch documentation. |
-| [HTTP API](../../destinations/catalog/streaming/http-destination.md) destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
-
-| Fix | Description |
-| --- | --- |
-| [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
-
--->
