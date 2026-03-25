@@ -3,9 +3,9 @@ keywords: 宛先；experience cloud ソリューション；ターゲット；�
 title: アドビの宛先の概要
 description: Adobe Experience Platformのデータを、Adobe Experience Cloudの他のソリューションに接続し、広告のターゲティング、パーソナライゼーション、MAなどを実現することで、顧客体験を管理しましょう
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '224'
 ht-degree: 29%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 29%
 
 ### 接続 {#connections}
 
-* [Adobe Advertising Cloud DSP接続](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSPとの連携](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Adobe Campaign 接続](../email-marketing/adobe-campaign.md)
 * [Adobe Target 接続](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -49,4 +49,4 @@ ht-degree: 29%
 
 Experience Platformのオーディエンス共有機能を使用して、Experience Platformのオーディエンスを他のAdobeの配信先と共有できます。 詳しくは、以下のページを参照してください（Audience Manager ドキュメントポータルで開きます）。
 
-* [&#x200B; コアサービス統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platform オーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+* [ コアサービス統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platform オーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
