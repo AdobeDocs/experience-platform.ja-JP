@@ -48,7 +48,7 @@ web ページから送信されるすべてのデータは、XDMとしてExperie
 
 データ収集のためのデータ準備プロセスの簡単なデモについては、次のビデオを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345566?captions=jpn&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
