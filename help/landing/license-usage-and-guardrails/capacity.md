@@ -234,7 +234,7 @@ Experience Platformでは、15分間のローリング間隔でサンドボッ�
 
 次のビデオでは、キャパシティの概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475274/?captions=jpn&learn=on&enablevpops)
 
 ## よくある質問 {#faq}
 
