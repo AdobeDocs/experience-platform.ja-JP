@@ -11,7 +11,7 @@ ht-degree: 41%
 
 # データ収集のためのデータ準備
 
-Data Prepは、[Experience Data Model （XDM） ](../xdm/home.md)との間でデータをマッピング、変換、検証するために使用できるAdobe Experience Platform サービスです。 Experience Platform対応の[ データストリーム ](./overview.md)を設定する場合、データ準備機能を使用して、ソースデータをExperience Platform Edge Networkに送信する際にXDMにマッピングできます。
+Data Prepは、[Experience Data Model （XDM） &#x200B;](../xdm/home.md)との間でデータをマッピング、変換、検証するために使用できるAdobe Experience Platform サービスです。 Experience Platform対応の[&#x200B; データストリーム &#x200B;](./overview.md)を設定する場合、データ準備機能を使用して、ソースデータをExperience Platform Edge Networkに送信する際にXDMにマッピングできます。
 
 web ページから送信されるすべてのデータは、XDMとしてExperience Platformに格納される必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れるXDMにデータを変換するには、次の3つの方法があります。
 
@@ -164,7 +164,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 **[!UICONTROL Mapping]** ステップが表示され、ソースデータのフィールドをExperience Platformのターゲットイベントスキーマのフィールドにマッピングできます。 ここから、2 つの方法でマッピングを設定できます。
 
-* 手動プロセスを使用して、このデータストリームの[ マッピングルール ](#create-mapping)を作成します。
+* 手動プロセスを使用して、このデータストリームの[&#x200B; マッピングルール &#x200B;](#create-mapping)を作成します。
 * 既存のデータストリームから[マッピングルールを読み込みます](#import-mapping)。
 
 >[!IMPORTANT]
@@ -179,11 +179,11 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ソースアイコン（![ソースアイコン](/help/images/icons/source.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、**[!UICONTROL Select]** ボタンを使用して続行します。
 
-![ ソーススキーマでマッピングするフィールドを選択しています。](assets/data-prep/source-mapping.png)
+![&#x200B; ソーススキーマでマッピングするフィールドを選択しています。](assets/data-prep/source-mapping.png)
 
 次に、スキーマアイコン（![スキーマアイコン](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、**[!UICONTROL Select]**&#x200B;を確認してください。
 
-![ ターゲットスキーマでマッピングするフィールドを選択しています。](assets/data-prep/target-mapping.png)
+![&#x200B; ターゲットスキーマでマッピングするフィールドを選択しています。](assets/data-prep/target-mapping.png)
 
 マッピングページが再表示され、完成したフィールドマッピングが表示されます。**[!UICONTROL Mapping progress]** セクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
 
@@ -205,7 +205,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 開始するには、**[!UICONTROL Import Mapping]**&#x200B;を選択します。
 
-![ マッピングの読み込みボタンが選択されています。](assets/data-prep/import-mapping-button.png)
+![&#x200B; マッピングの読み込みボタンが選択されています。](assets/data-prep/import-mapping-button.png)
 
 表示されるダイアログで、マッピングルールを読み込むデータストリームを選択します。データストリームを選択したら、**[!UICONTROL Preview]**&#x200B;を選択します。
 
