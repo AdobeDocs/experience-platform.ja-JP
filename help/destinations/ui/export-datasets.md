@@ -50,16 +50,16 @@ Experience Platform APIを使用して、データセットを書き出すこと
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>ソース、Web SDK、モバイルSDK、Analytics Data Connector、Audience Managerを通じてデータを取得または収集した後、Experience Platform UIで作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> システム生成プロファイル スナップショット データセット </a>。</li></td>
+    <td><ul><li>ソース、Web SDK、モバイルSDK、Analytics Data Connector、Audience Managerを通じてデータを取得または収集した後、Experience Platform UIで作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ja#profile-attribute-datasets"> システム生成プロファイル スナップショット データセット </a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> [!DNL Adobe Journey Optimizer]</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>

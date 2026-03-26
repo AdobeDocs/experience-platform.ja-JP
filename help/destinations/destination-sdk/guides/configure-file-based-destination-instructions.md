@@ -422,7 +422,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 宛先をテストするプロセスの一環として、Experience Platform UIを使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、次の2つのリソースを参照してください。
 
 * [オーディエンスの作成 – ドキュメントページ](/help/segmentation/ui/audience-portal.md#create-audience)
-* [&#x200B; オーディエンスの作成 – ビデオチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [&#x200B; オーディエンスの作成 – ビデオチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 

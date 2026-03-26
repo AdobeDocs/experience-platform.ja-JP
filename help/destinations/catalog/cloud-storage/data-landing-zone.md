@@ -85,7 +85,7 @@ Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロ
 
 >[!AVAILABILITY]
 >
->このセクションは、Microsoft Azureで動作するExperience Platformの実装に適用されます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
+>このセクションは、Microsoft Azureで動作するExperience Platformの実装に適用されます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud)を参照してください。
 
 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
@@ -224,7 +224,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->この節は、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
+>この節は、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud)を参照してください。
 
 AWSでプロビジョニングされた[!DNL Data Landing Zone] インスタンスに資格情報を取得するには、次の操作を実行します。 次に、任意のクライアントを使用して[!DNL Data Landing Zone] インスタンスに接続します。
 

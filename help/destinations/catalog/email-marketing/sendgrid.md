@@ -34,7 +34,7 @@ SendGridは、SendGrid APIとの通信のための認証メカニズムとして
 
 ![SendGrid API キーの設定ページに「API キーを作成」ボタンが表示されています。](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid宛先にデータをアクティブ化する前に、[で作成された](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) セグメント [!DNL Experience Platform]が必要です。 このページの下にある[制限](#limits) セクションも参照してください。
+SendGrid宛先にデータをアクティブ化する前に、[で作成された](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja) セグメント [!DNL Experience Platform]が必要です。 このページの下にある[制限](#limits) セクションも参照してください。
 
 >[!IMPORTANT]
 >
