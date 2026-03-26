@@ -58,9 +58,9 @@ Adobe Advertising Demand-Side Platform（DSP）の宛先では、認証済みオ
 
 * Experience Platform アカウントのExperience Cloud Organization ID。 Adobe [!DNL Real-Time Customer Data Platform] （[!DNL Real-Time CDP]）のユーザープロファイルページでIDを確認できます。
 
-* キャンペーンのアクティベーション用のオーディエンスを受け取るDSP[[!DNL Real-Time CDP] の](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) ソース。 Adobe アカウントチームは、Experience Cloud組織IDを使用してソースを作成します。
+* キャンペーンのアクティベーション用のオーディエンスを受け取るDSP[[!DNL Real-Time CDP] の](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage) ソース。 Adobe アカウントチームは、Experience Cloud組織IDを使用してソースを作成します。
 
-* [!DNL DSP] ソースが[[!DNL Real-Time CDP]  [!DNL DSP]に作成されたときに生成される、](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) アカウントまたは広告主のソースキー。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でAdvertising DSPの宛先への宛先接続を作成します。
+* [!DNL DSP] ソースが[[!DNL Real-Time CDP]  [!DNL DSP]に作成されたときに生成される、](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage) アカウントまたは広告主のソースキー。 [!DNL DSP] アカウントチームがこのキーを共有します。 以下に説明するように、Experience Platform内でAdvertising DSPの宛先への宛先接続を作成します。
 
 ### Cookieを共有するためのID同期の設定 {#cookie-sync}
 
@@ -133,7 +133,7 @@ Adobe Advertising DSPの宛先は、次の表に示すIDのアクティベーシ
 
 宛先に接続するには、[!UICONTROL Connection type] セクションに次のパラメーターを指定し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 Adobe アカウントチームは、ソースを作成した後、このキーを共有します。
+* **[!UICONTROL Account or Advertiser Key]**：この[!UICONTROL Source Key]は、[[!DNL Real-Time CDP]  ソースがDSP ユーザーインターフェイス &#x200B;](https://experienceleague.adobe.com/ja/docs/advertising/dsp/audiences/sources/source-manage)で作成されたときに生成されます。 Adobe アカウントチームは、ソースを作成した後、このキーを共有します。
 
 アカウントまたは広告主キーのフィールドを表示する接続タイプ セクションの![&#x200B; スクリーンショット。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
