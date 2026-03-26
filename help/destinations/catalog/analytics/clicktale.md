@@ -3,7 +3,7 @@ keywords: clicktale;clicktale extension;clicktale destination
 title: Clicktale 拡張機能
 description: Clicktale拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 63%
@@ -14,11 +14,11 @@ ht-degree: 63%
 
 ## 概要 {#overview}
 
-[!DNL Clicktale] タグ拡張機能を使用すると、[!DNL Clicktale's] ビジュアルエディターを使用してコードをデプロイし、データ要素をマッピングできます。
+[!DNL Clicktale] タグ拡張機能を使用して、[!DNL Clicktale's] ビジュアルエディターを使用してコードをデプロイし、データ要素をマッピングします。
 
 [!DNL Clicktale]は[!DNL Adobe Experience Platform]のAnalytics拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Clicktale 拡張機能](../../assets/catalog/analytics/clicktale/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 63%
 
 [!DNL Clicktale] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

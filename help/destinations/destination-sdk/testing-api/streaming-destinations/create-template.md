@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、宛先を公開する前にストリーミング宛先メッセージ変換テンプレートをテストする方法を説明します。
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 88%
+source-wordcount: '934'
+ht-degree: 87%
 
 ---
 
@@ -28,7 +28,7 @@ Destination SDKで宛先を作成する最初の手順の1つは、[!DNL Adobe E
 
 変換を成功させるためには、[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](../../functionality/destination-server/message-format.md#segments-identities-attributes)の例に類似した変換テンプレートを提供する必要があります。
 
-Adobeには、Adobe XDM形式のデータを宛先でサポートされている形式に変換するメッセージテンプレートを作成およびテストできるテンプレートツールが用意されています。 ツールには、以下に使用できる 2 つの API エンドポイントがあります。
+Adobeには、Adobe XDM形式のデータを宛先でサポートされている形式に変換するメッセージテンプレートを作成およびテストするためのテンプレートツールが用意されています。 ツールには、以下に使用できる 2 つの API エンドポイントがあります。
 
 * *サンプルテンプレート API* を使用して、サンプルテンプレートを取得する。
 * *レンダリングテンプレート API* を使用して、サンプルテンプレートをレンダリングする。これにより、結果を宛先で想定されているデータ形式と比較できます。書き出されたデータを宛先で想定されるデータ形式と比較したら、テンプレートを編集できます。この方法で、生成する書き出されたデータを、宛先で想定されるデータ形式に一致させます。
@@ -158,9 +158,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## レンダリングテンプレート API {#render-template-api}
 
-[サンプルテンプレート API](create-template.md#sample-template-api) を使用してメッセージ変換テンプレートを作成したら、[テンプレートをレンダリング](render-template-api.md)し、それに基づいて、書き出されたデータを生成できます。これにより、[!DNL Adobe Experience Platform]が宛先に書き出すプロファイルが、宛先の想定される形式と一致するかどうかを確認できます。
+[サンプルテンプレート API](create-template.md#sample-template-api) を使用してメッセージ変換テンプレートを作成したら、[テンプレートをレンダリング](render-template-api.md)し、それに基づいて、書き出されたデータを生成できます。これを使用して、宛先に書き出す[!DNL Adobe Experience Platform]のプロファイルが、宛先の想定される形式と一致するかどうかを確認します。
 
-実行できる呼び出しの例については、API リファレンスを参照してください。
+以下の呼び出しの例については、API リファレンスを参照してください。
 
 * [本文でプロファイルを送信しないテンプレートをレンダリング](render-template-api.md#best-effort)
 * [本文でプロファイルを送信するテンプレートをレンダリング](render-template-api.md#configurable-aggregation)

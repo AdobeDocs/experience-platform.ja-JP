@@ -5,16 +5,16 @@ badgeLimitedAvailability: label="限定提供" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '867'
 ht-degree: 23%
 
 ---
 
 # Audience Analysisの宛先
 
-[!UICONTROL Audience Analysis]の宛先を使用すると、[!DNL Adobe Experience Platform]人のオーディエンスデータを[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)にエンリッチできます。 生成されるエンリッチメントデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ja) レポートのディメンションとして使用できます。
+[!UICONTROL Audience Analysis]の宛先を使用して、[!DNL Adobe Experience Platform]のオーディエンスデータを[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)にエンリッチします。 生成されるエンリッチメントデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) レポートのディメンションとして使用できます。
 
 >[!AVAILABILITY]
 >
@@ -49,7 +49,7 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -60,10 +60,10 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -83,9 +83,9 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 >[!IMPORTANT]
 >
->宛先を作成するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先を作成するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先を作成するには、[宛先設定チュートリアル &#x200B;](../../ui/connect-destination.md)で説明されている手順に従います。
+この宛先を作成するには、[宛先設定チュートリアル ](../../ui/connect-destination.md)で説明されている手順に従います。
 
 ### 宛先の詳細 {#destination-details}
 
@@ -93,7 +93,7 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 * **[!UICONTROL Name]**：宛先名。
 * **[!UICONTROL Description]**：宛先の説明。
-* **[!UICONTROL Datastream ID]**：条件を満たすオーディエンスでエンリッチするデータストリーム ID。 このIDは、[&#x200B; データストリームマネージャー](/help/datastreams/overview.md)で取得できます。
+* **[!UICONTROL Datastream ID]**：条件を満たすオーディエンスでエンリッチするデータストリーム ID。 このIDは、[ データストリームマネージャー](/help/datastreams/overview.md)で取得できます。
 * **[!UICONTROL Integration alias]**：統合エイリアス。
 
 ### アラート {#alerts}
@@ -106,7 +106,7 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 ### ガバナンスポリシーと履行アクション {#governance-policy}
 
-このオプションのセクションでは、データガバナンスポリシーを定義し、オーディエンスが送信され、アクティブな場合に、使用されるデータがコンプライアンスに準拠していることを確認できます。
+このオプションのセクションでは、データガバナンスポリシーを定義し、オーディエンスが送信され、アクティブな場合に使用されるデータがコンプライアンスに準拠していることを確認できます。
 
 宛先の目的のマーケティングアクションの選択が完了したら、**[!UICONTROL Create]**&#x200B;を選択します。
 
@@ -114,7 +114,7 @@ Audience Analysisでは、次の表に示すIDのアクティベーションが�
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先を作成したら、宛先に対して目的のオーディエンスをアクティブ化できます。
 

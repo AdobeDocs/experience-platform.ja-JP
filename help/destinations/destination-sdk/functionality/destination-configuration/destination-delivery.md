@@ -2,16 +2,16 @@
 description: Destination SDK で作成された宛先に対して、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示す、宛先配信設定の設定方法を説明します。
 title: 宛先配信
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 79%
+source-wordcount: '639'
+ht-degree: 76%
 
 ---
 
 # 宛先配信
 
-宛先に書き出されたデータの配信先をより詳細に制御するには、Destination SDKで配信先の設定を指定できます。
+配信先に書き出したデータの配信先をより詳細に制御するには、Destination SDKを使用して配信先の設定を指定します。
 
 宛先配信セクションは、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示します。
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 ## サポートされる統合タイプ {#supported-integration-types}
 
-このページで説明される機能をサポートする統合のタイプについて詳しくは、以下の表を参照してください。
+このページで説明する機能をサポートする統合のタイプについて詳しくは、次の表を参照してください。
 
 | 統合タイプ | 機能のサポート |
 |---|---|

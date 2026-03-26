@@ -5,20 +5,20 @@ title: Flow Service API を使用した宛先データフローの更新
 type: Tutorial
 description: このチュートリアルでは、宛先データフローを更新する手順について説明します。 Flow Service APIを使用して、データフローを有効または無効にする、基本情報を更新する、オーディエンスと属性を追加および削除する方法を説明します。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2459'
-ht-degree: 29%
+source-wordcount: '2452'
+ht-degree: 27%
 
 ---
 
 # Flow Service API を使用した宛先データフローの更新
 
-このチュートリアルでは、宛先データフローを更新する手順について説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法を説明します。 Experience Platform UIを使用した宛先データフローの編集について詳しくは、[&#x200B; アクティベーションフローの編集](/help/destinations/ui/edit-activation.md)を参照してください。
+このチュートリアルでは、宛先データフローを更新する手順について説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法を説明します。 Experience Platform UIを使用した宛先データフローの編集について詳しくは、[ アクティベーションフローの編集](/help/destinations/ui/edit-activation.md)を参照してください。
 
 ## はじめに {#get-started}
 
-このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ &#x200B;](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[&#x200B; データのアクティベート &#x200B;](../ui/activation-overview.md)に関する手順に従ってください。
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ ](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[ データのアクティベート ](../ui/activation-overview.md)に関する手順に従ってください。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 29%
 このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて理解している必要もあります。
 
 * [宛先](../home.md): [!DNL Destinations]は、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティブ化できる宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 以下の節では、[!DNL Flow Service] APIを使用してデータフローを正常に更新するために知っておく必要がある追加情報を示します。
 
@@ -37,7 +37,7 @@ ht-degree: 29%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Experience Platform APIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform APIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -503,8 +503,8 @@ curl -X PATCH \
 | `value` | パラメーターの更新に使用する新しい値。 |
 | `id` | 宛先データフローに追加するオーディエンスのIDを指定します。 |
 | `name` | **（オプション）**。 宛先データフローに追加するオーディエンスの名前を指定します。 このフィールドは必須ではなく、名前を指定せずにオーディエンスを宛先データフローに正常に追加できます。 |
-| `filenameTemplate` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blobなどのバッチファイル書き出し先でデータフローにオーディエンスを追加する場合にのみ必要です。 <br>このフィールドは、宛先に書き出されるファイルのファイル名形式を決定します。 <br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されたファイルには、書き出されたオーディエンスのIDが含まれます。</li><li>`%SEGMENT_NAME%`: **（オプション）**。 書き出されたファイルには、書き出されたオーディエンスの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)`または`%TIMESTAMP%`: **（オプション）**。 ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`: **（オプション）**。 ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)」の節を参照してください。 |
-| `exportMode` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blobなどのバッチファイル書き出し先でデータフローにオーディエンスを追加する場合にのみ必要です。 <br>必須。 `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
+| `filenameTemplate` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blobなどのバッチファイル書き出し先でデータフローにオーディエンスを追加する場合にのみ必要です。 <br>このフィールドは、宛先に書き出されるファイルのファイル名形式を決定します。 <br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されたファイルには、書き出されたオーディエンスのIDが含まれます。</li><li>`%SEGMENT_NAME%`: **（オプション）**。 書き出されたファイルには、書き出されたオーディエンスの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)`または`%TIMESTAMP%`: **（オプション）**。 ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`: **（オプション）**。 ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先のアクティベーション チュートリアルの「[ ファイル名を設定](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)」の節を参照してください。 |
+| `exportMode` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blobなどのバッチファイル書き出し先でデータフローにオーディエンスを追加する場合にのみ必要です。 <br>必須。 `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。2つのオプションについて詳しくは、バッチ宛先アクティベーションのチュートリアルの「[完全ファイルを書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」と「[増分ファイルを書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | オーディエンスが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
 | `frequency` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blobなどのバッチファイル書き出し先でデータフローにオーディエンスを追加する場合にのみ必要です。 <br>必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
 | `triggerType` | *バッチ宛先*&#x200B;の場合のみ。 このフィールドは、`"DAILY_FULL_EXPORT"` セレクターで`frequency` モードを選択する場合にのみ必要です。 <br>必須。<br> <ul><li>毎日のExperience Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するには、`"AFTER_SEGMENT_EVAL"`を選択します。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>`"SCHEDULED"`を選択して、アクティブ化ジョブを特定の時間に実行します。 これにより、Experience Platform プロファイルデータが毎日同じ時間に書き出されますが、アクティベーションジョブが開始される前にバッチセグメンテーションジョブが完了したかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、`startTime`を追加して、毎日の書き出しをUTCのどの時点で行うべきかを示す必要もあります。</li></ul> |
@@ -633,7 +633,7 @@ curl -X PATCH \
 ]'
 ```
 
-ペイロードのプロパティについて詳しくは、[&#x200B; データフローにオーディエンスを追加](#add-segment)の節を参照してください。
+ペイロードのプロパティについて詳しくは、[ データフローにオーディエンスを追加](#add-segment)の節を参照してください。
 
 
 **応答**
@@ -873,8 +873,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用してオーディエンスやプロファイル属性を追加または削除するなど、宛先データフローのさまざまなコンポーネントを更新する方法について説明しました。 宛先について詳しくは、[宛先の概要](../home.md)を参照してください。
+[!DNL Flow Service] APIを使用してオーディエンスやプロファイル属性を追加または削除するなど、宛先データフローの様々なコンポーネントを更新する方法について説明しました。 宛先について詳しくは、[宛先の概要](../home.md)を参照してください。

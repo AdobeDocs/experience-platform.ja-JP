@@ -2,9 +2,9 @@
 description: ファイルベースの宛先に対するファイル形式オプションの設定
 title: Destination SDKを使用して、ファイルベースの宛先にファイル形式オプションを設定する方法を説明します。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 22%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 22%
 
 ## 概要 {#overview}
 
-Destination SDKでは、書き出したファイルの書式設定と圧縮オプションを、保存場所の下流の要件に合わせて幅広く調整できます。
+Destination SDKを使用すると、書き出したファイルの書式設定と圧縮オプションを、保存場所の下流の要件に合わせて幅広く調整できます。
 
 このページでは、Destination SDKを使用して、ファイルベースの宛先にファイル形式オプションを設定する方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
-以下の手順に進む前に、[Destination SDK入門](../../getting-started.md) ページを参照して、Destination SDK APIを操作するために必要なAdobe I/O認証情報およびその他の前提条件を取得する方法を確認してください。
+以下の手順に進む前に、[Destination SDK入門](../../getting-started.md) ページで、Destination SDK APIを操作するために必要なAdobe I/O認証情報およびその他の前提条件を取得する方法を参照してください。
 
 Adobeでは、次のドキュメントを読んでから先に進むことをお勧めします。
 
-* 使用可能なすべてのファイル形式オプションは、[&#x200B; ファイル形式設定](../../functionality/destination-server/file-formatting.md) セクションに詳細が記載されています。
+* 使用可能なすべてのファイル形式オプションは、[ ファイル形式設定](../../functionality/destination-server/file-formatting.md) セクションに詳細が記載されています。
 * Destination SDKを使用してファイルベースの宛先[を](../../guides/configure-file-based-destination-instructions.md)設定する手順を完了します。
 
 ## サーバーとファイル設定の作成 {#create-server-file-configuration}
@@ -108,11 +108,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!IMPORTANT]
 >
->この手順はオプションで、Experience Platform UIでユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[&#x200B; サーバーとファイル設定](#create-server-file-configuration)で設定されたデフォルト値に進みます。
+>この手順はオプションで、Experience Platform UIでユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[ サーバーとファイル設定](#create-server-file-configuration)で設定されたデフォルト値に進みます。
 
 この手順では、表示されるオプションを任意の順序でグループ化できます。また、選択したファイルタイプに基づいて、カスタムグループ化、ドロップダウンフィールド、条件付きグループ化を作成できます。 これらの設定はすべて、録画と以下のセクションに表示されます。
 
-![&#x200B; バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
+![ バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### ファイル形式オプションの順序 {#ordering}
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 次の手順 {#next-steps}
 
-この記事では、Destination SDKを使用して、書き出したファイルのカスタムファイル形式オプションを設定する方法について説明します。 次に、チームはファイルベースの宛先[の](../../../ui/activate-batch-profile-destinations.md) アクティベーションワークフローを使用して、宛先にデータを書き出すことができます。
+Destination SDKを使用して、書き出したファイルのカスタムファイル形式オプションを設定する方法を理解しました。 次に、チームはファイルベースの宛先[の](../../../ui/activate-batch-profile-destinations.md) アクティベーションワークフローを使用して、宛先にデータを書き出すことができます。

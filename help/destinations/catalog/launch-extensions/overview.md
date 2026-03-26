@@ -3,9 +3,9 @@ keywords: タグ拡張機能；タグ拡張機能；ローンチ先；プラッ�
 title: Adobe Experience Platformのタグ拡張機能
 description: Adobe Experience Platformは、Adobeの次世代のタグ管理機能を提供します。 Experience Platformなら、適切な顧客体験を実現するために必要なあらゆる分析タグ、マーケティングタグ、広告タグを容易にデプロイおよび管理できます。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '477'
 ht-degree: 22%
 
 ---
@@ -27,7 +27,7 @@ Experience Platform インターフェイスで拡張機能を検索するには
 
 ## タグ拡張機能の仕組み {#how-extensions-work}
 
-[&#x200B; タグ拡張機能](../../../tags/home.md#extensions)は、web サイトまたはモバイルアプリの機能を強化するコードパッケージです。 これには、生のイベントデータを[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)などの宛先に送信することが含まれますが、他の機能も提供できます。
+[ タグ拡張機能](../../../tags/home.md#extensions)は、web サイトまたはモバイルアプリの機能を強化するコードパッケージです。 これには、生のイベントデータを[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)などの宛先に送信することが含まれますが、他の機能も提供できます。
 
 タグとイベント転送拡張機能を区別することが重要です。 Experience Platform destinations ユーザーインターフェイスで表示される拡張機能は、*タグ拡張機能*&#x200B;です。 タグとイベント転送の違い[について詳しくは、イベント転送の概要を参照してください](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)。
 
@@ -45,9 +45,9 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## タグ拡張機能を使用する利点 {#extensions-benefits}
 
-Experience Platformのタグ機能は、Experience Cloudの既存のお客様は無料で利用できます。 このシステムは、インストール、設定、更新、削除ができる使いやすい拡張機能を介して、web サイトへのタグのデプロイメントを簡素化します。 タグを利用することで、web サイトへのフットプリントを小さく抑え、ページの読み込みを維持できます。
+Experience Platformのタグ機能は、Experience Cloudの既存のお客様は無料で利用できます。 このシステムは、インストール、設定、更新、削除ができる使いやすい拡張機能を介して、web サイトへのタグのデプロイメントを簡素化します。 タグを利用することで、web サイトへのフットプリントを削減し、ページの読み込みを高速化できます。
 
-拡張機能をタグ付けするためにオーディエンスをアクティブ化することはできませんが、特定の状況ではイベントデータのみを転送するようにルールを設定することができます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳細については、[&#x200B; タグのドキュメント &#x200B;](../../../tags/ui/managing-resources/rules.md)でルールについて説明しています。
+拡張機能をタグ付けするためにオーディエンスをアクティブ化することはできませんが、特定の状況ではイベントデータのみを転送するようにルールを設定することができます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳細については、[ タグのドキュメント ](../../../tags/ui/managing-resources/rules.md)でルールについて説明しています。
 
 ## 拡張機能の使用例 {#extensions-use-cases}
 

@@ -5,10 +5,10 @@ title: Flow Service APIを使用した宛先データフローの削除
 type: Tutorial
 description: Flow Service APIを使用して、バッチ宛先とストリーミング宛先にデータフローを削除する方法を説明します。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 44%
+source-wordcount: '552'
+ht-degree: 45%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 44%
 
 ## はじめに {#get-started}
 
-このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ &#x200B;](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[&#x200B; データのアクティベート &#x200B;](../ui/activation-overview.md)に関する手順に従ってください。
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ ](../catalog/overview.md)から目的の宛先を選択し、[宛先への接続](../ui/connect-destination.md)および[ データのアクティベート ](../ui/activation-overview.md)に関する手順に従ってください。
 
 このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて理解している必要もあります。
 
@@ -35,7 +35,7 @@ ht-degree: 44%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -86,12 +86,12 @@ curl -X DELETE \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、[!DNL Flow Service] APIを使用して、既存のデータフローを宛先に正常に削除しました。
+[!DNL Flow Service] APIを使用して、既存のデータフローを宛先に削除しました。
 
 ユーザーインターフェイスを使用してこれらの操作を実行する手順については、[UIでのデータフローの削除](../ui/delete-destinations.md)に関するチュートリアルを参照してください。
 
-[&#x200B; APIを使用して、宛先アカウントを](/help/destinations/api/delete-destination-account.md)削除[!DNL Flow Service]できます。
+[ APIを使用して、宛先アカウントを](/help/destinations/api/delete-destination-account.md)削除[!DNL Flow Service]できます。

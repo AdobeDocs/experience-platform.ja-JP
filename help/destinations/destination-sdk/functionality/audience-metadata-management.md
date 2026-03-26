@@ -2,10 +2,10 @@
 description: オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新または削除します。アドビは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。テンプレートを定義、テスト、送信すると、アドビはこのテンプレートを使用して、宛先への API 呼び出しを構造化します。
 title: オーディエンスメタデータの管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 69%
+source-wordcount: '1270'
+ht-degree: 64%
 
 ---
 
@@ -546,20 +546,20 @@ Experience Platform と API の間でオーディエンス ID、アクセスト�
 
 | マクロ | 説明 |
 |--- |--- |
-| `{{segment.alias}}` | Experience Platform でオーディエンスエイリアスにアクセスできるようにします。 |
-| `{{segment.name}}` | Experience Platform でオーディエンス名にアクセスできるようにします。 |
-| `{{segment.id}}` | Experience Platform でオーディエンス ID にアクセスできるようにします。 |
-| `{{customerData.accountId}}` | 宛先設定で設定したアカウント ID フィールドにアクセスできるようにします。 |
-| `{{oauth2ServiceAccessToken}}` | OAuth 2 の設定に基づいて、アクセストークンを動的に生成できるようにします。 |
-| `{{authData.accessToken}}` | API エンドポイントにアクセストークンを渡すことができるようにします。Experience Platform が期限切れでないトークンを使用して宛先に接続する場合は、`{{authData.accessToken}}` を使用します。そうでない場合は、`{{oauth2ServiceAccessToken}}` を使用してアクセストークンを生成します。 |
+| `{{segment.alias}}` | Experience Platformのオーディエンスエイリアスにアクセスします。 |
+| `{{segment.name}}` | Experience Platformのオーディエンス名にアクセスします。 |
+| `{{segment.id}}` | Experience Platformのオーディエンス IDにアクセスします。 |
+| `{{customerData.accountId}}` | 宛先設定で設定したアカウント ID フィールドにアクセスします。 |
+| `{{oauth2ServiceAccessToken}}` | OAuth 2設定に基づいてアクセストークンを動的に生成します。 |
+| `{{authData.accessToken}}` | アクセストークンをAPI エンドポイントに渡します。 Experience Platform が期限切れでないトークンを使用して宛先に接続する場合は、`{{authData.accessToken}}` を使用します。そうでない場合は、`{{oauth2ServiceAccessToken}}` を使用してアクセストークンを生成します。 |
 | `{{body.segments[0].segment.id}}` | 作成されたオーディエンスの一意の ID をキー `externalAudienceId` の値として返します。 |
 | `{{error.message}}` | Experience Platform UI でユーザーに表示されるエラーメッセージを返します。 |
-| `{{{segmentEnrichmentAttributes}}}` | 特定のオーディエンスに対するすべてのエンリッチメント属性にアクセスできます。  このマクロは、`create`、`update`、`delete` イベントでサポートされています。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
+| `{{{segmentEnrichmentAttributes}}}` | 特定のオーディエンスに対するすべてのエンリッチメント属性にアクセスします。  このマクロは、`create`、`update`、`delete` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
 | `{{destination.name}}` | 宛先の名前を返します。 |
 | `{{destination.sandboxName}}` | 宛先が設定されているExperience Platform サンドボックスの名前を返します。 |
 | `{{destination.id}}` | 宛先設定のIDを返します。 |
 | `{{destination.imsOrgId}}` | 宛先が設定されているIMS組織IDを返します。 |
-| `{{destination.enrichmentAttributes}}` | 宛先にマッピングされたすべてのオーディエンスのすべてのエンリッチメント属性にアクセスできます。 このマクロは、`createDestination`、`updateDestination`、`deleteDestination` イベントでサポートされています。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 宛先にマッピングされた特定の外部オーディエンスのエンリッチメント属性にアクセスできます。 エンリッチメント属性は、[&#x200B; カスタムアップロードオーディエンス &#x200B;](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[&#x200B; バッチオーディエンスアクティベーションガイド &#x200B;](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
+| `{{destination.enrichmentAttributes}}` | 宛先にマッピングされたすべてのオーディエンスのすべてのエンリッチメント属性にアクセスします。 このマクロは、`createDestination`、`updateDestination`、`deleteDestination` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 宛先にマッピングされた特定の外部オーディエンスのエンリッチメント属性にアクセスします。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences)でのみ使用できます。 エンリッチメント属性の選択がどのように機能するかについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)を参照してください。 |
 
 {style="table-layout:auto"}

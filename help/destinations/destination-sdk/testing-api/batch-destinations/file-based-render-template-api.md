@@ -2,10 +2,10 @@
 description: このページでは、/authoring/testing/template/render エンドポイントを使用して、宛先設定で定義された、テンプレート化された顧客データフィールドの外観を視覚化する方法について説明します。
 title: テンプレート化された顧客フィールドの検証
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 79%
+source-wordcount: '385'
+ht-degree: 80%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 79%
 
 ## はじめに {#getting-started}
 
-続行する前に、[&#x200B; はじめる前に &#x200B;](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 前提条件 {#prerequisites}
 
 `/template/render` エンドポイントを使用する前に、以下の条件を満たしていることを確認してください。
 
 * Destination SDK で作成した既存のファイルベースの宛先があり、[宛先カタログ](../../../ui/destinations-workspace.md)で確認できる。
-* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Experience Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
+* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Experience Platform UIで宛先との接続を参照する際に、URLからAPI呼び出しで使用する宛先インスタンス IDを取得します。
 
   ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -100,7 +100,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

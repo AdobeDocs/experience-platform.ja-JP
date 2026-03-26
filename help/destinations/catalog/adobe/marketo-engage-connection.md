@@ -1,10 +1,10 @@
 ---
 title: Marketo Engage Connection
-description: Marketo Engageは、マーケティング、広告、分析、コマースに対応する唯一のエンドツーエンドのCXM （顧客体験管理）ソリューションです。 CRMのリード管理や顧客エンゲージメントから、ABM （アカウントベースドマーケティング）や売上に関するアトリビューションに至るまで、施策を自動化および管理できます。
+description: Marketo Engageは、マーケティング、広告、分析、コマースに対応する唯一のエンドツーエンドのCXM （顧客体験管理）ソリューションです。 このツールは、CRMのリード管理や顧客エンゲージメントから、ABM （アカウントベースドマーケティング）や売上への貢献度に至るまで、アクティビティを自動化および管理するために役立ちます。
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1851'
 ht-degree: 16%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 ## 概要 {#overview}
 
-[!DNL Marketo Engage]は、マーケティング、広告、分析、コマース向けのエンドツーエンドの顧客体験管理（CXM）ソリューションです。 CRMのリード管理や顧客エンゲージメントから、ABM （アカウントベースドマーケティング）や売上に関するアトリビューションに至るまで、施策を自動化および管理できます。
+[!DNL Marketo Engage]は、マーケティング、広告、分析、コマース向けのエンドツーエンドの顧客体験管理（CXM）ソリューションです。 このツールは、CRMのリード管理や顧客エンゲージメントから、ABM （アカウントベースドマーケティング）や売上への貢献度に至るまで、アクティビティを自動化および管理するために役立ちます。
 
 この宛先を使用して、[!DNL Adobe Experience Platform]とMarketo Engageの間で、オーディエンスデータとプロファイル属性をリアルタイムで同期します。
 
@@ -45,7 +45,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 ## 前提条件 {#prerequisites}
 
-* 宛先を設定するユーザーは、Marketo インスタンスとパーティションで[&#x200B; ユーザーを編集](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
+* 宛先を設定するユーザーは、Marketo インスタンスとパーティションで[ ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
 * 同じAdobe [!DNL Real-Time CDP]組織のMarketo Engage インスタンスのみが、この宛先を設定するときに使用できます。
 * ユーザーをAdobe Admin Consoleで管理しているMarketo Engage インスタンスのみが、この宛先を使用できます。
 
@@ -55,7 +55,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| `DedupeField` | Marketoの既存のリードを識別して一致させるために使用されるフィールド。 | [&#x200B; マッピング &#x200B;](#mapping)手順で、重複排除フィールドとして使用するソースフィールド（`Email`またはその他のカスタム IDなど）をこのターゲット IDにマッピングします。 最適な結果を得るには、あらゆる顧客プロファイルで一貫して利用でき、独自のフィールドを選択します。 `ECID`は重複排除フィールドとしてサポートされていません。 |
+| `DedupeField` | Marketoの既存のリードを識別して一致させるために使用されるフィールド。 | [ マッピング ](#mapping)手順で、重複排除フィールドとして使用するソースフィールド（`Email`またはその他のカスタム IDなど）をこのターゲット IDにマッピングします。 最適な結果を得るには、あらゆる顧客プロファイルで一貫して利用でき、独自のフィールドを選択します。 `ECID`は重複排除フィールドとしてサポートされていません。 |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> <br> |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -119,9 +119,9 @@ Marketoでは、選択した&#x200B;**[!UICONTROL Marketo deduplication field]**
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -129,13 +129,13 @@ Marketoでは、選択した&#x200B;**[!UICONTROL Marketo deduplication field]**
 
 宛先に対する認証を行うには、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-宛先への認証方法を示す![&#x200B; スクリーンショット &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
+宛先への認証方法を示す![ スクリーンショット ](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-宛先の詳細を入力する方法を示す![&#x200B; サンプルのスクリーンショット &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
+宛先の詳細を入力する方法を示す![ サンプルのスクリーンショット ](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
@@ -145,8 +145,8 @@ Marketoでは、選択した&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Audience and profile]**: Marketo リストにオーディエンスメンバーを追加し、プロファイル情報を最新の状態に保つために、このオプションを選択します。
    * **[!UICONTROL Profile only]**: Experience Platformの最新の情報を使用してMarketoのリードプロファイルを最新の状態に保ちたい場合は、このオプションを選択します。
    * **[!UICONTROL Audience only]**: プロファイル情報を更新せずにMarketo リストにオーディエンスメンバーを追加する場合は、このオプションを選択します。
-* **[!UICONTROL Partition]**: *パーティションの選択は、**[!UICONTROL Profile only]**&#x200B;または&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同期タイプ*&#x200B;を選択した場合にのみ使用できます。 選択したワークスペースに関連付けられているMarketo パーティション IDを選択します。 これにより、書き出されたデータを受け取るMarketoのリードパーティションを指定できます。 特定のパーティションを選択しない場合、データはMarketoの&#x200B;**[!UICONTROL Default]** パーティションに送信されます。
-* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用するMarketo重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、そのフィールドをMarketoの[検索可能フィールド &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo-developer/marketo/rest/lead-database/lead-database)としてマークする必要があります。
+* **[!UICONTROL Partition]**: *パーティションの選択は、**[!UICONTROL Profile only]**または&#x200B;**[!UICONTROL Audience and profile]**同期タイプ*&#x200B;を選択した場合にのみ使用できます。 選択したワークスペースに関連付けられているMarketo パーティション IDを選択します。 これは、書き出されたデータを受け取るMarketoのリードパーティションを指定します。 特定のパーティションを選択しない場合、データはMarketoの&#x200B;**[!UICONTROL Default]** パーティションに送信されます。
+* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用するMarketo重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、そのフィールドをMarketoの[検索可能フィールド ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)としてマークする必要があります。
 
   >[!NOTE]
   >
@@ -166,8 +166,8 @@ Marketoでは、選択した&#x200B;**[!UICONTROL Marketo deduplication field]**
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -183,11 +183,11 @@ Marketoでリードを正常に作成するには、次の必須ターゲット�
 
 `email`を重複排除フィールドとして使用している場合は、次の画像に示すように、`firstName`属性と`lastName`属性もマッピングする必要があります。
 
-重複排除フィールドとして電子メールを使用する場合に必要なマッピングを示す![&#x200B; スクリーンショット &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
+重複排除フィールドとして電子メールを使用する場合に必要なマッピングを示す![ スクリーンショット ](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
 
 別の重複排除フィールドを使用している場合は、次の画像に示すように、3つの必須属性（`firstName`、`lastName`、`email`）をすべて手動でマッピングする必要があります。
 
-重複排除フィールドとして電子メールを使用しない場合に必要なマッピングを示す![&#x200B; スクリーンショット &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
+重複排除フィールドとして電子メールを使用しない場合に必要なマッピングを示す![ スクリーンショット ](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

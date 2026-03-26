@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気のトピック；アラート
 description: データフローの作成時にアラートを購読し、フロー実行のステータス、成功、失敗に関するアラートメッセージを受け取ることができます。
 title: コンテキスト内宛先アラートを購読
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 11%
+source-wordcount: '906'
+ht-degree: 12%
 
 ---
 
 # コンテキスト内宛先アラートを購読
 
-[!DNL Adobe Experience Platform]では、[!DNL Adobe Experience Platform]件のアクティビティに関するイベントベースのアラートを購読できます。 アラートにより、[[!DNL Observability Insights] API](../../observability/api/overview.md)をポーリングして、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、エラーが発生したかどうかを確認する必要がなくなります。
+[!DNL Adobe Experience Platform]を使用して、[!DNL Adobe Experience Platform]件のアクティビティに関するイベントベースのアラートを購読します。 アラートにより、[[!DNL Observability Insights] API](../../observability/api/overview.md)をポーリングして、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、エラーが発生したかどうかを確認する必要がなくなります。
 
 データフローを作成する際にアラートを購読すると、フロー実行のステータス、成功、失敗に関するアラートメッセージを受け取ることができます。
 
@@ -23,8 +23,8 @@ ht-degree: 11%
 このドキュメントでは、[!DNL Adobe Experience Platform]の次のコンポーネントに関する実務的な理解が必要です。
 
 * [宛先](../home.md)：宛先プラットフォームとの事前定義済みの統合により、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティベートできます。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [&#x200B; オブザーバビリティ &#x200B;](../../observability/home.md): [!DNL Observability Insights]を使用すると、統計指標とイベント通知を使用してExperience Platform アクティビティを監視できます。
-   * [&#x200B; アラート &#x200B;](../../observability/alerts/overview.md): Experience Platformの操作で特定の条件に達した場合（システムのしきい値に達した場合に発生する可能性がある問題など）、Experience Platformは、それらを購読した組織内のユーザーに対してアラートメッセージを配信できます。
+* [ オブザーバビリティ ](../../observability/home.md): [!DNL Observability Insights]を使用して、統計的指標とイベント通知を通じてExperience Platform アクティビティを監視します。
+   * [ アラート ](../../observability/alerts/overview.md): Experience Platformの操作で特定の条件に達した場合（システムのしきい値に達した場合に発生する可能性がある問題など）、Experience Platformは、それらを購読した組織内のユーザーに対してアラートメッセージを配信できます。
 
 ## UI でのアラートの登録 {#subscribe-destination-alerts}
 
@@ -38,7 +38,7 @@ ht-degree: 11%
 >
 >データフローのメールベースのアラート通知を受け取るには、Experience Platform アカウントのメールのインスタント通知を有効にする必要があります。
 
-[!UICONTROL Configure new destination]宛先接続[&#x200B; ワークフローの](connect-destination.md) ステップで、データフローのアラートを有効にできます。
+[!UICONTROL Configure new destination]宛先接続[ ワークフローの](connect-destination.md) ステップで、データフローのアラートを有効にできます。
 
 宛先アラートセクションを示す![UI画像。](../assets/ui/alerts/destination-alerts.png)
 
@@ -87,7 +87,7 @@ Experience Platformの通知アイコンを表示する![UI画像](../assets/ui/
 
 ページの下半分には、データフロー実行ステージ中に発生した[!UICONTROL Dataflow run errors]が表示されます。 ここから、エラー診断をプレビューするか、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)を使用して、エラー診断またはデータフローに対応するファイルマニフェストをダウンロードできます。
 
-![&#x200B; データフロー実行の詳細ページを示すUI画像。エラーセクションにハイライトが表示されている。](../assets/ui/alerts/dataflow-run-error.png)
+![ データフロー実行の詳細ページを示すUI画像。エラーセクションにハイライトが表示されている。](../assets/ui/alerts/dataflow-run-error.png)
 
 データフローエラーの処理について詳しくは、[UIでの宛先データフローの監視](../../dataflows/ui/monitor-destinations.md)に関するガイドを参照してください。
 
@@ -95,7 +95,7 @@ Experience Platformの通知アイコンを表示する![UI画像](../assets/ui/
 
 データフローのアラートも電子メールで配信されます。 メール本文でデータフロー名を選択すると、データフローに関する詳細情報が表示されます。
 
-![&#x200B; アラートメールのスクリーンショット &#x200B;](../assets/ui/alerts/email.png)
+![ アラートメールのスクリーンショット ](../assets/ui/alerts/email.png)
 
 UI アラートと同様に、[!UICONTROL Dataflow run overview] ページが表示され、データフローに関連するエラーを調査するためのインターフェイスが提供されます。
 
@@ -117,4 +117,4 @@ UI アラートと同様に、[!UICONTROL Dataflow run overview] ページが表
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、宛先データフローのインコンテキストアラートを購読する方法に関するステップバイステップガイドを提供しました。 詳しくは、[&#x200B; アラート UI ガイド &#x200B;](../../observability/alerts/ui.md)を参照してください。
+宛先データフローのインコンテキストアラートを購読できるようになりました。 詳しくは、[ アラート UI ガイド ](../../observability/alerts/ui.md)を参照してください。

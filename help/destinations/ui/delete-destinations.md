@@ -4,9 +4,9 @@ title: 宛先の削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UIで既存の宛先を削除する手順を説明します
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '394'
 ht-degree: 26%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 26%
 
 次の手順に従って、[!UICONTROL Browse] タブから宛先を削除します。
 
-1. [Experience Platform UI](https://platform.adobe.com/)にログインし、左側のナビゲーションバーから「**[!UICONTROL Destinations]**」を選択します。 既存の宛先を表示するには、上部ヘッダーから「**[!UICONTROL Browse]**」を選択します。
+1. [Experience Platform UI](https://platform.adobe.com/)に移動し、左側のナビゲーションバーから&#x200B;**[!UICONTROL Destinations]**&#x200B;を選択します。 上部ヘッダーから「**[!UICONTROL Browse]**」を選択して、既存の宛先を表示します。
 
    ![宛先を参照](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,18 +36,18 @@ ht-degree: 26%
 
    ![宛先を絞り込む](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 名前列の![詳細ボタン &#x200B;](/help/images/icons/more.png) ボタンを選択し、![削除ボタン &#x200B;](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;を選択して、既存の宛先接続を削除します。
+3. 名前列の![詳細ボタン ](/help/images/icons/more.png) ボタンを選択し、![削除ボタン ](/help/images/icons/delete.png) **[!UICONTROL Delete]**を選択して、既存の宛先接続を削除します。
    ![宛先を削除](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 宛先接続の削除を確認するには、**[!UICONTROL Delete]**&#x200B;を選択します。
 
    ![宛先の削除を確認](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## 宛先の詳細ページから宛先を削除する{#delete-destination-details-page}
+## 宛先の詳細ページから宛先を削除する {#delete-destination-details-page}
 
 宛先の詳細ページから宛先を削除するには、次の手順に従います。
 
-1. [Experience Platform UI](https://platform.adobe.com/)にログインし、左側のナビゲーションバーから「**[!UICONTROL Destinations]**」を選択します。 既存の宛先を表示するには、上部ヘッダーから「**[!UICONTROL Browse]**」を選択します。
+1. [Experience Platform UI](https://platform.adobe.com/)に移動し、左側のナビゲーションバーから&#x200B;**[!UICONTROL Destinations]**&#x200B;を選択します。 上部ヘッダーから「**[!UICONTROL Browse]**」を選択して、既存の宛先を表示します。
 
    ![宛先を参照](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -61,7 +61,7 @@ ht-degree: 26%
 
    * 宛先に既存のデータフローがある場合は、[!UICONTROL Dataflow runs] タブに移動します。
 
-     ![&#x200B; データフロー実行タブ &#x200B;](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![ データフロー実行タブ ](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 宛先に既存のデータフローがない場合は、オーディエンスのアクティベーションを開始できる空のページに移動します。
 
@@ -75,6 +75,6 @@ ht-degree: 26%
 
    ![宛先の削除の確認](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-   >[!NOTE]
-   >
-   >サーバーの負荷によっては、[!DNL Experience Platform]が宛先を削除するのに数分かかる場合があります。
+>[!NOTE]
+>
+>サーバーの負荷によっては、[!DNL Experience Platform]が宛先を削除するのに数分かかる場合があります。

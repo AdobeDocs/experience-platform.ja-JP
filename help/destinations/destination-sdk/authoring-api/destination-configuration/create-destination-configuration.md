@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK を通じて宛先設定を作成するための API 呼び出しの構築方法を説明します。
 title: 宛先設定の作成
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 87%
+source-wordcount: '1206'
+ht-degree: 88%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 87%
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](../../getting-started.md)を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 宛先設定の作成 {#create}
 
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。<br/><br/>これらの設定について詳しくは、[顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)を参照してください。 |
 | `customerDataFields.default` | 文字列 | デフォルト値を `enum` リストから定義します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに「`^[A-Za-z]+$`」と入力します。<br/><br/>これらの設定について詳しくは、[顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)を参照してください。 |
-| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=ja#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestarという宛先には、`https://www.adobe.com/go/destinations-moviestar-en`を使用します。 このリンクは、アドビが宛先をライブに設定してドキュメントが公開された後でのみ機能することに注意してください。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。ドキュメント リンクを示す![Experience Platform UI画像。](../../assets/authoring-api/destination-configuration/documentation-url.png "ドキュメント URL"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | 文字列 | [!DNL Adobe Experience Platform]で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=ja#destination-categories)をお読みください。以下のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。 |
+| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestarという宛先には、`https://www.adobe.com/go/destinations-moviestar-en`を使用します。 このリンクは、アドビが宛先をライブに設定してドキュメントが公開された後でのみ機能することに注意してください。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。ドキュメント リンクを示す![Experience Platform UI画像。](../../assets/authoring-api/destination-configuration/documentation-url.png "ドキュメント URL"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | 文字列 | [!DNL Adobe Experience Platform]で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories)をお読みください。以下のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。 |
 | `uiAttributes.connectionType` | 文字列 | 宛先に応じた接続のタイプ。サポートされている値： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。API ベースの統合の場合は `Streaming` に設定し、宛先にファイルを書き出す場合は `Batch` に設定する。 |
 | `identityNamespaces.externalId.acceptsAttributes` | ブール | 顧客が標準的なプロファイル属性を設定中の ID にマッピングできるかどうかを示します。 |
@@ -235,7 +235,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

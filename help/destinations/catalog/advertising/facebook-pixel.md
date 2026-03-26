@@ -3,9 +3,9 @@ keywords: facebook pixel extensions;facebook pixel extension;facebook pixel dest
 title: Facebook Pixel 拡張機能
 description: Facebook Pixel拡張機能は、Adobe Experience Platformの広告配信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '419'
 ht-degree: 59%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-[!DNL Facebook Pixel]は、Web サイト上でユーザーが実行するアクションを理解することで、広告の効果を測定できる分析ツールです。
+[!DNL Facebook Pixel]は、ユーザーがweb サイト上で実行するアクションを把握して、広告の効果を測定するための分析ツールです。
 
 [!DNL Facebook Pixel]は[!DNL Adobe Experience Platform]の広告拡張機能です。 この拡張機能について詳しくは、[Facebook ピクセルの Web サイト](https://developers.facebook.com/docs/facebook-pixel/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Facebook ピクセル拡張機能](../../assets/catalog/advertising/facebook-pixel/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 59%
 
 [!DNL Facebook Pixel] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

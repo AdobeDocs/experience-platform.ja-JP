@@ -4,9 +4,9 @@ title: Flow Service APIを使用した宛先接続の編集
 type: Tutorial
 description: Flow Service APIを使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 24%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 24%
 
 ## はじめに {#get-started}
 
-このチュートリアルでは、有効なデータフローIDが必要です。 有効なデータフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ &#x200B;](../catalog/overview.md)から目的の宛先を選択し、[宛先に接続](../ui/connect-destination.md)および[&#x200B; データをアクティブ化](../ui/activation-overview.md)するための手順に従ってください。
+このチュートリアルでは、有効なデータフローIDが必要です。 有効なデータフローIDがない場合は、このチュートリアルを試す前に、[宛先カタログ ](../catalog/overview.md)から目的の宛先を選択し、[宛先に接続](../ui/connect-destination.md)および[ データをアクティブ化](../ui/activation-overview.md)するための手順に従ってください。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ ht-degree: 24%
 このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて理解している必要もあります。
 
 * [宛先](../home.md): [!DNL Destinations]は、[!DNL Adobe Experience Platform]からのデータをシームレスにアクティブ化できる宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 以下の節では、[!DNL Flow Service] APIを使用してデータフローを正常に更新するために知っておく必要がある追加情報を示します。
 
@@ -40,7 +40,7 @@ ht-degree: 24%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Experience Platform APIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform APIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -463,8 +463,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して宛先接続の様々なコンポーネントを更新する方法について説明しました。 宛先について詳しくは、[宛先の概要](../home.md)を参照してください。
+[!DNL Flow Service] APIを使用して、宛先接続の様々なコンポーネントを更新する方法を学習しました。 宛先について詳しくは、[宛先の概要](../home.md)を参照してください。

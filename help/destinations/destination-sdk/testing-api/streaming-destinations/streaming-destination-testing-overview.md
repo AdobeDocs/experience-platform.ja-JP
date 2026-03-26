@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、ストリーミング宛先設定を公開する前にテストする方法を説明します。
 title: ストリーミング宛先テスト API
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 100%
+source-wordcount: '510'
+ht-degree: 93%
 
 ---
 
@@ -42,7 +42,7 @@ Destination SDK の一部として、アドビは、宛先の設定およびテ�
 
 リクエスト時にプロファイルを追加してもしなくても、宛先テスト API エンドポイントへの呼び出しを行うことができます。
 
-リクエスト時に任意のプロファイルを追加しない場合、アドビでは、ユーザーのためにこれらを内部で生成して、リクエストに追加します。プロファイルを生成してこのリクエストで使用したい場合は、[サンプルプロファイル生成 API リファレンス](../../testing-api/streaming-destinations/sample-profile-generation-api.md)を参照してください。[API リファレンス](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)に示すように、ソース XDM スキーマに基づいてプロファイルを生成する必要があります。ソーススキーマは、使用している sandbox の[結合スキーマ](../../../../profile/ui/union-schema.md)であることに注意してください。
+リクエスト時に任意のプロファイルを追加しない場合、アドビでは、ユーザーのためにこれらを内部で生成して、リクエストに追加します。このリクエストで使用するプロファイルを生成する場合は、[ サンプルプロファイル生成API リファレンス ](../../testing-api/streaming-destinations/sample-profile-generation-api.md)を参照してください。 [API リファレンス](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)に示すように、ソース XDM スキーマに基づいてプロファイルを生成する必要があります。ソーススキーマは、使用している sandbox の[結合スキーマ](../../../../profile/ui/union-schema.md)であることに注意してください。
 
 応答には、宛先リクエスト処理の結果が含まれます。リクエストには、3 つの主要セクションが含まれます。
 
@@ -231,7 +231,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-リクエストおよび応答パラメーターについて詳しくは、[宛先テスト API 操作](../../testing-api/streaming-destinations/destination-testing-api.md)を参照してください。
+リクエストと応答パラメーターの詳細については、[宛先テスト API操作](../../testing-api/streaming-destinations/destination-testing-api.md)を参照してください。
 
 ## 次の手順 {#next-steps}
 

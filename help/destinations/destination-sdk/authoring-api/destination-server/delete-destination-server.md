@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先サーバー設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の削除
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 84%
+source-wordcount: '328'
+ht-degree: 85%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 84%
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に、[&#x200B; はじめる前に &#x200B;](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 宛先サーバー設定の削除 {#delete}
 
@@ -66,7 +66,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

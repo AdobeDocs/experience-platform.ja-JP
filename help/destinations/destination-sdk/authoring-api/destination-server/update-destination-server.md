@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先サーバー設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の更新
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 93%
+source-wordcount: '1098'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 93%
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に、[&#x200B; はじめる前に &#x200B;](../../getting-started.md) を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 宛先サーバー設定の更新 {#update}
 
@@ -98,7 +98,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。オプションは、`GET`、`PUT`、`PUT`、`DELETE`、`PATCH` です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `httpTemplate.requestBody.value` | 文字列 | *必須。* この文字列は、Experience Platform顧客のデータを、ご利用のサービスが想定する形式に変換する、文字エスケープバージョンです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
+| `httpTemplate.requestBody.value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformのお客様のデータをサービスが期待する形式に変換する文字エスケープ版です。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[ プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
 | `httpTemplate.contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
 {style="table-layout:auto"}
@@ -756,7 +756,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) および [&#x200B; リクエストヘッダーエラー &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

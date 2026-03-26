@@ -5,9 +5,9 @@ title: Adobe Experience PlatformのFlow Service APIを使用して、ストリ�
 description: このドキュメントでは、Adobe Experience Platform APIを使用したストリーミング宛先の作成について説明します
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 40%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 40%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
 >[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
@@ -28,7 +28,7 @@ ht-degree: 40%
 
 ![概要 – ストリーミング宛先を作成し、オーディエンスをアクティブ化する手順](../assets/api/streaming-destination/overview.png)
 
-Experience Platformのユーザーインターフェイスを使用して宛先に接続し、データをアクティベートする場合は、[宛先の接続](../ui/connect-destination.md)および[&#x200B; ストリーミングオーディエンスの書き出し宛先へのオーディエンスデータのアクティベート &#x200B;](../ui/activate-segment-streaming-destinations.md)のチュートリアルを参照してください。
+Experience Platformのユーザーインターフェイスを使用して宛先に接続し、データをアクティベートする場合は、[宛先の接続](../ui/connect-destination.md)および[ ストリーミングオーディエンスの書き出し宛先へのオーディエンスデータのアクティベート ](../ui/activate-segment-streaming-destinations.md)のチュートリアルを参照してください。
 
 ## 基本を学ぶ {#get-started}
 
@@ -36,7 +36,7 @@ Experience Platformのユーザーインターフェイスを使用して宛先�
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog]は、Experience Platform内のデータの場所とリネージュの記録システムです。
-* [&#x200B; サンドボックス &#x200B;](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 以下の節では、Experience Platformのストリーミング宛先にデータをアクティベートするために知っておく必要がある追加情報を提供します。
 
@@ -53,7 +53,7 @@ Experience Platformのユーザーインターフェイスを使用して宛先�
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values}
 
-Experience Platform APIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform APIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -273,9 +273,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{ACCESS_ID}`: *[!DNL Amazon Kinesis]接続について。* Amazon Kinesis ストレージの場所のアクセス ID。
 * `{SECRET_KEY}`: *[!DNL Amazon Kinesis]接続について。* Amazon Kinesis ストレージの場所の秘密鍵。
 * `{REGION}`: *[!DNL Amazon Kinesis]接続について。* Experience Platformがデータをストリーミングする[!DNL Amazon Kinesis] アカウントのリージョン。
-* `{SAS_KEY_NAME}`: *[!DNL Azure Event Hubs]接続について。* SAS キー名を入力します。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
-* `{SAS_KEY}`: *[!DNL Azure Event Hubs]接続について。* SAS キーを入力します。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
-* `{EVENT_HUB_NAMESPACE}`: *[!DNL Azure Event Hubs]接続について。* Experience Platformがデータをストリーミングする[!DNL Azure Event Hubs]名前空間を入力します。 詳しくは、[&#x200B; ドキュメントの「](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) イベントハブ名前空間の作成[!DNL Microsoft]」を参照してください。
+* `{SAS_KEY_NAME}`: *[!DNL Azure Event Hubs]接続について。* SAS キー名を入力します。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
+* `{SAS_KEY}`: *[!DNL Azure Event Hubs]接続について。* SAS キーを入力します。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
+* `{EVENT_HUB_NAMESPACE}`: *[!DNL Azure Event Hubs]接続について。* Experience Platformがデータをストリーミングする[!DNL Azure Event Hubs]名前空間を入力します。 詳しくは、[ ドキュメントの「](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) イベントハブ名前空間の作成[!DNL Microsoft]」を参照してください。
 
 **応答**
 
@@ -332,7 +332,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
 * `{NAME_OF_DATA_STREAM}`: *[!DNL Amazon Kinesis]接続について。* [!DNL Amazon Kinesis] アカウントの既存のデータストリームの名前を指定します。 Experience Platformはこのストリームにデータを書き出します。
 * `{REGION}`: *[!DNL Amazon Kinesis]接続について。* Experience PlatformがデータをストリーミングするAmazon Kinesis アカウントのリージョン。
-* `{EVENT_HUB_NAME}`: *[!DNL Azure Event Hubs]接続について。* Experience Platformがデータをストリーミングする[!DNL Azure Event Hub]の名前を入力します。 詳しくは、[&#x200B; ドキュメントの「](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) イベントハブの作成[!DNL Microsoft]」を参照してください。
+* `{EVENT_HUB_NAME}`: *[!DNL Azure Event Hubs]接続について。* Experience Platformがデータをストリーミングする[!DNL Azure Event Hub]の名前を入力します。 詳しくは、[ ドキュメントの「](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) イベントハブの作成[!DNL Microsoft]」を参照してください。
 
 **応答**
 
@@ -405,7 +405,7 @@ curl -X POST \
 
 * `{FLOW_SPEC_ID}`: プロファイルベースの宛先のフロー仕様IDは`71471eba-b620-49e4-90fd-23f1fa0174d8`です。 この値を呼び出しに使用します。
 * `{SOURCE_CONNECTION_ID}`：手順「[Experience Platform データへの接続](#connect-to-your-experience-platform-data)」で取得したソース接続 ID を使用します。
-* `{TARGET_CONNECTION_ID}`：手順[&#x200B; ストリーミング宛先への接続](#connect-to-streaming-destination)で取得したターゲット接続IDを使用します。
+* `{TARGET_CONNECTION_ID}`：手順[ ストリーミング宛先への接続](#connect-to-streaming-destination)で取得したターゲット接続IDを使用します。
 
 **応答**
 
@@ -474,7 +474,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
 | `{ETAG}` | 前の手順`{ETAG}` データフローを作成[の応答から](#create-dataflow)を取得します。 前の手順の応答形式がエスケープされた引用符です。 リクエストのヘッダーでエスケープされていない値を使用する必要があります。 次の例を参照してください：<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス IDを指定します。 アクティブ化するオーディエンスのオーディエンス IDを取得するには、Experience Platform API リファレンスの「[&#x200B; オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)」を参照してください。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス IDを指定します。 アクティブ化するオーディエンスのオーディエンス IDを取得するには、Experience Platform API リファレンスの「[ オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)」を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、`add`操作を使用します。 |
 | `path` | 更新するフローの部分を定義します。データフローにオーディエンスを追加する場合は、例で指定したパスを使用します。 |
@@ -565,7 +565,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> プロファイル属性と手順[新しい宛先にデータをアクティブ化](#activate-data)のオーディエンスに加えて、[!DNL AWS Kinesis]と[!DNL Azure Event Hubs]の書き出しデータには、ID マップに関する情報も含まれます。 これは、書き出されたプロファイルのIDを表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど）。 以下の例を参照してください。
+> プロファイル属性と手順[新しい宛先にデータをアクティブ化](#activate-data)のオーディエンスに加えて、[!DNL AWS Kinesis]と[!DNL Azure Event Hubs]の書き出しデータには、ID マップに関する情報も含まれます。 これは、書き出されたプロファイルのIDを表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、モバイル ID、Google ID、電子メールアドレスなど）。 以下の例を参照してください。
 
 ```json
 {
@@ -625,18 +625,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 添付された[!DNL Postman] コレクションを使用して宛先に正常に接続するには、次の手順に従います。
 
 * [!DNL Postman]をダウンロードしてインストールします。
-* [&#x200B; ダウンロード &#x200B;](../assets/api/streaming-destination/DestinationPostmanCollection.zip)して、添付されたコレクションを解凍します。
+* [ ダウンロード ](../assets/api/streaming-destination/DestinationPostmanCollection.zip)して、添付されたコレクションを解凍します。
 * 対応するフォルダーからコレクションを[!DNL Postman]に読み込みます。
 * この記事の指示に従って環境変数を入力します。
 * この記事の指示に基づいて、[!DNL API]から[!DNL Postman]要求を実行します。
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、Experience Platformを任意のストリーミング宛先のいずれかに正常に接続し、それぞれの宛先へのデータフローを設定できます。 送信データは、顧客分析やその他の実行したいデータ操作の宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
+Experience Platformを任意のストリーミング宛先のいずれかに正常に接続し、それぞれの宛先へのデータフローを設定しました。 送信データは、顧客分析やその他の実行したいデータ操作の宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

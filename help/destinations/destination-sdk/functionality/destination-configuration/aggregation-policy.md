@@ -2,16 +2,16 @@
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 80%
+source-wordcount: '1225'
+ht-degree: 75%
 
 ---
 
 # 集計ポリシー
 
-API エンドポイントにデータを書き出す際に最大の効率を確保するために、様々な設定を使用して、書き出されたプロファイルをより大きいまたは小さいバッチに集計したり、ID でグループ化したりできます。これにより、API エンドポイントに対するダウンストリームの制限（レート制限、API呼び出しごとのID数など）に合わせてデータの書き出しを調整できます。
+API エンドポイントにデータを書き出す際に最大の効率を確保するために、様々な設定を使用して、書き出されたプロファイルをより大きいまたは小さいバッチに集計したり、ID でグループ化したりできます。これにより、API エンドポイントのダウンストリーム制限（レート制限、API呼び出しごとのID数など）に合わせてデータの書き出しを調整できます。
 
 設定可能な集計を使用して、Destination SDK が提供する設定を深く掘り下げたり、ベストエフォート集計を使用して、API 呼び出しをできる限りバッチ化するように Destination SDK に指示したりできます。
 
@@ -26,7 +26,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 
 この記事では、宛先に使用できる、サポートされるすべての集計ポリシー設定について説明します。
 
-このドキュメントを読み終えたら、[テンプレートの使用](../../functionality/destination-server/message-format.md#using-templating)および[集計キーの例](../../functionality/destination-server/message-format.md#template-aggregation-key)に関するドキュメントを参照して、選択した集計ポリシーに基づいてメッセージ変換テンプレートに集計ポリシーを含める方法を理解します。
+このドキュメントを読んだ後、[ テンプレートを使用する](../../functionality/destination-server/message-format.md#using-templating)に関するドキュメントと[集計キーの例](../../functionality/destination-server/message-format.md#template-aggregation-key)を参照して、選択した集計ポリシーに基づいてメッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 
 ## サポートされる統合タイプ {#supported-integration-types}
 
-このページで説明される機能をサポートする統合のタイプについて詳しくは、以下の表を参照してください。
+このページで説明する機能をサポートする統合のタイプについて詳しくは、次の表を参照してください。
 
 | 統合タイプ | 機能のサポート |
 |---|---|
@@ -81,7 +81,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | `aggregationType` | 文字列 | 宛先が使用する必要がある、集計ポリシーのタイプを示します。サポートされる集計タイプ： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | 整数 | Adobe Experience Platform は、1 回の HTTP 呼び出しで書き出された複数のプロファイルを集計できます。<br><br>この値は、1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を示します。これはベストエフォートの集計であることに注意してください。例えば、値100を指定した場合、Experience Platformは呼び出し時に100未満の任意の数のプロファイルを送信できます。 <br><br>サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を `1` に設定します。 |
 | `bestEffortAggregation.splitUserById` | ブール | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが 1 回の呼び出しで 1 つの ID しか受け入れない場合、特定の ID 名前空間に対して、このフラグを `true` に設定します。 |
-| `bestEffortAggregation.aggregationKey` | オブジェクト | *オプション*。以下で説明するパラメーターに基づいて、宛先にマッピングされた書き出されたプロファイルを集計できます。 集計が必要ない場合は、このパラメーターを省略するか、`null`に設定できます。 指定すると、設定可能な集計で集計キーと同じように機能します。 |
+| `bestEffortAggregation.aggregationKey` | オブジェクト | *オプション*。以下で説明するパラメーターに基づいて、宛先にマッピングされた書き出されたプロファイルを集計します。 集計が必要ない場合は、このパラメーターを省略するか、`null`に設定できます。 指定すると、設定可能な集計で集計キーと同じように機能します。 |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | ブール | 宛先に書き出されたプロファイルをオーディエンス ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | ブール | 宛先に書き出されたプロファイルをオーディエンス ID とオーディエンスステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | ブール | 宛先に書き出されたプロファイルを ID 名前空間でグループ化する場合は、このパラメーターを `true` に設定します。 |
@@ -96,7 +96,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 
 ## 設定可能な集計 {#configurable-aggregation}
 
-設定可能な集計は、同じ呼び出しに何千ものプロファイルを含む、大きなバッチを取りたい場合に最適です。このオプションでは、複雑な集計ルールに基づいて、書き出されたプロファイルを集計することもできます。
+設定可能な集計は、同じ呼び出しに何千ものプロファイルを含む、大きなバッチを取りたい場合に最適です。このオプションは、複雑な集計ルールに基づいて書き出されたプロファイルを集計することもサポートしています。
 
 以下の設定例に、設定可能な集計設定を示します。ベストエフォート集計の例については、[ベストエフォート集計](#best-effort-aggregation)の節を参照してください。設定可能な集計に適用されるパラメーターは、以下の表に記載されています。
 
@@ -136,7 +136,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | `configurableAggregation.splitUserById` | ブール | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが 1 回の呼び出しで 1 つの ID しか受け入れない場合、特定の ID 名前空間に対して、このフラグを `true` に設定します。 |
 | `configurableAggregation.maxBatchAgeInSecs` | 整数 | このパラメーターは、`maxNumEventsInBatch` と共に使用して、Experience Platform がエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <ul><li>最小値（秒）：301</li><li>最大値（秒）：3,600</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整数 | このパラメーターは、`maxBatchAgeInSecs` と共に使用して API 呼び出しにいくつの認定プロファイルを集計するかを決定します。 <ul><li>最小値：1,000</li><li>最大値：10,000</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
-| `configurableAggregation.aggregationKey` | - | 以下に記述するパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。 |
+| `configurableAggregation.aggregationKey` | - | 以下で説明するパラメーターに基づいて、宛先にマッピングされた書き出されたプロファイルを集計します。 |
 | `configurableAggregation.aggregationKey.includeSegmentId` | ブール | 宛先に書き出されたプロファイルをオーディエンス ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | ブール | 宛先に書き出されたプロファイルをオーディエンス ID とオーディエンスステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | ブール | 宛先に書き出されたプロファイルを ID 名前空間でグループ化する場合は、このパラメーターを `true` に設定します。 |

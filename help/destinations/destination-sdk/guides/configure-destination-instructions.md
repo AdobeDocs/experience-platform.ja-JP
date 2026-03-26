@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 53%
+source-wordcount: '874'
+ht-degree: 51%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 53%
 
 ## 前提条件 {#prerequisites}
 
-以下に示す手順に進む前に、[Destination SDK入門](../getting-started.md) ページを参照して、Destination SDK APIを操作するために必要なAdobe I/O認証情報およびその他の前提条件を取得する方法を確認してください。 これは、パートナーシップと権限の前提条件を完了し、宛先の開発を開始する準備ができていることを前提としています。
+以下に示す手順に進む前に、[Destination SDK入門](../getting-started.md) ページで、Destination SDK APIを操作するために必要なAdobe I/O認証情報およびその他の前提条件を取得する方法を確認してください。 これは、パートナーシップと権限の前提条件を完了し、宛先の開発を開始する準備ができていることを前提としています。
 
 ## Destination SDK の構成オプションを使用して宛先を設定する手順 {#steps}
 
@@ -25,7 +25,7 @@ ht-degree: 53%
 
 ## 手順 1：サーバーとテンプレートの構成を作成する {#create-server-template-configuration}
 
-[&#x200B; エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとテンプレート設定`/destinations-server`を作成することから開始します。
+[ エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとテンプレート設定`/destinations-server`を作成することから開始します。
 
 次に構成の例を示します。 `requestBody.value` パラメーターでのメッセージ変換テンプレートは、手順 3 の[変換テンプレートの作成](#create-transformation-template)で対応します。
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 3：メッセージ変換テンプレートの作成。テンプレート言語を使用して、メッセージの出力形式を指定します {#create-transformation-template}
 
-宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 「[ID、属性、オーディエンスメンバーシップの変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating)」の節のテンプレートの例を参照し、Adobeが提供する[&#x200B; テンプレートオーサリングツール &#x200B;](../testing-api/streaming-destinations/create-template.md)を使用します。
+宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 「[ID、属性、オーディエンスメンバーシップの変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating)」の節のテンプレートの例を参照し、Adobeが提供する[ テンプレートオーサリングツール ](../testing-api/streaming-destinations/create-template.md)を使用します。
 
 自分の用途に合ったメッセージ変換テンプレートを作成したら、そのテンプレートを手順 1 で作成したサーバーおよびテンプレートの構成に追加します。
 
@@ -178,7 +178,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 4：オーディエンスメタデータ構成の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、Destination SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを構成する必要があります。 この設定をセットアップする必要がある場合やその方法について詳しくは、[オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
+一部の宛先では、Destination SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを構成する必要があります。 この設定を設定する必要があるタイミングとその方法については、[ オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
 
 オーディエンスメタデータの構成を使用する場合は、手順 2 で作成した宛先構成に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を、`audienceTemplateId` として宛先構成に追加します。
 
@@ -279,12 +279,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 6：宛先のテスト {#test-destination}
 
-前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール &#x200B;](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
+前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール ](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
 
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、次の2つのリソースを参照してください。
 
 * [オーディエンスのドキュメントページの作成](/help/segmentation/ui/audience-portal.md#create-audience)
-* [&#x200B; オーディエンス動画のチュートリアルを作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [ オーディエンス動画のチュートリアルを作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 7：宛先を公開する {#publish-destination}
 

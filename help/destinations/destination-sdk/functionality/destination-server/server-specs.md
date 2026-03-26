@@ -2,9 +2,9 @@
 description: 「/authoring/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK の宛先サーバー仕様を設定する方法を説明します。
 title: Destination SDK で作成される宛先のサーバー仕様
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 85%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 85%
 
 宛先サーバー仕様は、[!DNL Adobe Experience Platform]からデータを受け取る宛先プラットフォームのタイプと、Experience Platformと宛先との間の通信パラメーターを定義します。 以下に例を示します。
 
-* [&#x200B; ストリーミング &#x200B;](#streaming-example)宛先サーバー仕様は、Experience PlatformからHTTP メッセージを受信するHTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
+* [ ストリーミング ](#streaming-example)宛先サーバー仕様は、Experience PlatformからHTTP メッセージを受信するHTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
 * [Amazon S3](#s3-example)宛先サーバー仕様は、Experience Platformがファイルをエクスポートする[!DNL S3] バケット名とパスを定義します。
 * [SFTP](#sftp-example)宛先サーバー仕様は、Experience PlatformがファイルをエクスポートするSFTP サーバーのホスト名、ルートディレクトリ、通信ポート、および暗号化タイプを定義します。
 
@@ -46,7 +46,7 @@ ht-degree: 85%
 
 ## ハードコーディングされたフィールドとテンプレート化されたフィールドの比較 {#templatized-fields}
 
-Destination SDK を通じて宛先サーバーを作成する場合、それらを設定にハードコーディングするか、またはテンプレート化されたフィールドを使用することで、設定パラメーター値を定義できます。テンプレート化されたフィールドを使用すると、Experience Platform UIからユーザー指定の値を読み取ることができます。
+Destination SDK を通じて宛先サーバーを作成する場合、それらを設定にハードコーディングするか、またはテンプレート化されたフィールドを使用することで、設定パラメーター値を定義できます。テンプレート化されたフィールドは、Experience Platform UIからユーザー指定の値を読み取ります。
 
 宛先サーバーパラメーターには、2 つの設定可能なフィールドがあります。これらのオプションは、ハードコーディングされた値とテンプレート化された値のどちらを使用しているかを示します。
 
@@ -160,7 +160,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL Amazon S3] 宛先サーバー {#s3-example}
 
-この宛先サーバーを使用すると、[!DNL Adobe Experience Platform] データを含むファイルをAmazon S3 ストレージに書き出すことができます。
+この宛先サーバーを使用して、[!DNL Adobe Experience Platform] データを含むファイルをAmazon S3 ストレージに書き出します。
 
 以下のサンプルに、Amazon S3 宛先用の宛先サーバー設定の例を示します。
 
@@ -194,7 +194,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL SFTP] 宛先サーバー {#sftp-example}
 
-この宛先サーバーでは、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL SFTP] ストレージサーバーに書き出すことができます。
+この宛先サーバーを使用して、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL SFTP] ストレージサーバーに書き出します。
 
 以下のサンプルに、SFTP 宛先用の宛先サーバー設定の例を示します。
 
@@ -232,7 +232,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL Azure Data Lake Storage]（[!DNL ADLS]）宛先サーバー {#adls-example}
 
-この宛先サーバーでは、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL Azure Data Lake Storage] アカウントにエクスポートできます。
+この宛先サーバーを使用して、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL Azure Data Lake Storage] アカウントにエクスポートします。
 
 以下のサンプルに、[!DNL Azure Data Lake Storage] 宛先用の宛先サーバー設定の例を示します。
 
@@ -260,7 +260,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL Azure Blob Storage] 宛先サーバー {#blob-example}
 
-この宛先サーバーでは、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL Azure Blob Storage] コンテナに書き出すことができます。
+この宛先サーバーを使用して、[!DNL Adobe Experience Platform] データを含むファイルを[!DNL Azure Blob Storage] コンテナに書き出します。
 
 以下のサンプルに、[!DNL Azure Blob Storage] 宛先用の宛先サーバー設定の例を示します。
 
@@ -294,7 +294,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL Data Landing Zone]（[!DNL DLZ]）宛先サーバー {#dlz-example}
 
-この宛先サーバーでは、Experience Platform データを含むファイルを[[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) ストレージに書き出すことができます。
+この宛先サーバーを使用して、Experience Platform データを含むファイルを[[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) ストレージに書き出します。
 
 以下のサンプルに、[!DNL Data Landing Zone]（[!DNL DLZ]）宛先用の宛先サーバー設定の例を示します。
 
@@ -324,7 +324,7 @@ Experience Platform UIから値を選択するオプションをユーザーに�
 
 ## [!DNL Google Cloud Storage] 宛先サーバー {#gcs-example}
 
-この宛先サーバーを使用すると、Experience Platform データを含むファイルを[!DNL Google Cloud Storage] アカウントにエクスポートできます。
+この宛先サーバーを使用して、Experience Platform データを含むファイルを[!DNL Google Cloud Storage] アカウントにエクスポートします。
 
 以下のサンプルに、[!DNL Google Cloud Storage] 宛先用の宛先サーバー設定の例を示します。
 

@@ -3,9 +3,9 @@ title: Merkury Enterprise Connectionsの宛先
 description: Adobe Experience Platform UIを使用してMerkury Enterprise Connections宛先接続を作成する方法を説明します。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1467'
 ht-degree: 14%
 
 ---
@@ -39,8 +39,8 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**宛先を管理**、**宛先をアクティブ化**、**プロファイルを表示**&#x200B;および&#x200B;**セグメントを表示**&#x200B;[[ アクセス制御の権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**ID グラフの表示** [[ アクセス制御権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。\![&#x200B; ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**宛先を管理**、**宛先をアクティブ化**、**プロファイルを表示**&#x200B;および&#x200B;**セグメントを表示**[[ アクセス制御の権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**ID グラフの表示** [[ アクセス制御権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。\![ ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## サポートされている ID {#supported-identities}
 
@@ -61,7 +61,7 @@ ht-degree: 14%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -72,10 +72,10 @@ ht-degree: 14%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -86,8 +86,8 @@ ht-degree: 14%
 
 | **項目** | **タイプ** | **メモ** |
 |---|---|---|  
-| 書き出しタイプ | **プロファイルベース** | [[宛先アクティベーションワークフロー]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、セグメントのすべてのメンバーを書き出します。 |
-| 頻度 | **バッチ** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[[ バッチファイルベースの配信先]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-types#file-based)を参照してください。 |
+| 書き出しタイプ | **プロファイルベース** | [[宛先アクティベーションワークフロー]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、セグメントのすべてのメンバーを書き出します。 |
+| 頻度 | **バッチ** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[[ バッチファイルベースの配信先]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**データセット宛先を管理およびアクティブ化** [[ アクセス制御権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
+>宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**データセット宛先を管理およびアクティブ化** [[ アクセス制御権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
 
-この宛先に接続するには、[[宛先設定チュートリアル ]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/connect-destination)に記載されている手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
+この宛先に接続するには、[[宛先設定チュートリアル ]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)に記載されている手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -120,7 +120,7 @@ Experience Platformでバケットにアクセスするには、次の資格情�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![宛先の詳細のスクリーンショット &#x200B;](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
+![宛先の詳細のスクリーンショット ](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
 
 * **名前（必須）** – 宛先が保存される名前
 * **説明** – 宛先の目的の短い説明
@@ -154,7 +154,7 @@ Merkury Enterprise Connections宛先を使用して既に定義されている�
 >* IDをエクスポートするには、**ID グラフを表示** アクセス制御権限が必要です。
 
 
-この宛先に対するオーディエンスのアクティブ化に関する手順については、[&#x200B; バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
+この宛先に対するオーディエンスのアクティブ化に関する手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
 
 ## マッピングの提案 {#mapping-suggestions}
 
@@ -183,8 +183,8 @@ Merkury Enterprise Connections宛先を使用して既に定義されている�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[&#x200B; データガバナンスの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/data-governance/home)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、Experience Platformから[!DNL Merkury]管理S3の場所にプロファイルデータを書き出すデータフローを正常に作成しました。 次に、処理を設定できるように、アカウント名、ファイル名、バケットパスを[!DNL Merkury]担当者に連絡する必要があります。
+Experience Platformから[!DNL Merkury]管理S3の場所にプロファイルデータを書き出すデータフローが正常に作成されました。 次に、処理を設定できるように、アカウント名、ファイル名、バケットパスを[!DNL Merkury]担当者に連絡する必要があります。

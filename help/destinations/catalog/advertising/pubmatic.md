@@ -3,7 +3,7 @@ title: PubMatic Connect
 description: PubMaticは、未来のデジタルマーケティングsupply chainをプログラマティックに提供することで、顧客価値を最大化します。 PubMatic Connectは、プラットフォーム技術と専用サービスを組み合わせて、在庫とデータのパッケージ化と取り引きの方法を強化します。
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 23%
@@ -63,7 +63,7 @@ PubMatic Connect プラットフォームにオーディエンスデータを送
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ PubMatic Connect プラットフォームにオーディエンスデータを送
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ PubMatic Connect プラットフォームにオーディエンスデータを送
 
 >[!IMPORTANT]
 >
-> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -135,11 +135,11 @@ PubMatic Connect プラットフォームにオーディエンスデータを送
 
 >[!IMPORTANT]
 >
-> - データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+> - データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >
-> - _ID_&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+> - _ID_&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -152,17 +152,17 @@ PubMatic Connect プラットフォームにオーディエンスデータを送
 - この手順で正しいUIDの種類を確認するには、[!DNL PubMatic] アカウント マネージャーにお問い合わせください。
 - 最初の手順で選択した識別子に一致する[!DNL PubMatic UID] タイプ番号を選択します。
 
-![属性とIDのマッピング &#x200B;](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![属性とIDのマッピング ](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ### オーディエンスのスケジュール {#audience-scheduling}
 
 PubMatic Connect （カスタムオーディエンス ID マッピング）宛先を使用している場合は、PubMatic プラットフォームの「Source Audience ID」に対応する各オーディエンスのマッピング IDを指定する必要があります。
 
-![&#x200B; オーディエンスのスケジュール &#x200B;](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
+![ オーディエンスのスケジュール ](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-[!DNL PubMatic] UIでは、データが正しくプッシュされたかどうか、およびセグメントが使用可能かどうかを確認できます。 データをプッシュしてから[!DNL PubMatic] UIを更新するには、最大で24時間かかる場合があります。
+[!DNL PubMatic] UIを使用して、データが正しくプッシュされたかどうか、およびセグメントが使用可能かどうかを確認します。 データをプッシュしてから[!DNL PubMatic] UIを更新するには、最大で24時間かかる場合があります。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

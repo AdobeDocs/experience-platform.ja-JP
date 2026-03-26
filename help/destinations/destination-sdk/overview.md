@@ -1,17 +1,17 @@
 ---
-description: Adobe Experience Platform Destination SDKは、選択したデータと認証フォーマットに基づいて、Experience Platformがエンドポイントまたはストレージの場所にオーディエンスデータとプロファイルデータを配信するように宛先統合パターンを設定できる一連の設定APIです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
+description: Adobe Experience Platform Destination SDKは、任意のデータと認証フォーマットに基づいて、Experience Platformがエンドポイントまたはストレージの場所にオーディエンスデータとプロファイルデータを配信するように宛先統合パターンを設定するための一連の設定APIです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '979'
 ht-degree: 22%
 
 ---
 
 # [!DNL Adobe Experience Platform] Destination SDK
 
-[!DNL Adobe Experience Platform] Destination SDKは、選択したデータと認証フォーマットに基づいて、エンドポイントまたはストレージの場所にオーディエンスデータとプロファイルデータを配信するようにExperience Platformの宛先統合パターンを設定できる一連の設定APIです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
+[!DNL Adobe Experience Platform] Destination SDKは、任意のデータと認証フォーマットに基づいて、エンドポイントまたはストレージの場所にオーディエンスとプロファイルデータを配信するようにExperience Platformの宛先統合パターンを設定するための一連の設定APIです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 
 Destination SDK ドキュメントでは、[!DNL Adobe Experience Platform] Destination SDKを使用して、[!DNL Adobe Experience Platform]との製品化された宛先の統合を設定、テストおよびリリースし、宛先を増え続ける宛先カタログの一部にするための手順を説明しています。 Destination SDKを使用すると、独自のカスタムプライベート宛先を作成して、ニーズに合わせたデータを書き出すこともできます。
 
@@ -32,7 +32,7 @@ Destination SDK ドキュメントでは、[!DNL Adobe Experience Platform] Dest
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">すべての設定オプションの説明</a></li>
                 <li> 宛先サーバー設定 – <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md"> サーバー仕様</a>および<a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md"> テンプレート仕様</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">顧客データフィールドとその他の宛先設定コンポーネント</a></li>
-                <li><a href="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">テンプレート化とマクロ</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">テンプレート化とマクロ</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Destination SDK ドキュメントでは、[!DNL Adobe Experience Platform] Dest
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">ストリーミング宛先エンドツーエンドガイドの設定</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Pebble テンプレートを使用したデータ変換について</a>および<a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md"> サポートされているテンプレート関数を表示</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">データ集計ポリシーについて</a></li>
-                <li><a href="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">ライブ設定の例</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">ライブ設定の例</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">ストリーミング宛先のテスト</a></li>
             </ul>
         </td>
@@ -132,9 +132,9 @@ Destination SDKを通じて、[!DNL Adobe Experience Platform]はREST API エン
 Destination SDKでは、統合機能を設定して、選択した保存場所にファイルを定期的に書き出すこともできます。 Experience Platformとのファイルベースの統合では、次のような機能をサポートしています。
 
 * サポートされている複数の形式（CSV、Parquet、JSON）でのファイル書き出し
-* 設定できるファイル形式オプション。これにより、書き出されたファイルの形式を構造化して、下流の要件に対応させることができます。
+* 書き出されたファイルの形式を構造化して、下流の要件に適合させるための設定可能なファイル形式オプション。
 
-[統合の前提条件](integration-prerequisites.md)の記事で宛先側の技術要件について説明し、[設定オプション &#x200B;](functionality/configuration-options.md)の記事でサポートされているすべての設定について説明します
+[統合の前提条件](integration-prerequisites.md)の記事で宛先側の技術要件について説明し、[設定オプション ](functionality/configuration-options.md)の記事でサポートされているすべての設定について説明します
 
 ## Destination SDK へのアクセスの取得 {#get-access}
 
@@ -142,9 +142,9 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 
 | パートナーまたは顧客のタイプ | Destination SDK へのアクセス方法 |
 |---------|----------|
-| 独立系ソフトウェアベンダー（ISV） | [Adobe テクノロジーパートナープログラム &#x200B;](https://partners.adobe.com/technologyprogram/experiencecloud.html)に参加して、Destination SDKにアクセスするためのExperience Platform サンドボックスのプロビジョニングをリクエストします。 |
-| システムインテグレーター（SI） | Experience Platform サンドボックスをプロビジョニングしてDestination SDKにアクセスするには、[Adobe ソリューションパートナープログラム &#x200B;](https://solutionpartners.adobe.com/home.html)のゴールドレベルまたはプラチナレベルである必要があります。 |
-| [Real-Time CDP Ultimate パッケージ &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)のExperience Platformのお客様 | デフォルトでは、Experience Platform サンドボックスとDestination SDKにアクセスできるので、組織のプライベートな配信先を構築できます。 |
+| 独立系ソフトウェアベンダー（ISV） | [Adobe テクノロジーパートナープログラム ](https://partners.adobe.com/technologyprogram/experiencecloud.html)に参加して、Destination SDKにアクセスするためのExperience Platform サンドボックスのプロビジョニングをリクエストします。 |
+| システムインテグレーター（SI） | Experience Platform サンドボックスをプロビジョニングしてDestination SDKにアクセスするには、[Adobe ソリューションパートナープログラム ](https://solutionpartners.adobe.com/home.html)のゴールドレベルまたはプラチナレベルである必要があります。 |
+| [Real-Time CDP Ultimate パッケージ ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)のExperience Platformのお客様 | デフォルトでは、Experience Platform サンドボックスとDestination SDKにアクセスできるので、組織のプライベートな配信先を構築できます。 |
 
 {style="table-layout:auto"}
 
@@ -152,13 +152,13 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 
 Experience Platform で宛先を設定するプロセスの概要を次に示します。
 
-1. ISVまたはSIの場合は、上記のセクションの[&#x200B; アクセスの取得](#get-access)情報を参照してください。 [Real-Time CDP Ultimate パッケージ &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)のお客様は、この手順をスキップできます。
+1. ISVまたはSIの場合は、上記のセクションの[ アクセスの取得](#get-access)情報を参照してください。 [Real-Time CDP Ultimate パッケージ ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)のお客様は、この手順をスキップできます。
 2. [Experience Platform サンドボックスのプロビジョニングをリクエスト](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support)し、宛先オーサリング権限を有効にします。
-3. 統合の構築。 製品ドキュメントの手順に従って、[&#x200B; ストリーミング宛先](guides/configure-destination-instructions.md)または[&#x200B; ファイルベースの宛先](guides/configure-file-based-destination-instructions.md)を設定します。
-4. 統合のテスト。 製品ドキュメントの指示に従って、[&#x200B; ストリーミング宛先](testing-api/streaming-destinations/streaming-destination-testing-overview.md)または[&#x200B; ファイルベースの宛先](testing-api/batch-destinations/file-based-destination-testing-overview.md)をテストします。
+3. 統合の構築。 製品ドキュメントの手順に従って、[ ストリーミング宛先](guides/configure-destination-instructions.md)または[ ファイルベースの宛先](guides/configure-file-based-destination-instructions.md)を設定します。
+4. 統合のテスト。 製品ドキュメントの指示に従って、[ ストリーミング宛先](testing-api/streaming-destinations/streaming-destination-testing-overview.md)または[ ファイルベースの宛先](testing-api/batch-destinations/file-based-destination-testing-overview.md)をテストします。
 5. ISVまたはSIが[製品化された統合](./overview.md#productized-custom-integrations)を作成している場合、[Adobeのレビュー用に統合](guides/submit-destination.md)を送信します（標準応答時間は5営業日です）。
-6. ISVまたはSIが製品化された統合を作成している場合は、[&#x200B; セルフサービスのドキュメントプロセス &#x200B;](docs-framework/documentation-instructions.md)を使用して、宛先用のExperience Leagueで製品ドキュメントページを作成します。
-7. 製品化された統合の場合、Adobeで承認されると、統合は[Experience Platform カタログ &#x200B;](../catalog/overview.md)に表示されます。
+6. ISVまたはSIが製品化された統合を作成している場合は、[ セルフサービスのドキュメントプロセス ](docs-framework/documentation-instructions.md)を使用して、宛先用のExperience Leagueで製品ドキュメントページを作成します。
+7. 製品化された統合の場合、Adobeで承認されると、統合は[Experience Platform カタログ ](../catalog/overview.md)に表示されます。
 8. 統合を更新する場合は、同じプロセスに従います。
 
 ## リファレンス {#reference}

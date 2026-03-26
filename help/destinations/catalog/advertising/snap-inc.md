@@ -2,9 +2,9 @@
 title: Snap Inc接続
 description: Snapchat Ads Platformに接続し、Experience Platformからオーディエンスを書き出す方法について説明します。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 21%
 
 ---
@@ -65,9 +65,9 @@ ht-degree: 21%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
-| [!DNL Federated Audience Composition] | ○ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences)を通じてExperience Platformに読み込まれたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ○ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)を通じてExperience Platformに読み込まれたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -77,10 +77,10 @@ ht-degree: 21%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -124,7 +124,7 @@ ht-degree: 21%
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
-* **[!UICONTROL Account ID]**: オーディエンスを読み込む広告アカウントに関連付けられている広告アカウント ID。 これを見つける方法について詳しくは、[Snapchat Business ヘルプセンター](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)に関するこのドキュメントを参照してください。
+* **[!UICONTROL Account ID]**: オーディエンスを読み込む広告アカウントに関連付けられている広告アカウント ID。 これを見つける方法について詳しくは、[Snapchat Business ヘルプセンター](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)のこのドキュメントを参照してください。
 
 >[!IMPORTANT]
 >
@@ -140,21 +140,21 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
-*Snap Inc*&#x200B;宛先に対してオーディエンスをアクティブ化すると、Snap Ads Managerの&#x200B;[**オーディエンス** セクション &#x200B;](https://businesshelp.snapchat.com/s/article/audience-sharing)にオーディエンスが表示されます。 このセクションに移動するには、次の手順に従います。
+*Snap Inc*&#x200B;宛先に対してオーディエンスをアクティブ化すると、Snap Ads Managerの&#x200B;[**オーディエンス** セクション ](https://businesshelp.snapchat.com/s/article/audience-sharing)にオーディエンスが表示されます。 このセクションに移動するには、次の手順に従います。
 
 1. [Snap Ads Manager](https://ads.snapchat.com/)にログインします
 2. 画面の左上隅にあるプルダウンメニューから「**オーディエンス**」を選択します。 [!DNL Adobe Experience Platform]でアクティブ化したオーディエンスは、オーディエンスライブラリに表示されます。
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe オーディエンスがSnap Incに最初にアクティベートされると、最初は空のオーディエンスとして表示されます。 これは、[!DNL Adobe Experience Platform]がオーディエンスを評価するまでSnap Incにメンバーデータを書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[&#x200B; セグメント化サービスの概要](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments)を参照してください。
+Adobe オーディエンスがSnap Incに最初にアクティベートされると、最初は空のオーディエンスとして表示されます。 これは、[!DNL Adobe Experience Platform]がオーディエンスを評価するまでSnap Incにメンバーデータを書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments)を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

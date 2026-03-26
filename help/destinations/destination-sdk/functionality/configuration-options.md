@@ -2,10 +2,10 @@
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 82%
+source-wordcount: '817'
+ht-degree: 79%
 
 ---
 
@@ -56,8 +56,8 @@ ht-degree: 82%
 
 ## オーディエンスメタデータ設定 {#audience-metadata-configuration}
 
-このコンポーネントでは、宛先でオーディエンスをプログラムで作成、更新、または削除する方法を設定できます。 ファイルベースの宛先の場合、ファイルが宛先に正常に配信されるたびに通知を設定できます。 [オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
+このコンポーネントを使用して、宛先でオーディエンスをプログラムで作成、更新、または削除する方法を設定します。 ファイルベースの宛先の場合は、ファイルが宛先に正常に配信されるたびに通知を設定するために使用します。 [オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、Destination SDK が提供する機能の一般的な概要と、特定の設定に関する詳細情報を得るための参照ページについて知ることができました。次に、Destination SDK を使用して[ストリーミング](../guides/configure-destination-instructions.md)や[ファイルベースの宛先を設定](../guides/configure-file-based-destination-instructions.md)するためのすべての手順が含まれるガイドを参照してください。
+これで、Destination SDKが提供する機能の概要と、特定の設定について詳しく説明するページが表示されました。 次に、Destination SDK を使用して[ストリーミング](../guides/configure-destination-instructions.md)や[ファイルベースの宛先を設定](../guides/configure-file-based-destination-instructions.md)するためのすべての手順が含まれるガイドを参照してください。

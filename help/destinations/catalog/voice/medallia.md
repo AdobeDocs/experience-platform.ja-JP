@@ -3,9 +3,9 @@ keywords: Medallia;medallia
 title: Medallia 拡張機能
 description: Medallia拡張機能は、Adobe Experience Platformのお客様の声を代弁します。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '448'
 ht-degree: 59%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-Web プロパティに[!DNL Medallia]をすばやくシームレスにデプロイします。 この拡張機能では、アンケートイベントを検出したり、データ要素を通じて顧客フィードバックをリアルタイムで取得したり、ルールで使用して顧客体験をパーソナライズしたり、[!DNL Adobe Analytics]とデータを共有したりすることもできます。
+Web プロパティに[!DNL Medallia]をすばやくシームレスにデプロイします。 この拡張機能は、アンケートイベントを検出し、データ要素を通じて顧客フィードバックをリアルタイムで取得し、ルールで使用して顧客体験をパーソナライズし、[!DNL Adobe Analytics]とデータを共有します。
 
 [!DNL Medallia]は[!DNL Adobe Experience Platform]の顧客拡張機能の声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
-![Medallia 拡張機能 &#x200B;](../../assets/catalog/voice/medallia/catalog.png)
+![Medallia 拡張機能 ](../../assets/catalog/voice/medallia/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -32,7 +32,7 @@ Web プロパティに[!DNL Medallia]をすばやくシームレスにデプロ�
 
 [!DNL Medallia] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

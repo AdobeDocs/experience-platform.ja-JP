@@ -5,16 +5,16 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1875'
 ht-degree: 17%
 
 ---
 
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] 接続
 
-[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) （旧称[!DNL Pardot]）の宛先を使用すると、[!DNL Adobe Experience Platform] プロファイルデータをSalesforceのB2B マーケティングオートメーションプラットフォームに書き出すことができます。
+[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) （旧称[!DNL Pardot]）の宛先は、[!DNL Adobe Experience Platform] プロファイルデータをSalesforceのB2B マーケティングオートメーションプラットフォームに書き出します。
 
 この統合により、[!DNL Adobe Experience Platform]の顧客プロファイルと[!DNL Salesforce Marketing Cloud Account Engagement]のマーケティングキャンペーンとの間で、シームレスにデータを同期できるようになります。
 
@@ -66,7 +66,7 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 | 資格情報 | 説明 |
 | --- | --- |
-| **[!UICONTROL Account Engagement Business Unit ID]** | [!DNL Salesforce] アカウントのエンゲージメント事業部ID。 IDの検索方法については、Salesforce [&#x200B; ドキュメント &#x200B;](https://help.salesforce.com/s/articleView?id=000381973&type=1)を参照してください。 |
+| **[!UICONTROL Account Engagement Business Unit ID]** | [!DNL Salesforce] アカウントのエンゲージメント事業部ID。 IDの検索方法については、Salesforce [ ドキュメント ](https://help.salesforce.com/s/articleView?id=000381973&type=1)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -101,10 +101,10 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -136,7 +136,7 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 [!DNL Salesforce] ログインページにリダイレクトされます。 [!DNL Marketing Cloud Account Engagement] アカウントの資格情報を入力し、**[!UICONTROL Log In]**&#x200B;を選択します。
 
-![Salesforce ログインページ &#x200B;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce ログインページ。")
+![Salesforce ログインページ ](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce ログインページ。")
 
 次に、**[!UICONTROL Allow]**&#x200B;を選択して、**[!DNL Adobe Experience Platform]** アプリに[!DNL Salesforce Marketing Cloud Account Engagement] アカウントへのアクセス権を付与します。 *この操作は1回のみ行う必要があります*。
 
@@ -164,8 +164,8 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -173,7 +173,7 @@ Experience Platformから[!DNL Marketing Cloud Account Engagement] アカウン�
 
 [!DNL Adobe Experience Platform]から[!DNL (V2) Marketing Cloud Account Engagement]宛先にオーディエンスデータを送信するには、Experience Data Model （XDM）スキーマフィールドを宛先の対応するフィールドにマッピングする必要があります。
 
-サポートされているフィールドの完全なリストについては、[Salesforce Prospect API v5 ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)を参照してください。 [&#x200B; カスタムフィールド &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)は、Alpha リリースではサポートされていません。
+サポートされているフィールドの完全なリストについては、[Salesforce Prospect API v5 ドキュメント ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)を参照してください。 [ カスタムフィールド ](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)は、Alpha リリースではサポートされていません。
 
 #### サポートされる属性 {#supported-attributes}
 
@@ -219,7 +219,7 @@ Salesforce Marketing Cloud Account Engagementの宛先は、次の表に示す�
 1. 選択したオーディエンスのいずれかに移動します。 「**[!DNL Activation data]**」タブを選択します。**[!UICONTROL Mapping ID]**&#x200B;列には、[!DNL Marketing Cloud Account Engagement Prospects] ページ内で生成されたカスタムフィールドの名前が表示されます。
    ![選択したセグメントのマッピング IDを示すExperience Platform UI スクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. [[!DNL Salesforce]](https://login.salesforce.com/) Web サイトにログインします。 次に、**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** ページに移動し、オーディエンスの見込み客が追加または更新されたかどうかを確認します。 または、[[!DNL Account Engagement]](https://pi.pardot.com/)にアクセスして&#x200B;**[!DNL Prospects]** ページにアクセスすることもできます。
+1. [[!DNL Salesforce]](https://login.salesforce.com/) Web サイトに移動します。 次に、**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** ページに移動し、オーディエンスの見込み客が追加または更新されたかどうかを確認します。 または、[[!DNL Account Engagement]](https://pi.pardot.com/)にアクセスして&#x200B;**[!DNL Prospects]** ページにアクセスすることもできます。
    ![見込み客ページを示すSalesforce UIのスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. 見込み客が更新されたかどうかを確認するには、見込み客を選択し、カスタム見込み客フィールドがExperience Platform オーディエンスのステータスで更新されているかどうかを確認します。
@@ -231,6 +231,6 @@ Salesforce Marketing Cloud Account Engagementの宛先は、次の表に示す�
 
 ## その他のリソース {#additional-resources}
 
-* [!DNL Marketing Cloud Account Engagement] [API ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
-* [Salesforce Import API v5 ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)
-* [Salesforce Prospect API v5 ドキュメント &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)
+* [!DNL Marketing Cloud Account Engagement] [API ドキュメント ](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
+* [Salesforce Import API v5 ドキュメント ](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)
+* [Salesforce Prospect API v5 ドキュメント ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)

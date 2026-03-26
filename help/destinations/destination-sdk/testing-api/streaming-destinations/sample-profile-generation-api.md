@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、宛先テストで使用できる、ストリーミング宛先用のサンプルプロファイルを生成する方法を説明します。
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 92%
+source-wordcount: '974'
+ht-degree: 91%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe XDM ソーススキーマ（宛先をテストする際に使用）また�
 
 ## サンプルプロファイル生成 API 操作の概要 {#get-started}
 
-続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](../../getting-started.md)を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 宛先をテストする際に使用する、ソーススキーマに基づいたサンプルプロファイルの生成 {#generate-sample-profiles-source-schema}
 
@@ -47,8 +47,8 @@ Adobe XDM ソーススキーマ（宛先をテストする際に使用）また�
 
 >[!IMPORTANT]
 >
->* このAPIを使用するには、Experience Platform UIで宛先への既存の接続が必要です。 詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
->* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
+>* このAPIを使用するには、Experience Platform UIで宛先への既存の接続が必要です。 詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)を参照してください。
+>* 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
 >
 >![宛先インスタンス ID の取得方法の UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentMembership` | 個人のオーディエンスメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[オーディエンスメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=ja)を参照してください。 |
+| `segmentMembership` | 個人のオーディエンスメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[オーディエンスメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)を参照してください。 |
 | `lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
 | `xdm:status` | オーディエンスメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてオーディエンスから外れています。</li></ul> |
-| `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja#identityMap)を参照してください。 |
+| `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -375,7 +375,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

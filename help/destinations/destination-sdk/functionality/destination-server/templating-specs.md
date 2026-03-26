@@ -2,10 +2,10 @@
 description: エンドポイントに送信される HTTP リクエストの書式設定方法を説明します。/authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK の宛先サーバーテンプレート仕様を設定します。
 title: Destination SDK で作成される宛先のテンプレート仕様
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 88%
+source-wordcount: '510'
+ht-degree: 83%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 88%
 
 テンプレート仕様は、リアルタイム（ストリーミング）宛先用の宛先サーバー設定の一部です。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[&#x200B; 設定オプション &#x200B;](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 &#x200B;](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
+このコンポーネントがDestination SDKで作成された統合にどの程度適合するかを理解するには、[configuration options](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用してストリーミング宛先を設定する方法](../../guides/configure-destination-instructions.md#create-server-template-configuration)に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介して宛先用のテンプレート仕様を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -71,7 +71,7 @@ ht-degree: 88%
 |---|---|---|
 | `httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。サポートされるメソッド：`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `value` | 文字列 | *必須。* この文字列は、Experience Platformから送信される HTTP リクエストを宛先で想定される形式に書式設定するテンプレートの文字がエスケープされたバージョンです。 <br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br>単純な変換の例については、[プロファイル属性](message-format.md#attributes)変換を参照してください。 |
+| `value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformから送信されたHTTP リクエストを、宛先が想定するフォーマットにフォーマットする、文字エスケープされたテンプレートのバージョンです。 <br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br>文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 <br>簡単な変換の例については、[ プロファイル属性](message-format.md#attributes)の変換を参照してください。 |
 | `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。変換テンプレートが生成する出力のタイプに応じて、これは、サポートされる任意の [HTTP アプリケーションコンテンツタイプ](https://www.iana.org/assignments/media-types/media-types.xhtml#application)になります。ほとんどの場合、この値は、`application/json` に設定する必要があります。 |
 
 {style="table-layout:auto"}

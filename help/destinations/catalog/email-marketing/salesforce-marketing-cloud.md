@@ -1,11 +1,11 @@
 ---
 title: Salesforce Marketing Cloud 接続
-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
+description: Salesforce Marketing Cloudは、ExactTargetとして知られるデジタルマーケティングスイートです。訪問者や顧客に向けてジャーニーを構築およびカスタマイズし、顧客体験をパーソナライズすることができます。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '878'
-ht-degree: 34%
+ht-degree: 29%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 34%
 
 ## 概要 {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/)は、以前ExactTargetとして知られていたデジタルマーケティングスイートで、訪問者や顧客が体験をパーソナライズするためのジャーニーを構築およびカスタマイズできます。
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/)は、以前はExactTargetとして知られていたデジタルマーケティングスイートで、訪問者や顧客のジャーニーを構築およびカスタマイズし、エクスペリエンスをパーソナライズするために使用できます。
 
-オーディエンスデータを[!DNL Salesforce Marketing Cloud]に送信するには、まず[Experience Platformの宛先](#connect-destination)に接続し、次に[&#x200B; ストレージの場所から](#import-data-into-salesforce)へのデータインポート [!DNL Salesforce Marketing Cloud]を設定する必要があります。
+オーディエンスデータを[!DNL Salesforce Marketing Cloud]に送信するには、まず[Experience Platformの宛先](#connect-destination)に接続し、次に[ ストレージの場所から](#import-data-into-salesforce)へのデータインポート [!DNL Salesforce Marketing Cloud]を設定する必要があります。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -23,7 +23,7 @@ ht-degree: 34%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -34,17 +34,17 @@ ht-degree: 34%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
+宛先の書き出しタイプと頻度については、次の表を参照してください。
 
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
@@ -57,13 +57,13 @@ ht-degree: 34%
 
 SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、Adobeでは、特定のIP範囲を契約許可リストに追加することをお勧めします。
 
-Adobe IPをSFTP宛先に追加する必要がある場合は、[SFTP宛先のIP アドレスの許可リストに加える](../cloud-storage/ip-address-allow-list.md)を参照してください。
+Adobe IPをSFTPに追加する必要がある場合は、[SFTP宛先のIP アドレスの許可リストに加える](../cloud-storage/ip-address-allow-list.md)を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -111,18 +111,18 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対するオーディエンスのアクティブ化の手順については、[&#x200B; バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
+この宛先に対するオーディエンスのアクティブ化の手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### 宛先属性 {#destination-attributes}
 
-この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは、[結合スキーマ &#x200B;](../../../profile/home.md#profile-fragments-and-union-schemas)から一意のIDを選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、「[&#x200B; メールマーケティング宛先に対してオーディエンスをアクティブ化する際のベストプラクティス &#x200B;](overview.md#best-practices)」を参照してください。
+この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは、[結合スキーマ ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意のIDを選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、「[ メールマーケティング宛先に対してオーディエンスをアクティブ化する際のベストプラクティス ](overview.md#best-practices)」を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Salesforce Marketing Cloud]の宛先の場合、Experience Platformは、指定したストレージの場所に`.csv` ファイルを作成します。 ファイルについて詳しくは、オーディエンスアクティベーションのチュートリアルの「[&#x200B; オーディエンスアクティベーションの検証](../../ui/activate-batch-profile-destinations.md#verify)」を参照してください。
+[!DNL Salesforce Marketing Cloud]の宛先の場合、Experience Platformは、指定したストレージの場所に`.csv` ファイルを作成します。 ファイルについて詳しくは、オーディエンスアクティベーションのチュートリアルの「[ オーディエンスアクティベーションの検証](../../ui/activate-batch-profile-destinations.md#verify)」を参照してください。
 
 ## [!DNL Salesforce Marketing Cloud]へのデータ読み込みを設定 {#import-data-into-salesforce}
 

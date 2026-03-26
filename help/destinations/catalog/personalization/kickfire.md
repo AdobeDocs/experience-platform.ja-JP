@@ -3,9 +3,9 @@ keywords: kickfire;Kickfire;kickfire拡張機能；Kickfire拡張機能
 title: KickFire 拡張機能
 description: KickFire拡張機能は、Adobe Experience Platformのパーソナライゼーションの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 58%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-[!DNL KickFire's]のIP アドレス インテリジェンスとB2B企業特性データにより、IP アドレスを企業に変換し、匿名のweb訪問者を特定し、アカウント データをテクノロジースタックに統合できます。これらはすべて、企業のIP アドレスに基づいています。
+[!DNL KickFire's] IP アドレス インテリジェンスとB2B企業特性データは、企業にIP アドレスを変換し、匿名のweb訪問者を特定し、企業のIP アドレスに基づいてアカウント データをテクノロジースタックに統合します。
 
 [!DNL KickFire]は[!DNL Adobe Experience Platform]のパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Kickfire の web サイト](https://www.kickfire.com/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![KickFire 拡張機能](../../assets/catalog/personalization/kickfire/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 58%
 
 [!DNL KickFire] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
