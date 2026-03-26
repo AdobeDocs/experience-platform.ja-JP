@@ -71,7 +71,7 @@ ht-degree: 83%
 |---|---|---|
 | `httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。サポートされるメソッド：`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformから送信されたHTTP リクエストを、宛先が想定するフォーマットにフォーマットする、文字エスケープされたテンプレートのバージョンです。 <br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br>文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 <br>簡単な変換の例については、[ プロファイル属性](message-format.md#attributes)の変換を参照してください。 |
+| `value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformから送信されたHTTP リクエストを、宛先が想定するフォーマットにフォーマットする、文字エスケープされたテンプレートのバージョンです。 <br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br>文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 <br>簡単な変換の例については、[&#x200B; プロファイル属性](message-format.md#attributes)の変換を参照してください。 |
 | `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。変換テンプレートが生成する出力のタイプに応じて、これは、サポートされる任意の [HTTP アプリケーションコンテンツタイプ](https://www.iana.org/assignments/media-types/media-types.xhtml#application)になります。ほとんどの場合、この値は、`application/json` に設定する必要があります。 |
 
 {style="table-layout:auto"}

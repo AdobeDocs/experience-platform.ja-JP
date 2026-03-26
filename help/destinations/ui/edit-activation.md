@@ -15,14 +15,14 @@ ht-degree: 8%
 
 [!DNL Adobe Experience Platform]では、既存のアクティベーションデータフローの様々なコンポーネントを宛先に設定できます。
 
-* [ アクティベーションデータフローを有効または無効にする](#enable-disable-dataflows)
-* [ アクティベーションデータフローに追加オーディエンス ](#add-audiences)を追加
+* [&#x200B; アクティベーションデータフローを有効または無効にする](#enable-disable-dataflows)
+* [&#x200B; アクティベーションデータフローに追加オーディエンス &#x200B;](#add-audiences)を追加
 * [マッピングされた属性とIDの編集](#edit-mapped-attributes)
 * [アクティベーションスケジュールと書き出し頻度の編集](#edit-schedule-frequency)
-* [ アクティベーションワークフローにデータセット ](#add-datasets)を追加
-* アクティベーションデータフローの[ マーケティングアクションの編集](#edit-marketing-actions)
-* [書き出したデータにアクセスラベル ](#apply-access-labels)を適用する
-* [ アクティベーションデータフローの名前と説明を編集](#edit-names-descriptions)
+* [&#x200B; アクティベーションワークフローにデータセット &#x200B;](#add-datasets)を追加
+* アクティベーションデータフローの[&#x200B; マーケティングアクションの編集](#edit-marketing-actions)
+* [書き出したデータにアクセスラベル &#x200B;](#apply-access-labels)を適用する
+* [&#x200B; アクティベーションデータフローの名前と説明を編集](#edit-names-descriptions)
 
 ## アクティベーションデータフローを参照 {#browse-activation-dataflows}
 
@@ -58,9 +58,9 @@ ht-degree: 8%
 
 アクティベーションのワークフローは、宛先のタイプによって少し異なります。 各宛先タイプのアクティベーションワークフローについて詳しくは、次のガイドを参照してください。
 
-* [ ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
-* [ バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
-* [ ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
+* [&#x200B; ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
+* [&#x200B; バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
+* [&#x200B; ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
 
 ## アクティベーションスケジュールと書き出し頻度の編集 {#edit-schedule-frequency}
 
@@ -77,9 +77,9 @@ ht-degree: 8%
 
 実行できるスケジュール設定の操作は、宛先のタイプによって少し異なります。 各宛先タイプのアクティベーションワークフローについて詳しくは、次のガイドを参照してください。
 
-* [ ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
-* [ バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
-* [ ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
+* [&#x200B; ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
+* [&#x200B; バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
+* [&#x200B; ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
 
 ## マッピングされた属性とIDの編集 {#edit-mapped-attributes}
 
@@ -97,31 +97,31 @@ ht-degree: 8%
 
 アクティベーションのワークフローは、宛先のタイプによって少し異なります。 各宛先タイプのアクティベーションワークフローについて詳しくは、次のガイドを参照してください。
 
-* [ ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
-* [ バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
-* [ ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
+* [&#x200B; ストリーミング宛先に対してオーディエンスをアクティブ化](./activate-segment-streaming-destinations.md) （例：FacebookまたはTwitter）;
+* [&#x200B; バッチプロファイル書き出し先にオーディエンスをアクティブ化](./activate-batch-profile-destinations.md) （例：Amazon S3またはOracle Eloqua）;
+* [&#x200B; ストリーミングプロファイル書き出し先にオーディエンスをアクティブ化](./activate-streaming-profile-destinations.md) （HTTP APIまたはAmazon Kinesisなど）。
 
 ## アクティベーションデータフローへのデータセットの追加 {#add-datasets}
 
-右側のパネルで「**[!UICONTROL Export datasets]**」を選択し、宛先に書き出す追加のデータセットを選択します。 このオプションを選択すると、[ データセット書き出しワークフロー](export-datasets.md)に移動します。
+右側のパネルで「**[!UICONTROL Export datasets]**」を選択し、宛先に書き出す追加のデータセットを選択します。 このオプションを選択すると、[&#x200B; データセット書き出しワークフロー](export-datasets.md)に移動します。
 
 >[!NOTE]
 >
 >このオプションは、データセットの書き出しをサポートする[宛先にのみ表示されます](export-datasets.md#supported-destinations)。
 
-![ データセットの書き出しデータフロー実行オプションを示すExperience Platform UIの画像。](../assets/ui/edit-activation/export-datasets.png)
+![&#x200B; データセットの書き出しデータフロー実行オプションを示すExperience Platform UIの画像。](../assets/ui/edit-activation/export-datasets.png)
 
 ## マーケティングアクションを編集 {#edit-marketing-actions}
 
 >[!IMPORTANT]
 >
->マーケティングアクションを編集するには、**[!UICONTROL Activate Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>マーケティングアクションを編集するには、**[!UICONTROL Activate Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 最初に宛先に接続するときに設定したマーケティングアクションを追加または削除できます。
 
 右側のパネルで「**[!UICONTROL Edit marketing actions]**」を選択して、マーケティングアクションの選択画面を開きます。
 
-![ マーケティングアクションを編集オプションを示すExperience Platform UI画像。](../assets/ui/edit-activation/edit-marketing-actions.png)
+![&#x200B; マーケティングアクションを編集オプションを示すExperience Platform UI画像。](../assets/ui/edit-activation/edit-marketing-actions.png)
 
 該当するマーケティング アクションを選択し、**[!UICONTROL Save]**&#x200B;を選択して変更を適用します。
 
@@ -130,9 +130,9 @@ ht-degree: 8%
 
 ## アクセスラベルの適用 {#apply-access-labels}
 
-書き出されたデータのデータ使用ラベルを編集するには、**[!UICONTROL Apply access labels]**&#x200B;を選択します。 詳しくは、[ データ使用ラベルのドキュメント ](../../data-governance/labels/overview.md)を参照してください。
+書き出されたデータのデータ使用ラベルを編集するには、**[!UICONTROL Apply access labels]**&#x200B;を選択します。 詳しくは、[&#x200B; データ使用ラベルのドキュメント &#x200B;](../../data-governance/labels/overview.md)を参照してください。
 
-![ データセットの書き出しデータフロー実行オプションを示すExperience Platform UIの画像。](../assets/ui/edit-activation/apply-access-labels.png)
+![&#x200B; データセットの書き出しデータフロー実行オプションを示すExperience Platform UIの画像。](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## アクティベーションデータフロー名と説明の編集 {#edit-names-descriptions}
 

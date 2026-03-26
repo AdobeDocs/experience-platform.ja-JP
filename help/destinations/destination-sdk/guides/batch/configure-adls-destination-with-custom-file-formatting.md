@@ -13,7 +13,7 @@ ht-degree: 8%
 
 ## 概要 {#overview}
 
-ここでは、Destination SDKを使用して、カスタム [!DNL Azure Data Lake Storage] ファイル形式オプション [とカスタム ](configure-file-formatting-options.md) ファイル名設定[を使用して](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)宛先を設定する方法について説明します。
+ここでは、Destination SDKを使用して、カスタム [!DNL Azure Data Lake Storage] ファイル形式オプション [とカスタム &#x200B;](configure-file-formatting-options.md) ファイル名設定[を使用して](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)宛先を設定する方法について説明します。
 
 このページでは、Azure Data Lake Storageの宛先で使用できるすべての設定オプションを示します。 必要に応じて、以下の手順に示す設定を編集したり、設定の特定の部分を削除したりできます。
 
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-最初に、`/destination-server` エンドポイントを使用して、[ サーバーとファイル設定](../../authoring-api/destination-server/create-destination-server.md)を作成します。
+最初に、`/destination-server` エンドポイントを使用して、[&#x200B; サーバーとファイル設定](../../authoring-api/destination-server/create-destination-server.md)を作成します。
 
 **API 形式**
 
@@ -402,7 +402,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ![選択した宛先カードを含む宛先カタログページを表示する画面の記録。](../../assets/guides/batch/adls-destination-card.gif)
 
-以下の画像と録画では、ファイルベースの宛先の[ アクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md)のオプションが、宛先設定で選択したオプションとどのように一致しているかを確認してください。
+以下の画像と録画では、ファイルベースの宛先の[&#x200B; アクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md)のオプションが、宛先設定で選択したオプションとどのように一致しているかを確認してください。
 
 宛先に関する詳細を入力する際に、フィールドが設定で設定したカスタムデータフィールドであることが表示されます。
 
@@ -413,10 +413,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ![宛先の詳細を入力](../../assets/guides/batch/file-configuration-options.gif)
 
 書き出し間隔をスケジュールする際に、表示されるフィールドが、`batchConfig`設定で設定したフィールドであることに注意してください。
-![ スケジュール設定オプションの書き出し](../../assets/guides/batch/file-export-scheduling.png)
+![&#x200B; スケジュール設定オプションの書き出し](../../assets/guides/batch/file-export-scheduling.png)
 
 ファイル名設定オプションを表示する際に、フィールドが表示され、設定で設定した`filenameConfig` オプションがどのように表示されるかに注目してください。
-![ ファイル名設定オプション ](../../assets/guides/batch/file-naming-options.gif)
+![&#x200B; ファイル名設定オプション &#x200B;](../../assets/guides/batch/file-naming-options.gif)
 
 上記のいずれかのフィールドを調整する場合は、[手順1](#create-server-file-configuration)と[2](#create-destination-configuration)を繰り返して、必要に応じて設定を変更します。
 

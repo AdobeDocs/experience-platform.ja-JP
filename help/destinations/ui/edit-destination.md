@@ -20,7 +20,7 @@ Experience Platform UIを使用して、認証資格情報の更新や場所の�
 
 ## 前提条件 {#prerequisites}
 
-宛先接続を編集するには、**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+宛先接続を編集するには、**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ## 宛先接続の編集 {#edit}
 
@@ -28,16 +28,16 @@ Experience Platform UIを使用して、認証資格情報の更新や場所の�
 
 1. **[!UICONTROL Destinations]**／**[!UICONTROL Browse]**&#x200B;に移動します。
 2. 編集する目的の宛先を選択します。
-3. `...`列の省略記号（[!UICONTROL Name]）を選択し、![宛先制御の編集&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**コントロールを使用して、既存の宛先接続を編集します。
+3. `...`列の省略記号（[!UICONTROL Name]）を選択し、![宛先制御の編集&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;コントロールを使用して、既存の宛先接続を編集します。
 4. モーダルウィンドウで、任意の設定を編集します。 完了したら、**[!UICONTROL Save]**&#x200B;を選択します。
 
 「宛先を編集」ウィンドウでは、最初に宛先に接続したときに設定した設定を更新できます。 これらの設定は、更新する宛先プラットフォームによって異なります。
 
 宛先の設定方法によっては、一部のフィールドが読み取り専用で、編集できない場合があります。 読み取り専用フィールドの値を変更するには、新しいフィールド値で[新しい宛先接続](../ui/connect-destination.md)を作成する必要があります。
 
-読み取り専用フィールドを示す![ スクリーンショット。](../assets/ui/edit-destinations/read-only.png)
+読み取り専用フィールドを示す![&#x200B; スクリーンショット。](../assets/ui/edit-destinations/read-only.png)
 
-以下に、[Amazon S3](../catalog/cloud-storage/amazon-s3.md)、[Azure イベントハブ ](../catalog/cloud-storage/azure-event-hubs.md)、[Google Ads](../catalog/advertising/google-ads-destination.md)の宛先に対して更新できる設定の例を示します。
+以下に、[Amazon S3](../catalog/cloud-storage/amazon-s3.md)、[Azure イベントハブ &#x200B;](../catalog/cloud-storage/azure-event-hubs.md)、[Google Ads](../catalog/advertising/google-ads-destination.md)の宛先に対して更新できる設定の例を示します。
 
 <div style="display: flex; gap: 12px; justify-content: flex-start; align-items: flex-start;">
   <img class="modal-image" src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Amazon S3の宛先画面を編集します。" style="max-width: 200px; height: auto; border: 1px solid #ccc;">
@@ -55,9 +55,9 @@ Experience Platform UIまたはFlow Service APIを使用すると、以下のリ
 
 | Experience Platform UIの使用 | Flow Service APIの使用 |
 |---------|----------|
-| 宛先接続の編集（このページ） | [ ターゲット接続コンポーネント（ストレージの場所と他のコンポーネント）の編集](/help/destinations/api/edit-destination.md#patch-target-connection) |
-| [ アカウントの編集](/help/destinations/ui/update-accounts.md) | [ ベース接続コンポーネント（認証パラメーターおよびその他のコンポーネント）を編集](/help/destinations/api/edit-destination.md#patch-base-connection) |
-| [ アクティベーションデータフローの編集](/help/destinations/ui/edit-activation.md) | [宛先データフローの更新](/help/destinations/api/update-destination-dataflows.md) |
+| 宛先接続の編集（このページ） | [&#x200B; ターゲット接続コンポーネント（ストレージの場所と他のコンポーネント）の編集](/help/destinations/api/edit-destination.md#patch-target-connection) |
+| [&#x200B; アカウントの編集](/help/destinations/ui/update-accounts.md) | [&#x200B; ベース接続コンポーネント（認証パラメーターおよびその他のコンポーネント）を編集](/help/destinations/api/edit-destination.md#patch-base-connection) |
+| [&#x200B; アクティベーションデータフローの編集](/help/destinations/ui/edit-activation.md) | [宛先データフローの更新](/help/destinations/api/update-destination-dataflows.md) |
 
 ## 次の手順 {#next-steps}
 

@@ -26,7 +26,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 
 この記事では、宛先に使用できる、サポートされるすべての集計ポリシー設定について説明します。
 
-このドキュメントを読んだ後、[ テンプレートを使用する](../../functionality/destination-server/message-format.md#using-templating)に関するドキュメントと[集計キーの例](../../functionality/destination-server/message-format.md#template-aggregation-key)を参照して、選択した集計ポリシーに基づいてメッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
+このドキュメントを読んだ後、[&#x200B; テンプレートを使用する](../../functionality/destination-server/message-format.md#using-templating)に関するドキュメントと[集計キーの例](../../functionality/destination-server/message-format.md#template-aggregation-key)を参照して、選択した集計ポリシーに基づいてメッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
 
 >[!IMPORTANT]
 >

@@ -56,7 +56,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## 役割ベースのアクセス制御（RBAC） {#rbac}
 
-[ リファレンスドキュメント ](functionality/configuration-options.md)に記載されているDestination SDK API エンドポイントを使用するには、**[!UICONTROL Destination Authoring]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
+[&#x200B; リファレンスドキュメント &#x200B;](functionality/configuration-options.md)に記載されているDestination SDK API エンドポイントを使用するには、**[!UICONTROL Destination Authoring]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
 
 ![宛先オーサリング権限](./assets/destination-authoring-permission.png)
 
@@ -80,5 +80,5 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
    * [Destination SDK を使用したストリーミング宛先の設定](guides/configure-destination-instructions.md)
    * [Destination SDK を使用したファイルベースの宛先の設定](guides/configure-file-based-destination-instructions.md)
 
-* すべての操作については、[宛先オーサリング API ドキュメント ](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
+* すべての操作については、[宛先オーサリング API ドキュメント &#x200B;](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
 * Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832)を参照してください。

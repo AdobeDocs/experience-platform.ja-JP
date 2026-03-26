@@ -18,7 +18,7 @@ ht-degree: 58%
 
 [!DNL KickFire]は[!DNL Adobe Experience Platform]のパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Kickfire の web サイト](https://www.kickfire.com/)を参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![KickFire 拡張機能](../../assets/catalog/personalization/kickfire/catalog.png)
 
@@ -32,7 +32,7 @@ ht-degree: 58%
 
 [!DNL KickFire] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

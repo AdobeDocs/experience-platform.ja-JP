@@ -18,17 +18,17 @@ ht-degree: 8%
 >
 >Beta フェーズが完了すると、[!DNL ad-hoc activation API]がすべてのExperience Platformのお客様に一般公開（GA）されるようになりました。 GA版では、APIがバージョン 2にアップグレードされました。 手順4 （[APIではエクスポート IDが不要になったため、最新のオーディエンス書き出しジョブ ID](#segment-export-id)）の取得は不要になりました。
 >
->詳しくは、このチュートリアルの下にある「[ アドホックアクティベーションジョブを実行](#activation-job)」を参照してください。
+>詳しくは、このチュートリアルの下にある「[&#x200B; アドホックアクティベーションジョブを実行](#activation-job)」を参照してください。
 
 ## 概要 {#overview}
 
 アドホックアクティベーション APIを使用すると、マーケターは、即座のアクティベーションが必要な状況に応じて、オーディエンスをプログラムによって宛先に迅速かつ効率的にアクティベートできます。
 
-アドホックアクティベーション APIを使用して、フルファイルを目的のファイル受信システムに書き出します。 アドホックオーディエンスのアクティベーションは、[ バッチファイルベースの宛先](../destination-types.md#file-based)でのみサポートされています。
+アドホックアクティベーション APIを使用して、フルファイルを目的のファイル受信システムに書き出します。 アドホックオーディエンスのアクティベーションは、[&#x200B; バッチファイルベースの宛先](../destination-types.md#file-based)でのみサポートされています。
 
 次の図は、24時間ごとにExperience Platformで行われるセグメンテーションジョブを含む、アドホックアクティベーション APIを介してオーディエンスをアクティベートするエンドツーエンドのワークフローを示しています。
 
-![ アドホックアクティベーション ](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+![&#x200B; アドホックアクティベーション &#x200B;](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
 ## ユースケース {#use-cases}
 
@@ -49,7 +49,7 @@ IT担当者は、Experience Platformのアドホックアクティベーショ�
 アドホックアクティベーション APIを使用する場合は、次のガードレールに注意してください。
 
 * 現在、各アドホックアクティベーションジョブでは、最大80のオーディエンスをアクティベートできます。 1つのジョブにつき80を超えるオーディエンスをアクティベートしようとすると、ジョブが失敗します。 この動作は、今後のリリースで変更される可能性があります。
-* スケジュールされた[ オーディエンス書き出しジョブ ](../../segmentation/api/export-jobs.md)と並行してアドホックアクティベーションジョブを実行することはできません。 アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 アクティベーションフローのステータスを監視する方法については、[宛先データフロー監視](../../dataflows/ui/monitor-destinations.md)を参照してください。 例えば、アクティベーションデータフローに&#x200B;**[!UICONTROL Processing]** ステータスが表示されている場合は、アドホックアクティベーションジョブを実行する前に、アクティベーションデータフローが終了するのを待ちます。
+* スケジュールされた[&#x200B; オーディエンス書き出しジョブ &#x200B;](../../segmentation/api/export-jobs.md)と並行してアドホックアクティベーションジョブを実行することはできません。 アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 アクティベーションフローのステータスを監視する方法については、[宛先データフロー監視](../../dataflows/ui/monitor-destinations.md)を参照してください。 例えば、アクティベーションデータフローに&#x200B;**[!UICONTROL Processing]** ステータスが表示されている場合は、アドホックアクティベーションジョブを実行する前に、アクティベーションデータフローが終了するのを待ちます。
 * オーディエンスごとに複数の同時アドホックアクティベーションジョブを実行しないでください。
 
 ## セグメント化の考慮事項 {#segmentation-considerations}
@@ -66,7 +66,7 @@ IT担当者は、Experience Platformのアドホックアクティベーショ�
 
 ## 手順2：資格情報の収集 {#credentials}
 
-Experience Platform APIを呼び出すには、まず[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform APIを呼び出すには、まず[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -115,7 +115,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 オーディエンス書き出しジョブ IDは、次に示すように`id` プロパティにあります。
 
-![ オーディエンス書き出しジョブ ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![&#x200B; オーディエンス書き出しジョブ ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## 手順5：アドホックアクティベーションジョブの実行 {#activation-job}
@@ -140,9 +140,9 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 >
 >アドホックアクティベーション APIのv2を使用するには、リクエストに`Accept: application/vnd.adobe.adhoc.activation+json; version=2` ヘッダーを含める必要があります。
 
-セグメント化サービス以外のオーディエンス（例：[外部オーディエンスまたはカスタムアップロードオーディエンス ](../../segmentation/ui/audience-portal.md#import-audience)）の場合は、外部オーディエンス IDではなく、リクエストでExperience Platformによって生成されたオーディエンス IDを指定する必要があります。 オーディエンス UIでオーディエンスの詳細ページを開くと、[ オーディエンスの概要パネル ](../../segmentation/ui/audience-portal.md#audience-summary)の上部に&#x200B;**ID#**&#x200B;と表示され、その後UUIDが表示されます。
+セグメント化サービス以外のオーディエンス（例：[外部オーディエンスまたはカスタムアップロードオーディエンス &#x200B;](../../segmentation/ui/audience-portal.md#import-audience)）の場合は、外部オーディエンス IDではなく、リクエストでExperience Platformによって生成されたオーディエンス IDを指定する必要があります。 オーディエンス UIでオーディエンスの詳細ページを開くと、[&#x200B; オーディエンスの概要パネル &#x200B;](../../segmentation/ui/audience-portal.md#audience-summary)の上部に&#x200B;**ID#**&#x200B;と表示され、その後UUIDが表示されます。
 
-![ システム生成ID フィールドがパネルの上部に強調表示されているオーディエンスの概要パネル。](../assets/api/ad-hoc-activation/audience-summary-id.png)
+![&#x200B; システム生成ID フィールドがパネルの上部に強調表示されているオーディエンスの概要パネル。](../assets/api/ad-hoc-activation/audience-summary-id.png)
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -168,8 +168,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティブ化する宛先インスタンスのID。 これらのIDは、Experience Platform UIから取得できます。「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」タブに移動し、目的の宛先行をクリックして、右側のパネルで宛先IDを表示します。 詳しくは、[宛先ワークスペースのドキュメント ](/help/destinations/ui/destinations-workspace.md#browse)を参照してください。 |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスのID。 アドホック APIを使用して、Experience Platformで生成されたオーディエンスと、外部（カスタムアップロード）オーディエンスを書き出すことができます。 外部オーディエンスをアクティブ化する場合は、オーディエンス IDの代わりにシステム生成IDを使用します。 システムで生成されたIDは、オーディエンス UIのオーディエンス概要ビューで確認できます。<br> 選択しないオーディエンス IDの![ ビュー。選択しないオーディエンス IDの](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png " ビュー。"){width="100" zoomable="yes"} <br> 使用するシステム生成オーディエンス IDの![ ビュー。](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "使用するシステム生成オーディエンス IDのビュー。"){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティブ化する宛先インスタンスのID。 これらのIDは、Experience Platform UIから取得できます。「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」タブに移動し、目的の宛先行をクリックして、右側のパネルで宛先IDを表示します。 詳しくは、[宛先ワークスペースのドキュメント &#x200B;](/help/destinations/ui/destinations-workspace.md#browse)を参照してください。 |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスのID。 アドホック APIを使用して、Experience Platformで生成されたオーディエンスと、外部（カスタムアップロード）オーディエンスを書き出すことができます。 外部オーディエンスをアクティブ化する場合は、オーディエンス IDの代わりにシステム生成IDを使用します。 システムで生成されたIDは、オーディエンス UIのオーディエンス概要ビューで確認できます。<br> 選択しないオーディエンス IDの![&#x200B; ビュー。選択しないオーディエンス IDの](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png " ビュー。"){width="100" zoomable="yes"} <br> 使用するシステム生成オーディエンス IDの![&#x200B; ビュー。](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "使用するシステム生成オーディエンス IDのビュー。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -209,9 +209,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティブ化する宛先インスタンスのID。 これらのIDは、Experience Platform UIから取得できます。「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」タブに移動し、目的の宛先行をクリックして、右側のパネルで宛先IDを表示します。 詳しくは、[宛先ワークスペースのドキュメント ](/help/destinations/ui/destinations-workspace.md#browse)を参照してください。 |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティブ化する宛先インスタンスのID。 これらのIDは、Experience Platform UIから取得できます。「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」タブに移動し、目的の宛先行をクリックして、右側のパネルで宛先IDを表示します。 詳しくは、[宛先ワークスペースのドキュメント &#x200B;](/help/destinations/ui/destinations-workspace.md#browse)を参照してください。 |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスのID。 |
-| <ul><li>`exportId1`</li></ul> | [ オーディエンス書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブの応答で返されたID。 このIDの検索方法については、[手順4：最新のオーディエンス書き出しジョブ ID](#segment-export-id)を取得するを参照してください。 |
+| <ul><li>`exportId1`</li></ul> | [&#x200B; オーディエンス書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブの応答で返されたID。 このIDの検索方法については、[手順4：最新のオーディエンス書き出しジョブ ID](#segment-export-id)を取得するを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -241,7 +241,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](../../landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ### アドホックアクティベーション APIに固有のAPI エラーコードとメッセージ {#specific-error-messages}
 

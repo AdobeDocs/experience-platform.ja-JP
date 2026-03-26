@@ -26,7 +26,7 @@ ht-degree: 54%
 * [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
 * [Mailchimp タグ](mailchimp-tags.md)
 * [（API）Oracle Eloqua](oracle-eloqua-api.md)
-* [ （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
+* [&#x200B; （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）OracleEloqua](oracle-eloqua.md)
 * [（ファイル）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
@@ -74,7 +74,7 @@ ht-degree: 54%
 
 その他の宛先は、ファイルをクラウドストレージの場所に書き出します。 エクスポートが完了したら、クラウドストレージの場所からメールマーケティングの宛先にデータをインポートする必要があります。
 
-「[ サポートされるメールマーケティング宛先](#supported-destinations)」セクションのリンクに従って、各メールマーケティング宛先に対してオーディエンスをアクティブ化する方法を説明します。
+「[&#x200B; サポートされるメールマーケティング宛先](#supported-destinations)」セクションのリンクに従って、各メールマーケティング宛先に対してオーディエンスをアクティブ化する方法を説明します。
 
 ## その他のリソース {#additional-resources}
 

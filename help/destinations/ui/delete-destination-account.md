@@ -15,7 +15,7 @@ ht-degree: 14%
 
 ## 概要 {#overview}
 
-「**[!UICONTROL Accounts]**」タブには、様々な宛先で確立した接続に関する詳細が表示されます。 各宛先アカウントで使用可能なすべての情報については、[ アカウントの概要](../ui/destinations-workspace.md#accounts)を参照してください。
+「**[!UICONTROL Accounts]**」タブには、様々な宛先で確立した接続に関する詳細が表示されます。 各宛先アカウントで使用可能なすべての情報については、[&#x200B; アカウントの概要](../ui/destinations-workspace.md#accounts)を参照してください。
 
 このチュートリアルでは、Experience Platform UIを使用して、不要になった宛先アカウントを削除する手順について説明します。
 
@@ -37,13 +37,13 @@ ht-degree: 14%
 
    ![宛先を絞り込む](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 削除するアカウントの名前の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの&#x200B;**[!UICONTROL Activate audiences]**、**[!UICONTROL Edit details]**&#x200B;および&#x200B;**[!UICONTROL Delete]**&#x200B;にオプションが表示されます。 目的のアカウントを削除するには、![削除ボタン ](/help/images/icons/delete.png) **[!UICONTROL Delete]** ボタンを選択します。
+3. 削除するアカウントの名前の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの&#x200B;**[!UICONTROL Activate audiences]**、**[!UICONTROL Edit details]**&#x200B;および&#x200B;**[!UICONTROL Delete]**&#x200B;にオプションが表示されます。 目的のアカウントを削除するには、![削除ボタン &#x200B;](/help/images/icons/delete.png) **[!UICONTROL Delete]** ボタンを選択します。
 
    ![宛先アカウントの削除](../assets/ui/delete-accounts/delete-accounts.png)
 
 4. 最終確認ダイアログボックスが表示され、**[!UICONTROL Delete]**&#x200B;を選択してプロセスを完了します。
 
-![ アカウントの削除を確認](../assets/ui/delete-accounts/confirm-account-deletion.png)
+![&#x200B; アカウントの削除を確認](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
 ## 次の手順 {#next-steps}
 

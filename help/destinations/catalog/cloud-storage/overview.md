@@ -79,4 +79,4 @@ ht-degree: 39%
 
 ## 次の手順 {#next-steps}
 
-使用する[ サポートされているクラウド宛先](#supported-destinations)のいずれかを選択したら、[宛先への接続チュートリアル ](/help/destinations/ui/connect-destination.md)を読んで、宛先への接続を確立する方法を確認してください。 次に、「ファイルベースの宛先へのアクティベーション」チュートリアルを参照して、クラウドストレージの宛先に[ データの書き出しを開始する方法を確認します。](/help/destinations/ui/activate-batch-profile-destinations.md)
+使用する[&#x200B; サポートされているクラウド宛先](#supported-destinations)のいずれかを選択したら、[宛先への接続チュートリアル &#x200B;](/help/destinations/ui/connect-destination.md)を読んで、宛先への接続を確立する方法を確認してください。 次に、「ファイルベースの宛先へのアクティベーション」チュートリアルを参照して、クラウドストレージの宛先に[&#x200B; データの書き出しを開始する方法を確認します。](/help/destinations/ui/activate-batch-profile-destinations.md)

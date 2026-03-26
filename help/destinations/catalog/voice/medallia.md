@@ -18,9 +18,9 @@ Web プロパティに[!DNL Medallia]をすばやくシームレスにデプロ�
 
 [!DNL Medallia]は[!DNL Adobe Experience Platform]の顧客拡張機能の声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[&#x200B; タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
-![Medallia 拡張機能 ](../../assets/catalog/voice/medallia/catalog.png)
+![Medallia 拡張機能 &#x200B;](../../assets/catalog/voice/medallia/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -32,7 +32,7 @@ Web プロパティに[!DNL Medallia]をすばやくシームレスにデプロ�
 
 [!DNL Medallia] 拡張機能をインストールします。
 
-[Experience Platform インターフェイス ](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
+[Experience Platform インターフェイス &#x200B;](https://platform.adobe.com/)で、**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

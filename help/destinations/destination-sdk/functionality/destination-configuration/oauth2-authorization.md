@@ -12,7 +12,7 @@ ht-degree: 66%
 
 # OAuth 2認証
 
-Destination SDKでは、宛先に対する複数の認証方法をサポートしています。 中には、[OAuth 2認証フレームワーク ](https://tools.ietf.org/html/rfc6749)を使用して宛先に対して認証を行うオプションがあります。
+Destination SDKでは、宛先に対する複数の認証方法をサポートしています。 中には、[OAuth 2認証フレームワーク &#x200B;](https://tools.ietf.org/html/rfc6749)を使用して宛先に対して認証を行うオプションがあります。
 
 このページでは、Destination SDKでサポートされている様々なOAuth 2認証フローについて説明し、宛先にOAuth 2認証を設定する手順を示します。
 
@@ -56,7 +56,7 @@ Destination SDKでは、宛先に対する複数の認証方法をサポート�
 
 ### Destination SDK で行う必要があること {#to-do-in-destination-sdk}
 
-Experience Platformで宛先に対するOAuth 2認証を設定するには、[ パラメーターの下の](../../authoring-api/destination-configuration/create-destination-configuration.md)宛先設定`customerAuthenticationConfigurations`にOAuth 2の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2承認付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで詳しく説明します。
+Experience Platformで宛先に対するOAuth 2認証を設定するには、[&#x200B; パラメーターの下の](../../authoring-api/destination-configuration/create-destination-configuration.md)宛先設定`customerAuthenticationConfigurations`にOAuth 2の詳細を追加する必要があります。 詳細な例については、[顧客認証](../../functionality/destination-configuration/customer-authentication.md)を参照してください。OAuth 2承認付与タイプに応じて、設定テンプレートに追加する必要があるフィールドに関する具体的な手順については、このページで詳しく説明します。
 
 ## サポートされる OAuth 2 付与タイプ {#oauth2-grant-types}
 
@@ -460,17 +460,17 @@ OAuth 2 パスワード付与（[RFC 標準仕様](https://tools.ietf.org/html/r
 | `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | 文字列 | <ul><li>`accessTokenRequest.urlBasedDestination.url.value` の値に対してテンプレートを使用する場合は、`PEBBLE_V1` を使用します。</li><li> フィールド `accessTokenRequest.urlBasedDestination.url.value` の値が定数である場合は、`NONE` を使用します。 </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | 文字列 | Experience Platform がアクセストークンをリクエストする URL。 |
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | 文字列 | <ul><li>`accessTokenRequest.httpTemplate.requestBody.value` の値に対してテンプレートを使用する場合は、`PEBBLE_V1` を使用します。</li><li> フィールド `accessTokenRequest.httpTemplate.requestBody.value` の値が定数である場合は、`NONE` を使用します。 </li></li> |
-| `accessTokenRequest.httpTemplate.requestBody.value` | 文字列 | テンプレート言語を使用して、アクセストークンエンドポイントに対する HTTP リクエストのフィールドをカスタマイズします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[ テンプレート規則](#templating-conventions)の節を参照してください。 |
+| `accessTokenRequest.httpTemplate.requestBody.value` | 文字列 | テンプレート言語を使用して、アクセストークンエンドポイントに対する HTTP リクエストのフィールドをカスタマイズします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[&#x200B; テンプレート規則](#templating-conventions)の節を参照してください。 |
 | `accessTokenRequest.httpTemplate.httpMethod` | 文字列 | アクセストークンエンドポイントの呼び出しに使用された HTTP メソッドを指定します。ほとんどの場合、この値は、`POST` です。 |
 | `accessTokenRequest.httpTemplate.contentType` | 文字列 | アクセストークンエンドポイントに対する HTTP 呼び出しのコンテンツタイプを指定します。<br> 例：`application/x-www-form-urlencoded` または `application/json`。 |
 | `accessTokenRequest.httpTemplate.headers` | 文字列 | アクセストークンエンドポイントに対する HTTP 呼び出しに任意のヘッダーを追加する必要があるかどうかを指定します。 |
 | `accessTokenRequest.responseFields.templatingStrategy` | 文字列 | <ul><li>`accessTokenRequest.responseFields.value` の値に対してテンプレートを使用する場合は、`PEBBLE_V1` を使用します。</li><li> フィールド `accessTokenRequest.responseFields.value` の値が定数である場合は、`NONE` を使用します。 </li></li> |
-| `accessTokenRequest.responseFields.value` | 文字列 | テンプレート言語を使用して、アクセストークンエンドポイントからの HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[ テンプレート規則](#templating-conventions)の節を参照してください。 |
+| `accessTokenRequest.responseFields.value` | 文字列 | テンプレート言語を使用して、アクセストークンエンドポイントからの HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[&#x200B; テンプレート規則](#templating-conventions)の節を参照してください。 |
 | `accessTokenRequest.validations.name` | 文字列 | この検証に対して指定された名前を示します。 |
 | `accessTokenRequest.validations.actualValue.templatingStrategy` | 文字列 | <ul><li>`accessTokenRequest.validations.actualValue.value` の値に対してテンプレートを使用する場合は、`PEBBLE_V1` を使用します。</li><li> フィールド `accessTokenRequest.validations.actualValue.value` の値が定数である場合は、`NONE` を使用します。 </li></li> |
-| `accessTokenRequest.validations.actualValue.value` | 文字列 | テンプレート言語を使用して、HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[ テンプレート規則](#templating-conventions)の節を参照してください。 |
+| `accessTokenRequest.validations.actualValue.value` | 文字列 | テンプレート言語を使用して、HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[&#x200B; テンプレート規則](#templating-conventions)の節を参照してください。 |
 | `accessTokenRequest.validations.expectedValue.templatingStrategy` | 文字列 | <ul><li>`accessTokenRequest.validations.expectedValue.value` の値に対してテンプレートを使用する場合は、`PEBBLE_V1` を使用します。</li><li> フィールド `accessTokenRequest.validations.expectedValue.value` の値が定数である場合は、`NONE` を使用します。 </li></li> |
-| `accessTokenRequest.validations.expectedValue.value` | 文字列 | テンプレート言語を使用して、HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[ テンプレート規則](#templating-conventions)の節を参照してください。 |
+| `accessTokenRequest.validations.expectedValue.value` | 文字列 | テンプレート言語を使用して、HTTP 応答のフィールドにアクセスします。テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、[&#x200B; テンプレート規則](#templating-conventions)の節を参照してください。 |
 
 {style="table-layout:auto"}
 

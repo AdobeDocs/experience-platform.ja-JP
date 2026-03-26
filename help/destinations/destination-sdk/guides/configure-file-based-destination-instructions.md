@@ -25,9 +25,9 @@ ht-degree: 43%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-[ エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定`/destinations-server`を作成することから開始します。
+[&#x200B; エンドポイントを使用して](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定`/destinations-server`を作成することから開始します。
 
-次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定する方法について詳しくは、対応する[ サーバー設定](../functionality/destination-server/server-specs.md)を参照してください。
+次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定する方法について詳しくは、対応する[&#x200B; サーバー設定](../functionality/destination-server/server-specs.md)を参照してください。
 
 **API 形式**
 
@@ -255,7 +255,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 3：オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、Destination SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを構成する必要があります。 この設定を設定する必要があるタイミングとその方法については、[ オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
+一部の宛先では、Destination SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを構成する必要があります。 この設定を設定する必要があるタイミングとその方法については、[&#x200B; オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
 
 オーディエンスメタデータの構成を使用する場合は、手順 2 で作成した宛先構成に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を `audienceTemplateId` のように宛先設定に追加します。
 
@@ -417,12 +417,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 5：宛先のテスト {#test-destination}
 
-前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール ](../testing-api/batch-destinations/file-based-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
+前の手順で設定エンドポイントを使用して宛先を設定した後、[宛先テストツール &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-overview.md)を使用して、[!DNL Adobe Experience Platform]と宛先の統合をテストできます。
 
 宛先をテストするプロセスの一環として、Experience Platform UIを使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、次の2つのリソースを参照してください。
 
 * [オーディエンスの作成 – ドキュメントページ](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ オーディエンスの作成 – ビデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [&#x200B; オーディエンスの作成 – ビデオチュートリアル &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 

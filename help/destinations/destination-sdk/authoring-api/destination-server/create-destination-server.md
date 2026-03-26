@@ -28,7 +28,7 @@ ht-degree: 80%
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](../../getting-started.md)を確認してください。
 
 ## 宛先サーバー設定の作成 {#create}
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。オプションは、`GET`、`PUT`、`POST`、`DELETE`、`PATCH` です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `httpTemplate.requestBody.value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformのお客様のデータをサービスが期待する形式に変換する文字エスケープ版です。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[ プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
+| `httpTemplate.requestBody.value` | 文字列 | *必須。*&#x200B;この文字列は、Experience Platformのお客様のデータをサービスが期待する形式に変換する文字エスケープ版です。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[&#x200B; プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
 | `httpTemplate.contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
 {style="table-layout:auto"}
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platform が接続する必要がある API エンドポイントのアドレスを入力して、アクティベーションワークフローのマッピング手順でターゲットフィールドとして設定するスキーマフィールドを取得します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。動的スキーマサーバーには、`GET` を使用します。 |
 | `responseFields.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `responseFields.value` | 文字列 | *必須。*&#x200B;この文字列は、パートナーAPIから受信した応答を、Experience Platform UIに表示されるパートナースキーマに変換する、文字エスケープされた変換テンプレートです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[ プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
+| `responseFields.value` | 文字列 | *必須。*&#x200B;この文字列は、パートナーAPIから受信した応答を、Experience Platform UIに表示されるパートナースキーマに変換する、文字エスケープされた変換テンプレートです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON標準のセクション 7](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[&#x200B; プロファイル属性](../../functionality/destination-server/message-format.md#attributes)の変換を参照してください。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -854,7 +854,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 動的ドロップダウン宛先サーバーの作成 {#dynamic-dropdown-servers}
 
-独自のAPIに基づいて、ドロップダウン顧客データフィールドを動的に取得および入力するには、[動的ドロップダウン ](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)を使用します。 例えば、宛先接続に使用する既存のユーザーアカウントのリストを取得できます。
+独自のAPIに基づいて、ドロップダウン顧客データフィールドを動的に取得および入力するには、[動的ドロップダウン &#x200B;](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)を使用します。 例えば、宛先接続に使用する既存のユーザーアカウントのリストを取得できます。
 
 動的ドロップダウン顧客データフィールドを設定する前に、動的ドロップダウンの宛先サーバーを設定する必要があります。
 
@@ -950,7 +950,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

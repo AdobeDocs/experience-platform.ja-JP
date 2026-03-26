@@ -32,11 +32,11 @@ ht-degree: 12%
 
 -->
 
-この記事では、[!DNL Flow Service API]を使用して[ データセット ](/help/catalog/datasets/overview.md)を[!DNL Adobe Experience Platform]から任意のクラウドストレージの場所（[!DNL Amazon S3]、SFTPの場所、または[!DNL Google Cloud Storage]など）に書き出すために必要なワークフローについて説明します。
+この記事では、[!DNL Flow Service API]を使用して[&#x200B; データセット &#x200B;](/help/catalog/datasets/overview.md)を[!DNL Adobe Experience Platform]から任意のクラウドストレージの場所（[!DNL Amazon S3]、SFTPの場所、または[!DNL Google Cloud Storage]など）に書き出すために必要なワークフローについて説明します。
 
 >[!TIP]
 >
->Experience Platformのユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[ データセットの書き出しUI チュートリアル ](/help/destinations/ui/export-datasets.md)を参照してください。
+>Experience Platformのユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[&#x200B; データセットの書き出しUI チュートリアル &#x200B;](/help/destinations/ui/export-datasets.md)を参照してください。
 
 ## 書き出しに使用できるデータセット {#datasets-to-export}
 
@@ -48,7 +48,7 @@ ht-degree: 12%
 
 現在、スクリーンショットで強調表示され、以下に示すクラウドストレージの宛先にデータセットを書き出すことができます。
 
-![ データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![&#x200B; データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -77,7 +77,7 @@ ht-degree: 12%
 
 ### 必要な権限 {#permissions}
 
-データセットをエクスポートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットをエクスポートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
 データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に&#x200B;**[!UICONTROL Activate]**&#x200B;または&#x200B;**[!UICONTROL Export datasets]** コントロールがある場合は、適切な権限を持っています。
 
@@ -87,7 +87,7 @@ ht-degree: 12%
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Experience Platform]個のAPIを呼び出すには、まず[Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[Experience Platform認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -111,7 +111,7 @@ ht-degree: 12%
 
 ### 用語集 {#glossary}
 
-このAPI チュートリアルで使用される用語については、API リファレンスドキュメントの[用語集セクション ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)を参照してください。
+このAPI チュートリアルで使用される用語については、API リファレンスドキュメントの[用語集セクション &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)を参照してください。
 
 ### 目的の宛先の接続仕様とフロー仕様の収集 {#gather-connection-spec-flow-spec}
 
@@ -362,7 +362,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-適格なデータセットを取得するには、リクエスト URLで使用される[!DNL connection spec] IDがデータレイクソース接続仕様ID、`23598e46-f560-407b-88d5-ea6207e49db0`である必要があり、2つのクエリパラメーター`outputField=datasets`と`outputType=activationDatasets`を指定する必要があります。 その他のすべてのクエリパラメーターは、[ カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)でサポートされている標準のクエリパラメーターです。
+適格なデータセットを取得するには、リクエスト URLで使用される[!DNL connection spec] IDがデータレイクソース接続仕様ID、`23598e46-f560-407b-88d5-ea6207e49db0`である必要があり、2つのクエリパラメーター`outputField=datasets`と`outputType=activationDatasets`を指定する必要があります。 その他のすべてのクエリパラメーターは、[&#x200B; カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)でサポートされている標準のクエリパラメーターです。
 
 +++
 
@@ -449,7 +449,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 応答が成功すると、アクティベーションの対象となるデータセットのリストが含まれます。 これらのデータセットは、次の手順でソース接続を構築する際に使用できます。
 
-返される各データセットの様々な応答パラメーターについて詳しくは、[ データセット API開発者ドキュメント ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)を参照してください。
+返される各データセットの様々な応答パラメーターについて詳しくは、[&#x200B; データセット API開発者ドキュメント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)を参照してください。
 
 ## ソース接続の作成 {#create-source-connection}
 
@@ -514,7 +514,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 また、次の点にも注意してください。
 
-* この手順で作成したソース接続は、データセットを宛先にアクティベートするために、データフローにリンクする必要があります。 ソース接続をデータフローにリンクする方法については、[ データフローの作成](#create-dataflow)の節を参照してください。
+* この手順で作成したソース接続は、データセットを宛先にアクティベートするために、データフローにリンクする必要があります。 ソース接続をデータフローにリンクする方法については、[&#x200B; データフローの作成](#create-dataflow)の節を参照してください。
 * ソース接続のデータセット IDは、作成後に変更できません。 ソース接続からデータセットを追加または削除する必要がある場合は、新しいソース接続を作成し、新しいソース接続のIDをデータフローにリンクする必要があります。
 
 ## （ターゲット）ベース接続の作成 {#create-base-connection}
@@ -2453,7 +2453,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## データセットの正常な書き出しの確認 {#verify}
 
-データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。[ データフローの作成時](#create-dataflow)に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されることを期待します。
+データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。[&#x200B; データフローの作成時](#create-dataflow)に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されることを期待します。
 
 Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 書き出しのたびに、次のパターンに従って新しいフォルダーが作成されます。
 
@@ -2477,7 +2477,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 既知の制限事項 {#known-limitations}
 
