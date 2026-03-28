@@ -158,7 +158,7 @@ Adobe Advertising DSPの宛先は、次の表に示すIDのアクティベーシ
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="事前設定済みのマッピングセット"
 >abstract="ECIDと[!DNL adcloud] Cookieの2つのマッピングセットが事前に設定されています。 データをAdobe Advertising DSPにアクティベートする場合、アクティベートされたオーディエンスに適格なプロファイルに少なくともECID IDが関連付けられており、宛先に正常にエクスポートされる必要があります。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="詳しくは、事前設定されたマッピングを参照してください。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="詳しくは、事前設定されたマッピングを参照してください。"
 
 >[!IMPORTANT]
 >
