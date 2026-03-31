@@ -53,7 +53,7 @@ ht-degree: 39%
 | 宛先にマッピングされる属性の最大数 | 50 | パフォーマンスガードレール | 複数の宛先および宛先タイプの場合、書き出し用にマッピングするプロファイル属性および ID を選択できます。最適なパフォーマンスを得るには、最大50個の属性を宛先インスタンスにマッピングする必要があります。 |
 | 宛先の最大数 | 100 | システム強制ガードレール | データを接続してアクティブ化できる宛先は、サンドボックスごとに&#x200B;*最大100個まで作成できます*。 [エッジパーソナライゼーションの宛先（カスタムパーソナライゼーション）](#edge-destinations-activation)は、100 件の推奨される宛先のうち、最大 10 件を構成できます。 |
 | 宛先に対してアクティブ化されるデータのタイプ | プロファイルデータ（ID および ID マップを含む） | システム強制ガードレール | 現在、宛先へ&#x200B;*プロファイルレコード属性*&#x200B;の書き出しのみ可能です。イベントデータを記述する XDM 属性は、現時点では書き出しでサポートされていません。 |
-| 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 一部を利用可能 | システム強制ガードレール | 配列属性を[ ファイルベースの宛先](/help/destinations/destination-types.md#file-based)に書き出すことができます。 [機能について詳しくは](/help/destinations/ui/export-arrays-maps-objects.md)を参照してください。 |
+| 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 一部を利用可能 | システム強制ガードレール | 配列属性を[&#x200B; ファイルベースの宛先](/help/destinations/destination-types.md#file-based)に書き出すことができます。 [機能について詳しくは](/help/destinations/ui/export-arrays-maps-objects.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ ht-degree: 39%
 | アクティベーションの頻度 | 1 日に 1 回、またはより頻繁な 3 時間、6 時間、8 時間、12 時間ごとに 1 回の増分書き出しを行います。 | システム強制ガードレール | バッチ書き出しの増分頻度について詳しくは、[完全ファイルの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)および[増分ファイルの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)ドキュメントの節を参照してください。 |
 | 特定の時間に書き出すことができるオーディエンスの最大数 | 100 | パフォーマンスガードレール | バッチ宛先インスタンスに最大100個のオーディエンスを追加することをお勧めします。 |
 | アクティベートするファイルあたりの最大行数（レコード数） | 500 万 | システム強制ガードレール | Adobe Experience Platform は、書き出したファイルを、ファイルあたり 500 万件のレコード（行）で自動的に分割します。各行は 1 つのプロファイルを表します。`filename.csv`、`filename_2.csv`、`filename_3.csv` のように、分割ファイル名には、ファイルが大きな書き出しの一部であることを示す数字が付加されます。詳しくは、「バッチの宛先をアクティベート」チュートリアルの[スケジュールの節](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)を参照してください。 |
-| 宛先インスタンスでアクティブ化できる外部オーディエンスの最大数（例：FAC、カスタムアップロード、オーディエンス構成） | 20 | システム強制ガードレール | バッチファイルベースの宛先に対して外部オーディエンス（例：[Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac)、[ カスタムアップロード ](/help/segmentation/ui/audience-portal.md#import-audience)、[Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)）をアクティブ化する場合、宛先インスタンスでアクティブ化できるオーディエンスは20個までという制限があります。 これらのオーディエンスタイプについて詳しくは、[ オーディエンスタイプとカスタマイズ ](/help/segmentation/ui/audience-portal.md#customize)を参照してください。 バッチファイルベースの宛先に対する外部オーディエンスのアクティブ化[ ワークフローについて詳しくは、こちらを参照してください](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)。 |
+| 宛先インスタンスでアクティブ化できる外部オーディエンスの最大数（例：FAC、カスタムアップロード、オーディエンス構成） | 20 | システム強制ガードレール | バッチファイルベースの宛先に対して外部オーディエンス（例：[Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac)、[&#x200B; カスタムアップロード &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience)、[Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)）をアクティブ化する場合、宛先インスタンスでアクティブ化できるオーディエンスは20個までという制限があります。 これらのオーディエンスタイプについて詳しくは、[&#x200B; オーディエンスタイプとカスタマイズ &#x200B;](/help/segmentation/ui/audience-portal.md#customize)を参照してください。 バッチファイルベースの宛先に対する外部オーディエンスのアクティブ化[&#x200B; ワークフローについて詳しくは、こちらを参照してください](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)。 |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ ht-degree: 39%
 
 ### データセットの書き出し {#dataset-exports}
 
-データセットの書き出しは現在、**[!UICONTROL First Full and then Incremental]** [ パターン ](/help/destinations/ui/export-datasets.md#scheduling)でサポートされています。 このセクション *で説明するガードレールは、データセット書き出しワークフローの設定後に最初に発生する完全な書き出し*&#x200B;に適用されます。
+データセットの書き出しは現在、**[!UICONTROL First Full and then Incremental]** [&#x200B; パターン &#x200B;](/help/destinations/ui/export-datasets.md#scheduling)でサポートされています。 このセクション *で説明するガードレールは、データセット書き出しワークフローの設定後に最初に発生する完全な書き出し*&#x200B;に適用されます。
 
 <!--
 
@@ -166,7 +166,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-詳しくは、[ データセットの書き出しについて](/help/destinations/ui/export-datasets.md)を参照してください。
+詳しくは、[&#x200B; データセットの書き出しについて](/help/destinations/ui/export-datasets.md)を参照してください。
 
 
 ### Destination SDK ガードレール {#destination-sdk-guardrails}
@@ -196,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 その他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間に関する情報、および[!DNL Real-Time CDP]製品説明ドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDPのガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービスの[ エンドツーエンドの待ち時間ダイアグラム ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービスの[&#x200B; エンドツーエンドの待ち時間ダイアグラム &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
