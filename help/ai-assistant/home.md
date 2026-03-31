@@ -1,124 +1,127 @@
 ---
-title: Adobe Experience Platformの AI アシスタント（従来）の概要
-description: AI アシスタント（従来）、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-Time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
+title: ADOBE EXPERIENCE PLATFORMのAI アシスタント（レガシー）の概要
+description: AI アシスタント（レガシー）について、その概要とユースケース、そしてAdobe Experience PlatformとReal-Time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 68c55e370cab58ce5c93359520bf4ce671282a1b
+source-git-commit: cc3ac0bb3e448f4a4fa69df5dcb7c45b098ca255
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1264'
 ht-degree: 5%
 
 ---
 
-# Adobe Experience Platformの AI アシスタント（従来）
+# ADOBE EXPERIENCE PLATFORMのAI アシスタント（レガシー）
 
 >[!IMPORTANT]
 >
->このドキュメントは、AI アシスタント（レガシー）に当てはまります。 AI アシスタント（次世代）について詳しくは、[Experience Cloudの AI](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) ドキュメントの [AI アシスタント UI ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
+>このドキュメントは、AI アシスタント（レガシー）に適用されます。 AI アシスタント（次世代型）について詳しくは、[AI アシスタント UI ガイド ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)をExperience Cloud[の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)AI ドキュメントでご確認ください。
 
-AI Assistant （レガシー）と AI Assistant （次世代）の比較については、次の表を参照してください。
+AI アシスタント（レガシー）とAI アシスタント（次世代）の比較については、次の表を参照してください。
 
-| 機能領域 | AI アシスタント（レガシー） | AI アシスタント（次世代） |
+| 機能領域 | AI アシスタント（レガシー） | AI アシスタント（次世代型） |
 | --- | --- | --- |
-| ユーザーエクスペリエンス | AI アシスタント（レガシー）は、右側のパネルでのみ使用できます。 | AI アシスタント（次世代）は、右パネルと没入型フルスクリーンエクスペリエンスの両方で利用できます。 |
-| 業務の範囲 | 製品知識と運用インサイトの両方に AI アシスタント（レガシー）を使用できます。 | AI Assistant （Next-Gen）を使用して、製品の知識、運用のインサイト、高度なエージェンシースキル、複数のステップのタスク実行を行うことができます。 |
-| Platform アーキテクチャ | AI アシスタント（従来の）は、Agent Orchestrator スタックに基づいて構築されていません。 | AI アシスタント（次世代）は [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を活用し、拡張性と機能間の高度な調整を可能にします。 |
-| アプリケーション範囲 | AI アシスタント（レガシー）は、アプリケーション固有の実装です。 | AI アシスタント（次世代）を使用すると、すべてのAdobe Experience Cloud アプリケーションで AI アシスタントを統一することができます。 |
-| アクセスと権限モデル | 個々の製品境界に合わせた、アプリケーションスコープのアクセスモデル。 | すべてのユーザーが AI Assistant （次世代）および関連するExperience Platform エージェントにアクセスできます。 **注意**: <ul><li>**Adobe Experience Manager**：管理者から、[Adobe Admin Console](https://helpx.adobe.com/jp/enterprise/using/admin-console.html) 経由で AI アシスタント（次世代）にアクセスする権限を付与されている必要があります。</li><li>**Customer Journey Analytics**：管理者から、[Customer Journey Analytics アクセス制御 &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/technotes/access-control?lang=en) を通じて AI アシスタントにアクセスする権限を付与してもらう必要があります。 これにより、製品に関する知識やデータインサイトを得ることができます。 |
+| ユーザーエクスペリエンス | AI アシスタント（レガシー）は、右側のパネルでのみ使用できます。 | AI アシスタント（次世代）は、右側のパネルと没入型のフルスクリーン体験の両方で利用できます。 |
+| 機能の範囲 | AI アシスタント（レガシー）は、製品知識と運用インサイトの両方に活用できます。 | AI アシスタント（次世代）は、製品知識、運用インサイト、高度なエージェント型スキル、マルチステップのタスク実行などに使用できます。 |
+| プラットフォームアーキテクチャ | AI アシスタント（レガシー）は、Agent Orchestratorスタック上に構築されていません。 | [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)が提供するAI アシスタント （次世代）は、機能をまたいで拡張性と高度な連携を可能にします。 |
+| 適用範囲 | AI アシスタント（レガシー）は、アプリケーション固有の実装です。 | AI アシスタント（次世代）を利用すれば、あらゆるAdobe Experience Cloudアプリケーションをまたいで、統合されたAI アシスタント体験を実現できます。 |
+| アクセスと権限のモデル | アプリケーション範囲のアクセスモデルを個々の製品境界に合わせて調整。 | 利用者は誰でも、AI アシスタント（次世代）と関連するExperience Platformエージェントにアクセスできます。 **メモ**: <ul><li>**Adobe Experience Manager**：管理者は、[Adobe Admin Console](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)を通じてAI アシスタント （Next-Gen）にアクセスする権限を付与する必要があります。</li><li>**Customer Journey Analytics**：管理者は、[Customer Journey Analytics アクセス制御](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en)を通じてAI アシスタントにアクセスする権限を付与する必要があります。 これにより、製品知識やデータインサイトにもとづいた質問が可能になります。 |
 
-次のビデオは、AI アシスタントについて理解を深めるためのものです。
+次のビデオは、AI アシスタントに関する理解を深めることを目的としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Adobe Experience Platformの AI アシスタント（従来）については、このドキュメントを参照してください。
+Adobe Experience PlatformのAI アシスタント（レガシー）について詳しくは、このドキュメントを参照してください。
 
-Adobe Experience Platformの AI アシスタント（従来の AI アシスタント）は、Adobe アプリケーションでのワークフローの高速化に使用できる対話型エクスペリエンスです。 AI アシスタント（レガシー）を使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタント（従来のバージョン）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
+ADOBE EXPERIENCE PLATFORMのAI アシスタント（レガシー）は、Adobeアプリケーションのワークフローを高速化するために利用できる会話型のエクスペリエンスです。 AI アシスタント（レガシー）を使用すれば、製品情報の理解、問題のトラブルシューティング、情報の検索を改善し、運用上のインサイトを獲得できます。 AI アシスタント（レガシー）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートしています。
 
-![&#x200B; 初めてユーザーエクスペリエンスがトリガーされる AI アシスタント インターフェイス &#x200B;](./images/ai-assistant-full.png)
+![初めてのユーザーエクスペリエンスがトリガーされたAI アシスタント インターフェイス。](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->AI アシスタント（レガシー）を使用するには、[&#x200B; ユーザー契約 &#x200B;](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の機能が展開される際に、追加の AI アシスタント（レガシー）機能を使用できます。
+>AI アシスタント （レガシー）を使用するには、事前に[ ユーザー契約書](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)に同意する必要があります。 ユーザー契約には、パブリックベータ契約も含まれます。 そのため、追加のAI アシスタント（レガシー）機能をベータ版で展開する際に使用できます。
 
-+++選択してユーザー契約インターフェイスを表示します
++++選択してユーザー契約書インターフェイスを表示
 
-![&#x200B; ユーザー使用許諾契約の最初のページ &#x200B;](./images/user-agreement-1.png)
+![ ユーザー契約書の最初のページ。](./images/user-agreement-1.png)
 
-![&#x200B; ユーザー契約書の最後のページ &#x200B;](./images/user-agreement-2.png)
+![ ユーザー契約書の最後のページ。](./images/user-agreement-2.png)
 
 +++
 
 ## AI アシスタントについて {#understanding-ai-assistant}
 
-AI アシスタント（レガシー）は、データベースにクエリを実行し、データベースのデータを人間が読み取れる回答に変換することで、送信された質問に応答します。
+AI アシスタント（レガシー）は、送信された質問に対して、データベースにクエリを実行し、データベースのデータを人間が読みやすい回答に変換することで回答します。
 
-基になるデータのこの内部表現は、**[!DNL Knowledge Graph]** とも呼ばれ、特定の回答の概念、データ、メタデータの包括的な Web です。
+この基礎となるデータの内部表現は、**[!DNL Knowledge Graph]**&#x200B;とも呼ばれます。これは、特定の回答に対する概念、データ、メタデータを包括的に組み合わせたwebです。
 
-[!DNL Knowledge Graph] は、クエリが送信されるたびに参照されるサブグラフで構成されます。
+[!DNL Knowledge Graph]は、クエリが送信されるたびに参照されるサブグラフで構成されます。
 
-* 顧客の運用インサイト。
-* 様々なメタストアにわたる顧客の運用インサイト。
+* 顧客運用に関するインサイト。
+* さまざまなメタストアをまたいだ顧客運用インサイト。
 * Experience Leagueのドキュメント。
 
-AI アシスタント（レガシー）をクエリする前に考慮すべき質問には、次の 2 つのクラスがあります。
+AI アシスタント（レガシー）をクエリする前に考慮すべき質問には、次の2つのクラスがあります。
 
-### 製品に関する知識 {#product-knowledge}
+### 製品知識 {#product-knowledge}
 
-製品に関する知識とは、Experience Leagueのドキュメントに基づいた概念やトピックを指します。 製品に関する知識の質問は、次のサブグループでさらに指定できます。
+製品ナレッジとは、Experience Leagueのドキュメントに基づいた概念とトピックを指します。 製品知識に関する質問は、さらに次のサブグループに指定できます。
 
-| 製品に関する知識 | 例 |
+| 製品知識 | 例 |
 | --- | --- |
-| 先を見越した学習 | <ul><li>ID とプライマリキーまたは外部キーの違いは何ですか。</li><li>類似オーディエンスとは</li></ul> |
-| 検出を開く | <ul><li>このデータセットを書き出すにはどうすればよいですか？</li><li>ヘルスケア関連の顧客向けのスキーマはありますか？</li></ul> |
+| ターゲットを絞った学習 | <ul><li>IDとプライマリキーまたは外部キーの違いは何ですか？</li><li>類似オーディエンスとは何ですか？</li></ul> |
+| オープン検出 | <ul><li>このデータセットを書き出すにはどうすればよいですか？</li><li>医療業界の顧客向けのスキーマはありますか？</li></ul> |
 | トラブルシューティング | <ul><li>Adobeが所有するプロファイルのスキーマを有効にできないのはなぜですか？</li><li>セグメントを削除できないのはなぜですか？</li></ul> |
 
 {style="table-layout:auto"}
 
-AI アシスタント（レガシー）の製品に関する知識について詳しくは、次のビデオをご覧ください。
+AI アシスタント（レガシー）製品ナレッジに関する追加情報については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475931/?captions=jpn&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### 運用上のインサイト {#operational-insights}
 
-オペレーショナルインサイトとは、カウント、ルックアップ、系列の影響を含む、メタデータオブジェクト（属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソース）に関して生成される回答 AI アシスタント（従来のツール）を指します。 サンドボックス内のデータは参照されません。
+運用上のインサイトとは、AI アシスタント（レガシー）が、カウント、ルックアップ、リネージへの影響など、メタデータオブジェクト（属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソース）について生成する回答を指します。 サンドボックス内のデータは表示されません。
 
-* データセットはいくつ持っていますか？
-* 使用されたことのないスキーマ属性の数。
-* アクティブ化されているオーディエンスはどれですか？
+* 所有しているデータセットの数は？
+* まだ使用されていないスキーマ属性の数
+* どのオーディエンスがアクティブ化されたか？
 
-次のドメインで、運用に関するインサイトについて AI アシスタント（レガシー）に質問できます。
+次のドメインで、AI アシスタント（レガシー）に運用上のインサイトについて質問することができます。
 
-| ドメイン | サポートされるメタデータ | サポートされていないメタデータ |
+| ドメイン | サポートされているメタデータ | サポートされていないメタデータ |
 | --- | --- | --- |
-| 属性 | <ul><li>属性名の検索</li><li>属性 – スキーマの関係</li><li>属性 – データセットの関係</li><li>属性 – オーディエンスの関係</li><li>属性 – 宛先の関係</li></ul> | <ul><li>属性クラス</li><li>監査</li><li>非推奨ステータス</li><li>ラベル</li><li>属性に格納される値</li></ul> |
-| オーディエンス | <ul><li>オーディエンス数</li><li>オーディエンスタイプ（ストリーミングまたはバッチ）</li><li>作成日/変更日</li><li>アクティベーションステータス</li><li>プロファイル数</li><li>オーディエンスを複製</li><li>オーディエンス定義検索</li><li>オーディエンス – オーディエンスの関係</li><li>オーディエンス – 属性関係</li><li>オーディエンス – データセット関係</li><li>オーディエンス – 宛先関係</li><li>名前検索</li><li>名前と ID 検索 | <ul><li>オーディエンスの重複</li><li>Audience Activation</li><li>オーディエンス – キャンペーン関係</li><li>監査</li><li>作成/変更</li><li>ラベル</li><li>プロファイル選定トレンド</li></ul> |
-| データフロー | <ul><li>データフロー数</li><li>データフローステータス</li><li>データフロー – データセットの関係</li><li>データフロー – ソースの関係</li></ul> | <ul><li>作成/変更</li><li>データフローバッチ関係</li><li>プロファイル数の取り込み</li></ul> |
-| データセット | <ul><li>データセット数</li><li>プロファイル有効化ステータス</li><li>作成日/変更日</li><li>データセット – スキーマの関係</li><li>データセット – オーディエンスの関係</li><li>データセット – 属性関係</li><li>データセット – データフロー関係</li><li>データセットサイズ</li><li>行数</li><li>名前検索 </li><li>名前と ID 検索</li></ul> | <ul><li>監査</li><li>作成者</li><li>データセット – バッチ関係</li><li>データセットの作成/変更</li><li>プロファイル数</li><li>値検索</li></ul> |
-| 宛先 | <ul><li>設定済みの宛先数</li><li>宛先 – オーディエンスの関係</li><li>宛先属性の関係</li></ul> | <ul><li>アカウントの設定</li><li>アカウント資格情報</li><li>一意のプロファイルがアクティブ化されました</li></ul> |
-| ジャーニー | <ul><li>カウント</li><li>名前検索</li><li>名前と ID 検索</li><li>ジャーニーステータス</li><li>トリガーステータス（オーディエンスとイベント）</li><li>作成日/変更日</li><li>繰り返し頻度</li></ul> | <ul><li>属性 – ジャーニーの関係</li><li>監査</li><li>作成/変更</li><li>作成者</li><li>イベント</li><li>ジャーニー - データセット</li><li>ジャーニー - スキーマ</li><li>オファー</li><li>プロファイル選定トレンド</li><li>ステップイベント</li></ul> |
-| スキーマ | <ul><li>スキーマ数</li><li>作成日/変更日</li><li>スキーマ – 属性関係</li><li>スキーマ – データセットの関係</li><li>スキーマ – オーディエンスの関係</li><li>プロファイル有効化ステータス</li><li>名前検索</li><li>名前と ID 検索</li></ul> | <ul><li>監査</li><li>作成/変更</li><li>作成者</li><li>フィールドグループ</li><li>ID</li><li>ID 名前空間</li><li>ラベル</li><li>プロファイル数</li></ul> |
-| ソース | <ul><li>アカウント数</li><li>アカウントステータス</li><li>各アカウントのアクティブ/非アクティブなデータフロー</li><li>Source コネクタ – データフローの関係</li><li>Source アカウント – データフローの関係</li></ul> | <ul><li>アカウント資格情報</li><li>アカウントの設定</li><li>データ取得指標</li><li>プロファイル数</li><li>Source - バッチ関係</li></ul> |
+| 属性 | <ul><li>属性名検索</li><li>属性 – スキーマ関係</li><li>属性 – データセットの関係</li><li>属性 – オーディエンス関係</li><li>属性 – 宛先関係</li></ul> | <ul><li>属性クラス</li><li>監査</li><li>非推奨ステータス</li><li>ラベル</li><li>属性に保存された値</li></ul> |
+| オーディエンス | <ul><li>オーディエンス数</li><li>オーディエンスタイプ（ストリーミングまたはバッチ）</li><li>作成日/変更日</li><li>アクティベーションステータス</li><li>プロファイル数</li><li>オーディエンスの重複</li><li>オーディエンス定義検索</li><li>Audience - audience relationship</li><li>オーディエンス – 属性の関係</li><li>オーディエンス – データセットの関係</li><li>オーディエンス – 宛先関係</li><li>名前検索</li><li>名前とID検索 | <ul><li>オーディエンスの重複</li><li>Audience Activation</li><li>オーディエンス – キャンペーンの関係</li><li>監査</li><li>作成/修正</li><li>ラベル</li><li>プロファイル選定のトレンド</li></ul> |
+| データフロー | <ul><li>データフロー数</li><li>データフローステータス</li><li>データフロー – データセットの関係</li><li>データフロー – ソース関係</li></ul> | <ul><li>制作/修正</li><li>データフローとバッチの関係</li><li>取り込みプロファイル数</li></ul> |
+| データセット | <ul><li>データセット数</li><li>プロファイル有効ステータス</li><li>作成/変更日</li><li>データセット – スキーマ関係</li><li>データセット – オーディエンスの関係</li><li>データセット – 属性関係</li><li>データセット – データフローの関係</li><li>データセットサイズ</li><li>行数</li><li>名前検索 </li><li>名前とID検索</li></ul> | <ul><li>監査</li><li>作成者</li><li>データセット – バッチ関係</li><li>データセットの作成/修正</li><li>プロファイル数</li><li>値検索</li></ul> |
+| データモデル（連合オーディエンス構成） | <ul><li>データモデルのカウント</li><li>名前検索</li><li>データモデルとスキーマの関係</li><li>リンクプロパティ</li><li>ステータス</li><li>作成日と変更日</li><li>リンクデータモデルの関係</li></ul> | |
+| 宛先 | <ul><li>設定済みの宛先数</li><li>宛先 – オーディエンスの関係</li><li>配信先属性の関係</li></ul> | <ul><li>アカウント設定</li><li>アカウント資格情報</li><li>一意のプロファイルがアクティブ化されました</li></ul> |
+| 連合データベース（連合オーディエンス構成） | <ul><li>データベース数</li><li>データベース名</li><li>データベースの種類</li><li>作成日/変更日</li><li>ステータス</li></ul> | |
+| ジャーニー | <ul><li>カウント</li><li>名前検索</li><li>名前とID検索</li><li>ジャーニーステータス</li><li>トリガーされたステータス（オーディエンスとイベントの比較）</li><li>作成日/変更日</li><li>繰り返し頻度</li></ul> | <ul><li>属性 – ジャーニーの関係</li><li>監査</li><li>制作/修正</li><li>作成者</li><li>イベント</li><li>ジャーニー - データセット</li><li>ジャーニー - スキーマ</li><li>オファー</li><li>プロファイル選定のトレンド</li><li>ステップイベント</li></ul> |
+| スキーマ | <ul><li>スキーマ数</li><li>作成/変更日</li><li>スキーマ – 属性関係</li><li>スキーマ – データセットの関係</li><li>スキーマ – オーディエンス関係</li><li>プロファイル有効ステータス</li><li>名前検索</li><li>名前とID検索</li></ul> | <ul><li>監査</li><li>制作/修正</li><li>作成者</li><li>フィールドグループ</li><li>ID</li><li>ID 名前空間</li><li>ラベル</li><li>プロファイル数</li></ul> |
+| スキーマ（連合オーディエンス構成） | <ul><li>スキーマ数</li><li>スキーマ名/ラベル検索</li><li>作成日と変更日</li><li>スキーマとデータベースの関係</li><li>オーディエンスタイプスキーマ</li></ul> | <ul><li>スキーマとコンポジションの関係</li><li>スキーマプロパティ</li></ul> |
+| ソース | <ul><li>アカウント数</li><li>アカウントステータス</li><li>各アカウントのアクティブ/非アクティブなデータフロー</li><li>Source コネクタ – データフローリレーションシップ</li><li>Source アカウント – データフローリレーションシップ</li></ul> | <ul><li>アカウント資格情報</li><li>アカウント設定</li><li>データ取り込み指標</li><li>プロファイル数</li><li>Source - バッチ関係</li></ul> |
 
 {style="table-layout:auto"}
 
-オペレーショナルインサイトの質問については、回答が現在の UI の状態を反映していない場合があります。 これらの質問を裏付けるデータは、24 時間ごとに 1 回更新されます。 例えば、Real-Time CDPで日中に行った変更内容は、夜間にデータストアに同期され、午前中にユーザーからの質問に使用できるようになります。 オブジェクトに関連する特定のデータを照会するには、サンドボックスにログインする必要があります。
+運用上のインサイトに関する質問の場合、回答がUIの現在の状態を反映しない場合があります。 これらの質問を裏付けるデータは、24時間ごとに更新されます。 例えば、日中にReal-Time CDPで行った変更は、夜間にデータストアと同期され、朝にユーザーからの質問に対応できるようになります。 サンドボックスにログインして、オブジェクトに関連する特定のデータについて問い合わせる必要があります。
 
-AI アシスタント（レガシー）の運用インサイトについて詳しくは、次のビデオをご覧ください。
+AI アシスタント（レガシー）の運用インサイトに関する追加情報については、次の動画をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444033?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### 機能の範囲 {#feature-scope}
 
 現在、AI アシスタント（レガシー）の範囲は次のとおりです。
 
-* [&#x200B; 製品ナレッジ &#x200B;](./home.md#product-knowledge):AI アシスタント（従来）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
-* [&#x200B; 運用に関するインサイト &#x200B;](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースなどのデータオブジェクトに関する運用に関するインサイトを、AI Assistant （従来の）に質問できます。
+* [製品情報](./home.md#product-knowledge): AI アシスタント （レガシー）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品情報に関する質問に答えることができます。 Customer Journey Analyticsの製品情報に関するトピックを詳しく調べることもできますが、それはCustomer Journey Analytics UIを介してのみです。
+* [運用上のインサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソースのデータオブジェクトに関する運用上のインサイトについて、AI アシスタント（レガシー）に質問することができます。
 
 ## 次の手順
 
-これで、AI アシスタント（レガシー）の概要を理解できたので、ワークフロー中に AI アシスタント（レガシー）を続行して使用できます。 詳しくは、次のドキュメントを参照してください。
+これで、AI アシスタント（レガシー）の概要を理解できたので、ワークフロー中にAI アシスタント（レガシー）を続行して使用できるようになります。 詳しくは、次のドキュメントを参照してください。
 
 * [AI アシスタント（レガシー） UI ガイド](./ui-guide.md)
-* [機能へのアクセス](./access.md)
+* [機能アクセス](./access.md)
 * [質問ガイド](./questions.md)
-* [AI アシスタントでのプライバシー、セキュリティ、ガバナンス（レガシー）](./privacy.md)
+* [AI アシスタント（レガシー）のプライバシー、セキュリティ、ガバナンス](./privacy.md)
 * [よくある質問](./faq.md)
