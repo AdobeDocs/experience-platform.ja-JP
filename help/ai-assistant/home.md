@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->このドキュメントは、AI アシスタント（レガシー）に適用されます。 AI アシスタント（次世代型）について詳しくは、[AI アシスタント UI ガイド ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)をExperience Cloud[の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)AI ドキュメントでご確認ください。
+>このドキュメントは、AI アシスタント（レガシー）に適用されます。 AI アシスタント（次世代型）について詳しくは、[AI アシスタント UI ガイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)をExperience Cloud[の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)AI ドキュメントでご確認ください。
 
 AI アシスタント（レガシー）とAI アシスタント（次世代）の比較については、次の表を参照してください。
 
@@ -37,13 +37,13 @@ ADOBE EXPERIENCE PLATFORMのAI アシスタント（レガシー）は、Adobe�
 
 >[!IMPORTANT]
 >
->AI アシスタント （レガシー）を使用するには、事前に[ ユーザー契約書](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)に同意する必要があります。 ユーザー契約には、パブリックベータ契約も含まれます。 そのため、追加のAI アシスタント（レガシー）機能をベータ版で展開する際に使用できます。
+>AI アシスタント （レガシー）を使用するには、事前に[&#x200B; ユーザー契約書](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)に同意する必要があります。 ユーザー契約には、パブリックベータ契約も含まれます。 そのため、追加のAI アシスタント（レガシー）機能をベータ版で展開する際に使用できます。
 
 +++選択してユーザー契約書インターフェイスを表示
 
-![ ユーザー契約書の最初のページ。](./images/user-agreement-1.png)
+![&#x200B; ユーザー契約書の最初のページ。](./images/user-agreement-1.png)
 
-![ ユーザー契約書の最後のページ。](./images/user-agreement-2.png)
+![&#x200B; ユーザー契約書の最後のページ。](./images/user-agreement-2.png)
 
 +++
 
@@ -114,7 +114,7 @@ AI アシスタント（レガシー）の運用インサイトに関する追�
 現在、AI アシスタント（レガシー）の範囲は次のとおりです。
 
 * [製品情報](./home.md#product-knowledge): AI アシスタント （レガシー）は、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品情報に関する質問に答えることができます。 Customer Journey Analyticsの製品情報に関するトピックを詳しく調べることもできますが、それはCustomer Journey Analytics UIを介してのみです。
-* [運用上のインサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソースのデータオブジェクトに関する運用上のインサイトについて、AI アシスタント（レガシー）に質問することができます。
+* [運用上のインサイト &#x200B;](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソースのデータオブジェクトに関する運用上のインサイトについて、AI アシスタント（レガシー）に質問することができます。
 
 ## 次の手順
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->このドキュメントは、AI アシスタント（レガシー）に適用されます。 AI アシスタント（次世代型）について詳しくは、[AI アシスタント UI ガイド ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)をExperience Cloud[の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)AI ドキュメントでご確認ください。
+>このドキュメントは、AI アシスタント（レガシー）に適用されます。 AI アシスタント（次世代型）について詳しくは、[AI アシスタント UI ガイド &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)をExperience Cloud[の](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)AI ドキュメントでご確認ください。
 
 AI アシスタント（レガシー）とAI アシスタント（次世代）の比較については、次の表を参照してください。
 
@@ -70,7 +70,7 @@ AI アシスタント（レガシー）へのアクセスは、次のパラメ�
 
 ![AI アシスタントを有効にする（レガシー）権限と、特定の役割に含まれる操作インサイトを表示する権限UI ページ。](./images/access/access-permissions.png)
 
-必要な権限を取得したら、使用しているアプリケーションの上部ヘッダーにある「![AI Assistant （Legacy） ](/help/images/icons/ai-assistant.png)」アイコンを選択して、AI Assistant （Legacy）にアクセスできます。
+必要な権限を取得したら、使用しているアプリケーションの上部ヘッダーにある「![AI Assistant （Legacy） &#x200B;](/help/images/icons/ai-assistant.png)」アイコンを選択して、AI Assistant （Legacy）にアクセスできます。
 
 ![初めてのユーザーエクスペリエンスを備えたAI アシスタント （レガシー）。](./images/access/access-home.png)
 
@@ -80,4 +80,4 @@ AI アシスタント（レガシー）へのアクセスは、次のパラメ�
 
 ## 次の手順
 
-AI アシスタント （レガシー）に完全にアクセスできたら、ワークフロー中に機能の使用に進むことができます。詳しくは、[AI アシスタント （レガシー） UI ガイド ](./ui-guide.md)を参照してください。
+AI アシスタント （レガシー）に完全にアクセスできたら、ワークフロー中に機能の使用に進むことができます。詳しくは、[AI アシスタント （レガシー） UI ガイド &#x200B;](./ui-guide.md)を参照してください。
