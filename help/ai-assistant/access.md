@@ -76,7 +76,7 @@ AI アシスタント（レガシー）へのアクセスは、次のパラメ�
 
 次のビデオでは、組織とユーザーのAI アシスタント（レガシー）へのアクセスを設定する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475920/?captions=jpn&learn=on)
 
 ## 次の手順
 

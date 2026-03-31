@@ -75,7 +75,7 @@ AI アシスタント（レガシー）をクエリする前に考慮すべき�
 
 AI アシスタント（レガシー）製品ナレッジに関する追加情報については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475931/?captions=jpn&learn=on)
 
 ### 運用上のインサイト {#operational-insights}
 
@@ -107,7 +107,7 @@ AI アシスタント（レガシー）製品ナレッジに関する追加情�
 
 AI アシスタント（レガシー）の運用インサイトに関する追加情報については、次の動画をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444033?captions=jpn&learn=on&enablevpops)
 
 ### 機能の範囲 {#feature-scope}
 
