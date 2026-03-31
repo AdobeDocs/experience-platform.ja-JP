@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->元の[[!DNL Oracle Eloqua]  （V1） ](oracle-eloqua.md) ソースは、2026年1月の時点で非推奨（廃止予定）となりました。 この非推奨のソースで利用できる移行はありません。新しい[!DNL Oracle Eloqua] （V2） ソースを使用してデータを再実装する必要があります。
+>元の[[!DNL Oracle Eloqua]  （V1） &#x200B;](oracle-eloqua.md) ソースは、2026年1月の時点で非推奨（廃止予定）となりました。 この非推奨のソースで利用できる移行はありません。新しい[!DNL Oracle Eloqua] （V2） ソースを使用してデータを再実装する必要があります。
 
 [!DNL Oracle Eloqua]は、主にB2B分野の組織が、リードの管理とバイヤージャーニーのオーケストレーションという複雑なプロセスを自動化およびパーソナライズできるように設計された、強力なエンタープライズグレードのマーケティングオートメーションプラットフォームです。 マーケティングチームが複数のデジタルチャネルをまたいで高度なキャンペーンを定義、展開、測定できる中心的なハブとして機能し、見込み客が最もエンゲージしている的確なタイミングで適切なコンテンツを受け取れるようにします。 [!DNL Eloqua]を通じて取り込むためにサポートされているオブジェクトは、**連絡先**、**アカウント**、**キャンペーン**、および&#x200B;**アクティビティ**&#x200B;です。 最初の取り込みが完了すると、変更されたデータはすべて、スケジュールされた増分プロセスを使用して取り込まれます。
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 **設定** > **Platform Extensions** > **App Cloud Developer** > **アプリを作成**&#x200B;に移動します。 アプリの名前、説明、アイコン、OAuth コールバック URLなど、アプリの詳細を入力します。 完了したら、「**保存**」をクリックします。
 
-![ アプリ開発者パネルとEloqua ダッシュボードの「アプリを作成」ボタン。](../../images/tutorials/create/eloqua/create-app.png)
+![&#x200B; アプリ開発者パネルとEloqua ダッシュボードの「アプリを作成」ボタン。](../../images/tutorials/create/eloqua/create-app.png)
 
 | プロパティ | 説明 |
 | --- | --- |
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 ![Eloquaのセキュリティグループの概要ウィンドウ。](../../images/tutorials/create/eloqua/security-group-overview.png)
 
-![使用APIの選択ウィンドウ ](../../images/tutorials/create/eloqua/consume-api.png)
+![使用APIの選択ウィンドウ &#x200B;](../../images/tutorials/create/eloqua/consume-api.png)
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ ht-degree: 2%
 
 キャンペーンデータを取り込むには、**ユーザーの編集** インターフェイスに移動し、選択したセキュリティグループに[!DNL Guided Campaigns]を追加します。
 
-![ ガイド付きキャンペーンを含むセキュリティグループが追加されました。](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
+![&#x200B; ガイド付きキャンペーンを含むセキュリティグループが追加されました。](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
 オプションで、追加のユーザーを作成し、そのユーザーをセキュリティグループに追加できます。 詳細な手順については、[!DNL Eloqua] ユーザーの作成[および](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) セキュリティグループへのユーザーの割り当て[に関する](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) ドキュメントを参照してください。
 
@@ -243,4 +243,4 @@ ht-degree: 2%
 
 ## [!DNL Eloqua]をExperience Platformに接続
 
-Experience Platform内で[!DNL Eloqua] ソース接続の設定に進みます。 UIによる接続の設定に関するステップバイステップガイドについては、[ チュートリアル（](../../tutorials/ui/create/marketing-automation/eloqua.md)）を参照してください。 このチュートリアルでは、[!DNL Eloqua] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定、データフローの監視について説明します。
+Experience Platform内で[!DNL Eloqua] ソース接続の設定に進みます。 UIによる接続の設定に関するステップバイステップガイドについては、[&#x200B; チュートリアル（](../../tutorials/ui/create/marketing-automation/eloqua.md)）を参照してください。 このチュートリアルでは、[!DNL Eloqua] アカウントの接続、データの選択、フィールドのマッピング、取り込みのスケジュール設定、データフローの監視について説明します。

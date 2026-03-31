@@ -48,13 +48,13 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 既存のアカウントを使用するには、**[!UICONTROL Existing account]**&#x200B;を選択し、使用する[!DNL Eloqua] アカウントを選択します。
 
-![ アカウント作成インターフェイスで既存のアカウントオプションが選択されました。](../../../../images/tutorials/create/eloqua/existing.png)
+![&#x200B; アカウント作成インターフェイスで既存のアカウントオプションが選択されました。](../../../../images/tutorials/create/eloqua/existing.png)
 
 ## 新しいアカウントを作成 {#new}
 
-新しいアカウントを作成するには、**[!UICONTROL New account]**&#x200B;を選択し、[!UICONTROL Source connection details]の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication]の下で、**クライアント ID**、**クライアントシークレット**、**ユーザー名**、**パスワード**、および&#x200B;**ベースエンドポイント**&#x200B;の値を指定します。 これらの資格情報について詳しくは、[認証ガイド ](../../../../connectors/marketing-automation/eloqua.md)を参照してください。 終了したら、**[!UICONTROL Connect to source]**&#x200B;を選択し、接続が確立されるまでに数秒間許可します。
+新しいアカウントを作成するには、**[!UICONTROL New account]**&#x200B;を選択し、[!UICONTROL Source connection details]の下に名前と説明を入力します。 次に、[!UICONTROL Account authentication]の下で、**クライアント ID**、**クライアントシークレット**、**ユーザー名**、**パスワード**、および&#x200B;**ベースエンドポイント**&#x200B;の値を指定します。 これらの資格情報について詳しくは、[認証ガイド &#x200B;](../../../../connectors/marketing-automation/eloqua.md)を参照してください。 終了したら、**[!UICONTROL Connect to source]**&#x200B;を選択し、接続が確立されるまでに数秒間許可します。
 
-![ ソース接続の詳細と認証資格情報のフィールドを含む新しいアカウントインターフェイス。](../../../../images/tutorials/create/eloqua/new.png)
+![&#x200B; ソース接続の詳細と認証資格情報のフィールドを含む新しいアカウントインターフェイス。](../../../../images/tutorials/create/eloqua/new.png)
 
 ## データの選択
 
@@ -70,7 +70,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 次に、データセットとデータフローに関する情報を提供する必要があります。 この手順では、既存のデータセットを使用するか、新しいデータセットを作成できます。 さらに、この手順では、リアルタイム顧客プロファイルへの取り込み用にデータセットをオプションで有効にすることもできます。
 
-![ データセットとデータフローの詳細インターフェイス。データセットのプロパティを設定するためのオプションが含まれています。](../../../../images/tutorials/create/eloqua/details.png)
+![&#x200B; データセットとデータフローの詳細インターフェイス。データセットのプロパティを設定するためのオプションが含まれています。](../../../../images/tutorials/create/eloqua/details.png)
 
 ## マッピング {#mapping}
 
@@ -141,7 +141,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 ## 監視
 
-データフローを選択すると、1回限りのデータのバックフィルと、指定したスケジュールに対するその後の増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UIでのソースデータフローの監視に関するガイド ](../../../../../dataflows/ui/monitor-sources.md)を参照してください。
+データフローを選択すると、1回限りのデータのバックフィルと、指定したスケジュールに対するその後の増分同期が行われます。 同期のステータスは、データフローに移動して監視できます。 詳しくは、[UIでのソースデータフローの監視に関するガイド &#x200B;](../../../../../dataflows/ui/monitor-sources.md)を参照してください。
 
 ## 次の手順
 
