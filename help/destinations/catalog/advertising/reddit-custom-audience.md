@@ -36,7 +36,7 @@ ht-degree: 27%
 
 * カスタムオーディエンスと顧客リストの使用が許可されている[!DNL Reddit Ads] アカウント。
 * 接続を認証する権限。 これは、[!DNL Reddit]にログインし、広告アカウントの代理で[!DNL Experience Platform]のオーディエンスを管理するためのアクセス権を承認できるユーザーである必要があります。
-* [!DNL Reddit]広告アカウント ID: オーディエンスが作成される広告アカウントの識別子。 広告アカウント IDは[ アカウント ](https://ads.reddit.com/accounts)で見つけることができます。 例：`a2_1b2c34d`。
+* [!DNL Reddit]広告アカウント ID: オーディエンスが作成される広告アカウントの識別子。 広告アカウント IDは[&#x200B; アカウント &#x200B;](https://ads.reddit.com/accounts)で見つけることができます。 例：`a2_1b2c34d`。
 
 ## サポートされている ID {#supported-identities}
 
@@ -55,7 +55,7 @@ ht-degree: 27%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 | --- | --- | --- |
-| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、セグメンテーションサービスを通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 |
 
 {style="table-layout:auto"}
@@ -64,10 +64,10 @@ ht-degree: 27%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 | --- | --- | --- | --- |
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -120,8 +120,8 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -166,7 +166,7 @@ ht-degree: 27%
 }
 ```
 
-詳細については、[Reddit API ドキュメント ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users)を参照してください。
+詳細については、[Reddit API ドキュメント &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users)を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -174,4 +174,4 @@ ht-degree: 27%
 
 ## その他のリソース {#additional-resources}
 
-カスタムオーディエンスエンドポイントがどのように機能するかについては、[Reddit API ドキュメント ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users)を参照してください。
+カスタムオーディエンスエンドポイントがどのように機能するかについては、[Reddit API ドキュメント &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users)を参照してください。
