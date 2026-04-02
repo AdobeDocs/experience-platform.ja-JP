@@ -295,7 +295,7 @@ Experience Platform UI内のライセンス使用状況ダッシュボードに�
 >
 >8月20日から、&#39;[!UICONTROL Average Profile Richness]&#39;と&#39;[!UICONTROL Total Storage]&#39;の使用権限を持つお客様は、代わりにライセンス使用状況ダッシュボードで&#39;[!UICONTROL Total Data Volume]&#39;を見ました。 顧客の使用権限は変更されず、追跡メトリックが簡素化されただけです。 [!UICONTROL Total Data Volume]は、エンゲージメントとパーソナライゼーションのワークフローでリアルタイム顧客プロファイルで使用可能なデータを表します。 この簡素化された指標により、リアルタイム顧客プロファイルの使用管理と測定が改善されました。 この変更について詳しくは、Adobeの担当者にお問い合わせください。
 
-ダッシュボードに表示される指標は、組織に関連付けられている製品と使用権限によって異なります。 お客様の組織が[Adobe Experience Platform Agents利用制限トライアル &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)に参加している場合、またはAdobe Experience Platform Agentsのライセンスを取得している場合、ダッシュボードには[!UICONTROL AI credits]指標が含まれます。 Adobe Experience Platformのライセンスを取得していない場合、AIによるクレジットの使用状況が主な指標として表示されます。
+ダッシュボードに表示される指標は、組織に関連付けられている製品と使用権限によって異なります。 お客様の組織が[Adobe Experience Platform Agents利用制限トライアル &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)に参加している場合、またはAdobe Experience Platform Agentsのライセンスを取得している場合、ダッシュボードには[!UICONTROL AI credits]指標が含まれます。 Adobe Experience Platformのライセンスを取得していない場合、AIによるクレジットの使用状況が主な指標として表示されます。
 
 | 指標 | 説明 |
 |---|---|
@@ -330,11 +330,11 @@ Experience Platform UI内のライセンス使用状況ダッシュボードに�
 
 | ライセンス | 製品説明 |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリ サービス、インテリジェントサービス &#x200B;](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリ サービス、インテリジェントサービス &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 5,000万</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:ODのライセンス認証</li><li>AEP:OD アクティベーション PRFL ～ 10M</li><li>AEP:OD アクティベーション PRFL （最大5,000万）</li></ul> | [Adobe Experience Platform アクティベーション &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD プロファイル オーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
