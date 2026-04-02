@@ -22,7 +22,7 @@ Experience Data Model （XDM）では、文字列フィールドに受け入れ�
 
 **[!UICONTROL Enums]**&#x200B;文字列フィールドに取り込むことができる値を、定義済みのセットに制限します。 列挙フィールドにデータを取り込もうとし、値がその設定で定義されているどれにも一致しない場合、取り込みは拒否されます。
 
-列挙とは対照的に、**[!UICONTROL Suggested values]** オプションを使用すると、取り込み可能な値を制限しない文字列フィールドの推奨値のセットを示すことができます。 代わりに、推奨される値は、文字列フィールドを属性として含める場合、[ セグメント化UI](../../../segmentation/ui/overview.md)で使用できる定義済みの値に影響します。
+列挙とは対照的に、**[!UICONTROL Suggested values]** オプションを使用すると、取り込み可能な値を制限しない文字列フィールドの推奨値のセットを示すことができます。 代わりに、推奨される値は、文字列フィールドを属性として含める場合、[&#x200B; セグメント化UI](../../../segmentation/ui/overview.md)で使用できる定義済みの値に影響します。
 
 Adobe Experience Platform ユーザーインターフェイスで新しいフィールド [を](./overview.md#define)定義し、型を[!UICONTROL String]に設定すると、そのフィールドに[列挙型](#enum)または[推奨値](#suggested-values)を定義するオプションが与えられます。
 
@@ -119,11 +119,11 @@ See the [section below](#evolution) for more information on the rules for updati
 
 現在のシステム制限により、取り込み中に列挙がシステムによって検証されない場合が2つあります。
 
-1. 列挙は[配列フィールド ](./array.md)で定義されています。
+1. 列挙は[配列フィールド &#x200B;](./array.md)で定義されています。
 1. 列挙は、スキーマ階層の1つ以上のレベルで定義されます。
 
 ## 次の手順
 
-このガイドでは、UIで文字列フィールドの列挙と推奨値を定義する方法について説明しました。 Schema Registry APIを使用して列挙と推奨値を管理する方法について詳しくは、次の[ チュートリアル ](../../tutorials/suggested-values.md)を参照してください。
+このガイドでは、UIで文字列フィールドの列挙と推奨値を定義する方法について説明しました。 Schema Registry APIを使用して列挙と推奨値を管理する方法について詳しくは、次の[&#x200B; チュートリアル &#x200B;](../../tutorials/suggested-values.md)を参照してください。
 
 [!DNL Schema Editor]で他のXDM フィールドタイプを定義する方法については、[UIでのフィールドの定義](./overview.md#special)の概要を参照してください。

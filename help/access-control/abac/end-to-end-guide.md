@@ -43,8 +43,8 @@ Adobe Experience Platformでは、属性ベースのアクセス制御を使用�
 
 次のことをおこないます。
 
-* [ ユーザーの役割にラベルを付ける](#label-roles): マーケティンググループが外部代理店と連携するヘルスケアプロバイダー（ACME ビジネスグループ）の例を使用します。
-* [ リソースにラベルを付ける（スキーマフィールドとオーディエンス） ](#label-resources): **[!UICONTROL PHI/ Regulated Health Data]** ラベルをスキーマリソースとオーディエンスに割り当てます。
+* [&#x200B; ユーザーの役割にラベルを付ける](#label-roles): マーケティンググループが外部代理店と連携するヘルスケアプロバイダー（ACME ビジネスグループ）の例を使用します。
+* [&#x200B; リソースにラベルを付ける（スキーマフィールドとオーディエンス） &#x200B;](#label-resources): **[!UICONTROL PHI/ Regulated Health Data]** ラベルをスキーマリソースとオーディエンスに割り当てます。
 * [それらをリンクするポリシーをアクティブ化します](#policy): リソースのラベルを役割のラベルに接続することで、スキーマフィールドとオーディエンスへのアクセスを禁止するデフォルトのポリシーを有効にします。 その後、一致するラベルを持つユーザーには、すべてのサンドボックスをまたいでスキーマフィールドとセグメントへのアクセス権が与えられます。
 
 ## 権限
@@ -91,13 +91,13 @@ Experience Platform UIの権限ワークスペースが表示され、**[!UICONT
 
 [!UICONTROL RHD] ラベルを持つユーザー役割を設定したので、次の手順は、その役割に対して制御するリソースに同じラベルを追加することです。
 
-上部のナビゲーションから、**アプリケーションスイッチャー** アイコンで表される![ アプリケーションスイッチャー](/help/images/icons/apps.png)を選択し、**[!UICONTROL Experience Platform]**&#x200B;を選択します。
+上部のナビゲーションから、**アプリケーションスイッチャー** アイコンで表される![&#x200B; アプリケーションスイッチャー](/help/images/icons/apps.png)を選択し、**[!UICONTROL Experience Platform]**&#x200B;を選択します。
 
-![ アプリケーションスイッチャーのドロップダウンメニューからExperience Platformが選択されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![&#x200B; アプリケーションスイッチャーのドロップダウンメニューからExperience Platformが選択されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 左側のナビゲーションから「**[!UICONTROL Schemas]**」を選択し、表示されるスキーマのリストから「**[!UICONTROL ACME Healthcare]**」を選択します。
 
-![ スキーマタブから選択されているACME Healthcare スキーマを示す画像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![&#x200B; スキーマタブから選択されているACME Healthcare スキーマを示す画像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 次に、**[!UICONTROL Labels]**&#x200B;を選択して、スキーマに関連付けられているフィールドを表示するリストを表示します。 ここから、一度に1つまたは複数のフィールドにラベルを割り当てることができます。 **[!UICONTROL BloodGlucose]**&#x200B;と&#x200B;**[!UICONTROL InsulinLevel]**&#x200B;のフィールドを選択し、**[!UICONTROL Apply access and data governance labels]**&#x200B;を選択します。
 
@@ -148,19 +148,19 @@ Experience Platform UIの権限ワークスペースが表示され、**[!UICONT
 
 アクセス制御ポリシーを有効にするには、左側のナビゲーションから「[!UICONTROL Permissions]」を選択し、「**[!UICONTROL Policies]**」を選択します。
 
-![表示されるポリシーのリスト ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![表示されるポリシーのリスト &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 次に、`...`の横にある省略記号（**[!UICONTROL Default-Field-Level-Access-Control-Policy]**）を選択すると、役割を編集、アクティブ化、削除、または複製するためのコントロールがドロップダウンに表示されます。 ドロップダウンから「**[!UICONTROL Activate]**」を選択します。
 
-![ ポリシーをアクティブ化するためのドロップダウン ](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![&#x200B; ポリシーをアクティブ化するためのドロップダウン &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
 アクティベーションポリシーのダイアログが表示され、アクティベーションの確認を求めるメッセージが表示されます。 **[!UICONTROL Confirm]** を選択します。
 
-![ ポリシーダイアログをアクティブ化](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![&#x200B; ポリシーダイアログをアクティブ化](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 ポリシーのアクティベーションの確認が受信され、[!UICONTROL Policies] ページに戻ります。
 
-![ ポリシー確認の有効化](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![&#x200B; ポリシー確認の有効化](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 <!-- 
 ## Create an access control policy {#policy}
