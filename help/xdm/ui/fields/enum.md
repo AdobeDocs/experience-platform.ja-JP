@@ -30,7 +30,7 @@ Adobe Experience Platform ユーザーインターフェイスで新しいフィ
 
 このドキュメントでは、[!UICONTROL Schemas] UI ワークスペースで列挙と推奨値を定義する方法について説明します。 UIでの設定方法やダウンストリームのエフェクトなど、列挙と推奨値の概要については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413679/?captions=jpn&quality=12&learn=on)
 
 ## 列挙の定義 {#enum}
 

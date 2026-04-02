@@ -249,4 +249,4 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 次のビデオは、属性ベースのアクセス制御に関する理解を深めることを目的とし、役割、リソース、ポリシーの設定方法の概要を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451828?captions=jpn&learn=on)
