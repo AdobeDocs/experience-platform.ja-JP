@@ -132,113 +132,113 @@ ht-degree: 39%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
-**[!UICONTROL License usage]** ダッシュボードを使用して、組織のライセンス使用状況に関する重要な情報を表示できます。 このダッシュボードは、Adobe Experience Platformのライセンスを取得している組織と取得していない組織を含め、適格なExperience Cloud組織が使用できます。 表示される情報は、組織の環境での毎日のスナップショット中にキャプチャされ、リアルタイムには更新されません。
+**[!UICONTROL License usage]** ダッシュボードを通じて、組織のライセンス使用状況に関する重要な情報を表示できます。 ダッシュボードは、Adobe Experience Platformのライセンスを取得している組織とそうでない組織を含む、対象となるExperience Cloud組織で使用できます。 表示される情報は、組織の環境の毎日のスナップショット中にキャプチャされ、リアルタイムでは更新されません。
 
-ライセンス使用状況レポートでは高い精度が提供されます。 ほとんどの指標は、複数の製品で共有され、製品ごとの合計ではなく、それらを使用するすべての製品の集計使用状況を反映します。
+ライセンス使用状況レポートは、詳細な情報を提供します。 ほとんどの指標は複数の製品で共有され、製品別の合計ではなく、それらを使用するすべての製品で集計された使用状況を反映します。
 
-このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセス方法と操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
+このガイドでは、UIでライセンス使用状況ダッシュボードにアクセスして操作する方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションに関する詳細情報を提供します。
 
-Experience Platform UI の一般的な概要については、[Experience Platform UI ガイド &#x200B;](../../landing/ui-guide.md) を参照してください。
+Experience Platform UIの概要については、[Experience Platform UI ガイド ](../../landing/ui-guide.md)を参照してください。
 
 ## [!UICONTROL License usage] ダッシュボードデータ
 
-[!UICONTROL License usage] ダッシュボードには、購入したすべてのExperience Platform製品とそれらの製品のアドオンのリストが表示されます。 このダッシュボードから、関連する任意のサンドボックスをまたいで、Experience Platformに関する組織のライセンス関連データのスナップショットを見つけることができます。
+[!UICONTROL License usage] ダッシュボードには、購入したすべてのExperience Platform製品と、それらの製品のアドオンのリストが表示されます。 このダッシュボードでは、Experience Platformのライセンス関連データのスナップショットを、関連する任意のサンドボックスで検索できます。
 
-このダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じように表示されます。 近似やサンプルではありませんが、ダッシュボードはリアルタイムでは更新されません。
+このダッシュボードのデータは、スナップショットが取得された特定の時点に表示されたとおりに表示されます。 近似やサンプルではありませんが、ダッシュボードはリアルタイムで更新されません。
 
-Adobe Experience Platform アプリケーション（Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsなど）を使用していない組織の場合、ダッシュボードには、AI クレジット使用状況指標のみが表示されます。
+Adobe Experience Platform アプリケーション（Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsなど）を持たない組織の場合、ダッシュボードにはAI クレジット使用指標のみが表示されます。
 
 >[!NOTE]
 >
->ダッシュボード内のほとんどの指標は、Experience Platform インスタンスのスナップショットに基づいて毎日更新されます。 [!UICONTROL CJA Rows Available] は例外で、毎月更新されます。 [!UICONTROL Adhoc Query Service Users Packs]、[!UICONTROL Profile Richness No of Packs]、[!UICONTROL Streaming Segmentation No of Packs] など、「パック」でラベル付けされた指標は、アドオン製品のライセンス使用権限を反映しており、継続的な使用を追跡するものではありません。 スナップショット後に行われた変更は、次のスナップショットが作成されるまで表示されません。
+>ダッシュボード内のほとんどの指標は、Experience Platform インスタンスのスナップショットに基づいて毎日更新されます。 [!UICONTROL CJA Rows Available]は例外であり、毎月更新されます。 [!UICONTROL Adhoc Query Service Users Packs]、[!UICONTROL Profile Richness No of Packs]、[!UICONTROL Streaming Segmentation No of Packs]などの「パック」でラベル付けされた指標は、アドオンの提供に対するライセンス使用権限を反映しており、継続的な使用は追跡されません。 スナップショットの後に行われた変更は、次のスナップショットが実行されるまで表示されません。
 
 ## ライセンス使用状況ダッシュボードの確認 {#explore}
 
-Experience Platform UI 内でライセンス使用状況ダッシュボードに移動するには、左パネルで「**[!UICONTROL License usage]**」を選択します。 ダッシュボードには、**[!UICONTROL Metrics]** と **[!UICONTROL Products]** の 2 つのタブがあります。
+Experience Platform UI内のライセンス使用状況ダッシュボードに移動するには、左側のパネルで「**[!UICONTROL License usage]**」を選択します。 ダッシュボードには2つのタブがあります：**[!UICONTROL Metrics]**&#x200B;と&#x200B;**[!UICONTROL Products]**。
 
 >[!NOTE]
 >
->ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 これにアクセスするには、**&quot;[!UICONTROL View License Usage Dashboard]&quot;** 権限を付与されている必要があります。
+>ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 アクセスするには、**&quot;[!UICONTROL View License Usage Dashboard]&quot;**&#x200B;権限が付与されている必要があります。
 >
->お客様の組織がAdobe Experience Platform アプリケーションのライセンスを取得している場合は、該当する製品プロファイルおよびサンドボックスでこの権限を付与します。
+>組織でAdobe Experience Platform アプリケーションのライセンスを取得している場合は、該当する製品プロファイルとサンドボックスでこの権限を付与します。
 >
->Adobe Experience Platform アプリケーションを持たない組織（AEMのみの組織やワークフローのみの組織など）の場合、この権限は、Adobe Experience Platform製品カードの下のAdobe Admin Consoleで利用できます（組織用にプロビジョニングされている場合）。 ユーザーがダッシュボードを表示するには、管理者が製品プロファイルに権限を追加する必要があります。
+>Adobe Experience Platform アプリケーションを持たない組織（AEM専用またはワークフロー専用の組織など）の場合、この権限はAdobe Admin ConsoleのAdobe Experience Platform製品カード（組織にプロビジョニングされている場合）で使用できます。 ユーザーがダッシュボードを表示するには、管理者が製品プロファイルに権限を追加する必要があります。
 
-## 「[!UICONTROL Metrics]」タブ {#metrics-tab}
+## [!UICONTROL Metrics] タブ {#metrics-tab}
 
-「**[!UICONTROL Metrics]**」タブには、組織全体のすべてのライセンス使用状況の指標が一元的に表示されます。 ほとんどの指標は製品間で共有されるので、これらの指標に対して個別の製品ごとの分類はありません。
+「**[!UICONTROL Metrics]**」タブには、組織全体のすべてのライセンス使用率の指標が一元的に表示されます。 ほとんどの指標は製品で共有されているため、これらの指標に対して製品ごとに個別の分類はありません。
 
 指標テーブルには、次の列が含まれます。
 
 | 列の名前 | 説明 |
 |---|---|
-| **[!UICONTROL Metric Name]** | ライセンス使用状況指標の名前。 各エントリには、説明と関連する製品のリストを表示する情報アイコン（`ⓘ`）が含まれます。 |
-| **[!UICONTROL Licensed]** | 契約で定義されているとおり、組織が使用できるユニット数。 この指標は、「製品」タブの **ライセンス量** と同じ値です。 |
-| **[!UICONTROL Measured]** | 組織が現在使用している指標の量。 |
-| **[!UICONTROL Usage %]** | ライセンス値の現在使用中の割合。 |
-| **[!UICONTROL Predicted Usage %]** | 今後 6 週間の指標の使用状況の予測範囲。 |
+| **[!UICONTROL Metric Name]** | ライセンス使用率メトリックの名前。 各エントリには、関連する製品の説明とリストを表示する情報アイコン（`ⓘ`）が含まれています。 |
+| **[!UICONTROL Licensed]** | 組織が使用できる単位の数（契約で定義）。 この指標は、「製品」タブの「**ライセンス量**」と同じ値です。 |
+| **[!UICONTROL Measured]** | 組織で現在使用されている指標の量。 |
+| **[!UICONTROL Usage %]** | 現在使用されているライセンス値の割合。 |
+| **[!UICONTROL Predicted Usage %]** | 今後6週間における指標の予測使用範囲。 |
 
-**[!UICONTROL Production]** または **[!UICONTROL Development]** サンドボックス切り替えスイッチを使用して、サンドボックスごとに表示される指標をフィルタリングします。
+**[!UICONTROL Production]**&#x200B;または&#x200B;**[!UICONTROL Development]** サンドボックスの切り替えスイッチを使用して、サンドボックスで表示される指標をフィルタリングします。
 
 >[!NOTE]
 >
->消費レポートは、サンドボックスタイプによって累積されます。 「[!UICONTROL Production]」または「[!UICONTROL Development]」を選択すると、そのタイプのすべてのサンドボックスの合計使用量が表示されます。
+>消費レポートは、サンドボックスタイプごとに累積されます。 [!UICONTROL Production]または[!UICONTROL Development]を選択すると、そのタイプのすべてのサンドボックスで使用状況が組み合わされて表示されます。
 
-![&#x200B; 指標、ライセンス量、使用状況データのリストが表示されているライセンス使用状況ダッシュボードの「指標」タブ &#x200B;](../images/license-usage/metrics-tab.png)
+![指標、ライセンス量、使用状況データのリストを表示する「ライセンス使用状況ダッシュボード指標」タブ。](../images/license-usage/metrics-tab.png)
 
 >[!WARNING]
 >
->ライセンス使用状況ダッシュボードを表示する権限は、サンドボックスレベルで指定する必要があります。 個々のサンドボックスに権限を追加して、ダッシュボード内で表示します。 この制限は、今後のリリースで対処される予定です。 それまでの間、次の回避策を使用できます。
+>ライセンス使用状況ダッシュボードを表示する権限は、サンドボックスレベルで指定する必要があります。 各サンドボックスに権限を追加し、ダッシュボード内で表示できます。 この制限は、今後のリリースで対応する予定です。 その間に、次の回避策を使用できます。
 >
->1. Adobe Admin Consoleで製品プロファイルを作成します。
->2. サンドボックス カテゴリの権限で、表示するすべてのサンドボックスをライセンス使用状況ダッシュボードに追加します。
+>1. Adobe Admin Consoleで商品プロファイルを作成します。
+>2. 「サンドボックス」カテゴリの「権限」で、表示するすべてのサンドボックスをライセンス使用ダッシュボードに追加します。
 >3. ユーザーダッシュボード権限カテゴリで、「ライセンス使用状況ダッシュボードを表示」権限を追加します。
 
-### 指標の詳細の表示 {#view-metric-details}
+### 指標の詳細を表示 {#view-metric-details}
 
-特定の指標の使用状況詳細を表示するには、リストで指標名を選択します。 次のような指標の詳細ビューが表示されます。
+特定の指標の使用状況の詳細を表示するには、リストで指標の名前を選択します。 指標の詳細なビューが表示され、次の情報が表示されます。
 
-- 使用状況の推移を示す履歴の折れ線グラフ
+- 経時的な利用状況を示す過去の折れ線グラフ
 - ライセンス値と測定値の比較
-- 個々のサンドボックスによる使用
-- データをフィルタリングするためのサンドボックスセレクター
-- CSV ダウンロード用の書き出しオプション
+- 個別のサンドボックスによる使用
+- データをフィルタリングするサンドボックスセレクター
+- CSV ダウンロードのエクスポートオプション
 
-このビジュアライゼーションを使用すると、トレンドの追跡、各サンドボックスが全体的な使用状況にどのように貢献しているかを把握、オフライン分析用にデータを書き出すことができます。
+このビジュアライゼーションにより、傾向を追跡し、各サンドボックスが全体的な使用状況にどのように貢献しているかを把握し、データを書き出してオフライン分析に利用することができます。
 
-各グラフには、データをフィルタリングするためのドロップダウンメニューが含まれています。 日付範囲ドロップダウンを使用して、ルックバック期間（デフォルト：過去 30 日間）を調整するか、サンドボックスドロップダウンを使用して、特定の実稼動用または開発用サンドボックスの使用状況を表示します。
+各チャートには、データをフィルタリングするためのドロップダウンメニューが含まれています。 日付範囲ドロップダウンを使用してルックバック期間を調整するか（デフォルト：過去30日間）、サンドボックスドロップダウンを使用して、特定の実稼動サンドボックスまたは開発サンドボックスの使用状況を表示します。
 
-![&#x200B; 履歴使用状況グラフ、サンドボックステーブル、エクスポートボタンを含んだアドレス可能なオーディエンス指標の詳細ビュー &#x200B;](../images/license-usage/metric-details-view.png)
+![過去の使用状況グラフ、サンドボックステーブル、エクスポート ボタンを含むアドレス可能なオーディエンス指標の詳細ビュー。](../images/license-usage/metric-details-view.png)
 
-**[!UICONTROL Custom date]** を選択して、表示する期間を選択することもできます。
+**[!UICONTROL Custom date]**&#x200B;を選択して、表示される期間を選択することもできます。
 
-![&#x200B; カスタムの日付範囲オプションがハイライト表示されたライセンス使用状況ダッシュボードの「概要」タブ。](../images/license-usage/custom-date-range.png)
+![ カスタムの日付範囲オプションがハイライト表示されたライセンス使用状況ダッシュボードの概要タブ。](../images/license-usage/custom-date-range.png)
 
-### CSV の書き出し {#export-metric-usage-data}
+### CSV書き出し {#export-metric-usage-data}
 
-選択した指標とサンドボックスの使用履歴データを、指標の詳細表示から直接、CSV ファイルとして書き出すことができます。 **[!UICONTROL Export]** アイコンを選択して、表形式でグラフのデータをダウンロードします。 書き出された CSV を使用すると、オフラインのトレンドを分析したり、チーム間で使用状況のインサイトを共有したりすることが簡単にできます。
+選択した指標とサンドボックスの使用履歴データを、指標の詳細ビューから直接CSV ファイルとして書き出すことができます。 **[!UICONTROL Export]** アイコンを選択して、表形式でグラフのデータをダウンロードします。 書き出されたCSVを使用して、オフラインでのトレンドの分析や、チーム間での使用状況に関するインサイトの共有が容易になります。
 
-## 「[!UICONTROL Products]」タブ {#products-tab}
+## [!UICONTROL Products] タブ {#products-tab}
 
-「**[!UICONTROL Products]**」タブには、購入した製品と関連するアドオン別にグループ化されたライセンス使用状況データが表示されます。 「[!UICONTROL Products]」タブには、次の 2 つのテーブルがあります。
+「**[!UICONTROL Products]**」タブには、購入した製品と関連するアドオン別にグループ化されたライセンス使用状況データが表示されます。 「[!UICONTROL Products]」タブには、次の2つのテーブルが含まれています。
 
-- **[!UICONTROL Core products]の表**：この表には、組織でライセンスされている主なAdobe Experience Platform製品が一覧表示されています。 各製品には、主要指標、使用状況のトラッキングおよび予測される使用状況が一覧表示されます。
-- **[!UICONTROL Add-ons]の表**: ライセンス量がコア製品の指標に貢献する補助項目を一覧表示します。 アドオンには、個別の指標はありませんが、関連付けられたコア製品の使用状況追跡を強化します。
+- **[!UICONTROL Core products]テーブル**：このテーブルには、お客様の組織がライセンスを取得している主なAdobe Experience Platform製品が一覧表示されます。 各製品には、主要な指標、利用状況の追跡、予測される利用状況が記載されています。
+- **[!UICONTROL Add-ons]テーブル**: ライセンス金額がコア製品の指標に貢献している補足項目を一覧表示します。 アドオンには個別の指標はありませんが、関連付けられたコア製品の使用状況追跡を強化します。
 
 | 列の名前 | 説明 |
 |---|---|
-| **[!UICONTROL Product]** | お客様の組織でライセンスされたAdobe ソリューション。 |
-| **[!UICONTROL Primary Metric]** | その製品内でのトラッキングに使用される主な指標。 |
-| **[!UICONTROL License Amount]** | プライマリ指標の最大量に対する契約値。 |
+| **[!UICONTROL Product]** | お客様の組織でライセンスを取得したAdobe ソリューション。 |
+| **[!UICONTROL Primary Metric]** | その製品内でトラッキングするために使用される主な指標。 |
+| **[!UICONTROL License Amount]** | プライマリ指標の最大量の契約値。 |
 | **[!UICONTROL Usage]** | 使用されたプライマリ指標の量。 |
-| **[!UICONTROL Usage %]** | ライセンス量に応じて使用される主要指標の割合。 |
+| **[!UICONTROL Usage %]** | ライセンス量に応じて使用される主な指標の割合。 |
 | **[!UICONTROL Predicted Usage]** | プライマリ指標の予測使用率。 |
 
 >[!NOTE]
 >
->アドオンの [!UICONTROL License Amount] は、コア製品の合計ライセンス量に含まれています。 アドオンは個別に追跡されるのではなく、関連する製品の機能を向上させます。 例えば、5 つのサンドボックスのパックを 1 組をアドオンとして購入した場合、金額はベース製品の金額に追加されます。 アドオンテーブルにはアドオンに固有の [!UICONTROL License Amount] が表示されますが、実際の使用状況は基本製品を通じて追跡されます。
+>アドオン用の[!UICONTROL License Amount]は、コア製品の合計ライセンス額に含まれています。 アドオンは個別に追跡されませんが、関連する製品の機能を強化します。 例えば、アドオンとして5つのサンドボックスのパックを1つ購入した場合、その金額はベース製品のそれに追加されます。 アドオンのテーブルにはアドオン特有の[!UICONTROL License Amount]が表示されますが、実際の使用状況はベース製品を通じて追跡されます。
 
-![&#x200B; コア製品とアドオンのテーブルが表示されているライセンス使用状況ダッシュボードの「製品」タブ &#x200B;](../images/license-usage/products-tab.png)
+![ コア製品とアドオンのテーブルが表示された「ライセンス使用状況ダッシュボード製品」タブ。](../images/license-usage/products-tab.png)
 
 ### 予測される使用状況 {#predicted-usage}
 
@@ -256,31 +256,31 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
-正確で最新の使用予測を使用して、ライセンスリソースをプロアクティブに管理および最適化します。 [!UICONTROL Predicted Usage] の列では、購入したすべての製品に関する、すべての実稼動および開発用サンドボックスのサンドボックスレベルでの将来のライセンス使用状況を予測します。 予測は毎週更新され、最新の使用状況データに基づいて 6 週間の予測が提供されるようになりました。 各予測には、情報に基づいた計画をサポートするための下限と上限の両方が含まれています。
+正確かつ最新の使用状況を予測し、ライセンスリソースを積極的に管理および最適化できます。 [!UICONTROL Predicted Usage]列は、購入したすべての製品のすべての実稼動用サンドボックスと開発用サンドボックスのサンドボックスレベルでの将来のライセンス使用状況を予測します。 予測は週単位で更新され、最新の利用状況データにもとづいて6週間の予測が提供されます。 各予測には、情報に基づいた計画をサポートするための下限と上限の両方が含まれます。
 
 >[!IMPORTANT]
 >
->予測は毎週金曜日に更新されます。 更新日は、情報アイコン（![&#x200B; この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
+>予測は、毎週金曜日に毎週更新されます。 更新日は、情報アイコン （![この情報アイコン）に含まれています。](../images/license-usage/info-icon.png)）が列タイトルの上にあります。
 
-製品のエンタイトルメント使用状況の概要を [!UICONTROL Product] テーブルの「[!UICONTROL Core products]」タブで表示します。
+[!UICONTROL Product] テーブルの「[!UICONTROL Core products]」タブにある製品の使用権限の使用状況の概要を表示します。
 
-![&#x200B; 製品と予測される使用状況列がハイライト表示された「[!UICONTROL License usage] [!UICONTROL Product]」タブ &#x200B;](../images/license-usage/product-predicted-usage.png)
-
->[!NOTE]
->
->ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織の実際の使用状況を理解し、Adobeで組織のライセンスの範囲外に使用状況が使用されないようにする責任を負います。
-
-予測される使用状況の割合は、次のように決定されます。
-
-- 下限と上限が大きく異なる場合は、範囲として表示されます（例：32% ～ 35%）。
-- 下限と上限がほぼ同じでゼロでない場合は、近似値（例：約 34%）として表示されます。
-- 下限と上限がほぼ同じでゼロの場合、正確に 0% と表示されます。
+![製品と予測使用列がハイライト表示された[!UICONTROL License usage] [!UICONTROL Product] タブ。](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
->このコンテキストの「ほぼ同一」とは、値が統計的に小数点以下 2 桁まで有意であることを意味します（例えば、下限が 0.342、上限が 0.344 の場合、どちらも 34% に丸められます）。
+>ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織の実際の使用状況を把握し、Adobeを使用して組織のライセンスの範囲を超えないようにする責任があります。
 
-予測使用量機能は、次の指標をサポートしています。
+予測される使用率の割合は次のように決定されます。
+
+- 下限と上限が大きく異なる場合は、範囲として表示されます（例：32%～35%）。
+- 下限と上限がほぼ同じで、ゼロでない場合は、近似値（約34%）として表示されます。
+- 下限と上限がほぼ同じでゼロの場合、それらは正確に0%として表示されます。
+
+>[!NOTE]
+>
+>このコンテキストでは、「ほぼ同じ」とは、値が統計的に有意な小数点以下2桁の値であることを意味します（例えば、下限が0.342、上限が0.344の両方が34%に丸められます）。
+
+予測使用機能では、次の指標をサポートしています。
 
 - [!UICONTROL Addressable audience]
 - [!UICONTROL Businessperson profiles]
@@ -293,56 +293,56 @@ Experience Platform UI 内でライセンス使用状況ダッシュボードに
 
 >[!IMPORTANT]
 >
->8 月 20 日以降、「[!UICONTROL Average Profile Richness]」および「[!UICONTROL Total Storage]」の使用権限を持つお客様には、ライセンス使用状況ダッシュボードに「[!UICONTROL Total Data Volume]」が表示されるようになりました。 顧客の使用権限に変更はなく、トラッキング指標の簡略化のみでした。 [!UICONTROL Total Data Volume] は、エンゲージメントワークフローおよびパーソナライゼーションワークフローに関して、リアルタイム顧客プロファイルで利用できるデータを表します。 このシンプル化された指標により、リアルタイム顧客プロファイルの使用に関する管理と測定が向上しました。 この変更に関する詳細については、Adobeの担当者に問い合わせることをお勧めします。
+>8月20日から、&#39;[!UICONTROL Average Profile Richness]&#39;と&#39;[!UICONTROL Total Storage]&#39;の使用権限を持つお客様は、代わりにライセンス使用状況ダッシュボードで&#39;[!UICONTROL Total Data Volume]&#39;を見ました。 顧客の使用権限は変更されず、追跡メトリックが簡素化されただけです。 [!UICONTROL Total Data Volume]は、エンゲージメントとパーソナライゼーションのワークフローでリアルタイム顧客プロファイルで使用可能なデータを表します。 この簡素化された指標により、リアルタイム顧客プロファイルの使用管理と測定が改善されました。 この変更について詳しくは、Adobeの担当者にお問い合わせください。
 
-ダッシュボードに表示される指標は、組織に関連付けられた製品と使用権限によって異なります。 組織が [Adobe Experience Platform エージェントの使用期限付き体験版に参加したり &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Adobe Experience Platform エージェントのライセンスを取得したりすると、ダッシュボードに [!UICONTROL AI credits] 指標が表示されます。 組織がAdobe Experience Platformのライセンスを保有していない場合、AI クレジット使用状況が主要指標として表示されます。
+ダッシュボードに表示される指標は、組織に関連付けられている製品と使用権限によって異なります。 お客様の組織が[Adobe Experience Platform Agents利用制限トライアル ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)に参加している場合、またはAdobe Experience Platform Agentsのライセンスを取得している場合、ダッシュボードには[!UICONTROL AI credits]指標が含まれます。 Adobe Experience Platformのライセンスを取得していない場合、AIによるクレジットの使用状況が主な指標として表示されます。
 
 | 指標 | 説明 |
 |---|---|
-| [!UICONTROL AI credits] | Adobe Experience Platform Agents の使用時に組織が消費した AI クレジットの数。 AI クレジットは、Adobe Experience Platform Agents の使用制限トライアル中および有料のエージェント使用のライセンスを取得した場合に使用されます。 この指標を使用すると、使用可能な使用権限に対する AI クレジット消費を監視できます。 |
+| [!UICONTROL AI credits] | Adobe Experience Platform Agentsを使用する際に組織が使用したAI クレジットの数。 AI クレジットは、Adobe Experience Platform Agentsの使用制限トライアル中および有料エージェントの使用許可が付与されている場合に使用されます。 この指標により、利用可能な利用資格に対するAI クレジットの消費量を監視できます。 |
 | [!UICONTROL Audience Activation Size] | 1 年間に任意のファイルベースの宛先に対してアクティベートされたプロファイルの合計サイズ。メモ : これには、ストリーミング宛先を通じて送信したプロファイルは含まれません。 |
-| [!UICONTROL Addressable Audience] | 直接識別可能なプロファイルと偽名プロファイルの両方を含む、組織が関与する資格のあるリアルタイム顧客プロファイルのユーザープロファイルのセット。 これらのプロファイルには、属性、ビヘイビアー、セグメントメンバーシップデータを含めることができます。 プロファイルボリュームは、Adobe Experience Platformのデフォルトの決定論的 ID グラフを使用して計算され、共有機能と見なされます。 |
+| [!UICONTROL Addressable Audience] | 組織がエンゲージする権限を持つリアルタイム顧客プロファイルの個人プロファイルのセット（直接識別可能プロファイルと仮名プロファイルの両方を含む）。 これらのプロファイルには、属性、行動、セグメントメンバーシップデータが含まれる場合があります。 プロファイルボリュームは、Adobe Experience Platformのデフォルトの確定的ID グラフを使用して計算され、共有機能と見なされます。 |
 | [!UICONTROL Adhoc Query Service Users Packs] | 承認済み同時クエリサービスユーザーの使用権限を追加するアドオン。パックごとに同時クエリサービスユーザー 5 人と同時実行アドホッククエリ 1 つが追加されます。追加のアドホッククエリユーザーパックのライセンスは複数購入可能です。 |
-| [!UICONTROL Average profile richness] | **非推奨** – 任意の時点でハブプロファイルサービス内に保存されたすべての実稼動データの合計を、許可されたビジネスユーザープロファイルの数の 5 倍で割った値です。 [!UICONTROL Average profile richness] は共有機能です。 |
+| [!UICONTROL Average profile richness] | **非推奨** – 任意の時点でHub プロファイルサービス内に保存されているすべての実稼動データの合計を、許可されたビジネスパーソンのプロファイル数の5倍で割った値。 [!UICONTROL Average profile richness]は共有機能です。 |
 | [!UICONTROL CJA Rows Available] | Customer Journey Analytics 内で分析に使用できるデータの 1 日あたりの平均行数。 |
-| [!UICONTROL Computed Attributes] | プロファイル属性に変換され、ユーザープロファイルに含めることができる、エクスペリエンスイベントに基づく集計プロファイル行動データ。 |
-| [!UICONTROL Consumer Audience] | 販売注文で「消費者オーディエンス」として識別されたユーザープロファイルの数。 |
+| [!UICONTROL Computed Attributes] | エクスペリエンスイベントに基づいて集計されたプロファイル行動データをプロファイル属性に変換し、人物プロファイルに含めることができます。 |
+| [!UICONTROL Consumer Audience] | 販売注文で「消費者オーディエンス」として識別された人物プロファイルの数。 |
 | [!UICONTROL Data Export Size] | データセットのアクティベーションを通じて 1 年間に送信されたデータの量。 |
 | [!UICONTROL Data Exports] | 1 年間にアドビ以外のソリューションに (直接または間接的に) 書き出すことができるデータセットの合計サイズ。 |
 | [!UICONTROL Data Lake Storage] | Adobe Experience Platform 内の分析データストアの使用量。 |
-| [!UICONTROL Engageable Audience] | Journey Optimizerのオーサリング、意思決定、配信、実験またはオーケストレーションの機能を使用して、過去 12 か月以内に関与を試みたリアルタイム顧客プロファイルのユーザーグループ。 |
-| [!UICONTROL Look-alike Audiences] | 消費者の類似オーディエンスは、既存の消費者オーディエンスをモデリングして類似の属性や行動を持つユーザープロファイルを識別することで生成されるオーディエンスです。 |
+| [!UICONTROL Engageable Audience] | Journey Optimizerのオーサリング、決定、配信、テスト、オーケストレーション機能を使用して、過去12か月以内にエンゲージを試みた、リアルタイム顧客プロファイルの人物プロファイルのグループ。 |
+| [!UICONTROL Look-alike Audiences] | 消費者の類似オーディエンスとは、既存の消費者オーディエンスをモデリングして、類似の属性や行動を持つ人物プロファイルを特定することで生成されるオーディエンスです。 |
 | [!UICONTROL Number of AMM Models] | 投資に基づいて指定した結果を測定 / 予測するために使用される機械学習モデル (Adobe Mix Modeler に組み込み済み) の数。 |
 | [!UICONTROL Number of Sandboxes] | Adobe Experience Platform にアクセスしてデータと操作を分離する Adobe オンデマンドサービスのインスタンス内での論理分離の数。 |
 | [!UICONTROL Profile Richness No of Packs] | 追加のプロファイルリッチネスパックごとに、許可される合計データ量がプロファイルあたり 25 KB 増加します。 |
 | [!UICONTROL Query Service Compute Hours] | バッチクエリの実行時に、クエリサービスエンジンがデータレイクに対してデータの読み取り、処理、書き戻しを行うために必要な時間の測定値。 |
 | [!UICONTROL Streaming Segmentation No of Packs] | パックでは、ストリーミングフローを通じて新しいデータをセグメント化サービスに入力すると、ユーザープロファイルのセグメントメンバーシップが更新されます。セグメントメンバーシップは、過去の行動を考慮せずに、現在のユーザープロファイル属性と現在のイベントの値に基づいて評価されます。ストリーミングセグメント化は共有機能です。 |
-| [!UICONTROL Total Data Volume] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 合計データ量は、**合計データ量= アドレス可能なオーディエンス ×平均プロファイル充実度** の式を使用して計算されます。 この指標は、プロファイルストアにのみ保存されたデータを反映し、データレイクのストレージを除外します。 プロファイルベースのエンゲージメントに関連するデータについて、より焦点を絞ったビューを提供します。 詳しくは、[&#x200B; 合計データ量に関するよくある質問 &#x200B;](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
-| [!UICONTROL Total Volume of Data Egress] | Adobe Experience Platformからサードパーティのデータウェアハウスに書き出されたデータの年間累積量です。 |
+| [!UICONTROL Total Data Volume] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの合計量。 合計データボリュームは、次の式を使用して計算されます。**合計データボリューム = アドレス可能オーディエンス ×平均プロファイルリッチネス**。 この指標は、プロファイルストアにのみ保存されたデータを反映し、データレイクのストレージは除外されます。 これにより、プロファイルベースのエンゲージメントに関連するデータを、より焦点を絞った形で把握できます。 詳しくは、[合計データボリューム ](../../landing/license-usage-and-guardrails/total-data-volume.md)に関するよくある質問を参照してください。 |
+| [!UICONTROL Total Volume of Data Egress] | Adobe Experience Platformからサードパーティのデータウェアハウスに書き出されるデータの年間累積量。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->販売注文でライセンスの使用権限を確認して、「ストレージ許可」などの指標を計算できます。<br> 例：<ul><li>ストレージ許可=契約内の「承認済みプロファイル」の数 X プロファイルの平均充実度</li></ul>
+>販売注文のライセンス使用権限を確認して、「ストレージ使用料」などの指標を計算できます。<br>例：<ul><li>ストレージ許可=契約の「許可されたプロファイル」の数X平均プロファイルリッチネス</li></ul>
 
-これらの指標の可用性と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の定義について詳しくは、該当する製品説明ドキュメントを参照してください。
+これらの指標の可用性と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、適切な製品説明ドキュメントを参照してください。
 
-| ライセンス | 製品の説明 |
+| ライセンス | 製品説明 |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 標準</li><li>ADOBE EXPERIENCE PLATFORM:OD 重い</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービス、インテリジェントサービス &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT 顧客データプラットフォーム :OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL から 10M</li><li>AEP:OD ACTIVATION PRFL （最大 50 M）</li></ul> | [Adobe Experience Platformのライセンス認証 &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス &#x200B;](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER:OD</li><li>JOURNEY OPTIMIZERPRIME:OD</li><li>JOURNEY OPTIMIZERULTIMATE:OD</li><li>UNP AJO PRIME スターター :OD</li><li>UNP AJO ULTIMATE スターター :OD</li><li>UNP Real-Time CDP:OD プロファイルオーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリ サービス、インテリジェントサービス ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 5,000万</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:ODのライセンス認証</li><li>AEP:OD アクティベーション PRFL ～ 10M</li><li>AEP:OD アクティベーション PRFL （最大5,000万）</li></ul> | [Adobe Experience Platform アクティベーション ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD プロファイル オーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
->ライセンス使用状況ダッシュボードは、組織にプロビジョニングされた最新のライセンスに関してのみレポートします。 組織にプロビジョニングされた最新のライセンスが上の表に表示されない場合、ライセンス使用状況ダッシュボードが正しく表示されない可能性があります。 今後のリリースで、1 つの組織での追加ライセンスと複数ライセンスのサポートが予定されています。
+>ライセンス使用状況ダッシュボードでは、組織にプロビジョニングされた最新のライセンスのみがレポートされます。 組織にプロビジョニングされた最新のライセンスが上記の表に表示されない場合、ライセンス使用状況ダッシュボードが正しく表示されない可能性があります。 1つの組織内の追加ライセンスと複数のライセンスのサポートは、今後のリリースで予定されています。
 
 ## 次の手順
 
-このドキュメントを読むと、ライセンス使用状況ダッシュボードを見つけ、購入した各製品、すべての実稼動または開発用サンドボックス、特定のサンドボックスの使用状況指標を表示できるようになります。 組織が購入したライセンスに基づいて、組織で使用可能な指標に関する詳細を確認できます。
+このドキュメントを読むと、ライセンス使用状況ダッシュボードを見つけ、購入した各製品、すべての実稼動または開発サンドボックス、および特定のサンドボックスの使用状況の指標を表示できます。 組織が購入したライセンスに基づいて、組織で利用可能な指標に関する詳細を確認できます。
 
-Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド &#x200B;](../../landing/ui-guide.md) を参照してください。
+Experience Platform UIで使用できるその他の機能について詳しくは、[Experience Platform UI ガイド ](../../landing/ui-guide.md)を参照してください。
