@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；data access;data access api;query data access
+keywords: Experience Platform；ホーム；人気のトピック；データアクセス；データアクセス api；クエリデータアクセス
 solution: Experience Platform
-title: Data Access API を使用したデータセットデータの表示
+title: Data Access APIを使用したデータセット データの表示
 type: Tutorial
-description: Adobe Experience Platformの Data Access API を使用して、データセットに保存されているデータを検索、アクセス、ダウンロードする方法について説明します。 このドキュメントでは、ページングや部分的なダウンロードなど、Data Access API のユニークな機能の一部を紹介します。
+description: Adobe Experience PlatformのData Access APIを使用して、データセット内に保存されているデータを検索、アクセス、ダウンロードする方法について説明します。 このドキュメントでは、ページングや部分的なダウンロードなど、Data Access APIの独自の機能の一部を紹介します。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 56%
 
 ---
 
-# API を使用したデータセットデータ [!DNL Data Access] 表示
+# [!DNL Data Access] APIを使用したデータセット データの表示
 
-このステップバイステップのチュートリアルでは、Adobe Experience Platformの [!DNL Data Access] API を使用して、データセットに保存されているデータを検索、アクセス、ダウンロードする方法について説明します。 このドキュメントでは、ページングや部分的なダウンロードなど、[!DNL Data Access] API のユニークな機能の一部を紹介します。
+このステップバイステップのチュートリアルでは、Adobe Experience Platformの[!DNL Data Access] APIを使用して、データセット内に保存されているデータを検索、アクセス、ダウンロードする方法について説明します。 このドキュメントでは、ページングや部分的なダウンロードなど、[!DNL Data Access] APIの固有の機能の一部を紹介します。
 
 ## はじめに
 
-このチュートリアルでは、データセットの作成および入力方法に関する十分な知識が必要です。 詳しくは、「[データセ ット作成のチュートリアル](../../catalog/datasets/create.md)」を参照してください。
+このチュートリアルでは、データセットの作成方法と設定方法について理解する必要があります。 詳しくは、「[データセ ット作成のチュートリアル](../../catalog/datasets/create.md)」を参照してください。
 
-次の節では、Experience Platform API を正常に呼び出すために知っておく必要がある追加情報を示します。
+以下の節では、Experience Platform APIを正常に呼び出すために知っておく必要がある追加情報を提供します。
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -28,13 +28,13 @@ ht-degree: 56%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Experience Platform] API を呼び出すには、まず [&#x200B; 認証チュートリアル &#x200B;](../../landing/api-authentication.md) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[認証チュートリアル ](../../landing/api-authentication.md)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -42,30 +42,30 @@ ht-degree: 56%
 >
 >[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含んだすべてのリクエストには、以下の追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
 ## シーケンス図
 
-このチュートリアルでは、以下のシーケンス図で説明する手順に従います。ここでは、[!DNL Data Access] API のコア機能について重点的に説明しています。
+このチュートリアルは、以下のシーケンス図で概説されている手順に従い、[!DNL Data Access] APIのコア機能を強調します。
 
-![Data Access API コア機能のシーケンス図。](../images/sequence_diagram.png)
+![Data Access API コア機能のシーケンス ダイアグラム。](../images/sequence_diagram.png)
 
-バッチおよびファイルに関する情報を取得するには、[!DNL Catalog] API を使用します。 これらのファイルに HTTP 経由でアクセスし、完全ダウンロードまたは部分ダウンロードとしてダウンロードするには、ファイルのサイズに応じて、[!DNL Data Access] API を使用します。
+バッチとファイルに関する情報を取得するには、[!DNL Catalog] APIを使用します。 ファイルのサイズに応じて、HTTP経由でこれらのファイルにアクセスしてダウンロードするには、[!DNL Data Access] APIを使用します。
 
 ## データの検索
 
-[!DNL Data Access] API の使用を開始する前に、アクセスするデータの場所を特定する必要があります。 [!DNL Catalog] API には 2 つのエンドポイントがあり、組織のメタデータを参照して、アクセスするバッチまたはファイルの ID を取得するために使用できます。
+[!DNL Data Access] APIの使用を開始する前に、アクセスするデータの場所を特定する必要があります。 [!DNL Catalog] APIには、組織のメタデータを参照し、アクセスするバッチまたはファイルのIDを取得するために使用できる2つのエンドポイントがあります。
 
 - `GET /batches`：組織内のバッチのリストを返します
 - `GET /dataSetFiles`：組織内のファイルのリストを返します
 
-[!DNL Catalog] API のエンドポイントの包括的なリストについては、[API リファレンス &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) を参照してください。
+[!DNL Catalog] APIのエンドポイントの包括的なリストについては、[API リファレンス ](https://developer.adobe.com/experience-platform-apis/references/catalog/)を参照してください。
 
-## 組織でバッチのリストを取得する
+## 組織の下のバッチのリストの取得
 
-[!DNL Catalog] API を使用すると、組織の下にバッチのリストを返すことができます。
+[!DNL Catalog] APIを使用すると、組織の下のバッチのリストを返すことができます。
 
 **API 形式**
 
@@ -85,7 +85,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **応答**
 
-応答には、組織に関連するすべてのバッチのリストを示すオブジェクトが含まれ、各最上位の値がバッチを表します。 個々のバッチオブジェクトには、その特定のバッチの詳細が含まれます。以下の応答は、スペースのために最小化されています。
+応答には、組織に関連するすべてのバッチをリストするオブジェクトが含まれ、各トップレベル値はバッチを表します。 個々のバッチオブジェクトには、その特定のバッチの詳細が含まれます。以下の応答は、スペースのために最小化されています。
 
 ```json
 {
@@ -108,7 +108,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 ### バッチのリストのフィルター {#filter-batches-list}
 
-特定のユースケースに関連するデータを取得するために、特定のバッチを見つけるためにフィルターが必要になる場合がよくあります。 `GET /batches` リクエストにパラメーターを追加して、返された応答をフィルタリングできます。 以下のリクエストは、特定のデータセット内で指定した時間の後に作成されたすべてのバッチを、作成時に並べ替えて返します。
+フィルターは、特定のユースケースに関連するデータを取得するために、特定のバッチを見つけるために必要になることがよくあります。 返された応答をフィルタリングするために、`GET /batches` リクエストにパラメーターを追加できます。 以下のリクエストは、特定のデータセット内で、指定された時間の後に作成されたすべてのバッチを、作成時に並べ替えて返します。
 
 **API 形式**
 
@@ -132,7 +132,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 ```json
 {   "{BATCH_ID_3}": {
@@ -196,7 +196,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ## 特定のバッチに属するすべてのファイルのリストを取得する
 
-アクセスするバッチの ID を取得したので、[!DNL Data Access] API を使用して、そのバッチに属するファイルのリストを取得できます。
+アクセスするバッチのIDを取得したので、[!DNL Data Access] APIを使用して、そのバッチに属するファイルのリストを取得できます。
 
 **API 形式**
 
@@ -253,7 +253,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 ## ファイル ID を使用したファイルへのアクセス {#access-file-with-file-id}
 
-一意のファイル ID を取得したら、[!DNL Data Access] API を使用して、ファイルの名前、バイト単位のサイズ、ダウンロードリンクなど、ファイルに関する特定の詳細にアクセスできます。
+一意のファイル IDを取得したら、[!DNL Data Access] APIを使用して、ファイルの名前、バイト単位のサイズ、ダウンロード用のリンクなど、ファイルに関する特定の詳細にアクセスできます。
 
 **API 形式**
 
@@ -275,11 +275,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-ファイル ID が個々のファイルを指すかディレクトリを指すかに応じて、返されるデータ配列には、そのディレクトリに属するファイルの 1 つのエントリまたはリストが含まれる場合があります。各ファイル要素には、ファイル名、バイト単位のサイズ、ファイルをダウンロードするためのリンクなどの詳細が含まれます。
+ファイル ID が個々のファイルを指すかディレクトリを指すかに応じて、返されるデータ配列には、そのディレクトリに属するファイルの 1 つのエントリまたはリストが含まれる場合があります。各ファイル要素には、ファイルの名前、バイト単位のサイズ、ファイルをダウンロードするためのリンクなどの詳細が含まれます。
 
 **ケース 1：ファイル ID が単一のファイルを指す**
 
-**応答** 
+**応答**
 
 ```json
 {
@@ -308,7 +308,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 **ケース 2：ファイル ID がディレクトリを指す**
 
-**応答** 
+**応答**
 
 ```json
 {
@@ -348,10 +348,10 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | プロパティ | 説明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | 関連ファイルをダウンロードする URL。 |
 
-この応答は、ID `{FILE_ID_2}`と`{FILE_ID_3}`を持つ 2 つの異なるファイルを含むディレクトリを返します。このシナリオでは、各ファイルの URL に従ってファイルにアクセスする必要があります。
+この応答は、ID `{FILE_ID_2}`と`{FILE_ID_3}`を持つ 2 つの異なるファイルを含むディレクトリを返します。このシナリオでは、各ファイルのURLに従ってファイルにアクセスする必要があります。
 
 ## ファイルのメタデータの取得
 
@@ -378,7 +378,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 応答ヘッダーには、次のような、クエリされたファイルのメタデータが含まれます。
 
@@ -387,7 +387,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 ## ファイルのコンテンツへのアクセス
 
-[!DNL Data Access] API を使用してファイルのコンテンツにアクセスすることもできます。
+[!DNL Data Access] APIを使用して、ファイルのコンテンツにアクセスすることもできます。
 
 **API 形式**
 
@@ -410,13 +410,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した場合は、ファイルの内容が返されます。
 
 ## ファイルの一部コンテンツのダウンロード {#download-partial-file-contents}
 
-ファイルから特定のバイト範囲をダウンロードするには、`GET /files/{FILE_ID}` API への [!DNL Data Access] リクエスト中に範囲ヘッダーを指定します。 範囲が指定されていない場合、API はデフォルトでファイル全体をダウンロードします。
+ファイルから特定の範囲のバイトをダウンロードするには、`GET /files/{FILE_ID}` リクエスト中に[!DNL Data Access] APIに範囲ヘッダーを指定します。 範囲が指定されていない場合、APIはデフォルトでファイル全体をダウンロードします。
 
 [前の節](#retrieve-the-metadata-of-a-file)の HEAD の例では、特定のファイルのサイズをバイト単位で示しています。
 
@@ -443,20 +443,20 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | プロパティ | 説明 |
-| -------- | ----------- | 
-| `Range: bytes=0-99` | ダウンロードするバイトの範囲を指定します。これが指定されていない場合、API はファイル全体をダウンロードします。 この例では、最初の 100 バイトがダウンロードされます。 |
+| -------- | ----------- |
+| `Range: bytes=0-99` | ダウンロードするバイトの範囲を指定します。これが指定されていない場合、APIはファイル全体をダウンロードします。 この例では、最初の100 バイトがダウンロードされます。 |
 
-**応答** 
+**応答**
 
 応答本体には、（リクエストの「範囲」ヘッダーで指定された）ファイルの最初の 100 バイトと、HTTP ステータス 206（部分的な内容）が含まれます。応答には、次のヘッダーも含まれます。
 
 - コンテンツの長さ：100（返されるバイト数）
-- Content-type: application/parquet （Parquet ファイルがリクエストされたため、応答のコンテンツタイプは `parquet`）
+- Content-type: application/parquet （Parquet ファイルが要求されたため、応答コンテンツタイプは`parquet`です）
 - コンテンツ範囲：バイト 0～99／249058（合計バイト数（249058）のうち、リクエストされた範囲（0-99））
 
 ## API 応答のページネーションの設定 {#configure-response-pagination}
 
-[!DNL Data Access] API 内の応答はページ分割されます。 デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
+[!DNL Data Access] API内の応答はページ分割されます。 デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
 
 - `limit`：「limit」パラメーターを使用して、必要に応じて 1 ページあたりのエントリ数を指定できます。
 - `start`：オフセットは、「開始」クエリパラメーターで設定できます。
@@ -474,7 +474,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 | -------- | ----------- |
 | `{BATCH_ID}` | アクセスしようとしているバッチのバッチ識別子。 |
 | `{OFFSET}` | 結果配列を開始するインデックス（例：開始= 0） |
-| `{LIMIT}` | 結果の配列で返される結果の数を制御します（例：limit=1） |
+| `{LIMIT}` | 結果の配列で返される結果の数を制御します（例：limit=1）。 |
 
 **リクエスト**
 
