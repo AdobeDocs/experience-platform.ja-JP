@@ -3,7 +3,7 @@ title: LiveRamp - オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1988'
 ht-degree: 53%
@@ -38,7 +38,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -49,10 +49,10 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -91,7 +91,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 * **[!UICONTROL Password]**: [!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If暗号化キーを指定する場合は、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も指定する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* **[!UICONTROL Subkey ID]**:If暗号化キーを指定する場合は、暗号化&#x200B;**[!UICONTROL Subkey ID]**も指定する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 **SSH キー認証を使用したSFTP** {#sftp-ssh}
 
@@ -106,7 +106,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 * **[!UICONTROL PGP/GPG encryption key]**: オプションで、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If暗号化キーを指定する場合は、暗号化&#x200B;**[!UICONTROL Subkey ID]**&#x200B;も指定する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
+* **[!UICONTROL Subkey ID]**:If暗号化キーを指定する場合は、暗号化&#x200B;**[!UICONTROL Subkey ID]**も指定する必要があります。 サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -118,7 +118,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-宛先の詳細を入力する方法を示す![Experience Platform UIのスクリーンショット &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+宛先の詳細を入力する方法を示す![Experience Platform UIのスクリーンショット ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
@@ -137,7 +137,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -237,7 +237,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df`と`ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f`のセクションはSegmentation Serviceからのオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`は[&#x200B; カスタムアップロード &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)としてExperience Platformにインポートされたオーディエンスを表します。
+上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df`と`ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f`のセクションはSegmentation Serviceからのオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`は[ カスタムアップロード ](../../../segmentation/ui/audience-portal.md#import-audience)としてExperience Platformにインポートされたオーディエンスを表します。
 
 Experience Platformでは、各[結合ポリシーID](../../../profile/merge-policies/overview.md)に対して1つのCSV ファイルが生成されるので、結合ポリシーIDごとに個別のデータフロー実行も生成されます。
 
