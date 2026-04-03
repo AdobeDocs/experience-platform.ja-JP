@@ -6,9 +6,9 @@ title: 顧客 AI におけるデータ要件
 topic-legacy: Getting started
 description: 顧客 AI が使用する必須のイベント、入力、出力について説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 91%
 
 ---
@@ -62,8 +62,8 @@ ht-degree: 91%
 
 | 用語 | 定義 |
 | --- | --- |
-| [エクスペリエンスデータモデル（XDM）](../../xdm/home.md) | XDM は、Adobe Experience Cloud で Adobe Experience Platform を活用して適切なメッセージを適切な人に適切なチャネルと適切なタイミングで配信できるようにする基本的なフレームワークです。Experience Platformでは、XDM System を使用してデータを特定の方法で整理し、Experience Platform サービスでの使用を容易にします。 |
-| [XDM スキーマ](../../xdm/schema/composition.md) | Experience Platform では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。あらゆるシステムにわたって一貫した形式でデータを定義することで、意味を保持しやすくなり、したがってデータから価値を得やすくなります。データをExperience Platformに取り込む前に、データの構造を記述し、各フィールドに含めることができるデータのタイプに制約を適用するためのスキーマを作成する必要があります。 スキーマは、基本の XDM クラスと 0 個以上のスキーマフィールドグループで構成されます。 |
+| [エクスペリエンスデータモデル（XDM）](../../xdm/home.md) | XDM は、Adobe Experience Cloud で Adobe Experience Platform を活用して適切なメッセージを適切な人に適切なチャネルと適切なタイミングで配信できるようにする基本的なフレームワークです。Experience Platformでは、Experience Platform サービスで使いやすいように、XDM システムを使用してデータを特定の方法で整理します。 |
+| [XDM スキーマ](../../xdm/schema/composition.md) | Experience Platform では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。あらゆるシステムにわたって一貫した形式でデータを定義することで、意味を保持しやすくなり、したがってデータから価値を得やすくなります。データをExperience Platformに取り込む前に、データの構造を説明するスキーマを作成し、各フィールドに含めることができるデータタイプに制約を与える必要があります。 スキーマは、基本の XDM クラスと 0 個以上のスキーマフィールドグループで構成されます。 |
 | [XDM クラス](../../xdm/schema/field-constraints.md) | すべての XDM スキーマは、`Experience Event` として分類できるデータを記述します。スキーマのデータ動作は、スキーマのクラスによって定義され、スキーマの作成時に割り当てられます。XDM クラスは、特定のデータ動作を表すためにスキーマに格納される必要がある最小の数のプロパティを記述します。 |
 | [フィールドグループ](../../xdm/schema/composition.md) | スキーマ内の 1 つ以上のフィールドを定義するコンポーネントです。フィールドグループは、スキーマの階層にフィールドがどのように現れるかを強制するので、フィールドが含まれているすべてのスキーマで同じ構造を示します。フィールドグループは、`meta:intendedToExtend` 属性で識別される特定のクラスにのみ適合します。 |
 | [データタイプ](../../xdm/schema/composition.md) | スキーマに 1 つ以上のフィールドを提供することもできるコンポーネントです。ただし、フィールドグループとは異なり、データタイプは特定のクラスに限定されません。そのため、データタイプは、潜在的に異なるクラスを持つ複数のスキーマで再利用可能な共通のデータ構造を記述するための、より柔軟なオプションとなります。このドキュメントで概要を説明しているデータタイプは、CEE と Adobe Analytics の両方のスキーマでサポートされています。 |
@@ -75,7 +75,7 @@ Adobe Analytics や Adobe Audience Manager などの入力データセットの�
 
 Adobe Analytics データまたは Audience Manager データのマッピングについて詳しくは、Analytics または Audience Manager の[フィールドマッピングガイド](../../sources/connectors/adobe-applications/mapping/audience-manager.md)を参照してください。
 
-上記のコネクタを介して入力されない入力データセットについては、エクスペリエンスイベントまたは消費者エクスペリエンスイベントの XDM スキーマを使用できます。スキーマの作成プロセス中に、XDM フィールドグループを追加できます。フィールドグループは、標準フィールドグループやカスタムフィールドグループなど、Adobeで提供できます。カスタムフィールドグループは、Experience Platformのデータ表現に一致します。
+上記のコネクタを介して入力されない入力データセットについては、エクスペリエンスイベントまたは消費者エクスペリエンスイベントの XDM スキーマを使用できます。スキーマの作成プロセス中に、XDM フィールドグループを追加できます。フィールドグループは、標準フィールドグループや、Experience Platformのデータ表現と一致するカスタムフィールドグループなど、Adobeで提供できます。
 
 >[!IMPORTANT]
 >
@@ -83,7 +83,7 @@ Adobe Analytics データまたは Audience Manager データのマッピング�
 
 ### 顧客 AI で使用される標準フィールドグループ {#standard-events}
 
-エクスペリエンスイベントは、顧客の様々な行動を特定するために使用されます。データの構造によっては、以下に示すイベントタイプが、顧客の行動の一部をカバーしていない場合があります。 Web やその他のチャネル固有のユーザーアクティビティを明確に特定するのに必要なデータがどのフィールドに含まれているかを判断するのは、ユーザーです。予測目標に応じて、必要なフィールドが変わることがあります。
+エクスペリエンスイベントは、顧客の様々な行動を特定するために使用されます。データの構造化によっては、以下に示すイベントタイプが顧客の行動すべてを網羅していない場合があります。 Web やその他のチャネル固有のユーザーアクティビティを明確に特定するのに必要なデータがどのフィールドに含まれているかを判断するのは、ユーザーです。予測目標に応じて、必要なフィールドが変わることがあります。
 
 >[!NOTE]
 >
@@ -91,29 +91,29 @@ Adobe Analytics データまたは Audience Manager データのマッピング�
 
 顧客 AI は、デフォルトで、コマース、Web、アプリケーション、検索の 4 つの標準フィールドグループのイベントを使用します。以下に示す標準フィールドグループのイベントごとにデータが必要になるわけではありませんが、特定のシナリオでは特定のイベントが必要になります。標準フィールドグループ内のイベントが使用可能な場合は、そのイベントをスキーマに含めることをお勧めします。例えば、購入イベントを予測するための顧客 AI モデルを作成する場合は、コマースフィールドグループと Web ページ詳細フィールドグループのデータを用意すると役に立ちます。
 
-Experience Platform UI にフィールドグループを表示するには、左側のレールで **[!UICONTROL スキーマ]** タブを選択してから **[!UICONTROL フィールドグループ]** タブを選択します。
+Experience Platform UIでフィールドグループを表示するには、左側のパネルの「**[!UICONTROL Schemas]**」タブを選択し、続いて「**[!UICONTROL Field groups]**」タブを選択します。
 
 | フィールドグループ | イベントタイプ | XDM フィールドパス |
 | --- | --- | --- |
-| [!UICONTROL コマース詳細] | 順序 | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | 順序 | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | checkouts | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | purchases | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Web 詳細] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL アプリケーションの詳細] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL 検索の詳細] | 検索 | `search.keywords` |
+| [!UICONTROL Search Details] | 検索 | `search.keywords` |
 
-さらに、顧客 AI は購読データを使用して、より優れた顧客離れモデルを構築できます。購読データは、[[!UICONTROL サブスクリプション]](../../xdm/data-types/subscription.md)データタイプの形式を使用してプロファイルごとに必要です。ほとんどのフィールドはオプションですが、顧客離れモデルを適切に構築するには、`startDate`、`endDate`、その他の関連詳細など、できるだけ多くのフィールドにデータを提供することを強くお勧めします。この機能の追加サポートについては、アカウントチームにお問い合わせください。
+さらに、顧客 AI は購読データを使用して、より優れた顧客離れモデルを構築できます。[[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) データ型形式を使用すると、各プロファイルにサブスクリプションデータが必要になります。 ほとんどのフィールドはオプションですが、顧客離れモデルを適切に構築するには、`startDate`、`endDate`、その他の関連詳細など、できるだけ多くのフィールドにデータを提供することを強くお勧めします。この機能の追加サポートについては、アカウントチームにお問い合わせください。
 
 ### カスタムイベントとプロファイル属性の追加 {#add-custom-events}
 
@@ -159,7 +159,7 @@ Experience Platform UI にフィールドグループを表示するには、左
 
 次の例は、必要なデータの最少量を判断するのに役立つ、簡単な数式の使用方法を示しています。最少要件を超える量のデータがある場合、より正確な結果がモデルから得られる可能性が高くなります。最少要件を下回る量しかない場合、モデルのトレーニングに十分なデータがないので、モデルは失敗します。
 
-顧客 AI は、サバイバルモデルを使用して、特定の時間にイベントが発生する確率を推定し、影響要因を特定します。また、教師あり学習では、ポジティブとネガティブの母集団を定義し、`lightgbm` などの意思決定ベースのツリーを使用して、確率スコアを生成します。
+Customer AIは、生存モデルを使用して、特定の時点でイベントが発生する確率を推定し、影響要因を特定するとともに、肯定的および否定的な母集団を定義する教師あり学習と、`lightgbm`のような決定ベースの木を使用して確率スコアを生成します。
 
 **数式**:
 
@@ -187,7 +187,7 @@ Experience Platform UI にフィールドグループを表示するには、左
 
    - 必要なデータ = 60 日+ 30 日 = 90 日
 
-- ユーザーが次の 7 日間に時計を購入する可能性があるかどうかを、実施要件を満たす母集団を明示的に&#x200B;**指定せず**&#x200B;予測したいと考えています。この場合、対象の母集団はデフォルトで「過去 45 日間にアクティビティがあったユーザー」になり、結果期間は 7 日間になります。
+- ユーザーが次の 7 日間に時計を購入する可能性があるかどうかを、実施要件を満たす母集団を明示的に&#x200B;**指定せず**&#x200B;予測したいと考えています。この場合、対象となる母集団は「過去45日間にアクティビティを行った人」にデフォルト設定され、結果ウィンドウは7日間です。
 
    - 実施要件のルックバックウィンドウ = 45 日
 
@@ -211,15 +211,15 @@ Experience Platform UI にフィールドグループを表示するには、左
 
 顧客 AI は、適格と見なされる個々のプロファイルの属性を生成します。スコア（出力）の使い方は、プロビジョニングした内容に基づいて 2 通りあります。リアルタイム顧客プロファイルが有効なデータセットがある場合は、[セグメントビルダー](../../segmentation/ui/segment-builder.md)でリアルタイム顧客プロファイルからの分析情報を利用できます。プロファイルが有効なデータセットがない場合は、データレイクで利用可能な[顧客 AI 出力データセットをダウンロード](./user-guide/download-scores.md)できます。
 
-出力データセットは、Experience Platform **データセット** ワークスペースで確認できます。 すべての顧客 AI 出力データセットは、「**顧客 AI スコア - NAME_OF_APP（アプリ名）**」という名前で始まります。同様に、すべての顧客 AI 出力スキーマは、「**顧客 AI スキーマ - Name_of_app（アプリ名）**」という名前で始まります。
+出力データセットは、Experience Platform **データセット** ワークスペースで見つけることができます。 すべての顧客 AI 出力データセットは、「**顧客 AI スコア - NAME_OF_APP（アプリ名）**」という名前で始まります。同様に、すべての顧客 AI 出力スキーマは、「**顧客 AI スキーマ - Name_of_app（アプリ名）**」という名前で始まります。
 
-![&#x200B; 顧客 AI の出力データセットの命名規則。](./images/user-guide/cai-schema-name-of-app.png)
+![Customer AIの出力データセットの命名規則。](./images/user-guide/cai-schema-name-of-app.png)
 
 次の表に、顧客 AI の出力に含まれる様々な属性を示します。
 
 | 属性 | 説明 |
 | ----- | ----------- |
-| [!UICONTROL スコア] | 顧客が、定義された時間枠で予測された目標を達成する相対的な可能性。この値は、確率の割合ではなく、全体の母集団に対する個々の確率として扱われます。このスコアは 0～100 です。 |
+| [!UICONTROL Score] | 顧客が、定義された時間枠で予測された目標を達成する相対的な可能性。この値は、確率の割合ではなく、全体の母集団に対する個々の確率として扱われます。このスコアは 0～100 です。 |
 | Probability | この属性は、定義された時間枠内で予測された目標を達成するためのプロファイルの真の確率です。異なる目標の出力を比較する場合は、百分位またはスコアに対する確率を考慮することをお勧めします。確率は頻繁に発生しないイベントの方が低い傾向があるため、適格な母集団全体の平均確率を決定するときに常に使用する必要があります。確率の値の範囲は 0～1 です。 |
 | 百分位 | この値は、同様にスコアリングされた他のプロファイルと比較したプロファイルのパフォーマンスに関する情報を提供します。たとえば、チャーンのパーセンタイルランクが 99 のプロファイルは、スコアリングされた他のすべてのプロファイルの 99％と比較して、チャーンのリスクが高いことを示しています。百分位数の範囲は 1～100 です。 |
 | 傾向タイプ | 選択された傾向タイプ |
