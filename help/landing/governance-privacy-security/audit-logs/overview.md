@@ -1,10 +1,10 @@
 ---
-title: 監査ログの概要
+title: 監査ログ概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 31%
@@ -28,55 +28,55 @@ ht-degree: 31%
 >title="Experience Platform でのユーザーアクティビティの監視"
 >abstract="<h2>説明</h2><p>監査ログの形式で、様々な Experience Platform サービスと機能のユーザーアクティビティを監視できます。これらのログは、<b>誰</b>が<b>いつ</b>、<b>どの</b>アクションを実行したかを記録する監査記録を形成します。監査ログは、Experience Platform に関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p>"
 
-システムで実行されるアクティビティの透明性と可視性を高めるために、Adobe Experience Platformでは、様々なサービスや機能に関するユーザーアクティビティを「監査ログ」の形式で監査できます。 これらのログは、Experience Platformに関する問題のトラブルシューティングに役立つ監査証跡を形成し、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。
+システムで実行されるアクティビティの透明性と可視性を高めるために、Adobe Experience Platformでは、「監査ログ」の形式で、様々なサービスや機能に対するユーザーアクティビティを監査できます。 これらのログは、Experience Platformの問題のトラブルシューティングに役立つ監査証跡を形成し、企業のデータスチュワードシップポリシーや規制要件に効果的に準拠するのに役立ちます。
 
-基本的に、監査ログでは、**誰が** 何を **アクションを** いつ **実行したかがわかります**。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーのメール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。
+基本的な意味では、監査ログは&#x200B;**who**&#x200B;が&#x200B;**what** アクションを実行し、**when**&#x200B;を実行したことを示します。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。
 
-ユーザーがアクションを実行すると、2 種類の監査イベントが記録されます。 コアイベントは、アクション（[!UICONTROL allow] または [!UICONTROL deny]）の認証結果をキャプチャし、拡張イベントは、実行結果（[!UICONTROL success] または [!UICONTROL failure]）をキャプチャします。 複数の拡張イベントを同じコアイベントにリンクできます。 例えば、宛先をアクティブ化すると、コアイベントは [!UICONTROL Destination Update] アクションの認証を記録し、拡張イベントは複数の [!UICONTROL Segment Activate] アクションを記録します。
+ユーザーがアクションを実行すると、2種類の監査イベントが記録されます。 コアイベントはアクションの承認結果（[!UICONTROL allow]または[!UICONTROL deny]）をキャプチャし、拡張イベントは実行結果（[!UICONTROL success]または[!UICONTROL failure]）をキャプチャします。 複数の拡張イベントを同じコアイベントにリンクできます。 例えば、宛先をアクティブ化する場合、コアイベントは[!UICONTROL Destination Update] アクションの承認を記録し、拡張イベントは複数の[!UICONTROL Segment Activate] アクションを記録します。
 
 >[!NOTE]
 >
-> **Role** リソース内のアクション **ユーザーの追加** および **ユーザーの削除** のメタデータには、アクションを実行したユーザーのメール ID は含まれません。 代わりに、ログにはシステムで生成されたメール ID （system@adobe.com）が表示されます。
+> アクション **Add user**&#x200B;および&#x200B;**Remove user** （**Role** リソース内）のメタデータには、アクションを実行したユーザーの電子メール IDは含まれません。 代わりに、ログにはシステムが生成したメール ID （system@adobe.com）が表示されます。
 
-このドキュメントでは、UI または API での表示方法や管理方法など、Experience Platformの監査ログについて説明します。
+このドキュメントでは、UIまたはAPIで監査ログを表示および管理する方法など、Experience Platformの監査ログについて説明します。
 
 ## 監査ログで記録されるイベントタイプ {#category}
 
-次の表に、監査ログでリソースが記録されるアクションの概要を示します。
+次の表に、監査ログでリソースを記録するアクションの概要を示します。
 
 | リソース | アクション |
 | --- | --- |
-| [&#x200B; アクセス制御ポリシー（属性ベースのアクセス制御） &#x200B;](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [&#x200B; アカウント （Adobe） &#x200B;](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [&#x200B; アトリビューション AI インスタンス &#x200B;](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
+| [ アクセス制御ポリシー（属性ベースのアクセス制御） ](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [ アカウント （Adobe） ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [ アトリビューション AI インスタンス ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>書き出し</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
 | 計算属性 | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [&#x200B; 顧客 AI インスタンス &#x200B;](../../../intelligent-services/customer-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
-| [データセット](../../../catalog/datasets/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>[&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../profile/home.md) 用に有効化</li><li>プロファイルを無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
-| [&#x200B; データストリーム &#x200B;](../../../datastreams/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li><li>[&#x200B; マッピングを編集 &#x200B;](../../../datastreams/data-prep.md)</li></ul> |
+| [Customer AI インスタンス ](../../../intelligent-services/customer-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
+| [データセット](../../../catalog/datasets/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>[ リアルタイム顧客プロファイル ](../../../profile/home.md)を有効にする</li><li>プロファイルを無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
+| [ データストリーム ](../../../datastreams/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li><li>[ マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
 | [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
 | [宛先](../../../destinations/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li><li>データセットをアクティブ化</li><li>データセットを削除</li><li>プロファイルをアクティブ化</li><li>プロファイルを削除</li></ul> |
-| [&#x200B; フィールドグループ &#x200B;](../../../xdm/schema/composition.md#field-group) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [ID グラフ &#x200B;](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
-| [ID 名前空間 &#x200B;](../../../identity-service/features/namespaces.md) | <ul><li>作成</li><li>更新</li></ul> |
-| [&#x200B; 結合ポリシー &#x200B;](../../../profile/merge-policies/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [&#x200B; 製品プロファイル &#x200B;](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [ フィールドグループ ](../../../xdm/schema/composition.md#field-group) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [ID グラフ ](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
+| [ID名前空間](../../../identity-service/features/namespaces.md) | <ul><li>作成</li><li>更新</li></ul> |
+| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [製品プロファイル ](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
 | [クエリ](../../../query-service/ui/overview.md) | <ul><li>実行</li></ul> |
-| [&#x200B; クエリテンプレート &#x200B;](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
-| [&#x200B; 役割（属性ベースのアクセス制御） &#x200B;](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
+| [ クエリテンプレート ](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [役割（属性ベースのアクセス制御） ](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
 | [サンドボックス](../../../sandboxes/home.md) | <ul><li>作成</li><li>更新</li><li>リセット</li><li>削除</li></ul> |
-| [&#x200B; スケジュールされたクエリ &#x200B;](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
+| [ スケジュール済みクエリ ](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>削除</li></ul> |
 | [スキーマ](../../../xdm/schema/composition.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>プロファイルを有効にする</li></ul> |
-| [&#x200B; セグメント &#x200B;](../../../segmentation/home.md) | <ul><li>作成</li><li>削除</li><li>セグメントをアクティブ化</li><li>セグメントを削除</li></ul> |
-| [Sourceのデータフロー &#x200B;](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li><li>データセットをアクティベート</li><li>データセットを削除</li><li>プロファイル無効化</li><li>プロファイルを削除</li></ul> |
-| [&#x200B; 作業指示 &#x200B;](../../../hygiene/home.md) | <ul><li>作成</li></ul> |
+| [ セグメント ](../../../segmentation/home.md) | <ul><li>作成</li><li>削除</li><li>セグメントをアクティブ化</li><li>セグメントを削除</li></ul> |
+| [Source データフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li><li>データセットをアクティベート</li><li>データセットを削除</li><li>プロファイルのアクティブ化</li><li>プロファイルを削除</li></ul> |
+| [作業指示](../../../hygiene/home.md) | <ul><li>作成</li></ul> |
 
 ## 監査ログへのアクセス
 
-組織に対してこの機能が有効になっている場合、アクティビティが発生すると監査ログが自動的に収集されます。 ログ収集を手動で有効にする必要はありません。
+この機能が組織で有効になっている場合、アクティビティが発生すると、監査ログが自動的に収集されます。 ログ収集を手動で有効にする必要はありません。
 
-監査ログを表示および書き出すには、**[!UICONTROL View User Activity Log]** のアクセス制御権限（[!UICONTROL Data Governance] カテゴリに表示）が付与されている必要があります。 Experience Platform機能の個々の権限を管理する方法については、[&#x200B; アクセス制御ドキュメント &#x200B;](../../../access-control/home.md) を参照してください。
+監査ログを表示およびエクスポートするには、**[!UICONTROL View User Activity Log]** アクセス制御権限が付与されている必要があります（[!UICONTROL Data Governance] カテゴリにあります）。 Experience Platform機能の個別の権限を管理する方法については、[ アクセス制御ドキュメント ](../../../access-control/home.md)を参照してください。
 
 ## UI での監査ログの管理 {#managing-audit-logs-in-the-ui}
 
@@ -85,17 +85,17 @@ ht-degree: 31%
 >title="手順"
 >abstract="<ul><li>左側のナビゲーションの「<b>監査</b>」を選択します。監査ワークスペースには、記録されたログのリストが表示されます。デフォルトでは、最新のログから古いログの順に並べ替えられています。</li>   <li> メモ：監査ログは、365 日間保持され、その後システムから削除されます。したがって、遡ることができる期間は最大 365 日までです。365 日より前のデータを振り返る必要がある場合は、社内ポリシーの要件を満たすために定期的にログを書き出す必要があります。 </li><li>リストからイベントを選択して、その詳細を右側のパネルに表示します。 </li><li>ファネルアイコンを選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。選択した各種フィルターに関係なく、最新 1000 件のレコードのみが表示されます。 </li><li>監査ログの現在のリストを書き出すには、「**ログをダウンロード**」を選択します。</li><li>この機能に関する詳しいヘルプについては、Experience League の<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ja">監査ログの概要</a>を参照してください。</li></ul>"
 
-Experience Platform UI の **[!UICONTROL Audits]** Workspace 内で、様々なExperience Platform機能の監査ログを表示できます。 ワークスペースには、記録されたログのリストが表示されます。デフォルトでは、最新のログから古いログの順に並べ替えられています。
+Experience Platform UIの&#x200B;**[!UICONTROL Audits]** ワークスペース内で、様々なExperience Platform機能の監査ログを表示できます。 ワークスペースには、記録されたログのリストが表示されます。デフォルトでは、最新のログから最新のログに順に並べ替えられます。
 
-![&#x200B; 左側のメニューの監査をハイライト表示した監査ダッシュボード。](../../images/audit-logs/audits.png)
+![左側のメニューの監査を強調表示する監査ダッシュボード。](../../images/audit-logs/audits.png)
 
-監査ログは、365 日間保持され、その後システムから削除されます。 365 日を超えるデータが必要な場合は、社内ポリシーの要件を満たすために定期的にログを書き出す必要があります。
+監査ログは365日間保持され、その後、システムから削除されます。 365日以上のデータが必要な場合は、社内ポリシー要件を満たすために、ログを定期的に書き出す必要があります。
 
-監査ログの要求方法によって、アクセスできる期間とレコード数が変わります。 [&#x200B; ログの書き出し &#x200B;](#export-audit-logs) を使用すると、365 日（90 日間隔）を上限とする最大 10,000 個の監査ログ（コアまたはエンハンス）に戻すことができます。Experience Platformの [&#x200B; アクティビティログ UI](#filter-audit-logs) には、過去 90 日を上限とする最大 1,000 個のコアイベントが表示され、それぞれに対応するエンハンスドイベントが含まれます。
+監査ログをリクエストする方法では、許可される期間とアクセス可能なレコード数が変更されます。 [ ログの書き出し](#export-audit-logs)を使用すると、365日（90日の間隔）を最大10,000件の監査ログ（コアまたは拡張）に戻すことができます。Experience Platformの[ アクティビティログ UI](#filter-audit-logs)には、過去90日間から最大1,000件のコアイベントが表示され、それぞれに対応する拡張イベントが表示されます。
 
 リストからイベントを選択して、その詳細を右側のパネルに表示します。
 
-![&#x200B; イベントの詳細パネルがハイライト表示された監査ダッシュボードの「アクティビティログ」タブ。](../../images/audit-logs/select-event.png)
+![ ダッシュボードアクティビティログのタブを監査し、イベントの詳細パネルを強調表示します。](../../images/audit-logs/select-event.png)
 
 ### 監査ログのフィルタリング
 
@@ -103,78 +103,78 @@ Experience Platform UI の **[!UICONTROL Audits]** Workspace 内で、様々なE
 
 >[!NOTE]
 >
->Experience Platform UI には、適用されたフィルターに関係なく、過去 90 日間のみ、最大 1,000 個のコアイベントが表示され、それぞれに対応する拡張イベントが含まれます。 それ以降（最大 365 日）にログが必要な場合は、[&#x200B; 監査ログをエクスポート &#x200B;](#export-audit-logs) する必要があります。
+>Experience Platform UIには、適用されたフィルターに関係なく、それぞれ対応する拡張イベントを含む、最大1000個のコアイベントまでの過去90日間のみが表示されます。 この期間を過ぎたログが必要な場合（最大365日）、[監査ログを書き出す](#export-audit-logs)必要があります。
 
-![&#x200B; フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../../images/audit-logs/filters.png)
+![ フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../../images/audit-logs/filters.png)
 
-UI の監査イベントには、次のフィルターを使用できます。
+UIの監査イベントには、次のフィルターを使用できます。
 
 | フィルター | 説明 |
 | --- | --- |
-| [!UICONTROL Category] | ドロップダウンメニューを使用すると、表示される結果を [&#x200B; カテゴリ &#x200B;](#category) でフィルタリングできます。 |
-| [!UICONTROL Action] | アクションでフィルターします。 各サービスで使用可能なアクションは、上記のリソーステーブルに表示されます。 |
-| [!UICONTROL User] | ユーザーでフィルタリングするには、完全なユーザー ID （例：`johndoe@acme.com`）を入力します。 |
-| [!UICONTROL Status] | 結果ごとに監査イベントをフィルタリングします。成功、失敗、許可または [&#x200B; アクセス制御 &#x200B;](../../../access-control/home.md) 権限がないことが原因で拒否されます。 実行されたアクションの場合、コアイベントには [!UICONTROL Allow] または [!UICONTROL Deny] が表示されます。 コアイベントが [!UICONTROL Allow] の場合、**[!UICONTROL Success]** または **[!UICONTROL Failure]** を表示する 1 つ以上の拡張イベントを添付していることがあります。 例えば、アクションが成功すると、コアイベントに [!UICONTROL Allow] が表示され、添付された拡張イベントに [!UICONTROL Success] が表示されます。 |
-| [!UICONTROL Date] | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 データは、90 日間のルックバック期間（例：2021-12-15～2022-03-15）で書き出すことができます。 これは、イベントタイプによって異なる場合があります。 |
+| [!UICONTROL Category] | ドロップダウンメニューを使用して、表示された結果を[ カテゴリ ](#category)でフィルタリングします。 |
+| [!UICONTROL Action] | アクションでフィルタリング。 各サービスで使用できるアクションは、上記のリソーステーブルに表示されます。 |
+| [!UICONTROL User] | 完全なユーザーID （例：`johndoe@acme.com`）を入力して、ユーザーで絞り込みます。 |
+| [!UICONTROL Status] | [ アクセス制御](../../../access-control/home.md)権限がないため、監査イベントを結果でフィルタリングできます。成功、失敗、許可、または拒否されました。 実行されたアクションの場合、コアイベントには[!UICONTROL Allow]または[!UICONTROL Deny]が表示されます。 コアイベントが[!UICONTROL Allow]の場合、**[!UICONTROL Success]**&#x200B;または&#x200B;**[!UICONTROL Failure]**&#x200B;を示す1つ以上の拡張イベントが添付されている可能性があります。 例えば、アクションが成功すると、コアイベントに[!UICONTROL Allow]、添付された拡張イベントに[!UICONTROL Success]が表示されます。 |
+| [!UICONTROL Date] | 開始日または終了日を選択して、結果をフィルタリングする日付範囲を定義します。 データは、90日間のルックバック期間（例：2021-12-15 ～ 2022-03-15）で書き出すことができます。 これはイベントタイプによって異なる場合があります。 |
 
-フィルターを削除するには、該当するフィルターのピルアイコンの「X」を選択するか、「**[!UICONTROL Clear all]**」を選択して、すべてのフィルターを削除します。
+フィルターを削除するには、該当するフィルターのピルアイコンの「X」を選択するか、**[!UICONTROL Clear all]**&#x200B;を選択してすべてのフィルターを削除します。
 
-![&#x200B; フィルターをクリアがハイライト表示された監査ダッシュボード。](../../images/audit-logs/clear-filters.png)
+![明確なフィルターがハイライト表示された監査ダッシュボード。](../../images/audit-logs/clear-filters.png)
 
 返される監査ログデータには、選択したフィルター条件を満たすすべてのクエリに関する次の情報が含まれます。
 
 | 列の名前 | 説明 |
 |---|---|
-| [!UICONTROL Timestamp] | `month/day/year hour:minute AM/PM` 形式で実行されたアクションの正確な日時。 |
-| [!UICONTROL Asset Name] | 「[!UICONTROL Asset Name]」フィールドの値は、フィルターとして選択したカテゴリによって異なります。 |
+| [!UICONTROL Timestamp] | `month/day/year hour:minute AM/PM`形式で実行されたアクションの正確な日時。 |
+| [!UICONTROL Asset Name] | [!UICONTROL Asset Name] フィールドの値は、フィルターとして選択したカテゴリによって異なります。 |
 | [!UICONTROL Category] | このフィールドは、フィルタードロップダウンで選択したカテゴリと一致します。 |
-| [!UICONTROL Action] | 使用できるアクションは、フィルターとして選択したカテゴリによって異なります。 |
-| [!UICONTROL User] | このフィールドには、クエリを実行したユーザー ID が表示されます。 |
+| [!UICONTROL Action] | 使用可能なアクションは、フィルターとして選択したカテゴリによって異なります。 |
+| [!UICONTROL User] | このフィールドは、クエリを実行したユーザーIDを提供します。 |
 
-![&#x200B; フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../../images/audit-logs/filtered.png)
+![ フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../../images/audit-logs/filtered.png)
 
 ### 監査ログの書き出し {#export-audit-logs}
 
-監査ログの現在のリストをエクスポートするには、「**[!UICONTROL Download log]**」を選択します。
+現在の監査ログのリストをエクスポートするには、**[!UICONTROL Download log]**&#x200B;を選択します。
 
 >[!NOTE]
 >
->ログは、90 日間隔（過去 365 日間まで）でリクエストできます。 ただし、1 回の書き出し中に返されるログの最大数は、10,000 個の監査イベント（コアまたは拡張）です。
+>過去365日間まで、90日間隔でログを要求できます。 ただし、1回の書き出しで返すことができるログの最大数は、10,000件の監査イベント（コアまたは拡張）です。
 
-![[!UICONTROL Download log] がハイライト表示された監査ダッシュボード。](../../images/audit-logs/download.png)
+![[!UICONTROL Download log]がハイライト表示された監査ダッシュボード。](../../images/audit-logs/download.png)
 
-表示されるダイアログで、目的の形式（**[!UICONTROL CSV]** または **[!UICONTROL JSON]**）を選択し、「**[!UICONTROL Download]**」を選択します。 ブラウザーが生成されたファイルをダウンロードし、お使いのマシンに保存します。
+表示されるダイアログで、目的の形式（**[!UICONTROL CSV]**&#x200B;または&#x200B;**[!UICONTROL JSON]**）を選択し、**[!UICONTROL Download]**&#x200B;を選択します。 ブラウザーは生成されたファイルをダウンロードし、コンピューターに保存します。
 
-![[!UICONTROL Download] がハイライト表示されたファイル形式選択ダイアログ &#x200B;](../../images/audit-logs/select-download-format.png)
+![[!UICONTROL Download]がハイライト表示されたファイル形式選択ダイアログ。](../../images/audit-logs/select-download-format.png)
 
 ## アラートの有効化 {#enable-alerts}
 
-監査アラートを有効にすると、次のルールの通知を受信できます。
+監査アラートを有効にして、次のルールに関する通知を受信できます。
 
 * オーディエンス作成
 * オーディエンスの更新
-* オーディエンスの削除
-* データセットの作成
+* オーディエンス削除
+* データセット作成
 * データセットの更新
-* データセット削除
+* データセットの削除
 * スキーマ作成
 * スキーマの更新
 * スキーマの削除
 
-リストから目的のアラートを選択して、通知を受信するように登録します。 アラートについて詳しくは、[UI を使用したアラートの購読 &#x200B;](../../../observability/alerts/ui.md) についてのガイドを参照してください。
+リストから目的のアラートを選択し、購読して通知を受信します。 アラートについて詳しくは、[UIを使用したアラートの購読](../../../observability/alerts/ui.md)に関するガイドを参照してください。
 
-## API での監査ログの管理
+## APIでの監査ログの管理
 
-UI で実行できるすべてのアクションは、API 呼び出しを使用して実行することもできます。 詳しくは、[API リファレンスドキュメント &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/) を参照してください。
+UIで実行できるすべてのアクションは、API呼び出しを使用して実行することもできます。 詳しくは、[API参照ドキュメント ](https://www.adobe.io/experience-platform-apis/references/audit-query/)を参照してください。
 
 ## Adobe Admin Consoleの監査ログの管理
 
-Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次の [&#x200B; ドキュメント &#x200B;](https://helpx.adobe.com/jp/enterprise/using/audit-logs.html) を参照してください。
+Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次の[ ドキュメント ](https://helpx.adobe.com/enterprise/using/audit-logs.html)を参照してください。
 
 ## 次の手順とその他のリソース
 
-このガイドでは、Experience Platformでの監査ログの管理方法について説明しました。 Experience Platform アクティビティの監視方法について詳しくは、[Observability Insights](../../../observability/home.md) および [&#x200B; データ取得の監視 &#x200B;](../../../ingestion/quality/monitor-data-ingestion.md) に関するドキュメントを参照してください。
+このガイドでは、Experience Platformで監査ログを管理する方法について説明しました。 Experience Platform アクティビティの監視方法について詳しくは、[Observability Insights](../../../observability/home.md)および[ データ取り込みの監視](../../../ingestion/quality/monitor-data-ingestion.md)に関するドキュメントを参照してください。
 
-Experience Platformの監査ログの理解を深めるために、次のビデオを視聴してください。
+Experience Platformの監査ログについて理解を深めるには、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/344651?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
