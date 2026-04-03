@@ -3,7 +3,7 @@ title: Demandbase接続
 description: この宛先を使用して、Account-Based Marketing（ABM）ユースケースのアカウントオーディエンスをアクティブ化します。 DemandBaseのB2B Demand Side Platform（DSP）を介して、ターゲットアカウント内の関連するペルソナや役割に広告を表示します。 ターゲットアカウントは、マーケティングやセールスにおけるその他の下流のユースケースのために、Demandbaseのサードパーティデータで強化することもできます。
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 16%
@@ -17,7 +17,7 @@ ht-degree: 16%
 >
 >デマンドベース宛先にアカウントオーディエンスをアクティブ化する機能は、[の](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[および](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] エディションを購入する企業で使用できます。
 
-[&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md)に基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、デマンドベースキャンペーンのプロファイルをアクティブ化します。
+[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md)に基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、デマンドベースキャンペーンのプロファイルをアクティブ化します。
 
 ## ユースケース {#use-case}
 
@@ -33,7 +33,7 @@ ht-degree: 16%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -42,10 +42,10 @@ ht-degree: 16%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | ○ | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -65,13 +65,13 @@ ht-degree: 16%
 アカウントのオーディエンスをDemandbaseに書き出すには、次の操作が必要です。
 
 1. Demandbase アカウント。
-2. Demandbase API トークン。 DemandbaseでユーザーとAPI トークンを生成できます。 トークンを生成するには、Demandbase アカウントにログインした後、[&#x200B; マイプロファイル/API トークン &#x200B;](https://web.demandbase.com/o/ad/at)に移動します。
+2. Demandbase API トークン。 DemandbaseでユーザーとAPI トークンを生成できます。 トークンを生成するには、Demandbase アカウントにログインした後、[ マイプロファイル/API トークン ](https://web.demandbase.com/o/ad/at)に移動します。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -79,7 +79,7 @@ ht-degree: 16%
 
 宛先に対して認証を行うには、必須フィールドに入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-![&#x200B; ベアラートークンを追加](/help/destinations/assets/catalog/advertising/demandbase/add-bearer-token.png)
+![ ベアラートークンを追加](/help/destinations/assets/catalog/advertising/demandbase/add-bearer-token.png)
 
 * **[!UICONTROL Bearer token]**: ベアラートークンを入力して、宛先に対する認証を行います。 トークンの取得方法について詳しくは、[前提条件](#prerequisites)を参照してください。
 
@@ -99,10 +99,10 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対してアカウントオーディエンスをアクティブ化する手順については、[&#x200B; アカウントオーディエンスをアクティブ化](/help/destinations/ui/activate-account-audiences.md)を参照してください。
+この宛先に対してアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスをアクティブ化](/help/destinations/ui/activate-account-audiences.md)を参照してください。
 
 ### 必須マッピング {#mandatory-mappings}
 
@@ -114,7 +114,7 @@ ht-degree: 16%
 | `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | アカウント組織のメールドメイン |
 | `xdm: accountKey.sourceKey` | `Identity: primaryId` | アカウントのプライマリ ID |
 
-![&#x200B; デマンドベースマッピング &#x200B;](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+![ デマンドベースマッピング ](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
 
 宛先が正しく機能するためには、これらのマッピングが必要であり、アクティベーションワークフローを続行する前に設定する必要があります。
 
