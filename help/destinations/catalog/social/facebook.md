@@ -3,7 +3,7 @@ keywords: facebook接続；facebook接続；facebook宛先；facebook;instagram;
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2733'
 ht-degree: 16%
@@ -52,10 +52,10 @@ ht-degree: 16%
 | `last_name` | 姓 | 使用可能な形式：小文字、`a-z`文字のみ、句読点なし。 特殊文字にはUTF-8 エンコーディングを使用します。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
 | `first_name` | 名 | 使用可能な形式：小文字、`a-z`文字のみ、句読点なし、スペースなし。 特殊文字にはUTF-8 エンコーディングを使用します。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
 | `first_name_initial` | 名（イニシャル） | 使用可能な形式：小文字、`a-z`文字のみ。 特殊文字にはUTF-8 エンコーディングを使用します。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
-| `state` | 都道府県 | 小文字の[2文字のANSI省略形コード &#x200B;](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code)を使用します。 米国以外の州では、小文字、句読点なし、特殊文字なし、スペースは使用しません。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
+| `state` | 都道府県 | 小文字の[2文字のANSI省略形コード ](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code)を使用します。 米国以外の州では、小文字、句読点なし、特殊文字なし、スペースは使用しません。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
 | `city` | 市区町村 | 使用可能な形式：小文字、`a-z`文字のみ、句読点なし、特殊文字なし、スペースなし。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
 | `zip` | 郵便番号 | 使用可能な形式：小文字、スペースなし。 米国の郵便番号の場合は、最初の5桁のみを使用します。 英国の場合は、`Area/District/Sector`形式を使用します。  <br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
-| `country` | 国 | 使用可能な形式：小文字の2文字の国コード （ISO 3166-1 alpha-2[形式）。  &#x200B;](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)<br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
+| `country` | 国 | 使用可能な形式：小文字の2文字の国コード （ISO 3166-1 alpha-2[形式）。  ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)<br>Experience Platform **は、この値を自動的に** ハッシュしてからFacebookに送信します。 この自動ハッシュ化は、Facebookのセキュリティおよびプライバシー要件に準拠するために必要です。 このフィールドには、**not**&#x200B;が事前にハッシュ化された値を指定します。これにより、一致するプロセスが失敗します。 |
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -63,7 +63,7 @@ ht-degree: 16%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ ht-degree: 16%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ ht-degree: 16%
 
 * お客様の[!DNL Facebook] ユーザーアカウントは、お客様が使用している広告アカウントを所有する[!DNL Facebook Business Account]への完全なアクセス権を持っている必要があります。
 * [!DNL Facebook] ユーザーアカウントでは、使用するAd アカウントに対して&#x200B;**[!DNL Manage campaigns]**&#x200B;権限を有効にする必要があります。
-* **[!DNL Adobe Experience Cloud]** ビジネス アカウントを[!DNL Facebook Ad Account]の広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの「[&#x200B; ビジネスマネージャーにパートナーを追加](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
+* **[!DNL Adobe Experience Cloud]** ビジネス アカウントを[!DNL Facebook Ad Account]の広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの「[ ビジネスマネージャーにパートナーを追加](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
 
   >[!IMPORTANT]
   >
@@ -138,7 +138,7 @@ ht-degree: 16%
 
 メールアドレスを[!DNL Adobe Experience Platform]に取り込む前にハッシュ化するか、Experience Platformでクリアなメールアドレスを使用して、アクティベーション時に[!DNL Experience Platform]個ハッシュ化します。
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)および[&#x200B; ストリーミング取り込みの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)および[ ストリーミング取り込みの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
 
 自分でメールアドレスをハッシュ化することを選択した場合は、次の要件に必ず準拠してください。
 
@@ -155,33 +155,33 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 > 属性ソースデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをチェックして、[!DNL Experience Platform]がアクティベーション時にデータを自動的にハッシュします。
 > **[!UICONTROL Apply transformation]** オプションは、ソースフィールドとして属性を選択した場合にのみ表示されます。 名前空間を選択しても表示されません。
 
-![&#x200B; マッピング手順で強調表示された変換制御を適用します。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![ マッピング手順で強調表示された変換制御を適用します。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## カスタム名前空間の使用 {#custom-namespaces}
 
-`Extern_ID`名前空間を使用して[!DNL Facebook]にデータを送信する前に、[!DNL Facebook Pixel]を使用して独自の識別子を同期してください。 詳しくは、[Facebook公式ドキュメント &#x200B;](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)を参照してください。
+`Extern_ID`名前空間を使用して[!DNL Facebook]にデータを送信する前に、[!DNL Facebook Pixel]を使用して独自の識別子を同期してください。 詳しくは、[Facebook公式ドキュメント ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 以下のビデオでは、[!DNL Facebook]宛先を設定し、オーディエンスをアクティブ化する手順も示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[宛先設定チュートリアル &#x200B;](../../ui/connect-destination.md)を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[宛先設定チュートリアル ](../../ui/connect-destination.md)を参照してください。
 
 ### 宛先に対する認証 {#authenticate}
 
 1. 宛先カタログでFacebookの宛先を検索し、**[!UICONTROL Set Up]**&#x200B;を選択します。
 2. **[!UICONTROL Connect to destination]** を選択します。
-   ![&#x200B; アクティブ化ワークフローに表示されているFacebookに認証の手順。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![ アクティブ化ワークフローに表示されているFacebookに認証の手順。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Facebookの資格情報を入力し、**ログイン**&#x200B;を選択します。
 
 ### 認証情報を更新 {#refresh-authentication-credentials}
@@ -199,10 +199,10 @@ Facebook認証トークンは60日ごとに有効期限が切れます。 トー
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**&#x200B;に移動します
 2. （オプション）ページで使用可能なフィルターを使用して、Facebook アカウントのみを表示します。
    ![Facebook アカウントのみを表示するフィルター](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**&#x200B;を選択します。
+3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**を選択します。
    ![詳細を編集コントロールを選択](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**&#x200B;を選択し、Facebookの資格情報で再認証します。
-   OAuthの再接続オプションを含む![&#x200B; モーダルウィンドウ &#x200B;](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**を選択し、Facebookの資格情報で再認証します。
+   OAuthの再接続オプションを含む![ モーダルウィンドウ ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -251,14 +251,14 @@ Facebook認証トークンは60日ごとに有効期限が切れます。 トー
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 **[!UICONTROL Segment schedule]** ステップでは、オーディエンスを[!UICONTROL Origin of audience]に送信する際に[!DNL Facebook Custom Audiences]を指定する必要があります。
 
-Facebook アクティベーション手順に表示される「![&#x200B; オーディエンスの起源」ドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+Facebook アクティベーション手順に表示される「![ オーディエンスの起源」ドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### マッピングの例：[!DNL Facebook Custom Audience]でのオーディエンスデータのアクティブ化 {#example-facebook}
 
@@ -287,7 +287,7 @@ Facebook アクティベーション手順に表示される「![&#x200B; オー
 > 
 >属性ソースデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをチェックして、[!DNL Experience Platform]がアクティベーション時にデータを自動的にハッシュします。
 
-![&#x200B; マッピング手順で強調表示された変換制御を適用します。](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![ マッピング手順で強調表示された変換制御を適用します。](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 書き出したデータ {#exported-data}
 
