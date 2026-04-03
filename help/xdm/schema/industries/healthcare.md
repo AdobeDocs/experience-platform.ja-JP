@@ -1,45 +1,45 @@
 ---
-title: ヘルスケア業界データモデル ERD
-description: ヘルスケア業界向けの標準化されたデータモデルを記述したエンティティ関係図（ERD）を表示します。 このデータモデルは、Adobe Experience Platformで使用するエクスペリエンスデータモデル（XDM）と互換性があります。
+title: ヘルスケア業界のデータモデル ERD
+description: 医療業界向けの標準化されたデータモデルを説明するERD （エンティティ関係図）を表示します。 このデータモデルは、Adobe Experience Platformで使用するExperience Data Model （XDM）と互換性があります。
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '526'
 ht-degree: 8%
 
 ---
 
-# [!UICONTROL &#x200B; ヘルスケア &#x200B;] 業界データモデル ERD
+# [!UICONTROL Healthcare]業界データモデル ERD
 
-次の ERD （エンティティ関係図）は、医療業界向けの標準化されたデータモデルを表しています。 ERD は、Adobe Experience Platformでのデータの保存方法を考慮して、正規化されていない方法で意図的に表示されます。
-
->[!NOTE]
->
->説明している ERD は、この業界のユースケースに合わせてデータをモデル化する方法の推奨事項です。 Experience Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で構築する必要があります。 詳しくは、UI での [&#x200B; スキーマ &#x200B;](../../ui/resources/schemas.md) および [&#x200B; 関係 &#x200B;](../../tutorials/relationship-ui.md) の管理に関するガイドを参照してください。
-
-次の凡例を使用して、この ERD を解釈します。
-
-* に示されている各エンティティは、基になる [&#x200B; エクスペリエンスデータモデル（XDM）クラス &#x200B;](../composition.md#class) に基づいています。
-* 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールド（サブフィールド）を表します。
-* 特定のエンティティで最も重要なフィールドは、赤でハイライト表示されます。
-* 個々の顧客の識別に使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの 1 つは「プライマリ ID」としてマークされます。
-* エンティティ関係は、cookie ベースのイベントでは多くの場合、トランザクションを行った個人を特定できないので、非依存としてマークされます。
-
-![&#x200B; ヘルスケア業界のデータモデルに関する ERD の例 &#x200B;](../../images/industries/healthcare.png)
+次のエンティティ関係図（ERD）は、ヘルスケア業界向けの標準化されたデータモデルを表しています。 ERDは、Adobe Experience Platformでのデータの保存方法を考慮して、意図的に非正規化された方法で表示されます。
 
 >[!NOTE]
 >
->各エンティティには、「_ID」フィールドが含まれます。このフィールドは、該当するレコードまたはイベントの一意の文字列識別子（`_id`）属性を表します。 このフィールドは、個々のレコードまたはイベントの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのデータを検索するために使用されます。 場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://tools.ietf.org/html/rfc4122) または [グローバル固有識別子（GUID）](https://docs.microsoft.com/ja-jp/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物、イベントまたはビジネスエンティティに関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド &#x200B;](../composition.md#identity) に降格させる必要があります。
+>前述のERDは、この業界のユースケースのためにデータをモデル化する方法に関する推奨事項です。 Experience Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で構築する必要があります。 詳しくは、UIの[ スキーマ ](../../ui/resources/schemas.md)および[関係](../../tutorials/relationship-ui.md)の管理に関するガイドを参照してください。
 
-## [!UICONTROL &#x200B; ヘルスケア &#x200B;] のユースケース
+このERDを解釈するには、次の凡例を使用します。
 
-次の表に、いくつかの一般的なヘルスケアユースケースで推奨されるクラスとスキーマフィールドグループの概要を示します。
+* に表示される各エンティティは、基礎となる[Experience Data Model （XDM）クラス ](../composition.md#class)に基づいています。
+* 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールドまたはサブフィールドを表します。
+* 特定のエンティティの最も重要なフィールドが赤で強調表示されます。
+* 個々の顧客を識別するために使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの1つは「プライマリ ID」としてマークされます。
+* Cookie ベースのイベントでは、多くの場合、トランザクションを実行した人物や個人を特定できないため、エンティティの関係は非依存としてマークされます。
 
-| ユースケース | 推奨されるクラスおよびフィールドグループ |
+![医療業界データモデルのERDの例](../../images/industries/healthcare.png)
+
+>[!NOTE]
+>
+>各エンティティには、「_ID」フィールドが含まれます。このフィールドは、該当するレコードまたはイベントの一意の文字列識別子（`_id`）属性を表します。 このフィールドは、個々のレコードまたはイベントの一意性を追跡し、データの重複を防ぎ、そのデータをダウンストリームサービスで検索するために使用されます。 場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://tools.ietf.org/html/rfc4122) または [グローバル固有識別子（GUID）](https://docs.microsoft.com/ja-jp/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。個人、イベント、またはビジネスエンティティに関連するID データは、代わりに、互換性のあるフィールドグループによって提供される[ID フィールド ](../composition.md#identity)にリレゲートする必要があります。
+
+## [!UICONTROL Healthcare]件のユースケース
+
+次の表に、ヘルスケアの一般的な使用例に推奨されるクラスとスキーマフィールドグループの概要を示します。
+
+| ユースケース | 推奨されるクラスとフィールドグループ |
 | --- | --- |
-| 保険を求める消費者の間でデジタル獲得と体験を向上させます。 以下に例を示します。 <ul><li>ユーザーが一般的な情報（プラン、プラン名/プラン層、メディケイド、ウェルネスプログラムなど）を含むページにアクセスする場合、プロモーションメールを送信したり、広告が表示されるサードパーティプラットフォームでターゲットにしたりするために、ユーザーの行動と探しているものを理解します。</li><li>人々が心臓の健康とワクチン情報を探す際には、ワクチンに関連する心臓の健康に関する情報を送って、ブランド認知度を高めたり、ワクチンのスケジュールを設定してもらったりします。</li></ul> | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア会員の詳細 &#x200B;]](../../field-groups/profile/healthcare-member-details.md)</li><li>[!UICONTROL &#x200B; プラン &#x200B;] クラスを使用する `planID` 属性とスキーマの間に確立された関係フィールド。</li></ul></li><li>**[[!UICONTROL 支払者]](../../classes/payer.md)**</li><li>**[[!UICONTROL 計画]](../../classes/plan.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケアプラン詳細 &#x200B;]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL アプリケーションの詳細]](../../field-groups/event/application-details.md)</li><li>[[!UICONTROL &#x200B; サイトツールの詳細 &#x200B;]](../../field-groups/event/sitetool-details.md)</li><li>[[!UICONTROL &#x200B; Campaign マーケティング詳細 &#x200B;]](../../field-groups/event/campaign-marketing-details.md)</li></ul></li></ul> |
-| 過去のオンライン行動と健康データに基づくターゲット広告を通じて、患者のデジタル獲得を強化します。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア会員の詳細 &#x200B;]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL プロバイダー]](../../classes/provider.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア提供組織 &#x200B;]](../../field-groups/provider/healthcare-provider.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Web 詳細]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertisingの詳細 &#x200B;]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
-| 顧客が保険会社を見つけた方法を理解するために、異なるチャネルを通じて保険のマーケティングを追跡することで、医療プランへの登録とアカウント作成を改善します。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア会員の詳細 &#x200B;]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 支払者]](../../classes/payer.md)**</li><li>**[[!UICONTROL 計画]](../../classes/plan.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケアプラン詳細 &#x200B;]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Web 詳細]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertisingの詳細 &#x200B;]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
-| 医療保険の適用の失効を避けます。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア会員の詳細 &#x200B;]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 計画]](../../classes/plan.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケアプラン詳細 &#x200B;]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
-| ダイレクト・トゥ・カスタマー（DTC）広告を使用して、医薬品の情報をプロバイダーに提供する。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア会員の詳細 &#x200B;]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 医薬品]](../../classes/medication.md)**:<ul><li>[[!UICONTROL &#x200B; ヘルスケア薬品 &#x200B;]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Web 詳細]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertisingの詳細 &#x200B;]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+| 保険を求める消費者の間で、デジタル顧客獲得とデジタル体験を向上させる。 以下に例を示します。 <ul><li>一般的な情報（プラン、プラン名/階層、メディケイド、ウェルネスプログラムなど）が含まれるページにアクセスすると、プロモーションメールを送信したり、広告を含むサードパーティプラットフォームでターゲティングしたりするために、利用者の行動と求めているものを把握できます。</li><li>人々が心臓の健康やワクチン情報を検索した際に、心臓の健康に関するワクチン関連情報を送ってブランド認知度を高めたり、ワクチンのスケジュールを尋ねたりします。</li></ul> | <ul><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL Healthcare Member Details]](../../field-groups/profile/healthcare-member-details.md)</li><li>`planID`属性と[!UICONTROL Plan] クラスを使用するスキーマの間に確立された関係フィールド。</li></ul></li><li>**[[!UICONTROL Payer]](../../classes/payer.md)**</li><li>**[[!UICONTROL Plan]](../../classes/plan.md)**：<ul><li>[[!UICONTROL Healthcare Plan Details]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL Application Details]](../../field-groups/event/application-details.md)</li><li>[[!UICONTROL Sitetool Details]](../../field-groups/event/sitetool-details.md)</li><li>[[!UICONTROL  Campaign Marketing Details]](../../field-groups/event/campaign-marketing-details.md)</li></ul></li></ul> |
+| 過去のオンライン行動および医療データにもとづいてターゲットを絞った広告を通じて、患者のデジタル獲得を促進したい。 | <ul><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL Healthcare Member Details]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Provider]](../../classes/provider.md)**：<ul><li>[[!UICONTROL Healthcare Provider]](../../field-groups/provider/healthcare-provider.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL Web Details]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising Details]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+| 顧客が保険会社をどのように知ったかを把握するために、様々なチャネルを通じて保険のマーケティングを追跡することで、医療プランへの登録とアカウントの作成を改善します。 | <ul><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL Healthcare Member Details]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Payer]](../../classes/payer.md)**</li><li>**[[!UICONTROL Plan]](../../classes/plan.md)**：<ul><li>[[!UICONTROL Healthcare Plan Details]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL Web Details]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising Details]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+| 医療保険の適用の逸脱を避ける。 | <ul><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL Healthcare Member Details]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Plan]](../../classes/plan.md)**：<ul><li>[[!UICONTROL Healthcare Plan Details]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
+| DTC （Direct-to-Customer）広告を使用して、医療提供者に医薬品情報をプロモーションする。 | <ul><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL Healthcare Member Details]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Medication]](../../classes/medication.md)**：<ul><li>[[!UICONTROL Healthcare medication]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL Web Details]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising Details]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
 
