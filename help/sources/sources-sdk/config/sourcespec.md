@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: セルフサービスソースのソース仕様の設定（Batch SDK）
-description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用するために準備が必要な設定の概要を説明します。
+title: セルフサービスソースのソース仕様の設定（バッチSDK）
+description: このドキュメントでは、セルフサービスソース（バッチSDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2107'
 ht-degree: 38%
 
 ---
 
-# セルフサービスソースのソース仕様の設定（Batch SDK）
+# セルフサービスソースのソース仕様の設定（バッチSDK）
 
 ソース仕様には、ソースのカテゴリ、ベータステータス、カタログアイコンに関する属性など、ソースに固有の情報が含まれます。また、URL パラメーター、コンテンツ、ヘッダー、スケジュールなどの便利な情報も含まれています。ソース仕様は、ベース接続からのソース接続を作成するために必要なパラメーターのスキーマも記述します。ソース接続を作成するには、スキーマが必要です。
 
@@ -231,30 +231,30 @@ ht-degree: 38%
 | --- | --- | --- |
 | `sourceSpec.attributes` | UI または API に固有のソースに関する情報が含まれます。 |  |
 | `sourceSpec.attributes.uiAttributes` | UI に固有のソースに関する情報を表示します。 |  |
-| `sourceSpec.attributes.uiAttributes.isPreview` | ソースが（実稼動/一般提供ではなく）プレビューとして表示されるかどうかを示すブール値の属性。 | <ul><li>`true`</li><li>`false`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.isPreview` | ソースがプレビューとして表示されるかどうかを示すブール値の属性（実稼動用/一般利用可能用ではありません）。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 機能に追加するために、顧客からのより多くのフィードバックがソースで必要かどうかを示すブール値の属性です。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | ソースのカテゴリを定義します。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI でソースのレンダリングに使用するアイコンを定義します。 | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UIでのソースのレンダリングに使用するアイコンを定義します。 | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | ソースの簡単な説明を表示します。 |  |
-| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UI でのソースのレンダリングに使用するラベルを表示します。 |  |
+| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UIでソースのレンダリングに使用するラベルを表示します。 |  |
 | `sourceSpec.attributes.spec.properties.urlParams` | URL リソースのパス、メソッド、およびサポートされているクエリパラメーターに関する情報が含まれます。 |  |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | データの取得元となるリソースパスを定義します。 | `/3.0/reports/${campaignId}/email-activity` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | データを取得するリクエストをリソースに送信する際に使用する HTTP メソッドを定義します。 | `GET`、`POST` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | データを取得するリクエストをリソースに送信する際に使用する HTTP メソッドを定義します。 | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | データの取得をリクエストする際にソース URL に追加できる、サポートされているクエリパラメーターを定義します。**メモ**：ユーザーが指定するパラメーター値は、プレースホルダーの形式にする必要があります。例：`${USER_PARAMETER}`。 | `"queryParams" : {"key" : "value", "key1" : "value1"}` はソース URL に `/?key=value&key1=value1` として追加されます。 |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | データの取得中にソース URL に対する HTTP リクエストで指定する必要があるヘッダーを定義します。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POST リクエストを通じて HTTP 本文を送信するように設定できます。 |  |
-| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[&#x200B; 追加のリソース &#x200B;](#content-path) の節を参照してください。 |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platformに取り込まれるコレクションレコードを指すパス。 | `$.emails` |
+| `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POST リクエストを通じてHTTP bodyを送信するように設定できます。 |  |
+| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要のある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[追加リソースセクション ](#content-path)を参照してください。 |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platformに取り込むコレクションレコードを指すパス。 | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | このプロパティを使用すると、コンテンツパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | このプロパティを使用すると、`contentPath` で指定した属性名の値を上書きできます。 | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | このプロパティを使用すると、2 つの配列を統合し、リソースデータをExperience Platform リソースに変換できます。 |  |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | このプロパティを使用すると、2つの配列を統合し、リソースデータをExperience Platform リソースに変換できます。 |  |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 統合するコレクションレコードを指すパス。 | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | このプロパティを使用すると、エンティティパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | このプロパティを使用すると、`explodeEntityPath` で指定した属性名の値を上書きできます。 | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | ユーザーの現在のページの応答から次のページへのリンクを取得するため、または次のページ URL を作成する際に指定する必要があるパラメーターまたはフィールドを定義します。 |  |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | ソースでサポートされているページネーションタイプを表示します。 | <ul><li>`OFFSET`：このページネーションタイプを使用すると、結果の配列を開始する場所のインデックスと、返される結果の上限数を指定することで、結果を解析できます。</li><li>`POINTER`：このページネーションタイプを使用すると、リクエストと共に送信する必要がある特定の項目を、`pointer` 変数を使用して指定することができます。ポインタータイプのページネーションでは、次のページを指すパスがペイロード内に必要です。</li><li>`CONTINUATION_TOKEN`：このページネーションタイプを使用すると、クエリまたはヘッダーパラメーターに継続トークンを追加して、事前に決定された最大値によって最初に返されなかった残りのリターンデータをソースから取得できます。</li><li>`PAGE`：このページネーションタイプを使用すると、クエリパラメーターにページングパラメーターを追加して、page 0 から始まり、ページごとに返されるデータをトラバースできます。</li><li>`NONE`：このページネーションタイプは、使用可能なページネーションタイプのいずれもサポートしていないソースに使用できます。 ページネーションタイプ `NONE` は、リクエスト後の応答データ全体を返します。</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | ソースでサポートされているページネーションタイプを表示します。 | <ul><li>`OFFSET`：このページネーションタイプを使用すると、結果の配列を開始する場所のインデックスと、返される結果の上限数を指定することで、結果を解析できます。</li><li>`POINTER`：このページネーションタイプを使用すると、リクエストと共に送信する必要がある特定の項目を、`pointer` 変数を使用して指定することができます。ポインタの種類のページ設定には、次のページを指すペイロードのパスが必要です。</li><li>`CONTINUATION_TOKEN`：このページ分割タイプを使用すると、クエリまたはヘッダーパラメーターを継続トークンで追加して、ソースから残りのリターンデータを取得できます。このリターンデータは、事前に決定された最大値のために最初に返されませんでした。</li><li>`PAGE`：このページ分割タイプを使用すると、ページごとに戻り値データをトラバースするページングパラメーターを含むクエリパラメーターをページの0から追加できます。</li><li>`NONE`：このページ分割タイプは、使用可能なページ分割タイプのいずれもサポートしていないソースに使用できます。 Pagination type `NONE`は、リクエストの後に応答データ全体を返します。</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 | `limit` または `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | 1 ページで取得するレコードの数。 | `limit=10` または `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | オフセット属性名。 ページネーションタイプが `offset` に設定されている場合に必要です。 | `offset` |
@@ -264,13 +264,13 @@ ht-degree: 38%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 終了時間のパラメーター名を定義します | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [&#x200B; ーザーが入力したパラメーターの例については、](#user-input) 追加のリソース `spec.properties` を参照してください。 |
+| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | [のユーザー入力パラメーターの例については、](#user-input)追加リソース `spec.properties`を参照してください。 |
 
 {style="table-layout:auto"}
 
 ## その他のリソース {#appendix}
 
-次の節では、高度なスケジュール設定やカスタムスキーマなど、`sourceSpec` ークフローに対して実行できる追加設定について説明します。
+次の節では、高度なスケジュール設定やカスタムスキーマなど、`sourceSpec`に対して実行できる追加の設定について説明します。
 
 ### コンテンツパスの例 {#content-path}
 
@@ -378,15 +378,15 @@ ht-degree: 38%
   }
 ```
 
-### ソースに対して様々なページネーションタイプを設定 {#pagination}
+### ソースに対して異なるページネーションの種類を設定します {#pagination}
 
-セルフサービスソース（バッチ SDK）でサポートされる他のページネーションタイプの例を以下に示します。
+次に、セルフサービスソース（バッチSDK）でサポートされているその他のページネーションタイプの例を示します。
 
 >[!BEGINTABS]
 
 >[!TAB  オフセット ]
 
-このページネーションタイプを使用すると、結果の配列を開始する場所のインデックスと、返される結果の上限数を指定することで、結果を解析できます。 例：
+このページネーションタイプでは、結果の配列の開始場所からインデックスを指定し、結果の返し数に制限を設けることで、結果を解析できます。 例：
 
 ```json
 "paginationParams": {
@@ -405,12 +405,12 @@ ht-degree: 38%
 | `limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 |
 | `limitValue` | 1 ページで取得するレコードの数。 |
 | `offSetName` | オフセット属性名。 ページネーションタイプが `offset` に設定されている場合に必要です。 |
-| `endConditionName` | 次の HTTP リクエストでページネーションループを終了させる条件を示すユーザー定義の値。 終了条件を設定する属性名を指定する必要があります。 |
-| `endConditionValue` | 終了条件を設定する属性値。 |
+| `endConditionName` | 次のHTTP リクエストでページネーション ループを終了する条件を示すユーザー定義の値。 終了条件を配置する属性名を指定する必要があります。 |
+| `endConditionValue` | 終了条件を配置する属性値。 |
 
->[!TAB  ポインター ]
+>[!TAB  ポインター]
 
-このページネーションタイプを使用すると、リクエストと共に送信する必要がある特定の項目を、`pointer` 変数を使用して指定することができます。 ポインタータイプのページネーションでは、次のページを指すパスがペイロード内に必要です。 例：
+このページ分割タイプを使用すると、`pointer`変数を使用して、リクエストで送信する必要がある特定の項目を指定できます。 ポインタの種類のページ設定には、次のページを指すペイロードのパスが必要です。 例：
 
 ```json
 {
@@ -426,13 +426,13 @@ ht-degree: 38%
 | `type` | データを返すために使用されるページネーションのタイプ。 |
 | `limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 |
 | `limitValue` | 1 ページで取得するレコードの数。 |
-| `pointerPath` | ポインターの属性名。 これには、次のページを指す属性への JSON パスが必要です。 |
+| `pointerPath` | ポインターの属性名。 これには、次のページを指す属性へのjson パスが必要です。 |
 
->[!TAB  継続トークン ]
+>[!TAB 継続トークン ]
 
-ページネーションの継続トークンタイプは、1 回の応答で返される可能性のある項目の最大数があらかじめ決定されていることから、返すことができなかった項目の数がさらに存在することを示す文字列トークンを返します。
+ページネーションの継続トークンタイプは、1回の応答で返すことができる項目の最大数があらかじめ決められているため、返すことができなかった項目の存在を示す文字列トークンを返します。
 
-継続トークンタイプのページネーションをサポートするソースは、次のようなページネーションパラメーターを持つ場合があります。
+ページ分割の継続トークンタイプをサポートするソースには、次のようなページ分割パラメーターがあります。
 
 ```json
 "paginationParams": {
@@ -447,12 +447,12 @@ ht-degree: 38%
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | データを返すために使用されるページネーションのタイプ。 |
-| `continuationTokenPath` | 返された結果の次のページに移動するために、クエリパラメーターに追加する必要がある値。 |
-| `parameterType` | `parameterType` プロパティは、`parameterName` を追加する場所を定義します。 `QUERYPARAM` タイプを使用すると、クエリに `parameterName` を追加できます。 `HEADERPARAM` を使用すると、ヘッダーリクエストに `parameterName` を追加できます。 |
-| `parameterName` | 継続トークンの組み込みに使用されるパラメーターの名前。 形式は次のとおりです。`{PARAMETER_NAME}={CONTINUATION_TOKEN}` |
-| `delayRequestMillis` | ページネーションの `delayRequestMillis` プロパティを使用すると、ソースに対して行われるリクエストの割合を制御できます。 一部のソースでは、1 分あたりに実行できるリクエスト数に制限があります。 例えば、[!DNL Zendesk] には 1 分あたりのリクエストが 100 件という制限があり、`delayRequestMillis` を `850` に定義すると、1 分あたりのリクエスト 100 件のしきい値の下で、1 分あたりのリクエスト数がちょうど約 80 件になるようにソースを設定できます。 |
+| `continuationTokenPath` | 返される結果の次のページに移動するために、クエリパラメーターに追加する必要がある値。 |
+| `parameterType` | `parameterType` プロパティは、`parameterName`を追加する必要がある場所を定義します。 `QUERYPARAM` タイプを使用すると、クエリを`parameterName`に追加できます。 `HEADERPARAM`を使用すると、ヘッダーリクエストに`parameterName`を追加できます。 |
+| `parameterName` | 継続トークンの組み込みに使用されるパラメーターの名前。 形式は次のとおりです：`{PARAMETER_NAME}={CONTINUATION_TOKEN}`。 |
+| `delayRequestMillis` | ページネーションの`delayRequestMillis` プロパティを使用すると、ソースに対して行われたリクエストの割合を制御できます。 一部のソースでは、1分に実行できるリクエストの数に制限があります。 例えば、[!DNL Zendesk]のリクエスト数は1分あたり100件に制限されており、`delayRequestMillis`から`850`を定義すると、1分あたり100件のリクエスト数のしきい値を大幅に下回る、1分あたり約80件のリクエストで呼び出しを行うようにソースを設定できます。 |
 
-次に、継続トークンタイプのページネーションを使用して返される応答の例を示します。
+次に、ページネーションの継続トークンタイプを使用して返される応答の例を示します。
 
 ```json
 {
@@ -481,7 +481,7 @@ ht-degree: 38%
 
 >[!TAB  ページ ]
 
-`PAGE` タイプのページネーションを使用すると、0 から始まるページ数でリターンデータをトラバースできます。 `PAGE` タイプのページネーションを使用する場合、1 つのページで指定するレコード数を指定する必要があります。
+`PAGE` タイプのページネーションでは、0から始まるページ数で返されるデータをトラバースできます。 `PAGE` タイプのページネーションを使用する場合は、1つのページで指定されたレコード数を指定する必要があります。
 
 ```json
 "paginationParams": {
@@ -500,17 +500,17 @@ ht-degree: 38%
 | `type` | データを返すために使用されるページネーションのタイプ。 |
 | `limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 |
 | `limitValue` | 1 ページで取得するレコードの数。 |
-| `initialPageIndex` | （オプション）初期ページインデックスは、ページネーションを開始するページ番号を定義します。 このフィールドは、ページネーションが 0 から始まらないソースに使用できます。 指定しない場合、初期ページインデックスはデフォルトで 0 になります。 このフィールドには整数を指定してください。 |
-| `endPageIndex` | （オプション）終了ページインデックスを使用すると、終了条件を確立し、ページネーションを停止できます。 このフィールドは、ページネーションを停止するデフォルトの終了条件が使用できない場合に使用できます。 このフィールドは、取り込まれるページ数または最後のページ番号が応答ヘッダーを通じて提供された場合にも使用できます。これは、`PAGE` タイプのページネーションを使用する場合に一般的です。 終了ページインデックスの値は、最後のページ番号または応答ヘッダーから得られる文字列型の式値です。 例えば、`headers.x-pagecount` を使用して、応答ヘッダーの `x-pagecount` 値に終了ページインデックスを割り当てることができます。 **注意**:`x-pagecount` は一部のソースにとって必須の応答ヘッダーであり、取り込まれるページの値を保持します。 |
-| `pageParamName` | 返されるデータの様々なページをトラバースするために、クエリパラメーターに追加する必要があるパラメーターの名前。 例：`https://abc.com?pageIndex=1` は、API のリターンペイロードの 2 ページ目を返します。 |
-| `maximumRequest` | 特定の増分実行に対してソースがおこなえるリクエストの最大数。 現在のデフォルトの制限は 10000 です。 |
+| `initialPageIndex` | （オプション）最初のページインデックスは、ページネーションを開始するページ番号を定義します。 このフィールドは、ページネーションが0から始まらないソースに使用できます。 指定しない場合、最初のページインデックスはデフォルトで0になります。 このフィールドには整数が必要です。 |
+| `endPageIndex` | （オプション）終了ページインデックスを使用すると、終了条件を設定し、ページネーションを停止できます。 このフィールドは、ページ分割を停止するデフォルトの終了条件が使用できない場合に使用できます。 このフィールドは、取り込むページ数または最後のページ番号が応答ヘッダーを通じて提供される場合にも使用できます。これは、`PAGE`形式のページネーションを使用する場合に一般的です。 終了ページインデックスの値は、最後のページ番号または応答ヘッダーの文字列型式の値のいずれかになります。 例えば、`headers.x-pagecount`を使用して、応答ヘッダーから`x-pagecount`値に終了ページインデックスを割り当てることができます。 **注**: `x-pagecount`は、一部のソースに対する必須の応答ヘッダーであり、取り込むページの数の値を保持します。 |
+| `pageParamName` | 戻り値データの異なるページをトラバースするために、クエリパラメーターに追加する必要があるパラメーターの名前。 例えば、`https://abc.com?pageIndex=1`は、APIのリターンペイロードの2番目のページを返します。 |
+| `maximumRequest` | 特定の増分実行に対してソースが実行できるリクエストの最大数。 現在のデフォルト制限は10000です。 |
 
 {style="table-layout:auto"}
 
 
 >[!TAB なし]
 
-使用可能なページネーションタイプのいずれもサポートしていないソースには、`NONE` のページネーションタイプを使用できます。 `NONE` のページネーションタイプを使用するソースは、GET リクエストが行われた場合、取得可能なすべてのレコードを返します。
+`NONE` ページネーション タイプは、使用可能なページネーション タイプのいずれもサポートしていないソースに使用できます。 `NONE`のページネーション型を使用するソースは、GET リクエストが行われたときに、取得できるすべてのレコードを返すだけです。
 
 ```json
 "paginationParams": {
@@ -520,11 +520,11 @@ ht-degree: 38%
 
 >[!ENDTABS]
 
-### セルフサービスソースの高度なスケジュール（バッチ SDK）
+### セルフサービスソースの高度なスケジューリング（バッチSDK）
 
-詳細スケジュールを使用して、ソースの増分スケジュールとバックフィルスケジュールを設定します。 `incremental` プロパティを使用すると、ソースが新規または変更済みのレコードのみを取り込むスケジュールを構成でき、`backfill` プロパティを使用すると、履歴データを取り込むスケジュールを作成できます。
+高度なスケジューリングを使用して、ソースの増分スケジュールとバックフィルのスケジュールを設定します。 `incremental` プロパティでは、ソースが新しいレコードまたは変更されたレコードのみを取り込むスケジュールを設定できます。一方、`backfill` プロパティでは、履歴データを取り込むスケジュールを作成できます。
 
-高度なスケジュール設定では、ソースに固有の式や関数を使用して、増分スケジュールとバックフィルスケジュールを設定できます。 次の例では、増分スケジュールを [!DNL Zendesk] 形式に、バックフィルを `type:user updated > {START_TIME} updated < {END_TIME}` 形式にフォーマットして、`type:user updated < {END_TIME}` ソースに必要なデータを示します。
+高度なスケジュール機能を使用すると、ソースに固有の式や関数を使用して、増分スケジュールやバックフィル スケジュールを設定できます。 次の例では、[!DNL Zendesk] ソースでは、増分スケジュールを`type:user updated > {START_TIME} updated < {END_TIME}`形式で、バックフィルを`type:user updated < {END_TIME}`形式で設定する必要があります。
 
 ```json
 "scheduleParams": {
@@ -537,12 +537,12 @@ ht-degree: 38%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `scheduleParams.type` | ソースが使用するスケジュールのタイプ。 この値を `ADVANCE` に設定して、詳細スケジュール タイプを使用します。 |
-| `scheduleParams.paramFormat` | スケジュールパラメーターの定義済み形式。 この値は、ソースの `scheduleStartParamFormat` 値および `scheduleEndParamFormat` 値と同じにすることができます。 |
-| `scheduleParams.incremental` | ソースの増分処理クエリ。 増分とは、新しいデータまたは変更されたデータのみを取り込む取り込み方法を指します。 |
+| `scheduleParams.type` | ソースで使用するスケジュールのタイプ。 高度なスケジュール タイプを使用するには、この値を`ADVANCE`に設定します。 |
+| `scheduleParams.paramFormat` | スケジュール パラメータの定義済み形式。 この値は、ソースの`scheduleStartParamFormat`および`scheduleEndParamFormat`の値と同じにすることができます。 |
+| `scheduleParams.incremental` | ソースの増分クエリ。 増分とは、新しいデータまたは変更されたデータのみが取り込まれる取り込み方法を指します。 |
 | `scheduleParams.backfill` | ソースのバックフィルクエリ。 バックフィルとは、履歴データが取り込まれる取り込み方法を指します。 |
 
-高度なスケジュールを設定したら、特定のソースがサポートする内容に応じて、URL、本文、ヘッダーパラメーターのセクションで `scheduleParams` を参照する必要があります。 次の例では、増分スケジュール式 `{SCHEDULE_QUERY}` バックフィルスケジュール式が使用される場所を指定するためのプレースホルダーを使用しています。 [!DNL Zendesk] ソースの場合、`query` は `queryParams` で高度なスケジュール設定を指定するために使用されます。
+高度なスケジュールを設定したら、特定のソースがサポートしているものに応じて、URL、本文、またはヘッダーのパラメーターのセクションで`scheduleParams`を参照する必要があります。 次の例では、`{SCHEDULE_QUERY}`は、増分スケジュール式とバックフィル スケジュール式を使用する場所を指定するために使用されるプレースホルダーです。 [!DNL Zendesk] ソースの場合、`query`は`queryParams`で高度なスケジュール設定を指定するために使用されます。
 
 ```json
 "urlParams": {
@@ -555,11 +555,11 @@ ht-degree: 38%
       }
 ```
 
-### カスタムスキーマを追加してソースの動的属性を定義する
+### カスタムスキーマを追加して、ソースの動的属性を定義します
 
-ソースにカスタムスキーマを含めて、`sourceSpec` ースに必要なすべての属性（必要になる可能性のある動的属性を含む）を定義できます。 接続仕様の `/connectionSpecs` セクションでカスタムスキーマを指定すると同時に、[!DNL Flow Service] API の `sourceSpec` エンドポイントに対してPUT リクエストを行うことで、ソースの対応する接続仕様を更新できます。
+カスタムスキーマを`sourceSpec`に含めることで、必要な動的属性を含め、ソースに必要なすべての属性を定義できます。 接続仕様の`/connectionSpecs` セクションでカスタムスキーマを指定しながら、[!DNL Flow Service] APIの`sourceSpec` エンドポイントに対してPUT リクエストを行うことで、ソースの対応する接続仕様を更新できます。
 
-ソースの接続仕様に追加できるカスタムスキーマの例を次に示します。
+次に、ソースの接続仕様に追加できるカスタムスキーマの例を示します。
 
 ```json
       "schema": {
@@ -660,4 +660,4 @@ ht-degree: 38%
 
 ## 次の手順
 
-ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[&#x200B; 探索仕様の設定 &#x200B;](./explorespec.md) に関するドキュメントを参照してください。
+ソースの仕様を入力したら、Experience Platformに統合するソースのエクスプローラーの仕様を設定します。 詳しくは、[探索仕様の設定](./explorespec.md)に関するドキュメントを参照してください。
