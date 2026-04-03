@@ -1,55 +1,55 @@
 ---
-title: Flow Service API を使用した Capilary とExperience Platformの接続
-description: API を使用してキャピラリーをExperience Platformに接続する方法を説明します。
+title: Flow Service APIを使用してCapillaryをExperience Platformに接続する
+description: APIを使用してCapillaryをExperience Platformに接続する方法について説明します。
 badge: ベータ版
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 9%
 
 ---
 
-# [!DNL Capillary Streaming Events] API を使用した [!DNL Flow Service] のExperience Platformへの接続
+# [!DNL Capillary Streaming Events] APIを使用して[!DNL Flow Service]をExperience Platformに接続します
 
 >[!AVAILABILITY]
 >
->[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [&#x200B; 利用条件 &#x200B;](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータ版のソースの使用について詳しくは、ソースの概要の[条件](../../../../home.md#terms-and-conditions)を参照してください。
 
-このガイドを読んで、[!DNL Capillary Streaming Events] と [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Capillary] アカウントからAdobe Experience Platformにデータをストリーミングする方法を学びます。
+このガイドでは、[!DNL Capillary Streaming Events]と[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)を使用して、[!DNL Capillary] アカウントからAdobe Experience Platformにデータをストリーミングする方法について説明します。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Capillary Streaming Events]  概要 &#x200B;](../../../../connectors/loyalty/capillary.md) を参照してください。
+認証について詳しくは、[[!DNL Capillary Streaming Events] 概要](../../../../connectors/loyalty/capillary.md)を参照してください。
 
-### Experience Platform API の使用
+### Experience Platform APIの使用
 
-Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) に関するガイドを参照してください。
+Experience Platform APIを正常に呼び出す方法について詳しくは、[Experience Platform APIの概要](../../../../../landing/api-guide.md)に関するガイドを参照してください。
 
 >[!BEGINSHADEBOX]
 
 ## 開発者プロセスチェックリスト
 
-1. スキーマレジストリを使用して、ターゲット **エクスペリエンスデータモデル（XDM）スキーマ** 作成または選択します。 この XDM スキーマを使用して、カタログサービスで **データセットを作成** します。
-2. **ベース接続** を作成して、[!DNL Capillary] 資格情報を保存します。
-3. **にバインドする** ソース接続 `baseConnectionId` を作成します。
-4. **ターゲット接続** を作成して、データレイクにデータが確実に取り込まれるようにします。
-5. データ準備を使用して、[!DNL Capillary] ソースフィールドを正しい XDM フィールドにマッピングするマッピングを作成します。
-6. `sourceConnectionId`、`targetConnectionId`、`mappingID` を使用してデータフローを作成します
-7. 単一のサンプルプロファイル/トランザクションイベントでテストし、データフローを検証します。
+1. スキーマレジストリを使用して、ターゲット **Experience Data Model （XDM） スキーマ**&#x200B;を作成または選択します。 このXDM スキーマを使用して、カタログサービスで&#x200B;**データセット**&#x200B;を作成します。
+2. **ベース接続**&#x200B;を作成して、[!DNL Capillary]資格情報を保存します。
+3. **にバインドする** ソース接続`baseConnectionId`を作成します。
+4. データがデータレイクに格納されるように、**ターゲット接続**&#x200B;を作成します。
+5. データ準備を使用して、[!DNL Capillary] ソースフィールドを正しいXDM フィールドにマッピングするマッピングを作成します。
+6. `sourceConnectionId`、`targetConnectionId`、`mappingID`を使用してデータフローを作成します
+7. 単一のサンプルプロファイル/トランザクションイベントでテストして、データフローを検証します。
 
 >[!ENDSHADEBOX]
 
 ## ベース接続の作成 {#base-connection}
 
-ベース接続は、資格情報と接続の詳細を保持します。 [!DNL Capillary] のベース接続を作成するには、`/connections` API の [!DNL Flow Service] エンドポイントに対して POST リクエストを実行し、リクエスト本文に [!DNL Capillary] 資格情報を指定します。
+ベース接続には、資格情報と接続の詳細が保持されます。 [!DNL Capillary]のベース接続を作成するには、`/connections` APIの[!DNL Flow Service] エンドポイントに対してPOST リクエストを行い、リクエスト本文に[!DNL Capillary]資格情報を指定します。
 
 **API 形式**
 
@@ -100,7 +100,7 @@ A successful response returns the newly created base connection, including its u
 
 ### ソース接続の作成
 
-ソース接続を作成するには、ベース接続 ID を指定したうえで、`/sourceConnections` エンドポイントに対して POST リクエストを行います。
+ソース接続を作成するには、ベース接続IDを指定しながら、`/sourceConnections` エンドポイントにPOST リクエストを行います。
 
 **API 形式**
 
@@ -131,7 +131,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、HTTP ステータス 201 と、一意の ID （`id`）を含む新しく作成されたソース接続の詳細が返されます。
+応答が成功すると、HTTP ステータス 201が、新しく作成されたソース接続の詳細（一意の識別子（`id`）を含む）で返されます。
 
 ```json
 {
@@ -144,9 +144,9 @@ curl -X POST \
 
 >[!BEGINTABS]
 
->[!TAB  プロファイルの取得 ]
+>[!TAB  プロファイル取り込み]
 
-プロファイルには、ID 属性とロイヤルティ属性が含まれています。 [!DNL Capillary] プロファイルスキーマに基づいた例については、次のペイロードを参照してください。 このスキーマを設定して、XDM 個人プロファイルにマッピングできます。
+プロファイルには、IDとロイヤルティ属性が含まれます。 [!DNL Capillary] プロファイルスキーマに基づく例の次のペイロードを表示します。 このスキーマを設定してXDM個人プロファイルにマッピングできます。
 
 **リクエスト**
 
@@ -183,9 +183,9 @@ curl -X POST \
 }
 ```
 
->[!TAB  トランザクションの取得 ]
+>[!TAB  トランザクション取得]
 
-トランザクションは、コマースアクティビティをキャプチャします。 [!DNL Capillary] イベントスキーマに基づいた例については、次のペイロードを参照してください。 このスキーマを設定して、XDM エクスペリエンスイベントにマッピングできます。
+トランザクションはコマースアクティビティをキャプチャします。 [!DNL Capillary] イベントスキーマに基づく例の次のペイロードを表示します。 このスキーマを設定してXDM エクスペリエンスイベントにマッピングできます。
 
 **リクエスト**
 
@@ -234,7 +234,8 @@ curl -X POST \
 
 >[!ENDTABS]
 
-<!--### Supported Events
+<!--
+### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -251,33 +252,34 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`-->
+* `customerUpdated`
+-->
 
 ### 履歴データの移行
 
-ロイヤルティの履歴データと取引データをExperience Platformに取り込むことができます。 データを構造化された CSV ファイルとして [!DNL Capillary] から書き出し、[!DNL SFTP] を使用して安全に転送し、Experience Platform データセットに取り込むだけです。 最初の移行が完了すると、イベント駆動型コネクタを通じてデータがリアルタイムで最新の状態に保たれます。
+Experience Platformに過去のロイヤルティデータと取引データを取り込むことができます。 データを[!DNL Capillary]から構造化CSV ファイルとしてエクスポートし、[!DNL SFTP]を使用して安全に転送し、Experience Platform データセットに取り込むだけです。 初回移行後も、イベント駆動型コネクタを使用してデータをリアルタイムで最新の状態に保つことができます。
 
 ### ターゲット XDM スキーマの作成 {#target-schema}
 
-エクスペリエンスデータモデル（XDM）スキーマは、Experience Platform内でカスタマーエクスペリエンスのデータを整理および記述するための標準化された方法を提供します。 ソースデータをExperience Platformに取り込むには、まず取り込むデータの構造とタイプを定義するターゲット XDM スキーマを作成する必要があります。 このスキーマは、取り込んだデータが存在するExperience Platform データセットのブループリントとして機能します。
+Experience Data Model （XDM）スキーマは、Experience Platform内の顧客体験データを整理および記述するための標準化された方法を提供します。 ソースデータをExperience Platformに取り込むには、まず、取り込むデータの構造とタイプを定義するターゲット XDM スキーマを作成する必要があります。 このスキーマは、取り込んだデータが格納されるExperience Platform データセットの設計図として機能します。
 
-[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを行うことで、ターゲット XDM スキーマを作成することができます。 ターゲット XDM スキーマの作成方法に関する詳細な手順については、次のガイドを参照してください。
+ターゲット XDM スキーマは、[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)に対してPOST リクエストを実行することで作成できます。 ターゲット XDM スキーマの作成方法について詳しくは、次のガイドを参照してください。
 
-* [API を使用したスキーマの作成 &#x200B;](../../../../../xdm/api/schemas.md)。
-* [UI を使用したスキーマの作成 &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md)。
+* [API](../../../../../xdm/api/schemas.md)を使用してスキーマを作成します。
+* [UI](../../../../../xdm/tutorials/create-schema-ui.md)を使用してスキーマを作成します。
 
-作成したら、後でターゲットデータセットとマッピングにターゲット XDM スキーマ `$id` が必要になります。
+作成したターゲット XDM スキーマ `$id`は、後でターゲットデータセットとマッピングに必要になります。
 
 ## ターゲットデータセットの作成 {#target-dataset}
 
-データセットは、データのコレクションのためのストレージと管理の構成体で、通常は、列（スキーマ）と行（フィールド）を持つテーブルのように構造化されます。 Experience Platformに正常に取り込まれたデータは、データセットとしてデータレイク内に保存されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用します。
+データセットは、データのコレクションのための保存および管理構造体です。通常、列（スキーマ）と行（フィールド）を持つテーブルのように構造化されます。 Experience Platformに正常に取り込まれたデータは、データセットとしてデータレイク内に保存されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用できます。
 
-ペイロードにターゲットスキーマの ID を指定しながら [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に対して POST リクエストを実行することで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成 &#x200B;](../../../../../catalog/api/create-dataset.md) に関するガイドを参照してください。
+ペイロード内でターゲットスキーマのIDを指定しながら、[ カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)にPOST リクエストを行うことで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成方法について詳しくは、[APIを使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するガイドを参照してください。
 
 
 ## ターゲット接続の作成 {#target}
 
-ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは`c604ff05-7f1a-43c0-8e18-33bf874cb11c`です。
 
 **API 形式**
 
@@ -316,9 +318,9 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-次に、ターゲットデータセットが準拠するターゲットスキーマにソースデータをマッピングします。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep]  の &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントに対して POST リクエストを実行します。 ターゲット XDM スキーマ ID と、作成するマッピングセットの詳細を含めます。
+次に、ソースデータを、ターゲットデータセットが準拠するターゲットスキーマにマッピングします。 マッピングを作成するには、`mappingSets`API[[!DNL Data Prep] の](https://developer.adobe.com/experience-platform-apis/references/data-prep/) エンドポイントにPOST リクエストを行います。 ターゲット XDM スキーマ IDと、作成するマッピングセットの詳細を含めます。
 
-次のように、キャピラリフィールドを対応する XDM スキーマフィールドにマッピングします。
+次のように、Capillary フィールドを対応するXDM スキーマフィールドにマッピングします。
 
 | ソーススキーマ | ターゲットスキーマ |
 |------------------------------|-------------------------------|
@@ -330,16 +332,16 @@ curl -X POST \
 
 >[!TIP]
 >
->データをマッピングする準備が整ったら、[&#x200B; イベントとプロファイルのマッピング &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [&#x200B; ファイルをデータ準備にインポート &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
+>データをマッピングする準備ができたら、[および](../../../../images/tutorials/create/capillary/mappings.zip) データ準備[!DNL Capillary]にファイルをインポートするための[ イベントおよびプロファイル マッピング ](../../../../../data-prep/ui/mapping.md#import-mapping)をダウンロードできます。
 
 ### データフローの作成 {#flow}
 
-ソース接続、マッピング、ターゲット接続を作成したら、データフローを設定して、[!DNL Capillary] からExperience Platformにデータを移動できます。
+ソース接続、マッピング、およびターゲット接続を作成した後、データフローを設定して、[!DNL Capillary]からExperience Platformにデータを移動できます。
 
-一般的なデータフローを次に示します。
+一般的なデータフローには、次のようなものがあります。
 
-* **プロファイルデータフロー**:[!DNL Capillary] プロファイルデータを XDM 個人プロファイルデータセットに取り込みます。
-* **トランザクションデータフロー**：トランザクションデータ [!DNL Capillary]XDM ExperienceEvent データセットに取り込みます。
+* **プロファイルデータフロー**: [!DNL Capillary] プロファイルデータをXDM個人プロファイルデータセットに取り込みます。
+* **トランザクションデータフロー**: [!DNL Capillary]個のトランザクションデータをXDM ExperienceEvent データセットに取り込みます。
 
 **リクエスト**
 
@@ -379,11 +381,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->`startTime` は UNIX エポック秒単位で表示されます。
+>`startTime`はUNIX エポック秒です。
 
 **応答**
 
-正常な応答は、対応するデータフロー ID を含むデータフローを返します。
+応答が成功すると、対応するデータフローIDを含むデータフローが返されます。
 
 ```json
 {
@@ -395,36 +397,36 @@ curl -X POST \
 
 ## エラー処理
 
-このコネクタには、次のシナリオに対応する堅牢なエラー処理が含まれています。
+コネクタには、次のシナリオに対する堅牢なエラー処理が含まれています。
 
-* **認証エラー**：認証が失敗すると、Adobe資格情報を自動更新します。
-* **レート制限エラー**:API レート制限に達した場合に、指数バックオフを使用して再試行を実装します。
-* **ネットワークエラー**：失敗したネットワークリクエストをログに記録して再試行します。
-* **データ検証エラー**：手動でのレビューおよび解決のために、無効なペイロードをログに記録します。
+* **認証エラー**：認証が失敗すると、Adobe資格情報が自動的に更新されます。
+* **レート制限エラー**: API レート制限に達した場合に、指数関数的なバックオフで再試行を実装します。
+* **ネットワークエラー**：失敗したネットワーク要求を記録し、再試行します。
+* **データ検証エラー**：手動でのレビューと解決のために無効なペイロードをログに記録します。
 
-すべてのエラーは、トラブルシューティングとデバッグを容易にするために、エラータイプ、タイムスタンプ、リクエストペイロード、Adobe API 応答などの詳細と共にログに記録されます。
+トラブルシューティングとデバッグを容易にするために、エラータイプ、タイムスタンプ、リクエストペイロード、Adobe API レスポンスなどの詳細を使用してすべてのエラーを記録します。
 
-## 接続のテスト
+## 接続をテストする
 
-接続をテストするための手順を以下に示します。
+接続をテストする手順については、次の手順に従ってください。
 
-* `/connections/{BASE_CONNECTION_ID}` にGET リクエストを送信し、ベース接続 ID を入力して、ベース接続が存在することを確認します。 この手順では、ベース接続のステータスが `active` に設定されていることを確認することもできます。
-* `/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}` にGET リクエストを送信し、ソース接続 ID を指定して、ソース接続を検証します。
-* ストリーミングエンドポイント URL を使用して、サンプルプロファイルペイロードを送信します（プロファイル取り込み JSON を使用）。
-* Experience Platform UI のデータセットに移動し、データセットに対してクエリを実行してレコードを確認します。
-* データ準備ログを使用して、エラーを調べます。
-* サポートチケットを開く必要がある場合は、次の点を確認します。
+* GET リクエストを`/connections/{BASE_CONNECTION_ID}`に送信し、ベース接続が存在することを確認するためにベース接続IDを指定します。 この手順では、ベース接続のステータスが`active`に設定されていることを確認することもできます。
+* `/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}`にGET リクエストを行い、ソース接続を検証するためにソース接続IDを指定します。
+* ストリーミングエンドポイント URLを使用して、サンプルプロファイルペイロードを送信します（プロファイル取り込みJSONを使用）。
+* Experience Platform UIでデータセットに移動し、データセットに対してクエリを実行して、レコードを確認します。
+* データ準備ログを使用して、エラーを検査します。
+* サポートチケットを発行する必要がある場合は、以下を確認してください。
    * リクエストペイロード
    * 応答本文
-   * リクエスト ID
+   * Request-id
    * タイムスタンプ
    * リソース ID。
 
 ## 付録
 
-その他の操作については、次のドキュメントを参照してください
+その他の操作について詳しくは、次のドキュメントを参照してください
 
 * [データフローの監視](../../../../../dataflows/ui/monitor-sources.md)
-* [&#x200B; データフローの更新 &#x200B;](../../../ui/update-dataflows.md)
-* [&#x200B; データフローの削除 &#x200B;](../../../ui/delete.md)
-* [&#x200B; ソースアカウントを更新 &#x200B;](../../../ui/update.md)
+* [ データフローの更新](../../../ui/update-dataflows.md)
+* [ データフローを削除](../../../ui/delete.md)
+* [ ソースアカウントを更新](../../../ui/update.md)
