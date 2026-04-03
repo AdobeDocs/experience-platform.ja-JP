@@ -2,7 +2,7 @@
 title: Pinterest Customer List 接続
 description: カスタマーリスト、サイトにアクセスした人、Pinterestでコンテンツにアクセスした人などから、オーディエンスを作成できます。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 28%
@@ -26,9 +26,9 @@ ht-degree: 28%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Pinterest Customer List]宛先は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Pinterest Customer List]宛先は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
-宛先アクティベーションワークフローの[&#x200B; マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)で、目的のIDをターゲットフィールド *pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestへのデータ取り込み時に区別され、決定されます。
+宛先アクティベーションワークフローの[ マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)で、目的のIDをターゲットフィールド *pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestへのデータ取り込み時に区別され、決定されます。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -44,7 +44,7 @@ ht-degree: 28%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> Adobe Journey OptimizerやGoogle AnalyticsなどのExperience Platformアプリケーションで， </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -53,10 +53,10 @@ ht-degree: 28%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -105,10 +105,10 @@ Pinterest トークンは30日ごとに有効期限が切れます。 トーク�
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**&#x200B;に移動します
 2. （オプション）ページで使用可能なフィルターを使用して、Pinterest アカウントのみを表示します。
    ![Pinterest アカウントのみを表示するフィルター](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
-3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**&#x200B;を選択します。
+3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**を選択します。
    ![詳細を編集コントロールを選択](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**&#x200B;を選択し、Pinterestの資格情報で再認証します。
-   OAuthの再接続オプションを含む![&#x200B; モーダルウィンドウ &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**を選択し、Pinterestの資格情報で再認証します。
+   OAuthの再接続オプションを含む![ モーダルウィンドウ ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -124,8 +124,8 @@ Pinterest トークンは30日ごとに有効期限が切れます。 トーク�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -135,7 +135,7 @@ Pinterest トークンは30日ごとに有効期限が切れます。 トーク�
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[Pinterest ヘルプセンターページ &#x200B;](https://help.pinterest.com/en/business/article/audience-targeting)を参照してください。
+詳しくは、[Pinterest ヘルプセンターページ ](https://help.pinterest.com/en/business/article/audience-targeting)を参照してください。
 
 +++ 変更ログを表示
 
