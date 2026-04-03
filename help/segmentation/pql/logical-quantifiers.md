@@ -1,9 +1,9 @@
 ---
 solution: Experience Platform
-title: PQL論理量指定子
-description: 論理量指定子を使用して、Profile Query Language（PQL）の配列で条件をアサートできます。
+title: PQLの論理数値化器
+description: 論理的な量子化器は、Profile Query Language（PQL）の配列で条件をアサートするために使用できます。
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 79%
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 # 論理量指定子関数
 
-論理量指定子を使用して、[!DNL Profile Query Language] の配列で条件をアサートできます（PQL）。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
+論理量指定子は、[!DNL Profile Query Language] （PQL）の配列で条件をアサートするために使用できます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## exists
 
