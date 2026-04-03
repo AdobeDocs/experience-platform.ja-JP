@@ -1,45 +1,45 @@
 ---
-title: Flow Service API を使用した Mixpanel のSource接続とデータフローの作成
-description: Flow Service API を使用してAdobe Experience Platformを Mixpanel に接続する方法を説明します。
+title: Flow Service APIを使用したMixpanel用のSource ConnectionとDataflowの作成
+description: Flow Service APIを使用してAdobe Experience PlatformをMixpanelに接続する方法を説明します。
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 52%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL Mixpanel] のソース接続とデータフローの作成
+# [!DNL Mixpanel] APIを使用して、[!DNL Flow Service]のソース接続とデータフローを作成します
 
-以下のチュートリアルでは、ソース接続とデータフローを作成し、[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用してデータをAdobe Experience Platformに取り [!DNL Mixpanel] む手順について説明します。
+次のチュートリアルでは、[!DNL Mixpanel]Flow Service API[を使用して](https://developer.adobe.com/experience-platform-apis/references/flow-service/) データをAdobe Experience Platformに取り込むためのソース接続とデータフローを作成する手順について説明します。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
-次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Mixpanel] ています。
+次の節では、[!DNL Mixpanel] APIを使用して[!DNL Flow Service]に正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL Mixpanel] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Mixpanel]をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `username` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントのドキュメント &#x200B;](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
+| `username` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントに関するドキュメント ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account)を参照してください。 | `Test8.6d4ee7.mp-service-account` |
 | `password` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのパスワード。 | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | [!DNL Mixpanel] プロジェクト ID。 この ID は、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) および [[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) を参照してください。 | `2384945` |
-| `timezone` | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) を参照してください。 | `Pacific Standard Time` |
+| `projectId` | [!DNL Mixpanel] プロジェクト ID。 このIDは、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)および[[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド ](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects)を参照してください。 | `2384945` |
+| `timezone` | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)を参照してください。 | `Pacific Standard Time` |
 
-[!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要 &#x200B;](../../../../connectors/analytics/mixpanel.md) を参照してください。
+[!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要](../../../../connectors/analytics/mixpanel.md)を参照してください。
 
 ## ベース接続の作成 {#base-connection}
 
-ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースの認証情報、接続の現在の状態、一意のベース接続IDなど、ソースとExperience Platform間の情報を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL Mixpanel] 認証資格情報をリクエスト本文の一部として指定します。
+ベース接続IDを作成するには、`/connections`認証情報をリクエスト本文の一部として提供しながら、[!DNL Mixpanel] エンドポイントにPOST リクエストを行います。
 
 **API 形式**
 
@@ -79,7 +79,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
-| `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
+| `description` | ベース接続に関する詳細情報を提供するために含めることができるオプション値。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
 | `auth.params.` | ソースの認証に必要な資格情報が含まれます。 |
@@ -99,7 +99,7 @@ curl -X POST \
 
 ## ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用すると、GET リクエストを実行してファイルとディレクトリを調べることができます。
+前の手順で生成したベース接続IDを使用して、GET リクエストを実行してファイルとディレクトリを探索できます。
 次の呼び出しを使用して、Experience Platformに取り込むファイルのパスを検索します。
 
 **API 形式**
@@ -114,11 +114,11 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
-| `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常に `rest` に設定されています。 |
-| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 このソースの場合、値は `json` になります。 |
-| `fileType=json` | Experience Platformに取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
+| `objectType=rest` | 探索するオブジェクトのタイプ。 現在、この値は常に`rest`に設定されています。 |
+| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 この値は、探索するディレクトリのパスを表します。 このソースの場合、値は`json`になります。 |
+| `fileType=json` | Experience Platformに取り込むファイルの種類。 現在、`json`はサポートされている唯一のファイル形式です。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | Experience Platformに取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`{"projectId":"2671127","timezone":"Pacific Standard Time"}` 文字列全体を base64 にエンコードする必要があります。**注意**：次の例では、base64 でエンコードされた `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` は `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==` と等しくなります。 |
+| `{SOURCE_PARAMS}` | Experience Platformに取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`{"projectId":"2671127","timezone":"Pacific Standard Time"}` 文字列全体を base64 にエンコードする必要があります。**注**：以下の例では、base64でエンコードされた`"{"projectId":"2671127","timezone":"Pacific Standard Time"}"`は`eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`と同じです。 |
 
 
 **リクエスト**
@@ -398,7 +398,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
+ソースデータをExperience Platformで使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 その後、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットを作成します。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -412,9 +412,9 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが保存される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込んだデータを格納する宛先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様IDを指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、およびデータレイクに対する接続仕様 ID が得られました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
+ターゲットスキーマ、ターゲットデータセット、データレイクへの接続仕様IDなどの一意の識別子が作成されました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
 
 **API 形式**
 
@@ -454,8 +454,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
-| `connectionSpec.id` | データレイクに対応する接続仕様 ID。 この修正済み ID は `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb` です。 |
-| `data.format` | Experience Platformに取り込む [!DNL Mixpanel] データの形式。 |
+| `connectionSpec.id` | データレイクに対応する接続仕様ID。 この修正済み ID は `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb` です。 |
+| `data.format` | Experience Platformに取り込む[!DNL Mixpanel] データのフォーマット。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
@@ -472,7 +472,7 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対して POST リクエストを実行します。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/)に対してPOST リクエストを実行することで実現します。
 
 **API 形式**
 
@@ -581,7 +581,7 @@ curl -X POST \
 
 ## フローの作成 {#flow}
 
-[!DNL Mixpanel] からExperience Platformにデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
+[!DNL Mixpanel]からExperience Platformにデータを取り込む最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -589,7 +589,7 @@ curl -X POST \
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。インターバルの値は、2 つの連続した取り込みの間隔を指定しますが、1 回のみの取り込みを作成する場合は、インターバルを設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。インターバル値は、2つの連続した取り込みの間の期間を指定しますが、1回限りの取り込みを作成する場合は、インターバルを設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
 
 
 **API 形式**
@@ -640,16 +640,16 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
-| `description` | データフローの詳細を提供するために含めることができるオプションの値です。 |
+| `description` | データフローに関する詳細情報を提供するために含めることができるオプション値。 |
 | `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
 | `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
 | `targetConnectionIds` | 以前の手順で生成された[ターゲット接続 ID](#target-connection)。 |
-| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。このプロパティは、XDM に準拠していないデータをExperience Platformに取り込む場合に必要です。 |
+| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。このプロパティは、XDMに準拠していないデータをExperience Platformに取り込む場合に必要です。 |
 | `transformations.name` | 変換に割り当てられた名前。 |
 | `transformations.params.mappingId` | 以前の手順で生成された[マッピング ID](#mapping)。 |
 | `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。この値のデフォルトは `0` です。 |
-| `scheduleParams.startTime` | このプロパティには、データフローの取り込みスケジュールに関する情報が含まれています。 |
+| `scheduleParams.startTime` | このプロパティには、データフローの取り込みスケジュールに関する情報が含まれます。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
 | `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
 
@@ -666,24 +666,24 @@ curl -X POST \
 
 ## 付録
 
-次の節では、データフローの監視、更新、削除を行う手順について説明します。
+次の節では、データフローを監視、更新、削除する手順について説明します。
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全なAPIの例については、[APIを使用したソースデータフローの監視](../../monitor.md)に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
+データフローのIDを指定しながら、`/flows` APIの[!DNL Flow Service] エンドポイントに対してPATCH リクエストを行うことで、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 PATCH リクエストを行う場合は、`etag` ヘッダーにデータフローの一意の`If-Match`を指定する必要があります。 完全なAPIの例については、[APIを使用したソースデータフローの更新](../../update-dataflows.md)に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
+ベース接続IDをクエリパラメーターとして指定しながら、[!DNL Flow Service] APIに対してPATCH リクエストを実行して、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合、`etag` ヘッダーにソースアカウントの一意の`If-Match`を指定する必要があります。 完全なAPIの例については、[APIを使用したソースアカウントの更新](../../update.md)に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローのIDを指定しながら、[!DNL Flow Service] APIに対してDELETE リクエストを実行して、データフローを削除します。 完全なAPIの例については、[APIを使用したデータフローの削除](../../delete-dataflows.md)に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。
+削除するアカウントのベース接続IDを指定しながら、[!DNL Flow Service] APIに対してDELETE リクエストを実行して、アカウントを削除します。 完全なAPIの例については、[APIを使用したソースアカウントの削除](../../delete.md)に関するガイドを参照してください。
