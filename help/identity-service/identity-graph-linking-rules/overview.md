@@ -1,11 +1,11 @@
 ---
-title: Id グラフリンクルール
-description: Id サービスでの ID グラフリンクルールについて説明します。
+title: ID グラフのリンク ルール
+description: Identity ServiceのID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1605'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -18,34 +18,35 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] が一般公開されました。 ID 設定を有効にした後、折りたたまれたグラフを折りたたみ解除（「固定」）する必要がある既存のサンドボックスがある場合は、Adobe アカウントチームまたはAdobe サポートにお問い合わせください。
+>[!DNL Identity Graph Linking Rules]が一般公開されました。 ID設定を有効にした後、折りたたまれたグラフを折りたたまない（「修正」）必要がある既存のサンドボックスがある場合は、Adobe アカウントチームまたはAdobe サポートにお問い合わせください。
 
-Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、すべての結合プロファイルが CRMID などの人物識別子を使用して 1 人の個人を表すと簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとする可能性があるシナリオがあります（「グラフ折りたたみ」）。 これらの不要な結合を防ぐために、[!DNL Identity Graph Linking Rules] を通じて提供される設定を使用して、ユーザーに対して正確なパーソナライゼーションを可能にできます。
+Adobe Experience Platform Identity ServiceとReal-Time Customer Profileを利用すれば、データが完全に取り込まれ、統合されたあらゆるプロファイルは、CRMIDなどの個人IDを通じて1人の個人を表していると容易に仮定できます。 ただし、特定のデータが複数の異なるプロファイルを単一のプロファイルに統合しようとする可能性があるシナリオ（「グラフの折りたたみ」）があります。 このような不要な結合を防ぐには、[!DNL Identity Graph Linking Rules]を通じて提供される設定を使用し、ユーザーに対して正確なパーソナライゼーションを行うことができます。
 
 ## 基本を学ぶ
 
-[!DNL Identity Graph Linking Rules] の理解には、次のドキュメントが不可欠です。
+[!DNL Identity Graph Linking Rules]を理解するには、次のドキュメントが不可欠です。
 
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
-* [トラブルシューティングと FAQ](./troubleshooting.md)
+* [トラブルシューティングとFAQ](./troubleshooting.md)
 * [名前空間の優先度](./namespace-priority.md)
 * [グラフシミュレーション UI](./graph-simulation.md)
-* [ID 設定 UI](./identity-settings-ui.md)
+* [ID設定UI](./identity-settings-ui.md)
 
 ## ビデオライブラリ
 
-次のビデオでは、ID グラフリンクルールの基本的な側面の一部について説明しています。
+次のビデオでは、ID グラフリンクルールの基本的な側面について説明します。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +56,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="ID グラフのリンクルールの概要" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448273/?captions=jpn&format=jpeg&nocache=1747851655227" alt="ID グラフのリンクルールの概要"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="ID グラフのリンクルールの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -77,8 +78,8 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID グラフリンクルール – グラフシミュレーション" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444044/?captions=jpn&format=jpeg&nocache=1747851655237" alt="ID グラフリンクルール – グラフシミュレーション"
+                    <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID グラフのリンクルール – グラフシミュレーション" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID グラフのリンクルール – グラフシミュレーション"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -86,9 +87,9 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="ID グラフリンクルール – グラフシミュレーション">ID グラフのリンクルール - グラフシミュレーション</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="ID グラフのリンクルール – グラフシミュレーション">ID グラフのリンクルール - グラフシミュレーション</a>
                     </p>
-                    <p class="is-size-6">グラフシミュレータを使用して、ID グラフのリンクルールをテストする方法を説明します。</p>
+                    <p class="is-size-6">グラフシミュレーターを使用してID グラフのリンクルールをテストする方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
@@ -100,8 +101,8 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID グラフリンクルール - ID 設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458488/?captions=jpn&format=jpeg&nocache=1747851655218" alt="ID グラフリンクルール - ID 設定"
+                    <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID グラフのリンクルール - ID設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID グラフのリンクルール - ID設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,9 +110,9 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID グラフリンクルール - ID 設定">ID グラフのリンクルール - ID 設定</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID グラフのリンクルール - ID設定">ID グラフのリンクルール - ID 設定</a>
                     </p>
-                    <p class="is-size-6">正確な顧客プロファイルを構築するための ID グラフリンクルールを有効にして設定する方法を説明します</p>
+                    <p class="is-size-6">正確な顧客プロファイルを構築するためにID グラフのリンクルールを有効にして設定する方法について説明します</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
@@ -130,118 +131,118 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 >title="グラフ折りたたみシナリオ"
 >abstract="グラフが「折りたたむ」ことや、複数のユーザーエンティティを表すことがある理由は複数あります。"
 
-この節では、[!DNL Identity Graph Linking Rules] を設定する際に検討する可能性のあるシナリオの例について概説します。
+この節では、[!DNL Identity Graph Linking Rules]を設定する際に考慮する可能性のあるシナリオの例について説明します。
 
 ### 共有デバイス
 
-1 台のデバイスで複数のログインが発生する場合があります。
+1つのデバイスで複数のログインが発生する場合があります。
 
 | 共有デバイス | 説明 |
 | --- | --- |
-| 家族用コンピューターとタブレット | ご夫婦ともそれぞれの銀行口座にログインします。 |
-| 公開キオスク | 空港で搭乗者がロイヤルティ ID を使用してログインし、手荷物をチェックインして搭乗券を印刷した。 |
-| コールセンター | カスタマーサポートに連絡して問題を解決するお客様の代わりに、コールセンターの担当者が 1 台のデバイスでログインします。 |
+| ファミリーコンピューターとタブレット | 夫と妻はそれぞれの銀行口座にログインします。 |
+| パブリックキオスク | 空港でロイヤルティ IDを使用してログインしている旅行者が、手荷物のチェックインや搭乗券の印刷を行う。 |
+| コールセンター | コールセンターの担当者は、カスタマーサポートに電話をかけるお客様の代わりに1つのデバイスにログインして、問題を解決します。 |
 
-![&#x200B; 一般的な共有デバイスの図](../images/identity-settings/shared-devices.png " 一般的な共有デバイスの図。"){zoomable="yes"}
+![一般的な共有デバイスの図。](../images/identity-settings/shared-devices.png "一般的な共有デバイスの図。"){zoomable="yes"}
 
-このような場合、グラフの観点から見ると、制限なしが有効になっている状態で、1 つの ECID が複数の CRMID にリンクされます。
-
-[!DNL Identity Graph Linking Rules] では、以下のことが可能です。
-
-* ログインに使用する ID を一意の ID として設定します。 例えば、CRMID 名前空間を使用して ID を 1 つだけ格納するようにグラフを制限し、その CRMID を共有デバイスの一意の識別子として定義できます。
-   * これにより、CRMID が ECID によって結合されないようにすることができます。
-
-### 無効なメール/電話のシナリオ
-
-登録時に電話番号やメールアドレスに偽りの値を提供するケースもあります。 この場合、制限が有効になっていないと、電話やメールに関連する ID が複数の異なる CRMID にリンクされます。
-
-![&#x200B; 無効なメールまたは電話のシナリオを表す図。](../images/identity-settings/invalid-email-phone.png " 無効なメールまたは電話のシナリオを表す図。"){zoomable="yes"}
+この場合、グラフの観点から見ると、制限が有効になっていない場合、単一のECIDが複数のCRMIDにリンクされます。
 
 [!DNL Identity Graph Linking Rules] では、以下のことが可能です。
 
-* CRMID、電話番号、またはメールアドレスを一意の識別子として設定し、1 人のユーザーを、自分のアカウントに関連付けられた 1 つの CRMID、電話番号、またはメールアドレスに制限します。
+* ログインに使用するIDを一意のIDとして設定します。 例えば、CRMID名前空間を持つ1つのIDのみを格納するようにグラフを制限し、そのCRMIDを共有デバイスの一意の識別子として定義できます。
+   * これにより、CRMIDがECIDによって結合されないようにすることができます。
 
-### ID 値がエラーまたは正しくない
+### 無効な電子メール/電話シナリオ
 
-名前空間に関係なく、一意でない誤った ID 値がシステムに取り込まれる場合があります。 以下に例を示します。
+また、登録時に偽の値を電話番号やメールアドレスとして提供するユーザーの例もあります。 このような場合、制限が有効になっていない場合、電話/メール関連のIDは複数の異なるCRMIDにリンクされます。
 
-* ID 値「user_null」の IDFA 名前空間。
-   * IDFA ID 値は 36 文字、英数字 32 文字、ハイフン 4 文字にする必要があります。
-* ID 値が「指定なし」の電話番号名前空間。
+![無効な電子メールまたは電話のシナリオを表す図。](../images/identity-settings/invalid-email-phone.png "無効な電子メールまたは電話のシナリオを表す図。"){zoomable="yes"}
+
+[!DNL Identity Graph Linking Rules] では、以下のことが可能です。
+
+* CRMID、電話番号、またはメールアドレスのいずれかを一意のIDとして設定し、アカウントに関連付けられている1人のCRMID、電話番号、またはメールアドレスに1人を制限します。
+
+### 誤ったID値または不正なID値
+
+名前空間に関係なく、一意でない誤ったID値がシステムに取り込まれる場合があります。 以下に例を示します。
+
+* ID値が「user_null」のIDFA名前空間。
+   * IDFA ID値は36文字（英数字32文字、ハイフン 4文字）にする必要があります。
+* ID値が「未指定」の電話番号の名前空間。
    * 電話番号にはアルファベットを使用しないでください。
 
-これらの ID により、次のグラフが表示される場合があります。このグラフでは、複数の CRMID が「無効」 ID と結合されます。
+これらのIDにより、次のグラフが作成される可能性があります。このグラフでは、複数のCRMIDが「不正」 IDと結合されます。
 
-![ID 値が誤っている、または正しくない ID データのグラフ例。](../images/identity-settings/bad-data.png "ID 値が間違っている、または正しくない ID データのグラフ例。"){zoomable="yes"}
+![誤ったID値または誤ったID値を持つID データのグラフの例。](../images/identity-settings/bad-data.png "誤ったID値または不正なID値を持つID データのグラフ例。"){zoomable="yes"}
 
-[!DNL Identity Graph Linking Rules] を使用すると、CRMID を一意の識別子として設定して、このタイプのデータに起因する不要なプロファイルの折りたたみを防ぐことができます。
+[!DNL Identity Graph Linking Rules]を使用すると、CRMIDを一意の識別子として設定して、この種類のデータによる不要なプロファイルの折りたたみを防ぐことができます。
 
 ## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
 [!DNL Identity Graph Linking Rules] を使用すると、次のことが可能です。
 
-* 一意の名前空間を設定することで、各ユーザーに対して単一の ID グラフ/結合プロファイルを作成します。これにより、2 つの異なる人物 ID が 1 つの ID グラフに結合するのを防ぎます。
-* 優先度を設定して、オンラインの認証済みイベントをその人物に関連付けます
+* 一意の名前空間を設定して、各ユーザーに対して単一のID グラフ/結合プロファイルを作成します。これにより、2つの異なる個人IDが1つのID グラフに結合されるのを防ぐことができます。
+* オンラインで認証されたイベントを、優先順位を設定することで個人に関連付けます
 
 ### 用語 {#terminology}
 
 | 用語 | 説明 |
 | --- | --- |
-| 一意の名前空間 | 一意の名前空間は、ID グラフのコンテキスト内で異なるように設定された ID 名前空間です。 UI を使用して、一意の名前空間を設定できます。 名前空間が一意と定義されると、グラフには、その名前空間を含む ID を 1 つだけ割り当てることができます。 |
-| 名前空間の優先度 | 名前空間の優先度とは、名前空間の相対的な重要度を指します。 名前空間の優先度は、UI を通じて設定できます。 特定の ID グラフ内の名前空間をランク付けできます。 有効にすると、ID 最適化アルゴリズムの入力や、エクスペリエンスイベントフラグメントのプライマリ ID の決定など、様々なシナリオで名前の優先度が使用されます。 |
-| ID 最適化アルゴリズム | ID 最適化アルゴリズムは、一意の名前空間と名前空間の優先順位を設定することで作成されたガイドラインが、特定の ID グラフで適用されるようにします。 |
+| 一意の名前空間 | 一意の名前空間とは、ID グラフのコンテキスト内で個別に設定されたID名前空間です。 UIを使用して、名前空間を一意に設定できます。 名前空間を一意として定義すると、グラフはその名前空間を含む1つのIDのみを持つことができます。 |
+| 名前空間の優先度 | 名前空間の優先度は、名前空間の相対的な重要度を相互に比較することを指します。 名前空間の優先度は、UIで設定可能です。 特定のID グラフで名前空間をランク付けできます。 有効にすると、ID最適化アルゴリズムの入力やエクスペリエンスイベントフラグメントのプライマリ IDの決定など、様々なシナリオで名前の優先度が使用されます。 |
+| ID 最適化アルゴリズム | ID最適化アルゴリズムは、一意の名前空間と名前空間の優先順位を設定して作成されたガイドラインが、特定のID グラフに適用されるようにします。 |
 
 ### 一意の名前空間 {#unique-namespace}
 
-ID 設定 UI ワークスペースを使用して、一意の名前空間を設定できます。 これにより、は、特定のグラフが、その一意の名前空間を含む ID を 1 つだけ持つ可能性があることを ID 最適化アルゴリズムに通知します。 これにより、同じグラフ内で 2 つの異なる人物識別子が結合されるのを防ぎます。
+ID設定UI ワークスペースを使用して、名前空間を一意に設定できます。 これにより、特定のグラフには、その一意の名前空間を含む1つのIDしか含まれていない可能性があることをID最適化アルゴリズムに通知します。 これにより、同じグラフ内の2つの異なる人物IDの結合を防ぐことができます。
 
-次のシナリオについて考えてみます。
+次のシナリオについて検討してください。
 
-* Scott はタブレットを使用し、GoogleのChromeブラウザーを開いて acme<span>.com にアクセスし、そこでサインインして新しいバスケットボールシューズを閲覧します。
-   * このシナリオでは、バックグラウンドで次の ID がログに記録されます。
-      * ブラウザーの使用を表す ECID 名前空間および値
-      * 認証済みユーザー（Scott がユーザー名とパスワードの組み合わせでログインした）を表す CRMID 名前空間と値。
-* その後、息子のピーターは同じタブレットを使用し、Google Chromeも使用して acme<span>.com にアクセスし、そこで自分のアカウントでサインインしてサッカー用品を参照します。
-   * このシナリオでは、バックグラウンドで次の ID がログに記録されます。
-      * ブラウザーを表すための同じ ECID 名前空間および値。
-      * 認証済みユーザーを表す新しい CRMID 名前空間および値。
+* Martin氏はタブレットを使用してGoogle Chrome ブラウザーを開き、acme<span>.comにログインして新しいバスケットボールシューズを探します。
+   * このシナリオでは、バックグラウンドで次のIDがログに記録されます。
+      * ブラウザーの使用を表すECID名前空間と値
+      * 認証済みユーザー（ユーザー名とパスワードの組み合わせでサインインしたMartin氏）を表すCRMID名前空間と値。
+* 息子のピーターは同じタブレットを使用し、Google Chromeを使ってacme<span>.comにアクセスし、自分のアカウントでサインインしてサッカー用品を探します。
+   * このシナリオでは、バックグラウンドで次のIDがログに記録されます。
+      * ブラウザーを表す同じECID名前空間と値。
+      * 認証済みユーザーを表す新しいCRMID名前空間と値。
 
-CRMID が一意の名前空間として設定された場合、ID 最適化アルゴリズムは、CRMID を結合する代わりに、2 つの異なる ID グラフに分割します。
+CRMIDが一意の名前空間として設定されている場合、ID最適化アルゴリズムは、CRMIDを結合するのではなく、2つの個別のID グラフに分割します。
 
-一意の名前空間を設定しないと、同じ CRMID 名前空間を持つ 2 つの ID が異なる ID 値を持つなど、グラフの不要な結合が発生する場合があります（このようなシナリオは、多くの場合、同じグラフ内の 2 つの異なる人物エンティティを表します）。
+一意の名前空間を設定しないと、同じCRMID名前空間を持つ2つのIDなどの不要なグラフの結合が発生する可能性がありますが、ID値が異なります（このようなシナリオは、同じグラフ内の2つの異なる人物エンティティを表すことが多いです）。
 
-ID 最適化アルゴリズムに通知する一意の名前空間を設定して、特定の ID グラフに取り込まれる ID データに対して制限を適用する必要があります。
+特定のID グラフに取り込まれるID データに制限を適用するために、ID最適化アルゴリズムに通知するように一意の名前空間を設定する必要があります。
 
 ### 名前空間の優先度 {#namespace-priority}
 
-名前空間の優先度とは、名前空間の相対的な重要度を指します。 名前空間の優先順位は UI を通じて設定でき、特定の ID グラフで名前空間をランク付けできます。
+名前空間の優先度は、名前空間の相対的な重要度を相互に比較することを指します。 名前空間の優先度はUIで設定可能で、特定のID グラフで名前空間をランク付けできます。
 
-名前空間の優先度を使用する 1 つの方法は、リアルタイム顧客プロファイルでエクスペリエンスイベントフラグメントのプライマリ ID （ユーザー行動）を決定することです。 優先度設定が設定されている場合、どのプロファイルフラグメントが保存されるかを決定する際に、web SDKのプライマリ ID 設定は使用されなくなります。
+名前空間の優先順位が使用される方法の1つは、リアルタイム顧客プロファイルのエクスペリエンスイベントフラグメント（ユーザー行動）のプライマリ IDを決定することです。 優先度設定が設定されている場合、Web SDKのプライマリ ID設定は、どのプロファイルフラグメントが保存されているかを判断するために使用されなくなります。
 
-一意の名前空間と名前空間の優先度は、どちらも ID 設定 UI ワークスペースで設定できます。 ただし、設定の影響は次のように異なります。
+一意の名前空間と名前空間の優先順位は、どちらもID設定UI ワークスペースで設定可能です。 ただし、設定の影響は異なります。
 
 | | ID サービス | リアルタイム顧客プロファイル |
 | --- | --- | --- |
-| 一意の名前空間 | ID サービスでは、ID 最適化アルゴリズムは一意の名前空間を参照し、特定の ID グラフに取り込まれる ID データを決定します。 | 一意の名前空間は、リアルタイム顧客プロファイルには影響しません。 |
-| 名前空間の優先度 | ID サービスでは、複数のレイヤーを持つグラフの場合、名前空間の優先度によって適切なリンクが削除されたことが判断されます。 | エクスペリエンスイベントがプロファイルに取り込まれると、優先度が最も高い名前空間がプロファイルフラグメントのプライマリ ID になります。 |
+| 一意の名前空間 | Identity Serviceでは、ID最適化アルゴリズムは、特定のID グラフに取り込まれるID データを決定するための一意の名前空間を指します。 | 一意の名前空間は、Real-Time Customer Profileには影響しません。 |
+| 名前空間の優先度 | Identity Serviceでは、複数のレイヤーを持つグラフの場合、名前空間の優先順位によって適切なリンクが削除されます。 | エクスペリエンスイベントがプロファイルに取り込まれると、最優先の名前空間がプロファイルフラグメントのプライマリ IDになります。 |
 
-* グラフあたり 50 個の ID の制限に達した場合、名前空間の優先度はグラフの動作に影響しません。
-* **名前空間の優先度は数値です** 名前空間の相対的な重要度を示す名前空間に割り当てられます。 これは、名前空間のプロパティです。
-* **プライマリ ID は、** に対してプロファイルフラグメントが保存される ID です。 プロファイルフラグメントは、特定のユーザーに関する情報を格納するデータのレコードです。属性（通常は CRM レコードを介して取り込まれる）またはイベント （通常はエクスペリエンスイベントまたはオンラインデータから取り込まれる）です。
-* 名前空間の優先度は、エクスペリエンスイベントフラグメントのプライマリ ID を決定します。
-   * プロファイルレコードの場合、Experience Platform UI のスキーマ ワークスペースを使用して、プライマリ ID などの ID フィールドを定義できます。 詳しくは、[UI での ID フィールドの定義 &#x200B;](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
-* エクスペリエンスイベントに、identityMap で最も名前空間の優先順位が高い 2 つ以上の ID がある場合、そのイベントは「無効なデータ」と見なされるので、取り込みから拒否されます。 例えば、identityMap に `{ECID: 111, CRMID: John, CRMID: Jane}` が含まれている場合、イベントが `CRMID: John` と `CRMID: Jane` の両方に同時に関連付けられていることを意味するので、イベント全体が不正なデータとして拒否されます。
+* グラフあたり50 IDの制限に達しても、名前空間の優先順位はグラフの動作に影響しません。
+* **名前空間の優先度は、その相対的な重要性を示す名前空間に割り当てられた数値**&#x200B;です。 これは名前空間のプロパティです。
+* **プライマリ IDは、プロファイルフラグメントが**&#x200B;に対して保存されるIDです。 プロファイルフラグメントは、特定のユーザーに関する情報（通常はCRM レコードを介して取り込まれる）またはイベント（通常はエクスペリエンスイベントまたはオンラインデータから取り込まれる）を保存するデータのレコードです。
+* 名前空間の優先順位によって、エクスペリエンスイベントフラグメントのプライマリ IDが決まります。
+   * プロファイルレコードの場合は、Experience Platform UIのスキーマワークスペースを使用して、プライマリ IDを含むID フィールドを定義できます。 詳しくは、[UIでのID フィールドの定義](../../xdm/ui/fields/identity.md)に関するガイドを参照してください。
+* エクスペリエンスイベントがidentityMapで名前空間の優先順位が最も高い2つ以上のIDを持つ場合、「不正なデータ」と見なされるため、取り込みから拒否されます。 例えば、identityMapに`{ECID: 111, CRMID: John, CRMID: Jane}`が含まれている場合、イベントが同時に`CRMID: John`と`CRMID: Jane`の両方に関連付けられていることを意味するため、イベント全体が不正なデータとして拒否されます。
 
-詳しくは、[&#x200B; 名前空間の優先度 &#x200B;](./namespace-priority.md) に関するガイドを参照してください。
+詳しくは、[名前空間の優先度](./namespace-priority.md)に関するガイドを参照してください。
 
 ## 次の手順
 
-[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules]について詳しくは、次のドキュメントを参照してください。
 
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
-* [トラブルシューティングと FAQ](./troubleshooting.md)
+* [トラブルシューティングとFAQ](./troubleshooting.md)
 * [名前空間の優先度](./namespace-priority.md)
 * [グラフシミュレーション UI](./graph-simulation.md)
-* [ID 設定 UI](./identity-settings-ui.md)
+* [ID設定UI](./identity-settings-ui.md)
