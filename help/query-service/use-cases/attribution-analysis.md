@@ -1,8 +1,8 @@
 ---
 title: アトリビューション分析
-description: このドキュメントでは、クエリサービスを使用して、ファーストタッチとラストタッチのマーケティングアトリビューションモデルに基づくマーケティング効果測定手法を作成する方法について説明します。
+description: このドキュメントでは、Query Serviceを使用して、ファーストタッチとラストタッチのマーケティングアトリビューションモデルに基づくマーケティング効果測定手法を作成する方法について説明します。
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 10%
@@ -11,47 +11,47 @@ ht-degree: 10%
 
 # 属性分析
 
-アトリビューションは、ビジネスの販売やコンバージョンに貢献するチャネル、オファー、メッセージなどのマーケティング戦術を決定するのに役立つ分析概念です。 この概念では、（消費者がブランドとやり取りする際に）顧客のタッチポイントに基づいて購入または獲得につながる消費者ジャーニー（顧客が目標を達成するために会社とやり取りするプロセス）を評価します。 アトリビューション分析を通じて、マーケターは、顧客を見込み客と結び付けるチャネルの投資回収率を評価できます。
+アトリビューションとは、ビジネスの売上やコンバージョンに貢献するチャネル、オファー、メッセージなどのマーケティング戦術を決定するのに役立つ分析コンセプトです。 この概念は、カスタマージャーニー（顧客が企業の目標を達成するために企業とインタラクションするプロセス）を評価し、その結果として顧客接点（消費者が企業とインタラクションするときはいつでも）にもとづいて購入または獲得をおこないます。 マーケターは、アトリビューション分析を通じて、潜在顧客につながるチャネルの投資収益率を評価できます。
 
 ## はじめに
 
-このドキュメント全体での SQL の例は、Adobe Analytics データで一般的に使用されるクエリです。 このチュートリアルでは、次のコンポーネントに関する十分な知識が必要です。
+このドキュメント全体のSQLの例は、Adobe Analytics データで一般的に使用されるクエリです。 このチュートリアルでは、次のコンポーネントについて理解する必要があります。
 
-* [&#x200B; レポートスイートデータ概要用のAdobe Analytics ソースコネクタ &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md)。
-* [Analytics フィールドマッピングのドキュメント &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) では、クエリサービスで使用する分析データの取り込みとマッピングについて詳しく説明しています。
-* [Attribution IQの概要 &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)
-* [Adobe Analytics アトリビューションパネルガイド &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
+* [ レポートスイートデータの概要](../../sources/connectors/adobe-applications/mapping/analytics.md)用のAdobe Analytics ソースコネクタ。
+* [Analytics フィールドマッピングに関するドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md)では、クエリサービスで使用するAnalytics データの取り込みとマッピングに関する詳細情報を提供しています。
+* [Attribution IQの概要](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集 &#x200B;](https://business.adobe.com/jp/glossary/index.html) も使用される場合があります。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](../sql/adobe-defined-functions.md#window-functions)を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集](https://business.adobe.com/glossary/index.html)も使用できます。
 
-次の各ユースケースについて、パラメーター化された SQL クエリの例をテンプレートとして提供し、カスタマイズします。 評価する SQL 例の `{ }` に表示されるパラメータを指定します。
+次の各ユースケースでは、カスタマイズ用のテンプレートとして、パラメーター化されたSQL クエリの例が提供されます。 評価に関心のあるSQLの例の`{ }`が表示される場所にパラメーターを指定します。
 
 ## 目標
 
-アトリビューションのユースケースでは、Adobe Analytics データを使用して、顧客のアクションを成功に関連付けます。 この関連付けは、顧客体験に影響を与える要因を理解するうえで重要な部分です。 アトリビューション分析データを使用すると、カスタマージャーニー中の顧客のタッチポイントの重要性を把握できます。
+アトリビューションのユースケースでは、Adobe Analyticsのデータを利用して、顧客の行動を成功した結果に関連付けることができます。 顧客体験に影響を与える要因を把握するうえで、この関連性は不可欠な要素です。 アトリビューション分析データは、カスタマージャーニーにおける顧客接点の重要性を把握するために活用できます。
 
-このドキュメントに含まれるクエリの例では、異なる有効期限設定を使用したファーストタッチとラストタッチのアトリビューションの様々なユースケースをサポートしています。 このガイドでは、次の主要な概念について説明します。
+このドキュメントに含まれるクエリの例では、有効期限の設定が異なるファーストタッチアトリビューションとラストタッチアトリビューションの様々なユースケースをサポートしています。 このガイドでは、次の主要な概念について説明します。
 
 * ファーストタッチとラストタッチのアトリビューション。
-* 有効期限タイムアウトを使用したファーストタッチとラストタッチのアトリビューション。
-* ファーストタッチとラストタッチ （有効期限条件）のアトリビューション。
+* 有効期限タイムアウト付きのファーストタッチとラストタッチアトリビューション。
+* 有効期限が設定されたファーストタッチとラストタッチアトリビューション。
 
-## 属性クエリパラメーター {#attribution-query-parameters}
+## アトリビューションクエリパラメーター {#attribution-query-parameters}
 
-次の表に、ファーストタッチアトリビューションクエリとラストタッチアトリビューションクエリで使用されるパラメーターの分類とその説明を示します。
+次の表に、ファーストタッチアトリビューションクエリとラストタッチアトリビューションクエリで使用されるパラメーターとその説明を示します。
 
 | パラメーター | 説明 |
 |---|---|
-| `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
-| `{CHANNEL_NAME}` | 返されたオブジェクトのラベル。 |
+| `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベル。 |
 | `{CHANNEL_VALUE}` | クエリのターゲットチャネルである列またはフィールド。 |
-| `{EXP_TIMEOUT}` | クエリがファーストタッチイベントを検索する、チャネルイベントより前の時間（秒単位）。 |
+| `{EXP_TIMEOUT}` | チャネルイベントの前の時間のウィンドウ。クエリがファーストタッチイベントを検索する秒単位。 |
 | `{EXP_CONDITION}` | チャネルの有効期限を決定する条件。 |
-| `{EXP_BEFORE}` | 指定された条件 `{EXP_CONDITION}` が満たされた前後にチャネルの有効期限が切れるかどうかを示すブール値。 これは主に、セッションの有効期限の条件で有効になり、ファーストタッチが以前のセッションから選択されないようにするためのものです。 デフォルトでは、この値は `false` に設定されています。 |
+| `{EXP_BEFORE}` | 指定された条件`{EXP_CONDITION}`が満たされる前または後にチャネルが期限切れになるかどうかを示すブール値。 これは主に、セッションの有効期限の条件に対して有効になり、前のセッションからファーストタッチが選択されないようにします。 デフォルトでは、この値は `false` に設定されています。 |
 
 ## クエリ結果列コンポーネント {#query-result-column-components}
 
-アトリビューションクエリの結果は、`first_touch` 列または `last_touch` 列のいずれかで示されます。 これらの列は、次のコンポーネントで構成されています。
+アトリビューションクエリの結果は、`first_touch`列または`last_touch`列のどちらかに表示されます。 これらの列は、次のコンポーネントで構成されます。
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -59,20 +59,20 @@ ht-degree: 10%
 
 | パラメーター | 説明 |
 | ---------- | ----------- |
-| `{NAME}` | `{CHANNEL_NAME}`。Azure Data Factory （ADF）でラベルとして入力されます。 |
+| `{NAME}` | Azure Data Factory （ADF）にラベルとして入力された`{CHANNEL_NAME}`。 |
 | `{VALUE}` | 指定した `{EXP_TIMEOUT}` 間隔内のラストタッチである `{CHANNEL_VALUE}` から得た値 |
-| `{TIMESTAMP}` | ラストタッチが発生した [!DNL Experience Event] のタイムスタンプ |
-| `{FRACTION}` | ラストタッチのアトリビューション （小数点以下の桁数で表します）。 |
+| `{TIMESTAMP}` | 最後のタッチが発生した[!DNL Experience Event]のタイムスタンプ |
+| `{FRACTION}` | ラストタッチのアトリビューション。小数点以下桁で表します。 |
 
 ### ファーストタッチ属性 {#first-touch}
 
-ファーストタッチアトリビューションでは、消費者が遭遇した最初のチャネルに成功した結果に対する責任の 100% を認めます。 この SQL の例は、後続の一連の顧客アクションを引き起こしたインタラクションをハイライト表示するために使用されます。
+ファーストタッチアトリビューションでは、最初のチャネルで消費者が遭遇した結果が成功した場合に、その責任の100%を認定します。 このSQLの例は、その後の一連の顧客アクションにつながったインタラクションを強調するために使用されます。
 
-以下のクエリは、ターゲット [!DNL Experience Event] データセットのチャネルのファーストタッチアトリビューション値と詳細を返します。 また、選択したチャネルの `struct` オブジェクトと、各行のファーストタッチ値、タイムスタンプ、アトリビューションも返します。
+以下のクエリは、ターゲット [!DNL Experience Event] データセット内の最初のタッチアトリビューション値とチャネルの詳細を返します。 また、選択したチャネルの`struct` オブジェクトを、各行の最初のタッチ値、タイムスタンプ、アトリビューションとともに返します。
 
 >[!NOTE]
 >
->Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）はMCIDとも呼ばれ、ネームスペースで引き続き使用されます。
 
 **クエリ構文**
 
@@ -80,7 +80,7 @@ ht-degree: 10%
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -98,7 +98,7 @@ LIMIT 10
 
 **結果**
 
-以下の結果では、初期トラッキングコード `em:946426` が [!DNL Experience Event] データセットから取得されています。 このトラッキングコードは、最初のインタラクションであったので、顧客アクションの責任の 100% （`1.0`）に関連付けられます。
+以下の結果では、最初のトラッキングコード `em:946426`が[!DNL Experience Event] データセットから取得されます。 このトラッキングコードは、最初のインタラクションであったため、顧客のアクションに対する責任の100% （`1.0`）に起因しています。
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -116,13 +116,13 @@ LIMIT 10
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
 
 ### ラストタッチ属性 {#second-touch}
 
-ラストタッチアトリビューションでは、成功した結果に対する責任の 100% を、消費者が最後に遭遇したチャネルにクレジットします。 次の SQL の例は、一連のお客様のアクションにおける最終的なインタラクションをハイライト表示するために使用されます。
+ラストタッチアトリビューションでは、成功した結果に対する責任の100%を、消費者が最後に遭遇したチャネルに割り当てます。 このSQLの例は、一連の顧客アクションの最終的なインタラクションを強調するために使用されます。
 
-クエリは、ターゲット [!DNL Experience Event] データセットのラストタッチアトリビューション値とチャネルの詳細を返します。 また、選択したチャネルの `struct` オブジェクトと、各行のラストタッチ値、タイムスタンプ、アトリビューションも返します。
+クエリは、ターゲット [!DNL Experience Event] データセット内のラストタッチアトリビューション値とチャネルの詳細を返します。 また、選択したチャネルの`struct` オブジェクトを、各行のラストタッチ値、タイムスタンプ、アトリビューションと共に返します。
 
 **クエリ構文**
 
@@ -145,7 +145,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 **結果**
 
-以下に示す結果では、返されたオブジェクトのトラッキングコードが、各 [!DNL Experience Event] レコードの最後のインタラクションになります。 各コードは、最後のインタラクションであったので、顧客のアクションに対して 100% （`1.0`）の責任を負います。
+以下に表示される結果では、返されたオブジェクト内のトラッキングコードは、各[!DNL Experience Event] レコード内の最後のインタラクションです。 各コードは、最後のインタラクションであったため、顧客のアクションに対して100% （`1.0`）の責任があると考えられています。
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
@@ -163,13 +163,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
 
 ### 有効期限条件を持つファーストタッチ属性 {#first-touch-attribution-with-expiration-condition}
 
-このクエリを使用すると、選択した条件によって決定される、[!DNL Experience Event] データセットの一部において、一連の顧客アクションを引き起こしたインタラクションを確認できます。
+このクエリは、選択した条件によって決定される[!DNL Experience Event] データセットの一部で、どのインタラクションが一連の顧客アクションにつながったかを確認するために使用されます。
 
-クエリは、条件の後または前に有効期限が切れる、ターゲット [!DNL Experience Event] データセット内の単一チャネルのファーストタッチアトリビューション値と詳細を返します。 また、選択したチャネルについて返された各行のファーストタッチ値、タイムスタンプ、アトリビューションを含む `struct` オブジェクトも返されます。
+クエリは、ターゲット [!DNL Experience Event] データセット内の1つのチャネルのファーストタッチアトリビューション値と詳細を返します。条件の後または前に有効期限が切れます。 また、選択したチャネルに対して返された各行の最初のタッチ値、タイムスタンプ、アトリビューションを含む`struct` オブジェクトも返されます。
 
 **クエリ構文**
 
@@ -179,11 +179,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
-次の例では、結果に示された 4 日間（7 月 15 日、21 日、23 日および 29 日）の購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の初期トラッキングコードは、顧客アクションの属性 100% （`1.0`）の責任になります。
+次の例では、結果に表示されている4日間（7月15日、21日、23日、29日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の最初のトラッキングコードは、顧客のアクションに対して100% （`1.0`）の責任を負っています。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -214,11 +214,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
 
 ### 有効期限タイムアウトを持つファーストタッチ属性 {#first-touch-attribution-with-expiration-timeout}
 
-このクエリは、選択した期間内に、顧客アクションを成功に導いたインタラクションを見つけるために使用されます。
+このクエリは、選択した期間内に、顧客のアクションが成功したインタラクションを検索するために使用されます。
 
 以下のクエリは、指定された期間のターゲット [!DNL Experience Event] データセット内の単一チャネルのファーストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
 
@@ -230,11 +230,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
-次に示す例では、各顧客アクションに対して返されるファーストタッチは、過去 7 日以内の最も古いインタラクションです（expTimeout = 86400 * 7）。
+次の例では、各顧客アクションに対して返されるファーストタッチは、過去7日以内の最も早いインタラクションです（expTimeout = 86400 * 7）。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -265,13 +265,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
 
 ### 有効期限条件を持つラストタッチ属性 {#last-touch-attribution-with-expiration-condition}
 
-このクエリは、選択した条件によって決定される [!DNL Experience Event] データセットの部分内で、一連の顧客アクションの最後のインタラクションを見つけるために使用されます。
+このクエリは、選択した条件によって決定される[!DNL Experience Event] データセットの一部で、一連の顧客アクションの最後のインタラクションを見つけるために使用されます。
 
-以下のクエリは、条件の後または前に有効期限が切れる、ターゲット [!DNL Experience Event] データセット内の単一チャネルのラストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+以下のクエリは、ターゲット [!DNL Experience Event] データセット内の単一チャネルのラストタッチアトリビューション値と詳細を返します。条件の後または前に有効期限が切れます。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
 
 **クエリ構文**
 
@@ -281,11 +281,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
-次の例では、結果に示された 4 日間（7 月 15 日、21 日、23 日および 29 日）の購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の最後のトラッキングコードは、顧客アクションの属性 100% （`1.0`）の責任になります。
+次の例では、結果に表示されている4日間（7月15日、21日、23日、29日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の最後のトラッキングコードは、顧客のアクションに対する100% （`1.0`）の責任を負っています。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -316,11 +316,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
 
 ### 有効期限タイムアウトを持つラストタッチ属性 {#last-touch-attribution-with-expiration-timeout}
 
-このクエリは、選択した期間内の最後のインタラクションを検索するために使用されます。 クエリは、指定された期間のターゲット [!DNL Experience Event] ータデータセット内の単一チャネルのラストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+このクエリは、選択した時間間隔の最後のインタラクションを検索するために使用されます。 クエリは、指定された期間のターゲット [!DNL Experience Event] データセット内の1つのチャネルのラストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
 
 **クエリ構文**
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターの完全なリストとその説明については、[&#x200B; アトリビューションクエリパラメーター &#x200B;](#attribution-query-parameters) の節を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch` 列に表示される結果の分類については、[&#x200B; 列コンポーネント &#x200B;](#query-result-column-components) を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
