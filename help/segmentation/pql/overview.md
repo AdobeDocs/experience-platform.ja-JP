@@ -3,7 +3,7 @@ solution: Experience Platform
 title: プロファイルクエリ言語（PQL）の概要
 description: このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 100%
@@ -59,11 +59,11 @@ PQL では次のリテラル型をサポートしています。
 | リテラル | 定義 | 例 |
 | ------- | ---------- | ------- |
 | 文字列 | 1 つ以上の文字で構成され、二重引用符で囲まれたデータタイプです。 | `"pizza"`、`"jobs"`、`"antidisestablishmentarianism"` |
-| ブール | true か false のいずれかであるデータタイプです。 | `true`、`false` |
+| ブール | true か false のいずれかであるデータタイプです。 | `true`, `false` |
 | 整数 | 整数を表すデータタイプです。正、負、ゼロのいずれかです。 | `-201`、`0`、`412` |
-| 倍精度実数 | 任意の実数を表すデータ型です。正、負、ゼロのいずれかです。 | `-51.24`、`3.14`、`0.6942058` |
-| 日付 | 年、月、日（整数パラメーター）に基づいて日付を作成するために使用できるデータ型です。`date(year, month, day)` という形式で記述します。 | `date(2020, 3, 14)` |
-| 配列 | 他のリテラル値のグループとして構成されるデータ型です。複数の値を区切る場合は、角括弧で囲んでグループ化し、カンマで区切ります。<br> **注意**：配列内の項目のプロパティに直接アクセスすることはできません。したがって、配列内のプロパティにアクセスする必要がある場合、サポートされているメソッドは `select X from array where X.item = ...` です。<br> PQL には、プロファイルにリンクされたエクスペリエンスイベントの配列を指す予約語 `xEvent` があります。 | `[1, 4, 7]`、`["US", "CA"]` |
+| 倍精度実数 | 任意の実数を表すデータタイプです。正、負、ゼロのいずれかです。 | `-51.24`、`3.14`、`0.6942058` |
+| 日付 | 年、月、日（整数パラメーター）に基づいて日付を作成するために使用できるデータタイプです。`date(year, month, day)` という形式で記述します。 | `date(2020, 3, 14)` |
+| 配列 | 他のリテラル値のグループとして構成されるデータ型です。複数の値を区切る場合は、角括弧で囲んでグループ化し、カンマで区切ります。<br> **注意**：配列内の項目のプロパティに直接アクセスすることはできません。したがって、配列内のプロパティにアクセスする必要がある場合、サポートされているメソッドは `select X from array where X.item = ...` です。<br> PQL には、プロファイルにリンクされたエクスペリエンスイベントの配列を指す予約語 `xEvent` があります。 | `[1, 4, 7]`, `["US", "CA"]` |
 | 相対時間参照 | タイムスタンプおよび時間間隔の参照の形式設定に使用できる予約語。 <ul><li>now、today、yesterday、tomorrow</li><li>this、last、next</li><li>before、after、from</li><li>millisecond／milliseconds、second／seconds、minute／minutes、hour／hours、day／days、week／weeks、month／months、year／years、decade／decades、century／centuries、millennium／millennia</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
 
 ## PQL 関数
