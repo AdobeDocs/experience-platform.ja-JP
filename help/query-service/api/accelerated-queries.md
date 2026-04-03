@@ -3,7 +3,7 @@ title: 高速クエリエンドポイント
 description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 97%
@@ -18,9 +18,9 @@ Data Distiller SKU の一部である [Query Service API](https://developer.adob
 
 ## はじめに
 
-Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKU に関連する [&#x200B; パッケージ &#x200B;](../packaging.md) および [&#x200B; ガードレール &#x200B;](../guardrails.md#query-accelerated-store) および [&#x200B; ライセンス &#x200B;](../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKUに関連する[ パッケージ ](../packaging.md)および[ ガードレール ](../guardrails.md#query-accelerated-store)と[ ライセンス ](../data-distiller/license-usage.md)のドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
-以下の節では、 Query Service API を使用して、ステートレスな方法でクエリ高速ストアにアクセスするために必要な API 呼び出しについて説明します。各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以下の節では、Query Service API を使用して、ステートレスな方法でクエリ高速ストアにアクセスするために必要な API 呼び出しについて説明します。各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ## 高速クエリの実行 {#run-accelerated-query}
 
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 |---|---|
 | `queryId` | 作成したクエリの ID 値。 |
 | `resultsMeta` | このオブジェクトには、結果で返される各列のメタデータが含まれるので、各列の名前とタイプがユーザーにわかります。 |
-| `resultsMeta._adhoc` | 単一のデータセットでのみ使用するために名前空間が使用されたフィールドを持つアドホックの Experience Data Model（XDM）スキーマ。 |
+| `resultsMeta._adhoc` | 単一のデータセットでのみ使用するために名前空間が使用されたフィールドを持つアドホックのエクスペリエンスデータモデル（XDM）スキーマ。 |
 | `resultsMeta._adhoc.type` | アドホックスキーマのデータタイプ。 |
 | `resultsMeta._adhoc.meta:xdmType` | これは、XDM フィールドタイプに対してシステムで生成される値です。利用可能なタイプについて詳しくは、[利用可能な XDM タイプ](../../xdm/tutorials/custom-fields-api.md)のドキュメントを参照してください。 |
 | `resultsMeta._adhoc.properties` | クエリされたデータセットの列名です。 |
