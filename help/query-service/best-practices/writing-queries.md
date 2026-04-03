@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Query Service;Query Service；クエリの記述；クエリの記述；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；クエリサービス；クエリの書き込み；クエリの書き込み；
 solution: Experience Platform
-title: クエリサービスでのクエリ実行の一般的なガイダンス
+title: クエリサービスでのクエリ実行に関する一般ガイダンス
 type: Tutorial
-description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておくべき重要な詳細の概要を説明します。
+description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 40%
 
 ---
 
-# [!DNL Query Service] でのクエリ実行の一般的なガイダンス
+# [!DNL Query Service]でのクエリ実行の一般的なガイダンス
 
-このドキュメントでは、Adobe Experience Platform [!DNL Query Service] でクエリを記述する際に知っておくべき重要な詳細を説明します。
+このドキュメントでは、Adobe Experience Platform [!DNL Query Service]でクエリを作成する際に知っておくべき重要な詳細について説明します。
 
-[!DNL Query Service] で使用される SQL 構文について詳しくは、[SQL 構文ドキュメント &#x200B;](../sql/syntax.md) を参照してください。
+[!DNL Query Service]で使用されるSQL構文について詳しくは、[SQL構文ドキュメント ](../sql/syntax.md)を参照してください。
 
 ## クエリ実行モデル
 
-Adobe Experience Platform [!DNL Query Service] には、インタラクティブと非インタラクティブの 2 つのクエリ実行モデルがあります。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
+Adobe Experience Platform [!DNL Query Service]には、インタラクティブと非インタラクティブの2つのクエリ実行モデルがあります。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
 
 ### インタラクティブクエリの実行
 
-クエリは、[!DNL Query Service] UI または [&#x200B; 接続されたクライアントを使用 &#x200B;](../clients/overview.md) して送信することで、インタラクティブに実行できます。 接続したクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返されるかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
+クエリは、[!DNL Query Service] UIを通じて送信するか、接続されたクライアント [を通じて](../clients/overview.md)送信することで、インタラクティブに実行できます。 接続されたクライアントを通じて[!DNL Query Service]を実行すると、送信されたクエリが返されるかタイムアウトするまで、アクティブなセッションがクライアントと[!DNL Query Service]の間で実行されます。
 
 インタラクティブクエリの実行には、次の制限があります。
 
@@ -36,13 +36,13 @@ Adobe Experience Platform [!DNL Query Service] には、インタラクティブ
 
 >[!NOTE]
 >
->最大行数の制限を上書きするには、クエリに `LIMIT 0` を含めます。 10 分のクエリタイムアウトは引き続き適用されます。
+>最大行制限を上書きするには、クエリに`LIMIT 0`を含めます。 10 分のクエリタイムアウトは引き続き適用されます。
 
-デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果をデータセットとして [!DNL Experience Platform] に保持するには、クエリで `CREATE TABLE AS SELECT` 構文を使用する必要があります。
+デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果を[!DNL Experience Platform]のデータセットとして保持するには、クエリで`CREATE TABLE AS SELECT`構文を使用する必要があります。
 
 ### 非インタラクティブクエリの実行
 
-[!DNL Query Service] API を通じて送信されたクエリは、非インタラクティブに実行されます。 非インタラクティブ実行とは、[!DNL Query Service] が API 呼び出しを受信し、受信した順序でクエリを実行することを意味します。 非インタラクティブクエリの場合は、常に、結果を受け取る [!DNL Experience Platform] めに新しいデータセットを生成するか、既存のデータセットに新しい行を挿入します。
+[!DNL Query Service] APIを介して送信されたクエリは、非インタラクティブに実行されます。 非インタラクティブ実行とは、[!DNL Query Service]がAPI呼び出しを受け取り、受け取った順序でクエリを実行することを意味します。 非インタラクティブなクエリは、常に[!DNL Experience Platform]に新しいデータセットを生成して結果を受け取るか、既存のデータセットに新しい行を挿入します。
 
 ## オブジェクト内の特定のフィールドへのアクセス
 
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Query Service] には、インタラクティブ
 
 >[!NOTE]
 >
->Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）はMCIDとも呼ばれ、ネームスペースで引き続き使用されます。
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -80,7 +80,7 @@ LIMIT 1
 
 >[!NOTE]
 >
->各表記タイプは同じ結果を返すので、使用する表記タイプは好みに応じて異なります。
+>それぞれの表記法タイプは同じ結果を返すため、使用する表記法は自分の好みに合わせて選択できます。
 
 上記の例のクエリはどちらも、単一の値ではなく、フラット化されたオブジェクトを返します。
 
@@ -116,7 +116,7 @@ LIMIT 1
 
 ## 見積もり
 
-クエリサービスのクエリ内では、一重引用符、二重引用符、逆引用符の使用方法が異なります。
+一重引用符、二重引用符、および逆引用符は、クエリサービスクエリ内で異なる用途があります。
 
 ### 一重引用符
 
@@ -165,7 +165,7 @@ FROM
 
 >[!NOTE]
 >
->ドット表記フィールドへのアクセスでは、二重引用符 **使用できません** 使用できません。
+>二重引用符&#x200B;**は、ドット表記法フィールドへのアクセスで使用できません**。
 
 ### 逆引用符
 
@@ -201,11 +201,11 @@ LIMIT 10
 
 ## テーブル情報の表示
 
-クエリサービスに接続すると、`\d` または `SHOW TABLES` のいずれかのコマンドを使用して、Experience Platformで使用可能なすべてのテーブルを表示できます。
+クエリ サービスに接続すると、`\d`または`SHOW TABLES` コマンドを使用して、Experience Platform上のすべての使用可能なテーブルを表示できます。
 
-### 標準テーブル表示
+### 標準テーブルビュー
 
-`\d` コマンドは、テーブルを一覧表示するための標準 [!DNL PostgreSQL] ビューを表示します。 このコマンドの出力例を次に示します。
+`\d` コマンドは、テーブルの一覧表示に使用する標準の[!DNL PostgreSQL] ビューを表示します。 このコマンドの出力例を以下に示します。
 
 ```sql
              List of relations
@@ -216,9 +216,9 @@ LIMIT 10
 (2 rows)
 ```
 
-### 詳細なテーブル表示
+### 詳細テーブルビュー
 
-`SHOW TABLES` コマンドは、テーブルに関するより詳細な情報を提供するカスタムコマンドです。 このコマンドの出力例を次に示します。
+`SHOW TABLES` コマンドは、テーブルに関するより詳細な情報を提供するカスタムコマンドです。 このコマンドの出力例を以下に示します。
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -230,48 +230,48 @@ LIMIT 10
 
 ### スキーマ情報
 
-テーブル内のスキーマに関する詳細を表示するには、`\d {TABLE_NAME}` コマンドを使用します。ここで、`{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
+テーブル内のスキーマに関する詳細な情報を表示するには、`\d {TABLE_NAME}` コマンドを使用します。ここで、`{TABLE_NAME}`は、スキーマ情報を表示するテーブルの名前です。
 
-次の例は、`luma_midvalues` を使用する場合に表示される、`\d luma_midvalues` テーブルのスキーマ情報を示しています。
+次の例は、`luma_midvalues`を使用して表示される`\d luma_midvalues` テーブルのスキーマ情報を示しています。
 
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 |-------------------+-----------------------------+-----------+----------+---------
- timestamp         | timestamp                   |           |          | 
- _id               | text                        |           |          | 
- productlistitems  | anyarray                    |           |          | 
- commerce          | luma_midvalues_commerce     |           |          | 
- receivedtimestamp | timestamp                   |           |          | 
- enduserids        | luma_midvalues_enduserids   |           |          | 
- datasource        | datasource                  |           |          | 
- web               | luma_midvalues_web          |           |          | 
- placecontext      | luma_midvalues_placecontext |           |          | 
- identitymap       | anymap                      |           |          | 
- marketing         | marketing                   |           |          | 
- environment       | luma_midvalues_environment  |           |          | 
- _experience       | luma_midvalues__experience  |           |          | 
- device            | device                      |           |          | 
- search            | search                      |           |          | 
+ timestamp         | timestamp                   |           |          |
+ _id               | text                        |           |          |
+ productlistitems  | anyarray                    |           |          |
+ commerce          | luma_midvalues_commerce     |           |          |
+ receivedtimestamp | timestamp                   |           |          |
+ enduserids        | luma_midvalues_enduserids   |           |          |
+ datasource        | datasource                  |           |          |
+ web               | luma_midvalues_web          |           |          |
+ placecontext      | luma_midvalues_placecontext |           |          |
+ identitymap       | anymap                      |           |          |
+ marketing         | marketing                   |           |          |
+ environment       | luma_midvalues_environment  |           |          |
+ _experience       | luma_midvalues__experience  |           |          |
+ device            | device                      |           |          |
+ search            | search                      |           |          |
 ```
 
-また、テーブル名に列の名前を追加することで、特定の列に関する詳細な情報を取得できます。 これは、`\d {TABLE_NAME}_{COLUMN}` の形式で記述されます。
+さらに、列の名前をテーブル名に追加することで、特定の列に関する詳細な情報を取得できます。 これは`\d {TABLE_NAME}_{COLUMN}`形式で書き込まれます。
 
-次の例は、`web` 列の追加情報を示しており、次のコマンドを使用して呼び出されます。`\d luma_midvalues_web`
+次の例は、`web`列の追加情報を示しており、次のコマンドを使用して呼び出されます：`\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 |----------------+-----------------------------------+-----------+----------+---------
- webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
- webreferrer    | web_webreferrer                   |           |          | 
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          |
+ webreferrer    | web_webreferrer                   |           |          |
 ```
 
 ## データセットの結合
 
-複数のデータセットを結合して、他のデータセットのデータをクエリに含めることができます。
+複数のデータセットを結合して、クエリに他のデータセットのデータを含めることができます。
 
-次の例では、次の 2 つのデータセット（`your_analytics_table` と `custom_operating_system_lookup`）を結合し、ページビュー数によって上位 50 個のオペレーティングシステム用の `SELECT` ステートメントを作成します。
+次の例では、次の2つのデータセット（`your_analytics_table`と`custom_operating_system_lookup`）を結合し、ページビュー数で上位50 オペレーティングシステムの`SELECT` ステートメントを作成します。
 
 **クエリ**
 
@@ -290,7 +290,7 @@ LIMIT 50;
 
 **結果**
 
-| Os | PageView |
+| OperatingSystem | ページビュー |
 | --------------- | --------- |
 | Windows 7 | 2781979.0 |
 | Windows XP | 1669824.0 |
@@ -302,7 +302,7 @@ LIMIT 50;
 | OSX 10.6.8 | 53652.0 |
 | Android 4.0.4 | 46167.0 |
 | Android 4.0.3 | 31852.0 |
-| Windows Server 2003 および XP x64 Edition | 28883.0 |
+| Windows Server 2003およびXP x64 Edition | 28883.0 |
 | Android 4.1.1 | 24336.0 |
 | Android 2.3.6 | 15735.0 |
 | OSX 10.6 | 13357.0 |
@@ -311,20 +311,20 @@ LIMIT 50;
 
 ## 重複の除外
 
-クエリサービスでは、データの重複排除、またはデータからの重複行の削除をサポートしています。 重複排除について詳しくは、[&#x200B; クエリサービスの重複排除ガイド &#x200B;](../key-concepts/deduplication.md) を参照してください。
+Query Serviceは、データの重複排除、またはデータから重複する行の削除をサポートしています。 重複排除について詳しくは、[ クエリサービス重複排除ガイド ](../key-concepts/deduplication.md)を参照してください。
 
-## クエリサービスでのタイムゾーンの計算
+## クエリサービスのタイムゾーン計算
 
-クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで永続化されたデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法について詳しくは、[FAQ タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法 &#x200B;](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) の節を参照してください。
+Query Serviceは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformの永続データを標準化します。 タイムゾーン要件をUTC タイムスタンプに変換する方法とUTC タイムスタンプから変換する方法について詳しくは、タイムゾーンをUTC タイムスタンプに変更する方法に関する[FAQの節を参照してください](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?)。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Query Service] を使用してクエリを記述する際の重要な考慮事項について説明しました。 SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
+このドキュメントでは、[!DNL Query Service]を使用してクエリを作成する際の重要な考慮事項について説明しました。 SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
 
-クエリサービス内で使用できるクエリの例について詳しくは、次のユースケースドキュメントを参照してください。
+クエリサービス内で使用できるクエリの詳細なサンプルについては、次のユースケースのドキュメントを参照してください。
 
-- [Analytics insights](../use-cases/analytics-insights.md)
+- [分析インサイト](../use-cases/analytics-insights.md)
 - [イベントのトレンドレポートの作成](../use-cases/trended-report-of-events.md)
 - [訪問者のロールアップレポートの表示](../use-cases/roll-up-report-of-a-visitor.md)
 - [ユーザーのページビューのリスト](../use-cases/list-visitor-sessions.md)
-- [ページビュー数別の訪問者のリスト](../use-cases/visitors-by-number-of-page-views.md)
+- [ページビュー数で訪問者をリストアップする](../use-cases/visitors-by-number-of-page-views.md)
