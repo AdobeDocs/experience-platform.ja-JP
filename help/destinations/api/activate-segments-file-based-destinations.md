@@ -4,7 +4,7 @@ title: Flow Service APIを使用して、ファイルベースの宛先にオー
 description: Flow Service APIを使用して、適格なプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法を説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4933'
 ht-degree: 9%
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
-* 書き出されたファイルの[&#x200B; ファイルタイプ &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)を選択できます。
+* 書き出されたファイルの[ ファイルタイプ ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)を選択できます。
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
 
 この機能は、次に示す6つのクラウドストレージカードでサポートされています。
@@ -33,7 +33,7 @@ ht-degree: 9%
 
 >[!TIP]
 >
->Experience Platform ユーザーインターフェイスを使用して、プロファイルをクラウドストレージの宛先に書き出すこともできます。 詳しくは、[&#x200B; ファイルベースの宛先のアクティベーションのチュートリアル &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
+>Experience Platform ユーザーインターフェイスを使用して、プロファイルをクラウドストレージの宛先に書き出すこともできます。 詳しくは、[ ファイルベースの宛先のアクティベーションのチュートリアル ](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 <!--
 
@@ -45,7 +45,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ## はじめに {#get-started}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 このガイドでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて実際に理解する必要があります。
 
@@ -57,9 +57,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 必要な権限 {#permissions}
 
-プロファイルをエクスポートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+プロファイルをエクスポートするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-*ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+*ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -67,7 +67,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Experience Platform]個のAPIを呼び出すには、まず[Experience Platform認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform]個のAPIを呼び出すには、まず[Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -91,11 +91,11 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 用語集 {#glossary}
 
-このAPI チュートリアルで使用される用語については、API リファレンスドキュメントの[用語集セクション &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)を参照してください。
+このAPI チュートリアルで使用される用語については、API リファレンスドキュメントの[用語集セクション ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)を参照してください。
 
 ## オーディエンスの書き出し先を選択 {#select-destination}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
 プロファイルの書き出しワークフローを開始する前に、オーディエンスの書き出し先の接続仕様とフロー仕様IDを特定します。 参考までに、以下の表を使用してください。
 
@@ -324,9 +324,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## Source接続の作成 {#create-source-connection}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-オーディエンスを書き出す宛先を決定したら、ソース接続を作成する必要があります。 [&#x200B; ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、内部[Experience Platform プロファイル ストア &#x200B;](/help/profile/home.md#profile-data-store)への接続を表します。
+オーディエンスを書き出す宛先を決定したら、ソース接続を作成する必要があります。 [ ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、内部[Experience Platform プロファイル ストア ](/help/profile/home.md#profile-data-store)への接続を表します。
 
 >[!BEGINSHADEBOX]
 
@@ -374,9 +374,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ベース接続の作成 {#create-base-connection}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[&#x200B; ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、資格情報を宛先に安全に保存します。 宛先のタイプに応じて、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、「`connection spec` オーディエンスを書き出す宛先を選択[」の説明に従って、まず目的の宛先の](#select-destination)を取得し、応答の`authSpec`を確認します。 サポートされているすべての宛先の`authSpec` プロパティについては、以下のタブを参照してください。
+[ ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、資格情報を宛先に安全に保存します。 宛先のタイプに応じて、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、「`connection spec` オーディエンスを書き出す宛先を選択[」の説明に従って、まず目的の宛先の](#select-destination)を取得し、応答の`authSpec`を確認します。 サポートされているすべての宛先の`authSpec` プロパティについては、以下のタブを参照してください。
 
 >[!BEGINTABS]
 
@@ -1198,9 +1198,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ターゲット接続の作成 {#create-target-connection}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-次に、ターゲット接続を作成する必要があります。 [Target接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)には、書き出されたオーディエンスの書き出しパラメーターが保存されます。 書き出しパラメーターには、書き出し場所、ファイル形式、圧縮などの詳細が含まれます。 例えば、CSV ファイルの場合、複数の書き出しオプションを選択できます。 サポートされているすべてのCSV書き出しオプションに関する詳細は、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+次に、ターゲット接続を作成する必要があります。 [Target接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)には、書き出されたオーディエンスの書き出しパラメーターが保存されます。 書き出しパラメーターには、書き出し場所、ファイル形式、圧縮などの詳細が含まれます。 例えば、CSV ファイルの場合、複数の書き出しオプションを選択できます。 サポートされているすべてのCSV書き出しオプションに関する詳細は、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 宛先の`targetSpec`で提供される`connection spec` プロパティを参照して、各宛先タイプでサポートされているプロパティを確認してください。 サポートされているすべての宛先の`targetSpec` プロパティについては、以下のタブを参照してください。
 
@@ -2438,7 +2438,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2532,7 +2532,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2625,7 +2625,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2718,7 +2718,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2812,7 +2812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2905,7 +2905,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->ファイル書き出しに使用できるCSV オプションについて詳しくは、[&#x200B; ファイル形式設定ページ &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
+>ファイル書き出しに使用できるCSV オプションについて詳しくは、[ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2963,9 +2963,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## データフローの作成 {#create-dataflow}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-宛先設定の次の手順は、データフローを作成することです。 [&#x200B; データフロー](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、以前に作成したエンティティと関連付けられ、オーディエンス書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて、以下のペイロードを使用し、以前の手順で使用したフローエンティティ IDを置き換えます。 この手順では、属性またはID マッピングに関連する情報をデータフローに追加していないことに注意してください。 これは次のステップで続きます。
+宛先設定の次の手順は、データフローを作成することです。 [ データフロー](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)は、以前に作成したエンティティと関連付けられ、オーディエンス書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて、以下のペイロードを使用し、以前の手順で使用したフローエンティティ IDを置き換えます。 この手順では、属性またはID マッピングに関連する情報をデータフローに追加していないことに注意してください。 これは次のステップで続きます。
 
 >[!BEGINTABS]
 
@@ -3280,7 +3280,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## 属性とID マッピングの設定 {#attribute-and-identity-mapping}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 データフローを作成したら、書き出す属性とIDのマッピングを設定する必要があります。 これは、次の3つのステップで構成されます。
 
@@ -3290,13 +3290,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 例えば、UIに表示されている次のマッピングを取得するには、上記の3つの手順を実行し、次の見出しで詳しく説明する必要があります。
 
-![&#x200B; マッピングステップの例](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+![ マッピングステップの例](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
 ### 入力スキーマの作成 {#create-input-schema}
 
-入力スキーマを作成するには、まず[結合スキーマ &#x200B;](/help/profile/ui/union-schema.md)と、宛先に書き出すことができるIDを取得する必要があります。 これは、ソースマッピングとして選択できる属性とIDのスキーマです。
+入力スキーマを作成するには、まず[結合スキーマ ](/help/profile/ui/union-schema.md)と、宛先に書き出すことができるIDを取得する必要があります。 これは、ソースマッピングとして選択できる属性とIDのスキーマです。
 
-![&#x200B; ソースフィールドの選択ビューで属性とID オプションを表示する録画](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
+![ ソースフィールドの選択ビューで属性とID オプションを表示する録画](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
 属性とIDを取得するためのリクエストとレスポンスの例を以下に示します。
 
@@ -4066,7 +4066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **応答**
 
-+++出力スキーマの作成 – 応答
++++ 出力スキーマの作成 – 応答
 
 ```json
 {
@@ -4372,17 +4372,19 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 応答のIDは、作成した入力スキーマの一意の識別子を表します。 後の手順で再利用するので、応答からIDをコピーします。
 
++++
+
 >[!ENDSHADEBOX]
 
 ### マッピングセットを作成 {#create-mapping-set}
 
-次に、[&#x200B; データ準備API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)を使用して、入力スキーマ ID、出力スキーマ ID、および目的のフィールドマッピングを使用してマッピングセットを作成します。
+次に、[ データ準備API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)を使用して、入力スキーマ ID、出力スキーマ ID、および目的のフィールドマッピングを使用してマッピングセットを作成します。
 
 >[!BEGINSHADEBOX]
 
 **リクエスト**
 
-+++マッピングセットの作成 – リクエスト
++++ マッピングセットの作成 – リクエスト
 
 >[!IMPORTANT]
 >
@@ -4514,13 +4516,13 @@ Flow Service APIからの応答は、更新されたデータフローのIDを�
 
 ## その他のデータフローの更新 {#other-dataflow-updates}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 データフローを更新するには、`PATCH`操作を使用します。 例えば、データフローにマーケティングアクションを追加したり、データフローを更新して必須キーまたは重複排除キーとしてフィールドを選択したり、既存の宛先にファイルマニフェスト生成を追加したりできます。
 
 ### マーケティングアクションの追加 {#add-marketing-action}
 
-[&#x200B; マーケティングアクション &#x200B;](/help/data-governance/api/marketing-actions.md)を追加するには、以下のリクエストと応答の例を参照してください。
+[ マーケティングアクション ](/help/data-governance/api/marketing-actions.md)を追加するには、以下のリクエストと応答の例を参照してください。
 
 >[!IMPORTANT]
 >
@@ -4753,9 +4755,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### ファイルマニフェスト生成を既存の宛先に追加 {#add-file-manifest}
 
-マニフェスト JSON ファイルには、書き出しの場所や書き出しサイズなどの情報が含まれます。 マニフェストの名前は、形式`manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して指定されています。 [&#x200B; サンプルマニフェストファイル &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 マニフェストファイルには、次のフィールドが含まれます。
+マニフェスト JSON ファイルには、書き出しの場所や書き出しサイズなどの情報が含まれます。 マニフェストの名前は、形式`manifest-<<destinationId>>-<<dataflowRunId>>.json`を使用して指定されています。 [ サンプルマニフェストファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)を表示します。 マニフェストファイルには、次のフィールドが含まれます。
 
-* `flowRunId`: エクスポートされたファイルを生成した[&#x200B; データフロー実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+* `flowRunId`: エクスポートされたファイルを生成した[ データフロー実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
 * `scheduledTime`: ファイルがエクスポートされたUTCの時間。
 * `exportResults.sinkPath`：書き出されたファイルが格納されているストレージの場所のパス。
 * `exportResults.name`: エクスポートされたファイルの名前。
@@ -4775,7 +4777,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **リクエスト**
 
-+++既存のターゲット接続にファイルマニフェストを追加 – リクエスト
++++ 既存のターゲット接続にファイルマニフェストを追加 – リクエスト
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4795,11 +4797,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## データフローの検証（データフロー実行の取得） {#get-dataflow-runs}
 
-![&#x200B; ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![ ユーザーが現在実行している手順をハイライト表示してオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 データフローの実行を確認するには、Dataflow Runs APIを使用します。
 
@@ -4807,7 +4811,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **リクエスト**
 
-+++データフロー実行の取得 – リクエスト
++++ データフロー実行の取得 – リクエスト
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4823,7 +4827,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-+++データフロー実行の取得 – 応答
++++ データフロー実行の取得 – 応答
 
 ```json
 {
@@ -4875,7 +4879,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](/help/landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルのAPI エンドポイントは、一般的なExperience Platform API エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの[API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
