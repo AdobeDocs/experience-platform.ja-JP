@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ID サービストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 96%
@@ -17,7 +17,7 @@ ht-degree: 96%
 
 単一の顧客を識別するデータは、多くの場合、その顧客がブランドに関与するために使用する様々なデバイスやシステムにわたって断片化されています。[!DNL Identity Service] では、断片化されたこれらの ID をひとまとめにして、顧客の行動の完全な把握を促進するので、インパクトの強いデジタルエクスペリエンスをリアルタイムで提供できるようになります。詳しくは、「[ID サービスの概要](./home.md)」を参照してください。
 
-## FAQ
+## よくある質問
 
 [!DNL Identity Service] に関するよくある質問への回答のリストを以下に示します。
 
@@ -31,7 +31,7 @@ ID データは、個人を識別するために使用できる任意のデー�
 
 ## 既知 ID と匿名 ID とは
 
-既知の ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用できる ID 値を指します。既知の ID の例としては、メールアドレス、電話番号、CRMID などがあります。
+既知の ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用できる ID 値を指します。既知のIDの例には、メールアドレス、電話番号、CRMIDなどがあります。
 
 匿名 ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用することができない ID 値を指します（Cookie ID など）。
 
@@ -49,7 +49,7 @@ ID データは、個人を識別するために使用できる任意のデー�
 
 ## 一部のフィールドを ID としてラベル付けしないようにする必要はありますか。
 
-「ID」フィールドは、個々のユーザーに固有の値のために予約する必要があります。例えば、顧客のロイヤリティープログラムのデータセットを考えてみましょう。「ロイヤリティーレベル」フィールド（ゴールド、シルバー、ブロンズ）は有用な ID フィールドではありませんが、一意の値であるロイヤリティー ID は有用な ID フィールドです。
+「ID」フィールドは、個々のユーザーに固有の値のために予約する必要があります。例えば、顧客の忠誠度プログラムのデータセットを考えてみましょう。「ロイヤルティレベル」フィールド（ゴールド、シルバー、ブロンズ）は有用な ID フィールドではありませんが、一意の値であるロイヤルティ ID は有用な ID フィールドです。
 
 郵便番号や IP アドレスなどのフィールドは、値が複数の個人に適用される場合があるので、個人の ID としてラベル付けできません。これらのタイプのフィールドは、世帯レベルのマーケティング戦略の ID としてのみラベル付けする必要があります。
 
@@ -61,7 +61,7 @@ ID サービス API の[`/cluster/members`エンドポイント](./api/list-clus
 
 ID 名前空間は、ID フィールドと顧客の ID との関係を示すコンテキストを提供します。例えば、「Email」名前空間の下の ID フィールドは標準的なメールフォーマット（name<span>@emailprovider.com）に準拠し、「Phone」名前空間を使用するフィールドは標準電話番号（北米では 987-555-1234 など）に準拠する必要があります。
 
-名前空間は、異なる CRM システム間で類似した ID 値を区別します。例えば、企業の報酬プログラムに関連付けられた数値のロイヤリティー ID を含むプロファイルを考えてみます。「Loyalty」名前空間では、同じプロファイルにも表示される e コマースシステムの類似した数値 ID からこの値が分離されます。
+名前空間は、異なる CRM システム間で類似した ID 値を区別します。例えば、企業の報酬プログラムに関連付けられた数値のロイヤルティ ID を含むプロファイルを考えてみます。「Loyalty」名前空間では、同じプロファイルにも表示される e コマースシステムの類似した数値 ID からこの値が分離されます。
 
 詳しくは、「[ID 名前空間の概要](./home.md)」を参照してください。
 
@@ -89,14 +89,15 @@ ID は、API 呼び出しで複合 ID または XID によって参照されま�
 
 ## ID サービスが個人を特定できる情報（PII）をどのように処理するのか教えてください。
 
-ID サービスには、電話番号とメールのハッシュ化された ID 値の取り込みをサポートする標準名前空間があります。ただし、値のハッシュ化はユーザーが行う必要があります。Experience Platformに取り込まれるデータのハッシュ化について詳しくは、[[!DNL Data Prep]  マッピング関数ガイド &#x200B;](../data-prep/functions.md#hashing) を参照してください。
+ID サービスには、電話番号とメールのハッシュ化された ID 値の取り込みをサポートする標準名前空間があります。ただし、値のハッシュ化はユーザーが行う必要があります。Experience Platformに取り込まれたデータのハッシュ化について詳しくは、[[!DNL Data Prep]  マッピング関数ガイド ](../data-prep/functions.md#hashing)を参照してください。
 
 ## PII ベースの ID をハッシュする際に考慮すべき点はありますか。
 
 ハッシュ化された PII 値を ID サービスに送信する場合は、データセット全体で同じ暗号化方式を使用する必要があります。これにより、データセット間で同じ ID 値が同じハッシュ値を生成し、ID グラフで適切に一致およびリンクできるようになります。
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,11 +112,12 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## ID グラフページや API にアクセスできないのはなぜですか？
 
-ID グラフデータを表示するには、Experience Platform管理者から `view-identity-graph` 権限をプロビジョニングしてもらう必要があります。 この権限がないと、ID グラフビューアページと、Experience Platform API の呼び出し時に、権限が拒否されたというメッセージが表示されます。 権限について詳しくは、[アクセス制御の概要](../access-control/home.md)を参照してください。
+ID グラフ データを表示するには、Experience Platform管理者が`view-identity-graph`権限をプロビジョニングする必要があります。 この権限を持たない場合、ID グラフビューアページとExperience Platform APIの呼び出し時に「権限が拒否されました」メッセージが表示されます。 権限について詳しくは、[アクセス制御の概要](../access-control/home.md)を参照してください。
 
 ## トラブルシューティング
 
@@ -140,7 +142,7 @@ ID グラフデータを表示するには、Experience Platform管理者から 
 - 必要なクエリーパラメーターがありません — nsId
 - 必要なクエリーパラメーターがありません — id
 - 必要なクエリーパラメーターがありません — xid または（nsid,id）
-- 必要なクエリーパラメーターがありません — targetNs
+- 必要なクエリーパラメーターがありません - targetNs
 - 必要なクエリーパラメーターがありません — xids または compositeXids
 
 再試行する前に、指定したパラメーターがリクエストパスに正しく含まれていることを確認してください。
@@ -276,11 +278,11 @@ ID グラフデータを表示するには、Experience Platform管理者から 
 }
 ```
 
-このエラーが表示されるのは、[!DNL Experience Platform] サービス呼び出しの実行で予期しない例外が発生した場合です。 ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
+このエラーは、[!DNL Experience Platform] サービス呼び出しの実行中に予期しない例外が発生した場合に表示されます。 ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
 
-## バッチ取得エラーコード
+## バッチ取り込みエラーコード
 
-[!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Experience Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
+[!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Experience Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取り込みは非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
 
 以下は、[バッチ取り込み API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) の使用時に発生する可能性のある [!DNL Identity Service] 関連のエラーメッセージのリストです。
 
@@ -294,7 +296,7 @@ ID グラフデータを表示するには、Experience Platform管理者から 
 }
 ```
 
-[!DNL Identity Service] は、それぞれ [!DNL Profile] クラスまたは [!DNL ExperienceEvent] クラスに準拠するレコードまたは時系列データの ID のみを使用します。どちらのクラスにも準拠していない [!DNL Identity Service] のデータを取得しようとすると、このエラーが発生します。
+[!DNL Identity Service] は、それぞれ [!DNL Profile] クラスまたは [!DNL ExperienceEvent] クラスに準拠するレコードまたは時系列データの ID のみを使用します。どちらのクラスにも準拠していない [!DNL Identity Service] のデータを取得しようとすると、このエラーがトリガーされます。
 
 ### 処理されたバッチの最初の 100 行に 0 個の有効な ID がありました
 
@@ -354,4 +356,4 @@ ID グラフデータを表示するには、Experience Platform管理者から 
 }
 ```
 
-このエラーは、バッチ取得中に予期しない例外が発生した場合に表示されます。ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
+このエラーは、バッチ取り込み中に予期しない例外が発生した場合に表示されます。ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
