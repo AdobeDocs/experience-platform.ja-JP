@@ -47,7 +47,7 @@ ID移行では、次の移行パターンがサポートされています。
 
 ## Audience Manager特性の更新
 
-XDM形式のデータが移行中にAudience Managerに送信される場合、そのデータを信号に変換する必要があります。 XDMが提供する新しいキーを反映するために、特性を更新する必要があります。 [BAAAM ツール &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)を使用すると、このプロセスが簡単になります。
+XDM形式のデータが移行中にAudience Managerに送信される場合、そのデータを信号に変換する必要があります。 XDMが提供する新しいキーを反映するために、特性を更新する必要があります。 [BAAAM ツール &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ja#getting-started-with-bulk-management)を使用すると、このプロセスが簡単になります。
 
 ## サードパーティ IDの移行 {#third-party-id}
 

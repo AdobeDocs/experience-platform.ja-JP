@@ -76,7 +76,7 @@ Edge Networkでは、[UUIDv4形式](https://datatracker.ietf.org/doc/html/rfc412
 >
 >JavaScriptの`document.cookie` メソッドを使用して設定されたCookie （タグメソッド [`cookie.set()`](../tags/cookie.md)を使用する場合を含む）は、Cookieの期間を制限するブラウザーポリシーからほとんど保護されません。
 
-`A`または`AAAA` レコードは、Cookieの設定と追跡でのみサポートされています。 データ収集の主な方法は、DNS `CNAME`を使用することです。 FPIDは`A`または`AAAA` レコードを使用して設定され、`CNAME`を使用してAdobeに送信されます。 [Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)を使用すると、データ収集用に`CNAME`を設定できます。
+`A`または`AAAA` レコードは、Cookieの設定と追跡でのみサポートされています。 データ収集の主な方法は、DNS `CNAME`を使用することです。 FPIDは`A`または`AAAA` レコードを使用して設定され、`CNAME`を使用してAdobeに送信されます。 [Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja#adobe-managed-certificate-program)を使用すると、データ収集用に`CNAME`を設定できます。
 
 ### Cookieの設定時期 {#when-to-set-cookie}
 
@@ -105,7 +105,7 @@ Edge NetworkにFPIDを送信するには、次の2つの方法があります。
 
 独自のドメインからFPID Cookieを設定するには、Web SDK呼び出しに独自の`CNAME`を設定し、データストリーム設定でファーストパーティ ID Cookie機能を有効にする必要があります。 DNS内の`CNAME` レコードを使用すると、あるドメイン名から別のドメイン名にエイリアスを作成できます。 このエイリアスは、サードパーティサービスを独自のドメインの一部であるかのように見せ、そのCookieをファーストパーティ Cookieのように見せるのに役立ちます。 `CNAME`を使用してファーストパーティデータ収集を有効にすると、データ収集エンドポイントに対して行われたリクエストに対して、ドメインのすべてのCookieが送信されます。
 
-1. Adobeと連携して、組織で使用するデータ収集用の`CNAME` レコードを作成します。 完全なプロセスについては、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
+1. Adobeと連携して、組織で使用するデータ収集用の`CNAME` レコードを作成します。 完全なプロセスについては、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
 1. データストリームで&#x200B;**[!UICONTROL First Party ID Cookie]** オプションを有効にします。 この設定は、ID マップの値を検索する代わりに、ファーストパーティデバイス IDを検索する際に、指定されたCookieを参照するようにEdge Networkに指示します。 この設定を有効にする場合は、FPIDを保存する必要があるCookieの名前を指定する必要があります。 詳しくは、[&#x200B; データストリームの作成と設定](/help/datastreams/configure.md#advanced-options)を参照してください。
 
    ![&#x200B; ファーストパーティ ID Cookie設定を強調表示するデータストリーム設定を示すPlatform UI画像](/help/collection/js/assets/first-party-id-datastreams.png)
@@ -198,7 +198,7 @@ Edge NetworkにFPIDを送信するには、次の2つの方法があります。
 
 | 訪問 | 説明 |
 | --- | --- |
-| 初回訪問 | まだFPID Cookieの設定を開始していないとします。 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)に含まれるECIDは、訪問者の識別に使用される識別子です。 |
+| 初回訪問 | まだFPID Cookieの設定を開始していないとします。 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ja#section-c55af54828dc4cce89f6118655d694c8)に含まれるECIDは、訪問者の識別に使用される識別子です。 |
 | 2回目の訪問 | FPID ソリューションのロールアウトが開始されました。 既存のECIDは引き続き存在し、訪問者を識別するためのプライマリ IDのままです。 |
 | 3回目の訪問 | 2回目と3回目の訪問の間に、ブラウザーポリシーのためにECIDが削除されたのに十分な時間が経過しました。 ただし、FPIDはDNS `A` レコードを使用して設定されているため、FPIDは保持されます。 FPIDはプライマリ IDと見なされ、エンドユーザーデバイスに書き込まれるECIDのシード処理に使用されます。 ユーザーは、Adobe Experience PlatformおよびExperience Cloud ソリューションの新しい訪問者とみなされます。 |
 | 4回目の訪問 | 3回目と4回目の訪問の間に、ブラウザーポリシーのためにECIDが削除されたのに十分な時間が経過しました。 前回の訪問と同様に、FPIDは設定された方法に応じて残ります。 今回は、前回の訪問と同じECIDが生成されます。 Adobe Experience PlatformおよびExperience Cloud ソリューション全体で、前回の訪問と同じユーザーが表示されます。 |

@@ -24,9 +24,9 @@ Visitor APIからアップグレードする場合、または古いIDの動作�
 
 ## ファーストパーティおよびサードパーティの収集 {#first-party-and-third-party-collection}
 
-Web SDKは、どのエンドポイントがデータ収集リクエストを受け取るかに関係なく、ID [cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) （`kndctr_` Cookieなど）をドメイン上のファーストパーティ Cookieとして常に設定します。 コレクションエンドポイント（実装がデータを送信するドメイン）は、ブラウザーとネットワークポリシーがリクエスト自体をどのように処理するかに影響する別の選択肢です。
+Web SDKは、どのエンドポイントがデータ収集リクエストを受け取るかに関係なく、ID [cookie](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk) （`kndctr_` Cookieなど）をドメイン上のファーストパーティ Cookieとして常に設定します。 コレクションエンドポイント（実装がデータを送信するドメイン）は、ブラウザーとネットワークポリシーがリクエスト自体をどのように処理するかに影響する別の選択肢です。
 
-**ファーストパーティコレクション**&#x200B;は、Adobe Edge Networkを指すCNAMEを使用して、組織が制御するドメイン（`data.example.com`など）を通じてデータ収集リクエストをルーティングします。 リクエストはドメイン上に残るため、広告ブロッカーやブラウザーネットワークの制限によってブロックされる可能性が低くなります。 また、ファーストパーティデータの収集は、独自のサーバーインフラストラクチャから[&#x200B; ファーストパーティデバイス ID](./fpid.md)を設定するための前提条件です。これは、利用可能な最も耐久性のあるID戦略です。 Adobeでは、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を使用して、実装にファーストパーティコレクションを設定することをお勧めします。
+**ファーストパーティコレクション**&#x200B;は、Adobe Edge Networkを指すCNAMEを使用して、組織が制御するドメイン（`data.example.com`など）を通じてデータ収集リクエストをルーティングします。 リクエストはドメイン上に残るため、広告ブロッカーやブラウザーネットワークの制限によってブロックされる可能性が低くなります。 また、ファーストパーティデータの収集は、独自のサーバーインフラストラクチャから[&#x200B; ファーストパーティデバイス ID](./fpid.md)を設定するための前提条件です。これは、利用可能な最も耐久性のあるID戦略です。 Adobeでは、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)を使用して、実装にファーストパーティコレクションを設定することをお勧めします。
 
 **サードパーティコレクション**&#x200B;は、Adobeが所有する[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) （`example.data.adobedc.net`など）に直接リクエストを送信します。 ID Cookieはまだドメインのファーストパーティとして設定されていますが、リクエスト自体はサードパーティのドメインに送信され、一部のブラウザーや広告ブロッカーによって制限される可能性があります。
 

@@ -34,7 +34,7 @@ Web SDKでは、[`defaultConsent`](/help/collection/js/commands/configure/defaul
 
 >[!NOTE]
 >
->訪問者がオプトアウトした場合でも、IDおよび同意Cookieが設定されます。 こうしたCookieは、訪問者のデータ収集の好みを尊重するために必要です。 Web SDKが設定するCookieの完全なリストについては、[Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)を参照してください。
+>訪問者がオプトアウトした場合でも、IDおよび同意Cookieが設定されます。 こうしたCookieは、訪問者のデータ収集の好みを尊重するために必要です。 Web SDKが設定するCookieの完全なリストについては、[Web SDK Cookie](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk)を参照してください。
 
 以前に同意を取り消した後に訪問者が同意を再付与した場合（`setConsent`の後`"general": "in"`で`"general": "out"`を呼び出すことにより）、Web SDKはイベントの送信を再開し、有効期限が切れていない場合はCookieから既存のECIDを使用します。 訪問者のIDは保持されます。
 

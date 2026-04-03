@@ -22,7 +22,7 @@ Web SDKは、次の標準をサポートしています。
    1. Experience Event スキーマには、[IAB TCF 2.0同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md)が含まれています。
    1. イベント [XDM オブジェクト &#x200B;](sendevent/xdm.md)にIAB同意情報を含めます。 Web SDKでは、イベントデータの送信時に同意情報が自動的に含まれません。
 
-このコマンドを使用すると、Web SDKはユーザーの環境設定を[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookieに書き込みます。 このCookieは、訪問者の同意設定を保存するため、訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーでweb サイトを読み込むときに、SDKはこれらの永続的環境設定を取得して、イベントをAdobeに送信できるかどうかを判断します。
+このコマンドを使用すると、Web SDKはユーザーの環境設定を[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk) Cookieに書き込みます。 このCookieは、訪問者の同意設定を保存するため、訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーでweb サイトを読み込むときに、SDKはこれらの永続的環境設定を取得して、イベントをAdobeに送信できるかどうかを判断します。
 
 Adobeでは、同意ダイアログの環境設定をWeb SDKの同意とは別に保存することをお勧めします。 Web SDKでは、同意を取得する方法は提供されていません。 ユーザーの環境設定がSDKと同期するように、ページが読み込まれるたびに`setConsent` コマンドを呼び出すことができます。 Web SDKは、同意が変更されたときにのみサーバーコールを行います。
 

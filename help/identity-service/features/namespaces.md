@@ -99,12 +99,12 @@ Experience Platformには、すべての組織で使用できる複数のID名�
 | 表示名 | ID記号（コード） | ID タイプ | 説明 |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | Cookie ID | Adobe AdCloudを表す名前空間。 |
-| Adobe Analytics (従来の ID) | AAID | Cookie ID | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)に関する次のドキュメントを参照してください。 |
+| Adobe Analytics (従来の ID) | AAID | Cookie ID | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=ja#namespaces)に関する次のドキュメントを参照してください。 |
 | Apple IDFA（広告主の ID） | IDFA | デバイス ID | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
 | Apple プッシュ通知サービス | APNS | デバイス ID | Apple プッシュ通知サービスを使用して収集されたIDを表す名前空間。 詳しくは、[Apple プッシュ通知サービス &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)に関する次のドキュメントを参照してください。 |
 | ECID | ECID | Cookie ID | ECIDを表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](./ecid.md)の次のドキュメントを参照してください。 |
 | メール | メール | メール | メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、単一の人物に関連付けられているため、様々なチャネルをまたいでその人物を識別するために使用できます。 |
-| メール（SHA256、小文字） | Email_LC_SHA256 | メール | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳しくは、[SHA256 ハッシュサポート &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)に関する次のドキュメントを参照してください。 |
+| メール（SHA256、小文字） | Email_LC_SHA256 | メール | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳しくは、[SHA256 ハッシュサポート &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support)に関する次のドキュメントを参照してください。 |
 | Firebase Cloud Messaging | FCM | デバイス ID | プッシュ通知にGoogle Firebase Cloud Messagingを使用して収集されたIDを表す名前空間。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)の次のドキュメントを参照してください。 |
 | Google Ad ID （GAID） | GAID | デバイス ID | Google 広告 ID を表す名前空間。詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=ja) に関する次のドキュメントを参照してください。 |
 | Phone | Phone | 電話番号 | 電話番号を表す名前空間。 このタイプの名前空間は、多くの場合、単一の人物に関連付けられているため、様々なチャネルをまたいでその人物を識別するために使用できます。 |

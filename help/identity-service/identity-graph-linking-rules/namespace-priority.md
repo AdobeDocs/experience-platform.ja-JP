@@ -65,7 +65,7 @@ IDは実世界のオブジェクトを表します。 ID グラフに表示さ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先順位は、リアルタイム顧客プロファイルのシステム動作に影響します。 次の図は、この概念を示しています。 詳しくは、[Adobe Experience Platformおよびアプリケーションアーキテクチャ図](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)に関するガイドを参照してください。
+現在、名前空間の優先順位は、リアルタイム顧客プロファイルのシステム動作に影響します。 次の図は、この概念を示しています。 詳しくは、[Adobe Experience Platformおよびアプリケーションアーキテクチャ図](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications)に関するガイドを参照してください。
 
 ![名前空間優先アプリケーション スコープのダイアグラム。](../images/namespace-priority/application-scope.png "名前空間優先アプリケーション スコープのダイアグラム。"){zoomable="yes"}
 
@@ -208,13 +208,13 @@ XDM スキーマについて詳しくは、[&#x200B; スキーマの概要](/hel
 
 * **イベントアプリケーション**：この動作は、Edge Networkに直接送信されたイベント（WebSDKやモバイルSDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースなど、[Experience Platform ハブ &#x200B;](/help/landing/edge-and-hub-comparison.md)から取り込まれたイベントは、この制限の対象ではありません。
 * **Edgeのセグメント化の特異性**：この動作はエッジのセグメント化に固有です。 バッチセグメンテーションとストリーミングセグメンテーションは、ハブで評価される個別のサービスであり、同じプロセスに従うものではありません。 詳しくは、[&#x200B; エッジセグメント化ガイド &#x200B;](/help/segmentation/methods/edge-segmentation.md)を参照してください。
-* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)および[Edge Networkとハブの比較](/help/landing/edge-and-hub-comparison.md) ページを参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)および[Edge Networkとハブの比較](/help/landing/edge-and-hub-comparison.md) ページを参照してください。
 
 #### Edge Network製品
 
 Edge Network上のアプリケーションがEdge プロファイルに遅滞なくアクセスできるようにするには、イベントにCRMIDに`primary=true`が含まれていることを確認してください。 これにより、ID グラフの更新をハブから待つことなく、すぐに利用できるようになります。
 
 * Adobe Target、Offer Decisioning、カスタム Personalizationの宛先など、Edge Network上のアプリケーションは、Edge プロファイルからプロファイルにアクセスするために、引き続きイベントのプライマリ IDに依存します。
-* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Network アーキテクチャ図](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)を参照してください。
+* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Network アーキテクチャ図](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)を参照してください。
 * Web SDKでプライマリ IDを設定する方法について詳しくは、[Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md)および[Data Collection](/help/collection/identity/overview.md)のIDに関するドキュメントを参照してください。
 * エクスペリエンスイベントにECIDが含まれていることを確認します。 ECIDが見つからない場合は、`primary=true`を含むイベントペイロードに追加され、予期しない結果が生じる可能性があります。

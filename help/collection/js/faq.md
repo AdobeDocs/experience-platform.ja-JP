@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDKからAdobe Experience Platformに直接デー�
 * *not*&#x200B;のお客様は、Experience PlatformまたはReal-time CDPにアクセスでき、[!DNL Web SDK]を使用するには、データ収集UIまたはExperience Platform UIでスキーマとデータストリームを作成するための適切な権限を設定する必要があります。
 * Experience PlatformまたはReal-time CDPにアクセスでき、[!DNL Web SDK]を使用したいお客様は、データ収集UIまたはExperience Platform UIでスキーマ、データセット、ID名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)に関するドキュメントを参照してください。
+これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ja)に関するドキュメントを参照してください。
 
 ## Web SDKを使用すべきユーザー？
 
@@ -144,11 +144,11 @@ Web SDKは、急速に進化しています。 より多くのユースケース
 
 ## CNAMEまたはファーストパーティドメインとは何ですか？なぜそれが重要なのですか？
 
-Core Services ガイドの[Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
+Core Services ガイドの[Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
 
 ## Adobe Experience Platform Web SDKはCookieを使用しますか？ その場合、どのようなCookieを使用しますか？
 
-コアサービスガイドの[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)を参照してください。
+コアサービスガイドの[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/cookies/web-sdk)を参照してください。
 
 ## Adobe Experience Platform Web SDKはどのブラウザーをサポートしていますか？
 
