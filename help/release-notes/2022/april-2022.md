@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2679'
+source-wordcount: '2556'
 ht-degree: 92%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 **リリース日：2022年4月27日（PT）**
 
-Adobe Experience Platform の既存の機能に対するアップデート：
+Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -26,9 +26,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Dashboards] {#dashboards}
 
-Experience Platformでは、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。
+Experience Platformには、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数のダッシュボードが用意されています。
 
-ダッシュボードは、組織のデータ用に事前設定されたレポートオプションを提供し、Experience Platform内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
+ダッシュボードは、組織のデータに対して事前設定済みのレポートオプションを提供し、Experience Platformのマーケティングワークフローに直接組み込まれています。 これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
 
 次のウィジェットは、各ダッシュボードのウィジェットライブラリで使用できます。[ウィジェットライブラリを使用したウィジェットの追加方法](../../dashboards/customize/widget-library.md)について詳しくは、ドキュメントを参照してください。
 
@@ -36,18 +36,18 @@ Experience Platformでは、毎日のスナップショットで取得した、�
 
 | ウィジェット | ダッシュボード | 説明 |
 | ------ | --------- | ----------- |
-| [!UICONTROL 追加されたプロファイルのトレンド] | プロファイル | このウィジェットは、折れ線グラフを使用して、過去 30 日、90 日または 12 か月にわたって毎日プロファイルストアに追加された結合プロファイルの合計数を示します。 |
-| [!UICONTROL 宛先ステータスにマッピングされたオーディエンス] | プロファイル | このウィジェットは、マッピングされたオーディエンスとマッピングされていないオーディエンスの両方の合計数を単一の指標で表示し、ドーナツグラフを使用して、それぞれの合計の割合の違いを示します。 |
-| [!UICONTROL オーディエンスサイズ] | プロファイル | このウィジェットは、最大 20 個のセグメントと各セグメントに含まれるオーディエンスの合計数をリストする 2 列の表を提供します。リストは、適用された結合ポリシーに依存し、オーディエンスの合計数に応じて高いものから低いものへと並べられます。 |
-| [!UICONTROL プロファイル数のトレンド] | プロファイル | このウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。30 日、90 日および 12 か月の期間のデータを可視化できます。 |
-| [!UICONTROL 単一の ID プロファイル (ID 別)] | プロファイル | このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。 |
-| [!UICONTROL 宛先ステータス] | 宛先 | このウィジェットは、有効な宛先の合計数を単一の指標として表示し、ドーナツグラフを使用して、有効な宛先と無効な宛先の割合の違いを示します。 |
-| [!UICONTROL 宛先プラットフォーム別のアクティブな宛先] | 宛先 | このウィジェットは、2 列の表を使用して、アクティブな宛先プラットフォームと各宛先プラットフォームに対するアクティブな宛先の合計数のリストを表示します。 |
-| [!UICONTROL すべての宛先にわたってアクティブ化されたオーディエンス] | 宛先 | このウィジェットは、すべての宛先にわたってアクティブ化されたオーディエンスの合計数を単一の指標で提供します。 |
-| [!UICONTROL Audience Activation の順序] | セグメント | このウィジェットは、宛先名、プラットフォーム、オーディエンスのアクティベーション日をリストする 3 列の表を提供します。 |
-| [!UICONTROL オーディエンスサイズのトレンド] | セグメント | このウィジェットは、30 日、90 日および 12 か月の期間で、任意のセグメント定義の条件を満たすプロファイルの合計数を示す折れ線グラフを提供します。 |
-| [!UICONTROL オーディエンスサイズの変更のトレンド] | セグメント | このウィジェットは、最新の日別スナップショット間の特定のセグメントに対して選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。 |
-| [!UICONTROL ID 別のオーディエンスサイズのトレンド] | セグメント | このウィジェットは、選択された ID タイプに基づいて、特定のセグメントに対するオーディエンスサイズのトレンドを示します。30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。 |
+| [!UICONTROL Profiles added trend] | プロファイル | このウィジェットは、折れ線グラフを使用して、過去30日間、90日間、または12か月間にプロファイルストアに毎日追加された結合プロファイルの合計数を示します。 |
+| [!UICONTROL Audiences mapped to destination status] | プロファイル | このウィジェットは、マッピングされたオーディエンスとマッピングされていないオーディエンスの両方の合計数を単一の指標で表示し、ドーナツグラフを使用して、それぞれの合計の割合の違いを示します。 |
+| [!UICONTROL Audiences size] | プロファイル | このウィジェットは、最大 20 個のセグメントと各セグメントに含まれるオーディエンスの合計数をリストする 2 列の表を提供します。リストは、適用された結合ポリシーに依存し、オーディエンスの合計数に応じて高いものから低いものへと並べられます。 |
+| [!UICONTROL Profile count trend] | プロファイル | このウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。30 日、90 日および 12 か月の期間のデータを可視化できます。 |
+| [!UICONTROL Single identity profiles by identity] | プロファイル | このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。 |
+| [!UICONTROL Destination status] | 宛先 | このウィジェットは、有効な宛先の合計数を単一の指標として表示し、ドーナツグラフを使用して、有効な宛先と無効な宛先の割合の違いを示します。 |
+| [!UICONTROL Active destinations by destination platform] | 宛先 | このウィジェットは、2 列の表を使用して、アクティブな宛先プラットフォームと各宛先プラットフォームに対するアクティブな宛先の合計数のリストを表示します。 |
+| [!UICONTROL Activated audiences across all destinations] | 宛先 | このウィジェットは、すべての宛先にわたってアクティブ化されたオーディエンスの合計数を単一の指標で提供します。 |
+| [!UICONTROL Audience activation order] | セグメント | このウィジェットは、宛先名、プラットフォーム、オーディエンスのアクティベーション日をリストする 3 列の表を提供します。 |
+| [!UICONTROL Audience size trend] | セグメント | このウィジェットは、30 日、90 日および 12 か月の期間で、任意のセグメント定義の条件を満たすプロファイルの合計数を示す折れ線グラフを提供します。 |
+| [!UICONTROL Audience size change trend] | セグメント | このウィジェットは、最新の日別スナップショット間の特定のセグメントに対して選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。 |
+| [!UICONTROL Audience size trend by identity] | セグメント | このウィジェットは、選択された ID タイプに基づいて、特定のセグメントに対するオーディエンスサイズのトレンドを示します。30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。 |
 
 **新機能** {#new-features}
 
@@ -61,21 +61,21 @@ Experience Platformでは、毎日のスナップショットで取得した、�
 
 ## データフロー {#dataflows}
 
-Experience Platformでは、データは様々なソースから取り込まれ、システム内で分析され、様々な宛先に対してアクティブ化されます。 Experience Platformでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+Experience Platformでは、さまざまなソースからデータを取り込み、システム内で分析し、さまざまな配信先で活用します。 Experience Platformでは、データフローに透明性を持たせることで、非線形になる可能性があるデータの流れを追跡するプロセスを簡単にします。
 
-データフローは、Experience Platform間でデータを移動するジョブを表します。 これらのデータフローは様々なサービスを対象に設定され、ソースコネクタからターゲットデータセットにデータを移動できます。こうしたデータは、ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先に対してアクティブ化されます。
+データフローとは、Experience Platform全体にデータを移動するジョブを表したものです。 これらのデータフローは様々なサービスを対象に設定され、ソースコネクタからターゲットデータセットにデータを移動できます。こうしたデータは、ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先に対してアクティブ化されます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| セグメントダッシュボード | 監視ダッシュボードを使用して、セグメントのデータフローを監視できるようになりました。詳しくは、[UI でのセグメントの監視](../../dataflows/ui/monitor-audiences.md)に関するガイドを参照してください。 |
+| セグメントダッシュボード | モニタリングダッシュボードを使用して、セグメントのデータフローをモニタリングできるようになりました。詳しくは、[UI でのセグメントのモニタリング](../../dataflows/ui/monitor-audiences.md)に関するガイドを参照してください。 |
 
 データフローの一般的な情報については、[データフローの概要](../../dataflows/home.md)を参照してください。セグメント化について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
+[!DNL Data Prep] を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータをマッピング、変換および検証できます。
 
 **更新された機能**
 
@@ -105,7 +105,7 @@ Amazon Kinesis、Azure Event Hubs および HTTP API 宛先について、リリ
 
 - 過去に 3 つの宛先でベータ版を使用したことがある場合は、何もする必要はありません。ベータ版の一部として設定されたすべてのデータフローは、引き続き機能し、GA バージョンに移行されます。
 - 4月27日以降にこれらの宛先を設定する場合は、新しい GA バージョンの宛先で行ってください。
-- 非推奨とマークされたベータ版のカードは、リリース作業が完了（4月29日金曜日（PT）の終わりを予定）すると、削除されます。Experience Platform エンジニアリングチームは、リリース作業が成功するよう注意深く監視しています。
+- 非推奨とマークされたベータ版のカードは、リリース作業が完了（4月29日金曜日（PT）の終わりを予定）すると、削除されます。Experience Platform エンジニアリングチームは、リリース作業が成功するよう注意深くモニタリングしています。
 
 **新しい宛先**
 
@@ -132,24 +132,24 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| グローバルスキーマ | [[!UICONTROL データハイジーン操作リクエスト]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | 指定されたデータセットまたはサンドボックス内のレコードを削除または変更するために、データクレンジングリクエストの詳細を取得します。 |
-| 記述子 | [[!UICONTROL 時系列の精度記述子]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | 時系列データおよび概要データの精度を示します。スキーマに適用される場合、そのスキーマの `timestamp` フィールドが、この精度の期間の最初のタイムスタンプです。 |
-| クラス | [[!UICONTROL XDM 概要指標]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | グループディメンションで事前に要約された指標を提供します（SQL SELECT と GROUP BY の結果など）。 |
-| フィールドグループ | [[!UICONTROL 同意ポリシー評価結果マップ]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | 個人に対する同意ポリシー評価結果を取得します。 |
-| フィールドグループ | [[!UICONTROL サイト検索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | サイト検索関連情報を取得します（検索クエリ、フィルタリング、順序付けなど）。 |
-| フィールドグループ | [[!UICONTROL リードを結合]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 2 人以上のリードが結合されるイベントの詳細を取得します。 |
-| フィールドグループ | [[!UICONTROL 送信済み電子メール]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | メールが受信者に送信されるイベントの詳細を取得します。 |
-| フィールドグループ | [[!UICONTROL フィールドのステッチ]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | イベントに対して ID ステッチプロセスで計算された値を取得します。 |
-| フィールドグループ | [[!UICONTROL 監査用のセカンダリ受信者の詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | 監査用のセカンダリ受信者の詳細を取得する Adobe Journey Optimizer フィールドグループ。 |
-| フィールドグループ | [[!UICONTROL XDM ビジネスアカウント人物関係の詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | アカウントと人物の関係に関する詳細を取得します。 |
-| フィールドグループ | [[!UICONTROL アカウント人物の詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | アカウントと人物の関係に関する詳細を取得します。 |
-| データタイプ | [[!UICONTROL 買い物かご]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | eコマースの買い物かごに関する情報を取得します。 |
-| データタイプ | [[!UICONTROL 送料]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 1 つ以上の製品に関する発送情報を取得します。 |
-| データタイプ | [[!UICONTROL サイト検索]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | サイト検索アクティビティに関する情報を取得します。 |
-| 拡張（Workfront） | [[!UICONTROL 操作タスク属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | 操作タスクに関する詳細を取得します。 |
-| 拡張（Workfront） | [[!UICONTROL 作業ポートフォリオ属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | 作業ポートフォリオに関する詳細を取得します。 |
-| 拡張（Workfront） | [[!UICONTROL 作業プログラム属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 作業プログラムに関する詳細を取得します。 |
-| 拡張（Workfront） | [[!UICONTROL 作業プロジェクト属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | 作業プロジェクトに関する詳細を取得します。 |
+| グローバルスキーマ | [[!UICONTROL Data Hygiene Operation Request]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | 指定されたデータセットまたはサンドボックス内のレコードを削除または変更するために、データクレンジングリクエストの詳細を取得します。 |
+| 記述子 | [[!UICONTROL Time-series Granularity Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | 時系列データおよび概要データの精度を示します。スキーマに適用される場合、そのスキーマの `timestamp` フィールドが、この精度の期間の最初のタイムスタンプです。 |
+| クラス | [[!UICONTROL XDM Summary Metrics]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | グループディメンションで事前に要約された指標を提供します（SQL SELECT と GROUP BY の結果など）。 |
+| フィールドグループ | [[!UICONTROL Consent policies evaluation results map]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | 個人に対する同意ポリシー評価結果を取得します。 |
+| フィールドグループ | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | サイト検索関連情報を取得します（検索クエリ、フィルタリング、順序付けなど）。 |
+| フィールドグループ | [[!UICONTROL Merge Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 2 人以上のリードが結合されるイベントの詳細を取得します。 |
+| フィールドグループ | [[!UICONTROL Email Sent]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | メールが受信者に送信されるイベントの詳細を取得します。 |
+| フィールドグループ | [[!UICONTROL Stitching Fields]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | イベントに対して ID ステッチプロセスで計算された値を取得します。 |
+| フィールドグループ | [[!UICONTROL Secondary Recipient Detail For Audit]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | 監査用のセカンダリ受信者の詳細を取得する Adobe Journey Optimizer フィールドグループ。 |
+| フィールドグループ | [[!UICONTROL XDM Business Account Person Relation Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | アカウントと人物の関係に関する詳細を取得します。 |
+| フィールドグループ | [[!UICONTROL Account Person Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | アカウントと人物の関係に関する詳細を取得します。 |
+| データタイプ | [[!UICONTROL Cart]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | eコマースの買い物かごに関する情報を取得します。 |
+| データタイプ | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 1 つ以上の製品に関する発送情報を取得します。 |
+| データタイプ | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | サイト検索アクティビティに関する情報を取得します。 |
+| 拡張（Workfront） | [[!UICONTROL Operational Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | 操作タスクに関する詳細を取得します。 |
+| 拡張（Workfront） | [[!UICONTROL Work Portfolio Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | 作業ポートフォリオに関する詳細を取得します。 |
+| 拡張（Workfront） | [[!UICONTROL Work Program Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 作業プログラムに関する詳細を取得します。 |
+| 拡張（Workfront） | [[!UICONTROL Work Project Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | 作業プロジェクトに関する詳細を取得します。 |
 
 {style="table-layout:auto"}
 
@@ -157,19 +157,19 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| グローバルスキーマ | [[!UICONTROL 宛先]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | `destinationCategory` の新しい列挙値。 |
-| 記述子 | [[!UICONTROL わかりやすい名前記述子]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | 標準フィールドから不要な、提案された値（`meta:enum`）を削除するサポートが追加されました。 |
-| フィールドグループ | [[!UICONTROL ユーザーログインプロセス]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` フィールドが追加されました。 |
-| データタイプ | [[!UICONTROL コマース]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | いくつかの買い物かご関連フィールドが追加されました。 |
-| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 選択されたオプションおよび割引額に、新しいフィールドが追加されました。 |
-| 拡張（インテリジェントサービス） | [[!UICONTROL Intelligent Services JourneyAI 送信時間の最適化]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | 送信時間スコアのストレージ形式を最適化します。 |
-| 拡張（Workfront） | [[!UICONTROL Workfront 変更イベント]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | いくつかのフィールドが、カスタムフォームフィールドの `workfront:customData` フィールドに置き換えられました。 |
-| 拡張（Workfront） | [[!UICONTROL 作業タスク属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | いくつかのフィールドが追加されました。 |
-| 拡張（Workfront） | [[!UICONTROL 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | 親オブジェクトタイプおよびカスタムフォームフィールド用の新しいフィールドです。 |
+| グローバルスキーマ | [[!UICONTROL Destinations]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | `destinationCategory` の新しい列挙値。 |
+| 記述子 | [[!UICONTROL Friendly Name Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | 標準フィールドから不要な、提案された値（`meta:enum`）を削除するサポートが追加されました。 |
+| フィールドグループ | [[!UICONTROL User Login Process]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` フィールドが追加されました。 |
+| データタイプ | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | いくつかの買い物かご関連フィールドが追加されました。 |
+| データタイプ | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 選択されたオプションおよび割引額に、新しいフィールドが追加されました。 |
+| 拡張（インテリジェントサービス） | [[!UICONTROL Intelligent Services JourneyAI Send Time Optimization]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | 送信時間スコアのストレージ形式を最適化します。 |
+| 拡張（Workfront） | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | いくつかのフィールドが、カスタムフォームフィールドの `workfront:customData` フィールドに置き換えられました。 |
+| 拡張（Workfront） | [[!UICONTROL Work Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | いくつかのフィールドが追加されました。 |
+| 拡張（Workfront） | [[!UICONTROL Work Object]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | 親オブジェクトタイプおよびカスタムフォームフィールド用の新しいフィールドです。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
+Experience PlatformのXDMについて詳しくは、[XDM System overview](../../xdm/home.md)を参照してください。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -183,7 +183,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| マルチデータセットのサポート | マルチデータセット機能では、すべての Experience Event データセットをサポートするようになり、ID マップを ID として選択できるようになりました。お客様は、データセット全体で共通の ID 名前空間がある限り、ID マップおよび関連する任意の ID を選択できます。アトリビューション AI は、Adobe Analytics、Experience Event、Consumer Experience Event のスキーマをサポートします。アトリビューション AI でのマルチデータセットのサポートについて詳しくは、[アトリビューション AI ユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md)を参照してください。 |
+| マルチデータセットのサポート | マルチデータセット機能では、すべてのエクスペリエンスイベントデータセットをサポートするようになり、ID マップを ID として選択できるようになりました。お客様は、データセット全体で共通の ID 名前空間がある限り、ID マップおよび関連する任意の ID を選択できます。アトリビューション AI は、Adobe Analytics、エクスペリエンスイベント、Consumer エクスペリエンスイベントのスキーマをサポートします。アトリビューション AI でのマルチデータセットのサポートについて詳しくは、[アトリビューション AI ユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md)を参照してください。 |
 
 [!DNL Intelligent Services] について詳しくは、[[!DNL Intelligent Services] 概要](../../intelligent-services/home.md)を参照してください。
 
@@ -195,7 +195,7 @@ Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| マルチデータセットのサポート | マルチデータセット機能では、すべての Experience Event データセットをサポートするようになり、ID マップを ID として選択できるようになりました。お客様は、データセット全体で共通の ID 名前空間がある限り、ID マップおよび関連する任意の ID を選択できます。顧客 AI は、Adobe Analytics、エクスペリエンスイベント、コンシューマーエクスペリエンスイベントおよび Adobe Audience Manager の各スキーマをサポートします。顧客 AI でのマルチデータセットのサポートについて詳しくは、[顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md)を参照してください。 |
+| マルチデータセットのサポート | マルチデータセット機能では、すべてのエクスペリエンスイベントデータセットをサポートするようになり、ID マップを ID として選択できるようになりました。お客様は、データセット全体で共通の ID 名前空間がある限り、ID マップおよび関連する任意の ID を選択できます。顧客 AI は、Adobe Analytics、エクスペリエンスイベント、コンシューマーエクスペリエンスイベントおよび Adobe Audience Manager の各スキーマをサポートします。顧客 AI でのマルチデータセットのサポートについて詳しくは、[顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md)を参照してください。 |
 | 顧客 AI の新しいモデル評価指標 | 顧客 AI の新しいゲインチャートを使用すると、マーケターは、予算と ROI 目標に基づいてターゲットとするグループサイズを決定できます。新しいリフトチャートは、モデルの品質を測定し、ランダムターゲティングに対して得られるリフトをよりわかりやすく可視化します。詳しくは、[顧客 AI でインサイトを見つける](../../intelligent-services/customer-ai/user-guide/discover-insights.md)を参照してください。 |
 
 [!DNL Intelligent Services] について詳しくは、[[!DNL Intelligent Services] 概要](../../intelligent-services/home.md)を参照してください。
@@ -214,7 +214,7 @@ Real-Time Customer Data Platform B2B エディションについて詳しくは�
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、Experience Platform サービスを使用して外部ソースからデータを取り込むと同時に、そのデータを構造化、ラベル付け、強化することができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -222,8 +222,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意および環境設定データを [!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[&#x200B; [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
-| [!DNL Square] のサポート | [!DNL Square] ソースを使用して、支払いデータを [!DNL Square] アカウントからExperience Platformに取り込むことができるようになりました。 |
+| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意と環境設定データを[!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[ [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
+| [!DNL Square] のサポート | [!DNL Square] ソースを使用して、[!DNL Square] アカウントからExperience Platformに支払いデータを取り込むことができるようになりました。 |
 | 顧客属性データフローの削除のサポート | 顧客属性ソースコネクタを使用して作成したデータフローを削除できるようになりました。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
