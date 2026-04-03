@@ -2,7 +2,7 @@
 title: Bombora ABM オーディエンス接続
 description: アカウントのオーディエンスにもとづいて、オーディエンスのターゲティング、パーソナライゼーション、抑制を行うために、Bombora キャンペーンのプロファイルをアクティベートします。
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1157'
 ht-degree: 18%
@@ -15,7 +15,7 @@ ht-degree: 18%
 >
 >Bombora ABM Audiences宛先にアカウントオーディエンスをアクティブ化する機能は、[の](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[および](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] エディションを購入する企業で利用できます。
 
-[&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md)に基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、Bombora キャンペーンのプロファイルをアクティベートします。
+[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md)に基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のために、Bombora キャンペーンのプロファイルをアクティベートします。
 
 ## ユースケース {#use-case}
 
@@ -47,7 +47,7 @@ B2B マーケターは、Adobe Real-Time CDPでアカウントリストを作成
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -56,10 +56,10 @@ B2B マーケターは、Adobe Real-Time CDPでアカウントリストを作成
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Bomboraでは、以下の表に記載されているターゲット IDのマッ�
 
 アカウントオーディエンスをBomboraにエクスポートするには、次の情報が必要です。
 
-1. Bombora アカウント。 お持ちでない場合は、[Bombora オーディエンスのアクティベーション申請フォーム &#x200B;](https://customers.bombora.com/artcdp/audience-activation-request)を使用してBombora アカウントをリクエストできます。
+1. Bombora アカウント。 お持ちでない場合は、[Bombora オーディエンスのアクティベーション申請フォーム ](https://customers.bombora.com/artcdp/audience-activation-request)を使用してBombora アカウントをリクエストできます。
 2. ボンボラ **[!UICONTROL client ID]**&#x200B;と&#x200B;**[!UICONTROL client secret]**。
 3. Bomboraに送信するデータは、**プロファイル対応**&#x200B;のデータセットから送信する必要があるので、データセットはプロファイルに含まれます。 この宛先に対するオーディエンスをアクティブ化する前に、データセットがプロファイル [に対して](/help/catalog/datasets/enable-for-profile.md)有効になっていることを確認してください。
 
@@ -97,7 +97,7 @@ Bomboraでは、以下の表に記載されているターゲット IDのマッ�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -105,7 +105,7 @@ Bomboraでは、以下の表に記載されているターゲット IDのマッ�
 
 宛先に対して認証を行うには、必須フィールドに入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
-![&#x200B; ベアラートークンを追加](../../assets/catalog/advertising/bombora/add-bearer-token.png)
+![ ベアラートークンを追加](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
 * **[!UICONTROL Client ID]**: [!DNL Bombora] クライアント IDを入力します。
 * **[!UICONTROL Client secret]**: [!DNL Bombora] クライアントの秘密鍵を入力します。
@@ -125,10 +125,10 @@ Bomboraでは、以下の表に記載されているターゲット IDのマッ�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-この宛先に対してアカウントオーディエンスをアクティブ化する手順については、[&#x200B; アカウントオーディエンスをアクティブ化](/help/destinations/ui/activate-account-audiences.md)を参照してください。
+この宛先に対してアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスをアクティブ化](/help/destinations/ui/activate-account-audiences.md)を参照してください。
 
 ### 必須マッピング {#mapping}
 
