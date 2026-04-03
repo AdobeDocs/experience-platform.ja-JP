@@ -3,19 +3,19 @@ cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Experience Platform
 solution-title: Platform Overview
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Documentation
-getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
 tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.ja-JP
 solution: Experience Platform
 type: Documentation
 index: true
 role: Developer, User, Admin, Leader
 auto-video-transcripts: true
-source-git-commit: ffdbe4919c55e3f106650a7eb3dd3f11bcdc8d71
+source-git-commit: aa233393af6cf7631ad51e41a00f73d9646d4a98
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 100%
