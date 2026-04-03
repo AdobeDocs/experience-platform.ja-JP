@@ -1,9 +1,9 @@
 ---
 solution: Experience Platform
-title: PQLの関数を配列、リスト、設定する
-description: Profile Query Language（PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。
+title: PQL関数の配列、リストおよびセット
+description: Profile Query Language（PQL）には、配列、リスト、文字列の操作を簡単にする機能が用意されています。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 57%
@@ -12,11 +12,11 @@ ht-degree: 57%
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language] （PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 &#x200B;](./overview.md) を参照してください。
+[!DNL Profile Query Language] （PQL）には、配列、リスト、文字列の操作を簡単にする関数が用意されています。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## 次に含まれる
 
-`in` 関数は、項目が配列またはリストのメンバーであるかどうかをブール値として判断するために使用されます。
+`in`関数は、項目が配列またはリストのメンバーであるかどうかをブール値として判断するために使用されます。
 
 **形式**
 
@@ -32,9 +32,9 @@ ht-degree: 57%
 person.birthMonth in [3, 6, 9]
 ```
 
-## Not in
+## 次に含まれない
 
-`notIn` 関数は、項目が配列またはリストのメンバーでないかどうかをブール値として判別するために使用されます。
+`notIn`関数は、項目が配列またはリストのメンバーでないかどうかをブール値として判断するために使用されます。
 
 >[!NOTE]
 >
@@ -54,9 +54,9 @@ person.birthMonth in [3, 6, 9]
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Intersects
+## 交わり
 
-`intersects` 関数は、2 つの配列またはリストに、ブール値として少なくとも 1 つの共通メンバーが含まれているかどうかを判断するために使用されます。
+`intersects`関数は、2つの配列またはリストに少なくとも1つの共通メンバーがブール値として含まれているかどうかを判断するために使用されます。
 
 **形式**
 
@@ -72,9 +72,9 @@ person.birthMonth notIn [3, 6, 9]
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersection
+## 積集合
 
-`intersection` 関数は、2 つの配列またはリストの共通メンバーをリストとして決定するために使用されます。
+`intersection`関数は、2つの配列またはリストの共通メンバーをリストとして決定するために使用されます。
 
 **形式**
 
@@ -90,9 +90,9 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
 ```
 
-## Subset of
+## サブセット
 
-`subsetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のサブセットであるかを判断するために使用されます。つまり、配列 A のすべての要素は、ブール値として配列 B の要素になります。
+`subsetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のサブセットであるかを判断するために使用されます。言い換えれば、配列A内のすべての要素が配列Bの要素であることをブール値として表します。
 
 **形式**
 
@@ -108,9 +108,9 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## Superset of
+## スーパーセット
 
-`supersetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のスーパーセットであるかを判断するために使用されます。つまり、配列 A には、配列 B のすべての要素がブール値として含まれます。
+`supersetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のスーパーセットであるかを判断するために使用されます。つまり、この配列Aには、配列Bのすべての要素がブール値として含まれています。
 
 **形式**
 
@@ -126,9 +126,9 @@ person.favoriteCities.subsetOf(person.visitedCities)
 person.eatenFoods.supersetOf(["sushi", "pizza"])
 ```
 
-## Includes
+## 次を含む
 
-`includes` 関数は、配列またはリストが、ブール値として指定された項目を含んでいるかどうかを判定するために使用されます。
+`includes`関数は、配列またはリストに特定の項目がブール値として含まれているかどうかを判断するために使用されます。
 
 **形式**
 
@@ -144,9 +144,9 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 person.favoriteColors.includes("red")
 ```
 
-## Distinct
+## 個別
 
-`distinct` 関数は、配列またはリストから重複する値を配列として削除するために使用します。
+`distinct`関数は、配列またはリストから配列として重複する値を削除するために使用されます。
 
 **形式**
 
@@ -164,7 +164,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-`groupBy` 関数は、グループ化式の一意の値から、配列式の値のパーティションである配列へのマップとしての式の値に基づいて、配列またはリストの値をグループに分割するために使用されます。
+`groupBy`関数は、グループ化式の一意の値から配列式の値のパーティションである配列へのマップとして、式の値に基づいて配列またはリストの値をグループに分割するために使用されます。
 
 **形式**
 
@@ -187,7 +187,7 @@ xEvent[type="order"].groupBy(storeId)
 
 ## Filter
 
-`filter` 関数は、入力に応じて配列またはリストとして使用される式に基づいて配列またはリストをフィルタリングするために使用されます。
+`filter`関数は、入力に応じて、式を配列またはリストとしてフィルタリングするために使用されます。
 
 **形式**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Map
 
-`map` 関数を使用すると、特定の配列内の各項目に式を配列として適用して新しい配列を作成できます。
+`map`関数は、配列として指定された配列内の各項目に式を適用して、新しい配列を作成するために使用されます。
 
 **形式**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## First `n` in array {#first-n}
 
-`topN` 関数は、配列として指定された数式に基づいて昇順で並べ替えられた場合に、配列の最初の `N` 項目を返すために使用されます。
+`topN`関数は、指定された数式に基づいて昇順に並べ替えられた配列の最初の`N`項目を配列として返すために使用されます。
 
 **形式**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Last `n` in array
 
-`bottomN` 関数は、配列として指定された数式に基づいて昇順で並べ替えられた場合に、配列の最後の `N` 項目を返すために使用されます。
+`bottomN`関数は、指定された数式に基づいて昇順に並べ替えられた配列の最後の`N`項目を配列として返すために使用されます。
 
 **形式**
 
@@ -261,7 +261,7 @@ orders.topN(price, 5)
 ```
 
 | 引数 | 説明 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | 並べ替えるリストまたは配列。 |
 | `{VALUE}` | 配列またはリストを並べ替えるプロパティ。 |
 | `{AMOUNT}` | 返される項目の数。 |
@@ -274,9 +274,9 @@ orders.topN(price, 5)
 orders.bottomN(price, 5)
 ```
 
-## First item
+## 最初の項目
 
-`head` 関数は、配列またはリスト内の最初の項目をオブジェクトとして返すために使用されます。
+`head`関数は、配列またはリストの最初の項目をオブジェクトとして返すために使用されます。
 
 **形式**
 
