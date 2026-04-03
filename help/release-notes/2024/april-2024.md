@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2024年4月
 description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1893'
 ht-degree: 25%
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 >[!TIP]
 >
->Real-Time Customer Data PlatformおよびAdobe Experience Platformで使用される用語については [&#128279;](/help/landing/glossary.md)Adobe Experience Platform用語集 &rbrace; を参照してください。 探している用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようにリクエストします。
+>[Adobe Experience Platform用語集](/help/landing/glossary.md)を使用して、Real-Time Customer Data PlatformとAdobe Experience Platformで使用される用語に慣れましょう。 探している特定の用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようリクエストします。
 
 Experience Platformの既存の機能に対するアップデート：
 
@@ -23,7 +23,7 @@ Experience Platformの既存の機能に対するアップデート：
 - [データ収集](#data-collection)
 - [宛先](#destinations)
 - [ID サービス](#identity-service)
-- [監視](#monitoring)
+- [モニタリング](#monitoring)
 - [クエリサービス](#query-service)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation)
@@ -37,7 +37,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| Real-Time Customer Data Platform B2B インサイト | アカウントとオポチュニティに関する事前設定済みの [Real-Time CDP B2B データインサイトを調べ &#x200B;](../../dashboards/insights/account-profiles.md) データを理解し、ビジネス上の意思決定に役立てます。 また、[Real-Time CDP B2B データモデルを使用して独自のインサイトを作成 &#x200B;](../../dashboards/data-models/cdp-insights-data-model-b2c.md) し、データを視覚化して調査し、ダッシュボードにカスタムビジュアライゼーションを保存することもできます。 |
+| Real-Time Customer Data Platform B2B インサイト | アカウントと商談に関する事前設定済みの[Real-Time CDP B2B データインサイト ](../../dashboards/insights/account-profiles.md)を確認して、データを理解し、ビジネス上の意思決定に役立てることができます。 また、[Real-Time CDP B2B データモデル ](../../dashboards/data-models/cdp-insights-data-model-b2c.md)を使用して独自のインサイトを構築し、データを視覚化および探索して、カスタムビジュアライゼーションをダッシュボードに保存することもできます。 |
 
 {style="table-layout:auto"}
 
@@ -45,37 +45,37 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## データ収集 {#data-collection}
 
-Adobe Experience Platformは、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Experience Platform Edge Networkに送信します。そこでデータを強化、変換、AdobeまたはAdobe以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platformには、クライアントサイドのカスタマーエクスペリエンスデータを収集してExperience Platform Edge Networkに送信し、AdobeまたはAdobe以外の宛先にエンリッチメント、変換、配布できる一連のテクノロジが用意されています。
 
 **新機能または更新された機能**
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| 拡張機能 | [!DNL Acxiom Anonymous Visitor Insights] Tags 拡張機能 | [!DNL Acxiom's Visitor Insights] を使用して、web サイトの訪問者の元の場所を特定します。 Acxiom では、地域 IP 検索テクノロジーを利用して、匿名ブラウザの場所を特定できます。 識別されると、組織データベース内の検索によって追加のインサイトが得られ、ブラウザーに送り返されます。 これにより、コンテンツ作成者は、これらのデータポイントに合わせてコンテンツを調整でき、見知らぬ人として出発した訪問者でも、よりパーソナライズされた魅力的なエクスペリエンスを訪問者に提供できます。 |
-| データストリーム | [Edge Network ボットの検出 &#x200B;](../../datastreams/bot-detection.md) | 自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。 <br> ボット検出を使用すると、[Adobe Experience Platform Data Collection によって生成されたイベントを &#x200B;](/help/collection/home.md) 既知のスパイダーやボットによって生成されたものとして識別できます。 データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。 <br> ボットトラフィックの識別によって、サイトまたはモバイルアプリケーション上のユーザーアクティビティをより正確に測定できます。 |
-| Mobile SDK | メジャーバージョンリリース | Mobile SDKの新しいメジャーバージョンがリリースされました。対象のプラットフォームは、iOS Mobile Core 5.x と互換性のあるiOS拡張機能、Android Mobile Core 3.x と互換性のあるAndroid拡張機能、React Native Core 6.x と互換性のあるReact Native拡張機能、Flutter Core 4.x と互換性のある Flutter 拡張機能です。 これらのリリースでは、Android SDK for Jetpack Compose のサポート、Adobe Journey Optimizer コードベースのエクスペリエンスのサポート、Flutter 向けAdobe Journey Optimizer Messaging 拡張機能の一般提供など、いくつかの新機能と機能強化が提供されています。 リリースノートについて詳しくは、[Mobile SDK リリースノート &#x200B;](https://developer.adobe.com/client-sdks/home/release-notes/) を参照してください。 |
-| Mobile SDK | プライバシー | Appleのポリシーが更新されたので、2024 年 5 月 1 日（PT）以降、開発者はApp Storeに送信するために新しいプライバシー機能を実装する必要があります。 Mobile SDKを使用するすべてのAdobe ユーザーは、5 月 1 日以降にApp Storeの承認を受けることを希望する場合は、SDKのバージョン 5.x にアップグレードする必要があります。 |
-| Roku SDK | Roku SDK | Roku SDKの最初のメジャーバージョンがリリースされ、Experience Platform Edge Networkのストリーミングメディアがサポートされるようになりました。 |
-| タグとイベント転送 | 製品内ガイダンス | Experience Platform[&#x200B; タグ &#x200B;](../../tags/home.md) および [&#x200B; イベント転送 &#x200B;](../../tags/ui/event-forwarding/overview.md) には、すぐに使い始めて価値をすばやく実感するのに役立つ、新しい範囲のエクスペリエンスが用意されています。 これらのエクスペリエンスには、新しいオンボーディング画面、製品内チュートリアル、ツールヒントが含まれます。 <br>![&#x200B; 製品内ガイダンスがハイライト表示されたイベント転送。](../2024/assets/april/event-forwarding.png " 「タイプ」フィールドと「値タイプをマップ」フィールドがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}<br> |
-| Web SDK | Audience Managerのお客様向けの Web SDKの導入のシンプル化 | 複数の Web SDKの更新により、Audience Manager、Analytics、Target などのExperience Cloud ソリューションにエクスペリエンスデータモデル（XDM）を使用しなくても、Web SDKの導入を簡単に行えるようになりました。 Audience Manager web SDKの導入について詳しくは、次のガイドを参照してください。 <ul><li><a href="https://experienceleague.adobe.com/ja/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Audience Manager タグ拡張機能から Web SDK タグ拡張機能にAudience Managerのデータ収集ライブラリを更新します</li><li><a href="https://experienceleague.adobe.com/ja/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Audience Managerのデータ収集ライブラリをAppMeasurement JavaScript ライブラリから Web SDK JavaScript ライブラリに更新する</li></ul> |
+| 拡張機能 | [!DNL Acxiom Anonymous Visitor Insights] タグ拡張機能 | サイト訪問者の出所を[!DNL Acxiom's Visitor Insights]で確認します。 Acxiomは、Geo IP ルックアップテクノロジーを利用することで、匿名のブラウザーの場所を特定することができます。 識別されると、整理されたデータベースで検索すると、追加のインサイトが得られ、ブラウザーに送り返されます。 これにより、コンテンツ制作者は、これらのデータポイントに合わせてコンテンツを調整し、初めて訪れた訪問者であっても、よりパーソナライズされた魅力的な体験を提供できるようになります。 |
+| データストリーム | [Edge Network ボット検出](../../datastreams/bot-detection.md) | 自動プログラム、web スクレイパー、クモ、スクリプトスキャナーなど、人間以外のエンティティから発生するトラフィックは、人間の訪問者から発生するイベントを識別するのが難しくなります。 この種類のトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。 <br> ボット検出を使用すると、[Adobe Experience Platform Data Collection](/help/collection/home.md)によって生成されたイベントを、既知のクモやボットによって生成されたものとして識別できます。 データストリームのボット検出を設定することで、特定のIP アドレス、IP範囲、およびボットイベントとして分類するリクエストヘッダーを特定できます。 <br> ボットトラフィックの識別により、サイトまたはモバイルアプリケーションでのユーザーアクティビティをより正確に測定できます。 |
+| Mobile SDK | メジャーバージョンリリース | モバイルSDKの新しいメジャーバージョンは、次のプラットフォーム向けにリリースされました。iOS Mobile Core 5.xおよび互換性のあるiOS拡張機能、Android Mobile Core 3.xおよび互換性のあるAndroid拡張機能、React Native Core 6.xおよび互換性のあるReact Native拡張機能、Flutter Core 4.xおよび互換性のあるFlutter拡張機能。 これらのリリースでは、Jetpack Compose用のAndroid SDKのサポート、Adobe Journey Optimizer コードベースのエクスペリエンスのサポート、Flutter用のAdobe Journey Optimizer Messaging拡張機能の一般提供など、いくつかの新機能と機能強化が提供されています。 詳細なリリースノートについては、[ モバイル SDK リリースノート ](https://developer.adobe.com/client-sdks/home/release-notes/)を参照してください。 |
+| Mobile SDK | プライバシー | Appleのポリシー更新により、2024年5月1日（PT）以降、開発者はApp Storeに送信するために新しいプライバシー機能を実装する必要があります。 Mobile SDKを使用しているすべてのAdobeのお客様が5月1日以降にApp Storeの承認を受けたい場合は、SDKのバージョン 5.xにアップグレードする必要があります。 |
+| SDK六 | SDK六 | Roku SDKの最初のメジャーバージョンは、Experience Platform Edge NetworkのStreaming Mediaに対応してリリースされました。 |
+| タグとイベント転送 | 製品内ガイダンス | Experience Platform [ タグ ](../../tags/home.md)と[ イベント転送](../../tags/ui/event-forwarding/overview.md)では、新しいエクスペリエンスの範囲が提供され、すばやく開始し、すばやく価値を生み出すことができます。 これらのエクスペリエンスには、新しいオンボーディング画面、製品内チュートリアル、ツールのヒントなどが含まれます。 製品内ガイダンスがハイライト表示された<br>![ イベント転送。](../2024/assets/april/event-forwarding.png "種類とマップ値の種類フィールドがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}<br> |
+| Web SDK | Audience Managerを利用している企業は、webSDKの導入を合理化できます | Audience Manager、Analytics、TargetなどのExperience Cloud ソリューションにExperience Data Model （XDM）を使用することなく、Web SDKの複数のアップデートを使用して、Web SDKの導入を簡素化できるようになりました。 Audience Manager Web SDKの導入について詳しくは、次のガイドを参照してください。 <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Audience Managerのデータ収集ライブラリをAudience Manager タグ拡張機能からWeb SDK タグ拡張機能に更新します</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Audience Managerのデータ収集ライブラリをAppMeasurement JavaScript ライブラリからWeb SDK JavaScript ライブラリに更新します</li></ul> |
 
 {style="table-layout:auto"}
 
-<!--| Web SDK | [Streaming Media Collection support in Web SDK](/help/collection/js/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](/help/collection/js/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/ja/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
+<!--| Web SDK | [Streaming Media Collection support in Web SDK](/help/collection/js/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](/help/collection/js/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
 
-データ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
+データ収集について詳しくは、[ データ収集の概要](../../collection/home.md)を参照してください。
 
 ## 宛先 {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**新機能または更新された機能** {#destinations-new-updated-functionality}
+**新しい機能または更新された機能** {#destinations-new-updated-functionality}
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Destination SDK`isRequired` ネストされた顧客データフィールドでパラメーターを使用できるようになりました | Destination SDKで宛先を設定する際に、[&#x200B; ネストされた顧客データフィールドを必要に応じて設定 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields) できるようになりました。 これにより、宛先を設定するユーザーは、そのフィールドの値を選択するまでアクティベーションフローを続行できません。 |
-| Edgeのセグメント化は、web SDKでAdobe Targetの宛先を設定する場合に必須の要件ではなくなりました | 以前は、Web SDKを使用して [Adobe Targetの宛先を設定する場合 &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md) パーソナライゼーションとエッジのセグメント化のためにデータストリームを有効にする必要がありました。 データストリームでエッジのセグメント化を有効にする必要がありました [&#x200B; 現在は削除されました &#x200B;](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 この統合パターンを使用すると、Real-Time CDPでAdobe Targetを使用する際に、パーソナライゼーションのユースケースのサブセットのメリットを得ることができます。 詳しくは、[&#x200B; 統合タイプで有効になるユースケース &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases) を参照してください。 |
-| [!BADGE Beta]{type=Informative} アクティブ化フローから複数のオーディエンスとデータセットを削除します | 宛先アクティブ化フローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 詳しくは、[&#x200B; 宛先の詳細 &#x200B;](../../destinations/ui/destination-details-page.md#bulk-remove) および [&#x200B; データセットの書き出し &#x200B;](../../destinations/ui/export-datasets.md) ドキュメントを参照してください。 |
+| Destination SDKのネストされた顧客データフィールドで`isRequired` パラメーターが使用可能になりました | Destination SDKで宛先を設定する際に、必要に応じて[ ネストされた顧客データフィールドを設定できるようになりました](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields)。 この方法では、宛先を設定しているユーザーは、そのフィールドの値を選択するまでアクティベーションフローを続行できません。 |
+| Web SDKでEdgeの宛先を設定する場合、Adobe Targetのセグメント化はもはや必須ではありません | 以前は、Web SDKで[Adobe Targetの宛先](/help/destinations/catalog/personalization/adobe-target-connection.md)を設定する際、パーソナライゼーションとエッジセグメント化のためにデータストリームを有効にする必要がありました。 エッジ セグメント化[に対してデータストリームを有効にする要件が削除されました](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 この統合パターンでは、Adobe TargetとReal-Time CDPを併用する場合にのみ、パーソナライゼーションのユースケースのサブセットからメリットを得ることができます。 統合タイプ [によって有効になる](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases) ユースケースについて詳しくは、こちらを参照してください。 |
+| [!BADGE Beta]{type=Informative} アクティベーションフローから複数のオーディエンスとデータセットを削除 | 宛先アクティベーションフローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 詳しくは、[宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-remove)および[ データセットの書き出し](../../destinations/ui/export-datasets.md)のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -89,40 +89,40 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| API の `/orgs/{ORG}/` エンドポイントの廃止 | [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) の次のエンドポイントは非推奨（廃止予定）になりました。<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> `/idnamespace/identities` および `/idnamespace/identities/{ID}` エンドポイントを使用して、同じタスクを実行し、組織内のすべての名前空間または組織内の特定の名前空間を取得できます。 |
+| APIの`/orgs/{ORG}/` エンドポイントの廃止 | [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/)の次のエンドポイントは非推奨（廃止予定）になりました。<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> `/idnamespace/identities`と`/idnamespace/identities/{ID}` エンドポイントを使用して、同じタスクを実行し、組織内のすべての名前空間または組織内の特定の名前空間のいずれかを取得できます。 |
 
 {style="table-layout:auto"}
 
 ID サービスについて詳しくは、[ID サービスの概要](../../identity-service/home.md)を参照してください。
 
-## 監視 {#monitoring}
+## モニタリング {#monitoring}
 
-Experience Platform UI のモニタリングダッシュボードを使用すると、ソース、ID サービス、リアルタイム顧客プロファイル、オーディエンスおよび宛先からのデータのジャーニーをモニタリングできます。
+Experience Platform UIのモニタリングダッシュボードを使用して、ソース、ID サービス、リアルタイム顧客プロファイル、オーディエンス、宛先からのデータのジャーニーをモニタリングします。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| ダッシュボード拡張の監視 | ビジネスの使用例に基づいて、様々なデータタイプに対して監視ダッシュボードを使用できるようになりました。 監視ダッシュボードを使用して、ソース、オーディエンスおよび宛先の人物、アカウントおよび見込み客のデータタイプアクティビティを監視します。 |
+| ダッシュボードの拡張の監視 | ビジネスのユースケースに基づいて、様々なデータタイプに対してモニタリングダッシュボードを使用できるようになりました。 モニタリングダッシュボードを使用して、ソース、オーディエンス、宛先の個人、アカウント、見込み客のデータタイプ活動をモニタリングします。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; 監視ダッシュボードの使用 &#x200B;](../../dataflows/ui/monitor.md) に関するガイドを参照してください。
+詳しくは、[監視ダッシュボードの使用](../../dataflows/ui/monitor.md)に関するガイドを参照してください。
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。[!DNL Data Lake] の任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルへの取り込みが可能になります。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| クエリの隔離 | 失敗したクエリ実行を自動的に分離して中断を防ぎ、一貫したパフォーマンスを維持します。 詳しくは、[&#x200B; クエリ強制隔離 &#x200B;](../../query-service/ui/query-schedules.md#quarantine) のドキュメントを参照してください。 |
-| クエリをキャンセル | クエリの実行を制御し、長時間実行されるクエリをキャンセルして生産性を向上させます。詳しくは、[&#x200B; クエリのキャンセル &#x200B;](../../query-service/ui/user-guide.md#cancel-query) のドキュメントを参照してください。 |
-| スケジュールされたクエリのアラート | クエリをスケジュールしながら、プロアクティブな通知で常に情報を入手し、効率的でタイムリーなタスク管理を確保します。 [&#x200B; クエリの作成時に、または既存のスケジュール済みクエリに対してインラインアクションを使用して &#x200B;](../../query-service/ui/query-schedules.md#alerts-for-query-status) アラートの配信を登録できます。 詳しくは、[&#x200B; インラインアクションを使用したアラートの購読 &#x200B;](../../query-service/ui/monitor-queries.md#alert-subscription) ドキュメントを参照してください。 |
-| スケジュール済みクエリナビゲーションの改善 | クエリテンプレートとスケジュールされた実行の間を簡単に移動して、生産性を向上させます。 詳しくは、[&#x200B; スケジュールされたクエリ実行の表示 &#x200B;](../../query-service/ui/query-schedules.md#scheduled-query-runs) に関するドキュメントを参照してください。 |
-| 拡張クエリの出力 | データをより深く分析するために、コンソール内で最大 500 行のクエリ結果にアクセスします。詳しくは、[result count](../../query-service/ui/user-guide.md#result-count) のドキュメントを参照してください。 |
-| レガシ クエリ エディターの廃止 | 2024 年 4 月 30 日（PT）現在、拡張クエリエディターは、すべてのユーザーにとってデフォルトのエディターになっています。 レガシーエディターは 2024 年 5 月 24 日（PT）に廃止され、使用できなくなります。 詳しくは、[&#x200B; クエリエディターユーザーガイド &#x200B;](../../query-service/ui/user-guide.md) を参照してください。 |
+| クエリの隔離 | 失敗したクエリ実行を自動的に分離することで、中断を防ぎ、一貫したパフォーマンスを維持します。 詳しくは、[ クエリ強制隔離](../../query-service/ui/query-schedules.md#quarantine)のドキュメントを参照してください。 |
+| クエリをキャンセル | クエリの実行を制御し、実行中のクエリをキャンセルして生産性を向上させます。詳しくは、[ クエリをキャンセル ](../../query-service/ui/user-guide.md#cancel-query)のドキュメントを参照してください。 |
+| スケジュールされたクエリアラート | クエリのスケジュールを設定しながら、先見的な通知により情報を提供することで、効率的でタイムリーなタスク管理を実現します。 クエリ [を作成する場合、または既存のスケジュール済みクエリに対してインラインアクションを使用する場合、アラートを](../../query-service/ui/query-schedules.md#alerts-for-query-status)購読できます。 詳しくは、「[ インラインアクションを使用したアラートの購読](../../query-service/ui/monitor-queries.md#alert-subscription)」のドキュメントを参照してください。 |
+| スケジュールされたクエリナビゲーションの改善 | クエリテンプレートとスケジュールされた実行を簡単に移動して、生産性を向上させることができます。 詳しくは、[ スケジュールされたクエリの実行の表示](../../query-service/ui/query-schedules.md#scheduled-query-runs)に関するドキュメントを参照してください。 |
+| 拡張クエリ出力 | データをより詳細に分析するために、コンソール内で最大500行のクエリ結果にアクセスできます。詳しくは、[結果数](../../query-service/ui/user-guide.md#result-count)のドキュメントを参照してください。 |
+| レガシークエリエディターのサンセット | 2024年4月30日（PT）より、拡張クエリエディターがすべてのユーザーのデフォルトのエディターになりました。 レガシーエディターは2024年5月24日（PT）に廃止され、使用できなくなります。 詳しくは、[ クエリエディターのユーザーガイド ](../../query-service/ui/user-guide.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -130,17 +130,17 @@ Experience Platform UI のモニタリングダッシュボードを使用する
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformでは、単一のExperience Platformインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と開発に役立つサンドボックスを提供しています。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [サンドボックスツール](../../sandboxes/ui/sandbox-tooling.md) | サンドボックスツールを使用して、サポートされているすべてのオブジェクトタイプを完全なサンドボックスパッケージに [&#x200B; 書き出し &#x200B;](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox) したあと、様々なサンドボックスをまたいでパッケージを [&#x200B; 読み込み &#x200B;](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox) して、オブジェクト設定をレプリケートします。 |
+| [サンドボックスツール](../../sandboxes/ui/sandbox-tooling.md) | サンドボックスツールを使用して、[ サポートされているすべてのオブジェクトタイプを](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox)完全なサンドボックスパッケージに書き出し、[様々なサンドボックスにまたがってパッケージを](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox)読み込んでオブジェクト設定を複製します。 |
 
 {style="table-layout:auto"}
 
-サンドボックスについて詳しくは、[&#x200B; サンドボックスの概要 &#x200B;](../../sandboxes/home.md) を参照してください。
+サンドボックスについて詳しくは、[ サンドボックスの概要](../../sandboxes/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -150,7 +150,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| オーディエンスのライフサイクルの状態 | オーディエンスのライフサイクル状態を合理化して、ライフサイクル管理を簡素化しました。 これらのライフサイクル状態について詳しくは、[&#x200B; セグメント化サービスに関する FAQ](../../segmentation/faq.md#lifecycle-states) を参照してください。 |
+| オーディエンスのライフサイクルの状態 | オーディエンスのライフサイクルの状態が合理化され、ライフサイクル管理が簡素化されました。 これらのライフサイクル状態について詳しくは、[ セグメント化サービス FAQ](../../segmentation/faq.md#lifecycle-states)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -166,21 +166,21 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 
 | 新しいソース | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | [[!DNL PathFactory]  ソース &#x200B;](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) を使用して、[!DNL PathFactory] からExperience Platformへの訪問者、セッション、ページビューのデータを統合します。 開始方法について詳しくは、[[!DNL PathFactory]  概要 &#x200B;](../../sources/connectors/marketing-automation/pathfactory.md) を参照してください。 |
-| [!DNL Teradata Vantage] | [[!DNL Teradata Vantage]  ソース &#x200B;](../../sources/tutorials/ui/create/databases/teradata-vantage.md) を使用すると、ハイブリッドマルチクラウド環境からExperience Platformにデータを取り込むことができます。 開始方法について詳しくは、[[!DNL Teradata Vantage]  概要 &#x200B;](../../sources/connectors/databases/teradata-vantage.md) を参照してください。 |
+| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | [[!DNL PathFactory] source](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md)を使用して、訪問者、セッション、ページビューのデータを[!DNL PathFactory]からExperience Platformに統合します。 開始する方法については、[[!DNL PathFactory] 概要](../../sources/connectors/marketing-automation/pathfactory.md)を参照してください。 |
+| [!DNL Teradata Vantage] | [[!DNL Teradata Vantage] source](../../sources/tutorials/ui/create/databases/teradata-vantage.md)を使用して、ハイブリッド マルチクラウド環境からExperience Platformにデータを取り込みます。 開始する方法については、[[!DNL Teradata Vantage] 概要](../../sources/connectors/databases/teradata-vantage.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
-**新機能および更新された機能**
+**新機能と更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| VA7 での許可リストへの登録用 IP アドレスの更新 | VA7 （北米）の許可リストに追加される IP アドレスのリストに次の IP アドレスが追加されました。 <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> 許可リストに追加する IP アドレスの包括的なリストについては、[IP アドレスの許可リストに関するドキュメント &#x200B;](../../sources/ip-address-allow-list.md) を参照してください。 |
-| [!DNL Azure Event Hubs] ソースを使用した新しい認証タイプのサポート | [!DNL Event Hubs] または [!DNL Azure Active Directory Authentication] を使用して、[!DNL Scoped Azure Active Directory Authentication] ソースをExperience Platformに接続できるようになりました。 詳しくは、[Experience Platformへの接続  [!DNL Event Hubs]  に関するガイド &#x200B;](../../sources/tutorials/ui/create/cloud-storage/eventhub.md) を参照してください。 |
-| 資格情報の取得 [!DNL Data Landing Zone] 更新 | ソースワークスペースの右側のパネルを使用して、[!DNL Data Landing Zone] 資格情報を取得できるようになりました。 また、右側のパネルを使用して資格情報を更新できるようになりました。 詳しくは、[[!DNL Data Landing Zone] UI ガイド &#x200B;](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) を参照してください。 |
+| VA7で許可リストに登録するためのIP アドレスの更新 | VA7 （北米）の許可リストに追加するIP アドレスのリストに、次のIP アドレスが追加されました。 <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> 許可リストに追加するIP アドレスの包括的なリストについては、[IP アドレス許可リストドキュメント ](../../sources/ip-address-allow-list.md)を参照してください。 |
+| [!DNL Azure Event Hubs] ソースでの新しい認証タイプのサポート | [!DNL Event Hubs]または[!DNL Azure Active Directory Authentication]を使用して、[!DNL Scoped Azure Active Directory Authentication] ソースをExperience Platformに接続できるようになりました。 詳しくは、[Experience Platformへの [!DNL Event Hubs] 接続](../../sources/tutorials/ui/create/cloud-storage/eventhub.md)に関するガイドを参照してください。 |
+| [!DNL Data Landing Zone]件の資格情報取得の更新 | ソース ワークスペースの右側のパネルを使用して、[!DNL Data Landing Zone]資格情報を取得できるようになりました。 右側のパネルを使用して、資格情報を更新することもできます。 詳しくは、[[!DNL Data Landing Zone] UI ガイド ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
 <!--| Enhanced filtering and navigation in the sources UI workspace | Use the enhanced filtering, search, and inline action tools in the sources UI workspace to streamline your workflow. <ul><li>Use filtering and search capabilities to navigate your way through sources accounts and dataflows in your organization.</li><li>Use inline actions to modify configuration settings applied to your dataflows and improve organizational workflows. You can use inline actions to apply tags, set up alerts, or create ingestion jobs on demand.</li></ul> For more information, read the guide on [filtering sources objects in the UI](../../sources/tutorials/ui/filter.md).|-->
 
-ソースについて詳しくは、[&#x200B; ソースの概要 &#x200B;](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[ ソースの概要](../../sources/home.md)を参照してください。
