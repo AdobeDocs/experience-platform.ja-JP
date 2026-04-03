@@ -1,9 +1,9 @@
 ---
 title: Flow Service API を使用したデータベースソースのデータフローの作成
 type: Tutorial
-description: Flow Service API を使用して、データフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
+description: Flow Service APIを使用してデータフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 71%
@@ -12,12 +12,12 @@ ht-degree: 71%
 
 # [!DNL Flow Service] API を使用したデータベースソースのデータフローの作成
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用してデータフローを作成し、データベースからAdobe Experience Platformにデータを取り込む方法については、このチュートリアルをお読みください。
+このチュートリアルでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)を使用してデータフローを作成し、データベースからAdobe Experience Platformにデータを取り込む方法について説明します。
 
 >[!NOTE]
 >
->* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[&#x200B; ソースカタログ &#x200B;](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
->* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) に対してサポートされているタイムスタンプは、UTC 時間を指定した TIMESTAMP_NTZ のみです。
+>* データフローを作成するには、データベースソースとの有効なベース接続IDが既に必要です。 このIDがない場合は、[ ソースカタログ ](../../../home.md#database)にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
+>* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンをUTCに設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md)でサポートされているタイムスタンプは、TIMESTAMP_NTZとUTC時間だけです。
 
 ## はじめに
 
@@ -28,11 +28,11 @@ ht-degree: 71%
    * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
-### Experience Platform API の使用
+### Experience Platform APIの使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../landing/api-guide.md) を参照してください。
+Experience Platform APIの呼び出しを正常に行う方法について詳しくは、[Experience Platform APIの概要](../../../../landing/api-guide.md)に関するガイドを参照してください。
 
 ## ソース接続の作成 {#source}
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | データベースソースの接続 ID。 |
 | `params.tableName` | ソースファイルのパス。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 リレーショナルスキーマと共に使用する場合、変更データキャプチャは、ターゲットデータセットをソースと同期させるために、挿入、更新、削除を追跡します。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要 &#x200B;](../../../../xdm/data-mirror/overview.md) を参照してください。 実装の詳細については、[&#x200B; ソースガイドの change data capture](../change-data-capture.md) および [&#x200B; リレーショナルスキーマテクニカルリファレンス &#x200B;](../../../../xdm/schema/relational.md) を参照してください。 |
+| `params.cdcEnabled` | 変更履歴キャプチャが有効かどうかを示すブール値。 リレーショナルスキーマで使用する場合、変更データキャプチャは、挿入、更新、削除を追跡して、ターゲットデータセットをソースと同期させます。 このプロパティは、次のデータベースソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要](../../../../xdm/data-mirror/overview.md)を参照してください。 実装の詳細については、[ ソースガイドのデータキャプチャの変更](../change-data-capture.md)および[ リレーショナルスキーマのテクニカルリファレンス ](../../../../xdm/schema/relational.md)を参照してください。 |
 | `connectionSpec.id` | データベースソースの接続仕様 ID。 データベース仕様 ID の一覧については、[付録](#appendix)を参照してください。 |
 
 **応答**
@@ -129,7 +129,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
+ソースデータをExperience Platformで使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 その後、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットを作成します。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -186,8 +186,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
 | `data.schema.version` | スキーマのバージョン番号。この値を、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。 |
-| `params.dataSetId` | 前の手順で生成されたターゲットデータセットの ID。 **メモ**：ターゲット接続を作成する場合、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
-| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
+| `params.dataSetId` | 前の手順で生成されたターゲットデータセットのID。 **注**: ターゲット接続を作成する際は、有効なデータセット IDを指定する必要があります。 無効なデータセット IDはエラーになります。 |
+| `connectionSpec.id` | データレイクへの接続に使用される接続仕様ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 **応答**
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む役割を果たします。 データフローを作成するにはまず、[!DNL Flow Service] API に対して GET リクエストを実行し、データフローの仕様を取得する必要があります。データフローの仕様は、外部データベースまたは NoSQL システムからデータを収集する役割を果たします。
+データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む責任があります。 データフローを作成するにはまず、[!DNL Flow Service] API に対して GET リクエストを実行し、データフローの仕様を取得する必要があります。データフローの仕様は、外部データベースまたは NoSQL システムからデータを収集する役割を果たします。
 
 **API 形式**
 
@@ -297,13 +297,13 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功した場合は、ソースからExperience Platformにデータを取り込む必要があるデータフローの仕様の詳細が返されます。 応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
+応答が成功すると、ソースからExperience Platformにデータを取り込むデータフロー仕様の詳細が返されます。 応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
 
 >[!NOTE]
 >
->以下の JSON 応答ペイロードは、簡潔にするために非表示になっています。 「ペイロード」を選択して、応答ペイロードを確認します。
+>以下のJSON応答ペイロードは簡潔にするために非表示になっています。 応答ペイロードを表示するには、「ペイロード」を選択します。
 
-+++ ペイロードを表示
++++ ペイロードの表示
 
 ```json
 {
@@ -657,8 +657,6 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `flowSpec.id` | 前の手順で取得した[フロー仕様 ID](#specs)。 |
@@ -669,7 +667,7 @@ curl -X POST \
 | `transformations.params.mappingId` | データベースに関連付けられたマッピング ID。 |
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。各頻度で許容される最小のインターバル値は次のとおりです。<ul><li>**1 回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。各周波数に対して許容される最小区間値は次のとおりです。<ul><li>**1回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
 
 **応答**
 
@@ -688,7 +686,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、スケジュールに従ってデータベースからデータを収集するソースコネクタを作成しました。これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、スケジュールに従ってデータベースからデータを収集するソースコネクタを作成しました。受信データは、[!DNL Real-Time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム Experience Platform サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)
