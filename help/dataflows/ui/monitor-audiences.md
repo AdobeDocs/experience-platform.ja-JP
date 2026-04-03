@@ -1,31 +1,31 @@
 ---
-description: Experience Platform ユーザーインターフェイスを使用して、セグメント化中にデータフローを監視する方法を説明します。
-title: UI でのオーディエンスのデータフローの監視
+description: Experience Platform ユーザーインターフェイスを使用して、セグメント化の際にデータフローを監視する方法について説明します。
+title: UIでのオーディエンスのデータフローの監視
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 7%
 
 ---
 
-# UI でのオーディエンスのデータフローの監視
+# UIでのオーディエンスのデータフローの監視
 
-セグメント化サービスを使用すると、セグメント定義またはその他のソースを使用して、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。 Experience Platformは、ソースから宛先へのデータフローを透過的に追跡するデータフローを提供します。
+セグメント化サービスを使用すると、セグメント定義またはその他のソースを通じて、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。 Experience Platformは、ソースから宛先へのデータの流れを透明性を保って追跡するためのデータフローを提供します。
 
-監視ダッシュボードを使用して、データのセグメント化のステータスなど、オーディエンス内のデータのアクティビティを視覚的に表示します。 Experience Platform ユーザーインターフェイスを使用してデータのセグメント化を監視し、オーディエンスのアクティベーション、評価および書き出しジョブのステータスを追跡できる、監視ダッシュボードを使用する方法について詳しくは、チュートリアルをお読みください。
+モニタリングダッシュボードを使用すると、データのセグメンテーションのステータスなど、オーディエンス内でのデータのアクティビティを視覚的に表示できます。 Experience Platformのユーザーインターフェイスを使用して、モニタリングダッシュボードを使用してデータのセグメンテーションをモニタリングし、オーディエンスのアクティベーション、評価、エクスポートのステータスをトラッキングする方法について、チュートリアルをご覧ください。
 
 ## はじめに {#getting-started}
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [&#x200B; データフロー &#x200B;](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [ データフロー](../home.md): データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
-- [&#x200B; セグメント化 &#x200B;](../../segmentation/home.md)：セグメント化によって、リアルタイム顧客プロファイルデータからオーディエンスを作成できます。
-   - [&#x200B; アクティベーションジョブ &#x200B;](../../destinations/ui/activation-overview.md)：アクティベーションジョブを使用して、指定した宛先に対してオーディエンスをアクティベートします。
-   - [&#x200B; 評価ジョブ &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)：評価ジョブは、オーディエンスを評価する非同期プロセスです。
-   - [&#x200B; 書き出しジョブ &#x200B;](../../segmentation/api/export-jobs.md)：書き出しジョブは、オーディエンスメンバーをデータセットに保持するために使用される非同期プロセスです。
+- [ セグメント化](../../segmentation/home.md): セグメント化を使用すると、リアルタイム顧客プロファイルデータからオーディエンスを作成できます。
+   - [ アクティベーションジョブ ](../../destinations/ui/activation-overview.md)：アクティベーションジョブを使用して、指定した宛先にオーディエンスをアクティベートします。
+   - [評価ジョブ ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)：評価ジョブは、オーディエンスを評価する非同期プロセスです。
+   - [書き出しジョブ ](../../segmentation/api/export-jobs.md)：書き出しジョブは、オーディエンスメンバーをデータセットに保持するために使用される非同期プロセスです。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ## オーディエンスモニタリングダッシュボード {#monitoring-audiences-dashboard}
@@ -37,133 +37,133 @@ ht-degree: 7%
 
 **[!UICONTROL Audiences]** ダッシュボードにアクセスするには、左側のナビゲーションで「**[!UICONTROL Monitoring]**」を選択します。 **[!UICONTROL Monitoring]** ページで、**[!UICONTROL Audiences]** カードを選択します。
 
-![&#x200B; オーディエンスカード。 前回の評価ジョブおよび前回の書き出しジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/audience-card.png)
+![ オーディエンスカード。 最後の評価ジョブと最後の書き出しジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/audience-card.png)
 
-メインの **[!UICONTROL Audiences]** ダッシュボードでは、**[!UICONTROL Audiences]** カードに最後の評価ジョブのステータスと日付および最後のエクスポートジョブが表示されます。
+メインの&#x200B;**[!UICONTROL Audiences]** ダッシュボードでは、**[!UICONTROL Audiences]** カードに、最後の評価ジョブと最後の書き出しジョブのステータスと日付が表示されます。
 
-ダッシュボード自体には、オーディエンスとセグメント化ジョブの両方の指標が含まれています。 デフォルトでは、ダッシュボードには過去 24 時間のオーディエンス指標が表示されます。 セグメント化ジョブビューについて詳しくは、[&#x200B; セグメント化ジョブの監視 &#x200B;](#monitoring-segmentation-jobs-dashboard) を参照してください。
+ダッシュボードには、オーディエンスとセグメンテーションジョブの両方の指標が含まれています。 デフォルトでは、ダッシュボードには過去24時間のオーディエンス指標が表示されます。 セグメント化ジョブ ビューについて詳しくは、「[ セグメント化ジョブの監視](#monitoring-segmentation-jobs-dashboard)」の節を参照してください。
 
 >[!IMPORTANT]
 >
->現在、オーディエンスの監視ダッシュボードでは、[&#x200B; バッチ（ファイルベース）の宛先に対してアクティブ化されたオーディエンス &#x200B;](../../destinations/destination-types.md#file-based) みがサポートされています。
+>現在、監視オーディエンスダッシュボードでは、[ バッチ（ファイルベース）宛先](../../destinations/destination-types.md#file-based)にアクティブ化されたオーディエンスのみがサポートされています。
 
-![オーディエンスダッシュボード。組織やサンドボックスの様々なオーディエンスに関する情報が表示されます。](../assets/ui/monitor-audiences/audience-dashboard.png)
+![オーディエンスダッシュボード。組織とサンドボックス内の様々なオーディエンスに関する情報が表示されます。](../assets/ui/monitor-audiences/audience-dashboard.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
 | **[!UICONTROL Audience name]** | オーディエンスの名前。 |
-| **[!UICONTROL Data type]** | オーディエンスのデータタイプ。 使用可能な値は、**[!UICONTROL Customer]**、**[!UICONTROL Account]**、**[!UICONTROL Prospect]** です。 カードのリボンの上にある [!UICONTROL Data type] フィルターを使用すると、指定したデータタイプのオーディエンスを表示できます。 |
+| **[!UICONTROL Data type]** | オーディエンスのデータタイプ。 使用可能な値には、**[!UICONTROL Customer]**、**[!UICONTROL Account]**&#x200B;および&#x200B;**[!UICONTROL Prospect]**&#x200B;が含まれます。 カードのリボンの上にある[!UICONTROL Data type] フィルターを使用すると、指定したデータタイプのオーディエンスを表示できます。 |
 | **[!UICONTROL Last evaluation timestamp]** | オーディエンスの最後の評価ジョブが実行された日時。 |
-| **[!UICONTROL Last evaluation status]** | オーディエンスの前回の評価ジョブのステータス。 使用可能な値は、**[!UICONTROL Success]**、**[!UICONTROL No runs]**、**[!UICONTROL Failed]** です。 |
-| **[!UICONTROL Last evaluation method]** | オーディエンスの評価方法。 バッチセグメント化のみがサポートされるので、取り得る値は **[!UICONTROL Batch]** のみです。 |
+| **[!UICONTROL Last evaluation status]** | オーディエンスの最後の評価ジョブのステータス。 使用可能な値には、**[!UICONTROL Success]**、**[!UICONTROL No runs]**&#x200B;および&#x200B;**[!UICONTROL Failed]**&#x200B;が含まれます。 |
+| **[!UICONTROL Last evaluation method]** | オーディエンスの評価方法。 バッチセグメント化のみがサポートされているので、可能な値は&#x200B;**[!UICONTROL Batch]**&#x200B;のみです。 |
 | **[!UICONTROL Last evaluation profiles]** | オーディエンスの最後の評価ジョブで評価されたプロファイルの数。 |
 | **[!UICONTROL Last activation timestamp]** | オーディエンスの最後のアクティベーションジョブが実行された日時。 |
-| **[!UICONTROL Last activation status]** | オーディエンスの前回のアクティベーションジョブのステータス。 使用可能な値は、**[!UICONTROL Success]**、**[!UICONTROL No runs]**、**[!UICONTROL Failed]** です。 |
-| **[!UICONTROL Last activation identities]** | オーディエンスの最後のアクティベーションジョブでアクティブ化された ID の数。 |
-| **[!UICONTROL Last activation destination]** | オーディエンスの最後のアクティベーションジョブがアクティベートされた宛先の名前。 |
+| **[!UICONTROL Last activation status]** | オーディエンスの最後のアクティベーションジョブのステータス。 使用可能な値には、**[!UICONTROL Success]**、**[!UICONTROL No runs]**&#x200B;および&#x200B;**[!UICONTROL Failed]**&#x200B;が含まれます。 |
+| **[!UICONTROL Last activation identities]** | オーディエンスの最後のアクティベーションジョブでアクティブ化されたIDの数。 |
+| **[!UICONTROL Last activation destination]** | オーディエンスの最後のアクティベーションジョブがアクティブ化された宛先の名前。 |
 
-フィルターアイコン（![&#x200B; フィルターアイコンを選択すると、結果を特定のオーディエンスにフィルタリングし、そのセグメント化ジョブを表示できます。](/help/images/icons/filter-add.png)）に設定します。 セグメント化ジョブは時系列で並べ替えられ、最新のセグメント化ジョブが最初に表示されます。
+フィルターのアイコン（![ フィルターアイコン）を選択すると、結果を特定のオーディエンスにフィルターし、そのセグメント化ジョブを表示できます。](/help/images/icons/filter-add.png)）。 セグメンテーションジョブは時系列で並べ替えられ、最新のセグメンテーションジョブが最初に表示されます。
 
-![&#x200B; フィルターアイコンがハイライト表示されています。 これを選択すると、指定したオーディエンスのセグメント化ジョブを表示できます。](../assets/ui/monitor-audiences/filter-audience.png)
+![ フィルターアイコンがハイライト表示されます。 これを選択すると、指定したオーディエンスのセグメント化ジョブを表示できます。](../assets/ui/monitor-audiences/filter-audience.png)
 
-フィルタリングされたオーディエンスダッシュボードが表示されます。 **[!UICONTROL Audiences]** カードには、最後の評価ジョブのステータスと日付、および最後のアクティベーションジョブの日付が表示されます。
+フィルタリングされたオーディエンスダッシュボードが表示されます。 **[!UICONTROL Audiences]** カードには、最後の評価ジョブと最後のアクティブ化ジョブのステータスと日付が表示されます。
 
-![&#x200B; オーディエンスカード。 前回の評価ジョブと前回のアクティベーションジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/specified-audience-card.png)
+![ オーディエンスカード。 最後の評価ジョブと最後のアクティブ化ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/specified-audience-card.png)
 
-ダッシュボード自体には、最後の評価およびアクティベーションジョブの時間とステータス、オーディエンス評価のプロファイル数を示すグラフ、および実行されたセグメント化ジョブの指標が表示されます。 デフォルトでは、ダッシュボードには、過去 24 時間のセグメント化ジョブ指標が表示されます。
+ダッシュボード自体には、最後の評価およびアクティベーションジョブの時間とステータス、オーディエンス評価のプロファイル数、実行されたセグメンテーションジョブの指標を示すグラフが表示されます。 デフォルトでは、ダッシュボードには過去24時間のセグメント化ジョブ指標が表示されます。
 
-![&#x200B; フィルタリングされたオーディエンスダッシュボード。 このオーディエンスに対して実行された様々なセグメント化ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/filter-audience.png)
+![ フィルタリングされたオーディエンスダッシュボード。 このオーディエンスに対して実行された様々なセグメント化ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/filter-audience.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
-| **[!UICONTROL Job start]** | セグメント化ジョブが開始した日時。 |
-| **[!UICONTROL Type]** | セグメント化ジョブのタイプを示します。 サポートされているジョブタイプは **アクティブ化** ジョブと **評価** ジョブの 2 つです。 |
+| **[!UICONTROL Job start]** | セグメント化ジョブが開始された日時。 |
+| **[!UICONTROL Type]** | セグメント化ジョブのタイプを示します。 サポートされているジョブタイプは、**アクティベーション**&#x200B;と&#x200B;**評価**&#x200B;です。 |
 | **[!UICONTROL Job complete]** | セグメント化ジョブが完了した日時。 |
-| **[!UICONTROL Processing time]** | セグメント化ジョブが完了するまでにかかった時間。 |
-| **[!UICONTROL Job status]** | セグメント化ジョブのステータス。 サポートされる値は、**[!UICONTROL Success]**、**[!UICONTROL In Progress]**、**[!UICONTROL Failed]** です。 |
-| **[!UICONTROL Profile count]** | セグメント化ジョブが評価しているプロファイルの数。 各ユーザーには、一意のプロファイルが必要です。 |
-| **[!UICONTROL Identity activated]** | セグメント化ジョブがアクティブ化している ID の数。 各プロファイルには複数の ID を設定できます。 例えば、プロファイルには、ID としてメール、電話番号、ロイヤルティ番号を含めることができます。 |
-| **[!UICONTROL Destination name]** | セグメント化ジョブをアクティブ化する宛先の名前。 |
+| **[!UICONTROL Processing time]** | セグメント化ジョブが完了するのにかかる時間。 |
+| **[!UICONTROL Job status]** | セグメント化ジョブのステータス。 サポートされている値には、**[!UICONTROL Success]**、**[!UICONTROL In Progress]**、**[!UICONTROL Failed]**&#x200B;などがあります。 |
+| **[!UICONTROL Profile count]** | セグメント化ジョブが評価するプロファイルの数。 各ユーザーには一意のプロファイルが必要です。 |
+| **[!UICONTROL Identity activated]** | セグメント化ジョブがアクティブ化しているIDの数。 各プロファイルには複数のIDを設定できます。 例えば、電子メール、電話番号、ロイヤルティ番号をIDとして使用できます。 |
+| **[!UICONTROL Destination name]** | セグメント化ジョブがアクティブ化されている宛先の名前。 |
 
-フィルターアイコン（![&#x200B; フィルターアイコンを選択すると、特定のセグメント化ジョブをさらにフィルタリングして、その詳細を確認できます。](/help/images/icons/filter.png)）に設定します。 フィルタリングできるセグメント化ジョブには、アクティベーションジョブと評価ジョブの 2 種類があります。
+特定のセグメント化ジョブをさらにフィルタリングし、フィルターアイコン（![ フィルターアイコン）を選択して、その詳細を確認できます。](/help/images/icons/filter.png)）。 フィルタリングできるセグメンテーションジョブには、アクティベーションジョブと評価ジョブの2種類があります。
 
 ### アクティベーションジョブの詳細 {#activation-job-details}
 
-アクティベーションジョブのデータフロー実行の詳細ページには、セグメント化ジョブに関連する実行の指標、データフロー実行エラー、オーディエンスに関する情報が表示されます。 アクティベーションジョブは、指定した宛先に対してオーディエンスをアクティベートするために使用されます。
+アクティベーションジョブデータフロー実行の詳細ページには、実行の指標、データフロー実行エラー、セグメント化ジョブに関連するオーディエンスに関する情報が表示されます。 アクティベーションジョブは、指定した宛先のオーディエンスをアクティベートするために使用されます。
 
-![&#x200B; アクティベーションジョブダッシュボード。 このオーディエンスに対して実行された様々なセグメント化ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/activation-job-dashboard.png)
+![ アクティベーション ジョブ ダッシュボード。 このオーディエンスに対して実行された様々なセグメント化ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/activation-job-dashboard.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
 | **[!UICONTROL Profiles received]** | アクティベーションフローで受信したプロファイルの合計数。 |
-| **[!UICONTROL Identities activated]** | 受信したプロファイルに基づいて、宛先に対して正常にアクティブ化された ID の合計数です。 |
-| **[!UICONTROL Identities excluded]** | 受信したプロファイルに基づいて、宛先に対してアクティブ化するために除外された ID の合計数です。 これらの ID は、属性が見つからない、または同意違反が原因で除外される可能性があります。 |
+| **[!UICONTROL Identities activated]** | 受信したプロファイルに基づいて、宛先に対して正常にアクティブ化されたIDの合計数。 |
+| **[!UICONTROL Identities excluded]** | 受信したプロファイルに基づいて、宛先に対するアクティブ化から除外されたIDの合計数。 属性が欠落しているか同意が違反しているため、これらのIDを除外できます。 |
 | **[!UICONTROL Size of data]** | アクティブ化するデータフローのサイズ。 |
-| **[!UICONTROL Total files]** | データフローでアクティブ化されているファイルの合計数です。 |
+| **[!UICONTROL Total files]** | データフローでアクティブ化されているファイルの合計数。 |
 | **[!UICONTROL Status]** | アクティベーションジョブの現在のステータス。 |
-| **[!UICONTROL Dataflow run start]** | アクティベーションジョブが開始した日時。 |
+| **[!UICONTROL Dataflow run start]** | アクティベーションジョブが開始された日時。 |
 | **[!UICONTROL Dataflow run end]** | アクティベーションジョブが終了した日時。 |
-| **[!UICONTROL Dataflow run ID]** | 現在のアクティベーションジョブの ID。 |
-| **[!UICONTROL IMS org ID]** | アクティベーションジョブが属する組織の ID。 |
-| **[!UICONTROL Destination name]** | データがアクティブ化されている宛先の名前。 |
+| **[!UICONTROL Dataflow run ID]** | 現在のアクティブ化ジョブのID。 |
+| **[!UICONTROL IMS org ID]** | アクティベーションジョブが属する組織のID。 |
+| **[!UICONTROL Destination name]** | データがアクティベートされる宛先の名前。 |
 
-「オーディエンス」セクションには、アクティベーションジョブの一部としてアクティベートされたオーディエンスのリストが表示されます。
+「オーディエンス」セクションには、アクティベーションジョブの一部としてアクティブ化されたオーディエンスのリストが表示されます。
 
-![&#x200B; アクティベーションジョブダッシュボード。 失敗または除外された ID に関する情報がハイライト表示されます。](../assets/ui/monitor-audiences/activation-job-audiences.png)
+![ アクティベーション ジョブ ダッシュボード。 失敗したIDまたは除外されたIDに関する情報が強調表示されます。](../assets/ui/monitor-audiences/activation-job-audiences.png)
 
-オーディエンスセクションでは、次の指標を使用できます。
+「オーディエンス」セクションでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | アクティブ化されたオーディエンスの名前。 |
-| **[!UICONTROL Identities activated]** | 受信したプロファイルに基づいて、宛先に対して正常にアクティブ化された ID の合計数です。 |
-| **[!UICONTROL Identities excluded]** | 受信したプロファイルに基づいて、宛先に対してアクティブ化するために除外された ID の合計数です。 これらの ID は、属性の欠如または同意違反が原因で除外される可能性があります。 |
-| **[!UICONTROL Last dataflow run status]** | そのオーディエンスに対して実行された前回のアクティベーションジョブのステータス。 |
+| **[!UICONTROL Identities activated]** | 受信したプロファイルに基づいて、宛先に対して正常にアクティブ化されたIDの合計数。 |
+| **[!UICONTROL Identities excluded]** | 受信したプロファイルに基づいて、宛先に対するアクティブ化から除外されたIDの合計数。 これらのIDは、属性が欠落しているか同意違反が原因で除外される可能性があります。 |
+| **[!UICONTROL Last dataflow run status]** | そのオーディエンスに対して実行された最後のアクティベーションジョブのステータス。 |
 | **[!UICONTROL Last dataflow run date]** | そのオーディエンスに対して実行された最後のアクティベーションジョブの日時。 |
 
-さらに、データフロー実行エラーに関する詳細を表示できます。 「データフロー実行エラー」セクションでは、失敗した ID と除外された ID の両方を表示できます。 「エラー」セクションには、エラーコードに関する詳細と、失敗または除外された ID の数が含まれます。
+さらに、データフロー実行エラーに関する詳細を表示できます。 「データフロー実行エラー」セクションでは、失敗したIDと除外されたIDの両方を表示できます。 「エラー」セクションには、エラーコードと、失敗または除外されたIDの数に関する詳細が含まれます。
 
-![&#x200B; アクティベーションジョブダッシュボード。 失敗または除外された ID に関する情報がハイライト表示されます。](../assets/ui/monitor-audiences/activation-job-errors.png)
+![ アクティベーション ジョブ ダッシュボード。 失敗したIDまたは除外されたIDに関する情報が強調表示されます。](../assets/ui/monitor-audiences/activation-job-errors.png)
 
 ### 評価ジョブの詳細 {#evaluation-job-details}
 
-評価ジョブのデータフロー実行の詳細ページには、セグメント化ジョブに関連する実行の指標とオーディエンスに関する情報が表示されます。
+評価ジョブデータフロー実行の詳細ページには、実行の指標とセグメント化ジョブに関連するオーディエンスに関する情報が表示されます。
 
-![&#x200B; 評価ジョブのダッシュボード。 オーディエンスの評価ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/evaluation-job-details.png)
+![評価ジョブ ダッシュボード。 オーディエンスの評価ジョブに関する情報が表示されます。](../assets/ui/monitor-audiences/evaluation-job-details.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
-| **[!UICONTROL Total profiles]** | 評価中のプロファイルの合計数。 |
-| **[!UICONTROL Status]** | 評価ジョブのステータス。 評価ジョブの可能なステータスには、**[!UICONTROL Success]** と **[!UICONTROL Failed]** があります。 |
+| **[!UICONTROL Total profiles]** | 評価されているプロファイルの合計数。 |
+| **[!UICONTROL Status]** | 評価ジョブのステータス。 評価ジョブの可能なステータスには、**[!UICONTROL Success]**&#x200B;と&#x200B;**[!UICONTROL Failed]**&#x200B;が含まれます。 |
 | **[!UICONTROL Job start]** | 評価ジョブが開始された日時。 |
 | **[!UICONTROL Job end]** | 評価ジョブが終了した日時。 |
-| **[!UICONTROL Job type]** | セグメント化ジョブのタイプ。 この場合、それは常に **[!UICONTROL Segment evaluation]** しい仕事になります。 |
-| **[!UICONTROL Evaluation type]** | 実行されている評価のタイプ。 **[!UICONTROL Batch]** または **[!UICONTROL Streaming]** のいずれかを指定できます。 |
-| **[!UICONTROL Job ID]** | 評価ジョブの ID。 |
-| **[!UICONTROL IMS org ID]** | 評価ジョブが属する組織の ID。 |
+| **[!UICONTROL Job type]** | セグメント化ジョブのタイプ。 この場合は、常に&#x200B;**[!UICONTROL Segment evaluation]** ジョブになります。 |
+| **[!UICONTROL Evaluation type]** | 実施している評価のタイプ。 **[!UICONTROL Batch]**&#x200B;または&#x200B;**[!UICONTROL Streaming]**&#x200B;を指定できます。 |
+| **[!UICONTROL Job ID]** | 評価ジョブのID。 |
+| **[!UICONTROL IMS org ID]** | 評価ジョブが属する組織のID。 |
 | **[!UICONTROL Audience name]** | 評価されるオーディエンスの名前。 |
-| **[!UICONTROL Audience ID]** | 評価対象のオーディエンス ID。 |
+| **[!UICONTROL Audience ID]** | 評価されるオーディエンスのID。 |
 
-「[!UICONTROL Audiences]」セクションには、評価ジョブの一部として評価されているオーディエンスのリストが表示されます。 検索バーを使用して、名前でオーディエンスのリストをフィルタリングできます。
+「[!UICONTROL Audiences]」セクションには、評価ジョブの一部として評価されているオーディエンスのリストが表示されます。 検索バーを使用して、オーディエンスのリストを名前でフィルタリングできます。
 
 >[!IMPORTANT]
 >
->このダッシュボードビューは現在、最大 800 個のオーディエンス指標をサポートしています。
+>このダッシュボードビューは現在、最大800個のオーディエンス指標をサポートしています。
 
 [!UICONTROL Audiences] セクションでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | 評価されるオーディエンスの名前。 |
-| **[!UICONTROL Profile count]** | 評価されているプロファイルの数。 |
+| **[!UICONTROL Profile count]** | 評価されるプロファイルの数。 |
 
 ## セグメント化ジョブモニタリングダッシュボード {#monitoring-segmentation-jobs-dashboard}
 
@@ -172,22 +172,22 @@ ht-degree: 7%
 >title="セグメント化ジョブ"
 >abstract="セグメント化ジョブビューには、すべてのオーディエンスに対する評価および書き出しジョブに関する情報が表示されます。"
 
-**[!UICONTROL Segmentation Jobs]** ダッシュボードにアクセスするには、**[!UICONTROL Segmentation jobs]** ダッシュボードで「[!UICONTROL Audiences]」を選択します。 [!UICONTROL Monitoring] ダッシュボードには、評価ジョブとエクスポートジョブに関する指標と情報が含まれています。
+**[!UICONTROL Segmentation Jobs]** ダッシュボードにアクセスするには、**[!UICONTROL Segmentation jobs]** ダッシュボードで[!UICONTROL Audiences]を選択します。 [!UICONTROL Monitoring] ダッシュボードには、評価および書き出しジョブに関する指標と情報が含まれています。
 
 >[!NOTE]
 >
->オーディエンスごとの監視では、**セグメント化評価ジョブ** のみがサポートされています。 セグメント化の書き出しジョブでは、組織レベルの監視のみがサポートされます。
+>オーディエンスごとの監視でサポートされているのは&#x200B;**セグメント化評価ジョブ**&#x200B;のみです。 セグメンテーション書き出しジョブは、組織レベルの監視のみをサポートします。
 
-![&#x200B; セグメント化ジョブの監視ダッシュボードが表示されます。 オーディエンスとセグメント化ジョブを切り替える切替スイッチがハイライト表示されます。](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
+![ セグメント化ジョブ監視ダッシュボードが表示されます。 オーディエンスとセグメント化ジョブを切り替える切り替えスイッチが強調表示されます。](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
-[!UICONTROL Segmentation Jobs] ダッシュボードを使用して、プロファイルの評価と書き出しが時間通りに発生し、例外なく発生するかどうかを把握します。これにより、宛先アクティベーションのダウンストリームサービスに、最新の評価済みプロファイルデータを含めることができます。
+[!UICONTROL Segmentation Jobs] ダッシュボードを使用して、プロファイルの評価と書き出しが時間通りに行われ、例外が発生しないかどうかを把握します。これにより、宛先アクティベーション用のダウンストリームサービスで、最新の評価済みプロファイルデータを使用できます。
 
 セグメント化ジョブでは、次の指標を使用できます。
 
 | 指標 | 説明 |
 | ------ | ----------- |
 | **[!UICONTROL Segmentation job]** | セグメント化ジョブの名前を示します。 |
-| **[!UICONTROL Type]** | セグメント化ジョブのタイプ（書き出しまたは評価）を示します。 どちらの場合も、セグメント化ジョブは組織に属するオーディエンス **すべて** を評価または書き出します。 エクスポートジョブについて詳しくは、[&#x200B; エクスポートジョブエンドポイント &#x200B;](../../segmentation/api/export-jobs.md) に関するガイドを参照してください。 評価ジョブについて詳しくは、[&#x200B; セグメント定義の評価 &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment) に関するチュートリアルを参照してください。 |
-| **[!UICONTROL Job start]** | セグメント化ジョブが開始した日時。 |
+| **[!UICONTROL Type]** | セグメント化ジョブのタイプ（書き出しまたは評価）を示します。 いずれの場合も、セグメント化ジョブは、組織に属する&#x200B;**all** オーディエンスを評価または書き出します。 書き出しジョブについて詳しくは、[書き出しジョブ エンドポイント ](../../segmentation/api/export-jobs.md)に関するガイドを参照してください。 評価ジョブについて詳しくは、[ セグメント定義の評価](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)に関するチュートリアルを参照してください。 |
+| **[!UICONTROL Job start]** | セグメント化ジョブが開始された日時。 |
 | **[!UICONTROL Job end]** | セグメント化ジョブが完了した日時。 |
-| **[!UICONTROL Status]** | 完了したジョブのステータス。 セグメント化ジョブの可能なステータスには、成功または失敗が含まれます。 |
+| **[!UICONTROL Status]** | 完了したジョブのステータス。 セグメント化ジョブで考えられるステータスには、「成功」または「失敗」が含まれます。 |
