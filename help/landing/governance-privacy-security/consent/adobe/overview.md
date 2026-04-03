@@ -2,11 +2,11 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
-description: Adobe 2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
+description: Adobe 2.0標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 1%
@@ -15,109 +15,110 @@ ht-degree: 1%
 
 # Adobe Experience Platformでの同意処理
 
-Adobe Experience Platformを使用すると、顧客から収集した同意データを処理し、保存されている顧客プロファイルに統合できます。 その後、このデータをダウンストリームプロセスで使用して、特定の顧客についてデータ収集が行われるのか、特定の目的のために顧客のプロファイルが使用されるのかを判断できます。 例えば、特定のプロファイルの同意データによって、書き出されたオーディエンスセグメントにデータを含めることができるかどうか、または特定のマーケティングチャネル（メール、テキストメッセージ、プッシュ通知など）にデータを参加できるかどうかを決定できます。
+Adobe Experience Platformでは、顧客から収集した同意データを処理し、保存されている顧客プロファイルに統合できます。 このデータを下流プロセスで使用することで、特定の顧客に対してデータ収集が行われるのか、特定の目的のためにプロファイルが使用されるのかを判断できます。 たとえば、特定のプロファイルの同意データは、書き出されたオーディエンスセグメントに含めることができるかどうか、または電子メール、テキストメッセージ、プッシュ通知などの特定のマーケティングチャネルに参加できるかどうかを判断できます。
 
-このドキュメントでは、Experience Platform データ操作を設定して、同意管理プラットフォーム（CMP）によって生成された顧客の同意データを取り込み、ダウンストリームのユースケース用に顧客プロファイルに統合する方法の概要を説明します。
+このドキュメントでは、同意管理プラットフォーム（CMP）によって生成された顧客の同意データを取り込み、そのデータをダウンストリームのユースケース向けに顧客プロファイルに統合するように、Experience Platform データ操作を設定する方法の概要を説明します。
 
 >[!NOTE]
 >
->このドキュメントでは、Adobe標準を使用した同意データの処理に焦点を当てています。 IAB Transparency and Consent Framework （TCF） 2.0 に従って同意データを処理する場合は、[Adobe Real-Time Customer Data Platformでの TCF 2.0 のサポート &#x200B;](../iab/overview.md) に関するガイドを参照してください。
+>このドキュメントでは、Adobe標準を使用した同意データの処理に焦点を当てています。 IAB Transparency and Consent Framework （TCF） 2.0に準拠して同意データを処理する場合は、Adobe Real-Time Customer Data Platform[での](../iab/overview.md)TCF 2.0のサポートに関するガイドを参照してください。
 
 ## 前提条件
 
-このガイドでは、同意データの処理に関連する様々なExperience Platform サービスについて、実際に理解している必要があります。
+このガイドでは、同意データの処理に関するさまざまなExperience Platform サービスについて理解する必要があります。
 
-* [Experience Data Model（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [Adobe Experience Platform ID サービス &#x200B;](/help/identity-service/home.md): デバイスやシステムをまたいで ID を結び付けることで、カスタマーエクスペリエンスのフラグメント化によって発生する基本的な課題を解決します。
-* [&#x200B; リアルタイム顧客プロファイル &#x200B;](/help/profile/home.md):[!DNL Identity Service] の機能を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独立したデータストアに保持します。
-* [Adobe Experience Platform web SDK](/help/collection/js/js-overview.md)：様々なExperience Platform サービスをお客様に向けた web サイトに統合できるクライアントサイド JavaScript ライブラリです。
-   * [SDK同意コマンド &#x200B;](/help/collection/js/commands/setconsent.md)：このガイドに記載されている同意関連のSDK コマンドのユースケースの概要です。
-* [Adobe Experience Platform セグメント化サービス &#x200B;](/help/segmentation/home.md): リアルタイム顧客プロファイルデータを、類似の特性を持ち、マーケティング戦略に対して同様の反応を示す個人のグループに分割できます。
+* [エクスペリエンスデータモデル（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：デバイスやシステム間でIDを橋渡しすることで、顧客体験データの断片化がもたらす根本的な課題を解決します。
+* [ リアルタイム顧客プロファイル ](/help/profile/home.md): [!DNL Identity Service]機能を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 リアルタイム顧客プロファイルは、データレイクからデータを取得し、独自のデータストアに顧客プロファイルを保持します。
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)：様々なExperience Platform サービスを顧客向けweb サイトに統合できるクライアントサイドのJavaScript ライブラリ。
+   * [SDK同意コマンド ](/help/collection/js/commands/setconsent.md)：このガイドに示す同意関連のSDK コマンドの使用例の概要。
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): リアルタイム顧客プロファイルデータを、同様の特性を共有し、マーケティング戦略に同様に対応する個人のグループに分割できます。
 
 ## 同意処理フローの概要 {#summary}
 
-次に、システムが適切に設定された後に同意データが処理される方法について説明します。
+次に、システムが適切に設定された後に同意データがどのように処理されるかを示します。
 
-1. 顧客は、web サイト上のダイアログを通じて、データ収集に対する同意環境設定を指定します。
-1. ページの読み込み（または CMP が同意環境設定の変更を検出した場合）ごとに、サイト上のカスタムスクリプトが現在の環境設定を標準 XDM オブジェクトにマッピングします。 次に、このオブジェクトはExperience Platform web SDK `setConsent` コマンドに渡されます。
-1. `setConsent` が呼び出されると、Experience Platform Web SDKは同意値が最後に受信した値と異なるかどうかを確認します。 値が異なる（または以前の値がない）場合は、構造化された同意/環境設定データがAdobe Experience Platformに送信されます。
-1. 同意/環境設定データは、同意/環境設定フィールドを含んだスキーマを持つ [!DNL Profile] 対応データセットに取り込まれます。
+1. 顧客は、web サイトのダイアログで、データ収集に関する同意の設定をおこないます。
+1. ページが読み込まれるたびに（またはCMPが同意設定の変更を検出した場合）、サイト上のカスタムスクリプトによって、現在の環境設定が標準のXDM オブジェクトにマッピングされます。 このオブジェクトは、次にExperience Platform Web SDK `setConsent` コマンドに渡されます。
+1. `setConsent`が呼び出されると、Experience Platform Web SDKは、同意値が最後に受信した値と異なるかどうかを確認します。 値が異なる場合（または以前の値がない場合）は、構造化された同意/環境設定データがAdobe Experience Platformに送信されます。
+1. 同意/環境設定データは、同意/環境設定フィールドを含むスキーマを持つ[!DNL Profile]対応データセットに取り込まれます。
 
-CMP の同意変更フックによってトリガーされるSDK コマンドに加えて、同意データは、[!DNL Profile] 対応データセットに直接アップロードされる顧客生成の XDM データを介してExperience Platformにも送ることができます。
+CMPの同意変更フックによってトリガーされるSDK コマンドに加えて、同意データは、お客様が生成したXDM データを通じてExperience Platformに流れ込み、[!DNL Profile]対応データセットに直接アップロードすることもできます。
 
 ### 同意の適用
 
-Experience Platformでの同意処理のサポートの現在のリリースでは、データ収集権限（`collect.val`）のみがExperience Platform web SDKによって自動的に適用されます。 顧客プロファイルで同意および環境設定をよりきめ細かく収集して保持できますが、これらの追加のシグナルは、独自のダウンストリームプロセスで手動で適用する必要があります。
+Experience Platformの同意処理サポートの現在のリリースでは、データ収集権限（`collect.val`）のみがExperience Platform Web SDKによって自動的に適用されます。 より詳細な同意や嗜好を収集し、顧客プロファイルに保持できますが、これらの追加のシグナルは、独自の下流プロセスで手動で適用する必要があります。
 
 >[!NOTE]
 >
->上記の XDM 同意フィールドの構造について詳しくは、[[!UICONTROL Consents and Preferences] データタイプのガイドを参照してください &#x200B;](/help/xdm/data-types/consents.md)
+>上記のXDM同意フィールドの構造について詳しくは、[[!UICONTROL Consents and Preferences] データタイプ ](/help/xdm/data-types/consents.md)に関するガイドを参照してください。
 
-システムが設定されると、Experience Platform Web SDKが現在のユーザーのデータ収集の同意値を解釈し、データがAdobe Experience Platform Edge Networkに送信されるか、クライアントからドロップされるか、データ収集権限が yes または no に設定されるまで保持される必要があるかどうかを判断します。
+システムが設定されると、Experience Platform Web SDKは、現在のユーザーのデータ収集の同意値を解釈し、データをAdobe Experience Platform Edge Networkに送信するか、クライアントから削除するか、データ収集権限が「はい」または「いいえ」に設定されるまで保持するかを判断します。
 
-## CMP 内で顧客同意データを生成する方法の決定 {#consent-data}
+## CMPで顧客の同意データを生成する方法を決定する {#consent-data}
 
-各 CMP システムは一意なので、顧客がサービスとやり取りする際に同意を提供できる最適な方法を決定する必要があります。 これを行う一般的な方法は、次の例のような cookie 同意ダイアログを使用することです。
+CMPのシステムは企業ごとに異なるため、顧客がサービスを利用する際に、最適な方法で顧客の同意を得る必要があります。 これを実現する一般的な方法は、次の例のように、Cookieの同意ダイアログを使用することです。
 
 ![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
 
-このダイアログでは、顧客がデータの特定のマーケティングおよびパーソナライゼーションのユースケースをオプトインまたはオプトアウトできるようにする必要があります。 これらの同意と環境設定は、次の手順で [!DNL Profile] 対応データセット用に定義するデータモデルに準拠している必要があります。
+このダイアログでは、顧客が、データに対して特定のマーケティングおよびパーソナライゼーションのユースケースをオプトインまたはオプトアウトできるようにする必要があります。 これらの同意と環境設定は、次の手順で[!DNL Profile]対応データセットに対して定義するデータモデルに準拠している必要があります。
 
-## [!DNL Profile] 対応データセットへの標準化された同意フィールドの追加 {#dataset}
+## 標準化された同意フィールドを[!DNL Profile]対応データセットに追加 {#dataset}
 
-顧客の同意データは、スキーマに同意フィールドが含まれている [!DNL Profile] 対応データセットに送信する必要があります。 これらのフィールドは、個々の顧客に関する属性情報の取得に使用するのと同じスキーマおよびデータセットに含める必要があります。
+顧客の同意データは、同意フィールドを含むスキーマを持つ[!DNL Profile]対応データセットに送信する必要があります。 これらのフィールドは、個々の顧客に関する属性情報を取得するために使用するのと同じスキーマとデータセットに含める必要があります。
 
-このガイドを続行する前に、これらの必須フィールドを [&#x200B; 対応データセットに追加する方法の詳細な手順については、](./dataset.md) 同意データを取得するためのデータセットの設定 [!DNL Profile] に関するチュートリアルを参照してください。
+このガイドを続行する前に、これらの必須フィールドを[対応データセットに追加する方法について詳しくは、](./dataset.md)同意データを取得するためのデータセットの設定[!DNL Profile]に関するチュートリアルを参照してください。
 
-## 同意データ [!DNL Profile] 含めるように結合ポリシーを更新する {#merge-policies}
+## [!DNL Profile]結合ポリシーを更新して同意データを含める {#merge-policies}
 
-同意データを処理するための [!DNL Profile] 対応データセットを作成したら、各顧客プロファイルに常に同意フィールドを含めるように結合ポリシーが設定されていることを確認する必要があります。 これには、競合する可能性がある他のデータセットよりも同意データセットが優先されるように、データセットの優先順位を設定することが含まれます。
+同意データを処理するための[!DNL Profile]対応データセットを作成したら、各顧客プロファイルに同意フィールドを常に含めるように結合ポリシーが設定されていることを確認する必要があります。 これには、同意データセットが競合する可能性のあるその他のデータセットよりも優先されるように、データセットの優先順位を設定することが含まれます。
 
 >[!NOTE]
 >
->競合するデータセットがない場合は、代わりに結合ポリシーのタイムスタンプの優先順位を設定する必要があります。 これにより、顧客から指定された最新の同意が使用される同意設定になります。
+>競合するデータセットがない場合は、代わりに結合ポリシーのタイムスタンプの優先順位を設定する必要があります。 これにより、顧客が指定した最新の同意が、使用される同意設定であることを確認できます。
 
-結合ポリシーの使用方法について詳しくは、まず [&#x200B; 結合ポリシーの概要 &#x200B;](../../../../profile/merge-policies/overview.md) をお読みください。 結合ポリシーを設定する場合は、[!UICONTROL Consents and Preferences] データセットの準備 [&#x200B; に関するガイドに記載されているように、](./dataset.md) スキーマフィールドグループによって提供される必要なすべての同意属性がプロファイルに含まれていることを確認する必要があります。
+結合ポリシーの操作方法について詳しくは、[結合ポリシーの概要](../../../../profile/merge-policies/overview.md)を参照してください。 結合ポリシーを設定する際は、[!UICONTROL Consents and Preferences] データセットの準備[に関するガイドに記載されているように、](./dataset.md) スキーマフィールドグループが提供するすべての必須の同意属性をプロファイルに含める必要があります。
 
-## 同意データをExperience Platformに取り込む
+## Experience Platformに同意データを取り込む
 
-データセットと結合ポリシーを用意して、顧客プロファイルで必要な同意フィールドを表したら、次の手順で、同意データ自体をExperience Platformに取り込みます。
+顧客プロファイルに必要な同意フィールドを表すデータセットと結合ポリシーが用意できたら、次のステップは同意データ自体をExperience Platformに取り込むことです。
 
-第一に、CMP が同意変更イベントを検出した場合は常に、Adobe Experience Platform Web SDKを使用して同意データをExperience Platformに送信する必要があります。 モバイルプラットフォームで同意データを収集する場合は、Adobe Experience Platform Mobile SDKを使用する必要があります。 また、収集した同意データを、同意データセットの XDM スキーマにマッピングし、バッチ取り込みを通じてExperience Platformに送信することで、直接取り込むことを選択することもできます。
+主に、CMPによって同意変更イベントが検出されるたびに、Adobe Experience Platform Web SDKを使用してExperience Platformに同意データを送信する必要があります。 モバイルプラットフォームで同意データを収集する場合は、Adobe Experience Platform モバイルSDKを使用する必要があります。 また、収集した同意データを同意データセットのXDM スキーマにマッピングし、バッチ収集を通じてExperience Platformに送信することで、同意データを直接取り込むこともできます。
 
 これらの各方法の詳細については、以下のサブセクションで説明します。
 
-### 同意データを処理するためのExperience Platform Web SDKの設定 {#web-sdk}
+### 同意データを処理するようにExperience Platform Web SDKを構成する {#web-sdk}
 
-Web サイトで同意変更イベントをリッスンするように CMP を設定したら、Experience Platform Web SDKを統合して、更新された同意設定を受け取り、ページの読み込みごとに、また同意変更イベントが発生するたびにExperience Platformに送信することができます。 詳しくは、[&#x200B; 顧客同意データを処理するための Web SDKの設定 &#x200B;](../sdk.md) に関するガイドを参照してください。
+Web サイトで同意変更イベントをリッスンするようにCMPを設定したら、Experience Platform Web SDKを統合して、更新された同意設定を受け取り、ページの読み込み時および同意変更イベントが発生するたびにExperience Platformに送信できます。 詳しくは、[お客様の同意データを処理するためのWeb SDKの設定](../sdk.md)に関するガイドを参照してください。
 
-### 同意データを処理するためのExperience Platform Mobile SDKの設定 {#mobile-sdk}
+### 同意データを処理するようにExperience Platform Mobile SDKを設定します {#mobile-sdk}
 
-モバイルアプリケーションで顧客の同意環境設定が必要な場合は、Experience Platform Mobile SDKを統合して、同意設定を取得および更新し、同意 API が呼び出されるたびに同意をExperience Platformに送信できます。
+お客様のモバイルアプリケーションで顧客の同意の設定が必要な場合は、Experience Platform Mobile SDKを統合して同意設定を取得および更新し、同意APIが呼び出されるたびにExperience Platformに送信できます。
 
-[&#x200B; 同意モバイル拡張機能の設定 &#x200B;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) および [&#x200B; 同意 API の使用 &#x200B;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/) については、Mobile SDKのドキュメントを参照してください。 Mobile SDKを使用してプライバシーに関する懸念を処理する方法について詳しくは、「[&#x200B; プライバシーと GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)」の節を参照してください。
+同意API[を使用した](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)同意用モバイル拡張機能の設定[および](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)については、Mobile SDKのドキュメントを参照してください。 Mobile SDKを使用してプライバシーに関する懸念を処理する方法について詳しくは、「[ プライバシーとGDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)」の節を参照してください。
 
-### XDM 準拠の同意データの直接取り込み {#batch}
+### XDMに準拠した同意データを直接取り込み {#batch}
 
-バッチ取り込みを使用して、XDM 準拠の同意データを CSV ファイルから取り込むことができます。 これは、まだ顧客プロファイルに統合されていない、以前に収集した同意データのバックログがある場合に役立ちます。
+バッチ収集を使用すると、XDM準拠の同意データをCSV ファイルから取り込むことができます。 これは、以前に収集した同意データのバックログが、顧客プロファイルにまだ統合されていない場合に役立ちます。
 
-データフィールドを XDM に変換し、Experience Platformに取り込む方法については、[CSV ファイルを XDM にマッピングする &#x200B;](../../../../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルに従ってください。 マッピングの [!UICONTROL Destination] を選択する場合は、「**[!UICONTROL Use existing dataset]**」オプションを選択し、前に作成した [!DNL Profile] 対応の同意データセットを選択します。
+[CSV ファイルをXDM](../../../../ingestion/tutorials/map-csv/overview.md)にマッピングする方法に関するチュートリアルに従って、データフィールドをXDMに変換し、Experience Platformに取り込む方法を説明します。 マッピングの[!UICONTROL Destination]を選択する際は、**[!UICONTROL Use existing dataset]** オプションを選択し、以前に作成した[!DNL Profile]対応の同意データセットを選択してください。
 
 ## 実装のテスト {#test-implementation}
 
-顧客の同意データを [!DNL Profile] 対応データセットに取り込んだら、更新されたプロファイルに同意属性が含まれているかどうかを確認できます。
+顧客の同意データを[!DNL Profile]対応データセットに取り込んだ後、更新されたプロファイルに同意属性が含まれているかどうかを確認できます。
 
 >[!IMPORTANT]
 >
->UI で既存のプロファイルの属性を表示するには、そのプロファイルに関連付けられた少なくとも 1 つの ID 値（および対応する名前空間）を把握している必要があります。
+>UIで既存のプロファイルの属性を表示するには、そのプロファイルに関連付けられている少なくとも1つのID値（および対応する名前空間）を把握する必要があります。
 >
->この情報にアクセスできない場合は、独自のテスト同意データを取り込み、代わりに、既知の ID 値/名前空間に関連付けることができます。
+>この情報にアクセスできない場合は、独自のテスト同意データを取り込み、代わりに既知のID値/名前空間に関連付けることもできます。
 
-プロファイルの詳細を検索する方法に関する具体的な手順については、[&#x200B; UI ガイドの &#x200B;](../../../../profile/ui/user-guide.md#browse)ID によるプロファイルの参照 [!DNL Profile] に関する節を参照してください。
+プロファイルの詳細を検索する方法について詳しくは、[ UI ガイドの](../../../../profile/ui/user-guide.md#browse)ID別プロファイルの参照[!DNL Profile]の節を参照してください。
 
-新しい同意属性は、デフォルトではプロファイルのダッシュボードには表示されません。 したがって、プロファイルが期待どおりに取り込まれていることを確認するには、プロファイルの詳細ページの「**[!UICONTROL Attributes]**」タブに移動する必要があります。 ニーズに合わせてダッシュボードをカスタマイズする方法については、[&#x200B; プロファイルダッシュボード &#x200B;](../../../../profile/ui/profile-dashboard.md) に関するガイドを参照してください。
+新しい同意属性は、デフォルトではプロファイルのダッシュボードには表示されません。 そのため、プロファイルの詳細ページの&#x200B;**[!UICONTROL Attributes]** タブに移動して、期待どおりに取り込まれていることを確認する必要があります。 ニーズに合わせてダッシュボードをカスタマイズする方法については、[ プロファイルダッシュボード ](../../../../profile/ui/profile-dashboard.md)のガイドを参照してください。
 
-<!-- (To be included once CJM is GA)
+<!-- 
+(To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
 If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Experience Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
@@ -127,6 +128,6 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 ## 次の手順
 
-このガイドでは、Adobe標準を使用して顧客の同意データを処理し、それらの属性を顧客プロファイルで表すようにExperience Platformを設定する方法について説明しました。 セグメントの選定やその他のダウンストリームのユースケースの決定要因として、顧客同意環境設定を統合できるようになりました。
+このガイドでは、Adobe標準を使用して顧客の同意データを処理し、それらの属性を顧客プロファイルに表すようにExperience Platformの操作を設定する方法について説明しました。 顧客の同意の環境設定を、セグメントの選定やその他の下流のユースケースにおける決定要因として統合できるようになりました。
 
-Experience Platformのプライバシー関連の機能について詳しくは、[Experience Platformでのガバナンス、プライバシー、セキュリティ &#x200B;](../../overview.md) の概要を参照してください。
+Experience Platformのプライバシー関連の機能について詳しくは、[Experience Platformのガバナンス、プライバシー、セキュリティに関する概要](../../overview.md)を参照してください。
