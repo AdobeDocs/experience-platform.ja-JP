@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service API を使用して、Mailchimp キャンペーンのデータフローを作成します
 description: Flow Service API を使用して Adobe Experience Platform を MailChimp Campaign に接続する方法を説明します。
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 75%
@@ -13,7 +13,7 @@ ht-degree: 75%
 
 # Flow Service API を使用して [!DNL Mailchimp Campaign] のデータフローを作成する
 
-以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformにデータを取り [!DNL Mailchimp Campaign] む手順を詳しく説明します。
+次のチュートリアルでは、[!DNL Mailchimp Campaign]API[[!DNL Flow Service] を使用して](https://www.adobe.io/experience-platform-apis/references/flow-service/) データをExperience Platformに取り込むためのソース接続とデータフローを作成する手順について説明します。
 
 ## 前提条件
 
@@ -21,15 +21,15 @@ OAuth 2 のリフレッシュコードを使用して Adobe Experience Platform 
 
 ## ベース接続の作成 {#base-connection}
 
-[!DNL Mailchimp] 認証資格情報を取得したら、データをExperience Platformに取り込むためにデータフローを作成するプロセス [!DNL Mailchimp Campaign] 開始できます。 データフローを作成する最初の手順は、ベース接続を作成することです。
+[!DNL Mailchimp]認証資格情報を取得したら、データフローを作成するプロセスを開始して、[!DNL Mailchimp Campaign] データをExperience Platformに取り込むことができるようになりました。 データフローを作成する最初の手順は、ベース接続を作成することです。
 
-ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースの認証情報、接続の現在の状態、一意のベース接続IDなど、ソースとExperience Platform間の情報を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 [!DNL Mailchimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。いずれかの認証タイプで認証する方法については、次の例を参照してください。
 
 ### 基本認証を使用した [!DNL Mailchimp] ベース接続の作成
 
-基本認証を使用した [!DNL Mailchimp] ベース接続を作成するには、API の `/connections` エンドポイントに POST リクエスト [!DNL Flow Service] 行います。その際、`authorizationTestUrl`、`username`、`password` の資格情報を提供を提供します。
+基本認証を使用して[!DNL Mailchimp] ベース接続を作成するには、`/connections`、[!DNL Flow Service]および`authorizationTestUrl`の資格情報を提供しながら、`username` APIの`password` エンドポイントにPOST リクエストを行います。
 
 **API 形式**
 
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### OAuth 2 更新コードコードを使って [!DNL Mailchimp] ベース接続を作成します
 
-OAuth 2 更新コードを使用して [!DNL Mailchimp] ベース接続を作成するには、`/connections` エンドポイントに POST リクエストを送信し、その際、`authorizationTestUrl` ーザーの資格情報を提供し、`accessToken` 信します。
+OAuth 2更新コードを使用して[!DNL Mailchimp] ベース接続を作成するには、`/connections`および`authorizationTestUrl`の資格情報を提供しながら、`accessToken` エンドポイントにPOST リクエストを行います。
 
 **API 形式**
 
@@ -323,7 +323,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
+ソースデータをExperience Platformで使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 その後、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットを作成します。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -384,7 +384,7 @@ curl -X POST \
 | `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
-| `data.format` | Experience Platformに取り込む [!DNL Mailchimp] データの形式。 |
+| `data.format` | Experience Platformに取り込む[!DNL Mailchimp] データのフォーマット。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
@@ -467,11 +467,11 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## フローの作成 {#flow}
 
-データをExperience Platformに取り込む最後 [!DNL Mailchimp] 手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
+[!DNL Mailchimp] データをExperience Platformに取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -543,24 +543,24 @@ curl -X POST \
 
 ## 付録
 
-次の節では、データフローの監視、更新、削除を行う手順について説明します。
+次の節では、データフローを監視、更新、削除する手順について説明します。
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング &#x200B;](../../monitor.md) に関するガイドを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全なAPIの例については、[APIを使用したソースデータフローの監視](../../monitor.md)に関するガイドを参照してください。
 
 ### データフローの更新
 
-データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するガイドを参照してください。
+データフローのIDを指定しながら、`/flows` APIの[!DNL Flow Service] エンドポイントに対してPATCH リクエストを行うことで、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 PATCH リクエストを行う場合は、`etag` ヘッダーにデータフローの一意の`If-Match`を指定する必要があります。 完全なAPIの例については、[APIを使用したソースデータフローの更新](../../update-dataflows.md)に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 &#x200B;](../../update.md) に関するガイドを参照してください。
+ベース接続IDをクエリパラメーターとして指定しながら、[!DNL Flow Service] APIに対してPATCH リクエストを実行して、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合、`etag` ヘッダーにソースアカウントの一意の`If-Match`を指定する必要があります。 完全なAPIの例については、[APIを使用したソースアカウントの更新](../../update.md)に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 &#x200B;](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローのIDを指定しながら、[!DNL Flow Service] APIに対してDELETE リクエストを実行して、データフローを削除します。 完全なAPIの例については、[APIを使用したデータフローの削除](../../delete-dataflows.md)に関するガイドを参照してください。
 
 ### アカウントを削除
 
-[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 &#x200B;](../../delete.md) に関するガイドを参照してください。
+削除するアカウントのベース接続IDを指定しながら、[!DNL Flow Service] APIに対してDELETE リクエストを実行して、アカウントを削除します。 完全なAPIの例については、[APIを使用したソースアカウントの削除](../../delete.md)に関するガイドを参照してください。
