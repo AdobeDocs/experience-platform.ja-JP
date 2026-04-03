@@ -2,9 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;クエリサービス;クエリサービス;Spark SQL;Spark SQL;Spark SQL 関数;関数;
 solution: Experience Platform
 title: クエリサービスの Spark SQL 関数
-description: SQL 機能を拡張するサポート対象の Spark SQL 関数について説明します。
+description: SQL機能を拡張するためにサポートされているSpark SQL関数について説明します。
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 93%
@@ -13,9 +13,9 @@ ht-degree: 93%
 
 # [!DNL Spark] SQL 関数
 
-複数の組み込みの Spark SQL 関数を使用して、Adobe Experience Platform クエリサービスで SQL 機能を拡張できます。 このドキュメントでは、クエリサービスでサポートされる Spark SQL 関数を示します。
+Adobe Experience Platform Query Serviceでは、いくつかの組み込みSpark SQL関数を使用して、SQL機能を拡張できます。 このドキュメントでは、クエリサービスでサポートされる Spark SQL 関数を示します。
 
-関数の構文、使用方法、例など、関数について詳しくは、[Spark SQL 関数のドキュメント &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html) を参照してください。
+関数の構文、使用状況、例など、関数の詳細については、[Spark SQL関数ドキュメント ](https://spark.apache.org/docs/latest/api/sql/index.html)を参照してください。
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 93%
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | 正の値を返します |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | 2 番目の値の指数に対する最初の値を返します |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | 値をラジアンに変換します |
-| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0 ～ 1 の乱数を返します |
+| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0 ～ 1の乱数を返します |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | ランダムな値を返します |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | 最も近い倍精度浮動小数点の値を返します |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | 最も近い丸められた値を返します |
@@ -87,7 +87,7 @@ ht-degree: 93%
 | [`sum`](https://spark.apache.org/docs/latest/api/sql/index.html#sum) | 値の合計を返します |
 | [`tan`](https://spark.apache.org/docs/latest/api/sql/index.html#tan) | 値の正接を返します |
 | [`tanh`](https://spark.apache.org/docs/latest/api/sql/index.html#tanh) | 値の双曲線正接を返します |
-| [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | 計算された母分散を返します |
+| [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | 計算された母集団分散を返します |
 | [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | 計算された標本分散を返します |
 
 ### 論理演算子と関数 {#logical-operators}
@@ -129,10 +129,10 @@ ht-degree: 93%
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 月間通算日を返します |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | 週間通算日（1～7）を返します |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | 年間通算日を返します |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 日付を UNIX® 時間で返します |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | UNIX®時間で日付を返します |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | 日付を UTC 時間で返します |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | 入力の時間を返します |
-| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | 日付が含まれる月の最終日を返します |
+| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | 日付が属する月の最終日を返します |
 | [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | 入力の分を返します |
 | [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | 入力の月を返します |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | 期間内の月数 |
@@ -141,7 +141,7 @@ ht-degree: 93%
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 文字列の秒を返します |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 文字列を日付に変換します。**メモ：**&#x200B;文字列は `yyyy-mm-ddTHH24:MM:SS` の形式である&#x200B;**必要**&#x200B;があります。 |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 文字列をタイムスタンプに変換します。**メモ：**&#x200B;文字列は `yyyy-mm-ddTHH24:MM:SS` の形式である&#x200B;**必要**&#x200B;があります。 |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 文字列を UNIX® タイムスタンプに変換します |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 文字列をUNIX® タイムスタンプに変換します |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 文字列を UTC タイムスタンプに変換します |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 日付を切り捨てます |
 | [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | UNIX® タイムスタンプを返します |
@@ -166,7 +166,7 @@ ht-degree: 93%
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | カウントされた回数の値を含む配列を作成する |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | 配列をソートする |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | 重複なしで配列を結合する |
-| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 指定された配列の値を、指定されたインデックスの元のコレクションの値と結合する |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 指定された配列の値を、指定されたインデックスの元のコレクションの値と組み合わせます |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | 配列のサイズを返します |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | 位置の要素を返す |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | 配列の要素を複数の行（null を除く）に分割する |
@@ -175,12 +175,12 @@ ht-degree: 93%
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | 配列の配列を一次元化する |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | 構造体の配列をテーブル（null を除く）に区切る |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | 構造体の配列をテーブル（null を含む）に区切る |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 配列の要素を、null を除く位置を含む複数の行に分割する |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 配列の要素を、nullを除く位置を持つ複数の行に分離します |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | 配列の要素を逆にする |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | 配列のランダム順列を返す |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | 配列をサブセット化する |
 | [`sort_array`](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array) | 順序を指定して配列をソートする |
-| [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | 関数を適用する前に、2 つの配列を 1 つの配列にマージする |
+| [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | 関数を適用する前に、2 つの配列を 1 つの配列に結合する |
 
 ### データタイプキャスト関数 {#datatype-casting}
 
@@ -305,7 +305,7 @@ ht-degree: 93%
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | 現在の日付を返します |
 | [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 現在のタイムスタンプを返します |
 
-### 高階関数 {#higher-order}
+### 高次関数 {#higher-order}
 
 | 関数 | 説明 |
 | -------- | ----------- |
