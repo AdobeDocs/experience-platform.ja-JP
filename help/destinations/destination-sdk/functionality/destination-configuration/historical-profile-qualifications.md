@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先でサポートされるプロファイル選定履歴について説明します。
 title: プロファイル選定履歴
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 99%
@@ -35,7 +35,8 @@ Destination SDK を通じて作成したすべての宛先は、デフォルト�
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"} 
+-->
 
 
 ## 次の手順 {#next-steps}
@@ -45,7 +46,7 @@ Destination SDK を通じて作成したすべての宛先は、デフォルト�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth2 認証](oauth2-authorization.md)
+* [OAuth2認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)
