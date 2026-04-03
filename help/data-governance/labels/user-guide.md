@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 71%
@@ -22,7 +22,7 @@ ht-degree: 71%
 
 ## ラベルの管理 {#manage-labels}
 
-データにラベルを適用するには、「prod」と呼ばれるデフォルトの実稼動サンドボックスで使用する **[!UICONTROL Manage Usage Labels]** 権限が必要です。 カスタムラベルを作成するには、製品プロファイルに対する管理権限も必要です。各組織には、適用可能なラベルのリストが 1 つだけあります。 ラベルは削除 **できません**。 代わりに、適用先のデータセットやフィールドから削除することができます。
+データにラベルを適用するには、「prod」と呼ばれるデフォルトの実稼動サンドボックスで使用するための&#x200B;**[!UICONTROL Manage Usage Labels]**&#x200B;権限が必要です。 カスタムラベルを作成するには、製品プロファイルに対する管理権限も必要です。各組織には、適用できるラベルのリストが1つしかありません。 ラベルを&#x200B;**削除できません**。 代わりに、適用されるデータセットまたはフィールドから削除できます。
 
 権限を割り当てる方法について詳しくは、[権限の設定](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja)の方法に関するガイドまたは[アクセス制御の概要](../../access-control/home.md)を参照してください。組織の Admin Console へのアクセス権がない場合は、組織の管理者にお問い合わせください。
 
@@ -32,13 +32,13 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->フィールドにラベルを付ける前にデータ使用ポリシーを作成した場合、新しいスキーマにラベルを適用する際にガバナンスポリシー違反ダイアログが発生する場合があります。 このダイアログは、このラベルを適用すると既存の使用ポリシーに違反することを示しています。 データ系列図を使用して、スキーマフィールドにラベルを追加する前に行う必要がある、他の設定変更を理解します。
+>フィールドにラベルを付ける前にデータ使用ポリシーを作成した場合、新しいスキーマにラベルを適用すると、ガバナンスポリシー違反ダイアログが表示される場合があります。 このダイアログは、このラベルを適用すると、既存の使用ポリシーに違反することを示します。 データリネージュ図を使用して、スキーマフィールドにラベルを追加する前に、他にどのような設定変更が必要かを理解します。
 >
->![&#x200B; 違反の概要とデータ系列の図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
+>![違反の概要とデータリネージュ図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
 >
->ポリシー違反について詳しくは、[&#x200B; データ使用ポリシー違反のドキュメント &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+>ポリシー違反について詳しくは、[ データ使用ポリシー違反ドキュメント ](../enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
 
-スキーマレベルでデータ使用ラベルを管理するには、既存のスキーマを選択するか、新しいスキーマを作成する必要があります。Adobe Experience Platformにログインした後、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択して **[!UICONTROL Schemas]** Workspace を開きます。 このページには、組織に属するすべての作成済みスキーマと、各スキーマに関する有用な詳細情報がリストされます。
+スキーマレベルでデータ使用ラベルを管理するには、既存のスキーマを選択するか、新しいスキーマを作成する必要があります。Adobe Experience Platformにログインした後、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択して、**[!UICONTROL Schemas]** ワークスペースを開きます。 このページには、組織に属するすべての作成済みスキーマと、各スキーマに関する有用な詳細情報がリストされます。
 
 ![「スキーマ」タブがハイライト表示された Adobe Experience Platform UI。](../images/labels/schema-tab.png)
 
@@ -46,11 +46,11 @@ ht-degree: 71%
 
 ### 新しいスキーマの作成
 
-新しいスキーマを作成するには、**[!UICONTROL Create schema]** ワークスペースの右上隅にある「**[!UICONTROL Schemas]**」を選択します。 手順について詳しくは、[スキーマエディターを使用してスキーマを作成する方法](../../xdm/tutorials/create-schema-ui.md#create)に関するガイドを参照してください。または、必要に応じて、[Schema Registry API を使用してスキーマを作成](../../xdm/tutorials/create-schema-api.md)することもできます。
+新しいスキーマを作成するには、**[!UICONTROL Create schema]** ワークスペースの右上隅にある&#x200B;**[!UICONTROL Schemas]**&#x200B;を選択します。 手順について詳しくは、[スキーマエディターを使用してスキーマを作成する方法](../../xdm/tutorials/create-schema-ui.md#create)に関するガイドを参照してください。または、必要に応じて、[Schema Registry API を使用してスキーマを作成](../../xdm/tutorials/create-schema-api.md)することもできます。
 
 ### スキーマへのデータ使用ラベルの追加 {#add-labels-to-schema}
 
-新しいスキーマを作成するか、スキーマ ワークスペースの「[!UICONTROL Browse]」タブのリストから既存のスキーマを選択した後、スキーマエディターで [!UICONTROL Schemas] キーマからフィールドを選択します。 [!UICONTROL Field properties] サイドバーで、「**[!UICONTROL Apply Access and Data Governance Labels]**」を選択します。
+新しいスキーマを作成するか、[!UICONTROL Browse] ワークスペースの「[!UICONTROL Schemas]」タブのリストから既存のスキーマを選択した後、スキーマエディターでスキーマからフィールドを選択します。 [!UICONTROL Field properties] サイドバーで、**[!UICONTROL Apply Access and Data Governance Labels]**&#x200B;を選択します。
 
 ![アクセスラベルとデータガバナンスラベルを適用がハイライト表示されたスキーマのビジュアライゼーションを表示するスキーマワークスペースの「構造」タブ。](../images/labels/schema-label-governance.png)
 
@@ -65,23 +65,23 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 >
->データセットレベルでフィールドにラベルを適用できなくなりました。このワークフローは非推奨（廃止予定）になり、スキーマレベルでラベルを適用するようになりました。データセットオブジェクトレベルで以前に適用したラベルは、2024 年 5 月 31 日（PT）までExperience Platform UI を通じて引き続きサポートされます。 すべてのスキーマ間でラベルの一貫性を確保するには、データセットレベルで以前にフィールドに付けていたラベルを、今後 1 年間にスキーマレベルに移行する必要があります。[以前に適用したラベルをデータセットからスキーマレベルに移行する方法](../e2e.md#migrate-labels)に関する手順については、ドキュメントを参照してください。
+>データセットレベルでフィールドにラベルを適用できなくなりました。このワークフローは非推奨（廃止予定）になり、スキーマレベルでラベルを適用するようになりました。以前にデータセットオブジェクトレベルで適用されたラベルは、2024年5月31日までExperience Platform UIを通じて引き続きサポートされます。 すべてのスキーマ間でラベルの一貫性を確保するには、データセットレベルで以前にフィールドに付けていたラベルを、今後 1 年間にスキーマレベルに移行する必要があります。[以前に適用したラベルをデータセットからスキーマレベルに移行する方法](../e2e.md#migrate-labels)に関する手順については、ドキュメントを参照してください。
 
 ラベルは、**[!UICONTROL Data Governance]** ワークスペースの「**[!UICONTROL Datasets]**」タブからデータセット全体に適用できます。 ワークスペースでは、データセットレベルでデータ使用ラベルを管理できます。
 
-![&#x200B; データガバナンスがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ &#x200B;](../images/labels/dataset-governance.png)
+![ データガバナンスがハイライト表示された[!UICONTROL Data Governance] ワークスペースの[!UICONTROL Datasets] タブ。](../images/labels/dataset-governance.png)
 
 データセットレベルでデータ使用ラベルを編集するには、最初にデータセット名の行にある鉛筆アイコン（![鉛筆アイコン。](/help/images/icons/edit.png)）を選択します。
 
-![&#x200B; 編集鉛筆アイコンがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ。](../images/labels/dataset-level-edit.png)
+![鉛筆の編集アイコンがハイライト表示された[!UICONTROL Data Governance] ワークスペースの[!UICONTROL Datasets] タブ。](../images/labels/dataset-level-edit.png)
 
-**[!UICONTROL Edit Governance Labels]** ダイアログが開きます。 ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、**[!UICONTROL Applied Labels]** のヘッダーが更新され、選択したラベルが表示されます。 目的のラベルを選択したら、「**[!UICONTROL Save Changes]**」を選択します。
+**[!UICONTROL Edit Governance Labels]** ダイアログが開きます。 ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。選択したラベルを表示しながら、各ボックスをチェックすると、**[!UICONTROL Applied Labels]** ヘッダーが更新されます。 目的のラベルを選択したら、**[!UICONTROL Save Changes]**&#x200B;を選択します。
 
 ![ラベルのチェックボックスと変更を保存がハイライト表示されたガバナンスラベルを編集ダイアログ。](../images/labels/apply-labels-dataset.png)
 
-**[!UICONTROL Data Governance]** ワークスペースが再び表示され、テーブルの最初の行にデータセットレベルで適用したラベルが表示されます。 また、データセット内の各フィールドに継承される、個々のカードで示されるラベルを確認することもできます。
+**[!UICONTROL Data Governance]** ワークスペースが再び表示され、テーブルの最初の行のデータセットレベルで適用したラベルが表示されます。 また、データセット内の各フィールドに継承される、個々のカードで示されるラベルを確認することもできます。
 
-![&#x200B; 適用したデータセットレベルのラベルと継承されたデータセットフィールドのラベルがハイライト表示された [!UICONTROL Data Governance] ワークスペースの「[!UICONTROL Datasets]」タブ &#x200B;](../images/labels/applied-dataset-labels.png)
+![適用されたデータセットレベルのラベルと継承されたデータセットフィールドのラベルがハイライト表示された[!UICONTROL Data Governance] ワークスペースの[!UICONTROL Datasets] タブ。](../images/labels/applied-dataset-labels.png)
 
 ### データセットからラベルを削除する {#remove-labels-from-a-dataset}
 
@@ -89,7 +89,8 @@ ht-degree: 71%
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- 
+To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -97,17 +98,20 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. 
+-->
 
 <!--Beleive can cut above here  -->
 
-**[!UICONTROL Show Inherited Labels]** 切替スイッチはデフォルトでオンになっており、スキーマからフィールドに継承されたラベルを表示できます。 切替スイッチをオフに切り替えると、データセット内の継承されたラベルが非表示になります。
+**[!UICONTROL Show Inherited Labels]** トグルはデフォルトでオンになっています。これにより、スキーマからフィールドに継承されたラベルを表示できます。 切替スイッチをオフに切り替えると、データセット内の継承されたラベルが非表示になります。
 
 ![継承されたラベルを表示切替スイッチがハイライト表示されたデータセットワークスペースの「データガバナンス」タブ。](../images/labels/inherited-labels.png)
 
-<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- 
+Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) 
+-->
 
 >[!NOTE]
 >
@@ -122,15 +126,15 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >title="ラベルの作成"
 >abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Experience Platform には、使用するラベルの標準セットが用意されていますが、組織に固有のカスタムラベルを作成することもできます。"
 
-**[!UICONTROL Policies]** UI の [!DNL Experience Platform] ワークスペース内に、独自のカスタム使用ラベルを作成できます。 左側のナビゲーションで **[!UICONTROL Policies]** を選択し、**[!UICONTROL Labels]** を選択して、既存のラベルのリストを表示します。 ここから **[!UICONTROL Create label]** を選択します。 
+独自のカスタム使用ラベルは、**[!UICONTROL Policies]** UIの[!DNL Experience Platform] ワークスペース内で作成できます。 左側のナビゲーションで「**[!UICONTROL Policies]**」を選択し、**[!UICONTROL Labels]**」を選択して既存のラベルのリストを表示します。 ここから **[!UICONTROL Create label]** を選択します。 
 
 ![作成ポリシーがハイライト表示されたポリシーワークスペース。](../images/labels/create-label-btn.png)
 
 **[!UICONTROL Create label]** ダイアログが表示されます。 ここから、新しいラベルに次の情報を入力します。
 
-* **[!UICONTROL Name]**: ラベルの一意の ID。 この値は参照用に使用するので、短く簡潔にする必要があります。
+* **[!UICONTROL Name]**: ラベルの一意のID。 この値は参照用に使用するので、短く簡潔にする必要があります。
 * **[!UICONTROL Friendly name]**: ラベルのわかりやすい表示名。
-* **[!UICONTROL Description]**:（任意）詳細なコンテキストを提供するためのラベルの説明。
+* **[!UICONTROL Description]**: （オプション）詳細なコンテキストを提供するラベルの説明。
 
 終了したら「**[!UICONTROL Create]**」を選択します。
 
@@ -140,7 +144,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 ![新しいカスタムラベルがハイライト表示されたポリシーワークスペースの「ラベル」タブ。](../images/labels/label-created.png)
 
-データセットやフィールドの使用ラベルを編集する場合や、データ使用ポリシーを作成する場合に、「**[!UICONTROL Custom Labels]**」でラベルを選択できるようになりました。
+データセットとフィールドの使用ラベルを編集する場合、またはデータ使用ポリシーを作成する場合に、ラベルを&#x200B;**[!UICONTROL Custom Labels]**&#x200B;で選択できるようになりました。
 
 ![カスタムラベルがハイライト表示されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../images/labels/add-custom-label.png)
 
@@ -150,10 +154,12 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
 
-<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
+<!-- 
+The workflow of this video is now outdated. This can be enabled once the video has been updated
 
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422791?captions=jpn&quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
+-->
