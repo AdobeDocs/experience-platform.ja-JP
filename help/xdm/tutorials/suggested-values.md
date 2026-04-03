@@ -1,38 +1,38 @@
 ---
-title: API での推奨値の管理
-description: Schema Registry API で文字列フィールドに推奨値を追加する方法を説明します。
+title: APIでの推奨値の管理
+description: Schema Registry APIの文字列フィールドに推奨値を追加する方法を説明します。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
 
 ---
 
-# API での推奨値の管理
+# APIでの推奨値の管理
 
-エクスペリエンスデータモデル（XDM）の任意の文字列フィールドについて、フィールドが取り込むことができる値を事前定義済みのセットに制限する **enum** を定義できます。 列挙フィールドにデータを取り込もうとすると、その値が設定で定義されている値と一致しない場合、取り込みは拒否されます。
+Experience Data Model （XDM）の任意の文字列フィールドに対して、フィールドが事前定義されたセットに取り込むことができる値を制限する&#x200B;**enum**&#x200B;を定義できます。 列挙フィールドにデータを取り込もうとし、値がその設定で定義されているどれにも一致しない場合、取り込みは拒否されます。
 
-列挙とは異なり、文字列フィールドに **推奨値** を追加しても、取り込むことができる値は制限されません。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[&#x200B; セグメント化 UI](../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
+列挙とは対照的に、文字列フィールドに&#x200B;**推奨値**&#x200B;を追加しても、取り込み可能な値は制限されません。 代わりに、推奨される値は、文字列フィールドを属性として含める場合、[ セグメント化UI](../../segmentation/ui/overview.md)で使用できる定義済みの値に影響します。
 
 >[!NOTE]
 >
->フィールドの更新された推奨値がセグメント化 UI に反映されるまでに、約 5 分の遅延があります。
+>フィールドの更新された推奨値がセグメント UIに反映されるまでに、おおよその5分の遅延があります。
 
-このガイドでは、[&#x200B; スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、[UI ガイドの列挙と推奨値 &#x200B;](../ui/fields/enum.md) を参照してください。
+このガイドでは、[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、列挙と推奨値に関する[UI ガイド ](../ui/fields/enum.md)を参照してください。
 
 ## 前提条件
 
-このガイドは、XDM でのスキーマ構成の要素と、Schema Registry API を使用して XDM リソースを作成および編集する方法について理解していることを前提としています。 説明が必要な場合は、次のドキュメントを参照してください。
+このガイドでは、XDMのスキーマ構成の要素と、Schema Registry APIを使用してXDM リソースを作成および編集する方法について理解していることを前提としています。 導入が必要な場合は、次のドキュメントを参照してください。
 
 * [スキーマ構成の基本](../schema/composition.md)
 * [Schema Registry API ガイド](../api/overview.md)
 
-既存のフィールドを更新する場合は、[&#x200B; 列挙と推奨値の進化ルール &#x200B;](../ui/fields/enum.md#evolution) を確認することを強くお勧めします。 結合に参加するスキーマの推奨値を管理している場合は、[&#x200B; 列挙と推奨値の結合ルール &#x200B;](../ui/fields/enum.md#merging) を参照してください。
+また、既存のフィールドを更新する場合は、列挙および推奨値[の](../ui/fields/enum.md#evolution)進化ルールを確認することを強くお勧めします。 和集合に参加するスキーマの推奨値を管理する場合は、列挙と推奨値のマージに関する[ ルール ](../ui/fields/enum.md#merging)を参照してください。
 
 ## 構成
 
-API では、**enum** フィールドの制約値は `enum` 配列で表され、`meta:enum` オブジェクトはそれらの値にわかりやすい表示名を提供します。
+APIでは、**enum** フィールドの制約された値は`enum`配列で表され、`meta:enum` オブジェクトはこれらの値に対してわかりやすい表示名を提供します。
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ API では、**enum** フィールドの制約値は `enum` 配列で表され�
 }
 ```
 
-列挙フィールドの場合、スキーマレジストリでは、`enum` で指定された値を超えて `meta:enum` を拡張することはできません。これらの制約の範囲外の文字列値を取り込もうとすると、検証に合格しないためです。
+列挙フィールドの場合、これらの制約の外の文字列値を取り込もうとしても検証を渡さないため、スキーマレジストリでは`meta:enum`を`enum`で指定された値を超えて拡張することはできません。
 
-または、`enum` 配列を含まず、`meta:enum` オブジェクトのみを使用して **推奨値** を示す文字列フィールドを定義することもできます。
+または、`enum`配列を含まず、`meta:enum` オブジェクトのみを使用して&#x200B;**推奨値**&#x200B;を示す文字列フィールドを定義することもできます。
 
 ```json
 "exampleStringField": {
@@ -67,21 +67,23 @@ API では、**enum** フィールドの制約値は `enum` 配列で表され�
 }
 ```
 
-文字列には制約を定義する `enum` 配列がないので、`meta:enum` プロパティを拡張して新しい値を含めることができます。
+文字列には制約を定義する`enum`配列がないため、その`meta:enum` プロパティを拡張して新しい値を含めることができます。
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## 標準フィールドへの推奨値の追加 {#add-suggested-standard}
 
-標準の文字列フィールドの `meta:enum` を拡張するには、特定のスキーマで問題となっているフィールドに [&#x200B; わかりやすい名前記述子 &#x200B;](../api/descriptors.md#friendly-name) を作成します。
+標準文字列フィールドの`meta:enum`を拡張するには、特定のスキーマで対象となるフィールドの[わかりやすい名前の記述子](../api/descriptors.md#friendly-name)を作成できます。
 
 >[!NOTE]
 >
->文字列フィールドの推奨値は、スキーマレベルでのみ追加できます。 つまり、あるスキーマでの標準フィールドの `meta:enum` を拡張しても、同じ標準フィールドを使用する他のスキーマには影響しません。
+>文字列フィールドの推奨値は、スキーマレベルでのみ追加できます。 つまり、1つのスキーマ内の標準フィールドの`meta:enum`を拡張しても、同じ標準フィールドを使用する他のスキーマには影響しません。
 
-次のリクエストは、`sourceSchema` で識別されるスキーマの標準 `eventType` フィールド（[XDM ExperienceEvent クラス &#x200B;](../classes/experienceevent.md) によって提供）に推奨値を追加します。
+次のリクエストは、`eventType`で識別されるスキーマの標準[ フィールド（](../classes/experienceevent.md)XDM ExperienceEvent クラス `sourceSchema`によって提供）に推奨値を追加します。
 
 ```curl
 curl -X POST \
@@ -112,7 +114,7 @@ curl -X POST \
       }'
 ```
 
-記述子を適用した後、スキーマレジストリはスキーマを取得する際に次のように応答します（応答がスペースを節約するために切り捨てられます）。
+ディスクリプタを適用すると、スキーマを取得する際に、スキーマレジストリは次のように応答します（応答はスペース用に切り捨てられます）。
 
 ```json
 {
@@ -134,7 +136,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->標準フィールドの `meta:enum` に既に値が含まれている場合、記述子からの新しい値は既存のフィールドを上書きせず、代わりにに追加されます。
+>標準フィールドに既に`meta:enum`未満の値が含まれている場合、記述子の新しい値は既存のフィールドを上書きせず、代わりに次の場所に追加されます。
 >
 >```json
 >"standardField": {
@@ -150,7 +152,8 @@ curl -X POST \
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,21 +213,22 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## カスタムフィールドの推奨値の管理 {#suggested-custom}
 
-カスタムフィールドの `meta:enum` を管理するには、PATCHリクエストを通じて、フィールドの親クラス、フィールドグループまたはデータタイプを更新できます。
+カスタムフィールドの`meta:enum`を管理するには、PATCH リクエストを使用して、フィールドの親クラス、フィールドグループ、またはデータタイプを更新できます。
 
 >[!WARNING]
 >
->標準フィールドとは異なり、カスタムフィールドの `meta:enum` を更新すると、そのフィールドを使用する他のすべてのスキーマに影響します。 変更がスキーマ間に反映されないようにする場合は、代わりに、新しいカスタムリソースを作成することを検討してください。
+>標準フィールドとは異なり、カスタムフィールドの`meta:enum`を更新すると、そのフィールドを使用する他のすべてのスキーマに影響します。 スキーマ間で変更を反映させたくない場合は、代わりに新しいカスタムリソースを作成することを検討してください。
 >
->* [&#x200B; カスタムクラスの作成 &#x200B;](../api/classes.md#create)
->* [&#x200B; カスタムフィールドグループの作成 &#x200B;](../api/field-groups.md#create)
->* [&#x200B; カスタムデータタイプの作成 &#x200B;](../api/data-types.md#create)
+>* [ カスタムクラスを作成](../api/classes.md#create)
+>* [ カスタムフィールドグループを作成](../api/field-groups.md#create)
+>* [ カスタムデータタイプを作成](../api/data-types.md#create)
 
-次のリクエストは、カスタムデータタイプが提供する「ロイヤルティレベル」フィールドの `meta:enum` を更新します。
+次のリクエストは、カスタムデータタイプによって提供される「ロイヤルティレベル」フィールドの`meta:enum`を更新します。
 
 ```curl
 curl -X PATCH \
@@ -249,7 +253,7 @@ curl -X PATCH \
       ]'
 ```
 
-変更を適用した後、スキーマレジストリはスキーマを取得する際に次のように応答します（応答がスペースを節約するために切り捨てられます）。
+変更を適用すると、スキーマを取得する際に、スキーマレジストリは次のように応答します（応答はスペース用に切り捨てられます）。
 
 ```json
 {
@@ -274,4 +278,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このガイドでは、Schema Registry API の文字列フィールドの推奨値を管理する方法について説明しました。 様々なフィールドタイプの作成方法について詳しくは、[API でのカスタムフィールドの定義 &#x200B;](./custom-fields-api.md) に関するガイドを参照してください。
+このガイドでは、Schema Registry APIで文字列フィールドの推奨値を管理する方法について説明しました。 さまざまなフィールドタイプを作成する方法について詳しくは、[APIでのカスタムフィールドの定義](./custom-fields-api.md)に関するガイドを参照してください。
