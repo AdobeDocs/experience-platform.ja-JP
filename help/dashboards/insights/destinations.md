@@ -1,8 +1,8 @@
 ---
 title: 宛先インサイト
-description: 宛先のインサイトを強化する SQL を確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformからのデータのアクティブ化をさらに詳しく調べます。
+description: 宛先インサイトを強化するSQLを確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformからのデータのアクティベーションをさらに詳しく調べます。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -11,22 +11,22 @@ ht-degree: 3%
 
 # 宛先インサイト
 
-データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+データモデルを分析して得られたインサイトは、Adobe Real-Time CDPのデータをよりアクセスしやすく、理解しやすく、意思決定に影響を与えます。
 
-宛先を強化する SQL にアクセスして宛先インサイトを理解し、独自のインサイトを生成して、Adobe Experience Platformから宛先プラットフォームへのデータのアクティブ化をさらに詳しく調べます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
+目的地のインサイトを強化するSQLにアクセスして理解し、独自のインサイトを生成することで、Adobe Experience Platformから目的地のプラットフォームへのデータの活性化をさらに詳しく調べることができます。 既存のReal-Time CDPデータモデルのSQLを参考に、独自のビジネスニーズに即したクエリを作成し、生データを新しい実用的なインサイトに変換できます。
 
-PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 &#x200B;](../view-sql.md) を参照してください。
+PLatform UIを使用してインサイトのSQLを直接適応させる方法について詳しくは、[SQL ドキュメントの表示](../view-sql.md)を参照してください。
 
-次のインサイトはすべて、[&#x200B; 宛先ダッシュボード &#x200B;](../guides/destinations.md) またはカスタム [&#x200B; ユーザー定義ダッシュボード &#x200B;](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md) で [&#x200B; 新しいウィジェットの作成と編集 &#x200B;](../customize/overview.md) を使用する方法については、[&#x200B; カスタマイズの概要 &#x200B;](../standard-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[宛先ダッシュボード ](../guides/destinations.md)またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md)の一部として使用できます。 ダッシュボードをカスタマイズする方法の手順については、[ カスタマイズの概要](../customize/overview.md)を参照するか、ウィジェットライブラリおよび[ ユーザー定義ダッシュボード ](../customize/custom-widgets.md)で[新しいウィジェットを作成および編集します](../standard-dashboards.md#create-widget)。
 
-## アクティブ化されたオーディエンス {#activated-audiences}
+## アクティベートされたオーディエンス {#activated-audiences}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 特定の宛先でフィルタリングされた、アクティブ化されたオーディエンスの合計数はどれくらいですか？
-- 各宛先ごとのアクティブ化されたオーディエンス数
+- 特定の宛先によってフィルタリングされたアクティブなオーディエンスの合計数は？
+- 各宛先のアクティブ化されたオーディエンスサイズは何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; アクティブ化されたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#activated-audiences) を参照してください。
+このinsightの外観と機能について詳しくは、[ アクティベート済みオーディエンスウィジェットのドキュメント ](../guides/destinations.md#activated-audiences)を参照してください。
 
 ## すべての宛先にわたってアクティブ化されたオーディエンス {#activated-audiences-across-all-destinations}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- すべての宛先でアクティブ化されているオーディエンスの数
-- アクティブ化されたオーディエンスの合計数
+- すべての宛先でどれだけのオーディエンスがアクティブ化されていますか？
+- アクティベートされたオーディエンスの合計数はどのくらいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; すべての宛先にわたるアクティブ化されたオーディエンス &#x200B;](../guides/destinations.md#activated-audiences-across-all-destinations) のウィジェットドキュメントを参照してください。
+このinsightの外観と機能について詳しくは、[すべての宛先でオーディエンスをアクティブ化ウィジェットのドキュメント ](../guides/destinations.md#activated-audiences-across-all-destinations)を参照してください。
 
 ## 宛先プラットフォーム別のアクティブな宛先 {#active-destinations-by-destination-platform}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - アクティブな宛先の数
-- 宛先プラットフォーム別のアクティブな宛先の分類は何ですか？
-- 宛先プラットフォームごとに分類された、アクティブな宛先の数
+- 宛先プラットフォーム別のアクティブな宛先の内訳は何ですか？
+- 宛先プラットフォームごとに分類されるアクティブな宛先の数は何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; 宛先プラットフォーム別のアクティブな宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform) を参照してください。
+このinsightの外観と機能について詳しくは、[Active destinations by destination platform widget ドキュメント ](../guides/destinations.md#active-destinations-by-destination-platform)を参照してください。
 
 ## オーディエンスサイズのトレンド {#audience-size-trend}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 宛先にマッピングされたオーディエンスの異常値を含め、オーディエンスサイズは時間の経過とともにどのように変化しますか？
-- 30 日、90 日および 12 か月の指定期間におけるオーディエンスサイズの宛先別の全体的なトレンドを見つけるにはどうすればよいですか？
-- サイズに影響するオーディエンスの主な特徴（メールマーケティングキャンペーンに関するスパイクなど）
+- 宛先にマッピングされたオーディエンスの異常値など、オーディエンスサイズは時間の経過とともにどのように変化しましたか？
+- 30日、90日、12か月という指定された期間の宛先ごとのオーディエンスサイズの全体的な傾向を見つけるにはどうすればよいですか？
+- メールマーケティング施策の急増など、規模に影響を与えるオーディエンスの主な特徴は何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; オーディエンスサイズのトレンドウィジェットのドキュメント &#x200B;](../guides/destinations.md#audience-size-trend) を参照してください。
+このinsightの外観と機能について詳しくは、[ オーディエンスサイズのトレンドウィジェットのドキュメント ](../guides/destinations.md#audience-size-trend)を参照してください。
 
 ## 一般的なオーディエンス {#common-audiences}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 2 つの異なる宛先間で共通するオーディエンスはどれですか？
-- 2 つの異なる宛先間の共通オーディエンスの各プロファイルはいくつ持ちますか？
-- 2 つの宛先のマッピング先となる最大のオーディエンスはどれですか？
+- 2つの異なる宛先間で共通するオーディエンスはどれですか？
+- 2つの異なる宛先間の共通オーディエンスはそれぞれ、いくつのプロファイルを持っていますか？
+- 2つの宛先がマッピングされる最大のオーディエンスはどれですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; 一般的なオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#common-audiences) を参照してください。
+このinsightの外観と機能について詳しくは、[共通オーディエンスウィジェットのドキュメント ](../guides/destinations.md#common-audiences)を参照してください。
 
 ## 宛先ステータス {#destination-status}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 使用可能な宛先の合計数は？
-- 無効になっている宛先の合計数は何ですか？
-- 有効な宛先と無効な宛先のパーセンテージ分割は何ですか？
+- 使用が有効になっている宛先の合計数を教えてください。
+- 無効になっている宛先の合計数を教えてください。
+- 有効な宛先と無効な宛先の割合はどのくらいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; 宛先ステータスウィジェットのドキュメント &#x200B;](../guides/destinations.md#destination-status) を参照してください。
+このinsightの外観と機能について詳しくは、[宛先ステータスウィジェットのドキュメント ](../guides/destinations.md#destination-status)を参照してください。
 
 ## 宛先数 {#destinations-count}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 現在設定されている宛先の数
-- 宛先の合計数は時間の経過とともにどのように変化していますか。
+- 宛先の合計数は、時間の経過とともにどのように変化しましたか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-このインサイトのアピアランスと機能について詳しくは、[&#x200B; 宛先数ウィジェットのドキュメント &#x200B;](../guides/destinations.md#destinations-count) を参照してください。
+このinsightの外観と機能について詳しくは、[宛先数ウィジェットのドキュメント ](../guides/destinations.md#destinations-count)を参照してください。
 
 ## マッピングされたオーディエンスの正常性 {#mapped-audience-health}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 宛先にマッピングされたオーディエンスのうち、過去 30 日間に大きな変化を持つものはどれですか？
-- マッピングされたオーディエンスの最新サイズはどれくらいですか？また、先月にわたって変更されたかどうかも教えてください。
-- 先月のサイズ変更の重大度に基づいて、宛先にマッピングされたすべてのオーディエンスをリストするにはどうすればよいですか？
+- 過去30日間に宛先にマッピングされたオーディエンスで、大きな違いがありますか？
+- マッピングされたオーディエンスの最新のサイズと、過去1か月間に変更されたかどうかです。
+- 先月のサイズ変更の重大度に基づいて、宛先にマッピングされたすべてのオーディエンスを一覧表示するにはどうすればよいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; マッピングされたオーディエンスの正常性ウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audience-health) を参照してください。
+このinsightの外観と機能について詳しくは、[ マッピング済みオーディエンス正常性ウィジェットのドキュメント ](../guides/destinations.md#mapped-audience-health)を参照してください。
 
 ## マッピングされたオーディエンス {#mapped-audiences}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 特定の宛先にマッピングされているオーディエンスの数
-- マッピングされたオーディエンスの数は時間の経過と共にどのように変化していますか。
-- 2 つの宛先を比較して、各宛先にマッピングされたオーディエンスの重複を確認するにはどうすればよいですか？
+- 特定の宛先にマッピングされているオーディエンスの数？
+- マッピングされたオーディエンスの数は、時間の経過とともにどのように変化しましたか？
+- 2つの宛先を比較して、各宛先にマッピングされたオーディエンスの重複を確認するにはどうすればよいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; マッピングされたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audiences) を参照してください。
+このinsightの外観と機能について詳しくは、[ マッピングされたオーディエンス ウィジェットのドキュメント ](../guides/destinations.md#mapped-audiences)を参照してください。
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## 最も使用されている宛先 {#most-used-destinations}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 最も使用されている宛先は何ですか？
-- 各宛先にマッピングされるオーディエンスの数（多い順に並べ替えたもの）。
-- オーディエンスと宛先のマッピングは、スナップショット間でどのように変化しますか？
+- 最も使用されている配信先は何ですか？
+- 各宛先にマッピングされるオーディエンスの数と、最も少ない順に並べ替える必要がありますか？
+- オーディエンスの宛先へのマッピングは、あるスナップショットから別のスナップショットに変わりますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; 最も使用されている宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#most-used-destinations) を参照してください。
+このinsightの外観と機能について詳しくは、[最もよく使用される宛先ウィジェットのドキュメント ](../guides/destinations.md#most-used-destinations)を参照してください。
 
 ## 最近アクティブ化されたオーディエンス {#recently-activated-audiences}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 最近アクティブ化されたオーディエンスの宛先はどれですか？
-- 最終更新日順に並べ替えたすべての宛先のリストを見つけるにはどうすればよいですか？
-- 最新のアクティベーションに基づいて 2 つの宛先を比較するにはどうすればよいですか？
+- オーディエンスが最も最近アクティブ化された宛先はどれですか？
+- 最終更新日で並べ替えられたすべての宛先のリストを見つけるにはどうすればよいですか？
+- 最新のアクティベーションに基づいて2つの宛先を比較するにはどうすればよいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-このインサイトの外観と機能については、[&#x200B; 最近アクティブ化されたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences) を参照してください。
+このinsightの外観と機能について詳しくは、[最近アクティブ化されたオーディエンスウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences)を参照してください。
 
-## 最近アクティブ化されたセグメント（宛先別） {#recently-activated-audiences-by-destination}
+## 最近アクティブ化されたオーディエンス（宛先別） {#recently-activated-audiences-by-destination}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 特定の宛先に対してアクティブ化されたオーディエンスは何ですか？
-- 特定のオーディエンスによってアクティブ化されたオーディエンスのリストを最新の状態から最新の状態にするにはどうすればよいですか？
-- 特定の宛先に対してアクティブ化された日付までのオーディエンスのリストを見つけるにはどうすればよいですか？
+- 特定の宛先に対してアクティブ化されるオーディエンスは何ですか？
+- 特定のオーディエンスによってアクティベートされたオーディエンスのリストを、最新から最新の順に見つけるにはどうすればよいですか？
+- 特定の宛先に対してアクティベートされた日付までにオーディエンスのリストを見つけるにはどうすればよいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[&#x200B; 最近アクティブ化されたオーディエンス （宛先別）ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination) を参照してください。
+このinsightの外観と機能について詳しくは、[宛先によって最近アクティブ化されたオーディエンス ](../guides/destinations.md#recently-activated-audiences-by-destination)を参照してください。
 
 ## 最近作成した宛先 {#recently-created-destinations}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- 最も最近作成された宛先はどれか
+- 最近作成された宛先はどれですか？
 - 作成日を含む宛先のリストを見つけるにはどうすればよいですか？
-- 最近作成された新しい宛先
+- 最近作成された新しい宛先は？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択すると、このinsightを生成するSQLが表示されます
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-このインサイトのアピアランスと機能について詳しくは、[&#x200B; 最近作成した宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-created-destinations) を参照してください。
+このinsightの外観と機能について詳しくは、[最近作成した宛先ウィジェットのドキュメント ](../guides/destinations.md#recently-created-destinations)を参照してください。
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
@@ -509,8 +511,8 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、ダッシュボードインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 これらの SQL クエリを編集および反復して、独自のインサイトを生成できるようになりました。
+このドキュメントでは、ダッシュボードのインサイトを生成するSQLと、この分析で解決される一般的な質問について説明します。 これらのSQL クエリを編集および再利用して、独自のインサイトを生成できます。
 
-PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 &#x200B;](../view-sql.md) を参照してください。
+PLatform UIを使用してインサイトのSQLを直接適応させる方法について詳しくは、[SQL ドキュメントの表示](../view-sql.md)を参照してください。
 
-また、[&#x200B; プロファイル &#x200B;](./profiles.md)、[&#x200B; アカウントプロファイル &#x200B;](./account-profiles.md) および [&#x200B; オーディエンス &#x200B;](./audiences.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。
+また、[ プロファイル ](./profiles.md)、[ アカウントプロファイル ](./account-profiles.md)および[ オーディエンス ](./audiences.md) ダッシュボードのインサイトを生成するSQLを読み取り、理解することもできます。
