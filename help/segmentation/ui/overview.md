@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 70%
+source-wordcount: '1028'
+ht-degree: 62%
 
 ---
 
@@ -23,23 +23,23 @@ ht-degree: 70%
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：[!DNL Experience Platform] に取り込まれる様々なデータソースの ID を結合することで、顧客プロファイルの作成を有効にします。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
-また、このドキュメントで使用されている次の主な用語を理解し、それらの違いを理解する必要があります。
+また、このドキュメントで使用されている次の重要な用語を理解し、それらの違いを理解する必要があります。
 
-- **オーディエンス**：類似した行動や特性を共有する人の集まりです。このユーザーグループは、セグメント定義（Experience-Platform で生成されたオーディエンス）、オーディエンス構成を使用したAdobe Experience Platformによって生成することも、カスタムアップロードなどの外部ソース（外部で生成されたオーディエンス）から生成することもできます。
+- **オーディエンス**：類似した行動や特性を共有する人の集まりです。この人物のコレクションは、セグメント定義（Experience-Platformで生成されたオーディエンス）、オーディエンス構成、またはカスタムアップロード（外部で生成されたオーディエンス）などの外部ソースから、Adobe Experience Platformで生成できます。
 - **セグメント定義**：Adobe Experience Platform が、ターゲットオーディエンスの重要な特徴や行動の説明に使用するルールです。
 - **セグメント**：プロファイルをオーディエンスに分割する行為です。
 
 ## 概要
 
-Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL オーディエンス]**」を選択して「**[!UICONTROL 概要]**」タブを開き、[!UICONTROL オーディエンス]ダッシュボードを表示します。
+Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Audiences]**」を選択し、**[!UICONTROL Overview]** ダッシュボードが表示されている「[!UICONTROL Audiences]」タブを開きます。
 
 >[!NOTE]
 >
->Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、オーディエンスを開始する際に役立つリンクとドキュメントが表示されます。
+>組織がExperience Platformを初めて使用しており、アクティブなプロファイルデータセットまたは結合ポリシーがまだ作成されていない場合、[!UICONTROL Audiences] ダッシュボードは表示されません。 代わりに、[!UICONTROL Overview] タブには、オーディエンスを開始するのに役立つリンクとドキュメントが表示されます。
 
-### [!UICONTROL オーディエンス]ダッシュボード {#segments-dashboard}
+### [!UICONTROL Audiences] ダッシュボード {#segments-dashboard}
 
-**[!UICONTROL ダッシュボード]**&#x200B;ダッシュボードは、組織のオーディエンスデータに関連する主要指標の概要を示します。
+**[!UICONTROL Audiences]** ダッシュボードは、組織のオーディエンスデータに関連する主要な指標の概要を示しています。
 
 詳しくは、[オーディエンスダッシュボードガイド](../../dashboards/guides/audiences.md)を参照してください。
 
@@ -47,15 +47,15 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ## 参照 {#browse}
 
-**[!UICONTROL 参照]** タブを選択して、オーディエンスポータルを表示します。 Audience Portal には、組織およびサンドボックスに属するすべてのオーディエンスのリストが表示され、プロファイル数、接触チャネル、作成日、最終変更日、タグ、分類などの詳細が含まれます。
+「**[!UICONTROL Browse]**」タブを選択して、オーディエンスポータルを表示します。 オーディエンスポータルには、組織とサンドボックスに属するすべてのオーディエンスのリストが表示され、プロファイル数、作成日、最終変更日、タグ、内訳などの詳細が含まれます。
 
-さらに、オーディエンスポータルを使用すると、セグメントビルダーまたはオーディエンスコンポジションを使用して新しいオーディエンスを作成したり、外部で生成されたオーディエンスをExperience Platformに読み込んだりできます。
+さらに、オーディエンスポータルでは、セグメントビルダーやオーディエンス構成を使用して新しいオーディエンスを作成したり、外部で生成されたオーディエンスをExperience Platformにインポートしたりできます。
 
-Audience Portal について詳しくは、[Audience Portal の概要 &#x200B;](./audience-portal.md) を参照してください。
+オーディエンスポータルについて詳しくは、[ オーディエンスポータルの概要](./audience-portal.md)を参照してください。
 
 ## 構成 {#compositions}
 
-「**[!UICONTROL 構成]**」タブを選択すると、組織のオーディエンス構成で生成されたすべてのオーディエンスのリストが表示されます。
+「**[!UICONTROL Compositions]**」タブを選択すると、組織のオーディエンス構成を通じて生成されたすべてのオーディエンスのリストが表示されます。
 
 ![組織のオーディエンス構成で作成されたオーディエンスのリスト。](../images/ui/overview/compositions.png)
 
@@ -67,7 +67,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 &#x200B;](
 | ------ | ----------- |
 | 複製 | 選択したオーディエンスをコピーします。 |
 | アクセスの管理 | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
-| 削除 | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[&#x200B; セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
+| 削除 | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンス **の依存関係にあるオーディエンスは削除できません**。 オーディエンスの削除について詳しくは、[ セグメント化に関するFAQ](../faq.md#lifecycle-states)を参照してください。 |
 
 「![テーブルをカスタマイズ](/help/images/icons/column-settings.png)」アイコンを選択して、表示するフィールドを変更できます。
 
@@ -78,23 +78,23 @@ Audience Portal について詳しくは、[Audience Portal の概要 &#x200B;](
 ![構成セクションに表示できる属性。](../images/ui/overview/compositions-customize-table.png)
 
 | フィールド | 説明 |
-| ----- | ----------- | 
-| [!UICONTROL 名前] | オーディエンスの名前。 |
-| [!UICONTROL ステータス] | オーディエンスのステータス。このフィールドの可能な値には、`Draft`、`Inactive` および `Published` が含まれます。 |
-| [!UICONTROL 作成日] | オーディエンスが作成された日時。 |
-| [!UICONTROL 作成者] | オーディエンスを作成した人物の名前。 |
-| [!UICONTROL 更新済み] | オーディエンスが最後に更新された日時。 |
-| [!UICONTROL 更新者] | オーディエンスを最後に更新したユーザーの名前。 |
+| ----- | ----------- |
+| [!UICONTROL Name] | オーディエンスの名前。 |
+| [!UICONTROL Status] | オーディエンスのステータス。このフィールドの可能な値には、`Draft`、`Inactive` および `Published` が含まれます。 |
+| [!UICONTROL Created] | オーディエンスが作成された日時。 |
+| [!UICONTROL Created by] | オーディエンスを作成した人物の名前。 |
+| [!UICONTROL Updated] | オーディエンスが最後に更新された日時。 |
+| [!UICONTROL Updated by] | オーディエンスを最後に更新したユーザーの名前。 |
 
-オーディエンスの構成方法を確認するには、「[!UICONTROL オーディエンス]」タブでオーディエンス名を選択します。
+オーディエンスがどのように構成されているかを確認するには、[!UICONTROL Audiences] タブ内でオーディエンスの名前を選択します。
 
 オーディエンス構成 ページが表示され、オーディエンスを構成する構成要素が表示されます。オーディエンス構成の使用方法について詳しくは、[オーディエンス構成 UI ガイド](./audience-composition.md)を参照してください。
 
 ## 連合オーディエンス構成 {#fac}
 
-オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
+オーディエンスの構成とセグメントの定義に加えて、Adobeの連合オーディエンスの構成を使用して、基礎データをコピーすることなく、新しいオーディエンスを企業データセットから構築し、Adobe Experience Platform Audience Portalに保存できます。 また、エンタープライズデータウェアハウスから連合され、構成されたオーディエンスデータを利用することで、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
-![&#x200B; 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
+![組織のFederated Audience Compositionで作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
 ## ストリーミングセグメント化 {#streaming-segmentation}
 
@@ -108,7 +108,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 &#x200B;](
 
 ## エッジセグメント化 {#edge-segmentation}
 
-Edgeのセグメント化は、Experience Platform内のオーディエンスをエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
+Edgeのセグメンテーション機能では、Experience Platformのオーディエンスをエッジで即座に評価できるため、同じページや次のページのパーソナライズされたユースケースを実現できます。
 
 エッジセグメント化について詳しくは、[エッジセグメント化 UI ガイド](../methods/edge-segmentation.md)を参照してください。
 
