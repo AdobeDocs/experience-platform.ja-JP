@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query Service;Adobe 定義関数；SQL;
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；クエリサービス；アドビ定義関数；sql;
 solution: Experience Platform
-title: クエリサービスでAdobeが定義した SQL 関数
-description: このドキュメントでは、Adobe Experience Platform クエリサービスで使用できるAdobe定義関数について説明します。
+title: クエリサービスでのAdobe定義のSQL関数
+description: このドキュメントでは、Adobe Experience Platform クエリサービスで使用できるAdobe定義の関数について説明します。
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 13%
 
 ---
 
-# クエリサービスでAdobeが定義した SQL 関数
+# クエリサービスでのAdobe定義のSQL関数
 
-Adobe定義関数（ここでは ADF と呼びます）は、データに対して一般的なビジネス関連タスクを実行するのに役立つ、Adobe Experience Platform クエリサービスの事前定義済み関数 [!DNL Experience Event] す。 これには、Adobe Analyticsの関数 [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja) や [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja) の関数が含まれます。
+Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[ セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)および[ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
 
-このドキュメントでは、[!DNL Query Service] で使用できるAdobe定義関数について説明します。
+このドキュメントでは、[!DNL Query Service]で利用できるAdobe定義の関数について説明します。
 
 >[!NOTE]
 >
->Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）はMCIDとも呼ばれ、ネームスペースで引き続き使用されます。
 
 ## 窓関数 {#window-functions}
 
-ビジネスロジックの大部分は、顧客のタッチポイントを収集し、時間順に並べる必要があります。このサポートは、SQL[!DNL Spark] ウィンドウ関数の形式で提供されます。 窓関数は標準 SQL の一部で、他の多くの SQL エンジンでサポートされています。
+ビジネスロジックの大部分は、顧客のタッチポイントを収集し、時間順に並べる必要があります。このサポートは、ウィンドウ関数の形式で[!DNL Spark] SQLによって提供されます。 窓関数は標準 SQL の一部で、他の多くの SQL エンジンでサポートされています。
 
 窓関数は、集計を更新し、順序付けられたサブセットの各行の 1 つの項目を返します。最も基本的な集計関数は `SUM()` です。`SUM()` は行を取得し、合計 1 つを提供します。代わりに `SUM()` をウィンドウに適用して、窓関数に変換すると、各行の累積合計が返されます。
 
-[!DNL Spark] の SQL ヘルパーの大部分は、ウィンドウ内の各行を更新するウィンドウ関数で、その行の状態が追加されています。
+[!DNL Spark] SQL ヘルパーの大部分は、ウィンドウ内の各行を更新し、その行の状態を追加するウィンドウ関数です。
 
 **クエリ構文**
 
@@ -37,17 +37,17 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
-| `{PARTITION}` | 列または使用可能フィールドに基づく行のサブグループ。 | `PARTITION BY endUserIds._experience.mcid.id` |
-| `{ORDER}` | サブセットまたは行の順序付けに使用する列または使用可能なフィールド。 | `ORDER BY timestamp` |
+| `{PARTITION}` | 列または使用可能なフィールドに基づく行のサブグループ。 | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | サブセットまたは行の順序に使用する列または使用可能なフィールド。 | `ORDER BY timestamp` |
 | `{FRAME}` | パーティション内の行のサブグループ。 | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## セッション化
 
-Web サイト、モバイルアプリケーション、インタラクティブ音声応答システム、その他の顧客インタラクションチャネルから生じる [!DNL Experience Event] データを操作する場合は、イベントを関連するアクティビティ期間にグループ化できると便利です。 通常は、製品の調査、請求書の支払い、口座残高の確認、申込書の入力など、アクティビティを推進する特定の意図があります。
+Web サイト、モバイルアプリケーション、インタラクティブ音声応答システム、またはその他の顧客インタラクションチャネルから送信される[!DNL Experience Event] データを操作する場合、関連するアクティビティの期間を中心にイベントをグループ化できるかどうかを確認できます。 通常、製品調査、請求書の支払い、アカウント残高の確認、申請の入力など、特定の意図にもとづいてアクティビティを推進します。
 
-このグループ化、つまりデータのセッション化は、イベントを関連付けて、顧客体験に関するより多くのコンテキストを明らかにするのに役立ちます。
+データをグループ化して分類することで、イベントを関連付けて、顧客体験に関する詳細なコンテキストを明らかにできます。
 
-Adobe Analyticsのセッション化について詳しくは、[&#x200B; コンテキスト対応セッション &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja) に関するドキュメントを参照してください。
+Adobe Analyticsでのセッション化について詳しくは、[ コンテキスト対応セッション ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
 
 **クエリ構文**
 
@@ -57,10 +57,10 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
-| `{EXPIRATION_IN_SECONDS}` | 現在のセッションの終了と新しいセッションの開始の条件を満たすためにイベント間に必要な秒数。 |
+| `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
+| `{EXPIRATION_IN_SECONDS}` | 現在のセッションの終了と新しいセッションの開始を検証するためにイベント間に必要な秒数。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`session` 列に指定されています。 `session` の列は、次のコンポーネントで構成されます。
+指定されたサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -104,14 +104,14 @@ LIMIT 10
 
 | パラメーター | 説明 |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
-| `{NUM}` | Window 関数の `PARTITION BY` で定義されたキーの、1 から始まる一意のセッション番号。 |
-| `{IS_NEW}` | レコードがセッションの最初かどうかを識別するために使用されるブール値。 |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの間の時間の差（秒単位）。 |
+| `{NUM}` | ウィンドウ関数の`PARTITION BY`で定義されたキーに対して、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初のレコードかどうかを識別するために使用されるブール値。 |
 | `{DEPTH}` | セッション内の現在のレコードの深さ。 |
 
 ### SESS_START_IF
 
-このクエリは、指定された現在のタイムスタンプと式に基づいて、現在の行のセッションの状態を返し、現在の行で新しいセッションを開始します。
+このクエリは、現在のタイムスタンプと指定された式に基づいて、現在の行のセッションの状態を返し、現在の行で新しいセッションを開始します。
 
 **クエリ構文**
 
@@ -121,10 +121,10 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
-| `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0`。 |
+| `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
+| `{TEST_EXPRESSION}` | データのフィールドをチェックする式。 例：`application.launches > 0` |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`session` 列に指定されています。 `session` の列は、次のコンポーネントで構成されます。
+指定されたサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -169,14 +169,14 @@ SELECT
 
 | パラメーター | 説明 |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
-| `{NUM}` | Window 関数の `PARTITION BY` で定義されたキーの、1 から始まる一意のセッション番号。 |
-| `{IS_NEW}` | レコードがセッションの最初かどうかを識別するために使用されるブール値。 |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの間の時間の差（秒単位）。 |
+| `{NUM}` | ウィンドウ関数の`PARTITION BY`で定義されたキーに対して、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初のレコードかどうかを識別するために使用されるブール値。 |
 | `{DEPTH}` | セッション内の現在のレコードの深さ。 |
 
 ### SESS_END_IF
 
-このクエリは、現在のタイムスタンプと指定された式に基づいて、現在のローのセッションの状態を返し、現在のセッションを終了して、次のローで新しいセッションを開始します。
+このクエリは、現在のタイムスタンプと指定された式に基づいて、現在の行のセッションの状態を返し、現在のセッションを終了し、次の行で新しいセッションを開始します。
 
 **クエリ構文**
 
@@ -186,10 +186,10 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TIMESTAMP}` | データセットで見つかったタイムスタンプ フィールド。 |
-| `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0`。 |
+| `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
+| `{TEST_EXPRESSION}` | データのフィールドをチェックする式。 例：`application.launches > 0` |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`session` 列に指定されています。 `session` の列は、次のコンポーネントで構成されます。
+指定されたサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -234,21 +234,21 @@ SELECT
 
 | パラメーター | 説明 |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
-| `{NUM}` | Window 関数の `PARTITION BY` で定義されたキーの、1 から始まる一意のセッション番号。 |
-| `{IS_NEW}` | レコードがセッションの最初かどうかを識別するために使用されるブール値。 |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの間の時間の差（秒単位）。 |
+| `{NUM}` | ウィンドウ関数の`PARTITION BY`で定義されたキーに対して、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初のレコードかどうかを識別するために使用されるブール値。 |
 | `{DEPTH}` | セッション内の現在のレコードの深さ。 |
 
 
 ## パス
 
-パスを使用すると、顧客のエンゲージメントの深さを把握し、エクスペリエンスが意図した手順が設計どおりに動作していることを確認し、顧客に影響を与える潜在的な問題点を特定できます。
+経路は、顧客のエンゲージメントの深さを把握し、エクスペリエンスの意図されたステップが設計どおりに機能していることを確認し、顧客に影響を与える可能性のある課題を特定するために使用できます。
 
-以下のオーストラリア国防軍は、過去および次回の関係からパスビューを確立することを支持している。 前のページと次のページを作成するか、複数のイベントを順を追ってパスを作成することができます。
+次のADFは、以前と次の関係からのパスビューの確立をサポートしています。 前のページや次のページを作成したり、複数のイベントを順を追ってパスを作成したりすることができます。
 
 ### 前のページ
 
-特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた前の値を決定します。この例では、`WINDOW` 関数がフレームで設定され、現在のロー `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` 後続のすべてのローを参照するように ADF が設定されています。
+特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた前の値を決定します。この例では、`WINDOW`関数がADFを設定する`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`のフレームで設定されており、現在の行とそれ以降のすべての行を確認できることに注意してください。
 
 **クエリ構文**
 
@@ -259,10 +259,10 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{KEY}` | イベントの列またはフィールド。 |
-| `{SHIFT}` | （任意）現在のイベントから離れたイベントの数。 デフォルト値は 1 です。 |
-| `{IGNORE_NULLS}` | （任意） null`{KEY}` 値を無視する必要があるかどうかを示すブール値。 デフォルト値は `false` です。 |
+| `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数。 デフォルトでは、値は1です。 |
+| `{IGNORE_NULLS}` | （オプション） null `{KEY}`値を無視する必要があるかどうかを示すブール値。 デフォルトでは、値は`false`です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -282,11 +282,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 |-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     |
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 19:22:34.0 |                                     | (Kids)
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:57.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:03:36.0 | Search Results                      | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:04:30.0 | Product Details: Pemmican Power Bar | (Search Results)
@@ -295,11 +295,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`previous_page` 列に指定されています。 `previous_page` 列内の値は、ADF で使用される `{KEY}` に基づいています。
+指定されたサンプルクエリの場合、結果は`previous_page`列に表示されます。 `previous_page`列内の値は、ADFで使用されている`{KEY}`に基づいています。
 
 ### 次のページ
 
-特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた次の値を決定します。この例では、`WINDOW` 関数がフレームで設定され、現在のロー `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` 後続のすべてのローを参照するように ADF が設定されています。
+特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた次の値を決定します。この例では、`WINDOW`関数がADFを設定する`ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING`のフレームで設定されており、現在の行とそれ以降のすべての行を確認できることに注意してください。
 
 **クエリ構文**
 
@@ -310,10 +310,10 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{KEY}` | イベントの列またはフィールド。 |
-| `{SHIFT}` | （任意）現在のイベントから離れたイベントの数。 デフォルト値は 1 です。 |
-| `{IGNORE_NULLS}` | （任意） null`{KEY}` 値を無視する必要があるかどうかを示すブール値。 デフォルト値は `false` です。 |
+| `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数。 デフォルトでは、値は1です。 |
+| `{IGNORE_NULLS}` | （オプション） null `{KEY}`値を無視する必要があるかどうかを示すブール値。 デフォルトでは、値は`false`です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -347,15 +347,15 @@ LIMIT 10
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`previous_page` 列に指定されています。 `previous_page` 列内の値は、ADF で使用される `{KEY}` に基づいています。
+指定されたサンプルクエリの場合、結果は`previous_page`列に表示されます。 `previous_page`列内の値は、ADFで使用されている`{KEY}`に基づいています。
 
 ## 間隔
 
-時間間隔を使用すると、イベントが発生する前後の特定の期間内に、潜在的な顧客の行動を調べることができます。
+時間間隔では、イベントが発生する前または後の特定の期間内に、潜在的な顧客行動を調査できます。
 
 ### 前の一致までの時間
 
-このクエリは、前の一致するイベントが表示されてからの時間の単位を表す数値を返します。 一致するイベントが見つからなかった場合は、null を返します。
+このクエリは、前の一致イベントが表示されてからの時間の単位を表す数値を返します。 一致するイベントが見つからなかった場合は、nullを返します。
 
 **クエリ構文**
 
@@ -367,11 +367,11 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TIMESTAMP}` | すべてのイベントに設定されているデータセットで見つかったタイムスタンプフィールド。 |
-| `{EVENT_DEFINITION}` | 前のイベントを選定するための式。 |
-| `{TIME_UNIT}` | 出力の単位。 日数、時間数、分数、秒数などの値を指定できます。 デフォルト値は秒です。 |
+| `{TIMESTAMP}` | すべてのイベントに入力されたデータセット内に見つかったタイムスタンプフィールド。 |
+| `{EVENT_DEFINITION}` | 前のイベントを修飾する式。 |
+| `{TIME_UNIT}` | 出力の単位。 可能な値には、日、時間、分、秒が含まれます。 デフォルトでは、値は秒です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -415,11 +415,11 @@ LIMIT 10
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`average_minutes_since_registration` 列に指定されています。 `average_minutes_since_registration` 列内の値は、現在のイベントと前のイベントの時間の差です。 時間の単位は、`{TIME_UNIT}` で事前に定義されています。
+指定されたサンプルクエリの場合、結果は`average_minutes_since_registration`列に表示されます。 `average_minutes_since_registration`列内の値は、現在のイベントと前のイベントの時間の差です。 時間の単位は、以前に`{TIME_UNIT}`で定義されていました。
 
 ### 次の一致までの時間
 
-このクエリは、次の一致するイベントの後の時間単位を表す負の数を返します。 一致するイベントが見つからない場合は、null が返されます。
+このクエリは、次に一致するイベントの背後にある時間の単位を表す負の数値を返します。 一致するイベントが見つからない場合は、nullが返されます。
 
 **クエリ構文**
 
@@ -429,11 +429,11 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TIMESTAMP}` | すべてのイベントに設定されているデータセットで見つかったタイムスタンプフィールド。 |
-| `{EVENT_DEFINITION}` | 次のイベントを選定するための式。 |
-| `{TIME_UNIT}` | （任意）出力の単位。 日数、時間数、分数、秒数などの値を指定できます。 デフォルト値は秒です。 |
+| `{TIMESTAMP}` | すべてのイベントに入力されたデータセット内に見つかったタイムスタンプフィールド。 |
+| `{EVENT_DEFINITION}` | 次のイベントを修飾する式。 |
+| `{TIME_UNIT}` | （オプション）出力の単位。 可能な値には、日、時間、分、秒が含まれます。 デフォルトでは、値は秒です。 |
 
-`OVER()` 関数内のパラメーターについて詳しくは、[window 関数 &#x200B;](#window-functions) を参照してください。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -477,14 +477,14 @@ LIMIT 10
 (10 rows)
 ```
 
-指定したサンプルクエリの結果は、`average_minutes_until_order_confirmation` 列に指定されています。 `average_minutes_until_order_confirmation` 列内の値は、現在のイベントと次のイベントの時間の差です。 時間の単位は、`{TIME_UNIT}` で事前に定義されています。
+指定されたサンプルクエリの場合、結果は`average_minutes_until_order_confirmation`列に表示されます。 `average_minutes_until_order_confirmation`列内の値は、現在のイベントと次のイベントの時間の差です。 時間の単位は、以前に`{TIME_UNIT}`で定義されていました。
 
 ## 次の手順
 
-ここで説明した関数を使用すると、[!DNL Experience Event] を使用して独自の [!DNL Query Service] データセットにアクセスするクエリを記述できます。 [!DNL Query Service] でのクエリの作成について詳しくは、[&#x200B; クエリの作成 &#x200B;](../best-practices/writing-queries.md) に関するドキュメントを参照してください。
+ここで説明した関数を使用して、[!DNL Experience Event]を使用して独自の[!DNL Query Service] データセットにアクセスするためのクエリを作成できます。 [!DNL Query Service]でのクエリのオーサリングについて詳しくは、[ クエリの作成](../best-practices/writing-queries.md)に関するドキュメントを参照してください。
 
 ## その他のリソース
 
-次のビデオでは、Adobe Experience Platform インターフェイスおよび PSQL クライアントでクエリを実行する方法を説明します。 さらに、このビデオでは、XDM オブジェクト内の個々のプロパティに関連する例、Adobe定義関数の使用例、CREATE TABLE AS SELECT （CTAS）の使用例も示しています。
+次のビデオでは、Adobe Experience Platform インターフェイスおよび PSQL クライアントでクエリを実行する方法を説明します。 さらに、このビデオでは、XDM オブジェクト内の個々のプロパティ、Adobe定義の関数の使用、CREATE TABLE AS SELECT （CTAS）の使用に関する例も使用しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/34782?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
