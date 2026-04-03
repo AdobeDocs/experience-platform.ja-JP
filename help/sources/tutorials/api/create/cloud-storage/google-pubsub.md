@@ -3,7 +3,7 @@ title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 45%
@@ -14,69 +14,69 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 >
->Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
+>[!DNL Google PubSub] ソースは、Real-Time Customer Data Platform Ultimateを購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Google PubSub]（以下「[!DNL PubSub]」）を Experience Platform に接続する手順を詳しく説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
-次の節では、[!DNL Flow Service] API を使用してExperience Platformに正しく接続するために必要 [!DNL PubSub] 追加情報を示します。
+以下の節では、[!DNL PubSub] APIを使用して[!DNL Flow Service]をExperience Platformに正常に接続するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL PubSub] アカウントを [!DNL Flow Service] に接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 &#x200B;](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
+[!DNL PubSub] アカウントを[!DNL Flow Service]に接続するには、以下に概説する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source] 概要](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites)を参照してください。
 
 >[!BEGINTABS]
 
->[!TAB  プロジェクトベースの認証 ]
+>[!TAB  プロジェクトベースの認証]
 
 | 資格情報 | 説明 |
 | --- | --- |
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| `credentials` | [!DNL PubSub] の認証に必要な資格情報。 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
+| `credentials` | [!DNL PubSub]の認証に必要な資格情報。 資格情報から空白を削除した後、完全なJSON ファイルを配置する必要があります。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
->[!TAB  トピックおよび購読ベースの認証 ]
+>[!TAB  トピックおよびサブスクリプションベースの認証]
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `credentials` | [!DNL PubSub] の認証に必要な資格情報。 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
-| `topicName` | メッセージのフィードを表すリソースの名前。 [!DNL PubSub] ソース内の特定のデータストリームへのアクセスを提供する場合は、トピック名を指定する必要があります。 トピック名の形式は `projects/{PROJECT_ID}/topics/{TOPIC_ID}` です。 |
-| `subscriptionName` | [!DNL PubSub] サブスクリプションの名前。 ま [!DNL PubSub]、購読を使用すると、メッセージの公開先のトピックを購読することで、メッセージを受信できます。 **メモ**:1 つの [!DNL PubSub] 購読は、1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数の購読が必要です。 配信登録名の形式は `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}` です。 |
+| `credentials` | [!DNL PubSub]の認証に必要な資格情報。 資格情報から空白を削除した後、完全なJSON ファイルを配置する必要があります。 |
+| `topicName` | メッセージのフィードを表すリソースの名前。 [!DNL PubSub] ソース内の特定のデータ ストリームへのアクセスを提供する場合は、トピック名を指定する必要があります。 トピック名の形式：`projects/{PROJECT_ID}/topics/{TOPIC_ID}`。 |
+| `subscriptionName` | [!DNL PubSub] サブスクリプションの名前。 [!DNL PubSub]では、メッセージが公開されたトピックにサブスクライブすることで、メッセージを受信できます。 **注**:1つの[!DNL PubSub] サブスクリプションは、1つのデータフローにのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 サブスクリプション名の形式：`projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
 >[!ENDTABS]
 
-これらの値について詳しくは、この [[!DNL PubSub]  認証 &#x200B;](https://cloud.google.com/pubsub/docs/authentication) ドキュメントを参照してください。 サービスアカウントベースの認証を使用するには、こちらの [[!DNL PubSub]  サービスアカウントの作成に関するガイド &#x200B;](https://cloud.google.com/docs/authentication/production#create_service_account) で、資格情報の生成手順を確認してください。
+これらの値について詳しくは、この[[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)文書を参照してください。 サービスアカウントベースの認証を使用するには、資格情報を生成する手順については、この[[!DNL PubSub]  サービスアカウントの作成に関するガイド ](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
 >[!TIP]
 >
 >サービスアカウントベースの認証を使用している場合は、サービスアカウントに十分なユーザーアクセス権が付与され、資格情報をコピー＆ペーストする際に、JSON 内に余分な空白がないことを確認してください。
 
-### Experience Platform API の使用
+### Experience Platform APIの使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform APIの呼び出しを正常に行う方法について詳しくは、[Experience Platform APIの概要](../../../../../landing/api-guide.md)に関するガイドを参照してください。
 
 ## ベース接続の作成
 
 >[!TIP]
 >
->作成した後は、[!DNL Google PubSub] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>作成したら、[!DNL Google PubSub] ベース接続の認証タイプを変更することはできません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
-ソース接続を作成する最初の手順は、[!DNL PubSub] ソースを認証し、ベース接続 ID を生成することです。ベース接続 ID を使用すると、ソース内を移動してファイルを探索し、データのタイプや形式に関する情報など、取り込みたい特定の項目を識別できます。
+ソース接続を作成する最初の手順は、[!DNL PubSub] ソースを認証し、ベース接続 ID を生成することです。ベース接続 ID を使用すると、ソース内を移動してファイルを探索し、データタイプや形式に関する情報など、取り込みたい特定の項目を識別できます。
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL PubSub] 認証資格情報をリクエストパラメーターの一部として指定します。
 
-[!DNL PubSub] ソースでは、認証時に許可するアクセスの種類を指定できます。 ルートアクセス権を持つように、または特定の [!DNL PubSub] トピックおよび購読へのアクセスを制限するために、アカウントを設定できます。
+[!DNL PubSub] ソースでは、認証中に許可するアクセスの種類を指定できます。 アカウントを設定して、特定の[!DNL PubSub] トピックとサブスクリプションへのルートアクセスを持たせたり、アクセスを制限したりできます。
 
 >[!NOTE]
 >
->[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント &#x200B;](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
+>[!DNL PubSub] プロジェクトに割り当てられたプリンシパル （役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックとサブスクリプションで継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）をトピックの対応するサブスクリプションにも追加する必要があります。 詳しくは、アクセス制御[[!DNL PubSub] に関する](<https://cloud.google.com/pubsub/docs/access-control>) ドキュメントを参照してください。
 
 **API 形式**
 
@@ -86,11 +86,11 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB  プロジェクトベースの認証 ]
+>[!TAB  プロジェクトベースの認証]
 
-プロジェクトベースの認証を使用したベース接続を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、リクエスト本文で `projectId` と `credentials` を指定します。
+プロジェクトベースの認証でベース接続を作成するには、`/connections` エンドポイントにPOST リクエストを行い、リクエスト本文に`projectId`と`credentials`を指定します。
 
-+++リクエスト
++++ リクエスト
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
-++++
++++
 
-+++応答
++++ 応答
 
 リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。このベース接続 ID は、次の手順でソース接続を作成する際に必要になります。
 
@@ -136,13 +136,13 @@ curl -X POST \
 }
 ```
 
-++++
++++
 
->[!TAB  トピックおよび購読ベースの認証 ]
+>[!TAB  トピックおよびサブスクリプションベースの認証]
 
-トピックおよび購読ベースの認証を使用したベース接続を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、リクエスト本文で `credentials`、`topicName`、`subscriptionName` を指定します。
+トピックおよびサブスクリプションベースの認証を使用してベース接続を作成するには、`/connections` エンドポイントにPOST リクエストを行い、リクエスト本文に`credentials`、`topicName`、および`subscriptionName`を指定します。
 
-+++リクエスト
++++ リクエスト
 
 ```shell
 curl -X POST \
@@ -173,13 +173,13 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
-| `auth.params.topicName` | アクセス権を付与する [!DNL PubSub] ソースのプロジェクト ID とトピック ID のペア。 |
-| `auth.params.subscriptionName` | アクセス権を付与する [!DNL PubSub] ソースのプロジェクト ID と購読 ID のペア。 |
+| `auth.params.topicName` | アクセスを提供する[!DNL PubSub] ソースのプロジェクト IDとトピック IDのペア。 |
+| `auth.params.subscriptionName` | アクセスを提供する[!DNL PubSub] ソースのプロジェクト IDとサブスクリプション IDのペア。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
 +++
 
-+++応答
++++ 応答
 
 リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。このベース接続 ID は、次の手順でソース接続を作成する際に必要になります。
 
@@ -190,7 +190,7 @@ curl -X POST \
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 
@@ -243,8 +243,8 @@ curl -X POST \
 | `baseConnectionId` | 前の手順で生成された [!DNL PubSub] ソースのベース接続 ID。 |
 | `connectionSpec.id` | [!DNL PubSub] の固定接続仕様 ID。この ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 | `data.format` | 取り込む [!DNL PubSub] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.topicName` | [!DNL PubSub] トピックの名前。 ま [!DNL PubSub]、トピックは、メッセージのフィードを表す名前付きリソースです。 |
-| `params.subscriptionName` | 特定のトピックに対応するサブスクリプション名。 [!DNL PubSub] では、購読を使用すると、トピックからメッセージを読み取ることができます。 1 つまたは複数の購読を 1 つのトピックに割り当てることができます。 |
+| `params.topicName` | [!DNL PubSub] トピックの名前。 [!DNL PubSub]では、トピックはメッセージのフィードを表す名前付きリソースです。 |
+| `params.subscriptionName` | 特定のトピックに対応するサブスクリプション名。 [!DNL PubSub]では、サブスクリプションを使用してトピックからメッセージを読み取ることができます。 1つまたは複数のサブスクリプションを1つのトピックに割り当てることができます。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
 
 **応答**
@@ -260,8 +260,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
+>ストリーミングデータフローを作成または更新した後、データの損失やデータの削除の可能性のあるインスタンスを防ぐには、データの取り込みを5分間だけ一時停止する必要があります。
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[&#x200B; [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
