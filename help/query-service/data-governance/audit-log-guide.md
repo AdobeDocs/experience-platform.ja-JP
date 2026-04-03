@@ -1,96 +1,96 @@
 ---
 title: クエリサービス監査ログの統合
-description: クエリサービス監査ログは、問題のトラブルシューティングや企業のデータ管理ポリシーおよび規制要件への準拠のための監査証跡を形成するために、様々なユーザーアクションの記録を保持します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
+description: Query Serviceの監査ログは、様々なユーザーアクションの記録を保持し、問題のトラブルシューティングや、企業のデータ管理ポリシーや規制要件への準拠のための監査証跡を形成します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 8%
 
 ---
 
-# [!DNL Query Service] 監査ログの統合
+# [!DNL Query Service]監査ログの統合
 
-Adobe Experience Platform [!DNL Query Service] 監査ログ統合は、クエリ関連のユーザーアクションのレコードを提供します。 監査ログは、企業のデータ管理ポリシーや規制要件のトラブルシューティングと順守に不可欠なツールです。 この機能を使用すると、様々なイベントタイプのアクションログを返し、レコードをフィルタリングして書き出すことができます。 ログにはExperience Platform UI または [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) 経由でアクセスでき、CSV または JSON ファイル形式でダウンロードできます。
+Adobe Experience Platform [!DNL Query Service]監査ログ統合では、クエリ関連のユーザーアクションのレコードが提供されます。 監査ログは、企業のデータ管理ポリシーや規制要件のトラブルシューティングや遵守に役立つ重要なツールです。 この機能を使用すると、多くのイベントタイプのアクションログを返し、レコードをフィルタリングおよびエクスポートできます。 ログは、Experience Platform UIまたは[Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/)を通じてアクセスし、CSVまたはJSON ファイル形式でダウンロードできます。
 
-監査ログのユーザーインターフェイスについて詳しくは、[&#x200B; 監査ログの概要ドキュメント &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。 Experience Platform API を呼び出す方法について詳しくは、[&#x200B; 監査ログ API ガイド &#x200B;](../../landing/api-guide.md) を参照してください。
+監査ログのユーザーインターフェイスについて詳しくは、[監査ログの概要ドキュメント ](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。 Experience Platform APIの呼び出しについて詳しくは、[監査ログ API ガイド ](../../landing/api-guide.md)を参照してください。
 
 >[!NOTE]
 >
->セッションの削除アクションがログに記録されます。 UI ワークフローについては、[&#x200B; クエリサービスセッションの管理 &#x200B;](../ui/session-management.md) を参照してください。
+>セッション削除アクションがログに記録されます。 UI ワークフローについては、[ クエリサービスセッションの管理](../ui/session-management.md)を参照してください。
 
 ## 前提条件
 
-Experience Platform UI 内で監査ログダッシュボードを表示するには、[!DNL Data Governance] [!UICONTROL View User Activity Log] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
+Experience Platform UI内で監査ログダッシュボードを表示するには、[!DNL Data Governance] [!UICONTROL View User Activity Log]権限を有効にする必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
-## [!DNL Query Service] 監査ログのカテゴリ {#audit-log-categories}
+## [!DNL Query Service]個の監査ログ カテゴリ {#audit-log-categories}
 
-[!DNL Query Service] が提供する監査ログのカテゴリは次のとおりです。
+[!DNL Query Service]が提供する監査ログのカテゴリは次のとおりです。
 
 | カテゴリ | 説明 |
 |---|---|
-| [!UICONTROL Query] | このカテゴリを使用すると、クエリの実行を監査できます。 |
-| [!UICONTROL Query template] | このカテゴリを使用すると、クエリテンプレートに対して実行される様々なアクション（作成、更新、削除）を監査できます。 |
-| [!UICONTROL Scheduled query] | このカテゴリを使用すると、[!DNL Query Service] 内で作成、更新または削除されたスケジュールを監査できます。 |
+| [!UICONTROL Query] | このカテゴリでは、クエリ実行を監査できます。 |
+| [!UICONTROL Query template] | このカテゴリでは、クエリテンプレートで実行されたさまざまなアクション（作成、更新、削除）を監査できます。 |
+| [!UICONTROL Scheduled query] | このカテゴリでは、[!DNL Query Service]内に作成、更新、または削除されたスケジュールを監査できます。 |
 
-## [!DNL Query Service] 監査ログの実行 {#perform-an-audit-log}
+## [!DNL Query Service]監査ログの実行 {#perform-an-audit-log}
 
-[!DNL Query Service] のアクティビティの監査を実行するには、左側のナビゲーションから「**[!UICONTROL Audits]**」を選択し、次に「funnel」アイコン（![A フィルターアイコン）を選択します。](/help/images/icons/filter.png)）を選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。
+[!DNL Query Service] アクティビティの監査を実行するには、左側のナビゲーションから「**[!UICONTROL Audits]**」を選択し、続いてfunnel アイコン（![ フィルターアイコン）を選択します。](/help/images/icons/filter.png)）を使用すると、検索結果の絞り込みに役立つフィルターコントロールのリストを表示できます。
 
-![&#x200B; 左側のナビゲーションに「監査」が表示され、フィルターコントロールがハイライト表示されたExperience Platform UI 監査ログダッシュボード。](../images/audit-log/filter-controls.png)
+![左側のナビゲーションとフィルター制御に「監査」がハイライト表示されたExperience Platform UI監査ログダッシュボード。](../images/audit-log/filter-controls.png)
 
-「[!UICONTROL Audits] dashboard [!UICONTROL Activity log]」タブでは、記録されたすべてのExperience Platform アクションを [!DNL Query Service] のいずれかのカテゴリでフィルタリングできます。 ログ結果は、実行期間、実行されたアクションや機能、クエリを実行したユーザーに基づいて、さらにフィルタリングできます。 詳しくは、監査ログのドキュメント [&#x200B; カテゴリ、アクション、ユーザー、ステータスに基づいてログをフィルタリングする方法の完全な手順 &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui) を参照してください。
+[!UICONTROL Audits] ダッシュボード [!UICONTROL Activity log] タブから、記録されたすべてのExperience Platform アクションを[!DNL Query Service] カテゴリでフィルタリングできます。 ログ結果は、実行された期間、実行されたアクション/関数、またはクエリを実行したユーザーに基づいて、さらにフィルタリングできます。 カテゴリ、アクション、ユーザー、ステータス [に基づいてログをフィルタリングする方法については、](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui)監査ログのドキュメントを参照してください。
 
 返される監査ログデータには、選択したフィルター条件を満たすすべてのクエリに関する次の情報が含まれます。
 
 | 列の名前 | 説明 |
 |---|---|
-| [!UICONTROL Timestamp] | `month/day/year hour:minute AM/PM` 形式で実行されたアクションの正確な日時。 |
-| [!UICONTROL Asset Name] | 「[!UICONTROL Asset Name]」フィールドの値は、フィルターとして選択したカテゴリによって異なります。 [!UICONTROL Scheduled query] カテゴリを使用する場合、これは **スケジュール名** です。 [!UICONTROL Query template] カテゴリを使用する場合、これは **テンプレート名** です。 [!UICONTROL Query] カテゴリを使用する場合、これは **セッション ID** です |
-| [!UICONTROL Category] | このフィールドは、フィルタードロップダウンで選択したカテゴリに一致します。 |
-| [!UICONTROL Action] | 作成、削除、更新、実行のいずれかを指定できます。 使用できるアクションは、フィルターとして選択したカテゴリによって異なります。 |
-| [!UICONTROL User] | このフィールドには、クエリを実行したユーザー ID が表示されます。 |
+| [!UICONTROL Timestamp] | `month/day/year hour:minute AM/PM`形式で実行されたアクションの正確な日時。 |
+| [!UICONTROL Asset Name] | [!UICONTROL Asset Name] フィールドの値は、フィルターとして選択したカテゴリによって異なります。 [!UICONTROL Scheduled query] カテゴリを使用する場合、これは&#x200B;**スケジュール名**&#x200B;です。 [!UICONTROL Query template] カテゴリを使用する場合、これは&#x200B;**テンプレート名**&#x200B;です。 [!UICONTROL Query] カテゴリを使用する場合、これは&#x200B;**セッション ID**&#x200B;です |
+| [!UICONTROL Category] | このフィールドは、フィルタードロップダウンで選択したカテゴリと一致します。 |
+| [!UICONTROL Action] | これは、作成、削除、更新、実行のいずれかです。 使用可能なアクションは、フィルターとして選択したカテゴリによって異なります。 |
+| [!UICONTROL User] | このフィールドは、クエリを実行したユーザーIDを提供します。 |
 
-![&#x200B; フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../images/audit-log/filtered-activity.png)
+![ フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../images/audit-log/filtered-activity.png)
 
 >[!NOTE]
 >
->ログ結果を CSV または JSON ファイル形式でダウンロードすると、監査ログダッシュボードにデフォルトで表示されるクエリの詳細よりも多くのクエリが提供されます。
+>ログ結果をCSVまたはJSON ファイル形式でダウンロードすると、監査ログダッシュボードにデフォルトで表示されるよりも多くのクエリの詳細が提供されます。
 
 ## 詳細パネル
 
-監査ログ結果の行を選択して、画面の右側にある詳細パネルを開きます。
+監査ログの結果の任意の行を選択して、画面の右側にある詳細パネルを開きます。
 
-![&#x200B; 詳細パネルがハイライト表示された「監査」ダッシュボードの「アクティビティログ」タブ &#x200B;](../images/audit-log/details-panel.png)
+![詳細パネルがハイライト表示されたダッシュボードアクティビティログのタブを監査します。](../images/audit-log/details-panel.png)
 
-詳細パネルを使用して、[!UICONTROL Asset ID] と [!UICONTROL Event status] を検索できます。
+詳細パネルを使用して、[!UICONTROL Asset ID]と[!UICONTROL Event status]を検索できます。
 
-[!UICONTROL Asset ID] の値は、監査で使用されるカテゴリに応じて変わります。
+[!UICONTROL Asset ID]の値は、監査で使用されるカテゴリによって異なります。
 
-* [!UICONTROL Query] カテゴリを使用する場合、[!UICONTROL Asset ID] は **セッション ID** です。
-* [!UICONTROL Query template] カテゴリを使用する場合、[!UICONTROL Asset ID] は **テンプレート ID** で、先頭に `[!UICONTROL templateID:]` が付きます。
-* [!UICONTROL Scheduled query] カテゴリを使用する場合、[!UICONTROL Asset ID] は **スケジュール ID** で、先頭に `[!UICONTROL scheduleID:]` が付きます。
+* [!UICONTROL Query] カテゴリを使用する場合、[!UICONTROL Asset ID]は&#x200B;**セッション ID**&#x200B;です。
+* [!UICONTROL Query template] カテゴリを使用する場合、[!UICONTROL Asset ID]は&#x200B;**テンプレート ID**&#x200B;で、先頭に`[!UICONTROL templateID:]`が付きます。
+* [!UICONTROL Scheduled query] カテゴリを使用する場合、[!UICONTROL Asset ID]は&#x200B;**スケジュール ID**&#x200B;で、先頭に`[!UICONTROL scheduleID:]`が付きます。
 
-[!UICONTROL Event status] の値は、監査で使用されるカテゴリに応じて変わります。
+[!UICONTROL Event status]の値は、監査で使用されるカテゴリによって異なります。
 
-* [!UICONTROL Query] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、そのセッション内でユーザーが実行したすべての **クエリ ID** のリストが表示されます。
-* [!UICONTROL Query template] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、イベントステータスのプレフィックスとして **テンプレート名** が表示されます。
-* [!UICONTROL Query schedule] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、イベントステータスのプレフィックスとして **スケジュール名** が表示されます。
+* [!UICONTROL Query] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、そのセッション内でユーザーが実行したすべての&#x200B;**クエリ ID**&#x200B;のリストが表示されます。
+* [!UICONTROL Query template] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、イベントステータスの接頭辞として&#x200B;**テンプレート名**&#x200B;が表示されます。
+* [!UICONTROL Query schedule] カテゴリを使用する場合、[!UICONTROL Event status] フィールドには、イベントのステータスのプレフィックスとして&#x200B;**スケジュール名**&#x200B;が表示されます。
 
-## [!DNL Query Service] 監査ログカテゴリで使用可能なフィルター {#available-filters}
+## [!DNL Query Service]個の監査ログカテゴリで使用可能なフィルター {#available-filters}
 
-使用可能なフィルターは、ドロップダウンで選択したカテゴリによって異なります。 次の表に、[[!DNL Query Service]  監査ログカテゴリ &#x200B;](#audit-log-categories) で使用できるフィルターの詳細を示します。
+使用可能なフィルターは、ドロップダウンで選択したカテゴリによって異なります。 次の表は、[[!DNL Query Service] 監査ログカテゴリ ](#audit-log-categories)で使用できるフィルターの詳細を示しています。
 
 | フィルター | 説明 |
 |---|---|
-| カテゴリ | 使用可能なカテゴリの完全なリストについては、[[!DNL Query Service]  監査ログカテゴリ &#x200B;](#audit-log-categories) の節を参照してください。 |
-| アクション | [!DNL Query Service] 監査カテゴリを参照する場合、update は **既存フォームの変更**、delete は **スケジュールまたはテンプレートの削除**、create は **新しいスケジュールまたはテンプレートの作成**、execute は **クエリの実行** です。 |
-| ユーザー | ユーザーでフィルタリングするには、完全なユーザー ID （例：johndoe@acme.com）を入力します。 |
-| ステータス | [!UICONTROL Allow]、[!UICONTROL Success]、[!UICONTROL Failure] の各オプションでは、「ステータス」または「イベントステータス」に基づいてログがフィルタリングされるのに対して、[!UICONTROL Deny] の各オプションでは **すべて** のログがフィルタリングされます。 |
+| カテゴリ | 使用可能なカテゴリの完全なリストについては、[[!DNL Query Service] 監査ログカテゴリ ](#audit-log-categories)の節を参照してください。 |
+| アクション | [!DNL Query Service]個の監査カテゴリを参照する場合、更新は既存のフォーム **に**&#x200B;変更され、削除は&#x200B;**スケジュールまたはテンプレート**&#x200B;の削除、作成は&#x200B;**新しいスケジュールまたはテンプレートの作成**、実行は&#x200B;**クエリを実行しています**。 |
+| ユーザー | 完全なユーザーID （johndoe@acme.comなど）を入力して、ユーザーでフィルタリングします。 |
+| ステータス | [!UICONTROL Allow]、[!UICONTROL Success]および[!UICONTROL Failure] オプションは、「ステータス」または「イベントステータス」に基づいてログをフィルタリングしますが、[!UICONTROL Deny] オプションは&#x200B;**すべての** ログをフィルタリングします。 |
 | 日付 | 結果をフィルターする日付範囲を定義する開始日および／または終了日を選択します。 |
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Query Service] 監査ログ機能と、その機能を使用して [!DNL Query Service] ユーザーのアクションをフィルタリングする方法について詳しく説明します。
+このドキュメントを読むことで、[!DNL Query Service]監査ログ機能と、それを使用して[!DNL Query Service] ユーザーアクションをフィルタリングする方法について理解を深めることができます。
 
-トラブルシューティングのために [!DNL Query Service] 監査ログ機能を使用している場合は、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md) を読むことをお勧めします。
+トラブルシューティングの目的で[!DNL Query Service]監査ログ機能を使用している場合は、[ トラブルシューティングガイド ](../troubleshooting-guide.md)をお読みになることをお勧めします。
