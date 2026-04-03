@@ -6,10 +6,10 @@ breadcrumb-title: データ収集
 user-guide-description: Adobe Experience Platform にデータを送信する方法について説明します。
 feature: Data Collection
 role: Developer
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 40%
+source-wordcount: '167'
+ht-degree: 37%
 
 ---
 
@@ -18,8 +18,17 @@ ht-degree: 40%
 
 + [概要](home.md)
 + [権限](permissions.md)
++ ID {#identity}
+   + [概要](identity/overview.md)
+   + [identityMapの使用](identity/identity-map.md)
+   + [ファーストパーティデバイス ID](identity/fpid.md)
+   + [ドメイン間の共有](identity/cross-domain-sharing.md)
+   + [モバイルアプリからモバイル web/Web ビュー](identity/mobile-to-web.md)
+   + [統一されたID サポート](identity/unified-identity-support.md)
+   + [同意とID](identity/consent.md)
+   + [トラブルシューティング](identity/troubleshooting.md)
 + BrightScript {#brightscript}
-   + [BrightScript の概要](brightscript/brs-overview.md)
+   + [BrightScriptの概要](brightscript/brs-overview.md)
 + JavaScript {#js}
    + [Web SDK JavaScriptの概要](js/js-overview.md)
    + [リリースノート](js/release-notes.md)
@@ -52,7 +61,7 @@ ht-degree: 40%
          + [onBeforeLinkClickSend](js/commands/configure/onbeforelinkclicksend.md)
          + [orgId](js/commands/configure/orgid.md)
          + [prehidingStyle](js/commands/configure/prehidingstyle.md)
-         + [pushNotification](js/commands/configure/pushnotifications.md)
+         + [pushNotifications](js/commands/configure/pushnotifications.md)
          + [streamingMedia](js/commands/configure/streamingmedia.md)
          + [targetMigrationEnabled](js/commands/configure/targetmigrationenabled.md)
          + [thirdPartyCookiesEnabled](js/commands/configure/thirdpartycookiesenabled.md)
@@ -66,7 +75,7 @@ ht-degree: 40%
          + [documentUnloading](js/commands/sendevent/documentunloading.md)
          + [edgeConfigOverrides](js/commands/sendevent/edgeconfigoverrides.md)
          + [eventType](js/commands/sendevent/eventtype.md)
-         + [パーソナライズ機能](js/commands/sendevent/personalization.md)
+         + [personalization](js/commands/sendevent/personalization.md)
          + [renderDecisions](js/commands/sendevent/renderdecisions.md)
          + [xdm](js/commands/sendevent/xdm.md)
       + [sendMediaEvent](js/commands/sendmediaevent.md)
@@ -74,10 +83,10 @@ ht-degree: 40%
       + [setConsent](js/commands/setconsent.md)
       + [setDebug](js/commands/setdebug.md)
       + [subscribeRulesetItems](js/commands/subscriberulesetitems.md)
-      + [コマンドの応答](js/commands/command-responses.md)
+      + [コマンド応答](js/commands/command-responses.md)
    + [フックの監視](js/monitoring-hooks.md)
    + [よくある質問](js/faq.md)
-+ タグ クライアントサイドJavaScript {#tags}
++ クライアントサイド JavaScriptのタグ付け {#tags}
    + [概要](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [会社](tags/company.md)
@@ -98,11 +107,7 @@ ht-degree: 40%
    + [コマースデータの収集](use-cases/collect-commerce-data.md)
    + [CSP の設定](use-cases/configuring-a-csp.md)
    + [デバッグ](use-cases/debugging.md)
-   + [イベントの重複排除](use-cases/event-duplication.md)
-   + ID {#identity}
-      + [概要](use-cases/identity/id-overview.md)
-      + [ファーストパーティデバイス ID](use-cases/identity/first-party-device-ids.md)
-      + [ID 共有](use-cases/identity/id-sharing.md)
+   + [イベントの重複の除外](use-cases/event-duplication.md)
    + MCP {#mcp}
       + [ChatGPT アプリ](use-cases/mcp/chatgpt.md)
    + [複数のSDK インスタンス](use-cases/multiple-instances.md)
@@ -112,5 +117,5 @@ ht-degree: 40%
       + [HTML オファーのレンダリング](use-cases/personalization/render-html-offers.md)
       + [提案を手動でレンダリング](use-cases/personalization/render-manual-propositions.md)
       + [フリッカーの管理](use-cases/personalization/manage-flicker.md)
-      + [イベントを表示](use-cases/personalization/display-events.md)
-      + [上位および下位のページイベント](use-cases/personalization/top-bottom-page-events.md)
+      + [表示イベント](use-cases/personalization/display-events.md)
+      + [トップおよびボトムのページイベント](use-cases/personalization/top-bottom-page-events.md)

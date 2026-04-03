@@ -2,10 +2,10 @@
 title: ID名前空間の概要
 description: Identity ServiceのID名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 28%
+source-wordcount: '1925'
+ht-degree: 27%
 
 ---
 
@@ -74,7 +74,7 @@ ID名前空間の1つの要素は&#x200B;**ID タイプ**&#x200B;です。 ID �
 * ID グラフを生成するかどうか：
    * ID グラフは、個人以外の ID とパートナー ID の ID タイプに対しては生成されません。
    * ID グラフは、その他のすべてのID タイプに対して生成されます。
-* システムの制限に達したときにID グラフから削除されるID。 詳しくは、ID データの[&#x200B; ガードレール &#x200B;](../guardrails.md)を参照してください。
+* システムの制限に達したときにID グラフから削除されるID。 詳しくは、ID データの[ ガードレール ](../guardrails.md)を参照してください。
 
 Experience Platformでは、次のID タイプを使用できます。
 
@@ -99,12 +99,12 @@ Experience Platformには、すべての組織で使用できる複数のID名�
 | 表示名 | ID記号（コード） | ID タイプ | 説明 |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | Cookie ID | Adobe AdCloudを表す名前空間。 |
-| Adobe Analytics (従来の ID) | AAID | Cookie ID | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=ja#namespaces)に関する次のドキュメントを参照してください。 |
+| Adobe Analytics (従来の ID) | AAID | Cookie ID | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)に関する次のドキュメントを参照してください。 |
 | Apple IDFA（広告主の ID） | IDFA | デバイス ID | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
-| Apple プッシュ通知サービス | APNS | デバイス ID | Apple プッシュ通知サービスを使用して収集されたIDを表す名前空間。 詳しくは、[Apple プッシュ通知サービス &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)に関する次のドキュメントを参照してください。 |
+| Apple プッシュ通知サービス | APNS | デバイス ID | Apple プッシュ通知サービスを使用して収集されたIDを表す名前空間。 詳しくは、[Apple プッシュ通知サービス ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)に関する次のドキュメントを参照してください。 |
 | ECID | ECID | Cookie ID | ECIDを表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](./ecid.md)の次のドキュメントを参照してください。 |
 | メール | メール | メール | メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、単一の人物に関連付けられているため、様々なチャネルをまたいでその人物を識別するために使用できます。 |
-| メール（SHA256、小文字） | Email_LC_SHA256 | メール | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳しくは、[SHA256 ハッシュサポート &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support)に関する次のドキュメントを参照してください。 |
+| メール（SHA256、小文字） | Email_LC_SHA256 | メール | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。詳しくは、[SHA256 ハッシュサポート ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)に関する次のドキュメントを参照してください。 |
 | Firebase Cloud Messaging | FCM | デバイス ID | プッシュ通知にGoogle Firebase Cloud Messagingを使用して収集されたIDを表す名前空間。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)の次のドキュメントを参照してください。 |
 | Google Ad ID （GAID） | GAID | デバイス ID | Google 広告 ID を表す名前空間。詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=ja) に関する次のドキュメントを参照してください。 |
 | Phone | Phone | 電話番号 | 電話番号を表す名前空間。 このタイプの名前空間は、多くの場合、単一の人物に関連付けられているため、様々なチャネルをまたいでその人物を識別するために使用できます。 |
@@ -143,7 +143,7 @@ UIでID名前空間を表示するには、左側のナビゲーションで「*
 
 [!UICONTROL Create identity namespace] ウィンドウが表示されます。 まず、作成するカスタム名前空間の表示名とID記号を指定する必要があります。 必要に応じて、説明を指定して、作成するカスタム名前空間に追加のコンテキストを追加することもできます。
 
-![&#x200B; カスタム ID名前空間に関する情報を入力できるポップアップウィンドウ。](../images/namespace/name-and-symbol.png)
+![ カスタム ID名前空間に関する情報を入力できるポップアップウィンドウ。](../images/namespace/name-and-symbol.png)
 
 次に、カスタム名前空間に割り当てるID タイプを選択します。 終了したら「**[!UICONTROL Create]**」を選択します。
 
@@ -159,8 +159,8 @@ UIでID名前空間を表示するには、左側のナビゲーションで「*
 
 ## ID データの名前空間
 
-ID の名前空間をどのように指定するかは、ID データの提供方法によって異なります。データ ID データの提供について詳しくは、[[!DNL Identity Service] 実装ガイド &#x200B;](../implementation.md)を参照してください。
+ID の名前空間をどのように指定するかは、ID データの提供方法によって異なります。データ ID データの提供について詳しくは、[[!DNL Identity Service] 実装ガイド ](../implementation.md)を参照してください。 Web SDK `identityMap`を通じてIDを送信する場合は、ID値を送信する前に準備および書式設定する方法について、[ データ収集でのIDMapの使用](/help/collection/identity/identity-map.md)を参照してください。
 
 ## 次の手順
 
-ID名前空間の主要な概念を理解したところで、[ID グラフビューア &#x200B;](../features/identity-graph-viewer.md)を使用してID グラフを操作する方法を学び始めることができます。
+ID名前空間の主要な概念を理解したところで、[ID グラフビューア ](../features/identity-graph-viewer.md)を使用してID グラフを操作する方法を学び始めることができます。

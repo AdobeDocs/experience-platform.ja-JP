@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2022年2月）
 description: Adobe Experience Platform の 2022年2月のリリースノートです。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 92%
@@ -17,7 +17,7 @@ ht-degree: 92%
 >
 >このリリースは、当初の日付の 2月23日から 3月7日に変更されました。
 
-Adobe Experience Platform の既存の機能に対するアップデート：
+Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data collection]](#data-collection)
@@ -33,7 +33,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しい標準宛先ウィジェット | 以下の標準ウィジェットを使用すると、宛先に関連する異なる指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。このウィジェットは、選択した宛先に応じて、最近アクティブ化された上位 5 つのセグメントを降順で示します。</li><li>オーディエンスサイズのトレンド。このウィジェットは、宛先アカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）。このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）。このウィジェットは、上位 5 つのマッピングされたセグメントのリストを表示します。セグメントは、ウィジェットのドロップダウンメニューから選択した宛先 ID に一致するソース ID のそれぞれのカウント数に従って、多い順に並べられます。</li><li>一般的なオーディエンス。このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用できる標準ウィジェットについて詳しくは、[宛先ダッシュボードドキュメント](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=ja#standard-widgets)を参照してください。 |
+| 新しい標準宛先ウィジェット | 以下の標準ウィジェットを使用すると、宛先に関連する異なる指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。このウィジェットは、選択した宛先に応じて、最近アクティブ化された上位 5 つのセグメントを降順で表示します。</li><li>オーディエンスサイズのトレンド。このウィジェットは、宛先アカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）。このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）。このウィジェットは、上位 5 つのマッピングされたセグメントのリストを表示します。セグメントは、ウィジェットのドロップダウンメニューから選択した宛先 ID に一致するソース ID のそれぞれのカウント数に従って、多い順に並べられます。</li><li>一般的なオーディエンス。このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用できる標準ウィジェットについて詳しくは、[宛先ダッシュボードドキュメント](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)を参照してください。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -45,11 +45,11 @@ Experience Platform は、クライアントサイドのカスタマーエクス
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが新しくなりました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../datastreams/overview.md)のガイドを参照してください。 |
+| データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローがアップデートされました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../datastreams/overview.md)のガイドを参照してください。 |
 | データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバーサイドのエクスペリエンスデータモデル（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../datastreams/data-prep.md)に関する節を参照してください。 |
-| ファーストパーティデバイス ID | Experience Platform Web SDKを使用してカスタマーデータを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Networkに送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。 詳しくは、[ファーストパーティデバイス ID](/help/collection/use-cases/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
+| ファーストパーティデバイス ID | Experience Platform Web SDKを使用してお客様のデータを収集する際に、独自のデバイス IDをAdobe Experience Platform Edge Networkに送信できるようになりました。これにより、サードパーティ Cookieの有効期間に対する最近のブラウザーの制限を回避できます。 詳しくは、[ファーストパーティデバイス ID](/help/collection/identity/fpid.md) に関するガイドを参照してください。 |
 
-Experience Platformのデータ収集について詳しくは、[&#x200B; データ収集の概要 &#x200B;](../../collection/home.md) を参照してください。
+Experience Platformでのデータ収集について詳しくは、[ データ収集の概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform [!DNL Identity Service] を利用すると、デバイ
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、Experience Platform サービスを使用して外部ソースからデータを取り込むと同時に、そのデータを構造化、ラベル付け、強化することができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
