@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
-title: プロファイルシステムジョブ API エンドポイント
+title: Profile System Jobs API エンドポイント
 type: Documentation
-description: Adobe Experience Platformを使用すると、プロファイルストアからデータセットやバッチを削除して、不要になった、または誤って追加されたリアルタイム顧客プロファイルデータを削除できます。 これには、プロファイル API を使用して、プロファイルシステムジョブまたは削除リクエストを作成する必要があります。
+description: Adobe Experience Platformを使用すると、プロファイルストアからデータセットまたはバッチを削除して、不要になった、またはエラーで追加されたリアルタイム顧客プロファイルデータを削除できます。 これには、プロファイル APIを使用してプロファイルシステムジョブを作成するか、リクエストを削除する必要があります。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 35%
 
 ---
 
-# プロファイルシステムジョブエンドポイント（削除リクエスト）
+# プロファイルシステムジョブエンドポイント（削除要求）
 
 >[!IMPORTANT]
 >
->次のエンドポイントは、Microsoft Azure で実行されているAdobe Experience Platformの実装とAmazon Web Services（AWS）で異なる場合があります。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>以下のエンドポイントは、Microsoft Azureで動作するAdobe Experience Platformの実装とAmazon Web Services（AWS）の実装で異なる場合があります。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
 
-Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Experience Platform] に取り込まれたデータは [!DNL Data Lake] に格納されます。データセットがプロファイルに対して有効になっている場合、そのデータは [!DNL Real-Time Customer Profile] データストアにも格納されます。 不要になったデータやエラーで追加されたデータを削除するには、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要が生じる場合があります。 これには、[!DNL Real-Time Customer Profile] API を使用して [!DNL Profile] システムジョブ、または「削除リクエスト」を作成する必要があります。
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Experience Platform]に取り込まれたデータは[!DNL Data Lake]に保存され、データセットがプロファイルに対して有効になっている場合、そのデータも[!DNL Real-Time Customer Profile] データストアに保存されます。 場合によっては、不要になったデータやエラーで追加されたデータを削除するために、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要があります。 これには、[!DNL Real-Time Customer Profile] APIを使用して[!DNL Profile] システムジョブまたは「delete リクエスト」を作成する必要があります。
 
 >[!NOTE]
 >
->[!DNL Data Lake] からデータセットまたはバッチを削除しようとしている場合は、[&#x200B; カタログサービスの概要 &#x200B;](../../catalog/home.md) にアクセスして詳細を確認してください。
+>[!DNL Data Lake]からデータセットまたはバッチを削除する場合は、[ カタログサービスの概要](../../catalog/home.md)にアクセスして詳細を確認してください。
 
 ## はじめに
 
@@ -32,15 +32,15 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 削除リクエストは長時間実行される非同期プロセスです。つまり、組織が複数の削除リクエストを一度に実行している場合があります。組織で現在実行中のすべての削除リクエストを表示するには、`/system/jobs` エンドポイントに対して GET リクエストを実行できます。
 
-また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。複数のパラメーターを使用するには、アンパサンド（`&`）を使用して各パラメーターを区切ります。
+また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。複数のパラメーターを使用するには、アンパサンド （`&`）を使用して各パラメーターを分離します。
 
 **API 形式**
 
 >[!AVAILABILITY]
 >
->Microsoft Azure でExperience Platformを使用する場合は、次のクエリパラメーター **のみ** を使用できます。
+>Microsoft AzureでExperience Platformを使用する場合、次のクエリパラメーターは&#x200B;**のみ**&#x200B;使用できます。
 >
->AWSでこのエンドポイントを使用すると、最初の 100 個のシステムジョブが作成日に基づいて降順で返されます。
+>AWSでこのエンドポイントを使用する場合、最初の100個のシステムジョブは、作成日に基づいて降順で返されます。
 
 ```http
 GET /system/jobs
@@ -49,10 +49,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
-| `start` | リクエストの作成時間ごとに、返される結果のページをオフセットします。 | `start=4` |
+| `start` | リクエストの作成時間に従って、返された結果のページをオフセットします。 | `start=4` |
 | `limit` | 返される結果の数を制限します。 | `limit=10` |
-| `page` | リクエストの作成時間ごとに、特定の結果ページを返します。 | `page=2` |
-| `sort` | 特定のフィールドで結果を昇順（`asc`）または降順（`desc`）で並べ替えます。結果の複数のページを返す場合、並べ替えパラメーターは機能しません。 | `sort=batchId:asc` |
+| `page` | リクエストの作成時間に従って、特定の結果ページを返します。 | `page=2` |
+| `sort` | 特定のフィールドで結果を昇順（`asc`）または降順（`desc`）で並べ替えます。複数のページの結果を返す場合、並べ替えパラメーターは機能しません。 | `sort=batchId:asc` |
 
 **リクエスト**
 
@@ -76,11 +76,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 >[!IMPORTANT]
 >
->このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+>このエンドポイントをAWSで使用する場合、**では** リクエストヘッダーの代わりに`x-sandbox-id` リクエストヘッダーを使用する必要があります。`x-sandbox-name`
 
 +++ システムジョブを表示するためのサンプルリクエスト。
 
@@ -100,15 +100,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 >[!IMPORTANT]
 >
->次の応答は、Azure インスタンスとAWS インスタンスで異なります。
+>Azure インスタンスとAWS インスタンスでは、次の対応が異なります。
 
 >[!BEGINTABS]
 
 >[!TAB Microsoft Azure]
 
-正常な応答には「子」配列と、そのリクエストの詳細を含む各削除リクエストのオブジェクトが含まれています。
+応答が成功すると、リクエストの詳細を含む各削除リクエストに対するオブジェクトを持つ「子」配列が含まれます。
 
-+++ 削除リクエストの表示に成功した応答
++++ 削除要求を表示するための正常な応答
 
 ```json
 {
@@ -144,14 +144,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `_page.count` | リクエストの合計数。この応答はスペースを節約するために切り捨てられています。 |
-| `_page.next` | 結果の追加のページが存在する場合は、[&#x200B; 参照リクエスト &#x200B;](#view-a-specific-delete-request) の ID 値を指定された `"next"` 値に置き換えて、結果の次のページを表示します。 |
-| `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` が返されます。 |
-| `status` | 削除リクエストのステータス。使用可能な値は、`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"` などです。 |
-| `metrics` | 処理されたレコードの数（`"recordsProcessed"`）、リクエストが処理された時間（秒）、またはリクエストが完了するまでにかかった時間（`"timeTakenInSec"`）を含むオブジェクト。 |
+| `_page.next` | 結果の追加ページが存在する場合は、[参照リクエスト ](#view-a-specific-delete-request)のID値を指定された`"next"`値に置き換えて、結果の次のページを表示します。 |
+| `jobType` | 作成されるジョブのタイプ。この場合、常に`"DELETE"`が返されます。 |
+| `status` | 削除リクエストのステータス。指定できる値は、`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"`です。 |
+| `metrics` | 処理されたレコードの数（`"recordsProcessed"`）と、リクエストが処理された時間（秒単位）、またはリクエストが完了するまでの所要時間（`"timeTakenInSec"`）を含むオブジェクト。 |
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 応答が成功すると、各システムリクエストのオブジェクトを含む配列が返されます。
 
@@ -197,10 +197,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `requestId` | システムジョブの ID。 |
-| `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
-| `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
-| `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+| `requestId` | システムジョブのID。 |
+| `requestType` | システムジョブのタイプ。 使用可能な値には、`BACKFILL_TTL`、`DELETE_EE_BATCH`および`TRUNCATE_DATASET`が含まれます。 |
+| `status` | システム ジョブのステータス。 使用可能な値には、`NEW`、`SUCCESS`、`ERROR`、`FAILED`および`IN-PROGRESS`が含まれます。 |
+| `properties` | システムジョブのバッチ IDやデータセット IDを含むオブジェクト。 |
 
 +++
 
@@ -210,9 +210,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 新しい削除リクエストの開始は、`/systems/jobs` エンドポイントへの POST リクエストを通じて行われます。このエンドポイントでは、削除するデータセットまたはバッチの ID がリクエストの本文に表示されます。 
 
-### データセットおよび関連するプロファイルデータの削除
+### データセットと関連プロファイルデータの削除
 
-データセットとそれに関連付けられたすべてのプロファイルデータをプロファイルストアから削除するには、データセット ID を POST リクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。レコ [!DNL Experience Platform] ドと時系列の両方のスキーマに基づいてデータセットを削除できます。
+データセットと、そのデータセットに関連付けられたすべてのプロファイルデータをプロファイルストアから削除するには、データセット IDをPOST リクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。[!DNL Experience Platform]を使用すると、レコードと時系列の両方のスキーマに基づいてデータセットを削除できます。
 
 **API 形式**
 
@@ -230,7 +230,7 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
-+++ データセットを削除するリクエストのサンプル。
++++ データセットを削除するサンプルリクエスト。
 
 ```shell
 curl -X POST \
@@ -249,15 +249,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `dataSetId` | 削除するデータセットの ID。 |
+| `dataSetId` | 削除するデータセットのID。 |
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 >[!IMPORTANT]
 >
->このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+>このエンドポイントをAWSで使用する場合、**では** リクエストヘッダーの代わりに`x-sandbox-id` リクエストヘッダーを使用する必要があります。`x-sandbox-name`
 
-+++ データセットを削除するリクエストのサンプル。
++++ データセットを削除するサンプルリクエスト。
 
 ```shell
 curl -X POST \
@@ -276,7 +276,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `dataSetId` | 削除するデータセットの ID。 |
+| `dataSetId` | 削除するデータセットのID。 |
 
 >[!ENDTABS]
 
@@ -284,7 +284,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->次の応答は、Azure インスタンスとAWS インスタンスで異なります。
+>Azure インスタンスとAWS インスタンスでは、次の対応が異なります。
 
 >[!BEGINTABS]
 
@@ -292,7 +292,7 @@ curl -X POST \
 
 正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `status` は、処理が開始されるまで `"NEW"` です。応答内の `dataSetId` は、リクエストで送信された `dataSetId` と一致する必要があります。
 
-+++ 削除リクエストの作成に成功した応答。
++++ 削除リクエストを作成するための応答が成功しました。
 
 ```json
 {
@@ -313,11 +313,11 @@ curl -X POST \
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 応答が成功すると、新しく作成したシステムリクエストの詳細が返されます。
 
-+++ 削除リクエストの作成に成功した応答。
++++ 削除リクエストを作成するための応答が成功しました。
 
 ```json
 {
@@ -340,10 +340,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `requestId` | システムジョブの ID。 |
-| `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
-| `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
-| `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+| `requestId` | システムジョブのID。 |
+| `requestType` | システムジョブのタイプ。 使用可能な値には、`BACKFILL_TTL`、`DELETE_EE_BATCH`および`TRUNCATE_DATASET`が含まれます。 |
+| `status` | システム ジョブのステータス。 使用可能な値には、`NEW`、`SUCCESS`、`ERROR`、`FAILED`および`IN-PROGRESS`が含まれます。 |
+| `properties` | システムジョブのバッチ IDやデータセット IDを含むオブジェクト。 |
 
 +++
 
@@ -355,9 +355,9 @@ curl -X POST \
 
 >[!NOTE]
 >
-> レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードスキーマに基づくデータセットに対して誤ったバッチの影響を削除する唯一の方法は、間違ったレコードを上書きするために、正しいデータでバッチを再度取り込むことです。
+> レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードスキーマに基づくデータセットの誤ったバッチの影響を取り除く唯一の方法は、誤ったレコードを上書きするために正しいデータでバッチを再取り込みすることです。
 
-レコードと時系列の動作について詳しくは、[!DNL XDM System] の概要の [XDM データの動作に関する節 &#x200B;](../../xdm/home.md#data-behaviors) を参照してください。
+レコードと時系列動作について詳しくは、[の概要の](../../xdm/home.md#data-behaviors)XDM データ動作[!DNL XDM System]の節を参照してください。
 
 **API 形式**
 
@@ -375,7 +375,7 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
-+++ バッチを削除するリクエストのサンプル。
++++ バッチを削除するためのサンプルリクエスト。
 
 ```shell
 curl -X POST \
@@ -395,16 +395,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `datasetId` | 削除するバッチのデータセットの ID。 |
-| `batchId` | 削除するバッチの ID。 |
+| `datasetId` | 削除するバッチのデータセットのID。 |
+| `batchId` | 削除するバッチのID。 |
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 >[!IMPORTANT]
 >
->このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+>このエンドポイントをAWSで使用する場合、**では** リクエストヘッダーの代わりに`x-sandbox-id` リクエストヘッダーを使用する必要があります。`x-sandbox-name`
 
-+++ バッチを削除するリクエストのサンプル。
++++ バッチを削除するためのサンプルリクエスト。
 
 ```shell
 curl -X POST \
@@ -424,8 +424,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `datasetId` | 削除するバッチのデータセットの ID。 |
-| `batchId` | 削除するバッチの ID。 |
+| `datasetId` | 削除するバッチのデータセットのID。 |
+| `batchId` | 削除するバッチのID。 |
 
 >[!ENDTABS]
 
@@ -433,15 +433,15 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->次の応答は、Azure インスタンスとAWS インスタンスで異なります。
+>Azure インスタンスとAWS インスタンスでは、次の対応が異なります。
 
 >[!BEGINTABS]
 
 >[!TAB Microsoft Azure]
 
-正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。応答の `"batchId"` 値は、リクエストで送信された `"batchId"` 値と一致する必要があります。
+正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。応答の`"batchId"`値は、リクエストで送信された`"batchId"`値と一致する必要があります。
 
-+++ 削除リクエストの作成に成功した応答。
++++ 削除リクエストを作成するための応答が成功しました。
 
 ```json
 {
@@ -459,16 +459,16 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システムによって生成された、削除リクエストの一意の読み取り専用 ID。 |
-| `datasetId` | 指定したデータセットの ID。 |
+| `datasetId` | 指定されたデータセットのID。 |
 | `batchId` | POST リクエストで指定されたバッチの ID。 |
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 応答が成功すると、新しく作成したシステムリクエストの詳細が返されます。
 
-+++ 削除リクエストの作成に成功した応答。
++++ 削除リクエストを作成するための応答が成功しました。
 
 ```json
 {
@@ -491,10 +491,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `requestId` | システムジョブの ID。 |
-| `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
-| `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
-| `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+| `requestId` | システムジョブのID。 |
+| `requestType` | システムジョブのタイプ。 使用可能な値には、`BACKFILL_TTL`、`DELETE_EE_BATCH`および`TRUNCATE_DATASET`が含まれます。 |
+| `status` | システム ジョブのステータス。 使用可能な値には、`NEW`、`SUCCESS`、`ERROR`、`FAILED`および`IN-PROGRESS`が含まれます。 |
+| `properties` | システムジョブのバッチ IDやデータセット IDを含むオブジェクト。 |
 
 +++
 
@@ -502,7 +502,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->Microsoft Azure でExperience Platformを使用する場合、次の機能は **のみ** 使用できます。
+>Microsoft AzureでExperience Platformを使用する場合は、次の機能は&#x200B;**のみ**&#x200B;利用できます。
 
 レコードデータセットバッチの削除リクエストを開始しようとすると、次のような 400 レベルのエラーが発生します。
 
@@ -532,7 +532,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DELETE_REQUEST_ID}` | 表示する削除リクエストの ID。 |
+| `{DELETE_REQUEST_ID}` | 表示する削除リクエストのID。 |
 
 **リクエスト**
 
@@ -544,7 +544,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
-+++ プロファイルジョブを表示するリクエストのサンプル。
++++ プロファイルジョブを表示するためのサンプルリクエスト。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
@@ -556,13 +556,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
 >[!IMPORTANT]
 >
->このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+>このエンドポイントをAWSで使用する場合、**では** リクエストヘッダーの代わりに`x-sandbox-id` リクエストヘッダーを使用する必要があります。`x-sandbox-name`
 
-+++ プロファイルジョブを表示するリクエストのサンプル。
++++ プロファイルジョブを表示するためのサンプルリクエスト。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
@@ -581,15 +581,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 >[!IMPORTANT]
 >
->次の応答は、Azure インスタンスとAWS インスタンスで異なります。
+>Azure インスタンスとAWS インスタンスでは、次の対応が異なります。
 
 >[!BEGINTABS]
 
 >[!TAB Microsoft Azure]
 
-応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答内の削除リクエストの ID （`"id"` 値）は、リクエストパスで送信された ID と一致する必要があります。
+応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答の削除リクエストのID （`"id"`値）は、リクエストパスで送信されたIDと一致する必要があります。
 
-+++ 削除リクエストの表示に成功した応答。
++++ 削除リクエストを表示するための応答が成功しました。
 
 ```json
 {
@@ -606,17 +606,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 | プロパティ | 説明 |
 | ---------- | ----------- |
-| `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` を返します。 |
-| `status` | 削除リクエストのステータス。使用可能な値は、`NEW`、`PROCESSING`、`COMPLETED`、`ERROR` などです。 |
-| `metrics` | 処理されたレコードの数（`"recordsProcessed"`）、リクエストが処理された時間（秒）、またはリクエストが完了するまでにかかった時間（`"timeTakenInSec"`）を含む配列。 |
+| `jobType` | 作成するジョブのタイプ。この場合、常に`"DELETE"`が返されます。 |
+| `status` | 削除リクエストのステータス。指定できる値は、`NEW`、`PROCESSING`、`COMPLETED`、`ERROR`です。 |
+| `metrics` | 処理されたレコードの数（`"recordsProcessed"`）と、リクエストが処理された時間（秒単位）、またはリクエストが完了するまでの所要時間（`"timeTakenInSec"`）を含む配列。 |
 
 +++
 
->[!TAB Amazon Web Services（AWS） ]
+>[!TAB Amazon Web Services （AWS） ]
 
-応答が成功すると、指定されたシステムリクエストの詳細が返されます。
+応答が成功すると、指定したシステムリクエストの詳細が返されます。
 
-+++ 削除リクエストの表示に成功した応答。
++++ 削除リクエストを表示するための応答が成功しました。
 
 ```json
 {
@@ -639,24 +639,24 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `requestId` | システムジョブの ID。 |
-| `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
-| `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
-| `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+| `requestId` | システムジョブのID。 |
+| `requestType` | システムジョブのタイプ。 使用可能な値には、`BACKFILL_TTL`、`DELETE_EE_BATCH`および`TRUNCATE_DATASET`が含まれます。 |
+| `status` | システム ジョブのステータス。 使用可能な値には、`NEW`、`SUCCESS`、`ERROR`、`FAILED`および`IN-PROGRESS`が含まれます。 |
+| `properties` | システムジョブのバッチ IDやデータセット IDを含むオブジェクト。 |
 
 +++
 
 >[!ENDTABS]
 
-削除リクエストステータスが `"COMPLETED"` になると、Data Access API を使用して削除されたデータにアクセスすることで、データが削除されたことを確認できます。 データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
+削除要求のステータスが`"COMPLETED"`になると、Data Access APIを使用して削除されたデータにアクセスしようとすることで、データが削除されたことを確認できます。 データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
 
 ## 削除リクエストの削除
 
 >[!AVAILABILITY]
 >
->このエンドポイントは、Adobe Experience Platformの Azure インスタンスで **のみ** サポートされており、AWS インスタンスでは **サポートされていません**。
+>このエンドポイントは、Adobe Experience PlatformのAzure インスタンスで&#x200B;**のみ** サポートされており、AWS インスタンスで&#x200B;**サポートされていません**。
 
-以前のリクエストを削除で [!DNL Experience Platform] ます。削除ジョブが完了しなかった場合や、処理ステージで停止した場合など、様々な理由で役立つ場合があります。 削除リクエストを削除するには、`/system/jobs` エンドポイントに対して DELETE リクエストを実行し、削除する削除リクエストの ID をリクエストパスに含めます。
+[!DNL Experience Platform]を使用すると、以前のリクエストを削除できます。これは、削除ジョブが完了しなかったか、処理段階で停止した場合など、さまざまな理由で役立つ可能性があります。 削除リクエストを削除するには、`/system/jobs` エンドポイントに対して DELETE リクエストを実行し、削除する削除リクエストの ID をリクエストパスに含めます。
 
 **API 形式**
 
@@ -678,10 +678,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 削除リクエストが成功すると、HTTP ステータス 200（OK）と空の応答本文が返されます。GET リクエストを実行して ID で削除リクエストを表示すると、リクエストが削除されたことを確認できます。削除リクエストが削除されたことを示す HTTP ステータス 404（不検知）が返されます。
 
 ## 次の手順
 
-[!DNL Experience Platform] 内の [!DNL Profile store] からデータセットとバッチを削除する手順がわかったので、誤って追加されたデータや、組織が必要としなくなったデータを安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
+[!DNL Profile store]内の[!DNL Experience Platform]からデータセットとバッチを削除する手順を理解したので、誤って追加されたデータや組織が不要になったデータを安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
