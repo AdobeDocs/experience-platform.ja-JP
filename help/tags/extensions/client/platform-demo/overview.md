@@ -2,7 +2,7 @@
 title: Adobe Experience Platform デモ拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Platform デモ拡張機能について説明します。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 97%
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 この拡張機能の内容は、新しい拡張機能に移植されています。現在の機能の簡単な比較を示します。
 
-| Experience Platform デモ拡張機能 | Experience Platform Web SDK |
+| Experience Platformデモ拡張機能 | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | カスタム顧客 ID のサポート | カスタム顧客 ID のサポート |
 | XDM 用のクライアント側マッピング UI | ECID で構築（visitor.js は不要） |
@@ -47,7 +47,7 @@ Adobe Experience Platform へのデータのストリーミングを開始する
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-モーダルには、値が事前入力されたフィールドが含まれています。この値は必要に応じて変更できます。複数のストリーミング接続を作成する場合は、**[!UICONTROL Data Source]** フィールドを一意にする必要があります。 別の接続で既に使用されている **[!UICONTROL Data Source]** を使用して別のストリーミング接続を作成しようとすると、失敗します。
+モーダルには、値が事前入力されたフィールドが含まれています。この値は必要に応じて変更できます。複数のストリーミング接続を作成する場合は、**[!UICONTROL Data Source]** フィールドが一意である必要があることに注意してください。 別の接続で既に使用されている **[!UICONTROL Data Source]** を使用して別のストリーミング接続を作成しようとすると、失敗します。
 
 ストリーミングエンドポイントを選択すると、ストリーミングエンドポイントの URL とソースが表示されます。
 
