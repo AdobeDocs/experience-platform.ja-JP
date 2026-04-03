@@ -1,8 +1,8 @@
 ---
 title: 探索的データ分析
-description: Data Distillerを使用して、Python ノートブックからデータを調査および分析する方法を説明します。
+description: Data Distillerを使用して、Python ノートブックからデータを探索および分析する方法を説明します。
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 14%
@@ -11,15 +11,15 @@ ht-degree: 14%
 
 # 探索的データ分析
 
-このドキュメントでは、Data Distillerを使用して [!DNL Python] ノートブックのデータを調査および分析するための基本的な例とベストプラクティスを説明します。
+このドキュメントでは、Data Distillerを使用して[!DNL Python] ノートブックのデータを探索および分析するための基本的な例とベストプラクティスを紹介します。
 
 ## はじめに
 
-このガイドを進める前に、[!DNL Python] ノートブックにデータDistillerへの接続が作成されていることを確認します。 [&#x200B; ノートブックをデータDistillerに接続 &#x200B;](./establish-connection.md) する手順については  [!DNL Python]  ドキュメントを参照してください。
+このガイドを続ける前に、[!DNL Python] ノートブックにData Distillerへの接続を作成していることを確認してください。 Data Distiller[に [!DNL Python]  ノートブックを接続する方法については、ドキュメントを参照してください。](./establish-connection.md)
 
 ## 基本統計の取得 {#basic-statistics}
 
-データセット内の行数と個別プロファイル数を取得するには、以下のコードを使用します。
+次のコードを使用して、データセット内の行数と個別のプロファイル数を取得します。
 
 ```python
 table_name = 'ecommerce_events'
@@ -40,16 +40,16 @@ df
 | --- | ----------- | -------------- |
 | 0 | 1276563 | 1276563 |
 
-## 大規模なデータセットのサンプルバージョンの作成 {#create-dataset-sample}
+## 大規模データセットのサンプルバージョンの作成 {#create-dataset-sample}
 
-クエリするデータセットが非常に大きい場合、または探索的なクエリによる正確な結果が必要でない場合は、データDistillerのクエリで使用できる [&#x200B; サンプリング機能 &#x200B;](../../key-concepts/dataset-samples.md) を使用します。 これは 2 段階のプロセスです。
+クエリするデータセットが非常に大きい場合、または探索的クエリの正確な結果が必要ない場合は、Data Distiller クエリで使用できる[ サンプリング機能](../../key-concepts/dataset-samples.md)を使用します。 これは2段階のプロセスです。
 
-- まず、データセットを **分析** して、指定したサンプリング率のサンプルバージョンを作成します
-- 次に、データセットのサンプルバージョンをクエリします。 サンプリングされたデータセットに適用する関数に応じて、出力を数値にスケーリングして、データセット全体に対応することができます
+- まず、**データセットを**&#x200B;分析して、指定したサンプリング比率のサンプルバージョンを作成します
+- 次に、データセットのサンプルバージョンをクエリします。 サンプルされたデータセットに適用する関数によっては、出力を完全なデータセットに数値に拡大することができます
 
-### 5% サンプルの作成 {#create-sample}
+### 5%のサンプルを作成 {#create-sample}
 
-次の例では、データセットを分析して 5% のサンプルを作成します。
+次の例では、データセットを分析し、5%のサンプルを作成します。
 
 ```python
 # A sampling rate of 10 is 100% in Query Service, so for 5% use a sampling rate 0.5
@@ -62,9 +62,9 @@ ANALYZE TABLE {table_name} TABLESAMPLE SAMPLERATE {sampling_rate}"""
 qs_cursor.query(analyze_table_query, output="raw")
 ```
 
-### サンプルを表示 {#view-sample}
+### サンプルの表示 {#view-sample}
 
-`sample_meta` 関数を使用して、特定のデータセットから作成されたサンプルを表示できます。 以下のコードスニペットに、`sample_meta` 関数の使用方法を示します。
+`sample_meta`関数を使用して、特定のデータセットから作成されたサンプルを表示できます。 以下のコードスニペットは、`sample_meta`関数の使用方法を示しています。
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -77,13 +77,13 @@ df_samples
 
 |   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | sampling_rate | filter_condition_on_source_dataset | sample_num_rows | created |
 |---|---|---|---|---|---|---|---|---|
-| 0 | cmle_synthetic_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | 一様 | 0.5 | 6427 | 23/09/2023 | 11:51:37 |
+| 0 | cmle_synthetic_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | 均一 | 0.5 | 6427 | 23/09/2023 | 11:51:37 |
 
 {style="table-layout:auto"}
 
 ### サンプルのクエリ {#query-sample-data}
 
-返されたメタデータからサンプルテーブル名を参照することで、サンプルを直接クエリできます。 その後、結果にサンプリング率を掛けて推定値を求めることができます。
+返されたメタデータからサンプルテーブル名を参照することで、サンプルを直接クエリできます。 その後、結果にサンプリング比率を掛けて、推定値を得ることができます。
 
 ```python
 sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sample_table_name"].iloc[0]
@@ -103,11 +103,11 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## メールファネル分析 {#email-funnel-analysis}
+## 電子メールfunnel分析 {#email-funnel-analysis}
 
-ファネル分析は、ターゲット結果に到達するために必要な手順と、それらの各手順を完了するユーザー数を理解する方法です。 次の例は、ニュースレターの購読ユーザーに向けた手順の簡単なファネル分析を示しています。 購読の結果は、`web.formFilledOut` のイベントタイプで表されます。
+Funnel分析とは、目標を達成するために必要なステップと、各ステップを完了したユーザー数を把握する手法です。 次の例は、ユーザーがニュースレターを購読する手順に関する簡単なfunnelの分析を示しています。 サブスクリプションの結果は、`web.formFilledOut`のイベントタイプで表されます。
 
-最初に、クエリを実行して、各ステップのユーザー数を取得します。
+まず、クエリを実行して、各ステップのユーザー数を取得します。
 
 ```python
 simple_funnel_analysis_query = f'''SELECT eventType, COUNT(DISTINCT _id) as "distinctUsers",COUNT(_id) as "distinctEvents" FROM {table_name} GROUP BY eventType ORDER BY distinctUsers DESC'''
@@ -136,7 +136,7 @@ funnel_df
 
 {style="table-layout:auto"}
 
-### クエリー結果を印刷 {#plot-results}
+### クエリ結果をプロット {#plot-results}
 
 次に、[!DNL Python] `plotly` ライブラリを使用してクエリ結果をプロットします。
 
@@ -152,18 +152,18 @@ fig.show()
 
 **出力例**
 
-![eventType メールファネルのインフォグラフィック。](../../images/data-distiller/email-funnel.png)
+![eventType メール funnelのインフォグラフィック。](../../images/data-distiller/email-funnel.png)
 
 ## イベントの相関関係 {#event-correlations}
 
-もう 1 つの一般的な分析は、イベントタイプとターゲットコンバージョンイベントタイプの間の相関関係を計算することです。 この例では、購読イベントは `web.formFilledOut` で表されます。 この例では、データDistillerクエリで使用できる [!DNL Spark] の関数を使用して、次の手順を実行します。
+もう1つの一般的な分析は、イベントタイプとターゲットコンバージョンイベントタイプの間の相関関係を計算することです。 この例では、サブスクリプションイベントは`web.formFilledOut`で表されます。 この例では、Data Distiller クエリで使用できる[!DNL Spark]関数を使用して、次の手順を実行します。
 
-1. プロファイル別に、各イベントタイプのイベント数をカウントします。
-2. プロファイル全体で各イベントタイプのカウントを集計し、各イベントタイプと `web,formFilledOut` の相関関係を計算します。
-3. カウントと相関関係のデータフレームを、各フィーチャー（イベントタイプのカウント）のピアソン相関係数とターゲットイベントのテーブルに変換します。
+1. 各イベントタイプのイベント数をプロファイル別にカウントします。
+2. プロファイル全体の各イベントタイプのカウントを集計し、各イベントタイプの相関関係を`web,formFilledOut`で計算します。
+3. カウントと相関のデータフレームを、ターゲットイベントを使用して各フィーチャー（イベントタイプのカウント）のピアソン相関係数のテーブルに変換します。
 4. 結果をプロットで視覚化します。
 
-[!DNL Spark] 関数は、データを集計して結果の小さなテーブルを返すので、このタイプのクエリをデータセット全体に対して実行できます。
+[!DNL Spark]関数はデータを集計して結果の小さなテーブルを返します。これにより、このタイプのクエリを完全なデータセットに対して実行できます。
 
 ```python
 large_correlation_query=f'''
@@ -213,7 +213,7 @@ large_correlation_df
 
 **サンプル出力**:
 
-|   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totaUsers | propositionDisplays_totaUsers | propositionInteractes_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteractes | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
+|   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totaUsers | propositionDisplays_totaUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_web ページビュー |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0.026805 | 0.2779 | なし | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | なし |
 
@@ -221,7 +221,7 @@ large_correlation_df
 
 ### 行をイベントタイプの相関関係に変換 {#event-type-correlation}
 
-次に、上記のクエリ出力のデータの単一行を、各イベントタイプとターゲットの購読イベントの相関関係を示すテーブルに変換します。
+次に、上記のクエリ出力の1行のデータを、各イベントタイプとターゲットのサブスクリプションイベントとの相関関係を示すテーブルに変換します。
 
 ```python
 cols = large_correlation_df.columns
@@ -234,19 +234,19 @@ corrdf.fillna(0)
 
 **サンプル出力**:
 
-|    | 変数 | 値 | 機能 | ピアソン相関性 |
+|    | 変数 | value | 機能 | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0.218874 | EmailOpens | 0.218874 |
+| 0 | `webForms_EmailOpens` | 0.218874 | EmailOpen | 0.218874 |
 | 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
 | 2 | `webForms_productViews` | 0.277900 | productViews | 0.277900 |
 | 3 | `webForms_productPurchases` | 0.000000 | productPurchases | 0.000000 |
 | 4 | `webForms_propositionDismisses` | 0.060140 | propositionDismisses | 0.060140 |
-| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteractes | 0.143656 |
+| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteracts | 0.143656 |
 | 6 | `webForms_emailClicks` | 0.305657 | emailClicks | 0.305657 |
 | 7 | `webForms_emailOpens` | 0.218874 | emailOpens | 0.218874 |
 | 8 | `webForms_emailSends` | 0.192836 | emailSends | 0.192836 |
 | 9 | `webForms_webLinkClicks` | 0.259353 | webLinkClicks | 0.259353 |
-| 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
+| 10 | `webForms_webPageViews` | 0.000000 | webPageView | 0.000000 |
 
 
 最後に、`matplotlib` [!DNL Python] ライブラリとの相関関係を視覚化できます。
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![&#x200B; イベント結果のイベントのピアソン相関性の棒グラフ &#x200B;](../../images/data-distiller/pearson-correlations.png)
+![ イベント結果のイベントのピアソン相関関係の棒グラフ ](../../images/data-distiller/pearson-correlations.png)
 
 ## 次の手順
 
-このドキュメントでは、Data Distillerを使用して [!DNL Python] ノートブックのデータを調査および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成し、機械学習環境でカスタムモデルをフィードする次の手順は、[&#x200B; 機械学習用の機能をエンジニアリング &#x200B;](./feature-engineering.md) することです。
+このドキュメントでは、Data Distillerを使用して[!DNL Python] ノートブックのデータを探索および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成してマシンラーニング環境でカスタムモデルをフィードする次のステップは、マシンラーニングの機能を[ エンジニア ](./feature-engineering.md)することです。
