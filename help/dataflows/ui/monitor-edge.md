@@ -1,13 +1,13 @@
 ---
 title: エッジのセグメント化の監視
 description: モニタリングダッシュボードを使用して、エッジセグメント化のスループットを監視する方法を説明します。
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 6%
 
 ---
-
 
 # エッジのセグメント化の監視
 
@@ -17,15 +17,15 @@ Adobe Experience Platform UIのモニタリングダッシュボードを使用�
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; データストリーム &#x200B;](../../datastreams/overview.md): データストリームを使用すると、Experience Platform Edge Networkをデータセットに接続できます。
-* [&#x200B; キャパシティ &#x200B;](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformでは、自社がガードレールのいずれかを超えているかどうかをキャパシティで確認し、これらの問題を解決する方法に関する情報を提供します。
-* [Edge セグメンテーション &#x200B;](../../segmentation/methods/edge-segmentation.md): Edge セグメンテーションは、エッジ [上の](../../landing/edge-and-hub-comparison.md)Adobe Experience Platformでセグメント定義を即座に評価し、同じページと次のページのパーソナライズのユースケースを有効にします。
+* [ データストリーム ](../../datastreams/overview.md): データストリームを使用すると、Experience Platform Edge Networkをデータセットに接続できます。
+* [ キャパシティ ](../../landing/license-usage-and-guardrails/capacity.md):Experience Platformでは、自社がガードレールのいずれかを超えているかどうかをキャパシティで確認し、これらの問題を解決する方法に関する情報を提供します。
+* [Edge セグメンテーション ](../../segmentation/methods/edge-segmentation.md): Edge セグメンテーションは、エッジ [上の](../../landing/edge-and-hub-comparison.md)Adobe Experience Platformでセグメント定義を即座に評価し、同じページと次のページのパーソナライズのユースケースを有効にします。
 
 ## アクセス {#access}
 
 エッジセグメント化スループットの監視ダッシュボードにアクセスするには、**[!UICONTROL Monitoring]** セクション内の&#x200B;**[!UICONTROL Data management]**&#x200B;を選択し、続いて&#x200B;**[!UICONTROL Edge]**&#x200B;を選択します。
 
-![&#x200B; モニターエッジのセグメント化ダッシュボードにアクセスする方法がハイライト表示されます。](/help/dataflows/assets/ui/monitor-edge/access.png)
+![ モニターエッジのセグメント化ダッシュボードにアクセスする方法がハイライト表示されます。](/help/dataflows/assets/ui/monitor-edge/access.png)
 
 監視ダッシュボードが表示されます。 エッジストリーミングスループットのモニタリング指標、エッジストリーミングスループットのレートを示すグラフ、データストリームビューが表示されます。 これらの指標は、サービス、エッジ、日付でフィルタリングできます。
 
@@ -56,7 +56,7 @@ Adobe Experience Platform UIのモニタリングダッシュボードを使用�
 
 監視グラフには、割り当てられた時間枠内で選択したエッジが受信した1秒あたりのレコードと、許可される最大容量が示されます。
 
-![&#x200B; エッジ セグメント化スループット グラフが表示されます。](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
+![ エッジ セグメント化スループット グラフが表示されます。](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
 
 ## データストリームビュー
 
@@ -66,7 +66,7 @@ Adobe Experience Platform UIのモニタリングダッシュボードを使用�
 
 データストリームビューの節には、サンドボックスのエッジを通過した最新のデータストリームのリストが表示されます。
 
-![&#x200B; データストリーム ビューが表示され、リストされたデータストリームに関する情報が表示されます。](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
+![ データストリーム ビューが表示され、リストされたデータストリームに関する情報が表示されます。](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
 
 | フィールド | 説明 |
 | ----- | ----------- |
