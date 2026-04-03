@@ -3,7 +3,7 @@ keywords: linkedin接続；linkedin接続；linkedin宛先；linkedin;
 title: Linkedin Matched Audiences接続
 description: ハッシュ化されたメールにもとづいて、オーディエンスのターゲティング、パーソナライゼーション、抑制にLinkedIn キャンペーンのプロファイルを活用できます。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 24%
@@ -30,7 +30,7 @@ Adobe Experience Platform UI![の](../../assets/catalog/social/linkedin/catalog.
 
 >[!IMPORTANT]
 >
->2025年9月以降、[!DNL IDFA]は[!DNL IDFA]宛先でサポートされなくなったため、[!DNL LinkedIn Matched Audiences]をターゲット IDとしてマッピングできなくなります。 詳しくは、[!DNL LinkedIn Matched Audiences]統合[&#x200B; ドキュメント &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes)を参照してください。 この変更は、LinkedInの要件によるものであり、Experience Platformの宛先サービスのアップグレードとは関係ありません。
+>2025年9月以降、[!DNL IDFA]は[!DNL IDFA]宛先でサポートされなくなったため、[!DNL LinkedIn Matched Audiences]をターゲット IDとしてマッピングできなくなります。 詳しくは、[!DNL LinkedIn Matched Audiences]統合[ ドキュメント ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes)を参照してください。 この変更は、LinkedInの要件によるものであり、Experience Platformの宛先サービスのアップグレードとは関係ありません。
 
 
 | ターゲット ID | 説明 | 注意点 |
@@ -46,7 +46,7 @@ Adobe Experience Platform UI![の](../../assets/catalog/social/linkedin/catalog.
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -57,10 +57,10 @@ Adobe Experience Platform UI![の](../../assets/catalog/social/linkedin/catalog.
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform UI![の](../../assets/catalog/social/linkedin/catalog.
 
 メールアドレスを[!DNL Adobe Experience Platform]に取り込む前にハッシュ化するか、Experience Platformでクリアなメールアドレスを使用して、アクティベーション時に[!DNL Experience Platform]個ハッシュ化します。
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)および[&#x200B; ストリーミング取り込みの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)および[ ストリーミング取り込みの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
 
 自分でメールアドレスをハッシュ化することを選択した場合は、次の要件に必ず準拠してください。
 
@@ -108,7 +108,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 >ハッシュ化されていない名前空間からのデータは、アクティベーション時に[!DNL Experience Platform]によって自動的にハッシュ化されます。
 > 属性ソースデータは自動的にハッシュ化されません。
 > 
-> [ID マッピング &#x200B;](../../ui/activate-segment-streaming-destinations.md#mapping)の手順で、ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをオンにして、アクティベーション時に[!DNL Experience Platform]がデータを自動的にハッシュします。
+> [ID マッピング ](../../ui/activate-segment-streaming-destinations.md#mapping)の手順で、ソースフィールドにハッシュ化されていない属性が含まれている場合は、**[!UICONTROL Apply transformation]** オプションをオンにして、アクティベーション時に[!DNL Experience Platform]がデータを自動的にハッシュします。
 > 
 > **[!UICONTROL Apply transformation]** オプションは、ソースフィールドとして属性を選択した場合にのみ表示されます。 名前空間を選択しても表示されません。
 
@@ -118,17 +118,17 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 以下のビデオでは、[!DNL LinkedIn Matched Audiences]宛先を設定し、オーディエンスをアクティブ化する手順も示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[宛先設定チュートリアル &#x200B;](../../ui/connect-destination.md)を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[宛先設定チュートリアル ](../../ui/connect-destination.md)を参照してください。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -146,10 +146,10 @@ LinkedInのトークンは60日ごとに有効期限が切れます。 トーク
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**&#x200B;に移動します
 2. （オプション）ページで使用可能なフィルターを使用して、LinkedIn アカウントのみを表示します。
    ![LinkedIn アカウントのみを表示するフィルター](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**&#x200B;を選択します。
+3. 更新するアカウントを選択し、省略記号を選択して&#x200B;**[!UICONTROL Edit details]**を選択します。
    ![詳細を編集コントロールを選択](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**&#x200B;を選択し、LinkedInの資格情報で再認証します。
-   OAuthの再接続オプションを含む![&#x200B; モーダルウィンドウ &#x200B;](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+4. モーダルウィンドウで、**[!UICONTROL Reconnect OAuth]**を選択し、LinkedInの資格情報で再認証します。
+   OAuthの再接続オプションを含む![ モーダルウィンドウ ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -178,8 +178,8 @@ LinkedInのトークンは60日ごとに有効期限が切れます。 トーク
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
