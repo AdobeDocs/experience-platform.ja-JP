@@ -2,7 +2,7 @@
 description: ファイルベースの宛先に対するファイル形式オプションの設定
 title: Destination SDKを使用して、ファイルベースの宛先にファイル形式オプションを設定する方法を説明します。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 22%
@@ -23,7 +23,7 @@ Destination SDKを使用すると、書き出したファイルの書式設定�
 
 Adobeでは、次のドキュメントを読んでから先に進むことをお勧めします。
 
-* 使用可能なすべてのファイル形式オプションは、[&#x200B; ファイル形式設定](../../functionality/destination-server/file-formatting.md) セクションに詳細が記載されています。
+* 使用可能なすべてのファイル形式オプションは、[ ファイル形式設定](../../functionality/destination-server/file-formatting.md) セクションに詳細が記載されています。
 * Destination SDKを使用してファイルベースの宛先[を](../../guides/configure-file-based-destination-instructions.md)設定する手順を完了します。
 
 ## サーバーとファイル設定の作成 {#create-server-file-configuration}
@@ -108,11 +108,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!IMPORTANT]
 >
->この手順はオプションで、Experience Platform UIでユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[&#x200B; サーバーとファイル設定](#create-server-file-configuration)で設定されたデフォルト値に進みます。
+>この手順はオプションで、Experience Platform UIでユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[ サーバーとファイル設定](#create-server-file-configuration)で設定されたデフォルト値に進みます。
 
 この手順では、表示されるオプションを任意の順序でグループ化できます。また、選択したファイルタイプに基づいて、カスタムグループ化、ドロップダウンフィールド、条件付きグループ化を作成できます。 これらの設定はすべて、録画と以下のセクションに表示されます。
 
-![&#x200B; バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
+![ バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### ファイル形式オプションの順序 {#ordering}
 
