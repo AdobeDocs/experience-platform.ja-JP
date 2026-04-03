@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
-title: Flow Service API を使用して、新しい接続仕様を作成します。
-description: 次のドキュメントでは、Flow Service API を使用して接続仕様を作成し、セルフサービスソースを通じて新しいソースを統合する手順を説明します。
+title: Flow Service APIを使用して新しい接続仕様を作成する
+description: 次のドキュメントでは、Flow Service APIを使用して接続仕様を作成し、セルフサービスソースを介して新しいソースを統合する手順について説明します。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 46%
 
 ---
 
-# [!DNL Flow Service] API を使用して、新しい接続仕様を作成します。
+# [!DNL Flow Service] APIを使用して新しい接続仕様を作成します
 
 接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 
-次のドキュメントでは、[!DNL Flow Service] API を使用して接続仕様を作成し、セルフサービスソース（バッチ SDK）を使用して新しいソースを統合する手順を説明します。
+次のドキュメントでは、[!DNL Flow Service] APIを使用して接続仕様を作成し、セルフサービスソース（バッチSDK）を使用して新しいソースを統合する手順について説明します。
 
 ## はじめに
 
@@ -23,9 +23,9 @@ ht-degree: 46%
 
 ## アーティファクトを収集
 
-セルフサービスソースを使用して新しいバッチソースを作成するには、まずAdobeと調整し、プライベート Git リポジトリーをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細をAdobeと調整する必要があります。
+セルフサービスソースを使用して新しいバッチソースを作成するには、まずAdobeと連携し、プライベート Git リポジトリをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細についてAdobeと連携する必要があります。
 
-指定したら、以下のようにプライベート Git リポジトリを構築する必要があります。
+指定したら、次のようにプライベート Git リポジトリを構造化する必要があります。
 
 * ソース
    * {your_source}
@@ -38,22 +38,22 @@ ht-degree: 46%
 
 | アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
-| {your_source} | ソースの名前。 このフォルダーには、プライベート Git リポジトリー内の、ソースに関連するすべてのアーティファクトを格納する必要があります。 | `mailchimp-members` |
-| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとして書式設定されます。 セルフサービスソース（バッチ SDK）でサポートされている使用可能なソースカテゴリのリストを次に示します。 <ul><li>広告</li><li>Analytics</li><li>同意および環境設定</li><li>CRM</li><li>カスタマーサクセス</li><li>データベース</li><li>e-Commerce</li><li>マーケティングオートメーション</li><li>支払い</li><li>プロトコル</li></ul> **メモ**：ソースが上記のカテゴリに当てはまらないと思われる場合は、Adobeの担当者にお問い合わせください。 | `mailchimp-members-category.txt` ファイル内で、ソースのカテゴリを次のように指定してください：`marketingAutomation`。 |
-| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Mailchimp Members] は、マーケティングオートメーションソースで、データをExperience Platformに取り込む [!DNL Mailchimp Members] めに使用できます。 |
-| {your_source}-icon.svg | Experience Platform ソースカタログ内のソースを表すために使用される画像。 このアイコンは、SVG ファイルである必要があります。 |  |
+| {your_source} | ソースの名前。 このフォルダーには、プライベート Git リポジトリー内のソースに関連するすべてのアーティファクトを含める必要があります。 | `mailchimp-members` |
+| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとしてフォーマットされます。 セルフサービスソース（バッチSDK）でサポートされている利用可能なソースカテゴリのリストには、次のものが含まれます。 <ul><li>広告</li><li>Analytics</li><li>同意および環境設定</li><li>CRM</li><li>カスタマーサクセス</li><li>データベース</li><li>e-Commerce</li><li>マーケティングオートメーション</li><li>支払い</li><li>プロトコル</li></ul> **注**：お客様のソースが上記のカテゴリのいずれかに当てはまらないと思われる場合は、Adobe担当者にお問い合わせください。 | `mailchimp-members-category.txt` ファイル内で、ソースのカテゴリ（`marketingAutomation`など）を指定してください。 |
+| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Mailchimp Members]は、[!DNL Mailchimp Members] データをExperience Platformに取り込むために使用できるマーケティングオートメーションソースです。 |
+| {your_source}-icon.svg | Experience Platform ソースカタログのソースを表すために使用する画像。 このアイコンは、SVG ファイルである必要があります。 |  |
 | {your_source}-label.txt | Experience Platform ソースカタログに表示されるソースの名前。 | Mailchimp メンバー |
-| {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このファイルは最初は必要ありません。このガイドの完了時に、接続仕様にデータが入力されるからです。 | `mailchimp-members-connectionSpec.json` |
+| {your_source}-connectionSpec.json | ソースの接続仕様を含むJSON ファイル。 このガイドを完了する際に接続仕様を入力するため、このファイルは最初は必要ありません。 | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->接続仕様のテスト期間中に、キー値の代わりに接続仕様の `text` を使用できます。
+>接続仕様のテスト期間中、キー値の代わりに、接続仕様で`text`を使用できます。
 
-必要なファイルをプライベート Git リポジトリに追加したら、Adobeがレビューするためのプルリクエスト（PR）を作成する必要があります。 PR が承認されて統合されると、ソースのラベル、説明、アイコンを参照するために接続仕様に使用できる ID が提供されます。
+必要なファイルをプライベート Git リポジトリに追加したら、Adobeでレビューするためのプルリクエスト（PR）を作成する必要があります。 PRが承認され、結合されると、接続仕様に使用できるIDが提供され、ソースのラベル、説明、アイコンを参照できます。
 
-次に、以下に説明する手順に従って、接続仕様を設定します。 高度なスケジュール、カスタムスキーマ、様々なページネーションタイプなど、ソースに追加できる様々な機能に関する追加のガイダンスについては、[&#x200B; ソース仕様の設定 &#x200B;](../config/sourcespec.md) に関するガイドを参照してください。
+次に、次の手順に従って接続仕様を設定します。 高度なスケジューリング、カスタムスキーマ、異なるページネーションタイプなど、ソースに追加できるさまざまな機能に関する追加のガイダンスについては、[ ソース仕様の設定](../config/sourcespec.md)に関するガイドを参照してください。
 
 ## 接続仕様テンプレートをコピー
 
