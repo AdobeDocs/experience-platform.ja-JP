@@ -2,7 +2,7 @@
 title: クラウドコネクタ拡張機能の概要
 description: Adobe Experience Platform の Cloud Connector イベント転送拡張機能について説明します。
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 75%
@@ -41,13 +41,13 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 
 #### クエリのパラメーター
 
-クエリ文字列パラメーターとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「siteSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{siteSection}}` と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+クエリ文字列パラメーターとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「siteSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{siteSection}}`と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 クエリのパラメーターを追加するには、「**[!UICONTROL Add Another]**」を選択します。
 
 #### ヘッダー
 
-ヘッダーとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「pageName」という名前のデータ要素の値をキーまたは値として参照するには、`{{pageName}}` と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+ヘッダーとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「pageName」という名前のデータ要素の値をキーまたは値として参照するには、`{{pageName}}`と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 ヘッダーを追加するには、「**[!UICONTROL Add Another]**」を選択します。
 
@@ -67,13 +67,13 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | [Accept-Datetime](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
 | Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
 | Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
-| Authorization | サーバーでユーザーエージェントを認証するための資格情報が含まれます。 |
+| 認証 | サーバーでユーザーエージェントを認証するための資格情報が含まれます。 |
 | [Cache-Control](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Cache-Control) | リクエストと応答の両方のキャッシュメカニズム用のディレクティブ。 |
 | [接続](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Connection) | 現在のトランザクションが終了した後、ネットワーク接続を開いたままにするかどうかを制御します。 |
 | [Content-Length](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Content-Length) | リソースのサイズ（10 進数バイト数）。 |
 | [Content-Type](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Content-Type) | リソースのメディアタイプを示します。 |
-| cookie | サーバーによって [`Set-Cookie`](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Set-Cookie) ヘッダーで以前に送信された、保存済み [HTTP Cookie](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Cookies) が含まれます。 |
-| Date | 一般的な HTTP ヘッダーには、メッセージの送信元の日時が含まれます。 |
+| Cookie | サーバーによって [`Set-Cookie`](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Set-Cookie) ヘッダーで以前に送信された、保存済み [HTTP Cookie](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Cookies) が含まれます。 |
+| 日付 | 一般的な HTTP ヘッダーには、メッセージの送信元の日時が含まれます。 |
 | [DNT](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/DNT) | ユーザーのトラッキングの設定を示します。 |
 | Expect | リクエストを適切に処理するためにサーバーが満たす必要があると考えられる事項を示します。 |
 | Forwarded | [リバースプロキシサーバー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Proxy_servers_and_tunneling)からの情報が含まれます。この情報は、プロキシがリクエストのパスに関連している場合に変更または失われます。 |
@@ -100,17 +100,17 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 
 #### 本文（JSON）
 
-リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{appSection}}` と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{appSection}}`と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 キーと値のペアを追加するには、「**[!UICONTROL Add Another]**」を選択します。
 
 #### 本文（生）
 
-リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{appSection}}` と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。1 つ以上のデータ要素を追加できます。
+リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、`{{appSection}}`と入力します。 または、ドロップダウンメニューで以前に作成したデータ要素を選択します。1 つ以上のデータ要素を追加できます。
 
 ### アドバンス
 
-イベント転送のルール内のアクションは順番に実行されます。 クライアントからの着信イベントにないデータを外部ソースから取得し、この応答を受け取って、同じルール内の後続アクションでデータを変換する、または最終的な宛先に送信する必要がある場合があります。詳細セクションの「リクエスト応答を保存」により、これが有効になります。
+イベント転送のルール内のアクションは順番に実行されます。 クライアントからの着信イベントにないデータを外部ソースから取得し、この応答を受け取って、同じルール内の後続アクションでデータを変換する、または最終的な宛先に送信する必要がある場合があります。詳細セクションの「リクエスト応答を保存」を使用すると、これを有効にできます。
 
 エンドポイントからの応答の本文を保存するには、「**[!UICONTROL Save the request response]**」ボックスをチェックして、テキストフィールドで応答キーを定義します。
 
@@ -122,40 +122,40 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
 
-## イベント転送ライブラリへの相互トランスポート層セキュリティ （[!DNL mTLS]） ルールの追加 {#mtls-rules}
+## イベント転送ライブラリに相互トランスポート層セキュリティ （[!DNL mTLS]）ルールを追加する {#mtls-rules}
 
-[!DNL mTLS] 証明書は、安全な通信におけるサーバーまたはクライアントの ID を証明するデジタル証明書です。 [!DNL mTLS] Service API を使用する場合、これらの証明書は、Adobe Experience Platform イベント転送とのインタラクションを検証し、暗号化するのに役立ちます。 このプロセスは、データを保護するだけでなく、すべての接続が信頼できるパートナーからのものであることを保証します。
+[!DNL mTLS]証明書は、安全な通信におけるサーバーまたはクライアントのIDを証明するデジタル資格情報です。 [!DNL mTLS] サービス APIを使用する場合、これらの証明書は、Adobe Experience Platform イベント転送とのやり取りを検証および暗号化するのに役立ちます。 このプロセスにより、データを保護できるだけでなく、あらゆる接続を信頼できるパートナーから取得することができます。
 
-### Adobe Cloud Connector 拡張機能のインストール {#install}
+### Adobe Cloud Connector拡張機能のインストール {#install}
 
-拡張機能をインストールするには、[&#x200B; イベント転送プロパティを作成 &#x200B;](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[ イベント転送プロパティ ](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
 
-左パネルで「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで **[!UICONTROL Adobe Cloud Connector]** カードを選択し、「**[!UICONTROL Install]**」を選択します。
+左側のパネルで「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL Adobe Cloud Connector]** カードを選択し、「**[!UICONTROL Install]**」を選択します。
 
-![&#x200B; インストールを強調表示した [!DNL Adobe Cloud Connector] 拡張機能カードを示す拡張機能カタログ &#x200B;](../../../images/extensions/server/cloud-connector/install-extension.png)
+![ インストールを強調表示する[!DNL Adobe Cloud Connector]拡張カードを示す拡張カタログ。](../../../images/extensions/server/cloud-connector/install-extension.png)
 
 ### イベント転送ルールの設定 {#rule}
 
 >[!NOTE]
 >
->[!DNL mTLS] を使用するようにルールを設定するには、Adobe Cloud Connector バージョン 1.2.4 以降がインストールされている必要があります。
+>[!DNL mTLS]を使用するようにルールを設定するには、Adobe Cloud Connector バージョン 1.2.4以降がインストールされている必要があります。
 
-拡張機能をインストールしたら、[!DNL mTLS] を使用するイベント転送ルールを作成し、ライブラリに追加できます。
+拡張機能をインストールした後、[!DNL mTLS]を使用するイベント転送ルールを作成し、ライブラリに追加できます。
 
-イベント転送プロパティに新しいイベント転送 [&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md) を作成します。 ルールの名前を指定し、「**[!UICONTROL Actions]**」で新しいアクションを追加して、拡張機能を「**[!UICONTROL Adobe Cloud Connector]**」に設定します。 次に、**[!UICONTROL Make Fetch Call]** の **[!UICONTROL Action Type]** を選択します。
+イベント転送プロパティに新しいイベント転送[ ルール ](../../../ui/managing-resources/rules.md)を作成します。 ルールの名前を指定し、**[!UICONTROL Actions]**&#x200B;の下に新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL Adobe Cloud Connector]**&#x200B;に設定します。 次に、**[!UICONTROL Make Fetch Call]**&#x200B;の&#x200B;**[!UICONTROL Action Type]**&#x200B;を選択します。
 
-![&#x200B; イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されたイベント転送プロパティルール ビュー。](../../../images/extensions/server/cloud-connector/event-action.png)
+![ イベント転送プロパティのルール ビュー。イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/cloud-connector/event-action.png)
 
-選択を行うと、[!DNL mTLS] リクエストの方法と宛先を設定するための追加のコントロールが表示されます。 環境でアクティブな証明書の使用を有効にするには、「**[!UICONTROL Enable in [!DNL mTLS]]**」を選択し、「**[!UICONTROL Keep Changes]**」を選択してルールを保存します。
+選択を行うと、追加のコントロールが表示され、[!DNL mTLS] リクエストのメソッドと宛先が設定されます。 環境内でアクティブな証明書の使用を有効にするには、**[!UICONTROL Enable in [!DNL mTLS]]**&#x200B;を選択し、**[!UICONTROL Keep Changes]**&#x200B;を選択してルールを保存します。
 
-![&#x200B; 追加のコントロールフィールドと「変更を保持」がハイライト表示されたイベント転送のプロパティルール ビュー。](../../../images/extensions/server/cloud-connector/save-rule.png)
+![追加のコントロール フィールドと変更点をハイライト表示したイベント転送プロパティ ルール ビュー。](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-これで、新しいルールの準備が整いました。 「**[!UICONTROL Save to Library]**」を選択し、「**[!UICONTROL Build]**」を選択してデプロイします。 [!DNL mTLS] リクエストがアクティブになり、ライブラリで使用できるようになりました。
+これで新しいルールの準備ができました。 **[!UICONTROL Save to Library]**&#x200B;を選択し、**[!UICONTROL Build]**&#x200B;を選択してデプロイします。 [!DNL mTLS] リクエストがアクティブになり、ライブラリで利用できるようになります。
 
-![&#x200B; ライブラリおよびビルドに保存がハイライト表示されたイベント転送ルール &#x200B;](../../../images/extensions/server/cloud-connector/save-build.png)
+![ ライブラリへの保存とビルドがハイライト表示されたイベント転送ルール。](../../../images/extensions/server/cloud-connector/save-build.png)
 
 ## 次の手順
 
-このガイドでは、イベント転送で mTLS ルールを設定する方法について説明しました。 環境用の mTLS の設定について詳しくは、[Mutual Transport Layer Security （[!DNL mTLS]） ガイド &#x200B;](../cloud-connector/mtls.md) を参照してください。
+このガイドでは、イベント転送でmTLS ルールを設定する方法について説明しました。 環境にmTLSを設定する方法の詳細については、[相互トランスポート層セキュリティ （[!DNL mTLS]）ガイド ](../cloud-connector/mtls.md)を参照してください。
 
-Experience Platformのイベント転送機能について詳しくは、[&#x200B; イベント転送の概要 &#x200B;](../../../ui/event-forwarding/overview.md) を参照してください。
+Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
