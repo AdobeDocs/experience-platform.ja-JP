@@ -2,7 +2,7 @@
 title: リアルタイム顧客プロファイルの概要
 description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -21,7 +21,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## プロファイルについて
 
-[!DNL Real-Time Customer Profile] は様々なエンタープライズシステムのデータを結合し、関連する時系列イベントを使用して、顧客プロファイルの形でそのデータへのアクセスを提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。以下の節では、Experience Platform内でプロファイルを効果的に構築し、維持するために理解しておく必要がある中心概念の一部を重点的に説明します。
+[!DNL Real-Time Customer Profile] は様々なエンタープライズシステムのデータを結合し、関連する時系列イベントを使用して、顧客プロファイルの形でそのデータへのアクセスを提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。次のセクションでは、Experience Platform内でプロファイルを効果的に構築および管理するために理解しなければならないコアコンセプトの一部を取り上げます。
 
 ### プロファイルエンティティの構成
 
@@ -45,11 +45,11 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 [!DNL Real-Time Customer Profile] は、取得されたデータを処理し、Adobe Experience Platform [!DNL Identity Service] を使用してて ID マッピングを通じて関連データを結合しますが、独自のデータを [!DNL Profile] データストア内に保持します。[!DNL Profile] ストアは、Data Lake 内のカタログデータと ID グラフ内の [!DNL Identity Service] データとは別のものです。
 
-プロファイルストアはMicrosoft Azure Cosmos DB インフラストラクチャを使用し、Experience Platform Data Lake はMicrosoft Azure Data Lake ストレージを使用します。
+プロファイルストアでは、Microsoft Azure Cosmos DB インフラストラクチャを使用し、Experience Platform データレイクではMicrosoft Azure データレイク ストレージを使用します。
 
 ### プロファイルガードレール
 
-Experience Platform は、リアルタイム顧客プロファイルがサポートできない[エクスペリエンスデータモデル（XDM）スキーマ](../xdm/home.md)の作成を回避するのに役立つ一連のガードレールを提供します。これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。 ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
+Experience Platform は、リアルタイム顧客プロファイルがサポートできない[エクスペリエンスデータモデル（XDM）スキーマ](../xdm/home.md)の作成を回避するのに役立つ一連のガードレールを提供します。これには、パフォーマンスの低下につながるソフトリミットと、エラーやシステム障害につながるハードリミットが含まれます。 ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
 
 ### プロファイルダッシュボード {#profile-dashboard}
 
@@ -57,15 +57,15 @@ Experience Platform UI には、毎日のスナップショット中にキャプ
 
 ### プロファイルフラグメントと結合プロファイル {#profile-fragments-vs-merged-profiles}
 
-個々の顧客プロファイルは、その顧客に対する単一のビューを形成する複数のプロファイルフラグメントで構成されます。例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントがExperience Platformに取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。
+個々の顧客プロファイルは、その顧客に対する単一のビューを形成するように結合された複数のプロファイルフラグメントで構成されます。例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントがExperience Platformに取り込まれると、それらのフラグメントが結合され、その顧客の単一のプロファイルが作成されます。
 
 つまり、プロファイルフラグメントは一意のプライマリ ID と、特定のデータセット内のその ID に対応する[レコード](#record-data)または[イベント](#time-series-events)データを表します。
 
-複数のデータセットからのデータが競合する場合（例えば、1 つのフラグメントリストが顧客について「独身」、他のリストが「既婚」としている）、[結合ポリシー](#merge-policies)が個人のプロファイルに優先順位を付け、含める情報を決定します。したがって、各プロファイルは通常、複数のデータセットからの複数のフラグメントで構成され、Experience Platform内のプロファイルフラグメントの合計数は、結合されたプロファイルの合計数よりも常に多くなる可能性が高くなります。
+複数のデータセットからのデータが競合する場合（例えば、1 つのフラグメントリストが顧客について「独身」、他のリストが「既婚」としている）、[結合ポリシー](#merge-policies)が個人のプロファイルに優先順位を付け、含める情報を決定します。したがって、Experience Platform内のプロファイルフラグメントの合計数は、通常、各プロファイルが複数のデータセットから複数のフラグメントで構成されるため、結合されたプロファイルの合計数よりも常に多くなる可能性があります。
 
 ### レコードデータ {#record-data}
 
-プロファイルとは、多数の属性（レコードデータとも呼ばれます）で構成される主体、組織または個人を表したものです。例えば、製品のプロファイルには SKU と説明が含まれ、人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれる場合があります。[!DNL Experience Platform] を使用すると、プロファイルをカスタマイズして、ビジネスに関連する特定のデータを使用できます。標準 [!DNL Experience Data Model] （XDM）のクラス [!DNL XDM Individual Profile] は、顧客レコードデータを記述するときにスキーマを構築するための推奨クラスであり、Experience Platform サービス間の多くの対話に不可欠なデータを提供します。 [!DNL Experience Platform] でのスキーマの使用に関する詳細については、まず[XDM システムの概要](../xdm/home.md)をお読みください。
+プロファイルとは、多数の属性（レコードデータとも呼ばれます）で構成される主体、組織または個人を表したものです。例えば、製品のプロファイルには SKU と説明が含まれ、人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれる場合があります。[!DNL Experience Platform] を使用すると、プロファイルをカスタマイズして、ビジネスに関連する特定のデータを使用できます。標準の[!DNL Experience Data Model] （XDM） クラス [!DNL XDM Individual Profile]は、顧客レコードデータを記述する際にスキーマを構築する際に優先されるクラスであり、Experience Platform サービス間の多くのインタラクションに不可欠なデータを提供します。 [!DNL Experience Platform] でのスキーマの使用に関する詳細については、まず[XDM システムの概要](../xdm/home.md)をお読みください。
 
 ### 時系列イベント {#time-series-events}
 
@@ -89,37 +89,39 @@ Experience Platform UI には、毎日のスナップショット中にキャプ
 
 UI の結合スキーマへのアクセス方法など、結合スキーマについて詳しくは、『[結合スキーマ UI ガイド](ui/union-schema.md)』を参照してください。
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## プロファイルとオーディエンス
 
 Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向けのエクスペリエンスを強化するために必要なオーディエンスを生成します。オーディエンスを作成すると、そのオーディエンスの ID が、適合するすべてのプロファイルのオーディエンスメンバーシップのリストに追加されます。セグメントルールは、RESTful API とセグメントビルダーのユーザーインターフェイスを使用して作成され、[!DNL Real-Time Customer Profile] データに適用されます。セグメント化の詳細については、「[セグメント化サービスの概要](../segmentation/home.md)」を参照してください。
 
-### ストリーミングの取得とストリーミングのセグメント化
+### ストリーミング取り込みとストリーミングのセグメント化
 
-リアルタイム入力は、ストリーミング取得と呼ばれるプロセスを通じて可能になります。プロファイルと時系列データが取り込まれると、[!DNL Real-Time Customer Profile] は、する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをオーディエンスに含めるか除外するかを自動的に決定してから、既存のデータと結合して和集合表示を更新します。その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。取得される間、データが正しく取得され、データセットの基になるスキーマに適合していることを確認する検証も行われます。取得中の検証の詳細については、まず「[データ取得の質の概要](../ingestion/quality/overview.md)」を読んでください。
+リアルタイム入力は、ストリーミング取り込みと呼ばれるプロセスを通じて可能になります。プロファイルと時系列データが取り込まれると、[!DNL Real-Time Customer Profile] は、する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをオーディエンスに含めるか除外するかを自動的に決定してから、既存のデータと結合して和集合表示を更新します。その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。取得される間、データが正しく取得され、データセットの基になるスキーマに適合していることを確認する検証も行われます。取得中の検証の詳細については、まず「[データ取得の質の概要](../ingestion/quality/overview.md)」を読んでください。
 
 ## データを [!DNL Profile] に取り込む
 
-[!DNL Experience Platform] でレコードと時系列データを [!DNL Profile] に送信するように構成して、リアルタイムのストリーミング取得とバッチ取得をサポートできます。詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
+[!DNL Experience Platform] でレコードと時系列データを [!DNL Profile] に送信するように構成して、リアルタイムのストリーミング取り込みとバッチ取り込みをサポートできます。詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
 
 >[!NOTE]
 >
 >[!DNL Analytics Cloud]、[!DNL Marketing Cloud] および [!DNL Advertising Cloud] などの Adobe ソリューションで収集されたデータは [!DNL Experience Platform] に流れ、[!DNL Profile] に取り込まれます。
 
-### プロファイル取得指標
+### プロファイル取り込み指標
 
-Observability Insights を使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Experience Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取得の割合、取得済みレコードサイズなどを把握できます。詳しくは、[Observability Insights API の概要](../observability/api/overview.md)を読み、リアルタイム顧客プロファイル指標の完全なリストについては、[利用可能な指標](../observability/api/metrics.md#available-metrics)に関するドキュメントを参照してください。
+Observability Insights を使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Experience Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取り込みの割合、取り込み済みレコードサイズなどを把握できます。詳しくは、[Observability Insights API の概要](../observability/api/overview.md)を読み、リアルタイム顧客プロファイル指標の完全なリストについては、[利用可能な指標](../observability/api/metrics.md#available-metrics)に関するドキュメントを参照してください。
 
 ## プロファイルストアデータの更新
 
-場合によっては、組織のプロファイルストアのデータを更新する必要があります。 例えば、レコードを修正したり、属性値を変更したりする必要がある場合があります。これは、バッチの取り込みを通じて行うことができ、upsert タグで構成されたプロファイル対応のデータセットが必要です。属性更新用にデータセットを構成する方法について詳しくは、[プロファイルとアップサートのデータセットの有効化](../catalog/datasets/enable-upsert.md)に関するチュートリアルを参照してください。
+組織のプロファイルストアのデータを更新する必要が生じる場合があります。 例えば、レコードを修正したり、属性値を変更したりする必要がある場合があります。これは、バッチの取り込みを通じて行うことができ、upsert タグで構成されたプロファイル対応のデータセットが必要です。属性更新用にデータセットを構成する方法について詳しくは、[プロファイルとアップサートのデータセットの有効化](../catalog/datasets/enable-upsert.md)に関するチュートリアルを参照してください。
 
 ## データガバナンスと [!DNL Privacy]
 
@@ -131,7 +133,7 @@ Observability Insights を使用すると、Adobe Experience Platform で主要�
 - データアクセスポリシー
 - マーケティングアクションのデータのアクセス制御
 
-データガバナンスは、いくつかのポイントで管理されています。これには、[!DNL Experience Platform] に取得するデータと、特定のマーケティングアクションの取得後にアクセスできるデータの決定が含まれます。詳しくは、まず「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
+データガバナンスは、いくつかのポイントで管理されています。これには、[!DNL Experience Platform] に取り込むデータと、特定のマーケティングアクションの取り込み後にアクセスできるデータの決定が含まれます。詳しくは、まず「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
 
 ### オプトアウトおよびデータのプライバシー要求の処理
 
