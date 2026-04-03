@@ -2,7 +2,7 @@
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2607'
 ht-degree: 85%
@@ -22,13 +22,13 @@ ht-degree: 85%
 | `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、 [命名規則](#naming-rules) に従う必要があります。 **これは、タグが識別子として使用します。拡張機能を公開した後は変更しないでください。** |
 | `platform` | 拡張機能のプラットフォーム。 現時点で使用できる値は `web` のみです。 |
 | `version` | 拡張機能のバージョン。 [semver](https://semver.org/lang/ja/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
-| `displayName` | 人間が判読できる、拡張機能の名前。これは、Experience Platform ユーザーに表示されます。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
-| `description` | 拡張機能の説明。これは、Experience Platform ユーザーに表示されます。 拡張機能によってユーザーが Web サイトに製品を実装できるようになる場合は、製品の動作を説明します。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
-| `iconPath` *（オプション）* | 拡張機能用に表示されるアイコンの相対パス。 スラッシュで始めることはできません。拡張子 `.svg` が付いた SVG ファイルを参照する必要があります。 SVGは正方形にする必要があり、Experience Platformで拡大縮小できます。 |
+| `displayName` | 人間が判読できる、拡張機能の名前。この情報は、Experience Platform ユーザーに表示されます。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
+| `description` | 拡張機能の説明。この情報は、Experience Platform ユーザーに表示されます。 拡張機能によってユーザーが Web サイトに製品を実装できるようになる場合は、製品の動作を説明します。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
+| `iconPath` *（オプション）* | 拡張機能用に表示されるアイコンの相対パス。 スラッシュで始めることはできません。拡張子 `.svg` が付いた SVG ファイルを参照する必要があります。 SVGは正方形にする必要があり、Experience Platformで拡大・縮小することもできます。 |
 | `author` | 「author」は、次の構造を持つオブジェクトです。 <ul><li>`name`：拡張機能の作成者の名前。または、会社名を使用することもできます。</li><li>`url` *（オプション）*：拡張機能の作成者の詳細を参照できる URL。</li><li>`email` *（オプション）*：拡張機能の作成者のメールアドレス。</li></ul>この構造は、[npm 作成者フィールド](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)のルールと一致します。 |
-| `releaseNotesUrl` *（オプション）* | この情報を公開する場所がある場合は、拡張機能のリリースノートの URL。 この URL は、拡張機能のインストールおよびアップグレード時に、Adobe タグ UI 内でこのリンクを表示するために使用されます。 このプロパティは、Web およびEdge拡張機能でのみサポートされます。 |
+| `releaseNotesUrl` *（オプション）* | この情報を公開する場所がある場合は、拡張機能のリリースノートのURLを指定します。 このURLは、拡張機能のインストールおよびアップグレード時にAdobe Tags UIでこのリンクを表示するために使用されます。 このプロパティは、WebおよびEdgeの拡張機能でのみサポートされています。 |
 | `exchangeUrl` *（公開拡張機能に必要）* | Adobe Exchange での拡張機能のリストへの URL。パターン `https://www.adobeexchange.com/experiencecloud.details.######.html` と一致する必要があります。 |
-| `viewBasePath` | すべてのビューおよびビュー関連のリソース（HTML、JavaScript、CSS、画像）を含むサブディレクトリの相対パス。 Experience Platformは、このディレクトリを web サーバー上でホストし、このディレクトリから iframe コンテンツを読み込みます。 これは必須フィールドで、先頭にスラッシュを使用することはできません。例えば、すべてのビューが `src/view/` 内に含まれている場合、`viewBasePath` の値は `src/view/` になります。 |
+| `viewBasePath` | すべてのビューおよびビュー関連のリソース（HTML、JavaScript、CSS、画像）を含むサブディレクトリの相対パス。 Experience Platformは、このディレクトリをweb サーバー上でホストし、そこからiframe コンテンツを読み込みます。 これは必須フィールドで、先頭にスラッシュを使用することはできません。例えば、すべてのビューが `src/view/` 内に含まれている場合、`viewBasePath` の値は `src/view/` になります。 |
 | `hostedLibFiles` *（オプション）* | ユーザーの多くは、タグ関連のすべてのファイルを自社サーバーでホストすることを好みます。これにより、ユーザーは実行時のファイルの可用性に関する確実性を高めることができ、コードを簡単にスキャンしてセキュリティの脆弱性を調べることができます。 実行時に拡張機能のライブラリ部分で JavaScript ファイルを読み込む必要がある場合は、このプロパティを使用して、これらのファイルをリストすることをお勧めします。 リストに含まれるファイルは、タグのランタイムライブラリと一緒にホストされます。 その後、拡張機能では、[getHostedLibFileUrl](./turbine.md#get-hosted-lib-file) メソッドで取得した URL 経由でファイルを読み込むことができます。<br><br>このオプションには、ホストする必要があるサードパーティのライブラリファイルの相対パスを使用した配列が含まれます。 |
 | `main` *（オプション）* | 実行時に実行する必要があるライブラリモジュールの相対パス。<br><br>このモジュールは常にランタイムライブラリに含まれ、実行されます。このモジュールは常にランタイムライブラリに含まれるため、モジュールが必須の場合は「メイン」モジュールのみを使用し、コードサイズを最小限に抑えることをお勧めします。<br><br>このモジュールが最初に実行される保証はありません。その前に他のモジュールが実行される場合があります。 |
 | `configuration` *（オプション）* | 拡張機能の[拡張機能設定](./configuration.md)の部分について説明します。ユーザーが拡張機能のグローバル設定を指定する必要がある場合に必要です。 このフィールドの構造化方法の詳細については、「[付録](#config-object)」を参照してください。 |
@@ -69,22 +69,22 @@ ht-degree: 85%
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>拡張機能の設定表示から保存される有効なオブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a> のオブジェクト。 設定表示の開発者は、保存した settings オブジェクトがこのスキーマと一致することを確認する必要があります。このスキーマは、Experience Platform サービスを使用してデータを保存しようとした場合の検証にも使用されます。<br><br>スキーマオブジェクトの例を次に示します。
+      <td>拡張機能の設定表示から保存される有効なオブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a> のオブジェクト。 設定表示の開発者は、保存した settings オブジェクトがこのスキーマと一致することを確認する必要があります。このスキーマは、ユーザーがExperience Platform サービスを使用してデータを保存しようとする場合の検証にも使用されます。<br><br>スキーマオブジェクトの例を次に示します。
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
@@ -117,7 +117,7 @@ ht-degree: 85%
     </tr>
     <tr>
       <td><code>categoryName</code> <em>（オプション）</em></td>
-      <td>指定した場合、<code>displayName</code> が UI 内の <code>categoryName</code> の下に一覧表示されます。 同じ <code>categoryName</code> を持つすべてのタイプが同じカテゴリに一覧表示されます。例えば、拡張機能で <code>keyUp</code> イベントタイプと <code>keyDown</code> イベントタイプが指定され、どちらのタイプも <code>Keyboard</code> の <code>categoryName</code> を持つ場合、ユーザーがルールを作成する際に使用可能なイベントタイプのリストから選択するときに、両方のイベントタイプが Keyboard カテゴリに表示されます。 <code>categoryName</code> の値は人間が判読できる必要があります。</td>
+      <td>指定すると、UI内の<code>displayName</code>の下に<code>categoryName</code>が表示されます。 同じ <code>categoryName</code> を持つすべてのタイプが同じカテゴリに一覧表示されます。例えば、拡張機能で <code>keyUp</code> イベントタイプと <code>keyDown</code> イベントタイプが指定され、どちらのタイプも <code>Keyboard</code> の <code>categoryName</code> を持つ場合、ユーザーがルールを作成する際に使用可能なイベントタイプのリストから選択するときに、両方のイベントタイプが Keyboard カテゴリに表示されます。 <code>categoryName</code> の値は人間が判読できる必要があります。</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
@@ -125,26 +125,26 @@ ht-degree: 85%
     </tr>
     <tr>
       <td><code>viewPath</code> <em>（オプション）</em></td>
-      <td>タイプの表示の相対 URL。<code>viewBasePath</code> に対する相対 URL であり、スラッシュで始まらないようにする必要があります。 拡張子 <code>.html</code> を持つ HTML ファイルを参照する必要があります。 クエリ文字列とフラグメント識別子（ハッシュ）を使用できます。タイプのライブラリモジュールがユーザーの設定を使用しない場合、このプロパティを除外すると、Experience Platformでは、代わりに、設定が不要であることを示すプレースホルダーが表示されます。</td>
+      <td>タイプの表示の相対 URL。<code>viewBasePath</code> に対する相対 URL であり、スラッシュで始まらないようにする必要があります。 拡張子 <code>.html</code> を持つ HTML ファイルを参照する必要があります。 クエリ文字列とフラグメント識別子（ハッシュ）を使用できます。タイプのライブラリモジュールでユーザーの設定が使用されていない場合は、このプロパティを除外すると、Experience Platformに代わりにプレースホルダーが表示され、設定が不要であることが示されます。</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクトに対して実行されるライブラリモジュールと互換性のある形式であることを、Experience Platformが適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
+      <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、Experience Platformがユーザーが保存したsettings オブジェクトが、実行時にsettings オブジェクトに基づいて動作するライブラリモジュールと互換性のあるフォーマットであることを適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
@@ -157,9 +157,9 @@ ht-degree: 85%
 
 ### 変換 {#transforms}
 
-特定のユースケースでは、拡張機能を使用するには、ビューから保存された settings オブジェクトをExperience Platformで変換してから、タグランタイムライブラリに発行する必要があります。 `extension.json` 内でタイプ定義を定義する際に、`transforms` プロパティを設定することで、これらの 1 つ以上の変換を実行するように要求できます。 `transforms` プロパティはオブジェクトの配列です。各オブジェクトは、実行する必要のある変換を表します。
+特定のユースケースでは、拡張機能をタグランタイムライブラリに出力する前に、ビューから保存された設定オブジェクトをExperience Platformで変換する必要があります。 `extension.json` 内でタイプ定義を定義する際に、`transforms` プロパティを設定することで、これらの 1 つ以上の変換を実行するように要求できます。 `transforms` プロパティはオブジェクトの配列です。各オブジェクトは、実行する必要のある変換を表します。
 
-すべての変換には `type` と `propertyPath` が必要です。 `type` は、`function`、`remove`、`file` のいずれかである必要があり、Experience Platformが settings オブジェクトに適用する必要があるトランスフォームを示します。 `propertyPath` はピリオドで区切られた文字列で、変更が必要なプロパティが settings オブジェクト内のどこにあるかをタグに伝えます。次に、設定オブジェクトと `propertyPath` の例を示します。
+すべての変換には `type` と `propertyPath` が必要です。 `type`は`function`、`remove`、`file`のいずれかである必要があり、Experience Platformをsettings オブジェクトに適用する変換を記述します。 `propertyPath` はピリオドで区切られた文字列で、変更が必要なプロパティが settings オブジェクト内のどこにあるかをタグに伝えます。次に、設定オブジェクトと `propertyPath` の例を示します。
 
 ```js
 {
@@ -188,7 +188,7 @@ ht-degree: 85%
 
 #### 関数変換
 
-関数変換を使用すると、Experience Platform ユーザーが記述したコードを、発行されたタグランタイムライブラリ内のライブラリモジュールによって実行できます。
+関数transformを使用すると、Experience Platform ユーザーが書き込んだコードを、生成されたタグランタイムライブラリ内のライブラリモジュールで実行できます。
 
 「カスタムスクリプト」アクションタイプを指定するとします。 「カスタムスクリプト」アクションビューには、ユーザーがコードを入力できるテキスト領域があります。ユーザーがテキスト領域に次のコードを入力したとします。
 
@@ -208,7 +208,7 @@ ht-degree: 85%
 
 設定オブジェクトがアクションタイプのビューから保存された時点で、ユーザーのコードは単なる文字列になります。 この動作には、JSON との間でコードを適切にシリアル化できるため利点もありますが、通常、コードは実行可能な関数ではなく、文字列としてタグのランタイムライブラリに発行されるため、欠点もあります。[`eval`](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/eval) または [Function コンストラクター](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Function)を使用して、アクションタイプのライブラリモジュール内のコードを実行しようとしても、[コンテンツのセキュリティポリシー](https://developer.mozilla.org/ja-JP/docs/Web/Security/CSP)によって実行がブロックされる可能性があるので、この操作は推奨されません。
 
-この状況の回避策として、タグランタイムライブラリでユーザーのコードが発行されたときに、関数変換を使用して、そのコードを実行可能な関数に含めるようExperience Platformに指示します。 この例の問題を解決するには、`extension.json` でタイプの定義の変換を次のように定義します。
+この状況の回避策として、transform関数を使用すると、タグランタイムライブラリで生成されたときにユーザーのコードを実行可能な関数にラップするようにExperience Platformに指示されます。 この例の問題を解決するには、`extension.json` でタイプの定義の変換を次のように定義します。
 
 ```json
 {
@@ -223,7 +223,7 @@ ht-degree: 85%
 ```
 
 * `type` は、設定オブジェクトに適用する必要のある変換のタイプを定義します。
-* `propertyPath` は、settings オブジェクト内で変更する必要があるプロパティをどこで見つけるかをExperience Platformに指示する、ピリオドで区切られた文字列です。
+* `propertyPath`は、Experience Platformがsettings オブジェクト内で変更する必要があるプロパティをどこで見つけるかを示すピリオド区切りの文字列です。
 * `parameters` は、ラッピング関数のシグネチャに含める必要があるパラメーター名の配列です。
 
 settings オブジェクトがタグのランタイムライブラリで発行されると、次のように変換されます。
@@ -242,7 +242,7 @@ settings オブジェクトがタグのランタイムライブラリで発行�
 
 #### ファイル変換
 
-ファイル変換を使用すると、Experience Platform ユーザーが記述したコードを、タグのランタイムライブラリとは別のファイルに発行できます。 このファイルは、タグのランタイムライブラリと共にホストされ、必要に応じて、実行時に拡張機能で読み込むことができます。
+ファイル変換を使用すると、Experience Platform ユーザーが書き込んだコードを、タグランタイムライブラリとは別のファイルに出力できます。 このファイルは、タグのランタイムライブラリと共にホストされ、必要に応じて、実行時に拡張機能で読み込むことができます。
 
 「カスタムスクリプト」アクションタイプを指定するとします。 アクションタイプのビューには、ユーザーがコードを入力できるテキスト領域が表示される場合があります。 ユーザーがテキスト領域に次のコードを入力したとします。
 
@@ -272,7 +272,7 @@ settings オブジェクトがタグのランタイムライブラリで発行�
 ```
 
 * `type` は、設定オブジェクトに適用する必要のある変換のタイプを定義します。
-* `propertyPath` は、settings オブジェクト内で変更する必要があるプロパティをどこで見つけるかをExperience Platformに指示する、ピリオドで区切られた文字列です。
+* `propertyPath`は、Experience Platformがsettings オブジェクト内で変更する必要があるプロパティをどこで見つけるかを示すピリオド区切りの文字列です。
 
 settings オブジェクトがタグのランタイムライブラリで発行されると、次のように変換されます。
 
@@ -318,7 +318,7 @@ settings オブジェクトがタグのランタイムライブラリで発行�
 ```
 
 * `type` は、設定オブジェクトに適用する必要のある変換のタイプを定義します。
-* `propertyPath` は、settings オブジェクト内で変更する必要があるプロパティをどこで見つけるかをExperience Platformに指示する、ピリオドで区切られた文字列です。
+* `propertyPath`は、Experience Platformがsettings オブジェクト内で変更する必要があるプロパティをどこで見つけるかを示すピリオド区切りの文字列です。
 
 settings オブジェクトがタグのランタイムライブラリで発行されると、次のように変換されます。
 
