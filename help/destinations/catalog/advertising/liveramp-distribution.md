@@ -2,7 +2,7 @@
 title: LiveRamp – 配布接続
 description: LiveRamp – 配信コネクターを使用して、以前LiveRampにオンボーディングしたオーディエンスをオーケストレーションし、下流の広告宛先にアクティベートする方法を説明します。
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2807'
 ht-degree: 42%
@@ -46,13 +46,13 @@ ht-degree: 42%
 
 [!DNL LiveRamp - Distribution]宛先を使用する方法とタイミングをより理解しやすくするために、[!DNL Adobe Experience Platform]のお客様がこの宛先を使用して解決できる使用例を次に示します。
 
-スポーツアパレルのretailerのマーケティングチームは、[LiveRamp - オンボーディング &#x200B;](liveramp-onboarding.md)接続を使用して、Experience PlatformからオーディエンスをLiveRamp アカウントに送信しました。
+スポーツアパレルのretailerのマーケティングチームは、[LiveRamp - オンボーディング ](liveramp-onboarding.md)接続を使用して、Experience PlatformからオーディエンスをLiveRamp アカウントに送信しました。
 
-[!DNL LiveRamp - Distribution]接続を通じて、オンボーディング済みオーディエンスのアクティベーションを[&#x200B; サポート対象の宛先](#supported-destinations)にトリガーできるようになりました。 その後、モバイル、オープン web、ソーシャル、[!DNL CTV] プラットフォームでユーザーをターゲティングできます。
+[!DNL LiveRamp - Distribution]接続を通じて、オンボーディング済みオーディエンスのアクティベーションを[ サポート対象の宛先](#supported-destinations)にトリガーできるようになりました。 その後、モバイル、オープン web、ソーシャル、[!DNL CTV] プラットフォームでユーザーをターゲティングできます。
 
 ## LiveRampへのオーディエンスのオンボーディング {#onboarding}
 
-[!DNL LiveRamp - Distribution]接続でオーディエンスをアクティブ化する前に、[LiveRamp - オンボーディング &#x200B;](liveramp-onboarding.md)接続を使用して、Experience Platform オーディエンスをLiveRampに書き出します。
+[!DNL LiveRamp - Distribution]接続でオーディエンスをアクティブ化する前に、[LiveRamp - オンボーディング ](liveramp-onboarding.md)接続を使用して、Experience Platform オーディエンスをLiveRampに書き出します。
 
 オーディエンスをLiveRampにオンボーディングした後、[宛先への接続](#connect)手順からアクティベーションワークフローを続行し、データのアクティベーション用にターゲット宛先プラットフォームを選択して設定します。
 
@@ -62,7 +62,7 @@ ht-degree: 42%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -73,10 +73,10 @@ ht-degree: 42%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -456,15 +456,15 @@ TargetSpotの宛先でサポートされているIDを示す![Experience Platfor
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-[!DNL LiveRamp - Distribution]接続は、[LiveRamp - オンボーディング &#x200B;](liveramp-onboarding.md)接続を介して、すでにLiveRamp アカウントにオンボーディングされているオーディエンスをアクティブ化します。
+[!DNL LiveRamp - Distribution]接続は、[LiveRamp - オンボーディング ](liveramp-onboarding.md)接続を介して、すでにLiveRamp アカウントにオンボーディングされているオーディエンスをアクティブ化します。
 
-オーディエンスを正常にアクティブ化するには、**以前にLiveRampにオンボーディングした**&#x200B;と同じ[&#x200B; オーディエンス &#x200B;](liveramp-onboarding.md)を選択する必要があります。
+オーディエンスを正常にアクティブ化するには、**以前にLiveRampにオンボーディングした**&#x200B;と同じ[ オーディエンス ](liveramp-onboarding.md)を選択する必要があります。
 
 >[!IMPORTANT]
 >
->以前に[LiveRamp - オンボーディング &#x200B;](liveramp-onboarding.md)接続を通じてオンボーディングされていないオーディエンスを選択しても、新しいオーディエンスのオンボーディングはトリガーされません。
+>以前に[LiveRamp - オンボーディング ](liveramp-onboarding.md)接続を通じてオンボーディングされていないオーディエンスを選択しても、新しいオーディエンスのオンボーディングはトリガーされません。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -478,4 +478,4 @@ TargetSpotの宛先でサポートされているIDを示す![Experience Platfor
 
 ## その他のリソース {#additional-resources}
 
-[!DNL LiveRamp - Onboarding]宛先の設定方法について詳しくは、[LiveRamp - オンボーディングドキュメント &#x200B;](liveramp-onboarding.md)を参照してください。
+[!DNL LiveRamp - Onboarding]宛先の設定方法について詳しくは、[LiveRamp - オンボーディングドキュメント ](liveramp-onboarding.md)を参照してください。
