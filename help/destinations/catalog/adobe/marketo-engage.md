@@ -2,7 +2,7 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対応する唯一のエンドツーエンドのCXM （顧客体験管理）ソリューションです。 このツールは、CRMのリード管理や顧客エンゲージメントから、ABM （アカウントベースドマーケティング）や売上への貢献度に至るまで、アクティビティを自動化および管理するために役立ちます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 16%
@@ -30,7 +30,7 @@ ht-degree: 16%
 Marketo V2の宛先の機能強化は次のとおりです。
 
 * アクティベーション ワークフローの&#x200B;**[!UICONTROL Schedule segment]** ステップであるMarketo V1では、データをMarketoに正常にエクスポートするために&#x200B;**マッピング ID**&#x200B;を手動で追加する必要がありました。 この手動の手順は、Marketo V2 では不要になりました。
-* アクティベーション ワークフローの&#x200B;**[!UICONTROL Mapping]** ステップであるMarketo V1では、XDM フィールドをMarketoの3つのターゲットフィールド（`firstName`、`lastName`、および`companyName`）にマッピングすることができました。 Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、以下の「[&#x200B; サポートされる属性](#supported-attributes)」の節を参照してください。
+* アクティベーション ワークフローの&#x200B;**[!UICONTROL Mapping]** ステップであるMarketo V1では、XDM フィールドをMarketoの3つのターゲットフィールド（`firstName`、`lastName`、および`companyName`）にマッピングすることができました。 Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、以下の「[ サポートされる属性](#supported-attributes)」の節を参照してください。
 
 ## 概要 {#overview}
 
@@ -42,7 +42,7 @@ Marketo V2の宛先の機能強化は次のとおりです。
 
 >[!NOTE]
 >
->宛先をアクティブ化ワークフローの[&#x200B; マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)では、IDをマッピングするには&#x200B;*必須*、属性をマッピングするには&#x200B;*オプション*&#x200B;です。 「ID名前空間」タブから電子メールやECIDをマッピングすることは、Marketoで個人が一致することを確認するために最も重要なことです。 マッピングメールは、最も高い一致率を保証します。
+>宛先をアクティブ化ワークフローの[ マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)では、IDをマッピングするには&#x200B;*必須*、属性をマッピングするには&#x200B;*オプション*&#x200B;です。 「ID名前空間」タブから電子メールやECIDをマッピングすることは、Marketoで個人が一致することを確認するために最も重要なことです。 マッピングメールは、最も高い一致率を保証します。
 
 ### サポートされている ID {#supported-identities}
 
@@ -55,7 +55,7 @@ Marketo V2の宛先の機能強化は次のとおりです。
 
 ### サポートされる属性 {#supported-attributes}
 
-Experience Platformの属性を、Marketoで組織がアクセスできる任意の属性にマッピングできます。 Marketoでは、[Describe API リクエスト &#x200B;](https://developers.marketo.com/rest-api/lead-database/leads/#describe)を使用して、組織がアクセスできる属性フィールドを取得できます。
+Experience Platformの属性を、Marketoで組織がアクセスできる任意の属性にマッピングできます。 Marketoでは、[Describe API リクエスト ](https://developers.marketo.com/rest-api/lead-database/leads/#describe)を使用して、組織がアクセスできる属性フィールドを取得できます。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -63,7 +63,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -97,10 +97,10 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-宛先の設定とオーディエンスのアクティベート方法について詳しくは、Marketo ドキュメントの[Adobe Experience Platform オーディエンスをMarketo静的リストにプッシュ &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja)を参照してください。
+宛先の設定とオーディエンスのアクティベート方法について詳しくは、Marketo ドキュメントの[Adobe Experience Platform オーディエンスをMarketo静的リストにプッシュ ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja)を参照してください。
 
 次のビデオでは、Marketoの宛先を設定し、オーディエンスをアクティベートする手順も示しています。
 
@@ -113,7 +113,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 >* ビデオで指摘された2つの制限は、もはや適用されません。 ビデオの録画時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多くのプロファイル属性フィールドをマッピングできるようになりました。 Marketo静的リストにまだ存在しないMarketoにオーディエンスメンバーを書き出すこともできます。これらのメンバーはリストに追加されます。
 >* ライセンス認証ワークフローの&#x200B;**[!UICONTROL Schedule audience step]**&#x200B;で、Marketo V1で、データをMarketoに正常にエクスポートするために&#x200B;**[!UICONTROL Mapping ID]**&#x200B;を手動で追加する必要がありました。 この手動の手順は、Marketo V2 では不要になりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440159?captions=jpn&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## 宛先の監視 {#monitor-destination}
 
@@ -123,4 +123,4 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[&#x200B; データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja)を参照してください。
