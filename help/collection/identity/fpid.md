@@ -12,7 +12,7 @@ ht-degree: 0%
 
 Experience Platform Edge Networkでは、Experience Cloud ID （ECID）を使用してweb サイト訪問者を識別します。 所有しているプロパティのIDの耐久性を向上させるには、1st パーティデバイス ID （FPID）と呼ばれる独自のデバイス IDを設定して管理します。 Edge Networkでは、FPIDを使用して、Adobe ソリューションが使用するECIDのシードを設定します。
 
-このページでは、ECIDと`identityMap`について詳しいユーザーを前提としています。 詳しくは、[ データ収集のID](./overview.md)を参照してください。
+このページでは、ECIDと`identityMap`について詳しいユーザーを前提としています。 詳しくは、[&#x200B; データ収集のID](./overview.md)を参照してください。
 
 ## FPIDを使用するタイミング {#when-to-use}
 
@@ -20,7 +20,7 @@ Experience Platform Edge Networkでは、Experience Cloud ID （ECID）を使用
 
 FPIDは、Web SDK タグ拡張機能を含む、Web SDKを使用するWeb実装でサポートされています。 主な目標が、組織が所有するドメインでより強力なIDの保持である場合や、所有しているweb プロパティでのレポートとパーソナライゼーションの継続性が必要な場合に最適です。 また、制御するインフラストラクチャから1st パーティ Cookieを設定および管理することもできます。
 
-FPIDは、アプリからwebへの引き継ぎや、複数のドメイン間でのIDの連続性を主な目標としている場合に適したツールではありません。 これらのシナリオについては、[ モバイルからwebへのID共有](./mobile-to-web.md)および[ クロスドメイン共有](./cross-domain-sharing.md)を参照してください。
+FPIDは、アプリからwebへの引き継ぎや、複数のドメイン間でのIDの連続性を主な目標としている場合に適したツールではありません。 これらのシナリオについては、[&#x200B; モバイルからwebへのID共有](./mobile-to-web.md)および[&#x200B; クロスドメイン共有](./cross-domain-sharing.md)を参照してください。
 
 FPIDを利用する利点は次のとおりです。
 
@@ -37,7 +37,7 @@ FPIDを利用するためのトレードオフには、次のようなものが�
 ### 高レベル設定パス
 
 1. 制御するインフラストラクチャ上で1st パーティデバイス IDを生成および管理します。
-1. このIDを[ ファーストパーティ Cookie](#setting-cookie-datastreams)または[ID ペイロード ](#identityMap)から読み取るように実装を設定します。
+1. このIDを[&#x200B; ファーストパーティ Cookie](#setting-cookie-datastreams)または[ID ペイロード &#x200B;](#identityMap)から読み取るように実装を設定します。
 1. 再訪問者が、自社のプロパティで一貫性のあるIDを継続的に維持していることを検証しましょう。
 
 ## FPIDの仕組み {#how-fpids-work}
@@ -70,17 +70,17 @@ Edge Networkでは、[UUIDv4形式](https://datatracker.ietf.org/doc/html/rfc412
 * コンテンツ管理システムを使用したCookieの生成（CMS）
 * コンテンツ配信ネットワーク（CDN）を使用したCookieの生成
 
-ファーストパーティ Cookieが最も効果を発揮するのは、DNS [やJavaScript コードではなく、DNS ](https://datatracker.ietf.org/doc/html/rfc1035)A レコード [ （IPv4の場合）または](https://datatracker.ietf.org/doc/html/rfc3596)AAAA レコード `CNAME` （IPv6の場合）を使用するサーバーを使用している場合です。
+ファーストパーティ Cookieが最も効果を発揮するのは、DNS [やJavaScript コードではなく、DNS &#x200B;](https://datatracker.ietf.org/doc/html/rfc1035)A レコード [&#x200B; （IPv4の場合）または](https://datatracker.ietf.org/doc/html/rfc3596)AAAA レコード `CNAME` （IPv6の場合）を使用するサーバーを使用している場合です。
 
 >[!IMPORTANT]
 >
 >JavaScriptの`document.cookie` メソッドを使用して設定されたCookie （タグメソッド [`cookie.set()`](../tags/cookie.md)を使用する場合を含む）は、Cookieの期間を制限するブラウザーポリシーからほとんど保護されません。
 
-`A`または`AAAA` レコードは、Cookieの設定と追跡でのみサポートされています。 データ収集の主な方法は、DNS `CNAME`を使用することです。 FPIDは`A`または`AAAA` レコードを使用して設定され、`CNAME`を使用してAdobeに送信されます。 [Adobeで管理されている証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)を使用すると、データ収集用に`CNAME`を設定できます。
+`A`または`AAAA` レコードは、Cookieの設定と追跡でのみサポートされています。 データ収集の主な方法は、DNS `CNAME`を使用することです。 FPIDは`A`または`AAAA` レコードを使用して設定され、`CNAME`を使用してAdobeに送信されます。 [Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)を使用すると、データ収集用に`CNAME`を設定できます。
 
 ### Cookieの設定時期 {#when-to-set-cookie}
 
-FPID Cookieは、Edge Networkにデータを送信する前に設定するのが理想的です。 実装でデータを収集する前に同意が必要な場合は、FPID Cookieと同意フローの調整に関するガイダンスについて、[ ファーストパーティデバイス IDを使用した同意](./consent.md#consent-with-fpids)を参照してください。 訪問者のインフレーションは、FPIDが最初のリクエストからECIDのシードを取得できるようにすると減少します。 それが不可能なシナリオでは、ECIDは既存のメソッドを使用して生成され、Cookieが存在する限りプライマリ識別子として機能します。 生成されたFPIDは、ECIDが存在しなくなるまで、プライマリ IDにはなりません。 ECIDが最終的にブラウザー削除ポリシーの影響を受けるが、FPIDが影響を受けないと仮定すると、FPIDは次回の訪問時のプライマリ識別子となり、その後の訪問時にECIDをシードするために使用されます。
+FPID Cookieは、Edge Networkにデータを送信する前に設定するのが理想的です。 実装でデータを収集する前に同意が必要な場合は、FPID Cookieと同意フローの調整に関するガイダンスについて、[&#x200B; ファーストパーティデバイス IDを使用した同意](./consent.md#consent-with-fpids)を参照してください。 訪問者のインフレーションは、FPIDが最初のリクエストからECIDのシードを取得できるようにすると減少します。 それが不可能なシナリオでは、ECIDは既存のメソッドを使用して生成され、Cookieが存在する限りプライマリ識別子として機能します。 生成されたFPIDは、ECIDが存在しなくなるまで、プライマリ IDにはなりません。 ECIDが最終的にブラウザー削除ポリシーの影響を受けるが、FPIDが影響を受けないと仮定すると、FPIDは次回の訪問時のプライマリ識別子となり、その後の訪問時にECIDをシードするために使用されます。
 
 ### 有効期限の設定 {#set-expiration}
 
@@ -105,10 +105,10 @@ Edge NetworkにFPIDを送信するには、次の2つの方法があります。
 
 独自のドメインからFPID Cookieを設定するには、Web SDK呼び出しに独自の`CNAME`を設定し、データストリーム設定でファーストパーティ ID Cookie機能を有効にする必要があります。 DNS内の`CNAME` レコードを使用すると、あるドメイン名から別のドメイン名にエイリアスを作成できます。 このエイリアスは、サードパーティサービスを独自のドメインの一部であるかのように見せ、そのCookieをファーストパーティ Cookieのように見せるのに役立ちます。 `CNAME`を使用してファーストパーティデータ収集を有効にすると、データ収集エンドポイントに対して行われたリクエストに対して、ドメインのすべてのCookieが送信されます。
 
-1. Adobeと連携して、組織で使用するデータ収集用の`CNAME` レコードを作成します。 完全なプロセスについては、[Adobeが管理する証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
-1. データストリームで&#x200B;**[!UICONTROL First Party ID Cookie]** オプションを有効にします。 この設定は、ID マップの値を検索する代わりに、ファーストパーティデバイス IDを検索する際に、指定されたCookieを参照するようにEdge Networkに指示します。 この設定を有効にする場合は、FPIDを保存する必要があるCookieの名前を指定する必要があります。 詳しくは、[ データストリームの作成と設定](/help/datastreams/configure.md#advanced-options)を参照してください。
+1. Adobeと連携して、組織で使用するデータ収集用の`CNAME` レコードを作成します。 完全なプロセスについては、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
+1. データストリームで&#x200B;**[!UICONTROL First Party ID Cookie]** オプションを有効にします。 この設定は、ID マップの値を検索する代わりに、ファーストパーティデバイス IDを検索する際に、指定されたCookieを参照するようにEdge Networkに指示します。 この設定を有効にする場合は、FPIDを保存する必要があるCookieの名前を指定する必要があります。 詳しくは、[&#x200B; データストリームの作成と設定](/help/datastreams/configure.md#advanced-options)を参照してください。
 
-   ![ ファーストパーティ ID Cookie設定を強調表示するデータストリーム設定を示すPlatform UI画像](/help/collection/js/assets/first-party-id-datastreams.png)
+   ![&#x200B; ファーストパーティ ID Cookie設定を強調表示するデータストリーム設定を示すPlatform UI画像](/help/collection/js/assets/first-party-id-datastreams.png)
 
 ### 方法2: `identityMap`でFPIDを使用する {#identityMap}
 

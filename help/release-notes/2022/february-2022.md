@@ -49,7 +49,7 @@ Experience Platform は、クライアントサイドのカスタマーエクス
 | データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバーサイドのエクスペリエンスデータモデル（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../datastreams/data-prep.md)に関する節を参照してください。 |
 | ファーストパーティデバイス ID | Experience Platform Web SDKを使用してお客様のデータを収集する際に、独自のデバイス IDをAdobe Experience Platform Edge Networkに送信できるようになりました。これにより、サードパーティ Cookieの有効期間に対する最近のブラウザーの制限を回避できます。 詳しくは、[ファーストパーティデバイス ID](/help/collection/identity/fpid.md) に関するガイドを参照してください。 |
 
-Experience Platformでのデータ収集について詳しくは、[ データ収集の概要](../../collection/home.md)を参照してください。
+Experience Platformでのデータ収集について詳しくは、[&#x200B; データ収集の概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 

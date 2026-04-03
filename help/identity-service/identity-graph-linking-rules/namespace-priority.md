@@ -37,7 +37,7 @@ ht-degree: 3%
 >
 >* 階層型グラフとは、複数レベルのリンクを持つID グラフのことです。 3つのレイヤーを持つグラフの例については、以下の画像を参照してください。
 
-![ グラフレイヤーの図](../images/namespace-priority/graph-layers.png " グラフレイヤーの図"){zoomable="yes"}
+![&#x200B; グラフレイヤーの図](../images/namespace-priority/graph-layers.png " グラフレイヤーの図"){zoomable="yes"}
 
 ### 名前空間の意味
 
@@ -53,7 +53,7 @@ IDは実世界のオブジェクトを表します。 ID グラフに表示さ�
 
 ## 名前空間の優先度設定の検証
 
-名前空間の優先順位付けについて理解できたら、UIのグラフシミュレーションツールを使用して、様々なグラフ折りたたみシナリオをテストし、優先度設定が期待されるグラフ結果を返していることを確認できます。 詳しくは、[ グラフシミュレーションツールの使用に関するガイド ](./graph-simulation.md)を参照してください。
+名前空間の優先順位付けについて理解できたら、UIのグラフシミュレーションツールを使用して、様々なグラフ折りたたみシナリオをテストし、優先度設定が期待されるグラフ結果を返していることを確認できます。 詳しくは、[&#x200B; グラフシミュレーションツールの使用に関するガイド &#x200B;](./graph-simulation.md)を参照してください。
 
 ## 名前空間の優先度の設定
 
@@ -120,7 +120,7 @@ IDは実世界のオブジェクトを表します。 ID グラフに表示さ�
 
 ## セグメント化サービス：セグメントメンバーシップのメタデータストレージ
 
-![ セグメント メンバーシップ ストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメント メンバーシップ ストレージの図。"){zoomable="yes"}
+![&#x200B; セグメント メンバーシップ ストレージの図。](../images/namespace-priority/segment-membership-storage.png " セグメント メンバーシップ ストレージの図。"){zoomable="yes"}
 
 特定の結合プロファイルの場合、セグメントメンバーシップは、名前空間の優先度が最も高いIDに対して保存されます。
 
@@ -152,7 +152,7 @@ JohnとJaneがデバイスを共有している場合、ECID （web ブラウザ
 
 ### 計算属性
 
-ID設定が有効になっている場合、計算属性は名前空間優先度を使用して計算属性値を保存します。 特定のイベントの場合、名前空間の優先順位が最も高いIDには、計算属性の値が書き込まれます。 詳しくは、[計算属性UI ガイド ](/help/profile/computed-attributes/ui.md)を参照してください。
+ID設定が有効になっている場合、計算属性は名前空間優先度を使用して計算属性値を保存します。 特定のイベントの場合、名前空間の優先順位が最も高いIDには、計算属性の値が書き込まれます。 詳しくは、[計算属性UI ガイド &#x200B;](/help/profile/computed-attributes/ui.md)を参照してください。
 
 ### データレイク
 
@@ -162,9 +162,9 @@ ID設定が有効になっている場合、計算属性は名前空間優先度
 
 ### Experience Data Model （XDM）スキーマ
 
-XDM個人プロファイルなど、XDM エクスペリエンスイベントではないスキーマは、IDとしてマークした[ フィールドを引き続き尊重します](/help/xdm/ui/fields/identity.md)。
+XDM個人プロファイルなど、XDM エクスペリエンスイベントではないスキーマは、IDとしてマークした[&#x200B; フィールドを引き続き尊重します](/help/xdm/ui/fields/identity.md)。
 
-XDM スキーマについて詳しくは、[ スキーマの概要](/help/xdm/home.md)を参照してください。
+XDM スキーマについて詳しくは、[&#x200B; スキーマの概要](/help/xdm/home.md)を参照してください。
 
 ### インテリジェントサービス
 
@@ -188,12 +188,12 @@ XDM スキーマについて詳しくは、[ スキーマの概要](/help/xdm/ho
 
 ### Privacy Service
 
-指定されたIDに対して[Privacy Service削除リクエスト ](../privacy.md)は次の方法で機能します。
+指定されたIDに対して[Privacy Service削除リクエスト &#x200B;](../privacy.md)は次の方法で機能します。
 
 * リアルタイム顧客プロファイル：指定されたID値をプライマリ IDとして持つプロファイルフラグメントを削除します。 **プロファイルのプライマリ IDは、名前空間の優先順位に基づいて決定されるようになりました。**
 * データレイク：指定したIDをプライマリ IDまたはセカンダリ IDとして持つレコードをすべて削除します。
 
-詳しくは、[ プライバシーサービスの概要](/help/privacy-service/home.md)を参照してください。
+詳しくは、[&#x200B; プライバシーサービスの概要](/help/privacy-service/home.md)を参照してください。
 
 ### EdgeのセグメンテーションとEdge Networkアプリケーション
 
@@ -206,8 +206,8 @@ XDM スキーマについて詳しくは、[ スキーマの概要](/help/xdm/ho
 
 特定のイベントでは、XDM フィールド `identityMap`として送信された[IDが無視され、セグメントメンバーシップのメタデータストレージに使用されないため、人物エンティティを表すすべての名前空間が](/help/xdm/ui/fields/identity.md)に含まれていることを確認してください。
 
-* **イベントアプリケーション**：この動作は、Edge Networkに直接送信されたイベント（WebSDKやモバイルSDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースなど、[Experience Platform ハブ ](/help/landing/edge-and-hub-comparison.md)から取り込まれたイベントは、この制限の対象ではありません。
-* **Edgeのセグメント化の特異性**：この動作はエッジのセグメント化に固有です。 バッチセグメンテーションとストリーミングセグメンテーションは、ハブで評価される個別のサービスであり、同じプロセスに従うものではありません。 詳しくは、[ エッジセグメント化ガイド ](/help/segmentation/methods/edge-segmentation.md)を参照してください。
+* **イベントアプリケーション**：この動作は、Edge Networkに直接送信されたイベント（WebSDKやモバイルSDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースなど、[Experience Platform ハブ &#x200B;](/help/landing/edge-and-hub-comparison.md)から取り込まれたイベントは、この制限の対象ではありません。
+* **Edgeのセグメント化の特異性**：この動作はエッジのセグメント化に固有です。 バッチセグメンテーションとストリーミングセグメンテーションは、ハブで評価される個別のサービスであり、同じプロセスに従うものではありません。 詳しくは、[&#x200B; エッジセグメント化ガイド &#x200B;](/help/segmentation/methods/edge-segmentation.md)を参照してください。
 * 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)および[Edge Networkとハブの比較](/help/landing/edge-and-hub-comparison.md) ページを参照してください。
 
 #### Edge Network製品

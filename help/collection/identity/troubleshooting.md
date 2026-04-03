@@ -40,8 +40,8 @@ alloy("getIdentity", { namespaces: ["ECID", "CORE"] }).then(function(result) {
 
 | 原因 | 特定方法 | 解決策 |
 | --- | --- | --- |
-| Cookieの短期間保持 | ブラウザーで`kndctr_` Cookieの有効期限を確認します。 7日以内に有効期限が切れる場合、ブラウザーポリシーによってCookieの期間が制限される可能性があります。 | DNS A/AAAA レコードを使用してサーバーから設定された[ ファーストパーティデバイス ID （FPID） ](./fpid.md)を実装し、Cookieの永続性を長くします。 |
-| 最初のリクエストでFPIDがありません | ページ読み込み時に最初のEdge Network リクエストを調べます。 FPID Cookieが存在しない場合、Edge Networkは新しいECIDを生成します。 最初のリクエストの後にFPIDが設定されている場合、その最初のリクエストで生成されたECIDは孤立します。 | Web SDKが最初のリクエストを送信する前に、FPID Cookieを設定します。 「[Cookieを設定するタイミング ](./fpid.md#when-to-set-cookie)」を参照してください。 |
+| Cookieの短期間保持 | ブラウザーで`kndctr_` Cookieの有効期限を確認します。 7日以内に有効期限が切れる場合、ブラウザーポリシーによってCookieの期間が制限される可能性があります。 | DNS A/AAAA レコードを使用してサーバーから設定された[&#x200B; ファーストパーティデバイス ID （FPID） &#x200B;](./fpid.md)を実装し、Cookieの永続性を長くします。 |
+| 最初のリクエストでFPIDがありません | ページ読み込み時に最初のEdge Network リクエストを調べます。 FPID Cookieが存在しない場合、Edge Networkは新しいECIDを生成します。 最初のリクエストの後にFPIDが設定されている場合、その最初のリクエストで生成されたECIDは孤立します。 | Web SDKが最初のリクエストを送信する前に、FPID Cookieを設定します。 「[Cookieを設定するタイミング &#x200B;](./fpid.md#when-to-set-cookie)」を参照してください。 |
 | ドメイン間で`orgId`の不一致 | ドメイン間で`orgId`設定値を比較します。 値が一致しない場合は、ID スコープが別々になります。 | 組織内のすべてのドメインで同じ[`orgId`](/help/collection/js/commands/configure/orgid.md)を使用します。 |
 | Cookieを削除する同意バナー | 同意が付与される前に同意の実装がすべてのCookieをクリアし、Web SDKが初期化されると、新しいECIDが生成されます。 | 同意バナーを設定して`kndctr_` Cookieを保持するか、同意が確立されるまでWeb SDKの初期化を遅らせます。 [同意とID](./consent.md)も参照してください。 |
 | JavaScriptで設定されたFPID Cookie | `document.cookie`を使用して設定されたCookieは、ブラウザの制限（ITP、ETP）の対象となり、有効期間が24時間に制限されることがあります。 | JavaScriptからではなく、DNS A/AAAA レコードを使用して、サーバーからFPID Cookieを設定します。 |
@@ -68,7 +68,7 @@ alloy("getIdentity", { namespaces: ["ECID", "CORE"] }).then(function(result) {
 **診断手順**:
 
 1. **FPID Cookie形式を確認してください**: FPIDは有効な[UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)である必要があります。 ブラウザーの開発者ツールを開き、FPID Cookieを見つけ、値がパターン `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`と一致することを確認します。
-2. **データストリームのCookie名を確認**: [ データストリームのCookie メソッド ](./fpid.md#setting-cookie-datastreams)を使用している場合、データストリームで設定されたCookie名は、サーバーが設定したCookieの名前と完全に一致する必要があります。
+2. **データストリームのCookie名を確認**: [&#x200B; データストリームのCookie メソッド &#x200B;](./fpid.md#setting-cookie-datastreams)を使用している場合、データストリームで設定されたCookie名は、サーバーが設定したCookieの名前と完全に一致する必要があります。
 3. **リクエストでCookieが送信されていることを確認します**:「ネットワーク」タブで、Edge Network リクエストの`Cookie` ヘッダーを調べます。 FPID Cookieを含める必要があります。
 4. **IDの優先度を確認**：既存のECIDが既に`kndctr_` Cookieに保存されている場合は、FPIDよりも優先されます。 FPIDは、既存のECIDが存在しない場合にのみ新しいECIDをシードします。 優先度の完全な順序については、[FPIDの仕組み](./fpid.md#how-fpids-work)を参照してください。
 5. **CNAMEの検証**: データストリーム cookie メソッドを使用する場合は、ファーストパーティコレクション CNAMEが正しく設定されていること、およびリクエストがルーティングされていることを確認します。
@@ -81,7 +81,7 @@ alloy("getIdentity", { namespaces: ["ECID", "CORE"] }).then(function(result) {
 
 **診断手順**:
 
-1. **URLを確認**：訪問者がリンクをクリックしたときに、宛先URLを調べます。 `adobe_mc` クエリ文字列パラメーターを含める必要があります。 パラメーターが見つからない場合、ソースドメインはパラメーターを追加しません。 [ クロスドメイン共有の実装](./cross-domain-sharing.md#implement-cross-domain-sharing)を参照してください。
+1. **URLを確認**：訪問者がリンクをクリックしたときに、宛先URLを調べます。 `adobe_mc` クエリ文字列パラメーターを含める必要があります。 パラメーターが見つからない場合、ソースドメインはパラメーターを追加しません。 [&#x200B; クロスドメイン共有の実装](./cross-domain-sharing.md#implement-cross-domain-sharing)を参照してください。
 2. **タイミングを確認**: `adobe_mc` パラメーターは5分後に有効期限が切れます。 宛先ページの読み込みに時間がかかりすぎる場合（リダイレクトやネットワークの速度が遅いなど）、パラメーターはWeb SDKが読み込む前に期限切れになる可能性があります。
 3. **一致する`orgId`を確認**：両方のドメインで同じ[`orgId`](/help/collection/js/commands/configure/orgid.md)を使用する必要があります。 組織IDが一致しない場合、宛先ドメインはハンドオフ IDを拒否します。
 4. **Web SDKが宛先**&#x200B;にあることを確認します。宛先ページには、Web SDKがインストールされ、設定されている必要があります。 これを指定しない場合、`adobe_mc` パラメーターは無視されます。

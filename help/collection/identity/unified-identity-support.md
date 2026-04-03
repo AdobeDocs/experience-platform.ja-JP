@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >この機能は現在ベータ版です。 可用性、行動、ドキュメントは変化する可能性があります。
 
-統合ID サポートにより、Edge Networkは、ファーストパーティとサードパーティの両方のID コンテキストで作業できるようになります。 所有しているプロパティでの永続的なファーストパーティ IDと、サードパーティ Cookieをサポートするブラウザーのサードパーティアクティベーションワークフローを統合します。 Web SDKがECID、FPID、およびその他のID シグナルを処理する方法の背景については、「[ データ収集のID](./overview.md)」を参照してください。
+統合ID サポートにより、Edge Networkは、ファーストパーティとサードパーティの両方のID コンテキストで作業できるようになります。 所有しているプロパティでの永続的なファーストパーティ IDと、サードパーティ Cookieをサポートするブラウザーのサードパーティアクティベーションワークフローを統合します。 Web SDKがECID、FPID、およびその他のID シグナルを処理する方法の背景については、「[&#x200B; データ収集のID](./overview.md)」を参照してください。
 
 統合ID サポートを利用することで、次のことが可能になります。
 
@@ -60,13 +60,13 @@ ECIDとDemdex IDは、決定論的アルゴリズムを通じて暗号学的に�
 * 実装では、FPIDなどの1st パーティの永続性戦略を基盤として使用します。
 * サードパーティ Cookieは、Web SDK設定で有効になっています。
 * データストリームに対してサードパーティ IDの同期が有効になっています。
-* 訪問者は、サードパーティ Cookieを許可するブラウザーを使用しています（以下の[ ブラウザーの互換性](#browser-compatibility)を参照）。
+* 訪問者は、サードパーティ Cookieを許可するブラウザーを使用しています（以下の[&#x200B; ブラウザーの互換性](#browser-compatibility)を参照）。
 
 ## 設定
 
 1. **Web SDKでサードパーティ Cookieを有効にする**: Web SDKの実装で&#x200B;**サードパーティ Cookieを使用**&#x200B;設定を有効にします。 タグ拡張機能を使用する場合は、**[!UICONTROL Use third-party cookies]** ID設定設定[で](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies)を有効にします。 JavaScript ライブラリを使用している場合は、[`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md)を`true`に設定します。
 
-1. **データストリームでサードパーティ IDの同期を有効にする**: データストリームの詳細設定で&#x200B;**[!UICONTROL Third-Party ID Sync]** オプションを有効にします。 [ データストリームの作成と設定](/help/datastreams/configure.md#advanced-options)を参照してください。
+1. **データストリームでサードパーティ IDの同期を有効にする**: データストリームの詳細設定で&#x200B;**[!UICONTROL Third-Party ID Sync]** オプションを有効にします。 [&#x200B; データストリームの作成と設定](/help/datastreams/configure.md#advanced-options)を参照してください。
 
 1. **ファーストパーティの永続性が有効であることを確認する**: ファーストパーティの永続性戦略（FPIDなど）が既に所有ドメインにデプロイされていることを確認します。 データ収集[の](fpid.md) ファーストパーティデバイス IDを参照してください。
 

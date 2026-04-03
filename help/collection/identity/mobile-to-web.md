@@ -12,9 +12,9 @@ ht-degree: 0%
 
 訪問者がモバイルアプリからWebViewまたはモバイル web ページに移動すると、アプリとweb コンテキストはそれぞれ独自のIDを維持します。 明示的な引き継ぎがなければ、web体験では訪問者を未知の新しい人物として扱い、レポートをフラグメント化し、パーソナライゼーションを再開します。
 
-モバイルからwebへのID共有では、訪問者の[Experience Cloud ID （ECID） ](./overview.md)をモバイルアプリから`adobe_mc` クエリ文字列パラメーターを介してweb宛先に渡すことにより、これを解決します。 パラメーターには、ECID、Experience Cloud組織ID、およびタイムスタンプが含まれます。 Web宛先が有効な`adobe_mc` パラメーターで読み込まれると、Web SDKはそれを自動的に読み取り、最初のEdge Network リクエストにハンドオフ IDを適用するため、両方のコンテキストで同じ訪問者が共有されます。
+モバイルからwebへのID共有では、訪問者の[Experience Cloud ID （ECID） &#x200B;](./overview.md)をモバイルアプリから`adobe_mc` クエリ文字列パラメーターを介してweb宛先に渡すことにより、これを解決します。 パラメーターには、ECID、Experience Cloud組織ID、およびタイムスタンプが含まれます。 Web宛先が有効な`adobe_mc` パラメーターで読み込まれると、Web SDKはそれを自動的に読み取り、最初のEdge Network リクエストにハンドオフ IDを適用するため、両方のコンテキストで同じ訪問者が共有されます。
 
-このパターンは、組織が管理するWebViewまたはモバイル web ページをモバイルアプリで開き、アプリのアクティビティとweb アクティビティを同じ訪問者に関連付けたままにする場合に使用します。 目標が異なるドメイン上のweb サイト間のID継続性である場合は、代わりに[ クロスドメイン共有](cross-domain-sharing.md)を使用してください。
+このパターンは、組織が管理するWebViewまたはモバイル web ページをモバイルアプリで開き、アプリのアクティビティとweb アクティビティを同じ訪問者に関連付けたままにする場合に使用します。 目標が異なるドメイン上のweb サイト間のID継続性である場合は、代わりに[&#x200B; クロスドメイン共有](cross-domain-sharing.md)を使用してください。
 
 ## 前提条件
 
@@ -81,7 +81,7 @@ Identity.getUrlVariables { urlVariables ->
 
 Web宛先に追加のコードは必要ありません。 Web SDKがページに存在し、URLに有効な`adobe_mc` パラメーターが含まれている場合、SDKはECIDを自動的に抽出し、最初のEdge Network リクエストで訪問者のID マップに適用します。
 
-Web宛先でWeb SDK タグ拡張機能を使用しており、IDを保持しながら訪問者を別のページにリダイレクトする必要がある場合は、[IDでリダイレクト ](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) アクションを使用して、`adobe_mc` パラメーターを次のページに転送します。
+Web宛先でWeb SDK タグ拡張機能を使用しており、IDを保持しながら訪問者を別のページにリダイレクトする必要がある場合は、[IDでリダイレクト &#x200B;](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) アクションを使用して、`adobe_mc` パラメーターを次のページに転送します。
 
 >[!NOTE]
 >

@@ -31,7 +31,7 @@ Experience Platformでは、[!DNL Customer Attributes] プロファイルデー�
 
 [!DNL Customer Attributes] データを他の[!DNL Profile] データセットに関連付けるには、そのデータとIDをExperience Cloud IDと照合できる必要があります。
 
-`CORE`名前空間を確立するには、[ データ収集](/help/collection/identity/overview.md)のID、[ モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)または[Experience Cloud ID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)を使用して、訪問者用のExperience Cloud IDを設定します。
+`CORE`名前空間を確立するには、[&#x200B; データ収集](/help/collection/identity/overview.md)のID、[&#x200B; モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)または[Experience Cloud ID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)を使用して、訪問者用のExperience Cloud IDを設定します。
 
 [!DNL Customer Attributes] ファイルは、他のID関係にそれ以上入力されません。 例えば、[!DNL Customer Attributes]のソースデータセットに&#x200B;**電子メール**&#x200B;と&#x200B;**ロイヤルティ ID** フィールドが含まれている場合、これらのフィールドを[!DNL Identity Service]に処理するには、スキーマのID フィールドとしてラベル付けする必要があります。
 

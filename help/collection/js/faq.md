@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDKからAdobe Experience Platformに直接デー�
 * *not*&#x200B;のお客様は、Experience PlatformまたはReal-time CDPにアクセスでき、[!DNL Web SDK]を使用するには、データ収集UIまたはExperience Platform UIでスキーマとデータストリームを作成するための適切な権限を設定する必要があります。
 * Experience PlatformまたはReal-time CDPにアクセスでき、[!DNL Web SDK]を使用したいお客様は、データ収集UIまたはExperience Platform UIでスキーマ、データセット、ID名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、[ データ収集の権限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)に関するドキュメントを参照してください。
+これらの権限の設定について詳しくは、[&#x200B; データ収集の権限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)に関するドキュメントを参照してください。
 
 ## Web SDKを使用すべきユーザー？
 
@@ -98,11 +98,11 @@ Web SDKは現在一般に公開されており、Adobe Experience Cloud製品に
 
 SDKは無料で、Adobeが無料でホストしています。 必要に応じて、無料でダウンロードし、独自のサーバーでホスティングできます。
 
-AdobeのサーバーがSDKからのインバウンドデータを適切に処理するには、Web SDKで[ データストリーム設定](/help/datastreams/overview.md)およびExperience Platform [XDM スキーマビルダー](/help/xdm/tutorials/create-schema-ui.md)へのアクセスが必要です。 アクセス権を取得する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
+AdobeのサーバーがSDKからのインバウンドデータを適切に処理するには、Web SDKで[&#x200B; データストリーム設定](/help/datastreams/overview.md)およびExperience Platform [XDM スキーマビルダー](/help/xdm/tutorials/create-schema-ui.md)へのアクセスが必要です。 アクセス権を取得する場合は、Adobe アカウントチームに連絡してリクエストプロセスを開始してください。
 
 ## 現在、Web SDKではどのようなユースケースがサポートされていますか？
 
-Web SDKは、急速に進化しています。 より多くのユースケースに取り組んでいます。 現在サポートされているユースケースの[ リストについては、こちらを参照してください。](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
+Web SDKは、急速に進化しています。 より多くのユースケースに取り組んでいます。 現在サポートされているユースケースの[&#x200B; リストについては、こちらを参照してください。](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## 既存の顧客は、サイトへのリタグ付けを余儀なくされていますか？
 
@@ -144,7 +144,7 @@ Web SDKは、急速に進化しています。 より多くのユースケース
 
 ## CNAMEまたはファーストパーティドメインとは何ですか？なぜそれが重要なのですか？
 
-Core Services ガイドの[Adobeで管理されている証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
+Core Services ガイドの[Adobeで管理されている証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。
 
 ## Adobe Experience Platform Web SDKはCookieを使用しますか？ その場合、どのようなCookieを使用しますか？
 

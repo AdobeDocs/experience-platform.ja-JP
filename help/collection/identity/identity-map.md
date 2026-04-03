@@ -12,8 +12,8 @@ ht-degree: 0%
 
 `identityMap` ペイロードオブジェクトは、訪問者がデバイスレベル [ECID](./overview.md)を超えているEdge Networkを識別する方法です。 訪問者がログインしたり、購入を完了したり、その他の方法で既知になったりすると、個人レベルのID （CRM ID、ハッシュメール、ロイヤルティ IDなど）をECIDと一緒に送信できます。 これらの個人レベルのIDは、下流のサービスに貴重な情報を提供し、次のことを可能にします。
 
-* **複数のデバイスとチャネルをまたいでアクティビティを個人に結び付けます。** [ID サービス ](/help/identity-service/home.md)は、送信したIDを[ID グラフ ](/help/identity-service/features/identity-graph-viewer.md)にリンクし、匿名のデバイス レベルの動作を既知の人物に接続します。
-* **統合顧客プロファイルの構築。** [ リアルタイム顧客プロファイル ](/help/profile/home.md)は、イベントと属性を単一のプロファイルに固定するために設定したプライマリ IDを使用し、個人レベルのセグメンテーションとオーディエンスの構築を可能にします。
+* **複数のデバイスとチャネルをまたいでアクティビティを個人に結び付けます。** [ID サービス &#x200B;](/help/identity-service/home.md)は、送信したIDを[ID グラフ &#x200B;](/help/identity-service/features/identity-graph-viewer.md)にリンクし、匿名のデバイス レベルの動作を既知の人物に接続します。
+* **統合顧客プロファイルの構築。** [&#x200B; リアルタイム顧客プロファイル &#x200B;](/help/profile/home.md)は、イベントと属性を単一のプロファイルに固定するために設定したプライマリ IDを使用し、個人レベルのセグメンテーションとオーディエンスの構築を可能にします。
 * **下流の宛先でオーディエンスをアクティブ化します。**&#x200B;多くの[宛先](/help/destinations/home.md)では、オーディエンスをユーザーベースに一致させるために、解決された個人レベルのID （ハッシュ化された電子メール、電話番号など）が必要です。
 * **クロスチャネルジャーニーのオーケストレーション。** [Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja)は、解決済みのIDを使用して、訪問者の認証済みの行動に基づいて、電子メール、プッシュ通知、アプリ内チャネルをまたいでジャーニーをトリガーし、パーソナライズします。
 
@@ -63,7 +63,7 @@ ECIDを名前空間キーとして含める必要はありません。 Edge Netw
 | **電子メール （未加工）** | 電子メールアドレス全体を小文字にし、先頭と末尾の空白をトリミングします。 | `user@example.com` |
 | **電子メール （ハッシュ化）** | 最初にメールアドレスを小文字にしてトリミングし、次にSHA-256でハッシュします。 結果の64文字の16進文字列を送信します。 名前空間の定義が必要でない限り、saltを追加しないでください。 | `a1b2c3d4e5f6a7b8c9...` |
 | **電話（E.164）** | [E.164](https://en.wikipedia.org/wiki/E.164)の数値を書式設定します。先頭の`+`、国コード、およびスペースや句読点のない購読者番号を指定します。 | `+15551234567` |
-| **FPID** | [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)文字列を生成します。 生成要件については、[ ファーストパーティデバイス ID](./fpid.md)を参照してください。 | `123e4567-e89b-42d3-9456-426614174000` |
+| **FPID** | [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)文字列を生成します。 生成要件については、[&#x200B; ファーストパーティデバイス ID](./fpid.md)を参照してください。 | `123e4567-e89b-42d3-9456-426614174000` |
 
 標準の名前空間とその定義の完全なリストについては、[ID名前空間の概要](/help/identity-service/features/namespaces.md#standard)を参照してください。
 
@@ -77,7 +77,7 @@ ECIDを名前空間キーとして含める必要はありません。 Edge Netw
 
 * **データレイヤー**：訪問者がログインした後、サイトのデータレイヤーから識別子を読み取ります。 この場所は、データレイヤーがアプリケーションのバックエンドによって入力され、認証済みセッションの状態を反映するため、最も信頼性の高いアプローチです。
 * **認証トークンまたはセッション Cookie**：認証システムが設定したJWTまたはセッション Cookieから識別子をデコードまたは検索します。 値を使用する前に、トークンがまだアクティブであることを検証します。
-* **サーバーサイドのエンリッチメント**: [Data Prep for Data Collection](/help/datastreams/data-prep.md)または[ イベント転送ルール ](/help/tags/ui/event-forwarding/overview.md)を使用して、EdgeでIDをマッピングまたは変換してから、ダウンストリームサービスに到達します。 この場所は、クライアントがサーバーサイドの内部IDにマッピングする不透明なセッショントークンのみを持っている場合に便利です。
+* **サーバーサイドのエンリッチメント**: [Data Prep for Data Collection](/help/datastreams/data-prep.md)または[&#x200B; イベント転送ルール &#x200B;](/help/tags/ui/event-forwarding/overview.md)を使用して、EdgeでIDをマッピングまたは変換してから、ダウンストリームサービスに到達します。 この場所は、クライアントがサーバーサイドの内部IDにマッピングする不透明なセッショントークンのみを持っている場合に便利です。
 
 >[!TIP]
 >
@@ -154,7 +154,7 @@ alloy("sendEvent", {
 
 >[!TAB Web SDK タグ拡張機能]
 
-タグ UIでID ペイロードを構築するには、[ID マップ ](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) データ要素タイプを使用します。
+タグ UIでID ペイロードを構築するには、[ID マップ &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) データ要素タイプを使用します。
 
 1. **[!UICONTROL Adobe Experience Platform Web SDK]**&#x200B;拡張機能と&#x200B;**[!UICONTROL Identity map]** データ要素タイプを使用してデータ要素を作成します。
 2. 名前空間、識別子に解決するデータ要素または値、および認証状態を指定して、IDを追加します。
@@ -251,13 +251,13 @@ alloy("sendEvent", {
 
 +++**匿名の訪問者**
 
-匿名の訪問者の場合、通常は`identityMap`を送信する必要はありません。 Edge NetworkはECIDを自動的に割り当て、プライマリ IDとして使用します。 [ ファーストパーティデバイス ID](./fpid.md)を使用する場合、匿名の訪問者に含める必要があるIDはFPIDのみです。
+匿名の訪問者の場合、通常は`identityMap`を送信する必要はありません。 Edge NetworkはECIDを自動的に割り当て、プライマリ IDとして使用します。 [&#x200B; ファーストパーティデバイス ID](./fpid.md)を使用する場合、匿名の訪問者に含める必要があるIDはFPIDのみです。
 
 +++
 
 ## identityMapがID グラフに与える影響 {#identity-graph}
 
-Experience Platformに到達する`identityMap`個のペイロードは[ID サービス ](/help/identity-service/home.md)によって処理され、送信したIDが[ID グラフ ](/help/identity-service/features/identity-graph-viewer.md)にリンクされます。 どの名前空間を含めるか、どのように`authenticatedState`を設定するか、そしてどのIDを`primary`としてマークするかは、Identity Serviceがそれらのグラフを構築および結合する方法を直接形作ります。
+Experience Platformに到達する`identityMap`個のペイロードは[ID サービス &#x200B;](/help/identity-service/home.md)によって処理され、送信したIDが[ID グラフ &#x200B;](/help/identity-service/features/identity-graph-viewer.md)にリンクされます。 どの名前空間を含めるか、どのように`authenticatedState`を設定するか、そしてどのIDを`primary`としてマークするかは、Identity Serviceがそれらのグラフを構築および結合する方法を直接形作ります。
 
 注意すべき主な行動：
 
@@ -265,7 +265,7 @@ Experience Platformに到達する`identityMap`個のペイロードは[ID サ�
 * **`primary` IDは、リアルタイム顧客プロファイルでイベントを固定します。** プロファイルは、プライマリ IDを使用して、イベントがどのプロファイルに属しているかを判断します。 誤ったIDをプライマリとしてマークする（例えば、個人レベル IDが使用可能な場合にECIDをプライマリとして設定する）と、個人レベルのプロファイルではなく、デバイスレベルのプロファイルに対してイベントが保存される可能性があります。
 * **`authenticatedState`はグラフの信頼性に影響します。**&#x200B;実際に確認されていないIDに対して`authenticated`を送信すると、取り消しにくい不正なクロスデバイスリンクが作成される可能性があります。 訪問者が現在のセッション中に積極的にIDを証明した場合にのみ`authenticated`を使用します。
 
-実装で[ID グラフ リンク ルール ](/help/identity-service/identity-graph-linking-rules/overview.md) （名前空間の優先順位やID最適化アルゴリズムなど）を使用している場合は、[実装ガイド ](/help/identity-service/identity-graph-linking-rules/implementation-guide.md)を参照して、これらのルールが`identityMap`を通じて送信するIDとどのように相互作用するかを理解してください。
+実装で[ID グラフ リンク ルール &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) （名前空間の優先順位やID最適化アルゴリズムなど）を使用している場合は、[実装ガイド &#x200B;](/help/identity-service/identity-graph-linking-rules/implementation-guide.md)を参照して、これらのルールが`identityMap`を通じて送信するIDとどのように相互作用するかを理解してください。
 
 >[!NOTE]
 >

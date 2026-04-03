@@ -40,7 +40,7 @@ alloy("configure", {
 
 ## `defaultConsent`と`setConsent`の併用 {#using-consent}
 
-`defaultConsent`と`setConsent`を一緒に使用すると、設定された値に応じて、データ収集、Cookie設定、IDの結果が異なります。 完全なインタラクションテーブルについては、[ データ収集](/help/collection/identity/consent.md#how-consent-affects-identity)の同意とIDを参照してください。
+`defaultConsent`と`setConsent`を一緒に使用すると、設定された値に応じて、データ収集、Cookie設定、IDの結果が異なります。 完全なインタラクションテーブルについては、[&#x200B; データ収集](/help/collection/identity/consent.md#how-consent-affects-identity)の同意とIDを参照してください。
 
 ## `gdprApplies`に基づく既定の同意の設定
 

@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->クライアントサイドでID情報が必要な場合は、`getIdentity`を使用します。 ECIDをXDMにマッピングする必要がある場合のみ、代わりに[ データ収集](/help/datastreams/data-prep.md)または[ タグ ECID アクセス ガイダンス ](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md)を使用してください。
+>クライアントサイドでID情報が必要な場合は、`getIdentity`を使用します。 ECIDをXDMにマッピングする必要がある場合のみ、代わりに[&#x200B; データ収集](/help/datastreams/data-prep.md)または[&#x200B; タグ ECID アクセス ガイダンス &#x200B;](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md)を使用してください。
 
 `getIdentity` コマンドは、次のフローを実行して`ECID`を取得します。
 
@@ -36,7 +36,7 @@ Web SDKの設定済みインスタンスを呼び出す際に、`getIdentity` �
 
   `"ECID"`と`"CORE ID"`を同時にリクエストできます。 例：`"namespaces": ["ECID","CORE"]`。
 
-* **`edgeConfigOverrides`**: [ データストリーム設定がオブジェクト ](configure/edgeconfigoverrides.md)を上書きします。
+* **`edgeConfigOverrides`**: [&#x200B; データストリーム設定がオブジェクト &#x200B;](configure/edgeconfigoverrides.md)を上書きします。
 
 ```js
 alloy("getIdentity",{

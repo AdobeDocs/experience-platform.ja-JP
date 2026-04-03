@@ -18,9 +18,9 @@ Web SDKは、次の標準をサポートしています。
 
 * **[Adobe standard](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: 1.0と2.0の両方の標準がサポートされています。
 * **[IABの透明性と同意フレームワーク](/help/landing/governance-privacy-security/consent/iab/overview.md)**：この標準を使用すると、実装が正しく設定されている場合、訪問者のリアルタイム顧客プロファイルが同意情報で更新されます。
-   1. XDM個別プロファイルスキーマには、[IAB TCF 2.0同意フィールドグループ ](/help/xdm/field-groups/profile/iab.md)が含まれています。
-   1. Experience Event スキーマには、[IAB TCF 2.0同意フィールドグループ ](/help/xdm/field-groups/event/iab.md)が含まれています。
-   1. イベント [XDM オブジェクト ](sendevent/xdm.md)にIAB同意情報を含めます。 Web SDKでは、イベントデータの送信時に同意情報が自動的に含まれません。
+   1. XDM個別プロファイルスキーマには、[IAB TCF 2.0同意フィールドグループ &#x200B;](/help/xdm/field-groups/profile/iab.md)が含まれています。
+   1. Experience Event スキーマには、[IAB TCF 2.0同意フィールドグループ &#x200B;](/help/xdm/field-groups/event/iab.md)が含まれています。
+   1. イベント [XDM オブジェクト &#x200B;](sendevent/xdm.md)にIAB同意情報を含めます。 Web SDKでは、イベントデータの送信時に同意情報が自動的に含まれません。
 
 このコマンドを使用すると、Web SDKはユーザーの環境設定を[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookieに書き込みます。 このCookieは、訪問者の同意設定を保存するため、訪問者の同意設定に関係なく設定されます。 ユーザーが次回ブラウザーでweb サイトを読み込むときに、SDKはこれらの永続的環境設定を取得して、イベントをAdobeに送信できるかどうかを判断します。
 
@@ -32,7 +32,7 @@ Adobeでは、同意ダイアログの環境設定をWeb SDKの同意とは別�
 
 ## `defaultConsent`と`setConsent`の併用 {#using-consent}
 
-`defaultConsent`と`setConsent`を一緒に使用すると、設定された値に応じて、データ収集、Cookie設定、IDの結果が異なります。 完全なインタラクションテーブルについては、[ データ収集](/help/collection/identity/consent.md#how-consent-affects-identity)の同意とIDを参照してください。
+`defaultConsent`と`setConsent`を一緒に使用すると、設定された値に応じて、データ収集、Cookie設定、IDの結果が異なります。 完全なインタラクションテーブルについては、[&#x200B; データ収集](/help/collection/identity/consent.md#how-consent-affects-identity)の同意とIDを参照してください。
 
 ## `setConsent` コマンドの使用
 
@@ -40,7 +40,7 @@ Web SDKの設定済みインスタンスを呼び出す際に、`setConsent` コ
 
 * **`consent[]`**: `consent` オブジェクトの配列。 同意オブジェクトの形式は、選択した標準とバージョンによって異なります。 同意標準に応じた各同意オブジェクトの例については、以下のタブを参照してください。
 * **`identityMap`**: ECIDの生成方法と同意情報の関連付けを制御するオブジェクト。 Adobeでは、`setConsent`を[`sendEvent`](sendevent/overview.md)などの他のコマンドよりも前に実行する場合は、このオブジェクトを含めることをお勧めします。
-* **`edgeConfigOverrides`**: [ データストリーム設定オーバーライド ](configure/edgeconfigoverrides.md)を含むオブジェクト。
+* **`edgeConfigOverrides`**: [&#x200B; データストリーム設定オーバーライド &#x200B;](configure/edgeconfigoverrides.md)を含むオブジェクト。
 
 >[!BEGINTABS]
 
@@ -48,7 +48,7 @@ Web SDKの設定済みインスタンスを呼び出す際に、`setConsent` コ
 
 ### Adobe 2.0標準`consent` オブジェクト
 
-Adobe Experience Platformにデータを送信する場合は、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0標準について詳しくは、[Adobe Experience Platformのガバナンス、プライバシー、セキュリティ ](/help/landing/governance-privacy-security/overview.md)を参照してください。 `consents` プロファイルフィールドグループの[!UICONTROL Consents and Preferences] フィールドのスキーマに対応する以下の値オブジェクト内にデータを追加できます。
+Adobe Experience Platformにデータを送信する場合は、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0標準について詳しくは、[Adobe Experience Platformのガバナンス、プライバシー、セキュリティ &#x200B;](/help/landing/governance-privacy-security/overview.md)を参照してください。 `consents` プロファイルフィールドグループの[!UICONTROL Consents and Preferences] フィールドのスキーマに対応する以下の値オブジェクト内にデータを追加できます。
 
 * **`standard`**：選択した同意標準。 Adobe 2.0標準の場合は、このプロパティを`"Adobe"`に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 Adobe 2.0標準の場合は、このプロパティを`"2.0"`に設定します。
@@ -80,7 +80,7 @@ alloy("setConsent", {
 
 Interactive Advertising Bureau Europe （IAB）のTransparency and Consent Framework （TCF）標準を通じて提供されたユーザーの同意設定を記録するには、次に示すように同意文字列を設定します。
 
-このように同意が設定されると、同意情報を使用してリアルタイム顧客プロファイルが更新されます。 これを機能させるには、プロファイル XDM スキーマに[ プロファイルプライバシースキーマフィールドグループ ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)を含める必要があります。 イベントを送信する場合、IAB同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKでは、同意に関する情報が自動的にイベントに含まれません。
+このように同意が設定されると、同意情報を使用してリアルタイム顧客プロファイルが更新されます。 これを機能させるには、プロファイル XDM スキーマに[&#x200B; プロファイルプライバシースキーマフィールドグループ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)を含める必要があります。 イベントを送信する場合、IAB同意情報をイベント XDM オブジェクトに手動で追加する必要があります。 Web SDKでは、同意に関する情報が自動的にイベントに含まれません。
 
 イベントで同意情報を送信するには、[!DNL Profile]対応[!DNL XDM ExperienceEvent] スキーマにExperience Event Privacy フィールドグループを追加する必要があります。 これを設定する手順については、データセット準備ガイドの[ExperienceEvent スキーマの更新](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema)の節を参照してください。
 
