@@ -1,22 +1,24 @@
 ---
-title: Data Hygiene API を使用したレコードの削除
+title: Data Hygiene APIを使用したレコードの削除
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 92%
 
 ---
 
-# Data Hygiene API を使用したレコードの削除
+# Data Hygiene APIを使用したレコードの削除
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. 
+-->
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
@@ -34,7 +36,7 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含んだすべてのリクエストには、以下の追加ヘッダーが必要です。
 
 * `Content-Type: application/json`
 
@@ -108,8 +110,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `companyContexts` | 組織の認証情報を含む配列。次のプロパティのオブジェクトを 1 つ含める必要があります。 <ul><li>`namespace`：`imsOrgID` に設定する必要があります。</li><li>`value`：組織 ID。 これは、`x-gw-ims-org-id` ヘッダーで提供される値と同じです。</li></ul> |
-| `users` | 情報を削除する 1 人以上のユーザーのコレクションを含む配列。各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。後で参照または検索できるように、この値には一意で簡単に識別できる文字列を選択することをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。単一の文字列値「`delete`」を含む必要があります。</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`：ID に関連付けられた [ID 名前空間](../../identity-service/features/namespaces.md)。これは、Experience Platformで認識される [&#x200B; 標準 &#x200B;](../../privacy-service/api/appendix.md#standard-namespaces) 名前空間にすることも、組織で定義されるカスタム名前空間にすることもできます。 使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`：ID 値。</li><li>`type`：グローバルに認識された名前空間を使用している場合は `standard`、組織で定義されている名前空間を使用している場合は `custom` に設定する必要があります。</li></ul></li></ul> |
+| `companyContexts` | 組織の認証情報を含む配列。次のプロパティのオブジェクトを 1 つ含める必要があります。 <ul><li>`namespace`：`imsOrgID` に設定する必要があります。</li><li>`value`：組織ID。 これは、`x-gw-ims-org-id` ヘッダーで提供される値と同じです。</li></ul> |
+| `users` | 情報を削除する 1 人以上のユーザーのコレクションを含む配列。各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。後で参照または検索できるように、この値には一意で簡単に識別できる文字列を選択することをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。単一の文字列値「`delete`」を含む必要があります。</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`：ID に関連付けられた [ID 名前空間](../../identity-service/features/namespaces.md)。これは、Experience Platformが認識する[標準の名前空間](../../privacy-service/api/appendix.md#standard-namespaces)にすることも、組織が定義するカスタム名前空間にすることもできます。 使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`：ID 値。</li><li>`type`：グローバルに認識された名前空間を使用している場合は `standard`、組織で定義されている名前空間を使用している場合は `custom` に設定する必要があります。</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 
