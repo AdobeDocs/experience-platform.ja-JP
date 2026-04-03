@@ -2,7 +2,7 @@
 title: Adobe クライアントデータレイヤー拡張機能
 description: Adobe Experience Platform における Adobe クライアントデータレイヤーのタグ拡張について説明します。
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 95%
@@ -13,21 +13,25 @@ ht-degree: 95%
 
 このドキュメントでは、Adobe クライアントデータレイヤー拡張機能の使用例とベストプラクティスを説明します。
 
-<!-- (Missing document?)
-If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
+<!-- 
+(Missing document?)
+If you would like to have more details on development consideration, [please reach this page](./dev.md). 
+-->
 
 ## インストール
 
-拡張機能をインストールするには、Experience Platform UI または Data Collection UI の拡張機能カタログに移動し、「Adobe Client Data Layer」を選択します。
+拡張機能をインストールするには、Experience Platform UIまたはData Collection UIで拡張機能カタログに移動し、「Adobe Client Data Layer」を選択します。
 
 ![カタログ内の ACDL 拡張機能ビュー](./images/catalog.png)
 
-<!-- (GitHub link?)
+<!-- 
+(GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
 This installation will not be supported on our end.<br>
 >[!NOTE]
 >
-> _Consider renaming the extension name in the extension.json file_ -->
+> _Consider renaming the extension name in the extension.json file_ 
+-->
 
 ## 拡張機能ビュー
 
