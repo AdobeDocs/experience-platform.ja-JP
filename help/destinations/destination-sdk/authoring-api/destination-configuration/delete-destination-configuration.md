@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先設定の削除
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 73%
@@ -19,7 +19,7 @@ ht-degree: 73%
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](../../getting-started.md)を確認してください。
+続行する前に、必要な宛先オーサリング権限と必要なヘッダーを取得する方法など、APIを正常に呼び出すために知っておく必要がある重要な情報については、[入門ガイド ](../../getting-started.md)を確認してください。
 
 ## 宛先設定の削除 {#delete}
 
@@ -43,7 +43,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++リクエスト
++++ リクエスト
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -53,14 +53,16 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++応答
++++
+
++++ 応答
 
 応答が成功すると、HTTP ステータス 200 が、空の HTTP 応答と共に返されます。
 
 
 ## API エラー処理 {#error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード &#x200B;](../../../../landing/troubleshooting.md#api-status-codes)および[&#x200B; リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの[API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes)および[ リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 
@@ -71,3 +73,5 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 * [宛先設定の作成](create-destination-configuration.md)
 * [宛先設定の取得](retrieve-destination-configuration.md)
 * [宛先設定の更新](update-destination-configuration.md)
+
++++
