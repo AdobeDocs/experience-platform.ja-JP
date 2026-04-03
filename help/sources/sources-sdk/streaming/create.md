@@ -1,24 +1,24 @@
 ---
-title: Flow Service API を使用したストリーミングSDKの新しい接続仕様の作成
-description: 次のドキュメントでは、Flow Service API を使用して接続仕様を作成し、セルフサービスソースを通じて新しいソースを統合する手順を説明します。
+title: Flow Service APIを使用してStreaming SDKの新しい接続仕様を作成します
+description: 次のドキュメントでは、Flow Service APIを使用して接続仕様を作成し、セルフサービスソースを介して新しいソースを統合する手順について説明します。
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: ベータ版
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 37%
 
 ---
 
-# [!DNL Flow Service] API を使用して、新しい接続仕様を作成します。
+# [!DNL Flow Service] APIを使用して新しい接続仕様を作成します
 
 >[!NOTE]
 >
->セルフサービスソースのストリーミング SDKはベータ版です。 ベータラベル付きソースの使用について詳しくは、[&#x200B; ソースの概要 &#x200B;](../../home.md#terms-and-conditions) を参照してください。
+>セルフサービスソースストリーミング SDKはベータ版です。 ベータ版のソースの使用について詳しくは、[ ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 
-次のドキュメントでは、[!DNL Flow Service] API を使用して接続仕様を作成し、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを統合する手順を説明します。
+次のドキュメントでは、[!DNL Flow Service] APIを使用して接続仕様を作成し、セルフサービスソース（ストリーミングSDK）を介して新しいソースを統合する手順について説明します。
 
 ## はじめに
 
@@ -26,9 +26,9 @@ ht-degree: 37%
 
 ## アーティファクトを収集
 
-セルフサービスソースを使用して新しいストリーミングソースを作成するには、まずAdobeと調整し、プライベート Git リポジトリーをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細をAdobeと調整する必要があります。
+セルフサービスソースを使用して新しいストリーミングソースを作成するには、まずAdobeと連携し、プライベート Git リポジトリをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細についてAdobeと連携する必要があります。
 
-指定したら、以下のようにプライベート Git リポジトリを構築する必要があります。
+指定したら、次のようにプライベート Git リポジトリを構造化する必要があります。
 
 * ソース
    * {your_source}
@@ -41,22 +41,22 @@ ht-degree: 37%
 
 | アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
-| {your_source} | ソースの名前。 このフォルダーには、プライベート Git リポジトリー内の、ソースに関連するすべてのアーティファクトを格納する必要があります。 | `medallia` |
-| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとして書式設定されます。 **メモ**：ソースが上記のカテゴリに当てはまらないと思われる場合は、Adobeの担当者にお問い合わせください。 | `medallia-category.txt` ファイル内で、ソースのカテゴリを次のように指定してください：`streaming`。 |
-| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Medallia] は、マーケティングオートメーションソースで、データをExperience Platformに取り込む [!DNL Medallia] めに使用できます。 |
-| {your_source}-icon.svg | Experience Platform ソースカタログ内のソースを表すために使用される画像。 このアイコンは、SVG ファイルである必要があります。 |  |
-| {your_source}-label.txt | Experience Platform ソースカタログに表示されるソースの名前。 | Medallia |
-| {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このファイルは最初は必要ありません。このガイドの完了時に、接続仕様にデータが入力されるからです。 | `medallia-connectionSpec.json` |
+| {your_source} | ソースの名前。 このフォルダーには、プライベート Git リポジトリー内のソースに関連するすべてのアーティファクトを含める必要があります。 | `medallia` |
+| {your_source}-category.txt | ソースが属するカテゴリで、テキストファイルとしてフォーマットされます。 **注**：お客様のソースが上記のカテゴリのいずれかに当てはまらないと思われる場合は、Adobe担当者にお問い合わせください。 | `medallia-category.txt` ファイル内で、ソースのカテゴリ（`streaming`など）を指定してください。 |
+| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Medallia]は、[!DNL Medallia] データをExperience Platformに取り込むために使用できるマーケティングオートメーションソースです。 |
+| {your_source}-icon.svg | Experience Platform ソースカタログのソースを表すために使用する画像。 このアイコンは、SVG ファイルである必要があります。 |  |
+| {your_source}-label.txt | Experience Platform ソースカタログに表示されるソースの名前。 | メダリア |
+| {your_source}-connectionSpec.json | ソースの接続仕様を含むJSON ファイル。 このガイドを完了する際に接続仕様を入力するため、このファイルは最初は必要ありません。 | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->接続仕様のテスト期間中に、キー値の代わりに接続仕様の `text` を使用できます。
+>接続仕様のテスト期間中、キー値の代わりに、接続仕様で`text`を使用できます。
 
-必要なファイルをプライベート Git リポジトリに追加したら、Adobeがレビューするためのプルリクエスト（PR）を作成する必要があります。 PR が承認されて統合されると、ソースのラベル、説明、アイコンを参照するために接続仕様に使用できる ID が提供されます。
+必要なファイルをプライベート Git リポジトリに追加したら、Adobeでレビューするためのプルリクエスト（PR）を作成する必要があります。 PRが承認され、結合されると、接続仕様に使用できるIDが提供され、ソースのラベル、説明、アイコンを参照できます。
 
-次に、以下に説明する手順に従って、接続仕様を設定します。 高度なスケジュール、カスタムスキーマ、様々なページネーションタイプなど、ソースに追加できる様々な機能に関する追加のガイダンスについては、[&#x200B; ソース仕様の設定 &#x200B;](../config/sourcespec.md) に関するガイドを参照してください。
+次に、次の手順に従って接続仕様を設定します。 高度なスケジューリング、カスタムスキーマ、異なるページネーションタイプなど、ソースに追加できるさまざまな機能に関する追加のガイダンスについては、[ ソース仕様の設定](../config/sourcespec.md)に関するガイドを参照してください。
 
 ## 接続仕様テンプレートをコピー
 
@@ -72,7 +72,7 @@ ht-degree: 37%
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -137,9 +137,9 @@ ht-degree: 37%
 
 接続仕様テンプレートを取得したら、ソースに対応する適切な値を入力して、新しい接続仕様のオーサリングを開始できます。
 
-接続仕様は、ソース仕様と参照仕様の 2 つの異なる部分に分けることができます。
+接続仕様は、ソース仕様と探索仕様の2つの異なる部分に分けることができます。
 
-接続仕様のセクションについて詳しくは、次のドキュメントを参照してください。
+接続仕様の節について詳しくは、次のドキュメントを参照してください。
 
 * [ソース仕様を設定](../config/sourcespec.md)
 * [参照仕様を設定](../config/explorespec.md)
@@ -154,7 +154,7 @@ POST /connectionSpecs
 
 **リクエスト**
 
-次のリクエストは、ストリーミングソースに対する完全オーサリングされた接続仕様の例です。
+次のリクエストは、ストリーミングソースの完全にオーサリングされた接続仕様の例です。
 
 ```shell
 curl -X POST \
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ curl -X POST \
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false
