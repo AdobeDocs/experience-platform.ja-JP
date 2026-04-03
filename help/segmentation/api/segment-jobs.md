@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
 title: セグメントジョブ API エンドポイント
-description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
+description: Adobe Experience Platform Segmentation Service APIのセグメントジョブエンドポイントを使用すると、組織用のセグメントジョブをプログラムで管理できます。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 18%
@@ -13,21 +13,21 @@ ht-degree: 18%
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [&#x200B; セグメント定義 &#x200B;](./segment-definitions.md) と、[&#x200B; がプロファイルフラグメント間で重複する属性をどのように結合するかを制御する &#x200B;](../../profile/api/merge-policies.md) 結合ポリシー [!DNL Real-Time Customer Profile] を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [ セグメント定義](./segment-definitions.md)と、[がプロファイルフラグメント全体で重複する属性をどのように結合するかを制御する](../../profile/api/merge-policies.md)結合ポリシー[!DNL Real-Time Customer Profile]を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
 このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[&#x200B; はじめる前に &#x200B;](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
+このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド ](./getting-started.md)を確認してください。
 
-## セグメントジョッブリストの取得 {#retrieve-list}
+## セグメントジョブリストの取得 {#retrieve-list}
 
-`/segment/jobs` エンドポイントにGET リクエストを送信すると、組織のすべてのセグメントジョブのリストを取得できます。
+`/segment/jobs` エンドポイントに対してGET リクエストを行うことで、組織のすべてのセグメントジョブのリストを取得できます。
 
 **API 形式**
 
-`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドの削減に役立てるため、使用することを強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを減らすために使用することを強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/jobs
@@ -43,14 +43,14 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 返されるセグメントジョブの開始オフセットを指定します。 | `start=1` |
 | `limit` | 1 ページに返されるセグメントジョブの数を指定します。 | `limit=20` |
 | `status` | ステータスに基づいて結果をフィルターします。サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELLING、CANCELLED です。 | `status=NEW` |
-| `sort` | 返されるセグメントジョブの順序。 | `[attributeName]:[desc\|asc]`.`sort=creationTime:desc` という形式で記述されます。 |
+| `sort` | 返されるセグメントジョブを注文します。 | は`[attributeName]:[desc\|asc]`形式で記述されています。`sort=creationTime:desc` |
 | `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
 
 **リクエスト**
 
-+++ セグメントジョブのリストを表示するリクエストのサンプルです。
++++ セグメントジョブのリストを表示するためのサンプルリクエスト。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -64,13 +64,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-応答に成功すると、HTTP ステータス 200 が、指定した組織のセグメントジョブのリストと共に JSON として返されます。 すべてのセグメント定義の完全なリストが、`children.segments` 属性内に表示されます。
+応答が成功すると、HTTP ステータス 200が返され、指定した組織のセグメントジョブのリストがJSONとして返されます。 すべてのセグメント定義の完全なリストが`children.segments`属性内に表示されます。
 
 >[!NOTE]
 >
->次の応答はスペースを節約するために切り捨てられており、最初に返されたジョブのみが表示されます。
+>次の応答はスペース用に切り捨てられており、最初に返されたジョブのみが表示されます。
 
-+++ セグメントジョブのリストを取得する際の応答例です。 
++++ セグメントジョブのリストを取得する際の応答のサンプル。 
 
 ```json
 {
@@ -174,24 +174,24 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | セグメントジョブのシステム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスの可能性のある値には、「NEW」、「PROCESSING」、「CANCELLED」、「CANCELLED」、「FAILED」、「SUCCESSFUL」などがあります。 |
+| `id` | セグメントジョブのシステム生成の読み取り専用ID。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスの潜在的な値には、「NEW」、「PROCESSING」、「CANCELING」、「CANCELED」、「FAILED」、「SUCCEEDED」などがあります。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | セグメント定義の ID。 |
-| `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
+| `segments.segment.id` | セグメント定義のID。 |
+| `segments.segment.expression` | PQLで記述された、セグメント定義のエクスプレッションに関する情報を含むオブジェクト。 |
 | `metrics` | セグメントジョブに関する診断情報を含むオブジェクト。 |
-| `metrics.totalTime` | セグメント化ジョブの開始時刻と終了時刻および合計所要時間に関する情報を含むオブジェクト。 |
-| `metrics.profileSegmentationTime` | セグメント化の評価の開始時刻と終了時刻および合計所要時間に関する情報を含むオブジェクト。 |
+| `metrics.totalTime` | セグメント化ジョブの開始時間と終了時間、および合計所要時間に関する情報を含むオブジェクト。 |
+| `metrics.profileSegmentationTime` | セグメント化の評価が開始および終了した時間、および合計所要時間に関する情報を含むオブジェクト。 |
 | `metrics.segmentProfileCounter` | セグメントごとに選定されたプロファイルの数。 |
-| `metrics.segmentedProfileByNamespaceCounter` | セグメント定義ごとに、各 ID 名前空間に適合するプロファイルの数。 |
-| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイルの数。 次の 3 つのステータスがサポートされています。 <ul><li>「実現済み」 – セグメント定義に適合するプロファイルの数。</li><li>「離脱済み」 – セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
-| `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとの結合プロファイルの合計数。 |
+| `metrics.segmentedProfileByNamespaceCounter` | セグメント定義ごとにID名前空間ごとに選定されたプロファイルの数。 |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイルの数。 次の3つのステータスがサポートされています。 <ul><li>「実現済み」 – セグメント定義に適格なプロファイルの数。</li><li>&quot;exited&quot; - セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとに結合されたプロファイルの合計数です。 |
 
 +++
 
 ## 新しいセグメントジョブの作成 {#create}
 
-新しいセグメントジョブを作成するには、`/segment/jobs` エンドポイントに POST リクエストを実行し、リクエスト本文にセグメント定義の ID を含めます。
+`/segment/jobs` エンドポイントにPOST リクエストを行い、リクエスト本文にセグメント定義のIDを含めることで、新しいセグメントジョブを作成できます。
 
 **API 形式**
 
@@ -222,15 +222,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentId` | 評価するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](./segment-definitions.md) を参照してください。 |
+| `segmentId` | 評価するセグメント定義のID。 これらのセグメント定義は、様々な結合ポリシーに属することができます。 セグメント定義の詳細については、[ セグメント定義エンドポイントガイド ](./segment-definitions.md)を参照してください。 |
 
 +++
 
 **応答**
 
-応答に成功すると、HTTP ステータス 200 と、新しく作成されたセグメントジョブに関する情報が返されます。
+応答が成功すると、HTTP ステータス 200が、新しく作成したセグメントジョブに関する情報と共に返されます。
 
-+++ 新しいセグメントジョブを作成する際のサンプル応答。
++++ 新しいセグメントジョブを作成する際の応答のサンプル。
 
 ```json
 {
@@ -339,17 +339,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | 新しく作成されたセグメントジョブのシステム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 セグメントジョブは新しく作成されるので、ステータスは常に「新規」になります。 |
-| `segments` | このセグメントジョブが実行されているセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | 指定したセグメント定義の ID。 |
-| `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
+| `id` | 新しく作成されたセグメントジョブのシステム生成の読み取り専用ID。 |
+| `status` | セグメントジョブの現在のステータス。 セグメントジョブが新しく作成されるので、ステータスは常に「NEW」になります。 |
+| `segments` | このセグメントジョブが実行中のセグメント定義に関する情報を含むオブジェクト。 |
+| `segments.segment.id` | 指定したセグメント定義のID。 |
+| `segments.segment.expression` | PQLで記述された、セグメント定義のエクスプレッションに関する情報を含むオブジェクト。 |
 
 +++
 
 ## 特定のセグメントジョブの取得 {#get}
 
-特定のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs` エンドポイントにGET リクエストを実行し、取得するセグメントジョブの ID をリクエストパスで指定します。
+`/segment/jobs` エンドポイントに対してGET リクエストを行い、取得するセグメントジョブのIDをリクエストパスに指定することで、特定のセグメントジョブに関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -358,12 +358,12 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | プロパティ | 説明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 取得するセグメントジョブの `id` 値。 |
 
 **リクエスト**
 
-+++ セグメントジョブを取得するためのリクエストの例です。
++++ セグメントジョブを取得するためのサンプルリクエスト。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
@@ -377,9 +377,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-リクエストが成功した場合は、指定されたセグメントジョブの詳細情報とともに HTTP ステータス 200 が返されます。 すべてのセグメント定義の完全なリストが、`children.segments` 属性内に表示されます。
+応答が成功すると、HTTP ステータス 200が、指定されたセグメントジョブに関する詳細情報とともに返されます。 すべてのセグメント定義の完全なリストが`children.segments`属性内に表示されます。
 
-+++ セグメントジョブを取得するためのサンプル応答。
++++ セグメントジョブを取得するための応答のサンプル。
 
 ```json
 {
@@ -443,20 +443,20 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | セグメントジョブのシステム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスの可能性のある値には、「NEW」、「PROCESSING」、「CANCELLED」、「CANCELLED」、「FAILED」、「SUCCESSFUL」などがあります。 |
+| `id` | セグメントジョブのシステム生成の読み取り専用ID。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスの潜在的な値には、「NEW」、「PROCESSING」、「CANCELING」、「CANCELED」、「FAILED」、「SUCCEEDED」などがあります。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | セグメント定義の ID。 |
-| `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
+| `segments.segment.id` | セグメント定義のID。 |
+| `segments.segment.expression` | PQLで記述された、セグメント定義のエクスプレッションに関する情報を含むオブジェクト。 |
 | `metrics` | セグメントジョブに関する診断情報を含むオブジェクト。 |
 
 +++
 
 >[!ENDTABS]
 
-## セグメントジョブの一括取得 {#bulk-get}
+## セグメントの一括取得ジョブ {#bulk-get}
 
-複数のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs/bulk-get` エンドポイントに POST リクエストを実行し、リクエスト本文でセグメントジョブの `id` 値を指定します。
+`/segment/jobs/bulk-get` エンドポイントにPOST リクエストを行い、リクエスト本文にセグメントジョブの`id`値を指定することで、複数のセグメントジョブに関する詳細情報を取得できます。
 
 **API 形式**
 
@@ -491,13 +491,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **応答**
 
-応答に成功すると、HTTP ステータス 207 とリクエストされたセグメントジョブが返されます。
+応答が成功すると、リクエストされたセグメントジョブを含むHTTP ステータス 207が返されます。
 
 >[!NOTE]
 >
->次の応答はスペースを節約するために切り捨てられており、各セグメントジョブの一部の詳細のみを表示しています。 完全な応答には、リクエストされたセグメントジョブの詳細がリストされます。
+>次の応答はスペース用に切り捨てられ、各セグメントジョブの部分的な詳細のみが表示されます。 完全な応答には、要求されたセグメントジョブの詳細が一覧表示されます。
 
-+++ 一括取得応答を使用する場合の応答例。
++++ 一括取得応答を使用する場合の応答のサンプル。
 
 ```json
 {
@@ -560,21 +560,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | セグメントジョブのシステム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスの可能性のある値には、「NEW」、「PROCESSING」、「CANCELLED」、「CANCELLED」、「FAILED」、「SUCCESSFUL」などがあります。 |
+| `id` | セグメントジョブのシステム生成の読み取り専用ID。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスの潜在的な値には、「NEW」、「PROCESSING」、「CANCELING」、「CANCELED」、「FAILED」、「SUCCEEDED」などがあります。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | セグメント定義の ID。 |
-| `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
+| `segments.segment.id` | セグメント定義のID。 |
+| `segments.segment.expression` | PQLで記述された、セグメント定義のエクスプレッションに関する情報を含むオブジェクト。 |
 
 +++
 
 ## 特定のセグメントジョブのキャンセルまたは削除 {#delete}
 
-`/segment/jobs` エンドポイントに対してDELETE リクエストを実行し、リクエストパスで削除するセグメントジョブの ID を指定することで、特定のセグメントジョブを削除できます。
+特定のセグメントジョブを削除するには、`/segment/jobs` エンドポイントに対してDELETE リクエストを行い、削除するセグメントジョブのIDをリクエストパスに指定します。
 
 >[!NOTE]
 >
->削除リクエストに対する API 応答は即座に行われます。 ただし、セグメントジョブの実際の削除は非同期です。 つまり、セグメントジョブに対する削除リクエストが行われた時間と、削除リクエストが適用された時間には時間差があります。
+>delete リクエストに対するAPI応答は即時です。 ただし、セグメントジョブの実際の削除は非同期です。 つまり、セグメントジョブに対する削除要求が行われた場合と適用された場合の間には、時間差があります。
 
 **API 形式**
 
@@ -583,12 +583,12 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | プロパティ | 説明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 削除するセグメントジョブの `id` 値。 |
 
 **リクエスト**
 
-+++ セグメントジョブを削除するリクエストの例。
++++ セグメントジョブを削除するサンプルリクエスト。
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
@@ -602,8 +602,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **応答**
 
-応答が成功すると、HTTP ステータス 204 が、空の応答本文と共に返されます。
+応答が成功すると、HTTP ステータス 204が空の応答本文で返されます。
 
 ## 次の手順
 
-このガイドを読むことで、セグメントジョブの仕組みについて理解が深まりました。
+このガイドを読むと、セグメントジョブの仕組みをより深く理解できるようになります。
