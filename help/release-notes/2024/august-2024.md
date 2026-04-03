@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 95%
+source-wordcount: '1556'
+ht-degree: 89%
 
 ---
 
@@ -29,13 +29,13 @@ Experience Platform の既存の機能とドキュメントに対するアップ
 
 ## 属性ベースのアクセス制御 {#abac}
 
-属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定のExperience Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定のExperience Platform ユーザーに対する個々のオブジェクトへのアクセス権を付与または取り消すことができます。
 
-属性ベースのアクセス制御により、組織の管理者は、すべてのExperience Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+属性ベースのアクセス制御により、Experience Platformの管理者は、あらゆるワークフローとリソースをまたいで、機密情報（SPD）、個人情報（PII）、その他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 **新機能**
 
-| 機能アップデート | 説明 |
+| 機能の更新 | 説明 |
 | --- | --- |
 | 権限マネージャーの新機能 | [権限マネージャー](../../access-control/abac/permission-manager/overview.md)を使用して、簡単なクエリでレポートを生成できるようになりました。これにより、アクセス管理を理解し、複数のワークフローと精度レベルにまたがるアクセス権限の検証にかかる時間を節約できます。ユーザーと役割のレポート作成について詳しくは、[権限マネージャーユーザーガイド](../../access-control/abac/permission-manager/permissions.md)を参照してください。![左側のナビゲーションで権限マネージャーがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/permission-manager-rn.png "ユーザーインターフェイスの権限マネージャー。"){width="250" align="center" zoomable="yes"} |
 
@@ -64,20 +64,20 @@ Adobe Experience Platform は、あらゆるタイプ、あらゆる待ち時間
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] では、ダッシュボードと REST エンドポイントの多数の異なるインスタンスを管理します。[!UICONTROL Braze] のお客様は、プロビジョニング先のインスタンスに基づいて、正しい REST エンドポイントを使用する必要があります。このリリースでは、[!UICONTROL Braze] に接続する際に選択できる新しい US-07 エンドポイントが追加されました。 |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze]は、ダッシュボードとREST エンドポイントに対して複数の異なるインスタンスを管理します。 [!UICONTROL Braze]人のお客様は、プロビジョニングするインスタンスに基づいて、正しいREST エンドポイントを使用する必要があります。 このリリースでは、[!UICONTROL Braze]への接続時に選択できる新しいUS-07 エンドポイントが追加されます。 |
 
 {style="table-layout:auto"}
 
-**新機能または更新された機能** {#destinations-new-updated-functionality}
+**新しい機能または更新された機能** {#destinations-new-updated-functionality}
 
 | 機能 | 説明 |
 | ----------- | ----------- |
 | オンデマンドでのファイルのバッチ宛先への書き出しが一般提供されるようになりました。 | オンデマンドでのファイルのバッチ宛先への書き出しを行うオプションを、すべてのお客様が使用できるようになりました。詳しくは、[専用のドキュメント](../../destinations/ui/export-file-now.md)を参照してください。 |
 | [スケジュール設定ステップ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)で、書き出された複数のオーディエンスの書き出しスケジュールを編集します。 | オーディエンスアクティベーションワークフローのスケジュール設定ステップから複数の書き出されたオーディエンスの書き出しスケジュールを直接編集するオプションを、すべてのお客様が使用できるようになりました。![スケジュール設定ステップの「スケジュールを編集」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/edit-schedule.png "スケジュール設定ステップの「スケジュールを編集」オプション。"){width="250" align="center" zoomable="yes"} |
 | [スケジュール設定ステップ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)で、書き出された複数のオーディエンスのファイル名を編集します。 | オーディエンスアクティベーションワークフローのスケジュール設定ステップから複数の書き出されたファイルの名前を直接編集するオプションを、すべてのお客様が使用できるようになりました。![スケジュール設定ステップの「ファイル名を編集」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/edit-file-name.png "スケジュール設定ステップの「ファイル名を編集」オプション。"){width="250" align="center" zoomable="yes"} |
-| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-remove)ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL 宛先の詳細]**&#x200B;ページで、既存のデータフローから複数のオーディエンスを削除するオプションを、すべてのお客様が使用できるようになりました。![宛先の詳細ページの「オーディエンスを削除」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/bulk-remove-audiences.png "宛先の詳細ページの「オーディエンスを削除」オプション。"){width="250" align="center" zoomable="yes"} |
-| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-export)ページで、複数のファイルをオンデマンドでバッチ宛先に書き出します。 | **[!UICONTROL 宛先の詳細]**&#x200B;ページで、複数のファイルをオンデマンドでバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。![宛先の詳細ページの「ファイルを今すぐ書き出し」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/bulk-export-file-now.png "宛先の詳細ページの「ファイルを今すぐ書き出し」オプション。"){width="250" align="center" zoomable="yes"} |
-| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-edit-file-names)ページで、書き出された複数のオーディエンスのファイル名を編集します。 | **[!UICONTROL 宛先の詳細]**&#x200B;ページで、書き出された複数のファイルの名前を直接編集できるようになりました。![宛先の詳細ページの「ファイル名を編集」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/edit-file-name-destination-details.png "宛先の詳細ページの「ファイル名を編集」オプション。"){width="250" align="center" zoomable="yes"} |
+| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-remove)ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL Destination Details]** ページから既存のデータフローから複数のオーディエンスを削除するオプションを、すべての顧客が利用できるようになりました。 ![宛先の詳細ページの「オーディエンスを削除」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/bulk-remove-audiences.png "宛先の詳細ページの「オーディエンスを削除」オプション。"){width="250" align="center" zoomable="yes"} |
+| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-export)ページで、複数のファイルをオンデマンドでバッチ宛先に書き出します。 | 複数のファイルをオンデマンドで&#x200B;**[!UICONTROL Destination Details]** ページからバッチ宛先に書き出すオプションは、すべての顧客が利用できるようになりました。 ![宛先の詳細ページの「ファイルを今すぐ書き出し」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/bulk-export-file-now.png "宛先の詳細ページの「ファイルを今すぐ書き出し」オプション。"){width="250" align="center" zoomable="yes"} |
+| [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-edit-file-names)ページで、書き出された複数のオーディエンスのファイル名を編集します。 | **[!UICONTROL Destination Details]** ページから直接、複数の書き出されたファイルの名前を編集できるようになりました。 ![宛先の詳細ページの「ファイル名を編集」オプションがハイライト表示された Experience Platform ユーザーインターフェイスの画像。](assets/august/edit-file-name-destination-details.png "宛先の詳細ページの「ファイル名を編集」オプション。"){width="250" align="center" zoomable="yes"} |
 | [宛先の詳細](../../destinations/ui/export-datasets.md#remove-dataset)ページで、データフローから複数のデータセットを削除します。 | データフローから複数のデータセットを削除するオプションを、すべてのお客様が使用できるようになりました。![宛先の詳細ページの「データセットを削除」オプションがハイライト表示された、Experience Platform ユーザーインターフェイスの画像。](assets/august/bulk-remove-datasets.png "宛先の詳細ページの「データセットを削除」オプション。"){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
+Experience PlatformのXDMについて詳しくは、[XDM System overview](../../xdm/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
