@@ -1,11 +1,11 @@
 ---
 title: Salesforce Source コネクタの概要
-description: API またはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
+description: APIまたはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Salesforce] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+>Amazon Web Services（AWS）でAdobe Experience Platformを実行する際に、[!DNL Salesforce] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](../../../landing/multi-cloud.md)を参照してください。
 
 >[!WARNING]
 >
->[!DNL Salesforce] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
+>[!DNL Salesforce] ソースの基本認証は、2026年1月に廃止されます。 ソースを引き続き使用し、[!DNL Salesforce] アカウントからExperience Platformにデータを取り込むには、OAuth 2 Client Credential認証に移行する必要があります。
 
-Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Salesforce] を含みます。
 
-## Azure 上のExperience Platformの [!DNL Salesforce] ソースを設定する {#azure}
+## AzureでExperience Platformの[!DNL Salesforce] ソースを設定する {#azure}
 
-Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
+AzureでExperience Platformの[!DNL Salesforce] アカウントを設定する方法については、次の手順に従ってください。
 
-### Azure に接続するための IP アドレスの許可リスト
+### AZUREに接続するためのIP アドレスの許可リスト
 
-ソースを Azure 上のExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス &#x200B;](../../ip-address-allow-list.md) ページを参照してください。
+Azure上のExperience Platformにソースを接続する前に、リージョン固有のIP アドレスを許可リストに追加する必要があります。 地域に固有のIP アドレスをYoutube 許可リストに追加しないと、ソースを使用する際にエラーまたはパフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
 >[!BEGINTABS]
 
@@ -207,14 +207,14 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 
 >[!ENDTABS]
 
-### [!DNL Salesforce] から XDM へのフィールドマッピング
+### [!DNL Salesforce]からXDMへのフィールドマッピング
 
-[!DNL Salesforce] とExperience Platformの間にソース接続を確立するには、Experience Platformに取り込まれる前に、[!DNL Salesforce] ソースデータフィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
+[!DNL Salesforce]とExperience Platformの間にソース接続を確立するには、[!DNL Salesforce] ソースデータフィールドをExperience Platformに取り込む前に、適切なターゲット XDM フィールドにマッピングする必要があります。
 
-データセットとExperience Platform間のフィールドマッピングルールについて詳 [!DNL Salesforce] くは、次を参照してください。
+[!DNL Salesforce] データセットとExperience Platform間のフィールドマッピングルールについて詳しくは、次を参照してください。
 
 - [連絡先](../adobe-applications/mapping/salesforce.md#contact)
-- [リード数](../adobe-applications/mapping/salesforce.md#lead)
+- [リード](../adobe-applications/mapping/salesforce.md#lead)
 - [アカウント](../adobe-applications/mapping/salesforce.md#account)
 - [商談](../adobe-applications/mapping/salesforce.md#opportunity)
 - [商談連絡先の役割](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
@@ -222,40 +222,40 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 - [キャンペーンメンバー](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [アカウント連絡先の関係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-### [!DNL Salesforce] 名前空間とスキーマ自動生成ユーティリティの設定
+### [!DNL Salesforce]名前空間とスキーマ自動生成ユーティリティの設定
 
-[!DNL Salesforce] ソースを [!DNL B2B-CDP] の一部として使用するには、まず [!DNL Postman] ユーティリティを設定して、[!DNL Salesforce] 名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を示します。
+[!DNL Salesforce] ソースを[!DNL B2B-CDP]の一部として使用するには、まず[!DNL Postman] ユーティリティを設定して[!DNL Salesforce]名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を提供しています。
 
-- この [GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
-- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Experience Platform API の使用について詳しくは、[Experience Platform API の概要 &#x200B;](../../../landing/api-guide.md) を参照してください。
-- Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
-- Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。
+- 名前空間とスキーマ自動生成ユーティリティのコレクションと環境は、この[GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)からダウンロードできます。
+- 必要なヘッダーの値を収集し、サンプル API呼び出しを読み取る方法など、Experience Platform APIの使用方法について詳しくは、[Experience Platform APIの概要](../../../landing/api-guide.md)に関するガイドを参照してください。
+- Experience Platform APIの資格情報を生成する方法について詳しくは、[Experience Platform APIの認証とアクセス ](../../../landing/api-authentication.md)に関するチュートリアルを参照してください。
+- Experience Platform API用の[!DNL Postman]の設定方法について詳しくは、[開発者向けコンソールの設定および [!DNL Postman]](../../../landing/postman.md)に関するチュートリアルを参照してください。
 
-Experience Platform Developer Console と [!DNL Postman] の設定により、[!DNL Postman] 環境に適切な環境値を適用できるようになりました。
+Experience Platform開発者コンソールと[!DNL Postman]の設定が完了したら、[!DNL Postman]環境に適切な環境値を適用できるようになりました。
 
-+++変数テーブルガイドの表示
++++変数テーブルガイドを表示する
 
-次の表に、値の例と、[!DNL Postman] 環境へのデータ入力に関する追加情報を示します。
+次の表は、値の例と、[!DNL Postman]環境の入力に関する追加情報を示しています。
 
 | 変数 | 説明 | 例 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
-| `API_KEY` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience Platform API を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス &#x200B;](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
-| `META_SCOPE` | [!DNL Marketo] に関しては、この値は固定で、常に `ent_dataservices_sdk` に設定されます。 | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | `global` コンテナには、標準のAdobeおよびExperience Platform パートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが含まれます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
-| `PRIVATE_KEY` | Experience Platform API に対する [!DNL Postman] インスタンスの認証に使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [&#x200B; 開発者コンソールの設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}`の生成に使用される一意のID。 [の取得方法について詳しくは、](../../../landing/api-authentication.md)Experience Platform APIの認証とアクセス `{CLIENT_SECRET}`に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web トークン （JWT）は、{ACCESS_TOKEN}の生成に使用される認証資格情報です。 [の生成方法について詳しくは、](../../../landing/api-authentication.md)Experience Platform APIの認証とアクセス `{JWT_TOKEN}`に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
+| `API_KEY` | Experience Platform APIへの呼び出しを認証するために使用される一意のID。 [の取得方法について詳しくは、](../../../landing/api-authentication.md)Experience Platform APIの認証とアクセス `{API_KEY}`に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform APIへの呼び出しを完了するために必要な認証トークン。 [の取得方法について詳しくは、](../../../landing/api-authentication.md)Experience Platform APIの認証とアクセス `{ACCESS_TOKEN}`に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
+| `META_SCOPE` | [!DNL Marketo]に関しては、この値は固定され、常に`ent_dataservices_sdk`に設定されます。 | `ent_dataservices_sdk` |
+| `CONTAINER_ID` | `global` コンテナには、標準のAdobeおよびExperience Platform パートナーが提供するすべてのクラス、スキーマフィールドグループ、データタイプ、スキーマが格納されます。 [!DNL Marketo]に関しては、この値は固定され、常に`global`に設定されます。 | `global` |
+| `PRIVATE_KEY` | Experience Platform APIに対する[!DNL Postman] インスタンスの認証に使用される資格情報。 [の取得方法については、「開発者向けコンソールの設定」および「 [!DNL Postman]](../../../landing/postman.md)開発者向けコンソールの設定」のチュートリアルおよび「{PRIVATE_KEY}」を参照してください。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
-| `IMS` | Identity Management System （IMS）は、Adobe サービスに対して認証を行うためのフレームワークを提供します。 [!DNL Marketo] に関しては、この値は固定で、常に `ims-na1.adobelogin.com` に設定されます。 | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `{ORG_ID}` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS` | Identity Management System （IMS）は、Adobe サービスに認証のためのフレームワークを提供します。 [!DNL Marketo]に関しては、この値は固定され、常に`ims-na1.adobelogin.com`に設定されます。 | `ims-na1.adobelogin.com` |
+| `IMS_ORG` | 製品やサービスを所有またはライセンス供与し、そのメンバーへのアクセスを許可できる法人。 [情報の取得方法については、 [!DNL Postman]](../../../landing/postman.md)開発者向けコンソールの設定と`{ORG_ID}`に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 使用している仮想サンドボックスパーティションの名前。 | `prod` |
-| `TENANT_ID` | 作成するリソースの名前空間が適切に設定され、組織内に含まれていることを確認するために使用される ID。 | `b2bcdpproductiontest` |
-| `PLATFORM_URL` | API 呼び出しを行う URL エンドポイント。 この値は固定で、常に `http://platform.adobe.io/` に設定されます。 | `http://platform.adobe.io/` |
-| `munchkinId` | [!DNL Marketo] アカウントの一意の ID。 インスタンスの取得方法について詳しくは、[&#x200B; インスタンスの認証 &#x200B;](../adobe-applications/marketo/marketo-auth.md) に関するチュー `munchkinId` リアルを参照してください  [!DNL Marketo]  | `123-ABC-456` |
-| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織 ID。 [!DNL Salesforce] 組織 ID の取得について詳しくは、次の [[!DNL Salesforce]  ガイド &#x200B;](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) を参照してください。 | `00D4W000000FgYJUA0` |
-| `has_abm` | [!DNL Marketo Account-Based Marketing] を購読しているかどうかを示すブール値。 | `false` |
-| `has_msi` | [!DNL Marketo Sales Insight] を購読しているかどうかを示すブール値。 | `false` |
+| `TENANT_ID` | 作成するリソースが適切な名前空間で構成され、組織内に含まれていることを確認するために使用されるID。 | `b2bcdpproductiontest` |
+| `PLATFORM_URL` | API呼び出しを行うURL エンドポイント。 この値は固定されており、常に`http://platform.adobe.io/`に設定されます。 | `http://platform.adobe.io/` |
+| `munchkinId` | [!DNL Marketo] アカウントの一意のID。 [の取得方法について詳しくは、 [!DNL Marketo]  インスタンスの認証](../adobe-applications/marketo/marketo-auth.md)に関するチュートリアルを参照してください。`munchkinId` | `123-ABC-456` |
+| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織ID。 [[!DNL Salesforce] 組織IDの取得について詳しくは、次の](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) ガイド [!DNL Salesforce]を参照してください。 | `00D4W000000FgYJUA0` |
+| `has_abm` | [!DNL Marketo Account-Based Marketing]を購読しているかどうかを示すブール値。 | `false` |
+| `has_msi` | [!DNL Marketo Sales Insight]を購読しているかどうかを示すブール値。 | `false` |
 
 {style="table-layout:auto"}
 
@@ -263,113 +263,113 @@ Experience Platform Developer Console と [!DNL Postman] の設定により、[!
 
 ### スクリプトの実行
 
-[!DNL Postman] コレクションと環境を設定すると、[!DNL Postman] インターフェイスを使用してスクリプトを実行できます。
+[!DNL Postman] コレクションと環境を設定したら、[!DNL Postman] インターフェイスを使用してスクリプトを実行できるようになりました。
 
-[!DNL Postman] インターフェイスで、自動生成ユーティリティのルートフォルダーを選択し、上部のヘッダーから「**[!DNL Run]**」を選択します。
+[!DNL Postman] インターフェイスで、自動生成ユーティリティのルート フォルダーを選択し、上部ヘッダーから&#x200B;**[!DNL Run]**&#x200B;を選択します。
 
 ![root-folder](../../images/tutorials/create/salesforce/root-folder.png)
 
-[!DNL Runner] インターフェイスが表示されます。 ここから、すべてのチェックボックスが選択されていることを確認してから選択し **[!DNL Run Namespaces and Schemas Autogeneration Utility]** す。
+[!DNL Runner] インターフェイスが表示されます。 ここから、すべてのチェックボックスが選択されていることを確認し、**[!DNL Run Namespaces and Schemas Autogeneration Utility]**&#x200B;を選択します。
 
 ![run-generator](../../images/tutorials/create/salesforce/run-generator.png)
 
-リクエストが成功すると、ベータ版の仕様に従って B2B 名前空間とスキーマが作成されます。
+リクエストが成功すると、ベータ仕様に従ってB2B名前空間とスキーマが作成されます。
 
-## Amazon Web Services上のExperience Platform用の [!DNL Salesforce] ソースの設定 {#aws}
+## Amazon Web ServicesでExperience Platformの[!DNL Salesforce] ソースを設定する {#aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+>この節は、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](../../../landing/multi-cloud.md)を参照してください。
 
-Amazon Web Services（AWS）上のExperience Platform用に [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
+Amazon Web Services （AWS）でExperience Platformの[!DNL Salesforce] アカウントを設定する方法については、次の手順に従ってください。
 
 ### 前提条件
 
-[!DNL Salesforce] アカウントをAWS リージョンのExperience Platformに接続するには、次が必要です。
+[!DNL Salesforce] アカウントをAWS リージョンのExperience Platformに接続するには、次の条件を満たす必要があります。
 
-- API アクセス権を持つ [!DNL Salesforce] アカウント。
-- その後、JWT_BEARER OAuth フローを有効にするために使用できる [!DNL Salesforce Connected App]。
-- データにアクセスするた [!DNL Salesforce] に必要な権限。
+- API アクセスを持つ[!DNL Salesforce] アカウント。
+- JWT_BEARER OAuth フローを有効にするために使用できる[!DNL Salesforce Connected App]です。
+- データへのアクセスに必要な[!DNL Salesforce]の権限。
 
-### 許可リストに加える AWSでの接続用 IP アドレス。
+### AWSでの接続用IP アドレスの許可リストに加える
 
-ソースをAWSのExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[AWSでExperience Platformに接続するための IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+AWS上のExperience Platformにソースを接続する前に、リージョン固有のIP アドレスを許可リストに追加する必要があります。 詳しくは、[AWS上のExperience Platformに接続するためのIP アドレスの許可リストに加える](../../ip-address-allow-list.md)に関するガイドを参照してください。
 
-### [!DNL Salesforce Connected App] の作成
+### [!DNL Salesforce Connected App]を作成
 
-まず、以下を使用して PEM ファイルの証明書とキーペアを作成します。
+最初に、以下を使用して、PEM ファイルの証明書/キーペアを作成します。
 
 ```shell
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. [!DNL Salesforce] ダッシュボードで、「設定」（![&#x200B; 設定アイコン）を選択します。](/help/images/icons/settings.png)）を選択してから、「**[!DNL Setup]**」を選択します。
-2. [!DNL App Manager] に移動し、「**[!DNL New Connection App]**」を選択します。
-3. アプリの名前を指定し、残りのフィールドに自動入力できるようにします。
-4. [!DNL Enable OAuth Settings] のボックスを有効にします。
-5. コールバック URL を設定します。 これは JWT では使用されないので、`https://localhost` を使用できます。
-6. [!DNL Use Digital Signatures] のボックスを有効にします。
-7. 前に作成した cert.pem ファイルをアップロードします。
+1. [!DNL Salesforce] ダッシュボードで、設定（![設定アイコン）を選択します。](/help/images/icons/settings.png)）を選択し、**[!DNL Setup]**&#x200B;を選択します。
+2. [!DNL App Manager]に移動し、**[!DNL New Connection App]**&#x200B;を選択します。
+3. アプリの名前を指定し、残りのフィールドを自動入力できるようにします。
+4. [!DNL Enable OAuth Settings]のボックスを有効にします。
+5. コールバック URLを設定します。 これはJWTには使用されないので、`https://localhost`を使用できます。
+6. [!DNL Use Digital Signatures]のボックスを有効にします。
+7. 前に作成したcert.pem ファイルをアップロードします。
 
 #### 必要な権限を追加
 
 次の権限を追加します。
 
-1. API を使用したユーザーデータの管理（api）
-2. カスタム権限へのアクセス （custom_permissions）
-3. ID URL サービスへのアクセス（ID、プロファイル、メール、アドレス、電話）
-4. 一意の ID （openid）へのアクセス
-5. いつでもリクエストを実行（refresh_token、offline_access）
+1. API （api）によるユーザーデータの管理
+2. カスタム権限へのアクセス（custom_permissions）
+3. ID URL サービス（ID、プロファイル、電子メール、アドレス、電話）にアクセスする
+4. 一意のID （openid）へのアクセス
+5. いつでもリクエストを実行できます（refresh_token、offline_access）
 
-権限が追加されたら、必ずこのチェックボックスを有効に **[!DNL Issue JSON Web Token (JWT)-based access tokens for named user]** ます。
+権限が追加されたら、**[!DNL Issue JSON Web Token (JWT)-based access tokens for named user]**&#x200B;のボックスを有効にしてください。
 
-次に、「**[!DNL Save]**」、「**[!DNL Continue]**」の順に選択し、「**[!DNL Manage Customer Details]**」を選択します。 消費者の詳細パネルを使用して、以下を取得します。
+次に、**[!DNL Save]**、**[!DNL Continue]**、**[!DNL Manage Customer Details]**&#x200B;の順に選択します。 消費者の詳細パネルを使用して、次の情報を取得します。
 
-- **コンシューマーキー**：後でExperience Platformに [!DNL Salesforce] アカウントを認証する際に、このコンシューマーキーをクライアント ID として使用します。
-- **コンシューマーシークレット**：後でExperience Platformに対して [!DNL Salesforce] アカウントを認証する際に、このコンシューマーシークレットをクライアント ID として使用します。
+- **コンシューマーキー**: [!DNL Salesforce] アカウントをExperience Platformに認証する際に、後でこのコンシューマーキーをクライアント IDとして使用します。
+- **Consumer secret**：後で[!DNL Salesforce] アカウントをExperience Platformに認証する際に、このConsumer secretをクライアント IDとして使用します。
 
-### 接続されたアプリへの [!DNL Salesforce] ユーザーの認証
+### 接続されたアプリへの[!DNL Salesforce] ユーザーの認証
 
-接続されたアプリを使用するための認証を取得するには、次の手順に従います。
+以下の手順に従って、Connected Appを使用する認証を取得します。
 
-1. **[!DNL Manage Connected Apps]** に移動します。
+1. **[!DNL Manage Connected Apps]**&#x200B;に移動します。
 2. **[!DNL Edit]** を選択します。
-3. **[!DNL Permitted Users]** を **[!DNL Admin approved users are pre-authorized]** として設定し、「**[!DNL Save]**」を選択します。
-4. **[!DNL Settings]/[!DNL Manage Users]/[!DNL Profiles]** に移動します。
-5. ユーザーに関連付けられたプロファイルを編集します。
-6. **[!DNL Connected App Access]** に移動し、前の手順で作成したアプリを選択します。
+3. **[!DNL Permitted Users]**&#x200B;を&#x200B;**[!DNL Admin approved users are pre-authorized]**&#x200B;として設定し、**[!DNL Save]**&#x200B;を選択します。
+4. **[!DNL Settings]> [!DNL Manage Users] >[!DNL Profiles]**&#x200B;に移動します。
+5. ユーザーに関連付けられているプロファイルを編集します。
+6. **[!DNL Connected App Access]**&#x200B;に移動し、前の手順で作成したアプリを選択します。
 
 ### JWT ベアラートークンの生成
 
 JWT ベアラートークンを生成するには、次の手順に従います。
 
-#### キーペアを pkcs12 に変換する
+#### キーペアをpkcs12に変換
 
-JWT ベアラートークンを生成するには、まず次のコマンドを使用して、証明書とキーのペアを pkcs12 形式に変換する必要があります。 この手順では、プロンプトが表示されたら **書き出しパスワードを設定** する必要もあります。
+JWT ベアラートークンを生成するには、まず次のコマンドを使用して、証明書/キーペアをpkcs12形式に変換する必要があります。 この手順では、プロンプトが表示されたら、**書き出しパスワード**&#x200B;を設定する必要もあります。
 
 ```shell
 openssl pkcs12 -export -in cert.pem -inkey key.pem -name jwtcert >jwtcert.p12
 ```
 
-#### pkcs12 に基づく java キーストアの作成
+#### pkcs12に基づくJava キーストアの作成
 
-次に、次のコマンドを使用して、生成したばかりの pkcs12 に基づいて java キーストアを作成します。 この手順では、プロンプトが表示されたら **宛先キーストアパスワードを設定** も入力する必要があります。 さらに、ソースキーストアのパスワードとして、以前の書き出しパスワードを指定する必要があります。
+次に、次のコマンドを使用して、生成したpkcs12に基づいてJava キーストアを作成します。 この手順では、プロンプトが表示されたら、**宛先キーストアパスワードを設定**&#x200B;する必要もあります。 さらに、以前の書き出しパスワードをソースキーストアパスワードとして指定する必要があります。
 
 ```shell
 keytool -importkeystore -srckeystore jwtcert.p12 -destkeystore keystore.jks -srcstoretype pkcs12 -alias jwtcert
 ```
 
-#### keystroke.jks に jwtcert エイリアスが含まれていることを確認します
+#### keystroke.jksにjwtcert エイリアスが含まれていることを確認します
 
-次に、次のコマンドを使用して、`keystroke.jks` に `jwtcert` エイリアスが含まれていることを確認します。 この手順では、前の手順で生成した宛先キーストアのパスワードを指定するように求められます。
+次に、follow コマンドを使用して、`keystroke.jks`に`jwtcert` エイリアスが含まれていることを確認します。 この手順では、前の手順で生成した宛先キーストアパスワードを指定するように求められます。
 
 ```shell
 keytool -keystore keystore.jks -list
 ```
 
-#### 署名済みトークンの生成
+#### 署名済みトークンを生成
 
-最後に、以下の Java クラス JWTExample を使用して、署名済みトークンを生成します。
+最後に、以下のJava クラス JWTExampleを使用して、署名済みトークンを生成します。
 
 ```java
 package org.example;
@@ -437,27 +437,27 @@ public class Main {
 
 | プロパティ | 設定  |
 | --- | --- |
-| `claimArray[0]` | クライアント ID で `claimArray[0]` を更新します。 |
-| `claimArray[1]` | `claimArray[1]` を、アプリに対して許可されている [!DNL Salesforce] のユーザー名に更新します。 |
-| `claimArray[2]` | [!DNL Salesforce] のログイン URL で `claimArray[2]` を更新します。 |
-| `claimArray[3]` | `claimArray[3]` を、エポック時間からミリ秒単位で書式設定された有効期限で更新します。 例えば、`3660624000000` は 12-31-2085 です。 |
-| `/path/to/keystore` | `/path/to/keystore` を keystore.jks の正しいパスに置き換えます |
-| `keystorepassword` | `keystorepassword` を宛先キーストアのパスワードに置き換えます。 |
-| `privatekeypassword` | `privatekeypassword` をソースキーストアのパスワードに置き換えます。 |
+| `claimArray[0]` | クライアント IDで`claimArray[0]`を更新します。 |
+| `claimArray[1]` | アプリに対して承認された`claimArray[1]` ユーザー名で[!DNL Salesforce]を更新します。 |
+| `claimArray[2]` | `claimArray[2]`を[!DNL Salesforce] ログイン URLで更新します。 |
+| `claimArray[3]` | 有効期限がエポック時間からミリ秒単位でフォーマットされた`claimArray[3]`を更新します。 例えば、`3660624000000`は12-31-2085です。 |
+| `/path/to/keystore` | `/path/to/keystore`をキーストア.jksへの正しいパスに置き換えます |
+| `keystorepassword` | `keystorepassword`を宛先キーストアのパスワードに置き換えます。 |
+| `privatekeypassword` | `privatekeypassword`をソースキーストアパスワードに置き換えます。 |
 
 ## 次の手順
 
-[!DNL Salesforce] アカウントの前提条件の設定が完了したら、[!DNL Salesforce] アカウントをExperience Platformに接続して CRM データを取り込む手順に進むことができます。 詳しくは、以下のドキュメントを参照してください。
+[!DNL Salesforce] アカウントの前提条件の設定が完了したら、[!DNL Salesforce] アカウントをExperience Platformに接続し、CRM データを取り込みます。 詳しくは、以下のドキュメントを参照してください。
 
-### API を使用した [!DNL Salesforce] のExperience Platformへの接続
+### APIを使用して[!DNL Salesforce]をExperience Platformに接続する
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] をExperience Platformに接続する方法について説明しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL Salesforce]をExperience Platformに接続する方法について説明します。
 
-- [Flow Service API を使用したSalesforceとExperience Platformの接続](../../tutorials/api/create/crm/salesforce.md)
+- [Flow Service APIを使用してSalesforceをExperience Platformに接続する](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
-### UI を使用した [!DNL Salesforce] のExperience Platformへの接続
+### UIを使用して[!DNL Salesforce]をExperience Platformに接続する
 
-- [UI でのSalesforce ソースコネクタの作成](../../tutorials/ui/create/crm/salesforce.md)
-- [UI での CRM 接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)
+- [UIでのSalesforce ソース接続の作成](../../tutorials/ui/create/crm/salesforce.md)
+- [UIでのCRM接続用データフローの作成](../../tutorials/ui/dataflow/crm.md)
