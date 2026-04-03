@@ -3,7 +3,7 @@ title: Moengage接続
 description: Moengageは、消費者とブランド間の顧客中心のインタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 28%
@@ -50,7 +50,7 @@ Adobeは、シンプルで直観的な操作で連携できます。 任意のAd
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -61,10 +61,10 @@ Adobeは、シンプルで直観的な操作で連携できます。 任意のAd
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ Adobeは、シンプルで直観的な操作で連携できます。 任意のAd
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -118,7 +118,7 @@ Adobeは、シンプルで直観的な操作で連携できます。 任意のAd
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -140,7 +140,7 @@ XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッ�
 
 [!UICONTROL Source Field] セクションで、空のフィールドの横にある矢印ボタンを選択します。
 
-![Moengage Destination Source マッピング &#x200B;](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
+![Moengage Destination Source マッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
 [!UICONTROL Select source field] ウィンドウでは、XDM フィールドの2つのカテゴリから選択できます。
 
@@ -152,14 +152,14 @@ XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッ�
 
 [!UICONTROL Target Field] セクションで、フィールドの右側にあるマッピングアイコンを選択します。
 
-![Moengage宛先ターゲットマッピング &#x200B;](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
+![Moengage宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 [!UICONTROL Select target field] ウィンドウでは、次の2つのカテゴリのターゲットフィールドから選択できます。
 
 * [!UICONTROL Select identity namespace]：このオプションを使用して、[!DNL Experience Platform]個のID名前空間を[!DNL Moengage]個のID名前空間にマッピングします。
 * [!UICONTROL Select custom attributes]：このオプションを使用して、XDM属性を[!DNL Moengage] アカウントで定義したカスタム [!DNL Moengage]属性にマッピングします。 <br>このオプションを使用して、既存のXDM属性の名前を[!DNL Moengage]に変更することもできます。 例えば、`lastName` XDM属性を`Last_Name`のカスタム [!DNL Moengage]属性にマッピングすると、まだ存在しない場合は`Last_Name`に[!DNL Moengage]属性が作成され、`lastName` XDM属性がそれにマッピングされます。
 
-![Moengage宛先ターゲットマッピングフィールド &#x200B;](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
+![Moengage宛先ターゲットマッピングフィールド ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
 ターゲットフィールドを選択し、**[!UICONTROL Select]**&#x200B;を選択します。
 
