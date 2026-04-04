@@ -55,7 +55,7 @@ ht-degree: 4%
 
 ## データ要素の作成 {#create-data-elements}
 
-データを[!DNL Snapchat] Conversions API拡張機能に送信するには、各データパラメーターに[ データ要素](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)を作成します。 次の手順に従います。
+データを[!DNL Snapchat] Conversions API拡張機能に送信するには、各データパラメーターに[ データ要素](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)を作成します。 次の手順に従います。
 
 1. プロパティの&#x200B;**[!UICONTROL Authoring]**&#x200B;画面で&#x200B;**[!UICONTROL Data Elements]**>**[!UICONTROL Property Info]**&#x200B;に移動し、**[!UICONTROL Add Data Element]**&#x200B;を選択します。
 
@@ -81,7 +81,7 @@ ht-degree: 4%
 
 ## コンバージョンイベントをSnapに送信するルールの作成 {#create-snap-rules}
 
-[ ルール ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)は、Experience Platformで拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API拡張機能を使用してコンバージョンイベントをSnapに送信する方法について説明します。
+[ ルール ](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)は、Experience Platformで拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API拡張機能を使用してコンバージョンイベントをSnapに送信する方法について説明します。
 
 ### 新しいルールの作成
 

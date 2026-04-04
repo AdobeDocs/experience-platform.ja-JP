@@ -19,10 +19,10 @@ ht-degree: 10%
 
 * [ レポートスイートデータの概要](../../sources/connectors/adobe-applications/mapping/analytics.md)用のAdobe Analytics ソースコネクタ。
 * [Analytics フィールドマッピングに関するドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md)では、クエリサービスで使用するAnalytics データの取り込みとマッピングに関する詳細情報を提供しています。
-* [Attribution IQの概要](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Attribution IQの概要](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)
 * [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](../sql/adobe-defined-functions.md#window-functions)を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集](https://business.adobe.com/glossary/index.html)も使用できます。
+`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](../sql/adobe-defined-functions.md#window-functions)を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集](https://business.adobe.com/jp/glossary/index.html)も使用できます。
 
 次の各ユースケースでは、カスタマイズ用のテンプレートとして、パラメーター化されたSQL クエリの例が提供されます。 評価に関心のあるSQLの例の`{ }`が表示される場所にパラメーターを指定します。
 

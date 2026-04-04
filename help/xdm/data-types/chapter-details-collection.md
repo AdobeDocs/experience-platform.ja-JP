@@ -21,9 +21,9 @@ ht-degree: 12%
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 文字列 | × | 章やセグメントの名前。 |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整数 | ○ | コンテンツ内の章の先頭からのオフセット（秒単位）。 |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整数 | ○ | コンテンツ内の章の位置（インデックス、整数）。 |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-name) | `friendlyName` | 文字列 | × | 章やセグメントの名前。 |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-offset) | `offset` | 整数 | ○ | コンテンツ内の章の先頭からのオフセット（秒単位）。 |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-position) | `index` | 整数 | ○ | コンテンツ内の章の位置（インデックス、整数）。 |
 
 {style="table-layout:auto"}

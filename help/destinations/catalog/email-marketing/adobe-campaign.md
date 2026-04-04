@@ -122,10 +122,10 @@ Adobe IPをSFTPに追加する必要がある場合は、[SFTP宛先のIP アド
 >[!IMPORTANT]
 >
 >* この統合を実行する際は、[!DNL SFTP]契約に従って、[!DNL Adobe Campaign]のストレージ制限、データベースのストレージ制限、アクティブなプロファイル制限に注意してください。
->* [!DNL Adobe Campaign]個のワークフローを使用して、[!DNL Campaign]で書き出したセグメントをスケジュール、読み込み、マッピングする必要があります。 [ ドキュメントの](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja)定期的なインポートの設定[!DNL Adobe Campaign Classic]および[ ドキュメントの](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) データ管理アクティビティについて[!DNL Adobe Campaign Standard]を参照してください。
+>* [!DNL Adobe Campaign]個のワークフローを使用して、[!DNL Campaign]で書き出したセグメントをスケジュール、読み込み、マッピングする必要があります。 [ ドキュメントの](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja)定期的なインポートの設定[!DNL Adobe Campaign Classic]および[ ドキュメントの](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=ja) データ管理アクティビティについて[!DNL Adobe Campaign Standard]を参照してください。
 >* [!DNL Adobe Campaign]にデータを送信する推奨される方法は、[!DNL Amazon S3]または[!DNL Azure Blob]です。
 
 [!DNL Experience Platform]を[!DNL Amazon S3]または[!DNL Azure Blob] ストレージに接続した後、ストレージの場所から[!DNL Adobe Campaign]へのデータ読み込みを設定する必要があります。 これを実現する方法については、次の[!DNL Adobe Campaign] ドキュメント ページを参照してください。
 
 * [ データの読み込みと書き出し](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ja)および[ データの読み込み（ファイル） ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ja)について、[!DNL Adobe Campaign Classic]のドキュメントでご確認ください。
-* [ プロセスとデータ管理の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html)および[ ファイルを読み込む](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) （[!DNL Adobe Campaign Standard] ドキュメント）。
+* [ プロセスとデータ管理の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=ja)および[ ファイルを読み込む](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=ja) （[!DNL Adobe Campaign Standard] ドキュメント）。

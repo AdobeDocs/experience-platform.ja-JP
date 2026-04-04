@@ -67,7 +67,7 @@ ht-degree: 21%
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
-| [!DNL Federated Audience Composition] | ○ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)を通じてExperience Platformに読み込まれたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ○ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences)を通じてExperience Platformに読み込まれたオーディエンス。 |
 
 {style="table-layout:auto"}
 

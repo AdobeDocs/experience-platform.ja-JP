@@ -169,7 +169,7 @@ UIで実行できるすべてのアクションは、API呼び出しを使用し
 
 ## Adobe Admin Consoleの監査ログの管理
 
-Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次の[ ドキュメント ](https://helpx.adobe.com/enterprise/using/audit-logs.html)を参照してください。
+Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次の[ ドキュメント ](https://helpx.adobe.com/jp/enterprise/using/audit-logs.html)を参照してください。
 
 ## 次の手順とその他のリソース
 

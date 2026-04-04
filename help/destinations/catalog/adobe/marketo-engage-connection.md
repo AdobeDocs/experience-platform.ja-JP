@@ -45,7 +45,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL A
 
 ## 前提条件 {#prerequisites}
 
-* 宛先を設定するユーザーは、Marketo インスタンスとパーティションで[ ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
+* 宛先を設定するユーザーは、Marketo インスタンスとパーティションで[ ユーザーを編集](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
 * 同じAdobe [!DNL Real-Time CDP]組織のMarketo Engage インスタンスのみが、この宛先を設定するときに使用できます。
 * ユーザーをAdobe Admin Consoleで管理しているMarketo Engage インスタンスのみが、この宛先を使用できます。
 
@@ -146,7 +146,7 @@ Marketoでは、選択した&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Profile only]**: Experience Platformの最新の情報を使用してMarketoのリードプロファイルを最新の状態に保ちたい場合は、このオプションを選択します。
    * **[!UICONTROL Audience only]**: プロファイル情報を更新せずにMarketo リストにオーディエンスメンバーを追加する場合は、このオプションを選択します。
 * **[!UICONTROL Partition]**: *パーティションの選択は、**[!UICONTROL Profile only]**または&#x200B;**[!UICONTROL Audience and profile]**同期タイプ*&#x200B;を選択した場合にのみ使用できます。 選択したワークスペースに関連付けられているMarketo パーティション IDを選択します。 これは、書き出されたデータを受け取るMarketoのリードパーティションを指定します。 特定のパーティションを選択しない場合、データはMarketoの&#x200B;**[!UICONTROL Default]** パーティションに送信されます。
-* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用するMarketo重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、そのフィールドをMarketoの[検索可能フィールド ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)としてマークする必要があります。
+* **[!UICONTROL Marketo deduplication field]**：既存のMarketo リードを更新する際に使用するMarketo重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、そのフィールドをMarketoの[検索可能フィールド ](https://experienceleague.adobe.com/ja/docs/marketo-developer/marketo/rest/lead-database/lead-database)としてマークする必要があります。
 
   >[!NOTE]
   >

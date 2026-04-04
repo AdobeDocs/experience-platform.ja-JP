@@ -496,7 +496,7 @@ Experience Platformは、ファイルの書き出しごとにデフォルトス�
 
 ### 同じタイムスタンプを持つプロファイルの重複排除の動作 {#deduplication-same-timestamp}
 
-プロファイルをファイルベースの宛先に書き出す場合、重複排除によって、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有する場合に、1つのプロファイルのみが書き出されます。 このタイムスタンプは、プロファイルのオーディエンスメンバーシップまたはID グラフが最後に更新された時点を表します。 プロファイルの更新およびエクスポート方法について詳しくは、[ プロファイルのエクスポート動作](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) ドキュメントを参照してください。
+プロファイルをファイルベースの宛先に書き出す場合、重複排除によって、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有する場合に、1つのプロファイルのみが書き出されます。 このタイムスタンプは、プロファイルのオーディエンスメンバーシップまたはID グラフが最後に更新された時点を表します。 プロファイルの更新およびエクスポート方法について詳しくは、[ プロファイルのエクスポート動作](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) ドキュメントを参照してください。
 
 #### 重要な考慮事項 {#key-considerations}
 
