@@ -326,5 +326,5 @@ Analytics データフローを削除するには、ソースワークスペー�
 >
 > 次のビデオに示す [!DNL Experience Platform] UI は旧式のものです。最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430254?captions=jpn&quality=12&learn=on)
 
