@@ -17,7 +17,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[ （レガシー）  [!DNL Amazon Ads]](./amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[ （レガシー）  [!DNL Amazon Ads]](./amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。
+>[!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[&#x200B; （レガシー）  [!DNL Amazon Ads]](./amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[&#x200B; （レガシー）  [!DNL Amazon Ads]](./amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。
 >
 >2026年4月末以降、[!DNL Amazon Ads v2]の名前は[!DNL Amazon Ads]に変更され、レガシーカードは非表示になり、カタログに1つの宛先カードが残ります。 既存のレガシーデータフローは引き続き機能し、その日付以降は&#x200B;**[!UICONTROL Browse]** タブで管理できます。
 
@@ -39,7 +39,7 @@ ht-degree: 16%
 
 ### オーディエンスの取り込みとアクティベーション {#activation-and-targeting}
 
-スポーツ衣料ブランドが、[!DNL Amazon Ads]をまたいで関連性の高い広告を既存顧客に配信したいと考えています。 企業は、顧客のメールアドレスをCRMから[!DNL Adobe Experience Platform]に取り込み、ファーストパーティのオフラインデータを使用してオーディエンスを構築し、これらのオーディエンスを[!DNL Amazon Ads]宛先を通じて[!DNL Amazon Ads v2]にアクティブ化できます。 アクティベーション後は、これらのオーディエンスを利用して、[!DNL Amazon Ads]のインベントリ全体でそれらの顧客に広告をターゲティングできるため、ブランドは既知の顧客と再エンゲージし、リピート購入を促進することができます。 詳しくは、[ データの管理](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)を参照してください。
+スポーツ衣料ブランドが、[!DNL Amazon Ads]をまたいで関連性の高い広告を既存顧客に配信したいと考えています。 企業は、顧客のメールアドレスをCRMから[!DNL Adobe Experience Platform]に取り込み、ファーストパーティのオフラインデータを使用してオーディエンスを構築し、これらのオーディエンスを[!DNL Amazon Ads]宛先を通じて[!DNL Amazon Ads v2]にアクティブ化できます。 アクティベーション後は、これらのオーディエンスを利用して、[!DNL Amazon Ads]のインベントリ全体でそれらの顧客に広告をターゲティングできるため、ブランドは既知の顧客と再エンゲージし、リピート購入を促進することができます。 詳しくは、[&#x200B; データの管理](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -81,7 +81,7 @@ ht-degree: 16%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [ セグメント化サービス ](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [&#x200B; セグメント化サービス &#x200B;](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルから](/help/segmentation/ui/audience-portal.md#import-audience)に[!DNL Experience Platform]をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Experience Platform]などの他の[!DNL Adobe Journey Optimizer] アプリで生成されたオーディエンス， </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -90,10 +90,10 @@ ht-degree: 16%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](/help/destinations/ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -123,7 +123,7 @@ ht-degree: 16%
 * **[!UICONTROL Account name]**：この宛先アカウントを識別するのに役立つ名前を入力します。 これは、同じ宛先に複数の接続がある場合に特に便利です。
 * **[!UICONTROL Description]** （オプション）：接続の目的や関連するビジネス コンテキストなど、アカウント間の区別に役立つ詳細を追加します。
 
-![Amazon Ads用Experience Platformの宛先に接続ダイアログ ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
+![Amazon Ads用Experience Platformの宛先に接続ダイアログ &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
 
 [!DNL Amazon Ads v2] インターフェイスにリダイレクトされます。 **[!UICONTROL Allow]**&#x200B;を選択して、Amazon アカウントにログインします。
 
@@ -135,7 +135,7 @@ ht-degree: 16%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![Experience PlatformのAmazon Ads v2宛先設定フィールド ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
+![Experience PlatformのAmazon Ads v2宛先設定フィールド &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
 
 * **[!UICONTROL Name]**：この宛先を識別する名前。
 * **[!UICONTROL Description]**：この宛先の特定に役立つ説明です。
@@ -153,8 +153,8 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
->* IDをエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* IDをエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -190,7 +190,7 @@ ht-degree: 16%
 
 アクティブ化後、**[!DNL Ads Data Manager]コンソール**&#x200B;でオーディエンスの取り込みを検証します。
 
-**[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**&#x200B;に移動します。 オーディエンスの取り込みステータス、サイズ、エラーログを確認します。 [ ドキュメントの](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) データの管理[および](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations)宛先[!DNL Amazon Ads] ページでは、さらに検証ガイダンスが提供されています。
+**[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**&#x200B;に移動します。 オーディエンスの取り込みステータス、サイズ、エラーログを確認します。 [&#x200B; ドキュメントの](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) データの管理[および](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations)宛先[!DNL Amazon Ads] ページでは、さらに検証ガイダンスが提供されています。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
