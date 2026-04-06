@@ -17,7 +17,7 @@ ht-degree: 9%
 >
 >[!DNL Talon.One] ソースはベータ版です。ベータ版のソースの使用について詳しくは、ソースの概要の[条件](../../../../home.md#terms-and-conditions)を参照してください。
 
-バッチデータの[!DNL Talon.One] ソースは、[!DNL Talon.One] アプリケーション用に記録されたイベントを受信します。 一般的なユースケースでは、`talon_session_closed`に対してフィルターを実行して、ロイヤルティポイントの獲得または交換、クーポンの交換、割引の付与など、完了したトランザクションを受け取ります。 APIについて詳しくは、[[!DNL Talon.One] 管理API リファレンス ](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount)を参照してください。
+バッチデータの[!DNL Talon.One] ソースは、[!DNL Talon.One] アプリケーション用に記録されたイベントを受信します。 一般的なユースケースでは、`talon_session_closed`に対してフィルターを実行して、ロイヤルティポイントの獲得または交換、クーポンの交換、割引の付与など、完了したトランザクションを受け取ります。 APIについて詳しくは、[[!DNL Talon.One] 管理API リファレンス &#x200B;](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount)を参照してください。
 
 このチュートリアルでは、UIのソースワークスペースを使用して、[!DNL Talon.One] アカウントからAdobe Experience Platformにバッチデータを取り込む方法について説明します。
 
@@ -54,7 +54,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 [!DNL Talon.One] ソースの新しいアカウントを作成するには、**[!UICONTROL New account]**&#x200B;を選択し、アカウントの名前とオプションの説明を入力します。 次に、[!DNL Talon.One] ドメインと[!UICONTROL Talon.One Management API Key]を指定します。 終了したら、**[!UICONTROL Connect to source]**&#x200B;を選択し、接続を確立するために数分間待ちます。
 
-![ ソースワークフローの「新しいアカウントを作成」ステップ。](../../../../images/tutorials/create/talon-one-batch/new.png)
+![&#x200B; ソースワークフローの「新しいアカウントを作成」ステップ。](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### 既存のアカウントの使用
 
@@ -68,7 +68,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 >
 >完了した取引（ロイヤルティポイントの獲得または交換、引き換えクーポン、割引の付与など）を取得するには、`talon_session_closed` イベントタイプを選択します。 タイプ別のイベントのフィルタリングについて詳しくは、[API ドキュメント  [!DNL Talon.One] の](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount)&quot;type&quot; クエリパラメーターを参照してください。
 
-![ ソースワークフローのデータの選択とプレビューの手順。](../../../../images/tutorials/create/talon-one-batch/select-data.png)
+![&#x200B; ソースワークフローのデータの選択とプレビューの手順。](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
 ## データセットとデータフローの詳細の設定
 
@@ -97,13 +97,13 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 データセットを設定したら、名前、オプションの説明、アラート設定など、データフローの詳細を指定する必要があります。
 
-![ データフローの詳細インターフェイス。](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
+![&#x200B; データフローの詳細インターフェイス。](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。 デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （オプション）データフローの簡単な説明。 |
-| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[&#x200B; アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 >
 >[!DNL Talon.One] ソースデータのマッピングに関する追加のガイダンスについては、[[!DNL Talon.One] 概要](../../../../connectors/loyalty/talon-one.md#mapping)を参照してください。
 
-![ ソースワークフローのマッピングインターフェイス。](../../../../images/tutorials/create/talon-one-batch/mapping.png)
+![&#x200B; ソースワークフローのマッピングインターフェイス。](../../../../images/tutorials/create/talon-one-batch/mapping.png)
 
 ## データフロー取り込みのスケジュール
 
@@ -138,7 +138,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 | 開始時間 | 予測された実行のタイムスタンプ。UTC タイムゾーンで表示されます。 |
 | バックフィル | バックフィルによって、最初に取り込むデータが決まります。 バックフィルが有効になっている場合、指定したパス内のすべての現在のファイルが、最初のスケジュールされた取り込み中に取り込まれます。 バックフィルが無効になっている場合、取り込みの最初の実行時から開始時までの間に読み込まれたファイルのみが取り込まれます。 開始時刻より前に読み込まれたファイルは取り込まれません。 |
 
-![ ソースワークフローのスケジュール設定ステップ。](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
+![&#x200B; ソースワークフローのスケジュール設定ステップ。](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
 
 ## レビュー
 
@@ -149,11 +149,11 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 詳細が正しいことを確認したら、**[!UICONTROL Finish]**&#x200B;を選択します。
 
-![ ソースワークフローのレビュー手順。](../../../../images/tutorials/create/talon-one-batch/review.png)
+![&#x200B; ソースワークフローのレビュー手順。](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル ](../../../../../dataflows/ui/monitor-sources.md)を参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル &#x200B;](../../../../../dataflows/ui/monitor-sources.md)を参照してください。
 
 ## 既知の制限事項
 
