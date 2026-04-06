@@ -314,7 +314,7 @@ Query Serviceは、業界やビジネスシナリオに関する様々なユー�
 >
 >ビデオに示されているUIは古くなっていますが、ワークフローで使用されるロジックは同じままです。
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34782?captions=jpn&quality=12&learn=on)
 
 ## 同時セッションの監視と管理 {#monitor-manage-sessions}
 

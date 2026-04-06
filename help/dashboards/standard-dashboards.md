@@ -186,4 +186,4 @@ Adobe Real-Time Customer Data Platform インサイトダッシュボードの�
 
 Experience Platformのダッシュボードについて理解を深めるには、次の動画をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413783?captions=jpn&quality=12&learn=on)

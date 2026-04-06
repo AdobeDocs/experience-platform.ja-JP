@@ -177,4 +177,4 @@ Adobe Admin Consoleでアクティビティの監査ログを管理する方法�
 
 Experience Platformの監査ログについて理解を深めるには、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344651?captions=jpn&quality=12&learn=on)

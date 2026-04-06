@@ -21,7 +21,7 @@ Adobe Experience Platformなら、顧客一人ひとりに合わせてリアル�
 
 次のビデオは、ストリーミング取り込みに関する理解を支援するために設計されており、上記の概念の概要を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31657?captions=jpn&quality=12&learn=on)
 
 ### ストリームプロファイルレコードと[!DNL ExperienceEvents]
 
