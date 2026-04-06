@@ -21,11 +21,11 @@ ht-degree: 9%
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|--------------------------------------------------------------|
-| [[!UICONTROL Chapter Completed]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-complete) | `isCompleted` | ブール値 | 章が完了したかどうかを確認します。 |
-| [[!UICONTROL Chapter ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter) | `ID` | 文字列 | 章の自動生成されたID。 |
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整数 | チャプターの長さ（秒）。 |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 文字列 | 章やセグメントの名前。 |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整数 | コンテンツ内の章の先頭からのオフセット（秒単位）。 |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整数 | コンテンツ内の章の位置（インデックス、整数）。 |
-| [[!UICONTROL Chapter Started]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-start) | `isStarted` | ブール値 | 章が始まったか否か。 |
-| [[!UICONTROL Chapter Time Played]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-time-spent) | `timePlayed` | 整数 | 章に費やした時間（秒単位）。 |
+| [[!UICONTROL Chapter Completed]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-complete) | `isCompleted` | ブール値 | 章が完了したかどうかを確認します。 |
+| [[!UICONTROL Chapter ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter) | `ID` | 文字列 | 章の自動生成されたID。 |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-length) | `length` | 整数 | チャプターの長さ（秒）。 |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-name) | `friendlyName` | 文字列 | 章やセグメントの名前。 |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-offset) | `offset` | 整数 | コンテンツ内の章の先頭からのオフセット（秒単位）。 |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-position) | `index` | 整数 | コンテンツ内の章の位置（インデックス、整数）。 |
+| [[!UICONTROL Chapter Started]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-start) | `isStarted` | ブール値 | 章が始まったか否か。 |
+| [[!UICONTROL Chapter Time Played]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-time-spent) | `timePlayed` | 整数 | 章に費やした時間（秒単位）。 |

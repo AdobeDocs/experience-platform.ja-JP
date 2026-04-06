@@ -72,7 +72,7 @@ ht-degree: 37%
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ curl -X POST \
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/ja-JP/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false

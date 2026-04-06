@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # クエリサービスでのAdobe定義のSQL関数
 
-Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[&#x200B; セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)および[&#x200B; アトリビューション &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
+Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[&#x200B; セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja)および[&#x200B; アトリビューション &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
 
 このドキュメントでは、[!DNL Query Service]で利用できるAdobe定義の関数について説明します。
 
@@ -47,7 +47,7 @@ Web サイト、モバイルアプリケーション、インタラクティブ�
 
 データをグループ化して分類することで、イベントを関連付けて、顧客体験に関する詳細なコンテキストを明らかにできます。
 
-Adobe Analyticsでのセッション化について詳しくは、[&#x200B; コンテキスト対応セッション &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
+Adobe Analyticsでのセッション化について詳しくは、[&#x200B; コンテキスト対応セッション &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja)のドキュメントを参照してください。
 
 **クエリ構文**
 

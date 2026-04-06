@@ -103,7 +103,7 @@ Marketo Measureの宛先に関する次の前提条件に注意してくださ�
 
 ## データの書き出しを検証する {#exported-data}
 
-正常なデータセット書き出しを検証するには、データセットが[Snowflake データウェアハウス &#x200B;](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html)に正常に送信されたことを確認します。
+正常なデータセット書き出しを検証するには、データセットが[Snowflake データウェアハウス &#x200B;](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=ja)に正常に送信されたことを確認します。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

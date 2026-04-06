@@ -26,7 +26,7 @@ ht-degree: 28%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Pinterest Customer List]宛先は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
+[!DNL Pinterest Customer List]宛先は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
 
 宛先アクティベーションワークフローの[&#x200B; マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)で、目的のIDをターゲットフィールド *pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestへのデータ取り込み時に区別され、決定されます。
 

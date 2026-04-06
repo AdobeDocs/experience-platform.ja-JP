@@ -31,14 +31,14 @@ AI アシスタント（レガシー）は、Experience Platform、Real-Time CDP
     <div><strong>学習の強化</strong><br/> ワークフローを中断することなく、製品知識の理解を深め、トラブルシューティングを行い、強化します。</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/ja/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>AI アシスタントのビデオプレイリスト </strong><br/>AI アシスタントで解決できるさまざまな課題とユースケースについて説明します。</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/ja/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -437,11 +437,11 @@ AI アシスタントのユースケースについて詳しくは、次の動�
 
 AI アシスタント（レガシー）の使用例については、次をお読みください。
 
-* [&#x200B; チームの新規メンバーのオンボーディング時間を短縮](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [&#x200B; オーディエンスを整理し、マーケティング活動を最適化](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [&#x200B; データの更新中に依存関係を確認し、リスクを最小限に抑える](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [新機能をより迅速に見つけてデプロイする](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
-* [AI アシスタントによるカスタマーサポートの変革](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [&#x200B; チームの新規メンバーのオンボーディング時間を短縮](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ja)
+* [&#x200B; オーディエンスを整理し、マーケティング活動を最適化](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ja)
+* [&#x200B; データの更新中に依存関係を確認し、リスクを最小限に抑える](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ja)
+* [新機能をより迅速に見つけてデプロイする](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ja)
+* [AI アシスタントによるカスタマーサポートの変革](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ja)
 
 >[!TAB 追加のビデオコンテンツ ]
 
@@ -465,6 +465,6 @@ AI アシスタント（レガシー）のユースケースや機能など、�
 <a href="https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> ドキュメント </a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> ドキュメント </a>
+<a href="https://experienceleague.adobe.com/ja/docs/analytics-platform/using/ai-assistant" target="_blank"> ドキュメント </a>
 </td>
 </tr></table>
