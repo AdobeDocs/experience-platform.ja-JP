@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
+source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1094'
 ht-degree: 88%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 88%
 # ソース {#sources}
 
 - [ソースの概要](home.md)
-- 使用可能なソースコネクタ {#connectors}
+- 利用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
       - [Analytics Classifications ソース](connectors/adobe-applications/classifications.md)
       - [Analytics ソース](connectors/adobe-applications/analytics.md)
@@ -90,15 +90,15 @@ ht-degree: 88%
       - [Snowflake ストリーミングコネクタ](connectors/databases/snowflake-streaming.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
-   - データおよび ID パートナー {#data-partner}
+   - データとID パートナー {#data-partner}
       - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom プロスペクティングデータの読み込み](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Algolia ユーザープロファイル](connectors/data-partners/algolia-user-profiles.md)
       - [ボンボラの意図](connectors/data-partners/bombora.md)
-      - [Demandbase の目的](connectors/data-partners/demandbase.md)
+      - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Merkury エンタープライズ ID 解決](connectors/data-partners/merkury.md)
    - データ共有 {#data-sharing}
-      - [デルタシャレ](connectors/data-sharing/deltashare.md)
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - e コマース {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -106,7 +106,8 @@ ht-degree: 88%
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - ロイヤルティ {#loyalty}
-      - [キャピラリーストリーミングイベント](connectors/loyalty/capillary.md)
+      - [キャピラリー・ストリーミング・イベント](connectors/loyalty/capillary.md)
+      - [コビエ](connectors/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - マーケティングオートメーション {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -115,11 +116,11 @@ ht-degree: 88%
       - [HubSpot](connectors/marketing-automation/hubspot.md)
       - [Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
-      - [Oracle Eloqua （V2）](connectors/marketing-automation/eloqua.md)
+      - [Oracleエロクア（V2）](connectors/marketing-automation/eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
-      - [SalesforceMarketing Cloud（V2）](connectors/marketing-automation/sfmc.md)
+      - [Salesforce Marketing Cloud （V2）](connectors/marketing-automation/sfmc.md)
    - 支払い {#payments}
       - [正方形コネクタ](connectors/payments/square.md)
       - [Stripe コネクタ](connectors/payments/stripe.md)
@@ -216,7 +217,7 @@ ht-degree: 88%
       - [支払いデータの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
       - [データテーブルの調査](tutorials/api/explore/tabular.md)
-   - データを収集 {#collect}
+   - Collect data {#collect}
       - [広告データを収集](tutorials/api/collect/advertising.md)
       - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
       - [CRM データの収集](tutorials/api/collect/crm.md)
@@ -305,15 +306,15 @@ ht-degree: 88%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake ストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - データおよび ID パートナー {#data-partner}
+      - データとID パートナー {#data-partner}
          - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom プロスペクティングデータの読み込み](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Algolia ユーザープロファイル](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [ボンボラの意図](tutorials/ui/create/data-partners/bombora.md)
-         - [Demandbase の目的](tutorials/ui/create/data-partners/demandbase.md)
+         - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury エンタープライズ ID 解決](tutorials/ui/create/data-partners/merkury.md)
       - データ共有 {#data-sharing}
-         - [デルタシャレ](tutorials/ui/create/data-sharing/deltashare.md)
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -321,9 +322,11 @@ ht-degree: 88%
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - ロイヤルティ {#loyalty}
-         - [キャピラリーストリーミングイベント](tutorials/ui/create/loyalty/capillary.md)
+         - [キャピラリー・ストリーミング・イベント](tutorials/ui/create/loyalty/capillary.md)
+         - [コビー（バッチ）](tutorials/ui/create/loyalty/kobie-batch.md)
+         - [Kobie （ストリーミング）](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One ストリーミングイベント](tutorials/ui/create/loyalty/talon-one-streaming.md)
-         - [Talon.One バッチ Source コネクタ](tutorials/ui/create/loyalty/talon-one-batch.md)
+         - [Talon.One Batch Source コネクタ](tutorials/ui/create/loyalty/talon-one-batch.md)
       - マーケティングオートメーション {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -332,13 +335,13 @@ ht-degree: 88%
          - [MailChimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [Oracle Eloqua （V2）](tutorials/ui/create/marketing-automation/eloqua.md)
+         - [Oracleエロクア（V2）](tutorials/ui/create/marketing-automation/eloqua.md)
          - [Oracle NetSuite アクティビティ](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite エンティティ](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
-         - [中継コネクタ](tutorials/ui/create/marketing-automation/relay-connector.md)
+         - [リレーコネクタ](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-         - [SalesforceMarketing Cloud（V2）](tutorials/ui/create/marketing-automation/sfmc.md)
+         - [Salesforce Marketing Cloud （V2）](tutorials/ui/create/marketing-automation/sfmc.md)
       - 支払い {#payments}
          - [正方形](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -360,7 +363,7 @@ ht-degree: 88%
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
    - [UI のテンプレートを使用してソースのデータフローを作成する](tutorials/ui/templates.md)
-   - [ソースオブジェクトのフィルタリング](tutorials/ui/filter.md)
+   - [ソースオブジェクトのフィルター](tutorials/ui/filter.md)
    - [暗号化されたデータの取り込み](tutorials/ui/encryped-ingestion.md)
    - [オンデマンド取り込み](tutorials/ui/on-demand-ingestion.md)
    - [バッチデータフローのモニター](tutorials/ui/monitor.md)
@@ -373,14 +376,14 @@ ht-degree: 88%
    - [データフローをドラフトとして保存](tutorials/ui/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/ui/labels.md)
    - [プライベートエンドポイントの作成](tutorials/ui/private-link.md)
-- セルフサービスソース（バッチ SDK） {#sdk}
+- セルフサービスソース（バッチSDK） {#sdk}
    - [概要](sources-sdk/overview.md)
-   - 接続仕様を設定 {#config}
+   - 接続仕様の設定 {#config}
       - [設定オプション](sources-sdk/config/config.md)
       - [認証仕様の設定](sources-sdk/config/authspec.md)
       - [ソース仕様の設定](sources-sdk/config/sourcespec.md)
       - [探索仕様の設定](sources-sdk/config/explorespec.md)
-   - セルフサービスソース（バッチ SDK） API ガイド {#self-serve-api}
+   - セルフサービスソース（バッチSDK） API ガイド {#self-serve-api}
       - [Self-Serve Sources（バッチ SDK）API の概要](sources-sdk/api/api-overview.md)
       - [はじめに](sources-sdk/api/getting-started.md)
       - [接続仕様を作成](sources-sdk/api/create.md)
@@ -393,7 +396,7 @@ ht-degree: 88%
       - [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](sources-sdk/documentation/text-editor.md)
       - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
       - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
-   - ストリーミングSDK {#streaming-sdk}
+   - Streaming SDK {#streaming-sdk}
       - [セルフサービスソース（ストリーミング SDK）の基本を学ぶ](sources-sdk/streaming/getting-started.md)
       - [ストリーミングソースの接続仕様の作成](sources-sdk/streaming/create.md)
       - [ストリーミングソースの接続仕様の更新](sources-sdk/streaming/update-connection-specs.md)
