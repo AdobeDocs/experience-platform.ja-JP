@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1724'
 ht-degree: 47%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeやパートナーのソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタの一部は、Adobeによって構築および管理され、その他は[Sources SDK](/help/sources/sources-sdk/overview.md)を使用してパートナー企業によって構築および管理されます。 パートナーが作成および保守するソースがある場合は、各パートナー構築コネクタのドキュメントページの上部にメモが表示されます。 例えば、[Amazon S3 コネクタ &#x200B;](/help/sources/connectors/cloud-storage/s3.md)はAdobeによって作成され、[RainFocus コネクタ &#x200B;](/help/sources/connectors/analytics/rainfocus.md)はRainFocus チームによって作成および管理されます。
+Experience Platform ソースカタログ内のコネクタの一部は、Adobeによって構築および管理され、その他は[Sources SDK](/help/sources/sources-sdk/overview.md)を使用してパートナー企業によって構築および管理されます。 パートナーが作成および保守するソースがある場合は、各パートナー構築コネクタのドキュメントページの上部にメモが表示されます。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md)はAdobeによって作成され、[RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md)はRainFocus チームによって作成および管理されます。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -40,7 +40,7 @@ Experience Platform ソースカタログ内のコネクタの一部は、Adobe�
 
 >[!NOTE]
 >
->30日間連続して失敗するSource取り込みデータフローは、自動的に無効になります。 [監視ダッシュボード &#x200B;](/help/dataflows/ui/monitor-sources.md)を使用して、データフローを確認し、失敗した理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用し、解決後にデータフローを再度有効にします。
+>30日間連続して失敗するSource取り込みデータフローは、自動的に無効になります。 [監視ダッシュボード ](/help/dataflows/ui/monitor-sources.md)を使用して、データフローを確認し、失敗した理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用し、解決後にデータフローを再度有効にします。
 
 ソースカタログで使用可能なすべてのソースのリストについては、次の節を参照してください。
 
@@ -230,6 +230,7 @@ Experience Platform は、サードパーティのデータベースからデー
 | ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | ストリーミング | Azure |
+| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | バッチ、ストリーミング | Azure |
 
 {style="table-layout:auto"}
 
@@ -244,11 +245,11 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | ストリーミング | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | バッチ | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | バッチ | Azure |
-| [[!DNL Oracle Eloqua]  （V2） &#x200B;](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
+| [[!DNL Oracle Eloqua]  （V2） ](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | ストリーミング | Azure |
-| [[!DNL Salesforce Marketing Cloud]  （V2） &#x200B;](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
+| [[!DNL Salesforce Marketing Cloud]  （V2） ](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
 
@@ -308,7 +309,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!TIP]
 >
->属性ベースのアクセス制御は次のように機能します。**roles**&#x200B;は、Experience Platform インスタンスを操作するユーザーの種類を分類するために作成されます。 **ラベル**&#x200B;は、特定の役割へのアクセスを指定するために&#x200B;**役割**&#x200B;に適用されます。 **ラベル**&#x200B;は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドとセグメントにアクセスできるようにするには、クエリされたリソース *に割り当てられているのと同じラベルを持つ役割*&#x200B;に追加する必要があります。 詳しくは、[属性ベースのアクセス制御エンドツーエンド ガイド &#x200B;](../access-control/abac/end-to-end-guide.md)を参照してください。
+>属性ベースのアクセス制御は次のように機能します。**roles**&#x200B;は、Experience Platform インスタンスを操作するユーザーの種類を分類するために作成されます。 **ラベル**&#x200B;は、特定の役割へのアクセスを指定するために&#x200B;**役割**&#x200B;に適用されます。 **ラベル**&#x200B;は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドとセグメントにアクセスできるようにするには、クエリされたリソース *に割り当てられているのと同じラベルを持つ役割*&#x200B;に追加する必要があります。 詳しくは、[属性ベースのアクセス制御エンドツーエンド ガイド ](../access-control/abac/end-to-end-guide.md)を参照してください。
 
 - スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーはアクセス権のあるフィールドのマッピングのみを作成できます。
 - 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用してデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを使用して、既存のデータフローを更新、削除、有効、無効にすることはできません。
@@ -316,7 +317,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!NOTE]
 >
->リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[&#x200B; リレーショナルスキーマの概要](../xdm/schema/relational.md)を参照してください。
+>リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[ リレーショナルスキーマの概要](../xdm/schema/relational.md)を参照してください。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
