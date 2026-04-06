@@ -13,13 +13,13 @@ ht-degree: 1%
 
 Experience Data Model （XDM）の任意の文字列フィールドに対して、フィールドが事前定義されたセットに取り込むことができる値を制限する&#x200B;**enum**&#x200B;を定義できます。 列挙フィールドにデータを取り込もうとし、値がその設定で定義されているどれにも一致しない場合、取り込みは拒否されます。
 
-列挙とは対照的に、文字列フィールドに&#x200B;**推奨値**&#x200B;を追加しても、取り込み可能な値は制限されません。 代わりに、推奨される値は、文字列フィールドを属性として含める場合、[ セグメント化UI](../../segmentation/ui/overview.md)で使用できる定義済みの値に影響します。
+列挙とは対照的に、文字列フィールドに&#x200B;**推奨値**&#x200B;を追加しても、取り込み可能な値は制限されません。 代わりに、推奨される値は、文字列フィールドを属性として含める場合、[&#x200B; セグメント化UI](../../segmentation/ui/overview.md)で使用できる定義済みの値に影響します。
 
 >[!NOTE]
 >
 >フィールドの更新された推奨値がセグメント UIに反映されるまでに、おおよその5分の遅延があります。
 
-このガイドでは、[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、列挙と推奨値に関する[UI ガイド ](../ui/fields/enum.md)を参照してください。
+このガイドでは、[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)を使用して推奨値を管理する方法について説明します。 Adobe Experience Platform ユーザーインターフェイスでこれを行う手順については、列挙と推奨値に関する[UI ガイド &#x200B;](../ui/fields/enum.md)を参照してください。
 
 ## 前提条件
 
@@ -28,7 +28,7 @@ Experience Data Model （XDM）の任意の文字列フィールドに対して�
 * [スキーマ構成の基本](../schema/composition.md)
 * [Schema Registry API ガイド](../api/overview.md)
 
-また、既存のフィールドを更新する場合は、列挙および推奨値[の](../ui/fields/enum.md#evolution)進化ルールを確認することを強くお勧めします。 和集合に参加するスキーマの推奨値を管理する場合は、列挙と推奨値のマージに関する[ ルール ](../ui/fields/enum.md#merging)を参照してください。
+また、既存のフィールドを更新する場合は、列挙および推奨値[の](../ui/fields/enum.md#evolution)進化ルールを確認することを強くお勧めします。 和集合に参加するスキーマの推奨値を管理する場合は、列挙と推奨値のマージに関する[&#x200B; ルール &#x200B;](../ui/fields/enum.md#merging)を参照してください。
 
 ## 構成
 
@@ -83,7 +83,7 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 >
 >文字列フィールドの推奨値は、スキーマレベルでのみ追加できます。 つまり、1つのスキーマ内の標準フィールドの`meta:enum`を拡張しても、同じ標準フィールドを使用する他のスキーマには影響しません。
 
-次のリクエストは、`eventType`で識別されるスキーマの標準[ フィールド（](../classes/experienceevent.md)XDM ExperienceEvent クラス `sourceSchema`によって提供）に推奨値を追加します。
+次のリクエストは、`eventType`で識別されるスキーマの標準[&#x200B; フィールド（](../classes/experienceevent.md)XDM ExperienceEvent クラス `sourceSchema`によって提供）に推奨値を追加します。
 
 ```curl
 curl -X POST \
@@ -224,9 +224,9 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 >
 >標準フィールドとは異なり、カスタムフィールドの`meta:enum`を更新すると、そのフィールドを使用する他のすべてのスキーマに影響します。 スキーマ間で変更を反映させたくない場合は、代わりに新しいカスタムリソースを作成することを検討してください。
 >
->* [ カスタムクラスを作成](../api/classes.md#create)
->* [ カスタムフィールドグループを作成](../api/field-groups.md#create)
->* [ カスタムデータタイプを作成](../api/data-types.md#create)
+>* [&#x200B; カスタムクラスを作成](../api/classes.md#create)
+>* [&#x200B; カスタムフィールドグループを作成](../api/field-groups.md#create)
+>* [&#x200B; カスタムデータタイプを作成](../api/data-types.md#create)
 
 次のリクエストは、カスタムデータタイプによって提供される「ロイヤルティレベル」フィールドの`meta:enum`を更新します。
 

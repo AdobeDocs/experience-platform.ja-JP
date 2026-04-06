@@ -39,7 +39,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 [!UICONTROL Create dashboard] ダイアログが表示されます。 作成するウィジェットのコレクションに、わかりやすい名前を入力し、**[!UICONTROL Save]**&#x200B;を選択します。
 
-![ ダッシュボードの作成ダイアログ。](./images/standard-dashboards/create-dashboard-dialog.png)
+![&#x200B; ダッシュボードの作成ダイアログ。](./images/standard-dashboards/create-dashboard-dialog.png)
 
 Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを使用してインサイトを作成できます。 このワークフローの手順については、[query pro モードの概要](./sql-insights-query-pro-mode/overview.md)を参照してください。
 
@@ -64,7 +64,7 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 
 ウィジェットコンポーザーワークスペースが表示されます。 次に、**[!UICONTROL Select data]**&#x200B;を選択して、ウィジェットに属性を追加するデータモデルを選択します。
 
-![ ウィジェット コンポーザーのワークスペース。](./images/standard-dashboards/widget-composer.png)
+![&#x200B; ウィジェット コンポーザーのワークスペース。](./images/standard-dashboards/widget-composer.png)
 
 #### データモデルを選択 {#select-data-model}
 
@@ -74,7 +74,7 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 >
 >情報アイコン （![情報アイコン）を選択します。](/help/images/icons/info.png)）は、完全なデータモデル名が長すぎてデータパネルに表示されない場合に表示されます。
 
-![ データを選択ダイアログ。](./images/standard-dashboards/select-data-model-dialog.png)
+![&#x200B; データを選択ダイアログ。](./images/standard-dashboards/select-data-model-dialog.png)
 
 プレビューリストには、データモデルに含まれるテーブルに関する詳細が表示されます。 次の表では、列フィールドとその潜在的な値について説明します。
 
@@ -100,7 +100,7 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 
 データモデルと現在選択されているテーブルが左側のパネルの上部に表示され、ウィジェットの作成に使用できる属性が[!UICONTROL Attributes]列に一覧表示されます。 リストをスクロールする代わりに検索バーを使用して属性を検索したり、鉛筆アイコン（![鉛筆アイコン）を選択して選択したデータモデルを変更したりできます。](/help/images/icons/edit.png)）を左パネルに配置します。
 
-![ ウィジェットコンポーザー内にデータが入力されたウィジェット。](./images/standard-dashboards/populated-widget-composer.png)
+![&#x200B; ウィジェットコンポーザー内にデータが入力されたウィジェット。](./images/standard-dashboards/populated-widget-composer.png)
 
 #### 属性の追加とフィルター {#add-and-filter-attributes}
 
@@ -114,11 +114,11 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 
 ウィジェットのグラフまたはグラフのタイプを変更するには、[!UICONTROL Marks] ドロップダウンを選択し、使用可能なオプションから選択します。 オプションには、棒グラフ、点グラフ、目盛りグラフ、線グラフまたは領域が含まれます。 選択すると、ウィジェットの現在の設定のプレビュービジュアライゼーションが生成されます。
 
-![ マーク ドロップダウンがハイライト表示されたウィジェット コンポーザー。](./images/standard-dashboards/marks-dropdown.png)
+![&#x200B; マーク ドロップダウンがハイライト表示されたウィジェット コンポーザー。](./images/standard-dashboards/marks-dropdown.png)
 
 属性をフィルターとして追加することで、ウィジェットに含める値または除外する値を選択できます。 属性リストからフィルターを追加すると、[!UICONTROL Filter] ダイアログが表示され、チェックボックスを使用して値を選択または選択解除できます。
 
-![ ウィジェットの値をフィルタリングするためのフィルターダイアログ。](./images/standard-dashboards/filter-dialog.png)
+![&#x200B; ウィジェットの値をフィルタリングするためのフィルターダイアログ。](./images/standard-dashboards/filter-dialog.png)
 
 #### 履歴データのフィルタリング {#filter-historical-data}
 
@@ -136,9 +136,9 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 
 ### ウィジェットのプロパティ
 
-プロパティ アイコン（![ プロパティ アイコン）を選択します。](/help/images/icons/properties.png)）を右側のパネルで開き、プロパティパネルを開きます。 [!UICONTROL Properties] パネルで、[!UICONTROL Widget title] テキストフィールドにウィジェットの名前を入力します。
+プロパティ アイコン（![&#x200B; プロパティ アイコン）を選択します。](/help/images/icons/properties.png)）を右側のパネルで開き、プロパティパネルを開きます。 [!UICONTROL Properties] パネルで、[!UICONTROL Widget title] テキストフィールドにウィジェットの名前を入力します。
 
-![ プロパティアイコンとウィジェットタイトルフィールドがハイライト表示されたプロパティパネル。](./images/standard-dashboards/properties-panel.png)
+![&#x200B; プロパティアイコンとウィジェットタイトルフィールドがハイライト表示されたプロパティパネル。](./images/standard-dashboards/properties-panel.png)
 
 ウィジェットのプロパティパネルでは、ウィジェットの様々な側面を編集できます。 ウィジェットの凡例の場所を編集するための完全な制御が可能です。 凡例を移動するには、[!UICONTROL Legend placement] ドロップダウンを選択し、使用可能なオプションのリストから目的の場所を選択します。 また、凡例に関連付けられているラベル、およびX軸またはY軸の名前を、それぞれ[!UICONTROL Legend title] テキストフィールドまたは[!UICONTROL Axis label] テキストフィールドに新しい名前を入力して変更することもできます。
 
@@ -150,11 +150,11 @@ Data Distiller SKUを購入したユーザーは、カスタム SQL クエリを
 
 >[!TIP]
 >
->プロパティ アイコン（![ プロパティ アイコン）を選択します。ダッシュボード名の横にある](/help/images/icons/properties.png)）をクリックして、作成に関する詳細を確認します。 表示されるダイアログで、ダッシュボードの名前を変更できます。
+>プロパティ アイコン（![&#x200B; プロパティ アイコン）を選択します。ダッシュボード名の横にある](/help/images/icons/properties.png)）をクリックして、作成に関する詳細を確認します。 表示されるダイアログで、ダッシュボードの名前を変更できます。
 
 このワークスペース内で、ウィジェットを並べ替えたり、サイズを変更したりできます。 ダッシュボード名と設定されたレイアウトを保持するには、**[!UICONTROL Save]**&#x200B;を選択します。
 
-![ カスタムウィジェットと保存ボタンがハイライト表示されたユーザー定義ダッシュボード。](./images/standard-dashboards/user-defined-dashboard.png)
+![&#x200B; カスタムウィジェットと保存ボタンがハイライト表示されたユーザー定義ダッシュボード。](./images/standard-dashboards/user-defined-dashboard.png)
 
 Adobe Real-Time Customer Data Platform インサイトダッシュボードの各クエリに効率的に実行するのに十分なリソースを確保するために、APIは各クエリに同時実行スロットを割り当てることで、リソースの使用状況を追跡します。 システムは最大4つの同時クエリを処理できるため、任意の時点で4つの同時クエリスロットを利用できます。 クエリは同時実行スロットに基づいてキューに入れられ、十分な同時実行スロットが使用可能になるまでキュー内で待機します。
 
@@ -182,7 +182,7 @@ Adobe Real-Time Customer Data Platform インサイトダッシュボードの�
 
 このドキュメントでは、カスタムダッシュボードの作成方法と、そのダッシュボードのカスタムウィジェットの作成、編集、更新の方法について詳しく説明します。
 
-[ プロファイル ](./guides/profiles.md#standard-widgets)、[ セグメント ](./guides/audiences.md#standard-widgets)、[宛先](./guides/destinations.md#standard-widgets) ダッシュボードで使用できる事前設定済みの指標とビジュアライゼーションについては、それぞれのドキュメントの標準ウィジェットのリストを参照してください。
+[&#x200B; プロファイル &#x200B;](./guides/profiles.md#standard-widgets)、[&#x200B; セグメント &#x200B;](./guides/audiences.md#standard-widgets)、[宛先](./guides/destinations.md#standard-widgets) ダッシュボードで使用できる事前設定済みの指標とビジュアライゼーションについては、それぞれのドキュメントの標準ウィジェットのリストを参照してください。
 
 Experience Platformのダッシュボードについて理解を深めるには、次の動画をご覧ください。
 

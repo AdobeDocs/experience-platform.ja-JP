@@ -31,15 +31,15 @@ Azure上のExperience PlatformとAWSのどちらを選択するかは、ビジ�
 
 上記の要因を考慮すると、この簡素化された意思決定ツリーは、ビジネスニーズに適したクラウド実装を決定するのに役立ちます。
 
-![ ホスティング場所の地理的分布を示す画像。](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
+![&#x200B; ホスティング場所の地理的分布を示す画像。](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
 
 ## ホスト場所 {#available-cloud-regions}
 
 適切なクラウド地域を選択することは、データレジデンシー要件を満たし、最適なパフォーマンスを確保するために不可欠です。
 
-![ ホスティング場所の地理的分布を示す画像。](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
+![&#x200B; ホスティング場所の地理的分布を示す画像。](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platformは、6つのMicrosoft Azure ホスティング場所、1つのAmazon Web Services（AWS）ホスティング場所で利用でき、世界中に分散している7つの[Edge Network ノード ](../collection/home.md#edge)を通じてデータをAdobe サービスにルーティングします。
+Experience Platformは、6つのMicrosoft Azure ホスティング場所、1つのAmazon Web Services（AWS）ホスティング場所で利用でき、世界中に分散している7つの[Edge Network ノード &#x200B;](../collection/home.md#edge)を通じてデータをAdobe サービスにルーティングします。
 
 ### Microsoft Azure リージョン {#azure-regions}
 
@@ -83,7 +83,7 @@ Adobeは、次のようなExperience Platform上で動作するすべてのア�
 | 機能/能力 | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
 | [HIPAAへの準拠](https://www.adobe.com/trust/compliance/hipaa-ready.html) | サポートあり | サポートなし |
-| [ ソースコネクタのカタログ ](/help/sources/home.md) | ソースカタログ内のすべてのコネクタがサポートされています | ソースコネクタの数は限られています。 AWSの実装で使用できるソースコネクタは、それぞれのドキュメントページのページ上部のメモで呼び出されます。 |
+| [&#x200B; ソースコネクタのカタログ &#x200B;](/help/sources/home.md) | ソースカタログ内のすべてのコネクタがサポートされています | ソースコネクタの数は限られています。 AWSの実装で使用できるソースコネクタは、それぞれのドキュメントページのページ上部のメモで呼び出されます。 |
 
 {style="table-layout:auto"}
 

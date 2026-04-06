@@ -13,7 +13,7 @@ ht-degree: 10%
 
 [!UICONTROL Error Details] コレクションは、エラーの詳細を説明する標準のExperience Data Model （XDM） データ型です。 [!UICONTROL Error Details] コレクション データ型を使用して、エラーソースとIDの詳細を取得します。 エラーIDはエラーを識別し、エラーソースはプレーヤーまたは外部ソースから発生しているかどうかを指定します。
 
-![ エラーの詳細データ型の図。](../images/data-types/error-details-collection.png)
+![&#x200B; エラーの詳細データ型の図。](../images/data-types/error-details-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |----------------------------|--------------|-----------|----------|-----------------------------------------------|

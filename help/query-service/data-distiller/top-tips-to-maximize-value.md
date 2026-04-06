@@ -55,7 +55,7 @@ RFM モデルでは、3つの主要パラメータを使用して、取引行動
 
 ![CSVのアップロード、データの探索、RFM スコアのエンリッチ、オーディエンスのアクティブ化の4つの手順を示す、「RFM-Score-Based SQL Audience」というタイトルのインフォグラフィック。](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
-Luma ケーススタディを開始する前に、サンプルデータセットを取り込む必要があります。 まず、[ リンクを選択して`luma_web_data.zip` データセットをローカルにダウンロードします](../resources/luma_web_data.zip)。 サンプルデータセットは、ユースケースに合わせて圧縮.zip形式のcsv ファイルです。 Adobe Acrobatまたはオペレーティングシステムの組み込みユーティリティなどの信頼できるファイル抽出ツールを使用して、このZIP ファイルを解凍します。 実際には、通常、Adobe Analytics、Adobe Commerce、またはAdobe Web/Mobile SDKからデータを取得します。
+Luma ケーススタディを開始する前に、サンプルデータセットを取り込む必要があります。 まず、[&#x200B; リンクを選択して`luma_web_data.zip` データセットをローカルにダウンロードします](../resources/luma_web_data.zip)。 サンプルデータセットは、ユースケースに合わせて圧縮.zip形式のcsv ファイルです。 Adobe Acrobatまたはオペレーティングシステムの組み込みユーティリティなどの信頼できるファイル抽出ツールを使用して、このZIP ファイルを解凍します。 実際には、通常、Adobe Analytics、Adobe Commerce、またはAdobe Web/Mobile SDKからデータを取得します。
 
 このチュートリアルでは、Data Distillerを使用して、関連するイベントとフィールドを標準化されたCSV フォーマットに抽出します。 目標は、効率と使いやすさを高めるために、フラットなデータ構造を維持しながら、必須フィールドのみを含めることです。
 
@@ -71,13 +71,13 @@ Experience Platform UIで、左側のナビゲーションパネルで「**[!UIC
 
 [!UICONTROL Add data] パネルが表示されます。 CSV ファイルを&#x200B;**[!UICONTROL Add data]** ボックスにドラッグ&amp;ドロップするか、**[!UICONTROL Choose File]**&#x200B;を選択してファイルを参照し、アップロードします。
 
-このプロセスについて詳しくは、データセット UI ガイドの[ バッチ取り込みチュートリアル ](../../ingestion/tutorials/ingest-batch-data.md)と[ データセット作成ワークフロー](../../catalog/datasets/user-guide.md#create)を参照してください。
+このプロセスについて詳しくは、データセット UI ガイドの[&#x200B; バッチ取り込みチュートリアル &#x200B;](../../ingestion/tutorials/ingest-batch-data.md)と[&#x200B; データセット作成ワークフロー](../../catalog/datasets/user-guide.md#create)を参照してください。
 
 #### アップロードの確認と完了 {#review-and-complete-upload}
 
 ファイルがアップロードされると、UIの下部にデータプレビューが表示されます。 **[!UICONTROL Finish]**&#x200B;を選択してアップロードを完了します。
 
-![ データプレビューと「完了」がハイライト表示された「CSV ファイルからデータセットを作成」ワークフローの「データの追加」セクション。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
+![&#x200B; データプレビューと「完了」がハイライト表示された「CSV ファイルからデータセットを作成」ワークフローの「データの追加」セクション。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 「luma_web_data」データセットのデータセットアクティビティビューが表示されます。 CSV ファイルの手動アップロード
 はバッチとして取り込まれ、[!UICONTROL Batch ID]によって識別されます。 右側のパネルには、テーブル名が`luma_web_data`として表示されます。
@@ -95,7 +95,7 @@ My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix
 
 データの処理が完了したら、右上隅の[!UICONTROL Preview dataset]を選択して、データセットをプレビューします。 データセットのプレビューは次のように表示されます。
 
-![ 「luma_web_data」データセットのデータセットプレビュー。](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
+![&#x200B; 「luma_web_data」データセットのデータセットプレビュー。](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
 #### スキーマの考慮事項 {#schema-considerations}
 
@@ -131,7 +131,7 @@ SELECT * FROM luma_web_data;
 
 ![基本的なクエリの探索結果のクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
-詳しくは、[ クエリ実行の一般的なガイダンス ](../best-practices/writing-queries.md)文書を参照してください。
+詳しくは、[&#x200B; クエリ実行の一般的なガイダンス &#x200B;](../best-practices/writing-queries.md)文書を参照してください。
 
 #### 注文を重視し、キャンセルされた取引を除外 {#focus-orders-exclude-cancelled}
 
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS order_data AS
 
 結果は次の画像に似ていますが、データセット IDが異なります。
 
-![ 「派生データセットを作成」クエリのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
+![&#x200B; 「派生データセットを作成」クエリのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
 
 ベストプラクティスとして、単純な探索クエリを実行して、データセット内のデータを検査します。 データを表示するには、次のステートメントを使用します。
 
@@ -227,7 +227,7 @@ CREATE TABLE IF NOT EXISTS order_data AS
 SELECT * FROM order_data;
 ```
 
-![ データ クエリを検査するためのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
+![&#x200B; データ クエリを検査するためのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
 
 #### RFM値を生成するトランザクションを集計します {#aggregate-transactions}
 
@@ -336,7 +336,7 @@ AS
 
 結果は次の画像に似ていますが、ビューIDが異なります。
 
-![ 「rfm_scores」ビューのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
+![&#x200B; 「rfm_scores」ビューのクエリ結果ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### RFM セグメントのモデル化 {#model-rfm-segments}
 
@@ -441,7 +441,7 @@ SELECT * FROM rfm_model_segment;
 >
 >「メール」名前空間は、Adobe Experience Platformの[標準ID名前空間](../../identity-service/features/namespaces.md#standard)です。 ID フィールドを定義する場合は、正確なID解決を容易にするために、適切な名前空間が指定されていることを確認&#x200B;ます。
 >
->ID フィールドの定義とID名前空間の操作について詳しくは、[Identity Service ドキュメント ](../../identity-service/home.md)または[Adobe Experience Platform UI](../../xdm/ui/fields/identity.md)でのID フィールドの定義に関するガイドを参照してください。
+>ID フィールドの定義とID名前空間の操作について詳しくは、[Identity Service ドキュメント &#x200B;](../../identity-service/home.md)または[Adobe Experience Platform UI](../../xdm/ui/fields/identity.md)でのID フィールドの定義に関するガイドを参照してください。
 
 クエリエディターは順次実行をサポートしているので、テーブル作成とデータ挿入クエリを1つのセッションに含めることができます。 次のSQLは、最初にRFM属性を格納するプロファイル対応テーブルを作成します。 次に、RFMが強化された顧客データを`rfm_model_segment`から`adls_rfm_profile` テーブルに挿入し、Real-Time Customer Profileの取り込みに必要なテナント固有の名前空間の下の各レコードを構造化します。
 
@@ -473,11 +473,11 @@ FROM rfm_model_segment;
 
 データセットを作成した後、**[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile`に移動して、データセットが空であることを確認します。
 
-![ 「adls_rfm_profile」データセットの詳細が表示され、プロファイルが有効になっている切り替えがハイライト表示されたデータセットワークスペース。](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
+![&#x200B; 「adls_rfm_profile」データセットの詳細が表示され、プロファイルが有効になっている切り替えがハイライト表示されたデータセットワークスペース。](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
 **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile`に移動して、新しく作成されたデータセットのXDM個人プロファイルスキーマダイアグラムと、そのカスタムフィールドグループを表示することもできます。
 
-![ スキーマキャンバスに「adls_rfm_profile」図が表示されているXDM ワークスペース。](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
+![&#x200B; スキーマキャンバスに「adls_rfm_profile」図が表示されているXDM ワークスペース。](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
 #### 新しく作成した派生データセットにデータを挿入する {#insert-data-into-derived-dataset}
 
@@ -512,9 +512,9 @@ SQLを保存した後、**[!UICONTROL Templates]** タブに移動して、保�
 
 または、テンプレート名の下にある「**[!UICONTROL Schedules]**」タブを選択し、「**[!UICONTROL Add Schedule]**」を選択します。
 
-![ スケジュールの追加がハイライト表示されたクエリワークスペースの「スケジュール」タブ。](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
+![&#x200B; スケジュールの追加がハイライト表示されたクエリワークスペースの「スケジュール」タブ。](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
-クエリのスケジュール設定について詳しくは、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md)を参照してください。
+クエリのスケジュール設定について詳しくは、[&#x200B; クエリスケジュールのドキュメント &#x200B;](../ui/query-schedules.md)を参照してください。
 
 [!UICONTROL Schedule details] ビューが表示されます。 ここから、次の詳細を入力してスケジュールを設定します。
 
@@ -527,7 +527,7 @@ SQLを保存した後、**[!UICONTROL Templates]** タブに移動して、保�
 
 ![設定が設定され、保存が強調表示されたスケジュールの詳細。](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-スケジュールを保存したら、任意の時点で「**[!UICONTROL Scheduled Queries]**」タブに移動して、スケジュールされたData Distiller ジョブを監視できます。 [ クエリ実行ステータス、エラーメッセージ、アラートの表示](../ui/monitor-queries.md)について詳しくは、スケジュールされたクエリの監視ドキュメントを参照してください。
+スケジュールを保存したら、任意の時点で「**[!UICONTROL Scheduled Queries]**」タブに移動して、スケジュールされたData Distiller ジョブを監視できます。 [&#x200B; クエリ実行ステータス、エラーメッセージ、アラートの表示](../ui/monitor-queries.md)について詳しくは、スケジュールされたクエリの監視ドキュメントを参照してください。
 
 設定が完了すると、SQL クエリは定義された間隔で自動的に実行され、手動の介入なしにデータが最新の状態に保たれます。
 
@@ -546,13 +546,13 @@ SQLを保存した後、**[!UICONTROL Templates]** タブに移動して、保�
 
 新しいオーディエンスを定義するには、`CREATE AUDIENCE AS SELECT` コマンドを使用します。 作成されたオーディエンスはデータセットに保存され、**[!UICONTROL Audiences]**&#x200B;の下の&#x200B;**[!UICONTROL Data Distiller]** ワークスペースに登録されます。
 
-SQL拡張機能を使用して作成されたオーディエンスは、[!UICONTROL Data Distiller] ワークスペースの[!UICONTROL Audiences] オリジンに自動的に登録されます。 [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md)から、必要に応じてオーディエンスを表示、管理、アクティブ化できます。
+SQL拡張機能を使用して作成されたオーディエンスは、[!UICONTROL Data Distiller] ワークスペースの[!UICONTROL Audiences] オリジンに自動的に登録されます。 [&#x200B; オーディエンスポータル &#x200B;](../../segmentation/ui/audience-portal.md)から、必要に応じてオーディエンスを表示、管理、アクティブ化できます。
 
 ![利用可能なオーディエンスを表示するオーディエンスポータル。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![ フィルターのサイドバーとData Distillerを選択した状態で利用可能なオーディエンスを表示するオーディエンスポータル。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![&#x200B; フィルターのサイドバーとData Distillerを選択した状態で利用可能なオーディエンスを表示するオーディエンスポータル。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
-SQL オーディエンスについて詳しくは、[Data Distiller Audiences ドキュメント ](../data-distiller-audiences/overview.md)を参照してください。 UIでオーディエンスを管理する方法については、[ オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#audience-list)を参照してください。
+SQL オーディエンスについて詳しくは、[Data Distiller Audiences ドキュメント &#x200B;](../data-distiller-audiences/overview.md)を参照してください。 UIでオーディエンスを管理する方法については、[&#x200B; オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#audience-list)を参照してください。
 
 #### オーディエンスの作成 {#create-an-audience}
 
@@ -657,21 +657,21 @@ RFM属性を使用して、ユーザーの行動や特徴にもとづいてユ�
 
 新しいオーディエンスを作成するには、右上隅の「**[!UICONTROL Create Audience]**」を選択します。 2つのオプションを含むダイアログボックスが表示されます。 **[!UICONTROL Build Rule]**&#x200B;を選択し、その後に&#x200B;**[!UICONTROL Create]**&#x200B;を選択します。
 
-![ ビルドルールを選択してハイライト表示されたオーディエンスを作成ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
+![&#x200B; ビルドルールを選択してハイライト表示されたオーディエンスを作成ダイアログ。](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
 オーディエンス構成UIでは、プロファイル属性にアクセスできます。 **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]**&#x200B;に移動して、使用可能な属性を表示します。
 
-オーディエンス構成の使用について詳しくは、[ オーディエンス構成UI ガイド ](../../segmentation/ui/audience-composition.md)を参照してください。 セグメントビルダーの使用について詳しくは、[ セグメントビルダーUI ガイド ](../../segmentation/ui/segment-builder.md)を参照してください。
+オーディエンス構成の使用について詳しくは、[&#x200B; オーディエンス構成UI ガイド &#x200B;](../../segmentation/ui/audience-composition.md)を参照してください。 セグメントビルダーの使用について詳しくは、[&#x200B; セグメントビルダーUI ガイド &#x200B;](../../segmentation/ui/segment-builder.md)を参照してください。
 
 ![XDM個人プロファイル属性を含むオーディエンス構成UIを利用できます。](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)
 
 Data Distillerで作成されたカスタム属性は、サンドボックス名の横に表示されるテナント名前空間名に一致するフォルダーに保存されます。 これらの属性は、オーディエンスのセグメント化基準の定義に使用できます。
 
-![ オーディエンス構成UIに表示されるカスタム属性。](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)
+![&#x200B; オーディエンス構成UIに表示されるカスタム属性。](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)
 
 RFM属性を使用してオーディエンスを構築するには、`Rfm_Model`属性をAudience Composerにドラッグ&amp;ドロップします。 これらの属性は、Edge、ストリーミング、バッチオーディエンスに使用できます。
 
-![ オーディエンス構成UIでオーディエンスを作成しています。](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
+![&#x200B; オーディエンス構成UIでオーディエンスを作成しています。](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
 オーディエンスを確定するには、右上隅の「**[!UICONTROL Save and Publish]**」を選択します。 保存後、新しく作成されたオーディエンスが[!UICONTROL Audiences] ワークスペースに表示され、その概要と条件を確認できます。
 

@@ -41,11 +41,11 @@ ht-degree: 0%
 
 プライベートリンクの使用を開始するには、Experience Platform UIの&#x200B;*[!UICONTROL Sources]* カタログに移動し、ソースワークスペースのタブのメニューから&#x200B;**[!UICONTROL Private endpoints]**&#x200B;を選択します。
 
-![ 「プライベート エンドポイント」を持つソース カタログ。](../../images/tutorials/private-links/catalog.png)
+![&#x200B; 「プライベート エンドポイント」を持つソース カタログ。](../../images/tutorials/private-links/catalog.png)
 
 インターフェイスを使用して、ID、関連するソース、現在のステータスなど、既存のプライベートエンドポイントに関する情報を表示します。 新しいプライベートエンドポイントを作成するには、**[!UICONTROL Create private endpoint]**&#x200B;を選択します。
 
-![ 「プライベートエンドポイントを作成」が選択されたプライベートエンドポイントインターフェイス。](../../images/tutorials/private-links/private-endpoints.png)
+![&#x200B; 「プライベートエンドポイントを作成」が選択されたプライベートエンドポイントインターフェイス。](../../images/tutorials/private-links/private-endpoints.png)
 
 次に、必要なソースを選択し、次のプロパティの値を入力します。
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 終了したら「**[!UICONTROL Submit]**」を選択します。
 
-![ ソース UI ワークスペースで新しいプライベート エンドポイントを作成するための認証ウィンドウ。](../../images/tutorials/private-links/create-private-endpoint.png)
+![&#x200B; ソース UI ワークスペースで新しいプライベート エンドポイントを作成するための認証ウィンドウ。](../../images/tutorials/private-links/create-private-endpoint.png)
 
 ### プライベートエンドポイントの承認
 
@@ -78,11 +78,11 @@ ht-degree: 0%
 >
 >「[!UICONTROL Private endpoint]」オプションが有効になっている場合、Experience Platformは、選択したソースに承認済みのプライベートエンドポイントが存在するかどうかを確認します。 承認されたエンドポイントが見つからない場合は、接続を確立できません。
 
-![ プライベートエンドポイントを有効にした新しいアカウント認証ステップ。](../../images/tutorials/private-links/new-account.png)
+![&#x200B; プライベートエンドポイントを有効にした新しいアカウント認証ステップ。](../../images/tutorials/private-links/new-account.png)
 
-次に、ソースの[!UICONTROL Existing account] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![ フィルターアイコン ](../../../images/icons/filter.png)を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
+次に、ソースの[!UICONTROL Existing account] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![&#x200B; フィルターアイコン &#x200B;](../../../images/icons/filter.png)を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
 
-![ ソースワークフローの既存のアカウントインターフェイスには、プライベートエンドポイント接続に対して有効になっているフィルタリングされたアカウントのみが表示されます。](../../images/tutorials/private-links/existing-private-endpoints.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイスには、プライベートエンドポイント接続に対して有効になっているフィルタリングされたアカウントのみが表示されます。](../../images/tutorials/private-links/existing-private-endpoints.png)
 
 使用するアカウントを選択し、**[!UICONTROL Interactive Authoring]**&#x200B;を有効にします。 この切り替えにより、接続をテストし、フォルダーリストを参照し、データをプレビューできる[!UICONTROL Interactive Authoring]機能である[!DNL Azure]がアクティブになります。 プライベート エンドポイント接続には[!UICONTROL Interactive Authoring]を有効にする必要があります。 このトグルを手動でオフにすることはできません。60分後に自動的にオフになります。
 

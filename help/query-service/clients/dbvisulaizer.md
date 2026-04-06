@@ -17,9 +17,9 @@ ht-degree: 3%
 
 ## はじめに
 
-このガイドでは、[!DNL DbVisualizer] Desktop アプリに既にアクセスしており、そのインターフェイスの操作方法に精通している必要があります。[!DNL DbVisualizer] デスクトップアプリをダウンロードするか、詳細については、[公式 [!DNL DbVisualizer]  ドキュメント ](https://www.dbvis.com/download/)を参照してください。
+このガイドでは、[!DNL DbVisualizer] Desktop アプリに既にアクセスしており、そのインターフェイスの操作方法に精通している必要があります。[!DNL DbVisualizer] デスクトップアプリをダウンロードするか、詳細については、[公式 [!DNL DbVisualizer]  ドキュメント &#x200B;](https://www.dbvis.com/download/)を参照してください。
 
-[!DNL  DbVisualizer]をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UIのQueries ワークスペースにアクセスする必要があります。 現在クエリワークスペースにアクセスできない場合は、組織管理者にお問い合わせください。
+[!DNL &#x200B; DbVisualizer]をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UIのQueries ワークスペースにアクセスする必要があります。 現在クエリワークスペースにアクセスできない場合は、組織管理者にお問い合わせください。
 
 ## データベース接続の作成 {#connect-database}
 
@@ -29,13 +29,13 @@ ht-degree: 3%
 
 ### 接続のドライバープロパティの設定 {#properties}
 
-「[!DNL PostgreSQL] オブジェクト表示」タブから、「**[!DNL Properties]**」タブを選択し、ナビゲーションサイドバーから「**[!DNL Driver Properties]**」を選択します。 [ ドライバーのプロパティ ](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties)の詳細については、公式ドキュメントを参照してください。
+「[!DNL PostgreSQL] オブジェクト表示」タブから、「**[!DNL Properties]**」タブを選択し、ナビゲーションサイドバーから「**[!DNL Driver Properties]**」を選択します。 [&#x200B; ドライバーのプロパティ &#x200B;](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties)の詳細については、公式ドキュメントを参照してください。
 
 次に、以下の表に記載されているドライバプロパティを入力します。
 
 >[!IMPORTANT]
 >
->DBVisualizerとAdobe Experience Platformを接続するには、SSLの使用を有効にする必要があります。 Adobe Experience Platform Query Serviceへのサードパーティ接続に対するSSL サポートと、[ SSL モードを使用して接続する方法については、](./ssl-modes.md)SSL モードのドキュメント `verify-full`を参照してください。
+>DBVisualizerとAdobe Experience Platformを接続するには、SSLの使用を有効にする必要があります。 Adobe Experience Platform Query Serviceへのサードパーティ接続に対するSSL サポートと、[&#x200B; SSL モードを使用して接続する方法については、](./ssl-modes.md)SSL モードのドキュメント `verify-full`を参照してください。
 
 | プロパティ | 説明 |
 | ------ | ------ |
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 ### 入力クエリサービス資格情報 {#query-service-credentials}
 
-BBVisualizerとQuery Serviceの接続に必要な資格情報を見つけるには、Experience Platform UIにログインし、左側のナビゲーションから「**[!UICONTROL Queries]**」を選択し、その後「**[!UICONTROL Credentials]**」を選択します。 **ホスト**、**ポート**、**データベース**、**ユーザー名**&#x200B;および&#x200B;**パスワード**&#x200B;の資格情報の検索について詳しくは、[資格情報ガイド ](../ui/credentials.md)を参照してください。
+BBVisualizerとQuery Serviceの接続に必要な資格情報を見つけるには、Experience Platform UIにログインし、左側のナビゲーションから「**[!UICONTROL Queries]**」を選択し、その後「**[!UICONTROL Credentials]**」を選択します。 **ホスト**、**ポート**、**データベース**、**ユーザー名**&#x200B;および&#x200B;**パスワード**&#x200B;の資格情報の検索について詳しくは、[資格情報ガイド &#x200B;](../ui/credentials.md)を参照してください。
 
 ![資格情報と期限切れの資格情報がハイライト表示されたExperience Platform Queries ワークスペースの資格情報ページ。](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -91,4 +91,4 @@ BBVisualizerとQuery Serviceの接続に必要な資格情報を見つけるに�
 
 ## 次の手順
 
-[!DNL DbVisualizer]を[!DNL Query Service]に接続したので、[!DNL DbVisualizer]を使用してクエリを作成できます。 クエリの作成方法と実行方法について詳しくは、[ クエリ実行に関するガイド ](../best-practices/writing-queries.md)を参照してください。
+[!DNL DbVisualizer]を[!DNL Query Service]に接続したので、[!DNL DbVisualizer]を使用してクエリを作成できます。 クエリの作成方法と実行方法について詳しくは、[&#x200B; クエリ実行に関するガイド &#x200B;](../best-practices/writing-queries.md)を参照してください。

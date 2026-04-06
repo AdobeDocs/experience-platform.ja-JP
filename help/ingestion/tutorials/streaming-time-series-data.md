@@ -22,7 +22,7 @@ ht-degree: 57%
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]がエクスペリエンスデータを整理するための標準化されたフレームワークです。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集約データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [Schema Registry開発者ガイド ](../../xdm/api/getting-started.md): [!DNL Schema Registry] APIの利用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法について説明する包括的なガイドです。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取り込み用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [Schema Registry開発者ガイド &#x200B;](../../xdm/api/getting-started.md): [!DNL Schema Registry] APIの利用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法について説明する包括的なガイドです。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取り込み用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 

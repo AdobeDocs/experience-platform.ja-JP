@@ -15,7 +15,7 @@ ht-degree: 65%
 
 Adobe Experience Platform Batch Ingestion APIを使用すると、データをExperience Platformにバッチファイルとして取り込むことができます。 取り込むデータは、フラットファイル（Parquet ファイルなど）からのプロファイルデータ、または[!DNL Experience Data Model] （XDM） レジストリの既知のスキーマに準拠するデータです。
 
-これらのAPI呼び出しに関する追加情報は、[ バッチ取り込みAPI リファレンス ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)を参照してください。
+これらのAPI呼び出しに関する追加情報は、[&#x200B; バッチ取り込みAPI リファレンス &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)を参照してください。
 
 次の図に、バッチ取り込みプロセスの概要を示します。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform Batch Ingestion APIを使用すると、データをEx
 
 ## はじめに
 
-このガイドで使用されているAPI エンドポイントは、[ バッチ取り込みAPI](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)の一部です。 先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されているAPI エンドポイントは、[&#x200B; バッチ取り込みAPI](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)の一部です。 先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ### [!DNL Data Ingestion] 前提条件
 
@@ -146,7 +146,7 @@ Small File Upload APIを使用してファイルをアップロードできま�
 
 >[!NOTE]
 >
->バッチ取り込みは、プロファイルストアのデータを段階的に更新するために使用できます。 詳細については、[ バッチ取り込み開発者ガイド ](#patch-a-batch)の[ バッチの更新](api-overview.md)に関する節を参照してください。
+>バッチ取り込みは、プロファイルストアのデータを段階的に更新するために使用できます。 詳細については、[&#x200B; バッチ取り込み開発者ガイド &#x200B;](#patch-a-batch)の[&#x200B; バッチの更新](api-overview.md)に関する節を参照してください。
 
 >[!INFO]
 >

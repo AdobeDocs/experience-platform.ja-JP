@@ -17,8 +17,8 @@ ht-degree: 52%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; ソース &#x200B;](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 次の節では、[!DNL Mixpanel] APIを使用して[!DNL Flow Service]に正常に接続するために知っておく必要がある追加情報を示します。
 
@@ -28,10 +28,10 @@ ht-degree: 52%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `username` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントに関するドキュメント ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account)を参照してください。 | `Test8.6d4ee7.mp-service-account` |
+| `username` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのユーザー名。 詳しくは、[[!DNL Mixpanel]  サービスアカウントに関するドキュメント &#x200B;](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account)を参照してください。 | `Test8.6d4ee7.mp-service-account` |
 | `password` | [!DNL Mixpanel] アカウントに対応するサービス アカウントのパスワード。 | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | [!DNL Mixpanel] プロジェクト ID。 このIDは、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)および[[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド ](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects)を参照してください。 | `2384945` |
-| `timezone` | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)を参照してください。 | `Pacific Standard Time` |
+| `projectId` | [!DNL Mixpanel] プロジェクト ID。 このIDは、ソース接続を作成するために必要です。 詳しくは、[[!DNL Mixpanel]  プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)および[[!DNL Mixpanel]  プロジェクトの作成と管理に関するガイド &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects)を参照してください。 | `2384945` |
+| `timezone` | [!DNL Mixpanel] プロジェクトに対応するタイムゾーン。 ソース接続を作成するにはタイムゾーンが必要です。 詳しくは、[Mixpanel プロジェクト設定ドキュメント &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)を参照してください。 | `Pacific Standard Time` |
 
 [!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要](../../../../connectors/analytics/mixpanel.md)を参照してください。
 

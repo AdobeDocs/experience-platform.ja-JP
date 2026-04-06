@@ -16,7 +16,7 @@ ht-degree: 40%
 
 このドキュメントでは、Adobe Experience Platform [!DNL Query Service]でクエリを作成する際に知っておくべき重要な詳細について説明します。
 
-[!DNL Query Service]で使用されるSQL構文について詳しくは、[SQL構文ドキュメント ](../sql/syntax.md)を参照してください。
+[!DNL Query Service]で使用されるSQL構文について詳しくは、[SQL構文ドキュメント &#x200B;](../sql/syntax.md)を参照してください。
 
 ## クエリ実行モデル
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 重複の除外
 
-Query Serviceは、データの重複排除、またはデータから重複する行の削除をサポートしています。 重複排除について詳しくは、[ クエリサービス重複排除ガイド ](../key-concepts/deduplication.md)を参照してください。
+Query Serviceは、データの重複排除、またはデータから重複する行の削除をサポートしています。 重複排除について詳しくは、[&#x200B; クエリサービス重複排除ガイド &#x200B;](../key-concepts/deduplication.md)を参照してください。
 
 ## クエリサービスのタイムゾーン計算
 

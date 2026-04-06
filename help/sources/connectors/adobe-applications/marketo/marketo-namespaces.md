@@ -13,9 +13,9 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->- B2B スキーマを[ リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md)で選定するには、[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md)へのアクセス権が必要です。
+>- B2B スキーマを[&#x200B; リアルタイム顧客プロファイル &#x200B;](../../../../rtcdp/b2b-overview.md)で選定するには、[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md)へのアクセス権が必要です。
 >
->- 2026年1月以降、Real-Time CDP B2B editionでは、B2B エンティティ間の&#x200B;**非標準**&#x200B;関係がサポートされなくなります。 したがって、[B2B名前空間およびスキーマガイド ](../../../../rtcdp/schemas/b2b.md)に記載されている標準の関係を使用するように、B2B エンティティを更新することをお勧めします。
+>- 2026年1月以降、Real-Time CDP B2B editionでは、B2B エンティティ間の&#x200B;**非標準**&#x200B;関係がサポートされなくなります。 したがって、[B2B名前空間およびスキーマガイド &#x200B;](../../../../rtcdp/schemas/b2b.md)に記載されている標準の関係を使用するように、B2B エンティティを更新することをお勧めします。
 
 >[!NOTE]
 >
@@ -31,9 +31,9 @@ ht-degree: 12%
 
 B2B名前空間およびスキーマ自動生成ユーティリティをサポートするように[!DNL Postman]環境を設定する方法の前提条件については、次のドキュメントを参照してください。
 
-- 名前空間とスキーマ自動生成ユーティリティのコレクションと環境は、この[GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)からダウンロードできます。
+- 名前空間とスキーマ自動生成ユーティリティのコレクションと環境は、この[GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)からダウンロードできます。
 - 必要なヘッダーの値を収集し、サンプル API呼び出しを読み取る方法など、Experience Platform APIの使用方法について詳しくは、[Experience Platform APIの概要](../../../../landing/api-guide.md)に関するガイドを参照してください。
-- Experience Platform APIの資格情報を生成する方法について詳しくは、[Experience Platform APIの認証とアクセス ](../../../../landing/api-authentication.md)に関するチュートリアルを参照してください。
+- Experience Platform APIの資格情報を生成する方法について詳しくは、[Experience Platform APIの認証とアクセス &#x200B;](../../../../landing/api-authentication.md)に関するチュートリアルを参照してください。
 - Experience Platform API用の[!DNL Postman]の設定方法について詳しくは、[開発者向けコンソールの設定および [!DNL Postman]](../../../../landing/postman.md)に関するチュートリアルを参照してください。
 
 Experience Platform開発者コンソールと[!DNL Postman]の設定が完了したら、[!DNL Postman]環境に適切な環境値を適用できるようになりました。
@@ -112,13 +112,13 @@ Experience Platform では、スキーマを使用して、一貫性のある再
 
 | スキーマ名 | ベースクラス | フィールドグループ | スキーマの[!DNL Profile] | プライマリ ID | プライマリ ID 名前空間 | セカンダリID | セカンダリID名前空間 | 関係 | メモ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| B2B アカウント | [XDM ビジネスアカウント ](../../../../xdm/classes/b2b/business-account.md) | XDM ビジネスアカウントの詳細 | 有効 | 基本クラスの`accountKey.sourceKey` | B2B アカウント | 基本クラスの`extSourceSystemAudit.externalKey.sourceKey` | B2B アカウント | <ul><li>XDM ビジネスアカウント詳細フィールドグループの`accountParentKey.sourceKey`</li><li>宛先プロパティ：`/accountKey/sourceKey`</li><li>タイプ：1対1</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li></ul> |  |
+| B2B アカウント | [XDM ビジネスアカウント &#x200B;](../../../../xdm/classes/b2b/business-account.md) | XDM ビジネスアカウントの詳細 | 有効 | 基本クラスの`accountKey.sourceKey` | B2B アカウント | 基本クラスの`extSourceSystemAudit.externalKey.sourceKey` | B2B アカウント | <ul><li>XDM ビジネスアカウント詳細フィールドグループの`accountParentKey.sourceKey`</li><li>宛先プロパティ：`/accountKey/sourceKey`</li><li>タイプ：1対1</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li></ul> |  |
 | B2B人物 | [XDM 個人プロファイル](../../../../xdm/classes/individual-profile.md) | <ul><li>XDM ビジネスパーソンの詳細</li><li>XDM ビジネスパーソンのコンポーネント</li><li>identityMap</li><li>同意と環境設定の詳細</li></ul> | 有効 | XDM ビジネス担当者詳細フィールドグループの`b2b.personKey.sourceKey` | B2B人物 | <ol><li>XDM ビジネス担当者詳細フィールド グループの`extSourceSystemAudit.externalKey.sourceKey`</li><li>XDM ビジネス担当者詳細フィールド グループの`workEmail.address`</ol></li> | <ol><li>B2B人物</li><li>メール</li></ol> | <ul><li>XDM ビジネス担当者コンポーネント フィールド グループの`personComponents.sourceAccountKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li><li>宛先プロパティ：accountKey.sourceKey</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：人物</li></ul> |  |
 | B2B オポチュニティ | [XDM ビジネス機会](../../../../xdm/classes/b2b/business-opportunity.md) | XDM ビジネスオポチュニティの詳細 | 有効 | 基本クラスの`opportunityKey.sourceKey` | B2B オポチュニティ | 基本クラスの`extSourceSystemAudit.externalKey.sourceKey` | B2B オポチュニティ | <ul><li>基本クラスの`accountKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li><li>宛先プロパティ：`accountKey.sourceKey`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：商談</li></ul> |  |
 | B2B オポチュニティと人物の関係 | [XDM ビジネスオポチュニティ人物との関係](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) | なし | 有効 | 基本クラスの`opportunityPersonKey.sourceKey` | B2B オポチュニティと人物の関係 | | | **最初の関係**<ul><li>基本クラスの`personKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B人物</li><li>名前空間：B2B Person</li><li>宛先プロパティ：b2b.personKey.sourceKey</li><li>現在のスキーマからの関係名：人物</li><li>参照スキーマからの関係名：商談</li></ul>**2番目の関係**<ul><li>基本クラスの`opportunityKey.sourceKey`</li><li>タイプ：多対一</li><li>リファレンススキーマ：B2B Opportunity </li><li>名前空間：B2B オポチュニティ </li><li>宛先プロパティ：`opportunityKey.sourceKey`</li><li>現在のスキーマからの関係名：商談</li><li>参照スキーマからの関係名：人物</li></ul> | |
-| B2B キャンペーン | [XDM ビジネスキャンペーン ](../../../../xdm/classes/b2b/business-campaign.md) | XDM ビジネスキャンペーンの詳細 | 有効 | 基本クラスの`campaignKey.sourceKey` | B2B キャンペーン | | | | |
+| B2B キャンペーン | [XDM ビジネスキャンペーン &#x200B;](../../../../xdm/classes/b2b/business-campaign.md) | XDM ビジネスキャンペーンの詳細 | 有効 | 基本クラスの`campaignKey.sourceKey` | B2B キャンペーン | | | | |
 | B2B キャンペーンメンバー | [XDM ビジネスキャンペーンメンバー](../../../../xdm/classes/b2b/business-campaign-members.md) | XDM ビジネスキャンペーンメンバーの詳細 | 有効 | 基本クラスの`ccampaignMemberKey.sourceKey` | B2B キャンペーンメンバー | | | **最初の関係**<ul><li>基本クラスの`personKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B人物</li><li>名前空間：B2B Person</li><li>宛先プロパティ：`b2b.personKey.sourceKey`</li><li>現在のスキーマからの関係名：人物</li><li>参照スキーマからの関係名：Campaigns</li></ul>**2番目の関係**<ul><li>基本クラスの`campaignKey.sourceKey`</li><li>タイプ：多対一</li><li>リファレンススキーマ：B2B キャンペーン</li><li>名前空間：B2B キャンペーン</li><li>宛先プロパティ：`campaignKey.sourceKey`</li><li>現在のスキーマからの関係名：Campaign</li><li>参照スキーマからの関係名：人物</li></ul> |  |
-| B2B マーケティングリスト | [XDM ビジネスマーケティングリスト ](../../../../xdm/classes/b2b/business-marketing-list.md) | なし | 有効 | 基本クラスの`marketingListKey.sourceKey` | B2B マーケティングリスト | なし | なし | なし | 静的リストは[!DNL Salesforce]から同期されていないため、セカンダリ IDがありません。 |
+| B2B マーケティングリスト | [XDM ビジネスマーケティングリスト &#x200B;](../../../../xdm/classes/b2b/business-marketing-list.md) | なし | 有効 | 基本クラスの`marketingListKey.sourceKey` | B2B マーケティングリスト | なし | なし | なし | 静的リストは[!DNL Salesforce]から同期されていないため、セカンダリ IDがありません。 |
 | B2B マーケティングリストメンバー | [XDM ビジネスマーケティングリストのメンバー](../../../../xdm/classes/b2b/business-marketing-list-members.md) | なし | 有効 | 基本クラスの`marketingListMemberKey.sourceKey` | B2B マーケティングリストメンバー | なし | なし | **最初の関係**<ul><li>基本クラスの`PersonKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B人物</li><li>名前空間：B2B Person</li><li>宛先プロパティ：`b2b.personKey.sourceKey`</li><li>現在のスキーマからの関係名：人物</li><li>参照スキーマからの関係名：マーケティングリスト</li></ul>**2番目の関係**<ul><li>基本クラスの`marketingListKey.sourceKey`</li><li>タイプ：多対一</li><li>リファレンススキーマ：B2B マーケティングリスト</li><li>名前空間：B2B マーケティングリスト</li><li>宛先プロパティ：`marketingListKey.sourceKey`</li><li>現在のスキーマからの関係名：マーケティングリスト</li><li>参照スキーマからの関係名：人物</li></ul> | 静的リスト メンバーは[!DNL Salesforce]から同期されていないため、セカンダリ IDがありません。 |
 | B2B アカウントと人物の関係 | [XDM ビジネスアカウント人物の関係](../../../../xdm/classes/b2b/business-account-person-relation.md) | ID マップ | 有効 | 基本クラスの`accountPersonKey.sourceKey` | B2B アカウントと人物の関係 | なし | なし | **最初の関係**<ul><li>基本クラスの`personKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B人物</li><li>名前空間：B2B Person</li><li>宛先プロパティ：`b2b.personKey.SourceKey`</li><li>現在のスキーマからの関係名：人物</li><li>参照スキーマからの関係名：アカウント</li></ul>**2番目の関係**<ul><li>基本クラスの`accountKey.sourceKey`</li><li>タイプ：多対一</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li><li>宛先プロパティ：`accountKey.sourceKey`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：人物</li></ul> |  |
 

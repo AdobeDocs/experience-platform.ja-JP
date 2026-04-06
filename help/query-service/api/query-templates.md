@@ -18,7 +18,7 @@ ht-degree: 44%
 
 次の節では、[!DNL Query Service] APIを使用して実行できるさまざまなAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
-Experience Platform UIを使用してテンプレートを作成する方法については、[UI クエリテンプレートのドキュメント ](../ui/query-templates.md)を参照してください。
+Experience Platform UIを使用してテンプレートを作成する方法については、[UI クエリテンプレートのドキュメント &#x200B;](../ui/query-templates.md)を参照してください。
 
 ### クエリテンプレートのリストの取得
 

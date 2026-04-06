@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >* DCS インレットを介したプロファイル更新のExperience Data Model （XDM） Entity Update メッセージ（JSON PATCH操作を含む）の取り込みは非推奨になりました。 代替案として、このガイドで説明した手順に従ってください。
 >
->* また、HTTP API ソースを使用して[生データをDCS インレット ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)に取り込み、必要なデータマッピングを指定して、データをXDM準拠のメッセージに変換してプロファイルを更新することもできます。
+>* また、HTTP API ソースを使用して[生データをDCS インレット &#x200B;](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)に取り込み、必要なデータマッピングを指定して、データをXDM準拠のメッセージに変換してプロファイルを更新することもできます。
 >
 >* ストリーミングアップサートで配列を使用する場合、操作の明確な意図を定義するために`upsert_array_append`または`upsert_array_replace`を明示的に使用する必要があります。 これらの関数が見つからない場合は、エラーが発生する可能性があります。
 
@@ -24,11 +24,11 @@ ht-degree: 3%
 
 アップサートをストリーミングすることで、取り込み中にデータを[!DNL Real-Time Customer Profile]件のPATCH リクエストに変換する際に、データのフォーマットを保持できます。 入力に基づいて、[!DNL Data Prep]では、1つのAPI ペイロードを送信し、データを[!DNL Real-Time Customer Profile]個のPATCHと[!DNL Identity Service]個のCREATE リクエストの両方に変換できます。
 
-[!DNL Data Prep]は、挿入とアップサートを区別するためにヘッダーパラメーターを使用します。 アップサートを使用するすべての行にはヘッダーが必要です。 ID記述子の有無にかかわらずアップサートを使用できます。 IDを持つアップサートを使用する場合は、[ID データセットの設定](#configure-the-identity-dataset)の節で説明されている設定手順に従う必要があります。 IDなしでアップサートを使用している場合は、リクエストでID設定を指定する必要はありません。 詳しくは、[IDを持たないアップサートのストリーミング ](#payload-without-identity-configuration)に関する節を参照してください。
+[!DNL Data Prep]は、挿入とアップサートを区別するためにヘッダーパラメーターを使用します。 アップサートを使用するすべての行にはヘッダーが必要です。 ID記述子の有無にかかわらずアップサートを使用できます。 IDを持つアップサートを使用する場合は、[ID データセットの設定](#configure-the-identity-dataset)の節で説明されている設定手順に従う必要があります。 IDなしでアップサートを使用している場合は、リクエストでID設定を指定する必要はありません。 詳しくは、[IDを持たないアップサートのストリーミング &#x200B;](#payload-without-identity-configuration)に関する節を参照してください。
 
 >[!NOTE]
 >
->アップサート機能を活用するには、データ取り込み中にXDM互換の設定をオフにし、[ データ準備マッパー](./ui/mapping.md)を使用して受信ペイロードを再マッピングすることをお勧めします。
+>アップサート機能を活用するには、データ取り込み中にXDM互換の設定をオフにし、[&#x200B; データ準備マッパー](./ui/mapping.md)を使用して受信ペイロードを再マッピングすることをお勧めします。
 
 このドキュメントでは、[!DNL Data Prep]でアップサートをストリーミングする方法について説明します。
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep]を使用すると、データ エンジニアはExperience Data Model （XDM）との間でデータをマッピング、変換、検証できます。
 * [[!DNL Identity Service]](../identity-service/home.md): デバイスとシステム間でIDを橋渡しすることで、個々の顧客とその行動をより詳細に把握します。
 * [リアルタイム顧客プロファイル](../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された顧客プロファイルをリアルタイムに提供します。
-* [ ソース ](../sources/home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; ソース &#x200B;](../sources/home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
 
 ## [!DNL Data Prep]でのストリーミングアップサートの使用 {#streaming-upserts-in-data-prep}
 
@@ -275,4 +275,4 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## 次の手順
 
-このドキュメントを読むことで、1つのAPI リクエストでIDを作成およびリンクしながら、[!DNL Data Prep]でアップサートをストリーミングして[!DNL Real-Time Customer Profile] データに部分的な行の更新を送信する方法を理解できるようになりました。 その他[!DNL Data Prep]機能について詳しくは、[[!DNL Data Prep] 概要](./home.md)を参照してください。 [!DNL Data Prep] API内でマッピングセットを使用する方法については、[[!DNL Data Prep] 開発者ガイド ](./api/overview.md)を参照してください。
+このドキュメントを読むことで、1つのAPI リクエストでIDを作成およびリンクしながら、[!DNL Data Prep]でアップサートをストリーミングして[!DNL Real-Time Customer Profile] データに部分的な行の更新を送信する方法を理解できるようになりました。 その他[!DNL Data Prep]機能について詳しくは、[[!DNL Data Prep] 概要](./home.md)を参照してください。 [!DNL Data Prep] API内でマッピングセットを使用する方法については、[[!DNL Data Prep] 開発者ガイド &#x200B;](./api/overview.md)を参照してください。

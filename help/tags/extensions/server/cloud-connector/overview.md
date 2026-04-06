@@ -128,11 +128,11 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 ### Adobe Cloud Connector拡張機能のインストール {#install}
 
-拡張機能をインストールするには、[ イベント転送プロパティ ](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[&#x200B; イベント転送プロパティ &#x200B;](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
 
 左側のパネルで「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL Adobe Cloud Connector]** カードを選択し、「**[!UICONTROL Install]**」を選択します。
 
-![ インストールを強調表示する[!DNL Adobe Cloud Connector]拡張カードを示す拡張カタログ。](../../../images/extensions/server/cloud-connector/install-extension.png)
+![&#x200B; インストールを強調表示する[!DNL Adobe Cloud Connector]拡張カードを示す拡張カタログ。](../../../images/extensions/server/cloud-connector/install-extension.png)
 
 ### イベント転送ルールの設定 {#rule}
 
@@ -142,9 +142,9 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 拡張機能をインストールした後、[!DNL mTLS]を使用するイベント転送ルールを作成し、ライブラリに追加できます。
 
-イベント転送プロパティに新しいイベント転送[ ルール ](../../../ui/managing-resources/rules.md)を作成します。 ルールの名前を指定し、**[!UICONTROL Actions]**&#x200B;の下に新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL Adobe Cloud Connector]**&#x200B;に設定します。 次に、**[!UICONTROL Make Fetch Call]**&#x200B;の&#x200B;**[!UICONTROL Action Type]**&#x200B;を選択します。
+イベント転送プロパティに新しいイベント転送[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)を作成します。 ルールの名前を指定し、**[!UICONTROL Actions]**&#x200B;の下に新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL Adobe Cloud Connector]**&#x200B;に設定します。 次に、**[!UICONTROL Make Fetch Call]**&#x200B;の&#x200B;**[!UICONTROL Action Type]**&#x200B;を選択します。
 
-![ イベント転送プロパティのルール ビュー。イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/cloud-connector/event-action.png)
+![&#x200B; イベント転送プロパティのルール ビュー。イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/cloud-connector/event-action.png)
 
 選択を行うと、追加のコントロールが表示され、[!DNL mTLS] リクエストのメソッドと宛先が設定されます。 環境内でアクティブな証明書の使用を有効にするには、**[!UICONTROL Enable in [!DNL mTLS]]**&#x200B;を選択し、**[!UICONTROL Keep Changes]**&#x200B;を選択してルールを保存します。
 
@@ -152,10 +152,10 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 これで新しいルールの準備ができました。 **[!UICONTROL Save to Library]**&#x200B;を選択し、**[!UICONTROL Build]**&#x200B;を選択してデプロイします。 [!DNL mTLS] リクエストがアクティブになり、ライブラリで利用できるようになります。
 
-![ ライブラリへの保存とビルドがハイライト表示されたイベント転送ルール。](../../../images/extensions/server/cloud-connector/save-build.png)
+![&#x200B; ライブラリへの保存とビルドがハイライト表示されたイベント転送ルール。](../../../images/extensions/server/cloud-connector/save-build.png)
 
 ## 次の手順
 
-このガイドでは、イベント転送でmTLS ルールを設定する方法について説明しました。 環境にmTLSを設定する方法の詳細については、[相互トランスポート層セキュリティ （[!DNL mTLS]）ガイド ](../cloud-connector/mtls.md)を参照してください。
+このガイドでは、イベント転送でmTLS ルールを設定する方法について説明しました。 環境にmTLSを設定する方法の詳細については、[相互トランスポート層セキュリティ （[!DNL mTLS]）ガイド &#x200B;](../cloud-connector/mtls.md)を参照してください。
 
-Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
+Experience Platformのイベント転送機能について詳しくは、[&#x200B; イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。

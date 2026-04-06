@@ -23,13 +23,13 @@ ht-degree: 22%
 
 ## はじめに
 
-このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド ](./overview.md)を確認して、[!DNL JupyterLab]の概要とData Science Workspace内での役割を確認してください。
+このガイドを読む前に、[[!DNL JupyterLab]  ユーザーガイド &#x200B;](./overview.md)を確認して、[!DNL JupyterLab]の概要とData Science Workspace内での役割を確認してください。
 
 ## ノートブックのデータ制限 {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->PySparkおよびScala ノートブックで、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが発生した場合。 これは通常、ドライバーまたはエグゼクティブがメモリ不足であることを意味します。 このエラーを解決するには、[ 「バッチ」モード ](#mode)に切り替えてみてください。
+>PySparkおよびScala ノートブックで、「リモート RPC クライアントの関連付けが解除されました」という理由でエラーが発生した場合。 これは通常、ドライバーまたはエグゼクティブがメモリ不足であることを意味します。 このエラーを解決するには、[&#x200B; 「バッチ」モード &#x200B;](#mode)に切り替えてみてください。
 
 次の情報は、読み取り可能なデータの最大量、使用されたデータの種類、データを読み取る推定期間を定義します。
 
@@ -361,7 +361,7 @@ spark = SparkSession.builder.getOrCreate()
 
 ### %datasetを使用してPySpark 3 ノートブックで読み書きを行う {#magic}
 
-[!DNL Spark] 2.4の導入により、PySpark 3 （`%dataset` 2.4） ノートブックで使用するためのカスタムマジックが[!DNL Spark]個提供されます。 IPython カーネルで利用できるマジック コマンドについて詳しくは、[IPython マジック ドキュメント ](https://ipython.readthedocs.io/en/stable/interactive/magics.html)を参照してください。
+[!DNL Spark] 2.4の導入により、PySpark 3 （`%dataset` 2.4） ノートブックで使用するためのカスタムマジックが[!DNL Spark]個提供されます。 IPython カーネルで利用できるマジック コマンドについて詳しくは、[IPython マジック ドキュメント &#x200B;](https://ipython.readthedocs.io/en/stable/interactive/magics.html)を参照してください。
 
 
 **用途**
@@ -383,7 +383,7 @@ spark = SparkSession.builder.getOrCreate()
 
 >[!TIP]
 >
->[ ノートブックデータ制限](#notebook-data-limits) セクション内のPySpark テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断します。
+>[&#x200B; ノートブックデータ制限](#notebook-data-limits) セクション内のPySpark テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断します。
 
 **例**
 
@@ -398,7 +398,7 @@ spark = SparkSession.builder.getOrCreate()
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティング ガイド ](../troubleshooting-guide.md)を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティング ガイド &#x200B;](../troubleshooting-guide.md)を参照してください。
 
 JupyterLab購入では、次の方法を使用して上記の例を自動生成できます。
 
@@ -498,7 +498,7 @@ Scalaでは、`clientContext`を読み込んでExperience Platform値を取得�
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティング ガイド ](../troubleshooting-guide.md)を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティング ガイド &#x200B;](../troubleshooting-guide.md)を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -530,7 +530,7 @@ df1.show(10)
 
 >[!TIP]
 >
->[ ノートブックデータ制限](#notebook-data-limits) セクション内のScala テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断してください。
+>[&#x200B; ノートブックデータ制限](#notebook-data-limits) セクション内のScala テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断してください。
 
 上記の例をJupyterLab buyで自動生成するには、次の方法を使用します。
 
@@ -555,7 +555,7 @@ Scalaでは、`clientContext`を読み込んでExperience Platform値を取得�
 > - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
 > - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
-> 詳しくは、[ トラブルシューティング ガイド ](../troubleshooting-guide.md)を参照してください。
+> 詳しくは、[&#x200B; トラブルシューティング ガイド &#x200B;](../troubleshooting-guide.md)を参照してください。
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -584,7 +584,7 @@ df1.write.format("com.adobe.platform.query")
 
 >[!TIP]
 >
->[ ノートブックデータ制限](#notebook-data-limits) セクション内のScala テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断してください。
+>[&#x200B; ノートブックデータ制限](#notebook-data-limits) セクション内のScala テーブルを確認して、`mode`を`interactive`または`batch`に設定する必要があるかどうかを判断してください。
 
 ### ローカルデータフレームの作成 {#scala-create-dataframe}
 
@@ -643,7 +643,7 @@ timedf.show()
 
 ## 次の手順
 
-このドキュメントでは、JupyterLab ノートブックを使用してデータセットにアクセスするための一般的なガイドラインについて説明しました。 データセットのクエリに関する詳細な例については、JupyterLab ノートブック [の](./query-service.md) クエリサービスのドキュメントを参照してください。 データセットの探索と可視化の方法について詳しくは、[ ノートブックを使用したデータの分析](./analyze-your-data.md)に関するドキュメントを参照してください。
+このドキュメントでは、JupyterLab ノートブックを使用してデータセットにアクセスするための一般的なガイドラインについて説明しました。 データセットのクエリに関する詳細な例については、JupyterLab ノートブック [の](./query-service.md) クエリサービスのドキュメントを参照してください。 データセットの探索と可視化の方法について詳しくは、[&#x200B; ノートブックを使用したデータの分析](./analyze-your-data.md)に関するドキュメントを参照してください。
 
 ## [!DNL Query Service]のオプションのSQL フラグ {#optional-sql-flags-for-query-service}
 

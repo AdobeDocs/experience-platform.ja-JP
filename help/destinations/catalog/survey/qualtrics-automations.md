@@ -21,7 +21,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、Qualtrics チームによって作成および管理されます。 お問い合わせやアップデートのリクエストについては、[ カスタマーサクセスハブ ](https://support-portal.qualtrics.com/)にログインして直接お問い合わせください。
+>宛先コネクタとドキュメントページは、Qualtrics チームによって作成および管理されます。 お問い合わせやアップデートのリクエストについては、[&#x200B; カスタマーサクセスハブ &#x200B;](https://support-portal.qualtrics.com/)にログインして直接お問い合わせください。
 
 ## ユースケース {#use-cases}
 
@@ -72,7 +72,7 @@ ht-degree: 23%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ ht-degree: 23%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -122,7 +122,7 @@ ht-degree: 23%
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
-* **[!UICONTROL URL]**: [ ワークフローをQualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)でトリガーする[JSON イベント ](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)に見つかったURL。 例については、以下のスクリーンショットを参照してください。
+* **[!UICONTROL URL]**: [&#x200B; ワークフローをQualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)でトリガーする[JSON イベント &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)に見つかったURL。 例については、以下のスクリーンショットを参照してください。
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -136,9 +136,9 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[ ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; ストリーミング宛先に対するオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -148,11 +148,11 @@ ht-degree: 23%
 
 マッピングに属性を追加するには、新しいマッピングの追加時に&#x200B;**カスタム属性**&#x200B;を選択します。 属性には任意の名前を入力できます。 Qualtricsでは、属性名の&#x200B;*camelCase*&#x200B;命名規則を推奨しています（例については、以下のスクリーンショットを参照）。
 
-![ カスタム属性](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![&#x200B; カスタム属性](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 可能な属性マッピングの例については、以下のスクリーンショットを参照してください。
 
-![ マッピングの例](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![&#x200B; マッピングの例](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
 #### ID のマッピング {#map-identities}
 

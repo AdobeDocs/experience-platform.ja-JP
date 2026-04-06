@@ -106,8 +106,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 指定されたURLのポートを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL: **必須** ポートを抽出する必要があるURL。</li></ul> | get_url_port （URL） | get_url_port&#x200B;（&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;） | 22 |
 | get_url_path | 指定されたURLのパスを返します。 デフォルトでは、フルパスが返されます。 | <ul><li>URL: **必須** パスを抽出する必要があるURL。</li><li>FULL_PATH: *オプション*&#x200B;完全なパスが返されるかどうかを決定するブール値。 falseに設定すると、パスの最後のみが返されます。</li></ul> | get_url_path&#x200B;（URL, FULL_PATH） | get_url_path&#x200B;（&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;） | &quot;//home/joe/&#x200B;employee.csv&quot; |
 | get_url_query_str | 特定のURLのクエリ文字列を、クエリ文字列名とクエリ文字列値のマップとして返します。 | <ul><li>URL: **必須** クエリ文字列を取得しようとしているURL。</li><li>アンカー：**必須** クエリ文字列内のアンカーで何が行われるかを決定します。 「retain」、「remove」、「append」の3つの値のいずれかを指定できます。<br><br>値が「retain」の場合、アンカーは返された値に添付されます。<br>値が「remove」の場合、アンカーは返された値から削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_query_str&#x200B;（URL, ANCHOR） | get_url_query_str&#x200B;（&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;retain&quot;） <br>get_url_query_str&#x200B;（&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;） <br>get_url_query_str&#x200B; &#x200B; &#x200B;（&quot;foo://example.comとします:8042/over/thereとします？name=ferret#nose&quot;, &quot;append&quot;） | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
-| get_url_encoded | この関数は、URLを入力として受け取り、特殊文字をASCII文字に置き換えるかエンコードします。 特殊文字について詳しくは、このドキュメントの付録の[特殊文字リスト ](#special-characters)を参照してください。 | <ul><li>URL: **必須**&#x200B;入力URLは、ASCII文字で置き換えたり、エンコードしたりする特殊文字を含みます。</li></ul> | get_url_encoded （URL） | get_url_encoded （&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;） | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
-| get_url_decoded | この関数は、URLを入力として受け取り、ASCII文字を特殊文字にデコードします。  特殊文字について詳しくは、このドキュメントの付録の[特殊文字リスト ](#special-characters)を参照してください。 | <ul><li>URL: **必須** ASCII文字を使用して特殊文字にデコードする入力URL。</li></ul> | get_url_decoded （URL） | get_url_decoded （&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;） | https</span>://example.com/partneralliance_asia-pacific_2022 |
+| get_url_encoded | この関数は、URLを入力として受け取り、特殊文字をASCII文字に置き換えるかエンコードします。 特殊文字について詳しくは、このドキュメントの付録の[特殊文字リスト &#x200B;](#special-characters)を参照してください。 | <ul><li>URL: **必須**&#x200B;入力URLは、ASCII文字で置き換えたり、エンコードしたりする特殊文字を含みます。</li></ul> | get_url_encoded （URL） | get_url_encoded （&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;） | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | この関数は、URLを入力として受け取り、ASCII文字を特殊文字にデコードします。  特殊文字について詳しくは、このドキュメントの付録の[特殊文字リスト &#x200B;](#special-characters)を参照してください。 | <ul><li>URL: **必須** ASCII文字を使用して特殊文字にデコードする入力URL。</li></ul> | get_url_decoded （URL） | get_url_decoded （&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;） | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->表の全内容を表示するには、左右にスクロールしてください。 `date`関数の詳細については、[ データ形式処理ガイド ](./data-handling.md#dates)の日付セクションを参照してください。
+>表の全内容を表示するには、左右にスクロールしてください。 `date`関数の詳細については、[&#x200B; データ形式処理ガイド &#x200B;](./data-handling.md#dates)の日付セクションを参照してください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -178,10 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 入力のサイズを返します。 | <ul><li>INPUT: **Required** サイズを検索しようとしているオブジェクト。</li></ul> | size_of （INPUT） | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | この関数は、入力配列全体のすべての要素をProfileの配列の最後に追加するために使用されます。 この関数は、更新中に&#x200B;**のみ**&#x200B;適用できます。 挿入のコンテキストで使用する場合、この関数はそのまま入力を返します。 | <ul><li>配列：**必須** プロファイルに配列を追加する配列。</li></ul> | upsert_array_append （ARRAY） | `upsert_array_append([123, 456])` | [123、456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、更新中に&#x200B;**のみ**&#x200B;適用できます。 挿入のコンテキストで使用する場合、この関数はそのまま入力を返します。 | <ul><li>配列：**必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace （ARRAY） | `upsert_array_replace([123, 456], 1)` | [123、456] |
-| [!BADGE 宛先のみ]{type=Informative} array_to_string | 指定した区切り記号を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合される前にフラット化されます。 **メモ**：この関数は宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>区切り記号：**必須**&#x200B;配列内の要素の結合に使用する区切り記号。</li><li>配列：**必須**&#x200B;結合する配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「Hello;world」 |
-| [!BADGE 宛先のみ]{type=Informative} filterArray* | 述語に基づいて、指定された配列をフィルタリングします。 **メモ**：この関数は宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須** フィルターする配列</li><li>述語：**必須**&#x200B;指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
-| [!BADGE 宛先のみ]{type=Informative} transformArray* | 述語に基づいて、指定された配列を変換します。 **メモ**：この関数は宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須**&#x200B;変換する配列。</li><li>述語：**必須**&#x200B;指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | `transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
-| [!BADGE 宛先のみ]{type=Informative} flattenArray* | 指定された（多次元）配列を一次元配列にフラット化します。 **メモ**：この関数は宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE 宛先のみ]{type=Informative} array_to_string | 指定した区切り記号を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合される前にフラット化されます。 **メモ**：この関数は宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>区切り記号：**必須**&#x200B;配列内の要素の結合に使用する区切り記号。</li><li>配列：**必須**&#x200B;結合する配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「Hello;world」 |
+| [!BADGE 宛先のみ]{type=Informative} filterArray* | 述語に基づいて、指定された配列をフィルタリングします。 **メモ**：この関数は宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須** フィルターする配列</li><li>述語：**必須**&#x200B;指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
+| [!BADGE 宛先のみ]{type=Informative} transformArray* | 述語に基づいて、指定された配列を変換します。 **メモ**：この関数は宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須**&#x200B;変換する配列。</li><li>述語：**必須**&#x200B;指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | `transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
+| [!BADGE 宛先のみ]{type=Informative} flattenArray* | 指定された（多次元）配列を一次元配列にフラット化します。 **メモ**：この関数は宛先で使用されます。 詳しくは、[&#x200B; ドキュメント &#x200B;](../destinations/ui/export-arrays-maps-objects.md)を参照してください。 | <ul><li>配列：**必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]&rbrack;） | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -272,7 +272,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 * 電話 – 小さな画面（通常は7 インチ未満）を備えたモバイルデバイス
 * モバイル – まだ識別されていないモバイルデバイス。 このモバイルデバイスは、eReader、タブレット、携帯電話、腕時計などであり得る。
 
-デバイスフィールド値について詳しくは、このドキュメントの付録の「[ デバイスフィールド値のリスト ](#device-field-values)」を参照してください。
+デバイスフィールド値について詳しくは、このドキュメントの付録の「[&#x200B; デバイスフィールド値のリスト &#x200B;](#device-field-values)」を参照してください。
 
 >[!NOTE]
 >
@@ -389,9 +389,9 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | | | %5C |
-| ] | %5D |
+| &rbrack; | %5D |
 | ^ | %5E |
 | &#39; | %60 |
 | ~ | %7E |

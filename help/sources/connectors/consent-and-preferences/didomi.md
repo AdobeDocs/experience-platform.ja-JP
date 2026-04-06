@@ -23,7 +23,7 @@ Adobe Experience Platformでは、ソースコネクタを使用して、クラ�
 
 [!DNL Didomi] ソースを使用して、[!DNL Didomi]の同意と環境設定の管理プラットフォームからリアルタイムのユーザー同意と環境設定データをExperience Platformにストリーミングします。 [!DNL Didomi] ソースを使用すると、Experience Platformの同意データを一元化して処理できるため、顧客プロファイルとダウンストリームのワークフローをコンプライアンスに準拠させ、最新の状態に保つことができます。
 
-![ 「Didomi」データ処理アーキテクチャ。](../../images/tutorials/create/didomi/flux.jpeg)
+![&#x200B; 「Didomi」データ処理アーキテクチャ。](../../images/tutorials/create/didomi/flux.jpeg)
 
 ## 前提条件
 
@@ -35,7 +35,7 @@ Adobe Experience Platformでは、ソースコネクタを使用して、クラ�
 
 ### Experience Platformの権限の設定
 
-**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL Manage Sources]**&#x200B;と[!DNL Didomi]の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[ アクセス制御UI ガイド ](../../../access-control/ui/overview.md)を参照してください。
+**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL Manage Sources]**&#x200B;と[!DNL Didomi]の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御UI ガイド &#x200B;](../../../access-control/ui/overview.md)を参照してください。
 
 ### Adobe API資格情報の収集
 
@@ -95,7 +95,7 @@ Experience Platformとの互換性を確保するには、Webhookが次の要件
 
 | フィールド | 説明 | 値 |
 | ---| --- | --- |
-| リクエストヘッダー | [!DNL webhook]のカスタム ヘッダー。 `x-adobe-flow-id`が含まれていることを確認してください。 この値は、[ データフローの作成後に取得できます](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url)。 | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
+| リクエストヘッダー | [!DNL webhook]のカスタム ヘッダー。 `x-adobe-flow-id`が含まれていることを確認してください。 この値は、[&#x200B; データフローの作成後に取得できます](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url)。 | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | 分割・統合 | このプロパティは、[!DNL webhook] データがフラットオブジェクトとして送信されることを保証するため、チェックする必要があります。 | 有効 |
 | イベントタイプ | [!DNL Didomi]をトリガーにする`event.*` イベント （`user.*`または[!DNL webhook]）の特定のグループを選択します。 `event.*`を使用して同意または環境設定の変更を追跡し、`user.*`を使用してユーザープロファイルの更新を追跡します。 この選択は、互換性のあるイベントのみがAdobeに送信されるようにするために必要です。 Adobeでは、データフローごとに1つのスキーマしかサポートされていないため、両方のイベントタイプを選択すると、取り込みエラーが発生する可能性があります。 | サポートされるイベントタイプのリストは次のとおりです。 <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
 

@@ -29,9 +29,9 @@ Adobe Experience Platformでは、顧客から収集した同意データを処�
 
 * [エクスペリエンスデータモデル（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：デバイスやシステム間でIDを橋渡しすることで、顧客体験データの断片化がもたらす根本的な課題を解決します。
-* [ リアルタイム顧客プロファイル ](/help/profile/home.md): [!DNL Identity Service]機能を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 リアルタイム顧客プロファイルは、データレイクからデータを取得し、独自のデータストアに顧客プロファイルを保持します。
+* [&#x200B; リアルタイム顧客プロファイル &#x200B;](/help/profile/home.md): [!DNL Identity Service]機能を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 リアルタイム顧客プロファイルは、データレイクからデータを取得し、独自のデータストアに顧客プロファイルを保持します。
 * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)：様々なExperience Platform サービスを顧客向けweb サイトに統合できるクライアントサイドのJavaScript ライブラリ。
-   * [SDK同意コマンド ](/help/collection/js/commands/setconsent.md)：このガイドに示す同意関連のSDK コマンドの使用例の概要。
+   * [SDK同意コマンド &#x200B;](/help/collection/js/commands/setconsent.md)：このガイドに示す同意関連のSDK コマンドの使用例の概要。
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): リアルタイム顧客プロファイルデータを、同様の特性を共有し、マーケティング戦略に同様に対応する個人のグループに分割できます。
 
 ## 同意処理フローの概要 {#summary}
@@ -51,7 +51,7 @@ Experience Platformの同意処理サポートの現在のリリースでは、�
 
 >[!NOTE]
 >
->上記のXDM同意フィールドの構造について詳しくは、[[!UICONTROL Consents and Preferences] データタイプ ](/help/xdm/data-types/consents.md)に関するガイドを参照してください。
+>上記のXDM同意フィールドの構造について詳しくは、[[!UICONTROL Consents and Preferences] データタイプ &#x200B;](/help/xdm/data-types/consents.md)に関するガイドを参照してください。
 
 システムが設定されると、Experience Platform Web SDKは、現在のユーザーのデータ収集の同意値を解釈し、データをAdobe Experience Platform Edge Networkに送信するか、クライアントから削除するか、データ収集権限が「はい」または「いいえ」に設定されるまで保持するかを判断します。
 
@@ -95,7 +95,7 @@ Web サイトで同意変更イベントをリッスンするようにCMPを設�
 
 お客様のモバイルアプリケーションで顧客の同意の設定が必要な場合は、Experience Platform Mobile SDKを統合して同意設定を取得および更新し、同意APIが呼び出されるたびにExperience Platformに送信できます。
 
-同意API[を使用した](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)同意用モバイル拡張機能の設定[および](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)については、Mobile SDKのドキュメントを参照してください。 Mobile SDKを使用してプライバシーに関する懸念を処理する方法について詳しくは、「[ プライバシーとGDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)」の節を参照してください。
+同意API[を使用した](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)同意用モバイル拡張機能の設定[および](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)については、Mobile SDKのドキュメントを参照してください。 Mobile SDKを使用してプライバシーに関する懸念を処理する方法について詳しくは、「[&#x200B; プライバシーとGDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)」の節を参照してください。
 
 ### XDMに準拠した同意データを直接取り込み {#batch}
 
@@ -113,9 +113,9 @@ Web サイトで同意変更イベントをリッスンするようにCMPを設�
 >
 >この情報にアクセスできない場合は、独自のテスト同意データを取り込み、代わりに既知のID値/名前空間に関連付けることもできます。
 
-プロファイルの詳細を検索する方法について詳しくは、[ UI ガイドの](../../../../profile/ui/user-guide.md#browse)ID別プロファイルの参照[!DNL Profile]の節を参照してください。
+プロファイルの詳細を検索する方法について詳しくは、[&#x200B; UI ガイドの](../../../../profile/ui/user-guide.md#browse)ID別プロファイルの参照[!DNL Profile]の節を参照してください。
 
-新しい同意属性は、デフォルトではプロファイルのダッシュボードには表示されません。 そのため、プロファイルの詳細ページの&#x200B;**[!UICONTROL Attributes]** タブに移動して、期待どおりに取り込まれていることを確認する必要があります。 ニーズに合わせてダッシュボードをカスタマイズする方法については、[ プロファイルダッシュボード ](../../../../profile/ui/profile-dashboard.md)のガイドを参照してください。
+新しい同意属性は、デフォルトではプロファイルのダッシュボードには表示されません。 そのため、プロファイルの詳細ページの&#x200B;**[!UICONTROL Attributes]** タブに移動して、期待どおりに取り込まれていることを確認する必要があります。 ニーズに合わせてダッシュボードをカスタマイズする方法については、[&#x200B; プロファイルダッシュボード &#x200B;](../../../../profile/ui/profile-dashboard.md)のガイドを参照してください。
 
 <!-- 
 (To be included once CJM is GA)

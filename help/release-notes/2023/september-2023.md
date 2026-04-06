@@ -43,7 +43,7 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 | 機能 | 説明 |
 | --- | --- |
-| 「アラート履歴」タブ | 「アラート [!UICONTROL History]」タブには、遅延、開始、成功、失敗など、すべてのイベントが含まれるようになりました。 履歴タブについて詳しくは、[ アラート UI ドキュメント ](../../observability/alerts/ui.md)を参照してください。 |
+| 「アラート履歴」タブ | 「アラート [!UICONTROL History]」タブには、遅延、開始、成功、失敗など、すべてのイベントが含まれるようになりました。 履歴タブについて詳しくは、[&#x200B; アラート UI ドキュメント &#x200B;](../../observability/alerts/ui.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -55,11 +55,11 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | --- | --- |
-| [ ライセンス使用状況ダッシュボードの改善](../../dashboards/guides/license-usage.md) | 向上したレポートと、組織のライセンス使用状況に関する主要な指標の可視化により、ライセンス契約を常に管理できます。 これらの改善により、購入したすべてのExperience Platform製品のライセンス使用率に関する指標を詳細に把握できます。 |
+| [&#x200B; ライセンス使用状況ダッシュボードの改善](../../dashboards/guides/license-usage.md) | 向上したレポートと、組織のライセンス使用状況に関する主要な指標の可視化により、ライセンス契約を常に管理できます。 これらの改善により、購入したすべてのExperience Platform製品のライセンス使用率に関する指標を詳細に把握できます。 |
 
 {style="table-layout:auto"}
 
-ライセンス使用状況ダッシュボードについて詳しくは、[ ライセンス使用状況ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
+ライセンス使用状況ダッシュボードについて詳しくは、[&#x200B; ライセンス使用状況ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -69,12 +69,12 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| データストリーム | デバイス検索のサポート | データストリームを設定する際に、収集するデバイス検索情報のレベルを選択できるようになりました。 デバイス検索情報には、ページの操作に使用したデバイス、ハードウェア、オペレーティングシステム、ブラウザーに関するデータが含まれます。 <br> デバイスのルックアップ情報を、ユーザーエージェントとクライアントのヒントと共に収集できません。 デバイス情報の収集を選択すると、ユーザーエージェントとクライアントヒントの収集が無効になり、その逆も無効になります。 すべてのデバイス検索情報は`xdm:device` フィールドグループに保存されます。 詳しくは、[ データストリームの設定](../../datastreams/configure.md#geolocation-device-lookup)に関するドキュメントを参照してください。 |
+| データストリーム | デバイス検索のサポート | データストリームを設定する際に、収集するデバイス検索情報のレベルを選択できるようになりました。 デバイス検索情報には、ページの操作に使用したデバイス、ハードウェア、オペレーティングシステム、ブラウザーに関するデータが含まれます。 <br> デバイスのルックアップ情報を、ユーザーエージェントとクライアントのヒントと共に収集できません。 デバイス情報の収集を選択すると、ユーザーエージェントとクライアントヒントの収集が無効になり、その逆も無効になります。 すべてのデバイス検索情報は`xdm:device` フィールドグループに保存されます。 詳しくは、[&#x200B; データストリームの設定](../../datastreams/configure.md#geolocation-device-lookup)に関するドキュメントを参照してください。 |
 | 拡張機能 | [!DNL TikTok] web イベント API拡張機能 | [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api)拡張機能を使用すると、Adobe Experience Platform Edge Networkでキャプチャしたデータを活用し、[!DNL TikTok] Web Events APIを使用してサーバーサイドのイベントの形式で[!DNL TikTok]に送信できます。 |
 
 {style="table-layout:auto"}
 
-データ収集について詳しくは、[ データ収集の概要](../../tags/home.md)を参照してください。
+データ収集について詳しくは、[&#x200B; データ収集の概要](../../tags/home.md)を参照してください。
 
 ## データガバナンス {#data-governance}
 
@@ -84,7 +84,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| サードパーティデータ用の新しいパートナーエコシステムラベル | サードパーティのエンリッチメントと見込み顧客の獲得に関する、新しいデータ使用ラベルが利用可能になりました。 詳しくは、[ パートナーエコシステムラベル ](../../data-governance/labels/reference.md#partner)に関するドキュメントを参照してください。 |
+| サードパーティデータ用の新しいパートナーエコシステムラベル | サードパーティのエンリッチメントと見込み顧客の獲得に関する、新しいデータ使用ラベルが利用可能になりました。 詳しくは、[&#x200B; パートナーエコシステムラベル &#x200B;](../../data-governance/labels/reference.md#partner)に関するドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -98,12 +98,12 @@ Experience Platform は、消費者レコードとデータセットをプログ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} レコードの削除（制限付きリリース） | Adobe Adobe Experience Platformの高度なデータライフサイクル管理機能：データセットの自動有効期限とレコードの削除により、あらゆるデータストアをまたいでデータライフサイクルを管理し、顧客の要件やライセンス契約を満たすことができます。<br> データセットの自動有効期限を使用すると、データセット全体を削除し、データセットを削除する日時を設定できます。<br> レコード削除を使用すると、プライマリ IDをターゲットにして個々の消費者プロファイルを削除できます。 プライマリ IDは、UIまたはCSV/JSON ファイルのアップロードを通じて個別に指定できます。 詳しくは、[ レコード削除ドキュメント ](../../hygiene/ui/record-delete.md)を参照してください |
-| データセット有効期限 | データセットの自動有効期限により、データを最小限に抑え、ライセンス契約を管理できます。 データセット全体を削除し、データセットを削除する日時を設定することで、データ量を削減できます。 詳しくは、[ データセットの有効期限に関するドキュメント ](../../hygiene/ui/dataset-expiration.md)を参照してください。 |
+| [!BADGE Beta]{type=Informative} レコードの削除（制限付きリリース） | Adobe Adobe Experience Platformの高度なデータライフサイクル管理機能：データセットの自動有効期限とレコードの削除により、あらゆるデータストアをまたいでデータライフサイクルを管理し、顧客の要件やライセンス契約を満たすことができます。<br> データセットの自動有効期限を使用すると、データセット全体を削除し、データセットを削除する日時を設定できます。<br> レコード削除を使用すると、プライマリ IDをターゲットにして個々の消費者プロファイルを削除できます。 プライマリ IDは、UIまたはCSV/JSON ファイルのアップロードを通じて個別に指定できます。 詳しくは、[&#x200B; レコード削除ドキュメント &#x200B;](../../hygiene/ui/record-delete.md)を参照してください |
+| データセット有効期限 | データセットの自動有効期限により、データを最小限に抑え、ライセンス契約を管理できます。 データセット全体を削除し、データセットを削除する日時を設定することで、データ量を削減できます。 詳しくは、[&#x200B; データセットの有効期限に関するドキュメント &#x200B;](../../hygiene/ui/dataset-expiration.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
-Experience Platformのデータハイジーン機能について詳しくは、[ データハイジーンの概要](../../hygiene/home.md)を参照してください。
+Experience Platformのデータハイジーン機能について詳しくは、[&#x200B; データハイジーンの概要](../../hygiene/home.md)を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -133,14 +133,14 @@ Add these to release notes as they go out
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Real-Time CDPでのデータ書き出し | [ データセット書き出し](../../destinations/ui/export-datasets.md)機能が一般公開されました。 購入したExperience Platform アプリ [に基づいて書き出すことができるデータセット ](../../destinations/ui/export-datasets.md#datasets-to-export)を参照し、データセットの書き出しに関する[ ガードレール ](/help/destinations/guardrails.md#dataset-exports)を確認してください。 |
-| （Beta）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、int値、ブール値）の配列をフラットスキーマファイルとしてクラウドストレージの宛先に書き出します。 この機能について詳しくは、[ ドキュメント ](../../destinations/ui/export-arrays-maps-objects.md)を参照してください。 |
+| Real-Time CDPでのデータ書き出し | [&#x200B; データセット書き出し](../../destinations/ui/export-datasets.md)機能が一般公開されました。 購入したExperience Platform アプリ [に基づいて書き出すことができるデータセット &#x200B;](../../destinations/ui/export-datasets.md#datasets-to-export)を参照し、データセットの書き出しに関する[&#x200B; ガードレール &#x200B;](/help/destinations/guardrails.md#dataset-exports)を確認してください。 |
+| （Beta）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、int値、ブール値）の配列をフラットスキーマファイルとしてクラウドストレージの宛先に書き出します。 この機能について詳しくは、[&#x200B; ドキュメント &#x200B;](../../destinations/ui/export-arrays-maps-objects.md)を参照してください。 |
 | Destination SDKの動的ドロップダウンセレクター | Destination SDKを使用して宛先を作成する際に、[動的ドロップダウンセレクター](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)を使用して、ドロップダウンセレクターのフィールドにAPIから取得した値を入力できるようになりました。 |
 
 **修正と機能強化** {#destinations-fixes-and-enhancements}
 
-- データフロー実行レベルでエンタープライズ宛先（[HTTP API](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)、[Amazon Kinesis](../../destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](../../destinations/catalog/cloud-storage/amazon-kinesis.md)）に対して利用可能になった[監視の透明性](../../destinations/catalog/cloud-storage/azure-event-hubs.md)を使用して、エラーコードとトラブルシューティング用のメッセージを介した追加情報とともに、[ データフローの詳細ビュー](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page)のアクティベーション指標とステータスを監視します。
-- [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md)、[Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)、および[ オーディエンス更新テンプレート ](../../destinations/destination-sdk/metadata-api/update-audience-template.md)を使用するその他の宛先にマッピングされたオーディエンスの名前を更新すると、これらの名前の変更が宛先のダウンストリームに反映されるようになりました。
+- データフロー実行レベルでエンタープライズ宛先（[HTTP API](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)、[Amazon Kinesis](../../destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](../../destinations/catalog/cloud-storage/amazon-kinesis.md)）に対して利用可能になった[監視の透明性](../../destinations/catalog/cloud-storage/azure-event-hubs.md)を使用して、エラーコードとトラブルシューティング用のメッセージを介した追加情報とともに、[&#x200B; データフローの詳細ビュー](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page)のアクティベーション指標とステータスを監視します。
+- [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md)、[Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)、および[&#x200B; オーディエンス更新テンプレート &#x200B;](../../destinations/destination-sdk/metadata-api/update-audience-template.md)を使用するその他の宛先にマッピングされたオーディエンスの名前を更新すると、これらの名前の変更が宛先のダウンストリームに反映されるようになりました。
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -152,14 +152,14 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| スキーマエディターに追加されたクイックアクション | スキーマエディターのキャンバスに新しいクイックアクションが追加されました。 JSON構造をコピーしたり、スキーマをエディターから直接削除したりできるようになりました。<br>![ スキーマエディターのクイックアクション。](../2023/assets/schema-editor-copy-json.png "詳細とJSONへのコピーがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"} |
-| カスタムまたは標準の作成者によるXDM リソースのフィルタリング | 使用可能なスキーマ、フィールドグループ、データタイプ、クラスのリストが、作成方法に基づいて事前にフィルタリングされるようになりました。 これにより、Adobeで作成されたかどうかに基づいて、リソースをフィルタリングできます。<br>![ スキーマワークスペースの標準フィルターとカスタムフィルター。](../2023/assets/standard-and-custom-classes.png "標準フィルターとカスタムフィルターがハイライト表示されたスキーマワークスペース。"){width="100" zoomable="yes"} <br>詳しくは、[ リソースの作成と編集に関するドキュメント ](../../xdm/ui/resources/classes.md#filter.md)を参照してください。 |
+| スキーマエディターに追加されたクイックアクション | スキーマエディターのキャンバスに新しいクイックアクションが追加されました。 JSON構造をコピーしたり、スキーマをエディターから直接削除したりできるようになりました。<br>![&#x200B; スキーマエディターのクイックアクション。](../2023/assets/schema-editor-copy-json.png "詳細とJSONへのコピーがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"} |
+| カスタムまたは標準の作成者によるXDM リソースのフィルタリング | 使用可能なスキーマ、フィールドグループ、データタイプ、クラスのリストが、作成方法に基づいて事前にフィルタリングされるようになりました。 これにより、Adobeで作成されたかどうかに基づいて、リソースをフィルタリングできます。<br>![&#x200B; スキーマワークスペースの標準フィルターとカスタムフィルター。](../2023/assets/standard-and-custom-classes.png "標準フィルターとカスタムフィルターがハイライト表示されたスキーマワークスペース。"){width="100" zoomable="yes"} <br>詳しくは、[&#x200B; リソースの作成と編集に関するドキュメント &#x200B;](../../xdm/ui/resources/classes.md#filter.md)を参照してください。 |
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 更新されたスキーマ作成ワークフロー | プロセスを合理化するために、新しいスキーマ作成ワークフローを実装しました。<br> ![新しいスキーマ作成UI。](../2023/assets/schema-class-options.png "新しいスキーマの詳細セレクターが強調表示されました。"){width="100" zoomable="yes"} <br>詳しくは、[ スキーマ作成ドキュメント ](../../xdm/ui/resources/schemas.md#create)を参照してください。 |
+| 更新されたスキーマ作成ワークフロー | プロセスを合理化するために、新しいスキーマ作成ワークフローを実装しました。<br> ![新しいスキーマ作成UI。](../2023/assets/schema-class-options.png "新しいスキーマの詳細セレクターが強調表示されました。"){width="100" zoomable="yes"} <br>詳しくは、[&#x200B; スキーマ作成ドキュメント &#x200B;](../../xdm/ui/resources/schemas.md#create)を参照してください。 |
 
 **新しい XDM コンポーネント**
 
@@ -190,8 +190,8 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| Identity Service UIの機能強化 | Experience Platform UIの改善されたカスタム名前空間作成ツールを使用して、カスタム名前空間とそれに対応するID タイプをより適切に管理します。 強化されたID サービス UIでは、次の機能が提供されます。 <ul><li>コンテキストに沿ったエクスペリエンス：ID名前空間とID タイプを視覚的に確認し、わかりやすく説明します。</li><li>正確性：ID名が重複することなく、エラー処理が改善されます。</li><li>見つけやすさ：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、[ カスタム名前空間の作成](../../identity-service/features/namespaces.md#create-namespaces)に関するガイドを参照してください。 |
-| ID グラフの制限の変更 | ID グラフの制限が150 IDから50 IDに変更されました。 新しいIDがグラフ全体に取り込まれると、取り込みタイムスタンプとID タイプに基づく最も古いIDが削除されます。 Cookie ID タイプは削除のために優先されます。 実稼動サンドボックスに次の項目が含まれる場合は、Adobe アカウントチームに連絡してID タイプの変更をリクエストしてください。 <ul><li>個人ID （CRM IDなど）がCookie/デバイス ID タイプとして設定されるカスタム名前空間。</li><li>cookie/デバイス識別子がクロスデバイス ID タイプとして設定されるカスタム名前空間。</li></ul> Adobe エンジニアリングは、これらのリクエストを手動で処理します。 詳しくは、[ID サービス データのガードレール ](../../identity-service/guardrails.md)および[ データ管理ライセンス使用権限のベストプラクティス ](../../landing/license-usage-and-guardrails/data-management-best-practices.md)に関するガイドを参照してください。 |
+| Identity Service UIの機能強化 | Experience Platform UIの改善されたカスタム名前空間作成ツールを使用して、カスタム名前空間とそれに対応するID タイプをより適切に管理します。 強化されたID サービス UIでは、次の機能が提供されます。 <ul><li>コンテキストに沿ったエクスペリエンス：ID名前空間とID タイプを視覚的に確認し、わかりやすく説明します。</li><li>正確性：ID名が重複することなく、エラー処理が改善されます。</li><li>見つけやすさ：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、[&#x200B; カスタム名前空間の作成](../../identity-service/features/namespaces.md#create-namespaces)に関するガイドを参照してください。 |
+| ID グラフの制限の変更 | ID グラフの制限が150 IDから50 IDに変更されました。 新しいIDがグラフ全体に取り込まれると、取り込みタイムスタンプとID タイプに基づく最も古いIDが削除されます。 Cookie ID タイプは削除のために優先されます。 実稼動サンドボックスに次の項目が含まれる場合は、Adobe アカウントチームに連絡してID タイプの変更をリクエストしてください。 <ul><li>個人ID （CRM IDなど）がCookie/デバイス ID タイプとして設定されるカスタム名前空間。</li><li>cookie/デバイス識別子がクロスデバイス ID タイプとして設定されるカスタム名前空間。</li></ul> Adobe エンジニアリングは、これらのリクエストを手動で処理します。 詳しくは、[ID サービス データのガードレール &#x200B;](../../identity-service/guardrails.md)および[&#x200B; データ管理ライセンス使用権限のベストプラクティス &#x200B;](../../landing/license-usage-and-guardrails/data-management-best-practices.md)に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -205,8 +205,8 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 
 | 機能 | 説明 |
 | --- | --- |
-| ログフィルタリング UIの更新 | クエリログフィルタリングの改善により、監視、管理、トラブルシューティング用のユーザー生成ログの可視性が向上しました。 さまざまな設定に基づいて、クエリログのリストをフィルタリングできます。<br> ![ クエリログのフィルター設定。](../2023/assets/log-filter-settings.png "新しいクエリログフィルターがハイライト表示されます。"){width="100" zoomable="yes"} <br>詳しくは、[ クエリログのドキュメント ](../../query-service/ui/query-logs.md#filter-logs)を参照してください。 |
-| 複数のクエリエディターUIの更新 | クエリエディターで複数のシーケンシャルクエリを実行したり、複数のクエリを記述して、すべてのクエリをシーケンシャルに実行したりできるようになりました。 クエリの実行に柔軟性を持たせるには、選択したクエリを強調表示し、その特定のクエリを選択して、他のクエリとは独立して実行します。 詳しくは、[ クエリエディターUI ガイド ](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries)を参照してください。 |
+| ログフィルタリング UIの更新 | クエリログフィルタリングの改善により、監視、管理、トラブルシューティング用のユーザー生成ログの可視性が向上しました。 さまざまな設定に基づいて、クエリログのリストをフィルタリングできます。<br> ![&#x200B; クエリログのフィルター設定。](../2023/assets/log-filter-settings.png "新しいクエリログフィルターがハイライト表示されます。"){width="100" zoomable="yes"} <br>詳しくは、[&#x200B; クエリログのドキュメント &#x200B;](../../query-service/ui/query-logs.md#filter-logs)を参照してください。 |
+| 複数のクエリエディターUIの更新 | クエリエディターで複数のシーケンシャルクエリを実行したり、複数のクエリを記述して、すべてのクエリをシーケンシャルに実行したりできるようになりました。 クエリの実行に柔軟性を持たせるには、選択したクエリを強調表示し、その特定のクエリを選択して、他のクエリとは独立して実行します。 詳しくは、[&#x200B; クエリエディターUI ガイド &#x200B;](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -220,8 +220,8 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| カスタマイズ可能な列 | サイズ変更可能な列を使用して、オーディエンスポータルのレイアウトをカスタマイズできるようになりました。 この機能について詳しくは、[ オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#customize)を参照してください。 |
-| 頻度の内訳の更新 | 組織内のオーディエンスの更新頻度の内訳を表示できるようになりました。 この機能について詳しくは、[ セグメント化UI ガイド ](../../segmentation/ui/overview.md#browse)を参照してください。 |
+| カスタマイズ可能な列 | サイズ変更可能な列を使用して、オーディエンスポータルのレイアウトをカスタマイズできるようになりました。 この機能について詳しくは、[&#x200B; オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#customize)を参照してください。 |
+| 頻度の内訳の更新 | 組織内のオーディエンスの更新頻度の内訳を表示できるようになりました。 この機能について詳しくは、[&#x200B; セグメント化UI ガイド &#x200B;](../../segmentation/ui/overview.md#browse)を参照してください。 |
 
 セグメント化サービスの詳細については、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。
 
@@ -233,8 +233,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| セルフサービスソースの`offset` ページネーションの新しいパラメーター（バッチSDK） | `endConditionName` ページネーションを使用する際に、ソースに`endConditionValue`と`offset`を指定できるようになりました。 これらのパラメーターを使用すると、次のHTTP リクエストでページネーション ループを終了する条件を指定できます。 詳しくは、「[ セルフサービスソースのページネーションガイド （バッチSDK） ](../../sources/sources-sdk/config/sourcespec.md#pagination)」を参照してください。 |
+| セルフサービスソースの`offset` ページネーションの新しいパラメーター（バッチSDK） | `endConditionName` ページネーションを使用する際に、ソースに`endConditionValue`と`offset`を指定できるようになりました。 これらのパラメーターを使用すると、次のHTTP リクエストでページネーション ループを終了する条件を指定できます。 詳しくは、「[&#x200B; セルフサービスソースのページネーションガイド （バッチSDK） &#x200B;](../../sources/sources-sdk/config/sourcespec.md#pagination)」を参照してください。 |
 
 {style="table-layout:auto"}
 
-ソースについて詳しくは、[ ソースの概要](../../sources/home.md)を参照してください。
+ソースについて詳しくは、[&#x200B; ソースの概要](../../sources/home.md)を参照してください。

@@ -39,7 +39,7 @@ ht-degree: 14%
 
 ![名前と説明が入力され、「確認」オプションがハイライト表示された「新しい役割を作成」ダイアログ。](../../images/ui/roles/roles-create-new-role.png)
 
-**[!UICONTROL Resources]** ワークスペースが表示されます。 スクロールするか、左側のパネルの検索バーにリソースの名前を入力して、必要なリソースを見つけます。 リソース名の横にある![ プラスアイコン ](/help/images/icons/plus.png)を選択して、リソースを追加します。
+**[!UICONTROL Resources]** ワークスペースが表示されます。 スクロールするか、左側のパネルの検索バーにリソースの名前を入力して、必要なリソースを見つけます。 リソース名の横にある![&#x200B; プラスアイコン &#x200B;](/help/images/icons/plus.png)を選択して、リソースを追加します。
 
 ![個々のリソースの「追加」オプションがハイライト表示されたリソースワークスペース。](../../images/ui/roles/roles-resources.png)
 
@@ -69,7 +69,7 @@ The following video is intended to support your understanding of creating a new 
 
 役割を複製すると、詳細、権限、ラベル、サンドボックスがコピーされます。 ユーザー、ユーザーグループ、およびAPI資格情報&#x200B;**は**&#x200B;にコピーされていないため、役割に手動で追加する必要があります。
 
-既存の役割を複製するには、**[!UICONTROL Roles]** タブ内で複製する役割を見つけます。 役割の名前の横にある![詳細アイコン ](/help/images/icons/more.png)を選択し、ドロップダウンメニューから&#x200B;**[!UICONTROL Duplicate]**&#x200B;を選択します。
+既存の役割を複製するには、**[!UICONTROL Roles]** タブ内で複製する役割を見つけます。 役割の名前の横にある![詳細アイコン &#x200B;](/help/images/icons/more.png)を選択し、ドロップダウンメニューから&#x200B;**[!UICONTROL Duplicate]**&#x200B;を選択します。
 
 ![役割のドロップダウンメニューを含む役割ワークスペースが展開され、「複製」オプションが強調表示されます。](../../images/ui/roles/role-duplicate.png)
 
@@ -87,7 +87,7 @@ The following video is intended to support your understanding of creating a new 
 
 ## 役割の削除
 
-役割を削除するには、**[!UICONTROL Roles]** タブ内で削除する役割を見つけます。 役割の名前の横にある![詳細アイコン ](/help/images/icons/more.png)を選択し、ドロップダウンメニューから&#x200B;**[!UICONTROL Delete]**&#x200B;を選択します。
+役割を削除するには、**[!UICONTROL Roles]** タブ内で削除する役割を見つけます。 役割の名前の横にある![詳細アイコン &#x200B;](/help/images/icons/more.png)を選択し、ドロップダウンメニューから&#x200B;**[!UICONTROL Delete]**&#x200B;を選択します。
 
 ![役割のドロップダウンメニューを含む役割ワークスペースが展開され、「複製」オプションが強調表示されます。](../../images/ui/roles/role-delete.png)
 

@@ -22,22 +22,22 @@ Adobe Experience Platform ユーザーインターフェイスのフィルタリ
 
 ソースワークスペースのオブジェクトナビゲーションツールを使用する前に、次のExperience Platformの機能と概念について理解しておくと便利です。
 
-* [ ソース ](../../home.md): Experience Platformのソースを使用して、Adobe アプリケーションまたはサードパーティのデータソースからデータを取り込みます。
-* [管理タグ ](../../../administrative-tags/overview.md)：管理タグを使用してメタデータ キーワードをオブジェクトに適用し、検索を有効にしてExperience Platform エコシステム内でそのオブジェクトを検索します。
-* [ アラート ](../../../observability/home.md): アラートを使用して、ソースデータフローなどのオブジェクトのステータスに関する最新情報を提供する通知を受信します。
-* [ データフロー](../../../dataflows/home.md): データフローは、Experience Platform間でデータを移動するデータジョブを表します。 ソースワークスペースを使用して、特定のソースからExperience Platformにデータを取り込むデータフローを作成できます。
-* [ データセット ](../../../catalog/datasets/user-guide.md): データセットは、スキーマ（列）とフィールド（行）を含むデータのコレクション（通常はテーブル）のストレージおよび管理構造です。
-* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformのサンドボックスを使用して、Experience Platform インスタンス間のバーチャルパーティションを作成し、開発用または実稼動用の環境を作成します。
+* [&#x200B; ソース &#x200B;](../../home.md): Experience Platformのソースを使用して、Adobe アプリケーションまたはサードパーティのデータソースからデータを取り込みます。
+* [管理タグ &#x200B;](../../../administrative-tags/overview.md)：管理タグを使用してメタデータ キーワードをオブジェクトに適用し、検索を有効にしてExperience Platform エコシステム内でそのオブジェクトを検索します。
+* [&#x200B; アラート &#x200B;](../../../observability/home.md): アラートを使用して、ソースデータフローなどのオブジェクトのステータスに関する最新情報を提供する通知を受信します。
+* [&#x200B; データフロー](../../../dataflows/home.md): データフローは、Experience Platform間でデータを移動するデータジョブを表します。 ソースワークスペースを使用して、特定のソースからExperience Platformにデータを取り込むデータフローを作成できます。
+* [&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md): データセットは、スキーマ（列）とフィールド（行）を含むデータのコレクション（通常はテーブル）のストレージおよび管理構造です。
+* [&#x200B; サンドボックス &#x200B;](../../../sandboxes/home.md): Experience Platformのサンドボックスを使用して、Experience Platform インスタンス間のバーチャルパーティションを作成し、開発用または実稼動用の環境を作成します。
 
 ## ソースデータフローのフィルター {#filter-sources-dataflows}
 
 Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Sources]**」を選択し、上部のヘッダーから「**[!UICONTROL Dataflows]**」を選択します。
 
-![ ソースワークスペースのデータフローページ ](../../images/tutorials/filter/dataflows-page.png)
+![&#x200B; ソースワークスペースのデータフローページ &#x200B;](../../images/tutorials/filter/dataflows-page.png)
 
 デフォルトでは、フィルターメニューはインターフェイスの左側に表示されます。 メニューを非表示にするには、**[!UICONTROL Hide filters]**&#x200B;を選択します。
 
-![ フィルター非表示オプションが選択されました。](../../images/tutorials/filter/hide-filters.png)
+![&#x200B; フィルター非表示オプションが選択されました。](../../images/tutorials/filter/hide-filters.png)
 
 ソースデータフローは、次のパラメーターでフィルタリングできます。
 
@@ -46,8 +46,8 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL So
 | [Source platform](#filter-dataflows-by-source-platform) | データフローを作成したソースに基づいて、データフローをフィルタリングします。 |
 | [タグ](#filter-dataflows-by-tags) | 適用されたタグに基づいて、データフローをフィルタリングします。 |
 | [ステータス](#filter-dataflows-by-status) | 現在のステータスに基づいて、データフローをフィルタリングします。 |
-| [ ターゲットデータセット ](#filter-dataflows-by-target-dataset) | 作成したターゲットデータセットに基づいて、データフローをフィルタリングします。 |
-| [ アカウント名](#filter-dataflows-by-account-name) | 対応するアカウントの名前に基づいて、データフローをフィルタリングします。 |
+| [&#x200B; ターゲットデータセット &#x200B;](#filter-dataflows-by-target-dataset) | 作成したターゲットデータセットに基づいて、データフローをフィルタリングします。 |
+| [&#x200B; アカウント名](#filter-dataflows-by-account-name) | 対応するアカウントの名前に基づいて、データフローをフィルタリングします。 |
 | [作成者](#filter-dataflows-by-user) | データフローを作成者に基づいてフィルタリングします。 |
 | [作成日](#filter-dataflows-by-creation-date) | データフローの作成日に基づいてデータフローをフィルタリングします。 |
 | [変更日](#filter-dataflows-by-modification-date) | 最後に更新された日付に基づいて、データフローをフィルタリングします。 |
@@ -122,7 +122,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL So
 
 Experience Platform UIで、左側のナビゲーションで「[!UICONTROL Sources]」を選択し、上部のヘッダーから「**[!UICONTROL Accounts]**」を選択します。 ソースアカウントは、作成元のソースまたは作成元のユーザーに基づいてフィルタリングできます。
 
-![ ソースワークスペースのアカウントページ ](../../images/tutorials/filter/accounts.png)
+![&#x200B; ソースワークスペースのアカウントページ &#x200B;](../../images/tutorials/filter/accounts.png)
 
 ## アカウントとデータフローの検索 {#search-for-accounts-and-dataflows}
 
@@ -134,13 +134,13 @@ Experience Platform UIで、左側のナビゲーションで「[!UICONTROL Sour
 
 [!UICONTROL Dataflows] ページの検索バーを使用して、特定のデータフローを検索します。 名前または説明を使用してデータフローを検索できます。
 
-![ACME データフローの検索クエリ ](../../images/tutorials/filter/search-dataflow.png)
+![ACME データフローの検索クエリ &#x200B;](../../images/tutorials/filter/search-dataflow.png)
 
 >[!TAB  アカウントを検索]
 
 [!UICONTROL Accounts] ページの検索バーを使用して、特定のアカウントを検索します。 アカウント名または説明を使用してアカウントを検索できます。
 
-![4月アカウントの検索クエリ ](../../images/tutorials/filter/search-account.png)
+![4月アカウントの検索クエリ &#x200B;](../../images/tutorials/filter/search-account.png)
 
 >[!ENDTABS]
 
@@ -154,13 +154,13 @@ Experience Platform UIで、左側のナビゲーションで「[!UICONTROL Sour
 | --- | --- |
 | [!UICONTROL Edit schedule] | **[!UICONTROL Edit schedule]**&#x200B;を選択して、データフローの取り込みスケジュールを更新します。 1回限りの取り込みに設定されたデータフローは編集できません。 |
 | [!UICONTROL Disable dataflow] | データフロー実行を無効にするには、**[!UICONTROL Disable dataflow]**&#x200B;を選択します。 このオプションは、データフローを削除しません。 |
-| [!UICONTROL View in monitoring] | 監視ダッシュボードでデータフローの指標とステータスを表示するには、**[!UICONTROL View in monitoring]**&#x200B;を選択します。 詳しくは、[ ソースデータフローの監視](../../../dataflows/ui/monitor-sources.md)に関するガイドを参照してください。 |
+| [!UICONTROL View in monitoring] | 監視ダッシュボードでデータフローの指標とステータスを表示するには、**[!UICONTROL View in monitoring]**&#x200B;を選択します。 詳しくは、[&#x200B; ソースデータフローの監視](../../../dataflows/ui/monitor-sources.md)に関するガイドを参照してください。 |
 | [!UICONTROL Delete] | **[!UICONTROL Delete]**&#x200B;を選択してデータフローを削除します。 |
-| [!UICONTROL Run on-demand] | データフロー実行の1回のイテレーションをトリガーするには、**[!UICONTROL Run on-demand]**&#x200B;を選択します。 詳しくは、[ オンデマンドデータフロー実行の作成](../ui/on-demand-ingestion.md)に関するガイドを参照してください。 |
-| [!UICONTROL Subscribe to alerts] | **[!UICONTROL Subscribe to alerts]**&#x200B;を選択して、購読できるアラートのポップアップウィンドウを表示します。 <ul><li>ソース データフロー実行開始：このアラートを選択すると、オンデマンドデータフローの実行が開始されたときに通知を受け取ります。</li><li>ソース データフロー実行の成功：オンデマンドデータフロー実行が正常に終了したときに通知を受け取るには、このアラートを選択します。</li><li>ソース データフロー実行エラー：エラーが原因でオンデマンドデータフロー実行が失敗した場合に、このアラートを選択します。</li></ul> 詳しくは、「[ ソースデータフローのアラートの購読](../ui/alerts.md)」に関するガイドを参照してください。 |
-| [!UICONTROL Add to package] | **[!UICONTROL Add to package]**&#x200B;を選択してデータフローをパッケージに追加し、別のサンドボックスで使用するために書き出します。 この手順では、新しいパッケージを作成するか、既存のパッケージにデータフローを追加できます。 詳しくは、[ サンドボックスツール ](../../../sandboxes/ui/sandbox-tooling.md)に関するガイドを参照してください。 |
-| [!UICONTROL Manage tags] | データフローにタグを追加または削除するには、**[!UICONTROL Manage tags]**&#x200B;を選択します。 タグを使用してメタデータの分類を管理し、ビジネスオブジェクトを分類して、発見や分類を容易にします。 詳しくは、[ タグの管理](../../../administrative-tags/ui/managing-tags.md)に関するガイドを参照してください。 |
+| [!UICONTROL Run on-demand] | データフロー実行の1回のイテレーションをトリガーするには、**[!UICONTROL Run on-demand]**&#x200B;を選択します。 詳しくは、[&#x200B; オンデマンドデータフロー実行の作成](../ui/on-demand-ingestion.md)に関するガイドを参照してください。 |
+| [!UICONTROL Subscribe to alerts] | **[!UICONTROL Subscribe to alerts]**&#x200B;を選択して、購読できるアラートのポップアップウィンドウを表示します。 <ul><li>ソース データフロー実行開始：このアラートを選択すると、オンデマンドデータフローの実行が開始されたときに通知を受け取ります。</li><li>ソース データフロー実行の成功：オンデマンドデータフロー実行が正常に終了したときに通知を受け取るには、このアラートを選択します。</li><li>ソース データフロー実行エラー：エラーが原因でオンデマンドデータフロー実行が失敗した場合に、このアラートを選択します。</li></ul> 詳しくは、「[&#x200B; ソースデータフローのアラートの購読](../ui/alerts.md)」に関するガイドを参照してください。 |
+| [!UICONTROL Add to package] | **[!UICONTROL Add to package]**&#x200B;を選択してデータフローをパッケージに追加し、別のサンドボックスで使用するために書き出します。 この手順では、新しいパッケージを作成するか、既存のパッケージにデータフローを追加できます。 詳しくは、[&#x200B; サンドボックスツール &#x200B;](../../../sandboxes/ui/sandbox-tooling.md)に関するガイドを参照してください。 |
+| [!UICONTROL Manage tags] | データフローにタグを追加または削除するには、**[!UICONTROL Manage tags]**&#x200B;を選択します。 タグを使用してメタデータの分類を管理し、ビジネスオブジェクトを分類して、発見や分類を容易にします。 詳しくは、[&#x200B; タグの管理](../../../administrative-tags/ui/managing-tags.md)に関するガイドを参照してください。 |
 
 ## 次の手順
 
-このドキュメントでは、ソースアカウントとデータフローページを移動する方法について説明しました。 ソースについて詳しくは、[ ソースの概要](../../home.md)を参照してください。
+このドキュメントでは、ソースアカウントとデータフローページを移動する方法について説明しました。 ソースについて詳しくは、[&#x200B; ソースの概要](../../home.md)を参照してください。

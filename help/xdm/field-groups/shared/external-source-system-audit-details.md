@@ -23,4 +23,4 @@ ht-degree: 4%
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [完全なスキーマ ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)
+* [完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)

@@ -226,9 +226,9 @@ Azure上のExperience Platformにソースを接続する前に、リージョ�
 
 [!DNL Salesforce] ソースを[!DNL B2B-CDP]の一部として使用するには、まず[!DNL Postman] ユーティリティを設定して[!DNL Salesforce]名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を提供しています。
 
-- 名前空間とスキーマ自動生成ユーティリティのコレクションと環境は、この[GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)からダウンロードできます。
+- 名前空間とスキーマ自動生成ユーティリティのコレクションと環境は、この[GitHub リポジトリ &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)からダウンロードできます。
 - 必要なヘッダーの値を収集し、サンプル API呼び出しを読み取る方法など、Experience Platform APIの使用方法について詳しくは、[Experience Platform APIの概要](../../../landing/api-guide.md)に関するガイドを参照してください。
-- Experience Platform APIの資格情報を生成する方法について詳しくは、[Experience Platform APIの認証とアクセス ](../../../landing/api-authentication.md)に関するチュートリアルを参照してください。
+- Experience Platform APIの資格情報を生成する方法について詳しくは、[Experience Platform APIの認証とアクセス &#x200B;](../../../landing/api-authentication.md)に関するチュートリアルを参照してください。
 - Experience Platform API用の[!DNL Postman]の設定方法について詳しくは、[開発者向けコンソールの設定および [!DNL Postman]](../../../landing/postman.md)に関するチュートリアルを参照してください。
 
 Experience Platform開発者コンソールと[!DNL Postman]の設定が完了したら、[!DNL Postman]環境に適切な環境値を適用できるようになりました。

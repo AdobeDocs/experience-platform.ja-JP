@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ドキュメントの[ オーディエンス構成の基本を学ぶガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)を参照して、そのコンテキストでのオーディエンス構成の操作について詳しくお読みください。
+Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ドキュメントの[&#x200B; オーディエンス構成の基本を学ぶガイド &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)を参照して、そのコンテキストでのオーディエンス構成の操作について詳しくお読みください。
 
 >[!ENDSHADEBOX]
 
@@ -26,7 +26,7 @@ Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ド
 >- プロファイルの管理
 >- 結合ポリシーの管理
 >
->Experience Platform内の権限について詳しくは、[ アクセス制御の概要](../../access-control/home.md#permissions)を参照してください。
+>Experience Platform内の権限について詳しくは、[&#x200B; アクセス制御の概要](../../access-control/home.md#permissions)を参照してください。
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ド
 
 オーディエンスで除外する場合は、**[!UICONTROL Add Audience]**&#x200B;を選択して、除外するオーディエンスを選択できます。
 
-![ 「[!UICONTROL Add audience]」ボタンが選択され、除外するオーディエンスを選択できます。](../images/ui/audience-composition/add-excluded-audience.png)
+![&#x200B; 「[!UICONTROL Add audience]」ボタンが選択され、除外するオーディエンスを選択できます。](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
@@ -160,7 +160,7 @@ Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ド
 >title="属性別に除外"
 >abstract="属性別に除外すると、選択した属性に基づいて、特定のプロファイルが構成に表示されないように除外できます。"
 
-属性で除外する場合は、![ セクション内の](/help/images/icons/project-edit.png)filter **[!UICONTROL Exclusion rule]** アイコンを選択して、除外する属性を選択できます。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
+属性で除外する場合は、![&#x200B; セクション内の](/help/images/icons/project-edit.png)filter **[!UICONTROL Exclusion rule]** アイコンを選択して、除外する属性を選択できます。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
 
 ![属性セクションがハイライト表示され、除外する属性を選ぶために選択すべき場所が示されている様子。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -226,13 +226,13 @@ Adobe Journey Optimizerをご利用のお客様は、Adobe Journey Optimizer ド
 
 ![[!UICONTROL Enrichment criteria]領域がハイライト表示されます。](../images/ui/audience-composition/enrichment-criteria.png)
 
-**[!UICONTROL Source join key]**&#x200B;を選択するには、![ フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
+**[!UICONTROL Source join key]**&#x200B;を選択するには、![&#x200B; フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
 
 **[!UICONTROL Select a profile attribute]** ポップオーバーが表示されます。 ソース結合キーとして使用するプロファイル属性を選択し、その属性をソース結合キーとして選択するには&#x200B;**[!UICONTROL Select]**&#x200B;を選択します。
 
 ![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/select-source-join-key.png)
 
-**[!UICONTROL Enrichment dataset join key]**&#x200B;を選択するには、![ フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
+**[!UICONTROL Enrichment dataset join key]**&#x200B;を選択するには、![&#x200B; フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
 
 **[!UICONTROL Enrichment attributes]** ポップオーバーが表示されます。 エンリッチメントデータセット結合キーとして使用する属性を選択し、その属性をエンリッチメントデータセット結合キーとして選択するには&#x200B;**[!UICONTROL Select]**&#x200B;を選択します。
 
@@ -300,7 +300,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 さらに、**[!UICONTROL Add profile limit]** トグルを有効にすることで、返されるプロファイルの数を制限できます。 この切り替えが有効になっている場合、**[!UICONTROL Included profiles]** フィールド内で返されるプロファイルの最大数を設定できます。
 
-![ プロファイル制限を追加トグルがハイライト表示され、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
+![&#x200B; プロファイル制限を追加トグルがハイライト表示され、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Split] {#split-block}
 
@@ -353,7 +353,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 属性で分割 {#split-attribute}
 
-属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割する属性を選択するには、**[!UICONTROL Split]** ブロックを選択し、続いて![ フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
+属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割する属性を選択するには、**[!UICONTROL Split]** ブロックを選択し、続いて![&#x200B; フィルター](/help/images/icons/project-edit.png) アイコンを選択します。
 
 ![フィルターボタンが選択され、属性別にフィルターする方法が示されています。](../images/ui/audience-composition/split-by-attribute.png)
 

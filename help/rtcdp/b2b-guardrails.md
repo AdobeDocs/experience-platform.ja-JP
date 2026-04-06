@@ -17,7 +17,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->このドキュメントに記載されている制限は、Real-Time Customer Data Platform B2B editionによって有効になった変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>このドキュメントに記載されている制限は、Real-Time Customer Data Platform B2B editionによって有効になった変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客プロファイルとアカウントプロファイルを利用して、行動インサイトと顧客属性にもとづいてパーソナライズされたクロスチャネルエクスペリエンスを提供できます。 プロファイルに対するこの新しいアプローチをサポートするために、Experience Platform では、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。
 
@@ -52,7 +52,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 >[!NOTE]
 >
->この節で説明するデータモデルの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>この節で説明するデータモデルの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
@@ -65,7 +65,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 >[!NOTE]
 >
->この節で説明するデータモデルの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>この節で説明するデータモデルの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
@@ -86,7 +86,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 >[!NOTE]
 >
->この節で説明するデータサイズの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>この節で説明するデータサイズの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
@@ -96,7 +96,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 >[!NOTE]
 >
->この節で説明するデータサイズの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>この節で説明するデータサイズの制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
@@ -110,7 +110,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 >[!NOTE]
 >
->この節で説明するセグメント化の制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更点を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+>この節で説明するセグメント化の制限は、Real-Time Customer Data Platform B2B editionで有効になっている変更点を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 ## 次の手順
 
-このドキュメントに記載されている制限は、Real-Time Customer Data Platform B2B editionによって有効になった変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [ ガードレール ](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
+このドキュメントに記載されている制限は、Real-Time Customer Data Platform B2B editionによって有効になった変更を表します。 Real-Time CDP B2B editionのデフォルトの制限の詳細については、これらの制限と、リアルタイム顧客プロファイルデータのドキュメント [&#x200B; ガードレール &#x200B;](../profile/guardrails.md)に記載されている一般的なAdobe Experience Platformの制限を組み合わせてください。
 
 ## 付録
 
@@ -126,7 +126,7 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 ### エンティティタイプ
 
-[!DNL Profile] ストアデータモデルは、[ プライマリエンティティ ](#primary-entity)と[ ディメンションエンティティ ](#dimension-entity)の2つのコアエンティティタイプで構成されています。
+[!DNL Profile] ストアデータモデルは、[&#x200B; プライマリエンティティ &#x200B;](#primary-entity)と[&#x200B; ディメンションエンティティ &#x200B;](#dimension-entity)の2つのコアエンティティタイプで構成されています。
 
 #### プライマリエンティティ
 
@@ -134,14 +134,14 @@ Real-Time Customer Data Platform B2B editionなら、リアルタイムの顧客
 
 時間に依存しない属性（「レコードデータ」とも呼ばれる）は、[!DNL XDM Individual Profile]、時系列データ（「イベントデータ」とも呼ばれる）は [!DNL XDM ExperienceEvent] を使用してモデル化されます。レコードと時系列データが Adobe Experience Platform に取り込まれると、[!DNL Real-Time Customer Profile] がトリガーされ、使用可能なデータの取り込みが開始されます。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは正確になります。
 
-![ レコードデータと時系列データの違いを示すインフォグラフィック。](../profile/images/guardrails/profile-entity.png)
+![&#x200B; レコードデータと時系列データの違いを示すインフォグラフィック。](../profile/images/guardrails/profile-entity.png)
 
 #### Dimension エンティティ
 
-プロファイルデータを管理するプロファイルデータストアはリレーショナルストアではありませんが、Profileは、オーディエンスを簡素化して直感的な方法で作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は[ マルチエンティティ セグメンテーション ](../segmentation/tutorials/multi-entity-segmentation.md)と呼ばれます。
+プロファイルデータを管理するプロファイルデータストアはリレーショナルストアではありませんが、Profileは、オーディエンスを簡素化して直感的な方法で作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は[&#x200B; マルチエンティティ セグメンテーション &#x200B;](../segmentation/tutorials/multi-entity-segmentation.md)と呼ばれます。
 
-組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの[!DNL XDM Individual Profile]以外のスキーマは「ディメンション エンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データは含まれません。 ディメンション エンティティを表すスキーマは、[ スキーマ関係](../xdm/tutorials/relationship-ui.md)を使用してプロファイル エンティティにリンクされます。
+組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの[!DNL XDM Individual Profile]以外のスキーマは「ディメンション エンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データは含まれません。 ディメンション エンティティを表すスキーマは、[&#x200B; スキーマ関係](../xdm/tutorials/relationship-ui.md)を使用してプロファイル エンティティにリンクされます。
 
 ディメンションエンティティは、複数エンティティのセグメント定義を支援および簡素化するルックアップデータを提供します。また、セグメントエンジンが、処理の最適化（高速ポイントルックアップ）のためにデータセット全体をメモリに読み込めるようディメンションエンティティのサイズは小さくする必要があります。
 
-![ プロファイル エンティティがディメンション エンティティで構成されていることを示すインフォグラフィック。](../profile/images/guardrails/profile-and-dimension-entities.png)
+![&#x200B; プロファイル エンティティがディメンション エンティティで構成されていることを示すインフォグラフィック。](../profile/images/guardrails/profile-and-dimension-entities.png)

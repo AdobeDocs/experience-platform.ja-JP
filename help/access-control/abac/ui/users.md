@@ -18,7 +18,7 @@ ht-degree: 8%
 >abstract="ユーザーは、Experience Platform へのアクセス権が付与された個人です。個々のユーザーの組織のリソースへのアクセスは、役割を通じて管理されます。"
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
 
-ユーザーは、Adobe Experience Platformにアクセスできる個人です。 組織のリソースに対する個々のユーザーのアクセスは、[役割](./roles.md){target="_blank"}を通じて管理されます。 組織は[ ユーザーグループ ](#user-groups)を作成して、複数のユーザーに同時にシームレスにアクセスできるようにすることもできます。 ユーザーはAdmin Consoleで管理され、Adobe Experience Platform製品カードに関連付けられているユーザーは、Experience Platformのユーザーリストの一部として表示されます。
+ユーザーは、Adobe Experience Platformにアクセスできる個人です。 組織のリソースに対する個々のユーザーのアクセスは、[役割](./roles.md){target="_blank"}を通じて管理されます。 組織は[&#x200B; ユーザーグループ &#x200B;](#user-groups)を作成して、複数のユーザーに同時にシームレスにアクセスできるようにすることもできます。 ユーザーはAdmin Consoleで管理され、Adobe Experience Platform製品カードに関連付けられているユーザーは、Experience Platformのユーザーリストの一部として表示されます。
 
 ## ユーザーの管理
 
@@ -37,11 +37,11 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 
 「**[!UICONTROL Details]**」タブには、ユーザーの概要が表示されます。 概要には、ユーザーの&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Preferred languages]**、**[!UICONTROL Account Type]**、**[!UICONTROL Authentication ID]**、**[!UICONTROL Email]**、**[!UICONTROL Email verified]** ステータス、**[!UICONTROL Country code]**、および&#x200B;**[!UICONTROL Phone number]**&#x200B;が表示されます。
 
-![ ユーザーの詳細ワークスペース。](../../images/ui/users/user-details.png){zoomable="yes"}
+![&#x200B; ユーザーの詳細ワークスペース。](../../images/ui/users/user-details.png){zoomable="yes"}
 
 「**[!UICONTROL Roles]**」タブを選択して、ユーザーが割り当てられている役割を表示します。
 
-![ ユーザーの役割ワークスペース。](../../images/ui/users/user-roles.png){zoomable="yes"}
+![&#x200B; ユーザーの役割ワークスペース。](../../images/ui/users/user-roles.png){zoomable="yes"}
 
 ### ユーザーへの役割の追加 {#add-user-role}
 
@@ -84,21 +84,21 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 
 組織のユーザーを表示するには、**[!UICONTROL Permissions]** Adobe Experience Cloud[の](https://experience.adobe.com/){target="_blank"}に移動します。左側のパネルの&#x200B;**[!UICONTROL Groups]** セクションから&#x200B;**[!UICONTROL Users]**&#x200B;を選択します。
 
-![ ユーザーが権限内のワークスペースをグループ化します。](../../images/ui/users/user-groups-overview.png){zoomable="yes"}
+![&#x200B; ユーザーが権限内のワークスペースをグループ化します。](../../images/ui/users/user-groups-overview.png){zoomable="yes"}
 
 ユーザーグループのリストが表示されます。 リストから表示するグループを選択します。
 
 「**[!UICONTROL Details]**」タブには、ユーザーグループの概要が表示されます。 概要には、グループの&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL User Count]**&#x200B;および&#x200B;**[!UICONTROL Admin count]**&#x200B;が表示されます。
 
-![ ユーザーグループの詳細ワークスペース。](../../images/ui/users/user-group-details.png){zoomable="yes"}
+![&#x200B; ユーザーグループの詳細ワークスペース。](../../images/ui/users/user-group-details.png){zoomable="yes"}
 
 「**[!UICONTROL Users]**」タブを選択して、グループに割り当てられたユーザーのリストを表示します。
 
-![ ユーザーグループのユーザーワークスペース。](../../images/ui/users/user-group-users.png){zoomable="yes"}
+![&#x200B; ユーザーグループのユーザーワークスペース。](../../images/ui/users/user-group-users.png){zoomable="yes"}
 
 「**[!UICONTROL Roles]**」タブを選択して、現在グループに割り当てられている役割のリストを表示します。
 
-![ ユーザーグループの役割ワークスペース。](../../images/ui/users/user-group-roles.png){zoomable="yes"}
+![&#x200B; ユーザーグループの役割ワークスペース。](../../images/ui/users/user-group-roles.png){zoomable="yes"}
 
 ### ユーザーグループへの役割の追加 {#add-user-group-role}
 
@@ -126,7 +126,7 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 >
 >権限でAPI資格情報を表示および管理できるのは、システム管理者のみです。
 
-Experience Platform APIをユーザーまたは開発者として使用するには、役割の特定の権限に加えて、API資格情報を追加する必要があります。 権限を使用すると、以前に作成したExperience Platform製品に割り当てられたAPI資格情報を役割に割り当てることができます。 API資格情報の作成と割り当て、および必要な権限に関する完全なガイドについては、[Experience Platform APIの認証とアクセス ](/help/landing/api-authentication.md){target="_blank"}のステップバイステップチュートリアルを参照してください。
+Experience Platform APIをユーザーまたは開発者として使用するには、役割の特定の権限に加えて、API資格情報を追加する必要があります。 権限を使用すると、以前に作成したExperience Platform製品に割り当てられたAPI資格情報を役割に割り当てることができます。 API資格情報の作成と割り当て、および必要な権限に関する完全なガイドについては、[Experience Platform APIの認証とアクセス &#x200B;](/help/landing/api-authentication.md){target="_blank"}のステップバイステップチュートリアルを参照してください。
 
 Experience Platformに関連付けられている組織のAPI資格情報を表示するには、**[!UICONTROL Permissions]** Adobe Experience Cloud[の](https://experience.adobe.com/){target="_blank"}に移動します。 左側のパネルの「**[!UICONTROL API Credentials]**」セクションから「**[!UICONTROL Users]**」を選択します。
 

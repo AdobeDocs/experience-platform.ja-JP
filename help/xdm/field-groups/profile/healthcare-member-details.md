@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # [!UICONTROL Healthcare Member Details] スキーマフィールドグループ
 
-[!UICONTROL Healthcare Member Details]は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md)の標準スキーマフィールドグループで、連絡先情報、かかりつけ医、計画情報など、医療サービスまたはケアを受ける人の詳細をキャプチャします。
+[!UICONTROL Healthcare Member Details]は、[[!DNL XDM Individual Profile]  クラス &#x200B;](../../classes/individual-profile.md)の標準スキーマフィールドグループで、連絡先情報、かかりつけ医、計画情報など、医療サービスまたはケアを受ける人の詳細をキャプチャします。
 
-![ フィールドグループ構造](../../images/field-groups/healthcare-member-details/structure.png)
+![&#x200B; フィールドグループ構造](../../images/field-groups/healthcare-member-details/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | その人の自宅の住所。 |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | 個人の自宅の電話番号。 |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | 人物の郵送先住所。 |
-| `memberDetails` | オブジェクト | 患者のヘルスケア関連の属性と関係に関する詳細情報を含むオブジェクト。 オブジェクトの構造について詳しくは、以下の[ サブセクション ](#memberDetails)を参照してください。 |
+| `memberDetails` | オブジェクト | 患者のヘルスケア関連の属性と関係に関する詳細情報を含むオブジェクト。 オブジェクトの構造について詳しくは、以下の[&#x200B; サブセクション &#x200B;](#memberDetails)を参照してください。 |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | 個人のヘルスケアメンバーシップに関連する個々のアクター、連絡先、または所有者。 |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | 個人のメールアドレス： |
@@ -59,6 +59,6 @@ ht-degree: 3%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力済み例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
-* [完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
+* [完全なスキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-このフィールドグループを一般的な[医療業界のユースケース ](../../schema/industries/healthcare.md)に使用する方法について詳しくは、業界スキーマのドキュメントを参照してください。
+このフィールドグループを一般的な[医療業界のユースケース &#x200B;](../../schema/industries/healthcare.md)に使用する方法について詳しくは、業界スキーマのドキュメントを参照してください。

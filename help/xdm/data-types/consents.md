@@ -184,7 +184,7 @@ ht-degree: 1%
 >
 >`personalize`はマーケティングのユースケースをカバーしていません。 例えば、顧客がすべてのチャネルでパーソナライゼーションをオプトアウトした場合、それらのチャネルを通じたコミュニケーションの受信を停止すべきではありません。 顧客のプロファイルではなく、一般的なメッセージを送信することが重要です。
 >
->同じ例では、顧客がすべてのチャネルのダイレクトマーケティングをオプトアウトした場合（`marketing`を通じて、[次のセクション ](#marketing)で説明）、パーソナライゼーションが許可されている場合でも、その顧客はメッセージを受け取ってはなりません。
+>同じ例では、顧客がすべてのチャネルのダイレクトマーケティングをオプトアウトした場合（`marketing`を通じて、[次のセクション &#x200B;](#marketing)で説明）、パーソナライゼーションが許可されている場合でも、その顧客はメッセージを受け取ってはなりません。
 
 ```json
 "personalize": {
@@ -257,7 +257,7 @@ ht-degree: 1%
 
 [!UICONTROL Consents and Preferences] データ型を使用して顧客から同意データを取り込むには、そのデータ型を含むスキーマに基づいてデータセットを作成する必要があります。
 
-フィールドにデータタイプを割り当てる手順については、[UIでのスキーマの作成](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)に関するチュートリアルを参照してください。 データ型[!UICONTROL Consents and Preferences]のフィールドを含むスキーマを作成したら、既存のスキーマでデータセットを作成する手順に従って、データセットユーザーガイドの[ データセットの作成](../../catalog/datasets/user-guide.md#create)に関する節を参照してください。
+フィールドにデータタイプを割り当てる手順については、[UIでのスキーマの作成](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)に関するチュートリアルを参照してください。 データ型[!UICONTROL Consents and Preferences]のフィールドを含むスキーマを作成したら、既存のスキーマでデータセットを作成する手順に従って、データセットユーザーガイドの[&#x200B; データセットの作成](../../catalog/datasets/user-guide.md#create)に関する節を参照してください。
 
 >[!IMPORTANT]
 >
@@ -317,4 +317,4 @@ ht-degree: 1%
 
 ### 完全[!UICONTROL Consents and Preferences] スキーマ {#full-schema}
 
-[!UICONTROL Consents and Preferences] データタイプの完全なスキーマを表示するには、[公式XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)を参照してください。
+[!UICONTROL Consents and Preferences] データタイプの完全なスキーマを表示するには、[公式XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)を参照してください。

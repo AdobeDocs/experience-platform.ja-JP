@@ -13,7 +13,7 @@ ht-degree: 37%
 
 組織で製品やサービスを販売している場合は、このページを、それらの製品やサービスの追跡方法に関するガイドとして使用できます。
 
-このページでは、XDM [Commerce スキーマ ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) フィールドグループを使用します。
+このページでは、XDM [Commerce スキーマ &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) フィールドグループを使用します。
 
 このフィールドグループは、次の2つの主要な部分で構成されています。
 

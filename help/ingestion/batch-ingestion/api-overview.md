@@ -13,15 +13,15 @@ ht-degree: 64%
 
 # バッチ取り込み開発者ガイド
 
-このドキュメントでは、Adobe Experience Platformで[ バッチ取り込みAPI エンドポイント ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)を使用するための包括的なガイドを提供します。 前提条件やベストプラクティスを含むバッチ取得APIの概要については、[ バッチ取得APIの概要](overview.md)を参照してください。
+このドキュメントでは、Adobe Experience Platformで[&#x200B; バッチ取り込みAPI エンドポイント &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)を使用するための包括的なガイドを提供します。 前提条件やベストプラクティスを含むバッチ取得APIの概要については、[&#x200B; バッチ取得APIの概要](overview.md)を参照してください。
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取り込みに使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-このガイドで使用されているAPI エンドポイントは、[ バッチ取り込みAPI](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)の一部です。 バッチ取り込みはRESTful APIを通じて提供され、サポートされているオブジェクトタイプに対して基本的なCRUD操作を実行できます。
+このガイドで使用されているAPI エンドポイントは、[&#x200B; バッチ取り込みAPI](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)の一部です。 バッチ取り込みはRESTful APIを通じて提供され、サポートされているオブジェクトタイプに対して基本的なCRUD操作を実行できます。
 
-続行する前に、[ バッチ取り込みAPIの概要](overview.md)と[入門ガイド ](getting-started.md)を確認してください。
+続行する前に、[&#x200B; バッチ取り込みAPIの概要](overview.md)と[入門ガイド &#x200B;](getting-started.md)を確認してください。
 
 ## JSON ファイルの取得
 
@@ -760,7 +760,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 バッチにパッチを適用するには、次の手順が必要です。
 
-- **プロファイルと属性の更新に対するデータセットの有効化。**&#x200B;これはデータセット タグを通じて行われます。特定の`isUpsert:true` タグを`unifiedProfile`配列に追加する必要があります。 データセットを作成する方法や、アップサート用に既存のデータセットを設定する方法を示す詳細な手順については、[ プロファイル更新のためのデータセットの有効化](../../catalog/datasets/enable-upsert.md)のチュートリアルに従ってください。
+- **プロファイルと属性の更新に対するデータセットの有効化。**&#x200B;これはデータセット タグを通じて行われます。特定の`isUpsert:true` タグを`unifiedProfile`配列に追加する必要があります。 データセットを作成する方法や、アップサート用に既存のデータセットを設定する方法を示す詳細な手順については、[&#x200B; プロファイル更新のためのデータセットの有効化](../../catalog/datasets/enable-upsert.md)のチュートリアルに従ってください。
 - **パッチを適用するフィールドとプロファイルのID フィールドを含むParquet ファイル。** バッチにパッチを適用するためのデータ形式は、通常のバッチ取り込みプロセスと似ています。 必要な入力はParquet ファイルで、更新するフィールドに加えて、プロファイルストアのデータと一致させるには、アップロードされたデータにID フィールドが含まれている必要があります。
 
 プロファイルとアップサートに対してデータセットを有効にし、パッチを適用するフィールドと必要なID フィールドを含むParquet ファイルを作成したら、[Parquet ファイルの取り込み](#ingest-parquet-files)の手順に従って、バッチ取り込みを介してパッチを完了できます。
@@ -921,7 +921,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取り込み用のデータ変換
 
-データファイルを[!DNL Experience Platform]に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[Experience Data Model （XDM） ](../../xdm/home.md) スキーマに準拠している必要があります。
+データファイルを[!DNL Experience Platform]に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[Experience Data Model （XDM） &#x200B;](../../xdm/home.md) スキーマに準拠している必要があります。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

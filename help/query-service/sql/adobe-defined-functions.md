@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # クエリサービスでのAdobe定義のSQL関数
 
-Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[ セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)および[ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
+Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[&#x200B; セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)および[&#x200B; アトリビューション &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
 
 このドキュメントでは、[!DNL Query Service]で利用できるAdobe定義の関数について説明します。
 
@@ -47,7 +47,7 @@ Web サイト、モバイルアプリケーション、インタラクティブ�
 
 データをグループ化して分類することで、イベントを関連付けて、顧客体験に関する詳細なコンテキストを明らかにできます。
 
-Adobe Analyticsでのセッション化について詳しくは、[ コンテキスト対応セッション ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
+Adobe Analyticsでのセッション化について詳しくは、[&#x200B; コンテキスト対応セッション &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
 
 **クエリ構文**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
 | `{EXPIRATION_IN_SECONDS}` | 現在のセッションの終了と新しいセッションの開始を検証するためにイベント間に必要な秒数。 |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
 | `{TEST_EXPRESSION}` | データのフィールドをチェックする式。 例：`application.launches > 0` |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | データセット内で見つかったタイムスタンプフィールド。 |
 | `{TEST_EXPRESSION}` | データのフィールドをチェックする式。 例：`application.launches > 0` |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -262,7 +262,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数。 デフォルトでは、値は1です。 |
 | `{IGNORE_NULLS}` | （オプション） null `{KEY}`値を無視する必要があるかどうかを示すブール値。 デフォルトでは、値は`false`です。 |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -313,7 +313,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数。 デフォルトでは、値は1です。 |
 | `{IGNORE_NULLS}` | （オプション） null `{KEY}`値を無視する必要があるかどうかを示すブール値。 デフォルトでは、値は`false`です。 |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | 前のイベントを修飾する式。 |
 | `{TIME_UNIT}` | 出力の単位。 可能な値には、日、時間、分、秒が含まれます。 デフォルトでは、値は秒です。 |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | 次のイベントを修飾する式。 |
 | `{TIME_UNIT}` | （オプション）出力の単位。 可能な値には、日、時間、分、秒が含まれます。 デフォルトでは、値は秒です。 |
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](#window-functions)を参照してください。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](#window-functions)を参照してください。
 
 **クエリの例**
 
@@ -481,7 +481,7 @@ LIMIT 10
 
 ## 次の手順
 
-ここで説明した関数を使用して、[!DNL Experience Event]を使用して独自の[!DNL Query Service] データセットにアクセスするためのクエリを作成できます。 [!DNL Query Service]でのクエリのオーサリングについて詳しくは、[ クエリの作成](../best-practices/writing-queries.md)に関するドキュメントを参照してください。
+ここで説明した関数を使用して、[!DNL Experience Event]を使用して独自の[!DNL Query Service] データセットにアクセスするためのクエリを作成できます。 [!DNL Query Service]でのクエリのオーサリングについて詳しくは、[&#x200B; クエリの作成](../best-practices/writing-queries.md)に関するドキュメントを参照してください。
 
 ## その他のリソース
 

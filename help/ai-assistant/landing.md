@@ -437,9 +437,9 @@ AI アシスタントのユースケースについて詳しくは、次の動�
 
 AI アシスタント（レガシー）の使用例については、次をお読みください。
 
-* [ チームの新規メンバーのオンボーディング時間を短縮](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [ オーディエンスを整理し、マーケティング活動を最適化](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [ データの更新中に依存関係を確認し、リスクを最小限に抑える](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [&#x200B; チームの新規メンバーのオンボーディング時間を短縮](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [&#x200B; オーディエンスを整理し、マーケティング活動を最適化](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [&#x200B; データの更新中に依存関係を確認し、リスクを最小限に抑える](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [新機能をより迅速に見つけてデプロイする](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 * [AI アシスタントによるカスタマーサポートの変革](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
@@ -448,7 +448,7 @@ AI アシスタント（レガシー）の使用例については、次をお�
 AI アシスタント（レガシー）の使用例については、次の動画をご覧ください。
 
 * [AI アシスタントの機能を活用](https://www.youtube.com/watch?v=J48CNmcV7wc)
-* [ オーディエンス向けAI アシスタントについて](https://www.youtube.com/live/DYsyii7ldck)
+* [&#x200B; オーディエンス向けAI アシスタントについて](https://www.youtube.com/live/DYsyii7ldck)
 * [AI アシスタントを使用して運用上のインサイトを活用](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]

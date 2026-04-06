@@ -15,7 +15,7 @@ ht-degree: 6%
 
 [!DNL Pinterest]は、レシピ、ホームデコレーション、スタイルのインスピレーションなどのアイデアを見つけるためのビジュアル検索エンジンです。 [!DNL Pinterest]には何十億ものピンがあり、[!DNL Pinterest]に他のユーザーと共有することもできます。 ユーザーのインタラクションイベントを照合し、[!DNL Pinterest Analytics]を活用してユーザーの行動を把握し、ターゲット広告を実行できます。
 
-[[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/) API [ イベント転送](../../../ui/event-forwarding/overview.md)拡張機能を使用すると、Adobe Experience Platform Edge Networkでキャプチャしたデータを活用して、[!DNL Pinterest]に送信できます。 このドキュメントでは、拡張機能の使用例、インストール方法、イベント転送[ ルール ](../../../ui/managing-resources/rules.md)に拡張機能を統合する方法について説明します。
+[[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/) API [&#x200B; イベント転送](../../../ui/event-forwarding/overview.md)拡張機能を使用すると、Adobe Experience Platform Edge Networkでキャプチャしたデータを活用して、[!DNL Pinterest]に送信できます。 このドキュメントでは、拡張機能の使用例、インストール方法、イベント転送[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)に拡張機能を統合する方法について説明します。
 
 コンバージョンアクセストークンは、[!DNL Pinterest]が[!DNL Pinterest] APIとやり取りする際に使用する認証方法です。
 
@@ -27,13 +27,13 @@ ht-degree: 6%
 
 マーケティング部門と分析部門は、[!DNL Pinterest]の分析機能を活用して、主要な利用者のインタラクションと行動を把握できます。これにより、利用者をより深く理解し、ターゲットを絞った広告施策を展開できるようになります。
 
-[!DNL Pinterest]に固有のユースケースについて詳しくは、[[!DNL Pinterest]  ユースケース ](https://business.pinterest.com/en/success-stories)のドキュメントを参照してください。
+[!DNL Pinterest]に固有のユースケースについて詳しくは、[[!DNL Pinterest]  ユースケース &#x200B;](https://business.pinterest.com/en/success-stories)のドキュメントを参照してください。
 
 ## [!DNL Pinterest] 前提条件 {#prerequisites}
 
-この拡張機能を使用するには、有効な[!DNL Pinterest] [法人アカウント ](https://help.pinterest.com/en/business/article/get-a-business-account)が必要です。 [[!DNL Pinterest] 登録ページ ](https://www.pinterest.com/business/create/)に移動してアカウントを登録し、まだアカウントをお持ちでない場合は作成します。
+この拡張機能を使用するには、有効な[!DNL Pinterest] [法人アカウント &#x200B;](https://help.pinterest.com/en/business/article/get-a-business-account)が必要です。 [[!DNL Pinterest] 登録ページ &#x200B;](https://www.pinterest.com/business/create/)に移動してアカウントを登録し、まだアカウントをお持ちでない場合は作成します。
 
-また、[!DNL Pinterest]開発者アカウントも必要です。このアカウントは、[!DNL Pinterest]法人アカウントに関連付ける必要があります。 開発者アカウントをビジネスアカウントに関連付けるには、[[!DNL Pinterest ] 開発者アカウント ](https://developers.pinterest.com/account-setup/)を参照してください。
+また、[!DNL Pinterest]開発者アカウントも必要です。このアカウントは、[!DNL Pinterest]法人アカウントに関連付ける必要があります。 開発者アカウントをビジネスアカウントに関連付けるには、[[!DNL Pinterest &#x200B;] 開発者アカウント &#x200B;](https://developers.pinterest.com/account-setup/)を参照してください。
 
 ### 必要な設定の詳細を収集する {#configuration-details}
 
@@ -46,7 +46,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 
 ## [!DNL Pinterest]拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、[ イベント転送プロパティ ](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[&#x200B; イベント転送プロパティ &#x200B;](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
 
 左側のナビゲーションで、**[!UICONTROL Extensions]**&#x200B;を選択します。 **[!UICONTROL Install]** タブの[!DNL Pinterest]拡張機能のカードで&#x200B;**[!UICONTROL Catalog]**&#x200B;を選択します。
 
@@ -58,7 +58,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 >
 >実装のニーズに応じて、拡張機能を設定する前に、スキーマ、データ要素、データセットを作成する必要がある場合があります。 ユースケースに合わせて設定する必要のあるエンティティを判断するには、開始する前にすべての設定手順を確認してください。
 
-左側のナビゲーションで、**[!UICONTROL Extensions]**&#x200B;を選択します。 **[!UICONTROL Configure]**** タブの[!DNL Pinterest]拡張機能のカードで[!UICONTROL Installed]を選択します。
+左側のナビゲーションで、**[!UICONTROL Extensions]**&#x200B;を選択します。 **[!UICONTROL Configure]**&#x200B;** タブの[!DNL Pinterest]拡張機能のカードで[!UICONTROL Installed]を選択します。
 
 ![[!DNL Pinterest]がハイライト表示された[!UICONTROL Install] タブに表示されている[!UICONTROL Configure]拡張機能。](../../../images/extensions/server/pinterest/configure.png)
 
@@ -70,7 +70,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 
 すべてのデータ要素を設定したら、イベントをいつ、どのように[!DNL Pinterest]に送信するかを決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しい[ ルール ](../../../ui/managing-resources/rules.md)を作成します。 **[!UICONTROL Actions]**&#x200B;で、新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL Pinterest]**&#x200B;に設定します。 Edge Network イベントを[!DNL Pinterest]に送信するには、**[!UICONTROL Action Type]**&#x200B;を&#x200B;**[!UICONTROL Send Event]に設定します。**
+イベント転送プロパティに新しい[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)を作成します。 **[!UICONTROL Actions]**&#x200B;で、新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL Pinterest]**&#x200B;に設定します。 Edge Network イベントを[!DNL Pinterest]に送信するには、**[!UICONTROL Action Type]**&#x200B;を&#x200B;**[!UICONTROL Send Event]に設定します。**
 
 ![[!DNL Pinterest] [!UICONTROL Send Event] ルールの作成。](../../../images/extensions/server/pinterest/rule.png)
 
@@ -82,13 +82,13 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 
 | フィールド名 | 説明 | 例 |
 | --- | --- | --- |
-| [!UICONTROL Event Name] | ユーザーイベントのタイプ。 ただし、これは任意のイベントタイプにできますが、[!DNL Pinterest Analytics]を活用するには、[[!DNL Pinterest]  イベントコード ](https://help.pinterest.com/en/business/article/add-event-codes)を使用することをお勧めします | &amp;ast; チェックアウト <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast；登録<br> &amp;ast; [ ユーザー定義イベント ] |
-| [!UICONTROL Action Source] | コンバージョンイベントが発生した場所を示すソース。 | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; web <br> &amp;ast; オフライン |
+| [!UICONTROL Event Name] | ユーザーイベントのタイプ。 ただし、これは任意のイベントタイプにできますが、[!DNL Pinterest Analytics]を活用するには、[[!DNL Pinterest]  イベントコード &#x200B;](https://help.pinterest.com/en/business/article/add-event-codes)を使用することをお勧めします | &ast; チェックアウト <br> &ast; add_to_cart <br> &ast; page_visit <br> &amp;ast；登録<br> &ast; [ ユーザー定義イベント ] |
+| [!UICONTROL Action Source] | コンバージョンイベントが発生した場所を示すソース。 | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; オフライン |
 | [!UICONTROL Event Time] | これはイベント時間を指します。 使用されるデフォルトの時間形式はUNIXで、ローカルのタイムゾーンに応じて`<seconds>.<miliseconds>`の形式になります。 詳しくは、[[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create)を参照してください。 | 1433188255.500は、1433188255秒後500 ミリ秒後、または2015年6月1日月曜日の午後7:50:55 GMTを示します。 |
 | [!UICONTROL Event ID] | このイベントを識別する一意のID文字列。コンバージョン APIとPinterest トラッキングの両方を介して取り込まれたイベント間の重複排除に使用できます。 この機能がなければ、イベントのデータは二重にカウントされる可能性が高く、指標のインフレーションを報告します。 | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | イベントのカスタムプロパティを含むJSON オブジェクト。 生のJSONを提供するか、簡素化されたキー値入力セットを使用するかを選択します。 | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
 
-![ ルール アクションで[!DNL Pinterest] [!UICONTROL Event Data]が強調表示されました。](../../../images/extensions/server/pinterest/event-data.png)
+![&#x200B; ルール アクションで[!DNL Pinterest] [!UICONTROL Event Data]が強調表示されました。](../../../images/extensions/server/pinterest/event-data.png)
 
 次のイベントプロパティを設定できます。
 
@@ -117,7 +117,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 | [!UICONTROL Client User Agent] | ユーザーのweb ブラウザーのユーザーエージェント文字列。 | Mozilla/5.0 （platform; rv:geckoversion） Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL Customer information data] | 他の顧客情報を含むJSON オブジェクト。 生のJSONを提供するか、簡素化されたキー値入力セットを使用するかを選択します。 | { &quot;ph&quot;: &quot;122333445&quot; } |
 
-![ ルール アクションで[!DNL Pinterest] [!UICONTROL User Data]が強調表示されました。](../../../images/extensions/server/pinterest/user-data.png)
+![&#x200B; ルール アクションで[!DNL Pinterest] [!UICONTROL User Data]が強調表示されました。](../../../images/extensions/server/pinterest/user-data.png)
 
 設定可能な顧客情報プロパティは次のとおりです。
 
@@ -153,7 +153,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 | コンテンツ ID | 製品IDのリスト（配列）。 |
 | 目次 | 価格や数量など、製品に関する情報を含むオブジェクトのリスト（配列）。 |
 
-![ ルール アクションで[!DNL Pinterest] [!UICONTROL Custom Data]が強調表示されました。](../../../images/extensions/server/pinterest/custom-data.png)
+![&#x200B; ルール アクションで[!DNL Pinterest] [!UICONTROL Custom Data]が強調表示されました。](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## [!DNL Pinterest]内のデータを検証
 
@@ -161,7 +161,7 @@ Experience Platformを[!DNL Pinterest]に接続するには、次の入力が必
 
 イベントの収集と[!DNL Experience Platform]統合が成功した場合、[!DNL Pinterest] UI内にイベントが表示されます。
 
-![ イベント マネージャー[!DNL Pinterest]](../../../images/extensions/server/pinterest/event-history.png)
+![&#x200B; イベント マネージャー[!DNL Pinterest]](../../../images/extensions/server/pinterest/event-history.png)
 
 [!DNL Pinterest] イベントデータ配布をさらにドリルスルーして表示できます。
 

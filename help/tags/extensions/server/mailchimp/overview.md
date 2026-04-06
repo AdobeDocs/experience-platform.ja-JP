@@ -16,13 +16,13 @@ ht-degree: 3%
 
 # Mailchimp イベント転送拡張機能の概要
 
-Mailchimp [ イベント転送](../../../ui/event-forwarding/overview.md)拡張機能は、Mailchimp マーケティング APIにイベントを送信し、Mailchimp マーケティング キャンペーン、ジャーニー、トランザクションのメールをトリガーできます。
+Mailchimp [&#x200B; イベント転送](../../../ui/event-forwarding/overview.md)拡張機能は、Mailchimp マーケティング APIにイベントを送信し、Mailchimp マーケティング キャンペーン、ジャーニー、トランザクションのメールをトリガーできます。
 
 このドキュメントでは、イベントを追加アクションを使用して拡張機能を設定し、ルールを設定する方法について説明します。
 
 ## 前提条件
 
-このドキュメントでは、拡張機能で活用される関連するMailchimp製品について理解していることを前提としています。 詳しくは、[ キャンペーン ](https://mailchimp.com/help/getting-started-with-campaigns/)、[ ジャーニー](https://mailchimp.com/help/about-customer-journeys/)、[ トランザクション ](https://mailchimp.com/help/transactional/)のMailchimp ヘルプドキュメントを参照してください。
+このドキュメントでは、拡張機能で活用される関連するMailchimp製品について理解していることを前提としています。 詳しくは、[&#x200B; キャンペーン &#x200B;](https://mailchimp.com/help/getting-started-with-campaigns/)、[&#x200B; ジャーニー](https://mailchimp.com/help/about-customer-journeys/)、[&#x200B; トランザクション &#x200B;](https://mailchimp.com/help/transactional/)のMailchimp ヘルプドキュメントを参照してください。
 
 この拡張機能を使用するにはMailchimp アカウントが必要です。 アカウント [ここ](https://login.mailchimp.com/signup/)に登録できます。 Mailchimp アカウントダッシュボードでは、このガイドで使用する次の値に注意してください。
 
@@ -47,13 +47,13 @@ Mailchimpにログインしてダッシュボードビューに移動すると�
 
 **Extras**&#x200B;を選択してから、**API キー**&#x200B;を選択します。
 
-![ エクストラメニュー、API キーリンク ](../../../images/extensions/server/mailchimp/menu-API-keys.png)
+![&#x200B; エクストラメニュー、API キーリンク &#x200B;](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
 **お使いのAPI キー**&#x200B;で、既存のキーを選択するか、**キーを作成**&#x200B;を選択して新しいキーを作成できます。 この拡張機能で特に使用する新しいキーを作成できます。 API キーをコピーし、後の手順のために保存します。 詳しくは、[API キーを生成する方法](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key)に関するMailchimpのドキュメントを参照してください。
 
 ### オーディエンス IDと差出人アドレス
 
-左側のナビゲーションで「**オーディエンス**」、「**オーディエンスダッシュボード**」を選択します。 次に、この拡張機能で使用するオーディエンスを選択します。 詳しくは、[ オーディエンスの作成](https://mailchimp.com/help/create-audience/)に関するMailchimp ドキュメントを参照してください。
+左側のナビゲーションで「**オーディエンス**」、「**オーディエンスダッシュボード**」を選択します。 次に、この拡張機能で使用するオーディエンスを選択します。 詳しくは、[&#x200B; オーディエンスの作成](https://mailchimp.com/help/create-audience/)に関するMailchimp ドキュメントを参照してください。
 
 オーディエンスを作成して選択した状態で、**オーディエンスを管理** ドロップダウンを選択し、**設定**&#x200B;を選択します。 この画面には、オーディエンスのさまざまな設定が表示されます。
 
@@ -83,7 +83,7 @@ Mailchimp プラン、トランザクションメール、カスタマージャ�
 
 同じイベント転送プロパティで、**[!UICONTROL Extensions]、**、**[!UICONTROL Catalog]**&#x200B;を選択して、インストールに使用できる拡張機能を表示します。 ここから、Mailchimp拡張機能を検索し、**[!UICONTROL Install]**&#x200B;を選択します。
 
-![Mailchimp拡張機能をインストール ](../../../images/extensions/server/mailchimp/install.png)
+![Mailchimp拡張機能をインストール &#x200B;](../../../images/extensions/server/mailchimp/install.png)
 
 設定画面が表示されます。 **[!UICONTROL Mailchimp Server Prefix Domain Name]**&#x200B;で、Mailchimp アカウントから先ほどコピーしたドメイン（一意のドメイン プレフィックスを含む）を入力します。
 
@@ -99,13 +99,13 @@ Mailchimp プラン、トランザクションメール、カスタマージャ�
 
 ## データ収集
 
-この拡張機能を[ ルール ](../../../ui/managing-resources/rules.md)で使用する場合、拡張機能が各イベントでMailchimpに送信するデータ値がいくつかあります。 一般的な実装では、[Adobe Experience Platform Web SDK拡張機能](../../client/web-sdk/overview.md)を設定して、そのデータを[!DNL Experience Platform Edge Network]に送信し、イベント転送プロパティで拡張機能で使用するように設定できます。
+この拡張機能を[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)で使用する場合、拡張機能が各イベントでMailchimpに送信するデータ値がいくつかあります。 一般的な実装では、[Adobe Experience Platform Web SDK拡張機能](../../client/web-sdk/overview.md)を設定して、そのデータを[!DNL Experience Platform Edge Network]に送信し、イベント転送プロパティで拡張機能で使用するように設定できます。
 
 この拡張機能で必要なデータは、Web SDKからXDM データ（[`xdm`](/help/collection/js/commands/sendevent/xdm.md) オブジェクトを使用）または非XDM データ（[`data`](/help/collection/js/commands/sendevent/data.md) オブジェクトを使用）として送信できます。
 
 たとえば、顧客がサイトでのイベントを購入したり登録したりした場合、この拡張機能を使ってMailchimpを通じて確認メールを送ることができます。 Web SDKからEdge Networkに必要な情報を送信すると、拡張機能はMailchimpでメールをトリガーします。
 
-![ イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
+![&#x200B; イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### データ要素
 
@@ -126,11 +126,11 @@ Mailchimp プラン、トランザクションメール、カスタマージャ�
 
 >[!IMPORTANT]
 >  
->上記の&#x200B;**パスの例**&#x200B;の値は例にすぎません。 これらのデータ要素で参照されるフィールド名と[ パス ](../../../ui/event-forwarding/overview.md#data-element-path)は、上記の手順でWeb SDKに名前を付けて設定した方法に応じて、プロパティで異なる場合があります。
+>上記の&#x200B;**パスの例**&#x200B;の値は例にすぎません。 これらのデータ要素で参照されるフィールド名と[&#x200B; パス &#x200B;](../../../ui/event-forwarding/overview.md#data-element-path)は、上記の手順でWeb SDKに名前を付けて設定した方法に応じて、プロパティで異なる場合があります。
 
 イベント転送プロパティでは、上記の各フィールドのデータ要素を作成できます。 作成したら、この拡張機能の[!UICONTROL Add Event] アクションでデータ要素を参照できます。
 
-![ イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
+![&#x200B; イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 この拡張機能と「イベントを追加」アクションを使用して、オーディエンスのMailchimp メールをトリガーできるようになりました。
 
@@ -140,4 +140,4 @@ Mailchimp プラン、トランザクションメール、カスタマージャ�
 
 ![Adobe Experience Platform デバッガー](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
-Mailchimp ダッシュボードのオーディエンスまたはオーディエンスメンバーのアクティビティフィードのビューに、そのオーディエンスまたはオーディエンスメンバーのイベントのリストが表示されます。 これは、拡張機能によって送信されたイベントと一致し、送信されたオプションのデータと、受信したメールまたはキャンペーンを表示する必要があります。 詳しくは、[Mailchimp Automation ヘルプガイド ](https://mailchimp.com/help/automation/)を参照してください。
+Mailchimp ダッシュボードのオーディエンスまたはオーディエンスメンバーのアクティビティフィードのビューに、そのオーディエンスまたはオーディエンスメンバーのイベントのリストが表示されます。 これは、拡張機能によって送信されたイベントと一致し、送信されたオプションのデータと、受信したメールまたはキャンペーンを表示する必要があります。 詳しくは、[Mailchimp Automation ヘルプガイド &#x200B;](https://mailchimp.com/help/automation/)を参照してください。

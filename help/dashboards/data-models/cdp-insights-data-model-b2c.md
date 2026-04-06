@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 前提条件
 
-このガイドでは、[ ユーザー定義ダッシュボード機能](../standard-dashboards.md)に関する実用的な理解が必要です。 このガイドを続ける前に、ドキュメントをお読みください。
+このガイドでは、[&#x200B; ユーザー定義ダッシュボード機能](../standard-dashboards.md)に関する実用的な理解が必要です。 このガイドを続ける前に、ドキュメントをお読みください。
 
 ## Real-Time CDP insightのレポートとユースケース
 
@@ -40,11 +40,11 @@ Real-Time CDP レポートは、プロファイルデータと、オーディエ
 
 以下の画像には、各データセットの関連データフィールドが含まれています。
 
-![ プロファイル モデルのERD。](../images/cdp-insights/profile-model.png)
+![&#x200B; プロファイル モデルのERD。](../images/cdp-insights/profile-model.png)
 
 #### プロファイル数のユースケース {#profile-count}
 
-[!UICONTROL Profile count] ウィジェットに使用されたロジックは、スナップショットが取得された時点で、プロファイルストア内で結合されたプロファイルの合計数を返します。 詳しくは、[[!UICONTROL Profile count] ウィジェットのドキュメント ](../guides/profiles.md#profile-count)を参照してください。
+[!UICONTROL Profile count] ウィジェットに使用されたロジックは、スナップショットが取得された時点で、プロファイルストア内で結合されたプロファイルの合計数を返します。 詳しくは、[[!UICONTROL Profile count] ウィジェットのドキュメント &#x200B;](../guides/profiles.md#profile-count)を参照してください。
 
 [!UICONTROL Profile count] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -64,7 +64,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### 単一のID プロファイルの使用例 {#single-identity-profiles}
 
-[!UICONTROL Single identity profiles] ウィジェットに使用されるロジックは、組織のプロファイルの数を提供します。このプロファイルには、IDを作成するID タイプが1つしかありません。 詳しくは、[[!UICONTROL Single identity profiles] ウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles)を参照してください。
+[!UICONTROL Single identity profiles] ウィジェットに使用されるロジックは、組織のプロファイルの数を提供します。このプロファイルには、IDを作成するID タイプが1つしかありません。 詳しくは、[[!UICONTROL Single identity profiles] ウィジェットのドキュメント &#x200B;](../guides/profiles.md#single-identity-profiles)を参照してください。
 
 [!UICONTROL Single identity profiles] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -97,7 +97,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### ID別プロファイルの使用例 {#profiles-by-identity}
 
-[!UICONTROL Profiles by identity] ウィジェットには、プロファイルストア内のすべての結合プロファイルのIDの内訳が表示されます。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity)を参照してください。
+[!UICONTROL Profiles by identity] ウィジェットには、プロファイルストア内のすべての結合プロファイルのIDの内訳が表示されます。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメント &#x200B;](../guides/profiles.md#profiles-by-identity)を参照してください。
 
 [!UICONTROL Profiles by identity] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -121,7 +121,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID ユースケース別の単一ID プロファイル {#single-identity-profiles-by-identity}
 
-[!UICONTROL Single identity profiles by identity] ウィジェットに使用されるロジックは、1つの一意の識別子のみで識別されるプロファイルの合計数を示します。 詳しくは、[ID ウィジェット別の単一ID プロファイルに関するドキュメント ](../guides/profiles.md#single-identity-profiles-by-identity)を参照してください。
+[!UICONTROL Single identity profiles by identity] ウィジェットに使用されるロジックは、1つの一意の識別子のみで識別されるプロファイルの合計数を示します。 詳しくは、[ID ウィジェット別の単一ID プロファイルに関するドキュメント &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity)を参照してください。
 
 [!UICONTROL Single identity profiles by identity] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -156,11 +156,11 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 以下の画像には、各データセットの関連データフィールドが含まれています。
 
-![ オーディエンスモデルのERD。](../images/cdp-insights/audience-model.png)
+![&#x200B; オーディエンスモデルのERD。](../images/cdp-insights/audience-model.png)
 
 #### オーディエンスサイズのユースケース {#audience-size}
 
-[!UICONTROL Audience size] ウィジェットに使用されるロジックは、最新のスナップショットの時点で、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Audience size] ウィジェットのドキュメント ](../guides/audiences.md#audience-size)を参照してください。
+[!UICONTROL Audience size] ウィジェットに使用されるロジックは、最新のスナップショットの時点で、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL Audience size] ウィジェットのドキュメント &#x200B;](../guides/audiences.md#audience-size)を参照してください。
 
 [!UICONTROL Audience size] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -184,7 +184,7 @@ WHERE
 
 #### オーディエンスサイズ変更トレンドのユースケース {#audience-size-change-trend}
 
-[!UICONTROL Audience size change trend] ウィジェットに使用されるロジックは、特定のオーディエンスに適格なプロファイルの合計数の最新の日次スナップショット間の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL Audience size change trend] ウィジェットのドキュメント ](../guides/audiences.md#audience-size-change-trend)を参照してください。
+[!UICONTROL Audience size change trend] ウィジェットに使用されるロジックは、特定のオーディエンスに適格なプロファイルの合計数の最新の日次スナップショット間の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL Audience size change trend] ウィジェットのドキュメント &#x200B;](../guides/audiences.md#audience-size-change-trend)を参照してください。
 
 [!UICONTROL Audience size change trend] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -221,7 +221,7 @@ SELECT date_key,
 
 #### 最も使用されている宛先のユースケース {#most-used-destinations}
 
-[!UICONTROL Most used destinations] ウィジェットで使用されるロジックは、マッピングされたオーディエンスの数に応じて、組織で最も使用される宛先をリストします。 このランキングは、insightで使用されている宛先を示し、使用率が低い可能性のある宛先も示します。 詳しくは、[[!UICONTROL Most used destinations] ウィジェット ](../guides/destinations.md#most-used-destinations)のドキュメントを参照してください。
+[!UICONTROL Most used destinations] ウィジェットで使用されるロジックは、マッピングされたオーディエンスの数に応じて、組織で最も使用される宛先をリストします。 このランキングは、insightで使用されている宛先を示し、使用率が低い可能性のある宛先も示します。 詳しくは、[[!UICONTROL Most used destinations] ウィジェット &#x200B;](../guides/destinations.md#most-used-destinations)のドキュメントを参照してください。
 
 [!UICONTROL Most used destinations] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -246,7 +246,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### 最近有効化されたオーディエンスのユースケース {#recently-activated-audiences}
 
-[!UICONTROL Recently activated audiences] ウィジェットのロジックは、宛先に最も最近マッピングされたオーディエンスのリストを提供します。 このリストは、システムでアクティブに使用されているオーディエンスと宛先のスナップショットを提供し、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL Recently activated audiences] ウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences)を参照してください。
+[!UICONTROL Recently activated audiences] ウィジェットのロジックは、宛先に最も最近マッピングされたオーディエンスのリストを提供します。 このリストは、システムでアクティブに使用されているオーディエンスと宛先のスナップショットを提供し、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL Recently activated audiences] ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences)を参照してください。
 
 [!UICONTROL Recently activated audiences] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -290,7 +290,7 @@ namespace-audience モデルは、次のデータセットで構成されます�
 
 #### オーディエンスのユースケース向けのID別プロファイル {#audience-profiles-by-identity}
 
-[!UICONTROL Profiles by identity] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストア内のすべての結合プロファイルのIDの内訳を提供します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメント ](../guides/audiences.md#profiles-by-identity)を参照してください。
+[!UICONTROL Profiles by identity] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストア内のすべての結合プロファイルのIDの内訳を提供します。 詳しくは、[[!UICONTROL Profiles by identity] ウィジェットのドキュメント &#x200B;](../guides/audiences.md#profiles-by-identity)を参照してください。
 
 [!UICONTROL Profiles by identity] ウィジェットを生成するSQLは、以下の折りたたみ可能なセクションに表示されます。
 
@@ -391,7 +391,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 以下の画像には、各データセットの関連データフィールドが含まれています。
 
-![ オーディエンスモデル別の重複名前空間のERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
+![&#x200B; オーディエンスモデル別の重複名前空間のERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### ID重複（オーディエンス）のユースケース {#audiences-identity-overlap}
 

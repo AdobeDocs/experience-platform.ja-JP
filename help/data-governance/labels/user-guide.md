@@ -36,7 +36,7 @@ ht-degree: 71%
 >
 >![違反の概要とデータリネージュ図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
 >
->ポリシー違反について詳しくは、[ データ使用ポリシー違反ドキュメント ](../enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
+>ポリシー違反について詳しくは、[&#x200B; データ使用ポリシー違反ドキュメント &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation)を参照してください。
 
 スキーマレベルでデータ使用ラベルを管理するには、既存のスキーマを選択するか、新しいスキーマを作成する必要があります。Adobe Experience Platformにログインした後、左側のナビゲーションで「**[!UICONTROL Schemas]**」を選択して、**[!UICONTROL Schemas]** ワークスペースを開きます。 このページには、組織に属するすべての作成済みスキーマと、各スキーマに関する有用な詳細情報がリストされます。
 
@@ -69,7 +69,7 @@ ht-degree: 71%
 
 ラベルは、**[!UICONTROL Data Governance]** ワークスペースの「**[!UICONTROL Datasets]**」タブからデータセット全体に適用できます。 ワークスペースでは、データセットレベルでデータ使用ラベルを管理できます。
 
-![ データガバナンスがハイライト表示された[!UICONTROL Data Governance] ワークスペースの[!UICONTROL Datasets] タブ。](../images/labels/dataset-governance.png)
+![&#x200B; データガバナンスがハイライト表示された[!UICONTROL Data Governance] ワークスペースの[!UICONTROL Datasets] タブ。](../images/labels/dataset-governance.png)
 
 データセットレベルでデータ使用ラベルを編集するには、最初にデータセット名の行にある鉛筆アイコン（![鉛筆アイコン。](/help/images/icons/edit.png)）を選択します。
 

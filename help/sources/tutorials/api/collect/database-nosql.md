@@ -16,7 +16,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->* データフローを作成するには、データベースソースとの有効なベース接続IDが既に必要です。 このIDがない場合は、[ ソースカタログ ](../../../home.md#database)にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
+>* データフローを作成するには、データベースソースとの有効なベース接続IDが既に必要です。 このIDがない場合は、[&#x200B; ソースカタログ &#x200B;](../../../home.md#database)にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンをUTCに設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md)でサポートされているタイムスタンプは、TIMESTAMP_NTZとUTC時間だけです。
 
 ## はじめに
@@ -28,7 +28,7 @@ ht-degree: 71%
    * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-* [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; サンドボックス &#x200B;](../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 ### Experience Platform APIの使用
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | データベースソースの接続 ID。 |
 | `params.tableName` | ソースファイルのパス。 |
-| `params.cdcEnabled` | 変更履歴キャプチャが有効かどうかを示すブール値。 リレーショナルスキーマで使用する場合、変更データキャプチャは、挿入、更新、削除を追跡して、ターゲットデータセットをソースと同期させます。 このプロパティは、次のデータベースソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要](../../../../xdm/data-mirror/overview.md)を参照してください。 実装の詳細については、[ ソースガイドのデータキャプチャの変更](../change-data-capture.md)および[ リレーショナルスキーマのテクニカルリファレンス ](../../../../xdm/schema/relational.md)を参照してください。 |
+| `params.cdcEnabled` | 変更履歴キャプチャが有効かどうかを示すブール値。 リレーショナルスキーマで使用する場合、変更データキャプチャは、挿入、更新、削除を追跡して、ターゲットデータセットをソースと同期させます。 このプロパティは、次のデータベースソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要](../../../../xdm/data-mirror/overview.md)を参照してください。 実装の詳細については、[&#x200B; ソースガイドのデータキャプチャの変更](../change-data-capture.md)および[&#x200B; リレーショナルスキーマのテクニカルリファレンス &#x200B;](../../../../xdm/schema/relational.md)を参照してください。 |
 | `connectionSpec.id` | データベースソースの接続仕様 ID。 データベース仕様 ID の一覧については、[付録](#appendix)を参照してください。 |
 
 **応答**

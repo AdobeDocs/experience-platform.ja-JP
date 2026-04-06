@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->B2B エンティティ（キャンペーンやマーケティングリストなど）を参照するエクスペリエンスイベントを含むオーディエンスは、サポートされなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレード ](../../rtcdp/b2b-architecture-upgrade.md)の概要をご覧ください。
+>B2B エンティティ（キャンペーンやマーケティングリストなど）を参照するエクスペリエンスイベントを含むオーディエンスは、サポートされなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレード &#x200B;](../../rtcdp/b2b-architecture-upgrade.md)の概要をご覧ください。
 
-このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionのセグメント定義の例と、一般的なB2B ユースケースで様々なタイプの属性を組み合わせる方法について説明します。 宛先がB2B ワークフローにどのように適合するかを理解するには、[ エンドツーエンドのチュートリアル ](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data)を参照してください。
+このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionのセグメント定義の例と、一般的なB2B ユースケースで様々なタイプの属性を組み合わせる方法について説明します。 宛先がB2B ワークフローにどのように適合するかを理解するには、[&#x200B; エンドツーエンドのチュートリアル &#x200B;](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data)を参照してください。
 
 >[!NOTE]
 >
->これらのセグメント化ユースケースに必要な属性は、Real-Time Customer Data Platform B2B editionのお客様のみが使用できます。 Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに[ セグメント化の概要](./segmentation-overview.md)を参照してください。
+>これらのセグメント化ユースケースに必要な属性は、Real-Time Customer Data Platform B2B editionのお客様のみが使用できます。 Real-Time Customer Data Platform B2B editionを使用していない場合は、代わりに[&#x200B; セグメント化の概要](./segmentation-overview.md)を参照してください。
 
 >[!BEGINSHADEBOX]
 
@@ -42,7 +42,7 @@ B2B クラスのセグメント化属性を使用する前に、次の手順を�
 1. B2B クラスを使用するスキーマを作成します。 B2B editionのクラスには、Account、Campaign、Opportunity、Marketing Listなどがあります。 [B2B クラスで使用するスキーマを設定する方法](../schemas/b2b.md)について詳しくは、スキーマのドキュメントを参照してください。
 2. Experience Data Model （XDM） B2B スキーマ間の関係を作成します。 B2B editionの属性にもとづくオーディエンスでは、拡張されたB2B セグメンテーション機能を完全に使用するために、クラス間の関係が必要です。 詳しくは、[2つのB2B スキーマ間の関係を定義する方法](../../xdm/tutorials/relationship-b2b.md)に関するドキュメントを参照してください。
 3. B2B スキーマにもとづくデータセットを使用してデータを取り込みます。 データの取り込み方法[については、](../../sources/connectors/adobe-applications/marketo/marketo.md)のソースドキュメントを参照してください。
-4. オーディエンスの構築方法に関する詳細なガイダンスについては、[ セグメントビルダーのユーザーガイド ](../../segmentation/ui/segment-builder.md)を参照してください。
+4. オーディエンスの構築方法に関する詳細なガイダンスについては、[&#x200B; セグメントビルダーのユーザーガイド &#x200B;](../../segmentation/ui/segment-builder.md)を参照してください。
 
 これらの要件を満たすと、一般的なB2B ユースケースにこれらの属性を組み合わせることができます。
 
@@ -62,11 +62,11 @@ B2B ユースケースのオーディエンスを効果的に作成するには�
 
 使用可能なリストから適切なスキーマを選択し、[!UICONTROL Composition] サイドレールから適切な関係を選択します。 次の例では、「人物」関係を選択すると、現在のスキーマ内のどの属性が関連する「人物」スキーマを参照するか（関係のソーススキーマの場合）、「人物」スキーマで参照されているか（関係の参照スキーマの場合）が表示されます。
 
-![ スキーマワークスペースの人物関係を使用したソース キーの例](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
+![&#x200B; スキーマワークスペースの人物関係を使用したソース キーの例](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
 この関係は、次の画像に示すように、`Key` フォルダーを使用してセグメントビルダー内に反映されます。
 
-セグメント ワークスペースでセグメントビルダーを使用する![ ソース キーの例](../assets/segmentation/b2b/source-key-segmentation-example.png)
+セグメント ワークスペースでセグメントビルダーを使用する![&#x200B; ソース キーの例](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
 使用可能なB2B クラスについて詳しくは、Real-Time Customer Data Platform B2B edition ドキュメント [の](../schemas/b2b.md) スキーマを参照してください。
 
@@ -100,7 +100,7 @@ B2B editionを使用したセグメント化には、次のユースケースを
 
 このオーディエンスを作成するには、過去3日間に価格ページを訪問したすべてのユーザーの基本オーディエンスを作成して、「セグメントのセグメント」を使用する必要があります。
 
-基本オーディエンスを表示する![ セグメントビルダー。](../assets/segmentation/b2b/example-4-base.png)
+基本オーディエンスを表示する![&#x200B; セグメントビルダー。](../assets/segmentation/b2b/example-4-base.png)
 
 最初のオーディエンスを作成した後、アカウントが「金融」業界にある機会の「意思決定者」である別のオーディエンスと組み合わせることができます。
 
@@ -124,7 +124,7 @@ B2B editionを使用したセグメント化には、次のユースケースを
 
 このオーディエンスを作成するには、過去3日間に価格ページを訪問したすべてのユーザーの基本オーディエンスを作成して、「セグメントのセグメント」を使用する必要があります。
 
-基本オーディエンスを表示する![ セグメントビルダー。](../assets/segmentation/b2b/example-7-base.png)
+基本オーディエンスを表示する![&#x200B; セグメントビルダー。](../assets/segmentation/b2b/example-7-base.png)
 
 最初のオーディエンスを作成した後は、そのオーディエンスを、商談の「意思決定者」である別のオーディエンスと組み合わせることができます。これらのオーディエンスでは、「クローズドフラグ」がtrueに設定され、「ロストフラグ」がfalseに設定されています。
 

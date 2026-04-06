@@ -17,7 +17,7 @@ ht-degree: 3%
 
 PLatform UIを使用してインサイトのSQLを直接適応させる方法について詳しくは、[SQL ドキュメントの表示](../view-sql.md)を参照してください。
 
-次のインサイトはすべて、[宛先ダッシュボード ](../guides/destinations.md)またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md)の一部として使用できます。 ダッシュボードをカスタマイズする方法の手順については、[ カスタマイズの概要](../customize/overview.md)を参照するか、ウィジェットライブラリおよび[ ユーザー定義ダッシュボード ](../customize/custom-widgets.md)で[新しいウィジェットを作成および編集します](../standard-dashboards.md#create-widget)。
+次のインサイトはすべて、[宛先ダッシュボード &#x200B;](../guides/destinations.md)またはカスタム [&#x200B; ユーザー定義ダッシュボード &#x200B;](../standard-dashboards.md)の一部として使用できます。 ダッシュボードをカスタマイズする方法の手順については、[&#x200B; カスタマイズの概要](../customize/overview.md)を参照するか、ウィジェットライブラリおよび[&#x200B; ユーザー定義ダッシュボード &#x200B;](../customize/custom-widgets.md)で[新しいウィジェットを作成および編集します](../standard-dashboards.md#create-widget)。
 
 ## アクティベートされたオーディエンス {#activated-audiences}
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-このinsightの外観と機能について詳しくは、[ アクティベート済みオーディエンスウィジェットのドキュメント ](../guides/destinations.md#activated-audiences)を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; アクティベート済みオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#activated-audiences)を参照してください。
 
 ## すべての宛先にわたってアクティブ化されたオーディエンス {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-このinsightの外観と機能について詳しくは、[すべての宛先でオーディエンスをアクティブ化ウィジェットのドキュメント ](../guides/destinations.md#activated-audiences-across-all-destinations)を参照してください。
+このinsightの外観と機能について詳しくは、[すべての宛先でオーディエンスをアクティブ化ウィジェットのドキュメント &#x200B;](../guides/destinations.md#activated-audiences-across-all-destinations)を参照してください。
 
 ## 宛先プラットフォーム別のアクティブな宛先 {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[Active destinations by destination platform widget ドキュメント ](../guides/destinations.md#active-destinations-by-destination-platform)を参照してください。
+このinsightの外観と機能について詳しくは、[Active destinations by destination platform widget ドキュメント &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform)を参照してください。
 
 ## オーディエンスサイズのトレンド {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ オーディエンスサイズのトレンドウィジェットのドキュメント ](../guides/destinations.md#audience-size-trend)を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; オーディエンスサイズのトレンドウィジェットのドキュメント &#x200B;](../guides/destinations.md#audience-size-trend)を参照してください。
 
 ## 一般的なオーディエンス {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-このinsightの外観と機能について詳しくは、[共通オーディエンスウィジェットのドキュメント ](../guides/destinations.md#common-audiences)を参照してください。
+このinsightの外観と機能について詳しくは、[共通オーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#common-audiences)を参照してください。
 
 ## 宛先ステータス {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-このinsightの外観と機能について詳しくは、[宛先ステータスウィジェットのドキュメント ](../guides/destinations.md#destination-status)を参照してください。
+このinsightの外観と機能について詳しくは、[宛先ステータスウィジェットのドキュメント &#x200B;](../guides/destinations.md#destination-status)を参照してください。
 
 ## 宛先数 {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-このinsightの外観と機能について詳しくは、[宛先数ウィジェットのドキュメント ](../guides/destinations.md#destinations-count)を参照してください。
+このinsightの外観と機能について詳しくは、[宛先数ウィジェットのドキュメント &#x200B;](../guides/destinations.md#destinations-count)を参照してください。
 
 ## マッピングされたオーディエンスの正常性 {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[ マッピング済みオーディエンス正常性ウィジェットのドキュメント ](../guides/destinations.md#mapped-audience-health)を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; マッピング済みオーディエンス正常性ウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audience-health)を参照してください。
 
 ## マッピングされたオーディエンス {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-このinsightの外観と機能について詳しくは、[ マッピングされたオーディエンス ウィジェットのドキュメント ](../guides/destinations.md#mapped-audiences)を参照してください。
+このinsightの外観と機能について詳しくは、[&#x200B; マッピングされたオーディエンス ウィジェットのドキュメント &#x200B;](../guides/destinations.md#mapped-audiences)を参照してください。
 
 <!-- 
 Commented out until the Jan release as the SQL IS MISSING:
@@ -394,7 +394,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[最もよく使用される宛先ウィジェットのドキュメント ](../guides/destinations.md#most-used-destinations)を参照してください。
+このinsightの外観と機能について詳しくは、[最もよく使用される宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#most-used-destinations)を参照してください。
 
 ## 最近アクティブ化されたオーディエンス {#recently-activated-audiences}
 
@@ -425,7 +425,7 @@ LIMIT
 
 +++
 
-このinsightの外観と機能について詳しくは、[最近アクティブ化されたオーディエンスウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences)を参照してください。
+このinsightの外観と機能について詳しくは、[最近アクティブ化されたオーディエンスウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-activated-audiences)を参照してください。
 
 ## 最近アクティブ化されたオーディエンス（宛先別） {#recently-activated-audiences-by-destination}
 
@@ -456,7 +456,7 @@ SELECT c.destination_name,
 
 +++
 
-このinsightの外観と機能について詳しくは、[宛先によって最近アクティブ化されたオーディエンス ](../guides/destinations.md#recently-activated-audiences-by-destination)を参照してください。
+このinsightの外観と機能について詳しくは、[宛先によって最近アクティブ化されたオーディエンス &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination)を参照してください。
 
 ## 最近作成した宛先 {#recently-created-destinations}
 
@@ -485,7 +485,7 @@ LIMIT
 
 +++
 
-このinsightの外観と機能について詳しくは、[最近作成した宛先ウィジェットのドキュメント ](../guides/destinations.md#recently-created-destinations)を参照してください。
+このinsightの外観と機能について詳しくは、[最近作成した宛先ウィジェットのドキュメント &#x200B;](../guides/destinations.md#recently-created-destinations)を参照してください。
 
 <!-- 
 Commented out until the Jan release as SQL MISSING FROM WIKI:
@@ -515,4 +515,4 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 PLatform UIを使用してインサイトのSQLを直接適応させる方法について詳しくは、[SQL ドキュメントの表示](../view-sql.md)を参照してください。
 
-また、[ プロファイル ](./profiles.md)、[ アカウントプロファイル ](./account-profiles.md)および[ オーディエンス ](./audiences.md) ダッシュボードのインサイトを生成するSQLを読み取り、理解することもできます。
+また、[&#x200B; プロファイル &#x200B;](./profiles.md)、[&#x200B; アカウントプロファイル &#x200B;](./account-profiles.md)および[&#x200B; オーディエンス &#x200B;](./audiences.md) ダッシュボードのインサイトを生成するSQLを読み取り、理解することもできます。

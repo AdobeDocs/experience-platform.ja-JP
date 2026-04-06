@@ -22,7 +22,7 @@ ht-degree: 60%
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]がエクスペリエンスデータを整理するための標準化されたフレームワークです。
-   - [Schema Registry開発者ガイド ](../../xdm/api/getting-started.md): [!DNL Schema Registry] APIの利用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法について説明する包括的なガイドです。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取り込み用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+   - [Schema Registry開発者ガイド &#x200B;](../../xdm/api/getting-started.md): [!DNL Schema Registry] APIの利用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法について説明する包括的なガイドです。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取り込み用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集約データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
 ### Experience Platform APIの使用

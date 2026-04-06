@@ -161,7 +161,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **シミュレートされたグラフ**
 
-![ シミュレートされたグラフの画像](../images/configs/basic/simple-implementation-non-unique.png)
+![&#x200B; シミュレートされたグラフの画像](../images/configs/basic/simple-implementation-non-unique.png)
 
 これらのクレジットカード番号やその他の一意でない名前空間が、常に1人のエンドユーザーに関連付けられる保証はありません。 2人のエンドユーザーが同じクレジットカードで登録する場合がありますが、誤って取り込まれた一意でないプレースホルダー値が存在する場合があります。 簡単に言えば、一意でない名前空間がグラフの折りたたみを引き起こさない保証はありません。
 
@@ -186,7 +186,7 @@ CRMID: Jane, ECID:123
 
 **シミュレートされたグラフ**
 
-![ ハッシュ付きの中間共有デバイスグラフ。](../images/configs/intermediate/intermediate-shared-device.png)
+![&#x200B; ハッシュ付きの中間共有デバイスグラフ。](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB 同じクレジットカードを持つ2人のエンドユーザー]
 
@@ -220,7 +220,7 @@ CRMID: Jill, CChash: undefined
 
 **シミュレートされたグラフ**
 
-![ ハッシュの問題が発生したグラフは、無効なクレジットカードになります。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+![&#x200B; ハッシュの問題が発生したグラフは、無効なクレジットカードになります。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
 
 >[!ENDTABS]
 
@@ -265,7 +265,7 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![ ハッシュ化されたCRMID](../images/configs/intermediate/shared-device-hashed-crmid.png)を含む共有デバイスグラフ
+![&#x200B; ハッシュ化されたCRMID](../images/configs/intermediate/shared-device-hashed-crmid.png)を含む共有デバイスグラフ
 
 >[!TAB 不正なデータ ]
 
@@ -278,7 +278,7 @@ CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
 
-![ ハッシュ化プロセスでエラーが発生し、一意でないハッシュ化されたCRMIDが発生した共有デバイスグラフ。](../images/configs/intermediate/hashing-error.png)
+![&#x200B; ハッシュ化プロセスでエラーが発生し、一意でないハッシュ化されたCRMIDが発生した共有デバイスグラフ。](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
 
@@ -390,7 +390,7 @@ CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
 CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 ```
 
-![ メールを変更したエンドユーザーを表示するグラフ。](../images/configs/intermediate/end-user-changes-email.png)
+![&#x200B; メールを変更したエンドユーザーを表示するグラフ。](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
@@ -437,7 +437,7 @@ loginID: JohnBusiness, ECID: 222
 
 **シミュレートされたグラフ**
 
-![ ビジネスと個人用の電子メールを持つエンドユーザーのID グラフ。](../images/configs/advanced/advanced.png)
+![&#x200B; ビジネスと個人用の電子メールを持つエンドユーザーのID グラフ。](../images/configs/advanced/advanced.png)
 
 **演習**
 
@@ -560,7 +560,7 @@ CRMID: John, thirdPartyID: xyz
 CRMID: Jane, thirdPartyID: xyz
 ```
 
-![ サードパーティ IDの関連付けの変更に伴うIDの動作を表示するグラフ。](../images/configs/advanced/complex-third-party-change.png)
+![&#x200B; サードパーティ IDの関連付けの変更に伴うIDの動作を表示するグラフ。](../images/configs/advanced/complex-third-party-change.png)
 
 >[!TAB 一意でないorderID]
 

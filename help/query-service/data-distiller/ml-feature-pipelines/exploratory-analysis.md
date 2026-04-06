@@ -42,7 +42,7 @@ df
 
 ## 大規模データセットのサンプルバージョンの作成 {#create-dataset-sample}
 
-クエリするデータセットが非常に大きい場合、または探索的クエリの正確な結果が必要ない場合は、Data Distiller クエリで使用できる[ サンプリング機能](../../key-concepts/dataset-samples.md)を使用します。 これは2段階のプロセスです。
+クエリするデータセットが非常に大きい場合、または探索的クエリの正確な結果が必要ない場合は、Data Distiller クエリで使用できる[&#x200B; サンプリング機能](../../key-concepts/dataset-samples.md)を使用します。 これは2段階のプロセスです。
 
 - まず、**データセットを**&#x200B;分析して、指定したサンプリング比率のサンプルバージョンを作成します
 - 次に、データセットのサンプルバージョンをクエリします。 サンプルされたデータセットに適用する関数によっては、出力を完全なデータセットに数値に拡大することができます
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![ イベント結果のイベントのピアソン相関関係の棒グラフ ](../../images/data-distiller/pearson-correlations.png)
+![&#x200B; イベント結果のイベントのピアソン相関関係の棒グラフ &#x200B;](../../images/data-distiller/pearson-correlations.png)
 
 ## 次の手順
 
-このドキュメントでは、Data Distillerを使用して[!DNL Python] ノートブックのデータを探索および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成してマシンラーニング環境でカスタムモデルをフィードする次のステップは、マシンラーニングの機能を[ エンジニア ](./feature-engineering.md)することです。
+このドキュメントでは、Data Distillerを使用して[!DNL Python] ノートブックのデータを探索および分析する方法について説明しました。 Experience Platformから機能パイプラインを作成してマシンラーニング環境でカスタムモデルをフィードする次のステップは、マシンラーニングの機能を[&#x200B; エンジニア &#x200B;](./feature-engineering.md)することです。

@@ -11,11 +11,11 @@ ht-degree: 3%
 
 # [!DNL The Trade Desk Real-Time Conversions API]拡張機能の概要
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)拡張機能を使用して、[!DNL The Trade Desk] イベント転送[ ルールのAPI機能を利用して、Adobe Experience Platform Edge Networkから](../../../ui/event-forwarding/overview.md)にデータを送信できます。
+[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)拡張機能を使用して、[!DNL The Trade Desk] イベント転送[&#x200B; ルールのAPI機能を利用して、Adobe Experience Platform Edge Networkから](../../../ui/event-forwarding/overview.md)にデータを送信できます。
 
-[!DNL The Trade Desk Real-Time Conversions API]拡張機能を使用すると、[ イベント転送](../../../ui/event-forwarding/overview.md) ルールのAPI機能を活用して、Adobe Experience Platform Edge Networkから[!DNL The Trade Desk]にデータを送信できます。
+[!DNL The Trade Desk Real-Time Conversions API]拡張機能を使用すると、[&#x200B; イベント転送](../../../ui/event-forwarding/overview.md) ルールのAPI機能を活用して、Adobe Experience Platform Edge Networkから[!DNL The Trade Desk]にデータを送信できます。
 
-このドキュメントでは、拡張機能をインストールし、イベント転送[ ルール ](../../../ui/managing-resources/rules.md)でその機能を使用する方法について説明します。
+このドキュメントでは、拡張機能をインストールし、イベント転送[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)でその機能を使用する方法について説明します。
 
 >[!NOTE]
 >
@@ -31,15 +31,15 @@ ht-degree: 3%
 
 ## [!DNL The Trade Desk] Real-Time Conversions APIのインストールと設定 {#install}
 
-拡張機能をインストールするには、[ イベント転送プロパティ ](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[&#x200B; イベント転送プロパティ &#x200B;](../../../ui/event-forwarding/overview.md#properties)を作成するか、代わりに編集する既存のプロパティを選択します。
 
 左側のナビゲーションの「**[!UICONTROL Extensions]**」を選択します。 「**[!UICONTROL Catalog]**」タブで、**[!UICONTROL The Trade Desk]** Real-Time Conversions API カードを選択し、**[!UICONTROL Install]**&#x200B;を選択します。
 
-![ インストールを強調表示する[!DNL The Trade Desk]拡張カードを示す拡張カタログ。](../../../images/extensions/server/tradedesk/install-extension.png)
+![&#x200B; インストールを強調表示する[!DNL The Trade Desk]拡張カードを示す拡張カタログ。](../../../images/extensions/server/tradedesk/install-extension.png)
 
 次の画面で、[!UICONTROL Advertiser ID]を入力し、オプションで[!UICONTROL Merchant ID]を入力します。 IDを直接入力に貼り付けることも、代わりにデータ要素を使用することもできます。 これらは、[!DNL The Trade Desk] Real-Time Conversions APIへのイベント呼び出しを行う際に使用されるデフォルト値として機能します。 終了したら「**[!UICONTROL Save]**」を選択します。
 
-データ要素を作成し、タグプロパティの拡張機能で利用できるようにする方法については、[ データ要素を作成](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
+データ要素を作成し、タグプロパティの拡張機能で利用できるようにする方法については、[&#x200B; データ要素を作成](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
 
 ![[!DNL The Trade Desk]および[!UICONTROL Advertiser ID] フィールドがハイライト表示された[!UICONTROL Merchant ID]拡張機能設定ページ。](../../../images/extensions/server/tradedesk/configure-extension.png)
 
@@ -49,15 +49,15 @@ ht-degree: 3%
 
 拡張機能をインストールして設定したら、イベントの送信方法と送信日時を決定するイベント転送ルールの作成を開始できます。[!DNL The Trade Desk]
 
-受け入れられたすべての[ リクエストプロパティ ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)を[!DNL The Trade Desk]および[!DNL The Trade Desk] Real-Time Conversions API経由で送信するには、いくつかのルールを設定することを検討してください。
+受け入れられたすべての[&#x200B; リクエストプロパティ &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)を[!DNL The Trade Desk]および[!DNL The Trade Desk] Real-Time Conversions API経由で送信するには、いくつかのルールを設定することを検討してください。
 
 >[!NOTE]
 >
 >イベントは、リアルタイム、またはできるだけリアルタイムに近い方法で送信する必要があります。
 
-イベント転送プロパティに新しいイベント転送[ ルール ](../../../ui/managing-resources/rules.md)を作成します。 **[!UICONTROL Actions]**&#x200B;で、新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL The Trade Desk]**&#x200B;に設定します。 次に、**[!UICONTROL Real Time Conversion]**&#x200B;の&#x200B;**[!UICONTROL Action Type]**&#x200B;を選択します。
+イベント転送プロパティに新しいイベント転送[&#x200B; ルール &#x200B;](../../../ui/managing-resources/rules.md)を作成します。 **[!UICONTROL Actions]**&#x200B;で、新しいアクションを追加し、拡張機能を&#x200B;**[!UICONTROL The Trade Desk]**&#x200B;に設定します。 次に、**[!UICONTROL Real Time Conversion]**&#x200B;の&#x200B;**[!UICONTROL Action Type]**&#x200B;を選択します。
 
-![ イベント転送プロパティのルール ビュー。イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
+![&#x200B; イベント転送プロパティのルール ビュー。イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
 選択後、追加のコントロールが表示され、[!DNL The Trade Desk]に送信されるイベントデータをさらに設定します。 ルールを保存するには、**[!UICONTROL Keep Changes]**&#x200B;を選択します。
 
@@ -82,13 +82,13 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-![ フィールドへのデータ入力の例を示す[!DNL Basic Request Properties] セクション。](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
+![&#x200B; フィールドへのデータ入力の例を示す[!DNL Basic Request Properties] セクション。](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
-[!DNL The Trade Desk] Real-Time Conversions APIが受け入れた[ リクエストプロパティ ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)について詳しくは、[!DNL The Trade Desk]開発者ドキュメントを参照してください。
+[!DNL The Trade Desk] Real-Time Conversions APIが受け入れた[&#x200B; リクエストプロパティ &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)について詳しくは、[!DNL The Trade Desk]開発者ドキュメントを参照してください。
 
 **[!UICONTROL Object Request Parameters]**
 
-詳細な情報を含むJSON オブジェクト。 縮小されたキー値入力セットを使用するか、生のJSONを提供するかを選択できます。 さらに、右側のディスク （![ ディスクアイコン ](/help/images/icons/database.png)）を選択すると、データ要素から動的データを取得できます。
+詳細な情報を含むJSON オブジェクト。 縮小されたキー値入力セットを使用するか、生のJSONを提供するかを選択できます。 さらに、右側のディスク （![&#x200B; ディスクアイコン &#x200B;](/help/images/icons/database.png)）を選択すると、データ要素から動的データを取得できます。
 
 
 ![使用可能なフィールドを表示する[!DNL Object Request Parameters] セクション。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
@@ -108,12 +108,12 @@ ht-degree: 3%
 
 ![使用可能なフィールドを表示する[!DNL Configuration Overrides] セクション。](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
-ルールに問題がなければ、**[!UICONTROL Save to Library]**&#x200B;を選択します。 最後に、新しいイベント転送[ ビルド ](../../../ui/publishing/builds.md)を公開して、ライブラリに加えられた変更を有効にします。
+ルールに問題がなければ、**[!UICONTROL Save to Library]**&#x200B;を選択します。 最後に、新しいイベント転送[&#x200B; ビルド &#x200B;](../../../ui/publishing/builds.md)を公開して、ライブラリに加えられた変更を有効にします。
 
 ## 次の手順
 
-このガイドでは、[!DNL The Trade Desk] Real-Time Conversions API拡張機能を使用してサーバーサイドのイベントデータを[!DNL The Trade Desk]に送信する方法について説明しました。 ここから、キャンペーンごとに特定のコンバージョンイベントを該当する形で送信する個別のルールを作成して、統合を拡張することをお勧めします。 [!DNL Adobe Experience Platform]のイベント転送機能について詳しくは、[ イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
+このガイドでは、[!DNL The Trade Desk] Real-Time Conversions API拡張機能を使用してサーバーサイドのイベントデータを[!DNL The Trade Desk]に送信する方法について説明しました。 ここから、キャンペーンごとに特定のコンバージョンイベントを該当する形で送信する個別のルールを作成して、統合を拡張することをお勧めします。 [!DNL Adobe Experience Platform]のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
 
 統合を効果的に実装する方法の詳細については、[!DNL The Trade Desk]Real-Time Conversions API[の [!DNL The Trade Desk]  ベストプラクティスに関する](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)のドキュメントを参照してください。
 
-Experience Platform Debugger and Event Forwarding Monitoring Toolを使用して実装をデバッグする方法について詳しくは、[Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md)および[ イベント転送におけるアクティビティの監視](../../../ui/event-forwarding/monitoring.md)を参照してください。
+Experience Platform Debugger and Event Forwarding Monitoring Toolを使用して実装をデバッグする方法について詳しくは、[Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md)および[&#x200B; イベント転送におけるアクティビティの監視](../../../ui/event-forwarding/monitoring.md)を参照してください。

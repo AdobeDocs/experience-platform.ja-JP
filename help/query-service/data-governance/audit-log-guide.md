@@ -13,11 +13,11 @@ ht-degree: 8%
 
 Adobe Experience Platform [!DNL Query Service]監査ログ統合では、クエリ関連のユーザーアクションのレコードが提供されます。 監査ログは、企業のデータ管理ポリシーや規制要件のトラブルシューティングや遵守に役立つ重要なツールです。 この機能を使用すると、多くのイベントタイプのアクションログを返し、レコードをフィルタリングおよびエクスポートできます。 ログは、Experience Platform UIまたは[Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/)を通じてアクセスし、CSVまたはJSON ファイル形式でダウンロードできます。
 
-監査ログのユーザーインターフェイスについて詳しくは、[監査ログの概要ドキュメント ](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。 Experience Platform APIの呼び出しについて詳しくは、[監査ログ API ガイド ](../../landing/api-guide.md)を参照してください。
+監査ログのユーザーインターフェイスについて詳しくは、[監査ログの概要ドキュメント &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。 Experience Platform APIの呼び出しについて詳しくは、[監査ログ API ガイド &#x200B;](../../landing/api-guide.md)を参照してください。
 
 >[!NOTE]
 >
->セッション削除アクションがログに記録されます。 UI ワークフローについては、[ クエリサービスセッションの管理](../ui/session-management.md)を参照してください。
+>セッション削除アクションがログに記録されます。 UI ワークフローについては、[&#x200B; クエリサービスセッションの管理](../ui/session-management.md)を参照してください。
 
 ## 前提条件
 
@@ -35,7 +35,7 @@ Experience Platform UI内で監査ログダッシュボードを表示するに�
 
 ## [!DNL Query Service]監査ログの実行 {#perform-an-audit-log}
 
-[!DNL Query Service] アクティビティの監査を実行するには、左側のナビゲーションから「**[!UICONTROL Audits]**」を選択し、続いてfunnel アイコン（![ フィルターアイコン）を選択します。](/help/images/icons/filter.png)）を使用すると、検索結果の絞り込みに役立つフィルターコントロールのリストを表示できます。
+[!DNL Query Service] アクティビティの監査を実行するには、左側のナビゲーションから「**[!UICONTROL Audits]**」を選択し、続いてfunnel アイコン（![&#x200B; フィルターアイコン）を選択します。](/help/images/icons/filter.png)）を使用すると、検索結果の絞り込みに役立つフィルターコントロールのリストを表示できます。
 
 ![左側のナビゲーションとフィルター制御に「監査」がハイライト表示されたExperience Platform UI監査ログダッシュボード。](../images/audit-log/filter-controls.png)
 
@@ -51,7 +51,7 @@ Experience Platform UI内で監査ログダッシュボードを表示するに�
 | [!UICONTROL Action] | これは、作成、削除、更新、実行のいずれかです。 使用可能なアクションは、フィルターとして選択したカテゴリによって異なります。 |
 | [!UICONTROL User] | このフィールドは、クエリを実行したユーザーIDを提供します。 |
 
-![ フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../images/audit-log/filtered-activity.png)
+![&#x200B; フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../images/audit-log/filtered-activity.png)
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ Experience Platform UI内で監査ログダッシュボードを表示するに�
 
 ## [!DNL Query Service]個の監査ログカテゴリで使用可能なフィルター {#available-filters}
 
-使用可能なフィルターは、ドロップダウンで選択したカテゴリによって異なります。 次の表は、[[!DNL Query Service] 監査ログカテゴリ ](#audit-log-categories)で使用できるフィルターの詳細を示しています。
+使用可能なフィルターは、ドロップダウンで選択したカテゴリによって異なります。 次の表は、[[!DNL Query Service] 監査ログカテゴリ &#x200B;](#audit-log-categories)で使用できるフィルターの詳細を示しています。
 
 | フィルター | 説明 |
 |---|---|
-| カテゴリ | 使用可能なカテゴリの完全なリストについては、[[!DNL Query Service] 監査ログカテゴリ ](#audit-log-categories)の節を参照してください。 |
+| カテゴリ | 使用可能なカテゴリの完全なリストについては、[[!DNL Query Service] 監査ログカテゴリ &#x200B;](#audit-log-categories)の節を参照してください。 |
 | アクション | [!DNL Query Service]個の監査カテゴリを参照する場合、更新は既存のフォーム **に**&#x200B;変更され、削除は&#x200B;**スケジュールまたはテンプレート**&#x200B;の削除、作成は&#x200B;**新しいスケジュールまたはテンプレートの作成**、実行は&#x200B;**クエリを実行しています**。 |
 | ユーザー | 完全なユーザーID （johndoe@acme.comなど）を入力して、ユーザーでフィルタリングします。 |
 | ステータス | [!UICONTROL Allow]、[!UICONTROL Success]および[!UICONTROL Failure] オプションは、「ステータス」または「イベントステータス」に基づいてログをフィルタリングしますが、[!UICONTROL Deny] オプションは&#x200B;**すべての** ログをフィルタリングします。 |
@@ -93,4 +93,4 @@ Experience Platform UI内で監査ログダッシュボードを表示するに�
 
 このドキュメントを読むことで、[!DNL Query Service]監査ログ機能と、それを使用して[!DNL Query Service] ユーザーアクションをフィルタリングする方法について理解を深めることができます。
 
-トラブルシューティングの目的で[!DNL Query Service]監査ログ機能を使用している場合は、[ トラブルシューティングガイド ](../troubleshooting-guide.md)をお読みになることをお勧めします。
+トラブルシューティングの目的で[!DNL Query Service]監査ログ機能を使用している場合は、[&#x200B; トラブルシューティングガイド &#x200B;](../troubleshooting-guide.md)をお読みになることをお勧めします。

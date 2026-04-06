@@ -110,13 +110,13 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | Experience Platform UIでの左側のナビゲーションの統合 | 以前はData Collection UIに限定されていた機能（タグ、イベント転送、データストリームを含む）が、Experience Platformの左側のナビゲーション（**[!UICONTROL Data Collection]** カテゴリ）からも利用できるようになりました。 Experience Platformでデータ収集機能を使用する際に、UIを切り替える必要がなくなります。 |
 | タグとイベント転送におけるユーザー属性 | タグおよびイベント転送で使用可能な[!UICONTROL Properties]を一覧表示する際に、各一覧表示されたプロパティに、最後に更新された日時と更新を行ったユーザーが表示されるようになりました。 |
 | イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
-| Web SDKの[User-Agent クライアントヒント ](/help/collection/use-cases/client-hints.md) | Web SDKで[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
+| Web SDKの[User-Agent クライアントヒント &#x200B;](/help/collection/use-cases/client-hints.md) | Web SDKで[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
 | Web SDKのページごとの移行 | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 | [[!DNL Adobe Journey Optimizer] によるデータストリームのサポート](../../datastreams/overview.md#aep) | Adobe Experience Platform のデータストリーム用サービスでは、[!DNL Adobe Journey Optimizer] がサポートされるようになりました。このオプションでは、[!DNL Adobe Journey Optimizer] で web およびアプリベースのインバウンドチャネルを使用できます。 |
 
 {style="table-layout:auto"}
 
-Experience Platformでのデータ収集について詳しくは、[ データ収集の概要](../../collection/home.md)を参照してください。
+Experience Platformでのデータ収集について詳しくは、[&#x200B; データ収集の概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 

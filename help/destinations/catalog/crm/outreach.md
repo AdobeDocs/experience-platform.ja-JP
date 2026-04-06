@@ -16,7 +16,7 @@ ht-degree: 27%
 
 [[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。[!DNL Outreach] は、組織がセールスエンゲージメントを自動化、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。
 
-この[!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md)は、[ アウトリーチ更新リソース API](https://api.outreach.io/api/v2/docs#update-an-existing-resource)を活用して、[!DNL Outreach]の見込み客に対応するオーディエンス内のIDを更新します。
+この[!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md)は、[&#x200B; アウトリーチ更新リソース API](https://api.outreach.io/api/v2/docs#update-an-existing-resource)を活用して、[!DNL Outreach]の見込み客に対応するオーディエンス内のIDを更新します。
 
 [!DNL Outreach]は、[!DNL Outreach] [!DNL Update Resource API]と通信するための認証メカニズムとして、承認付与を含むOAuth 2を使用しています。 [!DNL Outreach] インスタンスに対する認証手順は、[宛先に対する認証](#authenticate) セクション内で、さらに下にあります。
 
@@ -30,7 +30,7 @@ ht-degree: 27%
 
 [!DNL Outreach] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md)に関するAdobeのドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[&#x200B; オーディエンスメンバーシップの詳細スキーマフィールドグループ &#x200B;](/help/xdm/field-groups/profile/segmentation.md)に関するAdobeのドキュメントを参照してください。
 
 ### アウトリーチの前提条件 {#prerequisites-destination}
 
@@ -38,7 +38,7 @@ Experience Platformから[!DNL Outreach] アカウントにデータをエクス
 
 #### Outreach アカウントも必要です {#prerequisites-account}
 
-アカウントを既にお持ちでない場合は、[!DNL Outreach] [ ログイン ](https://accounts.outreach.io/users/sign_in) ページに移動して、アカウントを登録および作成します。 詳細については、[!DNL Outreach] サポート [ ページ ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account)も参照してください。
+アカウントを既にお持ちでない場合は、[!DNL Outreach] [&#x200B; ログイン &#x200B;](https://accounts.outreach.io/users/sign_in) ページに移動して、アカウントを登録および作成します。 詳細については、[!DNL Outreach] サポート [&#x200B; ページ &#x200B;](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account)も参照してください。
 
 [!DNL Outreach] CRM 宛先に対して認証を行う前に、以下の項目をメモしておきます。
 
@@ -67,7 +67,7 @@ Experience Platformから[!DNL Outreach] アカウントにデータをエクス
 
 このメッセージを受け取った場合は、レートしきい値に従ってオーディエンス書き出しスケジュールを更新する必要があります。
 
-詳細については、[[!DNL Outreach]  ドキュメント ](https://api.outreach.io/api/v2/docs#rate-limiting)を参照してください。
+詳細については、[[!DNL Outreach]  ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#rate-limiting)を参照してください。
 
 ## サポートされる ID {#supported-identities}
 
@@ -83,7 +83,7 @@ Experience Platformから[!DNL Outreach] アカウントにデータをエクス
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -94,10 +94,10 @@ Experience Platformから[!DNL Outreach] アカウントにデータをエクス
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -117,7 +117,7 @@ Experience Platformから[!DNL Outreach] アカウントにデータをエクス
 
 >[!IMPORTANT]
 >
-> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> 宛先に接続するには、**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -160,8 +160,8 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -169,11 +169,11 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
 
 オーディエンスデータを[!DNL Adobe Experience Platform]から[!DNL Outreach]宛先に正しく送信するには、フィールドマッピング手順を実行する必要があります。 マッピングでは、Experience Platform アカウントのExperience Data Model （XDM）スキーマフィールドと、ターゲット先の対応するスキーマフィールドとの間にリンクを作成します。 XDM フィールドを [!DNL Outreach] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-1. [!UICONTROL Mapping] ステップで、**[!UICONTROL Add new mapping]**を選択します。 画面に新しいマッピング行が表示されます。
-   新しいマッピングを追加する方法を示す![Experience Platform UI スクリーンショット ](../../assets/catalog/crm/outreach/add-new-mapping.png)
+1. [!UICONTROL Mapping] ステップで、**[!UICONTROL Add new mapping]**&#x200B;を選択します。 画面に新しいマッピング行が表示されます。
+   新しいマッピングを追加する方法を示す![Experience Platform UI スクリーンショット &#x200B;](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. [!UICONTROL Select source field] ウィンドウで、**[!UICONTROL Select identity namespace]** カテゴリを選択し、目的のマッピングを追加します。
-   ![Source マッピングを示すExperience Platform UI スクリーンショット ](../../assets/catalog/crm/outreach/source-mapping.png)
+   ![Source マッピングを示すExperience Platform UI スクリーンショット &#x200B;](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. [!UICONTROL Select target field] ウィンドウで、ソースフィールドをマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL Select identity namespace]**: ソースフィールドをリストからID名前空間にマッピングするには、このオプションを選択します。
@@ -185,7 +185,7 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
      |---|---|---|
      | `Oid` | `OutreachId` | ○ |
 
-   * **[!UICONTROL Select custom attributes]**: ソースフィールドを[!UICONTROL Attribute name] フィールドで定義したカスタム属性にマッピングするには、このオプションを選択します。 サポートされる属性の包括的なリストについては、[[!DNL Outreach] 見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect)を参照してください。
+   * **[!UICONTROL Select custom attributes]**: ソースフィールドを[!UICONTROL Attribute name] フィールドで定義したカスタム属性にマッピングするには、このオプションを選択します。 サポートされる属性の包括的なリストについては、[[!DNL Outreach] 見込み客ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#prospect)を参照してください。
      ![LastNameを使用したTarget マッピングを示すExperience Platform UI スクリーンショット。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと[!DNL Outreach] インスタンスの間に次のマッピングを追加します。
@@ -200,7 +200,7 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-* [ オーディエンスの書き出しをスケジュール ](../../ui/activate-segment-streaming-destinations.md)する手順を実行する場合は、Experience Platform オーディエンスを[!DNL Outreach]のカスタムフィールド属性に手動でマッピングする必要があります。
+* [&#x200B; オーディエンスの書き出しをスケジュール &#x200B;](../../ui/activate-segment-streaming-destinations.md)する手順を実行する場合は、Experience Platform オーディエンスを[!DNL Outreach]のカスタムフィールド属性に手動でマッピングする必要があります。
 
 * これを行うには、各セグメントを選択し、*フィールドの`N`から* カスタムフィールド [!DNL Outreach] ラベル **[!UICONTROL Mapping ID]** フィールドに対応する数値を入力します。
 
@@ -209,7 +209,7 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
   > * *内で使用される数値`N` （*） [!UICONTROL Mapping ID]は、[!DNL Outreach]内の数値に接尾辞が付いたカスタム属性キーと一致する必要があります。 例：*カスタムフィールド `N` ラベル*。
   > * 数値を指定するだけで、カスタムフィールドラベル全体を指定する必要はありません。
   > * [!DNL Outreach]は、最大150個のカスタムラベルフィールドをサポートしています。
-  > * 詳しくは、[[!DNL Outreach] 見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect)を参照してください。
+  > * 詳しくは、[[!DNL Outreach] 見込み客ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs#prospect)を参照してください。
 
    * 例：
 
@@ -223,10 +223,10 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**を選択します。
+1. 宛先のリストに移動するには、**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;を選択します。
    ![宛先を参照を示すExperience Platform UIのスクリーンショット。](../../assets/catalog/crm/outreach/browse-destinations.png)
 
-1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**であることを検証します。
+1. 宛先を選択し、ステータスが&#x200B;**[!UICONTROL enabled]**&#x200B;であることを検証します。
    ![選択した宛先の宛先データフロー実行を示すExperience Platform UI スクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
@@ -253,4 +253,4 @@ Outreachへの認証方法を示す![Experience Platform UIのスクリーンシ
 
 ## その他のリソース {#additional-resources}
 
-[[!DNL Outreach]  ドキュメント ](https://api.outreach.io/api/v2/docs/)には、[ エラー応答](https://api.outreach.io/api/v2/docs#error-responses)の詳細が記載されており、問題のデバッグに使用できます。
+[[!DNL Outreach]  ドキュメント &#x200B;](https://api.outreach.io/api/v2/docs/)には、[&#x200B; エラー応答](https://api.outreach.io/api/v2/docs#error-responses)の詳細が記載されており、問題のデバッグに使用できます。

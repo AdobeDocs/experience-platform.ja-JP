@@ -43,11 +43,11 @@ Data Distillerを利用すれば、データサイエンティストやエンジ
 
 この一連のガイドに含まれるドキュメントでは、Experience Platformから機能パイプラインを作成し、マシンラーニング環境でカスタムモデルをフィードするための基本的な手順について説明します。 これで、Data Distillerと[!DNL Jupyter Notebook]の間の接続を確立する準備が整いました。
 
-- **セットアップ**: [A [!DNL Python]  ノートブック ](./establish-connection.md)からData Distillerに接続
+- **セットアップ**: [A [!DNL Python]  ノートブック &#x200B;](./establish-connection.md)からData Distillerに接続
 
 以下にリンクされているドキュメントは、上記のインフォグラフィックに記載されている手順に対応しています。
 
-- **ステップ 1**: [ データセットの探索と分析](./exploratory-analysis.md)
+- **ステップ 1**: [&#x200B; データセットの探索と分析](./exploratory-analysis.md)
 - **ステップ 2**: [機械学習の機能を開発](./feature-engineering.md)
 - **ステップ 3**: [機能データセットの書き出し](./export-data.md)
 

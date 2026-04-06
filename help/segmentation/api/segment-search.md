@@ -18,7 +18,7 @@ ht-degree: 45%
 
 ## はじめに
 
-このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド ](./getting-started.md)を確認してください。
+このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](./getting-started.md)を確認してください。
 
 「はじめに」セクションで説明した必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 

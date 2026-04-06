@@ -139,10 +139,10 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | （複数） | [[!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files)の複数のXDM イベントタイプを追加しました。 |
 | フィールドグループ | [!UICONTROL Workfront Change Event] | `Full Record`と`Accessor Employee Ids`のフィールドグループが追加されました。 |
 | データタイプ | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | 項目に返金された金額を示すために、[!UICONTROL Refund Amount]が追加されました（ある場合）。 |
-| データタイプ | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | この注文の返金リストに[!UICONTROL Refunds List]が追加されました。 |
-| データタイプ | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | 本製品のカテゴリーデータのリストに、製品カテゴリを追加しました。 |
+| データタイプ | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | この注文の返金リストに[!UICONTROL Refunds List]が追加されました。 |
+| データタイプ | [[!UICONTROL Product List Item &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | 本製品のカテゴリーデータのリストに、製品カテゴリを追加しました。 |
 | データタイプ | [!UICONTROL Session details information] | `pev3`がレポートに使用されるメディアストリームのタイプを示す[文字列フィールドを追加しました](https://github.com/adobe/xdm/pull/1676/files)。 また、`pccr` プロパティは、リダイレクトが発生したかどうかを示します。 |
-| データタイプ | [!UICONTROL Requisition List] | [要求リストのプロパティ ](https://github.com/adobe/xdm/pull/1675/files)を提供します。 名前、ID、説明が含まれます。 |
+| データタイプ | [!UICONTROL Requisition List] | [要求リストのプロパティ &#x200B;](https://github.com/adobe/xdm/pull/1675/files)を提供します。 名前、ID、説明が含まれます。 |
 | データタイプ | [!UICONTROL Commerce] | [Commerce データ型が更新され](https://github.com/adobe/xdm/pull/1675/files)が、`requisitionListOpens`、`requisitionListAdds`、`requisitionListRemovals`および`requisitionList`が含まれるようになりました。 |
 
 {style="table-layout:auto"}

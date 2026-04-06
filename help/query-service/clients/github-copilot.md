@@ -15,13 +15,13 @@ ht-degree: 2%
 >
 >この統合ツールを使用する前に、GitHubと共有されるデータを理解する必要があります。 共有データには、編集中のコードとファイルに関するコンテキスト情報（「プロンプト」）とユーザーアクションに関する詳細（「ユーザーエンゲージメントデータ」）が含まれます。  [[!DNL GitHub Copilot]のプライバシーに関する声明](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement)を確認して、収集するデータについて確認してください。 また、組織のデータガバナンスポリシーを確実に遵守する責任があるため、サードパーティサービスの導入によるセキュリティへの影響も考慮する必要があります。 Adobeは、本ツールの使用から生じる可能性のあるデータ関連の懸念または問題について責任を負いません。 詳しくは、GitHubのドキュメントを参照してください。
 
-OpenAI Codexを活用した[!DNL GitHub Copilot]は、AIを活用したツールで、コードスニペットや機能全体をエディター内で直接提案することで、コーディング体験を向上させます。 [!DNL Visual Studio Code] （[!DNL VS Code]）と統合された[!DNL Copilot]は、特に複雑なクエリを操作する場合、ワークフローを大幅に高速化できます。 このガイドに従って、[!DNL GitHub Copilot]と[!DNL VS Code]をクエリサービスに接続し、より効率的にクエリを作成および管理する方法を説明します。 [!DNL Copilot]について詳しくは、[GitHubのCopilot製品ページ ](https://github.com/pricing)および[公式 [!DNL Copilot]  ドキュメント ](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)を参照してください。
+OpenAI Codexを活用した[!DNL GitHub Copilot]は、AIを活用したツールで、コードスニペットや機能全体をエディター内で直接提案することで、コーディング体験を向上させます。 [!DNL Visual Studio Code] （[!DNL VS Code]）と統合された[!DNL Copilot]は、特に複雑なクエリを操作する場合、ワークフローを大幅に高速化できます。 このガイドに従って、[!DNL GitHub Copilot]と[!DNL VS Code]をクエリサービスに接続し、より効率的にクエリを作成および管理する方法を説明します。 [!DNL Copilot]について詳しくは、[GitHubのCopilot製品ページ &#x200B;](https://github.com/pricing)および[公式 [!DNL Copilot]  ドキュメント &#x200B;](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)を参照してください。
 
 このドキュメントでは、[!DNL GitHub Copilot]と[!DNL VS Code]をAdobe Experience Platform Query Serviceに接続するために必要な手順について説明します。
 
 ## 基本を学ぶ {#get-started}
 
-このガイドでは、既にGitHub アカウントへのアクセス権があり、[!DNL GitHub Copilot]にサインアップしている必要があります。 [GitHub web サイト ](https://github.com/github-copilot/signup)からサインアップできます。 [!DNL VS Code]も必要です。 公式web サイト [から [!DNL VS Code]  ダウンロード ](https://code.visualstudio.com/download)できます。
+このガイドでは、既にGitHub アカウントへのアクセス権があり、[!DNL GitHub Copilot]にサインアップしている必要があります。 [GitHub web サイト &#x200B;](https://github.com/github-copilot/signup)からサインアップできます。 [!DNL VS Code]も必要です。 公式web サイト [から [!DNL VS Code]  ダウンロード &#x200B;](https://code.visualstudio.com/download)できます。
 
 [!DNL VS Code]をインストールして[!DNL Copilot] サブスクリプションをアクティベートしたら、Experience Platformの接続資格情報を取得します。 これらの資格情報は、Experience Platform UIの[!UICONTROL Credentials] ワークスペースの[!UICONTROL Queries] タブにあります。 Experience Platform UI[でこれらの値を見つける方法については、](../ui/credentials.md)資格情報ガイドを参照してください。 現在[!UICONTROL Queries] ワークスペースにアクセスできない場合は、組織管理者にお問い合わせください。
 
@@ -35,7 +35,7 @@ OpenAI Codexを活用した[!DNL GitHub Copilot]は、AIを活用したツール
 次の拡張機能は[!DNL GitHub Copilot]とそのチャット機能を有効にします。
 
 - [[!DNL GitHub Copilot]](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)：入力時にインラインコーディングの候補が表示されます。
-- [[!DNL GitHub Copilot]  チャット ](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)：会話型AI支援を提供するコンパニオン拡張機能。
+- [[!DNL GitHub Copilot]  チャット &#x200B;](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)：会話型AI支援を提供するコンパニオン拡張機能。
 
 ## 接続を作成 {#create-connection}
 
@@ -65,17 +65,17 @@ OpenAI Codexを活用した[!DNL GitHub Copilot]は、AIを活用したツール
 
 次に、表示されるドロップダウンメニューから「**[!DNL Use Password]**」、「**[!DNL Save as plaintext in settings]**」の順に選択します。 [!DNL Password] フィールドが表示されます。 このテキスト入力フィールドを使用して、アクセストークンを入力します。
 
-![ パスワードの使用、そのドロップダウンメニューおよびパスワードフィールドが強調表示されます。](../images/clients/github-copilot/access-token.png)
+![&#x200B; パスワードの使用、そのドロップダウンメニューおよびパスワードフィールドが強調表示されます。](../images/clients/github-copilot/access-token.png)
 
 最後に、SSLを有効にするには、[!DNL SSL]入力フィールドを選択し、表示されるドロップダウンメニューから[!DNL Enabled]を選択します。
 
-![ ドロップダウンメニューで「有効」がハイライト表示されているSSL フィールド。](../images/clients/github-copilot/ssl-enabled.png)
+![&#x200B; ドロップダウンメニューで「有効」がハイライト表示されているSSL フィールド。](../images/clients/github-copilot/ssl-enabled.png)
 
 >[!TIP]
 >
 >すべての資格情報を入力したら、接続を保存する前に接続をテストできます。 ワークスペースの一番下までスクロールして、**[!DNL Test Connection]**&#x200B;を選択します。
 >
->![ テスト接続がハイライト表示された接続アシスタント ワークスペース。](../images/clients/github-copilot/test-connection.png " テスト接続がハイライト表示された接続アシスタントワークスペース。"){width="100" zoomable="yes"}
+>![&#x200B; テスト接続がハイライト表示された接続アシスタント ワークスペース。](../images/clients/github-copilot/test-connection.png " テスト接続がハイライト表示された接続アシスタントワークスペース。"){width="100" zoomable="yes"}
 
 接続の詳細を正しく入力したら、**[!DNL Save Connection]**&#x200B;を選択して設定を確認します。
 
@@ -95,7 +95,7 @@ Experience Platform インスタンスに接続すると、[!DNL Copilot]をAI �
 
 ## [!DNL GitHub Copilot] 入門 {#get-started-with-copilot}
 
-まず、最新バージョンの[!DNL VS Code]がインストールされていることを確認してください。 古い[!DNL VS Code] バージョンでは、主要な[!DNL Copilot]機能が意図したとおりに動作しない可能性があります。 次に、[!DNL Enable Auto Completions]設定が有効になっていることを確認します。 [!DNL Copilot]が正しく実行されている場合、**[!DNL Copilot]アイコン** （![ コパイロット アイコン ](../images/clients/github-copilot/copilot-icon.png)）がステータスバーに表示されます（問題がある場合は、代わりに[!DNL Copilot] エラーアイコンが表示されます）。 **[!DNL Copilot]アイコン**&#x200B;を選択して、[!DNL [!DNL GitHub Copilot] メニュー]を開きます。 **[!DNL [!DNL GitHub Copilot] メニュー]**&#x200B;から、**[!DNL Edit Settings]**&#x200B;を選択します
+まず、最新バージョンの[!DNL VS Code]がインストールされていることを確認してください。 古い[!DNL VS Code] バージョンでは、主要な[!DNL Copilot]機能が意図したとおりに動作しない可能性があります。 次に、[!DNL Enable Auto Completions]設定が有効になっていることを確認します。 [!DNL Copilot]が正しく実行されている場合、**[!DNL Copilot]アイコン** （![&#x200B; コパイロット アイコン &#x200B;](../images/clients/github-copilot/copilot-icon.png)）がステータスバーに表示されます（問題がある場合は、代わりに[!DNL Copilot] エラーアイコンが表示されます）。 **[!DNL Copilot]アイコン**&#x200B;を選択して、[!DNL [!DNL GitHub Copilot] メニュー]を開きます。 **[!DNL [!DNL GitHub Copilot] メニュー]**&#x200B;から、**[!DNL Edit Settings]**&#x200B;を選択します
 
 ![[!DNL VS Code]が表示されている[!DNL GitHub Copilot Menu] エディターと、[!DNL Copilot] アイコンと設定の編集がハイライト表示されています。](../images/clients/github-copilot/github-copilot-menu.png)
 
@@ -107,7 +107,7 @@ Experience Platform インスタンスに接続すると、[!DNL Copilot]をAI �
 
 [!DNL GitHub Copilot]拡張機能をインストールしてログインすると、**ゴーストテキスト**&#x200B;という機能が自動的にアクティブ化され、入力時にコードの完了が提案されます。 これらの提案は、より効率的に、より少ない中断でコードを記述するのに役立ちます。 コメントを使用して、AI コードの提案を導くこともできます。 つまり、技術的な知識がなくても、平易な言葉をコードに変換してデータを分析することができます。
 
-![ コード候補と[!DNL GitHub Copilot] アイコンが強調表示されたVSCode UI。](../images/clients/github-copilot/ghost-text.png)
+![&#x200B; コード候補と[!DNL GitHub Copilot] アイコンが強調表示されたVSCode UI。](../images/clients/github-copilot/ghost-text.png)
 
 >[!TIP]
 >
@@ -127,14 +127,14 @@ Experience Platform インスタンスに接続すると、[!DNL Copilot]をAI �
 
 別のコード候補を切り替えるには、[!DNL Copilot] ダイアログで矢印を選択します。
 
-![ コパイロットの代替提案パネルを表示する[!DNL VS Code] エディター。](../images/clients/github-copilot/code-suggestions.png)
+![&#x200B; コパイロットの代替提案パネルを表示する[!DNL VS Code] エディター。](../images/clients/github-copilot/code-suggestions.png)
 
 
 ## インラインチャットの利用 {#inline-chat}
 
 コードについて[!DNL Copilot]と直接チャットすることもできます。 インラインチャットダイアログをトリガーするには、**Control （またはCommand） + I**&#x200B;を使用します。 この機能は、コードを繰り返し実行し、コンテキストで提案を絞り込むために使用されます。 受け入れる前に、コードブロックを強調表示し、インラインチャットを使用して、AIが提案したさまざまなソリューションを確認できます。
 
-![差分ビュー付きのインラインチャットウィンドウ ](../images/clients/github-copilot/inline-chat.png)
+![差分ビュー付きのインラインチャットウィンドウ &#x200B;](../images/clients/github-copilot/inline-chat.png)
 
 <!-- 
 THis section is poss unnecessary:
@@ -144,9 +144,9 @@ There are inline features for chat including doc, expalin, fix and test
 
 ## 専用チャットビュー {#dedicated-chat}
 
-専用のチャットサイドバーを備えた従来のチャットインターフェイスを使用して、アイデアや戦略の策定、コーディングの問題の解決、実装の詳細に関する議論を促進できます。 チャットアイコン（![ コパイロットのチャットアイコン）を選択します。](../images/clients/github-copilot/chat-icon.png)）を[!DNL VS Code] サイドバーに配置して、専用のチャットウィンドウを開きます。
+専用のチャットサイドバーを備えた従来のチャットインターフェイスを使用して、アイデアや戦略の策定、コーディングの問題の解決、実装の詳細に関する議論を促進できます。 チャットアイコン（![&#x200B; コパイロットのチャットアイコン）を選択します。](../images/clients/github-copilot/chat-icon.png)）を[!DNL VS Code] サイドバーに配置して、専用のチャットウィンドウを開きます。
 
-![ チャットアイコンがハイライト表示された[!DNL GitHub Copilot]のチャットサイドバー。](../images/clients/github-copilot/chat-sidebar.png)
+![&#x200B; チャットアイコンがハイライト表示された[!DNL GitHub Copilot]のチャットサイドバー。](../images/clients/github-copilot/chat-sidebar.png)
 
 履歴アイコン（![履歴アイコン）を選択して、チャット履歴にアクセスすることもできます。](../images/clients/github-copilot/history-icon.png)）をチャットパネルの上部に表示します。
 

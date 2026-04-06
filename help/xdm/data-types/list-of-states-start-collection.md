@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL List of States Start] データ型は、様々なプレーヤー属性の開始状態に関連する情報を表すために設計されたExperience Data Model （XDM） データ型です。 特定の属性状態（「fullscreen」、「mute」、「closedCaptioning」など）を示す[!UICONTROL Player State Name] プロパティが含まれます。 このデータタイプは、異なるプレイヤーの状態の初期条件をキャプチャして記述するために使用されます。
 
-![ データタイプ [!UICONTROL List of States Start]の図。](../images/data-types/list-of-states-start-collection.png)
+![&#x200B; データタイプ [!UICONTROL List of States Start]の図。](../images/data-types/list-of-states-start-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

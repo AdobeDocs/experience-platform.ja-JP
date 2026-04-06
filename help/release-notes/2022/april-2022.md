@@ -222,7 +222,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意と環境設定データを[!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[ [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
+| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意と環境設定データを[!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[&#x200B; [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
 | [!DNL Square] のサポート | [!DNL Square] ソースを使用して、[!DNL Square] アカウントからExperience Platformに支払いデータを取り込むことができるようになりました。 |
 | 顧客属性データフローの削除のサポート | 顧客属性ソースコネクタを使用して作成したデータフローを削除できるようになりました。 |
 

@@ -28,7 +28,7 @@ Reddit Conversions API拡張機能を使用して、以下を行います。
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能を使用するには有効なReddit Ads アカウントが必要です。 [[!DNL Reddit Ads] 登録ページ ](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account)に移動して、アカウントを登録し、まだアカウントをお持ちでない場合はアカウントを作成します。 アカウントを設定したら、[広告APIへのアクセスをリクエスト ](https://www.redditforbusiness.com/api-partnership)します。
+この拡張機能を使用するには有効なReddit Ads アカウントが必要です。 [[!DNL Reddit Ads] 登録ページ &#x200B;](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account)に移動して、アカウントを登録し、まだアカウントをお持ちでない場合はアカウントを作成します。 アカウントを設定したら、[広告APIへのアクセスをリクエスト &#x200B;](https://www.redditforbusiness.com/api-partnership)します。
 
 ### 必要な設定の詳細を収集する {#configuration-details}
 
@@ -36,26 +36,26 @@ Experience Platformを[!DNL Reddit]に接続するには、次の入力が必要
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| ピクセル ID | ピクセル IDは、[!DNL Reddit Ads] アカウントに関連付けられた一意のIDです。 web サイトやアプリでのユーザーのインタラクションやコンバージョンイベントを追跡するために使用されます。 お使いのPixel IDは、[!DNL Reddit Ads] [ アカウント ](https://ads.reddit.com/accounts)で確認できます。 | 123456789012 |
+| ピクセル ID | ピクセル IDは、[!DNL Reddit Ads] アカウントに関連付けられた一意のIDです。 web サイトやアプリでのユーザーのインタラクションやコンバージョンイベントを追跡するために使用されます。 お使いのPixel IDは、[!DNL Reddit Ads] [&#x200B; アカウント &#x200B;](https://ads.reddit.com/accounts)で確認できます。 | 123456789012 |
 | コンバージョンアクセストークン | [!DNL Reddit] コンバージョンアクセストークン。 ガイダンスについては、[[!DNL Reddit]  コンバージョン API](https://business.reddithelp.com/s/article/conversion-access-token) ドキュメントを参照してください。<br> **このトークンは期限切れではないため、このプロセスは1回だけ実行する必要があります。** | {YOUR_REDDIT_BEARER_TOKEN} |
 
 ## [!DNL Reddit]拡張機能のインストールと設定 {#install-configure}
 
 次の手順に従って、[!DNL Reddit] Conversions API拡張機能をインストールして設定します。
 
-1. Experience Platform Data Collection UIで、左側のナビゲーションから「[!UICONTROL Extensions]」を選択して、[!UICONTROL Extensions] カタログにアクセスします。 次に、[新しいイベント転送プロパティ ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties)を作成するか、既存のプロパティを選択します。
-2. 左側のナビゲーションパネルで&#x200B;**[!UICONTROL Extensions]**&#x200B;に移動します。 **[!UICONTROL Catalog]**&#x200B;を選択し、**[!DNL Reddit]**拡張機能を選択します。
+1. Experience Platform Data Collection UIで、左側のナビゲーションから「[!UICONTROL Extensions]」を選択して、[!UICONTROL Extensions] カタログにアクセスします。 次に、[新しいイベント転送プロパティ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties)を作成するか、既存のプロパティを選択します。
+2. 左側のナビゲーションパネルで&#x200B;**[!UICONTROL Extensions]**&#x200B;に移動します。 **[!UICONTROL Catalog]**&#x200B;を選択し、**[!DNL Reddit]**&#x200B;拡張機能を選択します。
    ![Reddit拡張機能がハイライト表示されたAdobe Experience Platform拡張機能カタログ。](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 次の設定の詳細を入力します。
    - **ピクセル ID**: [!DNL Reddit Ads] ピクセル IDを入力します。
    - **コンバージョンアクセストークン**: [!DNL Reddit Ads] アカウントで生成されたトークンを入力し、完了したら「**[!UICONTROL Save]**」を選択します。
-     ![ ピクセル IDとコンバージョンアクセストークンのフィールドを含む、Reddit コンバージョン API拡張機能の設定の詳細。](../../../images/extensions/server/reddit/reddit-capi-details.png)
+     ![&#x200B; ピクセル IDとコンバージョンアクセストークンのフィールドを含む、Reddit コンバージョン API拡張機能の設定の詳細。](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## イベント転送ルールの設定 {#config-rule}
 
 データ要素を設定したら、イベント転送ルールを作成して、イベントがいつ、どのように[!DNL Reddit Ads]に送信されるかを決定します。
 
-1. イベント転送プロパティの&#x200B;**ルール**&#x200B;に移動し、新しい[ ルール ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)を作成します。
+1. イベント転送プロパティの&#x200B;**ルール**&#x200B;に移動し、新しい[&#x200B; ルール &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)を作成します。
 2. **アクション**&#x200B;で、新しいアクションを追加し、拡張機能を&#x200B;**[!DNL Reddit CAPI]**&#x200B;に設定します。
 3. 「**アクションタイプ**」を「**イベントを送信**」に設定します。
    ![Reddit Conversions API拡張機能のイベント転送ルール設定インターフェイス。拡張機能とアクションタイプのフィールドが強調表示されている。](../../../images/extensions/server/reddit/reddit-rule.png)
@@ -64,7 +64,7 @@ Experience Platformを[!DNL Reddit]に接続するには、次の入力が必要
    | フィールド名 | 説明 | 例 |
    | --- | --- | --- |
    | `Event Name` | コンバージョンイベントの名前を指定します。 | `Purchase` |
-   | `Event Type` | [ サポートされているReddit コンバージョンイベント ](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events)またはカスタムイベントにできるイベントのタイプを定義します。 | `SignUp`, `MyCustomEvent` |
+   | `Event Type` | [&#x200B; サポートされているReddit コンバージョンイベント &#x200B;](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events)またはカスタムイベントにできるイベントのタイプを定義します。 | `SignUp`, `MyCustomEvent` |
    | `Timestamp` | イベント時間をISO形式またはエポック時間で指定します。 | `2025-04-15T16:01:00.000Z`, `1744742460000` |
    | `Client Dedupe ID` | 重複排除に一意のIDを追加します。 | `abc123` |
    | `Match Keys` | アトリビューションにユーザー識別子とデバイス識別子を含めます。 | `{"email":"hashed_email@example.com", "phone":"hashed_phone"}` |
@@ -87,7 +87,7 @@ Experience Platformを[!DNL Reddit]に接続するには、次の入力が必要
 
 ### イベントメタデータフィールド
 
-![ ピクセル IDとコンバージョンアクセストークンのフィールドを含む、Reddit コンバージョン API拡張機能の設定の詳細。](../../../images/extensions/server/reddit/reddit-event-metadata.png)
+![&#x200B; ピクセル IDとコンバージョンアクセストークンのフィールドを含む、Reddit コンバージョン API拡張機能の設定の詳細。](../../../images/extensions/server/reddit/reddit-event-metadata.png)
 
 | フィールド名 | 説明 | 例 |
 | --- | --- | --- |
@@ -120,14 +120,14 @@ Experience Platformを[!DNL Reddit]に接続するには、次の入力が必要
 
 ## 検証とデプロイ {#validate-deploy}
 
-拡張機能とルールを設定したら、[[!DNL Reddit Ads] Events Manager](https://business.reddithelp.com/s/article/Events-Manager)でイベントデータを確認して統合を検証します。 [Match Quality Score （MQS） ](https://business.reddithelp.com/s/article/match-quality-score)を使用して、シグナル統合の精度と信頼性を評価します。
+拡張機能とルールを設定したら、[[!DNL Reddit Ads] Events Manager](https://business.reddithelp.com/s/article/Events-Manager)でイベントデータを確認して統合を検証します。 [Match Quality Score （MQS） &#x200B;](https://business.reddithelp.com/s/article/match-quality-score)を使用して、シグナル統合の精度と信頼性を評価します。
 
-[!DNL Reddit Ads]の詳細については、[Reddit広告ドキュメント ](https://ads.reddit.com/)を参照してください。
+[!DNL Reddit Ads]の詳細については、[Reddit広告ドキュメント &#x200B;](https://ads.reddit.com/)を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、[!DNL Reddit] Conversions API拡張機能の設定方法と使用方法について説明します。 Adobe Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要](../../../ui/event-forwarding/overview.md)または次の資料を参照してください。
+このドキュメントでは、[!DNL Reddit] Conversions API拡張機能の設定方法と使用方法について説明します。 Adobe Experience Platformのイベント転送機能について詳しくは、[&#x200B; イベント転送の概要](../../../ui/event-forwarding/overview.md)または次の資料を参照してください。
 
-- [一致キーを共有](https://business.reddithelp.com/s/article/about-attribution-matching-signals)および[ イベントメタデータ ](https://business.reddithelp.com/s/article/about-event-metadata)：一致キーとイベントメタデータを効果的に共有する方法について説明します。
-- [ イベントの重複排除](https://business.reddithelp.com/s/article/event-deduplication): イベントの重複排除により、正確なイベント追跡を実現します。
-- [ コンバージョンアクセストークンを作成](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token)：手順に従って、セキュアなAPI認証用のコンバージョンアクセストークンを作成します。
+- [一致キーを共有](https://business.reddithelp.com/s/article/about-attribution-matching-signals)および[&#x200B; イベントメタデータ &#x200B;](https://business.reddithelp.com/s/article/about-event-metadata)：一致キーとイベントメタデータを効果的に共有する方法について説明します。
+- [&#x200B; イベントの重複排除](https://business.reddithelp.com/s/article/event-deduplication): イベントの重複排除により、正確なイベント追跡を実現します。
+- [&#x200B; コンバージョンアクセストークンを作成](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token)：手順に従って、セキュアなAPI認証用のコンバージョンアクセストークンを作成します。

@@ -17,12 +17,12 @@ ht-degree: 10%
 
 このドキュメント全体のSQLの例は、Adobe Analytics データで一般的に使用されるクエリです。 このチュートリアルでは、次のコンポーネントについて理解する必要があります。
 
-* [ レポートスイートデータの概要](../../sources/connectors/adobe-applications/mapping/analytics.md)用のAdobe Analytics ソースコネクタ。
-* [Analytics フィールドマッピングに関するドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md)では、クエリサービスで使用するAnalytics データの取り込みとマッピングに関する詳細情報を提供しています。
+* [&#x200B; レポートスイートデータの概要](../../sources/connectors/adobe-applications/mapping/analytics.md)用のAdobe Analytics ソースコネクタ。
+* [Analytics フィールドマッピングに関するドキュメント &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md)では、クエリサービスで使用するAnalytics データの取り込みとマッピングに関する詳細情報を提供しています。
 * [Attribution IQの概要](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
+* [Adobe Analytics アトリビューションパネルガイド &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
 
-`OVER()`関数内のパラメーターの説明については、[ ウィンドウ関数セクション ](../sql/adobe-defined-functions.md#window-functions)を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集](https://business.adobe.com/glossary/index.html)も使用できます。
+`OVER()`関数内のパラメーターの説明については、[&#x200B; ウィンドウ関数セクション &#x200B;](../sql/adobe-defined-functions.md#window-functions)を参照してください。 [Adobe マーケティングおよびCommerce用語の用語集](https://business.adobe.com/glossary/index.html)も使用できます。
 
 次の各ユースケースでは、カスタマイズ用のテンプレートとして、パラメーター化されたSQL クエリの例が提供されます。 評価に関心のあるSQLの例の`{ }`が表示される場所にパラメーターを指定します。
 
@@ -80,7 +80,7 @@ ht-degree: 10%
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[&#x200B; アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -116,7 +116,7 @@ LIMIT 10
 (10 rows)
 ```
 
-`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。
 
 ### ラストタッチ属性 {#second-touch}
 
@@ -163,7 +163,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。
 
 ### 有効期限条件を持つファーストタッチ属性 {#first-touch-attribution-with-expiration-condition}
 
@@ -179,7 +179,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[&#x200B; アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -214,7 +214,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。
 
 ### 有効期限タイムアウトを持つファーストタッチ属性 {#first-touch-attribution-with-expiration-timeout}
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[&#x200B; アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -265,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`first_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。
 
 ### 有効期限条件を持つラストタッチ属性 {#last-touch-attribution-with-expiration-condition}
 
@@ -281,7 +281,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[&#x200B; アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -316,7 +316,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。
 
 ### 有効期限タイムアウトを持つラストタッチ属性 {#last-touch-attribution-with-expiration-timeout}
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-必要になる可能性のあるパラメーターとその説明の完全なリストについては、[ アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
+必要になる可能性のあるパラメーターとその説明の完全なリストについては、[&#x200B; アトリビューションクエリパラメーターの節](#attribution-query-parameters)を参照してください。
 
 **クエリの例**
 
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション ](#query-result-column-components)を参照してください。
+`last_touch`列に表示される結果の内訳については、「[列コンポーネント」セクション &#x200B;](#query-result-column-components)を参照してください。

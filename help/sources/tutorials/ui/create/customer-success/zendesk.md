@@ -33,7 +33,7 @@ Experience Platformで[!DNL Zendesk] アカウントにアクセスするには�
 
 [!DNL Zendesk] ソースの認証について詳しくは、[[!DNL Zendesk]  ソースの概要](../../../../connectors/customer-success/zendesk.md)を参照してください。
 
-![Zendesk API トークン ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![Zendesk API トークン &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### [!DNL Zendesk]のExperience Platform スキーマを作成
 
@@ -41,7 +41,7 @@ Experience Platformで[!DNL Zendesk] アカウントにアクセスするには�
 
 [!DNL Zendesk]に必要な[!DNL Zendesk Search API] スキーマに関する追加のガイダンスについては、以下の[制限](#limits) セクションを参照してください。
 
-![ スキーマの作成](../../../../images/tutorials/create/zendesk/schema.png)
+![&#x200B; スキーマの作成](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## [!DNL Zendesk] アカウントを接続
 
@@ -75,7 +75,7 @@ Experience Platform UIで、左側のナビゲーションバーから「**[!UIC
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Zendesk] アカウントとExperience Platformの間のソース接続を認証して作成しました。 次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローを作成できるようになりました](../../dataflow/customer-success.md)。
+このチュートリアルでは、[!DNL Zendesk] アカウントとExperience Platformの間のソース接続を認証して作成しました。 次のチュートリアルに進み、[&#x200B; カスタマーサクセスデータをExperience Platformに取り込むためのデータフローを作成できるようになりました](../../dataflow/customer-success.md)。
 
 ## その他のリソース
 
@@ -87,15 +87,15 @@ Experience Platform UIで、左側のナビゲーションバーから「**[!UIC
 
 Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL Datasets]**」を選択して、[!UICONTROL Datasets] ワークスペースにアクセスします。 [!UICONTROL Dataset Activity]画面には、実行の詳細が表示されます。
 
-![ アクティビティページ ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
+![&#x200B; アクティビティページ &#x200B;](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
 次に、表示するデータフローのデータフロー実行IDを選択して、そのデータフロー実行に関する特定の詳細を表示します。
 
-![ データフローページ ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
+![&#x200B; データフローページ &#x200B;](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
 最後に、**[!UICONTROL Preview dataset]**&#x200B;を選択して、取り込まれたデータを表示します。
 
-![Zendesk データセット ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
+![Zendesk データセット &#x200B;](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
 また、[!DNL Zendesk] > [!DNL Customers] ページのデータに対してExperience Platform データを検証することもできます。
 
@@ -155,5 +155,5 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 * [Zendesk Search API/検索結果を書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results)は、1 ページにつき最大1000件のレコードを返します。
    * ``filter[type]`` パラメーターの値は``user``に設定されているため、Zendesk接続はユーザーのみを返します。
    * ページあたりの結果の数は、``page[size]`` パラメーターによって管理されます。 値は``100``に設定されています。 これは、Zendeskによって設定された速度低下の制約の影響を軽減するために行われます。
-   * [制限](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits)および[ ページネーション ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1)を参照してください。
+   * [制限](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits)および[&#x200B; ページネーション &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1)を参照してください。
    * カーソルのページネーション [を使用して、](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/) リストを介したページネーションを参照することもできます。

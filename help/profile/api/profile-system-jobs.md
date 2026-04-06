@@ -22,7 +22,7 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 >[!NOTE]
 >
->[!DNL Data Lake]からデータセットまたはバッチを削除する場合は、[ カタログサービスの概要](../../catalog/home.md)にアクセスして詳細を確認してください。
+>[!DNL Data Lake]からデータセットまたはバッチを削除する場合は、[&#x200B; カタログサービスの概要](../../catalog/home.md)にアクセスして詳細を確認してください。
 
 ## はじめに
 
@@ -144,7 +144,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `_page.count` | リクエストの合計数。この応答はスペースを節約するために切り捨てられています。 |
-| `_page.next` | 結果の追加ページが存在する場合は、[参照リクエスト ](#view-a-specific-delete-request)のID値を指定された`"next"`値に置き換えて、結果の次のページを表示します。 |
+| `_page.next` | 結果の追加ページが存在する場合は、[参照リクエスト &#x200B;](#view-a-specific-delete-request)のID値を指定された`"next"`値に置き換えて、結果の次のページを表示します。 |
 | `jobType` | 作成されるジョブのタイプ。この場合、常に`"DELETE"`が返されます。 |
 | `status` | 削除リクエストのステータス。指定できる値は、`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"`です。 |
 | `metrics` | 処理されたレコードの数（`"recordsProcessed"`）と、リクエストが処理された時間（秒単位）、またはリクエストが完了するまでの所要時間（`"timeTakenInSec"`）を含むオブジェクト。 |

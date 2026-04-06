@@ -22,8 +22,8 @@ ht-degree: 9%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; ソース &#x200B;](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 ### 必要な資格情報の収集
 
@@ -274,7 +274,7 @@ Experience Data Model （XDM）スキーマは、Experience Platform内の顧客
 
 データセットは、データのコレクションのための保存および管理構造体です。通常、列（スキーマ）と行（フィールド）を持つテーブルのように構造化されます。 Experience Platformに正常に取り込まれたデータは、データセットとしてデータレイク内に保存されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用できます。
 
-ペイロード内でターゲットスキーマのIDを指定しながら、[ カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)にPOST リクエストを行うことで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成方法について詳しくは、[APIを使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するガイドを参照してください。
+ペイロード内でターゲットスキーマのIDを指定しながら、[&#x200B; カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)にPOST リクエストを行うことで、ターゲットデータセットを作成できます。 ターゲットデータセットの作成方法について詳しくは、[APIを使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するガイドを参照してください。
 
 
 ## ターゲット接続の作成 {#target}
@@ -332,7 +332,7 @@ curl -X POST \
 
 >[!TIP]
 >
->データをマッピングする準備ができたら、[および](../../../../images/tutorials/create/capillary/mappings.zip) データ準備[!DNL Capillary]にファイルをインポートするための[ イベントおよびプロファイル マッピング ](../../../../../data-prep/ui/mapping.md#import-mapping)をダウンロードできます。
+>データをマッピングする準備ができたら、[および](../../../../images/tutorials/create/capillary/mappings.zip) データ準備[!DNL Capillary]にファイルをインポートするための[&#x200B; イベントおよびプロファイル マッピング &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping)をダウンロードできます。
 
 ### データフローの作成 {#flow}
 
@@ -427,6 +427,6 @@ curl -X POST \
 その他の操作について詳しくは、次のドキュメントを参照してください
 
 * [データフローの監視](../../../../../dataflows/ui/monitor-sources.md)
-* [ データフローの更新](../../../ui/update-dataflows.md)
-* [ データフローを削除](../../../ui/delete.md)
-* [ ソースアカウントを更新](../../../ui/update.md)
+* [&#x200B; データフローの更新](../../../ui/update-dataflows.md)
+* [&#x200B; データフローを削除](../../../ui/delete.md)
+* [&#x200B; ソースアカウントを更新](../../../ui/update.md)

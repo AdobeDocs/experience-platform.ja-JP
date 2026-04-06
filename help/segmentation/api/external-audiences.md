@@ -29,7 +29,7 @@ ht-degree: 8%
 >
 >このガイドのエンドポイントには、`/core/ais`ではなく`/core/ups`が付いています。
 
-Experience Platform APIを使用するには、[認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
+Experience Platform APIを使用するには、[認証チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -111,14 +111,14 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | 文字列 | 外部オーディエンスの名前。 |
 | `description` | 文字列 | 外部オーディエンスのオプションの説明。 |
 | `customAudienceId` | 文字列 | 外部オーディエンスのオプション識別子。 |
-| `fields` | オブジェクトの配列 | フィールドとそのデータタイプのリスト。 配列内に最小1 フィールドと最大41 フィールドが必要です。 フィールド **の1つはID フィールドである必要があり、**&#x200B;が含まれています。 `identityNs`フィールドのリストを作成する場合は、次の項目を追加できます。 <ul><li>`name`: **必須**&#x200B;外部オーディエンス仕様の一部であるフィールドの名前。</li><li>`type`: **必須** フィールドに取り込まれるデータのタイプ。 サポートされている値には、`string`、`number`、`long`、`integer`、`date` （`2025-05-13`）、`datetime` （`2025-05-23T20:19:00+00:00`）および`boolean`が含まれます。</li><li>`identityNs`: **ID フィールドに必須** ID フィールドで使用される名前空間。 サポートされている値には、`ECID`や`email`など、有効なすべての名前空間が含まれます。</li><li>`labels`: *オプション* フィールドのアクセス制御ラベルの配列。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 </li></ul> |
-| `sourceSpec` | オブジェクト | 外部オーディエンスが配置されている情報を含むオブジェクト。 このオブジェクトを使用する場合、**には次の情報を含める必要があります。** <ul><li>`path`: **必須**：外部オーディエンスの場所、またはソース内の外部オーディエンスを含むフォルダー。 ファイルパス **にスペースを含めることはできません**。 例えば、パスが`activation/sample-source/Example CSV File.csv`の場合、パスを`activation/sample-source/ExampleCSVFile.csv`に設定します。 データフローセクションの&#x200B;**Source data**&#x200B;列内で、ソースへのパスを見つけることができます。</li><li>`type`: **必須** ソースから取得するオブジェクトのタイプ。 この値は`file`または`folder`のいずれかです。</li><li>`sourceType`: *オプション*&#x200B;取得するソースのタイプ。 現在、サポートされている値は`Cloud Storage`のみです。</li><li>`cloudType`: **必須** ソースタイプに基づくクラウドストレージのタイプ。 サポートされている値には、`S3`、`DLZ`、`GCS`、`Azure`および`SFTP`が含まれます。</li><li>`baseConnectionId`: ベース接続のID。ソースプロバイダーから提供されます。 この値は、**値**、`cloudType`、または`S3`を使用する場合、`GCS`必須`SFTP`です。 それ以外の場合は、**not**&#x200B;でこのパラメーターを含める必要があります。 詳しくは、[ ソースコネクタの概要](../../sources/home.md)を参照してください。</li><li>`encryption`: *オプション*&#x200B;非同期暗号化データ取り込みに必要な暗号化キーを含むオブジェクト。</li><ul><li>`publicKeyId`: **必須**：暗号化キーのペアを生成したときに返された公開鍵ID。 詳しくは、[暗号化データ ガイド ](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair)を参照してください。 </li><li>`signVerificationKeyId`: *オプション*: カスタマー管理キーをExperience Platformと共有したときに返された公開鍵ID。 **注：**&#x200B;このフィールドは、そのAPI リクエストの応答で`publicKeyId`としてラベル付けされています。 詳しくは、[暗号化データ ガイド ](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform)を参照してください。</li></ul></ul> |
+| `fields` | オブジェクトの配列 | フィールドとそのデータタイプのリスト。 配列内に最小1 フィールドと最大41 フィールドが必要です。 フィールド **の1つはID フィールドである必要があり、**&#x200B;が含まれています。 `identityNs`フィールドのリストを作成する場合は、次の項目を追加できます。 <ul><li>`name`: **必須**&#x200B;外部オーディエンス仕様の一部であるフィールドの名前。</li><li>`type`: **必須** フィールドに取り込まれるデータのタイプ。 サポートされている値には、`string`、`number`、`long`、`integer`、`date` （`2025-05-13`）、`datetime` （`2025-05-23T20:19:00+00:00`）および`boolean`が含まれます。</li><li>`identityNs`: **ID フィールドに必須** ID フィールドで使用される名前空間。 サポートされている値には、`ECID`や`email`など、有効なすべての名前空間が含まれます。</li><li>`labels`: *オプション* フィールドのアクセス制御ラベルの配列。 使用可能なアクセス制御ラベルについて詳しくは、[&#x200B; データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 </li></ul> |
+| `sourceSpec` | オブジェクト | 外部オーディエンスが配置されている情報を含むオブジェクト。 このオブジェクトを使用する場合、**には次の情報を含める必要があります。** <ul><li>`path`: **必須**：外部オーディエンスの場所、またはソース内の外部オーディエンスを含むフォルダー。 ファイルパス **にスペースを含めることはできません**。 例えば、パスが`activation/sample-source/Example CSV File.csv`の場合、パスを`activation/sample-source/ExampleCSVFile.csv`に設定します。 データフローセクションの&#x200B;**Source data**&#x200B;列内で、ソースへのパスを見つけることができます。</li><li>`type`: **必須** ソースから取得するオブジェクトのタイプ。 この値は`file`または`folder`のいずれかです。</li><li>`sourceType`: *オプション*&#x200B;取得するソースのタイプ。 現在、サポートされている値は`Cloud Storage`のみです。</li><li>`cloudType`: **必須** ソースタイプに基づくクラウドストレージのタイプ。 サポートされている値には、`S3`、`DLZ`、`GCS`、`Azure`および`SFTP`が含まれます。</li><li>`baseConnectionId`: ベース接続のID。ソースプロバイダーから提供されます。 この値は、**値**、`cloudType`、または`S3`を使用する場合、`GCS`必須`SFTP`です。 それ以外の場合は、**not**&#x200B;でこのパラメーターを含める必要があります。 詳しくは、[&#x200B; ソースコネクタの概要](../../sources/home.md)を参照してください。</li><li>`encryption`: *オプション*&#x200B;非同期暗号化データ取り込みに必要な暗号化キーを含むオブジェクト。</li><ul><li>`publicKeyId`: **必須**：暗号化キーのペアを生成したときに返された公開鍵ID。 詳しくは、[暗号化データ ガイド &#x200B;](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair)を参照してください。 </li><li>`signVerificationKeyId`: *オプション*: カスタマー管理キーをExperience Platformと共有したときに返された公開鍵ID。 **注：**&#x200B;このフィールドは、そのAPI リクエストの応答で`publicKeyId`としてラベル付けされています。 詳しくは、[暗号化データ ガイド &#x200B;](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform)を参照してください。</li></ul></ul> |
 | `ttlInDays` | 整数 | 外部オーディエンスのデータの有効期限（日数）。 この値は1 ～ 90の範囲で設定できます。 デフォルトでは、データの有効期限は30日に設定されています。 |
 | `audienceType` | 文字列 | 外部オーディエンスのオーディエンスタイプ。 現在は、`people` のみがサポートされています。 |
 | `originName` | 文字列 | **必須** オーディエンスのオリジン。 これは、オーディエンスがどこから来たかを示します。外部オーディエンスの場合は、`CUSTOM_UPLOAD`を使用する必要があります。 |
 | `namespace` | 文字列 | オーディエンスの名前空間。 デフォルトでは、この値は `CustomerAudienceUpload` に設定されています。 |
-| `labels` | 文字列の配列 | 外部オーディエンスに適用されるアクセス制御ラベル。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
-| `tags` | 文字列の配列 | 外部オーディエンスに適用するタグ。 タグの配列を追加する場合、**は**&#x200B;を`tagId`使用する必要があります。 タグについて詳しくは、[ タグの管理ガイド ](/help/administrative-tags/ui/managing-tags.md)を参照してください。 |
+| `labels` | 文字列の配列 | 外部オーディエンスに適用されるアクセス制御ラベル。 使用可能なアクセス制御ラベルについて詳しくは、[&#x200B; データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
+| `tags` | 文字列の配列 | 外部オーディエンスに適用するタグ。 タグの配列を追加する場合、**は**&#x200B;を`tagId`使用する必要があります。 タグについて詳しくは、[&#x200B; タグの管理ガイド &#x200B;](/help/administrative-tags/ui/managing-tags.md)を参照してください。 |
 
 +++
 
@@ -186,7 +186,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `audienceType` | 文字列 | 外部オーディエンスのオーディエンスタイプ。 |
 | `originName` | 文字列 | **必須** オーディエンスのオリジン。 これはオーディエンスの出所を示しています。 |
 | `namespace` | 文字列 | オーディエンスの名前空間。 |
-| `labels` | 文字列の配列 | 外部オーディエンスに適用されるアクセス制御ラベル。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
+| `labels` | 文字列の配列 | 外部オーディエンスに適用されるアクセス制御ラベル。 使用可能なアクセス制御ラベルについて詳しくは、[&#x200B; データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
 
 
 +++
@@ -333,8 +333,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 
 | プロパティ | タイプ | 説明 |
 | -------- | ---- | ----------- |
-| `labels` | 配列 | オーディエンスのアクセスラベルの更新されたリストを含む配列。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
-| `fields` | オブジェクトの配列 | 外部オーディエンスのフィールドと関連するラベルを含む配列。 PATCH リクエストにリストされているフィールドのみが更新されます。 使用可能なアクセス制御ラベルについて詳しくは、[ データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
+| `labels` | 配列 | オーディエンスのアクセスラベルの更新されたリストを含む配列。 使用可能なアクセス制御ラベルについて詳しくは、[&#x200B; データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
+| `fields` | オブジェクトの配列 | 外部オーディエンスのフィールドと関連するラベルを含む配列。 PATCH リクエストにリストされているフィールドのみが更新されます。 使用可能なアクセス制御ラベルについて詳しくは、[&#x200B; データ使用ラベル用語集](/help/data-governance/labels/reference.md)を参照してください。 |
 | `ttlInDays` | 整数 | 外部オーディエンスのデータの有効期限（日数）。 この値は1 ～ 90の範囲で設定できます。 |
 
 +++
@@ -637,7 +637,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 | プロパティ | タイプ | 説明 |
 | -------- | ---- | ----------- |
-| `runs` | オブジェクト | オーディエンスに属する取り込み実行のリストを含むオブジェクト。 このオブジェクトの詳細については、[取り込みステータスの取得セクション ](#retrieve-ingestion-status)を参照してください。 |
+| `runs` | オブジェクト | オーディエンスに属する取り込み実行のリストを含むオブジェクト。 このオブジェクトの詳細については、[取り込みステータスの取得セクション &#x200B;](#retrieve-ingestion-status)を参照してください。 |
 
 +++
 
@@ -724,7 +724,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ais/external-audience/60ccea9
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Experience Platform APIを使用して外部オーディエンスを作成、管理、削除する方法について詳しく説明します。 Experience Platform UIで外部オーディエンスを使用する方法については、[ オーディエンスポータルのドキュメント ](../ui/audience-portal.md)を参照してください。
+このガイドでは、Experience Platform APIを使用して外部オーディエンスを作成、管理、削除する方法について詳しく説明します。 Experience Platform UIで外部オーディエンスを使用する方法については、[&#x200B; オーディエンスポータルのドキュメント &#x200B;](../ui/audience-portal.md)を参照してください。
 
 ## 付録 {#appendix}
 

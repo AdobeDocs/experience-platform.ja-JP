@@ -21,11 +21,11 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数やプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する類似の指標にアクセスするには、「[ プロファイルのプレビュー（サンプルステータスのプレビュー）」エンドポイントガイド ](../../profile/api/preview-sample-status.md)、Profile API開発者ガイドの一部を参照してください。
+>特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数やプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する類似の指標にアクセスするには、「[&#x200B; プロファイルのプレビュー（サンプルステータスのプレビュー）」エンドポイントガイド &#x200B;](../../profile/api/preview-sample-status.md)、Profile API開発者ガイドの一部を参照してください。
 
 ## はじめに
 
-このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド ](./getting-started.md)を確認してください。
+このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](./getting-started.md)を確認してください。
 
 ## 推定の生成方法
 
@@ -193,7 +193,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティ IDとその関連IDのリスト。 指定されたリンクは、[ プロファイルアクセス API エンドポイント ](../../profile/api/entities.md)を使用して、指定されたエンティティを検索するために使用できます。 |
+| `results` | エンティティ IDとその関連IDのリスト。 指定されたリンクは、[&#x200B; プロファイルアクセス API エンドポイント &#x200B;](../../profile/api/entities.md)を使用して、指定されたエンティティを検索するために使用できます。 |
 
 +++
 
@@ -273,4 +273,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 次の手順
 
-このガイドでは、Segmentation APIを使用してプレビューと見積もりを操作する方法について詳しく説明します。 特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数、プロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する指標にアクセスする方法については、[ プロファイルプレビュー（`/previewsamplestatus`） エンドポイントガイド ](../../profile/api/preview-sample-status.md)を参照してください。
+このガイドでは、Segmentation APIを使用してプレビューと見積もりを操作する方法について詳しく説明します。 特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数、プロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する指標にアクセスする方法については、[&#x200B; プロファイルプレビュー（`/previewsamplestatus`） エンドポイントガイド &#x200B;](../../profile/api/preview-sample-status.md)を参照してください。

@@ -33,13 +33,13 @@ Adobe Experience Platformなら、顧客一人ひとりに合わせてリアル�
 
 データがクリーンであることを確認したら、リアルタイム顧客プロファイルと[!DNL Identity Service]のデータセットを有効にできます。
 
-プロファイルと[!DNL Identity Service]のデータセットを有効にする方法について詳しくは、[ データセットの設定ガイド ](/help/profile/tutorials/dataset-configuration.md)を参照してください。
+プロファイルと[!DNL Identity Service]のデータセットを有効にする方法について詳しくは、[&#x200B; データセットの設定ガイド &#x200B;](/help/profile/tutorials/dataset-configuration.md)を参照してください。
 
 ## Experience Platformでのストリーミング取り込みの予想待ち時間を教えてください。
 
 >[!IMPORTANT]
 >
->ストリーミング取り込みのガードレールは、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスにおけるデータの使用は、プロファイル全体の10%に制限されています。 ライセンス使用権限について詳しくは、[ データ管理のベストプラクティスガイド ](/help/landing/license-usage-and-guardrails/data-management-best-practices.md)を参照してください。 ストリーミングスループットに制限を設定する方法については、[ キャパシティの概要](../../landing/license-usage-and-guardrails/capacity.md)を参照してください。
+>ストリーミング取り込みのガードレールは、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスにおけるデータの使用は、プロファイル全体の10%に制限されています。 ライセンス使用権限について詳しくは、[&#x200B; データ管理のベストプラクティスガイド &#x200B;](/help/landing/license-usage-and-guardrails/data-management-best-practices.md)を参照してください。 ストリーミングスループットに制限を設定する方法については、[&#x200B; キャパシティの概要](../../landing/license-usage-and-guardrails/capacity.md)を参照してください。
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |

@@ -60,7 +60,7 @@ Privacy Service での単一 ID 削除の分類を次の表に示します。
 
 ### データハイジーンにおけるデータセットの有効期限
 
-Adobe Experience Platform UIの[[!UICONTROL Data Hygiene] ワークスペース ](../../hygiene/ui/overview.md)では、データセットの有効期限をスケジュールできます。 データセットが有効期限に達すると、データレイク、ID サービスおよびリアルタイム顧客プロファイルは別個のプロセスを開始して、それぞれのサービスからデータセットの内容を削除します。詳しくは、[ ワークスペース [!UICONTROL Data Hygiene]を使用したデータセットの有効期限の管理に関するガイドを参照してください。](../../hygiene/ui/dataset-expiration.md)
+Adobe Experience Platform UIの[[!UICONTROL Data Hygiene] ワークスペース &#x200B;](../../hygiene/ui/overview.md)では、データセットの有効期限をスケジュールできます。 データセットが有効期限に達すると、データレイク、ID サービスおよびリアルタイム顧客プロファイルは別個のプロセスを開始して、それぞれのサービスからデータセットの内容を削除します。詳しくは、[&#x200B; ワークスペース [!UICONTROL Data Hygiene]を使用したデータセットの有効期限の管理に関するガイドを参照してください。](../../hygiene/ui/dataset-expiration.md)
 
 カタログサービスとデータハイジーンにおけるデータセット削除の違いの分類を次の表に示します。
 

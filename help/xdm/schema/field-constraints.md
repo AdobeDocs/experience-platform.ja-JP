@@ -17,9 +17,9 @@ Experience Data Model （XDM）スキーマでは、フィールドのタイプ�
 
 ## はじめに
 
-このガイドを使用する前に、XDM スキーマ、クラス、スキーマフィールドグループの概要について、[ スキーマ構成の基本](./composition.md)を確認してください。
+このガイドを使用する前に、XDM スキーマ、クラス、スキーマフィールドグループの概要について、[&#x200B; スキーマ構成の基本](./composition.md)を確認してください。
 
-APIで独自のフィールドタイプを定義する場合は、[ スキーマレジストリ開発者ガイド ](../api/getting-started.md)から始めて、カスタムフィールドを含めるフィールドグループとデータタイプを作成する方法を学ぶことを強くお勧めします。 Experience Platform UIを使用してスキーマを作成する場合は、[UIでのフィールドの定義](../ui/fields/overview.md)に関するガイドを参照して、カスタムフィールドグループおよびデータタイプ内で定義したフィールドに対する制約を実装する方法を説明します。
+APIで独自のフィールドタイプを定義する場合は、[&#x200B; スキーマレジストリ開発者ガイド &#x200B;](../api/getting-started.md)から始めて、カスタムフィールドを含めるフィールドグループとデータタイプを作成する方法を学ぶことを強くお勧めします。 Experience Platform UIを使用してスキーマを作成する場合は、[UIでのフィールドの定義](../ui/fields/overview.md)に関するガイドを参照して、カスタムフィールドグループおよびデータタイプ内で定義したフィールドに対する制約を実装する方法を説明します。
 
 ## ベース構造と例 {#basic-types}
 
@@ -27,7 +27,7 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
 
 >[!NOTE]
 >
->Experience Platform APIのJSON スキーマおよびその他の基盤テクノロジーについて詳しくは、[API基本ガイド ](../../landing/api-fundamentals.md#json-schema)を参照してください。
+>Experience Platform APIのJSON スキーマおよびその他の基盤テクノロジーについて詳しくは、[API基本ガイド &#x200B;](../../landing/api-fundamentals.md#json-schema)を参照してください。
 
 次の表は、各XDM タイプをJSON スキーマで表す方法と、そのタイプに準拠する値の例の概要を示しています。
 
@@ -60,11 +60,11 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 9007199254740991,
   "minimum": -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 2147483648,
   "minimum": -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 32767,
   "minimum": -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 128,
   「最小」: -128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date-time"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -151,7 +151,7 @@ XDMはJSON スキーマ上に構築されているため、XDM フィールド�
 >
 >以下の表に記載されている標準XDM タイプの中には、[!UICONTROL Map] タイプも含まれています。 マップは、データが特定の値にマッピングするキーとして表される場合、またはキーが静的スキーマに合理的に含まれず、データ値として扱われる必要がある場合に、標準スキーマで使用されます。
 >
->多くの標準XDM コンポーネントはマップタイプを使用しており、必要に応じて[ カスタムマップフィールドを定義することもできます](../tutorials/custom-fields-api.md#custom-maps)。 以下の表に含まれるマップタイプは、既存のデータが以下のいずれかの形式で現在保存されている場合に、XDMにマッピングする方法を決定するのに役立ちます。
+>多くの標準XDM コンポーネントはマップタイプを使用しており、必要に応じて[&#x200B; カスタムマップフィールドを定義することもできます](../tutorials/custom-fields-api.md#custom-maps)。 以下の表に含まれるマップタイプは、既存のデータが以下のいずれかの形式で現在保存されている場合に、XDMにマッピングする方法を決定するのに役立ちます。
 
 ### Parquet、Spark SQL、Java {#parquet}
 

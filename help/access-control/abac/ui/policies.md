@@ -12,11 +12,11 @@ ht-degree: 14%
 
 # アクセス制御ポリシーの管理
 
-アクセス制御ポリシーとは、属性をまとめて、許可されるアクションと許可されないアクションを確立するステートメントです。 Adobeには、すぐにアクティブ化できるデフォルトのポリシーが用意されています。また、[ ラベル ](./labels.md){target="_blank"}に基づいて特定のオブジェクトへのアクセス制御を開始する準備が整った場合にもアクティブ化できます。 既定のポリシー&#x200B;**[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;では、ユーザーが一致するラベルを持つ役割に属していない限り、リソースに適用されたラベルを利用してアクセスを拒否します。
+アクセス制御ポリシーとは、属性をまとめて、許可されるアクションと許可されないアクションを確立するステートメントです。 Adobeには、すぐにアクティブ化できるデフォルトのポリシーが用意されています。また、[&#x200B; ラベル &#x200B;](./labels.md){target="_blank"}に基づいて特定のオブジェクトへのアクセス制御を開始する準備が整った場合にもアクティブ化できます。 既定のポリシー&#x200B;**[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;では、ユーザーが一致するラベルを持つ役割に属していない限り、リソースに適用されたラベルを利用してアクセスを拒否します。
 
 >[!IMPORTANT]
 >
->アクセス制御ポリシーは、Adobe Experience Platformでのデータの使用方法を制御するデータ使用ポリシーと混同しないでください。 詳しくは、[ データ使用ポリシー](../../../data-governance/policies/create.md){target="_blank"}の作成に関するガイドを参照してください。
+>アクセス制御ポリシーは、Adobe Experience Platformでのデータの使用方法を制御するデータ使用ポリシーと混同しないでください。 詳しくは、[&#x200B; データ使用ポリシー](../../../data-governance/policies/create.md){target="_blank"}の作成に関するガイドを参照してください。
 
 ## サンドボックスのポリシーの設定 {#configure-policy}
 
@@ -58,11 +58,11 @@ ht-degree: 14%
 
 ポリシーにサンドボックスを追加するには、**[!UICONTROL Add Sandboxes]**&#x200B;を選択します。
 
-![ サンドボックスを追加オプションがハイライト表示されたポリシーのワークスペース。](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
+![&#x200B; サンドボックスを追加オプションがハイライト表示されたポリシーのワークスペース。](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
 
 **[!UICONTROL Add Sandboxes]** ダイアログが表示されます。 ポリシーに追加するサンドボックスを選択し、**[!UICONTROL Save]**&#x200B;を選択します。
 
-![ サンドボックスを選択し、保存オプションを強調表示したサンドボックスを追加ダイアログ。](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
+![&#x200B; サンドボックスを選択し、保存オプションを強調表示したサンドボックスを追加ダイアログ。](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ ht-degree: 14%
 
 ポリシーからサンドボックスを削除するには、リストから削除するサンドボックスを見つけて、**X** アイコンを選択します。
 
-![ サンドボックスを削除するために、「x」がハイライト表示されたポリシーのサンドボックスリスト。](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+![&#x200B; サンドボックスを削除するために、「x」がハイライト表示されたポリシーのサンドボックスリスト。](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
 
 確認ダイアログが表示されます。 ポリシーからサンドボックスの削除を完了するには、**[!UICONTROL Confirm]**&#x200B;を選択します。
 
@@ -88,11 +88,11 @@ ht-degree: 14%
 
 既存のポリシーをアクティブにするには、**[!UICONTROL Policies]**&#x200B;の「**[!UICONTROL Permissions]**」タブからポリシーを選択します。 ポリシーのアクティベーションステータスは、**[!UICONTROL Status]** セクションの下に表示されます。
 
-![ ポリシーのステータスがハイライト表示されたポリシーワークスペース。](../../images/ui/policies/policy-status.png){zoomable="yes"}
+![&#x200B; ポリシーのステータスがハイライト表示されたポリシーワークスペース。](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
 ポリシーの詳細ワークスペースが表示されます。 **[!UICONTROL Activate]** を選択します。
 
-![ アクティブ化オプションがハイライト表示されたポリシーの詳細ワークスペース。](../../images/ui/policies/policy-activate.png){zoomable="yes"}
+![&#x200B; アクティブ化オプションがハイライト表示されたポリシーの詳細ワークスペース。](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
 **[!UICONTROL Activate Policy]** ダイアログが表示されます。 ポリシーのアクティブ化を完了するには、**[!UICONTROL Confirm]**&#x200B;を選択します。
 

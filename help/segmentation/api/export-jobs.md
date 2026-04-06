@@ -17,11 +17,11 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->このガイドでは、[!DNL Segmentation API]での書き出しジョブの使用について説明します。 [!DNL Real-Time Customer Profile] データの書き出しジョブを管理する方法について詳しくは、[ プロファイル APIの書き出しジョブ ](../../profile/api/export-jobs.md)に関するガイドを参照してください
+>このガイドでは、[!DNL Segmentation API]での書き出しジョブの使用について説明します。 [!DNL Real-Time Customer Profile] データの書き出しジョブを管理する方法について詳しくは、[&#x200B; プロファイル APIの書き出しジョブ &#x200B;](../../profile/api/export-jobs.md)に関するガイドを参照してください
 
 ## はじめに
 
-このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド ](./getting-started.md)を確認してください。
+このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](./getting-started.md)を確認してください。
 
 ## 書き出しジョブのリストの取得 {#retrieve-list}
 

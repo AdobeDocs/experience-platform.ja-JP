@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能を使用するには、有効な[!DNL Algolia] アカウントが必要です。 アカウントを作成するには、[[!DNL Algolia] 登録ページ ](https://dashboard.algolia.com/users/sign_up)に移動します。まだアカウントをお持ちでない場合は、
+この拡張機能を使用するには、有効な[!DNL Algolia] アカウントが必要です。 アカウントを作成するには、[[!DNL Algolia] 登録ページ &#x200B;](https://dashboard.algolia.com/users/sign_up)に移動します。まだアカウントをお持ちでない場合は、
 
 ### 必要な設定の詳細を収集する {#configuration-details}
 
@@ -27,8 +27,8 @@ ht-degree: 2%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| アプリケーション ID | お客様のアプリケーション IDは、[ ダッシュボードの](https://www.algolia.com/account/api-keys/all)API キー[!DNL Algolia] セクションにあります。 | 0ABCDEFG12 |
-| 検索API キー | 検索API キーは、[ ダッシュボードの](https://www.algolia.com/account/api-keys/all)API キー[!DNL Algolia] セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
+| アプリケーション ID | お客様のアプリケーション IDは、[&#x200B; ダッシュボードの](https://www.algolia.com/account/api-keys/all)API キー[!DNL Algolia] セクションにあります。 | 0ABCDEFG12 |
+| 検索API キー | 検索API キーは、[&#x200B; ダッシュボードの](https://www.algolia.com/account/api-keys/all)API キー[!DNL Algolia] セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
 
 ## [!DNL Algolia] インサイト拡張機能をインストールして設定します {#install-configure}
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 ![](../../../images/extensions/client/algolia/clicked.png)
 
 イベントカテゴリについて詳しくは、[検索後にクリックしたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)を参照してください
-と[ クリックしたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) ガイド。
+と[&#x200B; クリックしたオブジェクト ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) ガイド。
 
 ### コンバージョン済み {#converted}
 
@@ -124,15 +124,15 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->データ要素に`queryId`が含まれている場合、イベントは&#x200B;**検索**&#x200B;の後にカート オブジェクト IDに追加されました。 それ以外の場合は、**カート オブジェクト ID**に追加されたイベントとして分類されます。
+>データ要素に`queryId`が含まれている場合、イベントは&#x200B;**検索**&#x200B;の後にカート オブジェクト IDに追加されました。 それ以外の場合は、**カート オブジェクト ID**&#x200B;に追加されたイベントとして分類されます。
 ><br>
->データ要素が`indexName`を提供しない場合、イベントの送信時に&#x200B;**デフォルトのインデックス名**が使用されます。
+>データ要素が`indexName`を提供しない場合、イベントの送信時に&#x200B;**デフォルトのインデックス名**&#x200B;が使用されます。
 ><br>
 >デフォルトのデータ要素が要件を満たさない場合は、カスタムのデータ要素を作成して、目的のイベントの詳細を返すことができます。
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
-イベントカテゴリについて詳しくは、[検索後にカートオブジェクト IDに追加](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/)および[ カートオブジェクト IDに追加](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/) ガイドを参照してください。
+イベントカテゴリについて詳しくは、[検索後にカートオブジェクト IDに追加](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/)および[&#x200B; カートオブジェクト IDに追加](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/) ガイドを参照してください。
 
 ### 購入日 {#purchased}
 
@@ -305,17 +305,17 @@ DataSet Data Elementは、HTML要素に関連付けられたデータを取得�
 
 検索&#x200B;*後にクリックされた*&#x200B;または検索&#x200B;*後に変換された* イベントには`queryID`が必要です。また、検索`positions`後にクリックされた&#x200B;*件には*&#x200B;も必要です。 これらのプロパティは、`insights` フラグがInstantSearchおよび/またはオートコンプリート クエリ パラメーターで有効になっている場合に使用できます。 サイトにインサイトを設定する方法については、次のリソースを参照してください。
 
-* [ オートコンプリートに関するインサイトの設定](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
+* [&#x200B; オートコンプリートに関するインサイトの設定](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [InstantSearch.jsでのインサイトの設定](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
-* [ クリックとコンバージョンイベントの概要](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [送信中 [!DNL Algolia]  インサイトイベント ](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [&#x200B; クリックとコンバージョンイベントの概要](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
+* [送信中 [!DNL Algolia]  インサイトイベント &#x200B;](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
 * [[!DNL Algolia] 拡張機能GitHub リポジトリを起動](https://github.com/algolia/algolia-launch-extension)
-* [InstantSearch.js ドキュメント ](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia] Insights API ドキュメント ](https://www.algolia.com/doc/rest-api/insights/)
-* [Algolia Launch拡張機能コード リポジトリ ](https://github.com/algolia/algolia-launch-extension)
+* [InstantSearch.js ドキュメント &#x200B;](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
+* [[!DNL Algolia] Insights API ドキュメント &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+* [Algolia Launch拡張機能コード リポジトリ &#x200B;](https://github.com/algolia/algolia-launch-extension)
 
 ## 次の手順 {#next-steps}
 
 このガイドでは、[!DNL Algolia] タグ拡張機能を使用して[!DNL Algolia Insights]にデータを送信する方法について説明しました。 サーバーサイドのイベントを[!DNL Algolia]にも送信することを計画している場合は、[[!DNL Conversions API]  イベント転送拡張機能](../../server/algolia/overview.md)のインストールと設定に進むことができます。
 
-Experience Platformのタグについて詳しくは、[ タグの概要](../../../home.md)を参照してください。
+Experience Platformのタグについて詳しくは、[&#x200B; タグの概要](../../../home.md)を参照してください。

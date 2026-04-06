@@ -55,7 +55,7 @@ Lumaのマーケティング部門は、Adobe Experience Platformをベースと
 1. [複数のデータソース](#using-multiple-data-sources)を使用する
 1. [データソースを設定する](#configuring-a-data-source)
 1. [特定の顧客のデータ](#bringing-the-data-together-for-a-specific-customer)を収集する
-1. [ オーディエンス ](#audiences)を設定します。
+1. [&#x200B; オーディエンス &#x200B;](#audiences)を設定します。
 1. [宛先](#destinations)を設定する
 1. [デバイス間でプロファイルを結合する](#cross-device-identity-stitching)。
 1. [プロファイルを分析する](#analyzing-the-profile)。

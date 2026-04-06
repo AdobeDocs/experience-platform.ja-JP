@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->計算属性にアクセスするには、適切な権限（**計算属性を表示**&#x200B;および&#x200B;**計算属性を管理**）が必要です。 必要な権限について詳しくは、[ アクセス制御ドキュメント ](../../access-control/home.md)を参照してください。 これらの権限の適用方法については、[権限の管理ガイド ](../../access-control/ui/permissions.md)を参照してください。
+>計算属性にアクセスするには、適切な権限（**計算属性を表示**&#x200B;および&#x200B;**計算属性を管理**）が必要です。 必要な権限について詳しくは、[&#x200B; アクセス制御ドキュメント &#x200B;](../../access-control/home.md)を参照してください。 これらの権限の適用方法については、[権限の管理ガイド &#x200B;](../../access-control/ui/permissions.md)を参照してください。
 
 Adobe Experience Platformでは、計算属性は、イベントレベルのデータをプロファイルレベルの属性に集約するために使用される関数です。 これらの関数は自動的に計算され、セグメンテーション、アクティベーション、パーソナライゼーションをまたいで使用できます。
 
@@ -32,7 +32,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 ![[!UICONTROL Profile] セクションと[!UICONTROL Computed attributes] タブがハイライト表示され、ユーザーが計算属性の参照ページにアクセスする方法が表示されます。](./images/ui/browse.png)
 
-表示するフィールドを選択するには、![列を設定アイコン ](/help/images/icons/column-settings.png)を選択して、表示するフィールドを追加または削除します。
+表示するフィールドを選択するには、![列を設定アイコン &#x200B;](/help/images/icons/column-settings.png)を選択して、表示するフィールドを追加または削除します。
 
 | フィールド | 説明 |
 | ----- | ----------- |
@@ -43,13 +43,13 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 | [!UICONTROL Last evaluation status] | 前回の評価実行で計算属性が正常に計算されたかどうかを示すステータス。 指定できる値は&#x200B;**[!UICONTROL Success]**&#x200B;または&#x200B;**[!UICONTROL Failed]**&#x200B;です。 |
 | [!UICONTROL Refresh frequency] | 計算属性が更新される頻度を示します。 使用できる値には、時間、日、週単位、月単位などがあります。 |
 | [!UICONTROL Fast refresh] | この計算属性に対して高速リフレッシュが有効かどうかを示す値。 高速リフレッシュが有効になっている場合、計算属性は、週単位、隔週単位、または月単位ではなく、日単位でリフレッシュできます。 この値は、ルックバック期間が週単位より大きい計算属性にのみ適用されます。 |
-| [!UICONTROL Lifecycle status] | 計算属性の現在のステータス。 3つのステータスが考えられます。 <ul><li>**[!UICONTROL Draft]:**&#x200B;計算属性には、**not**&#x200B;がまだスキーマにフィールドを作成していません。 この状態では、計算属性を編集できます。 </li><li>**[!UICONTROL Published]:**&#x200B;計算属性には、スキーマ上に作成されたフィールドがあり、使用する準備ができています。 この状態では、計算属性&#x200B;**を編集できません**。</li><li>**[!UICONTROL Inactive]:**&#x200B;計算属性は無効です。 非アクティブ状態について詳しくは、[FAQ ページ ](./faq.md#inactive-status)を参照してください。 </li> |
+| [!UICONTROL Lifecycle status] | 計算属性の現在のステータス。 3つのステータスが考えられます。 <ul><li>**[!UICONTROL Draft]:**&#x200B;計算属性には、**not**&#x200B;がまだスキーマにフィールドを作成していません。 この状態では、計算属性を編集できます。 </li><li>**[!UICONTROL Published]:**&#x200B;計算属性には、スキーマ上に作成されたフィールドがあり、使用する準備ができています。 この状態では、計算属性&#x200B;**を編集できません**。</li><li>**[!UICONTROL Inactive]:**&#x200B;計算属性は無効です。 非アクティブ状態について詳しくは、[FAQ ページ &#x200B;](./faq.md#inactive-status)を参照してください。 </li> |
 | [!UICONTROL Created] | 計算属性が作成された日時を示すタイムスタンプ。 |
 | [!UICONTROL Last modified] | 計算属性が最後に変更された日時を示すタイムスタンプ。 |
 
 表示される計算属性は、ライフサイクルステータスに基づいてフィルタリングすることもできます。 「![funnel](/help/images/icons/filter.png)」アイコンを選択します。
 
-![ フィルターアイコンがハイライト表示されます。](./images/ui/select-filter.png)
+![&#x200B; フィルターアイコンがハイライト表示されます。](./images/ui/select-filter.png)
 
 計算属性をステータス （[!UICONTROL Draft]、[!UICONTROL Published]、および[!UICONTROL Inactive]）でフィルタリングできるようになりました。
 
@@ -61,7 +61,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 新しい計算属性を作成するには、**[!UICONTROL Create computed attribute]**&#x200B;を選択して、新しい計算属性ワークフローを入力します。
 
-![ 「[!UICONTROL Create computed attributes]」ボタンが強調表示され、ユーザーが計算属性の作成ページにアクセスする方法が表示されます。](./images/ui/create.png)
+![&#x200B; 「[!UICONTROL Create computed attributes]」ボタンが強調表示され、ユーザーが計算属性の作成ページにアクセスする方法が表示されます。](./images/ui/create.png)
 
 **[!UICONTROL Create computed attribute]** ページが表示されます。 このページでは、作成する計算属性の基本情報を追加できます。
 
@@ -87,7 +87,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 ### 集計関数を適用
 
-次に、条件付き出力からフィールドに関数を適用できます。 まず、集計関数タイプを選択します。 利用できるオプションには、[!UICONTROL Sum]、[!UICONTROL Min]、[!UICONTROL Max]、[!UICONTROL Count]および[!UICONTROL Most Recent]が含まれます。 これらの関数の詳細については、計算属性の概要の[関数セクション ](./overview.md#functions)を参照してください。
+次に、条件付き出力からフィールドに関数を適用できます。 まず、集計関数タイプを選択します。 利用できるオプションには、[!UICONTROL Sum]、[!UICONTROL Min]、[!UICONTROL Max]、[!UICONTROL Count]および[!UICONTROL Most Recent]が含まれます。 これらの関数の詳細については、計算属性の概要の[関数セクション &#x200B;](./overview.md#functions)を参照してください。
 
 ![計算された属性関数が表示されます。](./images/ui/select-function.png)
 
@@ -99,7 +99,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 集計関数を適用した後、計算属性のルックバック期間を定義する必要があります。 このルックバック期間は、イベントを集計する時間の長さを指定します。 このルックバック期間は、時間、日、週、または月で指定できます。
 
-![ ルックバック期間が強調表示されます。](./images/ui/select-lookback-duration.png)
+![&#x200B; ルックバック期間が強調表示されます。](./images/ui/select-lookback-duration.png)
 
 ### 高速更新 {#fast-refresh}
 
@@ -110,11 +110,11 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 
 集計関数を適用する際に、ルックバック期間が1週間を超える場合は、高速リフレッシュを有効にできます。
 
-![ [!UICONTROL Fast Refresh] チェックボックスが強調表示されます。](./images/ui/enable-fast-refresh.png)
+![&#x200B; [!UICONTROL Fast Refresh] チェックボックスが強調表示されます。](./images/ui/enable-fast-refresh.png)
 
 高速更新を使用すると、属性を最新の状態に保つことができます。このオプションを有効にすると、長いルックバック期間であっても、計算属性を毎日更新できるので、ユーザーのアクティビティに迅速に対応できます。
 
-高速リフレッシュについて詳しくは、計算属性の概要の「[高速リフレッシュ」セクション ](./overview.md#fast-refresh)を参照してください。
+高速リフレッシュについて詳しくは、計算属性の概要の「[高速リフレッシュ」セクション &#x200B;](./overview.md#fast-refresh)を参照してください。
 
 これらの手順が完了したら、この計算属性をドラフトとして保存するか、すぐに公開するかを選択できます。
 
@@ -160,8 +160,8 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Pr
 >
 >計算属性&#x200B;**は、**&#x200B;をオーディエンス **構成**&#x200B;で使用できません。
 
-![ セグメントビルダーが表示され、セグメント定義コンポジションの一部として計算属性が表示されます。](./images/ui/use-ca.png)
+![&#x200B; セグメントビルダーが表示され、セグメント定義コンポジションの一部として計算属性が表示されます。](./images/ui/use-ca.png)
 
 ## 次の手順
 
-計算属性について詳しくは、[計算属性の概要](./overview.md)を参照してください。 APIを使用した計算属性の作成と設定について詳しくは、[計算属性の開発者ガイド ](./api.md)を参照してください。
+計算属性について詳しくは、[計算属性の概要](./overview.md)を参照してください。 APIを使用した計算属性の作成と設定について詳しくは、[計算属性の開発者ガイド &#x200B;](./api.md)を参照してください。

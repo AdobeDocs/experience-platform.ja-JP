@@ -13,7 +13,7 @@ ht-degree: 59%
 
 # Query ServiceとData Distillerに関するよくある質問
 
-このドキュメントでは、Query ServiceとData Distillerに関するよくある質問に回答します。 また、「クエリ」製品を使用してデータ検証を行ったり、変換されたデータをデータレイクに書き込んだりする際によく見られるエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Query ServiceとData Distillerに関するよくある質問に回答します。 また、「クエリ」製品を使用してデータ検証を行ったり、変換されたデータをデータレイクに書き込んだりする際によく見られるエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド &#x200B;](../landing/troubleshooting.md)を参照してください。
 
 ここでは、Adobe Experience PlatformにおけるQuery ServiceとData Distillerの連携を明らかにするために、次の基本的な質問を解説します。
 
@@ -29,7 +29,7 @@ Query Serviceを組み合わせることで迅速なインサイトを獲得し�
 
 **データ Distiller**: データの処理、クリーニング、およびエンリッチを行うバッチクエリを有効にし、結果をデータレイクに保存します。 これらのクエリは、より長い実行（最大24時間）と、スケジューリング、モニタリング、高速化されたレポートなどの追加機能をサポートします。 Data Distillerは、詳細なデータ処理とスケジュール型のデータ処理タスクに対応します。
 
-詳しくは、[ クエリサービスのパッケージングドキュメント ](./packaging.md)を参照してください。
+詳しくは、[&#x200B; クエリサービスのパッケージングドキュメント &#x200B;](./packaging.md)を参照してください。
 
 ## 質問カテゴリ {#categories}
 
@@ -41,7 +41,7 @@ Query Serviceを組み合わせることで迅速なインサイトを獲得し�
 - [データセットのサンプル](#dataset-samples)
 - [データの書き出し](#exporting-data)
 - [SQL構文](#sql-syntax) 
-- [ITAS クエリ ](#itas-queries)
+- [ITAS クエリ &#x200B;](#itas-queries)
 - [サードパーティツール](#third-party-tools)
 - [PostgreSQL API エラー](#postgresql-api-errors)
 - [REST API エラー](#rest-api-errors)
@@ -65,7 +65,7 @@ Query Serviceを組み合わせることで迅速なインサイトを獲得し�
 ### Query Service API に [!DNL Postman] を使用できますか？
 
 +++回答
-はい、[!DNL Postman] （無料のサードパーティ製アプリケーション）を使用して、すべてのAdobe API サービスを視覚化し、操作できます。 Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
+はい、[!DNL Postman] （無料のサードパーティ製アプリケーション）を使用して、すべてのAdobe API サービスを視覚化し、操作できます。 Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[&#x200B; [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
 +++
 
 ### UI を使用してクエリから返される行の最大数に制限はありますか？
@@ -134,7 +134,7 @@ Query Serviceを組み合わせることで迅速なインサイトを獲得し�
 ### 配列を含むデータセットに対するクエリを高速化するにはどうすればよいですか？
 
 +++回答
-配列を含むデータセットに対するクエリのパフォーマンスを向上させるには、実行時に[配列](https://spark.apache.org/docs/latest/api/sql/index.html#explode)を[CTAS クエリ ](./sql/syntax.md#create-table-as-select)として展開し、その処理時間を改善する機会をさらに探る必要があります。
+配列を含むデータセットに対するクエリのパフォーマンスを向上させるには、実行時に[配列](https://spark.apache.org/docs/latest/api/sql/index.html#explode)を[CTAS クエリ &#x200B;](./sql/syntax.md#create-table-as-select)として展開し、その処理時間を改善する機会をさらに探る必要があります。
 +++
 
 ### CTAS クエリが、少数の行に対して何時間も処理されたままになっているのはなぜですか？
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### データをサンプリングできますか？
 
 +++回答
-この機能は現在編集中です。 詳細は、[ リリースノート ](../release-notes/latest/latest.md)および機能のリリース準備が整ったら、Experience Platform UI ダイアログで確認できます。
+この機能は現在編集中です。 詳細は、[&#x200B; リリースノート &#x200B;](../release-notes/latest/latest.md)および機能のリリース準備が整ったら、Experience Platform UI ダイアログで確認できます。
 +++
 
 ### クエリサービスでサポートされているヘルパー関数は何ですか？
@@ -602,7 +602,7 @@ Data Distiller コンピューター時間用のライセンス使用状況ダ�
 ### DbVisualizerで匿名ブロックを使用できますか？
 
 +++回答
-はい。ただし、DbVisualizerなどの特定のサードパーティクライアントでは、スクリプトの一部を単一のステートメントとして処理する必要があることを示すために、SQL ブロックの前後に個別の識別子が必要になる場合があります。 詳細については、[匿名ブロックのドキュメント ](./key-concepts/anonymous-block.md)または[DbVisualizerの公式ドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect)を参照してください。
+はい。ただし、DbVisualizerなどの特定のサードパーティクライアントでは、スクリプトの一部を単一のステートメントとして処理する必要があることを示すために、SQL ブロックの前後に個別の識別子が必要になる場合があります。 詳細については、[匿名ブロックのドキュメント &#x200B;](./key-concepts/anonymous-block.md)または[DbVisualizerの公式ドキュメント &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect)を参照してください。
 +++
 
 ## TLS、ポートアクセス、および暗号化 {#tls-port-questions}
@@ -648,7 +648,7 @@ Data Distiller コンピューター時間用のライセンス使用状況ダ�
 ### Data Distillerのライセンス使用状況はどのように追跡され、この情報はどこで確認できますか？
 
 +++回答  
-バッチクエリの使用状況を追跡するために使用される主な指標は、計算時間です。 [ ライセンス使用状況ダッシュボード ](../dashboards/guides/license-usage.md)を通じて、この情報と現在の使用状況にアクセスできます。
+バッチクエリの使用状況を追跡するために使用される主な指標は、計算時間です。 [&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../dashboards/guides/license-usage.md)を通じて、この情報と現在の使用状況にアクセスできます。
 +++
 
 ### 計算時間とは
@@ -680,7 +680,7 @@ Data Distiller コンピューター時間用のライセンス使用状況ダ�
 +++回答
 開発用サンドボックスと実稼動用サンドボックスの両方でクエリを実行すると、同様のパフォーマンスが期待できます。 どちらの環境も、同じレベルの処理能力を提供するように設計されています。 ただし、処理するデータの量と、クエリの実行時のシステムアクティビティ全体に応じて、計算時間に違いが生じる可能性があります。
 
-Experience Platform UIの[ ライセンス使用状況ダッシュボード ](../dashboards/guides/license-usage.md)で、コンピューティング時間の使用状況を追跡します。
+Experience Platform UIの[&#x200B; ライセンス使用状況ダッシュボード &#x200B;](../dashboards/guides/license-usage.md)で、コンピューティング時間の使用状況を追跡します。
 +++
 
 ## クエリ UI

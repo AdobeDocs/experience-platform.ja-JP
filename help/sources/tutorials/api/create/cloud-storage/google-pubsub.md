@@ -22,8 +22,8 @@ ht-degree: 45%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; ソース &#x200B;](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 以下の節では、[!DNL PubSub] APIを使用して[!DNL Flow Service]をExperience Platformに正常に接続するために必要な追加情報を示します。
 
@@ -52,7 +52,7 @@ ht-degree: 45%
 
 >[!ENDTABS]
 
-これらの値について詳しくは、この[[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)文書を参照してください。 サービスアカウントベースの認証を使用するには、資格情報を生成する手順については、この[[!DNL PubSub]  サービスアカウントの作成に関するガイド ](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
+これらの値について詳しくは、この[[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)文書を参照してください。 サービスアカウントベースの認証を使用するには、資格情報を生成する手順については、この[[!DNL PubSub]  サービスアカウントの作成に関するガイド &#x200B;](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
 >[!TIP]
 >
@@ -264,4 +264,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL PubSub] ソース接続を作成しました。次のチュートリアルでは、このソース接続 ID を使用して、[&#x200B; [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
