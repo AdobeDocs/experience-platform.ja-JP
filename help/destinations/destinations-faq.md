@@ -231,7 +231,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target]のアクティブ化された属性はどこで確認できますか？ {#target-activated-attributes-location}
 
 +++回答
-属性は、[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ja)および[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja)のオファーでTargetで使用できます。
+属性は、[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)および[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html)のオファーでTargetで使用できます。
 +++
 
 ### データストリームを使用せずに宛先を作成し、後で同じ宛先にデータストリームを追加できますか？ {#destination-without-datastream}
@@ -267,7 +267,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target]および[!DNL Custom Personalization]の宛先は[!DNL HIPAA]に準拠していますか？ {#hipaa-compliance}
 
 +++回答
-[!DNL Adobe Target]は[!DNL HIPPA][[!DNL Adobe Healthcare Shield]に対して](https://business.adobe.com/jp/solutions/industries/healthcare.html)に準拠していません。 [!DNL HIPPA]または[!DNL Adobe Target]の宛先を介したエッジパーソナライゼーションを使用する前に、カスタム最適化チャネルの[!DNL Custom Personalization]の準備状況について、お客様が独自の法務チームに確認する必要があります。
+[!DNL Adobe Target]は[!DNL HIPPA][[!DNL Adobe Healthcare Shield]に対して](https://business.adobe.com/solutions/industries/healthcare.html)に準拠していません。 [!DNL HIPPA]または[!DNL Adobe Target]の宛先を介したエッジパーソナライゼーションを使用する前に、カスタム最適化チャネルの[!DNL Custom Personalization]の準備状況について、お客様が独自の法務チームに確認する必要があります。
 
 同意ポリシー管理を大規模に適用する必要があるユースケースの場合、顧客は[!DNL Adobe Privacy & Security Shield]を購入する必要があります。 [!DNL Adobe Privacy & Security Shield]機能は高度な機能スイートとして販売されており、個別に購入することはできません。
 

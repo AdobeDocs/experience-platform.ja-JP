@@ -24,7 +24,7 @@ Twitterの既存のフォロワーや顧客をターゲットにして、[!DNL A
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences]は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Twitter Custom Audiences]は、次の表に示すIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

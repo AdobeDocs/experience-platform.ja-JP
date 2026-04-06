@@ -17,9 +17,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年10月22日（PT）**
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Agent Orchestratorは、Adobe Experience Platformの�
 | ------- | ----------- |
 | Audience Agent | Audience Agentは、アカウントベースのオーディエンスをサポートし、会話形式のオーディエンスを検索して、重複するオーディエンスを検出できるようになりました。 詳しくは、[Audience Agent ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/audience)を参照してください。 |
 
-エージェントについて詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/home)を参照してください。
+エージェントについて詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)を参照してください。
 
 ## アラート {#alerts}
 

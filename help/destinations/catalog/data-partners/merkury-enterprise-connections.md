@@ -39,8 +39,8 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**宛先を管理**、**宛先をアクティブ化**、**プロファイルを表示**&#x200B;および&#x200B;**セグメントを表示**[[ アクセス制御の権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**ID グラフの表示** [[ アクセス制御権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。\![ ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**宛先を管理**、**宛先をアクティブ化**、**プロファイルを表示**&#x200B;および&#x200B;**セグメントを表示**[[ アクセス制御の権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**ID グラフの表示** [[ アクセス制御権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。\![ ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## サポートされている ID {#supported-identities}
 
@@ -86,8 +86,8 @@ ht-degree: 14%
 
 | **項目** | **タイプ** | **メモ** |
 |---|---|---|
-| 書き出しタイプ | **プロファイルベース** | [[宛先アクティベーションワークフロー]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、セグメントのすべてのメンバーを書き出します。 |
-| 頻度 | **バッチ** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[[ バッチファイルベースの配信先]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/destination-types#file-based)を参照してください。 |
+| 書き出しタイプ | **プロファイルベース** | [[宛先アクティベーションワークフロー]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)の「プロファイル属性を選択」画面で選択した目的のスキーマフィールド（電子メールアドレス、電話番号、姓など）と共に、セグメントのすべてのメンバーを書き出します。 |
+| 頻度 | **バッチ** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[[ バッチファイルベースの配信先]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**データセット宛先を管理およびアクティブ化** [[ アクセス制御権限]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
+>宛先に接続するには、**宛先を表示**&#x200B;および&#x200B;**データセット宛先を管理およびアクティブ化** [[ アクセス制御権限]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)が必要です。 [[ アクセス制御の概要]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)を読むか、製品管理者に連絡して必要な権限を取得してください。
 
-この宛先に接続するには、[[宛先設定チュートリアル ]](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/connect-destination)に記載されている手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
+この宛先に接続するには、[[宛先設定チュートリアル ]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)に記載されている手順に従います。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -154,7 +154,7 @@ Merkury Enterprise Connections宛先を使用して既に定義されている�
 >* IDをエクスポートするには、**ID グラフを表示** アクセス制御権限が必要です。
 
 
-この宛先に対するオーディエンスのアクティブ化に関する手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
+この宛先に対するオーディエンスのアクティブ化に関する手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
 
 ## マッピングの提案 {#mapping-suggestions}
 
@@ -183,7 +183,7 @@ Merkury Enterprise Connections宛先を使用して既に定義されている�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/data-governance/home)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform]がデータガバナンスを適用する方法について詳しくは、[ データガバナンスの概要](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)を参照してください。
 
 ## 次の手順 {#next-steps}
 

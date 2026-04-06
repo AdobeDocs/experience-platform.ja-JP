@@ -28,16 +28,16 @@ Adformの宛先を使用する方法とタイミングをより深く理解す�
 
 この宛先を使用して、Experience Cloud ID （ECID）とAdformのID Fusionに基づいて、Adobe [!DNL Real-Time CDP] オーディエンスをAdformに送信してアクティベーションします。 AdformのID Fusionは、Experience Cloud ID （ECID）に基づいてファーストパーティオーディエンスをアクティブ化するためのAdformのID解決サービスです。
 
-よくあるケースは、Experience Cloud ID （ECID）にもとづいて、web サイトやアプリへのweb サイト訪問者の再ターゲティングです。 必要な操作は、すぐに利用できる[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)または[ クライアントサイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform)のAdform拡張機能を使用して、Experience Cloud ID （ECID）をAdformに送信することだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、有効化のためにAdform宛先を介してAdformとオーディエンスを共有できます。
+よくあるケースは、Experience Cloud ID （ECID）にもとづいて、web サイトやアプリへのweb サイト訪問者の再ターゲティングです。 必要な操作は、すぐに利用できる[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)または[ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)のAdform拡張機能を使用して、Experience Cloud ID （ECID）をAdformに送信することだけです。 その後、Experience Cloud ID （ECID）のみに基づいて、有効化のためにAdform宛先を介してAdformとオーディエンスを共有できます。
 
 ## 前提条件 {#prerequisites}
 
 * この宛先を使用するには、既存のAdform顧客である必要があります。
 * Adform Audience Base Data Connectionの資格情報が必要です。
    * Adform Audience Base Data Connectionの資格情報をお持ちでない場合は、Adform担当者にお問い合わせください。
-* 適切に同期するには、[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)または[ クライアントサイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform)の接続をエンティティからAdform Site Trackingに接続する必要があります。
+* 適切に同期するには、[ イベントストリーミング ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)または[ クライアントサイド ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)の接続をエンティティからAdform Site Trackingに接続する必要があります。
    * エンティティからAdform Site Trackingへのイベントストリーミングまたはクライアントサイド接続がない場合は、Adform担当者にお問い合わせください。
-   * Adformは、[!DNL Adobe Experience Cloud] イベントストリーミング [と](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) クライアントサイド [の両方に](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/analytics/adform)個の拡張機能を提供しています。
+   * Adformは、[!DNL Adobe Experience Cloud] イベントストリーミング [と](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) クライアントサイド [の両方に](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)個の拡張機能を提供しています。
 
 
 ## サポートされている ID {#supported-identities}

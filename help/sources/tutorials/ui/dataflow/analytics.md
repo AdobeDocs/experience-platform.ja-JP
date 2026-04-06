@@ -153,4 +153,4 @@ Experience Platformでは、選択したターゲットスキーマまたはデ�
 >
 > 次のビデオに示すExperience Platform UIは古くなっています。 最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 >
->[!VIDEO](https://video.tv.adobe.com/v/34110?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

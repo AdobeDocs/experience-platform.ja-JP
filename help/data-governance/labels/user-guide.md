@@ -161,5 +161,5 @@ The workflow of this video is now outdated. This can be enabled once the video h
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422791?captions=jpn&quality=12&enable10seconds=on&speedcontrol=on) 
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
 -->

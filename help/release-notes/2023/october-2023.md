@@ -48,7 +48,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 拡張機能 | [!DNL LinkedIn] コンバージョン API | [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md)拡張機能を使用すると、Experience Platform イベントデータをLinkedInに転送することで、LinkedIn マーケティングキャンペーンの効果を評価できます。 |
 | 秘密鍵 | [!DNL LinkedIn] OAuth 2秘密鍵 | [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2)を使用すると、イベント転送時にサーバー間のインタラクションを[!DNL LinkedIn]に送信できます。 |
 | イベント転送 | タグとイベント転送の更新 | Experience Platformで[ タグ ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)および[ イベント転送](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja)のパフォーマンスを保持するには、成功したビルドと失敗したビルドの両方の最新の開発ビルドとステージ ビルドのみが保持されます。 使用されなくなったすべてのビルドが削除されます。 さらに、いくつかの多量のAPI使用が他のAPIのパフォーマンスを低下させないように、スロットリングとレート制限が実装されています。 |
-| 拡張機能 | 要素、ルール、拡張機能 | [要素、ルール、および拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=ja)がライブラリ出力で並べ替えられるようになり、同じライブラリの複数のビルドとデプロイメント間の一貫性が高まりました。 |
+| 拡張機能 | 要素、ルール、拡張機能 | [要素、ルール、および拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html)がライブラリ出力で並べ替えられるようになり、同じライブラリの複数のビルドとデプロイメント間の一貫性が高まりました。 |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
 

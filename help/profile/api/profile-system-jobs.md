@@ -16,7 +16,7 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->以下のエンドポイントは、Microsoft Azureで動作するAdobe Experience Platformの実装とAmazon Web Services（AWS）の実装で異なる場合があります。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud)を参照してください。
+>以下のエンドポイントは、Microsoft Azureで動作するAdobe Experience Platformの実装とAmazon Web Services（AWS）の実装で異なる場合があります。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
 
 Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Experience Platform]に取り込まれたデータは[!DNL Data Lake]に保存され、データセットがプロファイルに対して有効になっている場合、そのデータも[!DNL Real-Time Customer Profile] データストアに保存されます。 場合によっては、不要になったデータやエラーで追加されたデータを削除するために、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要があります。 これには、[!DNL Real-Time Customer Profile] APIを使用して[!DNL Profile] システムジョブまたは「delete リクエスト」を作成する必要があります。
 

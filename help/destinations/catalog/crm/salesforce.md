@@ -33,7 +33,7 @@ ht-degree: 14%
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-Salesforce CRM宛先にデータをアクティブ化する前に、[で](/help/xdm/schema/composition.md) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja) セグメント [!DNL Experience Platform]を作成しておく必要があります。
+Salesforce CRM宛先にデータをアクティブ化する前に、[で](/help/xdm/schema/composition.md) スキーマ [、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) データセット [、および](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) セグメント [!DNL Experience Platform]を作成しておく必要があります。
 
 ### [!DNL Salesforce CRM]の前提条件 {#prerequisites-destination}
 

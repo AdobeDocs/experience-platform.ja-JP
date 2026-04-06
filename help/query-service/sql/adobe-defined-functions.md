@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # クエリサービスでのAdobe定義のSQL関数
 
-Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[ セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja)および[ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
+Adobeで定義された関数（ADFと呼ばれます）は、Adobe Experience Platform Query Serviceの事前定義済みの関数で、[!DNL Experience Event]個のデータに対して一般的なビジネス関連タスクを実行するのに役立ちます。 これらは、[ セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)および[ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数を、Adobe Analyticsで見つかったものと同様に含みます。
 
 このドキュメントでは、[!DNL Query Service]で利用できるAdobe定義の関数について説明します。
 
@@ -47,7 +47,7 @@ Web サイト、モバイルアプリケーション、インタラクティブ�
 
 データをグループ化して分類することで、イベントを関連付けて、顧客体験に関する詳細なコンテキストを明らかにできます。
 
-Adobe Analyticsでのセッション化について詳しくは、[ コンテキスト対応セッション ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ja)のドキュメントを参照してください。
+Adobe Analyticsでのセッション化について詳しくは、[ コンテキスト対応セッション ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
 
 **クエリ構文**
 
@@ -487,4 +487,4 @@ LIMIT 10
 
 次のビデオでは、Adobe Experience Platform インターフェイスおよび PSQL クライアントでクエリを実行する方法を説明します。 さらに、このビデオでは、XDM オブジェクト内の個々のプロパティ、Adobe定義の関数の使用、CREATE TABLE AS SELECT （CTAS）の使用に関する例も使用しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/34782?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

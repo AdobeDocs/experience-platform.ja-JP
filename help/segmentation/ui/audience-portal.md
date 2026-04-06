@@ -102,7 +102,7 @@ ht-degree: 41%
 | ----- | ----------- |
 | [!UICONTROL Name] | オーディエンスの名前。 |
 | [!UICONTROL Profile count] | オーディエンスに適合するプロファイルの合計数。 |
-| [!UICONTROL Origin] | オーディエンスの接触チャネル。これは、オーディエンスがどこから来たかを示します。可能な値には、[Segmentation Service](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/ja/docs/audience-manager/user-guide/aam-home)、[類似オーディエンス ](../types/lookalike-audiences.md)、[Federated Audience Composition](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-overview/cja-overview)、[Data Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、および[Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)が含まれます。 |
+| [!UICONTROL Origin] | オーディエンスの接触チャネル。これは、オーディエンスがどこから来たかを示します。可能な値には、[Segmentation Service](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[類似オーディエンス ](../types/lookalike-audiences.md)、[Federated Audience Composition](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[Data Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、および[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)が含まれます。 |
 | [!UICONTROL Lifecycle status] | オーディエンスのステータス。このフィールドに使用できる値には、`Draft`、`Inactive`、および`Published`が含まれます。 異なる状態の意味や、オーディエンスを異なるライフサイクル状態に移動する方法など、ライフサイクルのステータスに関する詳細は、セグメント化に関するFAQ[の](../faq.md#lifecycle-status) ライフサイクルステータスの節を参照してください。 |
 | [!UICONTROL Update frequency] | オーディエンスのデータが更新される頻度を示す値。このフィールドに使用できる値には、[!UICONTROL Batch]、[!UICONTROL Streaming]、[!UICONTROL Edge]、および[!UICONTROL Not Scheduled]が含まれます。 |
 | [!UICONTROL Last updated by] | オーディエンスを最後に更新したユーザーの名前。 |
@@ -138,7 +138,7 @@ ht-degree: 41%
 
 ![検索バーがハイライト表示されています。](../images/ui/audience-portal/browse-audience-search.png)
 
-サポートされている機能など、[!DNL Unified Search] について詳しくは、[統合検索のドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=ja)を参照してください。
+サポートされている機能など、[!DNL Unified Search] について詳しくは、[統合検索のドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)を参照してください。
 
 #### タグ {#tags}
 
@@ -203,7 +203,7 @@ ht-degree: 41%
 
 | フィルター | 説明 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | オーディエンスの接触チャネルに基づいてフィルタリングできます。可能な値には、[Segmentation Service](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/ja/docs/audience-manager/user-guide/aam-home)、[類似オーディエンス ](../types/lookalike-audiences.md)、[Federated Audience Composition](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-overview/cja-overview)、[Data Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、および[Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)が含まれます。 |
+| [!UICONTROL Origin] | オーディエンスの接触チャネルに基づいてフィルタリングできます。可能な値には、[Segmentation Service](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[類似オーディエンス ](../types/lookalike-audiences.md)、[Federated Audience Composition](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[Data Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview)、および[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)が含まれます。 |
 | [!UICONTROL Has any tag] | タグでフィルタリングできます。**[!UICONTROL Has any tag]**&#x200B;から&#x200B;**[!UICONTROL Has all tags]**&#x200B;までの範囲で選択できます。 **[!UICONTROL Has any tag]**&#x200B;が選択されると、フィルターされたオーディエンスには、追加したタグの&#x200B;**any**&#x200B;が含まれます。 **[!UICONTROL Has all tags]**&#x200B;を選択すると、フィルターされたオーディエンスには、追加したタグの&#x200B;**すべて**&#x200B;が含まれている必要があります。 |
 | [!UICONTROL Lifecycle status] | オーディエンスのライフサイクルステータスに基づいてフィルタリングできます。利用できるオプションには、[!UICONTROL Deleted]、[!UICONTROL Draft]、[!UICONTROL Inactive]および[!UICONTROL Published]が含まれます。 |
 | [!UICONTROL Update frequency] | オーディエンスの更新頻度（評価方法）に基づいてフィルタリングできます。 利用できるオプションには、[!UICONTROL Batch]、[!UICONTROL Streaming]および[!UICONTROL Edge]があります |
