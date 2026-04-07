@@ -19,13 +19,13 @@ ht-degree: 28%
 
 | リリース月 | 更新タイプ | 説明 |
 | --- | --- | --- |
-| 2023年5月 | 機能とドキュメントの更新 | 2023年5月の時点で、**[!UICONTROL Custom personalization]**&#x200B;接続は[属性ベースのパーソナライゼーション ](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をサポートしており、すべての顧客が一般に利用できます。 |
+| 2023年5月 | 機能とドキュメントの更新 | 2023年5月の時点で、**[!UICONTROL Custom personalization]**&#x200B;接続は[属性ベースのパーソナライゼーション &#x200B;](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をサポートしており、すべての顧客が一般に利用できます。 |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれる場合があります。 このデータを保護するには、[宛先を属性ベースのパーソナライズ用に設定する際に](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;を使用します。 すべてのEdge Network API呼び出しは、[認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)で行う必要があります。
+>プロファイル属性には、機密データが含まれる場合があります。 このデータを保護するには、[宛先を属性ベースのパーソナライズ用に設定する際に](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;を使用します。 すべてのEdge Network API呼び出しは、[認証済みコンテキスト &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)で行う必要があります。
 >
 >WebまたはMobile SDKの実装に既に使用しているのと同じデータストリームを使用するサーバーサイド統合を追加して、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)を介してプロファイル属性を取得します。
 >
@@ -51,7 +51,7 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->カスタム Personalization接続を作成する前に、[ エッジパーソナライゼーション宛先にオーディエンスデータをアクティブ化する方法](/help/destinations/ui/activate-edge-personalization-destinations.md)に関するガイドを参照してください。 このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
+>カスタム Personalization接続を作成する前に、[&#x200B; エッジパーソナライゼーション宛先にオーディエンスデータをアクティブ化する方法](/help/destinations/ui/activate-edge-personalization-destinations.md)に関するガイドを参照してください。 このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -59,7 +59,7 @@ ht-degree: 28%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li>カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](/help/segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li>類似オーディエンス，</li><li>連合オーディエンス，</li><li>[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス</li><li>その他。</li></ul> |
 
 {style="table-layout:auto"}
@@ -68,10 +68,10 @@ ht-degree: 28%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づいて特定のグループをターゲティングします。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルに基づいて特定のグループをターゲティングします。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ ht-degree: 28%
 
 | 項目 | タイプ | メモ |
 | --- | --- | --- |
-| 書き出しタイプ | **[!UICONTROL Profile request]** | 1つのプロファイルに対して、カスタム Personalizationの宛先にマッピングされたすべてのオーディエンスをリクエストします。 異なるカスタム Personalizationの宛先を、異なる[Adobe データ収集データストリーム ](/help/datastreams/overview.md)に設定できます。 |
+| 書き出しタイプ | **[!UICONTROL Profile request]** | 1つのプロファイルに対して、カスタム Personalizationの宛先にマッピングされたすべてのオーディエンスをリクエストします。 異なるカスタム Personalizationの宛先を、異なる[Adobe データ収集データストリーム &#x200B;](/help/datastreams/overview.md)に設定できます。 |
 | 書き出し頻度 | **[!UICONTROL Streaming]** | ストリーミング宛先は、常にAPI ベースの接続です。 オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](/help/destinations/ui/connect-destination.md)の手順に従ってください。
 
@@ -119,9 +119,9 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイルとオーディエンスをエッジパーソナライゼーションの宛先にアクティブ化](/help/destinations/ui/activate-edge-personalization-destinations.md)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[&#x200B; プロファイルとオーディエンスをエッジパーソナライゼーションの宛先にアクティブ化](/help/destinations/ui/activate-edge-personalization-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
@@ -147,7 +147,7 @@ Adobe Experience Platform[で](/help/tags/home.md) タグを使用してExperien
 ]
 ```
 
-[ タグ ](/help/tags/home.md)を使用してExperience Platform Web SDKをデプロイしていない場合は、[ コマンド応答](/help/collection/js/commands/command-responses.md)を使用して、書き出されたデータを確認します。
+[&#x200B; タグ &#x200B;](/help/tags/home.md)を使用してExperience Platform Web SDKをデプロイしていない場合は、[&#x200B; コマンド応答](/help/collection/js/commands/command-responses.md)を使用して、書き出されたデータを確認します。
 
 [!DNL Adobe Experience Platform]からのJSON応答を解析して、[!DNL Adobe Experience Platform]と統合しているアプリケーションの統合エイリアスを見つけます。 オーディエンス IDをターゲティングパラメーターとしてアプリケーションのコードに渡します。 ここでは、宛先応答に固有の例を示します。
 
