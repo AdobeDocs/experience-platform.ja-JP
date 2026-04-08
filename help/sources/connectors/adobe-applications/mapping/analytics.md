@@ -2,10 +2,10 @@
 title: Adobe Analytics Source コネクタのマッピングフィールド
 description: Analytics Source コネクタを使用して、Adobe Analytics フィールドをXDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: e735d9e68ca5a49f8a4e1cbf3ea4264796117a78
 workflow-type: tm+mt
 source-wordcount: '3832'
-ht-degree: 23%
+ht-degree: 40%
 
 ---
 
@@ -297,70 +297,70 @@ Query Serviceを使用してこれらの変換を実行する方法について�
 
 +++非推奨の高度なマッピングフィールドのテーブルを表示するには、を選択します
 
-| データフィード | XDM フィールド | XDM タイプ |説明|
-| — | — | — | — |
-| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` |文字列| カスタム Analytics eVar。 企業によってeVarの使い方は異なります。 |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` |文字列| カスタム Analytics prop。 propの使い方は組織によって異なります。 |
-| `post_browser_height` | `environment.browserDetails.viewportHeight` |整数| ブラウザーの高さ（ピクセル単位）。 |
-| `post_browser_width` | `environment.browserDetails.viewportWidth` |整数| ブラウザーの幅（ピクセル単位）。 |
-| `post_campaign` | `marketing.trackingCode` |文字列| トラッキングコードディメンションで使用される変数。 |
-| `post_channel` | `web.webPageDetails.siteSection` |文字列| サイトセクションディメンションで使用される変数。 |
-| `post_cust_visid` | `endUserIDs._experience.aacustomid.id` |文字列|設定されている場合は、カスタム訪問者ID。 |
-| `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` |文字列|訪問者が到達した最初のページのURL。 |
-| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` |文字列|入口ページの元のディメンションで使用される変数。 訪問者のエントリーページのページ名。 |
-| `post_keywords` | `search.keywords` |文字列|ヒット用に収集されたキーワード。 |
-| `post_page_url` | `web.webPageDetails.URL` |文字列| ページヒットのURL。 |
-| `post_pagename` | `web.webPageDetails.pageViews.value` |文字列| ページ名を持つヒットの1に等しい。 これは、Adobe Analyticsのページビュー指標と同様です。 |
-| `post_purchaseid` | `commerce.order.purchaseID` |文字列|購入を一意に識別するために使用される変数。 |
-| `post_referrer` | `web.webReferrer.URL` |文字列|前ページのURL。 |
-| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` |文字列|状態変数。 |
-| `post_user_server` | `web.webPageDetails.server` |文字列| サーバーディメンションで使用される変数。 |
-| `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` |文字列|郵便番号ディメンションの入力に使用される変数。 |
-| `browser` | `_experience.analytics.environment.`<br/>`browserID` |整数| ブラウザーの数値ID。 |
-| `domain` | `environment.domain` |文字列| ドメインディメンションで使用される変数。 これは、ユーザーのインターネットサービスプロバイダー（ISP）に基づいています。 |
-| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` |文字列|訪問者の最初の参照URL。 |
-| `geo_city` | `placeContext.geo.city` |文字列|ヒットの都市の名前。 これは、ヒットのIP アドレスに基づいています。 |
-| `geo_dma` | `placeContext.geo.dmaID` |整数| ヒットのデモグラフィック領域の数値ID。 これは、ヒットのIP アドレスに基づいています。 |
-| `geo_region` | `placeContext.geo.stateProvince` |文字列| ヒットの状態または領域の名前。 これは、ヒットのIP アドレスに基づいています。 |
-| `geo_zip` | `placeContext.geo.postalCode` |文字列| ヒットの郵便番号。 これは、ヒットのIP アドレスに基づいています。 |
-| `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` |整数|訪問者のオペレーティングシステムを表す数値ID。 これは、user_agent列に基づいています。 |
-| `search_page_num` | `search.pageDepth` |整数|この変数は、すべての検索ページランクディメンションで使用され、ユーザーがサイトにクリックする前にサイト |で表示された検索結果のページを示します。 |
-| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` |文字列|検索キーワード ディメンションで使用される変数。 |
-| `visit_num` | `_experience.analytics.session.`<br/>`num` |整数|訪問数ディメンションで使用される変数。 これは1から始まり、新しい訪問が開始されるたびに（ユーザーごとに）増加します。 |
-| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` |整数| ヒット深度ディメンションで使用される変数。 この値は、ユーザーが生成するヒットごとに1増加し、各訪問の後にリセットされます。 |
-| `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` |文字列|訪問の最初のリファラー。 |
-| `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` |整数|訪問の最初のページ名。 |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | オブジェクト | カスタム Analytics prop。リスト propとして設定します。 区切られた値のリストが含まれます。 |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | オブジェクト |階層変数で使用され、区切られた値のリストを含みます。 | {values （array）, delimiter （string） } |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` |配列|変数値のリスト。 実装に応じて、カスタム値の区切りリストが含まれます。 | {value （文字列）, key （文字列） } |
-| `post_cookies` | `environment.browserDetails.cookiesEnabled` | ブール値| Cookie サポートディメンションで使用される変数。 |
-| `post_event_list` | `commerce.purchases`、<br/>`commerce.productViews`、<br/>`commerce.productListOpens`、<br/>`commerce.checkouts`、<br/>`commerce.productListAdds`、<br/>`commerce.productListRemovals`、<br/>`commerce.productListViews` | オブジェクト |ヒット時にトリガーされる標準コマースイベント。 | {id （文字列）、値（数値） } |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | オブジェクト | ヒットでトリガーされるカスタムイベント。| {id （オブジェクト）、値（オブジェクト） } |
-| `post_java_enabled` | `environment.browserDetails.javaEnabled` | ブール値| Java™が有効かどうかを示すフラグ。 |
-| `post_latitude` | `placeContext.geo._schema.latitude` |数値|   |
-| `post_longitude` | `placeContext.geo._schema.longitude` |数値|   |
-| `post_page_event` | `web.webInteraction.type` |文字列|画像リクエストで送信されるヒットのタイプ（標準ヒット、ダウンロードリンク、終了リンク、またはカスタムリンクをクリック）。 |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | ヒットがリンククリックの場合は1に等しい。 これは、Adobe Analyticsのページイベント指標と同様です。 |
-| `post_page_event_var1` | `web.webInteraction.URL` |文字列|この変数は、リンクトラッキング画像リクエストでのみ使用されます。 ダウンロードリンク、終了リンク、またはクリックされたカスタムリンクのURLです。 |
-| `post_page_event_var2` | `web.webInteraction.name` |文字列|この変数は、リンクトラッキング画像リクエストでのみ使用されます。 リンクのカスタム名です。 |
-| `post_page_type` | `web.webPageDetails.isErrorPage` | ブール値|これは、ページが見つからないディメンションを設定するために使用されます。 この変数は空か「ErrorPage」を含む必要があります|
-| `post_pagename_no_url` | `web.webPageDetails.name` | number | ページ名（設定されている場合）。 ページが指定されていない場合、この値は空のままになります。 |
-| `post_product_list` | `productListItems[].items` | array |製品リスト（製品の変数を介して渡される）。 | {SKU （文字列）、数量（整数）、priceTotal （数値） } |
-| `post_search_engine` | `search.searchEngine` |文字列|訪問者をサイトに参照した検索エンジンを表す数値ID。 |
-| `mvvar1_instances` | `.list.items[]` | オブジェクト |変数値のリスト。 実装に応じて、カスタム値の区切りリストが含まれます。 |
-| `mvvar2_instances` | `.list.items[]` | オブジェクト |変数値のリスト。 実装に応じて、カスタム値の区切りリストが含まれます。 |
-| `mvvar3_instances` | `.list.items[]` | オブジェクト |変数値のリスト。 実装に応じて、カスタム値の区切りリストが含まれます。 |
-| `color` | `device.colorDepth` |整数| c_color列の値に基づく色深度ID。 |
-| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` |文字列|訪問者の最初のリファラーのリファラータイプを表す数値ID。 |
-| `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` |整数| UNIX®時間での訪問者の最初のヒットのタイムスタンプ。 |
-| `geo_country` | `placeContext.geo.countryCode` | string | ヒットの送信元の国の略語（IPに基づく）。 |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | number |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | number |
-| `paid_search` | `search.isPaid` | ブール値| ヒットが有料検索検出と一致する場合に設定されるフラグ。 |
-| `ref_type` | `web.webReferrer.type` |文字列|ヒットの参照タイプを表す数値ID。 |
-| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | ブール値|訪問の最初のヒットが有料検索ヒットからのものかどうかを示すフラグ （1=有料、0=未払い）。 |
-| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` |文字列|訪問の最初のリファラーのリファラータイプを表す数値ID。 |
-| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` |文字列|訪問の最初の検索エンジンの数値ID。 |
-| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` |整数| UNIX®時間での訪問の最初のヒットのタイムスタンプ。|
+| データフィード | XDM フィールド | XDM タイプ | 説明 |
+| --- | --- | --- | --- |
+| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | 文字列 | カスタム分析eVar: 企業によってeVarの使い方は異なります。 |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | 文字列 | カスタム分析prop: propの使い方は組織によって異なります。 |
+| `post_browser_height` | `environment.browserDetails.viewportHeight` | 整数 | ブラウザーの高さ（ピクセル単位）。 |
+| `post_browser_width` | `environment.browserDetails.viewportWidth` | 整数 | ブラウザーの幅（ピクセル単位）。 |
+| `post_campaign` | `marketing.trackingCode` | 文字列 | トラッキングコードディメンションで使用される変数。 |
+| `post_channel` | `web.webPageDetails.siteSection` | 文字列 | 「サイトセクション」ディメンションで使用される変数。 |
+| `post_cust_visid` | `endUserIDs._experience.aacustomid.id` | 文字列 | カスタム訪問者 ID（設定されている場合）。 |
+| `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | 文字列 | 訪問者が最初に到達するページの URL。 |
+| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | 文字列 | 「オリジナルの入口ページ」ディメンションで使用される変数。訪問者の入口ページのページ名。 |
+| `post_keywords` | `search.keywords` | 文字列 | ヒット用に収集されたキーワード。 |
+| `post_page_url` | `web.webPageDetails.URL` | 文字列 | ページヒットの URL。 |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | 文字列 | ページ名を持つヒット数に1と等しい。 これは、Adobe Analyticsのページビュー指標と同様です。 |
+| `post_purchaseid` | `commerce.order.purchaseID` | 文字列 | 購入を一意に識別するために使用される変数。 |
+| `post_referrer` | `web.webReferrer.URL` | 文字列 | 前のページの URL。 |
+| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 文字列 | 状態変数。 |
+| `post_user_server` | `web.webPageDetails.server` | 文字列 | 「サーバー」ディメンションで使用される変数。 |
+| `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 文字列 | 「郵便番号」ディメンションの生成に使用される変数。 |
+| `browser` | `_experience.analytics.environment.`<br/>`browserID` | 整数 | ブラウザーの数値 ID。 |
+| `domain` | `environment.domain` | 文字列 | 「ドメイン」ディメンションで使用される変数。これは、ユーザーのインターネットサービスプロバイダー（ISP）に基づいています。 |
+| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | 文字列 | 訪問者の最初の参照 URL。 |
+| `geo_city` | `placeContext.geo.city` | 文字列 | ヒットの市区町村の名前。これは、ヒットのIP アドレスに基づいています。 |
+| `geo_dma` | `placeContext.geo.dmaID` | 整数 | ヒットの人口統計領域の数値 ID。これは、ヒットのIP アドレスに基づいています。 |
+| `geo_region` | `placeContext.geo.stateProvince` | 文字列 | ヒットの都道府県または地域の名前。これは、ヒットのIP アドレスに基づいています。 |
+| `geo_zip` | `placeContext.geo.postalCode` | 文字列 | ヒットの郵便番号。これは、ヒットのIP アドレスに基づいています。 |
+| `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | 整数 | 訪問者のオペレーティングシステムを表す数値 ID。user_agent 列に基づきます。 |
+| `search_page_num` | `search.pageDepth` | 整数 | この変数は、「すべての検索ページのランク」ディメンションで使用され、ユーザーがクリックスルーしてサイトに到達する前に、お客様のサイトが表示された | 検索結果のページを示します。 |
+| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | 文字列 | 「検索キーワード」ディメンションで使用される変数。 |
+| `visit_num` | `_experience.analytics.session.`<br/>`num` | 整数 | 「訪問回数」ディメンションで使用される変数。1 から始まり、（訪問者ごとに）新しい訪問が開始されるたびに増分されます。 |
+| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | 整数 | 「ヒットの深さ」ディメンションで使用される変数。この値は、ユーザーが生成したヒットごとに 1 ずつ増加し、各訪問後にリセットされます。 |
+| `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | 文字列 | 訪問の最初のリファラー。 |
+| `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | 整数 | 訪問の最初のページ名。 |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | オブジェクト | リスト propに設定されたカスタム Analytics prop。 区切られた値のリストが含まれます。 |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | オブジェクト | 階層変数で使用され、値の区切りリストが含まれます。 | {values (配列), delimiter (文字列)} |
+| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 配列 | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 | {value (文字列), key (文字列)} |
+| `post_cookies` | `environment.browserDetails.cookiesEnabled` | ブール値 | 「cookie サポート」ディメンションで使用される変数。 |
+| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | オブジェクト | 標準コマースイベントがヒット時にトリガーされました。 | {id (文字列), value (数値)} |
+| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
+| `post_java_enabled` | `environment.browserDetails.javaEnabled` | ブール値 | Java™が有効かどうかを示すフラグ。 |
+| `post_latitude` | `placeContext.geo._schema.latitude` | 数値 |   |
+| `post_longitude` | `placeContext.geo._schema.longitude` | 数値 |   |
+| `post_page_event` | `web.webInteraction.type` | 文字列 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、離脱リンク、クリックされたカスタムリンク）。 |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | 数値 | ヒットがリンククリックの場合は1に等しい。 これは、Adobe Analyticsのページイベント指標と同様です。 |
+| `post_page_event_var1` | `web.webInteraction.URL` | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。ダウンロードリンク、終了リンク、またはクリックされたカスタムリンクのURLです。 |
+| `post_page_event_var2` | `web.webInteraction.name` | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。リンクのカスタム名です。 |
+| `post_page_type` | `web.webPageDetails.isErrorPage` | ブール値 | 「エラーページ」ディメンションの入力に使用されます。この変数の値は、空か「ErrorPage」である必要があります。 |
+| `post_pagename_no_url` | `web.webPageDetails.name` | 数値 | ページの名前（設定されている場合）。ページが指定されていない場合、この値は空のままになります。 |
+| `post_product_list` | `productListItems[].items` | 配列 | 製品リスト。products 変数を通じて渡されます。 | {SKU (文字列), quantity (整数), priceTotal (数値)} |
+| `post_search_engine` | `search.searchEngine` | 文字列 | サイトに訪問者を誘導した検索エンジンを表す数値 ID。 |
+| `mvvar1_instances` | `.list.items[]` | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
+| `mvvar2_instances` | `.list.items[]` | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
+| `mvvar3_instances` | `.list.items[]` | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
+| `color` | `device.colorDepth` | 整数 | c_color 列の値に基づく色深度 ID。 |
+| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | 文字列 | 訪問者の最初のリファラーのリファラータイプを表す数値ID。 |
+| `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | 整数 | UNIX®時間での訪問者の最初のヒットのタイムスタンプ。 |
+| `geo_country` | `placeContext.geo.countryCode` | 文字列 | ヒットの発生元となった国の略称（IP アドレスに基づく）。 |
+| `geo_latitude` | `placeContext.geo._schema.latitude` | 数値 |  |
+| `geo_longitude` | `placeContext.geo._schema.longitude` | 数値 |  |
+| `paid_search` | `search.isPaid` | ブール値 | ヒットが有料検索の検出に一致した場合に設定されるフラグ。 |
+| `ref_type` | `web.webReferrer.type` | 文字列 | ヒットのリファラルのタイプを表す数値 ID。 |
+| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | ブール値 | 訪問の最初のヒットが有料検索ヒットからのヒットであったかどうかを示すフラグ（1 = 有料、0 = 無料）。 |
+| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | 文字列 | 訪問の最初のリファラーのリファラータイプを表す数値 ID。 |
+| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | 文字列 | 訪問の最初の検索エンジンを表す数値 ID。 |
+| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | 整数 | UNIX®時間での訪問の最初のヒットのタイムスタンプ。 |
 
 +++
