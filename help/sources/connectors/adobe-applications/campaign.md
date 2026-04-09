@@ -28,7 +28,7 @@ Campaign v8をExperience Platformに取り込むためのソース接続を作�
 
 >[!IMPORTANT]
 >
->Campaignでログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスする必要があります。 クライアントコンソールのダウンロードとインストール方法については、[Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html)を参照してください。
+>Campaignでログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスする必要があります。 クライアントコンソールのダウンロードとインストール方法については、[Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=ja)を参照してください。
 
 クライアントコンソールからCampaign v8 インスタンスにログインします。 「[!DNL Explorer]」タブで「[!DNL Administration]」を選択し、「[!DNL Configuration]」を選択します。 次に、[!DNL Data schemas]を選択し、名前またはラベルに`broadLog` フィルターを適用します。 表示されるリストで、名前`broadLogRcp`の受信者配信ログ ソーススキーマを選択します。
 
