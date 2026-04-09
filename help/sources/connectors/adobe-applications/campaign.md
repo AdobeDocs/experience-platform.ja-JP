@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計、視覚的なキャンペーンのオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行をサポートするマネージド基盤を提供します。 詳しくは、[Adobe Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja)を参照してください。
+Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計、視覚的なキャンペーンのオーケストレーション、リアルタイムのインタラクション管理、クロスチャネルの実行をサポートするマネージド基盤を提供します。 詳しくは、[Adobe Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja)を参照してください。
 
 Adobe Campaign Managed Cloud Services ソースコネクタを使用すると、Adobe Campaign v8からAdobe Experience Platformに配信およびトラッキングログデータを取り込むことができます。 このコネクタは、Platform内のバッチソースとして動作します。
 
@@ -28,19 +28,19 @@ Campaign v8をExperience Platformに取り込むためのソース接続を作�
 
 >[!IMPORTANT]
 >
->Campaignでログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスする必要があります。 クライアントコンソールのダウンロードとインストール方法については、[Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html)を参照してください。
+>Campaignでログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスする必要があります。 クライアントコンソールのダウンロードとインストール方法については、[Campaign v8 ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html)を参照してください。
 
 クライアントコンソールからCampaign v8 インスタンスにログインします。 「[!DNL Explorer]」タブで「[!DNL Administration]」を選択し、「[!DNL Configuration]」を選択します。 次に、[!DNL Data schemas]を選択し、名前またはラベルに`broadLog` フィルターを適用します。 表示されるリストで、名前`broadLogRcp`の受信者配信ログ ソーススキーマを選択します。
 
-![ 「エクスプローラー」タブが選択されたAdobe Campaign v8 クライアントコンソールで、管理、設定、およびデータスキーマノードが拡張され、フィルタリングが「広範」に設定されます。](./images/campaign/explorer.png)
+![&#x200B; 「エクスプローラー」タブが選択されたAdobe Campaign v8 クライアントコンソールで、管理、設定、およびデータスキーマノードが拡張され、フィルタリングが「広範」に設定されます。](./images/campaign/explorer.png)
 
 次に、「**データ**」タブを選択します。
 
-![ 「データ」タブが選択されたAdobe Campaign v8 クライアントコンソール。](./images/campaign/data.png)
+![&#x200B; 「データ」タブが選択されたAdobe Campaign v8 クライアントコンソール。](./images/campaign/data.png)
 
 データパネルで右クリックまたはキーを押して、コンテキストメニューを開きます。 ここから、**リストの設定…**&#x200B;を選択します
 
-![ コンテキストメニューを開き、「リストを設定」オプションを選択したAdobe Campaign v8 クライアントコンソール。](./images/campaign/configure.png)
+![&#x200B; コンテキストメニューを開き、「リストを設定」オプションを選択したAdobe Campaign v8 クライアントコンソール。](./images/campaign/configure.png)
 
 リスト設定ウィンドウが表示され、既存のリストに目的のフィールドを追加して、データパネルでデータを表示できるインターフェイスが表示されます。
 
