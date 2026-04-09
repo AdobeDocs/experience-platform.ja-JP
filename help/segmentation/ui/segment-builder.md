@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
-ht-degree: 44%
+source-wordcount: '6708'
+ht-degree: 43%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 44%
 
 ![セグメントビルダーの「フィールド」セクションがハイライト表示されている様子。](../images/ui/segment-builder/segment-fields.png)
 
-![設定アイコン &#x200B;](/help/images/icons/settings.png)を選択して、表示されるフィールドの設定を調整できます。
+![設定アイコン ](/help/images/icons/settings.png)を選択して、表示されるフィールドの設定を調整できます。
 
 **[!UICONTROL Available fields]**&#x200B;では、データを含むフィールドまたは完全なXDM スキーマのみを表示できます。
 
@@ -157,13 +157,13 @@ ht-degree: 44%
 
 +++
 
-属性を選択すると、[情報アイコン &#x200B;](../../images/icons/info.png)を選択して概要データを表示できます。 概要データには、フィールドの説明、値のレコード数、この属性の値を含むアカウントの割合などの情報が含まれます。
+属性を選択すると、[情報アイコン ](../../images/icons/info.png)を選択して概要データを表示できます。 概要データには、フィールドの説明、値のレコード数、この属性の値を含むアカウントの割合などの情報が含まれます。
 
 **[!UICONTROL Top values]** セクションには、属性に対して最も頻繁に発生する値が表示され、値、値を持つレコードの数、値が表す合計レコードの割合などの詳細が含まれます。
 
 ![属性の概要データを表示するポップオーバー](/help/segmentation/images/ui/segment-builder/summary-data.png)
 
-プロファイルの25%未満が属性に入力した場合は、代わりに![&#x200B; データ通知アイコン &#x200B;](../../images/icons/data-notice.png)が表示されます。 属性に関わらず、同じ概要データが表示されます。
+プロファイルの25%未満が属性に入力した場合は、代わりに![ データ通知アイコン ](../../images/icons/data-notice.png)が表示されます。 属性に関わらず、同じ概要データが表示されます。
 
 >[!NOTE]
 >
@@ -290,7 +290,7 @@ ht-degree: 44%
 
 ![列挙リストに含まれていない値を挿入しようとした場合に表示される警告](../images/ui/segment-builder/enum-warning.png)
 
-複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![&#x200B; プラスアイコン &#x200B;](/help/images/icons/add-circle.png)を選択して、**[!UICONTROL Add values in bulk]** ポップオーバーを表示します。
+複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![ プラスアイコン ](/help/images/icons/add-circle.png)を選択して、**[!UICONTROL Add values in bulk]** ポップオーバーを表示します。
 
 ![プラスアイコンがハイライト表示され、バルクアップロードポップオーバーにアクセスするために選択できるボタンが表示されます。](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -320,7 +320,7 @@ ht-degree: 44%
 | ネストされたデータ | パフォーマンスの最適化 | オーディエンス定義内には、ネストされたデータ（配列またはマップデータタイプ）の深さ2つ以上のレベルがあります。 |
 | オーディエンスサイズ | パフォーマンスの最適化 | オーディエンスの選定サイズが、サンドボックス内のプロファイルの合計数の30%を超えています。 |
 
-オーディエンス検証の仕組みについて詳しくは、[&#x200B; オーディエンス検証ガイド &#x200B;](/help/segmentation/validation.md)を参照してください。
+オーディエンス検証の仕組みについて詳しくは、[ オーディエンス検証ガイド ](/help/segmentation/validation.md)を参照してください。
 
 ### オーディエンスの追加
 
@@ -349,7 +349,7 @@ ht-degree: 44%
 
 コードビューには、API 呼び出しで使用するセグメント定義の値をコピーできるボタンがあります。セグメント定義の最新バージョンを取得するには、最新の変更をセグメント定義に保存してあることを確認してください。
 
-![&#x200B; コピーコードボタンがハイライト表示され、](../images/ui/segment-builder/copy-code.png)を使用できます
+![ コピーコードボタンがハイライト表示され、](../images/ui/segment-builder/copy-code.png)を使用できます
 
 ### 集計関数
 
@@ -393,7 +393,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->[年を無視する時間制約](./ignore-year.md)と[&#x200B; ルールレベルの時間制約](./segment-refactoring.md)の両方が以前にリファクタリングされ、リンクされた概要で詳細な情報を利用できるようになりました。
+>[年を無視する時間制約](./ignore-year.md)と[ ルールレベルの時間制約](./segment-refactoring.md)の両方が以前にリファクタリングされ、リンクされた概要で詳細な情報を利用できるようになりました。
 
 使用可能な時間制約のリストは次のとおりです。
 
@@ -407,7 +407,7 @@ ht-degree: 44%
 
 | 時間制限 | 説明 | 年を無視を有効にできます | 例 |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | **を比較する属性またはイベントは、今日から発生する必要があります。** | ○ | ![使用されている「Today」時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | **を比較する属性またはイベントは、今日から発生する必要があります。** これは、選択されたデフォルトの時間制約です。 | ○ | ![使用されている「Today」時間制約の例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨日 | **を比較する属性またはイベントは、昨日発生する必要があります。** | ○ | ![使用されている「昨日」時間制約の例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 今月 | **を比較する属性またはイベントは、今月に発生する必要があります**。 | ○ | ![使用されている「今月」時間制約の例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | **を比較する属性またはイベントは、今年のカレンダーで発生する必要があります**。 | × | ![使用されている「今年」時間制約の例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ ht-degree: 44%
 | 次の段階 | 比較する属性またはイベントは、選択した次の期間内に発生する必要があります。 選択した期間には、分、時間、日、週、月、年が含まれます。 | × | ![使用されている「次回に使用する」時間制約の例。](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | exists | 属性が存在します。 | × | ![使用されている「Exists」時間制約の例。](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | 存在しない | 属性が存在しません。 | × | ![使用されている「存在しない」時間制約の例。](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | **を比較する属性またはイベントは、オーディエンスが評価されたときに直ちに発生する必要があります**。 この時間制約は、「前」や「後」などの時間制約の中で、セカンダリレベルのオプションとしてのみ使用できます。 | ○ | ![使用されている「Now」時間制約の例。](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>「今日」時間制約と「今」時間制約の違いはわずかですが、重要です。
+>
+>- 「Today」時間制約を使用して、比較する属性またはイベントが現在の日付の&#x200B;**午前0時**&#x200B;に発生しているかどうかを確認します。
+>- 「今」時間制約を使用して、比較する属性またはイベントが現在&#x200B;**発生しているかどうかを確認します**。
+>
+>ただし、大きな例外が1つあります。トップレベルの時間制約として「Today」を使用している場合、つまり、属性またはイベントが今日&#x200B;**任意** ポイントで発生したかどうかを確認しています。
 
 +++
 
@@ -431,7 +441,7 @@ ht-degree: 44%
 
 カンバスレベルの時間制約を適用するには、イベントのタイムラインの上に表示される時計アイコンを選択します。
 
-![&#x200B; カンバスレベルの時間制約セレクターがハイライト表示されます。](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![ カンバスレベルの時間制約セレクターがハイライト表示されます。](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
 キャンバスレベルで時間制約を適用すると、時間制約がオーディエンスの&#x200B;**all** イベントに適用されます。
 
@@ -439,7 +449,7 @@ ht-degree: 44%
 
 カードレベルの制約を適用するには、時間制約を適用するカードを選択し、次に省略記号アイコン、および&#x200B;**[!UICONTROL Apply time rule]**&#x200B;を選択します。 これにより、**[!UICONTROL Event Rules]** コンテナ内の時間制約を選択できます。
 
-![&#x200B; カードレベルの時間制約セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/card-level.png)
+![ カードレベルの時間制約セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/card-level.png)
 
 時間の制約をカードレベルで適用すると、これはオーディエンスの&#x200B;**指定** イベントに時間の制約を適用します。
 
@@ -447,7 +457,7 @@ ht-degree: 44%
 
 イベント間に時間制約を適用するには、時間制約を適用する2つのイベント間の時計アイコンを選択します。
 
-![&#x200B; イベント間の時間制約セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/between-event.png)
+![ イベント間の時間制約セレクターが強調表示されます。](../images/ui/segment-builder/time-constraints/between-event.png)
 
 イベント間に時間制約を適用すると、イベント間の時間&#x200B;**に時間制約が適用されます。**
 
@@ -501,7 +511,7 @@ ht-degree: 44%
 
 次の例では、1つの式に&#x200B;**both** ANDとOR ロジックを混在させています。 コンテナを使用しない場合、ANDとOR ロジックの両方を単一レベルで混在させることはできません。
 
-![&#x200B; コンテナを使用してブール論理を混在させ、include/exclude ロジックを使用する方法を示す画像。](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+![ コンテナを使用してブール論理を混在させ、include/exclude ロジックを使用する方法を示す画像。](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
 
 +++
 
@@ -509,7 +519,7 @@ ht-degree: 44%
 
 次の例では、コンテナを使用してイベントのシーケンスを構築します。
 
-![&#x200B; コンテナを使用してイベントを順序付けする方法を示す画像。](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+![ コンテナを使用してイベントを順序付けする方法を示す画像。](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
 
 +++
 
@@ -579,7 +589,7 @@ ht-degree: 44%
 
 引き続きオーディエンスを作成する場合は、**[!UICONTROL View Profiles]**&#x200B;を選択して、オーディエンスのページ分割されたプレビューを表示できます。
 
-![&#x200B; オーディエンスのプロパティ セクションがハイライト表示されます。 オーディエンスのプロパティには、名前、説明、評価方法が含まれますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
+![ オーディエンスのプロパティ セクションがハイライト表示されます。 オーディエンスのプロパティには、名前、説明、評価方法が含まれますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -613,4 +623,4 @@ ht-degree: 44%
 - スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 - ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UIのその他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド &#x200B;](./overview.md)を参照してください。
+[!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照し、関連するビデオを視聴して知識を補ってください。[!DNL Segmentation Service] UIのその他の部分について詳しくは、[[!DNL Segmentation Service]  ユーザーガイド ](./overview.md)を参照してください。

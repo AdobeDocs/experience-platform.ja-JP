@@ -3,7 +3,7 @@ solution: Experience Platform
 title: ストリーミングセグメンテーションガイド
 description: ストリーミングセグメンテーションとは何か、ストリーミングセグメンテーションを使用して評価されるオーディエンスの作成方法、ストリーミングセグメンテーションを使用して作成されたオーディエンスの表示方法など、ストリーミングセグメンテーションについて説明します。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 19%
@@ -26,7 +26,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->ストリーミングセグメント化を機能させるには、スケジュールされたセグメント化を組織で有効にする必要があります。 スケジュールされたセグメント化の有効化について詳しくは、[&#x200B; オーディエンスポータルの概要](../ui/audience-portal.md#scheduled-segmentation)を参照してください。
+>ストリーミングセグメント化を機能させるには、スケジュールされたセグメント化を組織で有効にする必要があります。 スケジュールされたセグメント化の有効化について詳しくは、[ オーディエンスポータルの概要](../ui/audience-portal.md#scheduled-segmentation)を参照してください。
 
 | クエリタイプ | 詳細 | クエリ | 例 |
 | ---------- | ------- | ----- | ------- |
@@ -105,7 +105,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 ストリーミングセグメンテーションを使用して評価されるオーディエンスは、Segmentation Service APIまたはUIのAudience Portalを使用して作成できます。
 
-セグメント定義は、[適格なルールセット &#x200B;](#eligible-rulesets)のいずれかに一致する場合、ストリーミングを有効にできます。
+セグメント定義は、[適格なルールセット ](#eligible-rulesets)のいずれかに一致する場合、ストリーミングを有効にできます。
 
 >[!BEGINTABS]
 
@@ -204,21 +204,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 +++
 
-このエンドポイントの使用について詳しくは、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](../api/segment-definitions.md)を参照してください。
+このエンドポイントの使用について詳しくは、[ セグメント定義エンドポイントガイド ](../api/segment-definitions.md)を参照してください。
 
 >[!TAB  オーディエンスポータル ]
 
 オーディエンスポータルで、**[!UICONTROL Create audience]**&#x200B;を選択します。
 
-![&#x200B; オーディエンスポータルで「オーディエンスを作成」ボタンが強調表示されます。](../images/methods/streaming/select-create-audience.png)
+![ オーディエンスポータルで「オーディエンスを作成」ボタンが強調表示されます。](../images/methods/streaming/select-create-audience.png)
 
 ポップオーバーが表示されます。 **[!UICONTROL Build rules]**&#x200B;を選択してセグメントビルダーに入ります。
 
-![&#x200B; オーディエンスを作成ポップオーバーで「ルールを作成」ボタンが強調表示されます。](../images/methods/streaming/select-build-rules.png)
+![ オーディエンスを作成ポップオーバーで「ルールを作成」ボタンが強調表示されます。](../images/methods/streaming/select-build-rules.png)
 
-セグメントビルダー内で、[適格なルールセット &#x200B;](#eligible-rulesets)のいずれかに一致するセグメント定義を作成します。 セグメント定義がストリーミングセグメント化に適合する場合は、**[!UICONTROL Streaming]**&#x200B;を&#x200B;**[!UICONTROL Evaluation method]**&#x200B;として選択できます。
+セグメントビルダー内で、[適格なルールセット ](#eligible-rulesets)のいずれかに一致するセグメント定義を作成します。 セグメント定義がストリーミングセグメント化に適合する場合は、**[!UICONTROL Streaming]**&#x200B;を&#x200B;**[!UICONTROL Evaluation method]**&#x200B;として選択できます。
 
-![&#x200B; セグメント定義が表示されます。 評価タイプが強調表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることを示します。](../images/methods/streaming/streaming-evaluation-method.png)
+![ セグメント定義が表示されます。 評価タイプが強調表示され、ストリーミングセグメント化を使用してセグメント定義を評価できることを示します。](../images/methods/streaming/streaming-evaluation-method.png)
 
 セグメント定義の作成について詳しくは、[セグメントビルダーガイド](../ui/segment-builder.md)を参照してください。
 
@@ -354,15 +354,15 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 >[!TAB  オーディエンスポータル ]
 
-オーディエンスポータルのフィルターを使用すると、組織内のストリーミングセグメンテーションに有効なすべてのオーディエンスを取得できます。 ![&#x200B; フィルターアイコン &#x200B;](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
+オーディエンスポータルのフィルターを使用すると、組織内のストリーミングセグメンテーションに有効なすべてのオーディエンスを取得できます。 ![ フィルターアイコン ](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
 
-![&#x200B; フィルターアイコンがオーディエンスポータルで強調表示されます。](../images/methods/filter-audiences.png)
+![ フィルターアイコンがオーディエンスポータルで強調表示されます。](../images/methods/filter-audiences.png)
 
 使用可能なフィルター内で、**[!UICONTROL Update frequency]**&#x200B;に移動し、「[!UICONTROL Streaming]」を選択します。 このフィルターを使用すると、ストリーミングセグメンテーションを使用して評価された組織内のすべてのオーディエンスが表示されます。
 
-![&#x200B; ストリーミングの更新頻度が選択され、ストリーミングセグメンテーションを使用して評価された組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
+![ ストリーミングの更新頻度が選択され、ストリーミングセグメンテーションを使用して評価された組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
 
-Experience Platformでのオーディエンスの表示について詳しくは、[&#x200B; オーディエンスポータルガイド &#x200B;](../ui/audience-portal.md)を参照してください。
+Experience Platformでのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md)を参照してください。
 
 >[!ENDTABS]
 
@@ -372,7 +372,7 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 オーディエンスポータルでオーディエンスを選択すると、オーディエンスの詳細ページが表示されます。 これにより、オーディエンスの詳細の要約、時間の経過に伴う適格プロファイルの量、オーディエンスがアクティブ化された宛先など、オーディエンスに関する情報が表示されます。
 
-![&#x200B; ストリーミングセグメンテーションを使用して評価されたオーディエンスのオーディエンスの詳細ページが表示されます。](../images/methods/streaming/audience-details.png)
+![ ストリーミングセグメンテーションを使用して評価されたオーディエンスのオーディエンスの詳細ページが表示されます。](../images/methods/streaming/audience-details.png)
 
 ストリーミングが有効なオーディエンスの場合、**[!UICONTROL Profiles over time]** カードが表示され、合計適格オーディエンス数と新しいオーディエンス更新指標が表示されます。
 
@@ -382,7 +382,7 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 ![時間の経過に伴うプロファイル カードがハイライト表示されます。](../images/methods/streaming/profiles-over-time.png)
 
-オーディエンスの詳細については、[&#x200B; オーディエンスポータルの概要](../ui/audience-portal.md#audience-details)を参照してください。
+オーディエンスの詳細については、[ オーディエンスポータルの概要](../ui/audience-portal.md#audience-details)を参照してください。
 
 ## 次の手順
 
@@ -476,5 +476,3 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 アクティブな結合ポリシーセットがない場合は、[結合ポリシーを設定し](../../profile/merge-policies/ui-guide.md#configure) エッジでアクティブになるように設定する必要があります。
 
 +++
-
->[!ENDSHADEBOX]
