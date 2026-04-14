@@ -21,8 +21,8 @@ ht-degree: 8%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; ソース &#x200B;](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、Experience Platform サービスを使用して着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 ### 必要な資格情報の収集
 
@@ -53,7 +53,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 既存のアカウントを使用するには、**[!UICONTROL Existing account]**&#x200B;を選択し、使用する[!DNL Azure Databricks] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイスで、「既存のアカウント」が選択されています。](../../../../images/tutorials/create/databricks/existing.png)
+![&#x200B; ソースワークフローの既存のアカウントインターフェイスで、「既存のアカウント」が選択されています。](../../../../images/tutorials/create/databricks/existing.png)
 
 ### 新しいアカウントを作成
 
@@ -65,7 +65,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 * データベース
 * カタログ
 
-![ アカウント名とオプションの説明が指定された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
+![&#x200B; アカウント名とオプションの説明が指定された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
 
 さらに、[!UICONTROL Staging SAS URI]資格情報をコピーして[!DNL Azure Databricks]環境に貼り付ける必要があります。 終了したら、**[!UICONTROL Connect to source]**&#x200B;を選択し、接続が確立されるまでしばらく待ちます。
 
@@ -73,4 +73,4 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 ## [!DNL Azure Databricks] データのデータフローを作成
 
-[!DNL Azure Databricks] アカウントを正常に接続したので、[ データフローを作成し、データベースからExperience Platform](../../dataflow/databases.md)にデータを取り込むことができます。
+[!DNL Azure Databricks] アカウントを正常に接続したので、[&#x200B; データフローを作成し、データベースからExperience Platform](../../dataflow/databases.md)にデータを取り込むことができます。
