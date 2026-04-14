@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1091'
 ht-degree: 88%
 
 ---
@@ -74,10 +74,10 @@ ht-degree: 88%
       - [Amazon Redshift コネクタ](connectors/databases/redshift.md)
       - [Azure HDInsights 上の Apache Hive コネクタ](connectors/databases/hive.md)
       - [Azure HDInsights 上の Apache Spark コネクタ](connectors/databases/spark.md)
-      - [Azure Databricks コネクタ](connectors/databases/databricks.md)
       - [Azure Data Explorer コネクタ](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics コネクタ](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage コネクタ](connectors/databases/ats.md)
+      - [Databricks コネクタ](connectors/databases/databricks.md)
       - [Google BigQuery コネクタ](connectors/databases/bigquery.md)
       - [GreenPlum コネクタ](connectors/databases/greenplum.md)
       - [HP Vertica コネクタ](connectors/databases/hp-vertica.md)
@@ -167,10 +167,10 @@ ht-degree: 88%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 上の Apache Spark](tutorials/api/create/databases/spark.md)
-         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
+         - [Databricks](tutorials/api/create/databases/databricks.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -290,10 +290,10 @@ ht-degree: 88%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights 上の Apache Spark](tutorials/ui/create/databases/spark.md)
-         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
+         - [Databricks](tutorials/ui/create/databases/databricks.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
