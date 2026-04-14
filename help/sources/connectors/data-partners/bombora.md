@@ -46,7 +46,7 @@ B2B マーケターは、Real-Time CDPでアカウントリストを作成し、
 
 ### Experience Platformの権限の設定
 
-**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL Manage Sources]**&#x200B;と[!DNL Bombora]の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[ アクセス制御UI ガイド ](../../../access-control/abac/ui/permissions.md)を参照してください。
+**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL Manage Sources]**&#x200B;と[!DNL Bombora]の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御UI ガイド &#x200B;](../../../access-control/abac/ui/permissions.md)を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -69,7 +69,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 | シークレットアクセスキー | [!DNL Bombora] シークレット アクセス キー。 これは、Experience Platformにアカウントを認証するために必要な40文字の64でエンコードされた文字列です。 |
 | バケット名 | データの取得元となる[!DNL Bombora] バケット。 |
 
-これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、[ ソースの概要 [!DNL Google Cloud Storage] の](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)前提条件ガイドを参照してください。
+これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、[&#x200B; ソースの概要 [!DNL Google Cloud Storage] の](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)前提条件ガイドを参照してください。
 
 ## [!DNL Bombora] スキーマ {#schema}
 
@@ -105,7 +105,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 ## UIで[!DNL Bombora] アカウントをExperience Platformに接続します
 
-前提条件の設定が完了したら、[ アカウントをExperience Platform [!DNL Bombora] に接続する](../../tutorials/ui/create/data-partners/bombora.md)に関するチュートリアルを参照して、統合を開始してください。
+前提条件の設定が完了したら、[&#x200B; アカウントをExperience Platform [!DNL Bombora] に接続する](../../tutorials/ui/create/data-partners/bombora.md)に関するチュートリアルを参照して、統合を開始してください。
 
 ## よくある質問 {#faq}
 
@@ -123,7 +123,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-現在、取り込みとアクティベーションには標準の[!DNL Bombora] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Bombora]  スキーマガイド ](#schema)を参照して、フィールドの可用性の詳細を確認してください。
+現在、取り込みとアクティベーションには標準の[!DNL Bombora] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Bombora]  スキーマガイド &#x200B;](#schema)を参照して、フィールドの可用性の詳細を確認してください。
 
 +++
 
@@ -147,7 +147,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-[ クエリサービス ](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
+[&#x200B; クエリサービス &#x200B;](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
 
 +++
 
@@ -167,7 +167,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-Experience Platformでインテントデータを削除するには、[ データセット ](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
+Experience Platformでインテントデータを削除するには、[&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
 
 +++
 
@@ -203,6 +203,6 @@ Experience Platformのドメインマッチングは、スクラブドメイン�
 
 +++回答
 
-インテントデータは、[ アカウントオーディエンス ](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定し、エンゲージメントし、マーケティングとセールスのアウトリーチを最適化することができます。
+インテントデータは、[&#x200B; アカウントオーディエンス &#x200B;](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定し、エンゲージメントし、マーケティングとセールスのアウトリーチを最適化することができます。
 
 +++
