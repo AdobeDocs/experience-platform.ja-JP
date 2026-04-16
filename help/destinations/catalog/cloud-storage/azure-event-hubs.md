@@ -23,8 +23,8 @@ ht-degree: 43%
 
 [!DNL Azure Event Hubs] ストレージへのリアルタイムのアウトバウンド接続を作成して、[!DNL Adobe Experience Platform]からデータをストリーミングできます。
 
-* [!DNL Azure Event Hubs]について詳しくは、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)を参照してください。
-* プログラムで[!DNL Azure Event Hubs]に接続するには、[ ストリーミング宛先API チュートリアル ](../../api/streaming-destinations.md)を参照してください。
+* [!DNL Azure Event Hubs]について詳しくは、[Microsoftのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)を参照してください。
+* プログラムで[!DNL Azure Event Hubs]に接続するには、[&#x200B; ストリーミング宛先API チュートリアル &#x200B;](../../api/streaming-destinations.md)を参照してください。
 * Experience Platform ユーザーインターフェイスを使用して[!DNL Azure Event Hubs]に接続するには、以下の節を参照してください。
 
 ![UIのAWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -41,7 +41,7 @@ ht-degree: 43%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | × | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -52,10 +52,10 @@ ht-degree: 43%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -73,13 +73,13 @@ ht-degree: 43%
 
 ## IP アドレスの許可リスト {#ip-address-allowlist}
 
-お客様のセキュリティとコンプライアンス要件を満たすために、Experience Platformでは、[!DNL Azure Event Hubs]宛先に対して許可リストに加えるできる静的IPの一覧を提供しています。 許可リストに加えるするIPの完全なリストについては、[ ストリーミング宛先のIP アドレスの許可リストに加える](/help/destinations/catalog/streaming/ip-address-allow-list.md)を参照してください。
+お客様のセキュリティとコンプライアンス要件を満たすために、Experience Platformでは、[!DNL Azure Event Hubs]宛先に対して許可リストに加えるできる静的IPの一覧を提供しています。 許可リストに加えるするIPの完全なリストについては、[&#x200B; ストリーミング宛先のIP アドレスの許可リストに加える](/help/destinations/catalog/streaming/ip-address-allow-list.md)を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -92,8 +92,8 @@ ht-degree: 43%
 HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Standard authentication]** タイプを選択した場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
 * **[!UICONTROL SAS Key Name]**：認証ルールの名前。これはSAS キー名とも呼ばれます。
-* **[!UICONTROL SAS Key]**: イベントハブ名前空間のプライマリキー。 `sasPolicy`が対応する`sasKey`には、イベントハブのリストを入力するために&#x200B;**manage**&#x200B;権限が設定されている必要があります。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
-* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs]の名前空間を入力します。 [!DNL Azure Event Hubs]名前空間について詳しくは、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)を参照してください。
+* **[!UICONTROL SAS Key]**: イベントハブ名前空間のプライマリキー。 `sasPolicy`が対応する`sasKey`には、イベントハブのリストを入力するために&#x200B;**manage**&#x200B;権限が設定されている必要があります。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
+* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs]の名前空間を入力します。 [!DNL Azure Event Hubs]名前空間について詳しくは、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)を参照してください。
 
 #### Shared Access Signature （SAS）認証 {#sas-authentication}
 
@@ -102,9 +102,9 @@ HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Standard authenti
 HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Standard authentication]** タイプを選択した場合は、以下のフィールドを入力し、**[!UICONTROL Connect to destination]**&#x200B;を選択します。
 
 * **[!UICONTROL SAS Key Name]**：認証ルールの名前。これはSAS キー名とも呼ばれます。
-* **[!UICONTROL SAS Key]**: イベントハブ名前空間のプライマリキー。 `sasPolicy`が対応する`sasKey`には、イベントハブのリストを入力するために&#x200B;**manage**&#x200B;権限が設定されている必要があります。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
-* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs]の名前空間を入力します。 [!DNL Azure Event Hubs]名前空間について詳しくは、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)を参照してください。
-* **[!UICONTROL Event Hub Name]**: [!DNL Azure Event Hub]の名前を入力します。 [!DNL Azure Event Hubs]の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)を参照してください。
+* **[!UICONTROL SAS Key]**: イベントハブ名前空間のプライマリキー。 `sasPolicy`が対応する`sasKey`には、イベントハブのリストを入力するために&#x200B;**manage**&#x200B;権限が設定されている必要があります。 SAS キーを使用して[!DNL Azure Event Hubs]への認証を行う方法については、[Microsoftのドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)を参照してください。
+* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs]の名前空間を入力します。 [!DNL Azure Event Hubs]名前空間について詳しくは、[Microsoft ドキュメント &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)を参照してください。
+* **[!UICONTROL Event Hub Name]**: [!DNL Azure Event Hub]の名前を入力します。 [!DNL Azure Event Hubs]の名前について詳しくは、[Microsoft ドキュメント &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -125,8 +125,8 @@ HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Standard authenti
 * **[!UICONTROL Name]**: [!DNL Azure Event Hubs]への接続の名前を入力します。
 * **[!UICONTROL Description]**：接続の説明を入力します。 例：「プレミアム層のお客様」、「カイトサーフィンに興味のある方」
 * **[!UICONTROL eventHubName]**: [!DNL Azure Event Hubs]宛先にストリームの名前を指定します。
-* **[!UICONTROL Include Segment Names]**: データの書き出しに、書き出すオーディエンスの名前を含めるかどうかを切り替えます。 このオプションを選択したデータ書き出しの例については、以下の「[書き出されたデータ ](#exported-data)」セクションを参照してください。
-* **[!UICONTROL Include Segment Timestamps]**: オーディエンスを作成および更新した際のUNIX タイムスタンプと、オーディエンスをアクティブ化する宛先にマッピングした際のUNIX タイムスタンプをデータ書き出しに含める場合に、切り替えます。 このオプションを選択したデータ書き出しの例については、以下の「[書き出されたデータ ](#exported-data)」セクションを参照してください。
+* **[!UICONTROL Include Segment Names]**: データの書き出しに、書き出すオーディエンスの名前を含めるかどうかを切り替えます。 このオプションを選択したデータ書き出しの例については、以下の「[書き出されたデータ &#x200B;](#exported-data)」セクションを参照してください。
+* **[!UICONTROL Include Segment Timestamps]**: オーディエンスを作成および更新した際のUNIX タイムスタンプと、オーディエンスをアクティブ化する宛先にマッピングした際のUNIX タイムスタンプをデータ書き出しに含める場合に、切り替えます。 このオプションを選択したデータ書き出しの例については、以下の「[書き出されたデータ &#x200B;](#exported-data)」セクションを参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -138,10 +138,10 @@ HTTP エンドポイントに接続する&#x200B;**[!UICONTROL Standard authenti
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* [同意ポリシー評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)は、現在、Azure Event Hubs宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
-この宛先に対するオーディエンスのアクティブ化の手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md)を参照してください。
+この宛先に対するオーディエンスのアクティブ化の手順については、[&#x200B; ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md)を参照してください。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 
@@ -171,7 +171,7 @@ Experience Platformは、プロファイルの書き出し動作を[!DNL Azure E
 
 ![Amazon Kinesis destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクトに、その特定のプロファイルがそのメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示される場合があります（下の[書き出されたデータ ](#exported-data)節を参照）。 プロファイルが&#x200B;**Customer with DeLorean Cars** セグメントに適格であり、**Basic Site ActiveおよびCity - Dallas** セグメントのメンバーでもある場合、これらの2つのオーディエンスは、データフローでマッピングされているため、データエクスポートの`segmentMembership` オブジェクトにも存在します。これらはDeLorean Cars **セグメントを持つ顧客と同じ結合ポリシーを共有する場合です。**
+宛先へのプロファイルの書き出しは、*3 つのマッピングされたセグメント*&#x200B;のいずれかに適合またはいずれかを離脱するプロファイルによって決定されます。データの書き出しでは、`segmentMembership` オブジェクトに、その特定のプロファイルがそのメンバーであり、書き出しをトリガーしたオーディエンスと同じ結合ポリシーを共有している場合、他のマッピングされたオーディエンスが表示される場合があります（下の[書き出されたデータ &#x200B;](#exported-data)節を参照）。 プロファイルが&#x200B;**Customer with DeLorean Cars** セグメントに適格であり、**Basic Site ActiveおよびCity - Dallas** セグメントのメンバーでもある場合、これらの2つのオーディエンスは、データフローでマッピングされているため、データエクスポートの`segmentMembership` オブジェクトにも存在します。これらはDeLorean Cars **セグメントを持つ顧客と同じ結合ポリシーを共有する場合です。**
 
 プロファイル属性の観点から、上記でマッピングした 4 つの属性に対する変更によって、書き出しの宛先が決定し、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
 
