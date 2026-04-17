@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 80%
+source-wordcount: '828'
+ht-degree: 81%
 
 ---
 
@@ -57,6 +57,7 @@ ht-degree: 80%
 * イベント転送 {#event-forwarding}
    * [概要](./ui/event-forwarding/overview.md)
    * [はじめに](./ui/event-forwarding/getting-started.md)
+   * [ガイド付きの設定で](./ui/event-forwarding/guided-setup.md)
    * [シークレットの設定](./ui/event-forwarding/secrets.md)
    * [モニタリング（ベータ版）](./ui/event-forwarding/monitoring.md)
 * 管理 {#admin}
@@ -79,7 +80,7 @@ ht-degree: 80%
       * [Adobe Analytics &amp; Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
-      * Adobe Analytics製品文字列 {#product-string}
+      * Adobe Analytics商品文字列 {#product-string}
          * [概要](./extensions/client/product-string/overview.md)
          * [リリースノート](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
@@ -98,7 +99,7 @@ ht-degree: 80%
       * Adobe Experience Cloud ID サービス {#id-service}
          * [概要](./extensions/client/id-service/overview.md)
          * [リリースノート](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Manager アセットインサイト {#asset-insights}
+      * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概要](./extensions/client/asset-insights/overview.md)
          * [リリースノート](./extensions/client/asset-insights/release-notes.md)
       * Adobe Experience Platform デモ {#platform-demo}
@@ -127,12 +128,12 @@ ht-degree: 80%
             * [提案の適用](extensions/client/web-sdk/actions/apply-propositions.md)
             * [応答を適用](extensions/client/web-sdk/actions/apply-response.md)
             * [ルールセットの評価](extensions/client/web-sdk/actions/evaluate-rulesets.md)
-            * [Media Analytics トラッカーを取得](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
-            * [ID でリダイレクト](extensions/client/web-sdk/actions/redirect-with-identity.md)
-            * [イベント結合 ID をリセット](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+            * [Media Analytics トラッカーを入手](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+            * [IDでリダイレクト](extensions/client/web-sdk/actions/redirect-with-identity.md)
+            * [イベント結合IDをリセット](extensions/client/web-sdk/actions/reset-event-merge-id.md)
             * [イベントを送信](extensions/client/web-sdk/actions/send-event.md)
             * [メディアイベントを送信](extensions/client/web-sdk/actions/send-media-event.md)
-            * [プッシュ購読を送信](extensions/client/web-sdk/actions/send-push-subscription.md)
+            * [プッシュ通知の送信](extensions/client/web-sdk/actions/send-push-subscription.md)
             * [同意を設定](extensions/client/web-sdk/actions/set-consent.md)
             * [変数を更新](extensions/client/web-sdk/actions/update-variable.md)
          * [データ要素タイプ](extensions/client/web-sdk/data-element-types.md)
@@ -159,7 +160,7 @@ ht-degree: 80%
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
-      * [!DNL Algolia] Insights {#algolia-insights}
+      * [!DNL Algolia]個のインサイト {#algolia-insights}
          * [概要](./extensions/client/algolia/overview.md)
       * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
@@ -168,7 +169,7 @@ ht-degree: 80%
       * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
       * [ブランチ](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove] ビデオトラッキング {#brightcove}
+      * [!DNL BrightCove]件のビデオトラッキング {#brightcove}
          * [概要](./extensions/client/brightcove/overview.md)
          * [リリースノート](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
@@ -197,7 +198,7 @@ ht-degree: 80%
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
       * [Genesys Predictive Engagement](https://exchange.adobe.com/apps/ec/106148)
-      * Google データレイヤー {#google-data-layer}
+      * Google Data Layer {#google-data-layer}
          * [概要](./extensions/client/google-data-layer/overview.md)
          * [リリースノート](./extensions/client/google-data-layer/release-notes.md)
       * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
@@ -210,7 +211,7 @@ ht-degree: 80%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ &#x200B;](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -240,14 +241,14 @@ ht-degree: 80%
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] 再生](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube] ビデオトラッキング {#youtube}
+      * [!DNL YouTube]件のビデオトラッキング {#youtube}
          * [概要](./extensions/client/youtube/overview.md)
          * [リリースノート](./extensions/client/youtube/release-notes.md)
    * イベント転送拡張機能（サーバーサイド） {#server}
       * [概要](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [概要](./extensions/server/cloud-connector/overview.md)
-         * [mTLS 証明書](./extensions/server/cloud-connector/mtls.md)
+         * [mTLS証明書](./extensions/server/cloud-connector/mtls.md)
          * [リリースノート](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [概要](./extensions/server/adform/overview.md)
@@ -263,7 +264,7 @@ ht-degree: 80%
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
-      * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
+      * Google Ads強化コンバージョン {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [概要](./extensions/server/google-cloud-platform/overview.md)
@@ -292,28 +293,28 @@ ht-degree: 80%
          * [概要](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [概要](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] Web Events API {#tiktok}
+      * [!DNL Tiktok] Web イベント API {#tiktok}
          * [概要](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [概要](./extensions/server/tradedesk/overview.md)
-      * [!DNL Zendesk] Events API {#zendesk}
+      * [!DNL Zendesk] イベント API {#zendesk}
          * [概要](./extensions/server/zendesk/overview.md)
 * 拡張機能の開発 {#extension-dev}
    * [概要](./extension-dev/overview.md)
    * [はじめに](./extension-dev/getting-started.md)
    * [サポートされているブラウザー](./extension-dev/browsers.md)
-   * 送信プロセス {#submit}
+   * 提出プロセス {#submit}
       * [概要](./extension-dev/submit/overview.md)
-      * [組織設定](./extension-dev/submit/setup.md)
+      * [組織の設定](./extension-dev/submit/setup.md)
       * [ユーザーアクセスの許可](./extension-dev/submit/access.md)
       * [拡張機能の開発](./extension-dev/submit/develop.md)
       * [Exchange リストの作成](./extension-dev/submit/create-listing.md)
-      * [拡張機能パッケージ zip の作成](./extension-dev/submit/create-extension-package-zip.md)
+      * [拡張機能パッケージ zipの作成](./extension-dev/submit/create-extension-package-zip.md)
       * [エンドツーエンドテストのアップロードと実装](./extension-dev/submit/upload-and-test.md)
       * [拡張機能のリリース](./extension-dev/submit/release.md)
    * [拡張機能の設定](./extension-dev/configuration.md)
    * [拡張機能マニフェスト](./extension-dev/manifest.md)
-   * Web 拡張機能 {#web}
+   * web拡張機能 {#web}
       * [拡張機能のフロー](./extension-dev/web/flow.md)
       * [ライブラリモジュールの形式](./extension-dev/web/format.md)
       * [件数](./extension-dev/web/views.md)
@@ -323,7 +324,7 @@ ht-degree: 80%
       * [データ要素タイプ](./extension-dev/web/data-element-types.md)
       * [コアモジュール](./extension-dev/web/core.md)
       * [共有モジュール](./extension-dev/web/shared.md)
-   * Edge拡張機能 {#edge}
+   * Edgeの拡張機能 {#edge}
       * [拡張機能のフロー](./extension-dev/edge/flow.md)
       * [ライブラリモジュールの形式](./extension-dev/edge/format.md)
       * [条件のタイプ](./extension-dev/edge/condition-types.md)
@@ -333,7 +334,7 @@ ht-degree: 80%
    * [サードパーティライブラリのホスト](./extension-dev/third-party-libraries.md)
    * [turbine 自由変数](./extension-dev/turbine.md)
    * [下位互換性規格](./extension-dev/backwards-compatibility.md)
-   * [共有プライベート拡張機能](./extension-dev/shared-private-extensions.md)
+   * [共有されたプライベート拡張機能](./extension-dev/shared-private-extensions.md)
 * Reactor API {#api}
    * [概要](./api/overview.md)
    * [Reactor API の認証とアクセス](./api/getting-started.md)
@@ -344,7 +345,7 @@ ht-degree: 80%
       * [ルール](./api/endpoints/rules.md)
       * [ルールコンポーネント](./api/endpoints/rule-components.md)
       * [拡張機能パッケージ](./api/endpoints/extension-packages.md)
-      * [拡張機能パッケージの使用認証](./api/endpoints/extension-package-usage-authorizations.md)
+      * [拡張機能パッケージの使用の承認](./api/endpoints/extension-package-usage-authorizations.md)
       * [拡張機能](./api/endpoints/extensions.md)
       * [ライブラリ](./api/endpoints/libraries.md)
       * [ビルド](./api/endpoints/builds.md)
