@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->このドキュメントは、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)を参照してください。
+>このドキュメントは、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud)を参照してください。
 
 このガイドでは、Adobe Experience Platformの暗号化キーを作成、管理、制御することで、Amazon Web Services（AWS） Key Management Service （KMS）でデータを保護する方法を説明します。 この統合により、コンプライアンスの簡素化、自動化による運用の合理化、独自の主要管理インフラストラクチャを維持する必要性がなくなります。
 
-Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)を参照してください
+Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-privacy/cmk)を参照してください
 
 >[!IMPORTANT]
 >
