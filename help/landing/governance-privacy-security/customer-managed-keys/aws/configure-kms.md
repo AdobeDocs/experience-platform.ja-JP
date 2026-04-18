@@ -17,7 +17,7 @@ ht-degree: 0%
 
 このガイドでは、Adobe Experience Platformの暗号化キーを作成、管理、制御することで、Amazon Web Services（AWS） Key Management Service （KMS）でデータを保護する方法を説明します。 この統合により、コンプライアンスの簡素化、自動化による運用の合理化、独自の主要管理インフラストラクチャを維持する必要性がなくなります。
 
-Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメント ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)を参照してください
+Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)を参照してください
 
 >[!IMPORTANT]
 >
@@ -29,14 +29,14 @@ AWS KMSを使用すれば、Adobe Experience Platformの暗号化キーを一元
 
 このドキュメントを続ける前に、次の主要な概念と機能について十分に理解しておく必要があります。
 
-- **AWS Key Management Service （KMS）**：暗号化キーの作成、管理、回転の方法など、AWS KMSの基本を理解します。 詳しくは、[公式KMS ドキュメント ](https://docs.aws.amazon.com/kms/)を参照してください。
+- **AWS Key Management Service （KMS）**：暗号化キーの作成、管理、回転の方法など、AWS KMSの基本を理解します。 詳しくは、[公式KMS ドキュメント &#x200B;](https://docs.aws.amazon.com/kms/)を参照してください。
 - AWS **の** Identity and Access Management （IAM） ポリシー：IAMは、AWS サービスとリソースへのアクセスを安全に管理できるサービスです。 IAMを使用して以下を行います。
    - 特定のリソースにアクセスできるユーザー、グループ、役割を定義します。
    - ユーザーが実行を許可または拒否するアクションを指定します。
    - IAM ポリシーを使用して権限を割り当てることで、きめ細かいアクセス制御を実装します。
-詳しくは、[AWS KMSのIAM ポリシーの公式ドキュメント ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html)を参照してください。
-- **Experience Platformのデータセキュリティ**: Experience Platformがどのようにデータのセキュリティを確保し、暗号化のためにAWS KMSなどの外部サービスと統合するかを説明します。 Experience Platformは、転送時のHTTPS TLS v1.2、クラウドプロバイダーによる保管中の暗号化、隔離ストレージ、カスタマイズ可能な認証および暗号化オプションによってデータを保護します。 データのセキュリティを維持する方法について詳しくは、[ ガバナンス、プライバシー、セキュリティの概要](../overview.md)または[Experience Platformでのデータ暗号化](../../encryption.md)のドキュメントを参照してください。
-- **AWS Management Console**: 1つのweb ベース アプリケーションからすべてのAWS サービスにアクセスして管理できる中央ハブ。 検索バーを使用して、ツールの検索、通知の確認、アカウントと請求の管理、設定のカスタマイズをすばやく実行できます。 詳しくは、[公式AWS管理コンソールのドキュメント ](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)を参照してください。
+詳しくは、[AWS KMSのIAM ポリシーの公式ドキュメント &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html)を参照してください。
+- **Experience Platformのデータセキュリティ**: Experience Platformがどのようにデータのセキュリティを確保し、暗号化のためにAWS KMSなどの外部サービスと統合するかを説明します。 Experience Platformは、転送時のHTTPS TLS v1.2、クラウドプロバイダーによる保管中の暗号化、隔離ストレージ、カスタマイズ可能な認証および暗号化オプションによってデータを保護します。 データのセキュリティを維持する方法について詳しくは、[&#x200B; ガバナンス、プライバシー、セキュリティの概要](../overview.md)または[Experience Platformでのデータ暗号化](../../encryption.md)のドキュメントを参照してください。
+- **AWS Management Console**: 1つのweb ベース アプリケーションからすべてのAWS サービスにアクセスして管理できる中央ハブ。 検索バーを使用して、ツールの検索、通知の確認、アカウントと請求の管理、設定のカスタマイズをすばやく実行できます。 詳しくは、[公式AWS管理コンソールのドキュメント &#x200B;](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)を参照してください。
 
 ## 基本を学ぶ {#get-started}
 
@@ -44,7 +44,7 @@ AWS KMSを使用すれば、Adobe Experience Platformの暗号化キーを一元
 
 ### サポートされている地域を選択 {#select-supported-region}
 
-AWS KMSは、特定の地域で利用できます。 KMSがサポートされている地域で操作していることを確認してください。 サポートされているリージョンの完全なリストは、[AWS KMS エンドポイントおよびクォータ リスト ](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)で確認できます。
+AWS KMSは、特定の地域で利用できます。 KMSがサポートされている地域で操作していることを確認してください。 サポートされているリージョンの完全なリストは、[AWS KMS エンドポイントおよびクォータ リスト &#x200B;](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)で確認できます。
 
 AWS KMS暗号化キーがAdobe Experience Platform インスタンスと同じリージョンにあることを確認して、データレジデンシー要件への準拠を維持し、パフォーマンスを最適化し、リージョン間の追加コストを回避します。 地域が調整されていない場合、データにアクセスできなくなり、統合に失敗する可能性があります。
 
@@ -60,13 +60,13 @@ KMS内で暗号化キーを作成、管理、使用するために必要なAWS I
 
 ### AWS アカウント設定を確認する
 
-AWS アカウントでAWS KMS サービスの使用が有効になっていることを確認します。 ほとんどのアカウントでは、デフォルトでKMS アクセスが有効になっていますが、[AWS Management Console](https://aws.amazon.com/console/)にアクセスして、アカウント設定を確認できます。 詳しくは、[AWS Key Management Service開発者ガイド ](https://docs.aws.amazon.com/ja_jp/kms/latest/developerguide/overview.html)を参照してください。
+AWS アカウントでAWS KMS サービスの使用が有効になっていることを確認します。 ほとんどのアカウントでは、デフォルトでKMS アクセスが有効になっていますが、[AWS Management Console](https://aws.amazon.com/console/)にアクセスして、アカウント設定を確認できます。 詳しくは、[AWS Key Management Service開発者ガイド &#x200B;](https://docs.aws.amazon.com/ja_jp/kms/latest/developerguide/overview.html)を参照してください。
 
 ### AWS KMSに移動して、キー設定を開始します
 
 暗号化キーの設定と管理を開始するには、AWS アカウントにログインし、AWS Key Management Service （KMS）に移動します。 AWS Management Consoleで、サービスメニューから「**Key Management Service （KMS）**」を選択します。
 
-![ キー管理サービスがハイライト表示されたAWS Management Consoleの検索ドロップダウンメニュー。](../../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
+![&#x200B; キー管理サービスがハイライト表示されたAWS Management Consoleの検索ドロップダウンメニュー。](../../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
 
 ## 新しいキーを作成 {#create-a-key}
 
@@ -76,7 +76,7 @@ AWS アカウントでAWS KMS サービスの使用が有効になっている�
 
 [!DNL Key Management Service (KMS)] ワークスペースで、**[!DNL Create a key]**&#x200B;を選択します。
 
-![ キーの作成がハイライト表示されたキー管理サービス ワークスペース。](../../../images/governance-privacy-security/key-management-service/create-a-key.png)
+![&#x200B; キーの作成がハイライト表示されたキー管理サービス ワークスペース。](../../../images/governance-privacy-security/key-management-service/create-a-key.png)
 
 ## キー設定の設定 {#configure-key}
 
@@ -110,7 +110,7 @@ AWS アカウントでAWS KMS サービスの使用が有効になっている�
 
 設定に問題がなければ、**[!DNL Next]**&#x200B;を選択してワークフローを続行します。
 
-![ エイリアス、説明、タグ、次を強調表示したキーワークフローの手順2を実行します。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
+![&#x200B; エイリアス、説明、タグ、次を強調表示したキーワークフローの手順2を実行します。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
 
 ## 主要な管理権限の定義 {#define-key-admins}
 
@@ -124,7 +124,7 @@ AWS アカウントでAWS KMS サービスの使用が有効になっている�
 
 ワークフローを続行するには、**[!DNL Next]**&#x200B;を選択してください。
 
-![ チェックボックスと次がハイライト表示された、ワークフローの主要な管理者権限の定義ステージ。](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
+![&#x200B; チェックボックスと次がハイライト表示された、ワークフローの主要な管理者権限の定義ステージ。](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
 
 ## 主要ユーザーへのアクセス権の付与 {#assign-key-users}
 
@@ -134,7 +134,7 @@ AWS アカウントでAWS KMS サービスの使用が有効になっている�
 
 ワークフローを続行するには、**[!DNL Next]**&#x200B;を選択してください。
 
-![ チェックボックスと次が強調表示された、ワークフローのキー使用権限の定義ステージ。](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
+![&#x200B; チェックボックスと次が強調表示された、ワークフローのキー使用権限の定義ステージ。](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
 
 ## キー設定の確認 {#review}
 
@@ -144,10 +144,10 @@ AWS アカウントでAWS KMS サービスの使用が有効になっている�
 >
 >キーリージョンがAWS アカウントと同じであることを確認します。
 
-![ キー設定とエイリアスおよび説明のセクションがハイライト表示されたワークフローのレビュー段階。](../../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
+![&#x200B; キー設定とエイリアスおよび説明のセクションがハイライト表示されたワークフローのレビュー段階。](../../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
 
 **[!DNL Confirm]**&#x200B;を選択してプロセスを完了します。 使用可能なすべてのキーを一覧表示するKMS Customer Managed Keys ワークスペースに戻ります。
 
 ## 次の手順
 
-AWS KMSを設定したら、[!UICONTROL Platform Encryption Configuration] UIまたはAdobe Experience Platform APIを使用して統合を設定します。 Customer Managed Keys機能の設定に関する1回限りのプロセスを続行するには、[UI設定ガイド ](./ui-set-up.md)に進みます。
+AWS KMSを設定したら、[!UICONTROL Platform Encryption Configuration] UIまたはAdobe Experience Platform APIを使用して統合を設定します。 Customer Managed Keys機能の設定に関する1回限りのプロセスを続行するには、[UI設定ガイド &#x200B;](./ui-set-up.md)に進みます。
