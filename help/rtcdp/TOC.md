@@ -47,12 +47,12 @@ ht-degree: 58%
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
 * ガードレール {#guardrails}
    * [Real-Time CDP ガードレールの概要](guardrails/overview.md)
-   * データ取り込み用の[ ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [ [!DNL Edge Network API]の](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"} ガードレール
-   * [ データとセグメント化 [!DNL Real-Time Customer Profile] の](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"} ガードレール
-   * [ データ  [!DNL Identity Service] の](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"} ガードレール
-   * [ [!DNL Query Service]の](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"} ガードレール
-   * 宛先を通じたデータのアクティブ化に関する[ ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [データ取り込み用の ガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [&#x200B; [!DNL Edge Network API]の ガードレール](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [&#x200B; データとセグメント化 [!DNL Real-Time Customer Profile] の ガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
+   * [&#x200B; データ  [!DNL Identity Service] の ガードレール](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [&#x200B; [!DNL Query Service]の ガードレール](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [宛先を通じたデータのアクティブ化に関する ガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * 結合ポリシー {#merge-policies}
@@ -79,7 +79,7 @@ ht-degree: 58%
    * [ユースケース例の概要](/help/rtcdp/use-case-guides/overview.md)
    * [顧客体験のユースケースを活用してビジネス目標を推進](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * 顧客獲得 {#customer-acquisition}
-      * [ サードパーティ Cookieに依存せずにエンゲージし、新規顧客を獲得する](/help/rtcdp/partner-data/prospecting.md)
+      * [&#x200B; サードパーティ Cookieに依存せずにエンゲージし、新規顧客を獲得する](/help/rtcdp/partner-data/prospecting.md)
       * [パートナー支援の訪問者認識を利用して、未知の訪問者に対するオンサイト体験をパーソナライズします](/help/rtcdp/partner-data/onsite-personalization.md)
       * [未認証ユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
       * [未認証のサーバーサイドリターゲティング](./partner-data/unauthenticated-retargeting.md)
