@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
+source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 60%
+source-wordcount: '320'
+ht-degree: 58%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 60%
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
       * [Real-Time CDP B2B Edition のガードレール](b2b-guardrails.md)
-      * [Real-Time CDP B2B edition アーキテクチャのアップグレード](b2b-architecture-upgrade.md)
+      * [Real-Time CDP B2B editionのアーキテクチャのアップグレード](b2b-architecture-upgrade.md)
 * Audience ManagerとReal-Time CDP {#evolution}
    * [Audience Manager からの進化](aam-to-rtcdp.md)
 * アカウントプロファイル {#account}
@@ -34,25 +34,25 @@ ht-degree: 60%
    * [アカウントプロファイル UI ガイド](accounts/account-profile-ui-guide.md)
 * 管理 {#admin}
    * [管理の概要](administration/admin-overview.md)
-* オーディエンスとセグメント化 {#segmentation}
+* オーディエンスとセグメンテーション {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
    * [Audience Builder ガイド](segmentation/audience-builder.md)
    * [Real-Time CDP B2B Edition のセグメント化](segmentation/b2b.md)
    * [顧客 AI](segmentation/customer-ai.md)
 * データセット {#datasets}
    * [データセット](datasets/dataset.md)
-   * [Experience Platformのデータ品質](datasets/data-quality.md)
+   * [Experience Platformでのデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
    * [宛先の概要](destinations/overview.md)
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
 * ガードレール {#guardrails}
    * [Real-Time CDP ガードレールの概要](guardrails/overview.md)
-   * [&#x200B; データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=ja){target="_blank"}
-   * [&#x200B; のガードレール  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [&#x200B; データとセグメ  [!DNL Real-Time Customer Profile]  ト化のガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
-   * [&#x200B; データのガ  [!DNL Identity Service]  ドレール](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=ja){target="_blank"}
-   * [&#x200B; のガードレール  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=ja){target="_blank"}
-   * [&#x200B; 宛先を介したデータのアクティベーションのためのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=ja){target="_blank"}
+   * データ取り込み用の[ ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]の](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"} ガードレール
+   * [ データとセグメント化 [!DNL Real-Time Customer Profile] の](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"} ガードレール
+   * [ データ  [!DNL Identity Service] の](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"} ガードレール
+   * [ [!DNL Query Service]の](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"} ガードレール
+   * 宛先を通じたデータのアクティブ化に関する[ ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * 結合ポリシー {#merge-policies}
@@ -63,7 +63,7 @@ ht-degree: 60%
 * プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
    * [プロファイルの参照](profile/profile-browse.md)
-* Real-Time CDP B2B editionの AI/ML サービス {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B edition AI/ML サービス {#b2b-cdp-ai-ml}
    * [関連するアカウント](b2b-ai-ml-services/related-accounts.md)
    * [リードとアカウントのマッチング](b2b-ai-ml-services/lead-to-account-matching.md)
    * リードおよびアカウントの予測スコアリング {#predictive-lead-and-account-scoring-intro}
@@ -76,17 +76,18 @@ ht-degree: 60%
    * [ソースの概要](sources/sources-overview.md)
    * [Real-Time CDP B2B Edition のソース](sources/b2b.md)
 * ユースケース {#use-cases}
-   * [サンプルユースケースの概要](/help/rtcdp/use-case-guides/overview.md)
+   * [ユースケース例の概要](/help/rtcdp/use-case-guides/overview.md)
+   * [顧客体験のユースケースを活用してビジネス目標を推進](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * 顧客獲得 {#customer-acquisition}
-      * [&#x200B; サードパーティ cookie に依存せずに新規顧客を獲得および獲得 &#x200B;](/help/rtcdp/partner-data/prospecting.md)
-      * [パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
-      * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
-      * [認証されていないサーバーサイドリターゲティング](./partner-data/unauthenticated-retargeting.md)
+      * [ サードパーティ Cookieに依存せずにエンゲージし、新規顧客を獲得する](/help/rtcdp/partner-data/prospecting.md)
+      * [パートナー支援の訪問者認識を利用して、未知の訪問者に対するオンサイト体験をパーソナライズします](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [未認証ユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
+      * [未認証のサーバーサイドリターゲティング](./partner-data/unauthenticated-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * パーソナライズされたインサイトとエンゲージメント {#personalization-insights-engagement}
-      * [1 回限りの顧客価値をライフタイム価値に進化](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
-      * [お客様をインテリジェントに再エンゲージ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [顧客をインテリジェントに再エンゲージ：Luma の例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
+      * [一回限りの顧客価値から生涯価値への進化](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
+      * [顧客をインテリジェントにリエンゲージメント](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [顧客をインテリジェントにリエンゲージメントする：Lumaの例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)
