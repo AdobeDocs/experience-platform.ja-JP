@@ -86,7 +86,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 
 >[!IMPORTANT]
 >
->宛先を設定するユーザーは、Marketo インスタンスおよびパーティションで[&#x200B; ユーザーを編集](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
+>宛先を設定するユーザーは、Marketo インスタンスおよびパーティションで[&#x200B; ユーザーを編集](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)権限を持っている必要があります。
 
 ![宛先に接続](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -97,7 +97,7 @@ Experience Platformの属性を、Marketoで組織がアクセスできる任意
 * **[!UICONTROL First searchable field]**：重複排除するフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 デフォルトは電子メール
 * **[!UICONTROL First searchable field]**：重複排除するセカンダリフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 オプション
 
-インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [&#x200B; リードパーティション &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)は、Marketo Engageの概念で、企業や営業地域などのビジネス上の懸念事項によってリードレコードを分離するために使用されます。 Marketo サブスクリプションにワークスペースとパーティション機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトパーティションのみが使用できます。 単一の設定では、設定されたパーティションに存在するリードレコードのみを更新できます。
+インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [&#x200B; リードパーティション &#x200B;](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)は、Marketo Engageの概念で、企業や営業地域などのビジネス上の懸念事項によってリードレコードを分離するために使用されます。 Marketo サブスクリプションにワークスペースとパーティション機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトパーティションのみが使用できます。 単一の設定では、設定されたパーティションに存在するリードレコードのみを更新できます。
 
 >[!IMPORTANT]
 >
