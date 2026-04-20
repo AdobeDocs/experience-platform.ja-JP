@@ -1,9 +1,10 @@
 ---
 title: イベント転送ガイド付き設定
 description: ガイド付き設定を使用してイベント転送を設定する方法を説明します。
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -31,6 +32,10 @@ ht-degree: 1%
 
 データ収集UI![の「開始」カードを表示する](../../images/ui/guided-setup/get-started.png) イベント転送のホームページ
 
+>[!INFO]
+>
+>ガイド付き設定には、データコレクションのホームページから直接アクセスすることもできます。
+
 ### 新しいタグプロパティの作成 {#new-property}
 
 「プロパティの設定」セクションで「**[!UICONTROL New]**」を選択し、新しい&#x200B;**[!UICONTROL Property Domain]**&#x200B;詳細を入力します。
@@ -47,7 +52,7 @@ ht-degree: 1%
 
 今後、**ビジネスポートフォリオの作成**&#x200B;を依頼されます。 **[!UICONTROL Business portfolio name]**&#x200B;を入力し、**[!UICONTROL Next]**&#x200B;を選択します。
 
-![&#x200B; ポートフォリオ名が表示されているビジネス ポートフォリオ ページを作成](../../images/ui/guided-setup/portfolio-name.png)
+![ ポートフォリオ名が表示されているビジネス ポートフォリオ ページを作成](../../images/ui/guided-setup/portfolio-name.png)
 
 リストからビジネス ポートフォリオを選択し、**[!UICONTROL Next]**&#x200B;を選択します。 Business Portfolio、Ad Account、および[!DNL Meta Pixel]の設定を確認できます。 **[!UICONTROL Continue]**&#x200B;を選択して設定を確認し、**[!UICONTROL Next]**&#x200B;を選択します。
 
@@ -65,7 +70,7 @@ ht-degree: 1%
 
 タスクアクションページには、タスクとアクションのリストが表示されます。 これらのタスクを作成するには、**[!UICONTROL Create Resources]**&#x200B;を選択します。
 
-タスクと実行するアクションのリストを表示する![&#x200B; タスクのアクション &#x200B;](../../images/ui/guided-setup/create-resources.png)
+タスクと実行するアクションのリストを表示する![ タスクのアクション ](../../images/ui/guided-setup/create-resources.png)
 
 必要なルール、データ要素、拡張機能、ライブラリ、SDKなどに数分かかって、インストールを完了します。 「リソースの作成」セクションには、作成されたプロパティとリソースへのリンクが表示されます。
 
@@ -79,7 +84,7 @@ ht-degree: 1%
 >
 >検証プロセス中にエラーが発生した場合は、**[!UICONTROL Assurance]** リンクを選択して、失敗した可能性のあるイベントを確認します。
 
-検証結果を表示する![検証ページ &#x200B;](../../images/ui/guided-setup/finished-validation.png)
+検証結果を表示する![検証ページ ](../../images/ui/guided-setup/finished-validation.png)
 
 ### 既存のタグプロパティの使用 {#existing-property}
 
@@ -97,7 +102,7 @@ ht-degree: 1%
 
 既存のタグプロパティを使用しているため、設定プロセスは新しいプロパティワークフローとは若干異なります。 Web プロパティ、ホスト、環境の作成は既に存在するため、システムがスキップします。 最後に、**[!UICONTROL Create Resources]**&#x200B;を選択して、まだ使用できないタスクを作成します。
 
-![&#x200B; タスクのアクションと、スキップされるタスクとアクションのリストを表示](../../images/ui/guided-setup/create-resources-skip.png)
+![ タスクのアクションと、スキップされるタスクとアクションのリストを表示](../../images/ui/guided-setup/create-resources-skip.png)
 
 >[!INFO]
 >
@@ -113,10 +118,10 @@ ht-degree: 1%
 >
 >検証プロセス中にエラーが発生した場合は、**[!UICONTROL Assurance]** リンクを選択して、失敗した可能性のあるイベントを確認します。
 
-検証結果を表示する![検証ページ &#x200B;](../../images/ui/guided-setup/finished-validation.png)
+検証結果を表示する![検証ページ ](../../images/ui/guided-setup/finished-validation.png)
 
 ## 次の手順 {#next-steps}
 
 このガイドでは、ガイド付き設定ツールを使用して[!DNL Meta Conversions API]のプロパティを作成および設定する方法について説明しました。
 
-統合を効果的に実装する方法について詳しくは、[!DNL Meta][の [!DNL Conversions API] ベストプラクティスに関する](https://www.facebook.com/business/help/308855623839366?id=818859032317965)のドキュメントを参照してください。 Adobe Experience Cloudでのタグおよびイベント転送に関する一般的な情報については、[&#x200B; タグの概要](../../home.md)を参照してください。
+統合を効果的に実装する方法について詳しくは、[!DNL Meta][の [!DNL Conversions API] ベストプラクティスに関する](https://www.facebook.com/business/help/308855623839366?id=818859032317965)のドキュメントを参照してください。 Adobe Experience Cloudでのタグおよびイベント転送に関する一般的な情報については、[ タグの概要](../../home.md)を参照してください。
