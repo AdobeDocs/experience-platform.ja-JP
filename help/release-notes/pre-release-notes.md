@@ -1,87 +1,54 @@
 ---
-title: Experience Platformのプレリリースノート
+title: Experience Platform プレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
+source-git-commit: 5d1825bad97d3ec4beece416dc3e0fc9f6ca636d
 workflow-type: tm+mt
-source-wordcount: '1322'
-ht-degree: 18%
+source-wordcount: '1136'
+ht-degree: 17%
 
 ---
 
-# Adobe Experience Platformのプレリリースノート
+# Adobe Experience Platform プレリリースノート
 
 >[!IMPORTANT]
 >
->このドキュメントは、今月のリリースノートの **プレビュー** として提供することを目的としています。 リリース項目は変更される場合があり、最終リリースで追加または削除される場合があります。
+>このドキュメントは、今月のリリースノートの&#x200B;**プレビュー**&#x200B;として作成されます。 リリース項目は変更される可能性があり、最終リリースで追加または削除される場合があります。
 
 >[!TIP]
 >
->その他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
+>他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**リリース日：2026 年 3 月**
+**リリース日：2026年4月**
 
-Adobe Experience Platformの既存の機能に対する新機能とアップデート：
+Adobe Experience Platformの新機能と既存の機能の更新：
 
-- [詳細なデータライフサイクル管理](#advanced-data-lifecycle-management)
-- [Agent Orchestrator](#agent-orchestrator)
 - [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
-- [リアルタイム顧客プロファイル](#profile)
-- [実行と操作](#run-and-operate)
+- [Real-Time CDP](#rtcdp)
+- [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation-service)
 - [ソース](#sources)
 
-## 詳細なデータライフサイクル管理 {#advanced-data-lifecycle-management}
-
-Experience Platformは、消費者レコードとデータセットをプログラムで削除することで、保存されたデータを管理できる、一連のデータハイジーン機能を提供します。 UI のデータライフサイクルワークスペース、または Data Hygiene API への呼び出しを使用して、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、必要な場合は不適切なデータの修正が更新され、組織のポリシーで必要と判断された場合は削除されるようにします。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| マルチデータセットおよびプロファイルのみのレコード削除（API のみ） | 単一のデータセット ID、データセット ID のコンマ区切りリスト、またはのリテラル `ALL` を送信して、1 つ、多数または `datasetId` べてのデータセットの ID を削除できます。 `targetServices` を `["identity","profile","ajo"]` に設定して、削除をプロファイルサービスに制限することもできます。この場合、データレイクは変更されません。 詳しくは、『 [&#x200B; 作業指示のレコード作成ガイド &#x200B;](../hygiene/api/workorder.md) を参照してください。 |
-
-{style="table-layout:auto"}
-
-詳しくは、[&#x200B; 高度なデータライフサイクル管理の概要 &#x200B;](../hygiene/home.md) を参照してください。
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Agent Orchestratorを使用すると、ワークフローを自動化し、複数のチャネルをまたいで顧客とやり取りできる、AI を活用したエージェントを構築およびデプロイできます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| [!DNL Microsoft 365 Copilot] 用Adobe Marketing Agent | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] は、Adobeのマーケティングインテリジェンスを [!DNL Teams]、[!DNL Word]、[!DNL PowerPoint] およびその他の [!DNL Microsoft 365] アプリなどの日常的なツールに直接組み込む組み込みエージェントです。 このエージェントを使用すると、キャンペーンの計画中や、オーディエンスのレビューまたは同僚との共同作業の際に、Adobe アプリケーションから信頼できるキャンペーンインサイトを取り込んだり、お客様からの質問に回答したり、[!DNL Microsoft 365] ーザーワークフローを離れることなく、データに基づいた意思決定を行うことができます。 |
-
-{style="table-layout:auto"}
-
-詳しくは、[Agent Orchestrator ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。
-
 ## 宛先 {#destinations}
 
-Experience Platformから [!DNL Destinations] データの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations]は、Experience Platformからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新規宛先または更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
-| [Snowflake バッチ &#x200B;](../destinations/catalog/warehouses/snowflake-batch.md) 地域の選択 | 検索とドロップダウンを 1 つのコントロールに組み合わせた新しい検索可能なドロップダウンを使用して、地域をより簡単に見つけられるようになりました。 |
-| [Snowflake バッチ &#x200B;](../destinations/catalog/warehouses/snowflake-batch.md) 宛先へのオーディエンスメタデータの書き出し | この宛先に書き出すファイルには、オーディエンスメタデータが含まれるようになりました。 新しいテーブル構造は、今後設定されるすべての新しい宛先接続に適用されます。 古いテーブル構造は、廃止されるまでさらに 3 か月間保持されます。 |
-| [!DNL Adobe Advertising Cloud DSP] 接続 | 新しいAdobe Advertising DSP接続は、従来の接続と同じ機能に加えて、追加の ID のサポートを提供します。 |
-| [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md)、{Criteo[&#x200B; および &#x200B;](../destinations/catalog/advertising/criteo.md)4}Pinterest[&#x200B; に対する外部オーディエンスのサポート](../destinations/catalog/advertising/pinterest.md) | カスタムアップロードオーディエンス（CSV からインポート）、類似オーディエンス、フェデレーティッドオーディエンス、Adobe Journey Optimizerなどの他のExperience Platform アプリで作成されたオーディエンスなど、セグメント化サービスセグメント以外のオーディエンスを、Trade Desk CRM、Criteo およびPinterestに対してアクティブ化できるようになりました。 詳しくは、各宛先のカタログページの [&#x200B; サポートされるオーディエンス &#x200B;](../destinations/catalog/advertising/criteo.md#supported-audiences) の節を参照してください。 |
-| カスタムアップロードオーディエンス制限の増加 | 宛先インスタンスあたり最大 20 個のカスタムアップロードオーディエンスをアクティブ化できるようになりました。 以前は、この制限は 10 でした。 |
-| [&#x200B; ファイルを今すぐ書き出す &#x200B;](../destinations/ui/export-file-now.md) と外部オーディエンスの [&#x200B; アドホックアクティベーション API](../destinations/api/ad-hoc-activation-api.md) サポート | バッチファイルベースの宛先に対してアクティブ化する際に、ファイルを今すぐ書き出し（UI）およびアドホックアクティベーション API を、外部オーディエンス（カスタムアップロード、類似、フェデレーション、他のExperience Platform アプリからのオーディエンスなど）と共に使用できるようになりました。 |
-| OAuth 2 および mTLS を使用した HTTP API 宛先 | 認証エンドポイントに相互 TLS （mTLS）が必要な場合に、OAuth 2 を使用する HTTP API 宛先を作成して認証できるようになりました。宛先設定時のトークン取得で、mTLS がサポートされるようになりました。 |
-| ZoomInfo アカウントの宛先 | Real-Time Customer Data Platform（B2B）から ZoomInfo にアカウントオーディエンスを送信できるようになりました。 |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads カスタマーマッチ ](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 電子メールアドレスで顧客をマッチングし、検索広告やオーディエンス広告を含め、[!DNL Microsoft Advertising Network]をまたいで顧客と再エンゲージできます。 [!DNL Microsoft Advertising] アカウントをReal-Time CDPにリンクして、Experience Platformから直接カスタマーマッチリストの作成と管理を自動化します。 |
+| [!BADGE Beta]{type=Informative} [ カスタムオーディエンスを編集](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platformから[!DNL Reddit Ads]にオーディエンスを送信します。 [!DNL Reddit] アカウントを接続し、IDをマップ化し、オーディエンスをアクティブ化して、[!DNL Reddit]で興味を積極的に探しているユーザーにリーチします。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。 |
+| [!DNL Rokt] | [!DNL Rokt]を使用して、Experience PlatformのオーディエンスをAIを活用したリアルタイムの意思決定に結びつけ、より正確なターゲティング、抑制、パーソナライズによってキャンペーンのパフォーマンスを向上させます。 |
 
 {style="table-layout:auto"}
 
@@ -89,70 +56,81 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 
 | 修正 | 説明 |
 | --- | --- |
-| [Snowflake ストリーミング &#x200B;](../destinations/catalog/warehouses/snowflake.md) アカウント ID の検証 | アカウント ID 手順に正規表現バリデーターが追加されました。 ID を入力すると、組織 ID とアカウント ID が正しい形式（ドット区切り）であることが検証されるようになりました。 |
-| [TikTok](../destinations/catalog/social/tiktok.md) コネクタの電話番号のハッシュ | 電話番号をキーに設定された ID がTikTokに対してアクティブ化されない、宛先カードの設定ミスを修正しました。 |
+| カスタム Personalization モニタリングのサポート | 宛先の監視ダッシュボードで[!DNL Custom Personalization]宛先がサポートされるようになりました。 監視から[!DNL Custom Personalization]を除外した制限事項が削除されました。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。
+詳しくは、[宛先の概要](../destinations/home.md)を参照してください。
 
-## リアルタイム顧客プロファイル {#profile}
+## エクスペリエンスデータモデル（XDM） {#xdm}
 
-Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。
+XDMは、Experience Platformに取り込まれるデータの一般的な構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM標準を遵守することで、あらゆる顧客体験データを共通の表現に組み込み、より迅速に、より統合された方法でインサイトを提供することができます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| プロファイルイベント時間セレクター | 「プロファイルイベント」タブで時間枠を設定して、その範囲内のイベントを表示および分析できるようになりました。 時間枠は最大 30 日まで設定できます。 デフォルトでは、過去 48 時間のイベントが表示されます。 |
+| フィールドグループスキーマ使用状況の可視化 | どのスキーマが詳細ページのフィールドグループを使用しているかを表示し、スキーマメタデータを含む並べ替え可能なダイアログでそれらを探索します。 これにより、他社に後れを取ることなく、依存関係と影響を迅速に評価できます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; リアルタイム顧客プロファイルの概要 &#x200B;](../profile/home.md) を参照してください。
+詳しくは、[XDM システムの概要](../xdm/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。[!DNL Data Lake] の任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルへの取り込みが可能になります。
+クエリサービスを使用して、標準SQLを使用してAdobe Experience Platform [!DNL Data Lake]のデータをクエリします。 [!DNL Data Lake]の任意のデータセットを結合し、クエリの結果を、レポート、Data Science Workspace、またはReal-Time Customer Profileへの取り込みで使用する新しいデータセットとして取得します。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Data Distiller アクセラレーター | 「アクセラレータ」タブからアクセラレータを選択し、必要なパラメーターを入力して、生成された SQL を自分で書くことなく実行またはスケジュールできるようになりました。編集するカスタムテンプレートにアクセラレータをクローンします。 |
+| Data Distiller Accelerator | Adobeで管理され、パラメータ化されたSQL テンプレートをQuery Service UIで実行およびスケジュールして、SQLを記述することなく一般的な分析を実行できます。 これにより、分析ワークフローを標準化し、組織全体で信頼できるクエリロジックを再利用することができます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; クエリサービスの概要 &#x200B;](../query-service/home.md) を参照してください。
+詳しくは、[ クエリサービスの概要](../query-service/home.md)を参照してください。
 
-## 実行と操作 {#run-and-operate}
+## Real-Time CDP {#rtcdp}
 
-実行ツールと操作ツールを使用して、Experience Platform実装を調べ、トラブルシューティングし、最適化します。 スケジュールされたバッチのアクティベーションを可視化し、設定の問題を特定して、システムの信頼性を向上させます。
+[!DNL Real-Time CDP]は、複数のチャネルをまたいでデータをリアルタイムで取り込み、処理、アクティブ化することで、統合された実用的な顧客プロファイルを提供します。 Real-Time CDPなら、Experience Platform内から直接、既存のデータソースを連携し、豊富なオーディエンスを構築して活用し、あらゆる配信先をまたいでプライバシーに準拠したアクティベーションを実現できます。 これにより、マーケター、アナリスト、IT部門は、シームレスなクロスチャネルのマーケティングキャンペーンを通じて、詳細にパーソナライズされたタイムリーな顧客体験を提供できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [&#x200B; ジョブ スケジュール &#x200B;](../run-and-operate/job-schedules.md) 一般提供 | [!DNL Job Schedules] は、取り込みから宛先のアクティベーションまで、データパイプライン全体にわたるすべてのスケジュール済みバッチ処理ジョブの統合ビューを提供します。 実行ステータスを検査し、スケジュールの競合を特定し、ビジネス運用に影響を与える前に設定の問題を診断します。 |
-| ヘルスチェックの一般提供 | スキーマと ID の設定が不十分だと、プロファイルの誤った作成、セグメントの選定の失敗、アクティベーションの不正確さなど、ダウンストリームの重大な問題が引き起こされます。 <br> ヘルスチェックにより、事後対応のトラブルシューティングからプロアクティブな予防的メンテナンスへのアプローチが移行します。 ヘルスチェックは、サンドボックスで使用されるスキーマと ID の常時オンスキャンで、調査とトラブルシューティングに使用できる問題の概要を提供します。 |
+| Real-Time CDP MCP （Beta） | Real-Time CDP MCPを使用して、Real-Time CDPをAI エージェントおよびMCP互換クライアントに取り込み、ネイティブのLLM エクスペリエンスを通じてReal-Time CDPツールと直接やり取りできるようにします。 MCP互換クライアント（Claude、ChatGPT、Claude Code、Codex、Cursor、VS Codeなど）を`https://rtcdp-mcp.adobe.io/mcp`に接続することで、Experience Platform REST API呼び出しの記述や複数のUI ワークフローの操作を行うことなく、自然言語を使用してオーディエンス、宛先設定、アクティベーション実行履歴を調べることができます。 ブラウザーベースのAdobe ログインを完了すると、次のようなツールへの読み取り専用アクセス権が付与されます。 <ul><li>既存オーディエンスの検索</li><li>オーディエンスメンバーシップのプレビュー</li><li>宛先タイプのリスト</li><li>設定済みアカウントのリスト</li><li>設定済み宛先のリスト</li><li>Sourceとの連携のリスト</li><li>ターゲット接続のリスト</li><li>アクティブ化実行の検査</li></ul>。アクションが組織とサンドボックスにスコープされるように、各リクエストには`imsOrgId`と`sandboxName`のパラメーターが必要です。 このBeta リリースでは、書き込み操作はサポートされていません。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; 実行と操作の概要 &#x200B;](../run-and-operate/overview.md)、[&#x200B; ジョブスケジュールの検査 &#x200B;](../run-and-operate/job-schedules.md)、および [Platform UI ガイド &#x200B;](../landing/ui-guide.md) を参照してください。
+詳しくは、[Real-Time CDPの概要](../rtcdp/home.md)を参照してください。
 
-## セグメント化サービス {#segmentation}
+## サンドボックス {#sandboxes}
 
-Experience Platformでは、顧客データからオーディエンスセグメントを作成でき、これらのオーディエンスをライフサイクル全体で管理できます。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Audience Builder の取り込みソース | 無効なストリーミングオーディエンスや非効率的なストリーミングオーディエンスの構築を回避するために、Audience Builder 内で各属性がバッチ、ストリーミングまたはエッジソースのいずれかから取得されたかを確認できるようになりました。 |
-| アカウントオーディエンスビルダーのデータを含むフィールドのみを表示 | アカウントオーディエンスの作成時に、データを含む属性のみを表示するようにフィルタリングできるようになりました。 |
+| Express Copy | Express Copyを使用して、[ サンドボックスツール UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy)から1回のアクションでターゲットサンドボックスにオブジェクトをコピーします。 依存オブジェクトは自動的に検出され、ターゲットサンドボックスに作成されるか、すでに存在する場合に再利用されます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; オーディエンスの概要 &#x200B;](../segmentation/home.md) を参照してください。
+詳しくは、[ サンドボックスの概要](../sandboxes/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation-service}
+
+セグメンテーションサービスを利用して、顧客データからオーディエンスを構築し、Experience Platformでライフサイクル全体を管理できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| ストリーミングセグメント化モニタリング | サンドボックス、データセット、セグメントレベルでの評価率、取り込み遅延、データ品質指標をリアルタイムで可視化し、ストリーミングセグメンテーションを監視します。 評価レート、P95取り込み待ち時間、受信したレコード、評価されたレコード、失敗したレコード、スキップされたレコードなどの指標を表示します。 また、セグメントごとに適格および失格の純新規プロファイルも表示します。 これらのインサイトを活用して、データに影響を与える前にキャパシティ違反と取り込み問題を特定します。 |
+
+{style="table-layout:auto"}
+
+詳しくは、[ オーディエンスの概要](../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
@@ -162,25 +140,11 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | ソース | 説明 |
 | --- | --- |
-| Change Data Capture のサポートの強化 | [!DNL Marketo Engage]、[!DNL Microsoft Dynamics]、および [!DNL Salesforce CRM] ソースで Change Data Capture を使用できるようになりました。 |
+| 自動データフロー無効化 | 30日間連続して失敗するソース取り込みデータフローは自動的に無効になり、不健全なデータフローを表示し、繰り返し失敗する実行を減らすことができます。 |
+| [!DNL Delta Sharing] | [!DNL Delta Sharing] ソースを使用すると、安全でオープンなデータ共有プロトコルを通じて、Delta テーブルをExperience Platformに取り込むことができます。 [!DNL Delta Sharing]接続を設定し、取り込む共有とテーブルを選択すると、Platformはそのデータを自動的にデータセットに取り込むため、分析、セグメント化、アクティベーションに使用できます。 |
+| [!DNL Meta Ads]（ベータ版） | ソース ワークスペースの[!DNL Meta Ads] ソースコネクタ （Beta）を使用して、[!DNL Meta]への認証、広告アカウントの選択、キャンペーンおよびパフォーマンスデータのExperience Platform データセットへの取り込みのスケジュール設定を行うことができます。[!DNL Meta Ads] |
+| [!DNL Talon.One] | 新しい[!DNL Talon.One] バッチおよびストリーミングソースを使用して、Experience Platformを[!DNL Talon.One]に接続できるようになりました。 新しいソースを使用して、ロイヤルティプロファイルデータとトランザクションおよびロイヤルティアクティビティイベントをExperience Platformに取り込みます。 |
 
 {style="table-layout:auto"}
 
 詳しくは、[ソースの概要](../sources/home.md)を参照してください。
-
-<!--
-
-| [!DNL Deltashare] | The new [!DNL Deltashare] source lets you securely bring live, shared datasets from your partners or internal lakehouse environments directly into Adobe's applications without copying or manually uploading files. You connect to a [!DNL Deltashare] endpoint, choose the tables you need, and you can then use that governed, up-to-date data alongside your existing profiles and insights, so you spend less time on data wrangling and more time activating and analyzing it in your marketing workflows. |
-| [!DNL Kobie] | The new [!DNL Kobie] source connector lets you directly ingest rich loyalty data from [!DNL Kobie] into Adobe's applications, so you can activate it alongside your existing customer profiles and insights. You connect your [!DNL Kobie] environment, configure the data objects you want to bring in (such as member status, transactions, and engagement), and then you can use that up-to-date loyalty information to build audiences, personalize experiences, and measure performance without juggling separate systems. |
-| [!DNL Talon.One] | The new Talon.One source lets you seamlessly bring promotion and incentive data from Talon.One into Adobe's applications, so you can use it alongside your existing customer profiles and behavioral data. You connect your Talon.One account, select the entities and events you want to ingest (such as campaigns, coupons, and redemptions), and then you can use that real-time promotion context to build smarter audiences, personalize offers, and better understand which incentives are driving performance—without managing separate, disconnected systems. |
-
--->
-
-<!--
-
-| Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
-
-| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
-| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
-
--->
