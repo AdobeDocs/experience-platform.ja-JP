@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ ht-degree: 0%
 
 ## 基本を学ぶ
 
-フレームワークのテンプレートとサポートリソースをダウンロードして、体系化されたワークショップを実施し、すぐに活用できる優先順位付けされた測定可能なロードマップを作成します。
+[ フレームワークテンプレートとサポートリソース ](../assets/S651-use-case-framework-template.pdf)をダウンロードして、構造化されたワークショップを実行し、優先順位付けされた測定可能なロードマップを作成して、すぐに活用できます。
+
