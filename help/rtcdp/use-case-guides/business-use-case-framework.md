@@ -1,11 +1,9 @@
 ---
 title: 顧客体験のユースケースを活用してビジネス目標を推進
 description: 実用的でワークショップに対応したフレームワークを使用して、測定可能なビジネス成果に関連する顧客体験のユースケースを定義し、優先順位を付け、活用します。 シンプルな「Why → Who/What/Where/How」モデルを適用して、チームの連携、作業のガイド、効果の向上を図るこ→ができます。
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,5 +47,5 @@ ht-degree: 0%
 
 ## 基本を学ぶ
 
-[&#x200B; フレームワークテンプレートとサポートリソース &#x200B;](../assets/S651-use-case-framework-template.pdf)をダウンロードして、構造化されたワークショップを実行し、優先順位付けされた測定可能なロードマップを作成して、すぐに活用できます。
+[ フレームワークテンプレートとサポートリソース ](../assets/S651-use-case-framework-template.pdf)をダウンロードして、構造化されたワークショップを実行し、優先順位付けされた測定可能なロードマップを作成して、すぐに活用できます。
 
