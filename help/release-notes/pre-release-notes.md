@@ -45,9 +45,9 @@ Adobe Experience Platformの新機能と既存の機能の更新：
 
 | 宛先 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Microsoft Ads カスタマーマッチ ](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 電子メールアドレスで顧客をマッチングし、検索広告やオーディエンス広告を含め、[!DNL Microsoft Advertising Network]をまたいで顧客と再エンゲージできます。 [!DNL Microsoft Advertising] アカウントをReal-Time CDPにリンクして、Experience Platformから直接カスタマーマッチリストの作成と管理を自動化します。 |
-| [!BADGE Beta]{type=Informative} [ カスタムオーディエンスを編集](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platformから[!DNL Reddit Ads]にオーディエンスを送信します。 [!DNL Reddit] アカウントを接続し、IDをマップ化し、オーディエンスをアクティブ化して、[!DNL Reddit]で興味を積極的に探しているユーザーにリーチします。 |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。 |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads カスタマーマッチ &#x200B;](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 電子メールアドレスで顧客をマッチングし、検索広告やオーディエンス広告を含め、[!DNL Microsoft Advertising Network]をまたいで顧客と再エンゲージできます。 [!DNL Microsoft Advertising] アカウントをReal-Time CDPにリンクして、Experience Platformから直接カスタマーマッチリストの作成と管理を自動化します。 |
+| [!BADGE Beta]{type=Informative} [&#x200B; カスタムオーディエンスを編集](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platformから[!DNL Reddit Ads]にオーディエンスを送信します。 [!DNL Reddit] アカウントを接続し、IDをマップ化し、オーディエンスをアクティブ化して、[!DNL Reddit]で興味を積極的に探しているユーザーにリーチします。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[&#x200B; （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[&#x200B; （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。 |
 | [!DNL Rokt] | [!DNL Rokt]を使用して、Experience PlatformのオーディエンスをAIを活用したリアルタイムの意思決定に結びつけ、より正確なターゲティング、抑制、パーソナライズによってキャンペーンのパフォーマンスを向上させます。 |
 
 {style="table-layout:auto"}
@@ -88,7 +88,7 @@ XDMは、Experience Platformに取り込まれるデータの一般的な構造�
 
 {style="table-layout:auto"}
 
-詳しくは、[ クエリサービスの概要](../query-service/home.md)を参照してください。
+詳しくは、[&#x200B; クエリサービスの概要](../query-service/home.md)を参照してください。
 
 ## Real-Time CDP {#rtcdp}
 
@@ -112,11 +112,11 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| Express Copy | Express Copyを使用して、[ サンドボックスツール UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy)から1回のアクションでターゲットサンドボックスにオブジェクトをコピーします。 依存オブジェクトは自動的に検出され、ターゲットサンドボックスに作成されるか、すでに存在する場合に再利用されます。 |
+| Express Copy | Express Copyを使用して、[&#x200B; サンドボックスツール UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy)から1回のアクションでターゲットサンドボックスにオブジェクトをコピーします。 依存オブジェクトは自動的に検出され、ターゲットサンドボックスに作成されるか、すでに存在する場合に再利用されます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[ サンドボックスの概要](../sandboxes/home.md)を参照してください。
+詳しくは、[&#x200B; サンドボックスの概要](../sandboxes/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -130,7 +130,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 {style="table-layout:auto"}
 
-詳しくは、[ オーディエンスの概要](../segmentation/home.md)を参照してください。
+詳しくは、[&#x200B; オーディエンスの概要](../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
