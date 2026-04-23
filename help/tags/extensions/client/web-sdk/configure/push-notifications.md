@@ -20,7 +20,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->この機能は、最初に[ カスタムビルドコンポーネント ](custom-build-components.md)を使用して有効にする必要があります。デフォルトでは無効になっています。
+>この機能は、最初に[&#x200B; カスタムビルドコンポーネント &#x200B;](custom-build-components.md)を使用して有効にする必要があります。デフォルトでは無効になっています。
 
 1. Adobe IDの資格情報を使用して[experience.adobe.com](https://experience.adobe.com)にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。

@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Privacy Service]が個人データに対する�
 
 したがって、[!DNL Privacy Service]に送信される各IDには、ID値を発信元システムに関連付けることでコンテキストを提供する名前空間が付属している必要があります。 名前空間は、電子メールアドレス（「電子メール」）などの一般的な概念を表したり、IDをAdobe Advertising IDやAdobe Target IDなどの特定のアプリケーションに関連付けたりできます。
 
-Adobe Experience Platform ID サービスは、グローバルに定義された、またユーザー定義の ID 名前空間を管理します。名前空間について詳しくは、[ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。[!DNL Privacy Service]で一般的に使用される標準の名前空間と名前空間修飾子の一覧については、API ガイドの[付録セクション ](api/appendix.md)を参照してください。
+Adobe Experience Platform ID サービスは、グローバルに定義された、またユーザー定義の ID 名前空間を管理します。名前空間について詳しくは、[ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。[!DNL Privacy Service]で一般的に使用される標準の名前空間と名前空間修飾子の一覧については、API ガイドの[付録セクション &#x200B;](api/appendix.md)を参照してください。
 
 ## ECID とオプトインサービス
 
@@ -39,8 +39,8 @@ Adobe Experience Cloud [!DNL Identity Service]は、[!DNL Experience Cloud]の�
 
 [!DNL Adobe Privacy JavaScript Library]には、ブラウザーに保存されている顧客IDを取得および削除できる機能がいくつか用意されています。 複数のアドビアプリケーションから ECID を含む ID 情報を取得するように、ライブラリを設定できます。コールバックまたはプロミスを使用することで、正常に取得されたIDをプログラムで処理し、[!DNL Privacy Service] APIに送信できます。
 
-いくつかの一般的なユースケースのコードサンプルを含む[!DNL Privacy JS Library]の詳細については、[ プライバシーJS ライブラリの概要](js-library.md)を参照してください。
+いくつかの一般的なユースケースのコードサンプルを含む[!DNL Privacy JS Library]の詳細については、[&#x200B; プライバシーJS ライブラリの概要](js-library.md)を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、プライバシーリクエストで使用する顧客 ID データの取得に関する主要概念を簡単に説明しました。これらの概念とサービスについて詳しくは、各節に記載されているドキュメントへのリンクを確認することをお勧めします。取得したIDを[!DNL Privacy Service]に送信して、アクセス要求、削除要求、または販売停止要求を作成する手順については、[Privacy Service API ガイド ](api/overview.md)を参照してください。
+このドキュメントでは、プライバシーリクエストで使用する顧客 ID データの取得に関する主要概念を簡単に説明しました。これらの概念とサービスについて詳しくは、各節に記載されているドキュメントへのリンクを確認することをお勧めします。取得したIDを[!DNL Privacy Service]に送信して、アクセス要求、削除要求、または販売停止要求を作成する手順については、[Privacy Service API ガイド &#x200B;](api/overview.md)を参照してください。

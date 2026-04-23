@@ -44,7 +44,7 @@ Real-Time CDPでは、次のことが可能です。
 * Adobe Sensei による AI や機械学習を活用して、マーケター向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-詳しくは、[Real-Time Customer Data Platformのドキュメント ](../../rtcdp/overview.md)を参照してください。
+詳しくは、[Real-Time Customer Data Platformのドキュメント &#x200B;](../../rtcdp/overview.md)を参照してください。
 
 **主な特長**
 
@@ -138,7 +138,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 * なし。
 
-[!DNL Schema Registry] APIと[!DNL Schema Editor] ユーザーインターフェイスを使用したXDMの操作について詳しくは、[XDM システムのドキュメント ](../../xdm/home.md)を参照してください。
+[!DNL Schema Registry] APIと[!DNL Schema Editor] ユーザーインターフェイスを使用したXDMの操作について詳しくは、[XDM システムのドキュメント &#x200B;](../../xdm/home.md)を参照してください。
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
@@ -160,7 +160,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 * なし。
 
-[!DNL Real-Time Customer Profile] データの操作に関するチュートリアルやベストプラクティスなど、[!DNL Profile]の詳細については、[ リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+[!DNL Real-Time Customer Profile] データの操作に関するチュートリアルやベストプラクティスなど、[!DNL Profile]の詳細については、[&#x200B; リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -189,4 +189,4 @@ Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを�
 
 * なし。
 
-[!DNL Segmentation Service]について詳しくは、[ セグメント化サービスの概要](../../segmentation/home.md)を参照してください。
+[!DNL Segmentation Service]について詳しくは、[&#x200B; セグメント化サービスの概要](../../segmentation/home.md)を参照してください。

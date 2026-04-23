@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformでデータレイクに対してプライバシーリクエストを行う方法のみを説明します。 Real-Time Customer Profile データストアに対してもプライバシーリクエストを行う場合は、このチュートリアルに加えて、[ プロファイルのプライバシーリクエスト処理](../profile/privacy.md)に関するガイドを参照してください。
+>このガイドでは、Experience Platformでデータレイクに対してプライバシーリクエストを行う方法のみを説明します。 Real-Time Customer Profile データストアに対してもプライバシーリクエストを行う場合は、このチュートリアルに加えて、[&#x200B; プロファイルのプライバシーリクエスト処理](../profile/privacy.md)に関するガイドを参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -149,7 +149,7 @@ curl -X POST \
 
 UIでジョブリクエストを作成する場合は、データレイクに保存されているデータのジョブを処理するために、**[!UICONTROL AEP Data Lake]**&#x200B;の下の&#x200B;**[!UICONTROL Products]**&#x200B;を選択してください。
 
-![ プライバシーリクエスト作成ダイアログで選択されたデータレイク製品を示す画像](./images/privacy/product-value.png)
+![&#x200B; プライバシーリクエスト作成ダイアログで選択されたデータレイク製品を示す画像](./images/privacy/product-value.png)
 
 ### API の使用
 
@@ -202,19 +202,19 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platformは、組織に属するすべての[ サンドボックス ](../sandboxes/home.md)にわたってプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
+>Experience Platformは、組織に属するすべての[&#x200B; サンドボックス &#x200B;](../sandboxes/home.md)にわたってプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
 
 ## リクエスト処理の削除
 
 [!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Experience Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。レコードは7日以内にデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Experience Platform] サービスからもアクセスできません。
 
-プライバシーリクエストに`ProfileService`または`identity`も含めた場合、関連するデータは個別に処理されます。 詳しくは、[ プロファイル ](../profile/privacy.md#delete)の削除要求処理の節を参照してください。
+プライバシーリクエストに`ProfileService`または`identity`も含めた場合、関連するデータは個別に処理されます。 詳しくは、[&#x200B; プロファイル &#x200B;](../profile/privacy.md#delete)の削除要求処理の節を参照してください。
 
 ## 次の手順
 
 このドキュメントでは、データレイクのプライバシーリクエストの処理に関する重要な概念について説明します。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
 
-[ ストアのプライバシー要求を処理する手順については、](../profile/privacy.md) リアルタイム顧客プロファイルのプライバシー要求の処理[!DNL Profile]に関するドキュメントを参照してください。
+[&#x200B; ストアのプライバシー要求を処理する手順については、](../profile/privacy.md) リアルタイム顧客プロファイルのプライバシー要求の処理[!DNL Profile]に関するドキュメントを参照してください。
 
 ## 付録
 

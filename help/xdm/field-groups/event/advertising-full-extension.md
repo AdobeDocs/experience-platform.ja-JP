@@ -22,17 +22,17 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->このフィールドグループ [をExperience Platform UI](../../ui/explore.md)で検索したり、[ パブリック XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)でスキーマ全体を表示したりすることもできます。
+>このフィールドグループ [をExperience Platform UI](../../ui/explore.md)で検索したり、[&#x200B; パブリック XDM リポジトリ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)でスキーマ全体を表示したりすることもできます。
 
 ## フィールドグループ構造
 
 フィールドグループは、スキーマに単一の `_experience` オブジェクトを提供し、スキーマ自身には単一の `adcloud` オブジェクトが含まれます。
 
-![ フィールドグループ [!DNL Advertising]の最上位フィールド ](../../images/field-groups/advertising-full-extension/full-schema.png " フィールドグループ  [!DNL Advertising] の最上位フィールド ")
+![&#x200B; フィールドグループ [!DNL Advertising]の最上位フィールド &#x200B;](../../images/field-groups/advertising-full-extension/full-schema.png " フィールドグループ  [!DNL Advertising] の最上位フィールド ")
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `adDeliveryDetails` | オブジェクト | 広告配信の詳細： このオブジェクトの内容について詳しくは、[ オブジェクト `adDeliveryDetails`の以下の](#adDeliveryDetails) サブセクションを参照してください。 |
+| `adDeliveryDetails` | オブジェクト | 広告配信の詳細： このオブジェクトの内容について詳しくは、[&#x200B; オブジェクト `adDeliveryDetails`の以下の](#adDeliveryDetails) サブセクションを参照してください。 |
 | `advertisement` | オブジェクト | デジタル広告の詳細。 このオブジェクトの内容について詳しくは、広告オブジェクト [の以下の](#advertisement) サブセクションを参照してください。 |
 | `campaign` | オブジェクト | キャンペーン階層の詳細： このオブジェクトの内容について詳しくは、キャンペーンオブジェクト [の以下の](#campaign-campaign) サブセクションを参照してください。 |
 | `conversionDetails` | オブジェクト | 広告のコンバージョンの詳細。 このオブジェクトの内容については詳しくは、[次のサブセクション](#conversionDetails)を参照してください。 |
@@ -46,7 +46,7 @@ ht-degree: 11%
 
 adDeliveryDetails オブジェクトは、広告が配信された場所と方法に関する情報（プレースメント web サイトや位置識別子など）を提供します。
 
-![ オブジェクトとそのフィールドを示す`adDeliveryDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
+![&#x200B; オブジェクトとそのフィールドを示す`adDeliveryDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ adDeliveryDetails オブジェクトは、広告が配信された場所と方�
 
 Advertising オブジェクトは、デジタル広告に関する詳細（識別子、タイプ、クリエイティブ、ターゲティング、関連キーワードなど）を記述します。
 
-![ オブジェクトとそのフィールドを示す`advertisement` スキーマ図。](../../images/field-groups/advertising-full-extension/advertisement.png)
+![&#x200B; オブジェクトとそのフィールドを示す`advertisement` スキーマ図。](../../images/field-groups/advertising-full-extension/advertisement.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -82,7 +82,7 @@ Advertising オブジェクトは、デジタル広告に関する詳細（識�
 
 キャンペーンオブジェクトは、通貨の詳細とともに、アカウント、広告主、プレースメント、パッケージ識別子などの広告キャンペーン階層を定義します。
 
-![ オブジェクトとそのフィールドを示す`campaign` スキーマ図。](../../images/field-groups/advertising-full-extension/campaign.png)
+![&#x200B; オブジェクトとそのフィールドを示す`campaign` スキーマ図。](../../images/field-groups/advertising-full-extension/campaign.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -100,7 +100,7 @@ Advertising オブジェクトは、デジタル広告に関する詳細（識�
 
 conversionDetails オブジェクトは、トラッキングコード、ID、コンバージョンプロパティなど、広告コンバージョンのトラッキング情報を取得します。
 
-![ オブジェクトとそのフィールドを示す`conversionDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/conversionDetails.png "conversionDetails フィールド ")
+![&#x200B; オブジェクトとそのフィールドを示す`conversionDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/conversionDetails.png "conversionDetails フィールド ")
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 手数料オブジェクトは、Advertising DSP、アカウント、広告主ごとに分類された、メディア、データ、その他の広告コストをキャプチャします。
 
-![ オブジェクトとそのフィールドを示す`fees` スキーマ図。](../../images/field-groups/advertising-full-extension/fees.png)
+![&#x200B; オブジェクトとそのフィールドを示す`fees` スキーマ図。](../../images/field-groups/advertising-full-extension/fees.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -137,7 +137,7 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 在庫オブジェクトには、セッションデータ、パートナーコード、サイト ID、コスト通貨、セグメンテーションルールなど、広告在庫の商談に関する詳細が記録されます。
 
-![ オブジェクトとそのフィールドを示す`inventory` スキーマ図。](../../images/field-groups/advertising-full-extension/inventory.png)
+![&#x200B; オブジェクトとそのフィールドを示す`inventory` スキーマ図。](../../images/field-groups/advertising-full-extension/inventory.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -155,7 +155,7 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 `productDetails` オブジェクトには、製品識別子、国、言語、パーティション、タイトル、広告タイプなど、[!DNL Adobe Advertising Search, Social, & Commerce]のショッピング広告で取り上げられた製品に関する情報が含まれています。
 
-![ オブジェクトとそのフィールドを示す`productDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/productDetails.png)
+![&#x200B; オブジェクトとそのフィールドを示す`productDetails` スキーマ図。](../../images/field-groups/advertising-full-extension/productDetails.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -170,4 +170,4 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 このドキュメントでは、[!DNL Adobe Advertising]拡張機能フィールドグループの構造とユースケースについて説明しました。 フィールドグループ自体の詳細については、[公開 XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json)を参照してください。
 
-このフィールドグループを使用してAdobe Experience Platform Web SDKを使用して[!DNL Advertising] データを収集する場合は、[ データストリームの設定](../../../datastreams/overview.md)に関するガイドを参照して、サーバー側のXDMにデータをマッピングする方法を確認してください。
+このフィールドグループを使用してAdobe Experience Platform Web SDKを使用して[!DNL Advertising] データを収集する場合は、[&#x200B; データストリームの設定](../../../datastreams/overview.md)に関するガイドを参照して、サーバー側のXDMにデータをマッピングする方法を確認してください。

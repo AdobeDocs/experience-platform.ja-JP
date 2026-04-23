@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platform の ID データストアに対してプライバシーリクエストを行う方法についてのみ説明します。Experience Platform データレイクまたは[!DNL Real-Time Customer Profile]に対してもプライバシーリクエストを行う予定がある場合は、このチュートリアルに加えて、[ データレイクでのプライバシーリクエスト処理](../catalog/privacy.md)に関するガイドおよび[ プロファイル ](../profile/privacy.md)のプライバシーリクエスト処理に関するガイドを参照してください。
+>このガイドでは、Experience Platform の ID データストアに対してプライバシーリクエストを行う方法についてのみ説明します。Experience Platform データレイクまたは[!DNL Real-Time Customer Profile]に対してもプライバシーリクエストを行う予定がある場合は、このチュートリアルに加えて、[&#x200B; データレイクでのプライバシーリクエスト処理](../catalog/privacy.md)に関するガイドおよび[&#x200B; プロファイル &#x200B;](../profile/privacy.md)のプライバシーリクエスト処理に関するガイドを参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -115,8 +115,8 @@ Real-Time Customer Profile （`ProfileService`）とデータレイク （`aepDa
 | `identity` および `aepDataLake` | 指定されたIDは、Experience Platformが削除リクエストを受信したことを確認するメッセージを送信するとすぐに削除されます。 そのID グラフから構築されたプロファイルは残りますが、IDの関連付けが削除されたので、新しいデータが取り込まれても更新されません。<br><br> データレイク製品がリクエストを受信し、現在処理中であると応答した場合、プロファイルに関連付けられたデータはソフト削除されるため、[!DNL Experience Platform] サービスからはアクセスできません。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
 | `identity`、`ProfileService`、`aepDataLake` | 指定されたIDは、Experience Platformが削除リクエストを受信したことを確認するメッセージを送信するとすぐに削除されます。<br><br> データレイク製品がリクエストを受信し、現在処理中であると応答した場合、プロファイルに関連付けられたデータはソフト削除されるため、[!DNL Experience Platform] サービスからはアクセスできません。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
 
-ジョブのステータスのトラッキングについて詳しくは、[[!DNL Privacy Service]  ドキュメント ](../privacy-service/home.md#monitor)を参照してください。
+ジョブのステータスのトラッキングについて詳しくは、[[!DNL Privacy Service]  ドキュメント &#x200B;](../privacy-service/home.md#monitor)を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Identity Service] におけるプライバシーリクエストの処理に関する重要な概念について説明します。他の[!DNL Experience Cloud] アプリケーションのプライバシー要求の処理について詳しくは、[[!DNL Privacy Service] および [!DNL Experience Cloud]  アプリケーション ](../privacy-service/experience-cloud-apps.md)のドキュメントを参照してください。
+このドキュメントでは、[!DNL Identity Service] におけるプライバシーリクエストの処理に関する重要な概念について説明します。他の[!DNL Experience Cloud] アプリケーションのプライバシー要求の処理について詳しくは、[[!DNL Privacy Service] および [!DNL Experience Cloud]  アプリケーション &#x200B;](../privacy-service/experience-cloud-apps.md)のドキュメントを参照してください。
