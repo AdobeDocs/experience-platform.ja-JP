@@ -1,11 +1,11 @@
 ---
 title: プッシュ通知設定
-description: Web SDK タグ拡張機能のプッシュ通知を設定します。
+description: Web SDK タグ拡張機能のプッシュ通知の設定。
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 6%
+source-wordcount: '178'
+ht-degree: 11%
 
 ---
 
@@ -16,40 +16,36 @@ ht-degree: 6%
 >title="プッシュ通知"
 >abstract="プッシュ通知認証用の VAPID 公開鍵を設定します。"
 
->[!AVAILABILITY]
->
->Web SDKのプッシュ通知は現在 **ベータ版** です。 機能とドキュメントは変更される場合があります。
-
-この設定セクションでは、プッシュ通知認証用の VAPID 公開鍵を設定できます。
+この設定セクションでは、プッシュ通知認証用にVAPID公開鍵を設定できます。
 
 >[!NOTE]
 >
->この機能は、まず [&#x200B; カスタムビルドコンポーネント &#x200B;](custom-build-components.md) を使用して有効にする必要があります。デフォルトでは無効になっています。
+>この機能は、最初に[ カスタムビルドコンポーネント ](custom-build-components.md)を使用して有効にする必要があります。デフォルトでは無効になっています。
 
-1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. Adobe IDの資格情報を使用して[experience.adobe.com](https://experience.adobe.com)にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL Extensions]** に移動して、**[!UICONTROL Configure]** カードの [!UICONTROL Adobe Experience Platform Web SDK] をクリックします。
-1. 「**[!UICONTROL Custom build components]**」を展開し、「**[!UICONTROL Push notifications]**」を有効にします。
-1. [!UICONTROL SDK instances] の下で、下にスクロールして [!UICONTROL Push Notifications] セクションを探します。
-1. VAPID 公開鍵を「**[!UICONTROL VAPID Public Key]**」フィールドに入力します。
+1. **[!UICONTROL Extensions]**&#x200B;に移動し、**[!UICONTROL Configure]** カードの[!UICONTROL Adobe Experience Platform Web SDK]をクリックします。
+1. **[!UICONTROL Custom build components]**&#x200B;を展開し、**[!UICONTROL Push notifications]**&#x200B;を有効にします。
+1. [!UICONTROL SDK instances]で、下にスクロールして[!UICONTROL Push Notifications] セクションを見つけます。
+1. **[!UICONTROL VAPID Public Key]** フィールドにVAPID公開鍵を入力します。
 
-![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像 &#x200B;](../assets/push-notifications.png)
+![Web SDK タグ拡張機能を使用したプッシュ通知の設定を示す画像](../assets/push-notifications.png)
 
 次のフィールドを使用できます。
 
 ## [!UICONTROL VAPID public key]
 
-プッシュ購読に使用される VAPID 公開鍵。 Base64 でエンコードされた文字列です。
+プッシュサブスクリプションに使用されるVAPID公開鍵。 これはBase64でエンコードされた文字列です。
 
 ## [!UICONTROL Application ID]
 
-VAPID 公開鍵に関連付けられたアプリケーション ID。
+VAPID公開鍵に関連付けられたアプリケーション ID。
 
 ## [!UICONTROL Tracking dataset ID]
 
-プッシュ通知トラッキングおよび分析用のデータセット ID。
+プッシュ通知のトラッキングと分析のデータセット ID。
 
 ## JavaScript ライブラリを使用したプッシュ通知
 
-このセクションは、JavaScript ライブラリを設定する際のタグの [`pushNotifications`](/help/collection/js/commands/configure/pushnotifications.md) に相当します。 また、このリンク先ページには、前提条件と VAPID 公開鍵の生成に関する情報も含まれています。
+このセクションは、JavaScript ライブラリを設定する際の[`pushNotifications`](/help/collection/js/commands/configure/pushnotifications.md)に相当するタグです。 リンクされたページには、前提条件とVAPID公開鍵の生成に関する情報も表示されます。

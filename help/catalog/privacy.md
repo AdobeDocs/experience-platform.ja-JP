@@ -2,24 +2,24 @@
 keywords: Experience Platform;ホーム;人気のトピック;Data Lake のプライバシー;ID 名前空間;プライバシー;Data Lake
 solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
-description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
+description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データに対するプライバシーリクエストの処理に関連する基本概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1446'
-ht-degree: 69%
+source-wordcount: '1443'
+ht-degree: 67%
 
 ---
 
-# データレイクでのプライバシーリクエストの処理
+# データレイクでのプライバシーリクエスト処理
 
 Adobe Experience Platform [!DNL Privacy Service] は、法的および組織のプライバシーに関する規則に従って、個人データに対するアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。
 
-このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
+このドキュメントでは、データレイクに保存された顧客データに対するプライバシーリクエストの処理に関連する基本概念について説明します。
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて [&#x200B; プロファイルのプライバシーリクエスト処理 &#x200B;](../profile/privacy.md) に関するガイドを参照してください。
+>このガイドでは、Experience Platformでデータレイクに対してプライバシーリクエストを行う方法のみを説明します。 Real-Time Customer Profile データストアに対してもプライバシーリクエストを行う場合は、このチュートリアルに加えて、[ プロファイルのプライバシーリクエスト処理](../profile/privacy.md)に関するガイドを参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 
 ## ID 名前空間について {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service] は ID 名前空間を使用して、ID の値を元のシステムと関連付け、それらの値に対するコンテキストを提供します。名前空間は、電子メールアドレス（「電子メール」）などの一般的な概念を表すことがあります。また、ID を特定のアプリケーション（Adobe Advertising Cloud ID（「AdCloud」）や Adobe Target ID（「TNTID」）など）に関連付けることができます。
+Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service] は ID 名前空間を使用して、ID の値を元のシステムと関連付け、それらの値に対するコンテキストを提供します。名前空間は、電子メールアドレス（「電子メール」）などの一般的な概念を表したり、IDをAdobe Advertising IDやAdobe Target IDなどの特定のアプリケーションに関連付けたりできます。
 
 [!DNL Identity Service] は、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ## ID データをデータセットに追加
 
-データレイクのプライバシーリクエストを作成する場合、データを見つけて処理するには、有効な ID 値（および関連する名前空間）を各顧客に指定する必要があります。 したがって、プライバシーリクエストの対象となるすべてのデータセットには、関連する XDM スキーマに ID 記述子が含まれている必要があります。
+データレイクのプライバシーリクエストを作成する場合、個々の顧客がデータを検索して適切に処理できるように、有効なID値（および関連する名前空間）を各顧客に提供する必要があります。 したがって、プライバシーリクエストの対象となるすべてのデータセットには、関連する XDM スキーマに ID 記述子が含まれている必要があります。
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ### UI の使用 {#identity-ui}
 
-[!DNL Experience Platform] ユーザーインターフェイスでは、**[!UICONTROL Schemas]** ワークスペースを使用して、既存の XDM スキーマを編集できます。 スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
+[!DNL Experience Platform] ユーザーインターフェイスの&#x200B;**[!UICONTROL Schemas]** ワークスペースでは、既存のXDM スキーマを編集できます。 スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
 
 スキーマ内の適切なフィールドを ID フィールドとして設定したら、[プライバシーリクエストの送信](#submit)に関する次の節に進むことができます。
 
@@ -107,12 +107,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 作成する記述子のタイプ。ID 記述子の場合、値は「xdm:descriptorIdentity」にする必要があります。 |
+| `@type` | 作成する記述子のタイプ。ID記述子の場合、値は「xdm:descriptorIdentity」である必要があります。 |
 | `xdm:sourceSchema` | データセットの XDM スキーマの一意の URI ID。 |
 | `xdm:sourceVersion` | `xdm:sourceSchema` で指定された XDM スキーマのバージョン。 |
 | `xdm:sourceProperty` | 記述子を適用するスキーマフィールドへのパス。 |
 | `xdm:namespace` | [!DNL Privacy Service] が認識する[標準 ID 名前空間](../privacy-service/api/appendix.md#standard-namespaces)の 1 つ、または組織が定義するカスタム名前空間。 |
-| `xdm:property` | :id で使用される名前空間に応じて、「xdm:code」または「xdm`xdm:namespace`」を指定します。 |
+| `xdm:property` | :idで使用されている名前空間に応じて、「xdm:code」または「xdm`xdm:namespace`」のいずれかになります。 |
 | `xdm:isPrimary` | オプションのブール値。true の場合は、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。含めない場合のデフォルトは false です。 |
 
 **応答**
@@ -137,9 +137,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->この節では、データレイクのプライバシーリクエストをフォーマットする方法について説明します。 リクエストペイロードで送信されたユーザー ID データの形式を適切に設定する方法など、プライバシージョブの送信方法に関する完全な手順については、[[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) または [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) のドキュメントを確認することを強くお勧めします。
+>このセクションでは、データレイクに対するプライバシーリクエストを設定する方法について説明します。 リクエストペイロードで送信されたユーザー ID データの形式を適切に設定する方法など、プライバシージョブの送信方法に関する完全な手順については、[[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) または [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) のドキュメントを確認することを強くお勧めします。
 
-次の節では、[!DNL Privacy Service] の UI または API を使用してデータレイクに対してプライバシーリクエストをおこなう方法について概説します。
+次の節では、[!DNL Privacy Service] UIまたはAPIを使用して、データレイクに対してプライバシーリクエストを行う方法の概要を説明します。
 
 >[!IMPORTANT]
 >
@@ -147,19 +147,19 @@ curl -X POST \
 
 ### UI の使用
 
-UI でジョブリクエストを作成する場合は、データレイクに保存されたデータのジョブを処理するために、必ず **[!UICONTROL AEP Data Lake]** の下にある **[!UICONTROL Products]** を選択します。
+UIでジョブリクエストを作成する場合は、データレイクに保存されているデータのジョブを処理するために、**[!UICONTROL AEP Data Lake]**&#x200B;の下の&#x200B;**[!UICONTROL Products]**&#x200B;を選択してください。
 
-![&#x200B; プライバシーリクエスト作成ダイアログで選択された Data Lake 製品を示す画像 &#x200B;](./images/privacy/product-value.png)
+![ プライバシーリクエスト作成ダイアログで選択されたデータレイク製品を示す画像](./images/privacy/product-value.png)
 
 ### API の使用
 
-API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。ID サービスによって認識される有効な ID 名前空間を名前空間値に指定する必要があります。 標準名前空間には `standard` を使用し、カスタム名前空間には `custom` を使用します。
+API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。ID サービスで認識される有効なID名前空間を、名前空間値に指定する必要があります。 標準の名前空間には`standard`を使用し、カスタム名前空間には`custom`を使用します。
 
-データレイクの ID は、`unregistered` 値に `type` を使用し、該当するデータセットに追加された `namespace` プライバシーラベル [&#x200B; の 1 つと一致する &#x200B;](#privacy-labels) 値を使用する必要があります。
+データレイクのIDは、その`unregistered`値に`type`を使用し、該当するデータセットに追加された`namespace` プライバシーラベル [のいずれかに一致する](#privacy-labels)値を使用する必要があります。
 
-さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。データレイクにリクエストを送信する場合、配列には値 `aepDataLake` が含まれている必要があります。
+さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。データレイクにリクエストを行う場合、配列に値`aepDataLake`を含める必要があります。
 
-次のリクエストは、未登録の `email_label` 名前空間を使用して、データレイクの新しいプライバシージョブを作成します。 また、`include` の配列にデータレイクの製品値も含まれます。
+次のリクエストは、未登録の`email_label`名前空間を使用して、データレイクの新しいプライバシージョブを作成します。 また、`include`配列のデータレイクの製品値も含まれます。
 
 ```shell
 curl -X POST \
@@ -202,23 +202,23 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platformは、組織に属するすべての [&#x200B; サンドボックス &#x200B;](../sandboxes/home.md) でプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
+>Experience Platformは、組織に属するすべての[ サンドボックス ](../sandboxes/home.md)にわたってプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Experience Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、7 日以内にレコードがデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Experience Platform] サービスからもアクセスできません。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Experience Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。レコードは7日以内にデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Experience Platform] サービスからもアクセスできません。
 
-プライバシーリクエストに `ProfileService` または `identity` も含めた場合、関連するデータは個別に処理されます。 詳しくは、[&#x200B; プロファイルのリクエスト処理の削除 &#x200B;](../profile/privacy.md#delete) の節を参照してください。
+プライバシーリクエストに`ProfileService`または`identity`も含めた場合、関連するデータは個別に処理されます。 詳しくは、[ プロファイル ](../profile/privacy.md#delete)の削除要求処理の節を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、データレイクのプライバシーリクエストの処理に関する重要な概念を紹介しました。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
+このドキュメントでは、データレイクのプライバシーリクエストの処理に関する重要な概念について説明します。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
 
-[&#x200B; Store のプライバシーリクエストを処理する手順については、](../profile/privacy.md) リアルタイム顧客プロファイルのプライバシーリクエスト処理 [!DNL Profile] に関するドキュメントを参照してください。
+[ ストアのプライバシー要求を処理する手順については、](../profile/privacy.md) リアルタイム顧客プロファイルのプライバシー要求の処理[!DNL Profile]に関するドキュメントを参照してください。
 
 ## 付録
 
-次の節では、データレイクでプライバシーリクエストを処理するための追加情報を説明します。
+次の節では、データレイクでプライバシーリクエストを処理するための追加情報を示します。
 
 ### ネストされたマップタイプフィールドのラベル付け {#nested-maps}
 

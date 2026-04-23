@@ -2,9 +2,9 @@
 title: Adobe Privacy 拡張機能の概要
 description: Adobe Experience Platform の Adobe Privacy タグ拡張機能について説明します。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '821'
 ht-degree: 78%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 78%
 
 Adobe Privacy タグ拡張機能を使用すると、クライアントサイドデバイス上のアドビソリューションによってエンドユーザーに割り当てられているユーザー ID を収集および削除できます。 その後、収集した ID を[Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) に送信し、Adobe Experience Cloud のサポート対象アプリケーションにある関連する個人データにアクセスしたり削除したりできます。
 
-このガイドでは、Experience Platform UI または Data Collection UI でAdobe Privacy 拡張機能をインストールおよび設定する方法について説明します。
+このガイドでは、Experience Platform UIまたはData Collection UIでAdobe Privacy拡張機能をインストールおよび設定する方法について説明します。
 
 >[!NOTE]
 >
->タグを使用せずにこれらの機能をインストールする場合は、[Privacy のJavaScript ライブラリの概要 &#x200B;](../../../../privacy-service/js-library.md) を参照し、ローコードを使用して実装する手順を確認してください。
+>タグを使用せずにこれらの機能をインストールする場合は、生のコードを使用して実装する手順については、[Privacy JavaScript Libraryの概要](../../../../privacy-service/js-library.md)を参照してください。
 
 ## 拡張機能のインストールと設定
 
-左側のナビゲーションで「**[!UICONTROL Extensions]**」を選択し、次に「**[!UICONTROL Catalog]**」タブを選択します。 検索バーを使用して使用可能な拡張機能のリストを絞り込み、Adobe Privacy を見つけます。「**[!UICONTROL Install]**」を選択して続行します。
+左側のナビゲーションで「**[!UICONTROL Extensions]**」を選択し、「**[!UICONTROL Catalog]**」タブを選択します。 検索バーを使用して使用可能な拡張機能のリストを絞り込み、Adobe Privacy を見つけます。続行するには、**[!UICONTROL Install]**&#x200B;を選択してください。
 
 ![拡張機能のインストール](../../../images/extensions/client/privacy/install.png)
 
@@ -31,9 +31,9 @@ Adobe Privacy タグ拡張機能を使用すると、クライアントサイド
 * Adobe Audience Manager（AAM）
 * Adobe Target
 * Adobe Experience Cloud ID サービス（訪問者または ECID）
-* Adobe Advertising Cloud（AdCloud）
+* Adobe Advertising
 
-1 つ以上のソリューションを選択してから、「**[!UICONTROL Update]**」を選択します。
+1つ以上の解決策を選択してから、**[!UICONTROL Update]**&#x200B;を選択します。
 
 ![ソリューションの選択](../../../images/extensions/client/privacy/select-solutions.png)
 
@@ -49,7 +49,7 @@ Adobe Privacy タグ拡張機能を使用すると、クライアントサイド
 >
 >サポート対象の各ソリューションに設定可能な値について詳しくは、Privacy の JavaScript ライブラリの概要にある[設定パラメーター](../../../../privacy-service/js-library.md#config-params)セクションを参照してください。
 
-選択したソリューションのパラメーターの追加が完了したら、「**[!UICONTROL Save]**」を選択して設定を保存します。
+選択したソリューションのパラメーターの追加が完了したら、**[!UICONTROL Save]**&#x200B;を選択して設定を保存します。
 
 ![オプションで指定できるプロパティ](../../../images/extensions/client/privacy/save-config.png)
 
@@ -57,9 +57,9 @@ Adobe Privacy タグ拡張機能を使用すると、クライアントサイド
 
 Adobe Privacy の拡張機能には、特定のイベントが発生した場合や条件を満たした場合に、[ルール](../../../ui/managing-resources/rules.md)に従って使用できる 3 つのアクションタイプが用意されています。
 
-* **[!UICONTROL Retrieve Identities]**：ユーザーが保存した ID 情報が取得されます。
-* **[!UICONTROL Remove Identities]**：ユーザーが保存した ID 情報が削除されます。
-* **[!UICONTROL Retrieve Then Remove Identities]**：ユーザーが保存した ID 情報を取得してから削除します。
+* **[!UICONTROL Retrieve Identities]**: ユーザーの保存されたID情報が取得されます。
+* **[!UICONTROL Remove Identities]**: ユーザーの保存されたID情報が削除されます。
+* **[!UICONTROL Retrieve Then Remove Identities]**: ユーザーの保存されたID情報が取得され、その後削除されます。
 
 上記の各アクションに対して、取得した ID データを受け取り、オブジェクトパラメーターとして処理するコールバック JavaScript 関数を指定する必要があります。 ここから、これらの ID を必要に応じて保存、表示、または [Privacy Service API](../../../../privacy-service/api/overview.md) に送信できます。
 
@@ -67,7 +67,7 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ### ID を処理するデータ要素の定義
 
-左側のナビゲーションで「**[!UICONTROL Data Elements]**」を選択し、次に「**[!UICONTROL Add Data Element]**」を選択して、新しいデータ要素を作成するプロセスを開始します。 設定画面が表示されたら、拡張機能で「**[!UICONTROL Core]**」を選択し、データ要素タイプで「**[!UICONTROL Custom Code]**」を選択します。 ここから、右側のパネルの「**[!UICONTROL Open Editor]**」を選択します。
+左側のナビゲーションで&#x200B;**[!UICONTROL Data Elements]**&#x200B;を選択し、続いて&#x200B;**[!UICONTROL Add Data Element]**&#x200B;を選択して、新しいデータ要素を作成するプロセスを開始します。 設定画面に移動したら、拡張機能に「**[!UICONTROL Core]**」、データ要素タイプに「**[!UICONTROL Custom Code]**」を選択します。 ここから、右側のパネルで「**[!UICONTROL Open Editor]**」を選択します。
 
 ![データ要素タイプの選択](../../../images/extensions/client/privacy/data-element-type.png)
 
@@ -87,15 +87,15 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 取得した ID を処理するコールバックデータ要素を設定したら、サイトで特定のイベントが発生した場合やいずれかの条件を満たした場合は常に Adobe Privacy 拡張機能を呼び出すルールを作成できます。
 
-ルールのアクションを設定する際に、拡張機能として「**[!UICONTROL Adobe Privacy]**」を選択します。 アクションタイプには、拡張機能に用意されている [3 つの機能](#using)のいずれかを選択します。
+ルールのアクションを設定する際に、拡張機能に「**[!UICONTROL Adobe Privacy]**」を選択します。 アクションタイプには、拡張機能に用意されている [3 つの機能](#using)のいずれかを選択します。
 
 ![アクションタイプの選択](../../../images/extensions/client/privacy/action-type.png)
 
-右側のパネルでは、アクションのコールバックとして機能するデータ要素を選択するよう求められます。 「データベース」アイコン（![「データベース」アイコン](/help/images/icons/database.png)）をクリックし、前に作成したデータ要素をリストから選択します。 「**[!UICONTROL Keep Changes]**」を選択して続行します。
+右側のパネルでは、アクションのコールバックとして機能するデータ要素を選択するよう求められます。 「データベース」アイコン（![「データベース」アイコン](/help/images/icons/database.png)）をクリックし、前に作成したデータ要素をリストから選択します。 続行するには、**[!UICONTROL Keep Changes]**&#x200B;を選択してください。
 
 ![データ要素の選択](../../../images/extensions/client/privacy/add-data-element.png)
 
-ここから、目的のイベントと条件で Adobe Privacy アクションが実行されるように、ルールの設定を続行できます。 内容を確認して、「**[!UICONTROL Save]**」を選択します。
+ここから、目的のイベントと条件で Adobe Privacy アクションが実行されるように、ルールの設定を続行できます。 満足したら、**[!UICONTROL Save]**&#x200B;を選択します。
 
 ![ルールの保存](../../../images/extensions/client/privacy/save-rule.png)
 
@@ -107,4 +107,4 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ## 次の手順
 
-このガイドでは、UI でAdobe Privacy のタグ拡張機能を使用する方法について説明しました。 ローコードを使用して適用する方法をはじめ、拡張機能に用意されている各機能について詳しくは、Privacy Serviceドキュメントにある [Privacy の JavaScript ライブラリの概要](../../../../privacy-service/js-library.md)を参照してください。
+このガイドでは、UIでのAdobe Privacy タグ拡張機能の使用について説明しました。 ローコードを使用して適用する方法をはじめ、拡張機能に用意されている各機能について詳しくは、Privacy Serviceドキュメントにある [Privacy の JavaScript ライブラリの概要](../../../../privacy-service/js-library.md)を参照してください。

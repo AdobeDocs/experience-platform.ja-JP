@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '2227'
-ht-degree: 97%
+source-wordcount: '2151'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 **リリース日：2023年1月25日**
 
-Adobe Experience Platform の既存の機能に対するアップデート：
+Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
@@ -92,19 +92,19 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [（ベータ版）Adobe Experience Cloud Audiences 接続](../../destinations/catalog/adobe/experience-cloud-audiences.md) | [!UICONTROL （ベータ版）Adobe Experience Cloud Audiences 接続]を使用して、Experience Platform から様々な Experience Platform ソリューション（Audience Manager、Analytics、Advertising Cloud、Adobe Campaign、Target、Marketo など）にセグメントを共有します。 |
+| [（ベータ版）Adobe Experience Cloud Audiences 接続](../../destinations/catalog/adobe/experience-cloud-audiences.md) | [!UICONTROL (Beta) Adobe Experience Cloud Audiences]接続を使用して、Experience Platformのセグメントを、Audience Manager、Analytics、Advertising、Campaign、Target、MarketoなどのさまざまなExperience Platform ソリューションと共有します。 |
 | [Pega プロファイル接続](../../destinations/catalog/personalization/pega-profile.md) | Adobe Experience Platform の [!DNL Pega Profile Connector] を使用して [!DNL Amazon] S3 ストレージへのライブアウトバウンド接続を作成し、Adobe Experience Platform から CSV ファイルにプロファイルデータを定期的に書き出して、独自の S3 バケットに入れます。[!DNL Pega Customer Decision Hub] では、データジョブをスケジュールして、このプロファイルデータを S3 ストレージから読み込み、[!DNL Pega Customer Decision Hub] プロファイルを更新できます。 |
 | [（ベータ版）The Trade Desk CRM EU 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | EUID（European Unified ID）のリリースにより、[宛先カタログ](/help/destinations/catalog/overview.md)に 2 つの [!DNL The Trade Desk - CRM] 宛先が表示されるようになりました。 <ul><li> EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。</li><li> APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。 </li></ul> |
 
-**新機能または更新された機能** {#destinations-new-updated-functionality}
+**新しい機能または更新された機能** {#destinations-new-updated-functionality}
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| ストリーミング宛先との統合に関する有料メディア同意ポリシーの機能強化 | 有料メディアアクティベーションユースケースの[ストリーミング宛先](/help/destinations/destination-types.md#streaming-destinations)での[同意ポリシーの適用に対する機能強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement)。プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platform はポリシーの終了とストリーミング宛先との間で積極的に通信するようになりました。<br> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** および **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 |
+| ストリーミング宛先との統合に関する有料メディア同意ポリシーの機能強化 | 有料メディアアクティベーションユースケースの[ストリーミング宛先](/help/destinations/destination-types.md#streaming-destinations)での[同意ポリシーの適用に対する機能強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement)。プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platform はポリシーの終了とストリーミング宛先との間で積極的に通信するようになりました。<br> <b>注</b>：この機能は、**[!UICONTROL Privacy and Security Shield]**&#x200B;の顧客と&#x200B;**[!UICONTROL Healthcare Shield]**&#x200B;の顧客のみが利用できます。 |
 | ベータ版クラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン `:`、パイプ、セミコロン `;`）が、新しいベータ版クラウドストレージの宛先（[（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）で使用できるようになりました。<br> ファイルベースの宛先については、サポート対象の[ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。 |
-| [Destination SDK](/help/destinations/destination-sdk/overview.md) の[顧客データフィールド](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md)設定で使用できる新しいオプションパラメーター | `unique`：ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。<br> 例えば、[[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters)宛先の「**[!UICONTROL 統合エイリアス]**」フィールドは一意である必要があります。つまり、この宛先への 2 つの個別のデータフローがこのフィールドに同じ値を持つことはできません。 |
+| [Destination SDK](/help/destinations/destination-sdk/overview.md) の[顧客データフィールド](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md)設定で使用できる新しいオプションパラメーター | `unique`：ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。<br>例えば、**[!UICONTROL Integration alias]**&#x200B;宛先の[[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) フィールドは一意である必要があります。つまり、この宛先に対する2つの個別のデータフローがこのフィールドに対して同じ値を持つことはできません。 |
 
-**修正および機能強化** {#destinations-fixes-and-enhancements}
+**修正と機能強化** {#destinations-fixes-and-enhancements}
 
 <table>
     <tr>
@@ -113,11 +113,11 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
     </tr>
     <tr>
         <td>ファイルベースの宛先への書き出し動作の更新（PLAT-123316）</td>
-        <td>データファイルをバッチ宛先に書き出す際の<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#mandatory-attributes">必須属性</a>の動作の問題を修正しました。<br> 以前は、出力ファイルのすべてのレコードに以下の両方が含まれていることが確認されていました。 <ol><li><code>mandatoryField</code> 列の null 以外の値および</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値。</li></ol> 2 番目の条件が削除されました。その結果、以下の例に示すように、書き出されたデータファイルでより多くの出力行が表示される場合があります。<br> <b> 2023年1月リリースより前のサンプル動作 </b> <br> 必須フィールド：<code>emailAddress</code> <br> <b>アクティブ化する入力データ</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>アクティベーション出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月リリース以降のサンプル動作 </b> <br> <b>アクティベーション出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+        <td>データファイルをバッチ宛先に書き出す際の<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mandatory-attributes">必須属性</a>の動作の問題を修正しました。<br> 以前は、出力ファイルのすべてのレコードに以下の両方が含まれていることが確認されていました。 <ol><li><code>mandatoryField</code> 列の null 以外の値および</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値。</li></ol> 2 番目の条件が削除されました。その結果、以下の例に示すように、書き出されたデータファイルでより多くの出力行が表示される場合があります。<br> <b> 2023年1月リリースより前のサンプル動作 </b> <br> 必須フィールド：<code>emailAddress</code> <br> <b>アクティブ化する入力データ</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>アクティベーション出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月リリース以降のサンプル動作 </b> <br> <b>アクティベーション出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
     <tr>
         <td>必要なマッピングおよび重複マッピングの UI および API 検証（PLAT-123316）</td>
-        <td>宛先のアクティブ化ワークフローで<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#mapping">フィールドをマッピング</a>する際に、UI および API で以下のように検証が実施されるようになりました。<ul><li><b>必要なマッピング</b>：宛先開発者が必要なマッピングを使用して宛先を設定した場合（<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=ja">Google アドマネージャー 360</a> の宛先など）、データを宛先にアクティブ化するときに、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>重複したマッピング</b>：アクティベーションワークフローのマッピング手順では、ソースフィールドに重複する値を追加できますが、ターゲットフィールドには追加できません。許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可／禁止されています</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>禁止されています</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+        <td>宛先のアクティブ化ワークフローで<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">フィールドをマッピング</a>する際に、UI および API で以下のように検証が実施されるようになりました。<ul><li><b>必要なマッピング</b>：宛先開発者が必要なマッピングを使用して宛先を設定した場合（<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html">Google アドマネージャー 360</a> の宛先など）、データを宛先にアクティブ化するときに、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>重複したマッピング</b>：アクティベーションワークフローのマッピング手順では、ソースフィールドに重複する値を追加できますが、ターゲットフィールドには追加できません。許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可／禁止されています</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>禁止されています</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>    
 </table>
 
@@ -137,39 +137,39 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL コンバージョン]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | 通貨コンバージョンなどのコンバージョンデータを追跡するためのクラス。 |
-| フィールドグループ | [[!UICONTROL 通貨コンバージョンレートの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | 通貨コンバージョンに関連する追加の詳細を取得する、[!UICONTROL コンバージョン]クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL メタデータを使用した同意ポリシーの評価結果のマップ]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | 同意ポリシーのエントリと存在に関するメタデータ情報など、複数の同意ポリシーの評価結果に関する詳細の取得。 |
+| クラス | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | 通貨コンバージョンなどのコンバージョンデータを追跡するためのクラス。 |
+| フィールドグループ | [[!UICONTROL Currency Conversion Rate Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | 通貨変換に関連する追加の詳細をキャプチャする[!UICONTROL Conversion] クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | 同意ポリシーのエントリと存在に関するメタデータ情報など、複数の同意ポリシーの評価結果に関する詳細の取得。 |
 
 **更新された XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `ID` フィールドの名前を `name` に変更し、以前の `name` フィールドは `friendlyName` になりました。 |
-| データタイプ | [[!UICONTROL 決定提案の詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | 選択戦略の詳細を取得する `selectionStrategy` フィールドを追加しました。 |
-| フィールドグループ | [[!UICONTROL エクスペリエンスイベント - 提案インタラクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | フィールドグループは、[!UICONTROL Journey Step Event] クラスと互換性を持つようになりました。 |
-| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` フィールドの名前を `name` に変更しました。 |
-| データタイプ | [[!UICONTROL メディア情報]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | パターンの変更をビデオセグメントプロパティに戻しました。 |
-| データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | `droppedFrameCount` フィールドを削除しました。 |
-| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `isAuthorized` フィールドの名前を `authorized` に変更し、以前はブール値だった `type` を文字列に更新しました。 |
-| データタイプ | [[!UICONTROL 送料]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 新しいフィールド `shipDate`、`trackingNumber`、`trackingURL` を追加しました。 |
-| フィールドグループ | [[!UICONTROL AJO エンティティフィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | 新しいフィールド `journeyNodeID`、`journeyNodeName`、`journeyModeType` を追加しました。 |
-| フィールドグループ | [[!UICONTROL 消費者エクスペリエンスイベント]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | フィールドグループは、[!UICONTROL Summary Metrics] クラスとも互換性を持つようになりました。 |
-| フィールドグループ | [[!UICONTROL 製品トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | `productTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
-| フィールドグループ | [[!UICONTROL 相対トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | `relativeTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
-| フィールドグループ | [[!UICONTROL 重大なトリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | `severeTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
-| フィールドグループ | [[!UICONTROL 気象トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | `weatherTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
-| フィールドグループ | [[!UICONTROL XDM 関連ビジネスアカウント]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | フィールドグループが安定しました。 |
+| データタイプ | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `ID` フィールドの名前を `name` に変更し、以前の `name` フィールドは `friendlyName` になりました。 |
+| データタイプ | [[!UICONTROL Decision Proposition Details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | 選択戦略の詳細を取得する `selectionStrategy` フィールドを追加しました。 |
+| フィールドグループ | [[!UICONTROL Experience Event - Proposition Interactions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | フィールドグループは[!UICONTROL Journey Step Event] クラスと互換性があります。 |
+| データタイプ | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` フィールドの名前を `name` に変更しました。 |
+| データタイプ | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | パターンの変更をビデオセグメントプロパティに戻しました。 |
+| データタイプ | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | `droppedFrameCount` フィールドを削除しました。 |
+| データタイプ | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `isAuthorized` フィールドの名前を `authorized` に変更し、以前はブール値だった `type` を文字列に更新しました。 |
+| データタイプ | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 新しいフィールド `shipDate`、`trackingNumber`、`trackingURL` を追加しました。 |
+| フィールドグループ | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | 新しいフィールド `journeyNodeID`、`journeyNodeName`、`journeyModeType` を追加しました。 |
+| フィールドグループ | [[!UICONTROL Consumer Experience Event]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | フィールドグループは、[!UICONTROL Summary Metrics] クラスとも互換性があります。 |
+| フィールドグループ | [[!UICONTROL Product Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | `productTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
+| フィールドグループ | [[!UICONTROL Relative Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | `relativeTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
+| フィールドグループ | [[!UICONTROL Severe Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | `severeTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
+| フィールドグループ | [[!UICONTROL Weather Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | `weatherTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
+| フィールドグループ | [[!UICONTROL XDM Related Business Accounts]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | フィールドグループが安定しました。 |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 &#x200B;](../../xdm/home.md)」を参照してください。
+Experience PlatformのXDMについて詳しくは、[XDM System overview](../../xdm/home.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
 Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
 
-**今後非推奨（廃止）となる予定** {#deprecation}
+**今後の非推奨化** {#deprecation}
 
 セグメントメンバーシップライフサイクルの冗長性を取り除くために、`Existing` ステータスは 2023年3月末に[セグメントメンバーシップマップ](../../xdm/field-groups/profile/segmentation.md)から廃止される予定です。フォローアップのお知らせには、正確な非推奨（廃止予定）日が含まれます。
 
@@ -189,7 +189,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | ------- | ----------- |
 | セグメントビルダーでの値の一括読み込み | セグメントビルダーで、CSV または TSV ファイルをアップロードするか、コンマ区切りの値を手動で挿入することにより、複数の値の読み込みをサポートするようになりました。詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#rule-builder-canvas)を参照してください。 |
 | 外部オーディエンスのメンバーシップの有効期限 | デフォルトでは、外部オーディエンスのメンバーシップは 30 日間保持されます。これよりも長期間保持するには、オーディエンスデータの取り込み中に `validUntil` フィールドを使用します。 |
-| Experience Platformが生成したセグメントメンバーシップの有効期限 | `lastQualificationTime` フィールドに基づき、30 日を超えて `Exited` 状態にあるセグメントメンバーシップは、削除の対象となります。 |
+| Experience Platformで生成されたセグメントメンバーシップの有効期限 | `lastQualificationTime` フィールドに基づき、30 日を超えて `Exited` 状態にあるセグメントメンバーシップは、削除の対象となります。 |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むことができ、Experience Platform サービスを使用してそのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込み、Experience Platform サービスを使用してデータを構造化、ラベル付け、強化することができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

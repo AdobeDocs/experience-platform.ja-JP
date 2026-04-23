@@ -1,59 +1,59 @@
 ---
-title: 「Auditor」タブ
-description: Adobe Experience Platform Debuggerの「Auditor」タブを使用してAdobe Experience Cloud実装をテストする方法を説明します。
-keywords: デバッガー；experience platform デバッガー拡張機能；chrome；拡張機能；auditor;dtm;target
+title: 「監査」タブ
+description: Adobe Experience Platform Debuggerの「監査」タブを使用して、Adobe Experience Cloudの実装をテストする方法を説明します。
+keywords: debugger;experience platform debugger extension;chrome;extension;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 32%
+source-wordcount: '361'
+ht-degree: 33%
 
 ---
 
-# 「Auditor」タブ
+# 「監査」タブ
 
-Adobe Experience Platform Debuggerとして、「**[!UICONTROL Auditor]**」タブを使用して、ページに対して一連の監査テストを実行できます。
+Adobe Experience Platform Debuggerでは、「**[!UICONTROL Auditor]**」タブを使用して、ページで一連の監査テストを実行できます。
 
 この機能を使用するには：
 
-1. 左側のナビゲーションで **[!UICONTROL Auditor]** を選択します。
-1. 「**[!UICONTROL Auditor テストを実行]**」を選択します。 テストが完了すると、結果が以下に表示されます。
+1. 左側のナビゲーションで「**[!UICONTROL Auditor]**」を選択します。
+1. 「**[!UICONTROL Run Auditor Tests]**」を選択します。テストが完了すると、その結果が以下に表示されます。
 
-![&#x200B; 「Auditor」タブに表示されるテスト結果のスクリーンショット &#x200B;](../images/auditor-results.png)
+![監査タブのテスト結果のスクリーンショット ](../images/auditor-results.png)
 
 結果リストには、テストとその結果が表示され、問題を解決するための提案が示されます。
 
 ## テスト結果の解釈
 
-各テストには重み付けが付けられ、テストスコアは割り当てられた重み付けと等しくなります。 5 の重みでテストに合格すると、5 ポイントを獲得できます。
+各テストは重み付けされ、テストスコアは割り当てられた重みと等しくなります。 体重5のテストに合格すると、5 ポイントを獲得できます。
 
 | スコア | 説明 |
 | --- | --- |
-| 0 | 注意が必要な問題をアラートで通知しますが、スコアには影響しません。 |
-| 1 | は最適化を推奨します。 データの正確性には影響しません。 |
-| 2 | このテストに失敗すると、Adobe Experience Cloudの最新の機能や修正点にアクセスできなくなります。 |
-| 3 | 効率をテストし、実装がベストプラクティスに従っているかどうかを確認します。 |
-| 4 | 失敗は、信頼性の低いデータを収集している可能性があることを意味します。 |
+| 0 | 注意すべき課題を特定し、スコアに影響を与えないようにしましょう。 |
+| 1 | 最適化を提案： データの正確性には影響しません。 |
+| 2 | このテストに失敗すると、Adobe Experience Cloudの最新の機能と修正プログラムにアクセスできなくなります。 |
+| 3 | 効率性を検証し、ベストプラクティスに従って導入しているかどうかを確認します。 |
+| 4 | 失敗とは、信頼できないデータを収集している可能性があることを意味します。 |
 | 5 | 失敗すると、データが失われる可能性があります。 |
 
-すべてのテストが合格または不合格になります。 テスト条件に対する準拠または違反をテストするので、一部準拠している場合でも部分的にスコアが提供されるわけではありません。例えば、テストでアドビソリューションの最新バージョンを確認し、1 つ前のバージョンを使用していることがわかった場合、5 つ前のバージョンを使用している場合と同じスコアが付けられます。最新バージョンには、パフォーマンスの向上とバグ修正が含まれているので、最新バージョンにすることをお勧めします。
+すべてのテストは成功するか失敗します。 テスト条件に対する準拠または違反をテストするので、一部準拠している場合でも部分的にスコアが提供されるわけではありません。例えば、テストでアドビソリューションの最新バージョンを確認し、1 つ前のバージョンを使用していることがわかった場合、5 つ前のバージョンを使用している場合と同じスコアが付けられます。最新バージョンにはパフォーマンスの改善とバグ修正が含まれているため、最新バージョンを使用することをお勧めします。
 
 レベル 4 または 5 の結果を修正することを&#x200B;**強くお勧めします**。
 
 レベル 1 から 3 の結果を修正することを&#x200B;**お勧めします**。
 
-## サポートされるAdobeテクノロジ
+## サポートされているAdobe テクノロジー
 
-Auditor 機能は、次のAdobeテクノロジを評価できます。
+監査機能では、次のAdobe テクノロジを評価できます。
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Adobe Advertising Search
 * Adobe Analytics
 * Adobe Experience Cloud ID サービス
 * Adobe Target
-* タグ（旧称Adobe Experience Platform Launch）
+* Tags （旧Adobe Experience Platform Launch）
 
-## テストルーブリック
+## ルーブリックのテスト
 
 この機能で提供されるテストルーブリックについて詳しくは、次のドキュメントを参照してください。
 

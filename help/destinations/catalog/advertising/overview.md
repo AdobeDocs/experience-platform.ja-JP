@@ -3,10 +3,10 @@ keywords: 広告宛先；宛先；プラットフォーム宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム（DSP、ad network、SSPなど）に接続し、これらのプラットフォームで仮名オーディエンスを共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 41%
+source-wordcount: '289'
+ht-degree: 40%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 41%
 * [（Beta） Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [（Beta） Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSPとの連携](adobe-advertising-dsp-connection.md)
-* [従来のAdobe Advertising Cloud DSP接続](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [従来のAdobe Advertising DSP接続](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Amazon Ads v2との連携](amazon-ads-v2.md)
 * [ボンボラ・コネクション](bombora.md)
@@ -53,7 +53,7 @@ ht-degree: 41%
 
 ### 拡張機能 {#extensions}
 
-* [Adobe Advertising Cloud 拡張機能](adobe-advertising-cloud.md)
+* [Adobe Advertising拡張機能](adobe-advertising-cloud.md)
 * [Awin Advertising コンバージョンタグ拡張機能](awin-conversiontag.md)
 * [Awin Advertising マスタータグ拡張機能](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking拡張機能](bing-ads.md)

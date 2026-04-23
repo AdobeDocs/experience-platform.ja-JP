@@ -2,7 +2,7 @@
 title: リアルタイム顧客プロファイルの概要
 description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -113,7 +113,7 @@ Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向�
 
 >[!NOTE]
 >
->[!DNL Analytics Cloud]、[!DNL Marketing Cloud] および [!DNL Advertising Cloud] などの Adobe ソリューションで収集されたデータは [!DNL Experience Platform] に流れ、[!DNL Profile] に取り込まれます。
+>[!DNL Analytics Cloud]、[!DNL Marketing Cloud] および [!DNL Adobe Advertising] などの Adobe ソリューションで収集されたデータは [!DNL Experience Platform] に流れ、[!DNL Profile] に取り込まれます。
 
 ### プロファイル取り込み指標
 
