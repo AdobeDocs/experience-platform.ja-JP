@@ -18,9 +18,9 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-拡張機能をインストールする前に、[!DNL Algolia]へのアクセス権を持つ[!DNL Insights API] アカウントがあることを確認してください。 アカウントをお持ちでない場合は、[ サインアップ ](https://dashboard.algolia.com/users/sign_up)してAPIへのアクセスを有効にしてください。
+拡張機能をインストールする前に、[!DNL Algolia]へのアクセス権を持つ[!DNL Insights API] アカウントがあることを確認してください。 アカウントをお持ちでない場合は、[&#x200B; サインアップ &#x200B;](https://dashboard.algolia.com/users/sign_up)してAPIへのアクセスを有効にしてください。
 
-また、[!DNL Algolia] [!DNL Insights API]の使用方法を理解していることを確認してください。 イベントの送信方法の概要については、[ インサイト APIを使用したイベントの送信](https://www.algolia.com/doc/guides/sending-events/getting-started/)を参照してください。
+また、[!DNL Algolia] [!DNL Insights API]の使用方法を理解していることを確認してください。 イベントの送信方法の概要については、[&#x200B; インサイト APIを使用したイベントの送信](https://www.algolia.com/doc/guides/sending-events/getting-started/)を参照してください。
 
 [!DNL Algolia] アカウント ダッシュボードから次の値を収集します。
 - **[!UICONTROL Application ID]**
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 **[!UICONTROL Catalog]**&#x200B;を開いて&#x200B;**[!UICONTROL Algolia Event Forwarding]**&#x200B;拡張機能を見つけ、**[!UICONTROL Install]**&#x200B;を選択します。
 
-![Adobe Experience PlatformのAlgolia Event Forwarding拡張機能のインストールプロセス ](../../../images/extensions/server/algolia/install-extension.png)
+![Adobe Experience PlatformのAlgolia Event Forwarding拡張機能のインストールプロセス &#x200B;](../../../images/extensions/server/algolia/install-extension.png)
 
 ### 拡張機能の設定 {#configure-extension}
 
@@ -159,13 +159,13 @@ Experience Platform![の](../../../images/extensions/server/algolia/algolia-prof
 
 ## 次の手順
 
-このガイドでは、[!DNL Algolia]を使用して[!DNL Algolia Event Forwarding Extension]にデータを送信する方法について説明しました。 [!DNL Adobe Experience Platform]のイベント転送機能について詳しくは、[ イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
+このガイドでは、[!DNL Algolia]を使用して[!DNL Algolia Event Forwarding Extension]にデータを送信する方法について説明しました。 [!DNL Adobe Experience Platform]のイベント転送機能について詳しくは、[&#x200B; イベント転送の概要](../../../ui/event-forwarding/overview.md)を参照してください。
 
-Experience Platform Debugger and Event Forwarding Monitoring Toolを使用して実装をデバッグする方法について詳しくは、[Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md)および[ イベント転送におけるアクティビティの監視](../../../ui/event-forwarding/monitoring.md)を参照してください。
+Experience Platform Debugger and Event Forwarding Monitoring Toolを使用して実装をデバッグする方法について詳しくは、[Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md)および[&#x200B; イベント転送におけるアクティビティの監視](../../../ui/event-forwarding/monitoring.md)を参照してください。
 
 ## その他のリソース
 
-- [[!DNL Algolia] Insights API ドキュメント ](https://www.algolia.com/doc/rest-api/insights/)
-- [[!DNL Algolia]  イベントドキュメント ](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform]  イベント転送ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja)
+- [[!DNL Algolia] Insights API ドキュメント &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+- [[!DNL Algolia]  イベントドキュメント &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/)
+- [[!DNL Adobe Experience Platform]  イベント転送ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ja)
 - [[!DNL Algolia] AI機能の概要](https://www.algolia.com/products/ai-search/)

@@ -25,7 +25,7 @@ Web SDK JavaScript ライブラリ （`alloy()`）を直接呼び出すか、Ado
 
 ## ページトップイベント {#top-of-page}
 
-次の例では、パーソナライゼーションを要求するページ上部イベントを設定しますが、自動的にレンダリングされる提案に対して[表示イベント ](display-events.md)を抑制します。 これらの表示イベントは、代わりにページ下部のイベントと共に送信されます。
+次の例では、パーソナライゼーションを要求するページ上部イベントを設定しますが、自動的にレンダリングされる提案に対して[表示イベント &#x200B;](display-events.md)を抑制します。 これらの表示イベントは、代わりにページ下部のイベントと共に送信されます。
 
 >[!BEGINTABS]
 
@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | パラメーター | 必須／オプション | 説明 |
 | --- | --- | --- |
-| `type` | 必須 | このパラメーターを`decisioning.propositionFetch`に設定します。 この特別なイベントタイプは、Adobe Analyticsにこのイベントをドロップするように指示します。 Customer Journey Analyticsを使用する場合は、これらのイベントをドロップするフィルターを設定することもできます。 詳しくは、[Adobe AnalyticsのEdge Network イベントタイプ ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types)を参照してください。 |
+| `type` | 必須 | このパラメーターを`decisioning.propositionFetch`に設定します。 この特別なイベントタイプは、Adobe Analyticsにこのイベントをドロップするように指示します。 Customer Journey Analyticsを使用する場合は、これらのイベントをドロップするフィルターを設定することもできます。 詳しくは、[Adobe AnalyticsのEdge Network イベントタイプ &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types)を参照してください。 |
 | `renderDecisions` | 必須 | このパラメーターを`true`に設定します。 このパラメーターは、Web SDKに対して、Edge Networkから返される決定をレンダリングするように指示します。 |
 | `personalization.sendDisplayEvent` | 必須 | このパラメーターを`false`に設定します。 このパラメーターは、表示イベントの送信を停止します。 |
 
@@ -59,7 +59,7 @@ alloy("sendEvent", {
 
 ### 自動レンダリング提案 {#bottom-auto-rendered}
 
-次の例では、ページの最下部イベントを設定します。このイベントは、ページ上で自動的にレンダリングされたものの、[ ページの最上部](#top-of-page) イベントで抑制された提案に対して表示イベントを送信します。
+次の例では、ページの最下部イベントを設定します。このイベントは、ページ上で自動的にレンダリングされたものの、[&#x200B; ページの最上部](#top-of-page) イベントで抑制された提案に対して表示イベントを送信します。
 
 >[!BEGINTABS]
 
@@ -83,7 +83,7 @@ alloy("sendEvent", {
 
 ページの下部で発生するルールで[[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) アクションを設定します。 **[!UICONTROL Use guided events]**&#x200B;を有効にし、**[!UICONTROL Collect analytics]**&#x200B;を選択します。 このオプションは、&#39;[!UICONTROL Include rendered propositions]&#39;を有効にするようにロックします。
 
-代わりに、このフィールドを手動で設定するには、**[!UICONTROL Use guided events]**&#x200B;を無効のままにし、**[!UICONTROL Include rendered propositions]**&#x200B;を直接有効にします。 オプションで、**[!UICONTROL XDM]** フィールドに、ページデータを格納する[XDM オブジェクト ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) データ要素を入力します。
+代わりに、このフィールドを手動で設定するには、**[!UICONTROL Use guided events]**&#x200B;を無効のままにし、**[!UICONTROL Include rendered propositions]**&#x200B;を直接有効にします。 オプションで、**[!UICONTROL XDM]** フィールドに、ページデータを格納する[XDM オブジェクト &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) データ要素を入力します。
 
 >[!ENDTABS]
 
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 &#39;[!UICONTROL Use guided events]&#39; オプションはこのシナリオをカバーしていないので、アクションを手動で設定します：
 
-1. [XDM オブジェクト ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) （または[変数](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)）データ要素を作成し、レンダリングされた各提案の`_experience.decisioning.propositions`、`id`および`scope`を`scopeDetails`に入力し、`_experience.decisioning.propositionEventType.display`を`1`に設定します。 詳しくは、[表示イベントの管理](display-events.md)を参照してください。
+1. [XDM オブジェクト &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) （または[変数](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)）データ要素を作成し、レンダリングされた各提案の`_experience.decisioning.propositions`、`id`および`scope`を`scopeDetails`に入力し、`_experience.decisioning.propositionEventType.display`を`1`に設定します。 詳しくは、[表示イベントの管理](display-events.md)を参照してください。
 1. ページ ルールの下部の[[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) アクションで、**[!UICONTROL Use guided events]**&#x200B;を無効のままにして、**[!UICONTROL XDM]** フィールドからデータ要素を参照します。
 
 >[!ENDTABS]
