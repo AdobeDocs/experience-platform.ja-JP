@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | パラメーター | 必須／オプション | 説明 |
 | --- | --- | --- |
-| `type` | 必須 | このパラメーターを`decisioning.propositionFetch`に設定します。 この特別なイベントタイプは、Adobe Analyticsにこのイベントをドロップするように指示します。 Customer Journey Analyticsを使用する場合は、これらのイベントをドロップするフィルターを設定することもできます。 詳しくは、[Adobe AnalyticsのEdge Network イベントタイプ &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types)を参照してください。 |
+| `type` | 必須 | このパラメーターを`decisioning.propositionFetch`に設定します。 この特別なイベントタイプは、Adobe Analyticsにこのイベントをドロップするように指示します。 Customer Journey Analyticsを使用する場合は、これらのイベントをドロップするフィルターを設定することもできます。 詳しくは、[Adobe AnalyticsのEdge Network イベントタイプ &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/hit-types)を参照してください。 |
 | `renderDecisions` | 必須 | このパラメーターを`true`に設定します。 このパラメーターは、Web SDKに対して、Edge Networkから返される決定をレンダリングするように指示します。 |
 | `personalization.sendDisplayEvent` | 必須 | このパラメーターを`false`に設定します。 このパラメーターは、表示イベントの送信を停止します。 |
 

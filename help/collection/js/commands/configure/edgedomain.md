@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >このプロパティは、Cookieの設定場所を変更しません。 Web SDKは、最終的にデータを送信する場所に関係なく、常に[&#x200B; ファーストパーティ Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja)を設定します。
 
-`edgeDomain`に使用する値は、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)への参加によって異なります。
+`edgeDomain`に使用する値は、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)への参加によって異なります。
 
 **Adobeが管理する証明書プログラム**&#x200B;に参加している場合は、証明書の設定時に選択した1st パーティドメインに値を設定します。 通常、この値は組織が所有するサブドメインです。 たとえば、`data.example.com` のように設定します。組織内のCNAME レコードは、そのデータをAdobeに転送します。
 
