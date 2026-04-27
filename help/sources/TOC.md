@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
+source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1115'
 ht-degree: 88%
 
 ---
@@ -107,7 +107,6 @@ ht-degree: 88%
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - ロイヤルティ {#loyalty}
       - [キャピラリー・ストリーミング・イベント](connectors/loyalty/capillary.md)
-      - [コビエ](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - マーケティングオートメーション {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,6 +322,7 @@ ht-degree: 88%
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - ロイヤルティ {#loyalty}
          - [キャピラリー・ストリーミング・イベント](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie ストリーミングイベント](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One ストリーミングイベント](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source コネクタ](tutorials/ui/create/loyalty/talon-one-batch.md)
       - マーケティングオートメーション {#marketing-automation}
