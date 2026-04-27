@@ -2,20 +2,20 @@
 keywords: Experience Platform;ホーム;人気のトピック;ソースコネクタ;ソースコネクタ;ソース;データソース;データソース;データソース接続
 solution: Experience Platform
 title: ソースコネクタの概要
-description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1764'
 ht-degree: 47%
 
 ---
 
 # ソースコネクタの概要
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service]は、Experience Platform内の様々な異なるソースから顧客データを収集および一元化するために使用されます。 このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
+[!DNL Flow Service]は、Experience Platform内の様々な異なるソースから顧客データを収集および一元化するために使用されます。 このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。 これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
 
 Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業を行うことができます。
 
@@ -30,9 +30,9 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeやパートナーのソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタの一部は、Adobeによって構築および管理され、その他は[Sources SDK](/help/sources/sources-sdk/overview.md)を使用してパートナー企業によって構築および管理されます。 パートナーが作成および保守するソースがある場合は、各パートナー構築コネクタのドキュメントページの上部にメモが表示されます。 例えば、[Amazon S3 コネクタ &#x200B;](/help/sources/connectors/cloud-storage/s3.md)はAdobeによって作成され、[RainFocus コネクタ &#x200B;](/help/sources/connectors/analytics/rainfocus.md)はRainFocus チームによって作成および管理されます。
+Experience Platform ソースカタログ内のコネクタの一部は、Adobeによって構築および管理され、その他は[Sources SDK](/help/sources/sources-sdk/overview.md)を使用してパートナー企業によって構築および管理されます。 パートナーが作成および保守するソースがある場合は、各パートナー構築コネクタのドキュメントページの上部にメモが表示されます。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md)はAdobeによって作成され、[RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md)はRainFocus チームによって作成および管理されます。
 
-パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
+パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。 アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
 >[!ENDSHADEBOX]
 
@@ -40,13 +40,13 @@ Experience Platform ソースカタログ内のコネクタの一部は、Adobe�
 
 >[!NOTE]
 >
->30日間連続して失敗するSource取り込みデータフローは、自動的に無効になります。 [監視ダッシュボード &#x200B;](/help/dataflows/ui/monitor-sources.md)を使用して、データフローを確認し、失敗した理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用し、解決後にデータフローを再度有効にします。
+>30日間連続して失敗するSource取り込みデータフローは、自動的に無効になります。 [監視ダッシュボード ](/help/dataflows/ui/monitor-sources.md)を使用して、データフローを確認し、失敗した理由（資格情報、権限、スキーマまたはマッピングの変更など）を特定し、必要な更新を適用し、解決後にデータフローを再度有効にします。
 
 ソースカタログで使用可能なすべてのソースのリストについては、次の節を参照してください。
 
 ### アドビアプリケーション {#adobe-applications}
 
-Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。詳しくは、次の関連ドキュメントを参照してください。
+Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [UI での Adobe Audience Manager ソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -105,7 +105,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### クラウドストレージ {#cloud-storage}
 
-クラウドストレージソースは、ダウンロード、フォーマット、アップロードしなくても、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースは、ダウンロード、フォーマット、アップロードしなくても、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。 詳しくは、次の関連ドキュメントを参照してください。
 
 次のソースを使用して、クラウドストレージデータをExperience Platformに取り込むことができます。
 
@@ -137,7 +137,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### 顧客関係管理（CRM） {#customer-relationship-management}
 
-CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客とのロイヤルティを高め、顧客保持率を高めます。Adobe Experience Platform には、[!DNL Microsoft Dynamics 365] および [!DNL Salesforce] から CRM データを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客とのロイヤルティを高め、顧客保持率を高めます。 Adobe Experience Platform には、[!DNL Microsoft Dynamics 365] および [!DNL Salesforce] から CRM データを取り込む機能が用意されています。 詳しくは、次の関連ドキュメントを参照してください。
 
 次のソースを使用して、CRM データをExperience Platformに取り込むことができます。
 
@@ -164,7 +164,7 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 ### データベース {#database}
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 次のソースを使用して、データベースからExperience Platformにデータを取り込むことができます。
 
@@ -225,7 +225,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### ロイヤルティ {#loyalty}
 
-次のソースを使用して、Experience Platformにデータロイヤルティを取り込むことができます。
+次のソースを使用して、ロイヤルティデータをExperience Platformに取り込むことができます。
 
 | ソース | 取り込みタイプ | クラウド |
 | --- | --- | --- |
@@ -245,11 +245,11 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | ストリーミング | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | バッチ | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | バッチ | Azure |
-| [[!DNL Oracle Eloqua]  （V2） &#x200B;](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
+| [[!DNL Oracle Eloqua]  （V2） ](connectors/marketing-automation/eloqua.md) | バッチ | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | ストリーミング | Azure |
-| [[!DNL Salesforce Marketing Cloud]  （V2） &#x200B;](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
+| [[!DNL Salesforce Marketing Cloud]  （V2） ](connectors/marketing-automation/sfmc.md) | バッチ | Azure |
 
 {style="table-layout:auto"}
 
@@ -287,14 +287,14 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## データ取得におけるソースのアクセス制御
 
-データ取得元に対する権限は、Adobe Admin Console で管理できます。特定の製品プロファイルの「**[!UICONTROL Permissions]**」タブから権限にアクセスできます。 **[!UICONTROL Edit Permissions]** パネルから、**[!UICONTROL data ingestion]** メニューエントリを介してソースに関連する権限にアクセスできます。 **[!UICONTROL View Sources]**&#x200B;権限は、**[!UICONTROL Catalog]** タブの利用可能なソースと&#x200B;**[!UICONTROL Browse]** タブの認証されたソースに対する読み取り専用アクセス権を付与し、**[!UICONTROL Manage Sources]**&#x200B;権限は、ソースの読み取り、作成、編集、および無効化に対する完全なアクセス権を付与します。
+データ取得元に対する権限は、Adobe Admin Console で管理できます。 特定の製品プロファイルの「**[!UICONTROL Permissions]**」タブから権限にアクセスできます。 **[!UICONTROL Edit Permissions]** パネルから、**[!UICONTROL data ingestion]** メニューエントリを介してソースに関連する権限にアクセスできます。 **[!UICONTROL View Sources]**&#x200B;権限は、**[!UICONTROL Catalog]** タブの利用可能なソースと&#x200B;**[!UICONTROL Browse]** タブの認証されたソースに対する読み取り専用アクセス権を付与し、**[!UICONTROL Manage Sources]**&#x200B;権限は、ソースの読み取り、作成、編集、および無効化に対する完全なアクセス権を付与します。
 
 次の表に、これらの権限の様々な組み合わせに基づく UI の動作の概要を示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
 | **[!UICONTROL View Sources]**&#x200B;日 | 「Catalog」タブ、「Browse」タブ、「Accounts」タブ、「Dataflow」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
-| **[!UICONTROL Manage Sources]**&#x200B;日 | **[!UICONTROL View Sources]**&#x200B;に含まれる関数に加えて、**[!UICONTROL Connect Source]**&#x200B;の&#x200B;**[!UICONTROL Catalog]** オプションと&#x200B;**[!UICONTROL Select Data]**&#x200B;の&#x200B;**[!UICONTROL Browse]** オプションへのアクセス権を付与します。 **[!UICONTROL Manage Sources]**&#x200B;では、**[!UICONTROL DataFlows]**&#x200B;を有効または無効にし、スケジュールを編集することもできます。 |
+| **[!UICONTROL Manage Sources]**&#x200B;日 | **[!UICONTROL View Sources]**&#x200B;に含まれる関数に加えて、**[!UICONTROL Catalog]**&#x200B;の&#x200B;**[!UICONTROL Connect Source]** オプションと&#x200B;**[!UICONTROL Browse]**&#x200B;の&#x200B;**[!UICONTROL Select Data]** オプションへのアクセス権を付与します。 **[!UICONTROL Manage Sources]**&#x200B;では、**[!UICONTROL DataFlows]**&#x200B;を有効または無効にし、スケジュールを編集することもできます。 |
 | **[!UICONTROL View Sources]** オフと&#x200B;**[!UICONTROL Manage Sources]** オフ | ソースへのすべてのアクセスを取り消します。 |
 
 Adobe Permissions を通じて付与される使用可能な権限の詳細については、[アクセス制御の概要](../access-control/home.md)を参照してください。
@@ -303,13 +303,13 @@ Adobe Permissions を通じて付与される使用可能な権限の詳細に�
 
 Adobe Experience Platform での属性ベースのアクセス制御では、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
-属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。 さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
 
 #### ソースでの属性ベースのアクセス制御のサポート
 
 >[!TIP]
 >
->属性ベースのアクセス制御は次のように機能します。**roles**&#x200B;は、Experience Platform インスタンスを操作するユーザーの種類を分類するために作成されます。 **ラベル**&#x200B;は、特定の役割へのアクセスを指定するために&#x200B;**役割**&#x200B;に適用されます。 **ラベル**&#x200B;は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドとセグメントにアクセスできるようにするには、クエリされたリソース *に割り当てられているのと同じラベルを持つ役割*&#x200B;に追加する必要があります。 詳しくは、[属性ベースのアクセス制御エンドツーエンド ガイド &#x200B;](../access-control/abac/end-to-end-guide.md)を参照してください。
+>属性ベースのアクセス制御は次のように機能します。**roles**&#x200B;は、Experience Platform インスタンスを操作するユーザーの種類を分類するために作成されます。 **ラベル**&#x200B;は、特定の役割へのアクセスを指定するために&#x200B;**役割**&#x200B;に適用されます。 **ラベル**&#x200B;は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドとセグメントにアクセスできるようにするには、クエリされたリソース *に割り当てられているのと同じラベルを持つ役割*&#x200B;に追加する必要があります。 詳しくは、[属性ベースのアクセス制御エンドツーエンド ガイド ](../access-control/abac/end-to-end-guide.md)を参照してください。
 
 - スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーはアクセス権のあるフィールドのマッピングのみを作成できます。
 - 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用してデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを使用して、既存のデータフローを更新、削除、有効、無効にすることはできません。
@@ -317,7 +317,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 >[!NOTE]
 >
->リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[&#x200B; リレーショナルスキーマの概要](../xdm/schema/relational.md)を参照してください。
+>リレーショナルスキーマには、プライマリキーやバージョン識別子のフィールドなど、追加の要件があります。 詳しくは、[ リレーショナルスキーマの概要](../xdm/schema/relational.md)を参照してください。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
