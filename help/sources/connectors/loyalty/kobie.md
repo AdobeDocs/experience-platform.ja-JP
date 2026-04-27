@@ -19,6 +19,6 @@ ht-degree: 0%
 >
 >**Experience Platformに対する権限の設定**
 >
->[!DNL Kobie Streaming Events] アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL View Sources]**&#x200B;と&#x200B;**[!UICONTROL Manage Sources]**&#x200B;の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[ アクセス制御UI ガイド ](../../../access-control/abac/ui/permissions.md)を参照してください。
+>[!DNL Kobie Streaming Events] アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL View Sources]**&#x200B;と&#x200B;**[!UICONTROL Manage Sources]**&#x200B;の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御UI ガイド &#x200B;](../../../access-control/abac/ui/permissions.md)を参照してください。
 
 ソースカタログの[[!DNL Kobie Streaming Events] source](../../tutorials/ui/create/loyalty/kobie-streaming.md)を使用して、ロイヤルティデータを[!DNL Kobie] アカウントからAdobe Experience Platformにストリーミングします。
