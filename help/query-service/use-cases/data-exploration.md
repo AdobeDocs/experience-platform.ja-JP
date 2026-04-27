@@ -18,16 +18,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->このガイドの一部のスクリーンショットは[!DNL DBVisualizer]から取得されています。 DBVisualizer](../clients/dbvisulaizer.md)またはその他[ サードパーティのBI ツール ](../clients/overview.md)とクエリサービスを[接続する方法については、リンクされたドキュメントを参照してください。
+>このガイドの一部のスクリーンショットは[!DNL DBVisualizer]から取得されています。 DBVisualizer[&#128279;](../clients/dbvisulaizer.md)またはその他[&#x200B; サードパーティのBI ツール &#x200B;](../clients/overview.md)とクエリサービスを接続する方法については、リンクされたドキュメントを参照してください。
 
 ## 前提条件
 
 このドキュメントで説明する概念を理解するために、次のトピックについて説明する必要があります。
 
-- **データ取り込み**: [ データ取り込みの概要](../../ingestion/home.md)を参照して、Experience Platformにデータを取り込む方法の基本（様々な方法やプロセスを含む）を確認してください。
-- **バッチ取り込み**: バッチ取り込みの基本的な概念については、[ バッチ取り込みAPIの概要](../../ingestion/batch-ingestion/overview.md)を参照してください。 具体的には、「バッチ」とは何か、Experience Platformのデータ取り込みプロセス内でどのように機能するのか。
-- **データセット内のシステム メタデータ**: [ カタログサービスの概要](../../catalog/home.md)を参照して、システム メタデータ フィールドを使用して取り込んだデータを追跡およびクエリする方法を確認してください。
-- **Experience Data Model （XDM）**: [ スキーマ UIの概要](../../xdm/ui/overview.md)と[のスキーマ構成の基本&#39;](../../xdm/schema/composition.md)を参照して、XDM スキーマについて学び、XDM スキーマがExperience Platformに取り込まれたデータの構造と形式をどのように表し、検証するかを確認します。
+- **データ取り込み**: [&#x200B; データ取り込みの概要](../../ingestion/home.md)を参照して、Experience Platformにデータを取り込む方法の基本（様々な方法やプロセスを含む）を確認してください。
+- **バッチ取り込み**: バッチ取り込みの基本的な概念については、[&#x200B; バッチ取り込みAPIの概要](../../ingestion/batch-ingestion/overview.md)を参照してください。 具体的には、「バッチ」とは何か、Experience Platformのデータ取り込みプロセス内でどのように機能するのか。
+- **データセット内のシステム メタデータ**: [&#x200B; カタログサービスの概要](../../catalog/home.md)を参照して、システム メタデータ フィールドを使用して取り込んだデータを追跡およびクエリする方法を確認してください。
+- **Experience Data Model （XDM）**: [&#x200B; スキーマ UIの概要](../../xdm/ui/overview.md)と[のスキーマ構成の基本&#39;](../../xdm/schema/composition.md)を参照して、XDM スキーマについて学び、XDM スキーマがExperience Platformに取り込まれたデータの構造と形式をどのように表し、検証するかを確認します。
 
 ## データセットのバッチメタデータへのアクセス {#access-dataset-batch-metadata}
 
@@ -92,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->そのバッチ IDに関連付けられているバッチ IDとクエリレコードを取得するには、まずExperience Platform内でバッチを作成する必要があります。 このプロセスを自身でテストしたい場合は、CSV データをExperience Platformに取り込むことができます。 AIが生成したレコメンデーション ](../../ingestion/tutorials/map-csv/recommendations.md)を使用して、CSV ファイルを既存のXDM スキーマに[ マッピングする方法に関するガイドをご覧ください。
+>そのバッチ IDに関連付けられているバッチ IDとクエリレコードを取得するには、まずExperience Platform内でバッチを作成する必要があります。 このプロセスを自身でテストしたい場合は、CSV データをExperience Platformに取り込むことができます。 AIが生成したレコメンデーション [&#128279;](../../ingestion/tutorials/map-csv/recommendations.md)を使用して、CSV ファイルを既存のXDM スキーマに マッピングする方法に関するガイドをご覧ください。
 
 バッチを取り込んだら、データを取り込んだデータセットの[!UICONTROL Datasets activity tab]に移動する必要があります。
 
@@ -104,7 +104,7 @@ Experience Platform UIで、左側のナビゲーションで「**[!UICONTROL Da
 
 使用可能なバッチのリストからバッチを選択し、右側の詳細パネルから[!UICONTROL Batch ID]をコピーします。
 
-![ バッチ IDがハイライト表示された取り込まれたレコードを示すExperience Platform データセット UI。](../images/use-cases/batch-id.png)
+![&#x200B; バッチ IDがハイライト表示された取り込まれたレコードを示すExperience Platform データセット UI。](../images/use-cases/batch-id.png)
 
 次に、次のクエリを使用して、そのバッチの一部としてデータセットに含まれたすべてのレコードを取得します。
 
@@ -128,4 +128,4 @@ LIMIT 1;
 
 次に、データ収集を実践して、学習した概念を適用する必要があります。 提供されたサンプルファイルまたは独自のデータを使用して、サンプルデータセットをExperience Platformに取り込みます。 まだ行っていない場合は、[Adobe Experience Platformにデータを取り込む方法](../../ingestion/tutorials/ingest-batch-data.md)に関するチュートリアルをお読みください。
 
-また、データ分析機能を強化するために、様々なデスクトップクライアントアプリケーション ](../clients/overview.md)を使用してクエリサービスを[接続および検証する方法を説明します。
+また、データ分析機能を強化するために、様々なデスクトップクライアントアプリケーション [&#128279;](../clients/overview.md)を使用してクエリサービスを接続および検証する方法を説明します。
