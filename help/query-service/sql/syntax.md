@@ -198,7 +198,7 @@ SELECT statement 2
 
 `CREATE TABLE AS SELECT` （CTAS） コマンドを使用して、`SELECT` クエリの結果を新しいテーブルに具現化します。 これは、変換されたデータセットの作成、集計の実行、またはモデルで使用する前に機能設計データをプレビューする場合に便利です。
 
-変換された機能を使用してモデルをトレーニングする準備ができた場合は、`TRANSFORM`句を使用して`CREATE MODEL`を使用する方法について、[ モデルのドキュメント ](../advanced-statistics/models.md)を参照してください。
+変換された機能を使用してモデルをトレーニングする準備ができた場合は、`TRANSFORM`句を使用して`CREATE MODEL`を使用する方法について、[&#x200B; モデルのドキュメント &#x200B;](../advanced-statistics/models.md)を参照してください。
 
 オプションで`TRANSFORM`句を含めて、1つ以上の機能エンジニアリング関数をCTAS ステートメント内に直接適用できます。 モデルのトレーニングの前に、`TRANSFORM`を使用して変換ロジックの結果を調べます。
 
@@ -223,7 +223,7 @@ AS (select_query)
 | `schema` | XDM スキーマのタイトル。 この句は、新しいテーブルを既存のXDM スキーマに関連付ける場合にのみ使用してください。 |
 | `rowvalidation` | （オプション）データセットに取り込まれた各バッチについて、行レベルの検証を有効にします。 デフォルトはtrueです。 |
 | `label` | （オプション）値`PROFILE`を使用して、プロファイルの取り込みに対してデータセットを有効としてラベル付けします。 |
-| `transform` | （オプション）データセットをマテリアライズする前に、機能エンジニアリングの変換（文字列インデックス、ワンホットエンコーディング、TF-IDFなど）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは、[`TRANSFORM`節のドキュメント ](#transform)を参照してください。 |
+| `transform` | （オプション）データセットをマテリアライズする前に、機能エンジニアリングの変換（文字列インデックス、ワンホットエンコーディング、TF-IDFなど）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは、[`TRANSFORM`節のドキュメント &#x200B;](#transform)を参照してください。 |
 | `select_query` | データセットを定義する標準の`SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節](#select-queries)を参照してください。 |
 
 >[!NOTE]
@@ -302,9 +302,9 @@ AS SELECT * FROM movie_review;
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-変換の定義、モデルオプションの設定、トレーニングデータの設定など、CREATE MODELの使用方法について詳しくは、[ モデルのドキュメント ](../advanced-statistics/models.md)を参照してください。
+変換の定義、モデルオプションの設定、トレーニングデータの設定など、CREATE MODELの使用方法について詳しくは、[&#x200B; モデルのドキュメント &#x200B;](../advanced-statistics/models.md)を参照してください。
 
-`CREATE TABLE`での使用については、[CREATE TABLE AS SELECT セクション ](#create-table-as-select)を参照してください。
+`CREATE TABLE`での使用については、[CREATE TABLE AS SELECT セクション &#x200B;](#create-table-as-select)を参照してください。
 
 #### CREATE MODELの例
 
@@ -347,7 +347,7 @@ INSERT INTO table_name select_query
 | パラメーター | 説明 |
 | ----- | ----- |
 | `table_name` | クエリを挿入するテーブルの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
 
 **例**
 
@@ -442,7 +442,7 @@ CREATE VIEW view_name AS select_query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
 
 **例**
 
@@ -466,7 +466,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | データベースの名前。 |
 | `schema_name` | スキーマの名前。 |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
 
 **例**
 
@@ -746,7 +746,7 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-クエリサービスのベストプラクティスについて詳しくは、[ データアセットの論理的な整理](../best-practices/organize-data-assets.md) ガイドを参照してください。
+クエリサービスのベストプラクティスについて詳しくは、[&#x200B; データアセットの論理的な整理](../best-practices/organize-data-assets.md) ガイドを参照してください。
 
 ## テーブルが存在します
 
@@ -845,7 +845,7 @@ SET property_key = property_value
 
 ### テーブルを分析 {#analyze-table}
 
-`ANALYZE TABLE` コマンドは、指定されたテーブルまたはテーブルの分布分析と統計計算を実行します。 `ANALYZE TABLE`の使用は、データセットが[高速化ストア ](#compute-statistics-accelerated-store)に保存されているか、[ データレイク ](#compute-statistics-data-lake)に保存されているかによって異なります。 その使用について詳しくは、それぞれの節を参照してください。
+`ANALYZE TABLE` コマンドは、指定されたテーブルまたはテーブルの分布分析と統計計算を実行します。 `ANALYZE TABLE`の使用は、データセットが[高速化ストア &#x200B;](#compute-statistics-accelerated-store)に保存されているか、[&#x200B; データレイク &#x200B;](#compute-statistics-data-lake)に保存されているかによって異なります。 その使用について詳しくは、それぞれの節を参照してください。
 
 #### 高速化されたストアのCOMPUTE統計 {#compute-statistics-accelerated-store}
 
@@ -965,7 +965,7 @@ CLOSE ALL
 
 ### DEALLOCATE
 
-事前に準備されたSQL ステートメントの割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 準備済みステートメントの割り当てを明示的に解除しなかった場合は、セッションが終了したときに割り当てが解除されます。 準備済みステートメントの詳細については、[PREPARE コマンド ](#prepare) セクションを参照してください。
+事前に準備されたSQL ステートメントの割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 準備済みステートメントの割り当てを明示的に解除しなかった場合は、セッションが終了したときに割り当てが解除されます。 準備済みステートメントの詳細については、[PREPARE コマンド &#x200B;](#prepare) セクションを参照してください。
 
 ```sql
 DEALLOCATE name
@@ -989,7 +989,7 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-`EXECUTE` コマンドは、事前に準備されたステートメントを実行するために使用されます。 準備済みステートメントはセッション中にのみ存在するため、準備済みステートメントは、現在のセッションで以前に実行された`PREPARE` ステートメントによって作成されている必要があります。 準備済みステートメントの使用について詳しくは、[`PREPARE` コマンド ](#prepare) セクションを参照してください。
+`EXECUTE` コマンドは、事前に準備されたステートメントを実行するために使用されます。 準備済みステートメントはセッション中にのみ存在するため、準備済みステートメントは、現在のセッションで以前に実行された`PREPARE` ステートメントによって作成されている必要があります。 準備済みステートメントの使用について詳しくは、[`PREPARE` コマンド &#x200B;](#prepare) セクションを参照してください。
 
 ステートメントを作成した`PREPARE` ステートメントが一部のパラメーターを指定した場合、互換性のある一連のパラメーターを`EXECUTE` ステートメントに渡す必要があります。 これらのパラメーターが渡されない場合、エラーが発生します。
 
@@ -1101,12 +1101,12 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-標準のSELECT クエリパラメーターの詳細については、[SELECT クエリセクション ](#select-queries)を参照してください。 このセクションには、`SELECT INTO` コマンドに固有のパラメーターのみが一覧表示されます。
+標準のSELECT クエリパラメーターの詳細については、[SELECT クエリセクション &#x200B;](#select-queries)を参照してください。 このセクションには、`SELECT INTO` コマンドに固有のパラメーターのみが一覧表示されます。
 
 | パラメーター | 説明 |
 | ------ | ------ |
 | `TEMPORARY` または `TEMP` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログなしテーブルになります。 ログなしテーブルの詳細については、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/sql-createtable.html)を参照してください。 |
+| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログなしテーブルになります。 ログなしテーブルの詳細については、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/sql-createtable.html)を参照してください。 |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-詳しくは、[ アドホックデータセットでのIDの設定](../data-governance/ad-hoc-schema-identities.md)に関するドキュメントを参照してください。
+詳しくは、[&#x200B; アドホックデータセットでのIDの設定](../data-governance/ad-hoc-schema-identities.md)に関するドキュメントを参照してください。
 
 #### 列を追加
 

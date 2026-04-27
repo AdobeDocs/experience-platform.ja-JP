@@ -72,10 +72,10 @@ $$;
 /
 ```
 
-特にDbVisualizerの場合、UIに「[!DNL Execute the complete buffer as one SQL statement]」へのオプションもあります。 詳しくは、[DbVisualizerのドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)を参照してください。
+特にDbVisualizerの場合、UIに「[!DNL Execute the complete buffer as one SQL statement]」へのオプションもあります。 詳しくは、[DbVisualizerのドキュメント &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)を参照してください。
 
 ## 次の手順
 
-このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。 クエリの作成について詳しくは、[ クエリ実行ガイド ](../best-practices/writing-queries.md)を参照してください。
+このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。 クエリの作成について詳しくは、[&#x200B; クエリ実行ガイド &#x200B;](../best-practices/writing-queries.md)を参照してください。
 
-また、[増分読み込みデザインパターン ](./incremental-load.md)で匿名ブロックを使用してクエリの効率を高める方法についても説明します。
+また、[増分読み込みデザインパターン &#x200B;](./incremental-load.md)で匿名ブロックを使用してクエリの効率を高める方法についても説明します。
