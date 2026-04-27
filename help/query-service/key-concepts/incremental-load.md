@@ -2,9 +2,9 @@
 title: クエリサービスでの増分読み込み
 description: 増分読み込み機能は、匿名ブロックとスナップショットの両方の機能を使用して、一致するデータを無視しながらデータレイクからデータウェアハウスにデータを移動するための、ほぼリアルタイムのソリューションを提供します。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 99%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 99%
 
 次の手順では、スナップショットおよび匿名ブロック機能を使用して、データを作成し増分的に読み込む方法を示します。 このデザインパターンは、独自のクエリシーケンスのテンプレートとして使用できます。
 
-1. `checkpoint_log` テーブルを作成して、データの正常な処理に使用された最新のスナップショットを追跡します。データセットを増分的に処理するには、トラッキングテーブル（この例では `checkpoint_log`）をまず `null` に初期化する必要があります。
+1. `checkpoint_log` テーブルを作成して、データの正常な処理に使用された最新のスナップショットを追跡します。 データセットを増分的に処理するには、トラッキングテーブル（この例では `checkpoint_log`）をまず `null` に初期化する必要があります。
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ ht-degree: 99%
       WHERE false;
    ```
 
-1. 増分処理が必要なデータセット用の空のレコード 1 つを `checkpoint_log` テーブルに入力します。 `DIM_TABLE_ABC` は、以下の例で処理されるデータセットです。 `DIM_TABLE_ABC` の処理を初めて行う際、`last_snapshot_id` は `null` に初期化されます。これにより、初回はデータセット全体を処理し、それ以降は増分的に処理することができます。
+1. 増分処理が必要なデータセット用の空のレコード 1 つを `checkpoint_log` テーブルに入力します。 `DIM_TABLE_ABC` は、以下の例で処理されるデータセットです。 `DIM_TABLE_ABC` の処理を初めて行う際、`last_snapshot_id` は `null` に初期化されます。 これにより、初回はデータセット全体を処理し、それ以降は増分的に処理することができます。
 
    ```SQL
    INSERT INTO
@@ -52,12 +52,12 @@ ht-degree: 99%
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. 次に、`DIM_TABLE_ABC` からの処理済みの出力を含むように `DIM_TABLE_ABC_Incremental` を初期化します。  以下の SQL サンプルの&#x200B;**必須**&#x200B;実行セクションに含まれている匿名ブロック（手順 1～4 で説明）が順番に実行されて、データが増分的に処理されます。
+1. 次に、`DIM_TABLE_ABC` からの処理済みの出力を含むように `DIM_TABLE_ABC_Incremental` を初期化します。 以下の SQL サンプルの&#x200B;**必須**&#x200B;実行セクションに含まれている匿名ブロック（手順 1～4 で説明）が順番に実行されて、データが増分的に処理されます。
 
-   1. 処理の開始位置を示す `from_snapshot_id` を設定します。この例の `from_snapshot_id` は、`DIM_TABLE_ABC` で使用するために `checkpoint_log` テーブルからクエリされます。初回の実行時に、スナップショット ID は `null` になります。つまり、データセット全体が処理されます。
+   1. 処理の開始位置を示す `from_snapshot_id` を設定します。 この例の `from_snapshot_id` は、`DIM_TABLE_ABC` で使用するために `checkpoint_log` テーブルからクエリされます。 初回の実行時に、スナップショット ID は `null` になります。つまり、データセット全体が処理されます。
    1. `to_snapshot_id` をソーステーブル（`DIM_TABLE_ABC`）の現在のスナップショット ID として設定します。 例では、これはソーステーブルのメタデータテーブルからクエリされます。
-   1. `CREATE` キーワードを使用して、`DIM_TABLE_ABC_Incremenal` を宛先テーブルとして作成します。宛先テーブルは、ソースデータセット（`DIM_TABLE_ABC`）からの処理済みデータを保持します。これにより、ソーステーブルからの処理済みデータ（`from_snapshot_id` から `to_snapshot_id` まで）を宛先テーブルに増分的に追加できます。
-   1. `DIM_TABLE_ABC` で正常に処理されたソースデータの `to_snapshot_id` を `checkpoint_log` テーブルに反映させます。
+   1. `CREATE` キーワードを使用して、`DIM_TABLE_ABC_Incremenal` を宛先テーブルとして作成します。 宛先テーブルは、ソースデータセット（`DIM_TABLE_ABC`）からの処理済みデータを保持します。 これにより、ソーステーブルからの処理済みデータ（`from_snapshot_id` から `to_snapshot_id` まで）を宛先テーブルに増分的に追加できます。
+   1. `DIM_TABLE_ABC` で正常に処理されたソースデータの `to_snapshot_id` で `checkpoint_log` テーブルを更新します。
    1. 匿名ブロックの順次実行されたクエリのいずれかが失敗した場合は、**オプション**&#x200B;の例外セクションが実行されます。 この結果、エラーが返され、プロセスが終了します。
 
    >[!NOTE]
@@ -84,7 +84,7 @@ ht-degree: 99%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ ht-degree: 99%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -162,4 +162,4 @@ $$;
 
 ## 次の手順
 
-このドキュメントを通して、匿名ブロックおよびスナップショット機能を使用して増分読み込みを実行する方法をより深く理解し、このロジックを独自の具体的なクエリに適用できるようになりました。クエリの実行に関する一般的なガイダンスについては、[クエリサービスでのクエリのー実行に関するガイド](../best-practices/writing-queries.md)を参照してください。
+このドキュメントを通して、匿名ブロックおよびスナップショット機能を使用して増分読み込みを実行する方法をより深く理解し、このロジックを独自の具体的なクエリに適用できるようになりました。 クエリの実行に関する一般的なガイダンスについては、[クエリサービスでのクエリのー実行に関するガイド](../best-practices/writing-queries.md)を参照してください。

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスのSQL構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされるSQL構文について詳しく説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
-ht-degree: 4%
+source-wordcount: '4737'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform Query Serviceでは、`SELECT`文やその他の制限
 
 ## クエリを選択 {#select-queries}
 
-次の構文は、`SELECT`がサポートする[!DNL Query Service] クエリを定義します。
+次の構文は、[!DNL Query Service]がサポートする`SELECT` クエリを定義します。
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -124,7 +124,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapsho
 
 >[!NOTE]
 >
->`HEAD`句で`TAIL`または`SNAPSHOT`を使用する場合は、引用符で囲む必要があります（「HEAD」、「TAIL」など）。 引用符なしで使用すると、構文エラーが発生します。
+>`SNAPSHOT`句で`HEAD`または`TAIL`を使用する場合は、引用符で囲む必要があります（「HEAD」、「TAIL」など）。 引用符なしで使用すると、構文エラーが発生します。
 
 以下の表では、SNAPSHOT句の各構文オプションの意味を説明しています。
 
@@ -149,7 +149,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapsho
 
 ### WHERE句
 
-デフォルトでは、`WHERE` クエリの`SELECT`句によって生成された一致は、大文字と小文字が区別されます。 一致を大文字と小文字を区別しない場合は、`ILIKE`の代わりにキーワード `LIKE`を使用できます。
+デフォルトでは、`SELECT` クエリの`WHERE`句によって生成された一致は、大文字と小文字が区別されます。 一致を大文字と小文字を区別しない場合は、`LIKE`の代わりにキーワード `ILIKE`を使用できます。
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -198,7 +198,7 @@ SELECT statement 2
 
 `CREATE TABLE AS SELECT` （CTAS） コマンドを使用して、`SELECT` クエリの結果を新しいテーブルに具現化します。 これは、変換されたデータセットの作成、集計の実行、またはモデルで使用する前に機能設計データをプレビューする場合に便利です。
 
-変換された機能を使用してモデルをトレーニングする準備ができた場合は、[句を使用して](../advanced-statistics/models.md)を使用する方法について、`CREATE MODEL` モデルのドキュメント `TRANSFORM`を参照してください。
+変換された機能を使用してモデルをトレーニングする準備ができた場合は、`TRANSFORM`句を使用して`CREATE MODEL`を使用する方法について、[ モデルのドキュメント ](../advanced-statistics/models.md)を参照してください。
 
 オプションで`TRANSFORM`句を含めて、1つ以上の機能エンジニアリング関数をCTAS ステートメント内に直接適用できます。 モデルのトレーニングの前に、`TRANSFORM`を使用して変換ロジックの結果を調べます。
 
@@ -223,7 +223,7 @@ AS (select_query)
 | `schema` | XDM スキーマのタイトル。 この句は、新しいテーブルを既存のXDM スキーマに関連付ける場合にのみ使用してください。 |
 | `rowvalidation` | （オプション）データセットに取り込まれた各バッチについて、行レベルの検証を有効にします。 デフォルトはtrueです。 |
 | `label` | （オプション）値`PROFILE`を使用して、プロファイルの取り込みに対してデータセットを有効としてラベル付けします。 |
-| `transform` | （オプション）データセットをマテリアライズする前に、機能エンジニアリングの変換（文字列インデックス、ワンホットエンコーディング、TF-IDFなど）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは、[`TRANSFORM`節のドキュメント &#x200B;](#transform)を参照してください。 |
+| `transform` | （オプション）データセットをマテリアライズする前に、機能エンジニアリングの変換（文字列インデックス、ワンホットエンコーディング、TF-IDFなど）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは、[`TRANSFORM`節のドキュメント ](#transform)を参照してください。 |
 | `select_query` | データセットを定義する標準の`SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節](#select-queries)を参照してください。 |
 
 >[!NOTE]
@@ -280,11 +280,11 @@ AS SELECT * FROM movie_review;
 
 #### 制限と行動 {#limitations-and-behavior}
 
-`TRANSFORM`または`CREATE TABLE`で`CREATE TEMP TABLE`句を使用する場合は、次の制限事項に注意してください。
+`CREATE TABLE`または`CREATE TEMP TABLE`で`TRANSFORM`句を使用する場合は、次の制限事項に注意してください。
 
 - 変換関数がベクトル出力を生成すると、自動的に配列に変換されます。
 - そのため、`TRANSFORM`を使用して作成されたテーブルは、`CREATE MODEL`文で直接使用できません。 適切なフィーチャ ベクトルを生成するには、モデル作成時に変換ロジックを再定義する必要があります。
-- 変換は、テーブルの作成時にのみ適用されます。 `INSERT INTO`でテーブルに挿入された新しいデータは&#x200B;**自動的に変換されません**。 変換を新しいデータに適用するには、`CREATE TABLE AS SELECT`句を使用して`TRANSFORM`を使用してテーブルを再作成する必要があります。
+- 変換は、テーブルの作成時にのみ適用されます。 `INSERT INTO`でテーブルに挿入された新しいデータは&#x200B;**自動的に変換されません**。 変換を新しいデータに適用するには、`TRANSFORM`句を使用して`CREATE TABLE AS SELECT`を使用してテーブルを再作成する必要があります。
 - この方法は、再利用可能な変換パイプラインを構築するためではなく、ある時点での変換のプレビューと検証を目的としています。
 
 >[!NOTE]
@@ -302,9 +302,9 @@ AS SELECT * FROM movie_review;
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-変換の定義、モデルオプションの設定、トレーニングデータの設定など、CREATE MODELの使用方法について詳しくは、[&#x200B; モデルのドキュメント &#x200B;](../advanced-statistics/models.md)を参照してください。
+変換の定義、モデルオプションの設定、トレーニングデータの設定など、CREATE MODELの使用方法について詳しくは、[ モデルのドキュメント ](../advanced-statistics/models.md)を参照してください。
 
-`CREATE TABLE`での使用については、[CREATE TABLE AS SELECT セクション &#x200B;](#create-table-as-select)を参照してください。
+`CREATE TABLE`での使用については、[CREATE TABLE AS SELECT セクション ](#create-table-as-select)を参照してください。
 
 #### CREATE MODELの例
 
@@ -327,7 +327,7 @@ AS SELECT * FROM movie_review_e2e_DND;
 
 #### 制限事項 {#limitations}
 
-`TRANSFORM`で`CREATE TABLE`を使用する場合は、次の制限が適用されます。 変換されたデータの保存方法、ベクター出力の処理方法、および結果をモデルのトレーニングワークフローで直接再利用できない理由について詳しくは、`CREATE TABLE AS SELECT`の制限と動作の節を参照してください。
+`CREATE TABLE`で`TRANSFORM`を使用する場合は、次の制限が適用されます。 変換されたデータの保存方法、ベクター出力の処理方法、および結果をモデルのトレーニングワークフローで直接再利用できない理由について詳しくは、`CREATE TABLE AS SELECT`の制限と動作の節を参照してください。
 
 - ベクトル出力は自動的に配列に変換され、`CREATE MODEL`では直接使用できません。
 - 変換ロジックはメタデータとして保持されないので、バッチ間で再利用できません。
@@ -347,7 +347,7 @@ INSERT INTO table_name select_query
 | パラメーター | 説明 |
 | ----- | ----- |
 | `table_name` | クエリを挿入するテーブルの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
 
 **例**
 
@@ -442,7 +442,7 @@ CREATE VIEW view_name AS select_query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
 
 **例**
 
@@ -466,7 +466,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | データベースの名前。 |
 | `schema_name` | スキーマの名前。 |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション &#x200B;](#select-queries)にあります。 |
+| `select_query` | `SELECT` ステートメント。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries)にあります。 |
 
 **例**
 
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -647,7 +647,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -746,11 +746,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-クエリサービスのベストプラクティスについて詳しくは、[&#x200B; データアセットの論理的な整理](../best-practices/organize-data-assets.md) ガイドを参照してください。
+クエリサービスのベストプラクティスについて詳しくは、[ データアセットの論理的な整理](../best-practices/organize-data-assets.md) ガイドを参照してください。
 
 ## テーブルが存在します
 
-`table_exists` SQL コマンドは、テーブルが現在システムに存在するかどうかを確認するために使用されます。 このコマンドは、テーブル `true`が&#x200B;**存在する場合は**、テーブルが`false`が存在しない場合は&#x200B;**というブール値を返します。**
+`table_exists` SQL コマンドは、テーブルが現在システムに存在するかどうかを確認するために使用されます。 このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。
 
 ステートメントを実行する前にテーブルが存在するかどうかを検証することで、`table_exists`機能は、`CREATE`と`INSERT INTO`の両方のユースケースをカバーする匿名ブロックの書き込みプロセスを簡素化します。
 
@@ -775,7 +775,7 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
@@ -837,7 +837,7 @@ SET property_key = property_value
 | `property_key` | リストまたは変更するプロパティの名前。 |
 | `property_value` | プロパティに設定する値。 |
 
-任意の設定の値を返すには、`SET [property key]`なしで`property_value`を使用します。
+任意の設定の値を返すには、`property_value`なしで`SET [property key]`を使用します。
 
 ## [!DNL PostgreSQL] コマンド
 
@@ -845,7 +845,7 @@ SET property_key = property_value
 
 ### テーブルを分析 {#analyze-table}
 
-`ANALYZE TABLE` コマンドは、指定されたテーブルまたはテーブルの分布分析と統計計算を実行します。 `ANALYZE TABLE`の使用は、データセットが[高速化ストア &#x200B;](#compute-statistics-accelerated-store)に保存されているか、[&#x200B; データレイク &#x200B;](#compute-statistics-data-lake)に保存されているかによって異なります。 その使用について詳しくは、それぞれの節を参照してください。
+`ANALYZE TABLE` コマンドは、指定されたテーブルまたはテーブルの分布分析と統計計算を実行します。 `ANALYZE TABLE`の使用は、データセットが[高速化ストア ](#compute-statistics-accelerated-store)に保存されているか、[ データレイク ](#compute-statistics-data-lake)に保存されているかによって異なります。 その使用について詳しくは、それぞれの節を参照してください。
 
 #### 高速化されたストアのCOMPUTE統計 {#compute-statistics-accelerated-store}
 
@@ -873,9 +873,9 @@ ANALYZE TABLE <original_table_name>
 
 #### データレイクのCOMPUTE統計 {#compute-statistics-data-lake}
 
-[!DNL Azure Data Lake Storage] SQL コマンドを使用して、`COMPUTE STATISTICS` （ADLS） データセットの列レベルの統計を計算できるようになりました。 データセット全体、データセットのサブセット、すべての列、または列のサブセットのいずれかに関する列統計を計算します。
+`COMPUTE STATISTICS` SQL コマンドを使用して、[!DNL Azure Data Lake Storage] （ADLS） データセットの列レベルの統計を計算できるようになりました。 データセット全体、データセットのサブセット、すべての列、または列のサブセットのいずれかに関する列統計を計算します。
 
-`COMPUTE STATISTICS`は`ANALYZE TABLE` コマンドを拡張します。 ただし、`COMPUTE STATISTICS`、`FILTERCONTEXT`および`FOR COLUMNS` コマンドは、高速化されたストアテーブルではサポートされていません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在、ADLS テーブルでのみサポートされています。
+`COMPUTE STATISTICS`は`ANALYZE TABLE` コマンドを拡張します。 ただし、`COMPUTE STATISTICS`、`FILTERCONTEXT`および`FOR COLUMNS` コマンドは、高速化されたストアテーブルではサポートされていません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。
 
 **例**
 
@@ -883,13 +883,13 @@ ANALYZE TABLE <original_table_name>
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-`FILTER CONTEXT` コマンドは、指定されたフィルター条件に基づいて、データセットのサブセットに関する統計を計算します。 `FOR COLUMNS` コマンドは、分析のために特定の列をターゲットにします。
+`FILTER CONTEXT` コマンドは、指定されたフィルター条件に基づいて、データセットのサブセットに関する統計を計算します。 The `FOR COLUMNS` command targets specific columns for analysis.
 
 >[!NOTE]
 >
->生成された`Statistics ID`と統計は各セッションにのみ有効で、異なるPSQL セッション間でアクセスすることはできません。<br><br>制限：<ul><li>統計の生成は、配列またはマップデータタイプではサポートされていません</li><li>計算された統計は、セッション間で&#x200B;**not**&#x200B;保持されます。</li></ul><br><br>オプション：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br> デフォルトでは、フラグはtrueに設定されています。 その結果、サポートされていないデータタイプで統計が要求された場合、エラーアウトは発生せず、サポートされていないデータタイプのフィールドはサイレントにスキップされます。<br> サポートされていないデータタイプで統計が要求された場合にエラーに関する通知を有効にするには、`SET skip_stats_for_complex_datatypes = false`を使用します。
+>The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are **not** persisted across sessions.</li></ul><br><br>オプション：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but silently skips fields with the unsupported datatypes.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
 
-コンソール出力は以下のように表示されます。
+The console output appears as seen below.
 
 ```console
 |     Statistics ID      |
@@ -898,20 +898,20 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 (1 row)
 ```
 
-次に、`Statistics ID`を参照して、計算された統計を直接クエリできます。 次のステートメントの例に示すように、`Statistics ID`またはエイリアス名を使用して、出力を完全に表示します。 この機能について詳しくは、[&#x200B; エイリアス名のドキュメント &#x200B;](../key-concepts/dataset-statistics.md#alias-name)を参照してください。
+You can then query the computed statistics directly by referencing the `Statistics ID`. Use the the `Statistics ID` or the alias name as shown in the example statement below, to view the output in full. To learn more about this feature, see the [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-`SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時的な統計のメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
+Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
 
 ```sql
 SHOW STATISTICS;
 ```
 
-SHOW STATISTICSの出力例を以下に示します。
+An example output of SHOW STATISTICS is seen below.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
@@ -921,17 +921,17 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-詳しくは、[&#x200B; データセット統計ドキュメント &#x200B;](../key-concepts/dataset-statistics.md)を参照してください。
+See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
 
-#### 表サンプル {#tablesample}
+#### TABLESAMPLE {#tablesample}
 
-Adobe Experience Platform Query Serviceでは、近似クエリ処理機能の一部として、サンプルデータセットを提供しています。
+Adobe Experience Platform クエリサービスは、近似クエリ処理機能の一部としてサンプルデータセットを提供します。
 
-データセットのサンプルは、データセットに対する集計操作に対する正確な回答が必要ない場合に最適です。 近似クエリを発行して近似クエリを返し、大規模なデータセットに対してより効率的な探索的クエリを実行するには、`TABLESAMPLE`機能を使用します。
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. To conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer, use the `TABLESAMPLE` feature.
 
-サンプルデータセットは、既存の[!DNL Azure Data Lake Storage] （ADLS）データセットの均一なランダムサンプルで作成され、元のデータセットのレコードの割合のみが使用されます。 データセットサンプル機能は、`ANALYZE TABLE` コマンドを`TABLESAMPLE`および`SAMPLERATE` SQL コマンドで拡張します。
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.
 
-次の例では、1行目は、表の5%のサンプルを計算する方法を示しています。 2行目は、テーブル内のデータのフィルタリングされたビューから5% サンプルを計算する方法を示しています。
+In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
 
 **例**
 
@@ -940,11 +940,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-詳しくは、[&#x200B; データセットサンプルのドキュメント &#x200B;](../key-concepts/dataset-samples.md)を参照してください。
+See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
 
 ### BEGIN
 
-`BEGIN` コマンド、または`BEGIN WORK`または`BEGIN TRANSACTION` コマンドにより、トランザクション ブロックが開始されます。 begin コマンドの後に入力されたステートメントは、明示的なCOMMIT コマンドまたはROLLBACK コマンドが指定されるまで、1回のトランザクションで実行されます。 このコマンドは`START TRANSACTION`と同じです。
+The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -954,7 +954,7 @@ BEGIN TRANSACTION
 
 ### CLOSE
 
-`CLOSE` コマンドは、開いているカーソルに関連付けられているリソースを解放します。 カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
+`CLOSE` コマンドは、開いているカーソルに関連付けられているリソースを解放します。 カーソルを閉じた後の操作は許可されません。 不要になったカーソルは閉じる必要があります。
 
 ```sql
 CLOSE name
@@ -965,7 +965,7 @@ CLOSE ALL
 
 ### DEALLOCATE
 
-事前に準備されたSQL ステートメントの割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 準備済みステートメントの割り当てを明示的に解除しなかった場合は、セッションが終了したときに割り当てが解除されます。 準備済みステートメントの詳細については、[PREPARE コマンド &#x200B;](#prepare) セクションを参照してください。
+事前に準備されたSQL ステートメントの割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 準備済みステートメントの割り当てを明示的に解除しなかった場合は、セッションが終了したときに割り当てが解除されます。 準備済みステートメントの詳細については、[PREPARE コマンド ](#prepare) セクションを参照してください。
 
 ```sql
 DEALLOCATE name
@@ -989,7 +989,7 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-`EXECUTE` コマンドは、事前に準備されたステートメントを実行するために使用されます。 準備済みステートメントはセッション中にのみ存在するため、準備済みステートメントは、現在のセッションで以前に実行された`PREPARE` ステートメントによって作成されている必要があります。 準備済みステートメントの使用について詳しくは、[`PREPARE` コマンド &#x200B;](#prepare) セクションを参照してください。
+`EXECUTE` コマンドは、事前に準備されたステートメントを実行するために使用されます。 準備済みステートメントはセッション中にのみ存在するため、準備済みステートメントは、現在のセッションで以前に実行された`PREPARE` ステートメントによって作成されている必要があります。 準備済みステートメントの使用について詳しくは、[`PREPARE` コマンド ](#prepare) セクションを参照してください。
 
 ステートメントを作成した`PREPARE` ステートメントが一部のパラメーターを指定した場合、互換性のある一連のパラメーターを`EXECUTE` ステートメントに渡す必要があります。 これらのパラメーターが渡されない場合、エラーが発生します。
 
@@ -1010,7 +1010,7 @@ EXECUTE name [ ( parameter ) ]
 EXPLAIN statement
 ```
 
-応答の形式を定義するには、`FORMAT` コマンドで`EXPLAIN` キーワードを使用します。
+応答の形式を定義するには、`EXPLAIN` コマンドで`FORMAT` キーワードを使用します。
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -1018,7 +1018,7 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `FORMAT` | 出力形式を指定するには、`FORMAT` コマンドを使用します。 使用可能なオプションは`TEXT`または`JSON`です。 テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
+| `FORMAT` | 出力形式を指定するには、`FORMAT` コマンドを使用します。 使用可能なオプションは`TEXT`または`JSON`です。 テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。 このパラメーターのデフォルトは `TEXT` です。 |
 | `statement` | 実行プランを表示する`SELECT`、`INSERT`、`UPDATE`、`DELETE`、`VALUES`、`EXECUTE`、`DECLARE`、`CREATE TABLE AS`または`CREATE MATERIALIZED VIEW AS`のステートメント。 |
 
 >[!IMPORTANT]
@@ -1101,17 +1101,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-標準のSELECT クエリパラメーターの詳細については、[SELECT クエリセクション &#x200B;](#select-queries)を参照してください。 このセクションには、`SELECT INTO` コマンドに固有のパラメーターのみが一覧表示されます。
+標準のSELECT クエリパラメーターの詳細については、[SELECT クエリセクション ](#select-queries)を参照してください。 このセクションには、`SELECT INTO` コマンドに固有のパラメーターのみが一覧表示されます。
 
 | パラメーター | 説明 |
 | ------ | ------ |
 | `TEMPORARY` または `TEMP` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログなしテーブルになります。 ログなしテーブルの詳細については、[[!DNL PostgreSQL]  ドキュメント &#x200B;](https://www.postgresql.org/docs/current/sql-createtable.html)を参照してください。 |
+| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログなしテーブルになります。 ログなしテーブルの詳細については、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/sql-createtable.html)を参照してください。 |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**
 
-次のクエリは、テーブル `films_recent`の最近のエントリのみで構成される新しいテーブル `films`を作成します。
+次のクエリは、テーブル `films`の最近のエントリのみで構成される新しいテーブル `films_recent`を作成します。
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -1128,7 +1128,7 @@ SHOW ALL
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `name` | 情報を取得するランタイムパラメーターの名前。 ランタイムパラメーターの使用可能な値には、次の値が含まれます。<br>`SERVER_VERSION`：このパラメーターは、サーバーのバージョン番号を示します。<br>`SERVER_ENCODING`：このパラメーターは、サーバーサイドの文字セット エンコーディングを示します。<br>`LC_COLLATE`：このパラメーターは、照合用のデータベースのロケール設定（テキスト順序）を表示します。<br>`LC_CTYPE`：このパラメーターは、文字分類のデータベースのロケール設定を表示します。<br>`IS_SUPERUSER`：このパラメーターは、現在の役割にスーパーユーザー権限があるかどうかを示します。 |
+| `name` | 情報を取得するランタイムパラメーターの名前。 ランタイムパラメーターの可能な値には、次の値が含まれます。<br>`SERVER_VERSION`：このパラメーターは、サーバーのバージョン番号を示します。<br>`SERVER_ENCODING`：このパラメーターは、サーバー側の文字セットエンコーディングを示します。<br>`LC_COLLATE`：このパラメーターは、照合（テキストの順序付け）のデータベースのロケール設定を示します。<br>`LC_CTYPE`：このパラメーターは、現在の役割にスーパーユーザー権限があるかどうかを示します。<br>`IS_SUPERUSER` |
 | `ALL` | すべての設定パラメーターの値を説明付きで表示します。 |
 
 **例**
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-詳しくは、[&#x200B; アドホックデータセットでのIDの設定](../data-governance/ad-hoc-schema-identities.md)に関するドキュメントを参照してください。
+詳しくは、[ アドホックデータセットでのIDの設定](../data-governance/ad-hoc-schema-identities.md)に関するドキュメントを参照してください。
 
 #### 列を追加
 
@@ -1266,7 +1266,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 | 4 | `tinyint` | `int1` | `tinyint` | 0から255までの整数を1 バイトで格納するために使用される数値データタイプ。 |
 | 5 | `varchar(len)` | `string` | `varchar(len)` | 可変サイズの文字データタイプ。 `varchar`は、列データ エントリのサイズがかなり異なる場合に最適です。 |
 | 6 | `double` | `float8` | `double precision` | `FLOAT8`と`FLOAT`は`DOUBLE PRECISION`の有効な類義語です。 `double precision`は浮動小数点データ型です。 浮動小数点値は8 バイト単位で格納されます。 |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8`は`double precision`の有効な同義語です。`double precision`は浮動小数点データ型です。 浮動小数点値は8 バイト単位で格納されます。 |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8`は`double precision`の有効な同義語です。`double precision` は浮動小数点データタイプです。 浮動小数点値は8 バイト単位で格納されます。 |
 | 8 | `date` | `date` | `date` | `date` データ型は、タイムスタンプ情報のない4 バイトの保存されたカレンダー日付値です。 有効な日付の範囲は、01-01-0001 ～ 12-31-9999です。 |
 | 9 | `datetime` | `datetime` | `datetime` | カレンダーの日付と時刻として表される時刻にインスタントを保存するために使用されるデータタイプ。 `datetime`には、年、月、日、時間、秒、分数の修飾子が含まれます。 `datetime`宣言には、そのシーケンスに結合されているこれらの時間単位のサブセットを含めることも、1つの時間単位のみを含めることもできます。 |
 | 10 | `char(len)` | `string` | `char(len)` | `char(len)` キーワードは、アイテムが固定長文字であることを示すために使用されます。 |

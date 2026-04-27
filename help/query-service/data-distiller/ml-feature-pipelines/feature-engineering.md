@@ -2,10 +2,10 @@
 title: 機械学習のエンジニア機能
 description: Adobe Experience Platformのデータを、マシンラーニングモデルで使用できる機能や変数に変換する方法を説明します。 Data Distillerを使用してマシンラーニングの機能を大規模に計算し、その機能をマシンラーニングと共有します。
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 13%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;
