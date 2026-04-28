@@ -3,15 +3,20 @@ title: UIを使用したKobieからExperience Platformへのストリームデ�
 description: UIを使用してKobieからAdobe Experience Platformにデータをストリーミングする方法を説明します。
 hide: true
 hidefromtoc: true
+badge: ベータ版
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 14%
+source-wordcount: '904'
+ht-degree: 15%
 
 ---
 
 # UIを使用して[!DNL Kobie Streaming Events]からExperience Platformにデータをストリーミング
+
+>[!AVAILABILITY]
+>
+>[!DNL Kobie Streaming Events] ソースはベータ版です。 ベータ版のソースの使用について詳しくは、ソースの概要の[条件](../../../../home.md#terms-and-conditions)を参照してください。
 
 [!DNL Kobie Alchemy Loyalty Cloud (KALC)]は、エンタープライズレベルのガバナンスにより、価値実現までの時間の短縮、効率性の向上、ブランドの保護など、ロイヤルティ戦略に適応する、構成が容易で安全、かつスケーラブルなMACH プラットフォームです。 [!DNL KALC]では、CDP、CRM、CMSなどのシームレスな統合により、マーケターがあらゆるチャネルでリアルタイムのパーソナライゼーションを提供できるようにするとともに、ブランドロイヤルティの向上に合わせて進化できる柔軟性とトレーサビリティを提供します。
 
@@ -46,7 +51,7 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 次に、*[!UICONTROL Select data]* インターフェイスを使用して、サンプル JSON ファイルをアップロードし、ソーススキーマを定義します。 この手順では、プレビューインターフェイスを使用して、ペイロードのファイル構造を表示できます。 終了したら「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; ソースワークフローのデータを選択ステップ &#x200B;](../../../../images/tutorials/create/kobie/select-data.png)
+![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/kobie/select-data.png)
 
 ## データフローの詳細
 
@@ -75,21 +80,21 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 データセットを設定したら、名前、オプションの説明、アラート設定など、データフローの詳細を指定する必要があります。
 
-![&#x200B; データフローの詳細インターフェイス &#x200B;](../../../../images/tutorials/create/kobie/dataflow-details.png)
+![ データフローの詳細インターフェイス ](../../../../images/tutorials/create/kobie/dataflow-details.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。 デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （オプション）データフローの簡単な説明。 |
-| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[&#x200B; アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを生成できます。これらのオプションを使用すると、実行中のデータフローがこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要](../../alerts.md)を参照してください <ul><li>**ソースデータフロー実行開始**：このアラートを選択すると、データフロー実行が開始されたときに通知を受け取ります。</li><li>**ソースデータフローの実行成功**：このアラートを選択すると、データフローがエラーなしで終了した場合に通知を受け取ります。</li><li>**ソースデータフロー実行エラー**: データフロー実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## マッピング
 
-マッピングインターフェイスを使用して、Experience Platformにデータを取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI[&#128279;](../../../../../data-prep/ui/mapping.md)の マッピングガイドを参照してください。
+マッピングインターフェイスを使用して、Experience Platformにデータを取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI](../../../../../data-prep/ui/mapping.md)の[ マッピングガイドを参照してください。
 
-![&#x200B; ワークフローのマッピング手順](../../../../images/tutorials/create/kobie/mapping.png)
+![ ワークフローのマッピング手順](../../../../images/tutorials/create/kobie/mapping.png)
 
 ## レビュー
 
@@ -100,14 +105,14 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 詳細が正しいことを確認したら、**[!UICONTROL Finish]**&#x200B;を選択します。
 
-![&#x200B; ソースワークフローのレビューステップ。](../../../../images/tutorials/create/kobie/review.png)
+![ ソースワークフローのレビューステップ。](../../../../images/tutorials/create/kobie/review.png)
 
 ## ストリーミングエンドポイント URLの取得
 
 接続を作成すると、ソースの詳細ページが表示されます。 このページには、以前に実行したデータフロー、ID、ストリーミングエンドポイント URLなど、新しく作成した接続の詳細が表示されます。
 
-![&#x200B; ストリーミングエンドポイント URL。](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
+![ ストリーミングエンドポイント URL。](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。 データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル &#x200B;](../../monitor-streaming.md)を参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータをモニターすると、取り込み速度、成功、エラーに関する情報を確認できます。 データフローを監視する方法について詳しくは、[UIでのアカウントとデータフローの監視に関するチュートリアル ](../../monitor-streaming.md)を参照してください。
