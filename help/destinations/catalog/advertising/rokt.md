@@ -71,10 +71,10 @@ ht-degree: 25%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 最適な属性を選択できます。 これを使用して、マーケティングキャンペーンの特定のグループをターゲティングします。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 最適な属性を選択できます。 これを使用して、マーケティングキャンペーンの特定のグループをターゲティングします。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](/help/destinations/ui/connect-destination.md)の手順に従ってください。 宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -104,7 +104,7 @@ ht-degree: 25%
 * **[!UICONTROL Username]**: [!DNL Rokt] アカウントマネージャーから提供されたAPI キー。
 * **[!UICONTROL Password]**: [!DNL Rokt] アカウントマネージャーから提供されたAPI シークレット。
 
-  ![ アカウントの詳細、認証フィールド、宛先の詳細が入力された[!DNL Experience Platform]の[!DNL Rokt]宛先設定画面。](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
+  ![&#x200B; アカウントの詳細、認証フィールド、宛先の詳細が入力された[!DNL Experience Platform]の[!DNL Rokt]宛先設定画面。](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -123,8 +123,8 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -146,7 +146,7 @@ ht-degree: 25%
 
 フルマッピングの例を次に示します。
 
-![ ソースとターゲット ID フィールドが設定された[!DNL Experience Platform]の[!DNL Rokt]宛先アクティベーション ワークフローのマッピング ステップ。](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
+![&#x200B; ソースとターゲット ID フィールドが設定された[!DNL Experience Platform]の[!DNL Rokt]宛先アクティベーション ワークフローのマッピング ステップ。](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
 
 >[!NOTE]
 >
