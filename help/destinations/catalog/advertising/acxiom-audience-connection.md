@@ -34,7 +34,7 @@ ht-degree: 16%
 [!DNL Acxiom Audience Connection]宛先を設定する前に、次の前提条件を完了してください。
 
 * **利用条件の確認：** [!DNL Acxiom]の利用条件に関する契約書を読み、署名します。 実行した販売注文が完了すると、契約書へのリンクが届きます。 契約書に署名するまで、[!DNL Acxiom Audience Connection]宛先カードは[!DNL Experience Platform]宛先カタログに表示されません。 契約書に同意して署名すると、[!DNL Adobe]が設定を完了し、[!DNL Acxiom Audience Connection]宛先カードが表示されます。
-* **お客様の[!DNL Adobe]組織IDを知る：**&#x200B;お客様の[!DNL Adobe]組織IDは、利用条件を完了するために必要です。 組織ID](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)を[表示する方法について詳しくは、[!DNL Adobe]の&#x200B;*Experience Cloudの組織*&#x200B;のトピックを参照してください。
+* **お客様の[!DNL Adobe]組織IDを知る：**&#x200B;お客様の[!DNL Adobe]組織IDは、利用条件を完了するために必要です。 組織ID[&#128279;](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)を表示する方法について詳しくは、[!DNL Adobe]の&#x200B;*Experience Cloudの組織*&#x200B;のトピックを参照してください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -42,7 +42,7 @@ ht-degree: 16%
 
 | オーディエンスの由来 | サポートあり | 説明 |
 | --------- | ---------- | ---------- |
-| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [ セグメント化サービス ](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | [!DNL Experience Platform] [&#x200B; セグメント化サービス &#x200B;](/help/segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li>カスタムアップロードオーディエンス [がCSV ファイルから[!DNL Experience Platform]に](/help/segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li>類似オーディエンス，</li><li>連合オーディエンス，</li><li>[!DNL Adobe Journey Optimizer]などの他の[!DNL Experience Platform] アプリで生成されたオーディエンス，</li><li>その他。</li></ul> |
 
 {style="table-layout:auto"}
@@ -53,10 +53,10 @@ ht-degree: 16%
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 | -------------------- | ----------- | ------------- | ----------- |
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 最適な属性を選択できます。 マーケティングキャンペーンの特定のグループをターゲットにするのに使用できます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 最適な属性を選択できます。 マーケティングキャンペーンの特定のグループをターゲットにするのに使用できます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 配信先固有の設定 {#destination-settings}
 
@@ -105,7 +105,7 @@ ht-degree: 16%
 
 * **[!UICONTROL Publisher Account ID]**：この宛先に関連付けられている発行者アカウント IDを入力します。
 
-  パブリッシャーアカウント ID フィールドを表示する[!DNL Amazon]宛先の詳細パネルの![ スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
+  パブリッシャーアカウント ID フィールドを表示する[!DNL Amazon]宛先の詳細パネルの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
 
 ### [!DNL Facebook] {#facebook}
 
@@ -113,7 +113,7 @@ ht-degree: 16%
 
 * **[!UICONTROL Destination Account ID]**：この宛先の宛先アカウント IDを入力します。
 
-  宛先アカウント ID フィールドを表示する[!DNL Facebook]宛先の詳細パネルの![ スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png){zoomable="yes"}
+  宛先アカウント ID フィールドを表示する[!DNL Facebook]宛先の詳細パネルの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png){zoomable="yes"}
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -121,7 +121,7 @@ ht-degree: 16%
 
 * **[!UICONTROL Segment Category]**: セグメントが属するターゲット カテゴリまたは垂直方向。 例：金融サービス、自動車、医療
 
-  セグメントカテゴリフィールドを表示する[!DNL LG Ads]宛先の詳細パネルの![ スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
+  セグメントカテゴリフィールドを表示する[!DNL LG Ads]宛先の詳細パネルの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
 
 ### [!DNL Pinterest] {#pinterest}
 
@@ -129,7 +129,7 @@ ht-degree: 16%
 
 * **[!UICONTROL Destination Account ID]**：この宛先の宛先アカウント IDを入力します。
 
-  宛先アカウント ID フィールドを表示する[!DNL Pinterest]宛先の詳細パネルの![ スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
+  宛先アカウント ID フィールドを表示する[!DNL Pinterest]宛先の詳細パネルの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
 
 ### [!DNL Vizio] {#vizio}
 
@@ -137,7 +137,7 @@ ht-degree: 16%
 
 * **[!UICONTROL Advertiser Name]**：この宛先の広告主の名前を入力します。
 
-  広告主名フィールドを表示する[!DNL Vizio]宛先の詳細パネルの![ スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
+  広告主名フィールドを表示する[!DNL Vizio]宛先の詳細パネルの![&#x200B; スクリーンショット。](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
@@ -145,8 +145,8 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -180,11 +180,11 @@ ht-degree: 16%
 
 **[!UICONTROL Source Field]**&#x200B;列に、対応するターゲットフィールドにマッピングする各ソース属性の名前を入力します。 または、**[!UICONTROL Select source field]**&#x200B;を選択して、使用可能なソースフィールドを参照します。
 
-[!DNL Acxiom Audience Connection]宛先に事前入力された[!DNL Acxiom]の必須フィールドを含むソース フィールドとターゲット フィールドの列を表示する![ マッピング画面。](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
+[!DNL Acxiom Audience Connection]宛先に事前入力された[!DNL Acxiom]の必須フィールドを含むソース フィールドとターゲット フィールドの列を表示する![&#x200B; マッピング画面。](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
 
 すべてのフィールドをマッピングしたら、**[!UICONTROL Next]**&#x200B;を選択します。
 
-非標準スキーマを使用するには、[ クエリサービス UI ガイド ](/help/query-service/ui/overview.md)を参照して、フィールド名を[!DNL Adobe]標準スキーマにマッピングしてください。
+非標準スキーマを使用するには、[&#x200B; クエリサービス UI ガイド &#x200B;](/help/query-service/ui/overview.md)を参照して、フィールド名を[!DNL Adobe]標準スキーマにマッピングしてください。
 
 ### 宛先を確認 {#review}
 
