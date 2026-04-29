@@ -2,9 +2,9 @@
 title: サンドボックスツール
 description: サンドボックス間でサンドボックス設定をシームレスにエクスポートおよびインポートします。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
+source-git-commit: a026ee1fc33463da663f5a75561df9df34470453
 workflow-type: tm+mt
-source-wordcount: '3641'
+source-wordcount: '3668'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 サンドボックスツール機能を使用して、サンドボックスをまたいで設定の精度を向上させ、サンドボックス間でサンドボックス設定をシームレスに書き出しおよび読み込むことができます。 サンドボックスツールを利用して、実装プロセスの価値実現までの時間を短縮し、設定をサンドボックスをまたいで適切に移動できます。
 
-サンドボックスツール機能を使用して、様々なオブジェクトを選択し、パッケージに書き出すことができます。 パッケージは、1 つのオブジェクトまたは複数のオブジェクトで構成できます。<!--or an entire sandbox.--> パッケージに含まれているオブジェクトはすべて、同じサンドボックスから取得する必要があります。
+サンドボックスツール機能を使用して、様々なオブジェクトを選択し、パッケージに書き出すことができます。 パッケージは、1 つのオブジェクトまたは複数のオブジェクトで構成できます。 <!--or an entire sandbox.--> パッケージに含まれているオブジェクトはすべて、同じサンドボックスから取得する必要があります。
 
 ## サンドボックスツールでサポートされるオブジェクト {#supported-objects}
 
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 ### マルチエンティティオーディエンスのインポートの変更
 
-[B2B アーキテクチャのアップグレード &#x200B;](../../rtcdp/b2b-architecture-upgrade.md)を使用すると、これらのオーディエンスを含むパッケージがアップグレード前に公開された場合、B2B属性とエクスペリエンスイベントを含むマルチエンティティオーディエンスを読み込むことができなくなります。 これらのオーディエンスは読み込みに失敗し、新しいアーキテクチャに自動的に変換できません。
+[B2B アーキテクチャのアップグレード ](../../rtcdp/b2b-architecture-upgrade.md)を使用すると、これらのオーディエンスを含むパッケージがアップグレード前に公開された場合、B2B属性とエクスペリエンスイベントを含むマルチエンティティオーディエンスを読み込むことができなくなります。 これらのオーディエンスは読み込みに失敗し、新しいアーキテクチャに自動的に変換できません。
 
 この制限を回避するには、更新されたオーディエンスを含む新しいパッケージを作成し、サンドボックスツールを使用してそれぞれのターゲットサンドボックスに読み込む必要があります。
 
@@ -58,7 +58,7 @@ ht-degree: 6%
 
 ### Adobe Journey Optimizer オブジェクト {#abobe-journey-optimizer-objects}
 
-次の表は、サンドボックスツールと制限で現在サポートされている[!DNL Adobe Journey Optimizer] オブジェクトを示しています。 ベストプラクティスの一覧については、[Journey Optimizerの一般的なベストプラクティス &#x200B;](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) ガイドを参照してください。
+次の表は、サンドボックスツールと制限で現在サポートされている[!DNL Adobe Journey Optimizer] オブジェクトを示しています。 ベストプラクティスの一覧については、[Journey Optimizerの一般的なベストプラクティス ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) ガイドを参照してください。
 
 | Platform | オブジェクト | サポートされている依存オブジェクト | 詳細 |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ ht-degree: 6%
 | [!DNL Adobe Journey Optimizer] | カスタムアクション |  | カスタムアクションは、パッケージに個別に追加できます。 カスタムアクションをジャーニーに割り当てると、そのアクションは編集できなくなります。 カスタムアクションを更新するには、次の操作を行う必要があります。 <ul><li>ジャーニーを移行する前にカスタムアクションを移動する</li><li>移行後のカスタムアクションの設定（リクエストヘッダー、クエリパラメーター、認証など）を更新します</li><li>最初の手順で追加したカスタムアクションでジャーニーオブジェクトを移行する</li></ul> |
 | [!DNL Adobe Journey Optimizer] | コンテンツテンプレート | | コンテンツテンプレートは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 スタンドアロンテンプレートを使用すると、Journey Optimizerのキャンペーンやジャーニーをまたいで、カスタムコンテンツを簡単に再利用できます。 |
 | [!DNL Adobe Journey Optimizer] | フラグメント | ネストされたフラグメントはすべて。 | フラグメントは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 フラグメントは、Journey Optimizerのキャンペーンとジャーニーをまたいで、1つ以上のメールで参照できる再利用可能なコンポーネントです。 |
-| [!DNL Adobe Journey Optimizer] | キャンペーン | キャンペーンで使用される次のオブジェクトは、依存オブジェクトとしてコピーされます。 <ul><li>キャンペーン</li><li>オーディエンス</li><li>スキーマ</li><li>コンテンツテンプレート</li><li>フラグメント</li><li>メッセージ/コンテンツ</li><li>チャネル設定</li><li>統合された決定オブジェクト</li><li>実験の設定/バリアント</li></ul> | <ul><li>キャンペーンは、プロファイル、オーディエンス、スキーマ、インラインメッセージ、依存オブジェクトに関連するすべてのアイテムとともにコピーできます。 データ使用ラベルや言語設定など、一部の項目はコピーされません。 コピーできないオブジェクトの完全なリストについては、[別のサンドボックスへのオブジェクトの書き出し](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。</li><li>同じ設定が存在する場合、システムはターゲットサンドボックス内の既存のチャネル設定オブジェクトを自動的に検出して再利用します。 一致する設定が見つからない場合、読み込み中にチャネル設定はスキップされ、ユーザーはこのジャーニーのターゲットサンドボックスのチャネル設定を手動で更新する必要があります。</li><li>ユーザーは、ターゲットサンドボックス内の既存の実験とオーディエンスを、選択したキャンペーンの依存オブジェクトとして再利用できます。</li></ul> |
-| [!DNL Adobe Journey Optimizer] | 決定 | Decisioning オブジェクトをコピーする前に、宛先サンドボックスに次のオブジェクトが存在する必要があります。 <ul><li>Decisioning オブジェクト間で使用されるプロファイル属性</li><li>カスタムオファー属性のフィールドグループ</li><li>ルール、ランキングまたはキャップをまたいだコンテキスト属性に使用されるデータストリームのスキーマ。</li></ul> | <ul><li>AI モデルを使用するランキング式のコピーは、現在サポートされていません。</li><li>決定項目（オファー項目）は自動的に含まれません。 転送されていることを確認するには、**パッケージに追加** オプションを使用して手動で追加します。</li><li>選択戦略を使用するポリシーでは、関連する決定項目をコピープロセス中に手動で追加する必要があります。 手動またはフォールバックの決定項目を使用するポリシーでは、これらの項目が直接依存関係として自動的に含まれます。</li><li>決定項目は、他の関連オブジェクトよりも先にコピーする必要があります。</li><li>サポートされているオブジェクトの完全なリストについては、[別のサンドボックスへのオブジェクトの書き出し](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | キャンペーン | キャンペーンで使用される次のオブジェクトは、依存オブジェクトとしてコピーされます。 <ul><li>キャンペーン</li><li>オーディエンス</li><li>スキーマ</li><li>コンテンツテンプレート</li><li>フラグメント</li><li>メッセージ/コンテンツ</li><li>チャネル設定</li><li>統合された決定オブジェクト</li><li>実験の設定/バリアント</li></ul> | <ul><li>キャンペーンは、プロファイル、オーディエンス、スキーマ、インラインメッセージ、依存オブジェクトに関連するすべてのアイテムとともにコピーできます。 データ使用ラベルや言語設定など、一部の項目はコピーされません。 コピーできないオブジェクトの完全なリストについては、[別のサンドボックスへのオブジェクトの書き出し](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。</li><li>同じ設定が存在する場合、システムはターゲットサンドボックス内の既存のチャネル設定オブジェクトを自動的に検出して再利用します。 一致する設定が見つからない場合、読み込み中にチャネル設定はスキップされ、ユーザーはこのジャーニーのターゲットサンドボックスのチャネル設定を手動で更新する必要があります。</li><li>ユーザーは、ターゲットサンドボックス内の既存の実験とオーディエンスを、選択したキャンペーンの依存オブジェクトとして再利用できます。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 決定 | Decisioning オブジェクトをコピーする前に、宛先サンドボックスに次のオブジェクトが存在する必要があります。 <ul><li>Decisioning オブジェクト間で使用されるプロファイル属性</li><li>カスタムオファー属性のフィールドグループ</li><li>ルール、ランキングまたはキャップをまたいだコンテキスト属性に使用されるデータストリームのスキーマ。</li></ul> | <ul><li>AI モデルを使用するランキング式のコピーは、現在サポートされていません。</li><li>決定項目（オファー項目）は自動的に含まれません。 転送されていることを確認するには、**パッケージに追加** オプションを使用して手動で追加します。</li><li>選択戦略を使用するポリシーでは、関連する決定項目をコピープロセス中に手動で追加する必要があります。 手動またはフォールバックの決定項目を使用するポリシーでは、これらの項目が直接依存関係として自動的に含まれます。</li><li>決定項目は、他の関連オブジェクトよりも先にコピーする必要があります。</li><li>サポートされているオブジェクトの完全なリストについては、[別のサンドボックスへのオブジェクトの書き出し](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。</li></ul> |
 
 ## パッケージへのオブジェクトの書き出し {#export-objects}
 
@@ -82,17 +82,17 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="オブジェクトを削除"
->abstract="パッケージからオブジェクトを削除するには、削除する行を選択し、選択時に使用可能になる削除オプションを使用します。公開済みパッケージからオブジェクトを削除することはできません。"
+>abstract="パッケージからオブジェクトを削除するには、削除する行を選択し、選択時に使用可能になる削除オプションを使用します。 公開済みパッケージからオブジェクトを削除することはできません。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="パッケージの有効期限設定"
->abstract="パッケージは、ドラフトステータスで非アクティブな状態が続くと、有効期限が切れるように設定されます。デフォルトの日付は今日から 90 日に設定されています。この日付は、パッケージが公開されるまで変更され続けます。翌日ドラフトステータスのパッケージにアクセスすると、手動で設定しない限り、日付は 1 日後に移動します。"
+>abstract="パッケージは、ドラフトステータスで非アクティブな状態が続くと、有効期限が切れるように設定されます。 デフォルトの日付は今日から 90 日に設定されています。 この日付は、パッケージが公開されるまで変更され続けます。 翌日ドラフトステータスのパッケージにアクセスすると、手動で設定しない限り、日付は 1 日後に移動します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
 >title="パッケージステータス"
->abstract="デフォルトでは、ステータスはドラフトに設定されています。パッケージが公開されると、ステータスが「公開済み」に変わります。パッケージが公開された後は、変更することはできません。"
+>abstract="デフォルトでは、ステータスはドラフトに設定されています。 パッケージが公開されると、ステータスが「公開済み」に変わります。 パッケージが公開された後は、変更することはできません。"
 
 >[!NOTE]
 >
@@ -104,11 +104,11 @@ ht-degree: 6%
 
 左側のナビゲーションから「**[!UICONTROL Schemas]**」を選択し、使用可能なスキーマのリストを表示する「**[!UICONTROL Browse]**」タブを選択します。 次に、選択したスキーマの横にある省略記号（`...`）を選択すると、ドロップダウンにコントロールが表示されます。 ドロップダウンから「**[!UICONTROL Add to package]**」を選択します。
 
-![&#x200B; コントロールを強調表示するドロップダウンメニューを表示する[!UICONTROL Add to package] スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package.png)
+[!UICONTROL Add to package] コントロールを強調表示するドロップダウンメニューを表示する![ スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL Add to package]** ダイアログから、**[!UICONTROL Create new package]** オプションを選択します。 パッケージの[!UICONTROL Name]とオプションの[!UICONTROL Description]を指定し、**[!UICONTROL Add]**&#x200B;を選択します。
 
-![[!UICONTROL Add to package]が選択され、[!UICONTROL Create new package]が強調表示された[!UICONTROL Add] ダイアログ。](../images/ui/sandbox-tooling/create-new-package.png)
+![[!UICONTROL Create new package]が選択され、[!UICONTROL Add]が強調表示された[!UICONTROL Add to package] ダイアログ。](../images/ui/sandbox-tooling/create-new-package.png)
 
 **[!UICONTROL Schemas]**&#x200B;環境に戻されました。 次の手順に従って、作成したパッケージにオブジェクトを追加できるようになりました。
 
@@ -116,7 +116,7 @@ ht-degree: 6%
 
 使用可能なスキーマのリストを表示するには、左側のナビゲーションから「**[!UICONTROL Schemas]**」を選択し、「**[!UICONTROL Browse]**」タブを選択します。 次に、選択したスキーマの横にある省略記号（`...`）を選択して、ドロップダウンメニューにコントロールオプションを表示します。 ドロップダウンから「**[!UICONTROL Add to package]**」を選択します。
 
-![&#x200B; コントロールを強調表示するドロップダウンメニューを表示する[!UICONTROL Add to package] スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package.png)
+[!UICONTROL Add to package] コントロールを強調表示するドロップダウンメニューを表示する![ スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL Add to package]** ダイアログが表示されます。 「**[!UICONTROL Existing package]**」オプションを選択し、「**[!UICONTROL Package name]**」ドロップダウンを選択して、必要なパッケージを選択します。 最後に、**[!UICONTROL Add]**&#x200B;を選択して選択を確定します。
 
@@ -124,17 +124,17 @@ ht-degree: 6%
 
 パッケージに追加されたオブジェクトのリストが表示されます。 パッケージを公開し、サンドボックスに読み込めるようにするには、**[!UICONTROL Publish]**&#x200B;を選択します。
 
-![&#x200B; パッケージ内のオブジェクトのリスト。[!UICONTROL Publish] オプションを強調表示します。](../images/ui/sandbox-tooling/publish-package.png)
+![ パッケージ内のオブジェクトのリスト。[!UICONTROL Publish] オプションを強調表示します。](../images/ui/sandbox-tooling/publish-package.png)
 
 **[!UICONTROL Publish]**&#x200B;を選択して、パッケージの公開を確認します。
 
-![&#x200B; パッケージの確認ダイアログを公開し、[!UICONTROL Publish] オプションを強調表示します。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![ パッケージの確認ダイアログを公開し、[!UICONTROL Publish] オプションを強調表示します。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
 >公開すると、パッケージの内容は変更できません。 互換性の問題を回避するには、必要なアセットがすべて選択されていることを確認します。 変更が必要な場合は、新しいパッケージを作成する必要があります。
 
-**[!UICONTROL Packages]**&#x200B;環境の[!UICONTROL Sandboxes] タブに戻り、新しい公開パッケージを確認できます。
+[!UICONTROL Sandboxes]環境の&#x200B;**[!UICONTROL Packages]** タブに戻り、新しい公開パッケージを確認できます。
 
 ![新しく公開されたパッケージを強調表示するサンドボックスパッケージのリスト。](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -146,11 +146,11 @@ ht-degree: 6%
 
 パッケージをターゲットサンドボックスに読み込むには、「サンドボックス **[!UICONTROL Browse]**」タブに移動し、サンドボックス名の横にある「+」 オプションを選択します。
 
-![&#x200B; インポートパッケージの選択を強調表示するサンドボックス **[!UICONTROL Browse]** タブ。](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![ インポートパッケージの選択を強調表示するサンドボックス **[!UICONTROL Browse]** タブ。](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
 ドロップダウンメニューを使用して、ターゲットサンドボックスに読み込む&#x200B;**[!UICONTROL Package name]**&#x200B;を選択します。 今後の監視に使用する&#x200B;**[!UICONTROL Job name]**&#x200B;を追加します。 デフォルトでは、パッケージのスキーマを読み込むと、統合プロファイルは無効になります。 「**プロファイルのスキーマを有効にする**」を切り替えてこれを有効にし、「**[!UICONTROL Next]**」を選択します。
 
-![&#x200B; インポートの詳細ページに[!UICONTROL Package name] ドロップダウン選択が表示されています](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
+![ インポートの詳細ページに[!UICONTROL Package name] ドロップダウン選択が表示されています](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
 [!UICONTROL Package object and dependencies] ページには、このパッケージに含まれるすべてのアセットのリストが表示されます。 選択した親オブジェクトを正常に読み込むために必要な依存オブジェクトが自動的に検出されます。 欠けている属性は、ページの上部に表示されます。 詳細な内訳については、**[!UICONTROL View details]**&#x200B;を選択してください。
 
@@ -168,7 +168,7 @@ ht-degree: 6%
 
 新規作成または既存の使用のオプションが表示されます。 **[!UICONTROL Use existing]** を選択します。
 
-![依存オブジェクトオプション [!UICONTROL Package object and dependencies]と[!UICONTROL Create new]を表示する[!UICONTROL Use existing] ページ。](../images/ui/sandbox-tooling/use-existing-object.png)
+![依存オブジェクトオプション [!UICONTROL Create new]と[!UICONTROL Use existing]を表示する[!UICONTROL Package object and dependencies] ページ。](../images/ui/sandbox-tooling/use-existing-object.png)
 
 **[!UICONTROL Field group]** ダイアログに、オブジェクトで使用可能なフィールドグループのリストが表示されます。 必要なフィールドグループを選択し、**[!UICONTROL Save]**&#x200B;を選択します。
 
@@ -193,17 +193,17 @@ ht-degree: 6%
 
 サンドボックス全体を書き出すには、[!UICONTROL Sandboxes] **[!UICONTROL Packages]** タブに移動し、**[!UICONTROL Create package]**&#x200B;を選択します。
 
-![[!UICONTROL Sandboxes]を強調表示する&#x200B;**[!UICONTROL Packages]** [!UICONTROL Create package] タブ。](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![[!UICONTROL Create package]を強調表示する[!UICONTROL Sandboxes] **[!UICONTROL Packages]** タブ。](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-**[!UICONTROL Entire sandbox]** ダイアログで[!UICONTROL Type of package]の[!UICONTROL Create package]を選択します。 新しいパッケージの[!UICONTROL Package name]を指定し、ドロップダウンから&#x200B;**[!UICONTROL Sandbox]**&#x200B;を選択します。 最後に、**[!UICONTROL Create]**&#x200B;を選択してエントリを確認します。
+[!UICONTROL Create package] ダイアログで[!UICONTROL Type of package]の&#x200B;**[!UICONTROL Entire sandbox]**&#x200B;を選択します。 新しいパッケージの[!UICONTROL Package name]を指定し、ドロップダウンから&#x200B;**[!UICONTROL Sandbox]**&#x200B;を選択します。 最後に、**[!UICONTROL Create]**&#x200B;を選択してエントリを確認します。
 
-![完了したフィールドと[!UICONTROL Create package]を強調表示する[!UICONTROL Create] ダイアログ。](../images/ui/sandbox-tooling/create-package-dialog.png)
+![完了したフィールドと[!UICONTROL Create]を強調表示する[!UICONTROL Create package] ダイアログ。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 パッケージが正常に作成されました。**[!UICONTROL Publish]**&#x200B;を選択してパッケージを公開します。
 
 ![新しく公開されたパッケージを強調表示するサンドボックスパッケージのリスト。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-**[!UICONTROL Packages]**&#x200B;環境の[!UICONTROL Sandboxes] タブに戻り、新しい公開パッケージを確認できます。
+[!UICONTROL Sandboxes]環境の&#x200B;**[!UICONTROL Packages]** タブに戻り、新しい公開パッケージを確認できます。
 
 ### サンドボックスパッケージ全体をインポートする {#import-entire-sandbox-package}
 
@@ -213,11 +213,11 @@ ht-degree: 6%
 
 パッケージをターゲットサンドボックスに読み込むには、[!UICONTROL Sandboxes] **[!UICONTROL Browse]** タブに移動し、サンドボックス名の横にある「+」オプションを選択します。
 
-![&#x200B; インポートパッケージの選択を強調表示するサンドボックス **[!UICONTROL Browse]** タブ。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![ インポートパッケージの選択を強調表示するサンドボックス **[!UICONTROL Browse]** タブ。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
 ドロップダウンメニューを使用して、**[!UICONTROL Package name]** ドロップダウンを使用して完全なサンドボックスを選択します。 今後の監視に使用される&#x200B;**[!UICONTROL Job name]**&#x200B;とオプションの&#x200B;**[!UICONTROL Job description]**&#x200B;を追加し、**[!UICONTROL Next]**&#x200B;を選択します。
 
-![&#x200B; インポートの詳細ページに[!UICONTROL Package name] ドロップダウン選択が表示されています](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+![ インポートの詳細ページに[!UICONTROL Package name] ドロップダウン選択が表示されています](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
 
 >[!NOTE]
 >
@@ -225,19 +225,15 @@ ht-degree: 6%
 
 読み込まれたオブジェクトと除外されたオブジェクトの数と依存関係を確認できる[!UICONTROL Package object and dependencies] ページに移動します。 ここから、**[!UICONTROL Import]**&#x200B;を選択して、パッケージの読み込みを完了します。
 
-![&#x200B; 「[!UICONTROL Package object and dependencies]」ページには、サポートされていないオブジェクトタイプのインラインメッセージが表示され、[!UICONTROL Import]が強調表示されます。](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![ 「[!UICONTROL Package object and dependencies]」ページには、サポートされていないオブジェクトタイプのインラインメッセージが表示され、[!UICONTROL Import]が強調表示されます。](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 読み込みが完了するまでしばらく時間がかかります。 完了までの時間は、パッケージ内のオブジェクトの数によって異なります。 [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** タブからインポートジョブを監視できます。
 
 ### サンドボックスへのオブジェクトのエクスプレスコピー {#express-copy}
 
->[!IMPORTANT]
->
->Express コピー機能は現在ベータ版で、一部のお客様のみご利用いただけます。 Express copy （Beta）は現在、スキーマとソースデータフローのみをサポートしています。
+オブジェクトの在庫ページからエクスプレスコピーにアクセスできます。 例えば、使用可能なスキーマのリストを表示するには、左側のナビゲーションから「**[!UICONTROL Schemas]**」を選択し、「**[!UICONTROL Browse]**」タブを選択します。次に、選択したスキーマの横にある省略記号（`...`）を選択して、ドロップダウンメニューにコントロールオプションを表示します。 ドロップダウンから「**[!UICONTROL Add to package]**」を選択します。
 
-オブジェクトの在庫ページからエクスプレスコピーにアクセスできます。 例えば、使用可能なスキーマのリストを表示するには、左側のナビゲーションから「**[!UICONTROL Schemas]**」を選択し、「**[!UICONTROL Browse]**」タブを選択します。 次に、選択したスキーマの横にある省略記号（`...`）を選択して、ドロップダウンメニューにコントロールオプションを表示します。 ドロップダウンから「**[!UICONTROL Add to package]**」を選択します。
-
-![&#x200B; コントロールを強調表示するドロップダウンメニューを表示する[!UICONTROL Add to package] スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package-express.png)
+[!UICONTROL Add to package] コントロールを強調表示するドロップダウンメニューを表示する![ スキーマのリスト。](../images/ui/sandbox-tooling/add-to-package-express.png)
 
 **[!UICONTROL Add to package]** ダイアログが表示されます。 「**[!UICONTROL Express copy]**」オプションを選択し、ドロップダウンから「**[!UICONTROL Target sandbox]**」を選択します。 最後に、**[!UICONTROL Add]**&#x200B;を選択して選択を確定します。
 
@@ -249,13 +245,13 @@ ht-degree: 6%
 
 Express コピー要求のステータスを確認するには、左側のナビゲーションから「**[!UICONTROL Sandboxes]**」を選択し、「**[!UICONTROL Jobs]**」タブを選択します。 すべてのジョブと現在の処理ステータスのリストが表示されます。
 
-![&#x200B; ジョブのリストを表示する「ジョブ」タブ。](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+![ ジョブのリストを表示する「ジョブ」タブ。](../images/ui/sandbox-tooling/sandboxes-jobs.png)
 
 ## インポートの詳細を監視 {#view-import-details}
 
 インポートした詳細を表示するには、[!UICONTROL Sandboxes] **[!UICONTROL Jobs]** タブに移動し、リストからパッケージを選択します。 または、検索バーを使用してパッケージを検索します。
 
-![&#x200B; サンドボックス [!UICONTROL Jobs] タブは、インポートパッケージの選択を強調表示します。](../images/ui/sandbox-tooling/imports-tab.png)
+![ サンドボックス [!UICONTROL Jobs] タブは、インポートパッケージの選択を強調表示します。](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--
 ### View imported objects {#view-imported-objects}
@@ -271,9 +267,9 @@ Use the arrows to expand objects to view the full list of fields that have been 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
 -->
 
-サンドボックス環境の「**[!UICONTROL View import summary]**」タブの右側の詳細ペインで「**[!UICONTROL Jobs]**」を選択します。
+サンドボックス環境の「**[!UICONTROL Jobs]**」タブの右側の詳細ペインで「**[!UICONTROL View import summary]**」を選択します。
 
-![&#x200B; サンドボックス [!UICONTROL Imports] タブでは、右側のペインで[!UICONTROL View import details]の選択範囲がハイライト表示されます。](../images/ui/sandbox-tooling/view-import-details.png)
+![ サンドボックス [!UICONTROL Imports] タブでは、右側のペインで[!UICONTROL View import details]の選択範囲がハイライト表示されます。](../images/ui/sandbox-tooling/view-import-details.png)
 
 **[!UICONTROL Import summary]** ダイアログには、インポートの内訳が表示され、進行状況がパーセントで表示されます。
 
@@ -281,7 +277,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 >
 >特定の在庫ページに移動すると、オブジェクトのリストを表示できます。
 
-![&#x200B; インポートの詳細な内訳を示す[!UICONTROL Import details] ダイアログ。](../images/ui/sandbox-tooling/import-details.png)
+![ インポートの詳細な内訳を示す[!UICONTROL Import details] ダイアログ。](../images/ui/sandbox-tooling/import-details.png)
 
 読み込みが完了すると、Experience Platform UIに通知が届きます。 これらの通知には、アラートアイコンからアクセスできます。 ジョブが失敗した場合は、ここからトラブルシューティングに移動できます。
 
@@ -326,7 +322,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 スキーマを更新したら、**[!UICONTROL Sandboxes]**&#x200B;に移動し、**[!UICONTROL Packages]**&#x200B;を選択して、既存のパッケージを探します。
 
-![&#x200B; パッケージが選択されたサンドボックスツールインターフェイス &#x200B;](../images/ui/sandbox-tooling/select-package.png)
+![ パッケージが選択されたサンドボックスツールインターフェイス ](../images/ui/sandbox-tooling/select-package.png)
 
 パッケージインターフェイスを使用して、変更を確認します。 **[!UICONTROL Check for updates]**&#x200B;を選択して、パッケージ内のアーティファクトに対する変更を表示します。 次に、**[!UICONTROL View diff]**&#x200B;を選択して、アーティファクトに対して実行されたすべての変更の詳細な概要を受け取ります。
 
@@ -350,7 +346,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 >
 >このワークフローの一部として、すべての依存オブジェクトがターゲットサンドボックスで自動的に更新されます。
 
-![&#x200B; インポート対象インターフェイス。](../images/ui/sandbox-tooling/import-objective.png)
+![ インポート対象インターフェイス。](../images/ui/sandbox-tooling/import-objective.png)
 
 インポートプロセスをさらに検証するには、ターゲットサンドボックスに移動し、そのサンドボックス内から更新されたオブジェクトを手動で表示します。
 
@@ -371,16 +367,16 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 更新するターゲットオブジェクトを特定したら、**[!UICONTROL Finish]**&#x200B;を選択します。
 
-![&#x200B; ターゲットオブジェクトが選択されました。](../images/ui/sandbox-tooling/add-updated-objects.png)
+![ ターゲットオブジェクトが選択されました。](../images/ui/sandbox-tooling/add-updated-objects.png)
 
 ## ビデオチュートリアル
 
 次のビデオは、サンドボックスツールの理解を支援することを目的としており、新しいパッケージの作成、パッケージの公開、パッケージのインポートの方法の概要を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446084/?captions=jpn&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform UI内でサンドボックスツール機能を使用する方法を説明しました。 サンドボックスについて詳しくは、[&#x200B; サンドボックスユーザーガイド &#x200B;](../ui/user-guide.md)を参照してください。
+このドキュメントでは、Experience Platform UI内でサンドボックスツール機能を使用する方法を説明しました。 サンドボックスについて詳しくは、[ サンドボックスユーザーガイド ](../ui/user-guide.md)を参照してください。
 
-サンドボックス API を使用して様々な操作を実行する手順については、[サンドボックス開発者ガイド](../api/getting-started.md)を参照してください。Experience Platformのサンドボックスの概要については、[概要ドキュメント &#x200B;](../home.md)を参照してください。
+サンドボックス API を使用して様々な操作を実行する手順については、[サンドボックス開発者ガイド](../api/getting-started.md)を参照してください。 Experience Platformのサンドボックスの概要については、[概要ドキュメント ](../home.md)を参照してください。
