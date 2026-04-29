@@ -1,12 +1,12 @@
 ---
 title: The Trade Desk - CRM接続
 description: CRM データにもとづくオーディエンスのターゲティングと除外のために、Trade Desk アカウントにプロファイルをアクティベートします。
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
-ht-degree: 8%
+source-wordcount: '1861'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->[宛先カタログ &#x200B;](/help/destinations/catalog/overview.md)には、The Trade Desk - CRMの宛先が2つあります。
+>[宛先カタログ ](/help/destinations/catalog/overview.md)には、The Trade Desk - CRMの宛先が2つあります。
 >
 >* EU内でデータを取得する場合は、**[!DNL The Trade Desk - CRM (EU)]**&#x200B;宛先を使用します。
 >* APACまたはNAMER地域でデータを取得する場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]**&#x200B;の宛先を使用します。
@@ -43,7 +43,7 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL The Trade Desk]は、次の表に示すIDのアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL The Trade Desk] では、以下の表で説明する ID のアクティベーションをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 [!DNL Adobe Experience Platform]では、ハッシュ化されていない電子メール アドレスとハッシュ化された電子メール アドレスおよび電話番号の両方をサポートしています。 「ID照合要件」セクションの手順に従い、プレーンテキストとハッシュ化されたメールアドレスにそれぞれ適切な名前空間を使用します。
 
@@ -72,7 +72,7 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> Adobe Journey OptimizerやGoogle AnalyticsなどのExperience Platformアプリケーションで， </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -81,10 +81,10 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ CRM データに基づくオーディエンスのターゲティングと抑制�
 
 メールアドレスを[!DNL Adobe Experience Platform]に取り込む前にハッシュ化するか、生のメールアドレスを使用できます。
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[&#x200B; バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md)を参照してください。
 
 自分でメールアドレスをハッシュ化することを選択した場合は、次の要件に必ず準拠してください。
 
@@ -101,10 +101,9 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 * すべてのASCII文字を小文字に変換します。
 * `gmail.com`個の電子メールアドレスで、電子メールアドレスのユーザー名部分から次の文字を削除します。
 
-      *ピリオド （&#39;.&#39;） 文字（ASCII コード 46）。 例えば、「jane.doe@gmail.com」を「janedoe@gmail.com」に正規化します。
-     * プラス記号（&#39;+&#39;）文字（ASCII コード 43）とその後のすべての文字。 例えば、「janedoe+home@gmail.com」を「janedoe@gmail.com」に標準化します。
+      *ピリオド （&#39;.&#39;）文字（ASCII コード 46）。 例えば、「jane.doe@gmail.com」を「janedoe@gmail.com」に正規化します。
+     * プラス記号（「+」）文字（ASCII コード 43）とその後のすべての文字。 例えば、「janedoe+home@gmail.com」を「janedoe@gmail.com」に標準化します。
   
-
 ## 電話番号の正規化とハッシュ化の要件 {#phone-hashing}
 
 電話番号のアップロードについて知っておくべきことを以下に示します。
@@ -124,11 +123,11 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 * E.164の電話番号は、最大15桁までです。
 * 正規化されたE.164の電話番号では、次の構文が使用されます：`[+][country code][subscriber number including area code]`。スペース、ハイフン、括弧、またはその他の特殊文字は使用されません。 以下に、いくつかの例を示します。
 
-      * US: 1 （234） 567-8901は+12345678901に正規化されています。
-     * シンガポール：65 1243 5678は+6512345678に正規化されています。
-     * オーストラリア：携帯電話番号0491 570 006が正規化され、国コードを追加して先頭のゼロを削除します：+61491570006。
-     *英国：国コードを追加し、先頭のゼロを削除する07812めに携帯電話番号345678が正規化されています：+447812345678.
-  
+      * US: 1 （234） 567-8901が+12345678901に正規化されます。    * シンガポール：65 1243 5678が+6512345678に正規化されます。
+     * オーストラリア：モバイル電話番号0491 570 0 006が正規化され、国コードが追加され、国コードが削除されます。+61491570006.
+     *：携帯電話番号07812国コードコードが追加され、先頭先頭が開始され、先頭がされ、先頭0ががされ、国がが0に345678447812345678 0がり
+。  
+
 正規化された電話番号がUTF-16などの別のエンコーディングシステムではなく、UTF-8であることを確認します。
 
 電話番号ハッシュは、正規化された電話番号のBase64でエンコードされたSHA-256 ハッシュです。 電話番号は最初に正規化され、次にSHA-256 ハッシュアルゴリズムを使用してハッシュ化され、その後ハッシュ値のバイトはBase64 エンコーディングを使用してエンコードされます。 Base64 エンコーディングは、16進エンコードされた文字列表現ではなく、ハッシュ値のバイトに適用されます。
@@ -136,7 +135,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 | タイプ | 例 | コメントと使用状況 |
 |---|---|---|
-| 未加工の電話番号 | 1 （234） 567-8901 | これが出発点です。 |
+| 未加工の電話番号 | 1 (234) 567-8901 | これが出発点です。 |
 | 正規化された電話番号 | +12345678901 | 標準化は常に最初のステップです。 |
 | 正規化された電話番号のSHA-256 ハッシュ | 10e6f0b47054a83359477dcb35231db6de5c69fb1816e1a6b98e192de9e5b9ee | この64文字の文字列は、32 バイトのSHA-256を16進数でエンコードした表現です。 |
 | 正規化およびハッシュ化された電話番号の16進数からBase64へのSHA-256 エンコーディング | EObwtHBUqDNZR33LNSMdtt5cafsYFuGmuY4ZLenlue4 | この44文字の文字列は、32 バイトのSHA-256のBase64 エンコードされた表現です。 SHA-256 ハッシュは16進数値です。 16進値を入力として取り込むBase64 エンコーダーを使用する必要があります。 このエンコーディングは、リクエスト本文で送信されるphone_hash値に使用します。 |
@@ -152,9 +151,13 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 | 項目 | タイプ | メモ |
 |---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL Audience export]** | オーディエンスのすべてのメンバーを、Trade Deskの宛先で使用されている識別子（メールまたはハッシュ化されたメール）で書き出します。 |
-| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、プロファイル（ID）は1日1回下流の宛先プラットフォームに更新されます。 [&#x200B; バッチ書き出し](/help/destinations/destination-types.md#file-based)の詳細をご覧ください。 |
+| 書き出し頻度 | **[!UICONTROL Daily Batch]** | オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、プロファイル（ID）は1日1回下流の宛先プラットフォームに更新されます。 [ バッチ書き出し](/help/destinations/destination-types.md#file-based)の詳細をご覧ください。 |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>現在&#x200B;**[ファイルの書き出し](/help/destinations/ui/export-file-now.md)**&#x200B;機能は、[!DNL The Trade Desk] CRM宛先では使用できません。 オーディエンスを書き出すには、[ スケジュールされた毎日のバッチ書き出し](#activate)を使用します。
 
 ## 宛先への接続 {#connect}
 
@@ -169,20 +172,20 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 * **[!UICONTROL Account Type]**: **[!UICONTROL Existing Account]** オプションを選択してください。
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
-* **[!UICONTROL Advertiser ID]**: [!DNL Trade Desk Advertiser ID]。これは、[!DNL Trade Desk] アカウントマネージャーが共有するか、[!DNL Advertiser Preferences] UIの[!DNL Trade Desk]で見つけることができます。
+* **[!UICONTROL Advertiser ID]**: [!DNL Trade Desk Advertiser ID]。これは、[!DNL Trade Desk] アカウントマネージャーが共有するか、[!DNL Trade Desk] UIの[!DNL Advertiser Preferences]で見つけることができます。
 
 宛先の詳細を入力する方法を示す![Experience Platform UIのスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform [&#x200B; データガバナンスの概要](/help/data-governance/policies/overview.md)を参照してください。
+宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform [ データガバナンスの概要](/help/data-governance/policies/overview.md)を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
-宛先に対するオーディエンスのアクティブ化に関する手順については、[&#x200B; バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
+宛先に対するオーディエンスのアクティブ化に関する手順については、[ バッチプロファイル書き出し宛先へのオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 **[!UICONTROL Scheduling]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
@@ -232,4 +235,4 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
