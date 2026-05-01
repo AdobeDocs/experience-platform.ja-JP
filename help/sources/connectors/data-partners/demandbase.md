@@ -28,7 +28,7 @@ ht-degree: 12%
 
 ### Experience Platformの権限の設定
 
-[!DNL Demandbase] アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL View Sources]**&#x200B;と&#x200B;**[!UICONTROL Manage Sources]**&#x200B;の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[ アクセス制御UI ガイド ](../../../access-control/abac/ui/permissions.md)を参照してください。
+[!DNL Demandbase] アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL View Sources]**&#x200B;と&#x200B;**[!UICONTROL Manage Sources]**&#x200B;の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御UI ガイド &#x200B;](../../../access-control/abac/ui/permissions.md)を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -52,7 +52,7 @@ Experience Platformの[!DNL Demandbase]は[!DNL Google Cloud Storage]によっ�
 | バケット名 | データの取得元となる[!DNL Demandbase] バケット。 |
 | フォルダーパス | アクセス権を付与するフォルダーへのパス。 |
 
-これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、 [!DNL Google Cloud Storage]  ソースの概要](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)の[前提条件ガイドを参照してください。
+これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、 [!DNL Google Cloud Storage]  ソースの概要[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)の前提条件ガイドを参照してください。
 
 ## [!DNL Demandbase] スキーマ
 
@@ -98,7 +98,7 @@ Experience Platformの[!DNL Demandbase]は[!DNL Google Cloud Storage]によっ�
 
 ## UIで[!DNL Demandbase] アカウントをExperience Platformに接続します
 
-前提条件の設定が完了したら、 [!DNL Demandbase]  アカウントをExperience Platform](../../tutorials/ui/create/data-partners/demandbase.md)に接続する[に関するチュートリアルを参照して、統合を開始してください。
+前提条件の設定が完了したら、 [!DNL Demandbase]  アカウントをExperience Platform[&#128279;](../../tutorials/ui/create/data-partners/demandbase.md)に接続するに関するチュートリアルを参照して、統合を開始してください。
 
 ## よくある質問 {#faq}
 
@@ -116,7 +116,7 @@ Experience Platformの[!DNL Demandbase]は[!DNL Google Cloud Storage]によっ�
 
 +++回答
 
-現在、取り込みとアクティベーションには標準の[!DNL Demandbase] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Demandbase]  スキーマガイド ](#schema)を参照して、フィールドの可用性の詳細を確認してください。
+現在、取り込みとアクティベーションには標準の[!DNL Demandbase] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Demandbase]  スキーマガイド &#x200B;](#schema)を参照して、フィールドの可用性の詳細を確認してください。
 
 +++
 
@@ -140,7 +140,7 @@ Experience Platformの[!DNL Demandbase]は[!DNL Google Cloud Storage]によっ�
 
 +++回答
 
-[ クエリサービス ](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
+[&#x200B; クエリサービス &#x200B;](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
 
 +++
 
@@ -160,7 +160,7 @@ Experience Platformの[!DNL Demandbase]は[!DNL Google Cloud Storage]によっ�
 
 +++回答
 
-Experience Platformでインテントデータを削除するには、[ データセット ](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
+Experience Platformでインテントデータを削除するには、[&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
 
 +++
 
@@ -196,7 +196,7 @@ Experience Platformのドメインマッチングは、スクラブドメイン�
 
 +++回答
 
-インテントデータは、[ アカウントオーディエンス ](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定してエンゲージし、マーケティングとセールスのアウトリーチを最適化することができます
+インテントデータは、[&#x200B; アカウントオーディエンス &#x200B;](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定してエンゲージし、マーケティングとセールスのアウトリーチを最適化することができます
 
 +++
 
