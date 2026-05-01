@@ -3,9 +3,9 @@ title: ボンボラの意図
 description: Experience PlatformのBombora Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 11%
 
 ---
@@ -46,17 +46,17 @@ B2B マーケターは、Real-Time CDPでアカウントリストを作成し、
 
 ### Experience Platformの権限の設定
 
-**[!UICONTROL View Sources]** アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL Manage Sources]**&#x200B;と[!DNL Bombora]の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[&#x200B; アクセス制御UI ガイド &#x200B;](../../../access-control/abac/ui/permissions.md)を参照してください。
+[!DNL Bombora] アカウントをExperience Platformに接続するには、アカウントに対して&#x200B;**[!UICONTROL View Sources]**&#x200B;と&#x200B;**[!UICONTROL Manage Sources]**&#x200B;の両方の権限を有効にする必要があります。 必要な権限を取得するには、製品の管理者にお問い合わせください。 詳しくは、[ アクセス制御UI ガイド ](../../../access-control/abac/ui/permissions.md)を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
 クラウドストレージファイルまたはディレクトリに名前を付ける際には、以下に示す制限を考慮する必要があります。
 
 * ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
-* ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
+* ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。 使用した場合、自動的に削除されます。
 * 次の予約 URL 文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
 * 次の文字は使用できません。`" \ / : | < > * ?`
-* 不正なURL パス文字は使用できません。 `\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
+* 不正なURL パス文字は使用できません。 `\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。 また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 * 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
 ### 必要な資格情報の収集
@@ -69,7 +69,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 | シークレットアクセスキー | [!DNL Bombora] シークレット アクセス キー。 これは、Experience Platformにアカウントを認証するために必要な40文字の64でエンコードされた文字列です。 |
 | バケット名 | データの取得元となる[!DNL Bombora] バケット。 |
 
-これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、[&#x200B; ソースの概要 [!DNL Google Cloud Storage] の](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)前提条件ガイドを参照してください。
+これらの資格情報について詳しくは、[[!DNL Google Cloud Storage] HMAC キーガイド ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)を参照してください。 独自のアクセスキーを生成する手順については、 [!DNL Google Cloud Storage]  ソースの概要](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)の[前提条件ガイドを参照してください。
 
 ## [!DNL Bombora] スキーマ {#schema}
 
@@ -105,7 +105,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 ## UIで[!DNL Bombora] アカウントをExperience Platformに接続します
 
-前提条件の設定が完了したら、[&#x200B; アカウントをExperience Platform [!DNL Bombora] に接続する](../../tutorials/ui/create/data-partners/bombora.md)に関するチュートリアルを参照して、統合を開始してください。
+前提条件の設定が完了したら、 [!DNL Bombora]  アカウントをExperience Platform](../../tutorials/ui/create/data-partners/bombora.md)に接続する[に関するチュートリアルを参照して、統合を開始してください。
 
 ## よくある質問 {#faq}
 
@@ -123,7 +123,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-現在、取り込みとアクティベーションには標準の[!DNL Bombora] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Bombora]  スキーマガイド &#x200B;](#schema)を参照して、フィールドの可用性の詳細を確認してください。
+現在、取り込みとアクティベーションには標準の[!DNL Bombora] フィールドのみを使用できます。 サポートされているフィールドのリストを表示するには、[[!DNL Bombora]  スキーマガイド ](#schema)を参照して、フィールドの可用性の詳細を確認してください。
 
 +++
 
@@ -147,7 +147,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-[&#x200B; クエリサービス &#x200B;](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
+[ クエリサービス ](../../../query-service/home.md)でSQL クエリを実行し、会社名またはAccountIDを使用してインテントデータを検索します。 特定の企業のすべてのインテントデータを表示するには、企業名またはAccountIDを使用してクエリサービスでSQL クエリを実行し、関連するすべてのインテントシグナルを取得します。
 
 +++
 
@@ -167,7 +167,7 @@ Experience Platformの[!DNL Bombora]は[!DNL Google Cloud Storage]によって�
 
 +++回答
 
-Experience Platformでインテントデータを削除するには、[&#x200B; データセット &#x200B;](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
+Experience Platformでインテントデータを削除するには、[ データセット ](../../../catalog/datasets/user-guide.md#delete-a-dataset)を削除する必要があります。
 
 +++
 
@@ -195,7 +195,7 @@ Experience Platformでインテントデータを削除するには、[&#x200B; 
 
 +++回答
 
-Experience Platformのドメインマッチングは、スクラブドメインフィールドの値と完全に一致することに基づいています。 Experience Platformは、プレフィックス（例：https:/<span>/www）を自動的に削除し、トップレベルドメイン（例：adobe.com）を保持します。 一致させるには、ファジィ一致やサブドメインをサポートしない正確なドメイン値が必要です。
+Experience Platformのドメインマッチングは、スクラブドメインフィールドの値と完全に一致することに基づいています。 Experience Platformは接頭辞（例：https:/<span>/www）を自動的に削除します。 トップレベルドメインを保持します（例：adobe.com）。 一致させるには、ファジィ一致やサブドメインをサポートしない正確なドメイン値が必要です。
 
 +++
 
@@ -203,6 +203,29 @@ Experience Platformのドメインマッチングは、スクラブドメイン�
 
 +++回答
 
-インテントデータは、[&#x200B; アカウントオーディエンス &#x200B;](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定し、エンゲージメントし、マーケティングとセールスのアウトリーチを最適化することができます。
+インテントデータは、[ アカウントオーディエンス ](../../../segmentation/types/account-audiences.md)で利用して、ターゲティング、セグメンテーション、パーソナライゼーションを強化できます。 インテントシグナルを活用することで、特定のトピックに高い関心を示しているアカウントを特定し、エンゲージメントし、マーケティングとセールスのアウトリーチを最適化することができます。
+
++++
+
+### 標準の[!DNL Account Key] フィールドグループは[!DNL Bombora Account Intent] スキーマと互換性がありますか？
+
++++回答
+
+いいえ。 B2B アカウントスキーマとの関係を確立するには、`accountID` フィールドを使用します。 これにより、参照またはソーススキーマでフィールドグループ全体を導入する必要がなくなります。
++++
+
+### [!DNL Bombora Account Intent] スキーマは、B2B アカウントスキーマとの関係をどのように確立しますか？
+
++++回答
+
+[!DNL Bombora Account Intent] スキーマは、`accountID` フィールドを使用して、対応するB2B アカウントレコードにリンクします。 このフィールドは、両方のデータセットで一致するドメインが見つかった場合、取り込み中に自動的に入力されます。 具体的には、[!DNL Bombora] スキーマの`accountID`は、標準B2B アカウントスキーマの`accountKey.sourceKey`を参照しています。
+
++++
+
+### [!DNL Bombora Account Intent] スキーマで、一般的な[!DNL Account Key] フィールドグループ構造ではなく`accountID`を使用するのはなぜですか？
+
++++回答
+
+[!DNL Bombora Intent]個のスキーマは、ストレージと処理効率に重点を置いています。 スキーマは、フィールドグループ全体を使用するのではなく、関係を確立するために合理化された単一フィールド （`accountID`）を使用します。 これにより、複雑さを軽減し、インテントデータの最適な処理パターンと連携させることができます。
 
 +++
