@@ -40,4 +40,4 @@ Adobeでデータを送信する組織のID。 ほとんどの場合、自動入
 
 拡張機能がデータを送受信するドメイン。 デフォルトでは、フィールドには`<COMPANYID>.data.adobedc.net`が含まれています。 古い実装では、デフォルト値`edge.adobedc.net`が含まれている場合があります。これも有効です。
 
-Adobeでは、ほとんどの場合、1st パーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインを設定する方法については、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)も参照してください。
+Adobeでは、ほとんどの場合、1st パーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインを設定する方法については、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)も参照してください。
