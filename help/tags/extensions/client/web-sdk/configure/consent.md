@@ -24,7 +24,7 @@ ht-degree: 13%
 1. **[!UICONTROL Extensions]**&#x200B;に移動し、[!UICONTROL Adobe Experience Platform Web SDK] カードの&#x200B;**[!UICONTROL Configure]**&#x200B;を選択します。
 1. **[!UICONTROL Consent]** セクションまでスクロールします。
 
-![ タグ UIのWeb SDK タグ拡張機能のプライバシー設定を示す画像](../assets/web-sdk-ext-privacy.png)
+![&#x200B; タグ UIのWeb SDK タグ拡張機能のプライバシー設定を示す画像](../assets/web-sdk-ext-privacy.png)
 
 このセクションには、デフォルトの同意レベルを決定するラジオボタンのセットが1つ含まれています。
 

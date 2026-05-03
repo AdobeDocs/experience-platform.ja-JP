@@ -24,7 +24,7 @@ ht-degree: 4%
 1. **[!UICONTROL Extensions]**&#x200B;に移動し、[!UICONTROL Adobe Experience Platform Web SDK] カードの&#x200B;**[!UICONTROL Configure]**&#x200B;を選択します。
 1. **[!UICONTROL Personalization]** セクションまでスクロールします。
 
-![ タグ UIのWeb SDK タグ拡張機能のパーソナライゼーション設定を示す画像](../assets/web-sdk-ext-personalization.png)
+![&#x200B; タグ UIのWeb SDK タグ拡張機能のパーソナライゼーション設定を示す画像](../assets/web-sdk-ext-personalization.png)
 
 次のオプションがあります。
 

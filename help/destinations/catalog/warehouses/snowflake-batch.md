@@ -29,7 +29,7 @@ ht-degree: 17%
 
 AdobeからSnowflake アカウントへのデータフローを初めて設定すると、Adobeからのプライベートリストを受け入れるよう求めるメッセージが表示されます。
 
-Snowflakeのプライベートリスト承認画面を示す![ スクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
+Snowflakeのプライベートリスト承認画面を示す![&#x200B; スクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### データ保持とTTL （顧客生涯価値） {#ttl}
 
@@ -41,7 +41,7 @@ Snowflakeのプライベートリスト承認画面を示す![ スクリーン�
 
 ### オーディエンスの更新行動 {#audience-update-behavior}
 
-オーディエンスが[ バッチモード ](../../../segmentation/methods/batch-segmentation.md)で評価された場合、共有テーブルのデータは24時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と、それらの変更が共有テーブルに反映されるまでの間に、最大24時間の遅延が発生する可能性があります。
+オーディエンスが[&#x200B; バッチモード &#x200B;](../../../segmentation/methods/batch-segmentation.md)で評価された場合、共有テーブルのデータは24時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と、それらの変更が共有テーブルに反映されるまでの間に、最大24時間の遅延が発生する可能性があります。
 
 ### バッチデータ共有ロジック {#batch-data-sharing}
 
@@ -49,13 +49,13 @@ Snowflakeのプライベートリスト承認画面を示す![ スクリーン�
 
 ## ストリーミングとバッチデータ共有 {#batch-vs-streaming}
 
-Experience Platformには、[Snowflake ストリーミング ](snowflake.md)と[Snowflake バッチ ](snowflake-batch.md)の2種類のSnowflake配信先があります。
+Experience Platformには、[Snowflake ストリーミング &#x200B;](snowflake.md)と[Snowflake バッチ &#x200B;](snowflake-batch.md)の2種類のSnowflake配信先があります。
 
 両方の宛先では、アカウントに物理的にコピーすることなくSnowflakeのデータにアクセスできますが、各コネクタのユースケースに関して、推奨されるベストプラクティスがいくつかあります。
 
 次の表では、各データ共有方法が最も適切なシナリオを概説することで、使用するコネクタを決定するのに役立ちます。
 
-|  | 必要な場合は、[Snowflake バッチ ](snowflake-batch.md)を選択してください | 必要な場合は、[Snowflake ストリーミング ](snowflake.md)を選択してください |
+|  | 必要な場合は、[Snowflake バッチ &#x200B;](snowflake-batch.md)を選択してください | 必要な場合は、[Snowflake ストリーミング &#x200B;](snowflake.md)を選択してください |
 |--------|-------------------|----------------------|
 | **更新頻度** | 定期スナップショット | リアルタイムの継続的な更新 |
 | **データ プレゼンテーション** | 過去のデータに代わる完全なオーディエンススナップショット | プロファイルの変更に基づく増分更新 |
@@ -85,7 +85,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 * Snowflake アカウントがプライベートリストに登録されています。 Snowflakeのアカウント管理者権限を持つ社内のユーザーは、これを設定できます。
 * Snowflake アカウントのクラウドプロバイダーとリージョンを知っている。 宛先に接続するときに両方を入力する必要があります。
 
-必要な権限について詳しくは、[[!DNL Snowflake]  ドキュメント ](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing)を参照してください。
+必要な権限について詳しくは、[[!DNL Snowflake]  ドキュメント &#x200B;](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 | オーディエンスの由来 | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ○ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ○ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md)を通じて生成されたオーディエンス。 |
 | その他すべてのオーディエンスの生成元 | ○ | このカテゴリには、[!DNL Segmentation Service]を通じて生成されたオーディエンス以外のすべてのオーディエンスのオリジンが含まれます。 [様々なオーディエンスの起源](/help/segmentation/ui/audience-portal.md#customize)について読みます。 次に例を示します。 <ul><li> カスタムアップロードオーディエンス [がCSV ファイルからExperience Platformに](../../../segmentation/ui/audience-portal.md#import-audience)をインポートしました。</li><li> 類似オーディエンス， </li><li> 連合オーディエンス， </li><li> [!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで生成されたオーディエンス </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
@@ -106,10 +106,10 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 | オーディエンスのデータタイプ | サポートあり | 説明 | ユースケース |
 |--------------------|-----------|-------------|-----------|
-| [人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
-| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
-| [見込みオーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
-| [ データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
+| [人物オーディエンス &#x200B;](/help/segmentation/types/people-audiences.md) | ○ | 顧客プロファイルにもとづいて、マーケティング施策の特定のグループをターゲットにすることができます。 | 買い物客やカートの放棄が多い |
+| [&#x200B; アカウントオーディエンス &#x200B;](/help/segmentation/types/account-audiences.md) | × | アカウントベースドマーケティング戦略のために、特定の組織内の個人をターゲットにします。 | B2B マーケティング |
+| [見込みオーディエンス &#x200B;](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないが、ターゲットオーディエンスと特徴を共有する個人をターゲットにします。 | サードパーティデータによる見込み顧客の開拓 |
+| [&#x200B; データセットの書き出し](/help/catalog/datasets/overview.md) | × | [!DNL Adobe Experience Platform] データ レイクに保存されている構造化データのコレクション。 | レポート，データサイエンスワークフロー |
 
 {style="table-layout:auto"}
 
@@ -128,7 +128,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。 宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -136,7 +136,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 宛先に対して認証を行うには、**[!UICONTROL Connect to destination]**&#x200B;を選択し、アカウント名と、オプションでアカウントの説明を指定します。
 
-宛先への認証方法を示す![ サンプルのスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
+宛先への認証方法を示す![&#x200B; サンプルのスクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -147,14 +147,14 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-宛先の詳細を入力する方法を示す![ サンプルのスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
+宛先の詳細を入力する方法を示す![&#x200B; サンプルのスクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
 * **[!UICONTROL Name]**：今後この宛先を認識する際に使用する名前。
 * **[!UICONTROL Description]**：今後この宛先を特定するのに役立つ説明です。
 * **[!UICONTROL Snowflake Account ID]**: [Snowflake Data Sharing Account Identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing)。 アカウントが組織にリンクされているかどうかに応じて、次の形式を使用します。
    * アカウントが組織にリンクされている場合：組織名とアカウント名を&#x200B;**期間** （`.`）で区切って入力します。 例えば、組織名がACMEで、アカウント名がAsiaRegionの場合は、`ACME.AsiaRegion`と入力します。
    * アカウントが組織にリンクされていない場合：`AccountName`。
-* **[!UICONTROL Snowflake Region]**: Snowflake インスタンスがプロビジョニングされているリージョンを選択します。 サポートされているクラウドリージョンについて詳しくは、Snowflake [ ドキュメント ](https://docs.snowflake.com/en/user-guide/intro-regions)を参照してください。
+* **[!UICONTROL Snowflake Region]**: Snowflake インスタンスがプロビジョニングされているリージョンを選択します。 サポートされているクラウドリージョンについて詳しくは、Snowflake [&#x200B; ドキュメント &#x200B;](https://docs.snowflake.com/en/user-guide/intro-regions)を参照してください。
 * **[!UICONTROL Account acknowledgment]**: **[!UICONTROL Snowflake Account ID]**&#x200B;を入力した後、このドロップダウンで「**[!UICONTROL Yes]**」を選択して、**[!UICONTROL Snowflake Account ID]**&#x200B;が正しく、自分に属していることを確認します。
 
 >[!NOTE]
@@ -175,8 +175,8 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID*&#x200B;をエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -186,7 +186,7 @@ IDとプロファイル属性をこの宛先に書き出すことができます
 
 ![Experience Platformの宛先のマッピング画面を示すSnowflake ユーザーインターフェイスの画像。](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
 
-[計算フィールド コントロール ](../../ui/data-transformations-calculated-fields.md)を使用して、配列の書き出しと操作を実行できます。
+[計算フィールド コントロール &#x200B;](../../ui/data-transformations-calculated-fields.md)を使用して、配列の書き出しと操作を実行できます。
 
 ターゲット属性は、**[!UICONTROL Attribute name]** フィールドで指定した属性名を使用して、Snowflakeで自動的に作成されます。
 
@@ -206,7 +206,7 @@ IDとプロファイル属性をこの宛先に書き出すことができます
 * **AUDIENCE_STATUS**: オーディエンス内のプロファイルのメンバーシップ ステータス （例：`active`または`realized`）
 * **マッピング属性**：アクティベーションワークフロー中に選択されたすべてのマッピング属性が列として表されます
 
-動的なテーブルデータを含むSnowflake インターフェイスを示す![ スクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+動的なテーブルデータを含むSnowflake インターフェイスを示す![&#x200B; スクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 >[!NOTE]
 >

@@ -24,7 +24,7 @@ ht-degree: 11%
 1. **[!UICONTROL Extensions]**&#x200B;に移動し、[!UICONTROL Adobe Experience Platform Web SDK] カードの&#x200B;**[!UICONTROL Configure]**&#x200B;を選択します。
 1. 拡張された[!UICONTROL SDK instances] アコーディオンのすぐ下にあるインスタンス名を探します。
 
-![ タグ UI](../assets/web-sdk-ext-general.png)のWeb SDK タグ拡張機能の一般的な設定を示す画像
+![&#x200B; タグ UI](../assets/web-sdk-ext-general.png)のWeb SDK タグ拡張機能の一般的な設定を示す画像
 
 次のオプションがあります。
 
@@ -40,4 +40,4 @@ Adobeでデータを送信する組織のID。 ほとんどの場合、自動入
 
 拡張機能がデータを送受信するドメイン。 デフォルトでは、フィールドには`<COMPANYID>.data.adobedc.net`が含まれています。 古い実装では、デフォルト値`edge.adobedc.net`が含まれている場合があります。これも有効です。
 
-Adobeでは、ほとんどの場合、1st パーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインを設定する方法については、[Adobeが管理する証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)も参照してください。
+Adobeでは、ほとんどの場合、1st パーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインを設定する方法については、[Adobeが管理する証明書プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)も参照してください。
