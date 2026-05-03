@@ -1,43 +1,43 @@
 ---
-title: SDK インスタンスの設定
-description: Web SDK インスタンスの一般設定を指定します。
+title: SDK インスタンス設定
+description: Web SDK インスタンスの一般設定を行います。
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 2%
+source-wordcount: '293'
+ht-degree: 11%
 
 ---
 
-# SDK インスタンスの設定 {#sdk-instance}
+# SDK インスタンス設定 {#sdk-instance}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_sdkinstance"
 >title="SDK インスタンス"
->abstract="SDK インスタンス名、それが属する IMS 組織および Edge ドメインを設定します。"
+>abstract="SDK インスタンス名、属する IMS 組織、Edge ドメインを設定します。"
 
-この設定セクションでは、Web SDK インスタンス名、適用先の IMS 組織およびデータの送信先を管理します。 デフォルトでは、インスタンスの名前は `alloy` です。
+この設定セクションでは、Web SDK インスタンス名、適用されるIMS組織、データの送信先の場所を指定します。 デフォルトでは、インスタンスの名前は`alloy`です。
 
-1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. Adobe IDの資格情報を使用して[experience.adobe.com](https://experience.adobe.com)にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL Extensions]** に移動し、**[!UICONTROL Configure]** カードで [!UICONTROL Adobe Experience Platform Web SDK] を選択します。
-1. 展開された [!UICONTROL SDK instances] アコーディオンのすぐ下にあるインスタンス名を見つけます。
+1. **[!UICONTROL Extensions]**&#x200B;に移動し、[!UICONTROL Adobe Experience Platform Web SDK] カードの&#x200B;**[!UICONTROL Configure]**&#x200B;を選択します。
+1. 拡張された[!UICONTROL SDK instances] アコーディオンのすぐ下にあるインスタンス名を探します。
 
-![&#x200B; タグ UI の web SDK タグ拡張機能の一般設定を示す画像 &#x200B;](../assets/web-sdk-ext-general.png)
+![ タグ UI](../assets/web-sdk-ext-general.png)のWeb SDK タグ拡張機能の一般的な設定を示す画像
 
 次のオプションがあります。
 
 ## [!UICONTROL Name]
 
-Adobe Experience Platform Web SDK タグ拡張機能は、ページ上の複数のインスタンスをサポートします。 この名前は、Web SDKのタグライブラリを複製せずに、複数の組織にデータを送信する場合に使用します。 インスタンス名を任意の有効なJavaScript オブジェクト名に変更できます。
+Adobe Experience Platform Web SDK タグ拡張機能は、ページ上の複数のインスタンスをサポートしています。 名前は、重複したWeb SDK タグライブラリを必要とせずに、複数の組織にデータを送信するために使用されます。 インスタンス名は、有効な任意のJavaScript オブジェクト名に変更できます。
 
 ## [!UICONTROL IMS organization ID]
 
-Adobeでデータを送信する組織の ID。 ほとんどの場合、自動入力されるデフォルト値を使用します。 ページ上に複数のインスタンスがある場合、データの送信先の 2 番目の組織の値をこのフィールドに入力します。
+Adobeでデータを送信する組織のID。 ほとんどの場合、自動入力されるデフォルト値を使用します。 ページに複数のインスタンスがある場合は、データを送信する2番目の組織の値をこのフィールドに入力します。
 
 ## [!UICONTROL Edge domain]
 
-拡張機能がデータを送受信するドメイン。 デフォルトでは、フィールドには `<COMPANYID>.data.adobedc.net` が含まれています。 古い実装では、デフォルト値の `edge.adobedc.net` が含まれている場合がありますが、これも有効です。
+拡張機能がデータを送受信するドメイン。 デフォルトでは、フィールドには`<COMPANYID>.data.adobedc.net`が含まれています。 古い実装では、デフォルト値`edge.adobedc.net`が含まれている場合があります。これも有効です。
 
-Adobeでは、ほとんどの場合、ファーストパーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインのセットアップ方法については [&#128279;](https://experienceleague.adobe.com/ja/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe管理の証明書プログラム &rbrace; を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) も参照してください。
+Adobeでは、ほとんどの場合、1st パーティドメインを使用することをお勧めします。 データ収集に適したファーストパーティドメインを設定する方法については、[Adobeが管理する証明書プログラム ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)を参照してください。 この値の設定に関するガイダンスについては、JavaScript ライブラリのドキュメントの[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)も参照してください。

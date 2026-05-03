@@ -4,7 +4,7 @@ description: ビルドサイズを小さくする機能を無効にするカス�
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '278'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_buildoptions"
 >title="ビルドオプション"
->abstract="JavaScript ライブラリからモジュールを選択的に含めたり除外したりして、ライブラリサイズを減らし、パフォーマンスを向上させます。"
+>abstract="JavaScript ライブラリからモジュールを選択的に含めるか除外すると、ライブラリサイズを削減し、パフォーマンスを向上させることができます。"
 
 Web SDKには、パーソナライゼーション、ID、リンクトラッキングなど、さまざまな機能を実行するための複数のモジュールが用意されています。 ユースケースによっては、ライブラリ全体ではなく、特定の機能だけが必要な場合があります。 ビルドコンポーネントを無効にすると、必要なモジュールのみを使用できるため、ライブラリサイズを削減し、パフォーマンスを向上できます。
 
@@ -23,7 +23,7 @@ Web SDKには、パーソナライゼーション、ID、リンクトラッキ�
 1. Adobe IDの資格情報を使用して[experience.adobe.com](https://experience.adobe.com)にログインします。
 1. **[!UICONTROL Data Collection]**／**[!UICONTROL Tags]**&#x200B;に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL Extensions]**&#x200B;に移動し、**[!UICONTROL Configure]** カードの[!UICONTROL Adobe Experience Platform Web SDK]を選択します。
+1. **[!UICONTROL Extensions]**&#x200B;に移動し、[!UICONTROL Adobe Experience Platform Web SDK] カードの&#x200B;**[!UICONTROL Configure]**&#x200B;を選択します。
 1. 上部の&#x200B;**[!UICONTROL Custom build components]** アコーディオンを展開します。
 
 >[!WARNING]
