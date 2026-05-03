@@ -11,7 +11,7 @@ ht-degree: 29%
 
 # データ収集のためのデータ準備
 
-[!DNL Adobe Experience Platform] サービスの[!DNL Data Prep]を使用して、[Experience Data Model （XDM） ](/help/xdm/home.md)との間でデータをマッピング、変換、検証します。 Experience Platform対応の[ データストリーム ](/help/datastreams/overview.md)を設定する場合、[!DNL Data Prep]機能を使用して、ソースデータを[!DNL Adobe Experience Platform Edge Network]に送信する際にXDMにマッピングできます。
+[!DNL Adobe Experience Platform] サービスの[!DNL Data Prep]を使用して、[Experience Data Model （XDM） &#x200B;](/help/xdm/home.md)との間でデータをマッピング、変換、検証します。 Experience Platform対応の[&#x200B; データストリーム &#x200B;](/help/datastreams/overview.md)を設定する場合、[!DNL Data Prep]機能を使用して、ソースデータを[!DNL Adobe Experience Platform Edge Network]に送信する際にXDMにマッピングできます。
 
 web ページから送信されるすべてのデータは、XDMとしてExperience Platformに格納される必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れるXDMにデータを変換するには、次の3つの方法があります。
 
@@ -44,7 +44,7 @@ web ページから送信されるすべてのデータは、XDMとしてExperie
 >* [データ準備のマッピング機能](/help/data-prep/functions.md)
 >* [Data Prep でのデータ形式の取り扱い](/help/data-prep/data-handling.md)
 
-このガイドでは、UI 内のデータのマッピング方法を説明します。 手順を完了するには、[基本設定ステップ ](/help/datastreams/configure.md#create)までのデータストリームを作成するプロセスを開始します。
+このガイドでは、UI 内のデータのマッピング方法を説明します。 手順を完了するには、[基本設定ステップ &#x200B;](/help/datastreams/configure.md#create)までのデータストリームを作成するプロセスを開始します。
 
 データ収集のためのデータ準備プロセスの簡単なデモについては、次のビデオを参照してください。
 
@@ -164,7 +164,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 **[!UICONTROL Mapping]** ステップが表示され、ソースデータのフィールドをExperience Platformのターゲットイベントスキーマのフィールドにマッピングできます。 ここから、2 つの方法でマッピングを設定できます。
 
-* 手動プロセスを使用して、このデータストリームの[ マッピングルール ](#create-mapping)を作成します。
+* 手動プロセスを使用して、このデータストリームの[&#x200B; マッピングルール &#x200B;](#create-mapping)を作成します。
 * 既存のデータストリームから[マッピングルールを読み込みます](#import-mapping)。
 
 >[!IMPORTANT]
@@ -177,13 +177,13 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ![新しいマッピングを追加しています。](assets/data-prep/add-new-mapping.png)
 
-ソースアイコン（![Source フィールドセレクターアイコン ](/help/images/icons/source.png)）を選択し、表示されるダイアログで、提供されたキャンバスでマッピングするソースフィールドを選択します。 フィールドを選択したら、**[!UICONTROL Select]** ボタンを使用して続行します。
+ソースアイコン（![Source フィールドセレクターアイコン &#x200B;](/help/images/icons/source.png)）を選択し、表示されるダイアログで、提供されたキャンバスでマッピングするソースフィールドを選択します。 フィールドを選択したら、**[!UICONTROL Select]** ボタンを使用して続行します。
 
-![ ソーススキーマでマッピングするフィールドを選択しています。](assets/data-prep/source-mapping.png)
+![&#x200B; ソーススキーマでマッピングするフィールドを選択しています。](assets/data-prep/source-mapping.png)
 
-次に、スキーマアイコン（![ ターゲットスキーマセレクターアイコン ](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマの同様のダイアログを開きます。 データをマッピングするフィールドを選択してから、**[!UICONTROL Select]**&#x200B;を確認してください。
+次に、スキーマアイコン（![&#x200B; ターゲットスキーマセレクターアイコン &#x200B;](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマの同様のダイアログを開きます。 データをマッピングするフィールドを選択してから、**[!UICONTROL Select]**&#x200B;を確認してください。
 
-![ ターゲットスキーマでマッピングするフィールドを選択しています。](assets/data-prep/target-mapping.png)
+![&#x200B; ターゲットスキーマでマッピングするフィールドを選択しています。](assets/data-prep/target-mapping.png)
 
 マッピングページが再表示され、完成したフィールドマッピングが表示されます。 **[!UICONTROL Mapping progress]** セクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
 
@@ -205,7 +205,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 開始するには、**[!UICONTROL Import Mapping]**&#x200B;を選択します。
 
-![ マッピングの読み込みボタンが選択されています。](assets/data-prep/import-mapping-button.png)
+![&#x200B; マッピングの読み込みボタンが選択されています。](assets/data-prep/import-mapping-button.png)
 
 表示されるダイアログで、マッピングルールを読み込むデータストリームを選択します。 データストリームを選択したら、**[!UICONTROL Preview]**&#x200B;を選択します。
 
@@ -233,4 +233,4 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、UI でデータストリームを設定する際の、データの XDM へのマッピング方法について説明しました。 一般的なデータストリームのチュートリアルに従っていた場合は、[ データストリームの詳細の表示](/help/datastreams/overview.md)の手順に戻れるようになりました。
+このガイドでは、UI でデータストリームを設定する際の、データの XDM へのマッピング方法について説明しました。 一般的なデータストリームのチュートリアルに従っていた場合は、[&#x200B; データストリームの詳細の表示](/help/datastreams/overview.md)の手順に戻れるようになりました。

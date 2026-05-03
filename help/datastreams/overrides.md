@@ -17,11 +17,11 @@ ht-degree: 38%
 
 データストリーム設定の上書きは、次の2つの手順で行います。
 
-1. まず、[ データストリーム設定ページ ](/help/datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
+1. まず、[&#x200B; データストリーム設定ページ &#x200B;](/help/datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
 2. 次に、次のいずれかの方法で上書きを[!DNL Edge Network]に送信する必要があります。
    * `sendEvent`または`configure` [Web SDK](#send-overrides) コマンドを使用します。
-   * Web SDK [ タグ拡張機能](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md)を使用します。
-   * モバイル SDK [sendEvent](#send-overrides) APIを使用するか、[ ルール ](#send-overrides)を使用します。
+   * Web SDK [&#x200B; タグ拡張機能](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md)を使用します。
+   * モバイル SDK [sendEvent](#send-overrides) APIを使用するか、[&#x200B; ルール &#x200B;](#send-overrides)を使用します。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
@@ -68,7 +68,7 @@ ht-degree: 38%
 
 目的のオーバーライドを追加したら、データストリーム設定を保存します。
 
-[!DNL Adobe Target] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。[
+[!DNL Adobe Target] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK[&#128279;](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。
 
 ### Adobe Analytics のデータストリームの上書き {#analytics-overrides}
 
@@ -82,7 +82,7 @@ ht-degree: 38%
 
 目的のオーバーライドを追加したら、データストリーム設定を保存します。
 
-[!DNL Adobe Analytics] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。[
+[!DNL Adobe Analytics] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK[&#128279;](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。
 
 ### Experience Platform イベントデータセットのデータストリームの上書き {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Experience Platform イベントデータセットのデータストリームの
 
 目的のオーバーライドを追加したら、データストリーム設定を保存します。
 
-[!DNL Adobe Experience Platform] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。[
+[!DNL Adobe Experience Platform] データストリームの上書きが設定されました。 Web SDKまたはモバイル SDK[&#128279;](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。
 
 ### サードパーティ ID 同期コンテナのデータストリームの上書き {#container-overrides}
 
@@ -112,14 +112,14 @@ Experience Platform イベントデータセットのデータストリームの
 
 目的のオーバーライドを追加したら、データストリーム設定を保存します。
 
-ID同期コンテナの上書きが設定されました。 Web SDKまたはモバイル SDK](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。[
+ID同期コンテナの上書きが設定されました。 Web SDKまたはモバイル SDK[&#128279;](#send-overrides)経由で [!DNL Edge Network] に上書きを送信できるようになりました。
 
 ## Edge Networkにオーバーライドを送信する {#send-overrides}
 
 データ収集UIでデータストリームの上書きを設定した後、Web SDKまたはモバイル SDKを介して[!DNL Edge Network]に上書きを送信できます。
 
-* **Web SDK**: JavaScript ライブラリのコード例については、[ データストリーム設定の上書き](/help/collection/js/commands/configure/edgeconfigoverrides.md)を参照してください。
-* **モバイル SDK**: [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/)を使用するか、[ ルール ](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/)を使用して、データストリーム IDの上書きを送信できます。
+* **Web SDK**: JavaScript ライブラリのコード例については、[&#x200B; データストリーム設定の上書き](/help/collection/js/commands/configure/edgeconfigoverrides.md)を参照してください。
+* **モバイル SDK**: [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/)を使用するか、[&#x200B; ルール &#x200B;](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/)を使用して、データストリーム IDの上書きを送信できます。
 
 ## ペイロードの例 {#payload-example}
 

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # 動的データストリーム設定の作成
 
-デフォルトでは、[!DNL Adobe Experience Platform Edge Network]は、データストリームに到達するすべてのイベントを、データストリームに対して有効にしたすべての[!DNL Experience Cloud] [ サービス ](/help/datastreams/configure.md#add-services)に送信します。 ユースケースによっては、これが必ずしも理想的なワークフローであるとは限りません。
+デフォルトでは、[!DNL Adobe Experience Platform Edge Network]は、データストリームに到達するすべてのイベントを、データストリームに対して有効にしたすべての[!DNL Experience Cloud] [&#x200B; サービス &#x200B;](/help/datastreams/configure.md#add-services)に送信します。 ユースケースによっては、これが必ずしも理想的なワークフローであるとは限りません。
 
 動的データストリーム設定では、データストリームに対して有効になっている各サービスに対して定義する一連のルールを使用して、これに対応します。このルールは、各タイプのデータを受信する[!DNL Experience Cloud] ソリューションを制御します。
 
@@ -19,8 +19,8 @@ ht-degree: 3%
 
 データストリームの動的設定を作成するには、次の2つの条件を満たす必要があります。
 
-* *少なくとも*&#x200B;個のデータストリームを作成しておく必要があります。 詳しくは、[ データストリームの作成方法](/help/datastreams/configure.md)に関するドキュメントを参照してください。
-* データストリームに&#x200B;*少なくとも*&#x200B;個の[!DNL Experience Cloud] サービスを追加する必要があります。 詳しくは、[ データストリームにサービス ](/help/datastreams/configure.md#add-services)を追加する方法に関するドキュメントを参照してください。
+* *少なくとも*&#x200B;個のデータストリームを作成しておく必要があります。 詳しくは、[&#x200B; データストリームの作成方法](/help/datastreams/configure.md)に関するドキュメントを参照してください。
+* データストリームに&#x200B;*少なくとも*&#x200B;個の[!DNL Experience Cloud] サービスを追加する必要があります。 詳しくは、[&#x200B; データストリームにサービス &#x200B;](/help/datastreams/configure.md#add-services)を追加する方法に関するドキュメントを参照してください。
 
 データストリームを作成してExperience Cloud サービスを追加したら、次に[動的設定を作成できます](#create-dynamic-configuration)。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 ## 動的データストリーム設定とデータストリーム設定の上書き {#dynamic-versus-overrides}
 
-動的データストリーム設定と[ データストリーム設定オーバーライド ](/help/datastreams/overrides.md)は、相互に排他的な機能です。
+動的データストリーム設定と[&#x200B; データストリーム設定オーバーライド &#x200B;](/help/datastreams/overrides.md)は、相互に排他的な機能です。
 
 動的データストリーム設定をデータストリーム設定のオーバーライドと共に使用することはできません。 どちらか一方を選ばなければなりません。
 
@@ -48,33 +48,33 @@ ht-degree: 3%
 
 ## 動的データストリーム設定の作成 {#create-dynamic-configuration}
 
-[ データストリーム ](configure.md)を作成し、[ サービス ](configure.md#add-services)を追加した後、次の手順に従ってサービスに動的設定を追加します。
+[&#x200B; データストリーム &#x200B;](configure.md)を作成し、[&#x200B; サービス &#x200B;](configure.md#add-services)を追加した後、次の手順に従ってサービスに動的設定を追加します。
 
 1. **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** ページに移動し、作成したデータストリームを選択します。
 
-   ![ データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-datastream.png)
+   ![&#x200B; データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. 動的設定を定義するサービスの&#x200B;**[!UICONTROL Edit]** オプションを選択します。
 
-   ![ データストリームに追加されたサービスを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-service.png)
+   ![&#x200B; データストリームに追加されたサービスを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-service.png)
 
 1. **[!UICONTROL Configure]** ページで、**[!UICONTROL Save and Edit Dynamic Configuration]**&#x200B;を選択します。
 
-   ![ データストリーム設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![&#x200B; データストリーム設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. **[!UICONTROL Add Dynamic Configuration]** を選択します。
 
-   ![ ルールが追加される前に、動的設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![&#x200B; ルールが追加される前に、動的設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. **[!UICONTROL Resources]** パネルから、ルールを作成するアイテムをウィンドウの右側にドラッグ&amp;ドロップします。 複数のリソースを組み合わせて、複雑なルールを構築できます。
 
    各リソースのオプション（**[!UICONTROL equals]**、**[!UICONTROL does not equal]**、**[!UICONTROL exists]**&#x200B;など）を使用して、ルールを微調整します。
 
-   ![ リソースがドラッグされている動的設定ルールビルダーを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/drag-resources.png)
+   ![&#x200B; リソースがドラッグされている動的設定ルールビルダーを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/drag-resources.png)
 
 1. 「**[!UICONTROL Configuration]**」セクションで、データを各サービスに送信するかどうかに応じて、各ルールのサービスを有効または無効にします。 サービスを無効にすると、ルーティングは無効になり、*データはダウンストリームサービスに送信されません*。
 
-   ![ サービスの切り替えを含む動的設定ルールを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/enable-service.png)
+   ![&#x200B; サービスの切り替えを含む動的設定ルールを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/enable-service.png)
 
 1. ルールの設定が完了したら、**[!UICONTROL Save]**&#x200B;を選択します。
 
@@ -86,7 +86,7 @@ ht-degree: 3%
 
 ルールの順序を設定するには、ルールウィンドウを目的の順序でドラッグ&amp;ドロップします。
 
-![ ドラッグ&amp;ドロップを使用した動的データストリームルールの並べ替え](assets/configure-dynamic-datastream/move-rules.gif)
+![&#x200B; ドラッグ&amp;ドロップを使用した動的データストリームルールの並べ替え](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## ルールの適格性の基準 {#eligibility-criteria}
 
@@ -146,6 +146,6 @@ ht-degree: 3%
 動的データストリーム設定ルールを作成する際のベストプラクティスに従うことで、最適なパフォーマンス、システムの信頼性、および保守に適した設定を実現できます。 これらのガイドラインは、陥りがちな落とし穴を回避し、プラットフォームのアーキテクチャとシームレスに連携する効率的なルールを構築するのに役立ちます。
 
 * **ルールをシンプルかつフラットに保つ。** 複雑なロジックを表現する必要がある場合は、ネストするのではなく複数のルールを使用します。
-* **サポートされているデータ型](#supported-data-types)と[演算子](#supported-operators)のみを使用**[
+* **サポートされているデータ型[&#128279;](#supported-data-types)と[演算子](#supported-operators)のみを使用**
 * **ルールのパフォーマンスをテストします。** 過度に複雑なルールやサポートされていないルールは、システムがそれらを拒否したり、システムのパフォーマンスに影響を与えたりする可能性があります。
 

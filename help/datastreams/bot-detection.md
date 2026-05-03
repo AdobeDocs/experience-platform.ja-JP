@@ -13,7 +13,7 @@ ht-degree: 1%
 
 自動化されたプログラム、web スクレイパー、クモ、スクリプトスキャナーなどからの人間ではないトラフィックは、人間の訪問者からのイベントを識別することを困難にする可能性があります。 この種類のトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。
 
-ボット検出を使用して、[Web SDK](/help/collection/js/js-overview.md)、[ モバイル SDK](https://developer.adobe.com/client-sdks/home/)、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)によって生成されたイベントを、既知のクモやボットによって生成されたものとして識別します。
+ボット検出を使用して、[Web SDK](/help/collection/js/js-overview.md)、[&#x200B; モバイル SDK](https://developer.adobe.com/client-sdks/home/)、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)によって生成されたイベントを、既知のクモやボットによって生成されたものとして識別します。
 
 >[!NOTE]
 >
@@ -35,9 +35,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->ボット検出はボットリクエストをドロップしません。 ボットスコアリングを使用してXDM スキーマのみを更新し、設定した[ データストリームサービス ](/help/datastreams/configure.md)にイベントを転送します。
+>ボット検出はボットリクエストをドロップしません。 ボットスコアリングを使用してXDM スキーマのみを更新し、設定した[&#x200B; データストリームサービス &#x200B;](/help/datastreams/configure.md)にイベントを転送します。
 >
->Adobeのソリューションは、さまざまな方法でボットスコアリングに対応できます。 例えば、[!DNL Adobe Analytics]は独自の[ ボットフィルタリングサービス ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)を使用し、[!DNL Edge Network]によって設定されたスコアを使用しません。 2つのサービスで同じ[IAB ボットリスト ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)を使用しているため、ボットスコアリングは同じです。
+>Adobeのソリューションは、さまざまな方法でボットスコアリングに対応できます。 例えば、[!DNL Adobe Analytics]は独自の[&#x200B; ボットフィルタリングサービス &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)を使用し、[!DNL Edge Network]によって設定されたスコアを使用しません。 2つのサービスで同じ[IAB ボットリスト &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)を使用しているため、ボットスコアリングは同じです。
 
 ## 技術的な考慮事項 {#technical-considerations}
 
@@ -49,23 +49,23 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-ボット検出がデータストリームで機能するには、**[ボット検出情報](/help/xdm/field-groups/event/bot-detection-information.md)** フィールドグループをスキーマに追加する必要があります。 スキーマにフィールドグループを追加する方法については、[XDM スキーマ ](/help/xdm/ui/resources/schemas.md#add-field-groups)のドキュメントを参照してください。
+ボット検出がデータストリームで機能するには、**[ボット検出情報](/help/xdm/field-groups/event/bot-detection-information.md)** フィールドグループをスキーマに追加する必要があります。 スキーマにフィールドグループを追加する方法については、[XDM スキーマ &#x200B;](/help/xdm/ui/resources/schemas.md#add-field-groups)のドキュメントを参照してください。
 
 ## データストリームのボット検出の設定 {#configure}
 
-データストリーム設定を作成した後で、ボット検出を設定できます。 データストリームを[作成および設定する方法に関するドキュメント ](/help/datastreams/configure.md)を参照し、次の手順に従ってボット検出機能をデータストリームに追加します。
+データストリーム設定を作成した後で、ボット検出を設定できます。 データストリームを[作成および設定する方法に関するドキュメント &#x200B;](/help/datastreams/configure.md)を参照し、次の手順に従ってボット検出機能をデータストリームに追加します。
 
 データストリーム リストに移動し、ボット検出を追加するデータストリームを選択します。
 
-![ データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/bot-detection/datastream-list.png)
+![&#x200B; データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/bot-detection/datastream-list.png)
 
 データストリームの詳細ページで、右側のパネルの「**[!UICONTROL Bot Detection]**」オプションを選択します。
 
-データストリーム ユーザーインターフェイスでハイライト表示された![ ボット検出オプション。](assets/bot-detection/bot-detection.png)
+データストリーム ユーザーインターフェイスでハイライト表示された![&#x200B; ボット検出オプション。](assets/bot-detection/bot-detection.png)
 
 **[!UICONTROL Bot Detection Rules]** ページが表示されます。
 
-データストリーム設定ページの![ ボット検出設定。](assets/bot-detection/bot-detection-page.png)
+データストリーム設定ページの![&#x200B; ボット検出設定。](assets/bot-detection/bot-detection-page.png)
 
 ボット検出ルール ページでは、次の機能を使用してボット検出を設定できます。
 
@@ -113,13 +113,13 @@ IAB/ABC International Spiders and Bots Listを使用するようにデータス�
 
 2. ルールの名前を&#x200B;**[!UICONTROL Rule Name]** フィールドに入力します。
 
-   ルール名が強調表示された![ ボット検出ルール画面。](assets/bot-detection/rule-name.png)
+   ルール名が強調表示された![&#x200B; ボット検出ルール画面。](assets/bot-detection/rule-name.png)
 
 3. **[!UICONTROL Add new IP condition]**&#x200B;を選択して、新しいIP ベースのルールを追加します。 ルールは、IP アドレスまたはIP アドレス範囲で定義できます。
 
-   IP アドレスフィールドがハイライト表示された![ ボット検出ルール画面。](assets/bot-detection/ip-address-rule.png)
+   IP アドレスフィールドがハイライト表示された![&#x200B; ボット検出ルール画面。](assets/bot-detection/ip-address-rule.png)
 
-   IP範囲フィールドがハイライト表示された![ ボット検出ルール画面。](assets/bot-detection/ip-range-rule.png)
+   IP範囲フィールドがハイライト表示された![&#x200B; ボット検出ルール画面。](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -127,11 +127,11 @@ IAB/ABC International Spiders and Bots Listを使用するようにデータス�
 
 4. ルールにヘッダー条件を追加する場合は、**[!UICONTROL Add header conditions group]**&#x200B;を選択し、ルールで使用するヘッダーを選択します。
 
-   「ヘッダー条件を追加」グループオプションを表示する![ ボット検出ルール画面。](assets/bot-detection/header-conditions.png)
+   「ヘッダー条件を追加」グループオプションを表示する![&#x200B; ボット検出ルール画面。](assets/bot-detection/header-conditions.png)
 
    次に、選択したヘッダーに使用する条件を追加します。
 
-   ![ ヘッダー条件フィールドが入力されたボット検出ルール画面。](assets/bot-detection/header-condition-rule.png)
+   ![&#x200B; ヘッダー条件フィールドが入力されたボット検出ルール画面。](assets/bot-detection/header-condition-rule.png)
 
 5. 目的のボット検出ルールを設定した後、**[!UICONTROL Save]**&#x200B;を選択して、データストリームにルールを適用します。
 
@@ -146,19 +146,19 @@ IAB/ABC International Spiders and Bots Listを使用するようにデータス�
 
 特定のIP アドレスから送信されたすべてのリクエストをボットトラフィックとしてマークするには、単一のIP アドレスを評価する新しいボット検出ルールを作成します。
 
-単一のIP アドレスを評価するように設定された![ ボット検出ルール。](assets/bot-detection/bot-detection-one-ip.png)
+単一のIP アドレスを評価するように設定された![&#x200B; ボット検出ルール。](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 2つのIP アドレスに基づくボット検出 {#two-ip}
 
 2つの特定のIP アドレスのいずれかから発生するすべてのリクエストをボットトラフィックとしてマークするには、2つのIP アドレスを評価する新しいボット検出ルールを作成します。
 
-2つの特定のIP アドレスを評価するように設定された![ ボット検出ルール。](assets/bot-detection/bot-detection-two-ips.png)
+2つの特定のIP アドレスを評価するように設定された![&#x200B; ボット検出ルール。](assets/bot-detection/bot-detection-two-ips.png)
 
 ### IP アドレスの範囲に基づくボット検出 {#range}
 
 特定の範囲の任意のIP アドレスから発生するすべてのリクエストをボットトラフィックとしてマークするには、IP アドレス範囲全体を評価する新しいボット検出ルールを作成します。
 
-IP アドレス範囲を評価するように設定された![ ボット検出ルール。](assets/bot-detection/bot-detection-range.png)
+IP アドレス範囲を評価するように設定された![&#x200B; ボット検出ルール。](assets/bot-detection/bot-detection-range.png)
 
 ### IP アドレスとリクエストヘッダーに基づくボット検出 {#ip-header}
 

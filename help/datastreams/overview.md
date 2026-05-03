@@ -17,7 +17,7 @@ ht-degree: 48%
 
 [!DNL Adobe Experience Platform] UIまたはデータ収集UI内の左側のナビゲーションで&#x200B;**[!UICONTROL Datastreams]**&#x200B;を選択することで、データストリームを作成および管理できます。
 
-Adobe Experience Platform UIの「データストリーム」タブの![ スクリーンショット。](assets/overview/datastreams-tab.png)
+Adobe Experience Platform UIの「データストリーム」タブの![&#x200B; スクリーンショット。](assets/overview/datastreams-tab.png)
 
 UI でのデータストリームの設定方法について詳しくは、[設定ガイド](/help/datastreams/configure.md)を参照してください。
 
@@ -51,7 +51,7 @@ Experience Platform で、組織で機密性が高いと見なすデータを含
 
 >[!NOTE]
 >
->Experience Platform UIまたはData Collection UIの[!UICONTROL Schemas] タブ内でデータ使用ラベルを適用する方法について詳しくは、[ スキーマラベル付けチュートリアル ](/help/xdm/tutorials/labels.md)を参照してください。
+>Experience Platform UIまたはData Collection UIの[!UICONTROL Schemas] タブ内でデータ使用ラベルを適用する方法について詳しくは、[&#x200B; スキーマラベル付けチュートリアル &#x200B;](/help/xdm/tutorials/labels.md)を参照してください。
 
 データストリームを作成する場合、選択したスキーマに機密データ使用ラベルが含まれている場合は、そのデータをHIPAA対応の宛先に送信するようにデータストリームを設定することしかできません。 現在、データストリームでサポートされているHIPAA対応の宛先は[!DNL Adobe Experience Platform]のみです。 機密データ使用ラベルを含むデータストリームでは、[!DNL Adobe Target]、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、イベント転送、およびエッジ宛先を含むその他の宛先サービスは無効になっています。
 
