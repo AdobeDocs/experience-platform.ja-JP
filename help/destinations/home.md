@@ -1,11 +1,11 @@
 ---
 title: 宛先の概要
-description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
+description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
-ht-degree: 45%
+source-wordcount: '1379'
+ht-degree: 44%
 
 ---
 
@@ -28,45 +28,45 @@ Experience Platformの主な機能のひとつは、1st パーティデータを
 
 ## 宛先の手順 {#steps}
 
-* Experience Platformで利用可能なすべての宛先の[&#x200B; セルフサービスカタログ &#x200B;](./catalog/overview.md)から選択します。
+* Experience Platformで利用可能なすべての宛先の[ セルフサービスカタログ ](./catalog/overview.md)から選択します。
 * オーディエンスやデータセットを、MA （マーケティングオートメーション）プラットフォームやデジタル広告プラットフォームなどに送信できます。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
 
-[宛先ワークスペース &#x200B;](./ui/destinations-workspace.md)のコントロールを使用して、以下を行います。
+[宛先ワークスペース ](./ui/destinations-workspace.md)のコントロールを使用して、以下を行います。
 
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Experience Platformを宛先プラットフォームのアカウントにリンクします。
 * 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択します。
-* メールマーケティング宛先、CRM プラットフォーム、クラウドストレージの場所など、特定の宛先にオーディエンスをアクティブ化する際に書き出す[Experience Data Model （XDM）フィールド &#x200B;](../xdm/home.md)を選択します。
+* メールマーケティング宛先、CRM プラットフォーム、クラウドストレージの場所など、特定の宛先にオーディエンスをアクティブ化する際に書き出す[Experience Data Model （XDM）フィールド ](../xdm/home.md)を選択します。
 * 様々なタイプのプロファイルとオーディエンスを、個人、アカウント、見込み客などの配信先で活用できます。
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
-Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 利用可能なすべての宛先について詳しくは、[宛先タイプとカテゴリの概要](./destination-types.md)を参照してください。
+Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。 宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 利用可能なすべての宛先について詳しくは、[宛先タイプとカテゴリの概要](./destination-types.md)を参照してください。
 
 ## アドビが作成した宛先とパートナーが作成した宛先 {#adobe-and-partner-built-destinations}
 
-Experience Platform 宛先カタログのコネクタには、アドビによって作成および管理されているものと、[Destination SDK](/help/destinations/destination-sdk/overview.md) を使用してパートナー企業によって作成および管理されているものがあります。宛先がパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタに関するドキュメントページの上部にあるメモが呼び出されます。例えば、[Amazon S3 コネクタ](/help/destinations/catalog/cloud-storage/amazon-s3.md) はアドビが作成し、[TikTok コネクタ](/help/destinations/catalog/social/tiktok.md) は、TikTok チームが作成および管理しています。
+Experience Platform 宛先カタログのコネクタには、アドビによって作成および管理されているものと、[Destination SDK](/help/destinations/destination-sdk/overview.md) を使用してパートナー企業によって作成および管理されているものがあります。 宛先がパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタに関するドキュメントページの上部にあるメモが呼び出されます。 例えば、[Amazon S3 コネクタ](/help/destinations/catalog/cloud-storage/amazon-s3.md) はアドビが作成し、[TikTok コネクタ](/help/destinations/catalog/social/tiktok.md) は、TikTok チームが作成および管理しています。
 
-パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
+パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。 アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
 ## 宛先とアクセス制御 {#access-controls}
 
-Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個のアクセス制御権限で機能します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、[Adobe Experience Platformでのアクセス制御](../access-control/home.md)に移動し、ページの下部にあるテーブルまでスクロールします。
+Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個のアクセス制御権限で機能します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。 個々の権限について詳しくは、[Adobe Experience Platformでのアクセス制御](../access-control/home.md)に移動し、ページの下部にあるテーブルまでスクロールします。
 
 次の表に、宛先に対して特定のアクションを実行するために必要な権限と権限の組み合わせの概要を示します。
 
 | 権限レベル | 説明 |
 | ---- | ---- |
-| **[!UICONTROL View Destinations]** | Experience Platform UIの「宛先」タブにアクセスするには、**[!UICONTROL View Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[&#x200B; マッピング手順](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | ワークフローの[&#x200B; マッピング手順](ui/activate-batch-profile-destinations.md#mapping)にアクセスせずに既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | データセットを宛先にエクスポートするには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL View Identity Graph]** | *ID*&#x200B;を宛先にエクスポートするには、**[!UICONTROL View Identity Graph]** [&#x200B; アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![&#x200B; ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Experience Platform UIの「宛先」タブにアクセスするには、**[!UICONTROL View Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | 宛先に接続するには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[ マッピング手順](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**、および **[!UICONTROL View Segments]** | ワークフローの[ マッピング手順](ui/activate-batch-profile-destinations.md#mapping)にアクセスせずに既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;および&#x200B;**[!UICONTROL View Segments]**、[ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | データセットを宛先にエクスポートするには、**[!UICONTROL View Destinations]**&#x200B;および&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL View Identity Graph]** | *ID*&#x200B;を宛先にエクスポートするには、**[!UICONTROL View Identity Graph]** [ アクセス制御権限](/help/access-control/home.md#permissions)が必要です。<br> ![ ワークフローで強調表示されているID名前空間を選択して、オーディエンスを宛先にアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png " ワークフローで強調表示されたID名前空間を選択して、オーディエンスを宛先にアクティブ化します。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個の�
 
 [!DNL Adobe Experience Platform]の属性ベースのアクセス制御により、管理者は属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
-属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、宛先にデータを書き出すことはできません。
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。 さらに、データセット内のすべてのフィールドにアクセスできない場合は、宛先にデータを書き出すことはできません。
 
 宛先が属性ベースのアクセス制御と連携する方法について詳しくは、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations)を参照してください。
 
@@ -94,11 +94,17 @@ Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個の�
 
 ## 宛先のモニタリング {#destinations-monitoring}
 
-宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムへのデータの書き出しを監視できます。詳しくは、[UI での宛先へのデータフローのモニタリングに関するガイド](/help/dataflows/ui/monitor-destinations.md)を参照してください。
+宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムへのデータの書き出しを監視できます。 詳しくは、[UI での宛先へのデータフローのモニタリングに関するガイド](/help/dataflows/ui/monitor-destinations.md)を参照してください。
 
 ![宛先の監視ページの例。](./assets/overview/monitoring-page-example.png)
 
 また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには、*データ書き出しの検証セクション*&#x200B;があります。これは、Experience Platformからデータが正常に取り込まれていることを宛先プラットフォームで確認する方法を示します。 [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data)に関するこのセクションの例を表示します。
+
+## データ暗号化 {#encryption}
+
+宛先を介して[!DNL Experience Platform]から書き出された転送中のすべてのデータは、[HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246)以降を使用して、暗号化された安全な接続を経由します。 [!DNL Experience Platform]がアウトバウンド通信で使用するTLS プロトコルは、[ サーバー名表示（SNI） ](https://www.rfc-editor.org/rfc/rfc6066#page-6)もサポートしています。
+
+データの取り込み、暗号化、保持の方法について詳しくは、「[Experience Platformでのデータの暗号化](../landing/governance-privacy-security/encryption.md)」を参照してください。
 
 ## 宛先へのデータのアクティブ化に関するデータガバナンスの制限 {#data-governance}
 
@@ -107,7 +113,7 @@ Experience Platformの宛先機能は、[!DNL Adobe Experience Platform]個の�
 * 宛先の作成ワークフローで選択できる&#x200B;*マーケティングアクション*。
 * 特定の使用ラベルを含むデータが、特定のマーケティングアクションを持つ宛先に対してアクティブ化されることを制限する&#x200B;*データ使用ポリシー*。
 
-[&#x200B; マーケティングアクション &#x200B;](../data-governance/policies/overview.md)および[&#x200B; データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Experience Platformのデータガバナンスに関するドキュメントを参照してください。
+[ マーケティングアクション ](../data-governance/policies/overview.md)および[ データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Experience Platformのデータガバナンスに関するドキュメントを参照してください。
 
 宛先を作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Experience Platformの様々な宛先タイプに関する次のページを参照してください。
 
