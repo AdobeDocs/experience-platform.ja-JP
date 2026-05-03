@@ -2,25 +2,25 @@
 title: 動的データストリーム設定の作成
 description: ルールに基づいてデータを様々なExperience Cloud サービスにルーティングする、動的データストリーム設定を作成する方法について説明します。
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # 動的データストリーム設定の作成
 
-デフォルトでは、Experience Platform Edge Networkは、データストリームにリーチするすべてのイベントを、データストリームに対して有効にしたすべてのExperience Cloud [&#x200B; サービス &#x200B;](configure.md#add-services)に送信します。 ユースケースによっては、必ずしも理想的なワークフローではない可能性があります。
+デフォルトでは、[!DNL Adobe Experience Platform Edge Network]は、データストリームに到達するすべてのイベントを、データストリームに対して有効にしたすべての[!DNL Experience Cloud] [ サービス ](/help/datastreams/configure.md#add-services)に送信します。 ユースケースによっては、これが必ずしも理想的なワークフローであるとは限りません。
 
-動的データストリーム設定では、データストリームに対して有効な各サービスに対して定義する、ユーザーが設定できる一連のルールを通じて、この懸念に対処します。このルールは、Experience Cloud ソリューションが各タイプのデータを受け取る必要がある内容を決定します。
+動的データストリーム設定では、データストリームに対して有効になっている各サービスに対して定義する一連のルールを使用して、これに対応します。このルールは、各タイプのデータを受信する[!DNL Experience Cloud] ソリューションを制御します。
 
 ## 前提条件 {#prerequisites}
 
 データストリームの動的設定を作成するには、次の2つの条件を満たす必要があります。
 
-* *少なくとも*&#x200B;個のデータストリームを作成しておく必要があります。 詳しくは、[&#x200B; データストリームの作成方法](configure.md)に関するドキュメントを参照してください。
-* データストリームに&#x200B;*少なくとも*&#x200B;個のExperience Cloud サービスを追加する必要があります。 詳しくは、[&#x200B; データストリームにサービス &#x200B;](configure.md#add-services)を追加する方法に関するドキュメントを参照してください。
+* *少なくとも*&#x200B;個のデータストリームを作成しておく必要があります。 詳しくは、[ データストリームの作成方法](/help/datastreams/configure.md)に関するドキュメントを参照してください。
+* データストリームに&#x200B;*少なくとも*&#x200B;個の[!DNL Experience Cloud] サービスを追加する必要があります。 詳しくは、[ データストリームにサービス ](/help/datastreams/configure.md#add-services)を追加する方法に関するドキュメントを参照してください。
 
 データストリームを作成してExperience Cloud サービスを追加したら、次に[動的設定を作成できます](#create-dynamic-configuration)。
 
@@ -32,53 +32,53 @@ ht-degree: 3%
 |---------|------------|------|
 | Experience Platform サービスのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
 | イベント転送用データストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
-| Adobe Analyticsのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
-| Adobe Targetのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
-| Adobe Audience Managerのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
+| [!DNL Adobe Analytics]のデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
+| [!DNL Adobe Target]のデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
+| [!DNL Adobe Audience Manager]のデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
 | 1つのルール内で結合できる条件（述語）の最大数 | 100 | パフォーマンスガードレール |
 | タイムアウトする前に、データストリームごとにすべての動的データストリーム設定を評価するために許可される最大時間 | 25 ミリ秒 | システム強制ガードレール |
 
 ## 動的データストリーム設定とデータストリーム設定の上書き {#dynamic-versus-overrides}
 
-動的データストリーム設定と[&#x200B; データストリーム設定オーバーライド &#x200B;](overrides.md)は、相互に排他的な機能です。
+動的データストリーム設定と[ データストリーム設定オーバーライド ](/help/datastreams/overrides.md)は、相互に排他的な機能です。
 
-つまり、動的データストリーム設定をデータストリーム設定のオーバーライドと共に使用することはできません。 どちらか一方を選ばなければなりません。
+動的データストリーム設定をデータストリーム設定のオーバーライドと共に使用することはできません。 どちらか一方を選ばなければなりません。
 
-動的データストリーム設定とデータストリーム設定の上書きの両方を有効にすると、設定の上書きが優先され、動的データストリーム設定ルールは無視されます。
+両方を有効にすると、設定の上書きが優先され、システムは動的データストリーム設定ルールを無視します。
 
 ## 動的データストリーム設定の作成 {#create-dynamic-configuration}
 
-[&#x200B; データストリーム &#x200B;](configure.md)を作成し、[&#x200B; サービス &#x200B;](configure.md#add-services)を追加した後、次の手順に従ってサービスに動的設定を追加します。
+[ データストリーム ](configure.md)を作成し、[ サービス ](configure.md#add-services)を追加した後、次の手順に従ってサービスに動的設定を追加します。
 
 1. **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** ページに移動し、作成したデータストリームを選択します。
 
-   ![&#x200B; データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-datastream.png)
+   ![ データストリームのリストを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. 動的設定を定義するサービスの&#x200B;**[!UICONTROL Edit]** オプションを選択します。
 
-   ![&#x200B; データストリームに追加されたサービスを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-service.png)
+   ![ データストリームに追加されたサービスを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/select-service.png)
 
 1. **[!UICONTROL Configure]** ページで、**[!UICONTROL Save and Edit Dynamic Configuration]**&#x200B;を選択します。
 
-   ![&#x200B; データストリーム設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![ データストリーム設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. **[!UICONTROL Add Dynamic Configuration]** を選択します。
 
-   ![&#x200B; ルールが追加される前に、動的設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![ ルールが追加される前に、動的設定ページを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. **[!UICONTROL Resources]** パネルから、ルールを作成するアイテムをウィンドウの右側にドラッグ&amp;ドロップします。 複数のリソースを組み合わせて、複雑なルールを構築できます。
 
    各リソースのオプション（**[!UICONTROL equals]**、**[!UICONTROL does not equal]**、**[!UICONTROL exists]**&#x200B;など）を使用して、ルールを微調整します。
 
-   ![&#x200B; リソースがドラッグされている動的設定ルールビルダーを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/drag-resources.png)
+   ![ リソースがドラッグされている動的設定ルールビルダーを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. 「**[!UICONTROL Configuration]**」セクションで、データを各サービスに送信するかどうかに応じて、各ルールに対して有効または無効にするサービスを切り替えます。 トグルをオフにすると、サービスのルーティングが無効になり、*データがダウンストリーム サービスに送信されません*。
+1. 「**[!UICONTROL Configuration]**」セクションで、データを各サービスに送信するかどうかに応じて、各ルールのサービスを有効または無効にします。 サービスを無効にすると、ルーティングは無効になり、*データはダウンストリームサービスに送信されません*。
 
-   ![&#x200B; サービスの切り替えを含む動的設定ルールを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/enable-service.png)
+   ![ サービスの切り替えを含む動的設定ルールを表示するデータストリームのユーザーインターフェイス。](assets/configure-dynamic-datastream/enable-service.png)
 
 1. ルールの設定が完了したら、**[!UICONTROL Save]**&#x200B;を選択します。
 
-## ルールの優先度に関する考慮事項 {#considerations}
+## ルールの優先度に関する考慮事項 {#rule-priority}
 
 動的データストリーム設定ごとに複数のルールを定義できます。 ただし、データが複数のルールの条件に一致する場合、リストの最初の一致するルールのみが考慮され、他のすべての一致するルールは無視されます。
 
@@ -86,7 +86,7 @@ ht-degree: 3%
 
 ルールの順序を設定するには、ルールウィンドウを目的の順序でドラッグ&amp;ドロップします。
 
-ドラッグ&amp;ドロップでルールの順序を変更する方法を示す![GIF。](assets/configure-dynamic-datastream/move-rules.gif)
+![ ドラッグ&amp;ドロップを使用した動的データストリームルールの並べ替え](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## ルールの適格性の基準 {#eligibility-criteria}
 
@@ -117,7 +117,7 @@ ht-degree: 3%
 | **ブール値** | `equals true/false`, `does not equal true/false` |
 | **列挙** | `equals`、`does not equal`、`exists`、`does not exist` |
 | **日付** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
-| **論理** | `INCLUDE`, `ANY/ALL` （AND/ORと同等） |
+| **論理** | `INCLUDE`, `ANY/ALL` （[!DNL AND]/[!DNL OR]と同等） |
 
 >[!NOTE]
 >
@@ -127,17 +127,17 @@ ht-degree: 3%
 
 動的データストリーム設定のルールを作成する場合は、最適なパフォーマンスとシステムの互換性を確保するための構造要件を理解することが重要です。 ルール構造は、データを処理し、システム内をルーティングする効率に直接影響します。
 
-**フラット式のみを使用**。 ルールをフラットな論理式として定義する必要があります。 ネストされた論理式（コンテナまたは複数レベルのAND/ORを使用）はサポートされていません。 複雑なロジックが必要な場合は、それを複数のフラットルールに分割します。
+**フラット式のみを使用**。 ルールをフラットな論理式として定義する必要があります。 ネストされた論理式（[!DNL AND]/[!DNL OR]のコンテナまたは複数レベルを使用）はサポートされていません。 複雑なロジックが必要な場合は、それを複数のフラットルールに分割します。
 
-例えば、次の画像に示す複雑なルールを考えてみましょう。
+例えば、次のような複雑なルールを考えてみましょう。
 
-複雑なルールを示す![Platform UI画像。](assets/configure-dynamic-datastream/complex-rule.png)
+![複数のAND/OR条件を持つネストされた複雑なルールの例。](assets/configure-dynamic-datastream/complex-rule.png)
 
 このルールは、次のシンプルなルールに分割できます。
 
-![最初の単純化されたルールを示すPlatform UI画像。](assets/configure-dynamic-datastream/simple-rule-1.png)
+![最初の単純化されたルール。ネストされた複雑なルールを置き換えます。](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-2番目の簡略化されたルールを示す![Platform UI画像。](assets/configure-dynamic-datastream/simple-rule-2.png)
+![2番目の単純化されたルール。ネストされた複雑なルールを置き換えます。](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **複雑なルールを避ける**。 シンプルなルールにより、評価を迅速化し、メンテナンス性を向上できます。
 
@@ -145,11 +145,7 @@ ht-degree: 3%
 
 動的データストリーム設定ルールを作成する際のベストプラクティスに従うことで、最適なパフォーマンス、システムの信頼性、および保守に適した設定を実現できます。 これらのガイドラインは、陥りがちな落とし穴を回避し、プラットフォームのアーキテクチャとシームレスに連携する効率的なルールを構築するのに役立ちます。
 
-* **ルールをシンプルかつフラットに保つ。**&#x200B;複雑なロジックを表現する必要がある場合は、ネストではなく複数のルールを使用します。
-* **サポートされているデータ型[と](#supported-data-types)演算子[のみを使用](#supported-operators)**
-* **ルールのパフォーマンスをテストします。**&#x200B;過度に複雑なルールまたはサポートされていないルールは、システムがそれらを拒否するか、システムのパフォーマンスに影響を与える可能性があります。
-
-
-
-
+* **ルールをシンプルかつフラットに保つ。** 複雑なロジックを表現する必要がある場合は、ネストするのではなく複数のルールを使用します。
+* **サポートされているデータ型](#supported-data-types)と[演算子](#supported-operators)のみを使用**[
+* **ルールのパフォーマンスをテストします。** 過度に複雑なルールやサポートされていないルールは、システムがそれらを拒否したり、システムのパフォーマンスに影響を与えたりする可能性があります。
 
