@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート 2026年4月
 description: Adobe Experience Platformの2026年4月リリースノート。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
 source-git-commit: 9ebf498257378f4c5002276a84f104cf2d337601
 workflow-type: tm+mt
 source-wordcount: '1580'
@@ -69,10 +69,10 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 修正 | 説明 |
 | --- | --- |
 | [Snowflake ストリーミング ](../../destinations/catalog/warehouses/snowflake.md)宛先の新しい`TS`列 | [Snowflake ストリーミング ](../../destinations/catalog/warehouses/snowflake.md)の宛先に、各行が最後に更新された日時を示す`TS` タイムスタンプ列が共有テーブルに含まれるようになりました。 この更新は4月末までロールアウトされます。 |
-| [ カスタム Personalization](../../destinations/catalog/personalization/custom-personalization.md)宛先の監視サポート | [ データフロー実行ページ ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)に、[ カスタム Personalization](../../destinations/catalog/personalization/custom-personalization.md)宛先の指標が表示されるようになりました。 以前は、これらの指標はこの宛先タイプでは使用できませんでした。 これらのツールを使用して、オーディエンスが期待どおりにアクティブ化していることを確認し、問題を診断します。<br> ![Dataflowは、カスタム Personalizationの宛先に対して表示される指標を実行し、アクティブ化、除外、失敗したIDを表示します。](../2026/assets/april/dataflow-run-custom-personalization.png " データフローは、カスタム Personalizationの宛先に対して指標を実行します。"){zoomable="yes"} |
-| アクティベーションワークフローのレビューステップでのプロファイル数 | アクティベーションワークフローのレビューステップで、既にアクティベートされているオーディエンスのプロファイル数が表示されるようになりました。 [ バッチ宛先](../../destinations/ui/activate-batch-profile-destinations.md)だけでなく、[ ストリーミング宛先](../../destinations/ui/activate-segment-streaming-destinations.md)のプロファイル数も表示されます。<br> ![既にアクティブ化されたオーディエンスとストリーミング済みオーディエンスのアクティベーション ワークフローのレビュー手順に表示されるプロファイル数。アクティブ化ワークフローのレビュー手順の](../2026/assets/april/profile-count-review.png " プロファイル数。"){zoomable="yes"} |
+| [ カスタム Personalization](../../destinations/catalog/personalization/custom-personalization.md)宛先の監視サポート | [ データフロー実行ページ ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)に、[ カスタム Personalization](../../destinations/catalog/personalization/custom-personalization.md)宛先の指標が表示されるようになりました。 以前は、これらの指標はこの宛先タイプでは使用できませんでした。 これらのツールを使用して、オーディエンスが期待どおりにアクティブ化していることを確認し、問題を診断します。<br> ![Dataflowは、カスタム Personalizationの宛先に対して表示される指標を実行し、アクティブ化、除外、失敗したIDを表示します。](./assets/april/dataflow-run-custom-personalization.png " データフローは、カスタム Personalizationの宛先に対して指標を実行します。"){zoomable="yes"} |
+| アクティベーションワークフローのレビューステップでのプロファイル数 | アクティベーションワークフローのレビューステップで、既にアクティベートされているオーディエンスのプロファイル数が表示されるようになりました。 [ バッチ宛先](../../destinations/ui/activate-batch-profile-destinations.md)だけでなく、[ ストリーミング宛先](../../destinations/ui/activate-segment-streaming-destinations.md)のプロファイル数も表示されます。<br> ![既にアクティブ化されたオーディエンスとストリーミング済みオーディエンスのアクティベーション ワークフローのレビュー手順に表示されるプロファイル数。アクティブ化ワークフローのレビュー手順の](./assets/april/profile-count-review.png " プロファイル数。"){zoomable="yes"} |
 | [!DNL Pinterest] トークンの有効期限の可視化 | [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)宛先にトークンの有効期限が表示されるようになりました。これにより、再認証が必要なタイミングを確認できます。 [!DNL Pinterest] トークンは30日ごとに有効期限が切れます。 トークンの有効期限が切れると、データの書き出しが機能しなくなります。 中断を回避するには、トークンの有効期限が切れる前に[認証情報を更新します](../../destinations/catalog/advertising/pinterest.md#refresh-authentication-credentials)。 |
-| 期限切れのスケジュールではファイルの書き出しが無効になりました | オーディエンススケジュールが期限切れになると、使用を試みる前に&#x200B;**[!UICONTROL Export file now]**&#x200B;が無効になり、その理由をツールヒントで説明できます。 以前は、アクションを選択するとエラーが発生していました。<br> ![ ファイルの書き出しアクションが無効になり、そのアクションが使用できない理由を説明するツールヒントが表示されるようになりました。](../2026/assets/april/export-file-now-disabled.png " ファイルの書き出しアクションが無効になりました。"){zoomable="yes"} |
+| 期限切れのスケジュールではファイルの書き出しが無効になりました | オーディエンススケジュールが期限切れになると、使用を試みる前に&#x200B;**[!UICONTROL Export file now]**&#x200B;が無効になり、その理由をツールヒントで説明できます。 以前は、アクションを選択するとエラーが発生していました。<br> ![ ファイルの書き出しアクションが無効になり、そのアクションが使用できない理由を説明するツールヒントが表示されるようになりました。](./assets/april/export-file-now-disabled.png " ファイルの書き出しアクションが無効になりました。"){zoomable="yes"} |
 | アクティベーションワークフローの列の可視性の修正 | 1つのテーブル内の表示列を変更すると、アクティベーションワークフロー内の他のテーブルに誤って影響を与える問題を修正しました。 |
 
 {style="table-layout:auto"}
@@ -150,6 +150,9 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
 
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->
