@@ -22,8 +22,8 @@ ht-degree: 51%
 
 このチュートリアルでは、Adobe Experience Platform [!DNL Data Ingestion]に関する実務的な理解が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-- [ データ取り込みの概要](../home.md)：取り込み方法とデータコネクタなど、[!DNL Experience Platform Data Ingestion]の主要な概念について説明します。
-- [ ストリーミング取り込みの概要](../streaming-ingestion/overview.md): ストリーミング接続、データセット、[!DNL XDM Individual Profile]、[!DNL XDM ExperienceEvent]など、ストリーミング取り込みのワークフローと構成要素。
+- [&#x200B; データ取り込みの概要](../home.md)：取り込み方法とデータコネクタなど、[!DNL Experience Platform Data Ingestion]の主要な概念について説明します。
+- [&#x200B; ストリーミング取り込みの概要](../streaming-ingestion/overview.md): ストリーミング接続、データセット、[!DNL XDM Individual Profile]、[!DNL XDM ExperienceEvent]など、ストリーミング取り込みのワークフローと構成要素。
 
 このチュートリアルでは、[!DNL Experience Platform] APIへの呼び出しを正常に行うには、[Adobe Experience Platformへの認証](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了する必要もあります。 認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。 このヘッダーは、サンプル呼び出しで次のように示されます。
 
@@ -540,7 +540,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 - 1つのHTTP呼び出しで複数のXDM エンティティを送信することで、リクエストを削減します。
 - 取り込みエンドポイントを通じて、データをリアルタイムでストリーミングします。
 
-リクエストの送信方法について詳しくは、「[ データセットへのストリーミング ](#stream-to-dataset)」の節を参照してください。
+リクエストの送信方法について詳しくは、「[&#x200B; データセットへのストリーミング &#x200B;](#stream-to-dataset)」の節を参照してください。
 
 >[!TAB  バッチファイルをアップロード ]
 
@@ -552,7 +552,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 - アップストリームシステムからのファイルベースの書き出しを操作しています。
 - スケジュール済みまたは一括取り込みを好む。
 
-ステップバイステップの手順については、[ バッチ取り込みガイド ](../batch-ingestion/api-overview.md)を参照してください。
+ステップバイステップの手順については、[&#x200B; バッチ取り込みガイド &#x200B;](../batch-ingestion/api-overview.md)を参照してください。
 
 >[!ENDTABS]
 
