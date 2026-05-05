@@ -33,7 +33,7 @@ ht-degree: 25%
 
 Experience Platformで[!DNL Adobe Target]接続を設定する方法の概要については、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449794/?captions=jpn&quality=12&learn=on)
 
 ## 実装タイプに基づいてサポートされるユースケース {#supported-use-cases}
 
