@@ -2,10 +2,10 @@
 title: クエリテンプレート
 description: クエリテンプレートは再利用可能な保存済みの SQL クエリで、他のユーザーが再利用して時間と労力を節約できます。 クエリエディターまたはクエリサービス API を使用して作成でき、すべての Experience Platform データセットで使用できます。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 63%
+source-wordcount: '651'
+ht-degree: 54%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform クエリサービスを使用すると、SQL コー�
 
 ## 前提条件
 
-クエリエディターにアクセスし、Experience Platform UI 内のクエリダッシュボードを表示するには、[!UICONTROL &#x200B; クエリの管理 &#x200B;] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
+クエリ エディターにアクセスし、Experience Platform UI内でクエリ ダッシュボードを表示するには、[!UICONTROL Manage queries]権限を有効にする必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。 この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
 ## クエリテンプレートの作成
 
@@ -25,15 +25,23 @@ Adobe Experience Platform クエリサービスを使用すると、SQL コー�
 
 ### クエリエディターを使用して、クエリを作成し、テンプレートとして保存します。
 
-クエリエディターを使用して[書き込み](./user-guide.md#query-authoring)および[クエリを保存](./user-guide.md#saving-queries)する方法については、ドキュメントを参照してください。クエリに名前を付けて保存すると、「[!UICONTROL テンプレート]」タブからクエリテンプレートとして再利用できます。
+クエリエディターを使用して[書き込み](./user-guide.md#query-authoring)および[クエリを保存](./user-guide.md#saving-queries)する方法については、ドキュメントを参照してください。 クエリに名前を付けて保存すると、[!UICONTROL Templates] タブからクエリ テンプレートとして再利用できるようになります。
+
+### Data Distiller アクセラレーターからのテンプレートの作成 {#create-from-accelerator}
+
+Data Distiller アクセラレータは読み取り専用です。 アクセラレーターを変更するには、クエリエディターでアクセラレーターから編集可能なテンプレートを作成します。
+
+アクセラレーターを開き、**[!UICONTROL Create custom template]**&#x200B;を選択してSQLを複製します。 テンプレートを保存して、**[!UICONTROL Templates]** タブに追加します。 複製されたテンプレートは完全に編集可能で、必要に応じて実行、スケジュール、または変更できます。
+
+詳しい手順については、[Data Distiller アクセラレータ ](./accelerators.md#create-custom-template) ガイドを参照してください。
 
 >[!TIP]
 >
->クエリエディターでクエリを保存すると、確認メッセージがポップアップ表示され、アクションが成功したことが通知されます。 このポップアップメッセージには、クエリスケジュールワークスペースに移動する便利な方法を提供するリンクが含まれています。 カスタムケイデンスでクエリを実行する方法については、[&#x200B; クエリのスケジュール設定ドキュメント &#x200B;](./query-schedules.md) を参照してください。
+>クエリエディターでクエリを保存すると、確認メッセージがポップアップ表示され、アクションが成功したことを通知します。 このポップアップメッセージには、クエリスケジューリングワークスペースに移動するための便利な方法を提供するリンクが含まれています。 カスタムケイデンスでクエリを実行する方法については、[ クエリのスケジュールに関するドキュメント ](./query-schedules.md)を参照してください。
 
-## クエリテンプレートの参照 {#browse}
+## クエリテンプレートを参照 {#browse}
 
-Experience Platform UI のクエリワークスペースから、「**[!UICONTROL テンプレート]**」を選択して、使用可能な保存済みクエリのリストを表示します。
+Experience Platform UIのクエリワークスペースから、**[!UICONTROL Templates]**&#x200B;を選択して、使用可能な保存済みクエリのリストを表示します。
 
 ![「テンプレート」タブが強調表示されたクエリワークスペース。](../images/ui/query-templates/query-templates.png)
 
@@ -43,11 +51,11 @@ Experience Platform UI のクエリワークスペースから、「**[!UICONTRO
 
 詳細パネルから、次のアクションを実行できます。
 
-* 既存のテーブルのデータを選択して新しいテーブルを作成するには、「**[!UICONTROL CTAS として実行]**」を選択します。 このオプションは、SELECT クエリがある場合にのみ使用できます。
-* 「**[!UICONTROL スケジュールを追加]**」を選択して、クエリテンプレートのスケジュールの編集を開始します。
-* **[!UICONTROL スケジュールを表示]** を選択して、クエリエディターの [!UICONTROL &#x200B; スケジュール &#x200B;] タブに移動します。 このビューには、クエリに関連付けられているスケジュール情報が表示されます。
-* **[!UICONTROL クエリを削除]** を選択して、テンプレートを削除します。
-* テンプレート名を選択して、編集用に SQL が事前設定されているクエリエディターに移動します。
+* 既存のテーブルまたはテーブルからデータを選択して、新しいテーブルを作成するには、**[!UICONTROL Run as CTAS]**&#x200B;を選択します。 このオプションは、SELECT クエリがある場合にのみ使用できます。
+* クエリ テンプレートのスケジュールの編集を開始するには、**[!UICONTROL Add schedule]**&#x200B;を選択します。
+* 「**[!UICONTROL View schedule]**」を選択して、クエリエディターの「[!UICONTROL Schedules]」タブに移動します。 このビューには、クエリに関連付けられているスケジュール情報が含まれます。
+* テンプレートを削除するには、**[!UICONTROL Delete query]**&#x200B;を選択します。
+* テンプレート名を選択して、SQLが編集用に事前入力されているクエリエディターに移動します。
 
 ### Query Service API を使用してテンプレートを作成する
 
@@ -55,7 +63,7 @@ Query Service API を使用した[クエリテンプレートの作成方法](..
 
 >[!NOTE]
 >
->API を使用して作成したテンプレートは、「Experience Platform UI クエリサービステンプレート」タブにも表示されます。
+>APIを使用して作成されたテンプレートは、「Experience Platform UI クエリサービステンプレート」タブにも表示されます。
 
 ## 次の手順
 

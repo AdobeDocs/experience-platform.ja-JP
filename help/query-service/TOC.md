@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 68%
+source-wordcount: '439'
+ht-degree: 67%
 
 ---
 
@@ -25,23 +25,23 @@ ht-degree: 68%
    - [ライセンス使用状況](data-distiller/license-usage.md)
    - 派生データセット {#derived-datasets}
       - [概要](data-distiller/derived-datasets/overview.md)
-      - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
-      - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 拡張アプリケーション レポート用の SQL インサイト {#sql-insights}
+      - [SQLを使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+      - [決定ベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+   - 拡張アプリレポート用のSQL インサイト {#sql-insights}
       - [概要](data-distiller/sql-insights/overview.md)
       - [クエリプロモード](data-distiller/sql-insights/query-pro-mode.md)
-      - [高速化ストアの概要](data-distiller/sql-insights/accelerated-store-overview.md)
+      - [Accelerated Storeの概要](data-distiller/sql-insights/accelerated-store-overview.md)
       - [高速クエリの送信](data-distiller/sql-insights/send-accelerated-queries.md)
       - [レポートインサイトデータモデルガイド](data-distiller/sql-insights/reporting-insights-data-model.md)
    - AI/ML 機⁠能パ⁠イ⁠プ⁠ラ⁠イ⁠ン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
-      - [Jupyter Notebooks への接続](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Jupyter Notebooksへの接続](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
-      - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
-      - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
-      - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+      - [マシンラーニングのエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [マシンラーニング環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
+      - [AI/マシンラーニングデータパイプラインのエンドツーエンドのワークフローを強化](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Summit 2025 セッション](data-distiller/top-tips-to-maximize-value.md)
-- Data Distillerの統計情報と機械学習 {#advanced-statistics}
+- Data Distillerの統計情報とマシンラーニング {#advanced-statistics}
    - [概要](advanced-statistics/overview.md)
    - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
    - [モデル](advanced-statistics/models.md)
@@ -52,10 +52,10 @@ ht-degree: 68%
       - [分類](advanced-statistics/implement-models/classification.md)
       - [クラスタリング](advanced-statistics/implement-models/clustering.md)
    - 例 {#examples}
-      - [統計と機械学習を使用したボットフィルタリング](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
-      - [SQL ベースのロジスティックリグレッションを使用して顧客のチャーンを予測](advanced-statistics/examples/predict-customer-churn.md)
-- Data Distiller オーディエンス {#data-distiller-audiences}
-   - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
+      - [統計とマシンラーニングを使用したボットフィルタリング](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
+      - [SQL ベースのロジスティック回帰を使用して顧客離れを予測する](advanced-statistics/examples/predict-customer-churn.md)
+- Data Distiller audiences {#data-distiller-audiences}
+   - [SQLを使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
 - 例 {#use-cases}
    - [概要](use-cases/overview.md)
    - [参照を中止](use-cases/abandoned-browse.md)
@@ -70,9 +70,9 @@ ht-degree: 68%
    - [あいまい一致](use-cases/fuzzy-match.md)
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
    - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
-   - [SQL を使用して顧客チャーンを予測](use-cases/predict-customer-churn-stub.md)
+   - [SQLを使用した顧客離れの予測](use-cases/predict-customer-churn-stub.md)
    - [傾向スコア](use-cases/propensity-score.md)
-   - [上位関数を持つ類似レコードの取得](use-cases/retrieve-similar-records.md)
+   - [高次関数を使用した類似レコードの取得](use-cases/retrieve-similar-records.md)
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
@@ -86,14 +86,14 @@ ht-degree: 68%
    - [データ重複排除](key-concepts/deduplication.md)
    - [データセットのサンプル](key-concepts/dataset-samples.md)
    - [データセット統計の計算](key-concepts/dataset-statistics.md)
-- Data Distillerのハイパーキューブ {#hypercubes}
+- Data Distiller Hypercubes {#hypercubes}
    - [ハイパーキューブによる効率的なビッグデータ分析](hypercubes/overview.md)
 - クライアントのクエリサービスへの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
    - [SSL モード](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
-   - [GitHub コパイロット](./clients/github-copilot.md)
+   - [GitHub Copilot](./clients/github-copilot.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
@@ -105,13 +105,14 @@ ht-degree: 68%
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザガイド](ui/user-guide.md)
    - [クエリテンプレート](ui/query-templates.md)
+   - [Data Distiller Accelerator](ui/accelerators.md)
    - [パラメーター化クエリ](ui/parameterized-queries.md)
    - [クエリスケジュール](ui/query-schedules.md)
    - [クエリログ](ui/query-logs.md)
    - [スケジュール済みクエリの監視](ui/monitor-queries.md)
    - [セッションの管理](ui/session-management.md)
    - [資格情報ガイド](ui/credentials.md)
-   - [JWT の OAuth 資格情報への移行](ui/migrate-jwt-to-oauth.md)
+   - [JWTをOAuth資格情報に移行する](ui/migrate-jwt-to-oauth.md)
    - [クエリ結果からの出力データセットの生成](ui/create-datasets.md)
 - クエリサービス API {#api}
    - [はじめに](api/getting-started.md)
@@ -139,7 +140,7 @@ ht-degree: 68%
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
    - [アドビ定義関数](sql/adobe-defined-functions.md)
-   - [高階関数](sql/higher-order-functions.md)
+   - [高次関数](sql/higher-order-functions.md)
    - [Spark SQL 関数](sql/spark-sql-functions.md)
    - [メタデータコマンド](sql/metadata.md)
    - [準備済み文](sql/prepared-statements.md)
