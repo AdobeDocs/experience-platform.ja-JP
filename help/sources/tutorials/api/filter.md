@@ -17,7 +17,7 @@ ht-degree: 13%
 >
 >* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
->* [[!DNL Marketo Engage] 標準アクティビティ ](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Marketo Engage] 標準アクティビティ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
@@ -578,7 +578,7 @@ curl -X GET \
 
 ## [!DNL Marketo Engage]のアクティビティエンティティをフィルタリング {#filter-for-marketo}
 
-行レベルのフィルタリングを使用して、[[!DNL Marketo Engage]  ソースコネクタ ](../../connectors/adobe-applications/marketo/marketo.md)を使用する際に、アクティビティエンティティをフィルタリングできます。 現在、アクティビティエンティティと標準アクティビティタイプに対してのみフィルタリングできます。 カスタムアクティビティは、[[!DNL Marketo]  フィールドマッピング ](../../connectors/adobe-applications/mapping/marketo.md)の下で管理されたままです。
+行レベルのフィルタリングを使用して、[[!DNL Marketo Engage]  ソースコネクタ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)を使用する際に、アクティビティエンティティをフィルタリングできます。 現在、アクティビティエンティティと標準アクティビティタイプに対してのみフィルタリングできます。 カスタムアクティビティは、[[!DNL Marketo]  フィールドマッピング &#x200B;](../../connectors/adobe-applications/mapping/marketo.md)の下で管理されたままです。
 
 ### [!DNL Marketo]標準アクティビティタイプ {#marketo-standard-activity-types}
 
