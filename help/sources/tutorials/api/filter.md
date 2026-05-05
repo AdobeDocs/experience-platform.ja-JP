@@ -2,9 +2,9 @@
 title: Flow Service APIを使用して、Sourceの行レベル データをフィルタリングします
 description: このチュートリアルでは、Flow Service APIを使用してソースレベルでデータをフィルタリングする手順について説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2086'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 13%
 >
 >* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
->* [[!DNL Marketo Engage] 標準アクティビティ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Marketo Engage] 標準アクティビティ ](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
@@ -43,7 +43,7 @@ Experience Platform APIの呼び出しを正常に行う方法について詳し
 
 ソースの行レベルのデータをフィルタリングする最初の手順は、ソースの接続仕様を取得し、ソースがサポートする演算子と言語を決定することです。
 
-特定のソースの接続仕様を取得するには、`/connectionSpecs` APIの[!DNL Flow Service] エンドポイントにGET リクエストを行い、クエリパラメーターの一部としてソースのプロパティ名を指定します。
+特定のソースの接続仕様を取得するには、[!DNL Flow Service] APIの`/connectionSpecs` エンドポイントにGET リクエストを行い、クエリパラメーターの一部としてソースのプロパティ名を指定します。
 
 **API 形式**
 
@@ -53,7 +53,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 [!DNL Google BigQuery] プロパティを適用し、検索で`name`を指定することで、`"google-big-query"`接続仕様を取得できます。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 `name` プロパティを適用し、検索で`"google-big-query"`を指定することで、[!DNL Google BigQuery]接続仕様を取得できます。 |
 
 +++リクエスト
 
@@ -156,7 +156,7 @@ curl -X GET \
 
 ### データのプレビュー {#preview-your-data}
 
-クエリ パラメーターの一部として`/explore`を指定し、[!DNL Flow Service]でPQL入力条件を指定しながら、`filters` APIの[!DNL Base64] エンドポイントにGET リクエストを行うことで、データをプレビューできます。
+クエリ パラメーターの一部として`filters`を指定し、[!DNL Base64]でPQL入力条件を指定しながら、[!DNL Flow Service] APIの`/explore` エンドポイントにGET リクエストを行うことで、データをプレビューできます。
 
 **API 形式**
 
@@ -345,7 +345,7 @@ POST /sourceConnections
 
 +++リクエスト
 
-次のリクエストは、`test1.fasTestTable` = `city`の`DDN`からデータを取り込むソース接続を作成します。
+次のリクエストは、`city` = `DDN`の`test1.fasTestTable`からデータを取り込むソース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -394,7 +394,7 @@ curl -X POST \
 
 +++応答
 
-応答が成功すると、新しく作成されたソース接続の一意の識別子（`id`）が返されます。
+リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。
 
 ```json
 {
@@ -405,9 +405,180 @@ curl -X POST \
 
 +++
 
+## [!DNL Salesforce]個のデータフローをフィルター
+
+次の例は、[!DNL Flow Service] APIを使用して、行レベルのフィルタリングを既存の[!DNL Salesforce] データフローに適用するエンドツーエンドの方法を示しています。
+
+### クエリ言語とエスケープ
+
+[!DNL Salesforce] ソースでOAuth 2.0 クライアント資格情報を使用する場合、行レベルのフィルタリングはSOQL （[!DNL Salesforce] Object Query Language）を使用して実行されます。
+
+* SOQL フィルターの列名では、バックティックやその他の特殊文字を使用せずに、正確な[!DNL Salesforce] フィールド API名を使用します。
+* 文字列値は、SOQL構文で必要に応じて一重引用符で囲む必要があります。
+* ブール値の場合は、数値（`0`または`1`）の代わりにキーワード `true`または`false`を使用します。
+* `WHERE`句の日付と日時の値は、フィルターが日付/時刻タイプを表すことを示す場合、引用符で囲まれた文字列ではなく、引用符で囲まれていないSOQL日付または日時リテラルとして書き込む必要があります。
+
+PQL ベースの行レベルのフィルタリングの場合、値が`boolean`または`dateTime`であるすべてのリテラルノードに`literalType`を含める必要があるので、値が正しく解釈および変換されます。
+
+PQLの例：
+
+>[!BEGINTABS]
+
+>[!TAB PQLの例1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQLの例2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQLの例3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### [!DNL Salesforce]の接続仕様を取得
+
+[!DNL Salesforce] ソースの接続仕様情報を取得するには、[!DNL Flow Service] APIの`/connectionSpecs` エンドポイントに対してGET リクエストを行い、クエリパラメーターの一部としてソースのプロパティ名を指定します。
+
+**API 形式**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 `name` プロパティを適用し、検索で`"salesforce"`を指定することで、[!DNL Salesforce]接続仕様を取得できます。 |
+
++++リクエスト
+
+次のリクエストは、[!DNL Salesforce]の接続仕様を取得します。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++応答
+
+応答が成功すると、ステータスコード 200と、サポートされているクエリ言語と論理演算子に関する情報を含む[!DNL Salesforce]の接続仕様が返されます。
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
+```
+
++++
+
 ## [!DNL Marketo Engage]のアクティビティエンティティをフィルタリング {#filter-for-marketo}
 
-行レベルのフィルタリングを使用して、[[!DNL Marketo Engage]  ソースコネクタ &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)を使用する際に、アクティビティエンティティをフィルタリングできます。 現在、アクティビティエンティティと標準アクティビティタイプに対してのみフィルタリングできます。 カスタムアクティビティは、[[!DNL Marketo]  フィールドマッピング &#x200B;](../../connectors/adobe-applications/mapping/marketo.md)の下で管理されたままです。
+行レベルのフィルタリングを使用して、[[!DNL Marketo Engage]  ソースコネクタ ](../../connectors/adobe-applications/marketo/marketo.md)を使用する際に、アクティビティエンティティをフィルタリングできます。 現在、アクティビティエンティティと標準アクティビティタイプに対してのみフィルタリングできます。 カスタムアクティビティは、[[!DNL Marketo]  フィールドマッピング ](../../connectors/adobe-applications/mapping/marketo.md)の下で管理されたままです。
 
 ### [!DNL Marketo]標準アクティビティタイプ {#marketo-standard-activity-types}
 
@@ -683,7 +854,7 @@ curl -X GET \
 
 >[!TIP]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するデータフローの一意のバージョン/タグです。 バージョン/タグ値は、データフローが正常に更新されるたびに更新されます。
+>`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。 このヘッダーの値は、更新するデータフローの一意のバージョン/タグです。 バージョン/タグ値は、データフローが正常に更新されるたびに更新されます。
 
 **API 形式**
 
@@ -761,7 +932,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 | パラメーター | 説明 |
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 公開するソース接続のID。 |
-| `op` | クエリされたソース接続の状態を更新するアクション操作。ドラフトソース接続を公開するには、`op` を `publish` に設定します。 |
+| `op` | クエリされたソース接続の状態を更新するアクション操作。 ドラフトソース接続を公開するには、`op` を `publish` に設定します。 |
 
 +++リクエスト
 
@@ -805,7 +976,7 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 | パラメーター | 説明 |
 | --- | --- |
 | `{TARGET_CONNECTION_ID}` | 公開するターゲット接続のID。 |
-| `op` | クエリされたターゲット接続の状態を更新するアクション操作。ドラフトターゲット接続を公開するには、`op` を `publish` に設定します。 |
+| `op` | クエリされたターゲット接続の状態を更新するアクション操作。 ドラフトターゲット接続を公開するには、`op` を `publish` に設定します。 |
 
 +++リクエスト
 
@@ -850,7 +1021,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 | パラメーター | 説明 |
 | --- | --- |
 | `{FLOW_ID}` | 公開するデータフローのID。 |
-| `op` | クエリされたデータフローの状態を更新するアクション操作。ドラフトデータフローを公開するには、`op` を `publish` に設定します。 |
+| `op` | クエリされたデータフローの状態を更新するアクション操作。 ドラフトデータフローを公開するには、`op` を `publish` に設定します。 |
 
 +++リクエスト
 

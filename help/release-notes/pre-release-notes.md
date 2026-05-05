@@ -2,10 +2,10 @@
 title: Experience Platform プレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 15%
+source-wordcount: '1428'
+ht-degree: 17%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 15%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2026年4月**
 
@@ -45,13 +45,13 @@ Adobe Experience Platformの新機能と既存の機能の更新：
 
 | 宛先 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Microsoft Ads カスタマーマッチ &#x200B;](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 電子メールアドレスで顧客をマッチングし、検索広告やオーディエンス広告を含め、[!DNL Microsoft Advertising Network]をまたいで顧客と再エンゲージできます。 [!DNL Microsoft Advertising] アカウントをReal-Time CDPにリンクして、Experience Platformから直接カスタマーマッチリストの作成と管理を自動化します。 アクセスするには、Adobeのアカウントマネージャーにお問い合わせください。 |
-| [!BADGE Beta]{type=Informative} [&#x200B; カスタムオーディエンスを編集](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platformから[!DNL Reddit Ads]にオーディエンスを送信します。 [!DNL Reddit] アカウントを接続し、IDをマップ化し、オーディエンスをアクティブ化して、[!DNL Reddit]で興味を積極的に探しているユーザーにリーチします。 |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[&#x200B; （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[&#x200B; （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。 |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads カスタマーマッチ ](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 電子メールアドレスで顧客をマッチングし、検索広告やオーディエンス広告を含め、[!DNL Microsoft Advertising Network]をまたいで顧客と再エンゲージできます。 [!DNL Microsoft Advertising] アカウントをReal-Time CDPにリンクして、Experience Platformから直接カスタマーマッチリストの作成と管理を自動化します。 アクセスするには、Adobeのアカウントマネージャーにお問い合わせください。 |
+| [!BADGE Beta]{type=Informative} [ カスタムオーディエンスを編集](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platformから[!DNL Reddit Ads]にオーディエンスを送信します。 [!DNL Reddit] アカウントを接続し、IDをマップ化し、オーディエンスをアクティブ化して、[!DNL Reddit]で興味を積極的に探しているユーザーにリーチします。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]は、すべての新しい[!DNL Amazon Ads]接続の現在の宛先です。 既存の[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)接続がある場合、必要な変更を加えずに引き続き機能します。 [!DNL Amazon Ads v2]は[!DNL Ads Data Manager]に接続します。これにより、[!DNL Amazon Ads]製品でのID タイプの拡張、アドレス関連フィールド、データ共有がサポートされ、[ （レガシー）  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)と比較して、ターゲティングとオーディエンスの一致率が向上します。 |
 | [!DNL Rokt] | [!DNL Rokt]を使用して、Experience PlatformのオーディエンスをAIを活用したリアルタイムの意思決定に結びつけ、より正確なターゲティング、抑制、パーソナライズによってキャンペーンのパフォーマンスを向上させます。 |
-| [Criteo](../destinations/catalog/advertising/criteo.md)の外部オーディエンスのサポート | カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Criteo]などの他のExperience Platform アプリで作成されたオーディエンスを含む、セグメント化サービスから[!DNL Adobe Journey Optimizer]までのオリジンからオーディエンスをアクティベートします。 詳しくは、[&#x200B; サポートされているオーディエンス &#x200B;](../destinations/catalog/advertising/criteo.md#supported-audiences)の節を参照してください。 |
+| [Criteo](../destinations/catalog/advertising/criteo.md)の外部オーディエンスのサポート | カスタムアップロードオーディエンス（CSVからインポート）、類似オーディエンス、連合オーディエンス、[!DNL Adobe Journey Optimizer]などの他のExperience Platform アプリで作成されたオーディエンスを含む、セグメント化サービスから[!DNL Criteo]までのオリジンからオーディエンスをアクティベートします。 詳しくは、[ サポートされているオーディエンス ](../destinations/catalog/advertising/criteo.md#supported-audiences)の節を参照してください。 |
 | [Acxiom オーディエンス接続](../destinations/catalog/advertising/acxiom-audience-connection.md) | [!DNL Acxiom Audience Connection]の宛先が一般公開されました。 [!DNL Acxiom's Real ID] テクノロジーでオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]、[!DNL Spectrum]および[!DNL Viant]などの追加のプラットフォームにアクティベートするために使用します。 |
-| [Acxiom Real ID オーディエンス接続](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | [!DNL Acxiom Real ID Audience Connection]の宛先が一般公開されました。 このツールを使用すると、[!DNL Acxiom's Real ID]、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]および[!DNL Spectrum]など、サポートされている同じプラットフォームのセットで一致キーとして[!DNL Viant]を使用してオーディエンスをアクティブ化できます。 |
+| [Acxiom Real ID オーディエンス接続](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | [!DNL Acxiom Real ID Audience Connection]の宛先が一般公開されました。 このツールを使用すると、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]、[!DNL Spectrum]および[!DNL Viant]など、サポートされている同じプラットフォームのセットで一致キーとして[!DNL Acxiom's Real ID]を使用してオーディエンスをアクティブ化できます。 |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Adobe Experience Platformの新機能と既存の機能の更新：
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDMは、Experience Platformに取り込まれるデータの一般的な構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM標準を遵守することで、あらゆる顧客体験データを共通の表現に組み込み、より迅速に、より統合された方法でインサイトを提供することができます。
+XDMは、Experience Platformに取り込まれるデータの一般的な構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。
 
 **新機能または更新された機能**
 
@@ -95,7 +95,7 @@ XDMは、Experience Platformに取り込まれるデータの一般的な構造�
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; クエリサービスの概要](../query-service/home.md)を参照してください。
+詳しくは、[ クエリサービスの概要](../query-service/home.md)を参照してください。
 
 ## Real-Time CDP {#rtcdp}
 
@@ -105,7 +105,7 @@ XDMは、Experience Platformに取り込まれるデータの一般的な構造�
 
 | 機能 | 説明 |
 | --- | --- |
-| Real-Time CDP MCP （Beta） | Real-Time CDP MCPを使用して、Real-Time CDPをAI エージェントおよびMCP互換クライアントに取り込み、ネイティブのLLM エクスペリエンスを通じてReal-Time CDPツールと直接やり取りできるようにします。 MCP互換クライアント（Claude、ChatGPT、Claude Code、Codex、Cursor、VS Codeなど）を`https://rtcdp-mcp.adobe.io/mcp`に接続することで、Experience Platform REST API呼び出しの記述や複数のUI ワークフローの操作を行うことなく、自然言語を使用してオーディエンス、宛先設定、アクティベーション実行履歴を調べることができます。 ブラウザーベースのAdobe ログインを完了すると、次のようなツールへの読み取り専用アクセス権が付与されます。 <ul><li>既存オーディエンスの検索</li><li>オーディエンスメンバーシップのプレビュー</li><li>宛先タイプのリスト</li><li>設定済みアカウントのリスト</li><li>設定済み宛先のリスト</li><li>Sourceとの連携のリスト</li><li>ターゲット接続のリスト</li><li>アクティブ化実行の検査</li></ul>。アクションが組織とサンドボックスにスコープされるように、各リクエストには`imsOrgId`と`sandboxName`のパラメーターが必要です。 このBeta リリースでは、書き込み操作はサポートされていません。 |
+| Real-Time CDP MCP （Beta） | Real-Time CDP MCPを使用して、Real-Time CDPをAI エージェントおよびMCP互換クライアントに取り込み、ネイティブのLLM エクスペリエンスを通じてReal-Time CDPツールと直接やり取りできるようにします。 MCP互換クライアント（Claude、ChatGPT、Claude Code、Codex、Cursor、VS Codeなど）をAdobe担当者が提供するエンドポイントに接続することで、Experience Platform REST API呼び出しの記述や複数のUI ワークフローの操作なしに、自然言語を使用してオーディエンス、宛先設定、アクティベーション実行履歴を調べることができます。 ブラウザーベースのAdobe ログインを完了すると、次のようなツールへの読み取り専用アクセス権が付与されます。 <ul><li>既存オーディエンスの検索</li><li>オーディエンスメンバーシップのプレビュー</li><li>宛先タイプのリスト</li><li>設定済みアカウントのリスト</li><li>設定済み宛先のリスト</li><li>Sourceとの連携のリスト</li><li>ターゲット接続のリスト</li><li>アクティブ化実行の検査</li></ul>. アクションが組織とサンドボックスにスコープされるように、各リクエストには`imsOrgId`と`sandboxName`のパラメーターが必要です。 このBeta リリースでは、書き込み操作はサポートされていません。 |
 
 {style="table-layout:auto"}
 
@@ -113,17 +113,17 @@ XDMは、Experience Platformに取り込まれるデータの一般的な構造�
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。 企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Express Copy | Express Copyを使用して、[&#x200B; サンドボックスツール UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy)から1回のアクションでターゲットサンドボックスにオブジェクトをコピーします。 依存オブジェクトは自動的に検出され、ターゲットサンドボックスに作成されるか、すでに存在する場合に再利用されます。 |
+| Express Copy | Express Copyを使用して、[ サンドボックスツール UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy)から1回のアクションでターゲットサンドボックスにオブジェクトをコピーします。 依存オブジェクトは自動的に検出され、ターゲットサンドボックスに作成されるか、すでに存在する場合に再利用されます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; サンドボックスの概要](../sandboxes/home.md)を参照してください。
+詳しくは、[ サンドボックスの概要](../sandboxes/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -137,11 +137,11 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 {style="table-layout:auto"}
 
-詳しくは、[&#x200B; オーディエンスの概要](../segmentation/home.md)を参照してください。
+詳しくは、[ オーディエンスの概要](../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。 これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新規または更新されたソース**
 
