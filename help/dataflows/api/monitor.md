@@ -5,46 +5,46 @@ title: Flow Service API を使用したデータフローのモニター
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '770'
 ht-degree: 57%
 
 ---
 
 # Flow Service API を使用したデータフローのモニター
 
-Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。Adobe アプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。 さらに、Experience Platformを使用すると、外部パートナーに対してデータをアクティブ化できます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。 さらに、Experience Platformを使用すれば、データを外部パートナーにアクティベートできます。
 
-[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Adobe Experience Platformで一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースと宛先を接続できます。
+[!DNL Flow Service]は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集および一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされているすべてのソースと宛先を接続可能にします。
 
-このチュートリアルでは、[[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、完全性、エラー、指標に関するフロー実行データを監視する手順について説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効なデータフローの ID 値が必要です。有効なデータフロー ID がない場合は、このチュートリアルを試す前に、[&#x200B; ソースの概要 &#x200B;](../../sources/home.md) または [&#x200B; 宛先の概要 &#x200B;](../../destinations/catalog/overview.md) からコネクタを選択して、説明した手順に従ってください。
+このチュートリアルでは、有効なデータフローの ID 値が必要です。 有効なデータフローIDがない場合は、[ ソースの概要](../../sources/home.md)または[宛先の概要](../../destinations/catalog/overview.md)から選択したコネクタを選択し、このチュートリアルを試す前に概説されている手順に従います。
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-- [&#x200B; 宛先 &#x200B;](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Experience Platformのデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
+- [宛先](../../destinations/home.md)：宛先は、一般的に使用されるアプリケーションとの事前定義済みの統合であり、クロスチャネルマーケティング施策、メールキャンペーン、ターゲット広告などの多くのユースケースで、Experience Platformからのデータをシームレスに活用することができます。
 - [ソース](../../sources/home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用してフロー実行を正常に監視するために必要な追加情報を示しています。
+次の節では、[!DNL Flow Service] APIを使用してフロー実行を正常に監視するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。 また、API レスポンスで返されるサンプル JSON も示されています。 ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 ## フロー実行の監視
 
-データフローを作成したら、[!DNL Flow Service] API に対してGET リクエストを実行します。
+データフローを作成したら、[!DNL Flow Service] APIに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -191,13 +191,15 @@ curl -X GET \
 | `items` | 特定のフロー実行に関連付けられたメタデータの単一のペイロードが含まれます。 |
 | `metrics` | フロー実行のデータの特性。 |
 | `activities` | データがどのように変換されるかを示します。 |
-| `durationSummary` | フロー実行の開始および終了時間。 |
+| `durationSummary` | フロー実行の開始時間と終了時間。 |
 | `sizeSummary` | データのボリューム（バイト単位）。 |
 | `recordSummary` | データのレコード数。 |
-| `fileSummary` | データのファイルカウント。 |
-| `fileSummary.extensions` | アクティビティに固有の情報が含まれます。 例えば、`manifest` は「プロモーションアクティビティ」の一部にすぎないので、`extensions` オブジェクトに含まれます。 |
-| `statusSummary` | フロー実行が成功か失敗かを表示します。 |
+| `fileSummary` | データのファイル数。 |
+| `fileSummary.extensions` | アクティビティに固有の情報が含まれます。 例えば、`manifest`は「プロモーションアクティビティ」の一部にすぎないため、`extensions` オブジェクトに含まれます。 |
+| `statusSummary` | フロー実行が成功か失敗かを示します。 |
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して、データフローの指標とエラー情報を取得しました。これで、取り込みスケジュールに応じて、データフローを引き続きモニターし、そのステータスと取り込み率をトラックできるようになります。ソースのデータフローを監視する方法について詳しくは、[&#x200B; ユーザーインターフェイスを使用したソースのデータフローの監視 &#x200B;](../ui/monitor-sources.md) チュートリアルをお読みください。 宛先のデータフローを監視する方法について詳しくは、[&#x200B; ユーザーインターフェイスを使用した宛先のデータフローの監視 &#x200B;](../ui/monitor-destinations.md) チュートリアルをお読みください。
+このチュートリアルでは、[!DNL Flow Service] API を使用して、データフローの指標とエラー情報を取得しました。 これで、取り込みスケジュールに応じて、データフローを引き続きモニターし、そのステータスと取り込み率をトラックできるようになります。 ソースのデータフローを監視する方法について詳しくは、[ ユーザーインターフェイス ](../ui/monitor-sources.md) チュートリアルを使用したソースのデータフローの監視を参照してください。 宛先のデータフローを監視する方法について詳しくは、[ ユーザーインターフェイス ](../ui/monitor-destinations.md) チュートリアルを使用した宛先のデータフローの監視を参照してください。
+
+複数のXDM エンティティをデータフローに送信するには、HTTP リクエストで`messages`配列を使用するか、複数のレコードを含むファイル（CSV、JSON、Parquet）をアップロードします。 詳細なガイダンスとベストプラクティスについては、[複数のXDM エンティティをデータフローに送信する方法](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow)を参照してください。
