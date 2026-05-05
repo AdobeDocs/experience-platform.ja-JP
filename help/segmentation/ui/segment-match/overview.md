@@ -17,7 +17,7 @@ ht-degree: 62%
 >
 >Adobeは、2021年にお客様が共同作業やオーディエンスの交換を行うために[!DNL Segment Match]を導入しました。 2025年初頭、Adobeは[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)を導入しました。これは、このユースケースに対応するための長期的なアプローチです。
 >
->* 米国、カナダ、オーストラリア、ニュージーランド、EMEAのお客様：Adobeでは、Real-Time CDP PrimeおよびUltimateのお客様に対して、[!DNL Segment Match]からReal-Time CDP Collaborationへのデータコラボレーションユースケースの移行をお勧めします。 Real-Time CDP Collaborationの[ ドキュメント ](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)および[ クイックスタートガイド ](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)を参照し、詳しくはAdobe アカウントチームにお問い合わせください。
+>* 米国、カナダ、オーストラリア、ニュージーランド、EMEAのお客様：Adobeでは、Real-Time CDP PrimeおよびUltimateのお客様に対して、[!DNL Segment Match]からReal-Time CDP Collaborationへのデータコラボレーションユースケースの移行をお勧めします。 Real-Time CDP Collaborationの[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)および[&#x200B; クイックスタートガイド &#x200B;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)を参照し、詳しくはAdobe アカウントチームにお問い合わせください。
 >* その他のすべての地域のお客様の場合：2026年にReal-Time CDP Collaborationがリリースされるまで、[!DNL Segment Match]をお勧めします。
 
 Adobe Experience Platform Segment Matchは、複数のExperience Platform ユーザーが、安全に管理された環境で、プライバシーに配慮しながらセグメントデータを交換できるセグメント共有サービスです。 [!DNL Segment Match]は、Experience Platformのプライバシー標準と、ハッシュ化された電子メール、ハッシュ化された電話番号、IDFAやGAIDなどのデバイス IDなどの個人識別子を使用しています。
@@ -65,7 +65,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 セグメントマッチのデフォルトの同意設定は、オプトアウトに設定されています。 データのオプトインモデルを適用するには、アドビアカウントチームにメールでリクエストを送信してください。
 
-データ共有の同意値の設定に使用される`share`属性について詳しくは、[ プライバシーと同意フィールドグループ ](../../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
+データ共有の同意値の設定に使用される`share`属性について詳しくは、[&#x200B; プライバシーと同意フィールドグループ &#x200B;](../../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 
 ### データ使用ラベルの設定
 
