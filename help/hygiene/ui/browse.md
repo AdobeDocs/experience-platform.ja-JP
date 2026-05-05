@@ -25,11 +25,11 @@ ht-degree: 62%
 
 UIの&#x200B;**[!UICONTROL Data Lifecycle]** ワークスペースに最初にアクセスすると、既存の作業指示のリストが基本詳細とともに表示されます。
 
-Experience Platform UI](../images/ui/browse/work-order-list.png)の[!UICONTROL Data Lifecycle] ワークスペースを示す![画像
+Experience Platform UI![&#128279;](../images/ui/browse/work-order-list.png)の[!UICONTROL Data Lifecycle] ワークスペースを示す画像
 
 リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。 レコード削除タスクのリストを表示するには&#x200B;**[!UICONTROL Consumer]**&#x200B;を選択し、スケジュールされたデータセット有効期限のリストを表示するには&#x200B;**[!UICONTROL Dataset]**&#x200B;を選択します。
 
-[!UICONTROL Dataset] タブ ](../images/ui/browse/dataset-tab.png)を示す![画像
+[!UICONTROL Dataset] タブ ![&#128279;](../images/ui/browse/dataset-tab.png)を示す画像
 
 ファネルアイコン（![ファネルアイコンの画像](/help/images/icons/filter.png)）を選択すると、表示された作業指示のフィルターのリストが表示されます。
 

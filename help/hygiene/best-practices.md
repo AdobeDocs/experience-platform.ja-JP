@@ -15,11 +15,11 @@ Advanced Data Lifecycle Management UIとData Hygiene APIを使用して、クリ
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、データライフサイクルワークスペースと[ データハイジーン API](./api/overview.md)について理解する必要があります。 このドキュメントを続ける前に、UI](./ui/dataset-expiration.md)またはAPIを使用して、[高度なデータライフサイクル管理](./home.md)および[ レコード削除要求の作成](./ui/record-delete.md)または[ データセット有効期限に関するガイドを確認してください。
+このガイドでは、データライフサイクルワークスペースと[&#x200B; データハイジーン API](./api/overview.md)について理解する必要があります。 このドキュメントを続ける前に、UI[&#128279;](./ui/dataset-expiration.md)またはAPIを使用して、[高度なデータライフサイクル管理](./home.md)および[&#x200B; レコード削除要求の作成](./ui/record-delete.md)または データセット有効期限に関するガイドを確認してください。
 
 ## 作業指示の作成ガイドライン {#work-order-creation-guidelines}
 
-Data Hygiene APIの`/workorder` エンドポイントを使用して、Experience Platformでレコード削除リクエストをプログラムで管理できます。 このエンドポイントを使用すると、削除リクエストを作成したり、ステータスを確認したり、既存のリクエストを更新したりできます。 APIを使用してこれらのアクションを実行する方法については、[作業指示エンドポイント ドキュメント ](./api/workorder.md)を参照してください。 レコードの削除要求は、処理が開始される前にバッチ処理され、完了するのに最大30日（標準のSLA）または15日（Privacy and Security ShieldまたはHealthcare Shield）かかる場合があります。 各ステージで起こることについて詳しくは、[削除タイムラインの記録](./home.md#record-delete-transparency)を参照してください。
+Data Hygiene APIの`/workorder` エンドポイントを使用して、Experience Platformでレコード削除リクエストをプログラムで管理できます。 このエンドポイントを使用すると、削除リクエストを作成したり、ステータスを確認したり、既存のリクエストを更新したりできます。 APIを使用してこれらのアクションを実行する方法については、[作業指示エンドポイント ドキュメント &#x200B;](./api/workorder.md)を参照してください。 レコードの削除要求は、処理が開始される前にバッチ処理され、完了するのに最大30日（標準のSLA）または15日（Privacy and Security ShieldまたはHealthcare Shield）かかる場合があります。 各ステージで起こることについて詳しくは、[削除タイムラインの記録](./home.md#record-delete-transparency)を参照してください。
 
 >[!TIP]
 >
