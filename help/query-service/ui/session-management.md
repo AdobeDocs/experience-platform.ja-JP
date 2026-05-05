@@ -62,7 +62,7 @@ ht-degree: 1%
 
 セッション管理テーブルから、**[!UICONTROL End session]**&#x200B;を選択して、終了する非アクティブなセッションを選択します。
 
-終了セッションがハイライト表示された非アクティブなセッションを示す![ セッション管理テーブル。](../images/ui/session-management/end-session.png)
+終了セッションがハイライト表示された非アクティブなセッションを示す![&#x200B; セッション管理テーブル。](../images/ui/session-management/end-session.png)
 
 確認ダイアログが表示され、誤って終了するのを防ぐことができます。 ダイアログで「**[!UICONTROL End session]**」を選択して、アクションを確認します。
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 
 監査ログを使用してセッションの終了履歴を確認し、予期しない切断を調査します。
 
-監査ログの表示について詳しくは、[ クエリサービス監査ログガイド ](../data-governance/audit-log-guide.md)を参照してください。
+監査ログの表示について詳しくは、[&#x200B; クエリサービス監査ログガイド &#x200B;](../data-governance/audit-log-guide.md)を参照してください。
 
 ## 次の手順 {#next-steps}
 

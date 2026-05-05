@@ -26,13 +26,13 @@ Data Distiller アクセラレータは、一般的な分析シナリオ向け�
 
 * Experience Platformの[!UICONTROL Queries] ワークスペースにアクセスできます。
 * クエリ エディターの使用方法とクエリの実行方法[を理解しています。](./user-guide.md)
-* [ パラメーター化されたクエリ ](./parameterized-queries.md) （実行時にSQLのプレースホルダーが置き換えられました）について詳しい方もいらっしゃると思います。
+* [&#x200B; パラメーター化されたクエリ &#x200B;](./parameterized-queries.md) （実行時にSQLのプレースホルダーが置き換えられました）について詳しい方もいらっしゃると思います。
 
 ## アクセラレータの使用例 {#when-to-use}
 
-Funnel分析、移動平均、オーディエンスの重複などの一般的な分析パターンに対応する、事前定義済みのSQLが必要な場合は、アクセラレーターを使用できます。 ユースケースに適合するアクセラレータがない場合は、[ クエリエディター](./user-guide.md#query-authoring)でカスタムクエリを作成するか、新しいアクセラレータをリクエストします（[新しいアクセラレータをリクエスト ](#request-accelerator)を参照）。
+Funnel分析、移動平均、オーディエンスの重複などの一般的な分析パターンに対応する、事前定義済みのSQLが必要な場合は、アクセラレーターを使用できます。 ユースケースに適合するアクセラレータがない場合は、[&#x200B; クエリエディター](./user-guide.md#query-authoring)でカスタムクエリを作成するか、新しいアクセラレータをリクエストします（[新しいアクセラレータをリクエスト &#x200B;](#request-accelerator)を参照）。
 
-少数のアクセラレーターがダッシュボードとして開いて即座に分析したり、クエリエディターで開いてロジックを実行、スケジュール、調整したりできます。 [ ダッシュボードにリンクされたアクセラレータ ](#dashboard-accelerators) セクションを参照して、これらの事前設定済みのビジュアライゼーションがオーディエンスデータに関するインサイトをどのように提供するかをご確認ください。
+少数のアクセラレーターがダッシュボードとして開いて即座に分析したり、クエリエディターで開いてロジックを実行、スケジュール、調整したりできます。 [&#x200B; ダッシュボードにリンクされたアクセラレータ &#x200B;](#dashboard-accelerators) セクションを参照して、これらの事前設定済みのビジュアライゼーションがオーディエンスデータに関するインサイトをどのように提供するかをご確認ください。
 
 アクセラレーターの使用を開始するには、**[!UICONTROL Queries]** ワークスペースに移動し、**[!UICONTROL Accelerators]** タブまたは&#x200B;**[!UICONTROL Overview]** タブを開きます。
 
@@ -50,13 +50,13 @@ Funnel分析、移動平均、オーディエンスの重複などの一般的�
 >
 >**[!UICONTROL Accelerators]** タブから選択したすべてのアクセラレータがクエリエディターで開きます。
 
-![ アクセラレーターのテーブルを表示する「アクセラレーター」タブが選択されたクエリワークスペース。](../images/ui/accelerators/accelerators-tab-table.png)
+![&#x200B; アクセラレーターのテーブルを表示する「アクセラレーター」タブが選択されたクエリワークスペース。](../images/ui/accelerators/accelerators-tab-table.png)
 
 ### 「概要」タブの使用
 
 このパスは、おすすめのアクセラレータにすばやくアクセスする場合に使用します。 **[!UICONTROL Queries]**&#x200B;に移動し、「**[!UICONTROL Overview]**」タブを選択します。 次に、**[!UICONTROL Recommended Data Distiller accelerators]** セクションからカードを選択します。
 
-ほとんどのアクセラレーターはクエリエディターで開きます。 少数のアクセラレーターが、事前定義済みのビジュアライゼーションを備えたダッシュボードとして開きます。 カードがクエリエディターではなくダッシュボードを開く場合は、[ ダッシュボードにリンクされたアクセラレータ ](#dashboard-accelerators)を参照してください。
+ほとんどのアクセラレーターはクエリエディターで開きます。 少数のアクセラレーターが、事前定義済みのビジュアライゼーションを備えたダッシュボードとして開きます。 カードがクエリエディターではなくダッシュボードを開く場合は、[&#x200B; ダッシュボードにリンクされたアクセラレータ &#x200B;](#dashboard-accelerators)を参照してください。
 
 ![概要タブが選択されたクエリ ワークスペースには、推奨されるData Distiller アクセラレータのリストが表示されます。](../images/ui/accelerators/queries-overview-accelerators.png)
 
@@ -72,7 +72,7 @@ Funnel分析、移動平均、オーディエンスの重複などの一般的�
 
 右側のパネルには、**[!UICONTROL Accelerator ID]**、**[!UICONTROL Name]**、変更の詳細などのメタデータが表示され、**[!UICONTROL Add schedule]**&#x200B;までのスケジュール設定にアクセスできます。
 
-![ アクセラレーターを開いたクエリ エディター。SQL領域、クエリ パラメーターのタブ、右側のパネルが表示されます。](../images/ui/accelerators/accelerator-query-editor.png)
+![&#x200B; アクセラレーターを開いたクエリ エディター。SQL領域、クエリ パラメーターのタブ、右側のパネルが表示されます。](../images/ui/accelerators/accelerator-query-editor.png)
 
 ### パラメーターを指定し、アクセラレーターを実行する {#provide-parameters-execute}
 
@@ -85,7 +85,7 @@ Funnel分析、移動平均、オーディエンスの重複などの一般的�
 
 アクセラレーターが実行され、**[!UICONTROL Results]** タブに結果が表示されます。 これらの結果は、**[!UICONTROL Run as CTAS]**&#x200B;を使用するか、アクセラレーターをスケジュールしない限り、データセットに保持されません。
 
-パラメーター化されたクエリについて詳しくは、[ クエリエディターでのパラメーター化されたクエリ ](./parameterized-queries.md)を参照してください。
+パラメーター化されたクエリについて詳しくは、[&#x200B; クエリエディターでのパラメーター化されたクエリ &#x200B;](./parameterized-queries.md)を参照してください。
 
 ## アクセラレーターからの結果の永続化 {#persist-results}
 
@@ -93,7 +93,7 @@ Funnel分析、移動平均、オーディエンスの重複などの一般的�
 
 結果からデータセットを作成するには、**[!UICONTROL Save]**&#x200B;を選択してアクセラレータをテンプレートとして保存し、**[!UICONTROL Run as CTAS]**&#x200B;を選択します。 **[!UICONTROL Enter output dataset details]** ダイアログが表示されます。 データセット名とオプションの説明を入力し、データセットを作成することを確認します。 このアクションは、新しいデータセットを作成し、そのデータセットに結果を書き込みます。
 
-![ データセット名と説明が入力された[!UICONTROL Enter output dataset details] ダイアログ。](../images/ui/accelerators/output-dataset-details-dialog.png)
+![&#x200B; データセット名と説明が入力された[!UICONTROL Enter output dataset details] ダイアログ。](../images/ui/accelerators/output-dataset-details-dialog.png)
 
 ## アクセラレーターのスケジュール {#schedule-accelerator}
 
@@ -109,13 +109,13 @@ Funnel分析、移動平均、オーディエンスの重複などの一般的�
 
 スケジュール設定ダイアログで、頻度、タイムフレーム、出力データセットおよびパラメーター値を再度指定する必要があります。 クエリエディターで入力されたパラメーター値は、スケジュール設定には含まれません。 **[!UICONTROL Dataset details]** セクションでは、**[!UICONTROL Append into existing dataset]**&#x200B;または&#x200B;**[!UICONTROL Create and append into new dataset]**&#x200B;を選択できます。 スケジュールを設定すると、設定に基づいてアクセラレータが自動的に実行され、選択したデータセットに結果が書き込まれます。
 
-詳細な手順については、[ クエリ スケジュールの作成](./query-schedules.md#create-schedule) ガイドを参照してください。
+詳細な手順については、[&#x200B; クエリ スケジュールの作成](./query-schedules.md#create-schedule) ガイドを参照してください。
 
 ## アクセラレーターからカスタムテンプレートを作成する {#create-custom-template}
 
 SQLを変更したり、独自の設定でロジックを再利用したりする必要がある場合は、アクセラレーターからカスタムテンプレートを作成できます。 まず、クエリエディターでアクセラレーターを開き、**[!UICONTROL Create custom template]**&#x200B;を選択します。 必要に応じてSQLと詳細を変更し、**[!UICONTROL Save]**&#x200B;または&#x200B;**[!UICONTROL Save and close]**&#x200B;を選択してテンプレートを保存します。
 
-保存すると、テンプレートは編集可能になり、CTASで実行、スケジュール設定、または使用できます。 テンプレートは&#x200B;**[!UICONTROL Templates]** タブに保存され、他のテンプレートと同様に管理できます。 詳しくは、[ クエリテンプレート ](./query-templates.md)を参照してください。
+保存すると、テンプレートは編集可能になり、CTASで実行、スケジュール設定、または使用できます。 テンプレートは&#x200B;**[!UICONTROL Templates]** タブに保存され、他のテンプレートと同様に管理できます。 詳しくは、[&#x200B; クエリテンプレート &#x200B;](./query-templates.md)を参照してください。
 
 ### カスタムテンプレートの作成時の変化 {#custom-template-differences}
 
@@ -135,9 +135,9 @@ SQLを変更したり、独自の設定でロジックを再利用したりす�
 
 **[!UICONTROL Audience Identity Overlaps]**&#x200B;は、ID タイプが選択したオーディエンス内でどのように重複するかを調べて、IDの関係を理解します。 この分析を使用して、IDの合成とセグメンテーションの精度を向上させます。
 
-![ チャートとフィルターを使用したオーディエンス分析ビジュアライゼーションを表示するダッシュボードビュー。](../images/ui/accelerators/dashboard-accelerator-template-example.png)
+![&#x200B; チャートとフィルターを使用したオーディエンス分析ビジュアライゼーションを表示するダッシュボードビュー。](../images/ui/accelerators/dashboard-accelerator-template-example.png)
 
-ダッシュボードが開いたら、利用可能なコントロールとフィルターを使用して、オーディエンスデータを検索および比較します。 詳しくは、[ ダッシュボードテンプレート ](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)を参照してください。
+ダッシュボードが開いたら、利用可能なコントロールとフィルターを使用して、オーディエンスデータを検索および比較します。 詳しくは、[&#x200B; ダッシュボードテンプレート &#x200B;](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)を参照してください。
 
 ## 新しいアクセラレーターをリクエスト {#request-accelerator}
 
@@ -147,4 +147,4 @@ SQLを変更したり、独自の設定でロジックを再利用したりす�
 
 アクセラレーターを使用して、一般的な分析クエリを実行および自動化できるようになりました。
 
-ワークフローを拡張するには、[ クエリテンプレート ](./query-templates.md#browse)を作成して参照し、[ パラメーター化されたクエリ ](./parameterized-queries.md)を作成し、[ クエリ ](./query-schedules.md)をスケジュールするか、[ クエリサービスワークフロー](./user-guide.md)を探索します。
+ワークフローを拡張するには、[&#x200B; クエリテンプレート &#x200B;](./query-templates.md#browse)を作成して参照し、[&#x200B; パラメーター化されたクエリ &#x200B;](./parameterized-queries.md)を作成し、[&#x200B; クエリ &#x200B;](./query-schedules.md)をスケジュールするか、[&#x200B; クエリサービスワークフロー](./user-guide.md)を探索します。
