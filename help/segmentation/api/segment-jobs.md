@@ -4,22 +4,22 @@ title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service APIのセグメントジョブエンドポイントを使用すると、組織用のセグメントジョブをプログラムで管理できます。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 18%
+source-wordcount: '1240'
+ht-degree: 19%
 
 ---
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [&#x200B; セグメント定義](./segment-definitions.md)と、[がプロファイルフラグメント全体で重複する属性をどのように結合するかを制御する](../../profile/api/merge-policies.md)結合ポリシー[!DNL Real-Time Customer Profile]を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 [ セグメント定義](./segment-definitions.md)と、[!DNL Real-Time Customer Profile]がプロファイルフラグメント全体で重複する属性をどのように結合するかを制御する[結合ポリシー](../../profile/api/merge-policies.md)を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
 このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド &#x200B;](./getting-started.md)を確認してください。
+このガイドで使用されているエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 続行する前に、必須ヘッダーやサンプル API呼び出しの読み取り方法など、APIへの呼び出しを正常に行うために知っておく必要がある重要な情報については、[入門ガイド ](./getting-started.md)を確認してください。
 
 ## セグメントジョブリストの取得 {#retrieve-list}
 
@@ -27,7 +27,7 @@ ht-degree: 18%
 
 **API 形式**
 
-`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを減らすために使用することを強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを減らすために使用することを強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/jobs
@@ -42,9 +42,9 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | 返されるセグメントジョブの開始オフセットを指定します。 | `start=1` |
 | `limit` | 1 ページに返されるセグメントジョブの数を指定します。 | `limit=20` |
-| `status` | ステータスに基づいて結果をフィルターします。サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELLING、CANCELLED です。 | `status=NEW` |
+| `status` | ステータスに基づいて結果をフィルターします。 サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELLING、CANCELLED です。 | `status=NEW` |
 | `sort` | 返されるセグメントジョブを注文します。 | は`[attributeName]:[desc\|asc]`形式で記述されています。`sort=creationTime:desc` |
-| `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
+| `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。 次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
 
@@ -222,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentId` | 評価するセグメント定義のID。 これらのセグメント定義は、様々な結合ポリシーに属することができます。 セグメント定義の詳細については、[&#x200B; セグメント定義エンドポイントガイド &#x200B;](./segment-definitions.md)を参照してください。 |
+| `segmentId` | 評価するセグメント定義のID。 これらのセグメント定義は、様々な結合ポリシーに属することができます。 セグメント定義の詳細については、[ セグメント定義エンドポイントガイド ](./segment-definitions.md)を参照してください。 |
 
 +++
 
@@ -377,7 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-応答が成功すると、HTTP ステータス 200が、指定されたセグメントジョブに関する詳細情報とともに返されます。 すべてのセグメント定義の完全なリストが`children.segments`属性内に表示されます。
+正常な応答は、HTTP ステータス 200 と、指定したセグメントジョブに関する詳細情報を返します。 すべてのセグメント定義の完全なリストが`children.segments`属性内に表示されます。
 
 +++ セグメントジョブを取得するための応答のサンプル。
 
@@ -451,8 +451,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `metrics` | セグメントジョブに関する診断情報を含むオブジェクト。 |
 
 +++
-
->[!ENDTABS]
 
 ## セグメントの一括取得ジョブ {#bulk-get}
 
