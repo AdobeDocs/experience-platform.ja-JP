@@ -1,37 +1,50 @@
 ---
 title: Salesforce Service Cloud Source コネクタの概要
-description: API またはユーザーインターフェイスを使用してSalesforce Service Cloud をAdobe Experience Platformに接続する方法について説明します。
+description: APIまたはユーザーインターフェイスを使用して、Salesforce Service CloudをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: b9a9b00114b3c1159a14b7e39484d250fa7563ba
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 35%
+source-wordcount: '447'
+ht-degree: 10%
 
 ---
 
 # [!DNL Salesforce Service Cloud]
 
->[!WARNING]
->
->[!DNL Salesforce Service Cloud] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce Service Cloud] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
+[!DNL Salesforce Service Cloud]は、サービスワークフローを自動化し、企業と顧客の間のコミュニケーションを合理化するように設計されたカスタマーサクセスプラットフォームです。 メール、電話、ソーシャルメディア、ライブチャットなど、さまざまなチャネルからのリクエストを統合されたエージェントコンソールに集約できます。 これにより、サポートチームは、顧客の履歴の全体像を把握して「ケース」を管理することができ、顧客からの問い合わせに関係なく、応答がパーソナライズされた効率的なものになります。
 
-Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform ソースの[!DNL Salesforce Service Cloud] ソースコネクタを使用して、[!DNL Salesforce Service Cloud] アカウントを接続し、データをExperience Platform サービスで使用できます。
 
-[!DNL Experience Platform] は、サードパーティのカスタマーサクセスシステムからデータを取り込む機能を提供しています。 カスタマーサクセスプロバイダーのサポートには、[!DNL Salesforce Service Cloud] が含まれます。
+このドキュメントでは、[!DNL Salesforce Service Cloud] アカウントを設定してExperience Platformに接続する方法について説明します。
 
-## IP アドレスの許可リスト
+## 前提条件 {#prerequisites}
 
-ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+Experience Platformに正常に接続する前に完了する必要がある前提条件の設定については、この節を参照してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce Service Cloud] を [!DNL Experience Platform] に接続する方法について説明しています。
+### IP アドレスの許可リスト {#allowlist}
 
-## API を使用した [!DNL Salesforce Service Cloud] と [!DNL Experience Platform] の接続
+ソースをExperience Platformに接続する前に、リージョン固有のIP アドレスをードに追加する必要があります。 詳しくは、[Experience PlatformへのIP アドレスの許可リストに加える](../../ip-address-allow-list.md)に関するガイドを参照してください。
 
-- [Flow Service API を使用したSalesforce Service Cloud ベース接続の作成](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+### 必要な資格情報の収集 {#credentials}
+
+OAuth2 クライアント資格情報を使用して[!DNL Salesforce Service Cloud] アカウントを接続するには、次の資格情報の値を指定する必要があります。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| 環境 URL | [!DNL Salesforce Service Cloud] ソースインスタンスのURL。 |
+| クライアント ID | クライアント IDは、OAuth2認証の一環として、クライアント秘密鍵と並行して使用されます。 クライアント IDとクライアント秘密鍵を組み合わせることで、アプリケーションを[!DNL Salesforce Service Cloud]に対して識別し、アカウントの代理でアプリケーションを操作できるようになります。 |
+| クライアントシークレット | クライアント秘密鍵は、OAuth2認証の一環として、クライアント IDと並行して使用されます。 クライアント IDとクライアント秘密鍵を組み合わせることで、アプリケーションを[!DNL Salesforce Service Cloud]に対して識別し、アカウントの代理でアプリケーションを操作できるようになります。 |
+| API バージョン | 使用している[!DNL Salesforce Service Cloud] インスタンスのREST API バージョン。 API バージョンの値は、10進数でフォーマットする必要があります。 例えば、API バージョン `52`を使用している場合、値を`52.0`として入力する必要があります。 このフィールドを空白のままにすると、Experience Platformは使用可能な最新バージョンを自動的に使用します。 |
+
+[!DNL Salesforce Service Cloud]でのOAuthの使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth認証フローに関するガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
+
+## APIを使用して[!DNL Salesforce Service Cloud]をExperience Platformに接続
+
+- [Flow Service APIを使用したSalesforce Service Cloud ベース接続の作成](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用したカスタマーサクセスソースのデータフローの作成](../../tutorials/api/collect/customer-success.md)
 
-## UIを使用して [!DNL Salesforce Service Cloud] と [!DNL Experience Platform] を接続する
+## UIを使用して[!DNL Salesforce Service Cloud]をExperience Platformに接続する
 
-- [UI でのSalesforce Service Cloud ソース接続の作成](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+- [UIでのSalesforce Service Cloud ソース接続の作成](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
 - [UI でのカスタマーサクセスソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

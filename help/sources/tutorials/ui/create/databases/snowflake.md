@@ -1,142 +1,120 @@
 ---
-title: UI を使用したSnowflakeとExperience Platformの接続
+title: UIを使用してSnowflakeをExperience Platformに接続する
 type: Tutorial
-description: Adobe Experience Platform UI を使用してSnowflake ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UIを使用してSnowflake ソース接続を作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
+source-git-commit: ea8100cf8e032371b6c5187ba142bc12047b35d1
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1079'
 ht-degree: 6%
 
 ---
 
-# UI を使用した [!DNL Snowflake] のExperience Platformへの接続
+# UIを使用して[!DNL Snowflake]をExperience Platformに接続する
 
 >[!IMPORTANT]
 >
->Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Snowflake] ソースを利用できます。
+>[!DNL Snowflake] ソースは、Real-Time Customer Data Platform Ultimateを購入したユーザーがソースカタログで利用できます。
 
-ユーザーインターフェイスを使用して [!DNL Snowflake] アカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+このガイドでは、ユーザーインターフェイスを使用して[!DNL Snowflake] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
 >[!WARNING]
 >
->[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025年11月に廃止されます。 ソースを引き続き使用し、データベースからExperience Platformにデータを取り込むには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、資格情報の侵害リスクの軽減に関する[[!DNL Snowflake]  ベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)を参照してください。
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [&#x200B; ソース &#x200B;](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、[!DNL Experience Platform] サービスを使用して、着信データを構造化、ラベル付け、強化することができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つのExperience Platform インスタンスを個別のバーチャル環境に分割して、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 >[!NOTE]
 >
->`PREVENT_UNLOAD_TO_INLINE_URL` データベースからExperience Platformにデータをアンロードできるようにするには、`FALSE` フラグを [!DNL Snowflake] に設定する必要があります。
+>[!DNL Snowflake] データベースからExperience Platformへのデータのアンロードを許可するには、`PREVENT_UNLOAD_TO_INLINE_URL` フラグを`FALSE`に設定する必要があります。
 
-## ソースカタログのナビゲート {#navigate}
+## ソースカタログを移動する {#navigate}
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL Sources]**」を選択して、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。 または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-**[!DNL Snowflake]** データベース *[!UICONTROL カテゴリの下の「]*」を選択し、「**[!UICONTROL 設定]**」を選択します。
+「*[!UICONTROL Databases]*」カテゴリの「**[!DNL Snowflake]**」を選択し、「**[!UICONTROL Set up]**」を選択します。
 
 >[!TIP]
 >
->ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
+>ソースカタログのソースには、特定のソースがまだ認証済みアカウントを持っていない場合、**[!UICONTROL Set up]** オプションが表示されます。 認証済みアカウントが存在すると、このオプションは&#x200B;**[!UICONTROL Add data]**&#x200B;に変更されます。
 
-![&#x200B; ソースカタログとSnowflakeカードが選択されている状態…](../../../../images/tutorials/create/snowflake/catalog.png)
+![Snowflake カードが選択されたソースカタログ…](../../../../images/tutorials/create/snowflake/catalog.png)
 
-## 既存のアカウントを使用 {#existing}
+## 既存のアカウントの使用 {#existing}
 
-次に、ソースワークフローの認証手順に進みます。 ここでは、既存のアカウントを使用するか、新しいアカウントを作成できます。
+次に、ソースワークフローの認証ステップに移動します。 ここでは、既存のアカウントを使用するか、新しいアカウントを作成できます。
 
-既存のアカウントを使用するには、接続する [!DNL Snowflake] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+既存のアカウントを使用するには、接続する[!DNL Snowflake] アカウントを選択し、**[!UICONTROL Next]**&#x200B;を選択して続行します。
 
-![&#x200B; ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/snowflake/existing.png)
+![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/snowflake/existing.png)
 
 ## 新しいアカウントを作成 {#create}
 
 既存のアカウントがない場合は、ソースに対応する必要な認証資格情報を指定して、新しいアカウントを作成する必要があります。
 
-新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
+新しいアカウントを作成するには、**[!UICONTROL New account]**&#x200B;を選択し、名前を指定し、オプションでアカウントの説明を追加します。
 
-### Azure 上のExperience Platformへの接続 {#azure}
+### AzureでExperience Platformに接続する {#azure}
 
-アカウントキー認証またはキーペア認証のいずれかを使用して、[!DNL Snowflake] アカウントを Azure 上のExperience Platformに接続できます。
+キーペア認証を使用して、Azure上のExperience Platformに[!DNL Snowflake] アカウントを接続できます。
 
->[!BEGINTABS]
+キーペア認証を使用するには、**[!UICONTROL KeyPair authentication]**&#x200B;を選択し、アカウント、ユーザー名、秘密鍵、秘密鍵のパスフレーズ、データベース、およびウェアハウスの値を指定してから、**[!UICONTROL Connect to source]**&#x200B;を選択します。
 
->[!TAB  アカウントキー認証 ]
+![ アカウントキーペア認証インターフェイス。](../../../../images/tutorials/create/snowflake/new.png)
 
-アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、入力フォームに接続文字列を入力して「**[!UICONTROL ソースに接続]**」を選択します。
-
-![&#x200B; アカウントキー認証インターフェイス &#x200B;](../../../../images/tutorials/create/snowflake/account-key-auth.png)
+キーペア認証では、2048 ビット RSA キーペアを生成し、[!DNL Snowflake] ソースのアカウントを作成する際に次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[&#x200B; アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 &#x200B;](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
-| ウェアハウス | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
-| データベース | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
+| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`orgname-account_name` のようになります。 追加のガイダンスについては、[ アカウント IDの取得 [!DNL Snowflake] に関するガイドを参照してください。](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
-| パスワード | [!DNL Snowflake] ユーザーアカウントのパスワード。 |
-| 役割 | [!DNL Snowflake] セッションで使用する既定のアクセス制御ロールです。 役割は、指定したユーザーに既に割り当てられている既存の役割である必要があります。 デフォルトの役割は `PUBLIC` です。 |
-| 接続文字列 | [!DNL Snowflake] インスタンスへの接続に使用する接続文字列。 [!DNL Snowflake] の接続文字列パターンは `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` です |
+| 秘密鍵 | [!DNL Snowflake] アカウントの[!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵を生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対する認証時に秘密鍵パスフレーズも指定する必要があります。 詳しくは、 [!DNL Snowflake] 秘密鍵](../../../../connectors/databases/snowflake.md)の取得に関するガイドを参照してください。[ |
+| 秘密鍵パスフレーズ | 秘密鍵パスフレーズは、暗号化された秘密鍵で認証する際に使用する必要がある追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
+| データベース | Experience Platformに取り込むデータを含む[!DNL Snowflake] データベース。 |
+| ウェアハウス | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各[!DNL Snowflake] ウェアハウスは互いに独立しており、Experience Platformにデータを取り込む際に個別にアクセスする必要があります。 |
 
->[!TAB  キーペア認証 ]
+これらの値について詳しくは、[このSnowflake ドキュメント ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。
 
-キーペア認証を使用するには、「**[!UICONTROL キーペア認証]**」を選択し、アカウント、ユーザー名、秘密鍵、秘密鍵のパスフレーズ、データベース、ウェアハウスの値を入力して「**[!UICONTROL ソースに接続]**」を選択します。
-
-![&#x200B; アカウントキーペア認証インターフェイス &#x200B;](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
-
-キーペア認証を使用する場合は、[!DNL Snowflake] ソースのアカウントを作成する際に、2048 ビット RSA キーペアを生成してから、次の値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| --- | --- |
-| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[&#x200B; アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 &#x200B;](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
-| ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
-| 秘密鍵 | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[&#x200B; 秘密鍵の取得  [!DNL Snowflake]  に関す &#x200B;](../../../../connectors/databases/snowflake.md) ガイドを参照してください。 |
-| 秘密鍵のパスフレーズ | 秘密鍵のパスフレーズは、暗号化された秘密鍵を使用して認証を行う場合に使用する必要がある、追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
-| データベース | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
-| ウェアハウス | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
-
-これらの値について詳しくは、[&#x200B; このSnowflake ドキュメント &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
-
->[!ENDTABS]
-
-### AWS上のExperience Platformへの接続 {#aws}
+### AWSでExperience Platformに接続する {#aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
+>この節は、Amazon Web Services（AWS）で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、一部のお客様にご利用いただけます。 サポートされているExperience Platform インフラストラクチャについて詳しくは、[Experience Platform マルチクラウドの概要](../../../../../landing/multi-cloud.md)を参照してください。
 
-新しい [!DNL Snowflake] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、認証に必要な資格情報を入力します。
+新しい[!DNL Snowflake] アカウントを作成し、AWS上のExperience Platformに接続するには、自分がVA6 サンドボックスにいることを確認し、認証に必要な資格情報を指定します。
 
 >[!BEGINTABS]
 
->[!TAB  キーペア認証 ]
+>[!TAB  キーペア認証]
 
-キーペアを使用して接続するには、「**[!UICONTROL キーペア認証]**」を選択し、認証資格情報を入力して、「**[!UICONTROL ソースに接続]**」を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要 &#x200B;](../../../../connectors/databases/snowflake.md#gather-required-credentials) を参照してください。
+キーペアを使用して接続するには、**[!UICONTROL KeyPair Authentication]**&#x200B;を選択し、認証資格情報を指定してから&#x200B;**[!UICONTROL Connect to source]**&#x200B;を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要](../../../../connectors/databases/snowflake.md#gather-required-credentials)を参照してください。
 
-![&#x200B; キーペア認証の新しいアカウント作成手順。](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+![ キーペア認証の新しいアカウント作成ステップ。](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
 
->[!TAB  基本認証 ]
+>[!TAB 基本認証]
 
 >[!WARNING]
 >
->[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025年11月に廃止されます。 ソースを引き続き使用し、データベースからExperience Platformにデータを取り込むには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、資格情報の侵害リスクの軽減に関する[[!DNL Snowflake]  ベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)を参照してください。
 
-ユーザー名とパスワードの組み合わせを使用して接続するには、「**[!UICONTROL 基本認証]**」を選択し、認証資格情報を入力して「**[!UICONTROL ソースに接続]**」を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要 &#x200B;](../../../../connectors/databases/snowflake.md#gather-required-credentials) を参照してください。
+ユーザー名とパスワードの組み合わせを使用して接続するには、**[!UICONTROL Basic authentication]**&#x200B;を選択し、認証資格情報を指定してから&#x200B;**[!UICONTROL Connect to source]**&#x200B;を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要](../../../../connectors/databases/snowflake.md#gather-required-credentials)を参照してください。
 
-![SnowflakeをAWS上のExperience Platformに接続できるソースワークフローの新しいアカウント手順 &#x200B;](../../../../images/tutorials/create/snowflake/aws-auth.png)
+![SnowflakeをAWS上のExperience Platformに接続できるソースワークフローの新しいアカウントステップ。](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
 >[!ENDTABS]
 
 ### サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
 
-データ選択手順で、大きなテーブルまたはファイルのデータを取り込む際にタイムアウトが発生することがあります。 データプレビューをスキップして、タイムアウトを回避し、サンプルデータがなくてもスキーマを表示できます。 データのプレビューをスキップするには、「サンプルデータのプレビューをスキップ **[!UICONTROL 切替スイッチを有効]** します。
+データ選択ステップで、大きなテーブルまたはデータファイルを取り込む際にタイムアウトが発生する場合があります。 データプレビューをスキップしてタイムアウトを回避し、サンプルデータを含めなくてもスキーマを表示できます。 データのプレビューをスキップするには、**[!UICONTROL Skip previewing sample data]** トグルを有効にします。
 
-残りのワークフローは変わりません。 唯一の注意点は、データのプレビューをスキップすると、マッピングステップ中に計算フィールドと必須フィールドが自動検証されない可能性があり、マッピング中にこれらのフィールドを手動で検証する必要があるということです。
+ワークフローの残りの部分は同じままです。 唯一の注意点は、データプレビューをスキップすると、マッピングステップ中に計算フィールドと必須フィールドが自動検証されなくなる可能性があり、マッピング中にこれらのフィールドを手動で検証する必要があることです。
 
 ## 次の手順
 
-このチュートリアルでは、Snowflake アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、Snowflake アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して [!DNL Experience Platform]](../../dataflow/databases.md)にデータを取り込めるようになりました。
