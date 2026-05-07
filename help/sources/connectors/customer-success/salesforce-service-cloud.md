@@ -36,7 +36,7 @@ OAuth2 クライアント資格情報を使用して[!DNL Salesforce Service Clo
 | クライアントシークレット | クライアント秘密鍵は、OAuth2認証の一環として、クライアント IDと並行して使用されます。 クライアント IDとクライアント秘密鍵を組み合わせることで、アプリケーションを[!DNL Salesforce Service Cloud]に対して識別し、アカウントの代理でアプリケーションを操作できるようになります。 |
 | API バージョン | 使用している[!DNL Salesforce Service Cloud] インスタンスのREST API バージョン。 API バージョンの値は、10進数でフォーマットする必要があります。 例えば、API バージョン `52`を使用している場合、値を`52.0`として入力する必要があります。 このフィールドを空白のままにすると、Experience Platformは使用可能な最新バージョンを自動的に使用します。 |
 
-[!DNL Salesforce Service Cloud]でのOAuthの使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth認証フローに関するガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
+[!DNL Salesforce Service Cloud]でのOAuthの使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth認証フローに関するガイド &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
 
 ## APIを使用して[!DNL Salesforce Service Cloud]をExperience Platformに接続
 

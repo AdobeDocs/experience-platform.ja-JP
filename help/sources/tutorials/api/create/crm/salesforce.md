@@ -43,7 +43,7 @@ OAuth 2 クライアント資格情報を使用して[!DNL Salesforce] アカウ
 | `includeDeletedObjects` | 削除されたレコードをソフトで含めるかどうかを判断するために使用されるブール値。 trueに設定すると、ソフト削除されたレコードを[!DNL Salesforce] クエリに含め、アカウントからExperience Platformに取り込むことができます。 設定を指定しない場合、この値はデフォルトで`false`になります。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。 [!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
-[!DNL Salesforce]でのOAuthの使用について詳しくは、[[!DNL Salesforce] OAuth認証フローに関するガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
+[!DNL Salesforce]でのOAuthの使用について詳しくは、[[!DNL Salesforce] OAuth認証フローに関するガイド &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
 
 ### [!DNL Azure]にExperience Platformの[!DNL Salesforce]のベース接続を作成します
 
@@ -313,5 +313,5 @@ curl -X GET \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce] ベース接続を作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] APIを使用してCRM データをExperience Platformに取り込むデータフローを作成します](../../collect/crm.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] APIを使用してCRM データをExperience Platformに取り込むデータフローを作成します](../../collect/crm.md)

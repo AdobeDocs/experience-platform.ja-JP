@@ -36,7 +36,7 @@ ht-degree: 18%
 | API バージョン | 使用している[!DNL Salesforce] インスタンスのREST API バージョン。 API バージョンの値は、10進数でフォーマットする必要があります。 例えば、API バージョン `52`を使用している場合、値を`52.0`として入力する必要があります。 このフィールドを空白のままにすると、Experience Platformは使用可能な最新バージョンを自動的に使用します。 |
 | 削除されたオブジェクトを含める | 削除されたレコードをソフトで含めるかどうかを判断するために使用されるブール値。 trueに設定すると、ソフト削除されたレコードを[!DNL Salesforce] クエリに含め、アカウントからExperience Platformに取り込むことができます。設定を指定しない場合、この値はデフォルトで`false`になります。 |
 
-[!DNL Salesforce]でのOAuthの使用について詳しくは、[[!DNL Salesforce] OAuth認証フローに関するガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
+[!DNL Salesforce]でのOAuthの使用について詳しくは、[[!DNL Salesforce] OAuth認証フローに関するガイド &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)を参照してください。
 
 ## [!DNL Salesforce] アカウントを接続
 
@@ -83,4 +83,4 @@ OAuth 2 クライアント資格情報の場合、**[!UICONTROL OAuth2 Client Cr
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して [!DNL Experience Platform]](../../dataflow/crm.md)にデータを取り込めるようになりました。
+このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; データフローを設定して [!DNL Experience Platform]](../../dataflow/crm.md)にデータを取り込めるようになりました。

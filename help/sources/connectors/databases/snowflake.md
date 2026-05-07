@@ -42,7 +42,7 @@ ht-degree: 3%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`myorg-myaccount.snowflakecomputing.com` のようになります。 追加のガイダンスについては、[ アカウント IDの取得 [!DNL Snowflake] に関する節を参照してください。](#retrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`myorg-myaccount.snowflakecomputing.com` のようになります。 追加のガイダンスについては、[&#x200B; アカウント IDの取得 [!DNL Snowflake] に関する節を参照してください。](#retrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各[!DNL Snowflake] ウェアハウスは互いに独立しており、Experience Platformにデータを取り込む際に個別にアクセスする必要があります。 |
 | `database` | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`myorg-myaccount.snowflakecomputing.com` のようになります。 追加のガイダンスについては、[ アカウント IDの取得 [!DNL Snowflake] に関する節を参照してください。](#retrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`myorg-myaccount.snowflakecomputing.com` のようになります。 追加のガイダンスについては、[&#x200B; アカウント IDの取得 [!DNL Snowflake] に関する節を参照してください。](#retrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
 | `privateKey` | [!DNL Snowflake] アカウントの[!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵を生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対する認証時に秘密鍵パスフレーズも指定する必要があります。 詳しくは、[秘密鍵の取得](#retrieve-your-private-key)に関する節を参照してください。 |
 | `privateKeyPassphrase` | 秘密鍵パスフレーズは、暗号化された秘密鍵で認証する際に使用する必要がある追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
@@ -64,7 +64,7 @@ ht-degree: 3%
 | `database` | Experience Platformに取り込むデータを含む[!DNL Snowflake] データベース。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各[!DNL Snowflake] ウェアハウスは互いに独立しており、Experience Platformにデータを取り込む際に個別にアクセスする必要があります。 |
 
-これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。
+これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。
 
 >[!TAB 基本認証（AWS） ]
 
@@ -76,7 +76,7 @@ ht-degree: 3%
 >
 >**AWS リージョン**&#x200B;でExperience Platformに接続している[!DNL Snowflake] ソースの場合、基本認証は現在もサポートされていますが、現在は非推奨化の段階にあり、今後削除される予定です。 接続を維持するために、できるだけ早くキーペア認証に移行することを強くお勧めします。
 >
->非推奨（廃止予定）とガイダンスについて詳しくは、[[!DNL Snowflake] 資格情報の侵害リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)を参照してください。
+>非推奨（廃止予定）とガイダンスについて詳しくは、[[!DNL Snowflake] 資格情報の侵害リスクの軽減に関するベストプラクティスガイド &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)を参照してください。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -94,14 +94,14 @@ ht-degree: 3%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`http://myorg-myaccount.snowflakecomputing.com/` のようになります。 追加のガイダンスについては、[ アカウント IDの取得 [!DNL Snowflake] に関するガイドを参照してください。](#etrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、異なる[!DNL Snowflake]組織のアカウントを一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を付ける必要があります。 例えば、`http://myorg-myaccount.snowflakecomputing.com/` のようになります。 追加のガイダンスについては、[&#x200B; アカウント IDの取得 [!DNL Snowflake] に関するガイドを参照してください。](#etrieve-your-account-identifier) 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
 | `privateKey` | [!DNL Snowflake] ユーザーの秘密鍵です。base64はヘッダーや改行のない1行としてエンコードされています。 準備するには、PEM ファイルの内容をコピーし、`BEGIN`/`END`行とすべての改行を削除してから、結果をbase64 エンコードします。 詳しくは、[秘密鍵の取得](#retrieve-your-private-key)に関する節を参照してください。 **メモ：**&#x200B;暗号化された秘密鍵は、現在、AWS接続ではサポートされていません。 |
 | `port` | インターネット経由でサーバーに接続する際に[!DNL Snowflake]が使用するポート番号。 |
 | `database` | Experience Platformに取り込むデータを含む[!DNL Snowflake] データベース。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各[!DNL Snowflake] ウェアハウスは互いに独立しており、Experience Platformにデータを取り込む際に個別にアクセスする必要があります。 |
 
-これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。
+これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。
 
 >[!ENDTABS]
 
@@ -111,11 +111,11 @@ Experience Platformで[!DNL Snowflake] インスタンスを認証するため�
 
 アカウント IDを取得するには：
 
-* [[!DNL Snowflake]  アプリケーション UI ダッシュボード ](https://app.snowflake.com/)を使用して、アカウントにアクセスします。
+* [[!DNL Snowflake]  アプリケーション UI ダッシュボード &#x200B;](https://app.snowflake.com/)を使用して、アカウントにアクセスします。
 * 左側のナビゲーションで「**[!DNL Accounts]**」を選択し、ヘッダーから「**[!DNL Active Accounts]**」を選択します。
 * 次に、情報アイコンを選択し、現在のURLのドメイン名を選択してコピーします。
 
-![ ドメイン名が選択されたSnowflake UI ダッシュボード。](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+![&#x200B; ドメイン名が選択されたSnowflake UI ダッシュボード。](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
 ### RSA キーペアの生成
 
@@ -176,7 +176,7 @@ Experience Platformで[!DNL Snowflake] ソース接続を作成する前に、�
 * 表示される[!DNL Edit user] ウィンドウで、[!DNL Default Role]に移動して、特定のユーザーに関連付けられている役割を表示します。
 * 同じウィンドウで、[!DNL Default Warehouse]に移動して、特定のユーザーに関連付けられているウェアハウスを表示します。
 
-![ ロールとウェアハウスを確認できるSnowflake UI。](../../images/tutorials/create/snowflake/snowflake-configs.png)
+![&#x200B; ロールとウェアハウスを確認できるSnowflake UI。](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
 ## 次の手順
 

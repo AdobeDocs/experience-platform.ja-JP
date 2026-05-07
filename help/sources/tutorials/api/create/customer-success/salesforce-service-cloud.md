@@ -19,14 +19,14 @@ ht-degree: 35%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、[!DNL Experience Platform] サービスを使用して、着信データを構造化、ラベル付け、強化することができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformは、1つの[!DNL Experience Platform] インスタンスを個別のバーチャル環境に分割し、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
+* [&#x200B; ソース &#x200B;](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むことができますが、[!DNL Experience Platform] サービスを使用して、着信データを構造化、ラベル付け、強化することができます。
+* [&#x200B; サンドボックス &#x200B;](../../../../../sandboxes/home.md): Experience Platformは、1つの[!DNL Experience Platform] インスタンスを個別のバーチャル環境に分割し、デジタルエクスペリエンスアプリケーションの開発と進化に役立つバーチャルサンドボックスを提供します。
 
 次の節では、[!DNL Flow Service] APIを使用して[!DNL Salesforce Service Cloud]に正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-資格情報の取得について詳しくは、[認証ガイド ](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials)を参照してください。
+資格情報の取得について詳しくは、[認証ガイド &#x200B;](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials)を参照してください。
 
 ### Experience Platform APIの使用
 
@@ -98,5 +98,5 @@ curl -X POST \
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce Service Cloud] ベース接続を作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] APIを使用してExperience Platformにカスタマーサクセスデータを取り込むデータフローを作成します](../../collect/customer-success.md)
+* [&#x200B; [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] APIを使用してExperience Platformにカスタマーサクセスデータを取り込むデータフローを作成します](../../collect/customer-success.md)

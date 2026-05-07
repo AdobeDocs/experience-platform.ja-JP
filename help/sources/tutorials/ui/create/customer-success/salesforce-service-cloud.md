@@ -26,7 +26,7 @@ ht-degree: 36%
 
 ### 必要な資格情報の収集
 
-資格情報の取得について詳しくは、[認証ガイド ](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials)を参照してください。
+資格情報の取得について詳しくは、[認証ガイド &#x200B;](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials)を参照してください。
 
 ## [!DNL Salesforce Service Cloud] アカウントを接続
 
@@ -63,4 +63,4 @@ Experience Platform UIで、左側のナビゲーションから「**[!UICONTROL
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。 次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platform](../../dataflow/customer-success.md)に取り込むためのデータフローを設定できるようになりました。
+このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。 次のチュートリアルに進み、[&#x200B; カスタマーサクセスデータをExperience Platform](../../dataflow/customer-success.md)に取り込むためのデータフローを設定できるようになりました。
