@@ -92,11 +92,11 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - メディアオブジェクトの`length` プロパティが無効なデータタイプを誤って受け入れた[Media Analytics トラッカー](commands/getmediaanalyticstracker.md)のエラーを修正しました。
 - IDの検索が失敗した場合にPromiseの拒否を適切に処理するために、[ID管理](../identity/overview.md)のエラー処理を改善しました。
 - HTML コンテンツアイテムを含むパーソナライゼーションコンテンツのレンダリングが失敗し、見つからない`renderStatusHandler`に関連するエラーが発生する問題を解決しました。
-- 非HTTP URLを適切に処理するために、アクティビティマップ [URL コレクション ](commands/configure/clickcollectionenabled.md)を修正しました。
+- 非HTTP URLを適切に処理するために、アクティビティマップ [URL コレクション &#x200B;](commands/configure/clickcollectionenabled.md)を修正しました。
 
 **既知の問題**
 
-- `npx @adobe/alloy`を使用する[ カスタムビルド ](/help/collection/js/install/create-custom-build.md) プロセスは、現在、バージョン 2.28.0で期待どおりに機能していません。 選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDNで使用可能な標準のJavaScript ファイルには影響しません。 修正が進行中です。
+- `npx @adobe/alloy`を使用する[&#x200B; カスタムビルド &#x200B;](/help/collection/js/install/create-custom-build.md) プロセスは、現在、バージョン 2.28.0で期待どおりに機能していません。 選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDNで使用可能な標準のJavaScript ファイルには影響しません。 修正が進行中です。
 
 ## バージョン 2.27.0 - 2025年5月20日（PT）
 
@@ -111,7 +111,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズを削減し、読み込み時間を最適化できます。 NPM パッケージ ](install/create-custom-build.md)を使用してカスタム Web SDK ビルドを[作成する方法については、ドキュメントを参照してください。
+- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズを削減し、読み込み時間を最適化できます。 NPM パッケージ [&#128279;](install/create-custom-build.md)を使用してカスタム Web SDK ビルドを作成する方法については、ドキュメントを参照してください。
 - [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID CookieからECIDを直接自動的に読み取るようになりました。 `getIdentity`を`ECID`名前空間で呼び出し、既にID Cookieが存在する場合、Web SDKはIDを取得するためのEdge Networkへのリクエストを行わなくなります。 これで、CookieからIDを読み取ります。
 
 **修正点および改善点**
@@ -141,7 +141,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [ データストリームの上書き](/help/datastreams/overrides.md)が、メディアセッションの開始時にサポートされるようになりました。
+- [&#x200B; データストリームの上書き](/help/datastreams/overrides.md)が、メディアセッションの開始時にサポートされるようになりました。
 
 - [`onContentRendering`](monitoring-hooks.md#onContentRendering)監視フックにAdobe Target応答トークンのサポートを追加しました。
 
@@ -199,7 +199,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [ ストリーミングメディアコレクション ](commands/configure/streamingmedia.md)のサポートを追加しました。
+- [&#x200B; ストリーミングメディアコレクション &#x200B;](commands/configure/streamingmedia.md)のサポートを追加しました。
 
 **修正点および改善点**
 
@@ -224,7 +224,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **新機能**
 
 - Adobe Journey Optimizerからのアプリ内メッセージのレンダリングのサポートを追加しました。
-- [ ページイベントの上下](../use-cases/personalization/top-bottom-page-events.md)のサポートを追加しました。
+- [&#x200B; ページイベントの上下](../use-cases/personalization/top-bottom-page-events.md)のサポートを追加しました。
 - ページ全体のスコープとデフォルトサーフェスのリクエストを制御するために、`sendEvent` コマンドに[`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) オプションを追加しました。
 
 **修正点および改善点**
@@ -237,7 +237,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- ](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
+- [&#128279;](/help/datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
 
 **修正点および改善点**
 
@@ -310,7 +310,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- モバイルアプリとモバイル web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に提供できるようになりました。 詳細については、「[ データ収集のID](../identity/overview.md)」を参照してください。
+- モバイルアプリとモバイル web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に提供できるようになりました。 詳細については、「[&#x200B; データ収集のID](../identity/overview.md)」を参照してください。
 - 分析指標を増分せずに、[!DNL Adobe Target] からシングルページアプリケーションに提案の配列をレンダリングまたは実行できるようになりました。 これにより、レポートのエラーが減り、分析の精度が向上します。
 - 使用可能なコマンドやインスタンスの最終的な設定など、`getLibraryInfo` コマンドに追加情報を追加しました。
 
@@ -378,7 +378,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-- SDKを[NPM パッケージ ](install/npm.md)としてインストールできるようになりました。
+- SDKを[NPM パッケージ &#x200B;](install/npm.md)としてインストールできるようになりました。
 - [デフォルトの同意を設定](commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
 - [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにできるようになりました。
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
